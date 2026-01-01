@@ -1,7 +1,7 @@
 # --- HLAVNÍ NASTAVENÍ ---
 title: Klimatologie.eu
 description: Data, fakta a souvislosti o změně klimatu.
-url: "[https://klimatologie.eu](https://klimatologie.eu)" # Důležité: bez lomítka na konci
+url: "https://klimatologie.eu" # Důležité: bez lomítka na konci
 
 # --- AKTIVACE TÉMATU ---
 remote_theme: mmistakes/minimal-mistakes
