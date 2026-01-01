@@ -1,0 +1,12 @@
+main:
+  - title: "Úvod"
+    url: /
+
+  - title: "O projektu"
+    url: /o-projektu/
+
+  - title: "Blog & Novinky"
+    url: /blog/
+
+  - title: "Data v grafech"
+    url: /data/
