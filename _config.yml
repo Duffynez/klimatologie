@@ -1,0 +1,24 @@
+# --- HLAVNÍ NASTAVENÍ ---
+title: Klimatologie.eu
+description: Data, fakta a souvislosti o změně klimatu.
+url: "[https://klimatologie.eu](https://klimatologie.eu)" # Důležité: bez lomítka na konci
+
+# --- AKTIVACE TÉMATU ---
+remote_theme: mmistakes/minimal-mistakes
+plugins:
+  - jekyll-include-cache
+
+# --- NASTAVENÍ VZHLEDU ---
+minimal_mistakes_skin: "air" # Varianty: "air", "default", "dark", "sunrise"
+locale: "cs-CZ"              # Nastaví češtinu (datumy, tlačítka)
+
+# --- MENU A ODKAZY ---
+defaults:
+  # Nastavení pro články
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true   # Zobrazit panel s autorem vlevo
+      share: true            # Tlačítka pro sdílení
