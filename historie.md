@@ -13,6 +13,7 @@ toc: false
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 20px 0;
 }
 
 /* Svislá čára uprostřed */
@@ -20,7 +21,7 @@ toc: false
   content: '';
   position: absolute;
   width: 6px;
-  background-color: #e9ecef; /* Barva čáry */
+  background-color: #34495e; /* NOVÁ BARVA OSY (Tmavě modrošedá) */
   top: 0;
   bottom: 0;
   left: 50%;
@@ -30,7 +31,7 @@ toc: false
 
 /* Kontejner pro jednotlivé body */
 .container {
-  padding: 10px 40px;
+  padding: 10px 25px; /* ZMENŠENO z 40px - bubliny jsou nyní širší a blíže středu */
   position: relative;
   background-color: inherit;
   width: 50%;
@@ -45,8 +46,8 @@ toc: false
   height: 20px;
   right: -10px;
   background-color: white;
-  border: 4px solid #FF9F55; /* Barva tečky */
-  top: 20px;
+  border: 4px solid #34495e; /* Barva rámečku tečky ladí s osou */
+  top: 24px;
   border-radius: 50%;
   z-index: 1;
 }
@@ -60,12 +61,22 @@ toc: false
 
 /* Obsahová bublina */
 .content-box {
-  padding: 20px 30px;
+  padding: 15px 25px; /* Trochu menší vnitřní odsazení */
   background-color: white;
   position: relative;
-  border-radius: 6px;
-  border-left: 5px solid #ccc; /* Výchozí barva proužku */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Stín */
+  border-radius: 8px; 
+  border-left: 6px solid #ccc;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  font-size: 0.9rem; /* ZMENŠENÍ TEXTU */
+  line-height: 1.4;
+}
+
+/* Úprava nadpisů v bublinách */
+.content-box h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.1rem; /* ZMENŠENÍ NADPISU */
+    font-weight: bold;
 }
 
 /* --- BARVY KATEGORIÍ (Proužky vlevo) --- */
