@@ -6,21 +6,14 @@ author_profile: true
 toc: false
 ---
 
-Zde naleznete kompletní seznam studií, knih a dokumentů, ze kterých na tomto webu čerpáme. 
-Soubory jsou dostupné buď přímo u vydavatele, nebo v našem archivu.
+Zde naleznete kompletní seznam zdrojů.
 
-<!-- Styl pro tabulku, aby byla hezčí -->
 <style>
   table { width: 100%; display: table; }
-  tr:target { background-color: #ffffcc; } /* Zvýrazní řádek po kliknutí na odkaz */
+  tr:target { background-color: #ffffcc; }
   .type-badge { 
-      font-size: 0.7em; 
-      padding: 2px 6px; 
-      border-radius: 4px; 
-      background-color: #eee; 
-      color: #555;
-      text-transform: uppercase;
-      font-weight: bold;
+      font-size: 0.7em; padding: 2px 6px; border-radius: 4px; 
+      background-color: #eee; color: #555; text-transform: uppercase; font-weight: bold;
   }
 </style>
 
