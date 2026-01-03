@@ -1,24 +1,24 @@
 main:
   - title: "Úvod"
     url: /
-
+    
+  - title: "Pozorování"
+    url: /pozorovani/
+    
   - title: "Historie"
     url: /historie/
-
-  - title: "Slovníček"
-    url: /slovnicek/
-
-  - title: "Osobnosti"
-    url: /osobnosti/
-
+    
   - title: "Mechanismy"
     url: /mechanismy/
     
   - title: "Metody"
     url: /metody/
+    
+  - title: "Slovníček"
+    url: /slovnicek/
 
+  - title: "Osobnosti"
+    url: /osobnosti/
+    
   - title: "Disidenti"
     url: /disidenti/
-
-  - title: "Pozorování"
-    url: /pozorovani/
