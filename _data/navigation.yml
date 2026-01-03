@@ -2,11 +2,23 @@ main:
   - title: "Úvod"
     url: /
 
-  - title: "O projektu"
-    url: /o-projektu/
+  - title: "Historie"
+    url: /historie/
 
-  - title: "Blog & Novinky"
-    url: /blog/
+  - title: "Slovníček"
+    url: /slovnicek/
 
-  - title: "Data v grafech"
-    url: /data/
+  - title: "Osobnosti"
+    url: /osobnosti/
+
+  - title: "Mechanismy"
+    url: /mechanismy/
+    
+  - title: "Metody"
+    url: /metody/
+
+  - title: "Disidenti"
+    url: /disidenti/
+
+  - title: "Pozorování"
+    url: /pozorovani/
