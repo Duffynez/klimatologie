@@ -2,29 +2,11 @@
 # Klíč (ID) musí být jedinečný. Doporučuji formát: ROK_Příjmení
 # Typy: Studie, Kniha, Video, Článek, Report
 
-2023_Mann:
-  id: "2023_Mann"
-  title: "The Hockey Stick and the Climate Wars"
-  author: "Michael E. Mann"
-  year: "2023"
-  source: "Columbia University Press"
-  url: "[https://drive.google.com/file/d/vas-odkaz-na-google-drive](https://drive.google.com/file/d/vas-odkaz-na-google-drive)"
-  type: "Kniha"
-
-2001_IPCC:
-  id: "2001_IPCC"
-  title: "Climate Change 2001: The Scientific Basis"
-  author: "IPCC Working Group I"
-  year: "2001"
-  source: "Cambridge University Press"
-  url: "[https://www.ipcc.ch/report/ar3/wg1/](https://www.ipcc.ch/report/ar3/wg1/)" 
-  type: "Report"
-
-1896_Arrhenius:
-  id: "1896_Arrhenius"
-  title: "On the Influence of Carbonic Acid in the Air upon the Temperature of the Ground"
-  author: "Svante Arrhenius"
-  year: "1896"
-  source: "Philosophical Magazine"
-  url: "[https://drive.google.com/file/d/odkaz-na-stare-pdf](https://drive.google.com/file/d/odkaz-na-stare-pdf)"
+1862_Tyndall:
+  id: "1862_Tyndall"
+  title: "Philosophical Transactions of the Royal Society of London"
+  author: "John Tyndall" 
+  year: "1862"
+  source: "Royal Society"
+  url: "https://drive.google.com/file/d/16tQmPe8jO8sTpmKTBmUjCzqxz4i6W_hY/view?usp=drive_link"
   type: "Studie"
