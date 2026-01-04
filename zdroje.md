@@ -19,7 +19,6 @@ Zde naleznete kompletní seznam zdrojů.
 </style>
 
 | ID zdroje | Název díla | Autor & Rok | Typ |
-|:---|:---|:---|:---|
 {% for citace in site.data.citace %}
 | <a id="{{ citace.id }}"></a>**[{{ citace.id }}]** | <a href="{{ citace.url }}" target="_blank">**{{ citace.title }}**</a><br>_Zdroj: {{ citace.source }}_ | {{ citace.author }}<br>({{ citace.year }}) | <span class="type-badge">{{ citace.type }}</span> |
 {% endfor %}
