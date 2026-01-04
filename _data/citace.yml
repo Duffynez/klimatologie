@@ -1,12 +1,18 @@
- --- VZOROVÁ DATA (Můžete smazat a nahradit svými) ---
-# Klíč (ID) musí být jedinečný. Doporučuji formát: ROK_Příjmení
-# Typy: Studie, Kniha, Video, Článek, Report
+# Soubor: _data/citace.yml
+# Seznam zdrojů. Každý záznam začíná pomlčkou.
 
-1862_Tyndall:
-  id: "1862_Tyndall"
+- id: "1862_Tyndall"
   title: "Philosophical Transactions of the Royal Society of London"
-  author: "John Tyndall" 
+  author: "John Tyndall"
   year: "1862"
   source: "Royal Society"
   url: "https://drive.google.com/file/d/16tQmPe8jO8sTpmKTBmUjCzqxz4i6W_hY/view?usp=drive_link"
   type: "Studie"
+
+- id: "2024_Novak"
+  title: "Příklad další knihy"
+  author: "Jan Novák"
+  year: "2024"
+  source: "Nakladatelství XYZ"
+  url: "#"
+  type: "Kniha"
