@@ -1,12 +1,3 @@
----
-title: "Historie poznání klimatu"
-layout: single
-permalink: /historie/
-author_profile: true
-toc: false
----
-
-<!-- ZDE ZAČÍNÁ STYL PRO ČASOVOU OSU (Nezasahovat, pokud nechcete měnit vzhled) -->
 <style>
 /* Obal celé osy */
 .timeline {
@@ -21,7 +12,7 @@ toc: false
   content: '';
   position: absolute;
   width: 6px;
-  background-color: #34495e; /* NOVÁ BARVA OSY (Tmavě modrošedá) */
+  background-color: #34495e;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -29,122 +20,143 @@ toc: false
   border-radius: 3px;
 }
 
-/* Kontejner pro jednotlivé body */
+/* Kontejner - SPOLEČNÉ VLASTNOSTI */
 .container {
-  padding: 10px 25px; /* ZMENŠENO z 40px - bubliny jsou nyní širší a blíže středu */
+  padding: 10px 25px;
   position: relative;
   background-color: inherit;
   width: 50%;
   box-sizing: border-box;
 }
 
-/* Tečka na ose */
+/* Tečka na ose - SPOLEČNÉ */
 .container::after {
   content: '';
   position: absolute;
   width: 20px;
   height: 20px;
-  right: -10px;
+  right: -10px; /* Výchozí pro levou stranu */
   background-color: white;
-  border: 4px solid #34495e; /* Barva rámečku tečky ladí s osou */
+  border: 4px solid #34495e;
   top: 24px;
   border-radius: 50%;
   z-index: 1;
 }
 
-/* Levá a pravá strana */
-.left { left: 0; }
-.right { left: 50%; }
+/* --- AUTOMATICKÉ STŘÍDÁNÍ STRAN (Magie začíná zde) --- */
 
-/* Umístění šipek a teček pro pravou stranu */
-.right::after { left: -10px; }
+/* LICHÉ položky (1., 3., 5...) - VLEVO */
+.container:nth-child(odd) {
+  left: 0;
+}
+
+/* SUDÉ položky (2., 4., 6...) - VPRAVO */
+.container:nth-child(even) {
+  left: 50%;
+}
+
+/* Úprava tečky a šipky pro SUDÉ (pravé) položky */
+.container:nth-child(even)::after {
+  left: -10px; /* Tečka se přesune doleva */
+}
+
 
 /* Obsahová bublina */
 .content-box {
-  padding: 15px 25px; /* Trochu menší vnitřní odsazení */
+  padding: 15px 25px;
   background-color: white;
   position: relative;
   border-radius: 8px; 
   border-left: 6px solid #ccc;
   box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-  font-size: 0.9rem; /* ZMENŠENÍ TEXTU */
+  font-size: 0.9rem;
   line-height: 1.4;
 }
 
-/* Úprava nadpisů v bublinách */
 .content-box h3 {
     margin-top: 0;
     margin-bottom: 5px;
-    font-size: 1.1rem; /* ZMENŠENÍ NADPISU */
+    font-size: 1.1rem;
     font-weight: bold;
 }
 
-/* --- BARVY KATEGORIÍ (Proužky vlevo) --- */
-/* Politika = Červená */
+/* BARVY KATEGORIÍ */
 .politika { border-left-color: #e74c3c; }
 .politika h3 { color: #e74c3c; }
-
-/* Věda/Pozorování = Modrá */
 .veda { border-left-color: #3498db; }
 .veda h3 { color: #3498db; }
-
-/* Osobnosti = Zelená */
 .osobnost { border-left-color: #2ecc71; }
 .osobnost h3 { color: #2ecc71; }
 
-/* Responzivita pro mobily (Vše se srovná pod sebe) */
+/* RESPONZIVITA (Mobily) */
 @media screen and (max-width: 600px) {
   .timeline::after { left: 31px; }
+  
+  /* Na mobilu zrušíme střídání a vše dáme pod sebe */
   .container { width: 100%; padding-left: 70px; padding-right: 25px; }
-  .container::after { left: 21px; }
-  .left::after, .right::after { left: 21px; }
-  .right { left: 0%; }
+  
+  /* Vynutíme pozici pro obě varianty */
+  .container:nth-child(odd), 
+  .container:nth-child(even) { 
+    left: 0; 
+  }
+  
+  .container::after,
+  .container:nth-child(even)::after { 
+    left: 21px; 
+  }
 }
 </style>
 
-<!-- ZDE ZAČÍNÁ OBSAH ČASOVÉ OSY -->
-<!-- Tady budete přidávat události -->
 
-<div class="timeline">
 
-  <!-- UDÁLOST 1 (VLEVO) - Věda -->
-  <div class="container left">
+
+<div class="container">
+    <div class="content-box veda">
+      <h3>1681 - Edme Mariotte</h3>
+      <p>Všiml si, že sluneční světlo a teplo snadno prochází sklem, ale sálavé teplo (např. z horkého povrchu) se odráží nebo je pohlceno. Jde o úplně první pozorování principu, na kterém funguje skleníkový efekt.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="content-box veda">
+      <h3>1767 - H. B. de Saussure</h3>
+      <p>Sestrojil první „horkou krabici“ (heliothermometer). Šlo o izolovanou nádobu zakrytou vrstvami skla, která se na slunci rozpálila až na bod varu vody. Dokázal tak, že sklo dokáže uvěznit sluneční teplo.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="content-box veda">
+      <h3>1801 - William Herschel</h3>
+      <p>Při zkoumání slunečního spektra objevil <strong>infračervené záření</strong>. Zjistil, že nejvíce tepla se skrývá v neviditelné části světla za červenou barvou. To bylo zásadní pro pochopení toho, jak Země přijímá a vyzařuje energii.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="content-box veda">
+      <h3>1804 - John Leslie</h3>
+      <p>Publikoval experimenty o povaze tepla. Pomocí tzv. <em>Leslieho kostky</em> zkoumal, jak různé povrchy (lesklé vs. černé) vyzařují a pohlcují teplo, což je klíčové pro fyziku atmosféry.</p>
+    </div>
+  </div>
+
+  <div class="container">
     <div class="content-box veda">
       <h3>1824 - Joseph Fourier</h3>
-      <p>Poprvé popsán <strong>skleníkový efekt</strong>. Fourier spočítal, že by Země měla být mnohem chladnější, pokud by ji neohřívala atmosféra.</p>
+      <p>Shrnul poznatky o teplotě Země. Vyslovil hypotézu, že atmosféra funguje jako izolant (podobně jako Saussurova krabice), který udržuje planetu teplejší, než by byla v prázdném prostoru.</p>
     </div>
   </div>
 
-  <!-- UDÁLOST 2 (VPRAVO) - Věda -->
-  <div class="container right">
+  <div class="container">
+    <div class="content-box veda">
+      <h3>1840 - Louis Agassiz</h3>
+      <p>Vydal dílo <em>Études sur les glaciers</em>, kde poprvé vědecky formuloval teorii <strong>dob ledových</strong>. Ukázal, že klima Země není stabilní a v minulosti procházelo drastickými změnami.</p>
+    </div>
+  </div>
+
+  <div class="container">
     <div class="content-box veda">
       <h3>1856 - Eunice Newton Foote</h3>
-      <p>Experimentálně prokázala, že <strong>CO2 pohlcuje teplo</strong>. Byla to první vědecká studie spojující plyny v atmosféře s teplotou.</p>
+      <p>Experimentálně prokázala, že válec naplněný oxidem uhličitým se na slunci zahřeje mnohem více než ten se vzduchem. Jako první předpověděla, že změna množství CO2 v atmosféře změní teplotu planety.</p>
     </div>
   </div>
 
-  <!-- UDÁLOST 3 (VLEVO) - Osobnost -->
-  <div class="container left">
-    <div class="content-box osobnost">
-      <h3>1896 - Svante Arrhenius</h3>
-      <p>Vypočítal, že zdvojnásobení CO2 v atmosféře by zvýšilo teplotu o 5-6 °C. Tehdy to považoval za pozitivní věc, která oddálí dobu ledovou.</p>
-    </div>
-  </div>
-
-  <!-- UDÁLOST 4 (VPRAVO) - Pozorování -->
-  <div class="container right">
-    <div class="content-box veda">
-      <h3>1958 - Keelingova křivka</h3>
-      <p>Začátek měření CO2 na observatoři Mauna Loa. První nezvratný důkaz, že koncentrace oxidu uhličitého roste.</p>
-    </div>
-  </div>
-
-  <!-- UDÁLOST 5 (VLEVO) - Politika -->
-  <div class="container left">
-    <div class="content-box politika">
-      <h3>1988 - Založení IPCC</h3>
-      <p>OSN zakládá Mezivládní panel pro změnu klimatu, aby poskytoval objektivní vědecké informace.</p>
-    </div>
-  </div>
-
-</div>
