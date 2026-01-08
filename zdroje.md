@@ -4,6 +4,7 @@ layout: single
 permalink: /zdroje/
 author_profile: true
 toc: false
+classes: wide
 ---
 
 Zde naleznete kompletní seznam zdrojů.
