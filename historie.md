@@ -4,6 +4,7 @@ layout: single
 permalink: /historie/
 author_profile: true
 toc: false
+classes: wide
 ---
 
 <style>
@@ -158,3 +159,4 @@ toc: false
   </div>
 
 </div>
+
