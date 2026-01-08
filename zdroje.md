@@ -58,42 +58,41 @@ Zde naleznete kompletní seznam zdrojů seřazený chronologicky.
 </style>
 
 <div class="table-wrapper">
-  <table class="sources-table">
-    <thead>
-      <tr>
-        <th style="width: 15%;">ID zdroje</th>
-        <th style="width: 45%;">Název díla</th>
-        <th style="width: 25%;">Autor & Rok</th>
-        <th style="width: 15%;">Typ</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% assign sorted_citace = site.data.citace | sort: 'year' %}
-      
-      {% for citace in sorted_citace %}
-      <tr id="{{ citace.id }}">
-        <td>
-            <strong>[{{ citace.id }}]</strong>
-        </td>
-        <td>
-            {% if citace.url != "" %}
-              <a href="{{ citace.url }}" target="_blank"><strong>{{ citace.title }}</strong></a>
-            {% else %}
-              <strong>{{ citace.title }}</strong>
-            {% endif %}
-            <br>
-            <em style="color: #666; font-size: 0.9em;">Zdroj: {{ citace.source }}</em>
-        </td>
-        <td>
-            {{ citace.author }}
-            <br>
-            ({{ citace.year }})
-        </td>
-        <td>
-            <span class="type-badge">{{ citace.type }}</span>
-        </td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+<table class="sources-table">
+<thead>
+<tr>
+<th style="width: 15%;">ID zdroje</th>
+<th style="width: 45%;">Název díla</th>
+<th style="width: 25%;">Autor & Rok</th>
+<th style="width: 15%;">Typ</th>
+</tr>
+</thead>
+<tbody>
+{% assign sorted_citace = site.data.citace | sort: 'year' %}
+{% for citace in sorted_citace %}
+<tr id="{{ citace.id }}">
+<td>
+<strong>[{{ citace.id }}]</strong>
+</td>
+<td>
+{% if citace.url != "" %}
+<a href="{{ citace.url }}" target="_blank"><strong>{{ citace.title }}</strong></a>
+{% else %}
+<strong>{{ citace.title }}</strong>
+{% endif %}
+<br>
+<em style="color: #666; font-size: 0.9em;">Zdroj: {{ citace.source }}</em>
+</td>
+<td>
+{{ citace.author }}
+<br>
+({{ citace.year }})
+</td>
+<td>
+<span class="type-badge">{{ citace.type }}</span>
+</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
 </div>
