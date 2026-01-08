@@ -7,7 +7,7 @@ toc: false
 classes: wide
 ---
 
-Zde naleznete kompletní seznam zdrojů.
+Zde naleznete kompletní seznam zdrojů seřazený chronologicky.
 
 <style>
   /* Stylování tabulky */
@@ -17,7 +17,7 @@ Zde naleznete kompletní seznam zdrojů.
       margin: 20px 0;
       font-size: 0.9em;
   }
-  
+   
   .sources-table th {
       background-color: #f2f2f2;
       text-align: left;
@@ -28,12 +28,12 @@ Zde naleznete kompletní seznam zdrojů.
   .sources-table td {
       padding: 12px;
       border-bottom: 1px solid #ddd;
-      vertical-align: top; /* Zarovnání nahoru, aby texty seděly */
+      vertical-align: top;
   }
 
-  /* Efekt při prokliku na konkrétní citaci (zežloutnutí řádku) */
+  /* Efekt při prokliku na konkrétní citaci */
   tr:target {
-      background-color: #fff9c4 !important; /* !important přebije styl šablony */
+      background-color: #fff9c4 !important;
       transition: background-color 0.5s ease-in;
   }
 
@@ -68,13 +68,19 @@ Zde naleznete kompletní seznam zdrojů.
       </tr>
     </thead>
     <tbody>
-      {% for citace in site.data.citace %}
+      {% assign sorted_citace = site.data.citace | sort: 'year' %}
+      
+      {% for citace in sorted_citace %}
       <tr id="{{ citace.id }}">
         <td>
             <strong>[{{ citace.id }}]</strong>
         </td>
         <td>
-            <a href="{{ citace.url }}" target="_blank"><strong>{{ citace.title }}</strong></a>
+            {% if citace.url != "" %}
+              <a href="{{ citace.url }}" target="_blank"><strong>{{ citace.title }}</strong></a>
+            {% else %}
+              <strong>{{ citace.title }}</strong>
+            {% endif %}
             <br>
             <em style="color: #666; font-size: 0.9em;">Zdroj: {{ citace.source }}</em>
         </td>
