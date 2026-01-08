@@ -1,3 +1,11 @@
+---
+title: "Historie poznání klimatu"
+layout: single
+permalink: /historie/
+author_profile: true
+toc: false
+---
+
 <style>
 /* Obal celé osy */
 .timeline {
@@ -43,7 +51,7 @@
   z-index: 1;
 }
 
-/* --- AUTOMATICKÉ STŘÍDÁNÍ STRAN (Magie začíná zde) --- */
+/* --- AUTOMATICKÉ STŘÍDÁNÍ STRAN --- */
 
 /* LICHÉ položky (1., 3., 5...) - VLEVO */
 .container:nth-child(odd) {
@@ -55,11 +63,10 @@
   left: 50%;
 }
 
-/* Úprava tečky a šipky pro SUDÉ (pravé) položky */
+/* Úprava tečky pro SUDÉ (pravé) položky */
 .container:nth-child(even)::after {
-  left: -10px; /* Tečka se přesune doleva */
+  left: -10px;
 }
-
 
 /* Obsahová bublina */
 .content-box {
@@ -91,27 +98,17 @@
 /* RESPONZIVITA (Mobily) */
 @media screen and (max-width: 600px) {
   .timeline::after { left: 31px; }
-  
-  /* Na mobilu zrušíme střídání a vše dáme pod sebe */
   .container { width: 100%; padding-left: 70px; padding-right: 25px; }
-  
-  /* Vynutíme pozici pro obě varianty */
   .container:nth-child(odd), 
-  .container:nth-child(even) { 
-    left: 0; 
-  }
-  
+  .container:nth-child(even) { left: 0; }
   .container::after,
-  .container:nth-child(even)::after { 
-    left: 21px; 
-  }
+  .container:nth-child(even)::after { left: 21px; }
 }
 </style>
 
+<div class="timeline">
 
-
-
-<div class="container">
+  <div class="container">
     <div class="content-box veda">
       <h3>1681 - Edme Mariotte</h3>
       <p>Všiml si, že sluneční světlo a teplo snadno prochází sklem, ale sálavé teplo (např. z horkého povrchu) se odráží nebo je pohlceno. Jde o úplně první pozorování principu, na kterém funguje skleníkový efekt.</p>
@@ -160,3 +157,4 @@
     </div>
   </div>
 
+</div>
