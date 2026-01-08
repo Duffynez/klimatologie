@@ -1,5 +1,5 @@
 ---
-title: "Historie poznání klimatu"
+title: "Mechanismy, kterými se vysvětlujeme pozorování"
 layout: single
 permalink: /mechanismy/
 author_profile: true
