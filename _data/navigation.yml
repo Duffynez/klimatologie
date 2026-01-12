@@ -25,3 +25,29 @@ main:
 
   - title: "Zdroje"
     url: /zdroje/
+    
+pozorovani_menu:
+  - title: "Seznam pozorování"
+    children:
+      - title: "Globální teplota (GMST)"
+        url: /pozorovani/gmst/
+      - title: "Stratosférické ochlazování"
+        url: /pozorovani/stratosfericke-ochlazovani/
+      - title: "Nárůst vlhkosti"
+        url: /pozorovani/narust-vlhkosti/
+      - title: "Tepelný obsah oceánů (OHC)"
+        url: /pozorovani/ohc/
+      - title: "Vzestup hladiny oceánů (GMSL)"
+        url: /pozorovani/gmsl/
+      - title: "Acidifikace oceánů"
+        url: /pozorovani/acidifikace-oceanu/
+      - title: "Úbytek arktického ledu"
+        url: /pozorovani/ubytek-arktickeho-ledu/
+      - title: "Ústup horských ledovců"
+        url: /pozorovani/ustup-ledovcu/
+      - title: "Nestabilita ledových příkrovů"
+        url: /pozorovani/nestabilita-prikrovu/
+      - title: "Fenologické posuny (Jaro)"
+        url: /pozorovani/fenologicke-posuny/
+      - title: "Vlny veder"
+        url: /pozorovani/vlny-veder/
