@@ -5,6 +5,7 @@ layout: single
 author_profile: false
 sidebar:
   nav: "pozorovani_menu"
+classes: wide
 ---
 
 Vítejte v sekci pozorování. Tato část webu shrnuje klíčové fyzikální důkazy o probíhající změně klimatu.
