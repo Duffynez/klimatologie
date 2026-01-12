@@ -8,6 +8,7 @@
   source: "Paris"
   url: "https://drive.google.com/file/d/1hFTtUv6uDwtnOAyuGCC2vQjN6OgjEx8S/view?usp=sharing"
   type: "Kniha"
+  # [[1681_Mariotte]](/zdroje/#1681_Mariotte)
 
 - id: "1767_Saussure"
   title: "Voyages dans les Alpes (Cesty po Alpách)"
@@ -16,6 +17,7 @@
   source: "Neuchâtel"
   url: "https://drive.google.com/file/d/1WaJkNLg7jPsZ3it7opQ1LobD7AzOy8AV/view?usp=sharing"
   type: "Kniha"
+  # [[1767_Saussure]](/zdroje/#1767_Saussure)
 
 - id: "1801_Herschel"
   title: "Experiments on the Refrangibility of the invisible Rays of the Sun"
@@ -24,6 +26,7 @@
   source: "Philosophical Transactions of the Royal Society"
   url: "https://drive.google.com/file/d/17-KtOmjoq0FuBnixuXs4qhBsmTrJoSqw/view?usp=sharing"
   type: "Studie"
+  # [[1801_Herschel]](/zdroje/#1801_Herschel)
 
 - id: "1804_Leslie"
   title: "An Experimental Inquiry into the Nature and Propagation of Heat"
@@ -32,6 +35,7 @@
   source: "J. Mawman, London"
   url: "https://drive.google.com/file/d/1fAT9WjbOuIVrIL1pLJIF8koWMfVxl-yv/view?usp=sharing"
   type: "Kniha"
+  # [[1804_Leslie]](/zdroje/#1804_Leslie)
 
 - id: "1824_Fourier"
   title: "Remarques générales sur les températures du globe terrestre et des espaces planétaires"
@@ -40,6 +44,7 @@
   source: "Annales de Chimie et de Physique"
   url: "https://drive.google.com/file/d/1h9pv2MwWFjeZTcIcrFm7TM8EmkBM5TFl/view?usp=sharing"
   type: "Studie"
+  # [[1824_Fourier]](/zdroje/#1824_Fourier)
 
 - id: "1840_Agassiz"
   title: "Études sur les glaciers (Studie o ledovcích)"
@@ -48,6 +53,7 @@
   source: "Neuchâtel"
   url: "https://drive.google.com/file/d/1y8BZ81B-tPFX28s-4QwDCiYKjMLgh-KO/view?usp=sharing"
   type: "Kniha"
+  # [[1840_Agassiz]](/zdroje/#1840_Agassiz)
 
 - id: "1856_Foote"
   title: "Circumstances affecting the Heat of the Sun's Rays"
@@ -56,6 +62,7 @@
   source: "The American Journal of Science and Arts"
   url: "https://drive.google.com/file/d/15oymxiaSMzXA98QHhlvsMRLOZGohHEFj/view?usp=sharing"
   type: "Studie"
+  # [[1856_Foote]](/zdroje/#1856_Foote)
 
 - id: "1862_Tyndall"
   title: "On the Absorption and Radiation of Heat by Gases and Vapours"
@@ -64,6 +71,7 @@
   source: "Philosophical Transactions of the Royal Society of London"
   url: "https://drive.google.com/file/d/16tQmPe8jO8sTpmKTBmUjCzqxz4i6W_hY/view?usp=sharing"
   type: "Studie"
+  # [[1862_Tyndall]](/zdroje/#1862_Tyndall)
 
 - id: "1864_Croll"
   title: "On the Physical Cause of the Change of Climate during Geological Epochs"
@@ -72,6 +80,7 @@
   source: "Philosophical Magazine"
   url: "https://drive.google.com/file/d/1vsCMQbkVqpuDHsCNj00ANCU6tdvADrF4/view?usp=sharing"
   type: "Studie"
+  # [[1864_Croll]](/zdroje/#1864_Croll)
 
 - id: "1884_Langley"
   title: "Researches on Solar Heat and its Absorption by the Earth's Atmosphere"
@@ -80,6 +89,7 @@
   source: "Professional Papers of the Signal Service"
   url: "https://drive.google.com/file/d/1RFtDRgwXmn8ETxmUdINDzs8IDMoFmJyY/view?usp=sharing"
   type: "Report"
+  # [[1884_Langley]](/zdroje/#1884_Langley)
 
 - id: "1894_Hogbom"
   title: "Om sannolikheten för sekulära förändringar i atmosfärens kolsyrehalt"
@@ -88,6 +98,7 @@
   source: "Svensk Kemisk Tidskrift"
   url: "https://drive.google.com/file/d/1l_AeVv8G8S0BKzzUr4bTvQZN5-gN_VxH/view?usp=sharing"
   type: "Studie"
+  # [[1894_Hogbom]](/zdroje/#1894_Hogbom)
 
 - id: "1896_Arrhenius"
   title: "On the Influence of Carbonic Acid in the Air upon the Temperature of the Ground"
@@ -96,6 +107,7 @@
   source: "Philosophical Magazine and Journal of Science"
   url: "https://drive.google.com/file/d/1-gReg5x8Tsm43c7GCDEB6JV80VXDj0VU/view?usp=sharing"
   type: "Studie"
+  # [[1896_Arrhenius]](/zdroje/#1896_Arrhenius)
 
 - id: "1938_Callendar"
   title: "The artificial production of carbon dioxide and its influence on temperature"
@@ -104,6 +116,7 @@
   source: "Quarterly Journal of the Royal Meteorological Society"
   url: "https://drive.google.com/file/d/1hL9njRIBCqEfW3qz8cV2GidMB7QeKCZr/view?usp=sharing"
   type: "Studie"
+  # [[1938_Callendar]](/zdroje/#1938_Callendar)
 
 - id: "1941_Milankovic"
   title: "Kanon der Erdbestrahlung und seine Anwendung auf das Eiszeitenproblem"
@@ -112,6 +125,7 @@
   source: "Royal Serbian Academy"
   url: "https://drive.google.com/file/d/19N2a7IvozAvjVkxuqw9XHJV2UlU9m2Jt/view?usp=sharing"
   type: "Kniha"
+  # [[1941_Milankovic]](/zdroje/#1941_Milankovic)
 
 - id: "1952_Libby"
   title: "Radiocarbon Dating"
@@ -120,6 +134,7 @@
   source: "University of Chicago Press"
   url: "https://drive.google.com/file/d/1oQH4eoKfATFNVo0PQZDdZAhLhcOXBKqD/view?usp=sharing"
   type: "Kniha"
+  # [[1952_Libby]](/zdroje/#1952_Libby)
 
 - id: "1955_Emiliani"
   title: "Pleistocene Temperatures"
@@ -128,6 +143,7 @@
   source: "The Journal of Geology"
   url: "https://drive.google.com/file/d/1BUN9N05ph73dKAEPpzYsXT7QpjaJ6X6A/view?usp=sharing"
   type: "Studie"
+  # [[1955_Emiliani]](/zdroje/#1955_Emiliani)
 
 - id: "1956_Plass"
   title: "The Carbon Dioxide Theory of Climatic Change"
@@ -136,6 +152,7 @@
   source: "Tellus"
   url: "https://drive.google.com/file/d/1OQv4tb6jf8V3dPy_01bCkfL2DIbKjQ0_/view?usp=sharing"
   type: "Studie"
+  # [[1956_Plass]](/zdroje/#1956_Plass)
 
 - id: "1961_Sullivan"
   title: "Assault on the Unknown: The International Geophysical Year"
@@ -144,3 +161,4 @@
   source: "McGraw-Hill"
   url: "https://drive.google.com/file/d/1Zs3SNWqGN4n54-1YM3YqQJK9bdK5lAhp/view?usp=sharing"
   type: "Kniha"
+  # [[1961_Sullivan]](/zdroje/#1961_Sullivan)
