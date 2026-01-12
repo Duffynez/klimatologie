@@ -29,14 +29,14 @@ defaults:
       author_profile: true
       share: true
 
-  # Nastavení pro sekci POZOROVÁNÍ (NOVÉ)
-  # Toto automaticky přidá boční menu všem stránkám v _pozorovani
+# Nastavení pro sekci POZOROVÁNÍ
   - scope:
       path: ""
       type: pozorovani
     values:
       layout: single
-      author_profile: false # U datových stránek profil autora často ruší, ale můžeš dát true
-      share: true
+      author_profile: false
+      share: false         # Tímto zmizí tlačítka Facebook, X (Twitter) atd.
+      related: false       # Tímto zmizí sekce "Mohlo by vás zajímat"
       sidebar:
-        nav: "pozorovani_menu" # Tady se volá to menu z navigation.yml
+        nav: "pozorovani_menu"
