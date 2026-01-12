@@ -8,17 +8,35 @@ remote_theme: mmistakes/minimal-mistakes
 plugins:
   - jekyll-include-cache
 
+# --- DEFINICE KOLEKCÍ (NOVÉ) ---
+collections:
+  pozorovani:
+    output: true
+    permalink: /pozorovani/:path/
+
 # --- NASTAVENÍ VZHLEDU ---
 minimal_mistakes_skin: "air" # Varianty: "air", "default", "dark", "sunrise"
 locale: "cs-CZ"              # Nastaví češtinu (datumy, tlačítka)
 
 # --- MENU A ODKAZY ---
 defaults:
-  # Nastavení pro články
+  # Nastavení pro běžné články (blog)
   - scope:
       path: ""
       type: posts
     values:
       layout: single
-      author_profile: true   # Zobrazit panel s autorem vlevo
-      share: true            # Tlačítka pro sdílení
+      author_profile: true
+      share: true
+
+  # Nastavení pro sekci POZOROVÁNÍ (NOVÉ)
+  # Toto automaticky přidá boční menu všem stránkám v _pozorovani
+  - scope:
+      path: ""
+      type: pozorovani
+    values:
+      layout: single
+      author_profile: false # U datových stránek profil autora často ruší, ale můžeš dát true
+      share: true
+      sidebar:
+        nav: "pozorovani_menu" # Tady se volá to menu z navigation.yml
