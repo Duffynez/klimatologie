@@ -34,12 +34,15 @@ classes: wide
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   }
 
+  /* ÚPRAVA: Celý obrázek bez ořezu */
   .card-image {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    background-color: #f9f9f9;
+    height: 250px;
+    object-fit: contain;      /* Zobrazí celou fotku */
+    object-position: center;  /* Vycentruje ji */
+    background-color: #fff;   /* Bílé pozadí */
     border-bottom: 1px solid #eaeaea;
+    padding: 10px;
   }
 
   .card-content {
@@ -80,12 +83,12 @@ classes: wide
 
 <div class="grid-container">
   {% assign sorted_osobnosti = site.osobnosti | sort: 'rok' %}
-  
+   
   {% for person in sorted_osobnosti %}
     <a href="{{ person.url }}" class="person-card">
-      
+       
   {% if person.header.teaser %}
-    <img src="{{ person.header.teaser }}" alt="{{ person.title }}" class="card-image">
+        <img src="{{ person.header.teaser }}" alt="{{ person.title }}" class="card-image">
       {% else %}
         <div class="card-image" style="display:flex;align-items:center;justify-content:center;color:#ccc;font-size:0.9rem;">
           (Doplnit foto)
