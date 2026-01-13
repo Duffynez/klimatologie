@@ -8,11 +8,15 @@ remote_theme: mmistakes/minimal-mistakes
 plugins:
   - jekyll-include-cache
 
-# --- DEFINICE KOLEKCÍ (NOVÉ) ---
+# --- DEFINICE KOLEKCÍ ---
 collections:
   pozorovani:
     output: true
     permalink: /pozorovani/:path/
+  
+  osobnosti:            # <--- TOTO JSME PŘIDALI
+    output: true
+    permalink: /osobnosti/:path/
 
 # --- NASTAVENÍ VZHLEDU ---
 minimal_mistakes_skin: "air" # Varianty: "air", "default", "dark", "sunrise"
@@ -29,7 +33,7 @@ defaults:
       author_profile: true
       share: true
 
-# Nastavení pro sekci POZOROVÁNÍ
+  # Nastavení pro sekci POZOROVÁNÍ
   - scope:
       path: ""
       type: pozorovani
@@ -40,3 +44,13 @@ defaults:
       related: false       # Tímto zmizí sekce "Mohlo by vás zajímat"
       sidebar:
         nav: "pozorovani_menu"
+
+  # Nastavení pro sekci OSOBNOSTI (NOVÉ)
+  - scope:
+      path: ""
+      type: osobnosti
+    values:
+      layout: single
+      author_profile: false
+      share: false         # Vypnuto sdílení i u osobností
+      related: false       # Vypnuto "Mohlo by vás zajímat"
