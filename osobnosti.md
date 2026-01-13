@@ -34,15 +34,16 @@ classes: wide
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   }
 
-  /* ÚPRAVA: Celý obrázek bez ořezu */
+  /* ÚPRAVA: Přidáno !important, aby to šablona nemohla ignorovat */
   .card-image {
-    width: 100%;
-    height: 250px;
-    object-fit: contain;      /* Zobrazí celou fotku */
-    object-position: center;  /* Vycentruje ji */
-    background-color: #fff;   /* Bílé pozadí */
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: contain !important;   /* Zobrazí celou fotku */
+    object-position: center !important;
+    background-color: #fff !important;
     border-bottom: 1px solid #eaeaea;
     padding: 10px;
+    margin: 0 !important; /* Reset marginů šablony */
   }
 
   .card-content {
@@ -90,16 +91,16 @@ classes: wide
   {% if person.header.teaser %}
         <img src="{{ person.header.teaser }}" alt="{{ person.title }}" class="card-image">
       {% else %}
-        <div class="card-image" style="display:flex;align-items:center;justify-content:center;color:#ccc;font-size:0.9rem;">
+    <div class="card-image" style="display:flex;align-items:center;justify-content:center;color:#ccc;font-size:0.9rem;">
           (Doplnit foto)
-        </div>
+    </div>
       {% endif %}
 
-   <div class="card-content">
+  <div class="card-content">
         <div class="person-year">{{ person.rok }}</div>
         <h3 class="person-name">{{ person.title }}</h3>
         <p class="person-desc">{{ person.excerpt | truncate: 120 }}</p>
-      </div>
+   </div>
     </a>
   {% endfor %}
 </div>
