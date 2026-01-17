@@ -1,6 +1,7 @@
 ---
 layout: home
 author_profile: true
+classes: wide
 header:
   overlay_image: /assets/images/hlavni-obrazek.jpg # (Volitelné: Pěkná fotka na pozadí)
   overlay_filter: 0.5 # Ztmaví fotku, aby byl text čitelný
