@@ -10,10 +10,38 @@ Cílem tohoto webu je vytvořit přehledný, důvěryhodný a "brutálně vědec
 
 Web je postaven na statickém generátoru stránek **Jekyll**. Obsah je psán v Markdown souborech, což usnadňuje správu a verzování.
 
-### Struktura
+### Správa obsahu a struktura
 
-*   Obsah je logicky členěn do sekcí, jako je například `/pozorovani/`, která shrnuje klíčové fyzikální důkazy o probíhající změně klimatu (např. růst teplot, tání ledovců).
-*   Každá stránka je navržena tak, aby poskytla srozumitelný popis daného jevu.
+Web je logicky členěn do tematických celků, které jsou technicky řešeny buď jako statické stránky, nebo pomocí Jekyll "Collections".
+
+#### Pozorování (`/pozorovani/`)
+
+*   **Technické řešení:** Jekyll Collection.
+*   **Struktura:** Každý pozorovaný jev (např. globální teplota, tání ledu) má svůj vlastní Markdown soubor ve složce `_pozorovani/`.
+*   **Zobrazení:** Hlavní stránka `/pozorovani/` slouží jako rozcestník. V postranním panelu se automaticky generuje navigační menu (`sidebar: nav: "pozorovani_menu"`), které odkazuje na jednotlivé soubory v kolekci. Tím je zajištěno, že každé nově přidané pozorování se automaticky objeví v menu.
+
+#### Historie (`/historie/`)
+
+*   **Technické řešení:** Statická Markdown stránka.
+*   **Struktura:** Celý obsah, včetně struktury časové osy a jednotlivých milníků, je zapsán přímo v souboru `historie.md`. Vzhled je definován pomocí CSS stylů vložených přímo do tohoto souboru.
+*   **Zobrazení:** Stránka jednoduše vykreslí obsah tak, jak je zapsán v souboru.
+
+#### Osobnosti (`/osobnosti/`)
+
+*   **Technické řešení:** Jekyll Collection.
+*   **Struktura:** Každá osobnost má svůj vlastní Markdown soubor ve složce `_osobnosti/`.
+*   **Metadata:** Na začátku každého souboru jsou v YAML formátu uvedena klíčová data:
+    *   `title`: Jméno osobnosti.
+    *   `rok`: Letopočet klíčového objevu (slouží k chronologickému řazení).
+    *   `excerpt`: Krátký souhrn, který se zobrazí na kartě v přehledu.
+    *   `header.teaser`: Cesta k profilovému obrázku.
+*   **Zobrazení:** Hlavní stránka `/osobnosti/` automaticky prochází všechny soubory v kolekci `_osobnosti`, seřadí je podle `roku` a vygeneruje interaktivní mřížku s kartami jednotlivých vědců. Kliknutím na kartu se uživatel dostane na detailní stránku dané osobnosti.
+
+#### Zdroje (`/zdroje/`)
+
+*   **Technické řešení:** Dynamicky generovaná stránka z datového souboru.
+*   **Struktura:** Veškeré citace jsou centralizovány v souboru `_data/citace.yml`. Každá položka obsahuje ID, název, autora, rok, typ a URL odkaz.
+*   **Zobrazení:** Stránka `zdroje.md` obsahuje kód, který prochází soubor `_data/citace.yml`, seřadí položky podle roku (`year`) a vygeneruje z nich přehlednou HTML tabulku. Každý řádek tabulky má unikátní `id` odpovídající ID citace, což umožňuje přímé odkazování (`/zdroje/#ID_citace`).
 
 ### Systém zdrojování
 
