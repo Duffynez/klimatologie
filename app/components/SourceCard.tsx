@@ -1,11 +1,14 @@
-import { Source, sourceDownloadUrl, sourceViewUrl } from "../data/sources";
+import { Source, sourceCategoryMeta, sourceDownloadUrl, sourceViewUrl } from "../data/sources";
 
 export function SourceCard({ source }: { source: Source }) {
+  const category = sourceCategoryMeta[source.category];
+
   return (
-    <article className="source-card" id={source.id}>
+    <article className={`source-card source-card--${source.category}`} id={source.id}>
       <div className="source-card__meta">
-        <span>{source.year}</span>
+        <span className="source-card__category">{category.label}</span>
         <span>{source.type}</span>
+        <span>{source.year}</span>
       </div>
       <h2>{source.title}</h2>
       <p>{source.author}</p>
