@@ -14,7 +14,14 @@ export default function Home() {
   return (
     <>
       <section className="hero">
-        <Image src="/earth-hero.jpg" alt="Země z pohledu NASA" className="hero__image" fill priority sizes="100vw" />
+        <Image
+          src="/earth-europe.jpg"
+          alt="Země při pohledu na Evropu, severní Afriku a západní Asii"
+          className="hero__image hero__image--europe"
+          fill
+          priority
+          sizes="100vw"
+        />
         <div className="hero__shade" />
         <div className="hero__content">
           <p className="eyebrow eyebrow--light">Klimatologie.eu</p>
@@ -29,7 +36,7 @@ export default function Home() {
           </div>
         </div>
         <p className="hero__credit">
-          Obraz Země: NASA, Blue Marble. <a href="https://science.nasa.gov/resource/blue-marble/" target="_blank" rel="noreferrer">Zdroj obrázku</a>
+          Obraz Země: NASA Earth Observatory, Blue Marble. <a href="https://science.nasa.gov/earth/earth-observatory/the-blue-marble-true-color-global-imagery-at-1km-resolution/" target="_blank" rel="noreferrer">Zdroj obrázku</a>
         </p>
       </section>
 

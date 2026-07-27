@@ -134,6 +134,11 @@ a {
   object-position: 70% 43%;
 }
 
+.hero__image--europe {
+  object-fit: contain;
+  object-position: 72% 50%;
+}
+
 .hero__shade {
   background: rgba(8, 21, 24, 0.58);
 }
@@ -975,6 +980,11 @@ h3 {
 
   .hero__image {
     object-position: 59% 50%;
+  }
+
+  .hero__image--europe {
+    object-fit: cover;
+    object-position: 29% 38%;
   }
 
   .hero__content {

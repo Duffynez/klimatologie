@@ -20,13 +20,16 @@ test("keeps the source library, categories, and its download model in the site",
 });
 
 test("replaces the temporary starter surface", async () => {
-  const [home, layout] = await Promise.all([
+  const [home, layout, header] = await Promise.all([
     readFile(new URL("app/page.tsx", root), "utf8"),
     readFile(new URL("app/layout.tsx", root), "utf8"),
+    readFile(new URL("app/components/SiteHeader.tsx", root), "utf8"),
   ]);
 
   assert.match(home, /Data, souvislosti, zdroje/);
+  assert.match(home, /earth-europe\.jpg/);
   assert.match(layout, /Klimatologie\.eu/);
+  assert.match(header, /href: "\/", label: "Úvod"/);
   assert.doesNotMatch(home, /SkeletonPreview|codex-preview/);
 });
 
