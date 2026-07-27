@@ -9,7 +9,11 @@ export function Citation({ id }: { id: string }) {
   }
 
   return (
-    <Link className="citation" href={`/zdroje#${source.id}`} title={`${source.author} (${source.year})`}>
+    <Link
+      className={`citation citation--${source.category}`}
+      href={`/zdroje#${source.id}`}
+      title={`${source.author} (${source.year})`}
+    >
       [{source.author.split(" ").at(-1)} {source.year}]
     </Link>
   );

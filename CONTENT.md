@@ -19,7 +19,7 @@ Každá stránka o jevu musí mít tyto části:
 4. Datové soubory, grafy a zdroje.
 5. Datum poslední kontroly.
 
-Citujte přes komponentu `Citation` a ID zdroje. Neopisujte adresy zdrojů přímo do odstavců.
+Citujte přes komponentu `Citation` a ID zdroje. Značení citace automaticky přebírá barvu kategorie zdroje; barvu nepřidávejte ručně. Neopisujte adresy zdrojů přímo do odstavců.
 
 ## Kontrolní otázky před zveřejněním
 

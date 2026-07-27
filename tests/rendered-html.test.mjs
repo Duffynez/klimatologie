@@ -29,3 +29,15 @@ test("replaces the temporary starter surface", async () => {
   assert.match(layout, /Klimatologie\.eu/);
   assert.doesNotMatch(home, /SkeletonPreview|codex-preview/);
 });
+
+test("keeps categorized citations and arrow navigation in the history timeline", async () => {
+  const [citation, history] = await Promise.all([
+    readFile(new URL("app/components/Citation.tsx", root), "utf8"),
+    readFile(new URL("app/historie/page.tsx", root), "utf8"),
+  ]);
+
+  assert.match(citation, /citation--\$\{source\.category\}/);
+  assert.match(history, /timeline__item--\$\{source\.category\}/);
+  assert.match(history, /Předchozí milník/);
+  assert.match(history, /Další milník/);
+});
