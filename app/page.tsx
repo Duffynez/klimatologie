@@ -21,6 +21,7 @@ export default function Home() {
           fill
           priority
           sizes="100vw"
+          unoptimized
         />
         <div className="hero__shade" />
         <div className="hero__content">

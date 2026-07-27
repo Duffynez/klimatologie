@@ -28,6 +28,7 @@ test("replaces the temporary starter surface", async () => {
 
   assert.match(home, /Data, souvislosti, zdroje/);
   assert.match(home, /earth-europe\.jpg/);
+  assert.match(home, /unoptimized/);
   assert.match(layout, /Klimatologie\.eu/);
   assert.match(header, /href: "\/", label: "Úvod"/);
   assert.doesNotMatch(home, /SkeletonPreview|codex-preview/);
