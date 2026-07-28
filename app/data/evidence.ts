@@ -3,11 +3,11 @@ export type EvidenceTopic = {
   title: string;
   category: string;
   summary: string;
-  status: "mapujeme zdroje" | "připravujeme data";
+  status: "mapujeme zdroje" | "připravujeme data" | "hotovo";
 };
 
 export const evidenceTopics: EvidenceTopic[] = [
-  { slug: "gmst", title: "Globální teplota", category: "Atmosféra", summary: "Rozcestník pro pozorování globální průměrné povrchové teploty, metody a datové řady.", status: "připravujeme data" },
+  { slug: "gmst", title: "Globální teplota", category: "Atmosféra", summary: "Rozcestník pro pozorování globální průměrné povrchové teploty, metody a datové řady.", status: "hotovo" },
   { slug: "stratosfericke-ochlazovani", title: "Stratosférické ochlazování", category: "Atmosféra", summary: "Místo pro popis měření ve vyšších vrstvách atmosféry a jejich interpretace.", status: "mapujeme zdroje" },
   { slug: "narust-vlhkosti", title: "Nárůst vlhkosti", category: "Atmosféra", summary: "Budoucí přehled pozorování vodní páry, měřicích metod a nejistot.", status: "mapujeme zdroje" },
   { slug: "ohc", title: "Tepelný obsah oceánů", category: "Oceány", summary: "Stránka pro data o energii uložené v oceánu, měření a zdrojové soubory.", status: "připravujeme data" },

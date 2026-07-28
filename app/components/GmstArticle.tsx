@@ -24,24 +24,21 @@ export function GmstArticle() {
         </p>
 
         <p>
-          Tato konstrukce není specifická pro HadCRUT5 ani není nová. Parker a kol. v roce 1994 sestavili globální
-          pole dekádních ročních anomálií z teploty vzduchu nad pevninou a SST. {" "}
+          Takové globální řady nevznikly až s HadCRUT5. Parker a kol. v roce 1994 sestavili globální pole dekádních
+          anomálií z teploty vzduchu nad pevninou a SST. {" "}
           <ReferenceLink href="https://doi.org/10.1029/94JD00548">Parker et al., 1994</ReferenceLink>{" "}
-          Folland a kol. v roce 2001 z těchto složek počítali globální a hemisférické roční anomálie optimálním
-          vážením. {" "}
+          Folland a kol. v roce 2001 z téže dvojice dat spočítali globální a hemisférické roční anomálie. {" "}
           <ReferenceLink href="https://doi.org/10.1029/2001GL012877">Folland et al., 2001</ReferenceLink>{" "}
-          Smith a Reynolds pak v roce 2005 popsali měsíční globální rekonstrukci, která slučuje teplotu vzduchu nad
-          pevninou a teplotu mořské hladiny. {" "}
+          Smith a Reynolds v roce 2005 popsali její měsíční globální rekonstrukci. {" "}
           <ReferenceLink href="https://doi.org/10.1175/JCLI3362.1">Smith &amp; Reynolds, 2005</ReferenceLink>
         </p>
 
         <p>
-          Pozdější datové soubory tuto základní konstrukci rozvíjejí různými mřížkami, způsoby práce s chybějícími
-          oblastmi a modely nejistoty. Morice a kol. v roce 2012 spojili analýzy teploty vzduchu u povrchu a SST do
-          HadCRUT4. {" "}
+          Novější datové soubory se liší mřížkou, prací s mezerami a popisem nejistoty. Základní dvojice měření však
+          zůstává stejná. Morice a kol. v roce 2012 spojili teplotu vzduchu u povrchu a SST do HadCRUT4. {" "}
           <ReferenceLink href="https://doi.org/10.1029/2011JD017187">Morice et al., 2012</ReferenceLink>{" "}
-          Rohde a Hausfather v roce 2020 stejnou dvojici veličin výslovně popisují jako obvyklý globální land-ocean
-          index a dokumentují její použití v řadě Berkeley Earth. {" "}
+          Rohde a Hausfather v roce 2020 stejnou kombinaci popsali pro řadu Berkeley Earth jako teplotu vzduchu ve
+          výšce 2 metrů nad pevninou a SST nad oceánem. {" "}
           <ReferenceLink href="https://doi.org/10.5194/essd-12-3469-2020">Rohde &amp; Hausfather, 2020</ReferenceLink>
         </p>
 
