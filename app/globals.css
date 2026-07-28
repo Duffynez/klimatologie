@@ -597,10 +597,16 @@ h3 {
 }
 
 .article-glossary {
-  align-self: start;
+  position: fixed;
+  top: 88px;
+  right: max(20px, calc((100vw - var(--max-width)) / 2));
+  width: 248px;
+  max-height: calc(100vh - 108px);
+  overflow-y: auto;
   padding: 22px;
   border-top: 4px solid var(--sea);
   background: var(--white);
+  scrollbar-width: thin;
 }
 
 .article-glossary h2 {
@@ -1069,6 +1075,10 @@ h3 {
     gap: 34px;
   }
 
+  .article-glossary {
+    width: 205px;
+  }
+
   .source-card__actions {
     grid-column: 2;
     justify-content: start;
@@ -1199,6 +1209,9 @@ h3 {
   }
 
   .article-glossary {
+    position: static;
+    width: auto;
+    max-height: none;
     order: -1;
   }
 

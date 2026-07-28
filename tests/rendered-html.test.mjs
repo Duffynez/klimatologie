@@ -62,6 +62,6 @@ test("publishes the global surface temperature article instead of the generic pl
   assert.doesNotMatch(article, /<dt>Teplota u povrchu<\/dt>/);
   assert.doesNotMatch(article, /<dt>Anomálie<\/dt>/);
   assert.doesNotMatch(article, /<dt>Homogenizace<\/dt>/);
-  assert.doesNotMatch(styles, /\.article-glossary\s*\{\s*position: sticky/);
+  assert.match(styles, /\.article-glossary\s*\{\s*position: fixed/);
   assert.match(article, /10\.1029\/2019JD032361/);
 });
