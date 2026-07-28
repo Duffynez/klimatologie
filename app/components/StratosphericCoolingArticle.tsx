@@ -14,23 +14,38 @@ export function StratosphericCoolingArticle() {
     <article className="article-layout">
       <div className="article-prose">
         <p className="article-prose__intro">
-          Dlouhodobá změna teploty ve stratosféře je soubor časových řad, které popisují tepelný stav vymezené
-          vrstvy atmosféry nad tropopauzou. Každá taková řada musí určit výškovou nebo tlakovou vrstvu, územní
-          rozsah, časový krok, referenční období a způsob zpracování přístrojových dat. Označení
-          „stratosférické ochlazování“ pak popisuje zápornou dlouhodobou změnu v takto vymezené řadě. Randel a
-          kol. srovnali satelitní, radiosondážní a lidarová pozorování právě proto, že jednotlivé metody sledují
-          odlišné části svislého profilu a mají odlišnou historii měření. {" "}
+          Teplota stratosféry je teplota vzduchu v určité vrstvě nad tropopauzou. Pro klimatickou řadu se tato
+          veličina zapisuje jako teplota nebo teplotní odchylka v přesně určené tlakové vrstvě, oblasti a čase.
+          Globální měsíční hodnota je plošně vážený průměr těchto pozorování; bez údaje o vrstvě, územním rozsahu,
+          referenčním období a datovém produktu není její význam úplný. Randel a kol. takto společně vyhodnotili
+          satelitní, radiosondážní a lidarová pozorování stratosféry. {" "}
           <ReferenceLink href="https://doi.org/10.1029/2008JD010421">Randel et al., 2009</ReferenceLink>
+        </p>
+
+        <p>
+          Stejnou veličinu lze pozorovat několika cestami. Free a kol. sestavili velkoplošnou řadu z upravených
+          radiosond, Mears a Wentz popsali návaznost mikrovlnných měření MSU a AMSU-A a Zou s Qianem spojili
+          záznamy SSU a AMSU-A pro vyšší vrstvy. Každá práce proto zároveň vymezuje, co její čísla představují a
+          jak daleko v atmosféře její přístroj dosáhne. {" "}
+          <ReferenceLink href="https://doi.org/10.1029/2005JD006169">Free et al., 2005</ReferenceLink>, {" "}
+          <ReferenceLink href="https://doi.org/10.1175/2008JTECHA1176.1">Mears &amp; Wentz, 2009</ReferenceLink>{" "}
+          a <ReferenceLink href="https://doi.org/10.1175/JTECH-D-16-0018.1">Zou &amp; Qian, 2016</ReferenceLink>.
+        </p>
+
+        <p>
+          Pro zjišťování dlouhodobé změny je proto nutné srovnávat řady, které se vztahují ke stejné vrstvě, a
+          zachovat u nich i původní metodiku. Seidel a kol. porovnali satelitní klimatické řady pro stratosféru a
+          ukázali, že jejich shoda i rozdíly jsou měřitelnou součástí výsledku. {" "}
+          <ReferenceLink href="https://doi.org/10.1002/2015JD024039">Seidel et al., 2016</ReferenceLink>
         </p>
 
         <h2>Co přesně se měří</h2>
         <p>
-          Teplota ve stratosféře není jedna hodnota pro celou planetu. V daném okamžiku se liší se zeměpisnou
-          šířkou, roční dobou i výškou. Pozorovací řady proto zveřejňují teplotu na tlakových hladinách, například
-          100, 70, 50, 30 nebo 10 hPa, případně průměr přes širší vrstvu. Tlak zde není doplňkový údaj: stejná
-          tlaková hladina se v atmosféře nenachází v přesně stejné geometrické výšce na každém místě a v každém
-          ročním období. NOAA při svém dřívějším každodenním přehledu uváděla devět hladin od 100 do 0,4 hPa,
-          přibližně v rozsahu 16 až 55 km. {" "}
+          Pozorovací řady rozepisují stratosférickou teplotu na tlakové hladiny, například 100, 70, 50, 30 nebo
+          10 hPa, případně na průměr přes širší vrstvu. Tlak zde určuje polohu ve svislém profilu atmosféry:
+          stejná tlaková hladina se nenachází v přesně stejné geometrické výšce na každém místě a v každém ročním
+          období. NOAA při svém dřívějším každodenním přehledu uváděla devět hladin od 100 do 0,4 hPa, přibližně
+          v rozsahu 16 až 55 km. {" "}
           <ReferenceLink href="https://www.cpc.ncep.noaa.gov/products/stratosphere/temperature/index.shtml">
             NOAA CPC: tlakové hladiny a jejich přibližná výška
           </ReferenceLink>
@@ -48,10 +63,10 @@ export function StratosphericCoolingArticle() {
         </p>
 
         <p>
-          V této kapitole proto výraz „ochlazování stratosféry“ nikdy neznamená stejnou změnu v celé vrstvě od
-          tropopauzy po stratopauzu. U každého grafu je nutné číst, zda ukazuje tlakové hladiny, vrstvovou
-          teplotu, globální nebo regionální průměr a jaké období je použito jako nula anomálie. Bez těchto údajů
-          nelze číslo zařadit k žádné konkrétní pozorovací řadě.
+          V této kapitole označení „ochlazování stratosféry“ používáme pro zápornou dlouhodobou změnu konkrétní
+          takto vymezené řady. Každý graf proto uvádí tlakové hladiny nebo vrstvovou teplotu, globální či
+          regionální průměr a referenční období pro anomálie. Tyto údaje určují, ke které pozorovací řadě číslo
+          patří a s čím se dá smysluplně porovnat.
         </p>
 
         <h2>Od kdy máme použitelné řady</h2>
@@ -61,6 +76,15 @@ export function StratosphericCoolingArticle() {
           nepřírodních skoků souvisejících s přístroji a provozem stanic. Pro velkoplošné srovnávání proto
           současné radiosondážní produkty obvykle začínají rokem 1958. {" "}
           <ReferenceLink href="https://doi.org/10.1175/JCLI4050.1">Haimberger, 2007</ReferenceLink>
+        </p>
+
+        <p>
+          Další nezávislou radiosondážní konstrukci představuje HadAT2. Thorne a kol. ji sestavili z 676 stanic,
+          zavedli devět standardních tlakových hladin od 850 do 30 hPa a zveřejnili nejistotu výběru a úprav
+          stanic. Později Haimberger a kol. rozšířili dvě automatizované metody, RAOBCORE a RICH, které hledají
+          zlomy pomocí reanalytického pozadí i okolních stanic. {" "}
+          <ReferenceLink href="https://doi.org/10.1029/2004JD005753">Thorne et al., 2005</ReferenceLink>{" "}
+          a <ReferenceLink href="https://doi.org/10.1175/JCLI-D-11-00668.1">Haimberger et al., 2012</ReferenceLink>.
         </p>
 
         <p>
@@ -135,25 +159,26 @@ export function StratosphericCoolingArticle() {
         </p>
 
         <p>
-          Následující graf je historické srovnání několika radiosondážních analýz dolní stratosféry. Nejde o
-          současný datový produkt ani o výběr jedné „správné“ křivky. Právě rozdíly mezi křivkami ukazují, že
-          název řady, verze a způsob homogenizace patří k hodnotě stejně jako její jednotka.
+          Následující srovnání ukazuje globální dvanáctiměsíční průměry teplotních anomálií ve čtyřech vrstvách
+          atmosféry. Pro tento článek je podstatný horní panel, dolní stratosféra: vedle dvou reanalýz obsahuje
+          radiosondážní řadu HadAT2 a tři nezávisle sestavené satelitní produkty RSS, UAH a NOAA. Graf tím přímo
+          ukazuje, proč musí být u teplotní řady uveden přístroj, verze a přesně vymezená vrstva.
         </p>
         <figure className="article-figure">
           <Image
             className="article-figure__media"
-            src="/media/stratosphere/noaa-radiosonde-anomalies-1958-2011.gif"
-            alt="Historický graf porovnávající několik radiosondážních řad anomálie teploty dolní stratosféry mezi lety 1958 a 2011."
-            width={620}
-            height={282}
+            src="/media/stratosphere/jra3q-lower-stratosphere-comparison-2021.png"
+            alt="Graf porovnávající globální teplotní anomálie ve čtyřech vrstvách atmosféry, s dolní stratosférou v horním panelu."
+            width={597}
+            height={608}
             unoptimized
           />
           <figcaption>
-            Srovnání více radiosondážních analýz teploty dolní stratosféry pro období 1958–2011, upravené z
-            kapitoly <em>State of the Climate in 2011</em>. Zobrazený konec řady je rok 2011. NOAA Climate.gov. {" "}
-            <ReferenceLink href="https://www.climate.gov/news-features/understanding-climate/state-climate-2011-stratospheric-temperature">
-              Původní graf a popis
-            </ReferenceLink>
+            Dvanáctiměsíční globální anomálie teploty pro dolní stratosféru, horní troposféru, střední troposféru
+            a dolní troposféru. Horní panel kombinuje HadAT2 s nezávislými satelitními řadami RSS v4.0, UAH v6.0
+            a NOAA v4.1; všechny anomálie jsou vztažené k vlastnímu průměru let 1995–2005. Kosaka a kol., 2024,
+            obrázek 18, licence CC BY 4.0. {" "}
+            <ReferenceLink href="https://doi.org/10.2151/jmsj.2024-004">Původní článek a obrázek</ReferenceLink>
           </figcaption>
         </figure>
 

@@ -90,12 +90,15 @@ test("publishes a full stratospheric temperature article instead of the generic 
   assert.match(article, /Nejistota je součástí výsledku/);
   assert.match(article, /Slovníček pojmů/);
   assert.match(article, /10\.1029\/2008JD010421/);
+  assert.match(article, /10\.1029\/2004JD005753/);
+  assert.match(article, /10\.1175\/JCLI-D-11-00668\.1/);
   assert.match(article, /10\.1175\/2008JTECHA1176\.1/);
   assert.match(article, /10\.1175\/JTECH-D-16-0018\.1/);
   assert.match(article, /10\.1175\/JCLI-D-19-0998\.1/);
   assert.match(article, /10\.5194\/acp-24-12925-2024/);
   assert.match(article, /noaa-radiosonde-balloon-1944\.jpg/);
-  assert.match(article, /noaa-radiosonde-anomalies-1958-2011\.gif/);
+  assert.match(article, /jra3q-lower-stratosphere-comparison-2021\.png/);
+  assert.match(article, /10\.2151\/jmsj\.2024-004/);
   assert.match(article, /nasa-satellite-atmospheric-trends-1979-2005\.jpg/);
   assert.match(evidence, /slug: "stratosfericke-ochlazovani"[\s\S]*status: "hotovo"/);
 });
