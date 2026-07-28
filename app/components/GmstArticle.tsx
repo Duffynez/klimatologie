@@ -81,6 +81,12 @@ export function GmstArticle() {
           archivů spojují do jedné databáze. {" "}
           <ReferenceLink href="https://doi.org/10.1175/JCLI-D-18-0094.1">Menne et al., 2018</ReferenceLink>
         </p>
+
+        <p>
+          Mapa níže převádí tuto databázi do konkrétní podoby: ukazuje rozmístění stanic použitých v analýze GISTEMP
+          v4. Neříká, kolik pozorování bylo v každém měsíci k dispozici ani jakou historii má každá stanice; tyto
+          informace jsou v datech a metadatech.
+        </p>
         <figure className="article-figure">
           <Image
             className="article-figure__media"
@@ -114,6 +120,11 @@ export function GmstArticle() {
             WMO: globální pozorovací systém
           </ReferenceLink>
         </p>
+
+        <p>
+          Fotografie níže ukazuje jednu z kotvených bójí v této pozorovací síti. Je to příklad současné platformy
+          pro měření SST; nejde o souhrn historických způsobů oceánského měření, které následující odstavec rozlišuje.
+        </p>
         <figure className="article-figure article-figure--portrait">
           <Image
             className="article-figure__media"
@@ -133,7 +144,7 @@ export function GmstArticle() {
         </figure>
 
         <p>
-          Historická lodní měření nevznikala jedinou technikou. Námořníci měřili vodu ve vědrech vytažených z
+          Fotografie zachycuje moderní bóji, historická lodní měření však nevznikala jedinou technikou. Námořníci měřili vodu ve vědrech vytažených z
           moře, později se používala voda nasávaná do strojovny, čidla na trupu lodě a nakonec stále větší počet
           bójí. Jednotlivé postupy se liší místem, kde vodu snímají, materiálem nádoby, dobou mezi odběrem a
           odečtem i konstrukcí čidla. Kennedy ve studii o historických oceánských záznamech rozlišuje právě tyto
@@ -218,10 +229,16 @@ export function GmstArticle() {
           součástí téhož datového produktu a jejich rozdíl musí být u grafu vždy uveden. {" "}
           <ReferenceLink href="https://doi.org/10.1029/2019JD032361">Morice et al., 2021</ReferenceLink>
         </p>
+
+        <p>
+          Animace níže zachycuje výstup jedné konkrétní řady, GISTEMP v4, jako pětileté průměry anomálií. Není
+          soupisem jednotlivých stanic ani porovnáním všech datových souborů: ukazuje, jak tento produkt převádí
+          zpracovaná pozorování do postupných map.
+        </p>
         <figure className="article-figure">
           <video
-            className="article-figure__media"
             controls
+            className="article-figure__media"
             playsInline
             preload="metadata"
             aria-label="Pětileté průměry anomálií GISTEMP v4 od roku 1880 do roku 2025."
@@ -283,10 +300,16 @@ export function GmstArticle() {
           <ReferenceLink href="https://www.ncei.noaa.gov/products/land-based-station/noaa-global-temp">portálu NOAA</ReferenceLink>.
         </p>
 
+
+        <p>
+          Vedle tří řad popsaných výše pracuje také Berkeley Earth. Následující obrázek je převzaté srovnání čtyř
+          samostatně sestavovaných produktů, nikoli nový přepočet vytvořený pro tento web. Původní popisek a odkaz pod
+          grafem proto patří k jeho významu.
+        </p>
         <figure className="article-figure">
           <Image
-            className="article-figure__media"
             src="/media/gmst/global-temperature-four-datasets-nasa.jpg"
+            className="article-figure__media"
             alt="Graf porovnávající globální teplotní řady NASA GISTEMP, NOAA NCEI, Hadley Centre a Berkeley Earth."
             width={1536}
             height={989}
@@ -301,7 +324,7 @@ export function GmstArticle() {
 
 
         <p>
-          Tyto soubory nepoužívají stejnou nulu grafu, stejnou mřížku ani zcela stejný postup pro oblasti bez
+          Srovnání křivek samo o sobě nenahrazuje údaje o jejich konstrukci. Tyto soubory nepoužívají stejnou nulu grafu, stejnou mřížku ani zcela stejný postup pro oblasti bez
           měření. Každý graf na webu proto musí uvést název souboru, verzi, datum stažení, referenční období, zda
           obsahuje statistické doplnění mezer, a přímý odkaz na data i metodický článek.
         </p>
