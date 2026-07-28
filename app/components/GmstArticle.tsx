@@ -142,8 +142,8 @@ export function GmstArticle() {
         </p>
 
         <p>
-          Fotografie níže ukazuje jednu z kotvených bójí v této pozorovací síti. Je to příklad současné platformy
-          pro měření SST; nejde o souhrn historických způsobů oceánského měření, které následující odstavec rozlišuje.
+          Fotografie níže ukazuje jednu z kotvených bójí v této pozorovací síti. Je to příklad současné platformy pro
+          měření SST.
         </p>
         <figure className="article-figure article-figure--portrait">
           <Image
@@ -187,6 +187,11 @@ export function GmstArticle() {
           počítají, o kolik se daný měsíc nebo rok liší od obvyklé hodnoty téhož místa.
         </p>
 
+
+        <p>
+          Ve vzorci znamená <em>i</em> konkrétní stanici, <em>m</em> kalendářní měsíc a <em>y</em> rok.
+        </p>
+
         <div className="article-formula" aria-label="Výpočet teplotní anomálie">
           <span>anomálie(i, m, y)</span>
           <b>=</b>
@@ -210,7 +215,7 @@ export function GmstArticle() {
           a teprve potom se překrývají křivky.
         </p>
 
-        <h2>Od staničních dat k mapě a globálnímu průměru</h2>
+        <h2>Globální průměr</h2>
         <p>
           Prvním krokem je kontrola dat. Databáze hledají duplicity, nesmyslné hodnoty, chybějící měsíce, nesoulad
           s metadaty a další zjevné problémy. GHCN-M v4 například zveřejňuje příznaky pro duplicitní hodnoty,
