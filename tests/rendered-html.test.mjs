@@ -45,3 +45,16 @@ test("keeps categorized citations and arrow navigation in the history timeline",
   assert.match(history, /Předchozí milník/);
   assert.match(history, /Další milník/);
 });
+
+test("publishes the global surface temperature article instead of the generic placeholder", async () => {
+  const [article, evidencePage] = await Promise.all([
+    readFile(new URL("app/components/GmstArticle.tsx", root), "utf8"),
+    readFile(new URL("app/pozorovani/[slug]/page.tsx", root), "utf8"),
+  ]);
+
+  assert.match(evidencePage, /GmstArticle/);
+  assert.match(article, /Globální teplota u povrchu je plošně vážená časová řada/);
+  assert.match(article, /Od kdy máme globální řadu/);
+  assert.match(article, /Nejistota je součást výsledku/);
+  assert.match(article, /10\.1029\/2019JD032361/);
+});

@@ -530,6 +530,108 @@ h3 {
   padding-left: 24px;
 }
 
+.article-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 248px;
+  gap: 58px;
+  align-items: start;
+  margin: 56px 0 34px;
+}
+
+.article-prose {
+  max-width: 770px;
+}
+
+.article-prose__intro {
+  color: var(--ink) !important;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.28rem;
+  line-height: 1.55;
+}
+
+.article-prose h2 {
+  margin: 58px 0 17px;
+  font-size: clamp(1.75rem, 3vw, 2.45rem);
+  scroll-margin-top: 106px;
+}
+
+.article-prose p {
+  margin: 0 0 20px;
+  color: var(--muted);
+}
+
+.article-prose strong {
+  color: var(--ink);
+}
+
+.article-reference {
+  color: var(--source-science);
+  font-weight: 800;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.article-reference:hover,
+.article-reference:focus-visible {
+  color: var(--coral);
+}
+
+.article-formula {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 30px 0;
+  padding: 18px 20px;
+  border-left: 4px solid var(--sea);
+  background: var(--white);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.35;
+}
+
+.article-formula b {
+  color: var(--coral);
+  font-size: 1.25rem;
+}
+
+.article-facts {
+  position: sticky;
+  top: 96px;
+  padding: 22px;
+  border-top: 4px solid var(--sea);
+  background: var(--white);
+}
+
+.article-facts dl {
+  margin: 0;
+}
+
+.article-facts dl > div {
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+}
+
+.article-facts dl > div:first-child {
+  border-top: 0;
+}
+
+.article-facts dt {
+  color: var(--sea);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.article-facts dd {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.87rem;
+  line-height: 1.4;
+}
+
 .source-list {
   display: grid;
   gap: 14px;
@@ -958,6 +1060,11 @@ h3 {
     grid-template-columns: 95px minmax(0, 1fr);
   }
 
+  .article-layout {
+    grid-template-columns: minmax(0, 1fr) 205px;
+    gap: 34px;
+  }
+
   .source-card__actions {
     grid-column: 2;
     justify-content: start;
@@ -1011,6 +1118,7 @@ h3 {
   .topic-grid--full,
   .method-grid,
   .section-outline,
+  .article-layout,
   .person-feature,
   .profile-layout {
     grid-template-columns: 1fr;
@@ -1076,6 +1184,19 @@ h3 {
   .source-card__actions a {
     flex: 1;
     min-width: 0;
+  }
+
+  .article-prose__intro {
+    font-size: 1.14rem;
+  }
+
+  .article-prose h2 {
+    margin-top: 46px;
+  }
+
+  .article-facts {
+    position: static;
+    order: -1;
   }
 
   .timeline li {

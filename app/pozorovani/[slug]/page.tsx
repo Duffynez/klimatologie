@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { GmstArticle } from "../../components/GmstArticle";
 import { PageLead } from "../../components/PageLead";
 import { evidenceBySlug, evidenceTopics } from "../../data/evidence";
 
@@ -13,6 +14,21 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
 
   if (!topic) {
     notFound();
+  }
+
+  if (slug === "gmst") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Pozorování / Atmosféra" title="Dlouhodobá změna globální teploty u povrchu">
+          <p>
+            Jak vzniká globální teplotní řada z pozemních a oceánských pozorování, co přesně obsahuje a jak se
+            zveřejňuje její nejistota.
+          </p>
+        </PageLead>
+        <GmstArticle />
+        <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
+      </div>
+    );
   }
 
   return (
