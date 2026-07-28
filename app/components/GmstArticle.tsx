@@ -283,6 +283,23 @@ export function GmstArticle() {
           <ReferenceLink href="https://www.ncei.noaa.gov/products/land-based-station/noaa-global-temp">portálu NOAA</ReferenceLink>.
         </p>
 
+        <figure className="article-figure">
+          <Image
+            className="article-figure__media"
+            src="/media/gmst/global-temperature-four-datasets-nasa.jpg"
+            alt="Graf porovnávající globální teplotní řady NASA GISTEMP, NOAA NCEI, Hadley Centre a Berkeley Earth."
+            width={1536}
+            height={989}
+            unoptimized
+          />
+          <figcaption>
+            Srovnání čtyř nezávisle sestavovaných globálních teplotních řad: NASA GISTEMP, NOAA NCEI, Hadley
+            Centre/Climatic Research Unit a Berkeley Earth. Vizualizace: Gavin Schmidt / NASA. {" "}
+            <ReferenceLink href="https://science.nasa.gov/earth/climate-change/the-raw-truth-on-global-temperature-records/">Původní graf a popis</ReferenceLink>
+          </figcaption>
+        </figure>
+
+
         <p>
           Tyto soubory nepoužívají stejnou nulu grafu, stejnou mřížku ani zcela stejný postup pro oblasti bez
           měření. Každý graf na webu proto musí uvést název souboru, verzi, datum stažení, referenční období, zda

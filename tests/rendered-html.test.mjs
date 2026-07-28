@@ -68,6 +68,8 @@ test("publishes the global surface temperature article instead of the generic pl
   assert.match(article, /gistemp-stations-robinson\.png/);
   assert.match(article, /noaa-weather-buoy-44008\.jpg/);
   assert.match(article, /gistemp-five-year-anomaly-1880-2025\.mp4/);
+  assert.match(article, /global-temperature-four-datasets-nasa\.jpg/);
   assert.match(article, /NASA Scientific Visualization\s+Studio/);
+  assert.match(article, /Gavin Schmidt \/ NASA/);
   assert.match(styles, /\.article-figure__media\s*\{/);
 });
