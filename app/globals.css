@@ -596,7 +596,7 @@ h3 {
   font-size: 1.25rem;
 }
 
-.article-facts {
+.article-glossary {
   position: sticky;
   top: 96px;
   padding: 22px;
@@ -604,20 +604,25 @@ h3 {
   background: var(--white);
 }
 
-.article-facts dl {
+.article-glossary h2 {
+  margin: 0 0 15px;
+  font-size: 1.55rem;
+}
+
+.article-glossary dl {
   margin: 0;
 }
 
-.article-facts dl > div {
+.article-glossary dl > div {
   padding: 14px 0;
   border-top: 1px solid var(--line);
 }
 
-.article-facts dl > div:first-child {
+.article-glossary dl > div:first-child {
   border-top: 0;
 }
 
-.article-facts dt {
+.article-glossary dt {
   color: var(--sea);
   font-size: 0.72rem;
   font-weight: 800;
@@ -625,7 +630,7 @@ h3 {
   text-transform: uppercase;
 }
 
-.article-facts dd {
+.article-glossary dd {
   margin: 4px 0 0;
   color: var(--muted);
   font-size: 0.87rem;
@@ -1194,7 +1199,7 @@ h3 {
     margin-top: 46px;
   }
 
-  .article-facts {
+  .article-glossary {
     position: static;
     order: -1;
   }

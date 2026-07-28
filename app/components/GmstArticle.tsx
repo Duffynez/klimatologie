@@ -238,28 +238,65 @@ export function GmstArticle() {
         </p>
       </div>
 
-      <aside className="article-facts" aria-label="Technický přehled článku">
-        <p className="eyebrow">Datový přehled</p>
+      <aside className="article-glossary" aria-label="Slovníček pojmů">
+        <p className="eyebrow">Slovníček</p>
+        <h2>Pojmy v článku</h2>
         <dl>
           <div>
-            <dt>Veličina</dt>
-            <dd>Teplota vzduchu nad pevninou + SST nad oceánem</dd>
+            <dt>Teplota u povrchu</dt>
+            <dd>Teplota vzduchu nad pevninou a teplota mořské hladiny nad otevřeným oceánem.</dd>
           </div>
           <div>
-            <dt>Časový krok</dt>
-            <dd>Měsíc a rok</dd>
+            <dt>SST</dt>
+            <dd><em>Sea-surface temperature</em>, teplota mořské hladiny měřená loděmi a bójemi.</dd>
           </div>
           <div>
-            <dt>Nejdelší řady</dt>
-            <dd>Od ledna 1850</dd>
+            <dt>Anomálie</dt>
+            <dd>Rozdíl mezi naměřenou hodnotou a průměrem stejného místa a měsíce v referenčním období.</dd>
           </div>
           <div>
-            <dt>Výstup</dt>
-            <dd>Anomálie v °C vůči referenčnímu období</dd>
+            <dt>Referenční období</dt>
+            <dd>Víceleté období, které určuje nulu grafu, například 1961–1990.</dd>
           </div>
           <div>
-            <dt>Nutné údaje</dt>
-            <dd>Verze, nula grafu, pokrytí, nejistota</dd>
+            <dt>Homogenizace</dt>
+            <dd>Postup pro hledání a opravu technických zlomů ve staniční řadě.</dd>
+          </div>
+          <div>
+            <dt>Mřížka</dt>
+            <dd>Rozdělení zemského povrchu na buňky pro plošně vážený průměr.</dd>
+          </div>
+          <div>
+            <dt>Infill</dt>
+            <dd>Statistický odhad pro oblast bez přímého měření; neinfillovaná data takovou buňku ponechají prázdnou.</dd>
+          </div>
+          <div>
+            <dt>HadCRUT5</dt>
+            <dd>Globální řada složená z CRUTEM5 nad pevninou a HadSST4 nad oceánem.</dd>
+          </div>
+          <div>
+            <dt>CRUTEM5</dt>
+            <dd><em>Climatic Research Unit Temperature</em>, pozemní složka HadCRUT5.</dd>
+          </div>
+          <div>
+            <dt>HadSST4</dt>
+            <dd><em>Hadley Centre Sea Surface Temperature</em>, oceánská složka HadCRUT5.</dd>
+          </div>
+          <div>
+            <dt>GISTEMP v4</dt>
+            <dd><em>GISS Surface Temperature Analysis</em>, globální řada NASA Goddard Institute for Space Studies.</dd>
+          </div>
+          <div>
+            <dt>NOAAGlobalTemp v6.1</dt>
+            <dd>Globální řada NOAA založená na GHCN-M v4 a ERSST v6.</dd>
+          </div>
+          <div>
+            <dt>GHCN-M v4</dt>
+            <dd><em>Global Historical Climatology Network Monthly</em>, databáze měsíčních pozemních stanic.</dd>
+          </div>
+          <div>
+            <dt>ERSST v6</dt>
+            <dd><em>Extended Reconstructed Sea Surface Temperature</em>, rekonstruovaná oceánská řada SST.</dd>
           </div>
         </dl>
       </aside>

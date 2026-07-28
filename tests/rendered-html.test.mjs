@@ -56,5 +56,7 @@ test("publishes the global surface temperature article instead of the generic pl
   assert.match(article, /Globální teplota u povrchu je plošně vážená časová řada/);
   assert.match(article, /Od kdy máme globální řadu/);
   assert.match(article, /Nejistota je součást výsledku/);
+  assert.match(article, /Slovníček pojmů/);
+  assert.match(article, /NOAAGlobalTemp v6\.1/);
   assert.match(article, /10\.1029\/2019JD032361/);
 });
