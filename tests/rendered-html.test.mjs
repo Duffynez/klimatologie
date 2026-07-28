@@ -78,3 +78,24 @@ test("publishes the global surface temperature article instead of the generic pl
   assert.match(article, /Gavin Schmidt \/ NASA/);
   assert.match(styles, /\.article-figure__media\s*\{/);
 });
+test("publishes a full stratospheric temperature article instead of the generic placeholder", async () => {
+  const [article, evidencePage, evidence] = await Promise.all([
+    readFile(new URL("app/components/StratosphericCoolingArticle.tsx", root), "utf8"),
+    readFile(new URL("app/pozorovani/[slug]/page.tsx", root), "utf8"),
+    readFile(new URL("app/data/evidence.ts", root), "utf8"),
+  ]);
+
+  assert.match(evidencePage, /StratosphericCoolingArticle/);
+  assert.match(article, /Satelitní řady měří vrstvy, ne body/);
+  assert.match(article, /Nejistota je součástí výsledku/);
+  assert.match(article, /Slovníček pojmů/);
+  assert.match(article, /10\.1029\/2008JD010421/);
+  assert.match(article, /10\.1175\/2008JTECHA1176\.1/);
+  assert.match(article, /10\.1175\/JTECH-D-16-0018\.1/);
+  assert.match(article, /10\.1175\/JCLI-D-19-0998\.1/);
+  assert.match(article, /10\.5194\/acp-24-12925-2024/);
+  assert.match(article, /noaa-radiosonde-balloon-1944\.jpg/);
+  assert.match(article, /noaa-radiosonde-anomalies-1958-2011\.gif/);
+  assert.match(article, /nasa-satellite-atmospheric-trends-1979-2005\.jpg/);
+  assert.match(evidence, /slug: "stratosfericke-ochlazovani"[\s\S]*status: "hotovo"/);
+});

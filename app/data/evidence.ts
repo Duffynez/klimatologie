@@ -8,7 +8,7 @@ export type EvidenceTopic = {
 
 export const evidenceTopics: EvidenceTopic[] = [
   { slug: "gmst", title: "Globální teplota", category: "Atmosféra", summary: "Rozcestník pro pozorování globální průměrné povrchové teploty, metody a datové řady.", status: "hotovo" },
-  { slug: "stratosfericke-ochlazovani", title: "Stratosférické ochlazování", category: "Atmosféra", summary: "Místo pro popis měření ve vyšších vrstvách atmosféry a jejich interpretace.", status: "mapujeme zdroje" },
+  { slug: "stratosfericke-ochlazovani", title: "Stratosférické ochlazování", category: "Atmosféra", summary: "Jak se měří teplota ve stratosféře, které přístroje vytvářejí datové řady a jak se vyjadřuje jejich nejistota.", status: "hotovo" },
   { slug: "narust-vlhkosti", title: "Nárůst vlhkosti", category: "Atmosféra", summary: "Budoucí přehled pozorování vodní páry, měřicích metod a nejistot.", status: "mapujeme zdroje" },
   { slug: "ohc", title: "Tepelný obsah oceánů", category: "Oceány", summary: "Stránka pro data o energii uložené v oceánu, měření a zdrojové soubory.", status: "připravujeme data" },
   { slug: "gmsl", title: "Hladina oceánů", category: "Oceány", summary: "Budoucí přehled měření globální střední hladiny moře a souvisejících zdrojů.", status: "připravujeme data" },

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { GmstArticle } from "../../components/GmstArticle";
+import { StratosphericCoolingArticle } from "../../components/StratosphericCoolingArticle";
 import { PageLead } from "../../components/PageLead";
 import { evidenceBySlug, evidenceTopics } from "../../data/evidence";
 
@@ -26,6 +27,21 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
           </p>
         </PageLead>
         <GmstArticle />
+        <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
+      </div>
+    );
+  }
+
+  if (slug === "stratosfericke-ochlazovani") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Pozorování / Atmosféra" title="Dlouhodobá změna teploty ve stratosféře">
+          <p>
+            Jak se měří teplota v různých vrstvách stratosféry, odkdy sahají jednotlivé řady a jak se zveřejňují
+            jejich nejistoty.
+          </p>
+        </PageLead>
+        <StratosphericCoolingArticle />
         <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
       </div>
     );
