@@ -243,24 +243,12 @@ export function GmstArticle() {
         <h2>Pojmy v článku</h2>
         <dl>
           <div>
-            <dt>Teplota u povrchu</dt>
-            <dd>Teplota vzduchu nad pevninou a teplota mořské hladiny nad otevřeným oceánem.</dd>
-          </div>
-          <div>
             <dt>SST</dt>
             <dd><em>Sea-surface temperature</em>, teplota mořské hladiny měřená loděmi a bójemi.</dd>
           </div>
           <div>
-            <dt>Anomálie</dt>
-            <dd>Rozdíl mezi naměřenou hodnotou a průměrem stejného místa a měsíce v referenčním období.</dd>
-          </div>
-          <div>
             <dt>Referenční období</dt>
             <dd>Víceleté období, které určuje nulu grafu, například 1961–1990.</dd>
-          </div>
-          <div>
-            <dt>Homogenizace</dt>
-            <dd>Postup pro hledání a opravu technických zlomů ve staniční řadě.</dd>
           </div>
           <div>
             <dt>Mřížka</dt>

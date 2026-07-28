@@ -597,8 +597,7 @@ h3 {
 }
 
 .article-glossary {
-  position: sticky;
-  top: 96px;
+  align-self: start;
   padding: 22px;
   border-top: 4px solid var(--sea);
   background: var(--white);
@@ -1200,7 +1199,6 @@ h3 {
   }
 
   .article-glossary {
-    position: static;
     order: -1;
   }
 

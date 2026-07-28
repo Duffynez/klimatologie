@@ -47,9 +47,10 @@ test("keeps categorized citations and arrow navigation in the history timeline",
 });
 
 test("publishes the global surface temperature article instead of the generic placeholder", async () => {
-  const [article, evidencePage] = await Promise.all([
+  const [article, evidencePage, styles] = await Promise.all([
     readFile(new URL("app/components/GmstArticle.tsx", root), "utf8"),
     readFile(new URL("app/pozorovani/[slug]/page.tsx", root), "utf8"),
+    readFile(new URL("app/globals.css", root), "utf8"),
   ]);
 
   assert.match(evidencePage, /GmstArticle/);
@@ -58,5 +59,9 @@ test("publishes the global surface temperature article instead of the generic pl
   assert.match(article, /Nejistota je součást výsledku/);
   assert.match(article, /Slovníček pojmů/);
   assert.match(article, /NOAAGlobalTemp v6\.1/);
+  assert.doesNotMatch(article, /<dt>Teplota u povrchu<\/dt>/);
+  assert.doesNotMatch(article, /<dt>Anomálie<\/dt>/);
+  assert.doesNotMatch(article, /<dt>Homogenizace<\/dt>/);
+  assert.doesNotMatch(styles, /\.article-glossary\s*\{\s*position: sticky/);
   assert.match(article, /10\.1029\/2019JD032361/);
 });
