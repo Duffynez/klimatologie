@@ -14,30 +14,27 @@ export function StratosphericCoolingArticle() {
     <article className="article-layout">
       <div className="article-prose">
         <p className="article-prose__intro">
-          Teplota stratosféry je teplota vzduchu v určité vrstvě nad tropopauzou. Pro klimatickou řadu se tato
-          veličina zapisuje jako teplota nebo teplotní odchylka v přesně určené tlakové vrstvě, oblasti a čase.
-          Globální měsíční hodnota je plošně vážený průměr těchto pozorování; bez údaje o vrstvě, územním rozsahu,
-          referenčním období a datovém produktu není její význam úplný. Randel a kol. takto společně vyhodnotili
-          satelitní, radiosondážní a lidarová pozorování stratosféry. {" "}
-          <ReferenceLink href="https://doi.org/10.1029/2008JD010421">Randel et al., 2009</ReferenceLink>
+          Stratosféra je druhá velká vrstva zemské atmosféry. Leží nad vrstvou, v níž se odehrává počasí, a sahá
+          přibližně od 10–18 km do 50 km nad povrchem. Tento článek sleduje, jak se v ní měří teplota v čase.
         </p>
 
-        <p>
-          Stejnou veličinu lze pozorovat několika cestami. Free a kol. sestavili velkoplošnou řadu z upravených
-          radiosond, Mears a Wentz popsali návaznost mikrovlnných měření MSU a AMSU-A a Zou s Qianem spojili
-          záznamy SSU a AMSU-A pro vyšší vrstvy. Každá práce proto zároveň vymezuje, co její čísla představují a
-          jak daleko v atmosféře její přístroj dosáhne. {" "}
-          <ReferenceLink href="https://doi.org/10.1029/2005JD006169">Free et al., 2005</ReferenceLink>, {" "}
-          <ReferenceLink href="https://doi.org/10.1175/2008JTECHA1176.1">Mears &amp; Wentz, 2009</ReferenceLink>{" "}
-          a <ReferenceLink href="https://doi.org/10.1175/JTECH-D-16-0018.1">Zou &amp; Qian, 2016</ReferenceLink>.
-        </p>
-
-        <p>
-          Pro zjišťování dlouhodobé změny je proto nutné srovnávat řady, které se vztahují ke stejné vrstvě, a
-          zachovat u nich i původní metodiku. Seidel a kol. porovnali satelitní klimatické řady pro stratosféru a
-          ukázali, že jejich shoda i rozdíly jsou měřitelnou součástí výsledku. {" "}
-          <ReferenceLink href="https://doi.org/10.1002/2015JD024039">Seidel et al., 2016</ReferenceLink>
-        </p>
+        <figure className="article-figure article-figure--atmosphere">
+          <Image
+            className="article-figure__media"
+            src="/media/stratosphere/atmosphere-with-ionosphere-cs.svg"
+            alt="Schéma vrstev zemské atmosféry. Stratosféra leží mezi troposférou pod ní a mezosférou nad ní."
+            width={515}
+            height={509}
+            unoptimized
+          />
+          <figcaption>
+            Základní vrstvy atmosféry a ionosféra. Stratosféra leží mezi tropopauzou a stratopauzou. Diagram:
+            Bhamer, vektorová verze tiZom; public domain. {" "}
+            <ReferenceLink href="https://commons.wikimedia.org/wiki/File:Atmosphere_with_Ionosphere.svg">
+              Původní soubor na Wikimedia Commons
+            </ReferenceLink>
+          </figcaption>
+        </figure>
 
         <h2>Co přesně se měří</h2>
         <p>
@@ -54,9 +51,9 @@ export function StratosphericCoolingArticle() {
         <p>
           U satelitních řad se často setkáme s výrazem <em>teplota dolní stratosféry</em>, zkráceně TLS. Jde o
           vrstový údaj: kanál MSU 4, jeho nástupce AMSU-A 9 a novější ATMS 10 snímají mikrovlnné záření kyslíku
-          z širokého svislého pásma atmosféry, jehož citlivost vrcholí v dolní stratosféře. Nejde tedy o přesný
-          odečet teploty v jediném kilometru výšky. NOAA tento produkt zveřejňuje jako měsíční mřížkovou řadu a
-          samostatně uvádí všechny tři navazující přístrojové generace. {" "}
+          z širokého svislého pásma atmosféry, jehož citlivost vrcholí v dolní stratosféře. Výsledkem je průměrná
+          teplota široké vrstvy, který NOAA zveřejňuje jako měsíční mřížkovou řadu pro tři navazující přístrojové
+          generace. {" "}
           <ReferenceLink href="https://www.ncei.noaa.gov/products/climate-data-records/mean-layer-temperature-noaa">
             NOAA Mean Layer Temperature CDR
           </ReferenceLink>
@@ -90,9 +87,8 @@ export function StratosphericCoolingArticle() {
         <p>
           Globální satelitní řady začínají na konci roku 1978 se sondou MSU na družici TIROS-N. Od roku 1979
           jsou k dispozici také měření Stratospheric Sounding Unit neboli SSU, určená pro střední a vyšší
-          stratosféru. V devadesátých letech začal přechod k přístrojům AMSU-A. Ten není pouhým připsáním dalších
-          hodnot na konec tabulky: oba přístroje mají jiné kanály a jinou svislou citlivost, proto je jejich
-          návaznost samostatným úkolem datové analýzy. {" "}
+          stratosféru. V devadesátých letech začal přechod k přístrojům AMSU-A. Jejich propojení vyžaduje samostatný
+          postup datové analýzy, protože oba přístroje mají jiné kanály a jinou svislou citlivost. {" "}
           <ReferenceLink href="https://doi.org/10.1175/2008JTECHA1176.1">Mears &amp; Wentz, 2009</ReferenceLink>{" "}
           a <ReferenceLink href="https://doi.org/10.1175/JTECH-D-16-0018.1">Zou &amp; Qian, 2016</ReferenceLink>.
         </p>
@@ -136,8 +132,8 @@ export function StratosphericCoolingArticle() {
         </figure>
 
         <p>
-          Historie jedné stanice však není neměnná. Mění se typ čidla, radiační korekce, čas vypuštění, způsob
-          kódování i samotná stanice. Takové změny mohou vytvořit skok v časové řadě, aniž by odpovídající skok
+          Historie jedné stanice zahrnuje změny typu čidla, radiační korekce, času vypuštění, způsobu
+          kódování i samotné stanice. Takové změny mohou vytvořit skok v časové řadě, aniž by odpovídající skok
           nastal v teplotě okolní atmosféry. Randel a Wu nalezli u části historických radiosond systematické
           odchylky vůči družicovým měřením. {" "}
           <ReferenceLink href="https://doi.org/10.1175/JCLI3717.1">Randel &amp; Wu, 2006</ReferenceLink>{" "}
@@ -158,31 +154,36 @@ export function StratosphericCoolingArticle() {
           </ReferenceLink>
         </p>
 
+        <h2>Jak číst srovnávací graf</h2>
         <p>
-          Následující srovnání ukazuje globální dvanáctiměsíční průměry teplotních anomálií ve čtyřech vrstvách
-          atmosféry. Pro tento článek je podstatný horní panel, dolní stratosféra: vedle dvou reanalýz obsahuje
-          radiosondážní řadu HadAT2 a tři nezávisle sestavené satelitní produkty RSS, UAH a NOAA. Graf tím přímo
-          ukazuje, proč musí být u teplotní řady uveden přístroj, verze a přesně vymezená vrstva.
+          Následující obrázek srovnává globální dvanáctiměsíční průměry teplotních anomálií ve čtyřech vrstvách
+          atmosféry. Světle zelená křivka HadAT2 vychází z radiosond; řady RSS, UAH a NOAA pocházejí z družic.
+          Černá a červená křivka představují reanalýzy JRA-55 a JRA-3Q. Každý panel zobrazuje jinou vrstvu.
         </p>
         <figure className="article-figure">
           <Image
             className="article-figure__media"
             src="/media/stratosphere/jra3q-lower-stratosphere-comparison-2021.png"
-            alt="Graf porovnávající globální teplotní anomálie ve čtyřech vrstvách atmosféry, s dolní stratosférou v horním panelu."
+            alt="Srovnávací graf globálních teplotních anomálií ve čtyřech vrstvách atmosféry. Panely a až d zobrazují odshora dolní stratosféru, horní troposféru, střední troposféru a dolní troposféru."
             width={597}
             height={608}
             unoptimized
           />
+          <div className="article-figure__key" aria-label="Význam panelů srovnávacího grafu">
+            <p><strong>a) Dolní stratosféra.</strong> Vrstva, na kterou se tato kapitola soustředí.</p>
+            <p><strong>b) Horní troposféra.</strong> Vrstva bezprostředně pod stratosférou.</p>
+            <p><strong>c) Střední troposféra.</strong> Střední část nejnižší atmosférické vrstvy.</p>
+            <p><strong>d) Dolní troposféra.</strong> Část atmosféry nejblíže zemskému povrchu.</p>
+          </div>
           <figcaption>
-            Dvanáctiměsíční globální anomálie teploty pro dolní stratosféru, horní troposféru, střední troposféru
-            a dolní troposféru. Horní panel kombinuje HadAT2 s nezávislými satelitními řadami RSS v4.0, UAH v6.0
-            a NOAA v4.1; všechny anomálie jsou vztažené k vlastnímu průměru let 1995–2005. Kosaka a kol., 2024,
-            obrázek 18, licence CC BY 4.0. {" "}
+            Panely a)–d) ukazují postupně dolní stratosféru, horní troposféru, střední troposféru a dolní
+            troposféru. Všechny křivky jsou dvanáctiměsíční globální anomálie vztažené k vlastnímu průměru let
+            1995–2005. Kosaka a kol., 2024, obrázek 18, licence CC BY 4.0. {" "}
             <ReferenceLink href="https://doi.org/10.2151/jmsj.2024-004">Původní článek a obrázek</ReferenceLink>
           </figcaption>
         </figure>
 
-        <h2>Satelitní řady měří vrstvy, ne body</h2>
+        <h2>Satelitní řady měří vrstvy</h2>
         <p>
           Mikrovlnné sondážní přístroje na polárních družicích přijímají záření atmosférického kyslíku. Každý
           kanál má vlastní váhovou funkci: některé výšky přispívají k výsledné jasové teplotě více, jiné méně.
@@ -206,8 +207,7 @@ export function StratosphericCoolingArticle() {
         <p>
           Vyšší stratosféra vyžaduje jiné kanály než TLS. SSU poskytovala údaje přibližně pro 25 až 50 km do roku
           2006 a AMSU-A ji částečně nahradila od roku 1998. Zou a Qian ukazují, že svislé váhové funkce SSU se
-          navíc mění s polohou a časem. Spojený záznam proto vzniká teprve po přepočtu rozdílů mezi přístroji,
-          nikoli prostým slepením dvou křivek. {" "}
+          navíc mění s polohou a časem. Spojený záznam vzniká po přepočtu rozdílů mezi přístroji a po sjednocení jejich svislé citlivosti. {" "}
           <ReferenceLink href="https://doi.org/10.1175/JTECH-D-16-0018.1">Zou &amp; Qian, 2016</ReferenceLink>
         </p>
 
@@ -234,9 +234,8 @@ export function StratosphericCoolingArticle() {
         <p>
           Rádiová zákrytová měření GNSS poskytují výškově jemnější profily hlavně v oblasti horní troposféry a
           dolní stratosféry. Ve studii zahrnující období 1979–2018 Steiner a kol. porovnali více pozemních a
-          družicových systémů, včetně radiosond, GNSS-RO a mikrovlnných sondáží. Hodnota takového srovnání není
-          v tom, že by jeden přístroj zrušil ostatní, ale v tom, že lze zkontrolovat shodu i rozdíly mezi
-          nezávislými postupy a přesně je přiřadit k výškové oblasti. {" "}
+          družicových systémů, včetně radiosond, GNSS-RO a mikrovlnných sondáží. Takové srovnání umožňuje zkontrolovat shodu i rozdíly mezi samostatnými postupy a přesně je
+          přiřadit k výškové oblasti. {" "}
           <ReferenceLink href="https://doi.org/10.1175/JCLI-D-19-0998.1">Steiner et al., 2020</ReferenceLink>
         </p>
 
@@ -248,19 +247,18 @@ export function StratosphericCoolingArticle() {
           <ReferenceLink href="https://doi.org/10.5194/acp-24-12925-2024">Dubé et al., 2024</ReferenceLink>
         </p>
 
-        <h2>Nejistota je součástí výsledku</h2>
+        <h2>Jak se zveřejňuje nejistota</h2>
         <p>
-          Nejistota stratosférické teplotní řady nevychází jen z přesnosti jednoho čidla. Patří do ní také změny
-          přístrojů a provozních postupů u radiosond, nerovnoměrné rozmístění stanic, návaznost různých družic,
-          změna dráhy a místního času přeletu, rozdílné váhové funkce kanálů a volba způsobu jejich spojení.
-          Každý z těchto zdrojů může ovlivnit dlouhodobý odhad jinak v dolní a jinak ve vyšší stratosféře.
+          Každý publikovaný datový produkt uvádí vedle hodnot také popis jejich nejistoty. Do tohoto popisu patří
+          změny přístrojů a provozních postupů u radiosond, rozmístění stanic, návaznost družic, místní čas
+          přeletu, váhové funkce kanálů a postup jejich spojení. Tyto položky umožňují číst dlouhodobý odhad pro
+          konkrétní vrstvu a období.
         </p>
 
         <p>
-          Seidel a kol. už v roce 2004 porovnali osm horních atmosférických datových souborů a ukázali, že rozptyl
-          mezi nezávislými produkty je sám o sobě užitečnou informací o nejistotě. Pozdější srovnání satelitních
-          klimatických řad došlo k podobnému závěru: rozdíly se postupně snížily, ale u některých vrstev a období
-          nezmizely. {" "}
+          Seidel a kol. v roce 2004 porovnali osm datových souborů horní atmosféry a popsali rozptyl mezi
+          nezávislými produkty. Pozdější srovnání satelitních klimatických řad tyto rozdíly sledovalo pro různé
+          vrstvy a období. {" "}
           <ReferenceLink href="https://doi.org/10.1175/1520-0442(2004)017%3C2225:UISOLC%3E2.0.CO;2">
             Seidel et al., 2004
           </ReferenceLink>{" "}
@@ -268,9 +266,9 @@ export function StratosphericCoolingArticle() {
         </p>
 
         <p>
-          Proto má být vedle každého grafu na tomto webu uveden zdroj dat, verze, proměnná nebo kanál, výšková
-          vrstva, územní průměr, referenční období, časový rozsah a publikovaný popis nejistoty. Teprve tato sada
-          údajů určuje, co křivka říká a které jiné řady s ní lze smysluplně porovnat.
+          U každého grafu na tomto webu proto uvádíme zdroj dat, verzi, proměnnou nebo kanál, výškovou vrstvu,
+          územní průměr, referenční období, časový rozsah a publikovaný popis nejistoty. Tato sada údajů říká,
+          co přesně křivka zachycuje a s jakými jinými řadami ji lze porovnat.
         </p>
 
         <h2>Současné datové řady</h2>
@@ -303,9 +301,16 @@ export function StratosphericCoolingArticle() {
         <p>
           <strong>OSIRIS v7.3</strong> doplňuje pohled na horní stratosféru výškově rozlišeným satelitním produktem.
           Jeho publikovaná analýza pracuje s obdobím 2005–2021 pro odhad trendů a porovnává OSIRIS se SABER a MLS.
-          Tento zdroj proto nemá být bez dalšího zaměňován s dlouhou vrstvovou řadou TLS: jde o jinou výškovou
-          oblast, jiný přístrojový princip a jiný časový rozsah. {" "}
+          Produkt zachycuje jinou výškovou oblast, přístrojový princip i časový rozsah než vrstvá řada TLS. {" "}
           <ReferenceLink href="https://doi.org/10.5194/acp-24-12925-2024">Dubé et al., 2024</ReferenceLink>
+        </p>
+
+        <h2>Pozorování</h2>
+        <p>
+          Pozorováním v této kapitole je dlouhodobý vývoj teploty ve vymezených vrstvách stratosféry. V panelu a)
+          srovnávacího grafu jej zachycují samostatně zpracované radiosondážní, satelitní a reanalytické řady.
+          Každé tvrzení o tomto vývoji proto uvádí konkrétní vrstvu, období, datový produkt a způsob vyjádření
+          teploty.
         </p>
       </div>
 

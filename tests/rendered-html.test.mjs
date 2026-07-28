@@ -86,8 +86,13 @@ test("publishes a full stratospheric temperature article instead of the generic 
   ]);
 
   assert.match(evidencePage, /StratosphericCoolingArticle/);
-  assert.match(article, /Satelitní řady měří vrstvy, ne body/);
-  assert.match(article, /Nejistota je součástí výsledku/);
+  assert.match(article, /Stratosféra je druhá velká vrstva zemské atmosféry/);
+  assert.match(article, /atmosphere-with-ionosphere-cs\.svg/);
+  assert.match(article, /Jak číst srovnávací graf/);
+  assert.match(article, /a\) Dolní stratosféra/);
+  assert.match(article, /d\) Dolní troposféra/);
+  assert.match(article, /<h2>Pozorování<\/h2>/);
+  assert.doesNotMatch(article, /Nejistota stratosférické teplotní řady nevychází jen z přesnosti jednoho čidla/);
   assert.match(article, /Slovníček pojmů/);
   assert.match(article, /10\.1029\/2008JD010421/);
   assert.match(article, /10\.1029\/2004JD005753/);
