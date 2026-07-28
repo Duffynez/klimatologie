@@ -24,6 +24,29 @@ export function GmstArticle() {
         </p>
 
         <p>
+          Tato konstrukce není specifická pro HadCRUT5 ani není nová. Parker a kol. v roce 1994 sestavili globální
+          pole dekádních ročních anomálií z teploty vzduchu nad pevninou a SST. {" "}
+          <ReferenceLink href="https://doi.org/10.1029/94JD00548">Parker et al., 1994</ReferenceLink>{" "}
+          Folland a kol. v roce 2001 z těchto složek počítali globální a hemisférické roční anomálie optimálním
+          vážením. {" "}
+          <ReferenceLink href="https://doi.org/10.1029/2001GL012877">Folland et al., 2001</ReferenceLink>{" "}
+          Smith a Reynolds pak v roce 2005 popsali měsíční globální rekonstrukci, která slučuje teplotu vzduchu nad
+          pevninou a teplotu mořské hladiny. {" "}
+          <ReferenceLink href="https://doi.org/10.1175/JCLI3362.1">Smith &amp; Reynolds, 2005</ReferenceLink>
+        </p>
+
+        <p>
+          Pozdější datové soubory tuto základní konstrukci rozvíjejí různými mřížkami, způsoby práce s chybějícími
+          oblastmi a modely nejistoty. Morice a kol. v roce 2012 spojili analýzy teploty vzduchu u povrchu a SST do
+          HadCRUT4. {" "}
+          <ReferenceLink href="https://doi.org/10.1029/2011JD017187">Morice et al., 2012</ReferenceLink>{" "}
+          Rohde a Hausfather v roce 2020 stejnou dvojici veličin výslovně popisují jako obvyklý globální land-ocean
+          index a dokumentují její použití v řadě Berkeley Earth. {" "}
+          <ReferenceLink href="https://doi.org/10.5194/essd-12-3469-2020">Rohde &amp; Hausfather, 2020</ReferenceLink>
+        </p>
+
+
+        <p>
           Každé číslo v této řadě proto musí nést tři údaje: použitý datový soubor, období, ke kterému je
           odchylka vztažena, a verzi dat. Bez nich není hodnota úplně určená. Například GISTEMP používá jako nulu
           průměr let 1951–1980, HadCRUT5 období 1961–1990 a současný NOAAGlobalTemp období 1991–2020. Posun

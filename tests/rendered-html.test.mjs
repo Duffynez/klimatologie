@@ -65,6 +65,11 @@ test("publishes the global surface temperature article instead of the generic pl
   assert.doesNotMatch(styles, /\.article-glossary\s*\{\s*position: fixed/);
   assert.match(styles, /\.article-glossary dl\s*\{\s*display: grid/);
   assert.match(article, /10\.1029\/2019JD032361/);
+  assert.match(article, /10\.1029\/94JD00548/);
+  assert.match(article, /10\.1029\/2001GL012877/);
+  assert.match(article, /10\.1175\/JCLI3362\.1/);
+  assert.match(article, /10\.1029\/2011JD017187/);
+  assert.match(article, /10\.5194\/essd-12-3469-2020/);
   assert.match(article, /gistemp-stations-robinson\.png/);
   assert.match(article, /noaa-weather-buoy-44008\.jpg/);
   assert.match(article, /gistemp-five-year-anomaly-1880-2025\.mp4/);
