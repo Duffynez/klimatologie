@@ -594,6 +594,31 @@ h3 {
   color: var(--coral);
   font-size: 1.25rem;
 }
+.article-figure {
+  margin: 34px 0 38px;
+}
+
+.article-figure--portrait {
+  width: min(100%, 460px);
+}
+
+.article-figure__media {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+
+video.article-figure__media {
+  aspect-ratio: 16 / 9;
+}
+
+.article-figure figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.83rem;
+  line-height: 1.45;
+}
 
 .article-glossary {
   order: -1;

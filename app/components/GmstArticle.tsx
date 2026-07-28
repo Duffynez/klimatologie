@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
 
 function ReferenceLink({ href, children }: { href: string; children: ReactNode }) {
@@ -80,6 +81,21 @@ export function GmstArticle() {
           archivů spojují do jedné databáze. {" "}
           <ReferenceLink href="https://doi.org/10.1175/JCLI-D-18-0094.1">Menne et al., 2018</ReferenceLink>
         </p>
+        <figure className="article-figure">
+          <Image
+            className="article-figure__media"
+            src="/media/gmst/gistemp-stations-robinson.png"
+            alt="Mapa rozmístění meteorologických stanic používaných v analýze GISTEMP v4."
+            width={3840}
+            height={2160}
+            unoptimized
+          />
+          <figcaption>
+            Meteorologické stanice používané v analýze GISTEMP v4. Vizualizace: NASA Scientific Visualization
+            Studio; data: NASA GISS. {" "}
+            <ReferenceLink href="https://svs.gsfc.nasa.gov/4961/">Původní záznam a kredit</ReferenceLink>
+          </figcaption>
+        </figure>
 
         <p>
           Přístroj na stanici se v čase může změnit. Historické záznamy obsahují ruční odečty, zatímco část
@@ -98,6 +114,23 @@ export function GmstArticle() {
             WMO: globální pozorovací systém
           </ReferenceLink>
         </p>
+        <figure className="article-figure article-figure--portrait">
+          <Image
+            className="article-figure__media"
+            src="/media/gmst/noaa-weather-buoy-44008.jpg"
+            alt="Žlutá meteorologická bóje NOAA na mořské hladině."
+            width={1511}
+            height={2016}
+            unoptimized
+          />
+          <figcaption>
+            Meteorologická bóje 44008 s čidly pro teplotu mořské hladiny a další pozorování. Foto: James Elliott,
+            National Data Buoy Center; zdroj: NOAA PMEL. {" "}
+            <ReferenceLink href="https://www.pmel.noaa.gov/media/image/44008-pic1-2025june13jpg">
+              Původní fotografie
+            </ReferenceLink>
+          </figcaption>
+        </figure>
 
         <p>
           Historická lodní měření nevznikala jedinou technikou. Námořníci měřili vodu ve vědrech vytažených z
@@ -185,6 +218,25 @@ export function GmstArticle() {
           součástí téhož datového produktu a jejich rozdíl musí být u grafu vždy uveden. {" "}
           <ReferenceLink href="https://doi.org/10.1029/2019JD032361">Morice et al., 2021</ReferenceLink>
         </p>
+        <figure className="article-figure">
+          <video
+            className="article-figure__media"
+            controls
+            playsInline
+            preload="metadata"
+            aria-label="Pětileté průměry anomálií GISTEMP v4 od roku 1880 do roku 2025."
+          >
+            <source src="/media/gmst/gistemp-five-year-anomaly-1880-2025.mp4" type="video/mp4" />
+            Váš prohlížeč nepodporuje přehrávání videa.
+          </video>
+          <figcaption>
+            Pětileté průměry anomálií GISTEMP v4, 1880–2025. Tato verze nedopočítává hodnoty v oblastech bez
+            dat. NASA GISS. {" "}
+            <ReferenceLink href="https://data.giss.nasa.gov/gistemp/animations/">
+              Původní animace a popis
+            </ReferenceLink>
+          </figcaption>
+        </figure>
 
         <h2>Nejistota je součást výsledku</h2>
         <p>
