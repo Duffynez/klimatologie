@@ -40,10 +40,14 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
   if (slug === "stratosfericke-ochlazovani") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Pozorování / Atmosféra" title="Dlouhodobá změna teploty ve stratosféře">
+        <PageLead
+          eyebrow="Pozorování / Atmosféra"
+          title="Teplota stratosféry"
+          meta="Napsáno: 30. července 2026"
+        >
           <p>
-            Jak se měří teplota v různých vrstvách stratosféry, odkdy sahají jednotlivé řady a jak se zveřejňují
-            jejich nejistoty.
+            Jak se teplota stratosféry měří balóny, družicemi a rádiovými zákryty, jak se měření vyvíjela a co
+            ukazují zveřejněná data.
           </p>
         </PageLead>
         <StratosphericCoolingArticle />

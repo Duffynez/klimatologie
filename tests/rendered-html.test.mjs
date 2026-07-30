@@ -100,21 +100,33 @@ test("publishes the global surface temperature article instead of the generic pl
   assert.match(evidence, /slug: "gmst"[\s\S]*status: "hotovo"/);
 });
 test("publishes a full stratospheric temperature article instead of the generic placeholder", async () => {
-  const [article, evidencePage, evidence] = await Promise.all([
+  const [article, evidencePage, evidence, styles] = await Promise.all([
     readFile(new URL("app/components/StratosphericCoolingArticle.tsx", root), "utf8"),
     readFile(new URL("app/pozorovani/[slug]/page.tsx", root), "utf8"),
     readFile(new URL("app/data/evidence.ts", root), "utf8"),
+    readFile(new URL("app/globals.css", root), "utf8"),
   ]);
 
   assert.match(evidencePage, /StratosphericCoolingArticle/);
-  assert.match(article, /Stratosféra je druhá velká vrstva zemské atmosféry/);
-  assert.match(article, /atmosphere-with-ionosphere-cs\.svg/);
-  assert.match(article, /Jak číst srovnávací graf/);
-  assert.match(article, /a\) Dolní stratosféra/);
-  assert.match(article, /d\) Dolní troposféra/);
-  assert.match(article, /<h2>Pozorování<\/h2>/);
-  assert.doesNotMatch(article, /Nejistota stratosférické teplotní řady nevychází jen z přesnosti jednoho čidla/);
-  assert.match(article, /Slovníček pojmů/);
+  assert.match(evidencePage, /title="Teplota stratosféry"/);
+  assert.match(evidencePage, /Napsáno: 30\. července 2026/);
+  assert.match(article, /Teplotou stratosféry označujeme teplotu vzduchu mezi tropopauzou a stratopauzou/);
+  assert.match(article, /Potřebné informace/);
+  assert.match(article, /Tlaková hladina/);
+  assert.match(article, /Vrstvová teplota/);
+  assert.match(article, /Váhová funkce/);
+  assert.match(article, /noaa-atmosphere-temperature-profile\.png/);
+  assert.match(article, /ncar-stratospheric-weighting-functions\.png/);
+  assert.match(article, /ncar-stratospheric-temperature-1979-2024\.png/);
+  assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
+  assert.match(article, /Přesné shrnutí pozorování/);
+  assert.match(article, /−0,25 ± 0,16 K za desetiletí/);
+  assert.match(article, /State of the Climate in 2024/);
+  assert.match(article, /Usage Restrictions: None/);
+  assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
+  assert.doesNotMatch(article, /atmosphere-with-ionosphere-cs\.svg/);
+  assert.doesNotMatch(article, /jra3q-lower-stratosphere-comparison-2021\.png/);
+  assert.doesNotMatch(article, /nasa-satellite-atmospheric-trends-1979-2005\.jpg/);
   assert.match(article, /10\.1029\/2008JD010421/);
   assert.match(article, /10\.1029\/2004JD005753/);
   assert.match(article, /10\.1175\/JCLI-D-11-00668\.1/);
@@ -122,10 +134,9 @@ test("publishes a full stratospheric temperature article instead of the generic 
   assert.match(article, /10\.1175\/JTECH-D-16-0018\.1/);
   assert.match(article, /10\.1175\/JCLI-D-19-0998\.1/);
   assert.match(article, /10\.5194\/acp-24-12925-2024/);
+  assert.match(article, /10\.1038\/s41612-022-00229-7/);
   assert.match(article, /noaa-radiosonde-balloon-1944\.jpg/);
-  assert.match(article, /jra3q-lower-stratosphere-comparison-2021\.png/);
-  assert.match(article, /10\.2151\/jmsj\.2024-004/);
-  assert.match(article, /nasa-satellite-atmospheric-trends-1979-2005\.jpg/);
+  assert.match(styles, /\.article-figure--scroll-wide \.article-figure__media/);
   assert.match(evidence, /slug: "stratosfericke-ochlazovani"[\s\S]*status: "hotovo"/);
 });
 
