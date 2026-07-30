@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { GmstArticle } from "../../components/GmstArticle";
+import { OceanHeatArticle } from "../../components/OceanHeatArticle";
 import { StratosphericCoolingArticle } from "../../components/StratosphericCoolingArticle";
 import { PageLead } from "../../components/PageLead";
 import { evidenceBySlug, evidenceTopics } from "../../data/evidence";
@@ -42,6 +43,25 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
           </p>
         </PageLead>
         <StratosphericCoolingArticle />
+        <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
+      </div>
+    );
+  }
+
+  if (slug === "tepelny-obsah-oceanu") {
+    return (
+      <div className="page-shell">
+        <PageLead
+          eyebrow="Pozorování / Oceány"
+          title="Obsah tepla v oceánu"
+          meta="Napsáno: 30. července 2026"
+        >
+          <p>
+            Jak se z teplot naměřených v různých hloubkách počítá změna obsahu tepla, jak se měření vyvíjela a co
+            ukazují zveřejněná data.
+          </p>
+        </PageLead>
+        <OceanHeatArticle />
         <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
       </div>
     );

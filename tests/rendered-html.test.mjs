@@ -108,7 +108,36 @@ test("publishes a full stratospheric temperature article instead of the generic 
   assert.match(evidence, /slug: "stratosfericke-ochlazovani"[\s\S]*status: "hotovo"/);
 });
 
-test("keeps the current catalogue of thirteen observations", async () => {
+test("publishes a sourced ocean heat content article instead of the generic placeholder", async () => {
+  const [article, evidencePage, evidence] = await Promise.all([
+    readFile(new URL("app/components/OceanHeatArticle.tsx", root), "utf8"),
+    readFile(new URL("app/pozorovani/[slug]/page.tsx", root), "utf8"),
+    readFile(new URL("app/data/evidence.ts", root), "utf8"),
+  ]);
+
+  assert.match(evidencePage, /OceanHeatArticle/);
+  assert.match(evidencePage, /Napsáno: 30\. července 2026/);
+  assert.match(article, /Obsah tepla v oceánu vyjadřuje/);
+  assert.match(article, /Jak vzniká globální výpočet/);
+  assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
+  assert.match(article, /pan-2026-ohc-upper-2000m\.png/);
+  assert.match(article, /noaa-ohc-trend-1993-2024\.png/);
+  assert.match(article, /argo-float-deployment\.jpg/);
+  assert.match(article, /10\.1126\/science\.287\.5461\.2225/);
+  assert.match(article, /10\.1038\/nature07080/);
+  assert.match(article, /10\.1038\/nature09043/);
+  assert.match(article, /10\.1029\/2012GL051106/);
+  assert.match(article, /10\.1126\/sciadv\.1601545/);
+  assert.match(article, /10\.5194\/essd-16-3517-2024/);
+  assert.match(article, /10\.1007\/s00376-026-5876-0/);
+  assert.match(article, /10\.1029\/2024GL111229/);
+  assert.match(article, /CC BY 4\.0/);
+  assert.doesNotMatch(article, /Teplo je energie uložená ve vodě/);
+  assert.doesNotMatch(article, /Tepelná energie/);
+  assert.match(evidence, /slug: "tepelny-obsah-oceanu"[\s\S]*status: "hotovo"/);
+});
+
+test("keeps the current catalogue of fourteen observations", async () => {
   const evidence = await readFile(new URL("app/data/evidence.ts", root), "utf8");
   const slugs = [...evidence.matchAll(/\{ slug: "([^"]+)"/g)].map((match) => match[1]);
 
@@ -118,6 +147,7 @@ test("keeps the current catalogue of thirteen observations", async () => {
     "atmosfericka-koncentrace-co2",
     "narust-vlhkosti",
     "srazky-a-privalove-srazky",
+    "tepelny-obsah-oceanu",
     "gmsl",
     "acidifikace-oceanu",
     "ubytek-arktickeho-ledu",
@@ -130,5 +160,6 @@ test("keeps the current catalogue of thirteen observations", async () => {
   assert.match(evidence, /title: "Globální teplota u povrchu"/);
   assert.match(evidence, /title: "Teplota stratosféry"/);
   assert.match(evidence, /title: "Atmosférická koncentrace CO2"/);
+  assert.match(evidence, /title: "Obsah tepla v oceánu"/);
   assert.match(evidence, /title: "Sněhová pokrývka a permafrost"/);
 });
