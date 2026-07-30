@@ -107,3 +107,29 @@ test("publishes a full stratospheric temperature article instead of the generic 
   assert.match(article, /nasa-satellite-atmospheric-trends-1979-2005\.jpg/);
   assert.match(evidence, /slug: "stratosfericke-ochlazovani"[\s\S]*status: "hotovo"/);
 });
+
+test("keeps the agreed catalogue of fourteen observations", async () => {
+  const evidence = await readFile(new URL("app/data/evidence.ts", root), "utf8");
+  const slugs = [...evidence.matchAll(/\{ slug: "([^"]+)"/g)].map((match) => match[1]);
+
+  assert.deepEqual(slugs, [
+    "gmst",
+    "stratosfericke-ochlazovani",
+    "atmosfericka-koncentrace-co2",
+    "narust-vlhkosti",
+    "srazky-a-privalove-srazky",
+    "ohc",
+    "gmsl",
+    "acidifikace-oceanu",
+    "ubytek-arktickeho-ledu",
+    "ustup-ledovcu",
+    "nestabilita-prikrovu",
+    "snehova-pokryvka-a-permafrost",
+    "fenologicke-posuny",
+    "vlny-veder",
+  ]);
+  assert.match(evidence, /title: "Globální teplota u povrchu"/);
+  assert.match(evidence, /title: "Teplota stratosféry"/);
+  assert.match(evidence, /title: "Atmosférická koncentrace CO2"/);
+  assert.match(evidence, /title: "Sněhová pokrývka a permafrost"/);
+});
