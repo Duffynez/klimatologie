@@ -824,6 +824,10 @@ video.article-figure__media {
     width: 720px;
     max-width: none;
   }
+
+  .article-figure--scroll-wide .article-figure__media {
+    width: 980px;
+  }
 }
 
 .source-list {

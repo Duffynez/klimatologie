@@ -47,36 +47,57 @@ test("keeps categorized citations and arrow navigation in the history timeline",
 });
 
 test("publishes the global surface temperature article instead of the generic placeholder", async () => {
-  const [article, evidencePage, styles] = await Promise.all([
+  const [article, evidencePage, evidence, styles] = await Promise.all([
     readFile(new URL("app/components/GmstArticle.tsx", root), "utf8"),
     readFile(new URL("app/pozorovani/[slug]/page.tsx", root), "utf8"),
+    readFile(new URL("app/data/evidence.ts", root), "utf8"),
     readFile(new URL("app/globals.css", root), "utf8"),
   ]);
 
   assert.match(evidencePage, /GmstArticle/);
-  assert.match(article, /Globální teplota u povrchu je plošně vážená časová řada/);
-  assert.match(article, /Od kdy máme globální řadu/);
-  assert.match(article, /Nejistota je součást výsledku/);
-  assert.match(article, /Slovníček pojmů/);
-  assert.match(article, /NOAAGlobalTemp v6\.1/);
+  assert.match(evidencePage, /title="Globální teplota u povrchu"/);
+  assert.match(evidencePage, /Napsáno: 30\. července 2026/);
+  assert.match(article, /Globální teplota u povrchu vyjadřuje, jak se průměrná teplota/);
+  assert.match(article, /Historie globálního výpočtu/);
+  assert.match(article, /Jak vzniká globální výpočet/);
+  assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
+  assert.match(article, /Potřebné informace/);
+  assert.equal((article.match(/<dt>/g) ?? []).length, 4);
+  assert.match(article, /<dt>SST<\/dt>/);
+  assert.match(article, /<dt>Referenční období<\/dt>/);
+  assert.match(article, /<dt>Mřížka<\/dt>/);
+  assert.match(article, /<dt>Plošné vážení<\/dt>/);
+  assert.match(article, /NOAAGlobalTemp v6\.1\.0/);
+  assert.match(article, /HadCRUT\.5\.1\.0\.0/);
+  assert.match(article, /NASA GISTEMP v4/);
+  assert.match(article, /Berkeley Earth Land\/Ocean/);
+  assert.match(article, /1,43 ± 0,13 °C/);
+  assert.match(article, /1,09 °C/);
   assert.doesNotMatch(article, /<dt>Teplota u povrchu<\/dt>/);
   assert.doesNotMatch(article, /<dt>Anomálie<\/dt>/);
   assert.doesNotMatch(article, /<dt>Homogenizace<\/dt>/);
+  assert.doesNotMatch(article, /časová řada/);
   assert.doesNotMatch(styles, /\.article-glossary\s*\{\s*position: fixed/);
   assert.match(styles, /\.article-glossary dl\s*\{\s*display: grid/);
+  assert.match(styles, /\.article-figure--scroll-wide \.article-figure__media/);
+  assert.match(article, /10\.1002\/qj\.49706427503/);
+  assert.match(article, /10\.1002\/qj\.49708737102/);
+  assert.match(article, /10\.1038\/322430a0/);
+  assert.match(article, /10\.1029\/JD092iD11p13345/);
+  assert.match(article, /10\.1029\/2010RG000345/);
   assert.match(article, /10\.1029\/2019JD032361/);
-  assert.match(article, /10\.1029\/94JD00548/);
-  assert.match(article, /10\.1029\/2001GL012877/);
-  assert.match(article, /10\.1175\/JCLI3362\.1/);
-  assert.match(article, /10\.1029\/2011JD017187/);
+  assert.match(article, /10\.1175\/BAMS-D-24-0012\.1/);
+  assert.match(article, /10\.1029\/2023JD040179/);
   assert.match(article, /10\.5194\/essd-12-3469-2020/);
   assert.match(article, /gistemp-stations-robinson\.png/);
-  assert.match(article, /noaa-weather-buoy-44008\.jpg/);
+  assert.match(article, /noaa-drifting-buoy-deployment\.jpg/);
   assert.match(article, /gistemp-five-year-anomaly-1880-2025\.mp4/);
-  assert.match(article, /global-temperature-four-datasets-nasa\.jpg/);
-  assert.match(article, /NASA Scientific Visualization\s+Studio/);
-  assert.match(article, /Gavin Schmidt \/ NASA/);
+  assert.match(article, /c3s-global-temperature-datasets-1850-2025\.png/);
+  assert.match(article, /NASA Scientific Visualization Studio/);
+  assert.match(article, /C3S\/ECMWF/);
+  assert.match(article, /licence-to-use-copernicus-products/);
   assert.match(styles, /\.article-figure__media\s*\{/);
+  assert.match(evidence, /slug: "gmst"[\s\S]*status: "hotovo"/);
 });
 test("publishes a full stratospheric temperature article instead of the generic placeholder", async () => {
   const [article, evidencePage, evidence] = await Promise.all([

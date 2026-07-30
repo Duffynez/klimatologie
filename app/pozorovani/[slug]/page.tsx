@@ -21,10 +21,14 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
   if (slug === "gmst") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Pozorování / Atmosféra" title="Dlouhodobá změna globální teploty u povrchu">
+        <PageLead
+          eyebrow="Pozorování / Atmosféra"
+          title="Globální teplota u povrchu"
+          meta="Napsáno: 30. července 2026"
+        >
           <p>
-            Jak vzniká globální teplotní řada z pozemních a oceánských pozorování, co přesně obsahuje a jak se
-            zveřejňuje její nejistota.
+            Jak se z měření meteorologických stanic, lodí a bójí počítá globální změna teploty, jak se měření
+            vyvíjela a co ukazují zveřejněná data.
           </p>
         </PageLead>
         <GmstArticle />
