@@ -12,7 +12,7 @@ export const evidenceTopics: EvidenceTopic[] = [
   { slug: "atmosfericka-koncentrace-co2", title: "Atmosférická koncentrace CO2", category: "Atmosféra", summary: "Připravovaný přehled přímých měření koncentrace oxidu uhličitého ve vzduchu, jejich historie a datových řad.", status: "mapujeme zdroje" },
   { slug: "narust-vlhkosti", title: "Vlhkost atmosféry", category: "Atmosféra", summary: "Připravovaný přehled pozorování vodní páry, měřicích metod a nejistot.", status: "mapujeme zdroje" },
   { slug: "srazky-a-privalove-srazky", title: "Srážky a přívalové srážky", category: "Atmosféra", summary: "Připravovaný přehled úhrnů srážek, intenzivních srážkových epizod, měřicích sítí a datových řad.", status: "mapujeme zdroje" },
-  { slug: "ohc", title: "Tepelný obsah oceánů", category: "Oceány", summary: "Měření energie uložené v oceánu, jeho datové řady, metody a nejistoty.", status: "hotovo" },
+  { slug: "ohc", title: "Teplo v oceánech", category: "Oceány", summary: "Jak se z měření teploty vody zjišťuje množství tepla v oceánech a co ukazují aktuální data.", status: "hotovo" },
   { slug: "gmsl", title: "Globální střední hladina moře", category: "Oceány", summary: "Připravovaný přehled měření globální střední hladiny moře a souvisejících zdrojů.", status: "připravujeme data" },
   { slug: "acidifikace-oceanu", title: "Acidifikace oceánu", category: "Oceány", summary: "Rozcestník pro chemická měření oceánu, jejich limity a primární data.", status: "mapujeme zdroje" },
   { slug: "ubytek-arktickeho-ledu", title: "Arktický mořský led", category: "Kryosféra", summary: "Připravovaná stránka o ploše, rozsahu a sezónním rytmu mořského ledu.", status: "připravujeme data" },

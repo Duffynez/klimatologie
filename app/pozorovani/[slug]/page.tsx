@@ -53,12 +53,11 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
       <div className="page-shell">
         <PageLead
           eyebrow="Pozorování / Oceány"
-          title="Tepelný obsah oceánů"
+          title="Teplo v oceánech"
           meta="Napsáno: 30. července 2026"
         >
           <p>
-            Jak se z teplotních profilů vznikajících v různých hloubkách skládá měření energie uložené v oceánu, jaké
-            datové řady existují a co přesně v nich lze pozorovat.
+            Jak se měří teplota vody pod hladinou, jak z ní vzniká údaj o množství tepla a co ukazují aktuální data.
           </p>
         </PageLead>
         <OceanHeatContentArticle />
