@@ -29,7 +29,8 @@ export function OceanHeatArticle() {
           <div>
             <dt>Zettajoule</dt>
             <dd>
-              Zkráceně ZJ. Jeden zettajoule je 10<sup>21</sup> joulů; v této jednotce se zapisují globální součty.
+              Zkráceně ZJ. Jeden zettajoule je 10<sup>21</sup> joulů. Hodnota v grafu neudává veškeré teplo v
+              oceánu, ale změnu vůči určenému referenčnímu stavu.
             </dd>
           </div>
           <div>
@@ -367,6 +368,19 @@ export function OceanHeatArticle() {
           průměr; barva sama neoznačuje příčinu změny.
         </p>
 
+        <p>
+          Hodnota 300 ZJ v tomto grafu tedy neznamená, že horní část oceánu obsahuje celkem 300 ZJ. Znamená, že
+          vrstva od hladiny do 2 000 metrů obsahuje přibližně o 300 ZJ více tepla než v průměru let 1981–2010.
+          Měřítko lze převést také na teplotu. Japonská meteorologická agentura ve svém samostatném globálním
+          výpočtu uvádí, že přírůstek 63,9 ZJ za desetiletí odpovídá zvýšení průměrné teploty vrstvy 0–2 000 metrů
+          o 0,022 °C za desetiletí. Ve stejném přibližném poměru představuje 300 ZJ průměrné zvýšení teploty této
+          celé vrstvy asi o 0,10 °C. Jde o průměr přes světový oceán a všechny zahrnuté hloubky; změna na
+          jednotlivých místech může být větší, menší nebo může mít opačné znaménko.{" "}
+          <ReferenceLink href="https://www.data.jma.go.jp/kaiyou/english/ohc/ohc_global_en.html">
+            Japan Meteorological Agency
+          </ReferenceLink>
+        </p>
+
         <figure className="article-figure article-figure--scroll-mobile">
           <div
             className="article-figure__scroll"
@@ -407,10 +421,19 @@ export function OceanHeatArticle() {
         </figure>
 
         <p>
-          V tomto výpočtu je rok 2025 nejvyšším rokem od začátku zobrazeného období. IAP/CAS uvádí proti roku
-          2024 přírůstek přibližně 23 ± 8 ZJ v horních 2 000 metrech. Výsledky italské reanalýzy a služby
-          Copernicus Marine rovněž ukazují, že se obsah tepla mezi roky 2024 a 2025 dále zvětšil. Tento údaj
-          popisuje meziroční rozdíl konkrétních produktů, nikoli přímo změřené množství jediným přístrojem.{" "}
+          Na začátku grafu, v roce 1958, leží roční hodnota přibližně 130 ZJ pod průměrem let 1981–2010; v roce
+          2025 přesahuje 300 ZJ nad tímto průměrem. Rozdíl mezi prvním a posledním rokem je tedy zhruba 460 ZJ.
+          Při stejném orientačním převodu to odpovídá zvýšení průměrné teploty vrstvy 0–2 000 metrů asi o 0,16 °C.
+          Změna referenčního období by posunula všechny sloupce nahoru nebo dolů, tento rozdíl mezi roky by však
+          zůstal stejný.
+        </p>
+
+        <p>
+          Rok 2025 je v tomto výpočtu nejvyšším rokem od začátku zobrazeného období. IAP/CAS uvádí proti roku 2024
+          přírůstek přibližně 23 ± 8 ZJ v horních 2 000 metrech, což ve stejném měřítku představuje asi 0,008 °C
+          průměrovaných přes celou vrstvu. Výsledky italské reanalýzy a služby Copernicus Marine rovněž ukazují,
+          že se obsah tepla mezi roky 2024 a 2025 dále zvětšil. Tento údaj popisuje meziroční rozdíl konkrétních
+          produktů, nikoli přímo změřené množství jediným přístrojem.{" "}
           <ReferenceLink href="https://doi.org/10.1007/s00376-026-5876-0">Pan et al., 2026</ReferenceLink>
         </p>
 
@@ -580,6 +603,14 @@ export function OceanHeatArticle() {
                 .
               </li>
               <li>
+                Ishii, M. et al. (2017):{" "}
+                <ReferenceLink href="https://doi.org/10.2151/sola.2017-030">
+                  Accuracy of Global Upper Ocean Heat Content Estimation Expected from Present Observational Data
+                  Sets
+                </ReferenceLink>
+                .
+              </li>
+              <li>
                 Cheng, L. et al. (2024):{" "}
                 <ReferenceLink href="https://doi.org/10.5194/essd-16-3517-2024">
                   IAPv4 ocean temperature and ocean heat content gridded dataset
@@ -609,6 +640,12 @@ export function OceanHeatArticle() {
                   Globální obsah tepla podle NOAA
                 </ReferenceLink>
                 : hotové globální a oblastní hodnoty od roku 1955.
+              </li>
+              <li>
+                <ReferenceLink href="https://www.data.jma.go.jp/kaiyou/english/ohc/ohc_global_en.html">
+                  Globální obsah tepla a průměrná teplota podle JMA
+                </ReferenceLink>
+                : aktuální hodnoty pro vrstvu 0–2 000 metrů a textový soubor ke stažení.
               </li>
               <li>
                 <ReferenceLink href="https://doi.org/10.12157/IOCAS.20240117.001">IAPv4 OHC</ReferenceLink>: mřížková
