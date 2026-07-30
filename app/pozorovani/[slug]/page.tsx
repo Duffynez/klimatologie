@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { GmstArticle } from "../../components/GmstArticle";
-import { OceanHeatContentArticle } from "../../components/OceanHeatContentArticle";
 import { StratosphericCoolingArticle } from "../../components/StratosphericCoolingArticle";
 import { PageLead } from "../../components/PageLead";
 import { evidenceBySlug, evidenceTopics } from "../../data/evidence";
@@ -43,24 +42,6 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
           </p>
         </PageLead>
         <StratosphericCoolingArticle />
-        <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
-      </div>
-    );
-  }
-
-  if (slug === "ohc") {
-    return (
-      <div className="page-shell">
-        <PageLead
-          eyebrow="Pozorování / Oceány"
-          title="Teplo v oceánech"
-          meta="Napsáno: 30. července 2026"
-        >
-          <p>
-            Jak se měří teplota vody pod hladinou, jak z ní vzniká údaj o množství tepla a co ukazují aktuální data.
-          </p>
-        </PageLead>
-        <OceanHeatContentArticle />
         <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
       </div>
     );

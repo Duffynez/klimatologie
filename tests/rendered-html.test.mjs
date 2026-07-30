@@ -133,34 +133,3 @@ test("keeps the agreed catalogue of fourteen observations", async () => {
   assert.match(evidence, /title: "Atmosférická koncentrace CO2"/);
   assert.match(evidence, /title: "Sněhová pokrývka a permafrost"/);
 });
-
-test("publishes a readable ocean-heat article following the observation template", async () => {
-  const [article, evidencePage, evidence, pageLead] = await Promise.all([
-    readFile(new URL("app/components/OceanHeatContentArticle.tsx", root), "utf8"),
-    readFile(new URL("app/pozorovani/[slug]/page.tsx", root), "utf8"),
-    readFile(new URL("app/data/evidence.ts", root), "utf8"),
-    readFile(new URL("app/components/PageLead.tsx", root), "utf8"),
-  ]);
-
-  assert.match(evidencePage, /OceanHeatContentArticle/);
-  assert.match(evidencePage, /Napsáno: 30\. července 2026/);
-  assert.match(pageLead, /page-lead__meta/);
-  assert.match(article, /Jak číst tento článek/);
-  assert.match(article, /<h2>Co pozorujeme<\/h2>/);
-  assert.match(article, /<h2>Historie<\/h2>/);
-  assert.match(article, /<h2>Jak vznikají údaje<\/h2>/);
-  assert.match(article, /<h2>Data, která lze stáhnout<\/h2>/);
-  assert.match(article, /<h2>Pozorování<\/h2>/);
-  assert.match(article, /<h2>Prameny a data<\/h2>/);
-  assert.doesNotMatch(article, /article-formula/);
-  assert.doesNotMatch(article, /časová řada/);
-  assert.match(article, /10\.1029\/2012GL051106/);
-  assert.match(article, /10\.1126\/sciadv\.1601545/);
-  assert.match(article, /10\.5194\/essd-16-3517-2024/);
-  assert.match(article, /10\.1175\/JCLI-D-15-0801\.1/);
-  assert.match(article, /10\.1007\/s00376-026-5876-0/);
-  assert.match(article, /argo-float-deployment-noaa-pmel\.jpg/);
-  assert.match(article, /ncei-ohc-2025-0-700m\.jpg/);
-  assert.doesNotMatch(article, /iapv4-observation-coverage|iapv4-ohc-depth-series|iapv4-ohc-products-comparison/);
-  assert.match(evidence, /slug: "ohc"[\s\S]*status: "hotovo"/);
-});
