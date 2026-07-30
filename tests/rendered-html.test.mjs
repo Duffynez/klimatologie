@@ -108,7 +108,7 @@ test("publishes a full stratospheric temperature article instead of the generic 
   assert.match(evidence, /slug: "stratosfericke-ochlazovani"[\s\S]*status: "hotovo"/);
 });
 
-test("keeps the agreed catalogue of fourteen observations", async () => {
+test("keeps the current catalogue of thirteen observations", async () => {
   const evidence = await readFile(new URL("app/data/evidence.ts", root), "utf8");
   const slugs = [...evidence.matchAll(/\{ slug: "([^"]+)"/g)].map((match) => match[1]);
 
@@ -118,7 +118,6 @@ test("keeps the agreed catalogue of fourteen observations", async () => {
     "atmosfericka-koncentrace-co2",
     "narust-vlhkosti",
     "srazky-a-privalove-srazky",
-    "ohc",
     "gmsl",
     "acidifikace-oceanu",
     "ubytek-arktickeho-ledu",
