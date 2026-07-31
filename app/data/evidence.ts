@@ -15,7 +15,7 @@ export const evidenceTopics: EvidenceTopic[] = [
   { slug: "tepelny-obsah-oceanu", title: "Obsah tepla v oceánu", category: "Oceány", summary: "Měření teploty v oceánu, výpočet změny obsahu tepla a veřejně dostupná data.", status: "hotovo" },
   { slug: "gmsl", title: "Globální střední hladina moře", category: "Oceány", summary: "Jak se výška moře měří na pobřeží a z družic, jak vzniká globální průměr a co ukazují zveřejněná data.", status: "hotovo" },
   { slug: "acidifikace-oceanu", title: "Acidifikace oceánu", category: "Oceány", summary: "Jak se měří pH a další veličiny uhličitanového systému, jak vznikají globální rekonstrukce a co ukazují zveřejněná data.", status: "hotovo" },
-  { slug: "ubytek-arktickeho-ledu", title: "Arktický mořský led", category: "Kryosféra", summary: "Připravovaná stránka o ploše, rozsahu a sezónním rytmu mořského ledu.", status: "připravujeme data" },
+  { slug: "ubytek-arktickeho-ledu", title: "Arktický mořský led", category: "Kryosféra", summary: "Jak se měří rozsah, plocha, stáří, tloušťka a objem mořského ledu a co ukazují zveřejněná data.", status: "hotovo" },
   { slug: "ustup-ledovcu", title: "Horské ledovce", category: "Kryosféra", summary: "Místo pro dlouhodobá pozorování ledovců a jejich dokumentované zdroje.", status: "mapujeme zdroje" },
   { slug: "nestabilita-prikrovu", title: "Hmotnost ledových příkrovů", category: "Kryosféra", summary: "Připravovaný přehled měření hmotnosti grónského a antarktického ledového příkrovu.", status: "mapujeme zdroje" },
   { slug: "snehova-pokryvka-a-permafrost", title: "Sněhová pokrývka a permafrost", category: "Kryosféra", summary: "Připravovaný přehled rozsahu sněhu, vlastností zmrzlé půdy, měřicích metod a datových řad.", status: "mapujeme zdroje" },

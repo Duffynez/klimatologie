@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AtmosphericCo2Article } from "../../components/AtmosphericCo2Article";
 import { AtmosphericHumidityArticle } from "../../components/AtmosphericHumidityArticle";
+import { ArcticSeaIceArticle } from "../../components/ArcticSeaIceArticle";
 import { GlobalMeanSeaLevelArticle } from "../../components/GlobalMeanSeaLevelArticle";
 import { GmstArticle } from "../../components/GmstArticle";
 import { OceanAcidificationArticle } from "../../components/OceanAcidificationArticle";
@@ -170,6 +171,25 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
           </p>
         </PageLead>
         <OceanAcidificationArticle />
+        <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
+      </div>
+    );
+  }
+
+  if (slug === "ubytek-arktickeho-ledu") {
+    return (
+      <div className="page-shell">
+        <PageLead
+          eyebrow="Pozorování / Kryosféra"
+          title="Arktický mořský led"
+          meta="Napsáno: 31. července 2026"
+        >
+          <p>
+            Co přesně znamenají rozsah, plocha, stáří, tloušťka a objem mořského ledu, jak vznikají družicová data a
+            co ukazují zveřejněná měření.
+          </p>
+        </PageLead>
+        <ArcticSeaIceArticle />
         <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
       </div>
     );

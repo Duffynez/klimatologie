@@ -360,6 +360,43 @@ test("publishes a sourced ocean acidification article with measured and reconstr
   assert.match(evidence, /slug: "acidifikace-oceanu"[\s\S]*status: "hotovo"/);
 });
 
+test("publishes a sourced Arctic sea ice article with extent, age, and thickness evidence", async () => {
+  const [article, evidencePage, evidence] = await Promise.all([
+    readFile(new URL("app/components/ArcticSeaIceArticle.tsx", root), "utf8"),
+    readFile(new URL("app/pozorovani/[slug]/page.tsx", root), "utf8"),
+    readFile(new URL("app/data/evidence.ts", root), "utf8"),
+  ]);
+
+  assert.match(evidencePage, /ArcticSeaIceArticle/);
+  assert.match(evidencePage, /title="Arktický mořský led"/);
+  assert.match(evidencePage, /Napsáno: 31\. července 2026/);
+  assert.match(article, /Arktický mořský led je zmrzlá mořská voda/);
+  assert.equal((article.match(/<dt>/g) ?? []).length, 4);
+  assert.match(article, /<dt>Koncentrace ledu<\/dt>/);
+  assert.match(article, /<dt>Rozsah ledu<\/dt>/);
+  assert.match(article, /<dt>Plocha ledu<\/dt>/);
+  assert.match(article, /<dt>Víceletý led<\/dt>/);
+  assert.match(article, /Jak vzniká zveřejněný záznam/);
+  assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
+  assert.match(article, /nasa-minimum-2025\.jpg/);
+  assert.match(article, /noaa-seasonal-cycle-2025\.png/);
+  assert.match(article, /copernicus-march-1979-2026\.png/);
+  assert.match(article, /copernicus-september-1979-2025\.png/);
+  assert.match(article, /noaa-sea-ice-age-1985-2005-2025\.png/);
+  assert.equal((article.match(/unoptimized/g) ?? []).length, 5);
+  assert.match(article, /4,60 milionu km²/);
+  assert.match(article, /14,29 milionu km²/);
+  assert.match(article, /95 000/);
+  assert.match(article, /přibližně o 66 %/);
+  assert.match(article, /10\.1029\/JD089iD04p05355/);
+  assert.match(article, /10\.7265\/a98x-0f50/);
+  assert.match(article, /10\.5194\/tc-18-2473-2024/);
+  assert.match(article, /10\.1088\/1748-9326\/aae3ec/);
+  assert.match(article, /Licence to use Copernicus Products/);
+  assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
+  assert.match(evidence, /slug: "ubytek-arktickeho-ledu"[\s\S]*status: "hotovo"/);
+});
+
 test("keeps the current catalogue of fourteen observations", async () => {
   const evidence = await readFile(new URL("app/data/evidence.ts", root), "utf8");
   const slugs = [...evidence.matchAll(/\{ slug: "([^"]+)"/g)].map((match) => match[1]);
