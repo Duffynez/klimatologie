@@ -5,6 +5,7 @@ import { AtmosphericHumidityArticle } from "../../components/AtmosphericHumidity
 import { ArcticSeaIceArticle } from "../../components/ArcticSeaIceArticle";
 import { GlobalMeanSeaLevelArticle } from "../../components/GlobalMeanSeaLevelArticle";
 import { GmstArticle } from "../../components/GmstArticle";
+import { MountainGlaciersArticle } from "../../components/MountainGlaciersArticle";
 import { OceanAcidificationArticle } from "../../components/OceanAcidificationArticle";
 import { OceanHeatArticle } from "../../components/OceanHeatArticle";
 import { PrecipitationArticle } from "../../components/PrecipitationArticle";
@@ -190,6 +191,25 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
           </p>
         </PageLead>
         <ArcticSeaIceArticle />
+        <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
+      </div>
+    );
+  }
+
+  if (slug === "ustup-ledovcu") {
+    return (
+      <div className="page-shell">
+        <PageLead
+          eyebrow="Pozorování / Kryosféra"
+          title="Horské ledovce"
+          meta="Napsáno: 31. července 2026"
+        >
+          <p>
+            Jak se měří poloha čela, plocha, výška povrchu a změna hmotnosti ledovců, jak se spojují terénní a
+            družicová pozorování a co ukazují zveřejněná data.
+          </p>
+        </PageLead>
+        <MountainGlaciersArticle />
         <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
       </div>
     );

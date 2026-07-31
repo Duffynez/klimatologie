@@ -397,6 +397,43 @@ test("publishes a sourced Arctic sea ice article with extent, age, and thickness
   assert.match(evidence, /slug: "ubytek-arktickeho-ledu"[\s\S]*status: "hotovo"/);
 });
 
+test("publishes a sourced mountain glaciers article with field and satellite evidence", async () => {
+  const [article, evidencePage, evidence] = await Promise.all([
+    readFile(new URL("app/components/MountainGlaciersArticle.tsx", root), "utf8"),
+    readFile(new URL("app/pozorovani/[slug]/page.tsx", root), "utf8"),
+    readFile(new URL("app/data/evidence.ts", root), "utf8"),
+  ]);
+
+  assert.match(evidencePage, /MountainGlaciersArticle/);
+  assert.match(evidencePage, /title="Horské ledovce"/);
+  assert.match(evidencePage, /Napsáno: 31\. července 2026/);
+  assert.match(article, /Horský ledovec je dlouhodobě přetrvávající masa ledu/);
+  assert.equal((article.match(/<dt>/g) ?? []).length, 4);
+  assert.match(article, /<dt>Hmotnostní bilance<\/dt>/);
+  assert.match(article, /<dt>Vodní ekvivalent<\/dt>/);
+  assert.match(article, /<dt>Výškový model<\/dt>/);
+  assert.match(article, /<dt>Gigatuna<\/dt>/);
+  assert.match(article, /Jak vzniká zveřejněný záznam/);
+  assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
+  assert.match(article, /usgs-grinnell-1938-2019\.jpg/);
+  assert.match(article, /usgs-ablation-stake\.jpg/);
+  assert.match(article, /copernicus-observation-locations-2026\.png/);
+  assert.match(article, /copernicus-annual-mass-1976-2025\.png/);
+  assert.match(article, /copernicus-cumulative-mass-1976-2025\.png/);
+  assert.equal((article.match(/unoptimized/g) ?? []).length, 5);
+  assert.match(article, /−408 ± 132 Gt/);
+  assert.match(article, /−9 583 ± 1 211 Gt/);
+  assert.match(article, /26,4 ± 3,3 mm/);
+  assert.match(article, /10\.3189\/S002214300002757X/);
+  assert.match(article, /10\.5194\/essd-17-1977-2025/);
+  assert.match(article, /10\.1038\/s41586-021-03436-z/);
+  assert.match(article, /10\.1038\/s41586-024-08545-z/);
+  assert.match(article, /10\.1038\/s43017-026-00777-z/);
+  assert.match(article, /licence-to-use-copernicus-products/);
+  assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
+  assert.match(evidence, /slug: "ustup-ledovcu"[\s\S]*status: "hotovo"/);
+});
+
 test("keeps the current catalogue of fourteen observations", async () => {
   const evidence = await readFile(new URL("app/data/evidence.ts", root), "utf8");
   const slugs = [...evidence.matchAll(/\{ slug: "([^"]+)"/g)].map((match) => match[1]);
