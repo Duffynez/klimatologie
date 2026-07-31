@@ -87,7 +87,7 @@ export function AtmosphericHumidityArticle() {
           dosaženou výšku vznikne samostatný údaj. Z těchto profilů lze také sečíst vodní páru mezi povrchem a zvolenou
           horní hladinou. Archiv IGRA uchovává původní profily i odvozené veličiny; přesnost dlouhodobého srovnání
           závisí na znalosti typu čidla a změn v provozu stanice.{" "}
-          <ReferenceLink href="https://doi.org/10.1175/BAMS-87-1-53">Durre et al., 2006</ReferenceLink> a{" "}
+          <ReferenceLink href="https://doi.org/10.1175/JCLI3594.1">Durre et al., 2006</ReferenceLink> a{" "}
           <ReferenceLink href="https://doi.org/10.5194/amt-7-4463-2014">Dirksen et al., 2014</ReferenceLink>
         </p>
 
@@ -699,8 +699,8 @@ export function AtmosphericHumidityArticle() {
               </li>
               <li>
                 Durre, I. et al. (2006): vznik a kontrola archivu IGRA.{" "}
-                <ReferenceLink href="https://doi.org/10.1175/BAMS-87-1-53">
-                  DOI 10.1175/BAMS-87-1-53
+                <ReferenceLink href="https://doi.org/10.1175/JCLI3594.1">
+                  DOI 10.1175/JCLI3594.1
                 </ReferenceLink>
               </li>
               <li>

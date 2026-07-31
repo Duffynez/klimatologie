@@ -330,7 +330,7 @@ export function AtmosphericCo2Article() {
             <p className="article-data-item__links">
               <ReferenceLink href="https://gml.noaa.gov/ccgg/trends/data.html">Data NOAA ke stažení</ReferenceLink>
               {" · "}
-              <ReferenceLink href="https://scrippsco2.ucsd.edu/data/atmospheric_co2/mlo.html">
+              <ReferenceLink href="https://scrippsco2.ucsd.edu/data/atmospheric-co2-data/sampling-station-records/mauna-loa-observatory-hawaii/">
                 Data Scripps ke stažení
               </ReferenceLink>
             </p>
@@ -727,7 +727,7 @@ export function AtmosphericCo2Article() {
                 NOAA GML a Scripps: přímá měření na Mauna Loa.{" "}
                 <ReferenceLink href="https://gml.noaa.gov/ccgg/trends/data.html">NOAA</ReferenceLink>
                 {" · "}
-                <ReferenceLink href="https://scrippsco2.ucsd.edu/data/atmospheric_co2/mlo.html">
+                <ReferenceLink href="https://scrippsco2.ucsd.edu/data/atmospheric-co2-data/sampling-station-records/mauna-loa-observatory-hawaii/">
                   Scripps
                 </ReferenceLink>
               </li>
