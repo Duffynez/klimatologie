@@ -176,6 +176,45 @@ test("publishes a sourced ocean heat content article instead of the generic plac
   assert.match(evidence, /slug: "tepelny-obsah-oceanu"[\s\S]*status: "hotovo"/);
 });
 
+test("publishes a sourced atmospheric carbon dioxide article instead of the generic placeholder", async () => {
+  const [article, evidencePage, evidence, styles] = await Promise.all([
+    readFile(new URL("app/components/AtmosphericCo2Article.tsx", root), "utf8"),
+    readFile(new URL("app/pozorovani/[slug]/page.tsx", root), "utf8"),
+    readFile(new URL("app/data/evidence.ts", root), "utf8"),
+    readFile(new URL("app/globals.css", root), "utf8"),
+  ]);
+
+  assert.match(evidencePage, /AtmosphericCo2Article/);
+  assert.match(evidencePage, /title="Oxid uhličitý v atmosféře"/);
+  assert.match(evidencePage, /Napsáno: 31\. července 2026/);
+  assert.match(article, /Atmosférický oxid uhličitý popisujeme podílem molekul CO₂ v suchém vzduchu/);
+  assert.match(article, /Potřebné informace/);
+  assert.equal((article.match(/<dt>/g) ?? []).length, 4);
+  assert.match(article, /<dt>ppm<\/dt>/);
+  assert.match(article, /<dt>Molární zlomek<\/dt>/);
+  assert.match(article, /<dt>Referenční plyn<\/dt>/);
+  assert.match(article, /<dt>XCO₂<\/dt>/);
+  assert.match(article, /Jak vzniká zveřejněný záznam/);
+  assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
+  assert.match(article, /315,98 ± 0,12 ppm/);
+  assert.match(article, /425,64 ± 0,09 ppm/);
+  assert.match(article, /noaa-mauna-loa-co2-monthly\.png/);
+  assert.match(article, /noaa-global-co2-monthly\.png/);
+  assert.match(article, /noaa-co2-800000-years\.png/);
+  assert.equal((article.match(/unoptimized/g) ?? []).length, 5);
+  assert.match(article, /10\.1016\/0016-7037\(58\)90033-4/);
+  assert.match(article, /10\.1111\/j\.2153-3490\.1960\.tb01300\.x/);
+  assert.match(article, /10\.1029\/94JD01951/);
+  assert.match(article, /10\.1029\/95JD00859/);
+  assert.match(article, /10\.5194\/amt-14-3015-2021/);
+  assert.match(article, /10\.1038\/nature06949/);
+  assert.match(article, /10\.1002\/2014GL061957/);
+  assert.match(article, /10\.5194\/amt-10-549-2017/);
+  assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
+  assert.match(styles, /\.article-figure--sample/);
+  assert.match(evidence, /slug: "atmosfericka-koncentrace-co2"[\s\S]*status: "hotovo"/);
+});
+
 test("keeps the current catalogue of fourteen observations", async () => {
   const evidence = await readFile(new URL("app/data/evidence.ts", root), "utf8");
   const slugs = [...evidence.matchAll(/\{ slug: "([^"]+)"/g)].map((match) => match[1]);
@@ -198,7 +237,7 @@ test("keeps the current catalogue of fourteen observations", async () => {
   ]);
   assert.match(evidence, /title: "Globální teplota u povrchu"/);
   assert.match(evidence, /title: "Teplota stratosféry"/);
-  assert.match(evidence, /title: "Atmosférická koncentrace CO2"/);
+  assert.match(evidence, /title: "Oxid uhličitý v atmosféře"/);
   assert.match(evidence, /title: "Obsah tepla v oceánu"/);
   assert.match(evidence, /title: "Sněhová pokrývka a permafrost"/);
 });

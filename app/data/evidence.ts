@@ -9,7 +9,7 @@ export type EvidenceTopic = {
 export const evidenceTopics: EvidenceTopic[] = [
   { slug: "gmst", title: "Globální teplota u povrchu", category: "Atmosféra", summary: "Jak se z pozemních a oceánských měření počítá globální změna teploty a co ukazují zveřejněná data.", status: "hotovo" },
   { slug: "stratosfericke-ochlazovani", title: "Teplota stratosféry", category: "Atmosféra", summary: "Jak se teplota stratosféry měří balóny, družicemi a rádiovými zákryty a co ukazují zveřejněná data.", status: "hotovo" },
-  { slug: "atmosfericka-koncentrace-co2", title: "Atmosférická koncentrace CO2", category: "Atmosféra", summary: "Připravovaný přehled přímých měření koncentrace oxidu uhličitého ve vzduchu, jejich historie a datových řad.", status: "mapujeme zdroje" },
+  { slug: "atmosfericka-koncentrace-co2", title: "Oxid uhličitý v atmosféře", category: "Atmosféra", summary: "Jak se CO₂ měří na stanicích, ve vzorcích vzduchu, v ledu a z družic a co ukazují zveřejněná data.", status: "hotovo" },
   { slug: "narust-vlhkosti", title: "Vlhkost atmosféry", category: "Atmosféra", summary: "Připravovaný přehled pozorování vodní páry, měřicích metod a nejistot.", status: "mapujeme zdroje" },
   { slug: "srazky-a-privalove-srazky", title: "Srážky a přívalové srážky", category: "Atmosféra", summary: "Připravovaný přehled úhrnů srážek, intenzivních srážkových epizod, měřicích sítí a datových řad.", status: "mapujeme zdroje" },
   { slug: "tepelny-obsah-oceanu", title: "Obsah tepla v oceánu", category: "Oceány", summary: "Měření teploty v oceánu, výpočet změny obsahu tepla a veřejně dostupná data.", status: "hotovo" },
