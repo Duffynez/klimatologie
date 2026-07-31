@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AtmosphericCo2Article } from "../../components/AtmosphericCo2Article";
+import { AtmosphericHumidityArticle } from "../../components/AtmosphericHumidityArticle";
 import { GmstArticle } from "../../components/GmstArticle";
 import { OceanHeatArticle } from "../../components/OceanHeatArticle";
 import { StratosphericCoolingArticle } from "../../components/StratosphericCoolingArticle";
@@ -71,6 +72,25 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
           </p>
         </PageLead>
         <AtmosphericCo2Article />
+        <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
+      </div>
+    );
+  }
+
+  if (slug === "narust-vlhkosti") {
+    return (
+      <div className="page-shell">
+        <PageLead
+          eyebrow="Pozorování / Atmosféra"
+          title="Vlhkost atmosféry"
+          meta="Napsáno: 31. července 2026"
+        >
+          <p>
+            Co přesně vyjadřuje měrná a relativní vlhkost, jak se vodní pára měří u povrchu, ve výšce a v celém
+            sloupci atmosféry a co ukazují zveřejněná data.
+          </p>
+        </PageLead>
+        <AtmosphericHumidityArticle />
         <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
       </div>
     );

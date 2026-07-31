@@ -215,6 +215,45 @@ test("publishes a sourced atmospheric carbon dioxide article instead of the gene
   assert.match(evidence, /slug: "atmosfericka-koncentrace-co2"[\s\S]*status: "hotovo"/);
 });
 
+test("publishes a sourced atmospheric humidity article instead of the generic placeholder", async () => {
+  const [article, evidencePage, evidence] = await Promise.all([
+    readFile(new URL("app/components/AtmosphericHumidityArticle.tsx", root), "utf8"),
+    readFile(new URL("app/pozorovani/[slug]/page.tsx", root), "utf8"),
+    readFile(new URL("app/data/evidence.ts", root), "utf8"),
+  ]);
+
+  assert.match(evidencePage, /AtmosphericHumidityArticle/);
+  assert.match(evidencePage, /title="Vlhkost atmosféry"/);
+  assert.match(evidencePage, /Napsáno: 31\. července 2026/);
+  assert.match(article, /Vlhkost atmosféry popisuje množství vodní páry ve vzduchu/);
+  assert.match(article, /Potřebné informace/);
+  assert.equal((article.match(/<dt>/g) ?? []).length, 4);
+  assert.match(article, /<dt>Měrná vlhkost<\/dt>/);
+  assert.match(article, /<dt>Relativní vlhkost<\/dt>/);
+  assert.match(article, /<dt>Rosný bod<\/dt>/);
+  assert.match(article, /<dt>Vodní pára ve sloupci<\/dt>/);
+  assert.match(article, /Jak vzniká zveřejněný záznam/);
+  assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
+  assert.match(article, /\+0,10 g\/kg za desetiletí/);
+  assert.match(article, /−0,17 procentního bodu za desetiletí/);
+  assert.match(article, /\+0,48 ± 0,07 kg\/m² za desetiletí/);
+  assert.match(article, /hadisdh-specific-humidity-trend-1973-2024\.png/);
+  assert.match(article, /hadisdh-relative-humidity-trend-1973-2024\.png/);
+  assert.match(article, /nasa-water-vapor-noaa20\.jpg/);
+  assert.match(article, /noaa-rawinsonde-launch\.jpg/);
+  assert.equal((article.match(/unoptimized/g) ?? []).length, 4);
+  assert.match(article, /10\.1175\/JCLI3816\.1/);
+  assert.match(article, /10\.1175\/2008JCLI2274\.1/);
+  assert.match(article, /10\.5194\/cp-10-1983-2014/);
+  assert.match(article, /10\.5194\/essd-12-2853-2020/);
+  assert.match(article, /10\.1029\/2008JD010989/);
+  assert.match(article, /10\.1002\/2018EA000363/);
+  assert.match(article, /10\.1029\/2022JD036728/);
+  assert.match(article, /Open Government Licence v3\.0/);
+  assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
+  assert.match(evidence, /slug: "narust-vlhkosti"[\s\S]*status: "hotovo"/);
+});
+
 test("keeps the current catalogue of fourteen observations", async () => {
   const evidence = await readFile(new URL("app/data/evidence.ts", root), "utf8");
   const slugs = [...evidence.matchAll(/\{ slug: "([^"]+)"/g)].map((match) => match[1]);
