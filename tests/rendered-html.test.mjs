@@ -20,17 +20,24 @@ test("keeps the source library, categories, and its download model in the site",
 });
 
 test("replaces the temporary starter surface", async () => {
-  const [home, layout, header] = await Promise.all([
+  const [home, layout, header, robots, sitemap] = await Promise.all([
     readFile(new URL("app/page.tsx", root), "utf8"),
     readFile(new URL("app/layout.tsx", root), "utf8"),
     readFile(new URL("app/components/SiteHeader.tsx", root), "utf8"),
+    readFile(new URL("public/robots.txt", root), "utf8"),
+    readFile(new URL("public/sitemap.xml", root), "utf8"),
   ]);
 
   assert.match(home, /Data, souvislosti, zdroje/);
   assert.match(home, /earth-europe\.jpg/);
   assert.match(home, /unoptimized/);
   assert.match(layout, /Klimatologie\.eu/);
+  assert.match(layout, /static\.cloudflareinsights\.com\/beacon\.min\.js/);
+  assert.match(layout, /5e5e8b07ed9f445d82e999e0de1c8f65/);
   assert.match(header, /href: "\/", label: "Úvod"/);
+  assert.match(robots, /Sitemap: https:\/\/klimatologie\.eu\/sitemap\.xml/);
+  assert.match(sitemap, /https:\/\/klimatologie\.eu\/pozorovani\/stratosfericke-ochlazovani\//);
+  assert.match(sitemap, /https:\/\/klimatologie\.eu\/pozorovani\/tepelny-obsah-oceanu\//);
   assert.doesNotMatch(home, /SkeletonPreview|codex-preview/);
 });
 
