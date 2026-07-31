@@ -254,6 +254,43 @@ test("publishes a sourced atmospheric humidity article instead of the generic pl
   assert.match(evidence, /slug: "narust-vlhkosti"[\s\S]*status: "hotovo"/);
 });
 
+test("publishes a sourced precipitation article with separate daily and sub-daily observations", async () => {
+  const [article, evidencePage, evidence] = await Promise.all([
+    readFile(new URL("app/components/PrecipitationArticle.tsx", root), "utf8"),
+    readFile(new URL("app/pozorovani/[slug]/page.tsx", root), "utf8"),
+    readFile(new URL("app/data/evidence.ts", root), "utf8"),
+  ]);
+
+  assert.match(evidencePage, /PrecipitationArticle/);
+  assert.match(evidencePage, /title="Srážky a přívalové srážky"/);
+  assert.match(evidencePage, /Napsáno: 31\. července 2026/);
+  assert.match(article, /Srážkový úhrn udává, jak vysoká vrstva vody dopadla/);
+  assert.equal((article.match(/<dt>/g) ?? []).length, 4);
+  assert.match(article, /<dt>Úhrn srážek<\/dt>/);
+  assert.match(article, /<dt>Intenzita<\/dt>/);
+  assert.match(article, /<dt>Rx1day<\/dt>/);
+  assert.match(article, /<dt>Přívalová srážka<\/dt>/);
+  assert.match(article, /Jak vzniká zveřejněný záznam/);
+  assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
+  assert.match(article, /Celkové úhrny/);
+  assert.match(article, /Nejvyšší jednodenní úhrny/);
+  assert.match(article, /Hodinové extrémy/);
+  assert.match(article, /hadex3-prcptot-timeseries\.png/);
+  assert.match(article, /hadex3-prcptot-trend\.png/);
+  assert.match(article, /hadex3-rx1day-timeseries\.png/);
+  assert.match(article, /hadex3-rx1day-trend\.png/);
+  assert.match(article, /gsdr-i-station-coverage\.png/);
+  assert.equal((article.match(/unoptimized/g) ?? []).length, 7);
+  assert.match(article, /10\.1175\/JCLI-D-12-00502\.1/);
+  assert.match(article, /10\.1029\/2019JD032263/);
+  assert.match(article, /10\.1038\/s41597-023-02238-4/);
+  assert.match(article, /10\.1007\/s00382-022-06567-9/);
+  assert.match(article, /Open Government Licence v3\.0/);
+  assert.match(article, /CC BY 4\.0/);
+  assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
+  assert.match(evidence, /slug: "srazky-a-privalove-srazky"[\s\S]*status: "hotovo"/);
+});
+
 test("keeps the current catalogue of fourteen observations", async () => {
   const evidence = await readFile(new URL("app/data/evidence.ts", root), "utf8");
   const slugs = [...evidence.matchAll(/\{ slug: "([^"]+)"/g)].map((match) => match[1]);

@@ -4,6 +4,7 @@ import { AtmosphericCo2Article } from "../../components/AtmosphericCo2Article";
 import { AtmosphericHumidityArticle } from "../../components/AtmosphericHumidityArticle";
 import { GmstArticle } from "../../components/GmstArticle";
 import { OceanHeatArticle } from "../../components/OceanHeatArticle";
+import { PrecipitationArticle } from "../../components/PrecipitationArticle";
 import { StratosphericCoolingArticle } from "../../components/StratosphericCoolingArticle";
 import { PageLead } from "../../components/PageLead";
 import { evidenceBySlug, evidenceTopics } from "../../data/evidence";
@@ -91,6 +92,25 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
           </p>
         </PageLead>
         <AtmosphericHumidityArticle />
+        <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
+      </div>
+    );
+  }
+
+  if (slug === "srazky-a-privalove-srazky") {
+    return (
+      <div className="page-shell">
+        <PageLead
+          eyebrow="Pozorování / Atmosféra"
+          title="Srážky a přívalové srážky"
+          meta="Napsáno: 31. července 2026"
+        >
+          <p>
+            Jak se měří celkové úhrny, nejvyšší denní a hodinové srážky, jak se z bodových měření vytvářejí mapy a co
+            ukazují zveřejněná data.
+          </p>
+        </PageLead>
+        <PrecipitationArticle />
         <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
       </div>
     );
