@@ -4,6 +4,7 @@ import { AtmosphericCo2Article } from "../../components/AtmosphericCo2Article";
 import { AtmosphericHumidityArticle } from "../../components/AtmosphericHumidityArticle";
 import { GlobalMeanSeaLevelArticle } from "../../components/GlobalMeanSeaLevelArticle";
 import { GmstArticle } from "../../components/GmstArticle";
+import { OceanAcidificationArticle } from "../../components/OceanAcidificationArticle";
 import { OceanHeatArticle } from "../../components/OceanHeatArticle";
 import { PrecipitationArticle } from "../../components/PrecipitationArticle";
 import { StratosphericCoolingArticle } from "../../components/StratosphericCoolingArticle";
@@ -150,6 +151,25 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
           </p>
         </PageLead>
         <GlobalMeanSeaLevelArticle />
+        <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
+      </div>
+    );
+  }
+
+  if (slug === "acidifikace-oceanu") {
+    return (
+      <div className="page-shell">
+        <PageLead
+          eyebrow="Pozorování / Oceány"
+          title="Acidifikace oceánu"
+          meta="Napsáno: 31. července 2026"
+        >
+          <p>
+            Co přesně znamená změna pH mořské vody, jak se měří celý uhličitanový systém, jak vznikají globální
+            rekonstrukce a co ukazují zveřejněná data.
+          </p>
+        </PageLead>
+        <OceanAcidificationArticle />
         <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
       </div>
     );

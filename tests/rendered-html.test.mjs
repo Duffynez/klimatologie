@@ -324,6 +324,42 @@ test("publishes a sourced global mean sea-level article with tide-gauge and sate
   assert.match(evidence, /slug: "gmsl"[\s\S]*status: "hotovo"/);
 });
 
+test("publishes a sourced ocean acidification article with measured and reconstructed evidence", async () => {
+  const [article, evidencePage, evidence] = await Promise.all([
+    readFile(new URL("app/components/OceanAcidificationArticle.tsx", root), "utf8"),
+    readFile(new URL("app/pozorovani/[slug]/page.tsx", root), "utf8"),
+    readFile(new URL("app/data/evidence.ts", root), "utf8"),
+  ]);
+
+  assert.match(evidencePage, /OceanAcidificationArticle/);
+  assert.match(evidencePage, /title="Acidifikace oceánu"/);
+  assert.match(evidencePage, /Napsáno: 31\. července 2026/);
+  assert.match(article, /Acidifikace oceánu je dlouhodobý posun chemického stavu mořské vody/);
+  assert.equal((article.match(/<dt>/g) ?? []).length, 4);
+  assert.match(article, /<dt>pH<\/dt>/);
+  assert.match(article, /<dt>DIC<\/dt>/);
+  assert.match(article, /<dt>Celková alkalinita<\/dt>/);
+  assert.match(article, /<dt>Stav nasycení Ω<\/dt>/);
+  assert.match(article, /Jak se chemie oceánu měří/);
+  assert.match(article, /Jak vzniká zveřejněný výsledek/);
+  assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
+  assert.match(article, /copernicus-global-surface-ph\.png/);
+  assert.match(article, /noaa-wcoa-2026-ctd-rosette\.jpeg/);
+  assert.match(article, /bats-ph-aragonite-1983-2023\.webp/);
+  assert.match(article, /copernicus-surface-ph-trend-map\.png/);
+  assert.equal((article.match(/unoptimized/g) ?? []).length, 4);
+  assert.match(article, /10\.1038\/425365a/);
+  assert.match(article, /10\.1038\/nature04095/);
+  assert.match(article, /10\.1073\/pnas\.0906044106/);
+  assert.match(article, /10\.3389\/fmars\.2023\.1289931/);
+  assert.match(article, /10\.1029\/2023GB007765/);
+  assert.match(article, /10\.5194\/essd-16-121-2024/);
+  assert.match(article, /10\.25921\/m6tp-mj50/);
+  assert.match(article, /10\.25921\/8dba-fr90/);
+  assert.match(article, /CC BY 4\.0/);
+  assert.match(evidence, /slug: "acidifikace-oceanu"[\s\S]*status: "hotovo"/);
+});
+
 test("keeps the current catalogue of fourteen observations", async () => {
   const evidence = await readFile(new URL("app/data/evidence.ts", root), "utf8");
   const slugs = [...evidence.matchAll(/\{ slug: "([^"]+)"/g)].map((match) => match[1]);
