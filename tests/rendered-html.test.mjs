@@ -291,6 +291,39 @@ test("publishes a sourced precipitation article with separate daily and sub-dail
   assert.match(evidence, /slug: "srazky-a-privalove-srazky"[\s\S]*status: "hotovo"/);
 });
 
+test("publishes a sourced global mean sea-level article with tide-gauge and satellite evidence", async () => {
+  const [article, evidencePage, evidence] = await Promise.all([
+    readFile(new URL("app/components/GlobalMeanSeaLevelArticle.tsx", root), "utf8"),
+    readFile(new URL("app/pozorovani/[slug]/page.tsx", root), "utf8"),
+    readFile(new URL("app/data/evidence.ts", root), "utf8"),
+  ]);
+
+  assert.match(evidencePage, /GlobalMeanSeaLevelArticle/);
+  assert.match(evidencePage, /title="Globální střední hladina moře"/);
+  assert.match(evidencePage, /Napsáno: 31\. července 2026/);
+  assert.match(article, /Globální střední hladina moře vyjadřuje průměrnou změnu výšky světového oceánu/);
+  assert.equal((article.match(/<dt>/g) ?? []).length, 4);
+  assert.match(article, /<dt>Střední hladina<\/dt>/);
+  assert.match(article, /<dt>Relativní hladina<\/dt>/);
+  assert.match(article, /<dt>Výškový bod<\/dt>/);
+  assert.match(article, /<dt>Družicová altimetrie<\/dt>/);
+  assert.match(article, /Jak vzniká globální výsledek/);
+  assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
+  assert.match(article, /nasa-global-mean-sea-level-1993-2025\.png/);
+  assert.match(article, /noaa-san-francisco-tide-station\.jpg/);
+  assert.match(article, /hamlington-global-mean-sea-level-1993-2023\.png/);
+  assert.match(article, /copernicus-regional-sea-level-trends-1999-2025\.png/);
+  assert.equal((article.match(/unoptimized/g) ?? []).length, 4);
+  assert.match(article, /10\.1007\/s10712-019-09525-z/);
+  assert.match(article, /10\.1038\/s41586-020-2591-3/);
+  assert.match(article, /10\.5194\/essd-11-1189-2019/);
+  assert.match(article, /10\.1038\/s43247-024-01761-5/);
+  assert.match(article, /psmsl\.org\/data\/obtaining\/complete\.php/);
+  assert.match(article, /CC BY 4\.0/);
+  assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
+  assert.match(evidence, /slug: "gmsl"[\s\S]*status: "hotovo"/);
+});
+
 test("keeps the current catalogue of fourteen observations", async () => {
   const evidence = await readFile(new URL("app/data/evidence.ts", root), "utf8");
   const slugs = [...evidence.matchAll(/\{ slug: "([^"]+)"/g)].map((match) => match[1]);

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AtmosphericCo2Article } from "../../components/AtmosphericCo2Article";
 import { AtmosphericHumidityArticle } from "../../components/AtmosphericHumidityArticle";
+import { GlobalMeanSeaLevelArticle } from "../../components/GlobalMeanSeaLevelArticle";
 import { GmstArticle } from "../../components/GmstArticle";
 import { OceanHeatArticle } from "../../components/OceanHeatArticle";
 import { PrecipitationArticle } from "../../components/PrecipitationArticle";
@@ -130,6 +131,25 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
           </p>
         </PageLead>
         <OceanHeatArticle />
+        <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
+      </div>
+    );
+  }
+
+  if (slug === "gmsl") {
+    return (
+      <div className="page-shell">
+        <PageLead
+          eyebrow="Pozorování / Oceány"
+          title="Globální střední hladina moře"
+          meta="Napsáno: 31. července 2026"
+        >
+          <p>
+            Jak se výška moře měří na pobřeží a z družic, jak z jednotlivých měření vzniká globální průměr a co ukazují
+            zveřejněná data.
+          </p>
+        </PageLead>
+        <GlobalMeanSeaLevelArticle />
         <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
       </div>
     );

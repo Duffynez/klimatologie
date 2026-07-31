@@ -13,7 +13,7 @@ export const evidenceTopics: EvidenceTopic[] = [
   { slug: "narust-vlhkosti", title: "Vlhkost atmosféry", category: "Atmosféra", summary: "Jak se vodní pára měří u povrchu, ve výšce a v celém sloupci atmosféry a co ukazují zveřejněná data.", status: "hotovo" },
   { slug: "srazky-a-privalove-srazky", title: "Srážky a přívalové srážky", category: "Atmosféra", summary: "Jak se měří celkové úhrny, nejvyšší denní a hodinové srážky a co ukazují zveřejněná data.", status: "hotovo" },
   { slug: "tepelny-obsah-oceanu", title: "Obsah tepla v oceánu", category: "Oceány", summary: "Měření teploty v oceánu, výpočet změny obsahu tepla a veřejně dostupná data.", status: "hotovo" },
-  { slug: "gmsl", title: "Globální střední hladina moře", category: "Oceány", summary: "Připravovaný přehled měření globální střední hladiny moře a souvisejících zdrojů.", status: "připravujeme data" },
+  { slug: "gmsl", title: "Globální střední hladina moře", category: "Oceány", summary: "Jak se výška moře měří na pobřeží a z družic, jak vzniká globální průměr a co ukazují zveřejněná data.", status: "hotovo" },
   { slug: "acidifikace-oceanu", title: "Acidifikace oceánu", category: "Oceány", summary: "Rozcestník pro chemická měření oceánu, jejich limity a primární data.", status: "mapujeme zdroje" },
   { slug: "ubytek-arktickeho-ledu", title: "Arktický mořský led", category: "Kryosféra", summary: "Připravovaná stránka o ploše, rozsahu a sezónním rytmu mořského ledu.", status: "připravujeme data" },
   { slug: "ustup-ledovcu", title: "Horské ledovce", category: "Kryosféra", summary: "Místo pro dlouhodobá pozorování ledovců a jejich dokumentované zdroje.", status: "mapujeme zdroje" },
