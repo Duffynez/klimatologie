@@ -9,6 +9,7 @@ import { IceSheetsArticle } from "../../components/IceSheetsArticle";
 import { MountainGlaciersArticle } from "../../components/MountainGlaciersArticle";
 import { OceanAcidificationArticle } from "../../components/OceanAcidificationArticle";
 import { OceanHeatArticle } from "../../components/OceanHeatArticle";
+import { PhenologyArticle } from "../../components/PhenologyArticle";
 import { PrecipitationArticle } from "../../components/PrecipitationArticle";
 import { SnowPermafrostArticle } from "../../components/SnowPermafrostArticle";
 import { StratosphericCoolingArticle } from "../../components/StratosphericCoolingArticle";
@@ -250,6 +251,25 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
           </p>
         </PageLead>
         <SnowPermafrostArticle />
+        <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
+      </div>
+    );
+  }
+
+  if (slug === "fenologicke-posuny") {
+    return (
+      <div className="page-shell">
+        <PageLead
+          eyebrow="Pozorování / Živá příroda"
+          title="Sezónní jevy v živé přírodě"
+          meta="Napsáno: 1. srpna 2026"
+        >
+          <p>
+            Jak se sleduje rašení, kvetení, tah ptáků a sezóna vegetace v terénu, kamerami a z družic, jak se odlišují
+            jejich výsledky a co ukazují zveřejněná data.
+          </p>
+        </PageLead>
+        <PhenologyArticle />
         <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
       </div>
     );

@@ -519,6 +519,52 @@ test("publishes a sourced snow-cover and permafrost article with distinct observ
   assert.match(evidence, /slug: "snehova-pokryvka-a-permafrost"[\s\S]*status: "hotovo"/);
 });
 
+test("publishes a sourced phenology article with organism, camera, and satellite observations", async () => {
+  const [article, evidencePage, evidence] = await Promise.all([
+    readFile(new URL("app/components/PhenologyArticle.tsx", root), "utf8"),
+    readFile(new URL("app/pozorovani/[slug]/page.tsx", root), "utf8"),
+    readFile(new URL("app/data/evidence.ts", root), "utf8"),
+  ]);
+
+  assert.match(evidencePage, /PhenologyArticle/);
+  assert.match(evidencePage, /title="Sezónní jevy v živé přírodě"/);
+  assert.match(evidencePage, /Napsáno: 1\. srpna 2026/);
+  assert.match(article, /Fenologické pozorování je datum nebo sled opakovaných záznamů/);
+  assert.equal((article.match(/<dt>/g) ?? []).length, 4);
+  assert.match(article, /<dt>Fenologie<\/dt>/);
+  assert.match(article, /<dt>Fenofáze<\/dt>/);
+  assert.match(article, /<dt>Den roku<\/dt>/);
+  assert.match(article, /<dt>Vegetační sezóna<\/dt>/);
+  assert.match(article, /Jak vzniká zveřejněný záznam/);
+  assert.match(article, /Jednotlivá rostlina/);
+  assert.match(article, /Populace a pohybliví živočichové/);
+  assert.match(article, /<h3>Kamery<\/h3>/);
+  assert.match(article, /<h3>Družice<\/h3>/);
+  assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
+  assert.match(article, /denny-event-status-intensity\.png/);
+  assert.match(article, /phenocam-greenness-comparison\.png/);
+  assert.match(article, /buntgen-uk-flowering-1753-2019\.jpg/);
+  assert.match(article, /10\.1016\/j\.agrformet\.2018\.03\.003/);
+  assert.doesNotMatch(article, /10\.1016\/j\.agrformet\.2018\.02\.032/);
+  assert.equal((article.match(/unoptimized/g) ?? []).length, 3);
+  assert.match(article, /125 000/);
+  assert.match(article, /96 996/);
+  assert.match(article, /419 354/);
+  assert.match(article, /25,94 dne/);
+  assert.match(article, /2 826 588/);
+  assert.match(article, /5 500 výsledků pro 684 druhů/);
+  assert.match(article, /10\.1007\/s00484-014-0789-5/);
+  assert.match(article, /10\.1111\/gcb\.15000/);
+  assert.match(article, /10\.1098\/rspb\.2021\.2456/);
+  assert.match(article, /10\.1038\/s41558-019-0648-9/);
+  assert.match(article, /10\.1002\/ecm\.1552/);
+  assert.match(article, /10\.5194\/essd-17-6531-2025/);
+  assert.match(article, /10\.5067\/MODIS\/MCD12Q2\.061/);
+  assert.match(article, /CC BY 4\.0/);
+  assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
+  assert.match(evidence, /slug: "fenologicke-posuny"[\s\S]*status: "hotovo"/);
+});
+
 test("keeps the current catalogue of fourteen observations", async () => {
   const evidence = await readFile(new URL("app/data/evidence.ts", root), "utf8");
   const slugs = [...evidence.matchAll(/\{ slug: "([^"]+)"/g)].map((match) => match[1]);

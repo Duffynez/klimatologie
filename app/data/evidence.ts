@@ -19,7 +19,7 @@ export const evidenceTopics: EvidenceTopic[] = [
   { slug: "ustup-ledovcu", title: "Horské ledovce", category: "Kryosféra", summary: "Jak se měří poloha čela, plocha, výška povrchu a změna hmotnosti ledovců a co ukazují zveřejněná data.", status: "hotovo" },
   { slug: "nestabilita-prikrovu", title: "Změna hmotnosti ledových příkrovů", category: "Kryosféra", summary: "Jak se změna hmotnosti Grónska a Antarktidy odvozuje z výšky povrchu, gravitačního pole a toku ledu a co ukazují zveřejněná data.", status: "hotovo" },
   { slug: "snehova-pokryvka-a-permafrost", title: "Sněhová pokrývka a permafrost", category: "Kryosféra", summary: "Jak se měří rozsah a vodní hodnota sněhu, teplota permafrostu a hloubka aktivní vrstvy a co ukazují zveřejněná data.", status: "hotovo" },
-  { slug: "fenologicke-posuny", title: "Sezónní jevy v živé přírodě", category: "Živá příroda", summary: "Přehled pozorování sezónních změn v přírodě a metod jejich záznamu.", status: "mapujeme zdroje" },
+  { slug: "fenologicke-posuny", title: "Sezónní jevy v živé přírodě", category: "Živá příroda", summary: "Jak se sledují listy, květy, tah ptáků a sezóna vegetace v terénu, kamerami a z družic a co ukazují zveřejněná data.", status: "hotovo" },
   { slug: "vlny-veder", title: "Vlny veder", category: "Extrémy", summary: "Budoucí přehled definic, datových sad a dokumentovaných změn teplotních extrémů.", status: "připravujeme data" },
 ];
 
