@@ -565,6 +565,43 @@ test("publishes a sourced phenology article with organism, camera, and satellite
   assert.match(evidence, /slug: "fenologicke-posuny"[\s\S]*status: "hotovo"/);
 });
 
+test("publishes a sourced heat-wave article that keeps definitions and observations distinct", async () => {
+  const [article, evidencePage, evidence] = await Promise.all([
+    readFile(new URL("app/components/HeatWavesArticle.tsx", root), "utf8"),
+    readFile(new URL("app/pozorovani/[slug]/page.tsx", root), "utf8"),
+    readFile(new URL("app/data/evidence.ts", root), "utf8"),
+  ]);
+
+  assert.match(evidencePage, /HeatWavesArticle/);
+  assert.match(evidencePage, /title="Vlny veder"/);
+  assert.match(evidencePage, /Napsáno: 1\. srpna 2026/);
+  assert.match(article, /Vlna veder je souvislé období několika dnů/);
+  assert.equal((article.match(/<dt>/g) ?? []).length, 4);
+  assert.match(article, /<dt>Denní maximum<\/dt>/);
+  assert.match(article, /<dt>Denní minimum<\/dt>/);
+  assert.match(article, /<dt>Percentil<\/dt>/);
+  assert.match(article, /<dt>Referenční období<\/dt>/);
+  assert.match(article, /Jak vzniká zveřejněný záznam/);
+  assert.match(article, /Standardní ukazatel WSDI/);
+  assert.match(article, /Jaké výsledky lze srovnávat/);
+  assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
+  assert.match(article, /hadex3-wsdi-timeseries\.png/);
+  assert.match(article, /hadex3-wsdi-trend\.png/);
+  assert.equal((article.match(/unoptimized/g) ?? []).length, 2);
+  assert.match(article, /0,61 dne/);
+  assert.match(article, /1,69 °C/);
+  assert.match(article, /133 homogenizovaných českých stanic/);
+  assert.match(article, /18,5 tropického dne/);
+  assert.match(article, /10\.3354\/cr019193/);
+  assert.match(article, /10\.1175\/JCLI-D-12-00383\.1/);
+  assert.match(article, /10\.1038\/s41467-020-16970-7/);
+  assert.match(article, /10\.1038\/s41467-022-31432-y/);
+  assert.match(article, /10\.1002\/joc\.7505/);
+  assert.match(article, /Open Government Licence v3\.0/);
+  assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
+  assert.match(evidence, /slug: "vlny-veder"[\s\S]*status: "hotovo"/);
+});
+
 test("keeps the current catalogue of fourteen observations", async () => {
   const evidence = await readFile(new URL("app/data/evidence.ts", root), "utf8");
   const slugs = [...evidence.matchAll(/\{ slug: "([^"]+)"/g)].map((match) => match[1]);

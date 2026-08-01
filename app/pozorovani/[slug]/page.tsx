@@ -11,6 +11,7 @@ import { OceanAcidificationArticle } from "../../components/OceanAcidificationAr
 import { OceanHeatArticle } from "../../components/OceanHeatArticle";
 import { PhenologyArticle } from "../../components/PhenologyArticle";
 import { PrecipitationArticle } from "../../components/PrecipitationArticle";
+import { HeatWavesArticle } from "../../components/HeatWavesArticle";
 import { SnowPermafrostArticle } from "../../components/SnowPermafrostArticle";
 import { StratosphericCoolingArticle } from "../../components/StratosphericCoolingArticle";
 import { PageLead } from "../../components/PageLead";
@@ -270,6 +271,25 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
           </p>
         </PageLead>
         <PhenologyArticle />
+        <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
+      </div>
+    );
+  }
+
+  if (slug === "vlny-veder") {
+    return (
+      <div className="page-shell">
+        <PageLead
+          eyebrow="Pozorování / Extrémy"
+          title="Vlny veder"
+          meta="Napsáno: 1. srpna 2026"
+        >
+          <p>
+            Jak se z denních maxim a minim určují vlny veder, proč různé definice dávají různá čísla a co ukazují
+            globální, evropská a česká pozorování.
+          </p>
+        </PageLead>
+        <HeatWavesArticle />
         <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
       </div>
     );
