@@ -10,6 +10,7 @@ import { MountainGlaciersArticle } from "../../components/MountainGlaciersArticl
 import { OceanAcidificationArticle } from "../../components/OceanAcidificationArticle";
 import { OceanHeatArticle } from "../../components/OceanHeatArticle";
 import { PrecipitationArticle } from "../../components/PrecipitationArticle";
+import { SnowPermafrostArticle } from "../../components/SnowPermafrostArticle";
 import { StratosphericCoolingArticle } from "../../components/StratosphericCoolingArticle";
 import { PageLead } from "../../components/PageLead";
 import { evidenceBySlug, evidenceTopics } from "../../data/evidence";
@@ -230,6 +231,25 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
           </p>
         </PageLead>
         <IceSheetsArticle />
+        <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
+      </div>
+    );
+  }
+
+  if (slug === "snehova-pokryvka-a-permafrost") {
+    return (
+      <div className="page-shell">
+        <PageLead
+          eyebrow="Pozorování / Kryosféra"
+          title="Sněhová pokrývka a permafrost"
+          meta="Napsáno: 1. srpna 2026"
+        >
+          <p>
+            Jak se měří plocha, trvání a vodní hodnota sněhu, jak se ve vrtech sleduje teplota permafrostu a hloubka
+            sezónního rozmrzání a co ukazují zveřejněná data.
+          </p>
+        </PageLead>
+        <SnowPermafrostArticle />
         <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
       </div>
     );

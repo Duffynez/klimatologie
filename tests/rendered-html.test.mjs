@@ -474,6 +474,51 @@ test("publishes a sourced ice-sheet mass article with three independent measurem
   assert.match(evidence, /slug: "nestabilita-prikrovu"[\s\S]*status: "hotovo"/);
 });
 
+test("publishes a sourced snow-cover and permafrost article with distinct observables", async () => {
+  const [article, evidencePage, evidence] = await Promise.all([
+    readFile(new URL("app/components/SnowPermafrostArticle.tsx", root), "utf8"),
+    readFile(new URL("app/pozorovani/[slug]/page.tsx", root), "utf8"),
+    readFile(new URL("app/data/evidence.ts", root), "utf8"),
+  ]);
+
+  assert.match(evidencePage, /SnowPermafrostArticle/);
+  assert.match(evidencePage, /title="Sněhová pokrývka a permafrost"/);
+  assert.match(evidencePage, /Napsáno: 1\. srpna 2026/);
+  assert.match(article, /Sníh na souši pozorujeme jako plochu, dobu trvání, výšku a množství vody/);
+  assert.equal((article.match(/<dt>/g) ?? []).length, 4);
+  assert.match(article, /<dt>Rozsah sněhu<\/dt>/);
+  assert.match(article, /<dt>Vodní hodnota sněhu<\/dt>/);
+  assert.match(article, /<dt>Permafrost<\/dt>/);
+  assert.match(article, /<dt>Aktivní vrstva<\/dt>/);
+  assert.match(article, /Jak vzniká zveřejněný záznam/);
+  assert.match(article, /Mapa rozsahu sněhu/);
+  assert.match(article, /Teplota ve vrtu/);
+  assert.match(article, /Hloubka aktivní vrstvy/);
+  assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
+  assert.match(article, /usgs-snow-core-measurement\.jpg/);
+  assert.match(article, /noaa-arctic-snow-extent-1967-2025\.png/);
+  assert.match(article, /noaa-arctic-snow-mass-1981-2025\.png/);
+  assert.match(article, /biskaborn-global-permafrost-2007-2016\.png/);
+  assert.match(article, /noaa-alaska-permafrost-2024\.jpg/);
+  assert.equal((article.match(/unoptimized/g) ?? []).length, 5);
+  assert.match(article, /15 %/);
+  assert.match(article, /50 %/);
+  assert.match(article, /3 062 ± 35 Gt/);
+  assert.match(article, /0,29 ± 0,12 °C/);
+  assert.match(article, /9 z 20/);
+  assert.match(article, /0,8 cm za rok/);
+  assert.match(article, /10\.5194\/essd-7-137-2015/);
+  assert.match(article, /10\.1038\/s41597-021-00939-2/);
+  assert.match(article, /10\.1126\/sciadv\.adv7926/);
+  assert.match(article, /10\.1038\/s41467-018-08240-4/);
+  assert.match(article, /10\.5194\/essd-7-245-2015/);
+  assert.match(article, /10\.1002\/ppp\.2088/);
+  assert.match(article, /10\.5285\/a6fbedd8ee5b472c8e84e55f746c1704/);
+  assert.match(article, /CC BY 4\.0/);
+  assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
+  assert.match(evidence, /slug: "snehova-pokryvka-a-permafrost"[\s\S]*status: "hotovo"/);
+});
+
 test("keeps the current catalogue of fourteen observations", async () => {
   const evidence = await readFile(new URL("app/data/evidence.ts", root), "utf8");
   const slugs = [...evidence.matchAll(/\{ slug: "([^"]+)"/g)].map((match) => match[1]);
