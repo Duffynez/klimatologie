@@ -434,6 +434,46 @@ test("publishes a sourced mountain glaciers article with field and satellite evi
   assert.match(evidence, /slug: "ustup-ledovcu"[\s\S]*status: "hotovo"/);
 });
 
+test("publishes a sourced ice-sheet mass article with three independent measurement methods", async () => {
+  const [article, evidencePage, evidence] = await Promise.all([
+    readFile(new URL("app/components/IceSheetsArticle.tsx", root), "utf8"),
+    readFile(new URL("app/pozorovani/[slug]/page.tsx", root), "utf8"),
+    readFile(new URL("app/data/evidence.ts", root), "utf8"),
+  ]);
+
+  assert.match(evidencePage, /IceSheetsArticle/);
+  assert.match(evidencePage, /title="Změna hmotnosti ledových příkrovů"/);
+  assert.match(evidencePage, /Napsáno: 1\. srpna 2026/);
+  assert.match(article, /Změna hmotnosti ledového příkrovu vyjadřuje, o kolik se mezi dvěma určenými okamžiky změnila/);
+  assert.equal((article.match(/<dt>/g) ?? []).length, 4);
+  assert.match(article, /<dt>Ledový příkrov<\/dt>/);
+  assert.match(article, /<dt>Gigatuna<\/dt>/);
+  assert.match(article, /<dt>Firn<\/dt>/);
+  assert.match(article, /<dt>Linie ukotvení<\/dt>/);
+  assert.match(article, /Jak vzniká zveřejněný záznam/);
+  assert.match(article, /Výška povrchu/);
+  assert.match(article, /Změna gravitačního pole/);
+  assert.match(article, /Vstup a výstup ledu/);
+  assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
+  assert.match(article, /nasa-grace-polar-mass-2025\.png/);
+  assert.match(article, /nasa-grace-how-gravity-is-measured\.jpg/);
+  assert.match(article, /imbie-method-comparison-2023\.png/);
+  assert.match(article, /imbie-cumulative-mass-2023\.png/);
+  assert.equal((article.match(/unoptimized/g) ?? []).length, 4);
+  assert.match(article, /7 563 ± 699 Gt/);
+  assert.match(article, /4 892 ± 457 Gt/);
+  assert.match(article, /2 671 ± 530 Gt/);
+  assert.match(article, /21,0 ± 1,9 mm/);
+  assert.match(article, /10\.1126\/science\.1073888/);
+  assert.match(article, /10\.1126\/science\.1228102/);
+  assert.match(article, /10\.5194\/essd-15-1597-2023/);
+  assert.match(article, /10\.5194\/essd-18-1729-2026/);
+  assert.match(article, /10\.5285\/77B64C55-7166-4A06-9DEF-2E400398E452/);
+  assert.match(article, /CC BY 4\.0/);
+  assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
+  assert.match(evidence, /slug: "nestabilita-prikrovu"[\s\S]*status: "hotovo"/);
+});
+
 test("keeps the current catalogue of fourteen observations", async () => {
   const evidence = await readFile(new URL("app/data/evidence.ts", root), "utf8");
   const slugs = [...evidence.matchAll(/\{ slug: "([^"]+)"/g)].map((match) => match[1]);

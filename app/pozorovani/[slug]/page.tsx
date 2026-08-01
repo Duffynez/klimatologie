@@ -5,6 +5,7 @@ import { AtmosphericHumidityArticle } from "../../components/AtmosphericHumidity
 import { ArcticSeaIceArticle } from "../../components/ArcticSeaIceArticle";
 import { GlobalMeanSeaLevelArticle } from "../../components/GlobalMeanSeaLevelArticle";
 import { GmstArticle } from "../../components/GmstArticle";
+import { IceSheetsArticle } from "../../components/IceSheetsArticle";
 import { MountainGlaciersArticle } from "../../components/MountainGlaciersArticle";
 import { OceanAcidificationArticle } from "../../components/OceanAcidificationArticle";
 import { OceanHeatArticle } from "../../components/OceanHeatArticle";
@@ -210,6 +211,25 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
           </p>
         </PageLead>
         <MountainGlaciersArticle />
+        <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
+      </div>
+    );
+  }
+
+  if (slug === "nestabilita-prikrovu") {
+    return (
+      <div className="page-shell">
+        <PageLead
+          eyebrow="Pozorování / Kryosféra"
+          title="Změna hmotnosti ledových příkrovů"
+          meta="Napsáno: 1. srpna 2026"
+        >
+          <p>
+            Jak se změna hmotnosti Grónska a Antarktidy odvozuje z výšky povrchu, gravitačního pole a toku ledu, jak
+            se tyto postupy porovnávají a co ukazují zveřejněná data.
+          </p>
+        </PageLead>
+        <IceSheetsArticle />
         <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
       </div>
     );
