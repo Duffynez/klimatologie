@@ -9,11 +9,13 @@ export function SourceCard({ source }: { source: Source }) {
       <div className="source-card__meta">
         <span className="source-card__category">{category.label}</span>
         <span>{source.type}</span>
-        <span>{source.year}</span>
+        <time dateTime={`${source.year}`}>{source.year}</time>
       </div>
-      <h2>{source.title}</h2>
-      <p>{source.author}</p>
-      <p className="source-card__publication">{source.publication}</p>
+      <div className="source-card__body">
+        <h2>{source.title}</h2>
+        <p className="source-card__author">{source.author}</p>
+        <p className="source-card__publication">{source.publication}</p>
+      </div>
       <div className="source-card__actions">
         <a href={sourceViewUrl(source)} target="_blank" rel="noreferrer">
           {source.externalUrl ? "Otevřít původní zdroj" : "Otevřít na Google Drive"}
