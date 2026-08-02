@@ -435,14 +435,12 @@ export function IceSheetsArticle() {
         </p>
 
         <div className="article-observation-summary">
-          <p className="eyebrow">Přesné shrnutí pozorování</p>
+          <p className="eyebrow">Shrnutí pozorování</p>
           <p>
-            Tři nezávislé měřicí postupy ukazují úbytek hmotnosti grónského i antarktického ledového příkrovu. IMBIE
-            pro roky 1992–2020 vyčísluje jejich společný úbytek na 7 563 ± 699 Gt, z toho 4 892 ± 457 Gt připadá na
-            Grónsko a 2 671 ± 530 Gt na Antarktidu. V Antarktidě je úbytek zřetelný v západní části a na poloostrově;
-            malá změna východní Antarktidy má interval nejistoty zasahující na obě strany nuly. Gravitační měření
-            pokračující do března 2025 zachovává záporný směr změny u obou příkrovů. Přesné číslo vždy vyžaduje uvést
-            období, měřicí postup a hranici mezi příkrovem, okrajovými ledovci a plovoucími šelfy.
+            Grónský i antarktický ledový příkrov ztrácejí hmotnost. Mezi roky 1992 a 2020 společně ubylo přibližně
+            7 560 gigatun ledu, z toho asi 4 890 gigatun v Grónsku a 2 670 gigatun v Antarktidě. Antarktický úbytek se
+            soustřeďuje především do západní části kontinentu a na Antarktický poloostrov a u obou příkrovů pokračoval
+            také do března 2025.
           </p>
         </div>
 

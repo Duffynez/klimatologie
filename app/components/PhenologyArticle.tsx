@@ -461,15 +461,12 @@ export function PhenologyArticle() {
         </p>
 
         <div className="article-observation-summary">
-          <p className="eyebrow">Přesné shrnutí pozorování</p>
+          <p className="eyebrow">Shrnutí pozorování</p>
           <p>
-            Sezónní fáze živé přírody měříme jako data přesně definovaných událostí, opakovanou přítomnost a intenzitu
-            jevu, průběh počtu jedinců nebo změnu zelenosti porostu. Rozsáhlé evropské soubory ukazují, že většina
-            sledovaných jarních a letních rostlinných fází nastává dříve než v minulých desetiletích; podzimní fáze
-            mají menší a méně jednotnou změnu. Ptačí podklady ukazují průměrně dřívější předhnízdní tah a hnízdění,
-            nikoli však jednotný posun všech druhů a všech částí roku. Přesné číslo vždy patří ke konkrétnímu druhu či
-            porostu, fázi, území, období a metodě. Neexistuje jediný univerzální údaj „datum příchodu jara“ pro celou
-            živou přírodu.
+            V evropských pozorováních rostlin nastává většina jarních a letních fází dříve než v minulých
+            desetiletích. Posun podzimního zbarvení a opadu listů je menší a častěji směřuje k pozdějším datům.
+            Předhnízdní tah a hnízdění ptáků se v celosvětovém souhrnu posunuly přibližně o dva až tři dny za
+            desetiletí k dřívějším termínům.
           </p>
         </div>
 

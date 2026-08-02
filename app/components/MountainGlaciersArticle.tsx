@@ -429,14 +429,10 @@ export function MountainGlaciersArticle() {
         </figure>
 
         <div className="article-observation-summary">
-          <p className="eyebrow">Přesné shrnutí pozorování</p>
+          <p className="eyebrow">Shrnutí pozorování</p>
           <p>
-            Historická měření polohy čela ukazují v měřítku staletí převahu ústupu, přestože některé ledovce v
-            jednotlivých obdobích postupovaly. Terénní měření sněhu a ledu, opakované výškové mapy, družicové výškoměry
-            a gravitační mise shodně ukazují zápornou globální změnu hmotnosti v jednadvacátém století. Aktuální produkt
-            WGMS vyčísluje za roky 1975–2025 kumulovaný úbytek 9 583 ± 1 211 Gt a za samotný glaciologický rok 2025 úbytek
-            408 ± 132 Gt. Přesná regionální hodnota závisí na metodě a pokrytí; globální směr změny se objevuje ve všech
-            hlavních pozorovacích postupech.
+            U horských ledovců po celém světě dlouhodobě převažuje ústup čela a úbytek hmotnosti. Mezi roky 1975 a
+            2025 ztratily přibližně 9 600 gigatun ledu, z toho asi 400 gigatun během glaciologického roku 2025.
           </p>
         </div>
 

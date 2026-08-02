@@ -442,16 +442,13 @@ export function HeatWavesArticle() {
         </p>
 
         <div className="article-observation-summary">
-          <p className="eyebrow">Přesné shrnutí pozorování</p>
+          <p className="eyebrow">Shrnutí pozorování</p>
           <p>
-            Vlny veder určujeme z denních maxim, minim nebo průměrů jako několik po sobě jdoucích dnů nad pevnou či
-            místní hranicí. Staniční soubory HadEX a globální i regionální studie ukazují od druhé poloviny 20. století
-            na většině dostatečně pokryté souše více dnů ve vlnách, delší nejdelší události a větší součet překročení
-            hranice. Velikost změny se liší mezi oblastmi, obdobími a definicemi; průměrné překročení hranice během
-            jednoho horkého dne se v globální analýze měnilo méně jednotně než počet a délka dnů. Evropské výsledky
-            patří k nejvýraznějším v porovnání se zbytkem severních středních šířek. Česká staniční měření ukazují více
-            tropických dnů i dnů ve vlnách veder. Každé číslo je úplné teprve s uvedením teplotní veličiny, hranice,
-            minimální délky, území a let výpočtu.
+            Od poloviny 20. století přibylo ve většině oblastí souše dnů ve vlnách veder, nejdelší události se
+            prodloužily a vzrostlo jejich kumulované teplo. V Evropě se v letech 1979–2020 počet dnů v dlouhých vlnách
+            zvyšoval v průměru o 0,61 dne za desetiletí, zatímco ve zbytku severních středních šířek o 0,21 dne.
+            V České republice vzrostl průměrný počet tropických dnů z pěti ročně v období 1961–1990 na přibližně
+            jedenáct ročně v období 1991–2020.
           </p>
         </div>
 

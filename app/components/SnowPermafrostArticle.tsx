@@ -521,23 +521,12 @@ export function SnowPermafrostArticle() {
         </p>
 
         <div className="article-observation-summary">
-          <p className="eyebrow">Přesné shrnutí</p>
+          <p className="eyebrow">Shrnutí pozorování</p>
           <p>
-            Družicové mapy ukazují, že na arktické pevnině severně od 60° bez Grónska byl květnový rozsah sněhu v
-            letech 1967–2025 menší o 15 % a červnový o 50 %. Čtyři podklady vodní hodnoty ukazují za roky 1981–2025
-            malou a statisticky neprůkaznou dubnovou změnu, ale květnový pokles hmotnosti o 13 % a červnový o 33 %.
-          </p>
-          <p>
-            Vrty sítě GTN-P ukazují za roky 2007–2016 zvýšení prostorově vážené teploty permafrostu o
-            0,29 ± 0,12 °C; 71 ze 123 úplných vrtů se oteplilo, 12 ochladilo a 40 zůstalo v pásmu přibližně ±0,1 °C.
-            Aljašská měření pokračující do roku 2024 zaznamenala rekordní teplotu na 9 z 20 dlouhodobých míst. Síť CALM
-            zároveň u sledovaných cirkumpolárních lokalit za roky 2000–2018 uvádí průměrné prohlubování aktivní vrstvy
-            o 0,8 cm za rok.
-          </p>
-          <p>
-            Údaje platí pro uvedená území, období, hloubky a soubory. Rozsah sněhu neurčuje jeho hmotnost, teplota
-            vrtu neurčuje sama hloubku aktivní vrstvy a modelovaná mapa není totožná s přímým měřením. Právě proto jsou
-            všechny čtyři veličiny na této stránce zveřejněny odděleně.
+            Na arktické pevnině severně od 60° bez Grónska se mezi roky 1967 a 2025 zmenšil květnový rozsah sněhu o
+            15 % a červnový o 50 %. Mezi roky 1981 a 2025 klesla květnová hmotnost sněhu o 13 % a červnová o 33 %.
+            Průměrná teplota permafrostu se v letech 2007–2016 zvýšila o 0,29 °C a aktivní vrstva se v letech
+            2000–2018 prohlubovala v průměru o 0,8 centimetru za rok.
           </p>
         </div>
 

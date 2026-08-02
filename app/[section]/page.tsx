@@ -16,9 +16,7 @@ export default async function SectionPage({ params }: { params: Promise<{ sectio
 
   return (
     <div className="page-shell">
-      <PageLead eyebrow={content.eyebrow} title={content.title}>
-        <p>{content.intro}</p>
-      </PageLead>
+      <PageLead eyebrow={content.eyebrow} title={content.title} />
       <section className="section-outline">
         {content.blocks.map((block, index) => (
           <article key={block}>

@@ -126,7 +126,7 @@ test("publishes a full stratospheric temperature article instead of the generic 
   assert.match(article, /ncar-stratospheric-weighting-functions\.png/);
   assert.match(article, /ncar-stratospheric-temperature-1979-2024\.png/);
   assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
-  assert.match(article, /Přesné shrnutí pozorování/);
+  assert.match(article, /Shrnutí pozorování/);
   assert.match(article, /−0,25 ± 0,16 K za desetiletí/);
   assert.match(article, /State of the Climate in 2024/);
   assert.match(article, /Usage Restrictions: None/);
@@ -600,6 +600,55 @@ test("publishes a sourced heat-wave article that keeps definitions and observati
   assert.match(article, /Open Government Licence v3\.0/);
   assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
   assert.match(evidence, /slug: "vlny-veder"[\s\S]*status: "hotovo"/);
+});
+
+test("keeps the main section headers free of status labels and explanatory side copy", async () => {
+  const [evidenceIndex, evidenceFallback, history, people, genericSection, sources] = await Promise.all([
+    readFile(new URL("app/pozorovani/page.tsx", root), "utf8"),
+    readFile(new URL("app/pozorovani/[slug]/page.tsx", root), "utf8"),
+    readFile(new URL("app/historie/page.tsx", root), "utf8"),
+    readFile(new URL("app/osobnosti/page.tsx", root), "utf8"),
+    readFile(new URL("app/[section]/page.tsx", root), "utf8"),
+    readFile(new URL("app/zdroje/page.tsx", root), "utf8"),
+  ]);
+
+  assert.doesNotMatch(evidenceIndex, /topic\.status|Tahle mapa propojí/);
+  assert.doesNotMatch(evidenceFallback, /topic\.status|<PageLead[^>]*>[\s\S]*topic\.summary/);
+  assert.doesNotMatch(history, /Tato osa začíná knihovnou/);
+  assert.doesNotMatch(people, /Profily propojí životopis/);
+  assert.doesNotMatch(genericSection, /content\.intro/);
+  for (const page of [evidenceIndex, evidenceFallback, history, people, genericSection, sources]) {
+    assert.match(page, /<PageLead[^>]*\/>/);
+  }
+});
+
+test("uses one observation-only summary in every completed observation article", async () => {
+  const articleFiles = [
+    "GmstArticle.tsx",
+    "StratosphericCoolingArticle.tsx",
+    "AtmosphericCo2Article.tsx",
+    "AtmosphericHumidityArticle.tsx",
+    "PrecipitationArticle.tsx",
+    "OceanHeatArticle.tsx",
+    "GlobalMeanSeaLevelArticle.tsx",
+    "OceanAcidificationArticle.tsx",
+    "ArcticSeaIceArticle.tsx",
+    "MountainGlaciersArticle.tsx",
+    "IceSheetsArticle.tsx",
+    "SnowPermafrostArticle.tsx",
+    "PhenologyArticle.tsx",
+    "HeatWavesArticle.tsx",
+  ];
+  const articles = await Promise.all(
+    articleFiles.map((file) => readFile(new URL(`app/components/${file}`, root), "utf8")),
+  );
+
+  for (const article of articles) {
+    const summaries = article.match(/<div className="article-observation-summary">[\s\S]*?<\/div>/g) ?? [];
+    assert.equal(summaries.length, 1);
+    assert.equal((summaries[0].match(/Shrnutí pozorování/g) ?? []).length, 1);
+    assert.doesNotMatch(summaries[0], /Přesné shrnutí|Pozorování v jedné|±|nejist|metod|přístroj|stanic|družic|produkt|soubor|výpočet|map|není|nejsou|nelze|nikoli|neznamen|závis/i);
+  }
 });
 
 test("keeps the current catalogue of fourteen observations", async () => {

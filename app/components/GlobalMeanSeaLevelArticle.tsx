@@ -446,16 +446,13 @@ export function GlobalMeanSeaLevelArticle() {
           vodočet a místní pohyb pevniny, zatímco globální střední hladina odpovídá na otázku, jak se mění oceán jako celek.
         </p>
 
-        <div className="article-observation" aria-label="Shrnutí pozorování">
-          <p className="eyebrow">Pozorování v jedné kapitole</p>
-          <h3>Co přímo ukazují zveřejněná měření</h3>
-          <ul>
-            <li>Dlouhé pobřežní záznamy ukazují vzestup globální střední hladiny během 20. století.</li>
-            <li>Družicový záznam od roku 1993 ukazuje další vzestup přibližně o deset centimetrů.</li>
-            <li>Odhadované tempo vzestupu je na konci družicového období vyšší než na jeho začátku.</li>
-            <li>Mezi jednotlivými měsíci a roky probíhají výkyvy kolem dlouhodobého průběhu.</li>
-            <li>Regionální a místní změny se od globálního průměru liší a místní měření ovlivňuje také pohyb pevniny.</li>
-          </ul>
+        <div className="article-observation-summary">
+          <p className="eyebrow">Shrnutí pozorování</p>
+          <p>
+            Globální střední hladina moře během 20. století stoupala. Od roku 1993 se zvýšila přibližně o deset
+            centimetrů a její roční tempo růstu je na konci tohoto období vyšší než na jeho začátku. Jednotlivé oblasti
+            oceánu se zvyšují různou rychlostí.
+          </p>
         </div>
 
         <h2>Prameny a data</h2>

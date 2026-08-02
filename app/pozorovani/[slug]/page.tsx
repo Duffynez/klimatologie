@@ -297,13 +297,9 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
 
   return (
     <div className="page-shell">
-      <PageLead eyebrow={topic.category} title={topic.title}>
-        <p>{topic.summary}</p>
-      </PageLead>
+      <PageLead eyebrow={topic.category} title={topic.title} />
       <section className="method-grid">
         <div>
-          <p className="eyebrow">Stav obsahu</p>
-          <h2>{topic.status}</h2>
           <p>Než sem přidáme výklad nebo graf, doplníme prvozdroj, metodiku, datum aktualizace a odkaz ke stažení dat.</p>
         </div>
         <div>

@@ -573,14 +573,11 @@ export function ArcticSeaIceArticle() {
         </p>
 
         <div className="article-observation-summary">
-          <p className="eyebrow">Přesné shrnutí pozorování</p>
+          <p className="eyebrow">Shrnutí pozorování</p>
           <p>
-            Souvislé pasivní mikrovlnné měření od října 1978 ukazuje menší arktický rozsah ve všech měsících a největší
-            změnu na konci léta. Záznam stáří od roku 1984 ukazuje výrazně menší zastoupení víceletého a zejména
-            nejstaršího ledu. Ponorkové sonary a družicové výškoměry v oblastech a obdobích, která lze vzájemně
-            porovnat, ukazují menší tloušťku a objem. Přesná hodnota pro konkrétní den závisí na definici, datovém
-            produktu a verzi; směr dlouhodobých změn se objevuje v nezávislých metodách, které měří odlišné vlastnosti
-            téhož ledového pokryvu.
+            Rozsah arktického mořského ledu se od roku 1978 zmenšil ve všech měsících a největší pokles nastal na konci
+            léta. Od roku 1984 se výrazně snížilo zastoupení víceletého a nejstaršího ledu. Arktický mořský led je také
+            tenčí a jeho celkový objem je menší.
           </p>
         </div>
 

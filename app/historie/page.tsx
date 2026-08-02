@@ -10,12 +10,7 @@ export const metadata: Metadata = { title: "Historie" };
 export default function HistoryPage() {
   return (
     <div className="page-shell">
-      <PageLead eyebrow="Historie poznání" title="Časová osa původních prací.">
-        <p>
-          Tato osa začíná knihovnou pramenů, které už byly součástí původního webu. Každý milník odkazuje na
-          vlastní záznam a kopii dokumentu, aby šel vývoj oboru číst přímo z jeho stop.
-        </p>
-      </PageLead>
+      <PageLead eyebrow="Historie poznání" title="Časová osa původních prací." />
       <ol className="timeline">
         {historyEvents.map((event, index) => {
           const source = sourceById(event.sourceId);

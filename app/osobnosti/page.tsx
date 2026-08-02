@@ -8,12 +8,7 @@ export const metadata: Metadata = { title: "Osobnosti" };
 export default function PeoplePage() {
   return (
     <div className="page-shell">
-      <PageLead eyebrow="Lidé a práce" title="Osobnosti klimatologie.">
-        <p>
-          Profily propojí životopis, původní práci a konkrétní místo v historii oboru. Začínáme prvním profilem
-          přeneseným z původního webu.
-        </p>
-      </PageLead>
+      <PageLead eyebrow="Lidé a práce" title="Osobnosti klimatologie." />
       <Link className="person-feature" href="/osobnosti/mariotte">
         <Image src="/mariotte.jpg" alt="Portrét Edme Mariotta" width={300} height={420} sizes="(max-width: 620px) 260px, 300px" />
         <div>

@@ -605,13 +605,11 @@ export function AtmosphericHumidityArticle() {
         </p>
 
         <div className="article-observation-summary">
-          <p className="eyebrow">Přesné shrnutí pozorování</p>
+          <p className="eyebrow">Shrnutí pozorování</p>
           <p>
-            Od roku 1973 se v pozorovaných oblastech zvýšila měrná vlhkost vzduchu u povrchu nad pevninou i oceánem.
-            Relativní vlhkost nad pevninou ve stejném souboru poklesla; její změna nad oceánem zůstává mezi dostupnými
-            produkty nejistá. Celkové množství vodní páry ve sloupci nad nezamrzlými oceány od roku 1988 vzrostlo a rok
-            2024 byl nejvyšší v každém ze šesti souborů porovnaných ve zprávě <em>State of the Climate</em>. Každé z
-            těchto tvrzení platí pro jinou veličinu, výšku, zeměpisné pokrytí a období.
+            Od roku 1973 se měrná vlhkost vzduchu u povrchu zvýšila nad pevninou i oceánem, zatímco relativní vlhkost
+            nad pevninou poklesla. Celkové množství vodní páry nad nezamrzlými oceány od roku 1988 vzrostlo a v roce
+            2024 dosáhlo nejvyšší hodnoty celého sledovaného období.
           </p>
         </div>
 

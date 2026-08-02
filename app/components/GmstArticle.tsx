@@ -513,11 +513,10 @@ export function GmstArticle() {
         </p>
 
         <div className="article-observation-summary">
-          <p className="eyebrow">Pozorování v jedné větě</p>
+          <p className="eyebrow">Shrnutí pozorování</p>
           <p>
-            Pozemní stanice, lodě a bóje po spojení do několika samostatně zpracovaných globálních produktů
-            zaznamenávají dlouhodobý růst globální teploty u povrchu; desetiletí 2011–2020 bylo v hodnocení IPCC
-            o 1,09 °C výše než 1850–1900 a rok 2025 vyšel v souhrnu WMO na 1,43 ± 0,13 °C nad týmž základem.
+            Globální teplota u povrchu dlouhodobě roste. Desetiletí 2011–2020 bylo o 1,09 °C teplejší než období
+            1850–1900 a rok 2025 byl o 1,43 °C nad stejným základem.
           </p>
         </div>
 

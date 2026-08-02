@@ -615,17 +615,13 @@ export function OceanAcidificationArticle() {
           <ReferenceLink href="https://doi.org/10.1073/pnas.1504613112">Ríos et al., 2015</ReferenceLink>
         </p>
 
-        <div className="article-observation" aria-label="Shrnutí pozorování">
-          <p className="eyebrow">Pozorování v jedné kapitole</p>
-          <h3>Co ukazují zveřejněná měření a rekonstrukce</h3>
-          <ul>
-            <li>Dlouhá chemická pozorování u Bermud, Havaje a na dalších oceánských stanicích ukazují pokles povrchového pH.</li>
-            <li>Na BATS kleslo pH vypočtené ze změřeného DIC a alkality v letech 1983–2023 o 0,0752 a současně klesl stav nasycení aragonitem.</li>
-            <li>Globální povrchové rekonstrukce pro poslední čtyři desetiletí uvádějí sklon přibližně −0,017 pH za desetiletí.</li>
-            <li>Tempo se mezi oceánskými oblastmi liší a krátkodobé místní výkyvy mohou být větší než změna za několik let.</li>
-            <li>Opakované atlantické průřezy nacházejí pokles pH také ve středních a mezilehlých vodách, zatímco hlubší vrstvy se ve stejném období měnily méně.</li>
-            <li>Globální mapy jsou statistické rekonstrukce z měření; přímé, vypočtené a rekonstruované hodnoty proto musí být v každém grafu označeny zvlášť.</li>
-          </ul>
+        <div className="article-observation-summary">
+          <p className="eyebrow">Shrnutí pozorování</p>
+          <p>
+            Povrchové pH světového oceánu během posledních čtyř desetiletí klesalo přibližně o 0,017 za desetiletí.
+            U Bermud se mezi roky 1983 a 2023 snížilo o 0,0752 a současně klesl stav nasycení aragonitem. Pokles pH
+            probíhá také ve středních a mezilehlých vodách Atlantiku a jeho tempo se mezi oceánskými oblastmi liší.
+          </p>
         </div>
 
         <h2>Prameny a data</h2>

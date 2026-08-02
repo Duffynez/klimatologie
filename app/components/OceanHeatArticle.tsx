@@ -490,13 +490,11 @@ export function OceanHeatArticle() {
         </p>
 
         <div className="article-observation-summary">
-          <p className="eyebrow">Přesné shrnutí pozorování</p>
+          <p className="eyebrow">Shrnutí pozorování</p>
           <p>
-            Teplotní profily po prostorovém zpracování ukazují dlouhodobé zvětšování globálního obsahu tepla ve
-            vrstvě 0–2 000 metrů. Změna je doložena zvlášť v 0–700 i 700–2 000 metrech. Rok 2025 je v současných
-            výpočtech nejvyšším rokem tohoto záznamu, prostorové rozložení však zahrnuje kladné i záporné
-            regionální změny. Pozorování pod 2 000 metry rovněž ukazují celkový přírůstek, ale vycházejí z řidší
-            sítě a zveřejňují se samostatně.
+            Globální obsah tepla v oceánu dlouhodobě roste ve vrstvě od hladiny do hloubky 2 000 metrů. Přírůstek je
+            patrný v horních 700 metrech i mezi 700 a 2 000 metry a rok 2025 dosáhl nejvyšší hodnoty celého záznamu.
+            Celkový obsah tepla se zvyšuje také v oceánu pod hloubkou 2 000 metrů.
           </p>
         </div>
 

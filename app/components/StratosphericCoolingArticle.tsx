@@ -643,15 +643,12 @@ export function StratosphericCoolingArticle() {
         </p>
 
         <div className="article-observation-summary">
-          <p className="eyebrow">Přesné shrnutí pozorování</p>
+          <p className="eyebrow">Shrnutí pozorování</p>
           <p>
-            Balónová měření od roku 1958, souvislá družicová měření od konce roku 1978 a rádiové zákrytové
-            profily od roku 2002 společně dokumentují pokles globální teploty stratosféry. V družicových datech
-            za roky 1979–2018 činí podle použité široké vrstvy přibližně 0,25 až 0,70 °C za desetiletí a s výškou
-            roste. Dolní stratosféra má od poloviny devadesátých let menší čistou změnu než v první části
-            záznamu, zatímco střední a horní vrstvy pokračují v poklesu. Jednotlivé roky a oblasti mohou vykazovat
-            opačný pohyb; dlouhodobý globální rozdíl do roku 2024 zůstává ve všech čtyřech sledovaných vrstvách
-            záporný.
+            Globální teplota stratosféry dlouhodobě klesá. V letech 1979–2018 činil pokles podle výškové vrstvy
+            přibližně 0,25 až 0,70 °C za desetiletí a byl větší ve vyšších částech stratosféry. Dolní stratosféra se
+            od poloviny devadesátých let ochlazovala pomaleji, zatímco střední a horní vrstvy pokračovaly v poklesu
+            také do roku 2024.
           </p>
         </div>
 

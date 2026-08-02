@@ -509,13 +509,11 @@ export function PrecipitationArticle() {
         </p>
 
         <div className="article-observation-summary">
-          <p className="eyebrow">Přesné shrnutí pozorování</p>
+          <p className="eyebrow">Shrnutí pozorování</p>
           <p>
-            Celkové úhrny srážek se od poloviny 20. století měnily regionálně oběma směry a změna globálního průměru je ve
-            srovnání s regionálními rozdíly slabá. Nejvyšší jednodenní úhrny se ve většině dlouhých staničních záznamů a
-            ve většině vyhodnocených buněk HadEX3 zvýšily. Hodinová měření dokládají zesílení krátkých extrémů v několika
-            dlouhých regionálních archivech, jejich světové pokrytí však zatím nestačí k vytvoření stejně dlouhého a stejně
-            úplného globálního výsledku jako u denních srážek.
+            Celkové úhrny srážek se od poloviny 20. století v různých oblastech zvyšovaly i snižovaly a jejich globální
+            změna byla proti regionálním rozdílům malá. Ve většině vyhodnocených oblastí se zvýšily nejvyšší jednodenní
+            úhrny. V několika regionech zesílily také nejvyšší hodinové srážky.
           </p>
         </div>
 
