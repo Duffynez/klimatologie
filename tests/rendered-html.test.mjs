@@ -14,7 +14,8 @@ test("keeps the source library, categories, and its download model in the site",
   assert.match(sources, /1961_Sullivan/);
   assert.match(sources, /drive\.google\.com\/uc\?export=download/);
   assert.match(sources, /SourceCategory/);
-  assert.match(sources, /"science" \| "book" \| "politics" \| "organization"/);
+  assert.match(sources, /"science" \| "book" \| "politics" \| "organization" \| "media"/);
+  assert.match(sources, /media: \{ label: "Média a kultura" \}/);
   assert.match(sourceCard, /source-card--\$\{source\.category\}/);
   assert.match(sourceCard, /Google Drive/);
 });
@@ -54,16 +55,26 @@ test("separates academic and institutional events in a compact history timeline"
   assert.match(history, /timeline__item--\$\{lane\}/);
   assert.match(history, /timeline__identity/);
   assert.match(history, /timeline__title-row[\s\S]*<Citation id=\{source\.id\}/);
+  assert.match(history, /Společnost a rozhodování/);
+  assert.match(history, /Poznání a měření/);
   assert.doesNotMatch(history, /timeline__navigation|timeline__position|Předchozí milník|Další milník/);
   assert.match(events, /1972_Stockholm[\s\S]*lane: "institutional"/);
   assert.match(events, /1988_IPCC[\s\S]*lane: "institutional"/);
+  assert.match(events, /1956_TIME_Greenhouse[\s\S]*lane: "institutional"/);
+  assert.match(events, /1958_Keeling/);
+  assert.match(events, /1998_API_ActionPlan[\s\S]*lane: "institutional"/);
+  assert.match(events, /2004_DayAfterTomorrow[\s\S]*lane: "institutional"/);
+  assert.match(events, /2018_FFF[\s\S]*lane: "institutional"/);
   const summaries = [...events.matchAll(/summary: "([^"]+)"/g)].map((match) => match[1]);
-  assert.equal(summaries.length, 20);
+  assert.equal(summaries.length, 41);
   assert.ok(summaries.every((summary) => summary.split(/\s+/).length >= 65));
   assert.match(sources, /id: "1801_Herschel"[\s\S]*year: 1800/);
   assert.match(sources, /id: "1862_Tyndall"[\s\S]*year: 1861/);
   assert.match(sources, /un\.org\/en\/conferences\/environment\/stockholm1972/);
   assert.match(sources, /ipcc\.ch\/about\/history/);
+  assert.match(sources, /scrippsco2\.ucsd\.edu\/history_legacy\/early_keeling_curve/);
+  assert.match(sources, /doi\.org\/10\.1038\/329408a0/);
+  assert.match(sources, /unfccc\.int\/process-and-meetings\/the-paris-agreement/);
 });
 
 test("publishes the global surface temperature article instead of the generic placeholder", async () => {

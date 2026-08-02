@@ -15,6 +15,7 @@
   --source-book: #9a6d19;
   --source-politics: #b85c43;
   --source-organization: #506b96;
+  --source-media: #7c4f6f;
   --max-width: 1180px;
 }
 
@@ -297,6 +298,10 @@ h3 {
 
 .citation--organization {
   color: var(--source-organization);
+}
+
+.citation--media {
+  color: var(--source-media);
 }
 
 .citation--missing {
@@ -869,6 +874,10 @@ video.article-figure__media {
   --source-accent: var(--source-organization);
 }
 
+.source-card--media {
+  --source-accent: var(--source-media);
+}
+
 .source-card:target {
   border-color: var(--coral);
   box-shadow: 0 0 0 4px rgba(184, 92, 67, 0.16);
@@ -994,6 +1003,10 @@ video.article-figure__media {
 
 .timeline__item--organization {
   --timeline-accent: var(--source-organization);
+}
+
+.timeline__item--media {
+  --timeline-accent: var(--source-media);
 }
 
 .timeline__rail {

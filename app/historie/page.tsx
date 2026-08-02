@@ -9,10 +9,10 @@ export const metadata: Metadata = { title: "Historie" };
 export default function HistoryPage() {
   return (
     <div className="page-shell">
-      <PageLead eyebrow="Historie poznání" title="Časová osa poznání a rozhodnutí." />
+      <PageLead eyebrow="Historie poznání" title="Časová osa poznání, debaty a rozhodnutí." />
       <div className="timeline__head" aria-hidden="true">
-        <span>Politika a instituce</span>
-        <span>Věda a odborné práce</span>
+        <span>Společnost a rozhodování</span>
+        <span>Poznání a měření</span>
       </div>
       <ol className="timeline">
         {historyEvents.map((event) => {
