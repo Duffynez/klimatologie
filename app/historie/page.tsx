@@ -9,9 +9,9 @@ export const metadata: Metadata = { title: "Historie" };
 export default function HistoryPage() {
   return (
     <div className="page-shell">
-      <PageLead eyebrow="Historie poznání" title="Časová osa poznání, debaty a rozhodnutí." />
+      <PageLead eyebrow="Historie poznání" title="Časová osa vědeckého poznání a politických rozhodnutí." />
       <div className="timeline__head" aria-hidden="true">
-        <span>Společnost a rozhodování</span>
+        <span>Politická rozhodnutí</span>
         <span>Poznání a měření</span>
       </div>
       <ol className="timeline">

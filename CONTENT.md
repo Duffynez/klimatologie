@@ -21,6 +21,16 @@ Každá stránka o jevu musí mít tyto části:
 
 Citujte přes komponentu `Citation` a ID zdroje. Značení citace automaticky přebírá barvu kategorie zdroje; barvu nepřidávejte ručně. Neopisujte adresy zdrojů přímo do odstavců.
 
+## Milníky na stránce historie
+
+Časová osa sleduje pouze dvě souběžné historie: vývoj vědeckého poznání a formální politická rozhodnutí. Kandidát na vědecký milník musí přinést nový fyzikální poznatek, měřicí možnost, metodu, zásadní pozorování, ověření hypotézy, modelový postup, odbornou syntézu nebo důležitou pozorovací infrastrukturu. Politický milník musí změnit právní rámec, závazky, vykazování nebo trvalý způsob mezinárodního rozhodování.
+
+Každý kandidát musí mít přímou klimatickou souvislost, doložitelný a trvalý dopad, primární zdroj a význam, který není obsažen v jiném milníku. Do jedné věty musí jít přesně shrnout, co po události bylo nově možné vědět, měřit nebo rozhodnout. Bez splnění těchto podmínek na osu nepatří.
+
+Nezařazujeme popularizační knihy, noviny, časopisy, filmy, fotografie, umění, aktivismus, kampaně, ceny, firemní komunikaci, lobbing, jednotlivé projevy ani obecné ekologické události bez přímého klimatického rozhodnutí. Samotný vznik organizace nestačí; musí vytvořit zásadní vědeckou možnost nebo formální politický rámec. Opakované studie a aktualizace téhož poznatku patří do odborných článků a zdrojů, nikoli mezi nové historické milníky.
+
+Každá karta odpovídá na tři otázky: co se stalo, co bylo nově zjištěno nebo rozhodnuto a proč to změnilo další vývoj.
+
 ## Kontrolní otázky před zveřejněním
 
 - Je každé podstatné tvrzení navázané na zdroj?

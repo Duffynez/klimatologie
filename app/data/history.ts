@@ -76,63 +76,24 @@ export const historyEvents: HistoryEvent[] = [
     summary: "Plass využil přesnější laboratorní spektra a digitální výpočty k rozboru absorpčního pásu oxidu uhličitého kolem 15 mikrometrů v jednotlivých vrstvách atmosféry. Ukázal, proč silná absorpce uprostřed pásu neznamená, že další oxid uhličitý nemůže ovlivnit záření: mění se absorpce na okrajích pásu a ve vyšších, řidších vrstvách. Jeho model byl proti dnešním modelům jednoduchý, ale vrátil problém oxidu uhličitého do moderní spektroskopie a výpočetní fyziky. Především ukázal cestu od laboratorních spekter k číselnému odhadu změny radiační bilance a teploty.",
   },
   {
-    sourceId: "1956_TIME_Greenhouse",
-    lane: "institutional",
-    summary: "Časopis TIME představil širokému americkému publiku výzkum, podle něhož spalování uhlí a ropy zvyšuje množství oxidu uhličitého v ovzduší a může postupně měnit teplotu Země. Článek citoval oceánografa Rogera Revelleho a ukazuje, že základní problém nebyl v polovině padesátých let uzavřen pouze v odborných časopisech. Jeho historický význam nespočívá v novém měření, ale v okamžiku, kdy se fyzikální otázka budoucího oteplování dostala do významného masového média jako srozumitelné veřejné téma.",
-  },
-  {
     sourceId: "1958_Keeling",
     summary: "Charles David Keeling zahájil na observatoři Mauna Loa přesná a pravidelně kalibrovaná měření oxidu uhličitého v čistém oceánském vzduchu. Už první roky ukázaly dvě odlišné vlastnosti záznamu: pravidelné kolísání během roku a růst průměrné koncentrace mezi jednotlivými roky. Takzvaná Keelingova křivka proměnila úvahu o hromadění oxidu uhličitého v atmosféře v nepřetržité přímé pozorování. Její význam spočívá také v zavedení přísných standardů odběru, kalibrace a návaznosti měření, díky nimž lze dnešní hodnoty spolehlivě porovnávat s počátkem programu.",
-  },
-  {
-    sourceId: "1961_Sullivan",
-    summary: "Sullivanova kniha podala bezprostřední souhrn Mezinárodního geofyzikálního roku 1957–1958, během něhož vědci z 67 zemí koordinovali pozorování atmosféry, oceánů, ledovců, magnetického pole i kosmického prostoru. Program přinesl první vědecké družice, rozsáhlá polární měření, nové stanice a světová datová centra určená ke sdílení výsledků; v jeho rámci začala také přesná dlouhodobá měření atmosférického CO₂. Význam knihy je dokumentační, význam popsaného programu metodický: studium Země se posunulo od izolovaných výprav k souběžnému globálnímu pozorování podle společných postupů a s veřejně uchovávanými daty.",
   },
   {
     sourceId: "1967_Manabe_Wetherald",
     summary: "Manabe a Wetherald sestavili fyzikální model svislého sloupce atmosféry, v němž společně počítali přenos záření, proudění a rozložení vodní páry. Zkoumali, jak se ustálená teplota v různých výškách změní při jiné koncentraci oxidu uhličitého, a zachytili přitom oteplování spodní atmosféry i ochlazování výše položených vrstev. Práce se stala základem moderního modelování klimatu, protože převedla známé fyzikální zákony do výpočtu celé atmosférické struktury a ukázala, jak do výsledku vstupuje zesílení spojené s vodní párou. Na tento postup navázaly prostorové klimatické modely.",
   },
   {
-    sourceId: "1972_Limits",
-    lane: "institutional",
-    summary: "Kniha The Limits to Growth použila počítačový model k propojení růstu populace, průmyslové výroby, spotřeby neobnovitelných zdrojů, produkce potravin a znečištění. Nebyla klimatickou předpovědí a její scénáře nelze číst jako popis jediné nevyhnutelné budoucnosti. Historicky však zásadně rozšířila veřejnou debatu o představu, že jednotlivé ekologické a hospodářské problémy tvoří vzájemně propojený systém s konečnými mezemi. Klimatická změna se později stala jedním z témat, pro něž je právě takové dlouhodobé uvažování o zásobách, tocích, zpětných vazbách a překročení mezí důležité.",
-  },
-  {
-    sourceId: "1972_BlueMarble",
-    lane: "institutional",
-    summary: "Posádka Apolla 17 pořídila při cestě k Měsíci fotografii celé osvětlené Země, na níž jsou současně vidět Afrika, oceány, oblaka i antarktický led. Snímek nepřinesl nový klimatický údaj, ale vytvořil mimořádně působivý obraz planety jako jediného, prostorově omezeného celku bez politických hranic. Stal se jednou z nejšířeji reprodukovaných fotografií historie a součástí vznikajícího environmentálního jazyka. Jeho význam pro dějiny klimatu je kulturní: abstraktní pojem globálního systému dostal konkrétní podobu, kterou bylo možné sdílet ve školách, médiích i politice.",
-  },
-  {
-    sourceId: "1972_Stockholm",
-    lane: "institutional",
-    summary: "Stockholmská konference byla prvním velkým jednáním OSN zaměřeným jako celek na životní prostředí. Zástupci 113 států přijali deklaraci s 26 principy a akční plán se 109 doporučeními pro sledování a správu životního prostředí i mezinárodní spolupráci. Z konference vzešel Program OSN pro životní prostředí (UNEP), první orgán OSN věnovaný výhradně této oblasti. Význam Stockholmu spočívá ve vytvoření trvalého politického a institucionálního prostoru, v němž bylo možné řešit přeshraniční problémy na základě společných pozorování; nešlo ještě o klimatickou dohodu, ale bez tohoto rámce by pozdější klimatická spolupráce neměla kde vzniknout.",
-  },
-  {
     sourceId: "1976_Hays_Imbrie_Shackleton",
     summary: "Hays, Imbrie a Shackleton analyzovali hlubokomořská sedimentární jádra a hledali v nich pravidelné rytmy odpovídající změnám výstřednosti zemské dráhy, sklonu osy a precese. Ve zhruba půlmilionovém záznamu našli periody předpovězené astronomickými výpočty a ukázali, že změny oběžné dráhy určují tempo střídání ledových a meziledových období. Tím poskytli dlouho očekávaný kvantitativní test Milankovićovy teorie. Práce současně ukázala, že malé, přesně načasované změny slunečního záření mohou být prostřednictvím ledu, oceánu a atmosféry zesíleny do rozsáhlé proměny klimatu.",
-  },
-  {
-    sourceId: "1977_Black_Exxon",
-    lane: "institutional",
-    summary: "Vědecký poradce James Black předložil vedení společnosti Exxon souhrn tehdejšího poznání skleníkového účinku, růstu emisí a možných budoucích změn teploty. Prezentace otevřeně uváděla jak očekávaný směr změny, tak významné nejistoty a potřebu dalšího měření; firma poté několik let podporovala vlastní výzkum oxidu uhličitého a oceánu. Dokument je důležitý pro historii toku informací, protože dokládá, že velká ropná společnost řešila klimatické riziko odborně uvnitř podniku dříve, než se spor o její pozdější veřejnou komunikaci stal politickým tématem. Sám dokument ovšem není samostatným důkazem vývoje klimatu.",
   },
   {
     sourceId: "1979_Charney",
     summary: "Americká Národní akademie věd pověřila skupinu vedenou Julem Charneym, aby nezávisle posoudila, jaké oteplení lze očekávat při zdvojnásobení koncentrace oxidu uhličitého. Odborníci porovnali dva tehdy nejpokročilejší atmosférické modely, zhodnotili hlavní zpětné vazby a dospěli k pravděpodobnému rozmezí 1,5 až 4,5 °C. Charneyho zpráva nebyla prvním výpočtem tohoto účinku, ale stala se vzorem stručné odborné syntézy: oddělila dobře podložený směr změny od nejisté přesné velikosti a vymezila rozmezí, které zůstalo ústředním měřítkem klimatického výzkumu po další desetiletí.",
   },
   {
-    sourceId: "1979_WCC",
-    lane: "institutional",
-    summary: "První světová klimatická konference v Ženevě spojila odborníky z desítek zemí a označila možné lidské ovlivnění klimatu za problém vyžadující soustavný výzkum a mezinárodní spolupráci. Její závěry podpořily vznik Světového klimatického programu a později také Světového programu výzkumu klimatu, který koordinuje pozorování, modely a výměnu dat napříč státy. Význam konference spočívá v institucionálním posunu: klimatický výzkum už nebyl pouze součtem jednotlivých oborů a národních projektů, ale dostal trvalý mezinárodní rámec zaměřený na společné otázky a srovnatelné výsledky.",
-  },
-  {
     sourceId: "1987_Vostok",
     summary: "Barnola a jeho spolupracovníci změřili oxid uhličitý ve vzduchových bublinách uzavřených v ledovém jádru z antarktické stanice Vostok. Spolu s izotopovými údaji o minulých teplotách vznikl záznam dlouhý přibližně 160 000 let, v němž nízké koncentrace oxidu uhličitého provázely ledové doby a vyšší koncentrace teplejší období. Práce rozšířila přímé rozbory atmosférických plynů daleko před éru přístrojových měření a propojila chemii starého vzduchu s fyzickým záznamem klimatu. Pozdější hlubší vrty tento společný vývoj potvrdily přes několik dalších glaciálních cyklů.",
-  },
-  {
-    sourceId: "1988_Hansen_Senate",
-    lane: "institutional",
-    summary: "James Hansen při slyšení v Senátu Spojených států shrnul výsledky pozorování a modelových výpočtů a veřejně prohlásil, že oteplování už lze s vysokou mírou jistoty rozpoznat v naměřených teplotách. Vědecké argumenty vycházely z dřívějších recenzovaných prací, politický význam však vytvořilo místo a okamžik jejich sdělení: během mimořádně horkého léta se klimatická změna dostala na titulní strany a do parlamentní debaty. Slyšení tak představuje přelom mezi odborným poznáním a masovou politikou, nikoli počátek důkazů samotných; ty vznikaly postupně během předchozích desetiletí.",
   },
   {
     sourceId: "1988_IPCC",
@@ -154,37 +115,12 @@ export const historyEvents: HistoryEvent[] = [
     summary: "Kjótský protokol poprvé převedl obecný rámec klimatické úmluvy do právně závazných cílů pro průmyslové země uvedené v příloze protokolu. Vedle národních limitů zavedl společná pravidla započítávání emisí, kontrolu plnění a mechanismy umožňující část snižování uskutečnit prostřednictvím mezinárodní spolupráce. Pokrytí protokolu bylo omezené a některé významné státy se nezapojily nebo později odstoupily, přesto šlo o první praktickou zkoušku mezinárodního režimu s měřitelnými závazky. Zkušenosti s vykazováním, ověřováním i politickými limity následně ovlivnily podobu dalších dohod.",
   },
   {
-    sourceId: "1998_API_ActionPlan",
-    lane: "institutional",
-    summary: "Pracovní skupina složená ze zástupců amerických průmyslových organizací připravila plán veřejné komunikace o klimatické vědě. Dokument navrhoval školení mluvčích, kontakt s novináři a učiteli i šíření sdělení zdůrazňujících vědecké nejistoty; za známku úspěchu označil stav, kdy veřejnost bude nejistotu chápat jako součást běžného názoru. Je významným primárním pramenem k dějinám organizované klimatické komunikace, protože zachycuje konkrétní strategii, aktéry a zamýšlené publikum. Nevypovídá o správnosti fyzikálních měření, ale pomáhá vysvětlit, proč se veřejná debata vyvíjela jinak než odborná literatura.",
-  },
-  {
     sourceId: "2000_Argo",
     summary: "Mezinárodní program Argo začal budovat světovou síť autonomních plováků, které se pravidelně ponořují, měří teplotu a slanost oceánu do hloubky přibližně dvou kilometrů a po vynoření odesílají údaje přes družice. Během několika let vzniklo rovnoměrnější a průběžnější pokrytí oceánů, než jaké mohly poskytovat výzkumné lodě a jednotlivé historické trasy. Argo zásadně zpřesnilo sledování obsahu tepla, změn vodních mas i sezónního vývoje oceánu a současně zavedlo rychlé otevřené sdílení výsledků. Stalo se základní pozorovací infrastrukturou pro výzkum klimatu, oceánografii i předpovědní systémy.",
-  },
-  {
-    sourceId: "2004_DayAfterTomorrow",
-    lane: "institutional",
-    summary: "Katastrofický film The Day After Tomorrow zobrazil náhlé narušení oceánského proudění a během několika dnů proměnil velkou část severní polokoule v ledovou pustinu. Tak rychlý průběh ani zobrazené globální zamrznutí neodpovídají vědeckým poznatkům, film však dostal klimatické riziko do hlavního proudu zábavní kultury. Výzkum veřejnosti před uvedením a po něm zaznamenal u diváků větší obavy, vyšší ochotu jednat a současně některé nové mylné představy. Historický význam proto spočívá v doloženém vlivu fikce na vnímání problému, nikoli v přesnosti filmového scénáře.",
-  },
-  {
-    sourceId: "2006_InconvenientTruth",
-    lane: "institutional",
-    summary: "Dokument An Inconvenient Truth převedl přednášku Ala Gorea do filmového vyprávění založeného na grafech, fotografiích, animacích a osobním politickém příběhu. Keelingovu křivku, teplotní rekonstrukce a příklady změn v krajině tak představil publiku, které odborné zprávy běžně nečetlo. Film získal rozsáhlou mezinárodní distribuci a stal se jedním z nejviditelnějších kulturních bodů klimatické debaty první dekády století. Současně téma silně spojil s konkrétní politickou osobností, což pomohlo mobilizaci části veřejnosti, ale také prohloubilo stranické vnímání klimatické otázky.",
   },
   {
     sourceId: "2015_Paris",
     lane: "institutional",
     summary: "Pařížská dohoda vytvořila společný rámec, v němž předkládají klimatické plány všechny smluvní strany, nikoli pouze předem vymezená skupina průmyslových zemí. Stanovila cíl udržet oteplení výrazně pod 2 °C a usilovat o omezení na 1,5 °C, zavedla pětiletý cyklus zpřísňování národních příspěvků a společná pravidla transparentnosti. Jednotlivé cíle si státy určují samy a jejich součet automaticky nezaručuje splnění teplotního cíle. Historický význam dohody spočívá v téměř univerzálním politickém rámci, který propojuje dlouhodobý směr, pravidelné vyhodnocování a opakované národní rozhodování.",
-  },
-  {
-    sourceId: "2018_Stripes",
-    lane: "institutional",
-    summary: "Ed Hawkins převedl dlouhodobý vývoj teploty do jednoduchého sledu barevných pruhů, v němž každý pruh představuje jeden rok a odstín ukazuje jeho odchylku od zvoleného referenčního průměru. Vizualizace odstranila osy, čísla i odborné značky a ponechala pouze časový přechod od chladnějších modrých k teplejším červeným rokům. Nevytvořila nový datový soubor ani nový důkaz, ale nabídla snadno přenositelný jazyk pro již existující měření. Pruhy se rozšířily do médií, škol, veřejného prostoru i oděvů a staly se kulturním symbolem pozorovaného oteplování.",
-  },
-  {
-    sourceId: "2018_FFF",
-    lane: "institutional",
-    summary: "Školní stávka Grety Thunbergové před švédským parlamentem se prostřednictvím sociálních sítí rozšířila do mezinárodního hnutí Fridays for Future. Mladí lidé začali organizovat pravidelné protesty a požadovat, aby politická rozhodnutí odpovídala zveřejněným vědeckým závěrům a dlouhodobým závazkům. Hnutí nepřineslo nové měření ani odbornou teorii; změnilo však okruh lidí, kteří veřejně formulují klimatické požadavky, a zdůraznilo otázku odpovědnosti mezi generacemi. Jeho význam je společenský a politický: vědecké poznání se stalo základem masové mobilizace vedené věkovou skupinou bez běžného přístupu k volební moci.",
   },
 ];
