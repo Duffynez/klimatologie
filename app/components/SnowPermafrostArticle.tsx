@@ -524,9 +524,12 @@ export function SnowPermafrostArticle() {
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
             Na arktické pevnině severně od 60° bez Grónska se mezi roky 1967 a 2025 zmenšil květnový rozsah sněhu o
-            15 % a červnový o 50 %. Mezi roky 1981 a 2025 klesla květnová hmotnost sněhu o 13 % a červnová o 33 %.
-            Průměrná teplota permafrostu se v letech 2007–2016 zvýšila o 0,29 °C a aktivní vrstva se v letech
-            2000–2018 prohlubovala v průměru o 0,8 centimetru za rok.
+            15 % a červnový o 50 %. Jarní tání v letech 2010–2024 začínalo přibližně o jeden až dva týdny dříve než
+            v letech 1967–1981. Mezi roky 1981 a 2025 klesla květnová hmotnost sněhu o 13 % a červnová o 33 %.
+            Průměrná teplota permafrostu se v letech 2007–2016 zvýšila o 0,29 °C; ze 123 dlouhodobě sledovaných míst
+            se 71 oteplilo, 12 ochladilo a 40 se změnilo nejvýše o přibližně 0,1 °C. V roce 2024 dosáhlo 9 z 20
+            dlouhodobě sledovaných míst na Aljašce nejvyšší teploty svého záznamu. Aktivní vrstva permafrostu se v
+            letech 2000–2018 prohlubovala v průměru o 0,8 centimetru za rok.
           </p>
         </div>
 

@@ -492,9 +492,13 @@ export function OceanHeatArticle() {
         <div className="article-observation-summary">
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
-            Globální obsah tepla v oceánu dlouhodobě roste ve vrstvě od hladiny do hloubky 2 000 metrů. Přírůstek je
-            patrný v horních 700 metrech i mezi 700 a 2 000 metry a rok 2025 dosáhl nejvyšší hodnoty celého záznamu.
-            Celkový obsah tepla se zvyšuje také v oceánu pod hloubkou 2 000 metrů.
+            Globální obsah tepla v oceánu dlouhodobě roste od hladiny do hloubky 2 000 metrů. Mezi roky 1958 a 2025
+            se v této vrstvě zvýšil přibližně o 460 zettajoulů, což odpovídá zvýšení její průměrné teploty asi o
+            0,16 °C. Přírůstek probíhal v horních 700 metrech i mezi 700 a 2 000 metry; v letech 1955–2023 připadalo
+            v průměru 4,4 zettajoulu ročně na horní a 2,0 zettajoulu ročně na hlubší z těchto vrstev. Rok 2025 dosáhl
+            nejvyšší hodnoty celého záznamu a proti roku 2024 přibylo přibližně 23 zettajoulů. Jednotlivé části oceánu
+            se mění různými směry a rychlostmi, ale jejich globální součet roste. Kladná celková změna pokračuje také
+            pod hloubkou 2 000 metrů.
           </p>
         </div>
 

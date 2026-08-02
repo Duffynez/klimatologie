@@ -607,9 +607,12 @@ export function AtmosphericHumidityArticle() {
         <div className="article-observation-summary">
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
-            Od roku 1973 se měrná vlhkost vzduchu u povrchu zvýšila nad pevninou i oceánem, zatímco relativní vlhkost
-            nad pevninou poklesla. Celkové množství vodní páry nad nezamrzlými oceány od roku 1988 vzrostlo a v roce
-            2024 dosáhlo nejvyšší hodnoty celého sledovaného období.
+            Od roku 1973 se měrná vlhkost vzduchu u povrchu zvyšovala nad pevninou i oceánem přibližně o 0,10 gramu
+            vodní páry na kilogram vzduchu za desetiletí. Relativní vlhkost nad pevninou se ve stejném období snižovala
+            přibližně o 0,17 procentního bodu za desetiletí. V roce 2024 byla měrná vlhkost nad pevninou o 0,49 g/kg a
+            nad oceánem o 0,56 g/kg vyšší než průměr let 1991–2020 a dosáhla nejvyšších hodnot od roku 1973. Celkové
+            množství vodní páry v atmosféře nad nezamrzlými oceány vzrostlo v letech 1991–2024 přibližně o 0,48 kg/m²
+            za desetiletí a v roce 2024 dosáhlo nejvyšší hodnoty tohoto období.
           </p>
         </div>
 

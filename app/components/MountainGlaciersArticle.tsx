@@ -431,8 +431,13 @@ export function MountainGlaciersArticle() {
         <div className="article-observation-summary">
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
-            U horských ledovců po celém světě dlouhodobě převažuje ústup čela a úbytek hmotnosti. Mezi roky 1975 a
-            2025 ztratily přibližně 9 600 gigatun ledu, z toho asi 400 gigatun během glaciologického roku 2025.
+            U horských ledovců po celém světě dlouhodobě převažuje ústup čela a úbytek hmotnosti. Mezi roky 2000 a
+            2023 ztratilo hmotnost všech 19 sledovaných ledovcových oblastí; celkový úbytek činil přibližně 6 540
+            gigatun. Průměrná roční ztráta vzrostla z 231 gigatun v letech 2000–2011 na 314 gigatun v letech
+            2012–2023, tedy o 36 %. Od roku 1975 do roku 2025 ubylo přibližně 9 600 gigatun ledu a šest největších
+            ročních ztrát nastalo během sedmi let 2019–2025. Samotný glaciologický rok 2025 přinesl úbytek asi
+            400 gigatun. Největší část globální ztráty v gigatunách připadala na Aljašku a kanadskou Arktidu, zatímco
+            největší podíl původní hmotnosti ztratily ledovce ve střední Evropě, na Kavkaze a na Novém Zélandu.
           </p>
         </div>
 

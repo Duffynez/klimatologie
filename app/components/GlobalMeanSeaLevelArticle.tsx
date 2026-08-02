@@ -449,9 +449,12 @@ export function GlobalMeanSeaLevelArticle() {
         <div className="article-observation-summary">
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
-            Globální střední hladina moře během 20. století stoupala. Od roku 1993 se zvýšila přibližně o deset
-            centimetrů a její roční tempo růstu je na konci tohoto období vyšší než na jeho začátku. Jednotlivé oblasti
-            oceánu se zvyšují různou rychlostí.
+            Globální střední hladina moře během 20. století stoupala v průměru přibližně o 1,56 milimetru za rok.
+            Od začátku roku 1993 do července 2026 se zvýšila přibližně o 102 milimetrů, tedy o deset centimetrů.
+            Průměrné tempo za roky 1993–2023 činilo 3,3 milimetru za rok a během tohoto období vzrostlo přibližně z
+            2,1 na 4,5 milimetru za rok. Jednotlivé roky kolem dlouhodobého růstu výrazně kolísají: v roce 2024 hladina
+            stoupla o 5,9 milimetru a v roce 2025 o 0,8 milimetru. Také jednotlivé části oceánu se mění různou rychlostí;
+            jejich dlouhodobý průběh se místy liší od globální hodnoty přibližně o pět milimetrů za rok oběma směry.
           </p>
         </div>
 

@@ -645,10 +645,13 @@ export function StratosphericCoolingArticle() {
         <div className="article-observation-summary">
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
-            Globální teplota stratosféry dlouhodobě klesá. V letech 1979–2018 činil pokles podle výškové vrstvy
-            přibližně 0,25 až 0,70 °C za desetiletí a byl větší ve vyšších částech stratosféry. Dolní stratosféra se
-            od poloviny devadesátých let ochlazovala pomaleji, zatímco střední a horní vrstvy pokračovaly v poklesu
-            také do roku 2024.
+            Globální teplota dolní, střední i horní stratosféry je nižší než na začátku souvislého pozorování na konci
+            roku 1978. V letech 1979–2018 činil pokles podle výškové vrstvy přibližně 0,25 až 0,70 °C za desetiletí,
+            což za 39 let odpovídá ochlazení zhruba o 1 °C v dolní a až o 2,7 °C v horní sledované vrstvě. Dolní
+            stratosféra prodělala výrazné teplé vrcholy na začátku osmdesátých a devadesátých let a od poloviny
+            devadesátých let se ochlazovala pomaleji. Ve střední a horní stratosféře pokračoval pokles také v novější
+            části záznamu. Rok 2024 byl proti předchozímu roku mírně teplejší, celý průběh let 1979–2024 však zůstal
+            ve všech sledovaných vrstvách klesající.
           </p>
         </div>
 

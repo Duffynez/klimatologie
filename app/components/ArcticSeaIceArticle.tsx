@@ -575,9 +575,13 @@ export function ArcticSeaIceArticle() {
         <div className="article-observation-summary">
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
-            Rozsah arktického mořského ledu se od roku 1978 zmenšil ve všech měsících a největší pokles nastal na konci
-            léta. Od roku 1984 se výrazně snížilo zastoupení víceletého a nejstaršího ledu. Arktický mořský led je také
-            tenčí a jeho celkový objem je menší.
+            Rozsah arktického mořského ledu se od roku 1979 zmenšoval ve všech měsících a největší pokles nastal na
+            konci léta. Březnový rozsah ubýval do roku 2025 přibližně o 38 000 km² ročně a zářijový o 76 100 km²
+            ročně. Všech devatenáct letních minim od roku 2007 do roku 2025 bylo nižších než kterékoli minimum z let
+            1979–2006. Proměnilo se také stáří ledu: plocha starší než čtyři roky byla v roce 2025 o 95 % menší než
+            průměr let 1985–2004. V šesti dlouhodobě srovnávaných oblastech se tloušťka na konci tání zmenšila mezi
+            obdobími 1958–1976 a 2011–2018 přibližně o dva metry, tedy o 66 %. Od roku 2003 se zimní objem snížil
+            přibližně o 6 000 km³, zhruba o třetinu.
           </p>
         </div>
 

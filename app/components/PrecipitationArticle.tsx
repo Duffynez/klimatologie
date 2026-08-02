@@ -511,9 +511,13 @@ export function PrecipitationArticle() {
         <div className="article-observation-summary">
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
-            Celkové úhrny srážek se od poloviny 20. století v různých oblastech zvyšovaly i snižovaly a jejich globální
-            změna byla proti regionálním rozdílům malá. Ve většině vyhodnocených oblastí se zvýšily nejvyšší jednodenní
-            úhrny. V několika regionech zesílily také nejvyšší hodinové srážky.
+            Celkové roční úhrny srážek se od poloviny 20. století měnily rozdílně podle oblasti. Rozsáhlé nárůsty se
+            objevily v severních středních a vysokých zeměpisných šířkách, zatímco v části subtropů a jižních oblastí
+            úhrny klesaly; změna globálního průměru byla proti těmto regionálním rozdílům malá. Nejvyšší jednodenní
+            úhrny se v letech 1900–2009 zvyšovaly na 64 % z 8 326 dlouhodobě sledovaných míst a převaha růstu pokračuje
+            také v širším hodnocení let 1950–2018. Nejvyšší hodinové srážky zesílily v dlouhých záznamech z Nizozemska,
+            Hongkongu a Austrálie. Pozorujeme tedy prostorově rozdílný vývoj celkového množství srážek a častější růst
+            jejich nejsilnějších denních a v některých oblastech také hodinových úhrnů.
           </p>
         </div>
 

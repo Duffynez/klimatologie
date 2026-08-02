@@ -464,9 +464,12 @@ export function PhenologyArticle() {
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
             V evropských pozorováních rostlin nastává většina jarních a letních fází dříve než v minulých
-            desetiletích. Posun podzimního zbarvení a opadu listů je menší a častěji směřuje k pozdějším datům.
-            Předhnízdní tah a hnízdění ptáků se v celosvětovém souhrnu posunuly přibližně o dva až tři dny za
-            desetiletí k dřívějším termínům.
+            desetiletích. V letech 1971–2000 se dřívější rašení, kvetení nebo zrání objevilo u 78 % sledovaných
+            případů a průměrný posun činil 2,5 dne za desetiletí. V Německu, Rakousku a Švýcarsku mělo v letech
+            1951–2018 dřívější průběh 89 % sledovaných případů rašení a kvetení, zatímco zbarvení listů se u 57 % případů
+            posouvalo k pozdějším datům. Britská pozorování prvního kvetení měla v období 1987–2019 průměrné datum
+            téměř o 26 dnů dřívější než záznamy do roku 1986. U ptáků se předhnízdní tah a hnízdění v celosvětovém
+            souhrnu posunuly přibližně o dva až tři dny za desetiletí k dřívějším termínům.
           </p>
         </div>
 

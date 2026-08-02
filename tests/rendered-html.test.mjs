@@ -643,11 +643,13 @@ test("uses one observation-only summary in every completed observation article",
     articleFiles.map((file) => readFile(new URL(`app/components/${file}`, root), "utf8")),
   );
 
-  for (const article of articles) {
+  for (const [index, article] of articles.entries()) {
     const summaries = article.match(/<div className="article-observation-summary">[\s\S]*?<\/div>/g) ?? [];
     assert.equal(summaries.length, 1);
     assert.equal((summaries[0].match(/Shrnutí pozorování/g) ?? []).length, 1);
     assert.doesNotMatch(summaries[0], /Přesné shrnutí|Pozorování v jedné|±|nejist|metod|přístroj|stanic|družic|produkt|soubor|výpočet|map|není|nejsou|nelze|nikoli|neznamen|závis/i);
+    const summaryText = summaries[0].replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+    assert.ok(summaryText.split(" ").length >= 70, `${articleFiles[index]} has an undersized observation summary`);
   }
 });
 

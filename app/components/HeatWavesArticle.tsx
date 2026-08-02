@@ -444,11 +444,14 @@ export function HeatWavesArticle() {
         <div className="article-observation-summary">
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
-            Od poloviny 20. století přibylo ve většině oblastí souše dnů ve vlnách veder, nejdelší události se
-            prodloužily a vzrostlo jejich kumulované teplo. V Evropě se v letech 1979–2020 počet dnů v dlouhých vlnách
-            zvyšoval v průměru o 0,61 dne za desetiletí, zatímco ve zbytku severních středních šířek o 0,21 dne.
-            V České republice vzrostl průměrný počet tropických dnů z pěti ročně v období 1961–1990 na přibližně
-            jedenáct ročně v období 1991–2020.
+            Od poloviny 20. století přibylo ve většině sledovaných oblastí souše dnů ve vlnách veder, nejdelší
+            události se prodloužily a vzrostlo jejich kumulované teplo. V letech 1950–2017 se jejich počet ve většině
+            oblastí zvyšoval alespoň o jeden den za desetiletí a v mnoha nízkých zeměpisných šířkách o tři až pět dnů.
+            Nejdelší události se podle oblasti prodlužovaly přibližně o 0,2 až více než jeden den za desetiletí. V
+            Evropě se v letech 1979–2020 počet dnů v dlouhých vlnách zvyšoval v průměru o 0,61 dne za desetiletí,
+            zatímco ve zbytku severních středních šířek o 0,21 dne. V České republice vzrostl průměrný počet tropických
+            dnů z pěti ročně v období 1961–1990 na přibližně jedenáct v letech 1991–2020 a více než třináct v období
+            2011–2025; rok 2024 měl v plošném průměru 18,5 tropického dne.
           </p>
         </div>
 

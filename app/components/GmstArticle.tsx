@@ -515,8 +515,11 @@ export function GmstArticle() {
         <div className="article-observation-summary">
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
-            Globální teplota u povrchu dlouhodobě roste. Desetiletí 2011–2020 bylo o 1,09 °C teplejší než období
-            1850–1900 a rok 2025 byl o 1,43 °C nad stejným základem.
+            Globální teplota u povrchu dlouhodobě roste a meziroční kolísání se odehrává kolem tohoto vzestupného
+            průběhu. Desetiletí 2011–2020 bylo v průměru o 1,09 °C teplejší než období 1850–1900. Rok 2024 dosáhl
+            1,55 °C nad tímto základem a byl nejteplejším rokem celého záznamu; rok 2025 následoval s hodnotou
+            1,43 °C. Roky 2023, 2024 a 2025 tvoří tři nejteplejší roky a všech jedenáct let od roku 2015 do roku
+            2025 patří mezi jedenáct nejteplejších roků pozorovaného období.
           </p>
         </div>
 

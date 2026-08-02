@@ -438,9 +438,11 @@ export function IceSheetsArticle() {
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
             Grónský i antarktický ledový příkrov ztrácejí hmotnost. Mezi roky 1992 a 2020 společně ubylo přibližně
-            7 560 gigatun ledu, z toho asi 4 890 gigatun v Grónsku a 2 670 gigatun v Antarktidě. Antarktický úbytek se
-            soustřeďuje především do západní části kontinentu a na Antarktický poloostrov a u obou příkrovů pokračoval
-            také do března 2025.
+            7 560 gigatun ledu, což odpovídá asi 21 milimetrům globální střední hladiny moře. Na Grónsko připadlo
+            přibližně 4 890 gigatun a na Antarktidu 2 670 gigatun. Antarktický úbytek se soustřeďoval především do
+            západní části kontinentu a na Antarktický poloostrov. Průměrná společná ztráta vzrostla ze 105 gigatun
+            ročně v letech 1992–1996 na 372 gigatun ročně v letech 2016–2020. V období od dubna 2002 do března 2025
+            pokračoval úbytek v průměru přibližně 264 gigatun ročně v Grónsku a 135 gigatun ročně v Antarktidě.
           </p>
         </div>
 

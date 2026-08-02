@@ -584,8 +584,11 @@ export function AtmosphericCo2Article() {
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
             Koncentrace oxidu uhličitého na Mauna Loa vzrostla z 315,98 ppm v roce 1959 na 427,35 ppm v roce 2025.
-            Globální povrchový průměr se mezi roky 1979 a 2025 zvýšil z 336,85 na 425,64 ppm. Během předchozích
-            800 000 let se koncentrace zachycená v antarktickém ledu pohybovala přibližně mezi 170 a 300 ppm.
+            Přírůstek 111,37 ppm odpovídá přibližně 35 % hodnoty na začátku tohoto období. Globální povrchový průměr
+            se mezi roky 1979 a 2025 zvýšil z 336,85 na 425,64 ppm. Dlouhodobý růst je doprovázen pravidelným sezónním
+            kolísáním a rozdíly mezi zeměpisnými šířkami. Během předchozích 800 000 let se koncentrace zachycená v
+            antarktickém ledu pohybovala přibližně mezi 170 a 300 ppm; globální průměr roku 2024 dosáhl 422,8 ppm a
+            ležel nad celým tímto historickým rozsahem.
           </p>
         </div>
 

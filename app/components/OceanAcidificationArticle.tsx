@@ -619,8 +619,12 @@ export function OceanAcidificationArticle() {
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
             Povrchové pH světového oceánu během posledních čtyř desetiletí klesalo přibližně o 0,017 za desetiletí.
-            U Bermud se mezi roky 1983 a 2023 snížilo o 0,0752 a současně klesl stav nasycení aragonitem. Pokles pH
-            probíhá také ve středních a mezilehlých vodách Atlantiku a jeho tempo se mezi oceánskými oblastmi liší.
+            Mezi roky 1982 a 2021 se globální povrchový průměr snížil asi o 0,06 jednotky pH a stav nasycení aragonitem přibližně
+            o 10 %. U Bermud kleslo pH mezi roky 1983 a 2023 o 0,0752 a stav nasycení aragonitem o 0,354. Dlouhá
+            pozorování na sedmi místech v Atlantiku, Tichém oceánu, Islandském moři a u Nového Zélandu zaznamenala
+            pokles pH přibližně o 0,013 až 0,026 za desetiletí. Tempo se mezi oceánskými oblastmi i během roku liší.
+            Pokles pokračuje také ve středních a mezilehlých vodách Atlantiku, kde dosáhl v části jižního Atlantiku
+            přibližně 0,042 jednotky pH za dvě desetiletí.
           </p>
         </div>
 
