@@ -57,6 +57,11 @@ test("separates academic and institutional events in a compact history timeline"
   assert.doesNotMatch(history, /timeline__navigation|timeline__position|Předchozí milník|Další milník/);
   assert.match(events, /1972_Stockholm[\s\S]*lane: "institutional"/);
   assert.match(events, /1988_IPCC[\s\S]*lane: "institutional"/);
+  const summaries = [...events.matchAll(/summary: "([^"]+)"/g)].map((match) => match[1]);
+  assert.equal(summaries.length, 20);
+  assert.ok(summaries.every((summary) => summary.split(/\s+/).length >= 65));
+  assert.match(sources, /id: "1801_Herschel"[\s\S]*year: 1800/);
+  assert.match(sources, /id: "1862_Tyndall"[\s\S]*year: 1861/);
   assert.match(sources, /un\.org\/en\/conferences\/environment\/stockholm1972/);
   assert.match(sources, /ipcc\.ch\/about\/history/);
 });
