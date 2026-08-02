@@ -15,7 +15,9 @@ export type Source = {
   publication: string;
   category: SourceCategory;
   type: string;
-  driveFileId: string;
+  driveFileId?: string;
+  externalUrl?: string;
+  citationLabel?: string;
   topics: string[];
 };
 
@@ -38,12 +40,17 @@ export const sources: Source[] = [
   { id: "1955_Emiliani", title: "Pleistocene Temperatures", author: "Cesare Emiliani", year: 1955, publication: "The Journal of Geology", type: "Studie", category: "science", driveFileId: "1BUN9N05ph73dKAEPpzYsXT7QpjaJ6X6A", topics: ["historie", "teplota"] },
   { id: "1956_Plass", title: "The Carbon Dioxide Theory of Climatic Change", author: "Gilbert N. Plass", year: 1956, publication: "Tellus", type: "Studie", category: "science", driveFileId: "1OQv4tb6jf8V3dPy_01bCkfL2DIbKjQ0_", topics: ["historie", "uhlík"] },
   { id: "1961_Sullivan", title: "Assault on the Unknown: The International Geophysical Year", author: "Walter Sullivan", year: 1961, publication: "McGraw-Hill", type: "Kniha", category: "book", driveFileId: "1Zs3SNWqGN4n54-1YM3YqQJK9bdK5lAhp", topics: ["historie", "metody"] },
+  { id: "1972_Stockholm", title: "United Nations Conference on the Human Environment", author: "OSN", year: 1972, publication: "Stockholm 1972", type: "Mezinárodní konference", category: "politics", externalUrl: "https://www.un.org/en/conferences/environment/stockholm1972", citationLabel: "OSN 1972", topics: ["historie", "politika", "instituce"] },
+  { id: "1988_IPCC", title: "Vznik Mezivládního panelu pro změnu klimatu (IPCC)", author: "WMO a UNEP", year: 1988, publication: "IPCC", type: "Založení instituce", category: "organization", externalUrl: "https://www.ipcc.ch/about/history/", citationLabel: "IPCC 1988", topics: ["historie", "politika", "instituce"] },
 ];
 
 export const sourceById = (id: string) => sources.find((source) => source.id === id);
 
-export const sourceViewUrl = (source: Source) =>
-  `https://drive.google.com/file/d/${source.driveFileId}/view`;
+export const sourceViewUrl = (source: Source) => {
+  if (source.externalUrl) return source.externalUrl;
+  if (source.driveFileId) return `https://drive.google.com/file/d/${source.driveFileId}/view`;
+  return "#";
+};
 
 export const sourceDownloadUrl = (source: Source) =>
-  `https://drive.google.com/uc?export=download&id=${source.driveFileId}`;
+  source.driveFileId ? `https://drive.google.com/uc?export=download&id=${source.driveFileId}` : null;

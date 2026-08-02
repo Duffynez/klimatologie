@@ -2,6 +2,7 @@ import { Source, sourceCategoryMeta, sourceDownloadUrl, sourceViewUrl } from "..
 
 export function SourceCard({ source }: { source: Source }) {
   const category = sourceCategoryMeta[source.category];
+  const downloadUrl = sourceDownloadUrl(source);
 
   return (
     <article className={`source-card source-card--${source.category}`} id={source.id}>
@@ -14,8 +15,10 @@ export function SourceCard({ source }: { source: Source }) {
       <p>{source.author}</p>
       <p className="source-card__publication">{source.publication}</p>
       <div className="source-card__actions">
-        <a href={sourceViewUrl(source)} target="_blank" rel="noreferrer">Otevřít na Google Drive</a>
-        <a href={sourceDownloadUrl(source)} target="_blank" rel="noreferrer">Stáhnout kopii</a>
+        <a href={sourceViewUrl(source)} target="_blank" rel="noreferrer">
+          {source.externalUrl ? "Otevřít původní zdroj" : "Otevřít na Google Drive"}
+        </a>
+        {downloadUrl ? <a href={downloadUrl} target="_blank" rel="noreferrer">Stáhnout kopii</a> : null}
       </div>
     </article>
   );

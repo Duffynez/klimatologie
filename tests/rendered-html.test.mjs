@@ -41,16 +41,24 @@ test("replaces the temporary starter surface", async () => {
   assert.doesNotMatch(home, /SkeletonPreview|codex-preview/);
 });
 
-test("keeps categorized citations and arrow navigation in the history timeline", async () => {
-  const [citation, history] = await Promise.all([
+test("separates academic and institutional events in a compact history timeline", async () => {
+  const [citation, history, events, sources] = await Promise.all([
     readFile(new URL("app/components/Citation.tsx", root), "utf8"),
     readFile(new URL("app/historie/page.tsx", root), "utf8"),
+    readFile(new URL("app/data/history.ts", root), "utf8"),
+    readFile(new URL("app/data/sources.ts", root), "utf8"),
   ]);
 
   assert.match(citation, /citation--\$\{source\.category\}/);
   assert.match(history, /timeline__item--\$\{source\.category\}/);
-  assert.match(history, /Předchozí milník/);
-  assert.match(history, /Další milník/);
+  assert.match(history, /timeline__item--\$\{lane\}/);
+  assert.match(history, /timeline__identity/);
+  assert.match(history, /timeline__title-row[\s\S]*<Citation id=\{source\.id\}/);
+  assert.doesNotMatch(history, /timeline__navigation|timeline__position|Předchozí milník|Další milník/);
+  assert.match(events, /1972_Stockholm[\s\S]*lane: "institutional"/);
+  assert.match(events, /1988_IPCC[\s\S]*lane: "institutional"/);
+  assert.match(sources, /un\.org\/en\/conferences\/environment\/stockholm1972/);
+  assert.match(sources, /ipcc\.ch\/about\/history/);
 });
 
 test("publishes the global surface temperature article instead of the generic placeholder", async () => {

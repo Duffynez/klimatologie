@@ -1,4 +1,12 @@
-export const historyEvents = [
+export type HistoryLane = "academic" | "institutional";
+
+export type HistoryEvent = {
+  sourceId: string;
+  summary: string;
+  lane?: HistoryLane;
+};
+
+export const historyEvents: HistoryEvent[] = [
   { sourceId: "1681_Mariotte", summary: "Všímal si rozdílu mezi průchodem slunečního světla sklem a chováním sálavého tepla z horkých povrchů. Jde o rané pozorování principů důležitých pro popis skleníkového efektu." },
   { sourceId: "1767_Saussure", summary: "Sestrojil izolovanou nádobu krytou vrstvami skla, která se na slunci silně zahřívala. Jeho heliotermometr se stal důležitým experimentálním předobrazem pro pozdější úvahy o teple a atmosféře." },
   { sourceId: "1801_Herschel", summary: "Při zkoumání slunečního spektra objevil infračervené záření a ukázal, že část tepla leží mimo viditelné světlo." },
@@ -17,4 +25,6 @@ export const historyEvents = [
   { sourceId: "1955_Emiliani", summary: "Analýzou izotopů kyslíku v hlubokomořských sedimentech přispěl k rekonstrukci historie teplot oceánů a dob ledových." },
   { sourceId: "1956_Plass", summary: "S využitím výpočetní techniky zpřesnil výpočty absorpce infračerveného záření oxidem uhličitým." },
   { sourceId: "1961_Sullivan", summary: "Shrnul výsledky Mezinárodního geofyzikálního roku, který pomohl položit základy modernímu systematickému monitorování Země." },
+  { sourceId: "1972_Stockholm", lane: "institutional", summary: "Zástupci 113 států přijali Stockholmskou deklaraci a akční plán pro životní prostředí. Konference vedla také k vytvoření Programu OSN pro životní prostředí (UNEP) a položila institucionální základ pozdější mezinárodní klimatické politiky." },
+  { sourceId: "1988_IPCC", lane: "institutional", summary: "Světová meteorologická organizace a UNEP založily Mezivládní panel pro změnu klimatu (IPCC). Jeho úkolem se stalo pravidelně hodnotit stav poznání o změně klimatu, jejích dopadech a možnostech reakce pro potřeby vlád." },
 ];
