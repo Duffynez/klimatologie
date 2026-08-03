@@ -3,12 +3,10 @@ import Link from "next/link";
 const navigation = [
   { href: "/", label: "Úvod" },
   { href: "/pozorovani", label: "Pozorování" },
-  { href: "/historie", label: "Historie" },
-  { href: "/mechanismy", label: "Mechanismy" },
   { href: "/metody", label: "Metody" },
-  { href: "/slovnicek", label: "Slovníček" },
+  { href: "/mechanismy", label: "Mechanismy" },
+  { href: "/historie", label: "Historie" },
   { href: "/osobnosti", label: "Osobnosti" },
-  { href: "/disidenti", label: "Otázky" },
   { href: "/zdroje", label: "Zdroje" },
 ];
 

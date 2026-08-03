@@ -33,12 +33,11 @@ test("keeps the source library, categories, and its download model in the site",
 });
 
 test("replaces the temporary starter surface", async () => {
-  const [home, layout, header, footer, sections, robots, sitemap] = await Promise.all([
+  const [home, layout, header, footer, robots, sitemap] = await Promise.all([
     readFile(new URL("app/page.tsx", root), "utf8"),
     readFile(new URL("app/layout.tsx", root), "utf8"),
     readFile(new URL("app/components/SiteHeader.tsx", root), "utf8"),
     readFile(new URL("app/components/SiteFooter.tsx", root), "utf8"),
-    readFile(new URL("app/data/sections.ts", root), "utf8"),
     readFile(new URL("public/robots.txt", root), "utf8"),
     readFile(new URL("public/sitemap.xml", root), "utf8"),
   ]);
@@ -53,25 +52,23 @@ test("replaces the temporary starter surface", async () => {
   assert.match(layout, /Klimatologie\.eu/);
   assert.match(layout, /static\.cloudflareinsights\.com\/beacon\.min\.js/);
   assert.match(layout, /5e5e8b07ed9f445d82e999e0de1c8f65/);
-  assert.match(header, /href: "\/", label: "Úvod"/);
-  assert.match(header, /href: "\/metody", label: "Metody"/);
+  assert.match(header, /label: "Úvod"[\s\S]*label: "Pozorování"[\s\S]*label: "Metody"[\s\S]*label: "Mechanismy"[\s\S]*label: "Historie"[\s\S]*label: "Osobnosti"[\s\S]*label: "Zdroje"/);
+  assert.doesNotMatch(header, /Slovníček|Otázky|\/slovnicek|\/disidenti/);
   assert.doesNotMatch(footer, /Jak pracujeme s daty|Zápisník projektu|\/metody|\/blog/);
-  assert.doesNotMatch(sections, /metody:/);
-  assert.doesNotMatch(sections, /blog:|Zápisník projektu/);
   assert.match(robots, /Sitemap: https:\/\/klimatologie\.eu\/sitemap\.xml/);
   assert.match(sitemap, /https:\/\/klimatologie\.eu\/pozorovani\/stratosfericke-ochlazovani\//);
   assert.match(sitemap, /https:\/\/klimatologie\.eu\/pozorovani\/tepelny-obsah-oceanu\//);
   assert.match(sitemap, /https:\/\/klimatologie\.eu\/metody\//);
+  assert.doesNotMatch(sitemap, /\/slovnicek\/|\/disidenti\//);
   assert.doesNotMatch(sitemap, /https:\/\/klimatologie\.eu\/blog\//);
   assert.doesNotMatch(home, /SkeletonPreview|codex-preview/);
 });
 
 test("publishes a twenty-nine-item catalogue of measurement methods", async () => {
-  const [page, detailPage, methods, sections, styles] = await Promise.all([
+  const [page, detailPage, methods, styles] = await Promise.all([
     readFile(new URL("app/metody/page.tsx", root), "utf8"),
     readFile(new URL("app/metody/[slug]/page.tsx", root), "utf8"),
     readFile(new URL("app/data/methods.ts", root), "utf8"),
-    readFile(new URL("app/data/sections.ts", root), "utf8"),
     readFile(new URL("app/globals.css", root), "utf8"),
   ]);
 
@@ -89,17 +86,15 @@ test("publishes a twenty-nine-item catalogue of measurement methods", async () =
   assert.match(detailPage, /generateStaticParams/);
   assert.match(detailPage, /methodBySlug/);
   assert.match(detailPage, /Zpět na všechny metody/);
-  assert.doesNotMatch(sections, /metody:/);
   assert.match(styles, /\.method-catalog__grid/);
   assert.match(styles, /\.method-tile:hover/);
 });
 
 test("publishes twenty mechanisms with evidence that distinguishes explanations", async () => {
-  const [page, detailPage, mechanisms, sections, styles] = await Promise.all([
+  const [page, detailPage, mechanisms, styles] = await Promise.all([
     readFile(new URL("app/mechanismy/page.tsx", root), "utf8"),
     readFile(new URL("app/mechanismy/[slug]/page.tsx", root), "utf8"),
     readFile(new URL("app/data/mechanisms.ts", root), "utf8"),
-    readFile(new URL("app/data/sections.ts", root), "utf8"),
     readFile(new URL("app/globals.css", root), "utf8"),
   ]);
 
@@ -119,7 +114,6 @@ test("publishes twenty mechanisms with evidence that distinguishes explanations"
   assert.match(detailPage, /mechanismBySlug/);
   assert.match(detailPage, /Co musí toto vysvětlení objasnit/);
   assert.match(detailPage, /Zpět na všechny mechanismy/);
-  assert.doesNotMatch(sections, /mechanismy:/);
   assert.match(styles, /\.mechanism-catalog__grid/);
   assert.match(styles, /\.mechanism-tile:hover/);
 });
@@ -710,12 +704,11 @@ test("publishes a sourced heat-wave article that keeps definitions and observati
 });
 
 test("keeps the main section headers free of status labels and explanatory side copy", async () => {
-  const [evidenceIndex, evidenceFallback, history, people, genericSection, sources] = await Promise.all([
+  const [evidenceIndex, evidenceFallback, history, people, sources] = await Promise.all([
     readFile(new URL("app/pozorovani/page.tsx", root), "utf8"),
     readFile(new URL("app/pozorovani/[slug]/page.tsx", root), "utf8"),
     readFile(new URL("app/historie/page.tsx", root), "utf8"),
     readFile(new URL("app/osobnosti/page.tsx", root), "utf8"),
-    readFile(new URL("app/[section]/page.tsx", root), "utf8"),
     readFile(new URL("app/zdroje/page.tsx", root), "utf8"),
   ]);
 
@@ -723,8 +716,7 @@ test("keeps the main section headers free of status labels and explanatory side 
   assert.doesNotMatch(evidenceFallback, /topic\.status|<PageLead[^>]*>[\s\S]*topic\.summary/);
   assert.doesNotMatch(history, /Tato osa začíná knihovnou/);
   assert.doesNotMatch(people, /Profily propojí životopis/);
-  assert.doesNotMatch(genericSection, /content\.intro/);
-  for (const page of [evidenceIndex, evidenceFallback, history, people, genericSection, sources]) {
+  for (const page of [evidenceIndex, evidenceFallback, history, people, sources]) {
     assert.match(page, /<PageLead[^>]*\/>/);
   }
 });
