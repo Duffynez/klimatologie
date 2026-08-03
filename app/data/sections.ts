@@ -23,12 +23,6 @@ export const sections = {
     intro: "Tahle sekce nebude pracovat s nálepkami. Každá otázka dostane přesné znění, relevantní data, odkazy na primární literaturu a jasné vymezení toho, co zůstává nejisté.",
     blocks: ["Co přesně tvrzení říká", "Co ukazují data", "Co zůstává otevřené"],
   },
-  blog: {
-    title: "Zápisník projektu",
-    eyebrow: "Poznámky k výzkumu a tvorbě",
-    intro: "Zde budeme zveřejňovat kratší komentované výběry zdrojů, metodické poznámky a změny v databázi. Nejde o náhradu zdrojů, ale o průvodce k nim.",
-    blocks: ["Nové zdroje", "Poznámky k metodám", "Změny webu"],
-  },
 } as const;
 
 export type SectionSlug = keyof typeof sections;

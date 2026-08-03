@@ -10,8 +10,6 @@ export function SiteFooter() {
         </div>
         <div className="site-footer__links">
           <Link href="/zdroje">Databáze zdrojů</Link>
-          <Link href="/metody">Jak pracujeme s daty</Link>
-          <Link href="/blog">Zápisník projektu</Link>
         </div>
       </div>
     </footer>

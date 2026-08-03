@@ -33,24 +33,36 @@ test("keeps the source library, categories, and its download model in the site",
 });
 
 test("replaces the temporary starter surface", async () => {
-  const [home, layout, header, robots, sitemap] = await Promise.all([
+  const [home, layout, header, footer, sections, robots, sitemap] = await Promise.all([
     readFile(new URL("app/page.tsx", root), "utf8"),
     readFile(new URL("app/layout.tsx", root), "utf8"),
     readFile(new URL("app/components/SiteHeader.tsx", root), "utf8"),
+    readFile(new URL("app/components/SiteFooter.tsx", root), "utf8"),
+    readFile(new URL("app/data/sections.ts", root), "utf8"),
     readFile(new URL("public/robots.txt", root), "utf8"),
     readFile(new URL("public/sitemap.xml", root), "utf8"),
   ]);
 
-  assert.match(home, /Data, souvislosti, zdroje/);
+  assert.match(home, /Jak víme, co se s klimatem děje/);
+  assert.match(home, /co bylo skutečně pozorováno nebo změřeno/);
+  assert.match(home, /veřejnými daty a původními studiemi/);
   assert.match(home, /earth-europe\.jpg/);
   assert.match(home, /unoptimized/);
+  assert.match(home, /featuredObservationSlugs[\s\S]*"gmst"[\s\S]*"stratosfericke-ochlazovani"[\s\S]*"ustup-ledovcu"/);
+  assert.doesNotMatch(home, /Mapa pozorování|slice\(0, 6\)/);
   assert.match(layout, /Klimatologie\.eu/);
   assert.match(layout, /static\.cloudflareinsights\.com\/beacon\.min\.js/);
   assert.match(layout, /5e5e8b07ed9f445d82e999e0de1c8f65/);
   assert.match(header, /href: "\/", label: "Úvod"/);
+  assert.match(header, /href: "\/metody", label: "Metody"/);
+  assert.doesNotMatch(footer, /Jak pracujeme s daty|Zápisník projektu|\/metody|\/blog/);
+  assert.match(sections, /metody:/);
+  assert.doesNotMatch(sections, /blog:|Zápisník projektu/);
   assert.match(robots, /Sitemap: https:\/\/klimatologie\.eu\/sitemap\.xml/);
   assert.match(sitemap, /https:\/\/klimatologie\.eu\/pozorovani\/stratosfericke-ochlazovani\//);
   assert.match(sitemap, /https:\/\/klimatologie\.eu\/pozorovani\/tepelny-obsah-oceanu\//);
+  assert.match(sitemap, /https:\/\/klimatologie\.eu\/metody\//);
+  assert.doesNotMatch(sitemap, /https:\/\/klimatologie\.eu\/blog\//);
   assert.doesNotMatch(home, /SkeletonPreview|codex-preview/);
 });
 
