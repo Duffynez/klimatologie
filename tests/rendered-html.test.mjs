@@ -52,7 +52,7 @@ test("replaces the temporary starter surface", async () => {
   assert.match(layout, /Klimatologie\.eu/);
   assert.match(layout, /static\.cloudflareinsights\.com\/beacon\.min\.js/);
   assert.match(layout, /5e5e8b07ed9f445d82e999e0de1c8f65/);
-  assert.match(header, /label: "Úvod"[\s\S]*label: "Pozorování"[\s\S]*label: "Metody"[\s\S]*label: "Mechanismy"[\s\S]*label: "Historie"[\s\S]*label: "Osobnosti"[\s\S]*label: "Zdroje"/);
+  assert.match(header, /label: "Úvod"[\s\S]*label: "Pozorování"[\s\S]*label: "Metody"[\s\S]*label: "Mechanismy"[\s\S]*label: "Projekce"[\s\S]*label: "Důsledky"[\s\S]*label: "Historie"[\s\S]*label: "Osobnosti"[\s\S]*label: "Zdroje"/);
   assert.doesNotMatch(header, /Slovníček|Otázky|\/slovnicek|\/disidenti/);
   assert.doesNotMatch(footer, /Jak pracujeme s daty|Zápisník projektu|\/metody|\/blog/);
   assert.match(robots, /Sitemap: https:\/\/klimatologie\.eu\/sitemap\.xml/);
@@ -116,6 +116,29 @@ test("publishes twenty mechanisms with evidence that distinguishes explanations"
   assert.match(detailPage, /Zpět na všechny mechanismy/);
   assert.match(styles, /\.mechanism-catalog__grid/);
   assert.match(styles, /\.mechanism-tile:hover/);
+});
+
+test("adds projections and consequences as substantive top-level sections", async () => {
+  const [projections, consequences, header, sitemap] = await Promise.all([
+    readFile(new URL("app/projekce/page.tsx", root), "utf8"),
+    readFile(new URL("app/dusledky/page.tsx", root), "utf8"),
+    readFile(new URL("app/components/SiteHeader.tsx", root), "utf8"),
+    readFile(new URL("public/sitemap.xml", root), "utf8"),
+  ]);
+
+  assert.equal((projections.match(/summary: "/g) ?? []).length, 6);
+  assert.equal((consequences.match(/summary: "/g) ?? []).length, 6);
+  assert.match(projections, /Co lze říci o budoucím klimatu/);
+  assert.match(projections, /Ověřování modelů/);
+  assert.match(projections, /Nejistota a časový horizont/);
+  assert.match(consequences, /Co pozorované a očekávané změny způsobují/);
+  assert.match(consequences, /Od změny klimatu k riziku/);
+  assert.match(consequences, /Potraviny, sídla a infrastruktura/);
+  assert.doesNotMatch(projections + consequences, /Obsah připravujeme/);
+  assert.match(header, /href: "\/projekce", label: "Projekce"/);
+  assert.match(header, /href: "\/dusledky", label: "Důsledky"/);
+  assert.match(sitemap, /https:\/\/klimatologie\.eu\/projekce\//);
+  assert.match(sitemap, /https:\/\/klimatologie\.eu\/dusledky\//);
 });
 
 test("separates academic and institutional events in a compact history timeline", async () => {

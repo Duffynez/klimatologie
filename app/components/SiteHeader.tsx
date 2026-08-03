@@ -5,6 +5,8 @@ const navigation = [
   { href: "/pozorovani", label: "Pozorování" },
   { href: "/metody", label: "Metody" },
   { href: "/mechanismy", label: "Mechanismy" },
+  { href: "/projekce", label: "Projekce" },
+  { href: "/dusledky", label: "Důsledky" },
   { href: "/historie", label: "Historie" },
   { href: "/osobnosti", label: "Osobnosti" },
   { href: "/zdroje", label: "Zdroje" },
