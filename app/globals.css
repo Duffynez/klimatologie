@@ -565,36 +565,182 @@ h3 {
 
 .method-catalog__grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 38px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
 }
 
-.method-placeholder {
+.method-tile {
   display: grid;
   grid-template-columns: 34px minmax(0, 1fr);
   gap: 14px;
-  min-height: 132px;
-  padding: 22px 0;
-  border-bottom: 1px solid var(--line);
+  min-height: 184px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--white);
+  color: var(--ink);
+  text-decoration: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
 }
 
-.method-placeholder > span {
+.method-tile > span {
   color: var(--coral);
   font-size: 0.76rem;
   font-weight: 800;
 }
 
-.method-placeholder h3 {
+.method-tile h3 {
   margin: 0 0 8px;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.25rem;
   line-height: 1.25;
 }
 
-.method-placeholder p {
+.method-tile p {
   margin: 0;
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+.method-tile:hover,
+.method-tile:focus-visible,
+.mechanism-tile:hover,
+.mechanism-tile:focus-visible {
+  border-color: var(--sea);
+  box-shadow: 0 10px 20px rgba(21, 50, 53, 0.08);
+  transform: translateY(-2px);
+}
+
+.mechanism-guide {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 72px;
+  padding: 52px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.mechanism-guide h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+}
+
+.mechanism-guide p {
+  margin-top: 0;
+  color: var(--muted);
+}
+
+.mechanism-guide ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 24px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mechanism-guide li {
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.mechanism-catalog {
+  display: grid;
+  gap: 58px;
+  margin-top: 58px;
+}
+
+.mechanism-catalog__heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--sea);
+}
+
+.mechanism-catalog__heading h2 {
+  margin: 0;
+  font-size: 1.85rem;
+}
+
+.mechanism-catalog__heading span {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.mechanism-catalog__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.mechanism-tile {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 14px;
+  min-height: 252px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--white);
+  color: var(--ink);
+  text-decoration: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.mechanism-tile > span {
+  color: var(--coral);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.mechanism-tile h3 {
+  margin: 0 0 8px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+.mechanism-tile p {
+  margin: 0 0 13px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.mechanism-tile .mechanism-tile__evidence {
+  padding-top: 13px;
+  border-top: 1px solid var(--line);
+  margin-bottom: 0;
+  color: var(--ink);
+  font-size: 0.84rem;
+}
+
+.mechanism-detail-evidence {
+  width: min(100%, 770px);
+  padding: 48px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.mechanism-detail-evidence h2 {
+  margin: 0 0 14px;
+  font-size: clamp(1.75rem, 3vw, 2.45rem);
+}
+
+.mechanism-detail-evidence > p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.catalog-back-link {
+  display: inline-block;
+  margin-top: 42px;
 }
 
 .article-layout {
@@ -1387,7 +1533,8 @@ video.article-figure__media {
   }
 
   .home-intro,
-  .page-lead {
+  .page-lead,
+  .mechanism-guide {
     grid-template-columns: 1fr;
     gap: 28px;
   }
@@ -1395,6 +1542,7 @@ video.article-figure__media {
   .path-section,
   .topic-grid,
   .topic-grid--full,
+  .method-catalog__grid,
   .section-outline {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1513,6 +1661,7 @@ video.article-figure__media {
   .topic-grid--full,
   .method-grid,
   .method-catalog__grid,
+  .mechanism-catalog__grid,
   .section-outline,
   .person-feature,
   .profile-layout {
@@ -1560,6 +1709,10 @@ video.article-figure__media {
 
   .page-lead {
     padding-bottom: 44px;
+  }
+
+  .mechanism-guide ul {
+    grid-template-columns: 1fr;
   }
 
   .source-card {

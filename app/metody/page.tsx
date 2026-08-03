@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageLead } from "../components/PageLead";
 import { measurementMethods, methodCategories } from "../data/methods";
 
@@ -27,13 +28,13 @@ export default function MethodsPage() {
                   const number = measurementMethods.indexOf(method) + 1;
 
                   return (
-                    <article className="method-placeholder" id={method.slug} key={method.slug}>
+                    <Link className="method-tile" href={`/metody/${method.slug}`} key={method.slug}>
                       <span>{String(number).padStart(2, "0")}</span>
                       <div>
                         <h3>{method.title}</h3>
                         <p>{method.summary}</p>
                       </div>
-                    </article>
+                    </Link>
                   );
                 })}
               </div>

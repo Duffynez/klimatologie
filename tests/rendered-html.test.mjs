@@ -67,8 +67,9 @@ test("replaces the temporary starter surface", async () => {
 });
 
 test("publishes a twenty-nine-item catalogue of measurement methods", async () => {
-  const [page, methods, sections, styles] = await Promise.all([
+  const [page, detailPage, methods, sections, styles] = await Promise.all([
     readFile(new URL("app/metody/page.tsx", root), "utf8"),
+    readFile(new URL("app/metody/[slug]/page.tsx", root), "utf8"),
     readFile(new URL("app/data/methods.ts", root), "utf8"),
     readFile(new URL("app/data/sections.ts", root), "utf8"),
     readFile(new URL("app/globals.css", root), "utf8"),
@@ -83,10 +84,44 @@ test("publishes a twenty-nine-item catalogue of measurement methods", async () =
   assert.match(methods, /title: "Radiometrické a expoziční datování"/);
   assert.match(methods, /title: "Rekonstrukce teploty z vrtů"/);
   assert.match(page, /measurementMethods\.filter/);
-  assert.match(page, /method-placeholder/);
-  assert.doesNotMatch(page, /href=\{`\/metody/);
+  assert.match(page, /className="method-tile"/);
+  assert.match(page, /href=\{`\/metody\/\$\{method\.slug\}`\}/);
+  assert.match(detailPage, /generateStaticParams/);
+  assert.match(detailPage, /methodBySlug/);
+  assert.match(detailPage, /Zpět na všechny metody/);
   assert.doesNotMatch(sections, /metody:/);
   assert.match(styles, /\.method-catalog__grid/);
+  assert.match(styles, /\.method-tile:hover/);
+});
+
+test("publishes twenty mechanisms with evidence that distinguishes explanations", async () => {
+  const [page, detailPage, mechanisms, sections, styles] = await Promise.all([
+    readFile(new URL("app/mechanismy/page.tsx", root), "utf8"),
+    readFile(new URL("app/mechanismy/[slug]/page.tsx", root), "utf8"),
+    readFile(new URL("app/data/mechanisms.ts", root), "utf8"),
+    readFile(new URL("app/data/sections.ts", root), "utf8"),
+    readFile(new URL("app/globals.css", root), "utf8"),
+  ]);
+
+  const mechanismRecords = [...mechanisms.matchAll(/slug: "([^"]+)"/g)];
+  const evidenceRecords = [...mechanisms.matchAll(/distinguishingEvidence: "([^"]+)"/g)];
+  assert.equal(mechanismRecords.length, 20);
+  assert.equal(evidenceRecords.length, 20);
+  assert.match(mechanisms, /title: "Energetická bilance Země"/);
+  assert.match(mechanisms, /title: "Původ růstu atmosférického CO₂"/);
+  assert.match(mechanisms, /title: "Vnitřní proměnlivost atmosféry a oceánu"/);
+  assert.match(mechanisms, /title: "Mechanismy vln veder"/);
+  assert.match(page, /Jak rozhodujeme mezi vysvětleními/);
+  assert.match(page, /Rozlišující důkazy:/);
+  assert.match(page, /className="mechanism-tile"/);
+  assert.match(page, /href=\{`\/mechanismy\/\$\{mechanism\.slug\}`\}/);
+  assert.match(detailPage, /generateStaticParams/);
+  assert.match(detailPage, /mechanismBySlug/);
+  assert.match(detailPage, /Co musí toto vysvětlení objasnit/);
+  assert.match(detailPage, /Zpět na všechny mechanismy/);
+  assert.doesNotMatch(sections, /mechanismy:/);
+  assert.match(styles, /\.mechanism-catalog__grid/);
+  assert.match(styles, /\.mechanism-tile:hover/);
 });
 
 test("separates academic and institutional events in a compact history timeline", async () => {

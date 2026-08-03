@@ -1,6 +1,6 @@
 # Závazné zásady projektu Klimatologie.eu
 
-Tento dokument je závazný pro každou AI i člověka, kteří píší nebo upravují obsah projektu. Před prací s odborným textem jej vždy přečtěte společně se souborem `CONTENT.md`. Před psaním článku o měřicí nebo analytické metodě je navíc povinný soubor `METHODS.md`. Konkrétní redakční postup se může vyvíjet, ale následující cíle a standardy se nesmějí obejít kvůli rychlosti, stručnosti ani efektnímu vyznění textu.
+Tento dokument je závazný pro každou AI i člověka, kteří píší nebo upravují obsah projektu. Před prací s odborným textem jej vždy přečtěte společně se souborem `CONTENT.md`. Před psaním článku o měřicí nebo analytické metodě je navíc povinný soubor `METHODS.md`; před článkem o klimatickém mechanismu soubor `MECHANISMS.md`. Konkrétní redakční postup se může vyvíjet, ale následující cíle a standardy se nesmějí obejít kvůli rychlosti, stručnosti ani efektnímu vyznění textu.
 
 ## Tři hlavní cíle
 

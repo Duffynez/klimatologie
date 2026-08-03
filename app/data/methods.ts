@@ -194,3 +194,7 @@ export const methodCategories: MethodCategory[] = [
   "Dálkový průzkum",
   "Přírodní archivy",
 ];
+
+export function methodBySlug(slug: string) {
+  return measurementMethods.find((method) => method.slug === slug);
+}

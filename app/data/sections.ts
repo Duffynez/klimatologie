@@ -1,10 +1,4 @@
 export const sections = {
-  mechanismy: {
-    title: "Mechanismy",
-    eyebrow: "Jak se skládá vysvětlení",
-    intro: "Tato část bude propojovat fyzikální mechanismy s konkrétními pozorováními. Každé vysvětlení bude oddělovat měření, interpretaci a hranice jistoty.",
-    blocks: ["Záření a energetická bilance", "Atmosféra a oceán", "Zpětné vazby a časová měřítka"],
-  },
   slovnicek: {
     title: "Slovníček",
     eyebrow: "Pojmy bez zkratek navíc",
