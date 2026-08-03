@@ -56,7 +56,7 @@ test("replaces the temporary starter surface", async () => {
   assert.match(header, /href: "\/", label: "Úvod"/);
   assert.match(header, /href: "\/metody", label: "Metody"/);
   assert.doesNotMatch(footer, /Jak pracujeme s daty|Zápisník projektu|\/metody|\/blog/);
-  assert.match(sections, /metody:/);
+  assert.doesNotMatch(sections, /metody:/);
   assert.doesNotMatch(sections, /blog:|Zápisník projektu/);
   assert.match(robots, /Sitemap: https:\/\/klimatologie\.eu\/sitemap\.xml/);
   assert.match(sitemap, /https:\/\/klimatologie\.eu\/pozorovani\/stratosfericke-ochlazovani\//);
@@ -64,6 +64,29 @@ test("replaces the temporary starter surface", async () => {
   assert.match(sitemap, /https:\/\/klimatologie\.eu\/metody\//);
   assert.doesNotMatch(sitemap, /https:\/\/klimatologie\.eu\/blog\//);
   assert.doesNotMatch(home, /SkeletonPreview|codex-preview/);
+});
+
+test("publishes a twenty-nine-item catalogue of measurement methods", async () => {
+  const [page, methods, sections, styles] = await Promise.all([
+    readFile(new URL("app/metody/page.tsx", root), "utf8"),
+    readFile(new URL("app/data/methods.ts", root), "utf8"),
+    readFile(new URL("app/data/sections.ts", root), "utf8"),
+    readFile(new URL("app/globals.css", root), "utf8"),
+  ]);
+
+  const methodRecords = [...methods.matchAll(/slug: "([^"]+)"/g)];
+  assert.equal(methodRecords.length, 29);
+  assert.match(methods, /title: "Plynová chromatografie"/);
+  assert.match(methods, /title: "Družicová gravimetrie"/);
+  assert.match(methods, /title: "Ledová jádra a analýza uzavřeného vzduchu"/);
+  assert.match(methods, /title: "Dendrochronologie"/);
+  assert.match(methods, /title: "Radiometrické a expoziční datování"/);
+  assert.match(methods, /title: "Rekonstrukce teploty z vrtů"/);
+  assert.match(page, /measurementMethods\.filter/);
+  assert.match(page, /method-placeholder/);
+  assert.doesNotMatch(page, /href=\{`\/metody/);
+  assert.doesNotMatch(sections, /metody:/);
+  assert.match(styles, /\.method-catalog__grid/);
 });
 
 test("separates academic and institutional events in a compact history timeline", async () => {

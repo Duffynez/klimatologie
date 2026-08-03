@@ -5,12 +5,6 @@ export const sections = {
     intro: "Tato část bude propojovat fyzikální mechanismy s konkrétními pozorováními. Každé vysvětlení bude oddělovat měření, interpretaci a hranice jistoty.",
     blocks: ["Záření a energetická bilance", "Atmosféra a oceán", "Zpětné vazby a časová měřítka"],
   },
-  metody: {
-    title: "Metody",
-    eyebrow: "Jak vznikají data",
-    intro: "Metodika bude patřit k jádru webu. U každého datového zdroje chceme popsat, co se měří, kdo data spravuje, jaké má měření limity a kde lze stáhnout původní soubor.",
-    blocks: ["Přístrojová měření", "Rekonstrukce minulosti", "Satelitní pozorování"],
-  },
   slovnicek: {
     title: "Slovníček",
     eyebrow: "Pojmy bez zkratek navíc",
