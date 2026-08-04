@@ -1,13 +1,5 @@
 import Image from "next/image";
-import type { ReactNode } from "react";
-
-function ReferenceLink({ href, children }: { href: string; children: ReactNode }) {
-  return (
-    <a className="article-reference" href={href} target="_blank" rel="noreferrer">
-      {children}
-    </a>
-  );
-}
+import { SourceLink } from "./SourceLink";
 
 export function ArcticSeaIceArticle() {
   return (
@@ -53,12 +45,12 @@ export function ArcticSeaIceArticle() {
           počítali rozsah a plochu. Fowler, Emery a Maslanik v roce 2004 zavedli sledování stáří putujících ker a Kwok
           v roce 2018 společně vyhodnotil sonarová a družicová měření tloušťky a objemu. Současný Sea Ice Index i
           evropský záznam OSI SAF zachovávají stejné rozlišení základních veličin.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/JD089iD04p05355">Cavalieri et al., 1984</ReferenceLink>,{" "}
-          <ReferenceLink href="https://doi.org/10.1029/1999JC900082">Parkinson et al., 1999</ReferenceLink>,{" "}
-          <ReferenceLink href="https://doi.org/10.1109/LGRS.2004.824741">Fowler et al., 2004</ReferenceLink>,{" "}
-          <ReferenceLink href="https://doi.org/10.1088/1748-9326/aae3ec">Kwok, 2018</ReferenceLink>,{" "}
-          <ReferenceLink href="https://doi.org/10.7265/a98x-0f50">Sea Ice Index v4</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.5194/tc-13-49-2019">Lavergne et al., 2019</ReferenceLink>
+          <SourceLink id="DOI_10_1029_jd089id04p05355">Cavalieri et al., 1984</SourceLink>,{" "}
+          <SourceLink id="DOI_10_1029_1999jc900082">Parkinson et al., 1999</SourceLink>,{" "}
+          <SourceLink id="DOI_10_1109_lgrs_2004_824741">Fowler et al., 2004</SourceLink>,{" "}
+          <SourceLink id="DOI_10_1088_1748_9326_aae3ec">Kwok, 2018</SourceLink>,{" "}
+          <SourceLink id="DOI_10_7265_a98x_0f50">Sea Ice Index v4</SourceLink> a{" "}
+          <SourceLink id="DOI_10_5194_tc_13_49_2019">Lavergne et al., 2019</SourceLink>
         </p>
 
         <p>
@@ -66,9 +58,9 @@ export function ArcticSeaIceArticle() {
           započítá celou svou plochou. Kdyby buňka měla 600 km² a led pokrýval 75 %, přidá k rozsahu 600 km², ale k
           ploše ledu pouze 450 km². Rozsah je proto vždy nejméně stejně velký jako plocha a obě hodnoty odpovídají na
           jinou otázku. Přesný postup i tento způsob vážení uvádí uživatelská příručka{" "}
-          <ReferenceLink href="https://nsidc.org/sites/default/files/documents/user-guide/g02135-v004-userguide.pdf">
+          <SourceLink id="WEB_National_Snow_and_Ice_Data_C_uzivatelske_prirucce_Sea_Ice_Index_v4_48d7d043">
             Sea Ice Index v4
-          </ReferenceLink>
+          </SourceLink>
           .
         </p>
 
@@ -94,11 +86,11 @@ export function ArcticSeaIceArticle() {
             milionu km². Žlutá čára označuje průměrnou polohu denního minima v letech 1981–2010, nikoli pobřeží ani
             hranici souvislého ledu. Led na mapě je odvozen z měření přístroje AMSR2. Vizualizace: Trent L. Schindler;
             vědecká konzultace: Walt Meier; kredit: NASA Scientific Visualization Studio a JAXA. Zdroj:{" "}
-            <ReferenceLink href="https://svs.gsfc.nasa.gov/5583/">NASA SVS 5583</ReferenceLink>. Použití pro
+            <SourceLink id="WEB_NASA_NASA_Scientific_Visualization_Studio_Arctic_Sea_8c5c7d01">NASA SVS 5583</SourceLink>. Použití pro
             informační účely dovolují{" "}
-            <ReferenceLink href="https://www.nasa.gov/nasa-brand-center/images-and-media/">
+            <SourceLink id="WEB_NASA_Guidelines_for_using_NASA_Images_and_Media_Guide_e6f9e9e4">
               pravidla NASA pro obrazový materiál
-            </ReferenceLink>
+            </SourceLink>
             .
           </figcaption>
         </figure>
@@ -110,7 +102,7 @@ export function ArcticSeaIceArticle() {
           přímo hlášen, od úseků hranice doplněných zkušeností kartografů. U dopočtených částí dnes nelze zpětně určit
           chybu, a proto se tyto mapy nemají vydávat za stejně úplné měření jako současné družicové pokrytí. Originály,
           popis pozorovatelů i upozornění na nejistotu zveřejňuje{" "}
-          <ReferenceLink href="https://doi.org/10.7265/N56D5QXC">archiv map DMI 1893–1956</ReferenceLink>.
+          <SourceLink id="DOI_10_7265_n56d5qxc">archiv map DMI 1893–1956</SourceLink>.
         </p>
 
         <p>
@@ -119,9 +111,9 @@ export function ArcticSeaIceArticle() {
           pobřeží Eurasie. Walsh a kol. později spojili devět historických zdrojů do měsíčních map od roku 1850. Čím
           dále se jde před období družic, tím více buněk pochází z řídkých pozorování a rekonstrukce. Dlouhé historické
           soubory proto slouží k jiné otázce než přesný denní záznam od roku 1978.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2008JC004830">Mahoney et al., 2008</ReferenceLink>,{" "}
-          <ReferenceLink href="https://doi.org/10.1111/j.1931-0846.2016.12195.x">Walsh et al., 2017</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.7265/jj4s-tq79">Walsh et al., data v2</ReferenceLink>
+          <SourceLink id="DOI_10_1029_2008jc004830">Mahoney et al., 2008</SourceLink>,{" "}
+          <SourceLink id="DOI_10_1111_j_1931_0846_2016_12195_x">Walsh et al., 2017</SourceLink> a{" "}
+          <SourceLink id="DOI_10_7265_jj4s_tq79">Walsh et al., data v2</SourceLink>
         </p>
 
         <p>
@@ -129,7 +121,7 @@ export function ArcticSeaIceArticle() {
           Přístroj ESMR sledoval led v letech 1973–1976 a ukázal, že mikrovlny dovolují pozorovat povrch i během polární
           noci a přes většinu oblačnosti. Záznam však nenavazuje bez mezery na dnešní měření. Mapy, postup i tehdejší
           omezení shrnuli Parkinson a kol. v monografii{" "}
-          <ReferenceLink href="https://ntrs.nasa.gov/citations/19870015437">Arctic Sea Ice, 1973–1976</ReferenceLink>.
+          <SourceLink id="WEB_NASA_Arctic_Sea_ice_1973_1976_Satellite_passive_micro_d558d4bf">Arctic Sea Ice, 1973–1976</SourceLink>.
         </p>
 
         <p>
@@ -138,9 +130,9 @@ export function ArcticSeaIceArticle() {
           přístroji umožnil porovnat jejich odezvu a upravit převodní hodnoty tak, aby změna družice nevytvořila
           nepravý skok. Všechny generace však nemají stejné rozlišení ani stejnou oblast kolem severního pólu, takže
           verze produktu a zacházení s těmito rozdíly patří k výsledku.{" "}
-          <ReferenceLink href="https://doi.org/10.5067/QOZIVYV3V9JP">SMMR 1978–1987</ReferenceLink>,{" "}
-          <ReferenceLink href="https://doi.org/10.5067/8GQ8LZQVL0VL">NASA Team concentration</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.7265/a98x-0f50">Sea Ice Index v4</ReferenceLink>
+          <SourceLink id="DOI_10_5067_qozivyv3v9jp">SMMR 1978–1987</SourceLink>,{" "}
+          <SourceLink id="DOI_10_5067_8gq8lzqvl0vl">NASA Team concentration</SourceLink> a{" "}
+          <SourceLink id="DOI_10_7265_a98x_0f50">Sea Ice Index v4</SourceLink>
         </p>
 
         <p>
@@ -149,9 +141,9 @@ export function ArcticSeaIceArticle() {
           profily sahají do roku 1958, ale pokrývají vybrané trasy a roky. Družice ICESat měřila výšku povrchu ledu v
           letech 2003–2009, CryoSat-2 měří radarem od roku 2010 a ICESat-2 laserem od roku 2018. Teprve tyto přístroje
           přinesly opakované mapy velké části oceánu, převážně pro období od podzimu do jara.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2009GL039035">Kwok &amp; Rothrock, 2009</ReferenceLink>,{" "}
-          <ReferenceLink href="https://doi.org/10.1002/grl.50193">Laxon et al., 2013</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1088/1748-9326/aae3ec">Kwok, 2018</ReferenceLink>
+          <SourceLink id="DOI_10_1029_2009gl039035">Kwok &amp; Rothrock, 2009</SourceLink>,{" "}
+          <SourceLink id="DOI_10_1002_grl_50193">Laxon et al., 2013</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1088_1748_9326_aae3ec">Kwok, 2018</SourceLink>
         </p>
 
         <h2>Jak vzniká zveřejněný záznam</h2>
@@ -162,7 +154,7 @@ export function ArcticSeaIceArticle() {
           takže z kombinace kanálů lze odhadnout, jaká část sledované plochy je pokryta ledem. Metoda NASA Team používá
           typické hodnoty pro otevřenou vodu, jednoletý led a víceletý led a z jejich poměrů vypočte koncentraci. Její
           fyzikální i početní základ popsali Cavalieri, Gloersen a Campbell.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/JD089iD04p05355">Cavalieri et al., 1984</ReferenceLink>
+          <SourceLink id="DOI_10_1029_jd089id04p05355">Cavalieri et al., 1984</SourceLink>
         </p>
 
         <p>
@@ -172,9 +164,9 @@ export function ArcticSeaIceArticle() {
           signál připomíná otevřené moře. Příručka Sea Ice Index proto uvádí pro koncentraci jedné buňky obvykle asi
           ±5 procentních bodů v zimě a ±15 bodů v létě s tůněmi. Jde o nejistotu místní koncentrace, nikoli přímo o
           nejistotu součtu celé Arktidy.{" "}
-          <ReferenceLink href="https://nsidc.org/sites/default/files/documents/user-guide/g02135-v004-userguide.pdf">
+          <SourceLink id="WEB_National_Snow_and_Ice_Data_C_uzivatelske_prirucce_Sea_Ice_Index_v4_48d7d043">
             Sea Ice Index v4, kapitola 6
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <p>
@@ -183,7 +175,7 @@ export function ArcticSeaIceArticle() {
           straně čáry je souvislá pevná deska a na druhé žádný led. Okraj často tvoří široké pásmo rozlámaných ker a
           otevřené vody. Změna algoritmu, rozlišení nebo pobřežní masky proto může posunout výsledný rozsah, i když
           všechny produkty vycházejí z téhož družicového přeletu. Srovnání jedenácti algoritmů provedli{" "}
-          <ReferenceLink href="https://doi.org/10.1109/TGRS.2014.2310136">Ivanova et al., 2014</ReferenceLink>.
+          <SourceLink id="DOI_10_1109_tgrs_2014_2310136">Ivanova et al., 2014</SourceLink>.
         </p>
 
         <h3>Od denní mapy k měsíci, minimu a trendu</h3>
@@ -201,9 +193,9 @@ export function ArcticSeaIceArticle() {
           oblasti se s přístroji změnila z 1,19 milionu km² u SMMR na 0,064 milionu km² u AMSR2. V ploše ledu proto při
           změnách přístroje vznikají známé nespojitosti, zatímco rozsah je pro dlouhý přehled stabilnější. Tyto kroky jsou
           popsány a tabulkově vyčísleny v{" "}
-          <ReferenceLink href="https://nsidc.org/sites/default/files/documents/user-guide/g02135-v004-userguide.pdf">
+          <SourceLink id="WEB_National_Snow_and_Ice_Data_C_uzivatelske_prirucce_Sea_Ice_Index_v4_48d7d043">
             uživatelské příručce Sea Ice Index v4
-          </ReferenceLink>
+          </SourceLink>
           .
         </p>
 
@@ -229,7 +221,7 @@ export function ArcticSeaIceArticle() {
             měsíční odchylku v letech 1979–2024. Svislá osa je v milionech km². Graf ukazuje každý kalendářní měsíc,
             nikoli jen březnové maximum a zářijové minimum. Zdroj: Meier et al., Arctic Report Card 2025, obr. 2; data
             Sea Ice Index v4. Kredit: NOAA Arctic Program a autoři. Původní zpráva:{" "}
-            <ReferenceLink href="https://doi.org/10.25923/mmxf-0r86">DOI 10.25923/mmxf-0r86</ReferenceLink>.
+            <SourceLink id="DOI_10_25923_mmxf_0r86">DOI 10.25923/mmxf-0r86</SourceLink>.
           </figcaption>
         </figure>
 
@@ -247,9 +239,9 @@ export function ArcticSeaIceArticle() {
           Arktidě, neexistuje. Autoři proto ověřují především vstupní pohyb ledu a zkoumají chyby, které vznikají při
           spojování různých zdrojů pohybu. Stáří je užitečné také jako hrubý ukazatel tloušťky, ale dvě stejně staré kry
           nemusí být stejně silné.{" "}
-          <ReferenceLink href="https://doi.org/10.1109/LGRS.2004.824741">Fowler et al., 2004</ReferenceLink>,{" "}
-          <ReferenceLink href="https://doi.org/10.5194/tc-14-1519-2020">Tschudi et al., 2020</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.3390/rs8060457">Tschudi et al., 2016</ReferenceLink>
+          <SourceLink id="DOI_10_1109_lgrs_2004_824741">Fowler et al., 2004</SourceLink>,{" "}
+          <SourceLink id="DOI_10_5194_tc_14_1519_2020">Tschudi et al., 2020</SourceLink> a{" "}
+          <SourceLink id="DOI_10_3390_rs8060457">Tschudi et al., 2016</SourceLink>
         </p>
 
         <h3>Jak se měří tloušťka a odhaduje objem</h3>
@@ -259,8 +251,8 @@ export function ArcticSeaIceArticle() {
           plovoucí kry. K výpočtu je nutné znát nebo odhadnout hloubku a hustotu sněhu a hustotu ledu i mořské vody.
           Radar CryoSat-2 a laser ICESat-2 navíc zachycují odlišné odrazné plochy. Zveřejněná tloušťka je proto odhad
           z výšky a doprovodných údajů, nikoli přímý odečet celé ledové desky. Základ obou přístupů popisují{" "}
-          <ReferenceLink href="https://doi.org/10.1002/grl.50193">Laxon et al., 2013</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2019JC016008">Kwok et al., 2020</ReferenceLink>.
+          <SourceLink id="DOI_10_1002_grl_50193">Laxon et al., 2013</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1029_2019jc016008">Kwok et al., 2020</SourceLink>.
         </p>
 
         <p>
@@ -278,11 +270,11 @@ export function ArcticSeaIceArticle() {
           pocházejí z modelu, který přijímá pozorovanou koncentraci a dopočítává pohyb, růst a tání ledu. Příkladem je
           PIOMAS od roku 1979. Jeho výsledek je modelový odhad omezený pozorováními, nikoli samostatné družicové měření
           objemu. Model a jeho nejistotu popisují{" "}
-          <ReferenceLink href="https://doi.org/10.1175/1520-0493(2003)131%3C0845:MGSIWA%3E2.0.CO;2">
+          <SourceLink id="DOI_10_1175_1520_0493_2003_131_0845_mgsiwa_2_0_co_2">
             Zhang &amp; Rothrock, 2003
-          </ReferenceLink>{" "}
+          </SourceLink>{" "}
           a{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2011JC007084">Schweiger et al., 2011</ReferenceLink>.
+          <SourceLink id="DOI_10_1029_2011jc007084">Schweiger et al., 2011</SourceLink>.
         </p>
 
         <h3>Co znamená nejistota</h3>
@@ -293,7 +285,7 @@ export function ArcticSeaIceArticle() {
           sezónní rozdíly 0,5–1,0 milionu km², protože algoritmy reagují jinak na okraj ledu a používají jiné rozlišení.
           První údaj tedy odpovídá otázce, jak jistě porovnávat rok se stejným produktem; druhý ukazuje, jak moc se může
           změnit absolutní číslo při změně produktu.{" "}
-          <ReferenceLink href="https://doi.org/10.1088/1748-9326/aaf52c">Meier &amp; Stewart, 2019</ReferenceLink>
+          <SourceLink id="DOI_10_1088_1748_9326_aaf52c">Meier &amp; Stewart, 2019</SourceLink>
         </p>
 
         <p>
@@ -303,8 +295,8 @@ export function ArcticSeaIceArticle() {
           zkouška parametrů. Navazující práce z roku 2026 ukázala, že u plochy ledu zůstávají vedle náhodné složky také
           systematické vlivy volby masek, oprav, doplnění oblasti pólu a spojení přístrojů. Poctivý graf proto uvádí
           název produktu, verzi, období, veličinu a způsob výpočtu nejistoty.{" "}
-          <ReferenceLink href="https://doi.org/10.5194/tc-18-2473-2024">Wernecke et al., 2024</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.5194/tc-20-3783-2026">Wernecke et al., 2026</ReferenceLink>
+          <SourceLink id="DOI_10_5194_tc_18_2473_2024">Wernecke et al., 2024</SourceLink> a{" "}
+          <SourceLink id="DOI_10_5194_tc_20_3783_2026">Wernecke et al., 2026</SourceLink>
         </p>
 
         <h2>Zveřejňovaná data</h2>
@@ -317,10 +309,10 @@ export function ArcticSeaIceArticle() {
               3. Data jsou v CSV, GeoTIFF, PNG a shapefile. Dlouhodobé trendy je vhodné počítat z měsíčních hodnot.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://doi.org/10.7265/a98x-0f50">Data a citace</ReferenceLink>{" "}·{" "}
-              <ReferenceLink href="https://nsidc.org/sites/default/files/documents/user-guide/g02135-v004-userguide.pdf">
+              <SourceLink id="DOI_10_7265_a98x_0f50">Data a citace</SourceLink>{" "}·{" "}
+              <SourceLink id="WEB_National_Snow_and_Ice_Data_C_uzivatelske_prirucce_Sea_Ice_Index_v4_48d7d043">
                 metodika v4
-              </ReferenceLink>
+              </SourceLink>
             </p>
           </section>
 
@@ -332,9 +324,9 @@ export function ArcticSeaIceArticle() {
               2021. Evropský Sea Ice Index v2.3 z těchto dat zveřejňuje denní a měsíční rozsah a plochu.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://doi.org/10.15770/EUM_SAF_OSI_0023">OSI-450-a1</ReferenceLink>{" "}·{" "}
-              <ReferenceLink href="https://doi.org/10.15770/EUM_SAF_OSI_0014">OSI-430-a</ReferenceLink>{" "}·{" "}
-              <ReferenceLink href="https://doi.org/10.5194/tc-13-49-2019">Lavergne et al., 2019</ReferenceLink>
+              <SourceLink id="DOI_10_15770_eum_saf_osi_0023">OSI-450-a1</SourceLink>{" "}·{" "}
+              <SourceLink id="DOI_10_15770_eum_saf_osi_0014">OSI-430-a</SourceLink>{" "}·{" "}
+              <SourceLink id="DOI_10_5194_tc_13_49_2019">Lavergne et al., 2019</SourceLink>
             </p>
           </section>
 
@@ -346,9 +338,9 @@ export function ArcticSeaIceArticle() {
               i mapy PNG lze stáhnout z NSIDC.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://doi.org/10.5067/UTAV7490FEPB">Stáří v4</ReferenceLink>{" "}·{" "}
-              <ReferenceLink href="https://doi.org/10.5067/2XXGZY3DUGNQ">Quicklook</ReferenceLink>{" "}·{" "}
-              <ReferenceLink href="https://doi.org/10.5194/tc-14-1519-2020">metodická studie</ReferenceLink>
+              <SourceLink id="DOI_10_5067_utav7490fepb">Stáří v4</SourceLink>{" "}·{" "}
+              <SourceLink id="DOI_10_5067_2xxgzy3dugnq">Quicklook</SourceLink>{" "}·{" "}
+              <SourceLink id="DOI_10_5194_tc_14_1519_2020">metodická studie</SourceLink>
             </p>
           </section>
 
@@ -361,9 +353,9 @@ export function ArcticSeaIceArticle() {
               nejistoty nebo jejich vstupní složky.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://doi.org/10.5067/TXDHDJ1JT0CG">ICESat-2 v4</ReferenceLink>{" "}·{" "}
-              <ReferenceLink href="https://doi.org/10.5067/96JO0KIFDAS8">CryoSat-2 L4</ReferenceLink>{" "}·{" "}
-              <ReferenceLink href="https://doi.org/10.5067/04YYIKXW0GJS">spojený produkt ICESat-2/CryoSat-2</ReferenceLink>
+              <SourceLink id="DOI_10_5067_txdhdj1jt0cg">ICESat-2 v4</SourceLink>{" "}·{" "}
+              <SourceLink id="DOI_10_5067_96jo0kifdas8">CryoSat-2 L4</SourceLink>{" "}·{" "}
+              <SourceLink id="DOI_10_5067_04yyikxw0gjs">spojený produkt ICESat-2/CryoSat-2</SourceLink>
             </p>
           </section>
 
@@ -375,9 +367,9 @@ export function ArcticSeaIceArticle() {
               dlouhé historické otázky, ale jejich pokrytí a nejistota se v čase výrazně mění.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://doi.org/10.7265/N56D5QXC">DMI 1893–1956</ReferenceLink>{" "}·{" "}
-              <ReferenceLink href="https://doi.org/10.7265/jj4s-tq79">Walsh v2</ReferenceLink>{" "}·{" "}
-              <ReferenceLink href="https://doi.org/10.1111/j.1931-0846.2016.12195.x">popis databáze</ReferenceLink>
+              <SourceLink id="DOI_10_7265_n56d5qxc">DMI 1893–1956</SourceLink>{" "}·{" "}
+              <SourceLink id="DOI_10_7265_jj4s_tq79">Walsh v2</SourceLink>{" "}·{" "}
+              <SourceLink id="DOI_10_1111_j_1931_0846_2016_12195_x">popis databáze</SourceLink>
             </p>
           </section>
 
@@ -390,10 +382,10 @@ export function ArcticSeaIceArticle() {
               arktické měření tloušťky.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://psc.apl.uw.edu/research/projects/arctic-sea-ice-volume-anomaly/data/">
+              <SourceLink id="WEB_psc_apl_uw_edu_Polar_Science_Center_raquo_PIOMAS_Data_dbaf6399">
                 Data PIOMAS
-              </ReferenceLink>{" "}·{" "}
-              <ReferenceLink href="https://doi.org/10.1029/2011JC007084">nejistota modelu</ReferenceLink>
+              </SourceLink>{" "}·{" "}
+              <SourceLink id="DOI_10_1029_2011jc007084">nejistota modelu</SourceLink>
             </p>
           </section>
         </div>
@@ -406,13 +398,13 @@ export function ArcticSeaIceArticle() {
           rozsahu. V září 2025 uvádí NSIDC měsíční průměr 4,75 milionu km², zatímco OSI SAF 5,20 milionu km². U denního
           minima je to 4,60 milionu km² dne 10. září proti 5,07 milionu km² dne 7. září. Každé číslo je správně pouze se
           jménem svého produktu.{" "}
-          <ReferenceLink href="https://arctic.noaa.gov/report-card/report-card-2025/sea-ice-2025/">
+          <SourceLink id="WEB_NOAA_Sea_Ice_NOAA_Arctic_88643942">
             NOAA Arctic Report Card 2025
-          </ReferenceLink>{" "}
+          </SourceLink>{" "}
           a{" "}
-          <ReferenceLink href="https://climate.copernicus.eu/sea-ice-cover-september-2025">
+          <SourceLink id="WEB_Copernicus_Sea_ice_cover_for_September_2025_Copernicus_88c9834a">
             Copernicus, září 2025
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <p>
@@ -420,10 +412,10 @@ export function ArcticSeaIceArticle() {
           OSI SAF 14,43 milionu km² dne 7. března. Oba poskytovatelé považují hodnotu za statisticky nerozlišitelnou od
           nízkého maxima roku 2025, ale pořadí dnů a přesná plocha se liší. Rozdíl je praktickou ukázkou toho, proč se
           hodnoty z různých produktů nemají spojovat do jedné křivky bez přepočtu celého období stejnou metodou.{" "}
-          <ReferenceLink href="https://nsidc.org/ru/node/431729">NSIDC, maximum 2026</ReferenceLink> a{" "}
-          <ReferenceLink href="https://climate.copernicus.eu/sea-ice-cover-march-2026">
+          <SourceLink id="WEB_National_Snow_and_Ice_Data_C_Arctic_sea_ice_record_low_maximum_strikes_again_20554b0e">NSIDC, maximum 2026</SourceLink> a{" "}
+          <SourceLink id="WEB_Copernicus_Sea_ice_cover_for_March_2026_Copernicus_f75f3111">
             Copernicus, březen 2026
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <h2 id="pozorovani">Pozorování</h2>
@@ -434,7 +426,7 @@ export function ArcticSeaIceArticle() {
           rok a zářijový o −76 100 km² za rok. Jde o lineární sklon celého období, ne o tvrzení, že každý jednotlivý rok
           ztratil právě tuto plochu. Meziroční kolísání je zřetelné a velikost změny závisí na zvoleném počátečním a
           konečném roce. Čísla i přesné období uvádí tabulka 1 v{" "}
-          <ReferenceLink href="https://doi.org/10.25923/mmxf-0r86">Arctic Report Card 2025</ReferenceLink>.
+          <SourceLink id="DOI_10_25923_mmxf_0r86">Arctic Report Card 2025</SourceLink>.
         </p>
 
         <figure className="article-figure article-figure--scroll-mobile article-figure--scroll-wide">
@@ -458,9 +450,9 @@ export function ArcticSeaIceArticle() {
             procentní odchylku od březnového průměru 1991–2020, který činí 15,03 milionu km². Březen 2026 byl o 5,7 %
             pod tímto průměrem a v tomto produktu je nejnižším březnem v záznamu. Graf neukazuje denní maximum, ale
             průměr celého března. Kredit: C3S/ECMWF/EUMETSAT. Zdroj:{" "}
-            <ReferenceLink href="https://climate.copernicus.eu/sea-ice-cover-march-2026">
+            <SourceLink id="WEB_Copernicus_Sea_ice_cover_for_March_2026_Copernicus_f75f3111">
               Copernicus, březen 2026
-            </ReferenceLink>
+            </SourceLink>
             . Obsahuje informace Copernicus Climate Change Service 2026; Evropská komise ani ECMWF neodpovídají za
             jejich další použití.
           </figcaption>
@@ -473,9 +465,9 @@ export function ArcticSeaIceArticle() {
           roku 2025 bylo nižších než všechna minima z let 1979–2006. Pro samotný krátký úsek 2007–2025 však NSIDC
           nezjistil statisticky významný další sklon. Obě věty mohou platit současně: pozdější roky leží níže než starší
           část záznamu a uvnitř posledních devatenácti let je velké kolísání bez průkazného lineárního směru.{" "}
-          <ReferenceLink href="https://nsidc.org/sea-ice-today/analyses/2025-arctic-sea-ice-minimum-squeezes-ten-lowest-minimums">
+          <SourceLink id="WEB_National_Snow_and_Ice_Data_C_2025_Arctic_sea_ice_minimum_squeezes_into_the_te_15e854cc">
             NSIDC, minimum 2025
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <figure className="article-figure article-figure--scroll-mobile article-figure--scroll-wide">
@@ -500,9 +492,9 @@ export function ArcticSeaIceArticle() {
             průměrem a na 13. místě od nejnižší hodnoty tohoto produktu; nejnižší zůstává září 2012 s odchylkou −32 %.
             Jde o měsíční hodnoty OSI SAF, a proto se čísla liší od předchozího denního minima NSIDC. Kredit:
             C3S/ECMWF/EUMETSAT. Zdroj:{" "}
-            <ReferenceLink href="https://climate.copernicus.eu/sea-ice-cover-september-2025">
+            <SourceLink id="WEB_Copernicus_Sea_ice_cover_for_September_2025_Copernicus_88c9834a">
               Copernicus, září 2025
-            </ReferenceLink>
+            </SourceLink>
             . Obsahuje informace Copernicus Climate Change Service 2025; Evropská komise ani ECMWF neodpovídají za
             jejich další použití.
           </figcaption>
@@ -522,9 +514,9 @@ export function ArcticSeaIceArticle() {
           arktického souostroví. Jeho plocha byla o 47 % menší než v roce 2005. Led starší než čtyři roky zabíral 95 000
           km²; to je o 72 % méně než průměr let 2005–2024 a o 95 % méně než průměr 1,72 milionu km² z let 1985–2004.
           Údaj je výsledkem sledování pohybu a přežití ker, nikoli přímou mapou tloušťky.{" "}
-          <ReferenceLink href="https://arctic.noaa.gov/report-card/report-card-2025/sea-ice-2025/">
+          <SourceLink id="WEB_NOAA_Sea_Ice_NOAA_Arctic_88643942">
             Meier et al., 2025
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <figure className="article-figure article-figure--scroll-mobile article-figure--scroll-wide">
@@ -548,7 +540,7 @@ export function ArcticSeaIceArticle() {
             mladší než jeden rok; světlejší odstíny postupně 1–2, 2–3 a 3–4 roky; nejsvětlejší žlutá led starší než
             čtyři roky. Mapa zobrazuje nejstarší věkovou třídu v každé buňce. Zdroj: EASE-Grid Sea Ice Age v4 a
             Quicklook; Meier et al., Arctic Report Card 2025, obr. 4. Kredit: NOAA Arctic Program, NSIDC a autoři.{" "}
-            <ReferenceLink href="https://doi.org/10.25923/mmxf-0r86">Původní zpráva</ReferenceLink>.
+            <SourceLink id="DOI_10_25923_mmxf_0r86">Původní zpráva</SourceLink>.
           </figcaption>
         </figure>
 
@@ -560,7 +552,7 @@ export function ArcticSeaIceArticle() {
           konce tání mezi obdobím ponorek 1958–1976 a obdobím CryoSat-2 2011–2018 o 2,0 m, tedy přibližně o 66 %. Toto
           číslo se vztahuje k šesti vybraným oblastem a sjednocenému datu 15. září; není to souvislé měření každého roku
           ani plošný průměr celé Arktidy.{" "}
-          <ReferenceLink href="https://doi.org/10.1088/1748-9326/aae3ec">Kwok, 2018</ReferenceLink>
+          <SourceLink id="DOI_10_1088_1748_9326_aae3ec">Kwok, 2018</SourceLink>
         </p>
 
         <p>
@@ -569,7 +561,7 @@ export function ArcticSeaIceArticle() {
           období od začátku měření ICESat v roce 2003 vyčíslili úbytek zimního objemu přibližně o 6 000 km³, tedy asi
           třetinu. Zároveň ukázali, že velikost výsledku závisí na použité sněhové vrstvě. Jde proto o odhad složený z
           měření výšky a fyzikálního výpočtu, nikoli o přímé změření všech kry.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2021GL097448">Kacimi &amp; Kwok, 2022</ReferenceLink>
+          <SourceLink id="DOI_10_1029_2021gl097448">Kacimi &amp; Kwok, 2022</SourceLink>
         </p>
 
         <div className="article-observation-summary">
@@ -591,25 +583,25 @@ export function ArcticSeaIceArticle() {
             <h3>Primární studie</h3>
             <ul>
               <li>
-                <ReferenceLink href="https://doi.org/10.1029/JD089iD04p05355">Cavalieri et al., 1984</ReferenceLink>
+                <SourceLink id="DOI_10_1029_jd089id04p05355">Cavalieri et al., 1984</SourceLink>
                 : první podrobný popis získání koncentrace z přístroje SMMR.
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.1029/1999JC900082">Parkinson et al., 1999</ReferenceLink>:
+                <SourceLink id="DOI_10_1029_1999jc900082">Parkinson et al., 1999</SourceLink>:
                 rozsah, plocha a trendy v prvních 18 letech moderního družicového záznamu.
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.1109/LGRS.2004.824741">Fowler et al., 2004</ReferenceLink> a{" "}
-                <ReferenceLink href="https://doi.org/10.1029/2011GL047735">Maslanik et al., 2011</ReferenceLink>:
+                <SourceLink id="DOI_10_1109_lgrs_2004_824741">Fowler et al., 2004</SourceLink> a{" "}
+                <SourceLink id="DOI_10_1029_2011gl047735">Maslanik et al., 2011</SourceLink>:
                 vývoj metody a první dlouhá vyhodnocení stáří ledu.
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.1029/2009GL039035">Kwok &amp; Rothrock, 2009</ReferenceLink> a{" "}
-                <ReferenceLink href="https://doi.org/10.1088/1748-9326/aae3ec">Kwok, 2018</ReferenceLink>: sonarová a
+                <SourceLink id="DOI_10_1029_2009gl039035">Kwok &amp; Rothrock, 2009</SourceLink> a{" "}
+                <SourceLink id="DOI_10_1088_1748_9326_aae3ec">Kwok, 2018</SourceLink>: sonarová a
                 družicová měření tloušťky v letech 1958–2018.
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.1029/2021GL097448">Kacimi &amp; Kwok, 2022</ReferenceLink>:
+                <SourceLink id="DOI_10_1029_2021gl097448">Kacimi &amp; Kwok, 2022</SourceLink>:
                 společný odhad sněhu, tloušťky a objemu z ICESat-2 a CryoSat-2.
               </li>
             </ul>
@@ -619,25 +611,25 @@ export function ArcticSeaIceArticle() {
             <h3>Metodické práce</h3>
             <ul>
               <li>
-                <ReferenceLink href="https://doi.org/10.5194/tc-13-49-2019">Lavergne et al., 2019</ReferenceLink>:
+                <SourceLink id="DOI_10_5194_tc_13_49_2019">Lavergne et al., 2019</SourceLink>:
                 evropský klimatický záznam koncentrace OSI SAF a ESA CCI.
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.5194/tc-14-1519-2020">Tschudi et al., 2020</ReferenceLink>:
+                <SourceLink id="DOI_10_5194_tc_14_1519_2020">Tschudi et al., 2020</SourceLink>:
                 současná metoda pohybu a stáří ledu v NSIDC.
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.1088/1748-9326/aaf52c">Meier &amp; Stewart, 2019</ReferenceLink>,{" "}
-                <ReferenceLink href="https://doi.org/10.5194/tc-18-2473-2024">Wernecke et al., 2024</ReferenceLink> a{" "}
-                <ReferenceLink href="https://doi.org/10.5194/tc-20-3783-2026">Wernecke et al., 2026</ReferenceLink>:
+                <SourceLink id="DOI_10_1088_1748_9326_aaf52c">Meier &amp; Stewart, 2019</SourceLink>,{" "}
+                <SourceLink id="DOI_10_5194_tc_18_2473_2024">Wernecke et al., 2024</SourceLink> a{" "}
+                <SourceLink id="DOI_10_5194_tc_20_3783_2026">Wernecke et al., 2026</SourceLink>:
                 různé složky nejistoty rozsahu, plochy a jejich trendů.
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.1109/TGRS.2014.2310136">Ivanova et al., 2014</ReferenceLink>:
+                <SourceLink id="DOI_10_1109_tgrs_2014_2310136">Ivanova et al., 2014</SourceLink>:
                 srovnání jedenácti algoritmů koncentrace.
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.1029/2011JC007084">Schweiger et al., 2011</ReferenceLink>:
+                <SourceLink id="DOI_10_1029_2011jc007084">Schweiger et al., 2011</SourceLink>:
                 nejistota modelového objemu PIOMAS.
               </li>
             </ul>
@@ -647,29 +639,29 @@ export function ArcticSeaIceArticle() {
             <h3>Datové portály a stahování</h3>
             <ul>
               <li>
-                <ReferenceLink href="https://doi.org/10.7265/a98x-0f50">Sea Ice Index v4</ReferenceLink>: denní a
+                <SourceLink id="DOI_10_7265_a98x_0f50">Sea Ice Index v4</SourceLink>: denní a
                 měsíční koncentrace, rozsah, plocha, mapy a hranice od roku 1978.
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.15770/EUM_SAF_OSI_0023">OSI-450-a1</ReferenceLink> a{" "}
-                <ReferenceLink href="https://doi.org/10.15770/EUM_SAF_OSI_0014">OSI-430-a</ReferenceLink>: evropská
+                <SourceLink id="DOI_10_15770_eum_saf_osi_0023">OSI-450-a1</SourceLink> a{" "}
+                <SourceLink id="DOI_10_15770_eum_saf_osi_0014">OSI-430-a</SourceLink>: evropská
                 koncentrace, nejistota buněk a průběžné pokračování.
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.5067/UTAV7490FEPB">EASE-Grid Sea Ice Age v4</ReferenceLink>:
+                <SourceLink id="DOI_10_5067_utav7490fepb">EASE-Grid Sea Ice Age v4</SourceLink>:
                 týdenní stáří od roku 1984.
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.5067/TXDHDJ1JT0CG">ICESat-2 v4</ReferenceLink> a{" "}
-                <ReferenceLink href="https://doi.org/10.5067/96JO0KIFDAS8">CryoSat-2 L4</ReferenceLink>: zimní
+                <SourceLink id="DOI_10_5067_txdhdj1jt0cg">ICESat-2 v4</SourceLink> a{" "}
+                <SourceLink id="DOI_10_5067_96jo0kifdas8">CryoSat-2 L4</SourceLink>: zimní
                 tloušťka, volný bok, sníh a nejistoty.
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.7265/N56D5QXC">DMI 1893–1956</ReferenceLink>,{" "}
-                <ReferenceLink href="https://doi.org/10.7265/jj4s-tq79">Walsh v2</ReferenceLink> a{" "}
-                <ReferenceLink href="https://psc.apl.uw.edu/research/projects/arctic-sea-ice-volume-anomaly/data/">
+                <SourceLink id="DOI_10_7265_n56d5qxc">DMI 1893–1956</SourceLink>,{" "}
+                <SourceLink id="DOI_10_7265_jj4s_tq79">Walsh v2</SourceLink> a{" "}
+                <SourceLink id="WEB_psc_apl_uw_edu_Polar_Science_Center_raquo_PIOMAS_Data_dbaf6399">
                   PIOMAS
-                </ReferenceLink>
+                </SourceLink>
                 : historické mapy, rekonstrukce a modelový objem.
               </li>
             </ul>
@@ -679,28 +671,28 @@ export function ArcticSeaIceArticle() {
             <h3>Obrazy, grafy a podmínky použití</h3>
             <ul>
               <li>
-                <ReferenceLink href="https://svs.gsfc.nasa.gov/5583/">NASA SVS: Arctic Sea Ice Minimum 2025</ReferenceLink>;
+                <SourceLink id="WEB_NASA_NASA_Scientific_Visualization_Studio_Arctic_Sea_8c5c7d01">NASA SVS: Arctic Sea Ice Minimum 2025</SourceLink>;
                 kredit NASA Scientific Visualization Studio, JAXA a uvedení tvůrci. Podmínky:{" "}
-                <ReferenceLink href="https://www.nasa.gov/nasa-brand-center/images-and-media/">
+                <SourceLink id="WEB_NASA_Guidelines_for_using_NASA_Images_and_Media_Guide_e6f9e9e4">
                   NASA Images and Media Guidelines
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.25923/mmxf-0r86">Arctic Report Card 2025</ReferenceLink>, obr.
+                <SourceLink id="DOI_10_25923_mmxf_0r86">Arctic Report Card 2025</SourceLink>, obr.
                 2 a 4; kredit NOAA Arctic Program, NSIDC a autoři.
               </li>
               <li>
-                <ReferenceLink href="https://climate.copernicus.eu/sea-ice-cover-march-2026">Copernicus, březen 2026</ReferenceLink>{" "}
+                <SourceLink id="WEB_Copernicus_Sea_ice_cover_for_March_2026_Copernicus_f75f3111">Copernicus, březen 2026</SourceLink>{" "}
                 a{" "}
-                <ReferenceLink href="https://climate.copernicus.eu/sea-ice-cover-september-2025">
+                <SourceLink id="WEB_Copernicus_Sea_ice_cover_for_September_2025_Copernicus_88c9834a">
                   Copernicus, září 2025
-                </ReferenceLink>
+                </SourceLink>
                 ; kredit C3S/ECMWF/EUMETSAT. Licence dovoluje bezplatné převzetí s uvedením zdroje a prohlášením o
                 odpovědnosti:{" "}
-                <ReferenceLink href="https://cds.climate.copernicus.eu/licences/licence-to-use-copernicus-products">
+                <SourceLink id="WEB_Copernicus_Licence_to_use_Copernicus_Products_rev_12_4244ad0f">
                   Licence to use Copernicus Products
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
             </ul>

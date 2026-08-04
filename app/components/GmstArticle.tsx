@@ -1,13 +1,5 @@
 import Image from "next/image";
-import type { ReactNode } from "react";
-
-function ReferenceLink({ href, children }: { href: string; children: ReactNode }) {
-  return (
-    <a className="article-reference" href={href} target="_blank" rel="noreferrer">
-      {children}
-    </a>
-  );
-}
+import { SourceLink } from "./SourceLink";
 
 export function GmstArticle() {
   return (
@@ -64,8 +56,8 @@ export function GmstArticle() {
           pevninských a oceánských oblastí. Jones, Wigley a Wright tak v roce 1986 sestavili globální výpočet pro
           roky 1861–1984. Parker a kol. v roce 1994 popsali globální mapy založené na stejné dvojici měřených
           veličin: teplotě vzduchu nad pevninou a teplotě vody u hladiny oceánu.{" "}
-          <ReferenceLink href="https://doi.org/10.1038/322430a0">Jones et al., 1986</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1029/94JD00548">Parker et al., 1994</ReferenceLink>
+          <SourceLink id="DOI_10_1038_322430a0">Jones et al., 1986</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1029_94jd00548">Parker et al., 1994</SourceLink>
         </p>
 
         <p>
@@ -73,12 +65,12 @@ export function GmstArticle() {
           kol. ji popsali pro výpočet NASA, Rohde a Hausfather pro Berkeley Earth, Morice a kol. pro HadCRUT5 a
           Yin a kol. pro NOAAGlobalTemp. Metody se liší v podrobnostech, ale všechny tyto produkty spojují
           pozemní teplotu vzduchu s oceánskou teplotou vody u hladiny.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2010RG000345">Hansen et al., 2010</ReferenceLink>,{" "}
-          <ReferenceLink href="https://doi.org/10.5194/essd-12-3469-2020">
+          <SourceLink id="DOI_10_1029_2010rg000345">Hansen et al., 2010</SourceLink>,{" "}
+          <SourceLink id="DOI_10_5194_essd_12_3469_2020">
             Rohde &amp; Hausfather, 2020
-          </ReferenceLink>
-          , <ReferenceLink href="https://doi.org/10.1029/2019JD032361">Morice et al., 2021</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1175/BAMS-D-24-0012.1">Yin et al., 2024</ReferenceLink>
+          </SourceLink>
+          , <SourceLink id="DOI_10_1029_2019jd032361">Morice et al., 2021</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1175_bams_d_24_0012_1">Yin et al., 2024</SourceLink>
         </p>
 
         <p>
@@ -110,8 +102,8 @@ export function GmstArticle() {
           rozšířil na více než 400 stanic a skládal je nejprve do oblastí a šířkových pásů. Obě práce ukazují ranou
           podobu cesty od jednotlivých stanic ke globálnímu číslu a současně omezení tehdejšího prostorového
           pokrytí.{" "}
-          <ReferenceLink href="https://doi.org/10.1002/qj.49706427503">Callendar, 1938</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1002/qj.49708737102">Callendar, 1961</ReferenceLink>
+          <SourceLink id="1938_Callendar">Callendar, 1938</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1002_qj_49708737102">Callendar, 1961</SourceLink>
         </p>
 
         <p>
@@ -120,9 +112,9 @@ export function GmstArticle() {
           nepravidelným rozmístěním stanic. Jones, Wigley a Wright o rok dříve zveřejnili výpočet, který spojil
           pozemní a oceánská pozorování od roku 1861. Tyto práce patří k přímým předchůdcům dnešních globálních
           produktů.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/JD092iD11p13345">
+          <SourceLink id="DOI_10_1029_jd092id11p13345">
             Hansen &amp; Lebedeff, 1987
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <p>
@@ -140,9 +132,9 @@ export function GmstArticle() {
           přístroje 1,25 až 2 metry nad zemí. Současné automatické stanice často používají elektrický odporový
           teploměr; starší záznamy vznikaly odečtem kapalinových teploměrů. Poloha stanice, výška přístroje, typ
           krytu a změny vybavení se zapisují jako doprovodné údaje.{" "}
-          <ReferenceLink href="https://community.wmo.int/site/knowledge-hub/programmes-and-initiatives/instruments-and-methods-of-observation-programme-imop/guide-instruments-and-methods-of-observation-wmo-no-8">
+          <SourceLink id="WEB_World_Meteorological_Organiz_Guide_to_Instruments_and_Methods_of_Observation_93c4c4a4">
             WMO: Guide to Instruments and Methods of Observation
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <p>
@@ -151,7 +143,7 @@ export function GmstArticle() {
           historické měsíční záznamy. Mezinárodní archiv GHCN-M v4 tyto údaje a další sbírky spojuje, vyhledává
           duplicity a přidává značky kontroly kvality. Jeho metodický popis uvádí původ dat i postup sestavení
           databáze.{" "}
-          <ReferenceLink href="https://doi.org/10.1175/JCLI-D-18-0094.1">Menne et al., 2018</ReferenceLink>
+          <SourceLink id="DOI_10_1175_jcli_d_18_0094_1">Menne et al., 2018</SourceLink>
         </p>
 
         <figure className="article-figure">
@@ -167,7 +159,7 @@ export function GmstArticle() {
             Rozmístění 20 924 meteorologických stanic zobrazených pro GISTEMP v4. Velikost značek pouze omezuje
             jejich překrývání a nevyjadřuje význam stanice. Vizualizace: NASA Scientific Visualization Studio,
             Mark SubbaRao a AJ Christensen; produkce Kathryn Mersmann. Nezměněný materiál NASA.{" "}
-            <ReferenceLink href="https://svs.gsfc.nasa.gov/4961/">Původní mapa a úplný kredit</ReferenceLink>
+            <SourceLink id="WEB_NASA_NASA_Scientific_Visualization_Studio_Temperature_bec5836b">Původní mapa a úplný kredit</SourceLink>
           </figcaption>
         </figure>
 
@@ -185,7 +177,7 @@ export function GmstArticle() {
           lodi může naopak ovlivnit teplé okolí. Záznamy proto potřebují informaci o použitém způsobu. Datový
           produkt HadSST4 vytváří více možných oprav podle typu vědra, měření v sání motoru a období, v němž se
           jednotlivé metody používaly.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2018JD029867">Kennedy et al., 2019</ReferenceLink>
+          <SourceLink id="DOI_10_1029_2018jd029867">Kennedy et al., 2019</SourceLink>
         </p>
 
         <p>
@@ -193,7 +185,7 @@ export function GmstArticle() {
           unášené bóje. Teploměr driftující bóje je umístěn několik centimetrů pod rozhraním vody a vzduchu a
           hodnotu odesílá družicí. Lodní a bójová měření se shromažďují v archivu ICOADS, který zachovává typ
           platformy, polohu, čas a dostupné údaje o způsobu měření.{" "}
-          <ReferenceLink href="https://doi.org/10.1002/joc.4775">Freeman et al., 2017</ReferenceLink>
+          <SourceLink id="DOI_10_1002_joc_4775">Freeman et al., 2017</SourceLink>
         </p>
 
         <figure className="article-figure article-figure--portrait">
@@ -208,9 +200,9 @@ export function GmstArticle() {
           <figcaption>
             Vypouštění driftující bóje z lodi Bark Europa u Jižní Afriky. Bóje měří teplotu vody několik
             centimetrů pod hladinou a data odesílá družicí. Foto: NOAA/AOML, nezměněný materiál NOAA.{" "}
-            <ReferenceLink href="https://www.aoml.noaa.gov/index.php/2014/08/06/noaas-array-of-drifting-ocean-buoys/">
+            <SourceLink id="WEB_NOAA_raquo_NOAA_s_Array_of_Drifting_Ocean_Buoys_90005d3e">
               Původní fotografie a popis přístroje
-            </ReferenceLink>
+            </SourceLink>
           </figcaption>
         </figure>
 
@@ -239,9 +231,9 @@ export function GmstArticle() {
           porovnáním stanice s okolními místy: společná změna počasí se obvykle projeví u sousedů, místní skok
           pouze u jedné stanice. Menne a Williams v roce 2009 popsali párový postup používaný při zpracování
           pozemních dat NOAA.{" "}
-          <ReferenceLink href="https://doi.org/10.1175/2008JCLI2263.1">
+          <SourceLink id="DOI_10_1175_2008jcli2263_1">
             Menne &amp; Williams, 2009
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <p>
@@ -249,7 +241,7 @@ export function GmstArticle() {
           teplotních profilů a odhadují odchylky jednotlivých způsobů odběru. HadSST4 proto není jedna opravená
           minulost, ale soubor 200 možných zpracování, která zastupují přípustné hodnoty nejistých oprav. Tato
           informace pokračuje až do nejistoty výsledného HadCRUT5.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2018JD029867">Kennedy et al., 2019</ReferenceLink>
+          <SourceLink id="DOI_10_1029_2018jd029867">Kennedy et al., 2019</SourceLink>
         </p>
 
         <h3>3. Spočítá se místní měsíční rozdíl</h3>
@@ -259,9 +251,9 @@ export function GmstArticle() {
           o kolik byl daný měsíc na daném místě teplejší nebo chladnější než jeho vlastní základ. Tento místní
           rozdíl se může podobat hodnotám v širokém okolí mnohem více než samotná teplota, což umožňuje spojovat
           nepravidelně rozmístěná pozorování.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/JD092iD11p13345">
+          <SourceLink id="DOI_10_1029_jd092id11p13345">
             Hansen &amp; Lebedeff, 1987
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <h3>4. Místní hodnoty se rozmístí do mapy</h3>
@@ -279,9 +271,9 @@ export function GmstArticle() {
           rozšiřuje pozemní změny do vzdálenosti až 1 200 kilometrů, pokud má v dosahu vhodnou stanici. Berkeley
           Earth používá vlastní statistický prostorový výpočet. NOAAGlobalTemp v6 využívá neuronovou síť pro
           pozemní oblasti a Arktidu; verze 6.1.0 přidala stejně založenou oceánskou rekonstrukci ERSST v6.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2019JD032361">Morice et al., 2021</ReferenceLink>,{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2010RG000345">Hansen et al., 2010</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1175/BAMS-D-24-0012.1">Yin et al., 2024</ReferenceLink>
+          <SourceLink id="DOI_10_1029_2019jd032361">Morice et al., 2021</SourceLink>,{" "}
+          <SourceLink id="DOI_10_1029_2010rg000345">Hansen et al., 2010</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1175_bams_d_24_0012_1">Yin et al., 2024</SourceLink>
         </p>
 
         <h3>6. Buňky se váží podle plochy</h3>
@@ -299,15 +291,15 @@ export function GmstArticle() {
           zejména nad oceány a v polárních oblastech. S rozšířením stanic a bójí se zmenšuje, ale zcela nemizí.
           Brohan a kol. tyto složky oddělili pro HadCRUT3; novější HadCRUT5 je převádí do 200 možných realizací
           pozemní, oceánské a globální mapy.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2005JD006548">Brohan et al., 2006</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2019JD032361">Morice et al., 2021</ReferenceLink>
+          <SourceLink id="DOI_10_1029_2005jd006548">Brohan et al., 2006</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1029_2019jd032361">Morice et al., 2021</SourceLink>
         </p>
 
         <p>
           NASA zveřejňuje pro GISTEMP v4 obdobný soubor 200 možných měsíčních map pro roky 1880–2020. Každá
           varianta představuje jedno přípustné zpracování vzhledem k popsaným nejistotám. Rozptyl variant lze
           přenést do dalšího výpočtu místo toho, aby uživatel pracoval pouze s jednou střední křivkou.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2023JD040179">Lenssen et al., 2024</ReferenceLink>
+          <SourceLink id="DOI_10_1029_2023jd040179">Lenssen et al., 2024</SourceLink>
         </p>
 
         <h2>Zveřejňovaná data</h2>
@@ -327,10 +319,10 @@ export function GmstArticle() {
               realizací nejistoty a používají referenční období 1961–1990.
             </p>
             <p>
-              <ReferenceLink href="https://hadleyserver.metoffice.gov.uk/hadobs/hadcrut5/data/HadCRUT.5.1.0.0/download.html">
+              <SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_2d3e1c4c">
                 CSV a NetCDF ke stažení
-              </ReferenceLink>{" "}
-              · <ReferenceLink href="https://doi.org/10.1029/2019JD032361">metodická studie</ReferenceLink>
+              </SourceLink>{" "}
+              · <SourceLink id="DOI_10_1029_2019jd032361">metodická studie</SourceLink>
             </p>
           </section>
 
@@ -343,14 +335,14 @@ export function GmstArticle() {
               pozorovací nejistoty.
             </p>
             <p>
-              <ReferenceLink href="https://data.giss.nasa.gov/gistemp/data_v4.html">
+              <SourceLink id="WEB_NASA_Data_GISS_GISS_Surface_Temperature_Analysis_GIST_4f73fdd3">
                 Tabulky, CSV a NetCDF ke stažení
-              </ReferenceLink>{" "}
+              </SourceLink>{" "}
               ·{" "}
-              <ReferenceLink href="https://data.giss.nasa.gov/gistemp/uncertainty/">
+              <SourceLink id="WEB_NASA_Data_GISS_GISTEMP_Uncertainty_Analysis_Observati_77ee7299">
                 data a kód nejistoty
-              </ReferenceLink>{" "}
-              · <ReferenceLink href="https://doi.org/10.1029/2010RG000345">metodická studie</ReferenceLink>
+              </SourceLink>{" "}
+              · <SourceLink id="DOI_10_1029_2010rg000345">metodická studie</SourceLink>
             </p>
           </section>
 
@@ -363,18 +355,18 @@ export function GmstArticle() {
               bez přímého měření.
             </p>
             <p>
-              <ReferenceLink href="https://www.ncei.noaa.gov/data/noaa-global-surface-temperature/v6.1/access/timeseries/">
+              <SourceLink id="WEB_NOAA_Index_of_data_noaa_global_surface_temperature_v6_382f4cae">
                 Měsíční a roční hodnoty
-              </ReferenceLink>{" "}
+              </SourceLink>{" "}
               ·{" "}
-              <ReferenceLink href="https://www.ncei.noaa.gov/data/noaa-global-surface-temperature/v6.1/access/gridded/">
+              <SourceLink id="WEB_NOAA_Index_of_data_noaa_global_surface_temperature_v6_aef36414">
                 mapy NetCDF
-              </ReferenceLink>{" "}
+              </SourceLink>{" "}
               ·{" "}
-              <ReferenceLink href="https://doi.org/10.25921/vvaa-wq11">záznam datové verze</ReferenceLink> ·{" "}
-              <ReferenceLink href="https://doi.org/10.1175/BAMS-D-24-0012.1">
+              <SourceLink id="DOI_10_25921_vvaa_wq11">záznam datové verze</SourceLink> ·{" "}
+              <SourceLink id="DOI_10_1175_bams_d_24_0012_1">
                 metodika verze 6
-              </ReferenceLink>
+              </SourceLink>
             </p>
           </section>
 
@@ -387,11 +379,11 @@ export function GmstArticle() {
               konečným vydáním změněny. Původní metodická práce z roku 2020 popisuje standardní globální produkt.
             </p>
             <p>
-              <ReferenceLink href="https://berkeleyearth.org/data/">Datový portál a soubory ke stažení</ReferenceLink>{" "}
+              <SourceLink id="WEB_berkeleyearth_org_Data_Overview_Berkeley_Earth_b889a1aa">Datový portál a soubory ke stažení</SourceLink>{" "}
               ·{" "}
-              <ReferenceLink href="https://doi.org/10.5194/essd-12-3469-2020">
+              <SourceLink id="DOI_10_5194_essd_12_3469_2020">
                 metodická studie
-              </ReferenceLink>
+              </SourceLink>
             </p>
           </section>
         </div>
@@ -412,9 +404,9 @@ export function GmstArticle() {
             Pětileté průměry místních teplotních rozdílů GISTEMP v4 od let 1880–1884 do let 2021–2025,
             referenční období 1951–1980. Animace: NASA Goddard Institute for Space Studies, nezměněný materiál
             NASA.{" "}
-            <ReferenceLink href="https://data.giss.nasa.gov/gistemp/animations/">
+            <SourceLink id="WEB_NASA_Data_GISS_Surface_Temperature_Animations_34f35b4b">
               Původní animace a popis
-            </ReferenceLink>
+            </SourceLink>
           </figcaption>
         </figure>
 
@@ -456,13 +448,13 @@ export function GmstArticle() {
             NOAAGlobalTemp v6, Berkeley Earth a HadCRUT5. Obrázek byl aktualizován 28. ledna 2026. Zdroj a kredit:
             C3S/ECMWF; nezměněný materiál. V přehledu ERA5 vychází rok 2025 jako třetí nejteplejší. Souhrn WMO
             níže používá devět produktů a připouští druhé i třetí místo podle konkrétního souboru.{" "}
-            <ReferenceLink href="https://climate.copernicus.eu/GCH2025-graphics-gallery">
+            <SourceLink id="WEB_Copernicus_Graphics_Gallery_Copernicus_4a265eb8">
               Původní graf a data
-            </ReferenceLink>{" "}
+            </SourceLink>{" "}
             ·{" "}
-            <ReferenceLink href="https://cds.climate.copernicus.eu/licences/licence-to-use-copernicus-products">
+            <SourceLink id="WEB_Copernicus_Licence_to_use_Copernicus_Products_rev_12_4244ad0f">
               licence Copernicus
-            </ReferenceLink>
+            </SourceLink>
           </figcaption>
         </figure>
 
@@ -477,9 +469,9 @@ export function GmstArticle() {
           Šestá hodnotící zpráva IPCC porovnala více globálních produktů a pro desetiletí 2011–2020 vyhodnotila
           průměrnou změnu o 1,09 °C vůči období 1850–1900. Uvedené rozmezí 0,95 až 1,20 °C zahrnuje nejistotu
           pozorování i rozdíly mezi použitými produkty. Jde o průměr deseti let, nikoli o hodnotu jediného roku.{" "}
-          <ReferenceLink href="https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-2/">
+          <SourceLink id="WEB_Intergovernmental_Panel_on_C_Chapter_2_Changing_State_of_the_Climate_System_9c4e122d">
             IPCC AR6, kapitola 2
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <p>
@@ -488,9 +480,9 @@ export function GmstArticle() {
           uvedený interval má devadesátiprocentní úroveň nejistoty. Ve dvou produktech byl rok 2025 druhý
           nejteplejší a v sedmi třetí. Rozdíl mezi blízkými roky je tedy menší než nejistota, s níž lze jejich
           přesné pořadí určit.{" "}
-          <ReferenceLink href="https://wmo.int/publication-series/state-of-global-climate/state-of-global-climate-2025">
+          <SourceLink id="WEB_World_Meteorological_Organiz_State_of_the_Global_Climate_2025_53cbb3f3">
             WMO: State of the Global Climate 2025
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <p>
@@ -507,9 +499,9 @@ export function GmstArticle() {
           přibližně o 0,1 až 0,2 °C; tento rozptyl zahrnuje do nejistoty hodnot vztažených k období 1850–1900.
           Přesná hodnota proto vždy patří ke konkrétnímu produktu a verzi, zatímco dlouhodobý posun je společným
           výsledkem všech zde srovnaných zpracování.{" "}
-          <ReferenceLink href="https://wmo.int/publication-series/state-of-global-climate/state-of-global-climate-2025">
+          <SourceLink id="WEB_World_Meteorological_Organiz_State_of_the_Global_Climate_2025_53cbb3f3">
             WMO: State of the Global Climate 2025
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <div className="article-observation-summary">
@@ -530,37 +522,37 @@ export function GmstArticle() {
             <ul>
               <li>
                 Callendar, G. S. (1938):{" "}
-                <ReferenceLink href="https://doi.org/10.1002/qj.49706427503">
+                <SourceLink id="1938_Callendar">
                   The artificial production of carbon dioxide and its influence on temperature
-                </ReferenceLink>
+                </SourceLink>
                 . Pro tento článek je použita část s výpočtem teplot ze 147 stanic.
               </li>
               <li>
                 Callendar, G. S. (1961):{" "}
-                <ReferenceLink href="https://doi.org/10.1002/qj.49708737102">
+                <SourceLink id="DOI_10_1002_qj_49708737102">
                   Temperature fluctuations and trends over the earth
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Jones, P. D., Wigley, T. M. L. &amp; Wright, P. B. (1986):{" "}
-                <ReferenceLink href="https://doi.org/10.1038/322430a0">
+                <SourceLink id="DOI_10_1038_322430a0">
                   Global temperature variations between 1861 and 1984
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Hansen, J. &amp; Lebedeff, S. (1987):{" "}
-                <ReferenceLink href="https://doi.org/10.1029/JD092iD11p13345">
+                <SourceLink id="DOI_10_1029_jd092id11p13345">
                   Global trends of measured surface air temperature
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Parker, D. E. et al. (1994):{" "}
-                <ReferenceLink href="https://doi.org/10.1029/94JD00548">
+                <SourceLink id="DOI_10_1029_94jd00548">
                   Interdecadal changes of surface temperature since the late nineteenth century
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
             </ul>
@@ -571,72 +563,72 @@ export function GmstArticle() {
             <ul>
               <li>
                 Brohan, P. et al. (2006):{" "}
-                <ReferenceLink href="https://doi.org/10.1029/2005JD006548">
+                <SourceLink id="DOI_10_1029_2005jd006548">
                   Uncertainty estimates in regional and global observed temperature changes
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Menne, M. J. &amp; Williams, C. N. (2009):{" "}
-                <ReferenceLink href="https://doi.org/10.1175/2008JCLI2263.1">
+                <SourceLink id="DOI_10_1175_2008jcli2263_1">
                   Homogenization of Temperature Series via Pairwise Comparisons
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Hansen, J. et al. (2010):{" "}
-                <ReferenceLink href="https://doi.org/10.1029/2010RG000345">
+                <SourceLink id="DOI_10_1029_2010rg000345">
                   Global Surface Temperature Change
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Freeman, E. et al. (2017):{" "}
-                <ReferenceLink href="https://doi.org/10.1002/joc.4775">
+                <SourceLink id="DOI_10_1002_joc_4775">
                   ICOADS Release 3.0: a major update to the historical marine climate record
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Menne, M. J. et al. (2018):{" "}
-                <ReferenceLink href="https://doi.org/10.1175/JCLI-D-18-0094.1">
+                <SourceLink id="DOI_10_1175_jcli_d_18_0094_1">
                   The Global Historical Climatology Network Monthly Temperature Dataset, Version 4
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Kennedy, J. J. et al. (2019):{" "}
-                <ReferenceLink href="https://doi.org/10.1029/2018JD029867">
+                <SourceLink id="DOI_10_1029_2018jd029867">
                   An Ensemble Data Set of Sea-Surface Temperature Change From 1850
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Rohde, R. A. &amp; Hausfather, Z. (2020):{" "}
-                <ReferenceLink href="https://doi.org/10.5194/essd-12-3469-2020">
+                <SourceLink id="DOI_10_5194_essd_12_3469_2020">
                   The Berkeley Earth Land/Ocean Temperature Record
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Morice, C. P. et al. (2021):{" "}
-                <ReferenceLink href="https://doi.org/10.1029/2019JD032361">
+                <SourceLink id="DOI_10_1029_2019jd032361">
                   An Updated Assessment of Near-Surface Temperature Change From 1850: The HadCRUT5 Data Set
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Yin, X. et al. (2024):{" "}
-                <ReferenceLink href="https://doi.org/10.1175/BAMS-D-24-0012.1">
+                <SourceLink id="DOI_10_1175_bams_d_24_0012_1">
                   NOAAGlobalTemp Version 6: An AI-Based Global Surface Temperature Dataset
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Lenssen, N. et al. (2024):{" "}
-                <ReferenceLink href="https://doi.org/10.1029/2023JD040179">
+                <SourceLink id="DOI_10_1029_2023jd040179">
                   A NASA GISTEMPv4 Observational Uncertainty Ensemble
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
             </ul>
@@ -646,39 +638,39 @@ export function GmstArticle() {
             <h3>Data ke stažení</h3>
             <ul>
               <li>
-                <ReferenceLink href="https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-monthly">
+                <SourceLink id="WEB_NOAA_Global_Historical_Climatology_Network_monthly_GH_3f6fc0cd">
                   GHCN-M v4
-                </ReferenceLink>
+                </SourceLink>
                 : měsíční pozemní pozorování a doprovodné údaje.
               </li>
               <li>
-                <ReferenceLink href="https://icoads.noaa.gov/">ICOADS</ReferenceLink>: jednotlivá historická a
+                <SourceLink id="WEB_NOAA_International_Comprehensive_Ocean_Atmosphere_Dat_9d4f6713">ICOADS</SourceLink>: jednotlivá historická a
                 současná pozorování z lodí, bójí a dalších mořských platforem.
               </li>
               <li>
-                <ReferenceLink href="https://hadleyserver.metoffice.gov.uk/hadobs/hadcrut5/data/HadCRUT.5.1.0.0/download.html">
+                <SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_2d3e1c4c">
                   HadCRUT.5.1.0.0
-                </ReferenceLink>
+                </SourceLink>
                 : globální tabulky, mřížková data a 200 realizací.
               </li>
               <li>
-                <ReferenceLink href="https://data.giss.nasa.gov/gistemp/data_v4.html">GISTEMP v4</ReferenceLink>:
+                <SourceLink id="WEB_NASA_Data_GISS_GISS_Surface_Temperature_Analysis_GIST_4f73fdd3">GISTEMP v4</SourceLink>:
                 tabulky, CSV, NetCDF a další formáty.
               </li>
               <li>
-                <ReferenceLink href="https://www.ncei.noaa.gov/products/land-based-station/noaa-global-temp">
+                <SourceLink id="WEB_NOAA_NOAAGlobalTemp_0f2189d0">
                   NOAAGlobalTemp v6.1.0
-                </ReferenceLink>
+                </SourceLink>
                 : dokumentace, měsíční mapy a globální hodnoty.
               </li>
               <li>
-                <ReferenceLink href="https://berkeleyearth.org/data/">Berkeley Earth</ReferenceLink>: globální
+                <SourceLink id="WEB_berkeleyearth_org_Data_Overview_Berkeley_Earth_b889a1aa">Berkeley Earth</SourceLink>: globální
                 měsíční hodnoty a mřížková data.
               </li>
               <li>
-                <ReferenceLink href="https://wmo.int/publication-series/state-of-global-climate/state-of-global-climate-2025">
+                <SourceLink id="WEB_World_Meteorological_Organiz_State_of_the_Global_Climate_2025_53cbb3f3">
                   WMO State of the Global Climate 2025
-                </ReferenceLink>
+                </SourceLink>
                 : souhrn devíti produktů a výsledné hodnoty použité v kapitole Pozorování.
               </li>
             </ul>
@@ -689,39 +681,39 @@ export function GmstArticle() {
             <ul>
               <li>
                 Mapa stanic: NASA Scientific Visualization Studio.{" "}
-                <ReferenceLink href="https://svs.gsfc.nasa.gov/4961/">Původní soubor a kredit</ReferenceLink>. NASA
+                <SourceLink id="WEB_NASA_NASA_Scientific_Visualization_Studio_Temperature_bec5836b">Původní soubor a kredit</SourceLink>. NASA
                 své obrazové materiály dovoluje používat pro informační účely při uvedení zdroje, pokud není u
                 položky uvedeno jinak.{" "}
-                <ReferenceLink href="https://www.nasa.gov/nasa-brand-center/images-and-media/">
+                <SourceLink id="WEB_NASA_Guidelines_for_using_NASA_Images_and_Media_Guide_e6f9e9e4">
                   pravidla NASA
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Fotografie bóje: NOAA/AOML.{" "}
-                <ReferenceLink href="https://www.aoml.noaa.gov/index.php/2014/08/06/noaas-array-of-drifting-ocean-buoys/">
+                <SourceLink id="WEB_NOAA_raquo_NOAA_s_Array_of_Drifting_Ocean_Buoys_90005d3e">
                   Původní stránka
-                </ReferenceLink>
+                </SourceLink>
                 . Neoznačené fotografie NOAA jsou materiálem veřejné domény; kredit NOAA/AOML je zachován.{" "}
-                <ReferenceLink href="https://oceanservice.noaa.gov/about/faq.html">podmínky NOAA</ReferenceLink>.
+                <SourceLink id="WEB_NOAA_NOAA_s_National_Ocean_Service_About_Us_4ba21b52">podmínky NOAA</SourceLink>.
               </li>
               <li>
                 Animace pětiletých průměrů: NASA GISS.{" "}
-                <ReferenceLink href="https://data.giss.nasa.gov/gistemp/animations/">
+                <SourceLink id="WEB_NASA_Data_GISS_Surface_Temperature_Animations_34f35b4b">
                   Původní MP4 a popis
-                </ReferenceLink>
+                </SourceLink>
                 ; použit beze změny podle pravidel NASA.
               </li>
               <li>
                 Srovnávací graf: Copernicus Climate Change Service / ECMWF, aktualizace 28. ledna 2026.{" "}
-                <ReferenceLink href="https://climate.copernicus.eu/GCH2025-graphics-gallery">
+                <SourceLink id="WEB_Copernicus_Graphics_Gallery_Copernicus_4a265eb8">
                   Původní PNG a data
-                </ReferenceLink>
+                </SourceLink>
                 . Generováno s použitím informací Copernicus Climate Change Service 2026; Evropská komise ani
                 ECMWF nenesou odpovědnost za další použití těchto informací.{" "}
-                <ReferenceLink href="https://cds.climate.copernicus.eu/licences/licence-to-use-copernicus-products">
+                <SourceLink id="WEB_Copernicus_Licence_to_use_Copernicus_Products_rev_12_4244ad0f">
                   licence Copernicus
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
             </ul>

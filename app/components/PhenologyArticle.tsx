@@ -1,13 +1,5 @@
 import Image from "next/image";
-import type { ReactNode } from "react";
-
-function ReferenceLink({ href, children }: { href: string; children: ReactNode }) {
-  return (
-    <a className="article-reference" href={href} target="_blank" rel="noreferrer">
-      {children}
-    </a>
-  );
-}
+import { SourceLink } from "./SourceLink";
 
 export function PhenologyArticle() {
   return (
@@ -47,11 +39,11 @@ export function PhenologyArticle() {
           jejich opad. U živočichů se zaznamenává například začátek a průběh tahu, snášení vajec, líhnutí nebo doba, kdy
           jsou jedinci určitého vývojového stadia přítomni. Každá fáze má vlastní definici a vlastní datum nebo průběh.
           Takto fenofázi vymezují standardní protokoly{" "}
-          <ReferenceLink href="https://doi.org/10.1007/s00484-014-0789-5">Denny et al., 2014</ReferenceLink>, evropská{" "}
-          <ReferenceLink href="https://www.openagrar.de/servlets/MCRFileNodeServlet/openagrar_derivate_00010428/BBCH-Skala_en.pdf">
+          <SourceLink id="DOI_10_1007_s00484_014_0789_5">Denny et al., 2014</SourceLink>, evropská{" "}
+          <SourceLink id="WEB_openagrar_de_Meier_2001_stupnice_BBCH_f90d8917">
             stupnice BBCH
-          </ReferenceLink>{" "}
-          i databáze <ReferenceLink href="https://doi.org/10.1007/s00484-018-1512-8">PEP725</ReferenceLink>.
+          </SourceLink>{" "}
+          i databáze <SourceLink id="DOI_10_1007_s00484_018_1512_8">PEP725</SourceLink>.
         </p>
 
         <p>
@@ -60,8 +52,8 @@ export function PhenologyArticle() {
           Výsledek pak neobsahuje jen první zaznamenaný den, ale také trvání a velikost jevu. U pohyblivých živočichů
           se stejná myšlenka převádí na počet zjištěných jedinců nebo na kumulovaný průběh sezóny; z něj lze určit den,
           kdy bylo zaznamenáno například 10, 50 nebo 90 % celkového počtu.{" "}
-          <ReferenceLink href="https://doi.org/10.1007/s00484-014-0789-5">Denny et al., 2014</ReferenceLink>;{" "}
-          <ReferenceLink href="https://doi.org/10.1111/j.2041-210X.2010.00020.x">Moussus et al., 2010</ReferenceLink>
+          <SourceLink id="DOI_10_1007_s00484_014_0789_5">Denny et al., 2014</SourceLink>;{" "}
+          <SourceLink id="DOI_10_1111_j_2041_210x_2010_00020_x">Moussus et al., 2010</SourceLink>
         </p>
 
         <p>
@@ -69,9 +61,9 @@ export function PhenologyArticle() {
           koruně, na louce nebo v obrazovém bodu krajiny. Z křivky během roku se odvozuje začátek zelenání, vrchol,
           ústup zeleně a konec sezóny. Takové datum popisuje pozorovaný porost nebo zemský povrch, nikoli první list či
           květ určitého druhu. Způsob převodu obrazu na sezónní údaje popisují{" "}
-          <ReferenceLink href="https://doi.org/10.1038/sdata.2018.28">Richardson et al., 2018</ReferenceLink>,{" "}
-          <ReferenceLink href="https://doi.org/10.1016/S0034-4257(02)00135-9">Zhang et al., 2003</ReferenceLink> a
-          současné produkty <ReferenceLink href="https://doi.org/10.5067/MODIS/MCD12Q2.061">MODIS MCD12Q2</ReferenceLink>.
+          <SourceLink id="DOI_10_1038_sdata_2018_28">Richardson et al., 2018</SourceLink>,{" "}
+          <SourceLink id="DOI_10_1016_s0034_4257_02_00135_9">Zhang et al., 2003</SourceLink> a
+          současné produkty <SourceLink id="DOI_10_5067_modis_mcd12q2_061">MODIS MCD12Q2</SourceLink>.
         </p>
 
         <figure className="article-figure">
@@ -90,7 +82,7 @@ export function PhenologyArticle() {
             koruny s listy a zbarvenými listy, vpravo počet otevřených květů. Panel a zachycuje listy jednoho javoru
             cukrového v Maine, panel b květy jedné zlatice v Massachusetts v roce 2012. Druhé krátké kvetení na konci
             roku je vidět jen v opakovaných záznamech. Zdroj:{" "}
-            <ReferenceLink href="https://doi.org/10.1007/s00484-014-0789-5">Denny et al., 2014, obr. 1</ReferenceLink>,
+            <SourceLink id="DOI_10_1007_s00484_014_0789_5">Denny et al., 2014, obr. 1</SourceLink>,
             licence CC BY.
           </figcaption>
         </figure>
@@ -102,16 +94,16 @@ export function PhenologyArticle() {
           záznam pochází z roku 812, mezi jednotlivými staletími však zůstávají mezery a měnil se význam i přesnost
           zápisu. Od devatenáctého století se uplatňují přímá pozorování a od dvacátého století také údaje
           meteorologické služby. Původ a výběr těchto historických zpráv popsali{" "}
-          <ReferenceLink href="https://doi.org/10.1002/joc.1594">Aono a Kazui, 2008</ReferenceLink>.
+          <SourceLink id="DOI_10_1002_joc_1594">Aono a Kazui, 2008</SourceLink>.
         </p>
 
         <p>
           Robert Marsham začal roku 1736 na svém panství v anglickém Norfolku zapisovat 27 každoročních „znamení
           jara“, mezi nimi první listy, květy a přílety ptáků. Po jeho smrti pokračovali členové rodiny; odborné
           zpracování používá záznamy do roku 1947. Ve Švédsku vznikl jiný typ práce: Linného{" "}
-          <ReferenceLink href="https://db.huntbot.org/linndiss/72/">Calendarium Florae</ReferenceLink>, obhájený 31.
+          <SourceLink id="WEB_db_huntbot_org_Original_Linnaean_Dissertations_Hunt_Institute_f_b8827d4c">Calendarium Florae</SourceLink>, obhájený 31.
           března 1756, uspořádal dobu kvetení rostlin podle pozorování v Uppsale roku 1755. Marshamův soubor později
-          vyhodnotili <ReferenceLink href="https://doi.org/10.2307/2261570">Sparks a Carey, 1995</ReferenceLink>.
+          vyhodnotili <SourceLink id="DOI_10_2307_2261570">Sparks a Carey, 1995</SourceLink>.
         </p>
 
         <p>
@@ -119,7 +111,7 @@ export function PhenologyArticle() {
           společnými definicemi. Mezinárodní fenologické zahrady přidaly další kontrolu: od roku 1959 se na různých
           místech Evropy sledují geneticky shodné dřeviny rozmnožené z téhož materiálu. Tím se omezuje rozdíl mezi
           jednotlivými odrůdami. Vývoj sítě od první zahrady založené roku 1957 shrnují{" "}
-          <ReferenceLink href="https://doi.org/10.1007/s00484-021-02185-y">Brügger a Vassella, 2022</ReferenceLink>.
+          <SourceLink id="DOI_10_1007_s00484_021_02185_y">Brügger a Vassella, 2022</SourceLink>.
         </p>
 
         <p>
@@ -128,8 +120,8 @@ export function PhenologyArticle() {
           každoroční údaje v rozlišení 500 metrů; evropský Copernicus od roku 2017 vytváří obdobné údaje ze Sentinel-2
           v rozlišení 10 metrů. Mezi terénem a družicí dnes stojí automatické kamery, které fotografují stále stejný
           porost obvykle několikrát za hodinu.{" "}
-          <ReferenceLink href="https://doi.org/10.1016/0034-4257(94)90014-0">Reed et al., 1994</ReferenceLink>;{" "}
-          <ReferenceLink href="https://doi.org/10.5194/essd-17-6531-2025">Young et al., 2025</ReferenceLink>
+          <SourceLink id="DOI_10_1016_0034_4257_94_90014_0">Reed et al., 1994</SourceLink>;{" "}
+          <SourceLink id="DOI_10_5194_essd_17_6531_2025">Young et al., 2025</SourceLink>
         </p>
 
         <h2>Jak vzniká zveřejněný záznam</h2>
@@ -139,7 +131,7 @@ export function PhenologyArticle() {
           formulované fáze, například „jsou vidět otevřené květy?“. Odpověď „ne“ je stejně důležitá jako „ano“:
           poslední nepřítomnost a první přítomnost vymezují interval, ve kterém fáze začala. Jestliže byly návštěvy 1.
           a 11. května, nelze začátek vydávat za přesně známý den; nastal někdy mezi nimi. Častější návštěvy tento
-          interval zkracují. <ReferenceLink href="https://doi.org/10.1007/s00484-014-0789-5">Denny et al., 2014</ReferenceLink>
+          interval zkracují. <SourceLink id="DOI_10_1007_s00484_014_0789_5">Denny et al., 2014</SourceLink>
         </p>
 
         <p>
@@ -148,7 +140,7 @@ export function PhenologyArticle() {
           kvetení, 8 zrání plodů a 9 stárnutí nebo nástup klidu. Databáze PEP725 uchovává původní druh, fázi, místo,
           rok a den roku a převádí záznamy partnerských sítí na odpovídající kódy BBCH. Převod usnadňuje porovnání,
           avšak nezaručuje, že starší pozorovatelé v různých zemích používali úplně stejné podrobnosti definice.{" "}
-          <ReferenceLink href="https://doi.org/10.1007/s00484-018-1512-8">Templ et al., 2018</ReferenceLink>
+          <SourceLink id="DOI_10_1007_s00484_018_1512_8">Templ et al., 2018</SourceLink>
         </p>
 
         <h3>Populace a pohybliví živočichové</h3>
@@ -166,9 +158,9 @@ export function PhenologyArticle() {
           nezměnilo. Simulace deseti běžných ukazatelů ukázaly, že pro průběh celé sezóny jsou stabilnější vážený
           průměr, percentily nebo vyhlazená křivka než první záznam. Staré prameny někdy nic jiného než první datum
           neobsahují; takový výsledek je použitelný, pokud je označen a porovnává se s obdobně vzniklými údaji.{" "}
-          <ReferenceLink href="https://doi.org/10.1111/j.1365-2745.2008.01436.x">Miller-Rushing et al., 2008</ReferenceLink>;{" "}
-          <ReferenceLink href="https://doi.org/10.1007/s00442-008-0959-4">van Strien et al., 2008</ReferenceLink>;{" "}
-          <ReferenceLink href="https://doi.org/10.1111/j.2041-210X.2010.00020.x">Moussus et al., 2010</ReferenceLink>
+          <SourceLink id="DOI_10_1111_j_1365_2745_2008_01436_x">Miller-Rushing et al., 2008</SourceLink>;{" "}
+          <SourceLink id="DOI_10_1007_s00442_008_0959_4">van Strien et al., 2008</SourceLink>;{" "}
+          <SourceLink id="DOI_10_1111_j_2041_210x_2010_00020_x">Moussus et al., 2010</SourceLink>
         </p>
 
         <h3>Kamery</h3>
@@ -178,7 +170,7 @@ export function PhenologyArticle() {
           každý snímek se z červeného, zeleného a modrého kanálu počítá podíl zelené barvy Gcc: zelená dělená součtem
           červené, zelené a modré. Snímky se kontrolují kvůli sněhu, mlze, kapkám, změně záběru a automatickému vyvážení
           bílé. Denní hodnoty se vyhladí a z rostoucí a klesající části křivky se určí přechodová data.{" "}
-          <ReferenceLink href="https://doi.org/10.1038/sdata.2018.28">Richardson et al., 2018</ReferenceLink>
+          <SourceLink id="DOI_10_1038_sdata_2018_28">Richardson et al., 2018</SourceLink>
         </p>
 
         <p>
@@ -186,7 +178,7 @@ export function PhenologyArticle() {
           cameraNDVI, druhý pohled na proměnu porostu. Verze PhenoCam 3 zahrnuje snímky z let 2000–2023 na 738 místech,
           většinou v Severní Americe. Zveřejňuje původní obrazy, denní barvové hodnoty i odvozená přechodová data; u
           každého místa zůstává maska sledované části obrazu a údaj o kontrole kvality.{" "}
-          <ReferenceLink href="https://doi.org/10.5194/essd-17-6531-2025">Young et al., 2025</ReferenceLink>
+          <SourceLink id="DOI_10_5194_essd_17_6531_2025">Young et al., 2025</SourceLink>
         </p>
 
         <figure className="article-figure">
@@ -205,7 +197,7 @@ export function PhenologyArticle() {
             roce 2019. Prudký jarní vrchol Gcc vzniká velmi sytou barvou mladých listů; cameraNDVI jej nemá a na podzim
             klesá pozvolněji. Křivky tedy zachycují odlišné vlastnosti téhož porostu a jejich přechodová data nemusejí
             být shodná. Zdroj:{" "}
-            <ReferenceLink href="https://doi.org/10.5194/essd-17-6531-2025">Young et al., 2025, obr. 5</ReferenceLink>,
+            <SourceLink id="DOI_10_5194_essd_17_6531_2025">Young et al., 2025, obr. 5</SourceLink>,
             licence CC BY 4.0.
           </figcaption>
         </figure>
@@ -217,7 +209,7 @@ export function PhenologyArticle() {
           používá EVI2 odvozený z červeného a blízkého infračerveného záření. Algoritmus proloží pozorování křivkou a
           pro nejvýše dva vegetační cykly určí začátek růstu zeleně, její maximum, začátek poklesu a klidovou část roku.
           Součástí jsou příznaky kvality pro celý bod i jednotlivá data.{" "}
-          <ReferenceLink href="https://lpdaac.usgs.gov/documents/1417/MCD12Q2_User_Guide_V61.pdf">Příručka MCD12Q2 v6.1</ReferenceLink>
+          <SourceLink id="WEB_U_S_Geological_Survey_Prirucka_MCD12Q2_v6_1_dbceb14f">Příručka MCD12Q2 v6.1</SourceLink>
         </p>
 
         <p>
@@ -225,8 +217,8 @@ export function PhenologyArticle() {
           začátku zelenání proto patří směsi odrazů v tomto bodu. Evropský HR-VPP využívá Sentinel-2 a vytváří
           desetimetrové mapy od roku 2017, ale i zde jde o vlastnost povrchu. Vyšší rozlišení zmenšuje mísení různých
           porostů; nepřevádí družicový výsledek na datum prvního listu konkrétní rostliny.{" "}
-          <ReferenceLink href="https://doi.org/10.1016/j.rse.2018.06.047">Zhang et al., 2018</ReferenceLink>;{" "}
-          <ReferenceLink href="https://doi.org/10.2909/5ae0f2a2-7ad8-4f7c-878d-f1b09d78d7a1">Copernicus HR-VPP</ReferenceLink>
+          <SourceLink id="DOI_10_1016_j_rse_2018_06_047">Zhang et al., 2018</SourceLink>;{" "}
+          <SourceLink id="DOI_10_2909_5ae0f2a2_7ad8_4f7c_878d_f1b09d78d7a1">Copernicus HR-VPP</SourceLink>
         </p>
 
         <h2>Zveřejňovaná data</h2>
@@ -246,8 +238,8 @@ export function PhenologyArticle() {
               záznamů pochází z německé sítě DWD. Původní fáze jsou přiřazeny ke stupnici BBCH.
             </p>
             <p>
-              <ReferenceLink href="https://pep725.eu/dataset/">Data a ukázkový soubor CC BY 4.0</ReferenceLink>{" · "}
-              <ReferenceLink href="https://doi.org/10.1007/s00484-018-1512-8">Popis databáze</ReferenceLink>
+              <SourceLink id="WEB_pep725_eu_Dataset_PEP725_5a0c6dbb">Data a ukázkový soubor CC BY 4.0</SourceLink>{" · "}
+              <SourceLink id="DOI_10_1007_s00484_018_1512_8">Popis databáze</SourceLink>
             </p>
           </section>
 
@@ -259,9 +251,9 @@ export function PhenologyArticle() {
               stáhnout výsledek jako tabulku.
             </p>
             <p>
-              <ReferenceLink href="https://pct.usanpn.org/data/observational">Výběr a stažení dat</ReferenceLink>{" · "}
-              <ReferenceLink href="https://doi.org/10.5066/F78S4N1V">Trvalý identifikátor souboru</ReferenceLink>{" · "}
-              <ReferenceLink href="https://doi.org/10.3133/ofr20181060">Dokumentace</ReferenceLink>
+              <SourceLink id="WEB_pct_usanpn_org_Observational_Data_USA_National_Phenology_Networ_1b964494">Výběr a stažení dat</SourceLink>{" · "}
+              <SourceLink id="DOI_10_5066_f78s4n1v">Trvalý identifikátor souboru</SourceLink>{" · "}
+              <SourceLink id="DOI_10_3133_ofr20181060">Dokumentace</SourceLink>
             </p>
           </section>
 
@@ -273,7 +265,7 @@ export function PhenologyArticle() {
               lokalitách a měsících nebo získat přes rozhraní API.
             </p>
             <p>
-              <ReferenceLink href="https://data.neonscience.org/data-products/DP1.10055.001">Popis, dokumentace a stažení</ReferenceLink>
+              <SourceLink id="WEB_data_neonscience_org_NEON_Data_Product_94759182">Popis, dokumentace a stažení</SourceLink>
             </p>
           </section>
 
@@ -285,8 +277,8 @@ export function PhenologyArticle() {
               popsána a doložena v jejích doplňkových souborech.
             </p>
             <p>
-              <ReferenceLink href="https://naturescalendar.woodlandtrust.org.uk/">Portál a vkládání pozorování</ReferenceLink>{" · "}
-              <ReferenceLink href="https://doi.org/10.6084/m9.figshare.c.5800155">Soubory studie Büntgen et al.</ReferenceLink>
+              <SourceLink id="WEB_naturescalendar_woodlandtrus_Nature_s_Calendar_b68eee94">Portál a vkládání pozorování</SourceLink>{" · "}
+              <SourceLink id="DOI_10_6084_m9_figshare_c_5800155">Soubory studie Büntgen et al.</SourceLink>
             </p>
           </section>
 
@@ -297,8 +289,8 @@ export function PhenologyArticle() {
               načasování z meteorologických radarů; veřejný balíček na Figshare má popis souborů a licenci CC BY 4.0.
             </p>
             <p>
-              <ReferenceLink href="https://doi.org/10.6084/m9.figshare.10062239.v1">Data studie</ReferenceLink>{" · "}
-              <ReferenceLink href="https://doi.org/10.1038/s41558-019-0648-9">Odborný článek</ReferenceLink>
+              <SourceLink id="DOI_10_6084_m9_figshare_10062239_v1">Data studie</SourceLink>{" · "}
+              <SourceLink id="DOI_10_1038_s41558_019_0648_9">Odborný článek</SourceLink>
             </p>
           </section>
 
@@ -310,9 +302,9 @@ export function PhenologyArticle() {
               novější, ale neprošla stejnou závěrečnou kontrolou jako verze 3.
             </p>
             <p>
-              <ReferenceLink href="https://doi.org/10.3334/ORNLDAAC/2364">Původní snímky</ReferenceLink>{" · "}
-              <ReferenceLink href="https://doi.org/10.3334/ORNLDAAC/2389">Odvozená data</ReferenceLink>{" · "}
-              <ReferenceLink href="https://phenocam.nau.edu/phenocam_explorer/">Prohlížeč míst</ReferenceLink>
+              <SourceLink id="DOI_10_3334_ornldaac_2364">Původní snímky</SourceLink>{" · "}
+              <SourceLink id="DOI_10_3334_ornldaac_2389">Odvozená data</SourceLink>{" · "}
+              <SourceLink id="WEB_phenocam_nau_edu_PhenoCam_Explorer_V3_173fd14b">Prohlížeč míst</SourceLink>
             </p>
           </section>
 
@@ -324,8 +316,8 @@ export function PhenologyArticle() {
               bezplatně stáhnout po přihlášení k NASA Earthdata.
             </p>
             <p>
-              <ReferenceLink href="https://doi.org/10.5067/MODIS/MCD12Q2.061">MODIS MCD12Q2 v6.1</ReferenceLink>{" · "}
-              <ReferenceLink href="https://doi.org/10.5067/VIIRS/VNP22Q2.002">VIIRS VNP22Q2 v2</ReferenceLink>
+              <SourceLink id="DOI_10_5067_modis_mcd12q2_061">MODIS MCD12Q2 v6.1</SourceLink>{" · "}
+              <SourceLink id="DOI_10_5067_viirs_vnp22q2_002">VIIRS VNP22Q2 v2</SourceLink>
             </p>
           </section>
 
@@ -337,10 +329,10 @@ export function PhenologyArticle() {
               stahují se podle území a roku.
             </p>
             <p>
-              <ReferenceLink href="https://land.copernicus.eu/en/products/vegetation/high-resolution-seasonal-productivity">
+              <SourceLink id="WEB_Copernicus_Seasonal_Productivity_2017_present_raster_10_m_E_9528f67a">
                 Prohlížení a stažení
-              </ReferenceLink>{" · "}
-              <ReferenceLink href="https://doi.org/10.2909/5ae0f2a2-7ad8-4f7c-878d-f1b09d78d7a1">Trvalý identifikátor</ReferenceLink>
+              </SourceLink>{" · "}
+              <SourceLink id="DOI_10_2909_5ae0f2a2_7ad8_4f7c_878d_f1b09d78d7a1">Trvalý identifikátor</SourceLink>
             </p>
           </section>
         </div>
@@ -360,8 +352,8 @@ export function PhenologyArticle() {
           nebo rozdíl mezi nimi je samostatný výsledek, nikoli chyba, pokud každý údaj odpovídá své zveřejněné
           definici. Studie, které porovnávají terén, kamery a družice, proto pracují s konkrétními přechody a uvádějí
           prostorové rozlišení i nejistotu data.{" "}
-          <ReferenceLink href="https://doi.org/10.1016/j.agrformet.2014.05.008">Petach et al., 2014</ReferenceLink>;{" "}
-          <ReferenceLink href="https://doi.org/10.1016/j.agrformet.2018.03.003">Zhang et al., 2018</ReferenceLink>
+          <SourceLink id="DOI_10_1016_j_agrformet_2014_05_008">Petach et al., 2014</SourceLink>;{" "}
+          <SourceLink id="DOI_10_1016_j_agrformet_2018_03_003">Zhang et al., 2018</SourceLink>
         </p>
 
         <p>
@@ -369,9 +361,9 @@ export function PhenologyArticle() {
           pozorování, ale 14 milionů dodala německá síť. PhenoCam má 738 stanovišť, většinu v Severní Americe. Globální
           souhrn ptačí fenologie od Romana a kolegů zahrnuje pět kontinentů, avšak 50,05 % podkladů pochází z Evropy,
           33,65 % ze Severní Ameriky a žádný z Jižní či Střední Ameriky. Počet záznamů proto není totéž co rovnoměrné
-          pokrytí planety. <ReferenceLink href="https://doi.org/10.1007/s00484-018-1512-8">Templ et al., 2018</ReferenceLink>;{" "}
-          <ReferenceLink href="https://doi.org/10.5194/essd-17-6531-2025">Young et al., 2025</ReferenceLink>;{" "}
-          <ReferenceLink href="https://doi.org/10.1002/ecm.1552">Romano et al., 2023</ReferenceLink>
+          pokrytí planety. <SourceLink id="DOI_10_1007_s00484_018_1512_8">Templ et al., 2018</SourceLink>;{" "}
+          <SourceLink id="DOI_10_5194_essd_17_6531_2025">Young et al., 2025</SourceLink>;{" "}
+          <SourceLink id="DOI_10_1002_ecm_1552">Romano et al., 2023</SourceLink>
         </p>
 
         <h2 id="pozorovani">Pozorování</h2>
@@ -382,7 +374,7 @@ export function PhenologyArticle() {
           % dřívější průběh; u 30 % byl posun statisticky průkazný. Statisticky průkazné pozdější načasování měly 3 %.
           Průměrný posun jarních a letních fází činil 2,5 dne za desetiletí směrem k dřívějším dnům. Výsledky zbarvení
           a opadu listů neměly v tomto souboru jednotný směr.{" "}
-          <ReferenceLink href="https://doi.org/10.1111/j.1365-2486.2006.01193.x">Menzel et al., 2006</ReferenceLink>
+          <SourceLink id="DOI_10_1111_j_1365_2486_2006_01193_x">Menzel et al., 2006</SourceLink>
         </p>
 
         <p>
@@ -392,7 +384,7 @@ export function PhenologyArticle() {
           načasování a 54 % bylo statisticky průkazných. Průměr činil 0,240 dne za rok směrem k dřívějšímu datu. U
           zbarvení listů bylo 57 % výsledků pozdějších a průměrný posun činil 0,036 dne za rok směrem k pozdějšímu
           datu. Síla i směr se lišily mezi fázemi a mezi třicetiletými obdobími.{" "}
-          <ReferenceLink href="https://doi.org/10.1111/gcb.15000">Menzel et al., 2020</ReferenceLink>
+          <SourceLink id="DOI_10_1111_gcb_15000">Menzel et al., 2020</SourceLink>
         </p>
 
         <p>
@@ -401,7 +393,7 @@ export function PhenologyArticle() {
           Srovnání zahrnuje jiné počty pozorování, měnící se zastoupení míst a druhů a mimořádně dlouhé časové rozpětí;
           neznamená proto, že každý druh na každém místě posunul kvetení přesně o 26 dnů. Autoři zveřejnili také
           oddělené výsledky pro růstové formy, sever a jih, města a venkov i soubor 25 druhů zaznamenávaných v obou
-          částech. <ReferenceLink href="https://doi.org/10.1098/rspb.2021.2456">Büntgen et al., 2022</ReferenceLink>
+          částech. <SourceLink id="DOI_10_1098_rspb_2021_2456">Büntgen et al., 2022</SourceLink>
         </p>
 
         <figure className="article-figure">
@@ -419,7 +411,7 @@ export function PhenologyArticle() {
             1753–2019, modrá 122 574 pozorování do roku 1986 a červená 296 780 pozorování z let 1987–2019. Svislé čáry
             označují průměrný den každého souboru: 132 ve starší a 106 v novější části, rozdíl 25,94 dne. Graf zobrazuje
             rozdělení všech zahrnutých zápisů, nikoli křivku jediného druhu nebo stejné skupiny míst v každém roce.
-            Zdroj: <ReferenceLink href="https://doi.org/10.1098/rspb.2021.2456">Büntgen et al., 2022, obr. 2</ReferenceLink>,
+            Zdroj: <SourceLink id="DOI_10_1098_rspb_2021_2456">Büntgen et al., 2022, obr. 2</SourceLink>,
             licence CC BY 4.0.
           </figcaption>
         </figure>
@@ -430,7 +422,7 @@ export function PhenologyArticle() {
           měření. Zpracování 24 let zjistilo, že průměrné datum vrcholu tahu se posunulo k dřívějším dnům na jaře i na
           podzim; velikost změny byla obecně větší ve vyšších zeměpisných šířkách. Radar nerozlišuje jednotlivé druhy,
           ale zaznamenává souhrnný pohyb stovek druhů přes kontinent a jeho výsledek nezávisí na počtu dobrovolníků v
-          terénu. <ReferenceLink href="https://doi.org/10.1038/s41558-019-0648-9">Horton et al., 2020</ReferenceLink>
+          terénu. <SourceLink id="DOI_10_1038_s41558_019_0648_9">Horton et al., 2020</SourceLink>
         </p>
 
         <p>
@@ -438,7 +430,7 @@ export function PhenologyArticle() {
           stanovištích v Severní Americe v letech 1961–2018. Autoři počítali medián průchodu, nikoli pouze prvního
           ptáka. Směr dlouhodobé změny nebyl společný všem druhům a oběma částem roku; u některých druhů a míst byl
           patrný dřívější průchod, u jiných nebyla lineární změna průkazná.{" "}
-          <ReferenceLink href="https://doi.org/10.1111/1365-2656.13887">Horton et al., 2023</ReferenceLink>
+          <SourceLink id="DOI_10_1111_1365_2656_13887">Horton et al., 2023</SourceLink>
         </p>
 
         <p>
@@ -447,7 +439,7 @@ export function PhenologyArticle() {
           nebyla společná změna statisticky průkazná. Výsledek má výrazně nerovnoměrné zeměpisné pokrytí a zahrnuje
           různé ukazatele počátku i středu sezóny; popisuje proto průměr přes zveřejněné podklady, ne jednotný posun
           každého ptačího druhu na Zemi.{" "}
-          <ReferenceLink href="https://doi.org/10.1002/ecm.1552">Romano et al., 2023</ReferenceLink>
+          <SourceLink id="DOI_10_1002_ecm_1552">Romano et al., 2023</SourceLink>
         </p>
 
         <h3>Co lze z těchto výsledků říci společně</h3>
@@ -478,48 +470,48 @@ export function PhenologyArticle() {
           <section>
             <h3>Definice a terénní metody</h3>
             <ul>
-              <li><ReferenceLink href="https://doi.org/10.1007/s00484-014-0789-5">Denny et al., 2014: standardizované sledování stavu a intenzity fenofází</ReferenceLink></li>
-              <li><ReferenceLink href="https://www.openagrar.de/servlets/MCRFileNodeServlet/openagrar_derivate_00010428/BBCH-Skala_en.pdf">Meier, 2001: stupnice BBCH</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1007/s00484-018-1512-8">Templ et al., 2018: evropská databáze PEP725</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1111/j.1365-2745.2008.01436.x">Miller-Rushing et al., 2008: přesnost prvních dat kvetení</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1007/s00442-008-0959-4">van Strien et al., 2008: vliv počtu pozorování na první záznam</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1111/j.2041-210X.2010.00020.x">Moussus et al., 2010: porovnání deseti ukazatelů sezónního načasování</ReferenceLink></li>
+              <li><SourceLink id="DOI_10_1007_s00484_014_0789_5">Denny et al., 2014: standardizované sledování stavu a intenzity fenofází</SourceLink></li>
+              <li><SourceLink id="WEB_openagrar_de_Meier_2001_stupnice_BBCH_f90d8917">Meier, 2001: stupnice BBCH</SourceLink></li>
+              <li><SourceLink id="DOI_10_1007_s00484_018_1512_8">Templ et al., 2018: evropská databáze PEP725</SourceLink></li>
+              <li><SourceLink id="DOI_10_1111_j_1365_2745_2008_01436_x">Miller-Rushing et al., 2008: přesnost prvních dat kvetení</SourceLink></li>
+              <li><SourceLink id="DOI_10_1007_s00442_008_0959_4">van Strien et al., 2008: vliv počtu pozorování na první záznam</SourceLink></li>
+              <li><SourceLink id="DOI_10_1111_j_2041_210x_2010_00020_x">Moussus et al., 2010: porovnání deseti ukazatelů sezónního načasování</SourceLink></li>
             </ul>
           </section>
 
           <section>
             <h3>Historické prameny</h3>
             <ul>
-              <li><ReferenceLink href="https://db.huntbot.org/linndiss/72/">Berger a Linnaeus, 1756: Calendarium Florae, původní tisk a PDF</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.2307/2261570">Sparks a Carey, 1995: Marshamova pozorování 1736–1947</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1002/joc.1594">Aono a Kazui, 2008: rekonstrukce kvetení třešní v Kjótu</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1007/s00484-021-02185-y">Brügger a Vassella, 2022: historie Mezinárodních fenologických zahrad</ReferenceLink></li>
+              <li><SourceLink id="WEB_db_huntbot_org_Original_Linnaean_Dissertations_Hunt_Institute_f_b8827d4c">Berger a Linnaeus, 1756: Calendarium Florae, původní tisk a PDF</SourceLink></li>
+              <li><SourceLink id="DOI_10_2307_2261570">Sparks a Carey, 1995: Marshamova pozorování 1736–1947</SourceLink></li>
+              <li><SourceLink id="DOI_10_1002_joc_1594">Aono a Kazui, 2008: rekonstrukce kvetení třešní v Kjótu</SourceLink></li>
+              <li><SourceLink id="DOI_10_1007_s00484_021_02185_y">Brügger a Vassella, 2022: historie Mezinárodních fenologických zahrad</SourceLink></li>
             </ul>
           </section>
 
           <section>
             <h3>Současná pozorování</h3>
             <ul>
-              <li><ReferenceLink href="https://doi.org/10.1111/j.1365-2486.2006.01193.x">Menzel et al., 2006: 125 000 evropských měření v letech 1971–2000</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1111/gcb.15000">Menzel et al., 2020: rostlinné fáze v Německu, Rakousku a Švýcarsku 1951–2018</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1098/rspb.2021.2456">Büntgen et al., 2022: první kvetení ve Spojeném království 1753–2019</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1038/s41558-019-0648-9">Horton et al., 2020: noční tah ptáků z meteorologických radarů</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1111/1365-2656.13887">Horton et al., 2023: šest desetiletí kroužkovacích záznamů lesňáčků</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1002/ecm.1552">Romano et al., 2023: celosvětový souhrn ptačího tahu a hnízdění</ReferenceLink></li>
+              <li><SourceLink id="DOI_10_1111_j_1365_2486_2006_01193_x">Menzel et al., 2006: 125 000 evropských měření v letech 1971–2000</SourceLink></li>
+              <li><SourceLink id="DOI_10_1111_gcb_15000">Menzel et al., 2020: rostlinné fáze v Německu, Rakousku a Švýcarsku 1951–2018</SourceLink></li>
+              <li><SourceLink id="DOI_10_1098_rspb_2021_2456">Büntgen et al., 2022: první kvetení ve Spojeném království 1753–2019</SourceLink></li>
+              <li><SourceLink id="DOI_10_1038_s41558_019_0648_9">Horton et al., 2020: noční tah ptáků z meteorologických radarů</SourceLink></li>
+              <li><SourceLink id="DOI_10_1111_1365_2656_13887">Horton et al., 2023: šest desetiletí kroužkovacích záznamů lesňáčků</SourceLink></li>
+              <li><SourceLink id="DOI_10_1002_ecm_1552">Romano et al., 2023: celosvětový souhrn ptačího tahu a hnízdění</SourceLink></li>
             </ul>
           </section>
 
           <section>
             <h3>Kamery a družice</h3>
             <ul>
-              <li><ReferenceLink href="https://doi.org/10.1038/sdata.2018.28">Richardson et al., 2018: metodika a první verze PhenoCam</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.5194/essd-17-6531-2025">Young et al., 2025: PhenoCam v3, 738 míst a data do roku 2023</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1016/S0034-4257(02)00135-9">Zhang et al., 2003: odvození sezónních přechodů z MODIS</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1016/j.rse.2018.06.047">Zhang et al., 2018: vznik a ověření produktu VIIRS</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1016/j.agrformet.2018.03.003">Zhang et al., 2018: porovnání přechodových dat VIIRS a PhenoCam</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.5067/MODIS/MCD12Q2.061">MODIS MCD12Q2 v6.1</ReferenceLink> a{" "}
-                <ReferenceLink href="https://doi.org/10.5067/VIIRS/VNP22Q2.002">VIIRS VNP22Q2 v2</ReferenceLink>: globální data ke stažení.</li>
-              <li><ReferenceLink href="https://doi.org/10.2909/5ae0f2a2-7ad8-4f7c-878d-f1b09d78d7a1">Copernicus HR-VPP</ReferenceLink>: desetimetrová evropská data od roku 2017.</li>
+              <li><SourceLink id="DOI_10_1038_sdata_2018_28">Richardson et al., 2018: metodika a první verze PhenoCam</SourceLink></li>
+              <li><SourceLink id="DOI_10_5194_essd_17_6531_2025">Young et al., 2025: PhenoCam v3, 738 míst a data do roku 2023</SourceLink></li>
+              <li><SourceLink id="DOI_10_1016_s0034_4257_02_00135_9">Zhang et al., 2003: odvození sezónních přechodů z MODIS</SourceLink></li>
+              <li><SourceLink id="DOI_10_1016_j_rse_2018_06_047">Zhang et al., 2018: vznik a ověření produktu VIIRS</SourceLink></li>
+              <li><SourceLink id="DOI_10_1016_j_agrformet_2018_03_003">Zhang et al., 2018: porovnání přechodových dat VIIRS a PhenoCam</SourceLink></li>
+              <li><SourceLink id="DOI_10_5067_modis_mcd12q2_061">MODIS MCD12Q2 v6.1</SourceLink> a{" "}
+                <SourceLink id="DOI_10_5067_viirs_vnp22q2_002">VIIRS VNP22Q2 v2</SourceLink>: globální data ke stažení.</li>
+              <li><SourceLink id="DOI_10_2909_5ae0f2a2_7ad8_4f7c_878d_f1b09d78d7a1">Copernicus HR-VPP</SourceLink>: desetimetrová evropská data od roku 2017.</li>
             </ul>
           </section>
 
@@ -528,18 +520,18 @@ export function PhenologyArticle() {
             <ul>
               <li>
                 Metodický obraz pochází z{" "}
-                <ReferenceLink href="https://doi.org/10.1007/s00484-014-0789-5">Denny et al., 2014, obr. 1</ReferenceLink>.
+                <SourceLink id="DOI_10_1007_s00484_014_0789_5">Denny et al., 2014, obr. 1</SourceLink>.
                 Článek i obraz jsou zveřejněny pod licencí CC BY; převzatý soubor je z univerzitní výukové kopie se
                 zachovaným odkazem na původní práci.
               </li>
               <li>
                 Graf kvetení pochází z{" "}
-                <ReferenceLink href="https://doi.org/10.1098/rspb.2021.2456">Büntgen et al., 2022, obr. 2</ReferenceLink>,
+                <SourceLink id="DOI_10_1098_rspb_2021_2456">Büntgen et al., 2022, obr. 2</SourceLink>,
                 publikovaného pod licencí CC BY 4.0.
               </li>
               <li>
                 Kamerový graf pochází z{" "}
-                <ReferenceLink href="https://doi.org/10.5194/essd-17-6531-2025">Young et al., 2025, obr. 5</ReferenceLink>,
+                <SourceLink id="DOI_10_5194_essd_17_6531_2025">Young et al., 2025, obr. 5</SourceLink>,
                 publikovaného pod licencí CC BY 4.0. Všechny tři obrazy jsou převzaty beze změny; české vysvětlení je
                 uvedeno v popisku stránky.
               </li>

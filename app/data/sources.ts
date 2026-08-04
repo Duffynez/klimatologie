@@ -1,3 +1,5 @@
+import { articleSources } from "./articleSources";
+
 export type SourceCategory = "science" | "book" | "politics" | "organization";
 
 export const sourceCategoryMeta = {
@@ -34,7 +36,7 @@ export const sources: Source[] = [
   { id: "1884_Langley", title: "Researches on Solar Heat and its Absorption by the Earth's Atmosphere", author: "Samuel Pierpont Langley", year: 1884, publication: "Professional Papers of the Signal Service", type: "Report", category: "science", driveFileId: "1RFtDRgwXmn8ETxmUdINDzs8IDMoFmJyY", topics: ["historie", "atmosféra"] },
   { id: "1894_Hogbom", title: "Om sannolikheten för sekulära förändringar i atmosfärens kolsyrehalt", author: "Arvid Högbom", year: 1894, publication: "Svensk Kemisk Tidskrift", type: "Studie", category: "science", driveFileId: "1l_AeVv8G8S0BKzzUr4bTvQZN5-gN_VxH", topics: ["historie", "uhlík"] },
   { id: "1896_Arrhenius", title: "On the Influence of Carbonic Acid in the Air upon the Temperature of the Ground", author: "Svante Arrhenius", year: 1896, publication: "Philosophical Magazine and Journal of Science", type: "Studie", category: "science", driveFileId: "1-gReg5x8Tsm43c7GCDEB6JV80VXDj0VU", topics: ["historie", "uhlík"] },
-  { id: "1938_Callendar", title: "The Artificial Production of Carbon Dioxide and its Influence on Temperature", author: "Guy Stewart Callendar", year: 1938, publication: "Quarterly Journal of the Royal Meteorological Society", type: "Studie", category: "science", driveFileId: "1hL9njRIBCqEfW3qz8cV2GidMB7QeKCZr", topics: ["historie", "teplota"] },
+  { id: "1938_Callendar", title: "The Artificial Production of Carbon Dioxide and its Influence on Temperature", author: "Guy Stewart Callendar", year: 1938, publication: "Quarterly Journal of the Royal Meteorological Society", type: "Studie", category: "science", driveFileId: "1hL9njRIBCqEfW3qz8cV2GidMB7QeKCZr", externalUrl: "https://doi.org/10.1002/qj.49706427503", topics: ["historie", "teplota"] },
   { id: "1941_Milankovic", title: "Kanon der Erdbestrahlung und seine Anwendung auf das Eiszeitenproblem", author: "Milutin Milanković", year: 1941, publication: "Royal Serbian Academy", type: "Kniha", category: "book", driveFileId: "19N2a7IvozAvjVkxuqw9XHJV2UlU9m2Jt", topics: ["historie", "klima"] },
   { id: "1952_Libby", title: "Radiocarbon Dating", author: "Willard Libby", year: 1952, publication: "University of Chicago Press", type: "Kniha", category: "book", driveFileId: "1oQH4eoKfATFNVo0PQZDdZAhLhcOXBKqD", topics: ["historie", "metody"] },
   { id: "1955_Emiliani", title: "Pleistocene Temperatures", author: "Cesare Emiliani", year: 1955, publication: "The Journal of Geology", type: "Studie", category: "science", driveFileId: "1BUN9N05ph73dKAEPpzYsXT7QpjaJ6X6A", topics: ["historie", "teplota"] },
@@ -65,6 +67,7 @@ export const sources: Source[] = [
   { id: "2026_USCRN_Daily01_Readme", title: "USCRN Daily01: Description of Data Fields", author: "NOAA National Centers for Environmental Information", year: 2026, publication: "U.S. Climate Reference Network", type: "Datová dokumentace", category: "organization", externalUrl: "https://www.ncei.noaa.gov/pub/data/uscrn/products/daily01/readme.txt", citationLabel: "NOAA/NCEI Daily01", topics: ["metody", "teplota", "data", "USCRN"] },
   { id: "2026_SeaBird_SBE41", title: "SBE 41/41CP Deep Argo CTD: Technical Specifications", author: "Sea-Bird Scientific", year: 2026, publication: "SBE 41/41CP Deep datasheet DS.53", type: "Technická dokumentace přístroje", category: "organization", externalUrl: "https://www.seabird.com/hubfs/Product%20Assets/SBE%2041/Datasheets/SBE%2041_41%20CP%20Deep%20DS.53.March26.pdf?hsLang=en", citationLabel: "Sea-Bird 2026", topics: ["metody", "teplota", "termistory", "Argo", "oceán"] },
   { id: "2026_Argo_Data", title: "How to Use Argo Profile Files", author: "Argo Data Management Team", year: 2026, publication: "International Argo Program", type: "Datová dokumentace", category: "organization", externalUrl: "https://argo.ucsd.edu/data/how-to-use-argo-files/", citationLabel: "Argo 2026", topics: ["metody", "teplota", "data", "Argo", "oceán"] },
+  ...articleSources,
 ];
 
 export const sourceById = (id: string) => sources.find((source) => source.id === id);

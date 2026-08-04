@@ -1,13 +1,5 @@
 import Image from "next/image";
-import type { ReactNode } from "react";
-
-function ReferenceLink({ href, children }: { href: string; children: ReactNode }) {
-  return (
-    <a className="article-reference" href={href} target="_blank" rel="noreferrer">
-      {children}
-    </a>
-  );
-}
+import { SourceLink } from "./SourceLink";
 
 export function AtmosphericHumidityArticle() {
   return (
@@ -64,9 +56,9 @@ export function AtmosphericHumidityArticle() {
           vzduch nasycení při své současné teplotě. Stejný vzduch proto může mít nezměněné množství vodní páry, ale po
           změně teploty jinou relativní vlhkost. Vymezení obou veličin i způsob jejich výpočtu z teploty a rosného bodu
           popisuje{" "}
-          <ReferenceLink href="https://repository.oceanbestpractices.org/bitstream/handle/11329/83/wmo_8_en-2012.pdf?sequence=1">
+          <SourceLink id="WEB_repository_oceanbestpractice_WMO_kapitola_o_mereni_vlhkosti_0667b41b">
             přístrojová příručka WMO
-          </ReferenceLink>
+          </SourceLink>
           .
         </p>
 
@@ -76,10 +68,10 @@ export function AtmosphericHumidityArticle() {
           oddělily podrobně zpracovaná měření nad pevninou a mořem do dnešního souboru HadISDH. Všechny tyto práce
           používají stejné základní rozlišení: množství vodní páry a míra nasycení vzduchu jsou dvě samostatně
           zveřejňované veličiny.{" "}
-          <ReferenceLink href="https://doi.org/10.1175/JCLI3816.1">Dai, 2006</ReferenceLink>,{" "}
-          <ReferenceLink href="https://doi.org/10.1175/2008JCLI2274.1">Willett et al., 2008</ReferenceLink>,{" "}
-          <ReferenceLink href="https://doi.org/10.5194/cp-10-1983-2014">Willett et al., 2014</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.5194/essd-12-2853-2020">Willett et al., 2020</ReferenceLink>
+          <SourceLink id="DOI_10_1175_jcli3816_1">Dai, 2006</SourceLink>,{" "}
+          <SourceLink id="DOI_10_1175_2008jcli2274_1">Willett et al., 2008</SourceLink>,{" "}
+          <SourceLink id="DOI_10_5194_cp_10_1983_2014">Willett et al., 2014</SourceLink> a{" "}
+          <SourceLink id="DOI_10_5194_essd_12_2853_2020">Willett et al., 2020</SourceLink>
         </p>
 
         <p>
@@ -87,8 +79,8 @@ export function AtmosphericHumidityArticle() {
           dosaženou výšku vznikne samostatný údaj. Z těchto profilů lze také sečíst vodní páru mezi povrchem a zvolenou
           horní hladinou. Archiv IGRA uchovává původní profily i odvozené veličiny; přesnost dlouhodobého srovnání
           závisí na znalosti typu čidla a změn v provozu stanice.{" "}
-          <ReferenceLink href="https://doi.org/10.1175/JCLI3594.1">Durre et al., 2006</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.5194/amt-7-4463-2014">Dirksen et al., 2014</ReferenceLink>
+          <SourceLink id="DOI_10_1175_jcli3594_1">Durre et al., 2006</SourceLink> a{" "}
+          <SourceLink id="DOI_10_5194_amt_7_4463_2014">Dirksen et al., 2014</SourceLink>
         </p>
 
         <p>
@@ -96,7 +88,7 @@ export function AtmosphericHumidityArticle() {
           Výsledek se uvádí v kg/m². Protože jeden kilogram vody rozprostřený na jednom metru čtverečním vytvoří vrstvu
           vysokou jeden milimetr, stejné číslo lze zapsat také v milimetrech. Mears a kol. takto spojili měření
           jedenácti družicových přístrojů do vzájemně kalibrovaného záznamu od ledna 1988.{" "}
-          <ReferenceLink href="https://doi.org/10.1002/2018EA000363">Mears et al., 2018</ReferenceLink>
+          <SourceLink id="DOI_10_1002_2018ea000363">Mears et al., 2018</SourceLink>
         </p>
 
         <figure className="article-figure">
@@ -114,9 +106,9 @@ export function AtmosphericHumidityArticle() {
             vlhkosti s výškou, barva na povrchu celkové množství vodní páry ve sloupci. Jde o prostorovou orientaci,
             nikoli o graf dlouhodobé změny; výška i hustota bílé vrstvy jsou ve vizualizaci zvětšeny. Data: přístroj
             ATMS na NOAA-20. Vizualizace a kredit:{" "}
-            <ReferenceLink href="https://svs.gsfc.nasa.gov/4939">
+            <SourceLink id="WEB_NASA_NASA_Scientific_Visualization_Studio_3D_Water_Va_cbd0352b">
               NASA Scientific Visualization Studio
-            </ReferenceLink>
+            </SourceLink>
             .
           </figcaption>
         </figure>
@@ -127,9 +119,9 @@ export function AtmosphericHumidityArticle() {
           vlasového vlhkoměru, jeho kalibrace i pozorování v různých podmínkách. Odmaštěný lidský vlas se při změně
           vlhkosti prodlužoval nebo zkracoval a přes páku pohyboval ručičkou. Přístroj umožnil opakovatelně sledovat
           změny vlhkosti, jeho stupnice však vyjadřovala odezvu konkrétního materiálu.{" "}
-          <ReferenceLink href="https://books.google.com/books?id=Zmkfb8I-kVEC">
+          <SourceLink id="WEB_Google_Books_Essais_sur_l_hygrometrie_1er_Essai_Description_d_bb9f5517">
             de Saussure, 1783, digitalizovaný svazek
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <p>
@@ -137,9 +129,9 @@ export function AtmosphericHumidityArticle() {
           éteru a zaznamenal teplotu, při níž se na druhé baňce objevila rosa. Tím získal rosný bod, tedy veličinu
           založenou na pozorovaném okamžiku kondenzace. Dochovaný přístroj a odkaz na původní článek zveřejňuje
           Smithsonian Institution.{" "}
-          <ReferenceLink href="https://www.si.edu/object/nmah_1167504">
+          <SourceLink id="WEB_Smithsonian_Institution_Danielluv_vlhkomer_Smithsonian_fe197e61">
             Daniellův vlhkoměr, Smithsonian
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <p>
@@ -147,9 +139,9 @@ export function AtmosphericHumidityArticle() {
           obaluje navlhčený knot. Odpařování ochlazuje vlhký teploměr a z rozdílu obou teplot se společně s tlakem
           vypočte vlhkost. Tento princip se stal základem velké části historických staničních i lodních měření a WMO
           jej dodnes popisuje jako jednu z referenčních měřicích metod.{" "}
-          <ReferenceLink href="https://repository.oceanbestpractices.org/bitstream/handle/11329/83/wmo_8_en-2012.pdf?sequence=1">
+          <SourceLink id="WEB_repository_oceanbestpractice_WMO_kapitola_o_mereni_vlhkosti_0667b41b">
             WMO, kapitola o měření vlhkosti
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <p>
@@ -158,9 +150,9 @@ export function AtmosphericHumidityArticle() {
           Väisälä. Pravidelné výstupy se během dalších desetiletí staly součástí meteorologických sítí. Historii
           jednotlivých konstrukcí shrnuje přehled vývoje atmosférických pozorovacích systémů a vlastní měření dnes
           uchovává archiv IGRA.{" "}
-          <ReferenceLink href="https://doi.org/10.1175/AMSMONOGRAPHS-D-18-0006.1">
+          <SourceLink id="DOI_10_1175_amsmonographs_d_18_0006_1">
             Fleming et al., 2018
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <p>
@@ -168,8 +160,8 @@ export function AtmosphericHumidityArticle() {
           pracovat v červenci 1987 a jeho nástupci poskytují mikrovlnná měření nad oceány. Bevis a kol. v roce 1992
           ukázali, že množství vodní páry lze určit také ze zpoždění rádiového signálu mezi navigační družicí a přesně
           zaměřeným přijímačem na zemi.{" "}
-          <ReferenceLink href="https://www.ncei.noaa.gov/products/ssmi-hydrological">NOAA SSM/I</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1029/92JD01517">Bevis et al., 1992</ReferenceLink>
+          <SourceLink id="WEB_NOAA_Special_Sensor_Microwave_Imager_SSM_I_Hydrologic_795cc7a4">NOAA SSM/I</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1029_92jd01517">Bevis et al., 1992</SourceLink>
         </p>
 
         <h2>Jak se vlhkost měří</h2>
@@ -180,9 +172,9 @@ export function AtmosphericHumidityArticle() {
           kapacitu či odpor podle množství pohlcené vodní páry. Kondenzační vlhkoměr naopak ochlazuje zrcátko a měří
           teplotu, při které se na jeho povrchu vytvoří rosa nebo jinovatka. Z teploty, tlaku a jednoho takového údaje
           lze podle standardních vztahů vypočítat další vlhkostní veličiny.{" "}
-          <ReferenceLink href="https://repository.oceanbestpractices.org/bitstream/handle/11329/83/wmo_8_en-2012.pdf?sequence=1">
+          <SourceLink id="WEB_repository_oceanbestpractice_WMO_kapitola_o_mereni_vlhkosti_0667b41b">
             WMO Guide No. 8
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <p>
@@ -190,7 +182,7 @@ export function AtmosphericHumidityArticle() {
           povrchem. Nad pevninou se běžně pracuje s měřením přibližně ve dvou metrech. Na lodích se výška přístroje
           mezi plavidly liší a s výměnou lodního parku se v čase měnila; HadISDH.marine proto používá informace o
           výšce a typu ventilace při korekci známých rozdílů.{" "}
-          <ReferenceLink href="https://doi.org/10.5194/essd-12-2853-2020">Willett et al., 2020</ReferenceLink>
+          <SourceLink id="DOI_10_5194_essd_12_2853_2020">Willett et al., 2020</SourceLink>
         </p>
 
         <h3>Radiosonda</h3>
@@ -199,7 +191,7 @@ export function AtmosphericHumidityArticle() {
           teplotu, relativní vlhkost a polohu. Z každé sekundy letu tak vzniká bod s časem a výškou; spojením bodů
           vznikne svislý profil. Ve studii Durre a kol. byly z teploty, tlaku a poklesu rosného bodu vypočteny také
           součty vodní páry mezi povrchem a tlakovou hladinou 500 hPa.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2008JD010989">Durre et al., 2009</ReferenceLink>
+          <SourceLink id="DOI_10_1029_2008jd010989">Durre et al., 2009</SourceLink>
         </p>
 
         <figure className="article-figure article-figure--portrait">
@@ -215,9 +207,9 @@ export function AtmosphericHumidityArticle() {
           <figcaption>
             Radiosonda krátce po vypuštění. Nahoře je balón, uprostřed padák a dole přístrojová skříňka, která během
             letu měří mimo jiné teplotu, tlak a relativní vlhkost a údaje vysílá přijímací stanici. Fotografie a popis:{" "}
-            <ReferenceLink href="https://www.noaa.gov/noaa-collections/photo-library/nssl0020jpg">
+            <SourceLink id="WEB_NOAA_NOAA_Photo_Library_NSSL_00df5c76">
               NOAA Photo Library, NSSL
-            </ReferenceLink>
+            </SourceLink>
             ; dílo federální vlády USA.
           </figcaption>
         </figure>
@@ -228,7 +220,7 @@ export function AtmosphericHumidityArticle() {
           Referenční síť GRUAN proto ke každému profilu připojuje korekce i nejistotu závislou na výšce. Dirksen a kol.
           u sondy Vaisala RS92 popsali například opravu suchého zkreslení způsobeného zářením a porovnání s
           přesnějšími mrazovými vlhkoměry.{" "}
-          <ReferenceLink href="https://doi.org/10.5194/amt-7-4463-2014">Dirksen et al., 2014</ReferenceLink>
+          <SourceLink id="DOI_10_5194_amt_7_4463_2014">Dirksen et al., 2014</SourceLink>
         </p>
 
         <h3>Mikrovlnný radiometr na družici</h3>
@@ -237,7 +229,7 @@ export function AtmosphericHumidityArticle() {
           zvolených frekvenčních pásmech, z nichž některá jsou citlivá na vodní páru. Výpočet hledá takové množství
           vodní páry, při kterém modelované záření nejlépe odpovídá měření. Nad nezamrzlým oceánem lze zároveň odhadnout
           vliv kapalné vody v oblacích, větru a teploty mořské hladiny.{" "}
-          <ReferenceLink href="https://doi.org/10.1002/2018EA000363">Mears et al., 2018</ReferenceLink>
+          <SourceLink id="DOI_10_1002_2018ea000363">Mears et al., 2018</SourceLink>
         </p>
 
         <p>
@@ -245,9 +237,9 @@ export function AtmosphericHumidityArticle() {
           SSMIS, AMSR-E, WindSat a další na společnou kalibraci, porovnává jejich souběžná měření a teprve poté skládá
           denní a měsíční mapy. Výsledkem je pozorování celkové vodní páry nad nezamrzlými oceány od ledna 1988 v
           buňkách o velikosti jednoho stupně.{" "}
-          <ReferenceLink href="https://www.remss.com/measurements/atmospheric-water-vapor/tpw-1-deg-product/">
+          <SourceLink id="WEB_Remote_Sensing_Systems_Remote_Sensing_Systems_e8e6fee6">
             RSS TPW Version 7 Release 1
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <h3>Pozemní přijímač navigačních družic</h3>
@@ -256,7 +248,7 @@ export function AtmosphericHumidityArticle() {
           zpoždění, z tlaku u stanice se vypočte jeho suchá část a zbývající část se převede na množství vodní páry nad
           přijímačem. Potřebná je také teplota, která tento převod zpřesňuje. Metodu formulovali Bevis a kol.; dnešní
           sítě poskytují téměř souvislá měření za každého počasí.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/92JD01517">Bevis et al., 1992</ReferenceLink>
+          <SourceLink id="DOI_10_1029_92jd01517">Bevis et al., 1992</SourceLink>
         </p>
 
         <h2>Jak vzniká zveřejněný záznam</h2>
@@ -266,7 +258,7 @@ export function AtmosphericHumidityArticle() {
           provádí převody už z jednotlivých hodinových hodnot. To je důležité, protože vztahy mezi teplotou, rosným
           bodem a relativní vlhkostí nejsou lineární; měsíční průměr jedné veličiny proto nelze beze zbytku převést na
           měsíční průměr jiné.{" "}
-          <ReferenceLink href="https://doi.org/10.5194/cp-10-1983-2014">Willett et al., 2014</ReferenceLink>
+          <SourceLink id="DOI_10_5194_cp_10_1983_2014">Willett et al., 2014</SourceLink>
         </p>
 
         <h3>2. Automatické kontroly označí nepravděpodobná měření</h3>
@@ -275,7 +267,7 @@ export function AtmosphericHumidityArticle() {
           soulad se sousedními stanicemi. Podezřelý údaj dostane příznak kvality a do klimatického výpočtu nevstoupí.
           Původní hlášení přitom zůstává oddělené od opraveného souboru, takže lze zpětně zjistit, co kontrola
           vyřadila.{" "}
-          <ReferenceLink href="https://doi.org/10.5194/cp-8-1649-2012">Dunn et al., 2012</ReferenceLink>
+          <SourceLink id="DOI_10_5194_cp_8_1649_2012">Dunn et al., 2012</SourceLink>
         </p>
 
         <h3>3. Změny přístroje a stanice se hledají v sousedních záznamech</h3>
@@ -284,8 +276,8 @@ export function AtmosphericHumidityArticle() {
           skok, který nepatří skutečné změně okolního vzduchu. HadISDH hledá takové zlomy porovnáním stanice s okolními
           místy a používá údaje o známých změnách provozu. U lodí se samostatně opravuje výška měření a nedostatečné
           proudění vzduchu kolem některých přístrojů.{" "}
-          <ReferenceLink href="https://doi.org/10.5194/cp-10-1983-2014">Pevnina</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.5194/essd-12-2853-2020">oceán</ReferenceLink>
+          <SourceLink id="DOI_10_5194_cp_10_1983_2014">Pevnina</SourceLink> a{" "}
+          <SourceLink id="DOI_10_5194_essd_12_2853_2020">oceán</SourceLink>
         </p>
 
         <h3>4. Měsíční hodnoty se ukládají do zeměpisné mřížky</h3>
@@ -302,7 +294,7 @@ export function AtmosphericHumidityArticle() {
           přístroje, opravuje vzájemné posuny a z výsledků vytváří mapy se stejnou mřížkou. Měření nad pevninou, mořským
           ledem a při silném dešti jsou z klimatického souboru mikrovlnné vodní páry vynechána, protože odezvu povrchu
           a kapalné vody nelze stejným postupem spolehlivě oddělit.{" "}
-          <ReferenceLink href="https://doi.org/10.1002/2018EA000363">Mears et al., 2018</ReferenceLink>
+          <SourceLink id="DOI_10_1002_2018ea000363">Mears et al., 2018</SourceLink>
         </p>
 
         <h3>6. Nejistota se počítá pro měření i pro nepozorovaná místa</h3>
@@ -328,13 +320,13 @@ export function AtmosphericHumidityArticle() {
               veličině a měsíci. Data mají mřížku 5° × 5°, referenční období 1991–2020 a zveřejněnou nejistotu.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://www.metoffice.gov.uk/hadobs/hadisdh/downloadLAND.html">
+              <SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_8e11a3a4">
                 Stažení dat
-              </ReferenceLink>
+              </SourceLink>
               {" · "}
-              <ReferenceLink href="https://www.metoffice.gov.uk/hadobs/hadisdh/onlinematerialLAND.html">
+              <SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_fa0e4d55">
                 Grafy a textové tabulky
-              </ReferenceLink>
+              </SourceLink>
             </p>
           </section>
 
@@ -346,13 +338,13 @@ export function AtmosphericHumidityArticle() {
               severních oceánech a podstatně řidší jižně od 20° jižní šířky.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://www.metoffice.gov.uk/hadobs/hadisdh/downloadMARINE.html">
+              <SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_453433f7">
                 Oceánská data
-              </ReferenceLink>
+              </SourceLink>
               {" · "}
-              <ReferenceLink href="https://www.metoffice.gov.uk/hadobs/hadisdh/downloadBLEND.html">
+              <SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_9e8f60ef">
                 Spojená data
-              </ReferenceLink>
+              </SourceLink>
             </p>
           </section>
 
@@ -364,9 +356,9 @@ export function AtmosphericHumidityArticle() {
               dostupnost vlhkosti je však u každé stanice a výšky jiná a často začíná mnohem později.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://www.ncei.noaa.gov/products/weather-balloon/integrated-global-radiosonde-archive">
+              <SourceLink id="WEB_NOAA_Integrated_Global_Radiosonde_Archive_IGRA_ab0ea6c1">
                 Popis, dokumentace a stažení
-              </ReferenceLink>
+              </SourceLink>
             </p>
           </section>
 
@@ -377,11 +369,11 @@ export function AtmosphericHumidityArticle() {
               IGRA, ale její postup je určen pro přesné porovnávání přístrojů a dlouhodobé sledování horní atmosféry.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://www.gruan.org/data/data-products">
+              <SourceLink id="WEB_gruan_org_GRUAN_Homepage_Data_products_a7fb1534">
                 Certifikované datové produkty
-              </ReferenceLink>
+              </SourceLink>
               {" · "}
-              <ReferenceLink href="https://doi.org/10.5194/amt-7-4463-2014">Metodika</ReferenceLink>
+              <SourceLink id="DOI_10_5194_amt_7_4463_2014">Metodika</SourceLink>
             </p>
           </section>
 
@@ -392,9 +384,9 @@ export function AtmosphericHumidityArticle() {
               1 spojuje mikrovlnné radiometry do měsíčních map 1° × 1° a zveřejňuje je v souborech NetCDF.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://www.remss.com/measurements/atmospheric-water-vapor/tpw-1-deg-product/">
+              <SourceLink id="WEB_Remote_Sensing_Systems_Remote_Sensing_Systems_e8e6fee6">
                 Data, dokumentace a citace
-              </ReferenceLink>
+              </SourceLink>
             </p>
           </section>
 
@@ -406,9 +398,9 @@ export function AtmosphericHumidityArticle() {
               takže je možné porovnat, kde se nezávislé způsoby měření shodují a kde se rozcházejí.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://repository.library.noaa.gov/view/noaa/71485/noaa_71485_DS1.pdf">
+              <SourceLink id="WEB_NOAA_State_of_the_Climate_in_2024_tabulka_2_8_4784f00d">
                 State of the Climate in 2024
-              </ReferenceLink>
+              </SourceLink>
             </p>
           </section>
         </div>
@@ -426,7 +418,7 @@ export function AtmosphericHumidityArticle() {
           výpočtovým modelem a vytváří souvislou mapu. Allan a kol. ukázali, že změna zeměpisného pokrytí může ovlivnit
           globální průměr HadISDH; proto vedle čistě pozorovaných buněk porovnávali i variantu doplněnou reanalýzou.
           Zpráva za rok 2024 z téhož důvodu ukazuje ERA5 jak na celé ploše, tak pouze v místech pokrytých HadISDH.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2022JD036728">Allan et al., 2022</ReferenceLink>
+          <SourceLink id="DOI_10_1029_2022jd036728">Allan et al., 2022</SourceLink>
         </p>
 
         <p>
@@ -468,13 +460,13 @@ export function AtmosphericHumidityArticle() {
           <figcaption>
             Lineární trend měrné vlhkosti u povrchu v souboru HadISDH.blend.1.5.1.2024f, 1973–2024. Výpočet používá
             pozorované buňky nad pevninou a z lodí; intervaly zohledňují časovou závislost ročních hodnot. Zdroj:{" "}
-            <ReferenceLink href="https://www.metoffice.gov.uk/hadobs/hadisdh/trendmaterialBLEND.html">
+            <SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_17fcf283">
               Met Office Hadley Centre
-            </ReferenceLink>
+            </SourceLink>
             . © British Crown copyright 2025, Met Office. Contains public sector information licensed under the{" "}
-            <ReferenceLink href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">
+            <SourceLink id="WEB_The_National_Archives_Open_Government_Licence_4372b8a9">
               Open Government Licence v3.0
-            </ReferenceLink>
+            </SourceLink>
             .
           </figcaption>
         </figure>
@@ -509,13 +501,13 @@ export function AtmosphericHumidityArticle() {
           </div>
           <figcaption>
             Lineární trend relativní vlhkosti u povrchu v souboru HadISDH.blend.1.5.1.2024f, 1973–2024. Zdroj:{" "}
-            <ReferenceLink href="https://www.metoffice.gov.uk/hadobs/hadisdh/trendmaterialBLEND.html">
+            <SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_17fcf283">
               Met Office Hadley Centre
-            </ReferenceLink>
+            </SourceLink>
             . © British Crown copyright 2025, Met Office. Contains public sector information licensed under the{" "}
-            <ReferenceLink href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">
+            <SourceLink id="WEB_The_National_Archives_Open_Government_Licence_4372b8a9">
               Open Government Licence v3.0
-            </ReferenceLink>
+            </SourceLink>
             .
           </figcaption>
         </figure>
@@ -534,12 +526,12 @@ export function AtmosphericHumidityArticle() {
           oceánem vychází stejná střední hodnota <strong>+0,10 g/kg za desetiletí</strong>, interval je širší: +0,07 až
           +0,12 g/kg. Čísla se vztahují k dostupným buňkám mezi 70° jižní a 70° severní šířky a zahrnují opravu časové
           závislosti ročních hodnot.{" "}
-          <ReferenceLink href="https://www.metoffice.gov.uk/hadobs/hadisdh/onlinematerialLAND.html">
+          <SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_fa0e4d55">
             HadISDH.land 4.6.1.2024f
-          </ReferenceLink> a{" "}
-          <ReferenceLink href="https://www.metoffice.gov.uk/hadobs/hadisdh/onlinematerialMARINE.html">
+          </SourceLink> a{" "}
+          <SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_0790df63">
             HadISDH.marine 1.6.1.2024f
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <p>
@@ -556,9 +548,9 @@ export function AtmosphericHumidityArticle() {
           začátku záznamu v roce 1973. Ostatní produkty uvedené ve <em>State of the Climate in 2024</em> rovněž
           označily rok 2024 za nejvyšší: odchylky měrné vlhkosti se pohybovaly od 0,32 do 0,58 g/kg nad pevninou a od
           0,35 do 0,56 g/kg nad oceánem.{" "}
-          <ReferenceLink href="https://repository.library.noaa.gov/view/noaa/71485/noaa_71485_DS1.pdf">
+          <SourceLink id="WEB_NOAA_State_of_the_Climate_in_2024_tabulka_2_8_4784f00d">
             Willett et al., 2025, tabulka 2.6
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <p>
@@ -573,10 +565,10 @@ export function AtmosphericHumidityArticle() {
           pro období 1988–2017 vypočetli trend celkové vodní páry <strong>+0,436 kg/m² za desetiletí</strong>, tedy
           +1,49 % za desetiletí. Aktualizované srovnání ve zprávě za rok 2024 uvádí pro období 1991–2024{" "}
           <strong>+0,48 ± 0,07 kg/m² za desetiletí</strong>, neboli +1,64 ± 0,25 % za desetiletí.{" "}
-          <ReferenceLink href="https://doi.org/10.1002/2018EA000363">Mears et al., 2018</ReferenceLink> a{" "}
-          <ReferenceLink href="https://repository.library.noaa.gov/view/noaa/71485/noaa_71485_DS1.pdf">
+          <SourceLink id="DOI_10_1002_2018ea000363">Mears et al., 2018</SourceLink> a{" "}
+          <SourceLink id="WEB_NOAA_State_of_the_Climate_in_2024_tabulka_2_8_4784f00d">
             State of the Climate in 2024, tabulka 2.8
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <p>
@@ -593,7 +585,7 @@ export function AtmosphericHumidityArticle() {
           severní polokoule mezi roky 1973 a 2006 trend vodní páry od povrchu do 500 hPa{" "}
           <strong>+0,45 mm za desetiletí</strong>. Výsledek se vztahuje pouze k pevninským oblastem zastoupeným těmito
           stanicemi a k vymezené části atmosféry.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2008JD010989">Durre et al., 2009</ReferenceLink>
+          <SourceLink id="DOI_10_1029_2008jd010989">Durre et al., 2009</SourceLink>
         </p>
 
         <p>
@@ -623,61 +615,61 @@ export function AtmosphericHumidityArticle() {
             <ul>
               <li>
                 de Saussure, H.-B. (1783): <em>Essais sur l&apos;hygrométrie</em>, původní popis vlasového vlhkoměru.{" "}
-                <ReferenceLink href="https://books.google.com/books?id=Zmkfb8I-kVEC">
+                <SourceLink id="WEB_Google_Books_Essais_sur_l_hygrometrie_1er_Essai_Description_d_bb9f5517">
                   Digitalizovaný svazek
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 Daniell, J. F. (1820): původní kondenzační vlhkoměr a bibliografické údaje.{" "}
-                <ReferenceLink href="https://www.si.edu/object/nmah_1167504">
+                <SourceLink id="WEB_Smithsonian_Institution_Danielluv_vlhkomer_Smithsonian_fe197e61">
                   Smithsonian Institution
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 Dai, A. (2006): globální klimatologie a trendy povrchové vlhkosti v letech 1975–2005.{" "}
-                <ReferenceLink href="https://doi.org/10.1175/JCLI3816.1">DOI 10.1175/JCLI3816.1</ReferenceLink>
+                <SourceLink id="DOI_10_1175_jcli3816_1">DOI 10.1175/JCLI3816.1</SourceLink>
               </li>
               <li>
                 Willett, K. M. et al. (2008): spojený pozemní a oceánský soubor HadCRUH.{" "}
-                <ReferenceLink href="https://doi.org/10.1175/2008JCLI2274.1">
+                <SourceLink id="DOI_10_1175_2008jcli2274_1">
                   DOI 10.1175/2008JCLI2274.1
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 Willett, K. M. et al. (2014): vznik víceproměnného HadISDH nad pevninou.{" "}
-                <ReferenceLink href="https://doi.org/10.5194/cp-10-1983-2014">
+                <SourceLink id="DOI_10_5194_cp_10_1983_2014">
                   DOI 10.5194/cp-10-1983-2014
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 Willett, K. M. et al. (2020): vznik a nejistoty HadISDH.marine.{" "}
-                <ReferenceLink href="https://doi.org/10.5194/essd-12-2853-2020">
+                <SourceLink id="DOI_10_5194_essd_12_2853_2020">
                   DOI 10.5194/essd-12-2853-2020
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 Durre, I. et al. (2009): radiosondážní změny vodní páry nad pevninou severní polokoule.{" "}
-                <ReferenceLink href="https://doi.org/10.1029/2008JD010989">
+                <SourceLink id="DOI_10_1029_2008jd010989">
                   DOI 10.1029/2008JD010989
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 Bevis, M. et al. (1992): určení integrované vodní páry z GPS.{" "}
-                <ReferenceLink href="https://doi.org/10.1029/92JD01517">
+                <SourceLink id="DOI_10_1029_92jd01517">
                   DOI 10.1029/92JD01517
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 Mears, C. A. et al. (2018): spojení družicových mikrovlnných radiometrů a vyčíslení nejistoty.{" "}
-                <ReferenceLink href="https://doi.org/10.1002/2018EA000363">
+                <SourceLink id="DOI_10_1002_2018ea000363">
                   DOI 10.1002/2018EA000363
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 Allan, R. P. et al. (2022): porovnání povrchové, sloupcové a výškové vlhkosti v letech 1979–2020.{" "}
-                <ReferenceLink href="https://doi.org/10.1029/2022JD036728">
+                <SourceLink id="DOI_10_1029_2022jd036728">
                   DOI 10.1029/2022JD036728
-                </ReferenceLink>
+                </SourceLink>
               </li>
             </ul>
           </section>
@@ -688,27 +680,27 @@ export function AtmosphericHumidityArticle() {
               <li>
                 WMO: <em>Guide to Meteorological Instruments and Methods of Observation</em>, kapitola 4 o měření
                 vlhkosti.{" "}
-                <ReferenceLink href="https://repository.oceanbestpractices.org/bitstream/handle/11329/83/wmo_8_en-2012.pdf?sequence=1">
+                <SourceLink id="WEB_repository_oceanbestpractice_WMO_kapitola_o_mereni_vlhkosti_0667b41b">
                   Příručka WMO No. 8
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 Dunn, R. J. H. et al. (2012): automatické kontroly hodinových pozemních hlášení HadISD.{" "}
-                <ReferenceLink href="https://doi.org/10.5194/cp-8-1649-2012">
+                <SourceLink id="DOI_10_5194_cp_8_1649_2012">
                   DOI 10.5194/cp-8-1649-2012
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 Durre, I. et al. (2006): vznik a kontrola archivu IGRA.{" "}
-                <ReferenceLink href="https://doi.org/10.1175/JCLI3594.1">
+                <SourceLink id="DOI_10_1175_jcli3594_1">
                   DOI 10.1175/JCLI3594.1
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 Dirksen, R. J. et al. (2014): korekce a nejistota referenčních radiosondáží GRUAN.{" "}
-                <ReferenceLink href="https://doi.org/10.5194/amt-7-4463-2014">
+                <SourceLink id="DOI_10_5194_amt_7_4463_2014">
                   DOI 10.5194/amt-7-4463-2014
-                </ReferenceLink>
+                </SourceLink>
               </li>
             </ul>
           </section>
@@ -719,32 +711,32 @@ export function AtmosphericHumidityArticle() {
               <li>
                 Met Office Hadley Centre: HadISDH.land, HadISDH.marine a HadISDH.blend, konečné verze do prosince
                 2024.{" "}
-                <ReferenceLink href="https://www.metoffice.gov.uk/hadobs/hadisdh/">
+                <SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_c9cc26f3">
                   Hlavní stránka, dokumentace a rozcestník
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 NOAA/NCEI: Integrated Global Radiosonde Archive, verze 2.2.{" "}
-                <ReferenceLink href="https://www.ncei.noaa.gov/products/weather-balloon/integrated-global-radiosonde-archive">
+                <SourceLink id="WEB_NOAA_Integrated_Global_Radiosonde_Archive_IGRA_ab0ea6c1">
                   Profily, měsíční hodnoty a odvozené parametry
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 GRUAN: referenční profily tlaku, teploty, vlhkosti a větru s nejistotami.{" "}
-                <ReferenceLink href="https://www.gruan.org/data/data-products">Datové produkty</ReferenceLink>
+                <SourceLink id="WEB_gruan_org_GRUAN_Homepage_Data_products_a7fb1534">Datové produkty</SourceLink>
               </li>
               <li>
                 Remote Sensing Systems: Total Precipitable Water, Version 7 Release 1.{" "}
-                <ReferenceLink href="https://www.remss.com/measurements/atmospheric-water-vapor/tpw-1-deg-product/">
+                <SourceLink id="WEB_Remote_Sensing_Systems_Remote_Sensing_Systems_e8e6fee6">
                   Měsíční mapy a NetCDF
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 NOAA a American Meteorological Society: <em>State of the Climate in 2024</em>, oddíly o povrchové a
                 sloupcové vlhkosti.{" "}
-                <ReferenceLink href="https://repository.library.noaa.gov/view/noaa/71485/noaa_71485_DS1.pdf">
+                <SourceLink id="WEB_NOAA_State_of_the_Climate_in_2024_tabulka_2_8_4784f00d">
                   Úplná kapitola Global Climate
-                </ReferenceLink>
+                </SourceLink>
               </li>
             </ul>
           </section>
@@ -754,28 +746,28 @@ export function AtmosphericHumidityArticle() {
             <ul>
               <li>
                 Vizualizace vodní páry a přístroje ATMS byla převzata z{" "}
-                <ReferenceLink href="https://svs.gsfc.nasa.gov/4939">
+                <SourceLink id="WEB_NASA_NASA_Scientific_Visualization_Studio_3D_Water_Va_cbd0352b">
                   NASA Scientific Visualization Studio
-                </ReferenceLink>
+                </SourceLink>
                 ; stránka požaduje kredit NASA&apos;s Scientific Visualization Studio.
               </li>
               <li>
                 Fotografie radiosondy pochází z{" "}
-                <ReferenceLink href="https://www.noaa.gov/noaa-collections/photo-library/nssl0020jpg">
+                <SourceLink id="WEB_NOAA_NOAA_Photo_Library_NSSL_00df5c76">
                   NOAA Photo Library
-                </ReferenceLink>
+                </SourceLink>
                 . Kredit: NOAA Central Library; OAR/ERL/National Severe Storms Laboratory. Materiál NOAA je dílem
                 federální vlády USA, pokud u položky není uvedeno jinak.
               </li>
               <li>
                 Mapy trendů byly převzaty beze změny z{" "}
-                <ReferenceLink href="https://www.metoffice.gov.uk/hadobs/hadisdh/trendmaterialBLEND.html">
+                <SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_17fcf283">
                   Met Office Hadley Centre
-                </ReferenceLink>
+                </SourceLink>
                 . © British Crown copyright 2025, Met Office. Contains public sector information licensed under the{" "}
-                <ReferenceLink href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">
+                <SourceLink id="WEB_The_National_Archives_Open_Government_Licence_4372b8a9">
                   Open Government Licence v3.0
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
             </ul>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Citation } from "./Citation";
+import { SourceLink } from "./SourceLink";
 
 const blueHillDays = [
   { date: "1. 1.", minimum: "2,4", average: "5,9", maximum: "8,1" },
@@ -189,7 +190,7 @@ export function ResistanceThermometryArticle() {
             citlivý prvek je ukryt uvnitř kovového stonku; kabel jej spojuje s měřicí elektronikou stanice.
             Foto: americký Národní úřad pro oceán a atmosféru (NOAA), National Centers for Environmental
             Information (NCEI), převzato beze změny. NOAA u svého webového obsahu žádá uvedení zdroje. {" "}
-            <a className="article-reference" href="https://www.noaa.gov/disclaimer" target="_blank" rel="noreferrer">Podmínky použití NOAA</a>. {" "}
+            <SourceLink id="WEB_NOAA_Podminky_pouziti_NOAA_17f3c88c">Podmínky použití NOAA</SourceLink>. {" "}
             <Citation id="2026_USCRN_Measurements" />
           </figcaption>
         </figure>
@@ -319,7 +320,7 @@ export function ResistanceThermometryArticle() {
             Laboratoř NIST pro kalibraci etalonových platinových odporových teploměrů. Dlouhé lázně a aparatury
             udržují definované teplotní podmínky; odporové můstky porovnávají teploměr s referenčními odpory.
             Foto: National Institute of Standards and Technology (NIST), nezměněný veřejný materiál; NIST žádá
-            uvedení zdroje. <a className="article-reference" href="https://www.nist.gov/image/sprt-calibration-laboratory" target="_blank" rel="noreferrer">Původní snímek a kredit</a>
+            uvedení zdroje. <SourceLink id="WEB_nist_gov_SPRT_Calibration_Laboratory_NIST_eaa9779d">Původní snímek a kredit</SourceLink>
           </figcaption>
         </figure>
 

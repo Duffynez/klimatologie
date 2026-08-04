@@ -1,13 +1,5 @@
 import Image from "next/image";
-import type { ReactNode } from "react";
-
-function ReferenceLink({ href, children }: { href: string; children: ReactNode }) {
-  return (
-    <a className="article-reference" href={href} target="_blank" rel="noreferrer">
-      {children}
-    </a>
-  );
-}
+import { SourceLink } from "./SourceLink";
 
 export function MountainGlaciersArticle() {
   return (
@@ -53,9 +45,9 @@ export function MountainGlaciersArticle() {
           průvodci Světové meteorologické organizace a současným globálním vyhodnocením WGMS. Slovo „ledovec“ v nich
           zahrnuje údolní ledovce, menší ledové čapky a ledová pole vzniklá na souši. V globálních součtech se hodnotí
           ledovce mimo hlavní grónský a antarktický ledový příkrov; započítávají se však samostatné ledovce na jejich
-          okrajích. <ReferenceLink href="https://wgms.ch/downloads/Cogley_etal_2011.pdf">Cogley et al., 2011</ReferenceLink>,{" "}
-          <ReferenceLink href="https://wgms.ch/downloads/WMO-8-vII-2024_en.pdf">WMO, 2024</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s41586-024-08545-z">GlaMBIE Team, 2025</ReferenceLink>
+          okrajích. <SourceLink id="WEB_World_Glacier_Monitoring_Ser_glosar_UNESCO_a_WGMS_06fc9a79">Cogley et al., 2011</SourceLink>,{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">WMO, 2024</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1038_s41586_024_08545_z">GlaMBIE Team, 2025</SourceLink>
         </p>
 
         <p>
@@ -63,7 +55,7 @@ export function MountainGlaciersArticle() {
           a na tvar údolí; čelo některého ledovce se proto může dočasně posunout dopředu, i když ledovec jako celek
           ztrácí hmotnost. Hmotnostní bilance naproti tomu porovnává množství ledu a sněhu na začátku a na konci přesně
           vymezeného období. Při čtení výsledku je tedy vždy nutné uvést veličinu, oblast a období měření. Tento rozdíl
-          podrobně vymezuje <ReferenceLink href="https://wgms.ch/downloads/Cogley_etal_2011.pdf">glosář UNESCO a WGMS</ReferenceLink>.
+          podrobně vymezuje <SourceLink id="WEB_World_Glacier_Monitoring_Ser_glosar_UNESCO_a_WGMS_06fc9a79">glosář UNESCO a WGMS</SourceLink>.
         </p>
 
         <figure className="article-figure">
@@ -81,7 +73,7 @@ export function MountainGlaciersArticle() {
             ukazuje změnu jednoho konkrétního ledovce. Opakovaná fotografie zachytí polohu čela a viditelný rozsah ledu;
             sama o sobě však neurčí změnu hmotnosti ani vývoj ledovců v jiných oblastech. Fotografie: T. J. Hileman,
             Glacier National Park Archives, a Lisa
-            McKeon, USGS. Zdroj: <ReferenceLink href="https://www.usgs.gov/media/images/grinnell-glacier-pair">USGS</ReferenceLink>;
+            McKeon, USGS. Zdroj: <SourceLink id="WEB_U_S_Geological_Survey_Grinnell_Glacier_Pair_248d244b">USGS</SourceLink>;
             licence: volné dílo.
           </figcaption>
         </figure>
@@ -92,8 +84,8 @@ export function MountainGlaciersArticle() {
           bodů, map, obrazů a později fotografií. Mezinárodně koordinované sledování začalo roku 1894 založením
           Mezinárodní komise pro ledovce v Curychu; François-Alphonse Forel zveřejnil první společný přehled v roce 1895.
           Původním cílem bylo každoročně shromažďovat posuny čel z různých zemí podle srovnatelného postupu. Historii
-          sítě dokládají <ReferenceLink href="https://wgms.ch/downloads/WGMS2020_SummaryReport1894-2019.pdf">WGMS, 2020</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.3189/2015JoG15J017">Zemp et al., 2015</ReferenceLink>.
+          sítě dokládají <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WGMS_2020_6e490990">WGMS, 2020</SourceLink> a{" "}
+          <SourceLink id="DOI_10_3189_2015jog15j017">Zemp et al., 2015</SourceLink>.
         </p>
 
         <p>
@@ -102,8 +94,8 @@ export function MountainGlaciersArticle() {
           prvních šestnáct let tohoto programu už v roce 1962. V terénu se od té doby
           opakovaně měří množství zimního sněhu a letní úbytek ledu. Dlouhé záznamy z jednotlivých ledovců zachycují
           změny rok po roce, jejich počet je však malý ve srovnání s množstvím ledovců na Zemi. Historický původ a
-          terminologii shrnují <ReferenceLink href="https://doi.org/10.3189/S002214300002757X">Schytt, 1962</ReferenceLink> a{" "}
-          <ReferenceLink href="https://wgms.ch/downloads/Cogley_etal_2011.pdf">Cogley et al., 2011</ReferenceLink>.
+          terminologii shrnují <SourceLink id="DOI_10_3189_s002214300002757x">Schytt, 1962</SourceLink> a{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_glosar_UNESCO_a_WGMS_06fc9a79">Cogley et al., 2011</SourceLink>.
         </p>
 
         <p>
@@ -111,15 +103,15 @@ export function MountainGlaciersArticle() {
           postupně připojily družice a od roku 2000 poskytl archiv stereoskopických snímků ASTER opakované výškové mapy
           téměř všech ledovcových oblastí. Hugonnet a kol. z těchto snímků vypočítali stejným postupem změny výšky pro
           roky 2000–2019. Jejich výsledek už nevycházel jen z několika dobře dostupných ledovců, ale z družicového
-          pokrytí celého světa. <ReferenceLink href="https://doi.org/10.1038/s41586-021-03436-z">Hugonnet et al., 2021</ReferenceLink>
+          pokrytí celého světa. <SourceLink id="DOI_10_1038_s41586_021_03436_z">Hugonnet et al., 2021</SourceLink>
         </p>
 
         <p>
           Dnešní globální přehled spojuje obě tradice. Každoroční terénní měření popisují průběh jednotlivých let;
           družicové změny výšky určují dlouhodobý úbytek u přibližně 200 000 ledovců. Dussaillant a kol. tento postup
           použili pro roční hodnoty 1976–2024 a WGMS jej v roce 2026 doplnila o glaciologický rok 2025.{" "}
-          <ReferenceLink href="https://doi.org/10.5194/essd-17-1977-2025">Dussaillant et al., 2025</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s43017-026-00777-z">WGMS Network, 2026</ReferenceLink>
+          <SourceLink id="DOI_10_5194_essd_17_1977_2025">Dussaillant et al., 2025</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1038_s43017_026_00777_z">WGMS Network, 2026</SourceLink>
         </p>
 
         <p>
@@ -127,7 +119,7 @@ export function MountainGlaciersArticle() {
           globálním produktu znamená rok 2025 na severní polokouli období od 1. října 2024 do 30. září 2025, na jižní
           polokouli od 1. dubna 2024 do 31. března 2025 a v tropech kalendářní rok 2025. Rok v grafu proto není ve všech
           oblastech totožný s kalendářním rokem, ale vždy obsahuje jeden úplný sezónní cyklus.{" "}
-          <ReferenceLink href="https://doi.org/10.5194/essd-17-1977-2025">Dussaillant et al., 2025, oddíl 2.2</ReferenceLink>
+          <SourceLink id="DOI_10_5194_essd_17_1977_2025">Dussaillant et al., 2025, oddíl 2.2</SourceLink>
         </p>
 
         <h2>Jak vzniká zveřejněný záznam</h2>
@@ -137,8 +129,8 @@ export function MountainGlaciersArticle() {
           teodolitem a opakovanou fotografií; dnes se používá také přesná družicová poloha a snímky z letadel či družic.
           Z obrysu ledovce lze vypočítat plochu. U suti na povrchu, trvalých sněhových polí a navazujících ledovců však
           nemusí být hranice na snímku jednoznačná, proto k obrysu patří datum, zdroj obrazu a popis kvality mapování. Na
-          tato omezení upozorňují <ReferenceLink href="https://doi.org/10.3189/2015JoG15J017">Zemp et al., 2015</ReferenceLink> a dokumentace{" "}
-          <ReferenceLink href="https://nsidc.org/data/nsidc-0770/versions/7">Randolph Glacier Inventory v7</ReferenceLink>.
+          tato omezení upozorňují <SourceLink id="DOI_10_3189_2015jog15j017">Zemp et al., 2015</SourceLink> a dokumentace{" "}
+          <SourceLink id="WEB_National_Snow_and_Ice_Data_C_Randolph_Glacier_Inventory_A_Dataset_of_Global_G_4155a535">Randolph Glacier Inventory v7</SourceLink>.
         </p>
 
         <h3>Tyče, sondy a sněhové jámy</h3>
@@ -146,8 +138,8 @@ export function MountainGlaciersArticle() {
           Při přímém glaciologickém měření jsou body rozmístěny od spodní části ledovce po jeho nejvyšší část. Na jaře
           se sondou zjišťuje hloubka zimního sněhu a ve sněhové jámě nebo jádru také jeho hustota. Na podzim se u tyčí
           zavrtaných do ledu odečte, o kolik klesl povrch. Hloubka a hustota sněhu se v každém bodě převedou na hmotnost vody
-          na metr čtvereční. Standardní postup popisují <ReferenceLink href="https://wgms.ch/downloads/WMO-8-vII-2024_en.pdf">WMO, 2024</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1017/jog.2019.66">O’Neel et al., 2019</ReferenceLink>.
+          na metr čtvereční. Standardní postup popisují <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">WMO, 2024</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1017_jog_2019_66">O’Neel et al., 2019</SourceLink>.
         </p>
 
         <p>
@@ -172,7 +164,7 @@ export function MountainGlaciersArticle() {
           <figcaption>
             Měřicí tyč na Wolverine Glacier na Aljašce na konci léta. Tyč byla na začátku období zasazena pod povrch;
             délka odkryté části dovoluje odečíst úbytek sněhu a ledu v tomto bodě. Fotografie: Emily Baker, USGS. Zdroj:{" "}
-            <ReferenceLink href="https://www.usgs.gov/media/images/ablation-stake-wolverine-glacier">USGS</ReferenceLink>;
+            <SourceLink id="WEB_U_S_Geological_Survey_Ablation_Stake_on_Wolverine_Glacier_276f80c5">USGS</SourceLink>;
             licence: volné dílo.
           </figcaption>
         </figure>
@@ -183,8 +175,8 @@ export function MountainGlaciersArticle() {
           v každém místě odečte starší výška od novější. Kladný rozdíl značí zesílení, záporný zeslabení. Součet změn
           přes celý obrys poskytne změnu objemu. Postup vyžaduje opravit posun map, odfiltrovat mraky a chybné body a
           odhadnout místa, kde výška chybí. Základní korekce popsali{" "}
-          <ReferenceLink href="https://doi.org/10.5194/tc-5-271-2011">Nuth &amp; Kääb, 2011</ReferenceLink>; globální zpracování použili{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s41586-021-03436-z">Hugonnet et al., 2021</ReferenceLink>.
+          <SourceLink id="DOI_10_5194_tc_5_271_2011">Nuth &amp; Kääb, 2011</SourceLink>; globální zpracování použili{" "}
+          <SourceLink id="DOI_10_1038_s41586_021_03436_z">Hugonnet et al., 2021</SourceLink>.
         </p>
 
         <p>
@@ -192,8 +184,8 @@ export function MountainGlaciersArticle() {
           přibyl nebo zmizel. Pro víceleté geodetické období se běžně používá 850 ± 60 kg na m³; pro krátké intervaly
           může být převod podstatně méně spolehlivý, protože se mění podíl sněhu, firnu a ledu. Huss proto doporučuje
           tento převod pro dostatečně dlouhá období a Dussaillant a kol. do svého globálního výpočtu nepřijímají
-          geodetická období kratší než pět let. <ReferenceLink href="https://doi.org/10.5194/tc-7-877-2013">Huss, 2013</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.5194/essd-17-1977-2025">Dussaillant et al., 2025</ReferenceLink>
+          geodetická období kratší než pět let. <SourceLink id="DOI_10_5194_tc_7_877_2013">Huss, 2013</SourceLink> a{" "}
+          <SourceLink id="DOI_10_5194_essd_17_1977_2025">Dussaillant et al., 2025</SourceLink>
         </p>
 
         <h3>Od jednotlivých ledovců ke globálnímu součtu</h3>
@@ -203,7 +195,7 @@ export function MountainGlaciersArticle() {
           dlouhodobé změně výšky, kterou u jednotlivých ledovců změřily družice. Výsledkem je odhad pro každý rok a každý
           zahrnutý ledovec: terénní data ukazují, ve kterých letech byl úbytek v oblasti větší nebo menší, zatímco
           výškové mapy určují celkovou změnu za delší období. Metodu, ověření vynecháním části stanic i výpočet nejistot
-          zveřejnili <ReferenceLink href="https://doi.org/10.5194/essd-17-1977-2025">Dussaillant et al., 2025</ReferenceLink>.
+          zveřejnili <SourceLink id="DOI_10_5194_essd_17_1977_2025">Dussaillant et al., 2025</SourceLink>.
         </p>
 
         <p>
@@ -211,7 +203,7 @@ export function MountainGlaciersArticle() {
           Ledovcům bez přímého geodetického záznamu se přiřadí průměr příslušné oblasti. Jednotlivé výsledky se násobí
           plochou, sečtou do 19 světových oblastí a nakonec do globální hodnoty v gigatunách. Nejistota zahrnuje chybu
           výšky, převod objemu na hmotnost, řídkost terénních měření a změnu plochy; roste tam, kde jsou pozorované
-          ledovce vzdálenější. <ReferenceLink href="https://doi.org/10.5194/essd-17-1977-2025">Dussaillant et al., 2025, metodika a ověření</ReferenceLink>
+          ledovce vzdálenější. <SourceLink id="DOI_10_5194_essd_17_1977_2025">Dussaillant et al., 2025, metodika a ověření</SourceLink>
         </p>
 
         <figure className="article-figure article-figure--scroll-mobile article-figure--scroll-wide">
@@ -234,7 +226,7 @@ export function MountainGlaciersArticle() {
             Žluté body označují přibližně 500 ledovců s glaciologickým terénním měřením, světle modré body přibližně
             200 000 ledovců s geodetickým družicovým měřením. Mapa ukazuje rozdíl v prostorovém pokrytí obou metod;
             překrývající se body mohou na této velikosti splývat. Data: WGMS, RGI 6.0 a GTN-G; graf: C3S/ECMWF/WGMS,
-            2026. Zdroj: <ReferenceLink href="https://climate.copernicus.eu/climate-indicators/glaciers">Copernicus Climate Indicator: Glaciers, obr. 3b</ReferenceLink>.
+            2026. Zdroj: <SourceLink id="WEB_Copernicus_Glaciers_Copernicus_5ae74590">Copernicus Climate Indicator: Glaciers, obr. 3b</SourceLink>.
           </figcaption>
         </figure>
 
@@ -244,7 +236,7 @@ export function MountainGlaciersArticle() {
           převodu a odhadu ročního průběhu v místech bez terénního měření. Při součtu se zohledňuje, že chyby blízkých
           ledovců mohou být podobné. Dussaillant a kol. ověřovali prostorové doplňování tak, že část pozorování
           opakovaně vynechali a porovnali odhad se skrytou hodnotou. U produktu 1976–2024 uvádějí intervaly jako jednu
-          směrodatnou odchylku. <ReferenceLink href="https://doi.org/10.5194/essd-17-1977-2025">Dussaillant et al., 2025</ReferenceLink>
+          směrodatnou odchylku. <SourceLink id="DOI_10_5194_essd_17_1977_2025">Dussaillant et al., 2025</SourceLink>
         </p>
 
         <p>
@@ -252,7 +244,7 @@ export function MountainGlaciersArticle() {
           měření, rozdíly výškových modelů, družicové výškoměry a družicové měření změn gravitačního pole. Autoři
           upozorňují, že některé vstupy sdílejí stejné snímky nebo podobné postupy, a jejich chyby tedy nejsou zcela
           nezávislé. Náhodná nejistota může být proto spíše dolní hranicí skutečné nejistoty oblasti; známé systematické
-          rozdíly mezi metodami zůstávají předmětem srovnání. <ReferenceLink href="https://doi.org/10.1038/s41586-024-08545-z">GlaMBIE Team, 2025</ReferenceLink>
+          rozdíly mezi metodami zůstávají předmětem srovnání. <SourceLink id="DOI_10_1038_s41586_024_08545_z">GlaMBIE Team, 2025</SourceLink>
         </p>
 
         <h2>Zveřejňovaná data</h2>
@@ -266,8 +258,8 @@ export function MountainGlaciersArticle() {
               jako archiv tabulek CSV a má přidělené trvalé DOI.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://doi.org/10.5904/wgms-fog-2026-02-10">Data FoG 2026</ReferenceLink>{" "}
-              <ReferenceLink href="https://wgms.ch/data_databaseversions/">Všechna vydání a dokumentace</ReferenceLink>
+              <SourceLink id="DOI_10_5904_wgms_fog_2026_02_10">Data FoG 2026</SourceLink>{" "}
+              <SourceLink id="WEB_World_Glacier_Monitoring_Ser_database_versions_world_glacier_monitoring_servi_ccf7faf7">Všechna vydání a dokumentace</SourceLink>
             </p>
           </section>
 
@@ -281,8 +273,8 @@ export function MountainGlaciersArticle() {
               časové pokrytí však není všude stejné.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://doi.org/10.5067/F6JMOVY5NAVZ">RGI v7: data a příručka</ReferenceLink>{" "}
-              <ReferenceLink href="https://www.glims.org/glacierdata/">GLIMS: databáze a stažení</ReferenceLink>
+              <SourceLink id="DOI_10_5067_f6jmovy5navz">RGI v7: data a příručka</SourceLink>{" "}
+              <SourceLink id="WEB_glims_org_GLIMS_Glacier_Database_2d3c95bb">GLIMS: databáze a stažení</SourceLink>
             </p>
           </section>
 
@@ -295,9 +287,9 @@ export function MountainGlaciersArticle() {
               dlouhodobými geodetickými změnami. Data lze stáhnout přímo od WGMS nebo z Copernicus Climate Data Store.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://doi.org/10.5904/wgms-amce-2026-02-10">WGMS AMCE 2026</ReferenceLink>{" "}
-              <ReferenceLink href="https://doi.org/10.24381/cds.ba597449">Copernicus CDS</ReferenceLink>{" "}
-              <ReferenceLink href="https://doi.org/10.5194/essd-17-1977-2025">Metodická studie</ReferenceLink>
+              <SourceLink id="DOI_10_5904_wgms_amce_2026_02_10">WGMS AMCE 2026</SourceLink>{" "}
+              <SourceLink id="DOI_10_24381_cds_ba597449">Copernicus CDS</SourceLink>{" "}
+              <SourceLink id="DOI_10_5194_essd_17_1977_2025">Metodická studie</SourceLink>
             </p>
           </section>
 
@@ -311,9 +303,9 @@ export function MountainGlaciersArticle() {
               každoročního produktu WGMS.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://doi.org/10.5904/wgms-glambie-2024-07">Data GlaMBIE</ReferenceLink>{" "}
-              <ReferenceLink href="https://doi.org/10.6096/13">Data Hugonnet et al.</ReferenceLink>{" "}
-              <ReferenceLink href="https://github.com/rhugonnet/ww_tvol_study">Kód Hugonnet et al.</ReferenceLink>
+              <SourceLink id="DOI_10_5904_wgms_glambie_2024_07">Data GlaMBIE</SourceLink>{" "}
+              <SourceLink id="DOI_10_6096_13">Data Hugonnet et al.</SourceLink>{" "}
+              <SourceLink id="WEB_GitHub_GitHub_rhugonnet_ww_tvol_study_Process_global_sc_300ee76a">Kód Hugonnet et al.</SourceLink>
             </p>
           </section>
         </div>
@@ -333,7 +325,7 @@ export function MountainGlaciersArticle() {
             přírůstkem, červené rok s úbytkem; nula znamená stejnou celkovou hmotnost na začátku a konci daného
             glaciologického roku. Graf neukazuje interval nejistoty jednotlivých let, proto jsou přesná čísla v textu
             uváděna s nejistotou z primární studie. Data: WGMS; graf: C3S/ECMWF/WGMS, 2026. Zdroj:{" "}
-            <ReferenceLink href="https://climate.copernicus.eu/climate-indicators/glaciers">Copernicus Climate Indicator: Glaciers, obr. 1</ReferenceLink>.
+            <SourceLink id="WEB_Copernicus_Glaciers_Copernicus_5ae74590">Copernicus Climate Indicator: Glaciers, obr. 1</SourceLink>.
           </figcaption>
         </figure>
 
@@ -344,7 +336,7 @@ export function MountainGlaciersArticle() {
           mapami sám nerozliší jednotlivé roky a potřebuje převod objemu na hmotnost. Družicový výškoměr sleduje změny
           podél drah družice. Gravitační mise odvozují změnu hmotnosti z proměn gravitačního pole, ale až pro oblasti o
           rozměru stovek kilometrů. Každý postup tak poskytuje jinou kombinaci podrobnosti v čase a prostoru.{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s41586-024-08545-z">GlaMBIE Team, 2025</ReferenceLink>
+          <SourceLink id="DOI_10_1038_s41586_024_08545_z">GlaMBIE Team, 2025</SourceLink>
         </p>
 
         <p>
@@ -352,7 +344,7 @@ export function MountainGlaciersArticle() {
           od meziročního kolísání a spojila výsledky po metodách i mezi metodami. Rozdíly často spadaly do uváděných
           intervalů nejistoty, v některých oblastech však zůstaly systematické odchylky. Globální součet proto není
           prostým průměrem všech publikovaných čísel a shoda na celosvětové hodnotě sama nezaručuje shodu v každém
-          pohoří. <ReferenceLink href="https://doi.org/10.1038/s41586-024-08545-z">GlaMBIE Team, 2025</ReferenceLink>
+          pohoří. <SourceLink id="DOI_10_1038_s41586_024_08545_z">GlaMBIE Team, 2025</SourceLink>
         </p>
 
         <h2 id="pozorovani">Pozorování</h2>
@@ -361,14 +353,14 @@ export function MountainGlaciersArticle() {
           směru toku než v minulosti a celková hmotnost světových ledovců klesá. Jednotlivé ledovce i oblasti mají
           odlišný průběh a v některých desetiletích se část čel posouvala dopředu. Globální převaha ústupu je však v
           souboru přibližně 42 000 změn čela od roku 1600 patrná v měřítku staletí.{" "}
-          <ReferenceLink href="https://doi.org/10.3189/2015JoG15J017">Zemp et al., 2015</ReferenceLink>
+          <SourceLink id="DOI_10_3189_2015jog15j017">Zemp et al., 2015</SourceLink>
         </p>
 
         <p>
           Nejnovější každoroční vyhodnocení WGMS uvádí pro glaciologický rok 2025 globální změnu −408 ± 132 Gt. Záporné
           znaménko znamená, že součet ztracené hmotnosti byl o tuto hodnotu větší než součet přírůstků. Od začátku
           výpočtu v roce 1975 činí kumulovaná změna −9 583 ± 1 211 Gt. Šest největších ročních úbytků celého záznamu
-          nastalo během sedmi let 2019–2025. <ReferenceLink href="https://doi.org/10.1038/s43017-026-00777-z">WGMS Network, 2026</ReferenceLink>
+          nastalo během sedmi let 2019–2025. <SourceLink id="DOI_10_1038_s43017_026_00777_z">WGMS Network, 2026</SourceLink>
         </p>
 
         <p>
@@ -376,14 +368,14 @@ export function MountainGlaciersArticle() {
           vody. Úbytek 408 Gt v roce 2025 tedy odpovídá asi 408 km³ vody rozložené mezi ledovce světa. Kumulovaných
           9 583 Gt odpovídá 26,4 ± 3,3 mm globální střední hladiny moře; roční hodnota 2025 odpovídá 1,1 ± 0,4 mm. Tento
           přepočet popisuje tentýž hmotnostní úbytek v jiné jednotce, nikoli samostatné měření hladiny.{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s43017-026-00777-z">WGMS Network, 2026</ReferenceLink>
+          <SourceLink id="DOI_10_1038_s43017_026_00777_z">WGMS Network, 2026</SourceLink>
         </p>
 
         <p>
           Nezávislé globální zpracování družicových výškových map zjistilo pro roky 2000–2019 průměrný úbytek 267 ± 16
           Gt za rok. Autoři současně vyčíslili, že tempo úbytku se během těchto dvou desetiletí zvyšovalo o 48 ± 16 Gt za
           rok za desetiletí. Tento výsledek vznikl z opakovaných stereoskopických snímků ASTER a byl ověřován vůči
-          přesnějším regionálním měřením. <ReferenceLink href="https://doi.org/10.1038/s41586-021-03436-z">Hugonnet et al., 2021</ReferenceLink>
+          přesnějším regionálním měřením. <SourceLink id="DOI_10_1038_s41586_021_03436_z">Hugonnet et al., 2021</SourceLink>
         </p>
 
         <p>
@@ -391,7 +383,7 @@ export function MountainGlaciersArticle() {
           387 Gt za celé období, v průměru −273 ± 16 Gt za rok. Průměrný roční úbytek vzrostl z 231 ± 23 Gt v letech
           2000–2011 na 314 ± 23 Gt v letech 2012–2023, tedy o 36 ± 10 %. Shoda s družicovým odhadem pro roky 2000–2019
           se týká globální velikosti; GlaMBIE současně nachází větší rozdíly mezi metodami v některých jednotlivých
-          oblastech. <ReferenceLink href="https://doi.org/10.1038/s41586-024-08545-z">GlaMBIE Team, 2025</ReferenceLink>
+          oblastech. <SourceLink id="DOI_10_1038_s41586_024_08545_z">GlaMBIE Team, 2025</SourceLink>
         </p>
 
         <p>
@@ -399,14 +391,14 @@ export function MountainGlaciersArticle() {
           Největší podíl globálního úbytku v gigatunách připadal na Aljašku (22 %), kanadskou Arktidu (20 %), okrajové
           ledovce Grónska (13 %) a jižní Andy (10 %). Vzhledem k počáteční hmotnosti byly největší relativní ztráty ve
           střední Evropě (39 %), na Kavkaze (35 %) a na Novém Zélandu (29 %). Absolutní gigatuny a procento původní
-          hmotnosti proto odpovídají na dvě různé otázky. <ReferenceLink href="https://doi.org/10.1038/s41586-024-08545-z">GlaMBIE Team, 2025</ReferenceLink>
+          hmotnosti proto odpovídají na dvě různé otázky. <SourceLink id="DOI_10_1038_s41586_024_08545_z">GlaMBIE Team, 2025</SourceLink>
         </p>
 
         <p>
           Také jediný rok může mít v jednotlivých oblastech odlišné pořadí podle zvolené jednotky. V roce 2025 byla
           plošně průměrná ztráta největší v západní Kanadě a USA, na Islandu a ve střední Evropě. Největší příspěvek ke
           globálnímu součtu v gigatunách však pocházel z vysokohorské Asie, Aljašky a ruské Arktidy, protože tyto
-          oblasti mají větší plochu ledovců. <ReferenceLink href="https://doi.org/10.1038/s43017-026-00777-z">WGMS Network, 2026</ReferenceLink>
+          oblasti mají větší plochu ledovců. <SourceLink id="DOI_10_1038_s43017_026_00777_z">WGMS Network, 2026</SourceLink>
         </p>
 
         <figure className="article-figure">
@@ -424,7 +416,7 @@ export function MountainGlaciersArticle() {
             roční hodnoty; světle modré pole vyjadřuje zveřejněnou nejistotu. Grafická verze Copernicus popisuje koncový
             součet zaokrouhleně jako −9 581 Gt, zatímco související recenzovaná práce WGMS uvádí −9 583 ± 1 211 Gt;
             v textu používáme údaj z práce. Data: WGMS; graf: C3S/ECMWF/WGMS, 2026. Zdroj:{" "}
-            <ReferenceLink href="https://climate.copernicus.eu/climate-indicators/glaciers">Copernicus Climate Indicator: Glaciers, obr. 4</ReferenceLink>.
+            <SourceLink id="WEB_Copernicus_Glaciers_Copernicus_5ae74590">Copernicus Climate Indicator: Glaciers, obr. 4</SourceLink>.
           </figcaption>
         </figure>
 
@@ -447,27 +439,27 @@ export function MountainGlaciersArticle() {
             <h3>Primární studie</h3>
             <ul>
               <li>
-                <ReferenceLink href="https://doi.org/10.3189/S002214300002757X">Schytt, 1962</ReferenceLink>:
+                <SourceLink id="DOI_10_3189_s002214300002757x">Schytt, 1962</SourceLink>:
                 původní popis prvních šestnácti let hmotnostní bilance Storglaciären.
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.3189/2015JoG15J017">Zemp et al., 2015</ReferenceLink>:
+                <SourceLink id="DOI_10_3189_2015jog15j017">Zemp et al., 2015</SourceLink>:
                 společné vyhodnocení historických změn délky, objemu a hmotnosti do roku 2010.
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.1038/s41586-019-1071-0">Zemp et al., 2019</ReferenceLink>:
+                <SourceLink id="DOI_10_1038_s41586_019_1071_0">Zemp et al., 2019</SourceLink>:
                 globální a regionální hmotnostní změny v letech 1961–2016.
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.1038/s41586-021-03436-z">Hugonnet et al., 2021</ReferenceLink>:
+                <SourceLink id="DOI_10_1038_s41586_021_03436_z">Hugonnet et al., 2021</SourceLink>:
                 globální změny výšky a hmotnosti z družicových snímků v letech 2000–2019.
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.1038/s41586-024-08545-z">GlaMBIE Team, 2025</ReferenceLink>:
+                <SourceLink id="DOI_10_1038_s41586_024_08545_z">GlaMBIE Team, 2025</SourceLink>:
                 porovnání a spojení čtyř pozorovacích metod pro roky 2000–2023.
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.1038/s43017-026-00777-z">WGMS Network, 2026</ReferenceLink>:
+                <SourceLink id="DOI_10_1038_s43017_026_00777_z">WGMS Network, 2026</SourceLink>:
                 aktuální globální a regionální bilance za rok 2025 a od roku 1975.
               </li>
             </ul>
@@ -477,24 +469,24 @@ export function MountainGlaciersArticle() {
             <h3>Metodické práce</h3>
             <ul>
               <li>
-                <ReferenceLink href="https://wgms.ch/downloads/Cogley_etal_2011.pdf">Cogley et al., 2011</ReferenceLink>:
+                <SourceLink id="WEB_World_Glacier_Monitoring_Ser_glosar_UNESCO_a_WGMS_06fc9a79">Cogley et al., 2011</SourceLink>:
                 mezinárodní definice ledovce, hmotnostní bilance, období a jednotek.
               </li>
               <li>
-                <ReferenceLink href="https://wgms.ch/downloads/WMO-8-vII-2024_en.pdf">WMO, 2024</ReferenceLink>:
+                <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">WMO, 2024</SourceLink>:
                 současný návod pro měření ledovců v terénu a dálkovým průzkumem.
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.1017/jog.2019.66">O’Neel et al., 2019</ReferenceLink>:
+                <SourceLink id="DOI_10_1017_jog_2019_66">O’Neel et al., 2019</SourceLink>:
                 terénní měření, prostorové rozložení bodů a geodetická kontrola dlouhých záznamů.
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.5194/tc-5-271-2011">Nuth &amp; Kääb, 2011</ReferenceLink> a{" "}
-                <ReferenceLink href="https://doi.org/10.5194/tc-7-877-2013">Huss, 2013</ReferenceLink>:
+                <SourceLink id="DOI_10_5194_tc_5_271_2011">Nuth &amp; Kääb, 2011</SourceLink> a{" "}
+                <SourceLink id="DOI_10_5194_tc_7_877_2013">Huss, 2013</SourceLink>:
                 zarovnání výškových modelů a převod změny objemu na hmotnost.
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.5194/essd-17-1977-2025">Dussaillant et al., 2025</ReferenceLink>:
+                <SourceLink id="DOI_10_5194_essd_17_1977_2025">Dussaillant et al., 2025</SourceLink>:
                 roční globální produkt, prostorové doplňování, ověření a výpočet nejistoty.
               </li>
             </ul>
@@ -504,24 +496,24 @@ export function MountainGlaciersArticle() {
             <h3>Datové portály a stahování</h3>
             <ul>
               <li>
-                <ReferenceLink href="https://doi.org/10.5904/wgms-fog-2026-02-10">FoG 2026</ReferenceLink>:
+                <SourceLink id="DOI_10_5904_wgms_fog_2026_02_10">FoG 2026</SourceLink>:
                 jednotlivá historická a současná pozorování ve stahovatelných tabulkách.
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.5904/wgms-amce-2026-02-10">AMCE 1976–2025</ReferenceLink>:
+                <SourceLink id="DOI_10_5904_wgms_amce_2026_02_10">AMCE 1976–2025</SourceLink>:
                 roční hodnoty pro ledovce, mřížku, oblasti a celý svět.
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.5904/wgms-glambie-2024-07">GlaMBIE</ReferenceLink>:
+                <SourceLink id="DOI_10_5904_wgms_glambie_2024_07">GlaMBIE</SourceLink>:
                 vstupní i kombinované odhady podle metod a oblastí.
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.6096/13">Hugonnet et al., data</ReferenceLink>:
+                <SourceLink id="DOI_10_6096_13">Hugonnet et al., data</SourceLink>:
                 výškové a hmotnostní změny pro jednotlivé ledovce i mapové dlaždice.
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.5067/F6JMOVY5NAVZ">RGI v7</ReferenceLink> a{" "}
-                <ReferenceLink href="https://www.glims.org/glacierdata/">GLIMS</ReferenceLink>:
+                <SourceLink id="DOI_10_5067_f6jmovy5navz">RGI v7</SourceLink> a{" "}
+                <SourceLink id="WEB_glims_org_GLIMS_Glacier_Database_2d3c95bb">GLIMS</SourceLink>:
                 globální obrysy, atributy a opakovaná mapování ledovců.
               </li>
             </ul>
@@ -531,19 +523,19 @@ export function MountainGlaciersArticle() {
             <h3>Obrazy, grafy a podmínky použití</h3>
             <ul>
               <li>
-                <ReferenceLink href="https://www.usgs.gov/media/images/grinnell-glacier-pair">Grinnell Glacier Pair</ReferenceLink> a{" "}
-                <ReferenceLink href="https://www.usgs.gov/media/images/ablation-stake-wolverine-glacier">Ablation Stake on Wolverine Glacier</ReferenceLink>:
+                <SourceLink id="WEB_U_S_Geological_Survey_Grinnell_Glacier_Pair_248d244b">Grinnell Glacier Pair</SourceLink> a{" "}
+                <SourceLink id="WEB_U_S_Geological_Survey_Ablation_Stake_on_Wolverine_Glacier_276f80c5">Ablation Stake on Wolverine Glacier</SourceLink>:
                 USGS označuje oba soubory jako volné dílo; fotografové a původ jsou uvedeni u obrazů.
               </li>
               <li>
-                <ReferenceLink href="https://climate.copernicus.eu/climate-indicators/glaciers">Copernicus Climate Indicator: Glaciers</ReferenceLink>,
+                <SourceLink id="WEB_Copernicus_Glaciers_Copernicus_5ae74590">Copernicus Climate Indicator: Glaciers</SourceLink>,
                 obr. 1, 3b a 4; data WGMS, kredit C3S/ECMWF/WGMS.
               </li>
               <li>
                 Převzetí grafů dovoluje{" "}
-                <ReferenceLink href="https://cds.climate.copernicus.eu/licences/licence-to-use-copernicus-products">
+                <SourceLink id="WEB_Copernicus_Licence_to_use_Copernicus_Products_rev_12_4244ad0f">
                   Licence to use Copernicus Products
-                </ReferenceLink>
+                </SourceLink>
                 . Materiál je použit beze změny. Evropská komise ani ECMWF neodpovídají za způsob jeho dalšího použití.
               </li>
             </ul>

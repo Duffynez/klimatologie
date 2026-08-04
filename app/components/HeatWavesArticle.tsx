@@ -1,13 +1,5 @@
 import Image from "next/image";
-import type { ReactNode } from "react";
-
-function ReferenceLink({ href, children }: { href: string; children: ReactNode }) {
-  return (
-    <a className="article-reference" href={href} target="_blank" rel="noreferrer">
-      {children}
-    </a>
-  );
-}
+import { SourceLink } from "./SourceLink";
 
 export function HeatWavesArticle() {
   return (
@@ -50,13 +42,13 @@ export function HeatWavesArticle() {
 
         <p>
           Tento společný základ používají globální ukazatele sestavené z meteorologických stanic od práce{" "}
-          <ReferenceLink href="https://doi.org/10.3354/cr019193">Frich et al., 2002</ReferenceLink> přes analýzu{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2005JD006290">Alexander et al., 2006</ReferenceLink> až po
-          metodické srovnání <ReferenceLink href="https://doi.org/10.1175/JCLI-D-12-00383.1">Perkins a Alexander, 2013</ReferenceLink>.
+          <SourceLink id="DOI_10_3354_cr019193">Frich et al., 2002</SourceLink> přes analýzu{" "}
+          <SourceLink id="DOI_10_1029_2005jd006290">Alexander et al., 2006</SourceLink> až po
+          metodické srovnání <SourceLink id="DOI_10_1175_jcli_d_12_00383_1">Perkins a Alexander, 2013</SourceLink>.
           Stejnou stavbu, tedy hranici a minimální počet po sobě jdoucích dnů, mají také ukazatel nadměrného tepla
-          navržený <ReferenceLink href="https://doi.org/10.3390/ijerph120100227">Nairnem a Fawcettem, 2015</ReferenceLink>
+          navržený <SourceLink id="DOI_10_3390_ijerph120100227">Nairnem a Fawcettem, 2015</SourceLink>
           a víceúčelový globální archiv{" "}
-          <ReferenceLink href="https://doi.org/10.1038/sdata.2018.206">Sadegh et al., 2018</ReferenceLink>. Konkrétní
+          <SourceLink id="DOI_10_1038_sdata_2018_206">Sadegh et al., 2018</SourceLink>. Konkrétní
           hranice i požadovaná délka se mezi nimi liší. Slova „vlna veder“ proto sama o sobě ještě neurčují výpočet.
         </p>
 
@@ -66,7 +58,7 @@ export function HeatWavesArticle() {
           denní maximum dosáhne alespoň 30 °C. Počet tropických dnů je přímo srozumitelný, ale jednotlivý tropický den
           ještě nevytváří vícedenní událost. Pro vlnu veder musí být navíc určeno, kolik takových dnů má následovat bez
           přerušení. Přehled českých definic a měření zveřejňuje{" "}
-          <ReferenceLink href="https://www.chmi.cz/o-chmu/aktuality/vlny-veder-v-historii-a-dnes">Český hydrometeorologický ústav</ReferenceLink>.
+          <SourceLink id="WEB_Cesky_hydrometeorologicky_us_Vlny_veder_v_historii_a_dnes_27ba4cfb">Český hydrometeorologický ústav</SourceLink>.
         </p>
 
         <p>
@@ -75,7 +67,7 @@ export function HeatWavesArticle() {
           případů. Hranice tak může být jiná v Helsinkách, Praze a Aténách a současně se během roku mění. Tento způsob
           umožňuje srovnávat neobvykle teplá období vzhledem k místním podmínkám, nikoli stejnou absolutní teplotu ve
           všech oblastech. Podrobné vymezení používají například{" "}
-          <ReferenceLink href="https://doi.org/10.1175/JCLI-D-12-00383.1">Perkins a Alexander, 2013</ReferenceLink>.
+          <SourceLink id="DOI_10_1175_jcli_d_12_00383_1">Perkins a Alexander, 2013</SourceLink>.
         </p>
 
         <h3>Den, noc a trvání</h3>
@@ -85,8 +77,8 @@ export function HeatWavesArticle() {
           vedle událostí z denních maxim porovnávali i události z minimálních teplot. Nairn a Fawcett používají
           třídenní průměr teploty a porovnávají jej jak s dlouhodobou místní hranicí, tak s předchozími třiceti dny.
           Výsledky těchto postupů odpovídají na příbuzné, ale odlišné otázky.{" "}
-          <ReferenceLink href="https://doi.org/10.1175/JCLI-D-12-00383.1">Perkins a Alexander, 2013</ReferenceLink>;{" "}
-          <ReferenceLink href="https://doi.org/10.3390/ijerph120100227">Nairn a Fawcett, 2015</ReferenceLink>
+          <SourceLink id="DOI_10_1175_jcli_d_12_00383_1">Perkins a Alexander, 2013</SourceLink>;{" "}
+          <SourceLink id="DOI_10_3390_ijerph120100227">Nairn a Fawcett, 2015</SourceLink>
         </p>
 
         <p>
@@ -94,7 +86,7 @@ export function HeatWavesArticle() {
           definice se šesti dny. Globální archiv GHWR proto zveřejnil souběžné výpočty pro 2, 3, 4, 5, 6, 7 a 10 po
           sobě jdoucích dnů a pro několik pevných i místních hranic. Nejde o sedm verzí téhož čísla, ale o záměrné
           měření citlivosti výsledku na volbu pravidla.{" "}
-          <ReferenceLink href="https://doi.org/10.1038/sdata.2018.206">Sadegh et al., 2018</ReferenceLink>
+          <SourceLink id="DOI_10_1038_sdata_2018_206">Sadegh et al., 2018</SourceLink>
         </p>
 
         <h3>Standardní ukazatel WSDI</h3>
@@ -104,8 +96,8 @@ export function HeatWavesArticle() {
           pětidenního okna v referenčním období, často z let 1961–1990. Výsledek má jednotku dnů za rok. WSDI tedy
           neudává počet událostí ani délku nejdelší z nich: dvě šestidenní události dávají 12 dnů stejně jako jedna
           dvanáctidenní. Definici zavedl soubor ukazatelů použitý v práci{" "}
-          <ReferenceLink href="https://doi.org/10.3354/cr019193">Frich et al., 2002</ReferenceLink> a současné provedení
-          dokumentuje <ReferenceLink href="https://www.metoffice.gov.uk/hadobs/hadex3/hadex3_product_user_guide.pdf">uživatelská příručka HadEX3</ReferenceLink>.
+          <SourceLink id="DOI_10_3354_cr019193">Frich et al., 2002</SourceLink> a současné provedení
+          dokumentuje <SourceLink id="WEB_Met_Office_uzivatelska_prirucka_HadEX3_6eb86927">uživatelská příručka HadEX3</SourceLink>.
         </p>
 
         <h3>Co lze z jedné definice spočítat</h3>
@@ -115,9 +107,9 @@ export function HeatWavesArticle() {
           vrchol její nejvyšší teplotu a průměrná intenzita obvyklé překročení hranice během započtených dnů.
           Kumulované teplo sčítá každé denní překročení hranice, takže roste současně s délkou i velikostí překročení.
           Tyto vlastnosti systematicky oddělili{" "}
-          <ReferenceLink href="https://doi.org/10.1175/JCLI-D-12-00383.1">Perkins a Alexander, 2013</ReferenceLink> a
+          <SourceLink id="DOI_10_1175_jcli_d_12_00383_1">Perkins a Alexander, 2013</SourceLink> a
           pozdější globální analýza{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s41467-020-16970-7">Perkins-Kirkpatrick a Lewis, 2020</ReferenceLink>.
+          <SourceLink id="DOI_10_1038_s41467_020_16970_7">Perkins-Kirkpatrick a Lewis, 2020</SourceLink>.
         </p>
 
         <h2>Historie měření</h2>
@@ -125,8 +117,8 @@ export function HeatWavesArticle() {
           Dlouhé záznamy denních maxim a minim vznikly později než měsíční průměry. Střední Anglie má souvislý
           soubor denní průměrné teploty od roku 1772, zatímco přímo použitelné denní maximum a minimum začíná rokem
           1878. Způsob sestavení a pozdější opravy tohoto historického souboru popsali{" "}
-          <ReferenceLink href="https://doi.org/10.1002/joc.3370120402">Parker et al., 1992</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1002/joc.1190">Parker a Horton, 2005</ReferenceLink>. Je to regionální
+          <SourceLink id="DOI_10_1002_joc_3370120402">Parker et al., 1992</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1002_joc_1190">Parker a Horton, 2005</SourceLink>. Je to regionální
           měření, nikoli globální obraz, ale ukazuje, jak dlouhá musí být denní pozorování, chceme-li ve starších
           obdobích vyhledávat několikadenní teplotní události.
         </p>
@@ -135,10 +127,10 @@ export function HeatWavesArticle() {
           První společný globální výpočet deseti ukazatelů teplotních a srážkových extrémů publikovali Frich a
           spoluautoři v roce 2002. Shromáždili přibližně 3 000 ročních záznamů vypočtených ze stanic pro období
           1946–1999; pokrytí bylo řídké zejména v Africe a části Jižní Ameriky.{" "}
-          <ReferenceLink href="https://doi.org/10.3354/cr019193">Frich et al., 2002</ReferenceLink> Alexander a
+          <SourceLink id="DOI_10_3354_cr019193">Frich et al., 2002</SourceLink> Alexander a
           spoluautoři pak v roce 2006 vytvořili globální mapy z větší sítě stanic a zveřejnili změny několika
           teplotních ukazatelů včetně WSDI.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2005JD006290">Alexander et al., 2006</ReferenceLink>
+          <SourceLink id="DOI_10_1029_2005jd006290">Alexander et al., 2006</SourceLink>
         </p>
 
         <p>
@@ -147,10 +139,10 @@ export function HeatWavesArticle() {
           roce 2020 spojil staniční ukazatele do mřížky od roku 1901 do roku 2018; aktualizace metody z roku 2024
           doplnila zejména popis pokrytí, srovnání a nejistot. Dnešní verze HadEX3 3.0.4 zůstává uzavřeným historickým
           souborem končícím rokem 2018.{" "}
-          <ReferenceLink href="https://doi.org/10.1175/JCLI-D-12-00383.1">Perkins a Alexander, 2013</ReferenceLink>;{" "}
-          <ReferenceLink href="https://doi.org/10.1038/sdata.2018.206">Sadegh et al., 2018</ReferenceLink>;{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2019JD032263">Dunn et al., 2020</ReferenceLink>;{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2023EA003279">Dunn et al., 2024</ReferenceLink>
+          <SourceLink id="DOI_10_1175_jcli_d_12_00383_1">Perkins a Alexander, 2013</SourceLink>;{" "}
+          <SourceLink id="DOI_10_1038_sdata_2018_206">Sadegh et al., 2018</SourceLink>;{" "}
+          <SourceLink id="DOI_10_1029_2019jd032263">Dunn et al., 2020</SourceLink>;{" "}
+          <SourceLink id="DOI_10_1029_2023ea003279">Dunn et al., 2024</SourceLink>
         </p>
 
         <h2>Jak vzniká zveřejněný záznam</h2>
@@ -159,9 +151,9 @@ export function HeatWavesArticle() {
           Meteorologická stanice měří teplotu vzduchu v radiačním krytu, zpravidla přibližně dva metry nad zemí. Z
           průběžných měření přístroj uchová nejvyšší a nejnižší hodnotu pozorovacího dne. Přesná hranice dne, typ
           krytu, čidlo a způsob odečtu patří k metadatům stanice. Doporučené přístroje, umístění a provoz popisuje{" "}
-          <ReferenceLink href="https://community.wmo.int/site/knowledge-hub/programmes-and-initiatives/instruments-and-methods-observation-programme-imop/guide-instruments-and-methods-observation-wmo-no-8-0">
+          <SourceLink id="WEB_World_Meteorological_Organiz_prirucka_WMO_c_8_f7933a04">
             příručka WMO č. 8
-          </ReferenceLink>.
+          </SourceLink>.
         </p>
 
         <p>
@@ -170,7 +162,7 @@ export function HeatWavesArticle() {
           rozdílů vůči okolním stanicím. Podezřelé údaje dostanou příznak kvality a původní hodnota zůstává dohledatelná.
           Změna stanice nebo přístroje se řeší podle metodiky konkrétního následného produktu; samotný GHCN-Daily není
           jedním globálně homogenizovaným výpočtem teplotních extrémů.{" "}
-          <ReferenceLink href="https://doi.org/10.1175/JTECH-D-11-00103.1">Menne et al., 2012</ReferenceLink>
+          <SourceLink id="DOI_10_1175_jtech_d_11_00103_1">Menne et al., 2012</SourceLink>
         </p>
 
         <h3>Místní hranice a souvislé události</h3>
@@ -186,8 +178,8 @@ export function HeatWavesArticle() {
           data použitá k určení hranice chovala statisticky jinak než roky před a po referenčním období. Zhang a
           spoluautoři proto zavedli opakovaný výběr hodnot, který omezuje umělý skok v ukazatelích založených na
           percentilech. Tento postup používají datové soubory ETCCDI včetně HadEX3.{" "}
-          <ReferenceLink href="https://doi.org/10.1175/JCLI3366.1">Zhang et al., 2005</ReferenceLink>;{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2019JD032263">Dunn et al., 2020</ReferenceLink>
+          <SourceLink id="DOI_10_1175_jcli3366_1">Zhang et al., 2005</SourceLink>;{" "}
+          <SourceLink id="DOI_10_1029_2019jd032263">Dunn et al., 2020</SourceLink>
         </p>
 
         <h3>Od stanic k mapě</h3>
@@ -197,8 +189,8 @@ export function HeatWavesArticle() {
           Hodnota buňky je váženým průměrem dostupných stanic; váha klesá se vzdáleností. Pro výpočet musí být v
           dosahu, v němž spolu stanice ještě dostatečně souvisejí, alespoň tři použitelné stanice. Z přibližně 37 000
           dodaných stanic prošlo požadavky na kvalitu a délku pro jednotlivé teplotní ukazatele nejvýše asi 7 000.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2019JD032263">Dunn et al., 2020</ReferenceLink>;{" "}
-          <ReferenceLink href="https://www.metoffice.gov.uk/hadobs/hadex3/hadex3_product_user_guide.pdf">HadEX3 Product User Guide</ReferenceLink>
+          <SourceLink id="DOI_10_1029_2019jd032263">Dunn et al., 2020</SourceLink>;{" "}
+          <SourceLink id="WEB_Met_Office_uzivatelska_prirucka_HadEX3_6eb86927">HadEX3 Product User Guide</SourceLink>
         </p>
 
         <p>
@@ -207,7 +199,7 @@ export function HeatWavesArticle() {
           požaduje nejméně 66 % ročních hodnot a poslední platný rok alespoň 2009; trend se počítá jako medián sklonů
           mezi všemi dvojicemi ročních hodnot. Tečky v mapě označují buňky, kde 95% interval odhadu nezahrnuje nulu.
           Tato pravidla i mapy pokrytí zveřejnili{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2019JD032263">Dunn et al., 2020</ReferenceLink>.
+          <SourceLink id="DOI_10_1029_2019jd032263">Dunn et al., 2020</SourceLink>.
         </p>
 
         <h3>Co vytváří nejistotu</h3>
@@ -217,7 +209,7 @@ export function HeatWavesArticle() {
           se rozdělit na dvě. U globální mapy navíc záleží na tom, kde stanice existují a které buňky splní požadavek na
           úplnost. Zveřejněná práce proto musí uvést nejen sklon změny, ale i období, definici a pravidlo pokrytí.
           Citlivost na délku období podrobně vyhodnotili{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s41467-020-16970-7">Perkins-Kirkpatrick a Lewis, 2020</ReferenceLink>.
+          <SourceLink id="DOI_10_1038_s41467_020_16970_7">Perkins-Kirkpatrick a Lewis, 2020</SourceLink>.
         </p>
 
         <h2>Zveřejňovaná data</h2>
@@ -236,9 +228,9 @@ export function HeatWavesArticle() {
               nejstarší maximum a minimum je z 2. ledna 1833; délka se liší podle stanice. <strong>Pokrytí:</strong>{" "}
               světová souš, velmi nerovnoměrně v místě i čase. <strong>Verze:</strong> GHCN-Daily v3, průběžné denní
               aktualizace a pravidelné přestavění archivu. <strong>Stažení:</strong>{" "}
-              <ReferenceLink href="https://www.ncei.noaa.gov/pub/data/ghcn/daily/">veřejné soubory NOAA</ReferenceLink>.{" "}
-              <strong>Metoda:</strong> <ReferenceLink href="https://doi.org/10.1175/JTECH-D-11-00103.1">Menne et al., 2012</ReferenceLink>;{" "}
-              <ReferenceLink href="https://doi.org/10.7289/V5D21VHZ">datový záznam a DOI</ReferenceLink>.
+              <SourceLink id="WEB_NOAA_Index_of_pub_data_ghcn_daily_96798b50">veřejné soubory NOAA</SourceLink>.{" "}
+              <strong>Metoda:</strong> <SourceLink id="DOI_10_1175_jtech_d_11_00103_1">Menne et al., 2012</SourceLink>;{" "}
+              <SourceLink id="DOI_10_7289_v5d21vhz">datový záznam a DOI</SourceLink>.
             </p>
           </section>
 
@@ -249,9 +241,9 @@ export function HeatWavesArticle() {
               nejlepšího odhadu zveřejňuje soubor 20 realizací pro prostorovou nejistotu. <strong>Období:</strong>{" "}
               1. ledna 1950 až 31. prosince 2025. <strong>Pokrytí:</strong> evropská souš v mřížce 0,1° nebo 0,25°.
               <strong> Verze:</strong> 33.0e, vydaná v květnu 2026. <strong>Stažení:</strong>{" "}
-              <ReferenceLink href="https://surfobs.climate.copernicus.eu/dataaccess/access_eobs.php">portál E-OBS</ReferenceLink>.{" "}
-              <strong>Metoda:</strong> <ReferenceLink href="https://doi.org/10.1029/2017JD028200">Cornes et al., 2018</ReferenceLink>;{" "}
-              <ReferenceLink href="https://doi.org/10.24381/cds.151d3ec6">datový záznam</ReferenceLink>.
+              <SourceLink id="WEB_Copernicus_E_OBS_data_access_94a6a7b1">portál E-OBS</SourceLink>.{" "}
+              <strong>Metoda:</strong> <SourceLink id="DOI_10_1029_2017jd028200">Cornes et al., 2018</SourceLink>;{" "}
+              <SourceLink id="DOI_10_24381_cds_151d3ec6">datový záznam</SourceLink>.
             </p>
           </section>
 
@@ -262,9 +254,9 @@ export function HeatWavesArticle() {
               převedené do globální mřížky; mezi nimi WSDI. <strong>Období:</strong> 1901–2018. <strong>Pokrytí:</strong>{" "}
               světová souš s prázdnými místy tam, kde chybějí vhodné stanice. <strong>Verze:</strong> 3.0.4, statický
               soubor s variantami pro referenční období 1961–1990 a 1981–2010. <strong>Stažení:</strong>{" "}
-              <ReferenceLink href="https://www.metoffice.gov.uk/hadobs/hadex3/download_etccdi.html">Met Office HadEX3</ReferenceLink>.{" "}
-              <strong>Metoda:</strong> <ReferenceLink href="https://doi.org/10.1029/2019JD032263">Dunn et al., 2020</ReferenceLink> a{" "}
-              <ReferenceLink href="https://doi.org/10.1029/2023EA003279">Dunn et al., 2024</ReferenceLink>.
+              <SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_dd07bd35">Met Office HadEX3</SourceLink>.{" "}
+              <strong>Metoda:</strong> <SourceLink id="DOI_10_1029_2019jd032263">Dunn et al., 2020</SourceLink> a{" "}
+              <SourceLink id="DOI_10_1029_2023ea003279">Dunn et al., 2024</SourceLink>.
             </p>
           </section>
 
@@ -275,9 +267,9 @@ export function HeatWavesArticle() {
               předpovědního systému a mnoha druhů pozorování. <strong>Období:</strong> od roku 1940, průběžně doplňované.
               <strong> Pokrytí:</strong> celý svět; běžný výstup v mřížce 0,25°. <strong>Verze:</strong> pátá generace
               reanalýzy ECMWF. <strong>Stažení:</strong>{" "}
-              <ReferenceLink href="https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels">Copernicus Climate Data Store</ReferenceLink>.{" "}
-              <strong>Metoda:</strong> <ReferenceLink href="https://doi.org/10.1002/qj.3803">Hersbach et al., 2020</ReferenceLink>;{" "}
-              <ReferenceLink href="https://doi.org/10.24381/cds.adbb2d47">datový záznam</ReferenceLink>.
+              <SourceLink id="WEB_Copernicus_ERA5_hourly_data_on_single_levels_from_1940_to_p_7e4f50d4">Copernicus Climate Data Store</SourceLink>.{" "}
+              <strong>Metoda:</strong> <SourceLink id="DOI_10_1002_qj_3803">Hersbach et al., 2020</SourceLink>;{" "}
+              <SourceLink id="DOI_10_24381_cds_adbb2d47">datový záznam</SourceLink>.
             </p>
           </section>
 
@@ -288,8 +280,8 @@ export function HeatWavesArticle() {
               minima či průměru, pevných i místních hranic a délky 2 až 10 dnů. <strong>Období:</strong> 1979–2017.
               <strong> Pokrytí:</strong> světová souš v mřížce 0,5°, odvozená z denních dat CPC. <strong>Verze:</strong>{" "}
               statický výzkumný archiv publikovaný v roce 2018. <strong>Stažení:</strong>{" "}
-              <ReferenceLink href="https://doi.org/10.6084/m9.figshare.c.4004668">Figshare</ReferenceLink>.{" "}
-              <strong>Metoda:</strong> <ReferenceLink href="https://doi.org/10.1038/sdata.2018.206">Sadegh et al., 2018</ReferenceLink>.
+              <SourceLink id="DOI_10_6084_m9_figshare_c_4004668">Figshare</SourceLink>.{" "}
+              <strong>Metoda:</strong> <SourceLink id="DOI_10_1038_sdata_2018_206">Sadegh et al., 2018</SourceLink>.
             </p>
           </section>
         </div>
@@ -310,7 +302,7 @@ export function HeatWavesArticle() {
             buňky, takže rozdíly nejsou pouze rozdíly v teplotě; mění se také vstupní stanice a pokrytí. HadEX3 pro
             globální výpočet vybírá buňky s alespoň 90% úplností a váží je podle plochy. Všechny čtyři výpočty v době
             společného pokrytí zachycují vzestup od konce 20. století, jednotlivé roky i velikost odchylky se liší.
-            Zdroj: <ReferenceLink href="https://www.metoffice.gov.uk/hadobs/hadex3/">Met Office HadEX3</ReferenceLink>,
+            Zdroj: <SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_b4e2ac85">Met Office HadEX3</SourceLink>,
             původní graf beze změny, Open Government Licence v3.0.
           </figcaption>
         </figure>
@@ -328,8 +320,8 @@ export function HeatWavesArticle() {
           zjistili, že výsledky z denních maxim, denních minim a ukazatele nadměrného tepla se v mnoha oblastech
           shodují ve směru dlouhodobých změn, avšak liší se v počtu nalezených dnů a v zeměpisném rozložení. GHWR
           ukazuje totéž systematicky: změna délky nebo hranice mění události, které do souboru vstoupí.{" "}
-          <ReferenceLink href="https://doi.org/10.1175/JCLI-D-12-00383.1">Perkins a Alexander, 2013</ReferenceLink>;{" "}
-          <ReferenceLink href="https://doi.org/10.1038/sdata.2018.206">Sadegh et al., 2018</ReferenceLink>
+          <SourceLink id="DOI_10_1175_jcli_d_12_00383_1">Perkins a Alexander, 2013</SourceLink>;{" "}
+          <SourceLink id="DOI_10_1038_sdata_2018_206">Sadegh et al., 2018</SourceLink>
         </p>
 
         <h2 id="pozorovani">Pozorování</h2>
@@ -340,7 +332,7 @@ export function HeatWavesArticle() {
           HadEX3, HadEX2, HadEX a GHCNDEX se liší použitými stanicemi a pokrytím, ale ve společných desetiletích
           zachycují stejný pozdní vzestup WSDI. Mapa HadEX3 pro období označené v grafu jako 1950–2018 ukazuje kladné
           sklony ve většině dostupných buněk Evropy, Asie, Střední a Jižní Ameriky a Austrálie.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2019JD032263">Dunn et al., 2020</ReferenceLink>
+          <SourceLink id="DOI_10_1029_2019jd032263">Dunn et al., 2020</SourceLink>
         </p>
 
         <figure className="article-figure">
@@ -359,7 +351,7 @@ export function HeatWavesArticle() {
             pod mapou. Tečky označují buňky, kde 95% interval odhadu sklonu nezahrnuje nulu. Bílá pevnina nemá
             dostatečné staniční pokrytí: pro mapu je potřeba alespoň 66 % ročních hodnot a poslední platný rok nejdříve
             2009. Prázdná oblast proto neznamená nulovou změnu. Zdroj:{" "}
-            <ReferenceLink href="https://www.metoffice.gov.uk/hadobs/hadex3/">Met Office HadEX3</ReferenceLink>, původní
+            <SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_b4e2ac85">Met Office HadEX3</SourceLink>, původní
             graf beze změny, Open Government Licence v3.0.
           </figcaption>
         </figure>
@@ -371,7 +363,7 @@ export function HeatWavesArticle() {
           alespoň o jeden den za desetiletí; v mnoha nízkých zeměpisných šířkách činil sklon tři až pět dnů za
           desetiletí. V žádné z hodnocených oblastí nezjistili statisticky průkazný pokles tohoto počtu. Nejdelší
           událost se podle oblasti prodlužovala přibližně o 0,2 až více než jeden den za desetiletí.{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s41467-020-16970-7">Perkins-Kirkpatrick a Lewis, 2020</ReferenceLink>
+          <SourceLink id="DOI_10_1038_s41467_020_16970_7">Perkins-Kirkpatrick a Lewis, 2020</SourceLink>
         </p>
 
         <p>
@@ -380,7 +372,7 @@ export function HeatWavesArticle() {
           hranice během jednoho započteného dne se ve většině oblastí průkazně neměnilo. Výsledek je důležitý pro čtení
           slov „silnější vlna“: celkové zatížení událostí může růst hlavně tím, že přibývají nebo se prodlužují horké
           dny, i když se jejich průměrné překročení hranice mění méně.{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s41467-020-16970-7">Perkins-Kirkpatrick a Lewis, 2020</ReferenceLink>
+          <SourceLink id="DOI_10_1038_s41467_020_16970_7">Perkins-Kirkpatrick a Lewis, 2020</SourceLink>
         </p>
 
         <p>
@@ -388,7 +380,7 @@ export function HeatWavesArticle() {
           2017 něco přes dva dny za desetiletí při začátku v roce 1950, ale 6,4 dne za desetiletí při začátku na
           počátku osmdesátých let. Kratší interval zachytil jinou část kolísání a měl méně roků. Sklon proto vždy
           uvádíme s oběma krajními roky; samotná hodnota „dnů za desetiletí“ není úplným výsledkem.{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s41467-020-16970-7">Perkins-Kirkpatrick a Lewis, 2020</ReferenceLink>
+          <SourceLink id="DOI_10_1038_s41467_020_16970_7">Perkins-Kirkpatrick a Lewis, 2020</SourceLink>
         </p>
 
         <h3>Evropa</h3>
@@ -399,7 +391,7 @@ export function HeatWavesArticle() {
           ve vlnách za desetiletí. Ve zbytku severních středních zeměpisných šířek činil 0,21 dne za desetiletí.
           Kumulované překročení hranice mělo odpovídající sklony 1,69 °C a 0,44 °C za desetiletí. Čísla patří k této
           prostorové a šestidenní definici; třídenní varianta je ve studii uvedena zvlášť.{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s41467-022-31432-y">Rousi et al., 2022</ReferenceLink>
+          <SourceLink id="DOI_10_1038_s41467_022_31432_y">Rousi et al., 2022</SourceLink>
         </p>
 
         <p>
@@ -408,7 +400,7 @@ export function HeatWavesArticle() {
           letní denní maximum se v obou souborech měnilo o 3,4 °C na každý stupeň změny globální průměrné teploty;
           uvedený interval byl 2,4–4,3 °C. Toto číslo popisuje teplotu jednoho nejteplejšího dne v létě, nikoli počet
           ani trvání vln veder. Jeho zařazení ukazuje, proč je třeba nejteplejší den a vícedenní událost držet odděleně.{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s41467-023-42143-3">Vautard et al., 2023</ReferenceLink>
+          <SourceLink id="DOI_10_1038_s41467_023_42143_3">Vautard et al., 2023</SourceLink>
         </p>
 
         <h3>Česká republika</h3>
@@ -417,7 +409,7 @@ export function HeatWavesArticle() {
           absolutních maxim i minim a také počtu letních dnů, tropických dnů, tropických nocí, dnů ve vlnách veder a
           dnů s teplou odchylkou. Autoři zveřejnili výsledky pro jednotlivé stanice a typy cirkulace; tvrzení se tedy
           neopírá o jedinou městskou stanici ani o jeden teplý rok.{" "}
-          <ReferenceLink href="https://doi.org/10.1002/joc.7505">Zahradníček et al., 2022</ReferenceLink>
+          <SourceLink id="DOI_10_1002_joc_7505">Zahradníček et al., 2022</SourceLink>
         </p>
 
         <p>
@@ -426,7 +418,7 @@ export function HeatWavesArticle() {
           letech 2011–2025. Rok 2024 měl v průměru 18,5 tropického dne a rok 2015 téměř 26. V srpnu 2015 byl tropický
           den alespoň na jedné stanici šestnáct dnů v řadě; nejdelší souvislý úsek na jedné stanici měl čtrnáct dnů.
           Plošný průměr, výskyt někde na území a jediná stanice jsou tři různé souhrny a ČHMÚ je proto uvádí odděleně.{" "}
-          <ReferenceLink href="https://www.chmi.cz/o-chmu/aktuality/vlny-veder-v-historii-a-dnes">ČHMÚ, 2026</ReferenceLink>
+          <SourceLink id="WEB_Cesky_hydrometeorologicky_us_Vlny_veder_v_historii_a_dnes_27ba4cfb">ČHMÚ, 2026</SourceLink>
         </p>
 
         <h3>Co v mapách zůstává neznámé</h3>
@@ -437,8 +429,8 @@ export function HeatWavesArticle() {
           souvislou mapu i tam, ale je to reanalýza propojující pozorování s výpočtem atmosféry. Shodný směr ve více
           souborech je proto užitečná kontrola; ani souvislá mapa však nenahrazuje údaj o vstupních měřeních a použité
           definici.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2019JD032263">Dunn et al., 2020</ReferenceLink>;{" "}
-          <ReferenceLink href="https://doi.org/10.1002/qj.3803">Hersbach et al., 2020</ReferenceLink>
+          <SourceLink id="DOI_10_1029_2019jd032263">Dunn et al., 2020</SourceLink>;{" "}
+          <SourceLink id="DOI_10_1002_qj_3803">Hersbach et al., 2020</SourceLink>
         </p>
 
         <div className="article-observation-summary">
@@ -460,46 +452,46 @@ export function HeatWavesArticle() {
           <section>
             <h3>Definice a metodické práce</h3>
             <ul>
-              <li><ReferenceLink href="https://doi.org/10.3354/cr019193">Frich et al., 2002: první globální soubor deseti ukazatelů extrémů</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1175/JCLI3366.1">Zhang et al., 2005: výpočet percentilů uvnitř referenčního období</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1175/JCLI-D-12-00383.1">Perkins a Alexander, 2013: jednotné měření vlastností vln veder</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.3390/ijerph120100227">Nairn a Fawcett, 2015: ukazatel nadměrného tepla</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1038/sdata.2018.206">Sadegh et al., 2018: více definic v archivu GHWR</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1175/JTECH-D-11-00103.1">Menne et al., 2012: sestavení a kontrola GHCN-Daily</ReferenceLink></li>
+              <li><SourceLink id="DOI_10_3354_cr019193">Frich et al., 2002: první globální soubor deseti ukazatelů extrémů</SourceLink></li>
+              <li><SourceLink id="DOI_10_1175_jcli3366_1">Zhang et al., 2005: výpočet percentilů uvnitř referenčního období</SourceLink></li>
+              <li><SourceLink id="DOI_10_1175_jcli_d_12_00383_1">Perkins a Alexander, 2013: jednotné měření vlastností vln veder</SourceLink></li>
+              <li><SourceLink id="DOI_10_3390_ijerph120100227">Nairn a Fawcett, 2015: ukazatel nadměrného tepla</SourceLink></li>
+              <li><SourceLink id="DOI_10_1038_sdata_2018_206">Sadegh et al., 2018: více definic v archivu GHWR</SourceLink></li>
+              <li><SourceLink id="DOI_10_1175_jtech_d_11_00103_1">Menne et al., 2012: sestavení a kontrola GHCN-Daily</SourceLink></li>
             </ul>
           </section>
 
           <section>
             <h3>Historické a globální staniční práce</h3>
             <ul>
-              <li><ReferenceLink href="https://doi.org/10.1002/joc.3370120402">Parker et al., 1992: denní teplota ve střední Anglii od roku 1772</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1002/joc.1190">Parker a Horton, 2005: nejistoty maxim a minim od roku 1878</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1029/2005JD006290">Alexander et al., 2006: globální změny denních extrémů</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1029/2019JD032263">Dunn et al., 2020: vznik HadEX3</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1029/2023EA003279">Dunn et al., 2024: aktualizace a hodnocení HadEX3</ReferenceLink></li>
+              <li><SourceLink id="DOI_10_1002_joc_3370120402">Parker et al., 1992: denní teplota ve střední Anglii od roku 1772</SourceLink></li>
+              <li><SourceLink id="DOI_10_1002_joc_1190">Parker a Horton, 2005: nejistoty maxim a minim od roku 1878</SourceLink></li>
+              <li><SourceLink id="DOI_10_1029_2005jd006290">Alexander et al., 2006: globální změny denních extrémů</SourceLink></li>
+              <li><SourceLink id="DOI_10_1029_2019jd032263">Dunn et al., 2020: vznik HadEX3</SourceLink></li>
+              <li><SourceLink id="DOI_10_1029_2023ea003279">Dunn et al., 2024: aktualizace a hodnocení HadEX3</SourceLink></li>
             </ul>
           </section>
 
           <section>
             <h3>Současná pozorování</h3>
             <ul>
-              <li><ReferenceLink href="https://doi.org/10.1038/s41467-020-16970-7">Perkins-Kirkpatrick a Lewis, 2020: globální počet, délka a kumulované teplo 1950–2017</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1038/s41467-022-31432-y">Rousi et al., 2022: evropské vlny veder 1979–2020</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1038/s41467-023-42143-3">Vautard et al., 2023: nejteplejší letní dny v západní Evropě</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1002/joc.7505">Zahradníček et al., 2022: české teplotní extrémy 1961–2020</ReferenceLink></li>
-              <li><ReferenceLink href="https://www.chmi.cz/o-chmu/aktuality/vlny-veder-v-historii-a-dnes">ČHMÚ, 2026: tropické dny a souvislé události v České republice</ReferenceLink></li>
+              <li><SourceLink id="DOI_10_1038_s41467_020_16970_7">Perkins-Kirkpatrick a Lewis, 2020: globální počet, délka a kumulované teplo 1950–2017</SourceLink></li>
+              <li><SourceLink id="DOI_10_1038_s41467_022_31432_y">Rousi et al., 2022: evropské vlny veder 1979–2020</SourceLink></li>
+              <li><SourceLink id="DOI_10_1038_s41467_023_42143_3">Vautard et al., 2023: nejteplejší letní dny v západní Evropě</SourceLink></li>
+              <li><SourceLink id="DOI_10_1002_joc_7505">Zahradníček et al., 2022: české teplotní extrémy 1961–2020</SourceLink></li>
+              <li><SourceLink id="WEB_Cesky_hydrometeorologicky_us_Vlny_veder_v_historii_a_dnes_27ba4cfb">ČHMÚ, 2026: tropické dny a souvislé události v České republice</SourceLink></li>
             </ul>
           </section>
 
           <section>
             <h3>Datové portály</h3>
             <ul>
-              <li><ReferenceLink href="https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily">GHCN-Daily: popis</ReferenceLink> a <ReferenceLink href="https://www.ncei.noaa.gov/pub/data/ghcn/daily/">soubory ke stažení</ReferenceLink></li>
-              <li><ReferenceLink href="https://surfobs.climate.copernicus.eu/dataaccess/access_eobs.php">E-OBS v33.0e: evropské denní mapy</ReferenceLink></li>
-              <li><ReferenceLink href="https://www.metoffice.gov.uk/hadobs/hadex3/download_etccdi.html">HadEX3 v3.0.4: mřížkované ukazatele a pomocná data</ReferenceLink></li>
-              <li><ReferenceLink href="https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels">ERA5: hodinová reanalýza</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.6084/m9.figshare.c.4004668">GHWR: více metod určení vln veder</ReferenceLink></li>
-              <li><ReferenceLink href="https://opendata.chmi.cz/meteorology/climate/historical_csv/">ČHMÚ: otevřená historická staniční data v CSV</ReferenceLink></li>
+              <li><SourceLink id="WEB_NOAA_Global_Historical_Climatology_Network_daily_GHCN_14491e06">GHCN-Daily: popis</SourceLink> a <SourceLink id="WEB_NOAA_Index_of_pub_data_ghcn_daily_96798b50">soubory ke stažení</SourceLink></li>
+              <li><SourceLink id="WEB_Copernicus_E_OBS_data_access_94a6a7b1">E-OBS v33.0e: evropské denní mapy</SourceLink></li>
+              <li><SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_dd07bd35">HadEX3 v3.0.4: mřížkované ukazatele a pomocná data</SourceLink></li>
+              <li><SourceLink id="WEB_Copernicus_ERA5_hourly_data_on_single_levels_from_1940_to_p_7e4f50d4">ERA5: hodinová reanalýza</SourceLink></li>
+              <li><SourceLink id="DOI_10_6084_m9_figshare_c_4004668">GHWR: více metod určení vln veder</SourceLink></li>
+              <li><SourceLink id="WEB_Cesky_hydrometeorologicky_us_Index_of_meteorology_climate_historical_csv_13ecfbd3">ČHMÚ: otevřená historická staniční data v CSV</SourceLink></li>
             </ul>
           </section>
 
@@ -508,9 +500,9 @@ export function HeatWavesArticle() {
             <ul>
               <li>
                 Oba grafy pocházejí z{" "}
-                <ReferenceLink href="https://www.metoffice.gov.uk/hadobs/hadex3/">oficiální stránky HadEX3</ReferenceLink>
+                <SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_b4e2ac85">oficiální stránky HadEX3</SourceLink>
                 a zobrazují ukazatel WSDI z verze 3.0.4. Met Office je zpřístupňuje pod{" "}
-                <ReferenceLink href="https://www.metoffice.gov.uk/hadobs/hadex3/terms_and_conditions.html">Open Government Licence v3.0</ReferenceLink>.
+                <SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_cdb0d8ce">Open Government Licence v3.0</SourceLink>.
                 Soubory jsou převzaty beze změny; české vysvětlení barev, výběru buněk a omezení je doplněno v
                 popiscích této stránky.
               </li>

@@ -1,13 +1,5 @@
 import Image from "next/image";
-import type { ReactNode } from "react";
-
-function ReferenceLink({ href, children }: { href: string; children: ReactNode }) {
-  return (
-    <a className="article-reference" href={href} target="_blank" rel="noreferrer">
-      {children}
-    </a>
-  );
-}
+import { SourceLink } from "./SourceLink";
 
 export function StratosphericCoolingArticle() {
   return (
@@ -61,9 +53,9 @@ export function StratosphericCoolingArticle() {
           kolem 9–12 kilometrů ve středních zeměpisných šířkách a až 18–20 kilometrů nad tropy. Horní hranice,
           stratopauza, leží přibližně ve výšce 50 kilometrů. Proto může hladina 100 hPa představovat dolní
           stratosféru v jedné oblasti a blízkost tropopauzy v jiné.{" "}
-          <ReferenceLink href="https://prod-01-alb-www-noaa.woc.noaa.gov/jetstream/atmosphere/layers-of-atmosphere">
+          <SourceLink id="WEB_NOAA_Layers_of_the_Atmosphere_29f17d10">
             NOAA: vrstvy atmosféry
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <figure className="article-figure article-figure--portrait">
@@ -79,9 +71,9 @@ export function StratosphericCoolingArticle() {
             Přibližný svislý profil teploty v dolních vrstvách atmosféry. Stratosféra začíná nad proměnlivou
             tropopauzou a končí u stratopauzy kolem 50 km. Graf znázorňuje typický profil, nikoli měření jednoho
             dne nebo místa. Nezměněný materiál NOAA, veřejná doména.{" "}
-            <ReferenceLink href="https://prod-01-alb-www-noaa.woc.noaa.gov/jetstream/atmosphere/layers-of-atmosphere">
+            <SourceLink id="WEB_NOAA_Layers_of_the_Atmosphere_29f17d10">
               Původní obrázek a popis
-            </ReferenceLink>
+            </SourceLink>
           </figcaption>
         </figure>
 
@@ -99,13 +91,13 @@ export function StratosphericCoolingArticle() {
           měření střední a horní stratosféry a Steiner a kol. později porovnali balóny, několik družicových
           přístrojů, lidary a rádiová zákrytová měření. Každá práce uvádí, kterou výšku nebo vrstvu její výsledek
           skutečně zastupuje.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2005JD006169">Free et al., 2005</ReferenceLink>,{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2004JD005753">Thorne et al., 2005</ReferenceLink>,{" "}
-          <ReferenceLink href="https://doi.org/10.1175/2008JTECHA1176.1">
+          <SourceLink id="DOI_10_1029_2005jd006169">Free et al., 2005</SourceLink>,{" "}
+          <SourceLink id="DOI_10_1029_2004jd005753">Thorne et al., 2005</SourceLink>,{" "}
+          <SourceLink id="DOI_10_1175_2008jtecha1176_1">
             Mears &amp; Wentz, 2009
-          </ReferenceLink>
-          , <ReferenceLink href="https://doi.org/10.1175/JTECH-D-16-0018.1">Zou &amp; Qian, 2016</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1175/JCLI-D-19-0998.1">Steiner et al., 2020</ReferenceLink>
+          </SourceLink>
+          , <SourceLink id="DOI_10_1175_jtech_d_16_0018_1">Zou &amp; Qian, 2016</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1175_jcli_d_19_0998_1">Steiner et al., 2020</SourceLink>
         </p>
 
         <h2>Historie měření</h2>
@@ -121,13 +113,13 @@ export function StratosphericCoolingArticle() {
           oblasti. Richard Assmann zveřejnil o několik dní později obdobný výsledek z německých měření. Dobová
           zpráva uvádí 540 balónových výstupů z Trappes, z nichž 268 překročilo 11 kilometrů. Pozorovaná změna
           svislého průběhu teploty se stala základem rozdělení atmosféry na troposféru a stratosféru.{" "}
-          <ReferenceLink href="https://journals.ametsoc.org/view/journals/mwre/30/7/1520-0493-30_7_356.xml">
+          <SourceLink id="WEB_journals_ametsoc_org_The_International_Aeronautical_Congress_at_Berli_8cb3a239">
             Monthly Weather Review, 1902
-          </ReferenceLink>
-          , <ReferenceLink href="https://doi.org/10.4267/2042/36222">Rochas, 2002</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1175/AMSMONOGRAPHS-D-19-0003.1">
+          </SourceLink>
+          , <SourceLink id="DOI_10_4267_2042_36222">Rochas, 2002</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1175_amsmonographs_d_19_0003_1">
             Baldwin et al., 2019
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <p>
@@ -135,10 +127,10 @@ export function StratosphericCoolingArticle() {
           Francii v roce 1929 vypustil přístroj, který teplotu během letu vysílal rádiem, a zavedl označení
           radiosonda. Ve třicátých letech vznikly praktické konstrukce v Sovětském svazu, Finsku, Německu a
           Spojených státech. Pravidelné provozní sítě se rozšířily před druhou světovou válkou a během ní.{" "}
-          <ReferenceLink href="https://www.nist.gov/nist-museum/tuning-weather-forecasting">
+          <SourceLink id="WEB_nist_gov_Tuning_into_Weather_Forecasting_NIST_be922613">
             NIST: vývoj radiosond
-          </ReferenceLink>{" "}
-          a <ReferenceLink href="https://www.weather.gov/upperair/factsheet">NOAA/NWS: historie měření</ReferenceLink>
+          </SourceLink>{" "}
+          a <SourceLink id="WEB_NOAA_Radiosonde_Observation_27e1f005">NOAA/NWS: historie měření</SourceLink>
         </p>
 
         <figure className="article-figure article-figure--portrait">
@@ -153,9 +145,9 @@ export function StratosphericCoolingArticle() {
           <figcaption>
             Příprava meteorologického balónu s radiosondou v roce 1944. Fotografie: U.S. Army Air Forces /
             NOAA Photo Library, nezměněný materiál veřejné domény.{" "}
-            <ReferenceLink href="https://www.ncei.noaa.gov/products/weather-balloon/radiosonde-atmospheric-temperature-products">
+            <SourceLink id="WEB_NOAA_Radiosonde_Atmospheric_Temperature_Products_for_960a4f75">
               NOAA: radiosondová teplotní data
-            </ReferenceLink>
+            </SourceLink>
           </figcaption>
         </figure>
 
@@ -165,8 +157,8 @@ export function StratosphericCoolingArticle() {
           začíná rokem 1958, kdy už síť dovoluje počítat velkoplošné průměry. Jeho autoři zvolili 85 pevninských
           stanic a 13 tlakových hladin. Rok 1958 proto neoznačuje první radiosondu, ale začátek konkrétního
           pravidelně zpracovávaného globálního produktu.{" "}
-          <ReferenceLink href="https://doi.org/10.1175/JCLI3198.1">Free et al., 2004</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2005JD006169">Free et al., 2005</ReferenceLink>
+          <SourceLink id="DOI_10_1175_jcli3198_1">Free et al., 2004</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1029_2005jd006169">Free et al., 2005</SourceLink>
         </p>
 
         <p>
@@ -176,13 +168,13 @@ export function StratosphericCoolingArticle() {
           Unit-A (AMSU-A) od roku 1998, Microwave Limb Sounder (MLS) od roku 2004 a později Advanced Technology
           Microwave Sounder (ATMS) umožnily pokračovat i po skončení původních MSU a SSU. Souvislé globální
           družicové záznamy proto začínají na konci roku 1978.{" "}
-          <ReferenceLink href="https://www.cpc.ncep.noaa.gov/products/stratosphere/strat_a_f/NOAA-N.pdf">
+          <SourceLink id="WEB_NOAA_NASA_NOAA_prehled_druzic_a566a73a">
             NASA/NOAA: přehled družic
-          </ReferenceLink>{" "}
+          </SourceLink>{" "}
           a{" "}
-          <ReferenceLink href="https://climatedataguide.ucar.edu/climate-data/stratospheric-temperature-satellite-datasets-used-quantify-lower-middle-and-upper">
+          <SourceLink id="WEB_University_Corporation_for_A_Stratospheric_Temperature_Satellite_Datasets_Use_394cf021">
             NCAR Climate Data Guide
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <p>
@@ -190,11 +182,11 @@ export function StratosphericCoolingArticle() {
           signál navigačních družic ohýbá při průchodu atmosférou. Z těchto zákrytových měření lze odvodit svislé
           profily teploty. Jejich globální klimatické zpracování začíná v roce 2002 a poskytuje další měření
           založené na odlišném fyzikálním principu.{" "}
-          <ReferenceLink href="https://doi.org/10.1016/S0273-1177(03)00591-X">Wickert et al., 2004</ReferenceLink>{" "}
+          <SourceLink id="DOI_10_1016_s0273_1177_03_00591_x">Wickert et al., 2004</SourceLink>{" "}
           a{" "}
-          <ReferenceLink href="https://www.cosmic.ucar.edu/RO_Climate_Data_Record">
+          <SourceLink id="WEB_University_Corporation_for_A_RO_Climate_Data_Record_Constellation_Observing_S_03516764">
             klimatický soubor centra CDAAC
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <h2>Co se skutečně měří</h2>
@@ -204,7 +196,7 @@ export function StratosphericCoolingArticle() {
           vodíkem. Teplotní čidlo je vystavené proudícímu vzduchu, tlakové čidlo určuje tlakovou hladinu a poloha
           se sleduje pomocí družicové navigace. Přístroj vysílá hodnoty každou sekundu přijímači na zemi.
           Typický výstup trvá déle než dvě hodiny a může překročit 35 kilometrů.{" "}
-          <ReferenceLink href="https://www.weather.gov/upperair/factsheet">NOAA/NWS: radiosondové pozorování</ReferenceLink>
+          <SourceLink id="WEB_NOAA_Radiosonde_Observation_27e1f005">NOAA/NWS: radiosondové pozorování</SourceLink>
         </p>
 
         <p>
@@ -213,9 +205,9 @@ export function StratosphericCoolingArticle() {
           podrobného profilu ukládají také hodnoty na standardních tlakových hladinách, například 100, 70, 50 a
           30 hPa. Celosvětová síť má přibližně tisíc stanic a běžně dosahuje 30 kilometrů nebo výše. Horní
           stratosféru kolem 45–50 kilometrů tato provozní síť pokrývá jen omezeně.{" "}
-          <ReferenceLink href="https://wmo.int/activities/global-observing-system-gos/global-observing-system-gos">
+          <SourceLink id="WEB_World_Meteorological_Organiz_Global_Observing_System_GOS_cd0817f4">
             WMO Global Observing System
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <p>
@@ -223,9 +215,9 @@ export function StratosphericCoolingArticle() {
           meteorologické služby proto používají stínění, malé rychle reagující snímače a korekce závislé na typu
           přístroje, výšce a osvětlení. Přesný postup se mezi generacemi radiosond měnil. Klimatické zpracování
           musí znát datum těchto změn, protože výměna čidla může v místním záznamu vytvořit skok.{" "}
-          <ReferenceLink href="https://community.wmo.int/site/knowledge-hub/programmes-and-initiatives/instruments-and-methods-of-observation-programme-imop/guide-instruments-and-methods-of-observation-wmo-no-8">
+          <SourceLink id="WEB_World_Meteorological_Organiz_Guide_to_Instruments_and_Methods_of_Observation_93c4c4a4">
             WMO Guide to Instruments and Methods of Observation
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <h3>Družice: teplota široké vrstvy</h3>
@@ -242,10 +234,10 @@ export function StratosphericCoolingArticle() {
           nejcitlivější přibližně v 17 kilometrech a zastupuje dolní stratosféru zhruba mezi 13 a 22 kilometry.
           Původní SSU měřil infračervené záření oxidu uhličitého ve třech ještě širších kanálech. Jejich maxima
           leží přibližně ve 30, 38 a 45 kilometrech.{" "}
-          <ReferenceLink href="https://doi.org/10.1175/2008JTECHA1176.1">
+          <SourceLink id="DOI_10_1175_2008jtecha1176_1">
             Mears &amp; Wentz, 2009
-          </ReferenceLink>{" "}
-          a <ReferenceLink href="https://doi.org/10.1002/2014JD021603">Zou et al., 2014</ReferenceLink>
+          </SourceLink>{" "}
+          a <SourceLink id="DOI_10_1002_2014jd021603">Zou et al., 2014</SourceLink>
         </p>
 
         <figure className="article-figure article-figure--portrait">
@@ -276,9 +268,9 @@ export function StratosphericCoolingArticle() {
             ukazuje relativní příspěvek dané výšky. Překryv křivek je skutečnou vlastností měření, takže kanály
             nejsou ostře oddělené výškové přihrádky. Graf: William Randel, NSF NCAR Climate Data Guide, beze změny;
             stránka uvádí „Usage Restrictions: None“.{" "}
-            <ReferenceLink href="https://climatedataguide.ucar.edu/climate-data/stratospheric-temperature-satellite-datasets-used-quantify-lower-middle-and-upper">
+            <SourceLink id="WEB_University_Corporation_for_A_Stratospheric_Temperature_Satellite_Datasets_Use_394cf021">
               Původní obrázek a odborný popis
-            </ReferenceLink>
+            </SourceLink>
           </figcaption>
         </figure>
 
@@ -302,10 +294,10 @@ export function StratosphericCoolingArticle() {
           rozlišený profil, zatímco měsíční klimatický produkt spojuje tisíce profilů z několika družic. Současný
           soubor COSMIC Data Analysis and Archive Center (CDAAC) začíná v březnu 2002, nabízí teplotu mezi 10 a
           40 kilometry na výškovém kroku 200 metrů a ukládá ji v zeměpisné mřížce 5° × 10°.{" "}
-          <ReferenceLink href="https://www.cosmic.ucar.edu/RO_Climate_Data_Record">
+          <SourceLink id="WEB_University_Corporation_for_A_RO_Climate_Data_Record_Constellation_Observing_S_03516764">
             klimatický soubor CDAAC
-          </ReferenceLink>{" "}
-          a <ReferenceLink href="https://doi.org/10.5194/amt-13-3081-2020">Gleisner et al., 2020</ReferenceLink>
+          </SourceLink>{" "}
+          a <SourceLink id="DOI_10_5194_amt_13_3081_2020">Gleisner et al., 2020</SourceLink>
         </p>
 
         <h2>Jak vzniká zveřejněný záznam</h2>
@@ -316,7 +308,7 @@ export function StratosphericCoolingArticle() {
           hladiny a přidává značky kvality. U družicových dat začíná kontrola u radiance každého záběru. U
           rádiových zákrytů se vyřadí profily, které nesplní kontrolu přesnosti dráhy, signálu a odvozených
           veličin. Tyto archivy tvoří vstup pro měsíční klimatické produkty.{" "}
-          <ReferenceLink href="https://doi.org/10.1175/JTECH-D-17-0223.1">Durre et al., 2018</ReferenceLink>
+          <SourceLink id="DOI_10_1175_jtech_d_17_0223_1">Durre et al., 2018</SourceLink>
         </p>
 
         <h3>2. Radiosondy se porovnají v čase</h3>
@@ -326,11 +318,11 @@ export function StratosphericCoolingArticle() {
           sestavili ručně posouzený soubor 87 stanic. Haimberger později vyvinul automatické postupy RAOBCORE a
           RICH, které využívají rozdíly vůči okolním pozorováním a meteorologickým analýzám. Výsledkem jsou
           alternativní opravené verze, nikoli jeden neomylný přepis minulosti.{" "}
-          <ReferenceLink href="https://doi.org/10.1175/1520-0442(2003)016%3C0224:THOMRT%3E2.0.CO;2">
+          <SourceLink id="DOI_10_1175_1520_0442_2003_016_0224_thomrt_2_0_co_2">
             Lanzante et al., 2003
-          </ReferenceLink>
-          , <ReferenceLink href="https://doi.org/10.1175/JCLI4050.1">Haimberger, 2007</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1175/JCLI-D-11-00668.1">Haimberger et al., 2012</ReferenceLink>
+          </SourceLink>
+          , <SourceLink id="DOI_10_1175_jcli4050_1">Haimberger, 2007</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1175_jcli_d_11_00668_1">Haimberger et al., 2012</SourceLink>
         </p>
 
         <h3>3. Z vybraných stanic se vytvoří velkoplošný průměr</h3>
@@ -339,10 +331,10 @@ export function StratosphericCoolingArticle() {
           měsíčních hodnot. Od roku 1996 nejprve počítá rozdíl mezi sousedními měsíci u jednotlivých stanic,
           teprve potom tyto rozdíly spojuje do velkých zeměpisných oblastí a z nich obnoví dlouhodobý průběh.
           Postup omezuje vliv skoků a mezer, zároveň však přidává nejistotu tam, kde je stanic málo.{" "}
-          <ReferenceLink href="https://doi.org/10.1175/JCLI3198.1">Free et al., 2004</ReferenceLink> a{" "}
-          <ReferenceLink href="https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ncdc%3AC00978">
+          <SourceLink id="DOI_10_1175_jcli3198_1">Free et al., 2004</SourceLink> a{" "}
+          <SourceLink id="WEB_NOAA_Radiosonde_Atmospheric_Temperature_Products_for_d1952dde">
             NOAA RATPAC v2
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <h3>4. Každá družice se nejprve kalibruje samostatně</h3>
@@ -360,9 +352,9 @@ export function StratosphericCoolingArticle() {
           koriguje posun místního času přeletu, protože dráha družice se postupně mění a stejnou oblast může po
           letech pozorovat v jinou denní dobu. Právě volba kalibrace, překryvů a korekce dráhy tvoří hlavní
           rozdíl mezi produkty NOAA, RSS a UAH.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2011JD016205">Zou &amp; Wang, 2011</ReferenceLink>,{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2010JD014954">Mears et al., 2011</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1007/s13143-017-0010-y">Spencer et al., 2017</ReferenceLink>
+          <SourceLink id="DOI_10_1029_2011jd016205">Zou &amp; Wang, 2011</SourceLink>,{" "}
+          <SourceLink id="DOI_10_1029_2010jd014954">Mears et al., 2011</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1007_s13143_017_0010_y">Spencer et al., 2017</SourceLink>
         </p>
 
         <h3>6. Staré a nové kanály dostanou stejnou výškovou citlivost</h3>
@@ -372,8 +364,8 @@ export function StratosphericCoolingArticle() {
           AMSU-A matematicky složí tak, aby napodobily široké váhové funkce SSU1, SSU2 a SSU3. Druhý nezávislý
           postup aplikuje tytéž funkce na podrobnější profily přístroje MLS. Obě pokračování původního SSU pak lze
           přímo porovnat.{" "}
-          <ReferenceLink href="https://doi.org/10.1175/JTECH-D-16-0018.1">Zou &amp; Qian, 2016</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1175/JCLI-D-15-0629.1">Randel et al., 2016</ReferenceLink>
+          <SourceLink id="DOI_10_1175_jtech_d_16_0018_1">Zou &amp; Qian, 2016</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1175_jcli_d_15_0629_1">Randel et al., 2016</SourceLink>
         </p>
 
         <h3>7. Měsíční mapy se převedou na globální hodnotu</h3>
@@ -392,8 +384,8 @@ export function StratosphericCoolingArticle() {
           Mears a kol. vytvářejí mnoho přípustných variant korekcí, zatímco současné přehledy zároveň porovnávají
           výsledky RSS, NOAA a UAH. Shoda více zpracování stejného signálu zmenšuje nejistotu metody, ale
           nepředstavuje tři nezávislé soustavy družic.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2010JD014954">Mears et al., 2011</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1175/JCLI-D-19-0998.1">Steiner et al., 2020</ReferenceLink>
+          <SourceLink id="DOI_10_1029_2010jd014954">Mears et al., 2011</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1175_jcli_d_19_0998_1">Steiner et al., 2020</SourceLink>
         </p>
 
         <h2>Zveřejňovaná data</h2>
@@ -413,13 +405,13 @@ export function StratosphericCoolingArticle() {
               po roce 1997 není homogenizovaná stejným způsobem jako starší údaje.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ncdc%3AC00978">
+              <SourceLink id="WEB_NOAA_Radiosonde_Atmospheric_Temperature_Products_for_d1952dde">
                 Popis a stažení
-              </ReferenceLink>
+              </SourceLink>
               {" · "}
-              <ReferenceLink href="https://doi.org/10.7289/V5SF2T7J">DOI dat</ReferenceLink>
+              <SourceLink id="DOI_10_7289_v5sf2t7j">DOI dat</SourceLink>
               {" · "}
-              <ReferenceLink href="https://doi.org/10.1029/2005JD006169">Metodická práce</ReferenceLink>
+              <SourceLink id="DOI_10_1029_2005jd006169">Metodická práce</SourceLink>
             </p>
           </section>
 
@@ -431,11 +423,11 @@ export function StratosphericCoolingArticle() {
               se v grafech zkracuje na RSS. Produkt zastupuje přibližně 13–22 kilometrů.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://www.remss.com/missions/amsu/">Data RSS</ReferenceLink>
+              <SourceLink id="WEB_Remote_Sensing_Systems_Remote_Sensing_Systems_25160e34">Data RSS</SourceLink>
               {" · "}
-              <ReferenceLink href="https://doi.org/10.1175/2008JTECHA1176.1">Metoda</ReferenceLink>
+              <SourceLink id="DOI_10_1175_2008jtecha1176_1">Metoda</SourceLink>
               {" · "}
-              <ReferenceLink href="https://doi.org/10.1029/2010JD014954">Nejistota</ReferenceLink>
+              <SourceLink id="DOI_10_1029_2010jd014954">Nejistota</SourceLink>
             </p>
           </section>
 
@@ -448,15 +440,15 @@ export function StratosphericCoolingArticle() {
               záznamu.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://www.ncei.noaa.gov/products/climate-data-records/mean-layer-temperature-noaa">
+              <SourceLink id="WEB_NOAA_Mean_Layer_Temperature_NOAA_CDR_743b717d">
                 Produkt a dokumentace
-              </ReferenceLink>
+              </SourceLink>
               {" · "}
-              <ReferenceLink href="https://doi.org/10.25921/tn91-wv50">DOI dat</ReferenceLink>
+              <SourceLink id="DOI_10_25921_tn91_wv50">DOI dat</SourceLink>
               {" · "}
-              <ReferenceLink href="https://www.star.nesdis.noaa.gov/smcd/emb/mscat/products.php">
+              <SourceLink id="WEB_NOAA_Center_for_Satellite_Applications_and_Research_N_c3fa6ee2">
                 Přímé soubory
-              </ReferenceLink>
+              </SourceLink>
             </p>
           </section>
 
@@ -468,9 +460,9 @@ export function StratosphericCoolingArticle() {
               hodnoty i mřížková data od prosince 1978.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://www.nsstc.uah.edu/data/msu/">Data UAH</ReferenceLink>
+              <SourceLink id="WEB_nsstc_uah_edu_Index_of_data_msu_9b9f4900">Data UAH</SourceLink>
               {" · "}
-              <ReferenceLink href="https://doi.org/10.1007/s13143-017-0010-y">Metodická práce</ReferenceLink>
+              <SourceLink id="DOI_10_1007_s13143_017_0010_y">Metodická práce</SourceLink>
             </p>
           </section>
 
@@ -483,13 +475,13 @@ export function StratosphericCoolingArticle() {
               2004.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://www.star.nesdis.noaa.gov/smcd/emb/mscat/introduction.php">
+              <SourceLink id="WEB_NOAA_Center_for_Satellite_Applications_and_Research_N_aabcb47e">
                 NOAA SSU+AMSU
-              </ReferenceLink>
+              </SourceLink>
               {" · "}
-              <ReferenceLink href="https://doi.org/10.1175/JTECH-D-16-0018.1">Metoda NOAA</ReferenceLink>
+              <SourceLink id="DOI_10_1175_jtech_d_16_0018_1">Metoda NOAA</SourceLink>
               {" · "}
-              <ReferenceLink href="https://doi.org/10.1175/JCLI-D-15-0629.1">Metoda NCAR</ReferenceLink>
+              <SourceLink id="DOI_10_1175_jcli_d_15_0629_1">Metoda NCAR</SourceLink>
             </p>
           </section>
 
@@ -502,11 +494,11 @@ export function StratosphericCoolingArticle() {
               mikrovlnného kanálu.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://www.cosmic.ucar.edu/RO_Climate_Data_Record">
+              <SourceLink id="WEB_University_Corporation_for_A_RO_Climate_Data_Record_Constellation_Observing_S_03516764">
                 Popis a stažení dat
-              </ReferenceLink>
+              </SourceLink>
               {" · "}
-              <ReferenceLink href="https://doi.org/10.5194/amt-13-3081-2020">Vyhodnocení dat</ReferenceLink>
+              <SourceLink id="DOI_10_5194_amt_13_3081_2020">Vyhodnocení dat</SourceLink>
             </p>
           </section>
         </div>
@@ -566,9 +558,9 @@ export function StratosphericCoolingArticle() {
             svisle posunuté; šedá čára označuje jejich vlastní nulu. Graf: William Randel, NSF NCAR Climate Data
             Guide, aktualizace odborného přehledu v roce 2025, beze změny; stránka uvádí „Usage Restrictions:
             None“.{" "}
-            <ReferenceLink href="https://climatedataguide.ucar.edu/climate-data/stratospheric-temperature-satellite-datasets-used-quantify-lower-middle-and-upper">
+            <SourceLink id="WEB_University_Corporation_for_A_Stratospheric_Temperature_Satellite_Datasets_Use_394cf021">
               Původní graf, data a úplný kredit
-            </ReferenceLink>
+            </SourceLink>
           </figcaption>
         </figure>
 
@@ -592,7 +584,7 @@ export function StratosphericCoolingArticle() {
           −0,25 ± 0,16 K za desetiletí pro TLS, −0,56 ± 0,13 K pro SSU1, −0,62 ± 0,13 K pro SSU2 a −0,70 ±
           0,14 K pro SSU3. Znaménko minus znamená pokles. Uvedené hodnoty ± jsou nejistoty sklonu, které autoři
           připojili ke konkrétnímu statistickému výpočtu.{" "}
-          <ReferenceLink href="https://doi.org/10.1175/JCLI-D-19-0998.1">Steiner et al., 2020</ReferenceLink>
+          <SourceLink id="DOI_10_1175_jcli_d_19_0998_1">Steiner et al., 2020</SourceLink>
         </p>
 
         <p>
@@ -607,9 +599,9 @@ export function StratosphericCoolingArticle() {
           následné prudké poklesy. Od poloviny devadesátých let se její globální křivka pohybuje převážně v
           užším pásmu a dlouhodobý sklon za kratší novější období je menší než sklon od roku 1979. Tento tvar se
           objevuje v RSS, NOAA i UAH a také v radiosondových zpracováních.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2008JD010421">Randel et al., 2009</ReferenceLink>,{" "}
-          <ReferenceLink href="https://doi.org/10.1002/2015JD024039">Seidel et al., 2016</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1175/JCLI-D-19-0998.1">Steiner et al., 2020</ReferenceLink>
+          <SourceLink id="DOI_10_1029_2008jd010421">Randel et al., 2009</SourceLink>,{" "}
+          <SourceLink id="DOI_10_1002_2015jd024039">Seidel et al., 2016</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1175_jcli_d_19_0998_1">Steiner et al., 2020</SourceLink>
         </p>
 
         <p>
@@ -619,8 +611,8 @@ export function StratosphericCoolingArticle() {
           SSU3 a pro období 1979–2021 dostali poblíž 45 kilometrů pokles přibližně 0,6 K za desetiletí.
           Samostatné profily OSIRIS, MLS a infračerveného přístroje Sounding of the Atmosphere using Broadband
           Emission Radiometry (SABER) se pro roky 2005–2021 rovněž shodly na poklesu v horní stratosféře.{" "}
-          <ReferenceLink href="https://doi.org/10.1175/JCLI-D-15-0629.1">Randel et al., 2016</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.5194/acp-24-12925-2024">Dubé et al., 2024</ReferenceLink>
+          <SourceLink id="DOI_10_1175_jcli_d_15_0629_1">Randel et al., 2016</SourceLink> a{" "}
+          <SourceLink id="DOI_10_5194_acp_24_12925_2024">Dubé et al., 2024</SourceLink>
         </p>
 
         <p>
@@ -628,8 +620,8 @@ export function StratosphericCoolingArticle() {
           krátké pro přímé zopakování celého výpočtu od roku 1979, ale ve společném období potvrzují pokles v
           dolní stratosféře a umožňují sledovat, jak se změna liší po kilometrových výškách. Výsledky několika
           zpracovatelských center se v globálním a šířkovém průměru navzájem blíží.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2009GL039777">Steiner et al., 2009</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s41612-022-00229-7">Gleisner et al., 2022</ReferenceLink>
+          <SourceLink id="DOI_10_1029_2009gl039777">Steiner et al., 2009</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1038_s41612_022_00229_7">Gleisner et al., 2022</SourceLink>
         </p>
 
         <p>
@@ -637,9 +629,9 @@ export function StratosphericCoolingArticle() {
           že globální průměr dolní, střední a horní stratosféry se během roku 2024 mírně zvýšil. Celé období
           1979–2024 přesto zůstává ve všech těchto vrstvách klesající. Jeden teplejší rok tedy změnil poslední
           bod křivky, ale neobrátil mnohadesetiletý rozdíl mezi jejím začátkem a koncem.{" "}
-          <ReferenceLink href="https://ametsoc.net/sotc2024/02GlobalClimate_SotC2024.pdf">
+          <SourceLink id="WEB_ametsoc_net_State_of_the_Climate_in_2024_Stratospheric_Tempe_d68326f7">
             State of the Climate in 2024
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <div className="article-observation-summary">
@@ -661,37 +653,37 @@ export function StratosphericCoolingArticle() {
             <h3>Historie a přímá měření</h3>
             <ul>
               <li>
-                <ReferenceLink href="https://journals.ametsoc.org/view/journals/mwre/30/7/1520-0493-30_7_356.xml">
+                <SourceLink id="WEB_journals_ametsoc_org_The_International_Aeronautical_Congress_at_Berli_8cb3a239">
                   The International Aeronautical Congress at Berlin
-                </ReferenceLink>
+                </SourceLink>
                 , dobová zpráva z roku 1902 o balónových měřeních Teisserenca de Borta a Assmanna.
               </li>
               <li>
                 Rochas, M. J. (2002):{" "}
-                <ReferenceLink href="https://doi.org/10.4267/2042/36222">
+                <SourceLink id="DOI_10_4267_2042_36222">
                   Le contexte scientifique de la surprenante découverte de la stratosphère
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Baldwin, M. P. et al. (2019):{" "}
-                <ReferenceLink href="https://doi.org/10.1175/AMSMONOGRAPHS-D-19-0003.1">
+                <SourceLink id="DOI_10_1175_amsmonographs_d_19_0003_1">
                   100 Years of Progress in Understanding the Stratosphere and Mesosphere
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 WMO:{" "}
-                <ReferenceLink href="https://community.wmo.int/site/knowledge-hub/programmes-and-initiatives/instruments-and-methods-of-observation-programme-imop/guide-instruments-and-methods-of-observation-wmo-no-8">
+                <SourceLink id="WEB_World_Meteorological_Organiz_Guide_to_Instruments_and_Methods_of_Observation_93c4c4a4">
                   Guide to Instruments and Methods of Observation
-                </ReferenceLink>
+                </SourceLink>
                 , kapitola o měření ve volné atmosféře.
               </li>
               <li>
                 Durre, I. et al. (2018):{" "}
-                <ReferenceLink href="https://doi.org/10.1175/JTECH-D-17-0223.1">
+                <SourceLink id="DOI_10_1175_jtech_d_17_0223_1">
                   Overview of the Integrated Global Radiosonde Archive Version 2
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
             </ul>
@@ -702,86 +694,86 @@ export function StratosphericCoolingArticle() {
             <ul>
               <li>
                 Lanzante, J. R. et al. (2003):{" "}
-                <ReferenceLink href="https://doi.org/10.1175/1520-0442(2003)016%3C0224:THOMRT%3E2.0.CO;2">
+                <SourceLink id="DOI_10_1175_1520_0442_2003_016_0224_thomrt_2_0_co_2">
                   Temporal Homogenization of Monthly Radiosonde Temperature Data
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Free, M. et al. (2004):{" "}
-                <ReferenceLink href="https://doi.org/10.1175/JCLI3198.1">
+                <SourceLink id="DOI_10_1175_jcli3198_1">
                   Using First Differences to Reduce Inhomogeneity in Radiosonde Temperature Datasets
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Free, M. et al. (2005):{" "}
-                <ReferenceLink href="https://doi.org/10.1029/2005JD006169">
+                <SourceLink id="DOI_10_1029_2005jd006169">
                   Radiosonde Atmospheric Temperature Products for Assessing Climate
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Thorne, P. W. et al. (2005):{" "}
-                <ReferenceLink href="https://doi.org/10.1029/2004JD005753">
+                <SourceLink id="DOI_10_1029_2004jd005753">
                   Revisiting radiosonde upper-air temperatures from 1958 to 2002
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Haimberger, L. (2007):{" "}
-                <ReferenceLink href="https://doi.org/10.1175/JCLI4050.1">
+                <SourceLink id="DOI_10_1175_jcli4050_1">
                   Homogenization of Radiosonde Temperature Time Series
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Haimberger, L. et al. (2012):{" "}
-                <ReferenceLink href="https://doi.org/10.1175/JCLI-D-11-00668.1">
+                <SourceLink id="DOI_10_1175_jcli_d_11_00668_1">
                   Homogenization of the Global Radiosonde Temperature Dataset through Combined Comparison with Reanalysis
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Mears, C. A. &amp; Wentz, F. J. (2009):{" "}
-                <ReferenceLink href="https://doi.org/10.1175/2008JTECHA1176.1">
+                <SourceLink id="DOI_10_1175_2008jtecha1176_1">
                   Construction of the RSS Atmospheric Temperature Records from the MSU and AMSU Microwave Sounders
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Mears, C. A. et al. (2011):{" "}
-                <ReferenceLink href="https://doi.org/10.1029/2010JD014954">
+                <SourceLink id="DOI_10_1029_2010jd014954">
                   Assessing uncertainty in estimates of atmospheric temperature changes from MSU and AMSU
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Zou, C.-Z. et al. (2014):{" "}
-                <ReferenceLink href="https://doi.org/10.1002/2014JD021603">
+                <SourceLink id="DOI_10_1002_2014jd021603">
                   Recalibration and merging of SSU observations for stratospheric temperature trend studies
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Zou, C.-Z. &amp; Qian, H. (2016):{" "}
-                <ReferenceLink href="https://doi.org/10.1175/JTECH-D-16-0018.1">
+                <SourceLink id="DOI_10_1175_jtech_d_16_0018_1">
                   Stratospheric Temperature Climate Data Record from Merged SSU and AMSU-A Observations
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Spencer, R. W. et al. (2017):{" "}
-                <ReferenceLink href="https://doi.org/10.1007/s13143-017-0010-y">
+                <SourceLink id="DOI_10_1007_s13143_017_0010_y">
                   UAH Version 6 Global Satellite Temperature Products
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Gleisner, H. et al. (2020):{" "}
-                <ReferenceLink href="https://doi.org/10.5194/amt-13-3081-2020">
+                <SourceLink id="DOI_10_5194_amt_13_3081_2020">
                   Evaluation of the 15-year ROM SAF monthly mean GPS radio occultation climate data record
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
             </ul>
@@ -792,51 +784,51 @@ export function StratosphericCoolingArticle() {
             <ul>
               <li>
                 Randel, W. J. et al. (2009):{" "}
-                <ReferenceLink href="https://doi.org/10.1029/2008JD010421">
+                <SourceLink id="DOI_10_1029_2008jd010421">
                   An update of observed stratospheric temperature trends
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Randel, W. J. et al. (2016):{" "}
-                <ReferenceLink href="https://doi.org/10.1175/JCLI-D-15-0629.1">
+                <SourceLink id="DOI_10_1175_jcli_d_15_0629_1">
                   Stratospheric Temperature Trends over 1979–2015 Derived from Combined SSU, MLS, and SABER Observations
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Seidel, D. J. et al. (2016):{" "}
-                <ReferenceLink href="https://doi.org/10.1002/2015JD024039">
+                <SourceLink id="DOI_10_1002_2015jd024039">
                   Stratospheric temperature changes during the satellite era
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Steiner, A. K. et al. (2020):{" "}
-                <ReferenceLink href="https://doi.org/10.1175/JCLI-D-19-0998.1">
+                <SourceLink id="DOI_10_1175_jcli_d_19_0998_1">
                   Observed Temperature Changes in the Troposphere and Stratosphere from 1979 to 2018
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Gleisner, H. et al. (2022):{" "}
-                <ReferenceLink href="https://doi.org/10.1038/s41612-022-00229-7">
+                <SourceLink id="DOI_10_1038_s41612_022_00229_7">
                   Monitoring global climate change using GNSS radio occultation
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Dubé, K. et al. (2024):{" "}
-                <ReferenceLink href="https://doi.org/10.5194/acp-24-12925-2024">
+                <SourceLink id="DOI_10_5194_acp_24_12925_2024">
                   Upper-stratospheric temperature trends: new results from OSIRIS
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Randel, W. J. et al. (2025):{" "}
-                <ReferenceLink href="https://ametsoc.net/sotc2024/02GlobalClimate_SotC2024.pdf">
+                <SourceLink id="WEB_ametsoc_net_State_of_the_Climate_in_2024_Stratospheric_Tempe_d68326f7">
                   State of the Climate in 2024: Stratospheric Temperature
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
             </ul>
@@ -846,41 +838,41 @@ export function StratosphericCoolingArticle() {
             <h3>Data ke stažení</h3>
             <ul>
               <li>
-                <ReferenceLink href="https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ncdc%3AC00978">
+                <SourceLink id="WEB_NOAA_Radiosonde_Atmospheric_Temperature_Products_for_d1952dde">
                   RATPAC v2
-                </ReferenceLink>
+                </SourceLink>
                 : měsíční radiosondové hodnoty od roku 1958.
               </li>
               <li>
-                <ReferenceLink href="https://www.remss.com/missions/amsu/">RSS TLS v4.0</ReferenceLink>: měsíční
+                <SourceLink id="WEB_Remote_Sensing_Systems_Remote_Sensing_Systems_25160e34">RSS TLS v4.0</SourceLink>: měsíční
                 globální, regionální a mřížková data dolní stratosféry.
               </li>
               <li>
-                <ReferenceLink href="https://www.ncei.noaa.gov/products/climate-data-records/mean-layer-temperature-noaa">
+                <SourceLink id="WEB_NOAA_Mean_Layer_Temperature_NOAA_CDR_743b717d">
                   NOAA STAR TLS v5.0
-                </ReferenceLink>
+                </SourceLink>
                 : mřížková data MSU, AMSU-A a ATMS.
               </li>
               <li>
-                <ReferenceLink href="https://www.nsstc.uah.edu/data/msu/">UAH TLS v6.1</ReferenceLink>: textové a
+                <SourceLink id="WEB_nsstc_uah_edu_Index_of_data_msu_9b9f4900">UAH TLS v6.1</SourceLink>: textové a
                 mřížkové soubory dolní stratosféry.
               </li>
               <li>
-                <ReferenceLink href="https://www.star.nesdis.noaa.gov/smcd/emb/mscat/introduction.php">
+                <SourceLink id="WEB_NOAA_Center_for_Satellite_Applications_and_Research_N_aabcb47e">
                   NOAA SSU+AMSU v3.0
-                </ReferenceLink>
+                </SourceLink>
                 : střední a horní stratosféra.
               </li>
               <li>
-                <ReferenceLink href="https://www.cosmic.ucar.edu/RO_Climate_Data_Record">
+                <SourceLink id="WEB_University_Corporation_for_A_RO_Climate_Data_Record_Constellation_Observing_S_03516764">
                   CDAAC GNSS-RO
-                </ReferenceLink>
+                </SourceLink>
                 : měsíční profily teploty, úhlu ohybu a indexu lomu od roku 2002.
               </li>
               <li>
-                <ReferenceLink href="https://climatedataguide.ucar.edu/climate-data/stratospheric-temperature-satellite-datasets-used-quantify-lower-middle-and-upper">
+                <SourceLink id="WEB_University_Corporation_for_A_Stratospheric_Temperature_Satellite_Datasets_Use_394cf021">
                   NCAR Climate Data Guide
-                </ReferenceLink>
+                </SourceLink>
                 : aktuální rozcestník verzí, odborné pokyny a srovnávací grafy.
               </li>
             </ul>
@@ -891,9 +883,9 @@ export function StratosphericCoolingArticle() {
             <ul>
               <li>
                 Profil atmosféry: NOAA JetStream.{" "}
-                <ReferenceLink href="https://prod-01-alb-www-noaa.woc.noaa.gov/jetstream/atmosphere/layers-of-atmosphere">
+                <SourceLink id="WEB_NOAA_Layers_of_the_Atmosphere_29f17d10">
                   Původní obrázek
-                </ReferenceLink>
+                </SourceLink>
                 . Použit beze změny jako materiál NOAA ve veřejné doméně.
               </li>
               <li>
@@ -902,17 +894,17 @@ export function StratosphericCoolingArticle() {
               </li>
               <li>
                 Váhové funkce a srovnávací graf: William Randel, NSF NCAR Climate Data Guide.{" "}
-                <ReferenceLink href="https://climatedataguide.ucar.edu/climate-data/stratospheric-temperature-satellite-datasets-used-quantify-lower-middle-and-upper">
+                <SourceLink id="WEB_University_Corporation_for_A_Stratospheric_Temperature_Satellite_Datasets_Use_394cf021">
                   Zdroj, kredit a odborný kontext
-                </ReferenceLink>
+                </SourceLink>
                 . Oba soubory jsou převzaty beze změny; zdrojová stránka uvádí „Usage Restrictions: None“.
               </li>
               <li>
                 NOAA uvádí, že její materiály lze bez zvláštního svolení použít, pokud u položky není uvedeno
                 jinak; požaduje uvedení zdroje a zakazuje dojem oficiálního schválení.{" "}
-                <ReferenceLink href="https://oceanservice.noaa.gov/about/faq.html">
+                <SourceLink id="WEB_NOAA_NOAA_s_National_Ocean_Service_About_Us_4ba21b52">
                   Pravidla použití NOAA
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
             </ul>

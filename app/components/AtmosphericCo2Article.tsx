@@ -1,13 +1,5 @@
 import Image from "next/image";
-import type { ReactNode } from "react";
-
-function ReferenceLink({ href, children }: { href: string; children: ReactNode }) {
-  return (
-    <a className="article-reference" href={href} target="_blank" rel="noreferrer">
-      {children}
-    </a>
-  );
-}
+import { SourceLink } from "./SourceLink";
 
 export function AtmosphericCo2Article() {
   return (
@@ -64,13 +56,13 @@ export function AtmosphericCo2Article() {
           Severní Ameriky. O dva roky později zveřejnil první souvislá pozorování z observatoře Mauna Loa a z
           jižního pólu. V obou pracích spojil odběr okolního vzduchu s přesným určením množství CO₂ a s kontrolou
           pomocí referenčních plynů.{" "}
-          <ReferenceLink href="https://doi.org/10.1016/0016-7037(58)90033-4">
+          <SourceLink id="DOI_10_1016_0016_7037_58_90033_4">
             Keeling, 1958
-          </ReferenceLink>{" "}
+          </SourceLink>{" "}
           a{" "}
-          <ReferenceLink href="https://doi.org/10.1111/j.2153-3490.1960.tb01300.x">
+          <SourceLink id="DOI_10_1111_j_2153_3490_1960_tb01300_x">
             Keeling, 1960
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <p>
@@ -78,9 +70,9 @@ export function AtmosphericCo2Article() {
           vzduchu na desítkách míst a rozdíly mezi zeměpisnými šířkami. Masarie a Tans v roce 1995 ukázali, jak lze
           z časově neúplných měření jednotlivých stanic sestavit vzájemně srovnatelný globální záznam. Andrews a
           kol. v roce 2014 podrobně doložili měření na vysokých věžích včetně kalibrace a nejistot.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/94JD01951">Conway et al., 1994</ReferenceLink>,{" "}
-          <ReferenceLink href="https://doi.org/10.1029/95JD00859">Masarie &amp; Tans, 1995</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.5194/amt-7-647-2014">Andrews et al., 2014</ReferenceLink>
+          <SourceLink id="DOI_10_1029_94jd01951">Conway et al., 1994</SourceLink>,{" "}
+          <SourceLink id="DOI_10_1029_95jd00859">Masarie &amp; Tans, 1995</SourceLink> a{" "}
+          <SourceLink id="DOI_10_5194_amt_7_647_2014">Andrews et al., 2014</SourceLink>
         </p>
 
         <p>
@@ -89,7 +81,7 @@ export function AtmosphericCo2Article() {
           opakovaně určeny absolutní manometrickou metodou. Hall a kol. popsali vznik stupnice, její rozsah od
           přibližně 250 do 800 ppm i zpětné přepočítání starších kalibrací. Díky této návaznosti lze porovnávat
           vzorky odebrané různými pracovišti a v různých letech.{" "}
-          <ReferenceLink href="https://doi.org/10.5194/amt-14-3015-2021">Hall et al., 2021</ReferenceLink>
+          <SourceLink id="DOI_10_5194_amt_14_3015_2021">Hall et al., 2021</SourceLink>
         </p>
 
         <p>
@@ -97,8 +89,8 @@ export function AtmosphericCo2Article() {
           prošlo atmosférou, odrazilo se od povrchu a vrátilo se k přístroji. Z něj se počítá XCO₂, tedy průměr přes
           celý sloupec vzduchu. Eldering a kol. popsali první soubor těchto měření a Wunch a kol. jej porovnali s
           pozemními spektrometry sítě TCCON.{" "}
-          <ReferenceLink href="https://doi.org/10.5194/amt-10-549-2017">Eldering et al., 2017</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.5194/amt-10-2209-2017">Wunch et al., 2017</ReferenceLink>
+          <SourceLink id="DOI_10_5194_amt_10_549_2017">Eldering et al., 2017</SourceLink> a{" "}
+          <SourceLink id="DOI_10_5194_amt_10_2209_2017">Wunch et al., 2017</SourceLink>
         </p>
 
         <h2>Historie měření</h2>
@@ -107,9 +99,9 @@ export function AtmosphericCo2Article() {
           Reiset odebíral v letech 1871–1880 vzduch u severního pobřeží Francie a v roce 1880 popsal použitý postup
           i výsledky v <em>Comptes rendus de l&apos;Académie des sciences</em>. Chemická měření byla pomalejší než
           dnešní přístroje a výsledek citlivě závisel na místě odběru, počasí i čistotě laboratorního postupu.{" "}
-          <ReferenceLink href="https://www.biodiversitylibrary.org/item/23752">
+          <SourceLink id="WEB_biodiversitylibrary_org_Digitalizovany_puvodni_svazek_6958270a">
             Reiset, 1880, původní svazek
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <p>
@@ -118,10 +110,10 @@ export function AtmosphericCo2Article() {
           je důležitá také tím, že ukazuje hranici starých chemických údajů: jednotlivé výsledky nelze spojit bez
           znalosti odběru a kontroly přístroje. Pozdější rozbor Fraserové a kol. znovu vyhodnotil původní záznamy
           ze západní Evropy a Reisetova měření porovnal s moderním sezónním průběhem.{" "}
-          <ReferenceLink href="https://doi.org/10.3402/tellusa.v10i2.9231">Callendar, 1958</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.3402/tellusb.v38i2.15083">
+          <SourceLink id="DOI_10_3402_tellusa_v10i2_9231">Callendar, 1958</SourceLink> a{" "}
+          <SourceLink id="DOI_10_3402_tellusb_v38i2_15083">
             Fraser et al., 1986
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <p>
@@ -130,9 +122,9 @@ export function AtmosphericCo2Article() {
           odhaloval posun jeho odezvy. Pravidelná měření začala na jižním pólu v roce 1957 a na Mauna Loa v březnu
           1958. Keeling a kol. později popsali celý postup výběru stabilního okolního vzduchu, kalibraci i první
           dvě desetiletí havajského záznamu.{" "}
-          <ReferenceLink href="https://doi.org/10.1111/j.2153-3490.1976.tb00701.x">
+          <SourceLink id="DOI_10_1111_j_2153_3490_1976_tb00701_x">
             Keeling et al., 1976
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <figure className="article-figure">
@@ -158,9 +150,9 @@ export function AtmosphericCo2Article() {
           základních observatořích v roce 1973. Síť se postupně rozšířila na ostrovy, pobřeží, lodě, vysoké věže,
           letadla a vnitrozemské stanice. Vzorky z různých míst se analyzují vůči stejné kalibrační stupnici, takže
           se vedle změny v čase dá sledovat i prostorové rozložení.{" "}
-          <ReferenceLink href="https://gml.noaa.gov/ccgg/flask.html">
+          <SourceLink id="WEB_NOAA_Carbon_Cycle_Greenhouse_Gases_NOAA_Global_Monito_611ed2c8">
             NOAA Global Greenhouse Gas Reference Network
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <p>
@@ -168,9 +160,9 @@ export function AtmosphericCo2Article() {
           měření CO₂ z antarktických a grónských ledových jader. Etheridge a kol. v roce 1996 spojili led,
           pórovitý sníh nad ním a přímá měření do záznamu posledního tisíciletí. Lüthi a kol. v roce 2008 rozšířili
           antarktická data na 800 000 let.{" "}
-          <ReferenceLink href="https://doi.org/10.1038/295220a0">Neftel et al., 1982</ReferenceLink>,{" "}
-          <ReferenceLink href="https://doi.org/10.1029/95JD03410">Etheridge et al., 1996</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1038/nature06949">Lüthi et al., 2008</ReferenceLink>
+          <SourceLink id="DOI_10_1038_295220a0">Neftel et al., 1982</SourceLink>,{" "}
+          <SourceLink id="DOI_10_1029_95jd03410">Etheridge et al., 1996</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1038_nature06949">Lüthi et al., 2008</SourceLink>
         </p>
 
         <p>
@@ -179,9 +171,9 @@ export function AtmosphericCo2Article() {
           typ výsledku: průměr přes výšku atmosféry získaný z naměřeného spektra. Měření zakrytá oblačností nebo
           silně ovlivněná aerosoly neprojdou kontrolou kvality, a proto družicová mapa nemá v každém průletu hodnotu
           pro každé místo.{" "}
-          <ReferenceLink href="https://doi.org/10.5194/amt-10-59-2017">
+          <SourceLink id="DOI_10_5194_amt_10_59_2017">
             Crisp et al., 2017
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <h2>Co se skutečně měří</h2>
@@ -191,9 +183,9 @@ export function AtmosphericCo2Article() {
           spektroskopii v optické dutině: laser prochází měřicí komorou a přístroj sleduje, jak rychle po vypnutí
           zdroje světlo zaniká na vlnové délce pohlcované CO₂. Od dubna 2019 tím nahradil starší infračervený
           analyzátor. Vzduch se před měřením vysuší a přístroj pravidelně dostává referenční plyn z tlakové lahve.{" "}
-          <ReferenceLink href="https://gml.noaa.gov/ccgg/about/co2_measurements.html">
+          <SourceLink id="WEB_NOAA_Carbon_Cycle_Greenhouse_Gases_NOAA_Global_Monito_66691a03">
             NOAA: podrobný popis měření
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <h3>Vzorek odebraný do baňky</h3>
@@ -234,13 +226,13 @@ export function AtmosphericCo2Article() {
           na 8,9 ± 0,5 roku a celou šířku časového vyhlazení přibližně na 12,5 ± 1,5 roku. U pomalu narůstajícího
           ledu v Antarktidě může být vyhlazení mnohem delší. Ledová data proto zachovávají skutečný vzduch, ale
           rychlé změny v něm nejsou časově ostré stejně jako v denním měření stanice.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/96GL03156">
+          <SourceLink id="DOI_10_1029_96gl03156">
             Levchenko et al., 1996
-          </ReferenceLink>{" "}
+          </SourceLink>{" "}
           a{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2003JD003562">
+          <SourceLink id="DOI_10_1029_2003jd003562">
             Trudinger et al., 2003
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <h3>Světlo prošlé atmosférou</h3>
@@ -249,7 +241,7 @@ export function AtmosphericCo2Article() {
           CO₂. Z hloubky absorpčních čar, tlaku, vodní páry, oblačnosti, aerosolů a odrazivosti povrchu výpočet
           odvodí množství CO₂ ve sloupci vzduchu. Kyslíkové pásmo pomáhá určit celkové množství suchého vzduchu,
           vůči němuž se CO₂ vyjádří. Výstupem jednoho úspěšného výpočtu je XCO₂ pro úzkou stopu družice.{" "}
-          <ReferenceLink href="https://doi.org/10.5194/amt-10-549-2017">Eldering et al., 2017</ReferenceLink>
+          <SourceLink id="DOI_10_5194_amt_10_549_2017">Eldering et al., 2017</SourceLink>
         </p>
 
         <h2>Jak vzniká zveřejněný záznam</h2>
@@ -275,8 +267,8 @@ export function AtmosphericCo2Article() {
           k množství CO₂ určuje pomocí několika tlakových lahví. Ty tvoří kalibrační řetězec od pracovních lahví na
           stanici přes laboratorní standardy až k primárním standardům stupnice WMO CO₂ X2019. Změní-li se hodnota
           některého standardu po nové kalibraci, lze s uloženými údaji přepočítat i starší měření.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2005JD006003">Zhao &amp; Tans, 2006</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.5194/amt-14-3015-2021">Hall et al., 2021</ReferenceLink>
+          <SourceLink id="DOI_10_1029_2005jd006003">Zhao &amp; Tans, 2006</SourceLink> a{" "}
+          <SourceLink id="DOI_10_5194_amt_14_3015_2021">Hall et al., 2021</SourceLink>
         </p>
 
         <h3>4. Provozní vlivy se označí příznakem kvality</h3>
@@ -301,7 +293,7 @@ export function AtmosphericCo2Article() {
           pozadí. Pro každou stanici se nejprve proloží hladký průběh v čase. Ve 48 okamžicích každého roku se
           hodnoty stanic uspořádají podle zeměpisné šířky, mezi nimi se vypočte plynulý průběh a ten se plošně
           zprůměruje. Globální číslo proto není prostým aritmetickým průměrem všech dostupných vzorků.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/95JD00859">Masarie &amp; Tans, 1995</ReferenceLink>
+          <SourceLink id="DOI_10_1029_95jd00859">Masarie &amp; Tans, 1995</SourceLink>
         </p>
 
         <h3>7. Nejistota a verze zůstávají součástí výsledku</h3>
@@ -328,11 +320,11 @@ export function AtmosphericCo2Article() {
               souběh slouží jako dlouhodobá kontrola.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://gml.noaa.gov/ccgg/trends/data.html">Data NOAA ke stažení</ReferenceLink>
+              <SourceLink id="WEB_NOAA_Trends_in_CO2_NOAA_Global_Monitoring_Laboratory_8f52d95b">Data NOAA ke stažení</SourceLink>
               {" · "}
-              <ReferenceLink href="https://scrippsco2.ucsd.edu/data/atmospheric-co2-data/sampling-station-records/mauna-loa-observatory-hawaii/">
+              <SourceLink id="WEB_scrippsco2_ucsd_edu_Mauna_Loa_Observatory_Hawaii_Scripps_CO2_4d2260fe">
                 Data Scripps ke stažení
-              </ReferenceLink>
+              </SourceLink>
             </p>
           </section>
 
@@ -344,11 +336,11 @@ export function AtmosphericCo2Article() {
               být ještě předběžný.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://gml.noaa.gov/ccgg/trends/gl_data.html">
+              <SourceLink id="WEB_NOAA_Trends_in_CO2_NOAA_Global_Monitoring_Laboratory_ff9ec92f">
                 Popis a soubory CSV
-              </ReferenceLink>
+              </SourceLink>
               {" · "}
-              <ReferenceLink href="https://doi.org/10.15138/9N0H-ZH07">Datová citace a verze</ReferenceLink>
+              <SourceLink id="DOI_10_15138_9n0h_zh07">Datová citace a verze</SourceLink>
             </p>
           </section>
 
@@ -360,11 +352,11 @@ export function AtmosphericCo2Article() {
               kvality každého záznamu.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://gml.noaa.gov/ccgg/data/getdata.php?gas=co2">
+              <SourceLink id="WEB_NOAA_Carbon_Cycle_Greenhouse_Gases_NOAA_Global_Monito_f7a76e45">
                 Výběr měření CO₂
-              </ReferenceLink>
+              </SourceLink>
               {" · "}
-              <ReferenceLink href="https://gml.noaa.gov/ccgg/obspack/">ObsPack</ReferenceLink>
+              <SourceLink id="WEB_NOAA_ObsPack_NOAA_Global_Monitoring_Laboratory_ae6fb64e">ObsPack</SourceLink>
             </p>
           </section>
 
@@ -376,11 +368,11 @@ export function AtmosphericCo2Article() {
               Tento výpočet používá širší soubor stanic než globální produkt NOAA.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://gaw.kishou.go.jp/">WDCGG data</ReferenceLink>
+              <SourceLink id="WEB_World_Meteorological_Organiz_WDCGG_World_Data_Centre_for_Greenhouse_Gases_824b544d">WDCGG data</SourceLink>
               {" · "}
-              <ReferenceLink href="https://wmo.int/resources/publication-series/greenhouse-gas-bulletin/wmo-greenhouse-gas-bulletin-no-21">
+              <SourceLink id="WEB_World_Meteorological_Organiz_WMO_Greenhouse_Gas_Bulletin_No_21_d093105c">
                 WMO Bulletin č. 21
-              </ReferenceLink>
+              </SourceLink>
             </p>
           </section>
 
@@ -392,13 +384,13 @@ export function AtmosphericCo2Article() {
               mezi vrty liší a musí se číst společně s daty.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=noaa-icecore-17975">
+              <SourceLink id="WEB_NOAA_NOAA_WDS_Paleoclimatology_Antarctic_Ice_Cores_Re_1183d28b">
                 Složený záznam NOAA/NCEI
-              </ReferenceLink>
+              </SourceLink>
               {" · "}
-              <ReferenceLink href="https://doi.org/10.1002/2014GL061957">
+              <SourceLink id="DOI_10_1002_2014gl061957">
                 Revize Bereiter et al., 2015
-              </ReferenceLink>
+              </SourceLink>
             </p>
           </section>
 
@@ -410,13 +402,13 @@ export function AtmosphericCo2Article() {
               od výsledků ovlivněných oblačností, aerosoly nebo povrchem.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://ocov2.jpl.nasa.gov/science/oco-2-data-center/">
+              <SourceLink id="WEB_NASA_OCO_2_Data_Center_bd5da22f">
                 Datové centrum OCO-2
-              </ReferenceLink>
+              </SourceLink>
               {" · "}
-              <ReferenceLink href="https://ocov2.jpl.nasa.gov/science/validation/">
+              <SourceLink id="WEB_NASA_Validation_9ba2b44b">
                 Kontrola verze 11.2
-              </ReferenceLink>
+              </SourceLink>
             </p>
           </section>
         </div>
@@ -495,10 +487,10 @@ export function AtmosphericCo2Article() {
           422,79 ± 0,10 ppm, zatímco WMO z širší sítě stanic 423,9 ± 0,2 ppm. Rozdíl vzniká výběrem stanic,
           prostorovým výpočtem a přesným vymezením produktu. Pro změnu mezi roky je proto správné používat stále
           stejný produkt a uvést jeho verzi, místo aby se hodnoty z NOAA a WMO spojily do jednoho pokračování.{" "}
-          <ReferenceLink href="https://gml.noaa.gov/ccgg/trends/gl_data.html">NOAA, globální data</ReferenceLink> a{" "}
-          <ReferenceLink href="https://wmo.int/resources/publication-series/greenhouse-gas-bulletin/wmo-greenhouse-gas-bulletin-no-21">
+          <SourceLink id="WEB_NOAA_Trends_in_CO2_NOAA_Global_Monitoring_Laboratory_ff9ec92f">NOAA, globální data</SourceLink> a{" "}
+          <SourceLink id="WEB_World_Meteorological_Organiz_WMO_Greenhouse_Gas_Bulletin_No_21_d093105c">
             WMO Bulletin č. 21
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <h2 id="pozorovani">Pozorování</h2>
@@ -521,7 +513,7 @@ export function AtmosphericCo2Article() {
           načasování tohoto kolísání se mezi stanicemi liší. Conway a kol. doložili v celosvětové síti také rozdíly
           mezi zeměpisnými šířkami: v jednom okamžiku nemá povrchový vzduch na všech místech přesně stejný molární
           zlomek CO₂. Globální průměr tento prostorový obraz shrnuje do jednoho čísla.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/94JD01951">Conway et al., 1994</ReferenceLink>
+          <SourceLink id="DOI_10_1029_94jd01951">Conway et al., 1994</SourceLink>
         </p>
 
         <p>
@@ -537,9 +529,9 @@ export function AtmosphericCo2Article() {
           odhalili chybu při uvolňování vzduchu z ledu, která v nejstarších vzorcích dosahovala 10,1 ± 2,4 ppm, a
           dotčené hodnoty opravili. Graf je vhodný pro pohled na celý rozsah; pro výpočet konkrétní hodnoty nebo
           časového intervalu je určena revidovaná tabulka.{" "}
-          <ReferenceLink href="https://doi.org/10.1002/2014GL061957">
+          <SourceLink id="DOI_10_1002_2014gl061957">
             Bereiter et al., 2015
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <figure className="article-figure article-figure--scroll-mobile article-figure--scroll-wide">
@@ -575,9 +567,9 @@ export function AtmosphericCo2Article() {
           přes pozemní síť TCCON a měření z letadel na stupnici WMO; tým mise pro ni uvádí odchylku od pozemní
           kontroly i náhodný rozptyl menší než 0,85 ppm. Tato hodnota popisuje kvalitu družicového XCO₂, nikoli
           nejistotu globálního povrchového průměru.{" "}
-          <ReferenceLink href="https://ocov2.jpl.nasa.gov/science/validation/">
+          <SourceLink id="WEB_NASA_Validation_9ba2b44b">
             OCO-2: kontrola verze 11.2
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <div className="article-observation-summary">
@@ -600,66 +592,66 @@ export function AtmosphericCo2Article() {
               <li>
                 Reiset, J. (1880): <em>Recherches sur la proportion de l&apos;acide carbonique dans l&apos;air</em>,
                 Comptes rendus, 90, 1144–1148.{" "}
-                <ReferenceLink href="https://www.biodiversitylibrary.org/item/23752">
+                <SourceLink id="WEB_biodiversitylibrary_org_Digitalizovany_puvodni_svazek_6958270a">
                   Digitalizovaný původní svazek
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 Callendar, G. S. (1958): <em>On the Amount of Carbon Dioxide in the Atmosphere</em>, Tellus, 10,
                 243–248.{" "}
-                <ReferenceLink href="https://doi.org/10.3402/tellusa.v10i2.9231">
+                <SourceLink id="DOI_10_3402_tellusa_v10i2_9231">
                   DOI 10.3402/tellusa.v10i2.9231
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 Keeling, C. D. (1958): <em>The concentration and isotopic abundances of atmospheric carbon dioxide
                 in rural areas</em>, Geochimica et Cosmochimica Acta, 13, 322–334.{" "}
-                <ReferenceLink href="https://doi.org/10.1016/0016-7037(58)90033-4">
+                <SourceLink id="DOI_10_1016_0016_7037_58_90033_4">
                   DOI 10.1016/0016-7037(58)90033-4
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 Keeling, C. D. (1960): <em>The Concentration and Isotopic Abundances of Carbon Dioxide in the
                 Atmosphere</em>, Tellus, 12, 200–203.{" "}
-                <ReferenceLink href="https://doi.org/10.1111/j.2153-3490.1960.tb01300.x">
+                <SourceLink id="DOI_10_1111_j_2153_3490_1960_tb01300_x">
                   DOI 10.1111/j.2153-3490.1960.tb01300.x
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 Keeling, C. D. et al. (1976): <em>Atmospheric carbon dioxide variations at Mauna Loa Observatory,
                 Hawaii</em>, Tellus, 28, 538–551.{" "}
-                <ReferenceLink href="https://doi.org/10.1111/j.2153-3490.1976.tb00701.x">
+                <SourceLink id="DOI_10_1111_j_2153_3490_1976_tb00701_x">
                   DOI 10.1111/j.2153-3490.1976.tb00701.x
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 Conway, T. J. et al. (1994): <em>Evidence for interannual variability of the carbon cycle from the
                 NOAA/CMDL global air sampling network</em>, Journal of Geophysical Research, 99, 22831–22855.{" "}
-                <ReferenceLink href="https://doi.org/10.1029/94JD01951">
+                <SourceLink id="DOI_10_1029_94jd01951">
                   DOI 10.1029/94JD01951
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 Etheridge, D. M. et al. (1996): <em>Natural and anthropogenic changes in atmospheric CO₂ over the
                 last 1000 years from air in Antarctic ice and firn</em>, Journal of Geophysical Research, 101,
                 4115–4128.{" "}
-                <ReferenceLink href="https://doi.org/10.1029/95JD03410">
+                <SourceLink id="DOI_10_1029_95jd03410">
                   DOI 10.1029/95JD03410
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 Lüthi, D. et al. (2008): <em>High-resolution carbon dioxide concentration record 650,000–800,000
                 years before present</em>, Nature, 453, 379–382.{" "}
-                <ReferenceLink href="https://doi.org/10.1038/nature06949">
+                <SourceLink id="DOI_10_1038_nature06949">
                   DOI 10.1038/nature06949
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 Bereiter, B. et al. (2015): <em>Revision of the EPICA Dome C CO₂ record from 800 to 600 kyr before
                 present</em>, Geophysical Research Letters, 42, 542–549.{" "}
-                <ReferenceLink href="https://doi.org/10.1002/2014GL061957">
+                <SourceLink id="DOI_10_1002_2014gl061957">
                   DOI 10.1002/2014GL061957
-                </ReferenceLink>
+                </SourceLink>
               </li>
             </ul>
           </section>
@@ -669,48 +661,48 @@ export function AtmosphericCo2Article() {
             <ul>
               <li>
                 Masarie, K. A. &amp; Tans, P. P. (1995): globálně konzistentní zpracování měření CO₂.{" "}
-                <ReferenceLink href="https://doi.org/10.1029/95JD00859">
+                <SourceLink id="DOI_10_1029_95jd00859">
                   DOI 10.1029/95JD00859
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 Zhao, C. L. &amp; Tans, P. P. (2006): nejistota kalibrační stupnice WMO.{" "}
-                <ReferenceLink href="https://doi.org/10.1029/2005JD006003">
+                <SourceLink id="DOI_10_1029_2005jd006003">
                   DOI 10.1029/2005JD006003
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 Andrews, A. E. et al. (2014): přístroje a nejistoty měření CO₂ na vysokých věžích NOAA.{" "}
-                <ReferenceLink href="https://doi.org/10.5194/amt-7-647-2014">
+                <SourceLink id="DOI_10_5194_amt_7_647_2014">
                   DOI 10.5194/amt-7-647-2014
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 Hall, B. D. et al. (2021): revize kalibrační stupnice WMO CO₂ X2019.{" "}
-                <ReferenceLink href="https://doi.org/10.5194/amt-14-3015-2021">
+                <SourceLink id="DOI_10_5194_amt_14_3015_2021">
                   DOI 10.5194/amt-14-3015-2021
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 Levchenko, V. A. et al. (1996) a Trudinger, C. M. et al. (2003): stáří a časové vyhlazení vzduchu
                 v ledu.{" "}
-                <ReferenceLink href="https://doi.org/10.1029/96GL03156">
+                <SourceLink id="DOI_10_1029_96gl03156">
                   Levchenko et al.
-                </ReferenceLink>
+                </SourceLink>
                 {" · "}
-                <ReferenceLink href="https://doi.org/10.1029/2003JD003562">
+                <SourceLink id="DOI_10_1029_2003jd003562">
                   Trudinger et al.
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 Eldering, A. et al. (2017) a Wunch, D. et al. (2017): získání a pozemní ověření XCO₂ z OCO-2.{" "}
-                <ReferenceLink href="https://doi.org/10.5194/amt-10-549-2017">
+                <SourceLink id="DOI_10_5194_amt_10_549_2017">
                   Eldering et al.
-                </ReferenceLink>
+                </SourceLink>
                 {" · "}
-                <ReferenceLink href="https://doi.org/10.5194/amt-10-2209-2017">
+                <SourceLink id="DOI_10_5194_amt_10_2209_2017">
                   Wunch et al.
-                </ReferenceLink>
+                </SourceLink>
               </li>
             </ul>
           </section>
@@ -720,45 +712,45 @@ export function AtmosphericCo2Article() {
             <ul>
               <li>
                 NOAA GML: globální měsíční a roční CO₂, verze 6. července 2026.{" "}
-                <ReferenceLink href="https://gml.noaa.gov/ccgg/trends/gl_data.html">
+                <SourceLink id="WEB_NOAA_Trends_in_CO2_NOAA_Global_Monitoring_Laboratory_ff9ec92f">
                   Tabulky a metodika
-                </ReferenceLink>
+                </SourceLink>
                 {" · "}
-                <ReferenceLink href="https://doi.org/10.15138/9N0H-ZH07">Datová citace</ReferenceLink>
+                <SourceLink id="DOI_10_15138_9n0h_zh07">Datová citace</SourceLink>
               </li>
               <li>
                 NOAA GML a Scripps: přímá měření na Mauna Loa.{" "}
-                <ReferenceLink href="https://gml.noaa.gov/ccgg/trends/data.html">NOAA</ReferenceLink>
+                <SourceLink id="WEB_NOAA_Trends_in_CO2_NOAA_Global_Monitoring_Laboratory_8f52d95b">NOAA</SourceLink>
                 {" · "}
-                <ReferenceLink href="https://scrippsco2.ucsd.edu/data/atmospheric-co2-data/sampling-station-records/mauna-loa-observatory-hawaii/">
+                <SourceLink id="WEB_scrippsco2_ucsd_edu_Mauna_Loa_Observatory_Hawaii_Scripps_CO2_4d2260fe">
                   Scripps
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 NOAA GML: jednotlivá měření a sjednocené soubory ObsPack.{" "}
-                <ReferenceLink href="https://gml.noaa.gov/ccgg/data/getdata.php?gas=co2">
+                <SourceLink id="WEB_NOAA_Carbon_Cycle_Greenhouse_Gases_NOAA_Global_Monito_f7a76e45">
                   Výběr dat
-                </ReferenceLink>
+                </SourceLink>
                 {" · "}
-                <ReferenceLink href="https://gml.noaa.gov/ccgg/obspack/">ObsPack</ReferenceLink>
+                <SourceLink id="WEB_NOAA_ObsPack_NOAA_Global_Monitoring_Laboratory_ae6fb64e">ObsPack</SourceLink>
               </li>
               <li>
                 WMO: <em>Greenhouse Gas Bulletin No. 21</em>, globální hodnoty za rok 2024.{" "}
-                <ReferenceLink href="https://wmo.int/resources/publication-series/greenhouse-gas-bulletin/wmo-greenhouse-gas-bulletin-no-21">
+                <SourceLink id="WEB_World_Meteorological_Organiz_WMO_Greenhouse_Gas_Bulletin_No_21_d093105c">
                   Bulletin a PDF
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 NOAA/NCEI: složený záznam CO₂ z antarktických ledových jader za 800 000 let.{" "}
-                <ReferenceLink href="https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=noaa-icecore-17975">
+                <SourceLink id="WEB_NOAA_NOAA_WDS_Paleoclimatology_Antarctic_Ice_Cores_Re_1183d28b">
                   Data a metadata
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 NASA/JPL: referenční soubory OCO-2 XCO₂ Lite v11.2r.{" "}
-                <ReferenceLink href="https://ocov2.jpl.nasa.gov/science/oco-2-data-center/">
+                <SourceLink id="WEB_NASA_OCO_2_Data_Center_bd5da22f">
                   Datové centrum
-                </ReferenceLink>
+                </SourceLink>
               </li>
             </ul>
           </section>
@@ -768,33 +760,33 @@ export function AtmosphericCo2Article() {
             <ul>
               <li>
                 Fotografie observatoře Mauna Loa z roku 1958 pochází z{" "}
-                <ReferenceLink href="https://gml.noaa.gov/obop/mlo/gallery/NOAA_MaunaLoa_Aerial%20Photos%20of%20the%20Mauna%20Loa%20Observatory/index.html">
+                <SourceLink id="WEB_NOAA_Mauna_Loa_Observatory_NOAA_Global_Monitoring_Lab_fe0040dc">
                   galerie NOAA GML
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Fotografie odběrových baněk a její popis pocházejí ze stránky{" "}
-                <ReferenceLink href="https://gml.noaa.gov/ccgg/behind_the_scenes/surface.html">
+                <SourceLink id="WEB_NOAA_Education_Behind_The_Scenes_NOAA_GML_2bef52ec">
                   NOAA GML: Surface Flasks
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Grafy Mauna Loa a globálního průměru byly převzaty beze změny z{" "}
-                <ReferenceLink href="https://gml.noaa.gov/ccgg/trends/">NOAA GML Trends in CO₂</ReferenceLink>;
+                <SourceLink id="WEB_NOAA_Trends_in_CO2_NOAA_Global_Monitoring_Laboratory_f1c52261">NOAA GML Trends in CO₂</SourceLink>;
                 datum verze je vytištěno přímo v obrazu.
               </li>
               <li>
                 Graf 800 000 let zveřejnila NOAA Climate.gov 30. dubna 2025.{" "}
-                <ReferenceLink href="https://prod-01-asg-www-climate.woc.noaa.gov/media/16929">
+                <SourceLink id="WEB_NOAA_ClimateDashboard_atmospheric_carbon_dioxide_imag_5eb9863d">
                   Původní soubor, popis a datové zdroje
-                </ReferenceLink>
+                </SourceLink>
               </li>
               <li>
                 Uvedené materiály NOAA jsou díly federální vlády USA a jsou převzaty jako volná díla, pokud u
                 konkrétního souboru není uvedeno jinak. Loga a názvy institucí nevyjadřují podporu tohoto webu.{" "}
-                <ReferenceLink href="https://www.noaa.gov/disclaimer">Pravidla NOAA</ReferenceLink>
+                <SourceLink id="WEB_NOAA_Podminky_pouziti_NOAA_17f3c88c">Pravidla NOAA</SourceLink>
               </li>
             </ul>
           </section>

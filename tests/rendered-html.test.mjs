@@ -1,12 +1,17 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 
 const root = new URL("../", import.meta.url);
+const sourceCatalogueText = (await Promise.all([
+  readFile(new URL("app/data/sources.ts", root), "utf8"),
+  readFile(new URL("app/data/articleSources.ts", root), "utf8"),
+])).join("\n");
 
 test("keeps the source library, categories, and its download model in the site", async () => {
-  const [sources, sourceCard, sourceLibrary, sourcePage, styles] = await Promise.all([
+  const [sources, articleSources, sourceCard, sourceLibrary, sourcePage, styles] = await Promise.all([
     readFile(new URL("app/data/sources.ts", root), "utf8"),
+    readFile(new URL("app/data/articleSources.ts", root), "utf8"),
     readFile(new URL("app/components/SourceCard.tsx", root), "utf8"),
     readFile(new URL("app/components/SourceLibrary.tsx", root), "utf8"),
     readFile(new URL("app/zdroje/page.tsx", root), "utf8"),
@@ -15,6 +20,9 @@ test("keeps the source library, categories, and its download model in the site",
 
   assert.match(sources, /1681_Mariotte/);
   assert.match(sources, /2000_Argo/);
+  assert.match(sources, /\.\.\.articleSources/);
+  assert.ok((articleSources.match(/^  \{ id:/gm) ?? []).length >= 496);
+  assert.doesNotMatch(articleSources, /author: "doi\.org"|<\/?(?:sub|sup|i)>|�/);
   assert.match(sources, /drive\.google\.com\/uc\?export=download/);
   assert.match(sources, /SourceCategory/);
   assert.match(sources, /"science" \| "book" \| "politics" \| "organization"/);
@@ -26,10 +34,28 @@ test("keeps the source library, categories, and its download model in the site",
   assert.match(sourceLibrary, /Typ zdroje/);
   assert.match(sourceLibrary, /Všechna období/);
   assert.match(sourceLibrary, /Od nejnovějších/);
+  assert.match(sourceLibrary, /Hledat ve zdrojích/);
+  assert.match(sourceLibrary, /normalizeSearchText/);
   assert.match(sourceLibrary, /aria-live="polite"/);
   assert.match(sourcePage, /<SourceLibrary sources=\{sources\}/);
   assert.match(styles, /\.source-filters/);
   assert.match(styles, /\.source-card__actions \{[\s\S]*?justify-content: flex-end/);
+});
+
+test("routes every published article source through the central catalogue", async () => {
+  const componentDirectory = new URL("app/components/", root);
+  const articleFiles = (await readdir(componentDirectory)).filter((name) => name.endsWith("Article.tsx"));
+  const sourceIds = new Set([...sourceCatalogueText.matchAll(/\bid:\s*"([^"]+)"/g)].map((match) => match[1]));
+
+  for (const file of articleFiles) {
+    const article = await readFile(new URL(file, componentDirectory), "utf8");
+    assert.doesNotMatch(article, /<ReferenceLink\b/, `${file} still uses ReferenceLink`);
+    assert.doesNotMatch(article, /<a\b[^>]*href="https?:\/\//, `${file} contains an uncatalogued URL`);
+
+    for (const match of article.matchAll(/<(?:Citation|SourceLink)\s+id="([^"]+)"/g)) {
+      assert.ok(sourceIds.has(match[1]), `${file} references missing source ${match[1]}`);
+    }
+  }
 });
 
 test("replaces the temporary starter surface", async () => {
@@ -211,22 +237,22 @@ test("publishes the global surface temperature article instead of the generic pl
   assert.doesNotMatch(styles, /\.article-glossary\s*\{\s*position: fixed/);
   assert.match(styles, /\.article-glossary dl\s*\{\s*display: grid/);
   assert.match(styles, /\.article-figure--scroll-wide \.article-figure__media/);
-  assert.match(article, /10\.1002\/qj\.49706427503/);
-  assert.match(article, /10\.1002\/qj\.49708737102/);
-  assert.match(article, /10\.1038\/322430a0/);
-  assert.match(article, /10\.1029\/JD092iD11p13345/);
-  assert.match(article, /10\.1029\/2010RG000345/);
-  assert.match(article, /10\.1029\/2019JD032361/);
-  assert.match(article, /10\.1175\/BAMS-D-24-0012\.1/);
-  assert.match(article, /10\.1029\/2023JD040179/);
-  assert.match(article, /10\.5194\/essd-12-3469-2020/);
+  assert.match(sourceCatalogueText, /10\.1002\/qj\.49706427503/);
+  assert.match(sourceCatalogueText, /10\.1002\/qj\.49708737102/);
+  assert.match(sourceCatalogueText, /10\.1038\/322430a0/);
+  assert.match(sourceCatalogueText, /10\.1029\/JD092iD11p13345/);
+  assert.match(sourceCatalogueText, /10\.1029\/2010RG000345/);
+  assert.match(sourceCatalogueText, /10\.1029\/2019JD032361/);
+  assert.match(sourceCatalogueText, /10\.1175\/BAMS-D-24-0012\.1/);
+  assert.match(sourceCatalogueText, /10\.1029\/2023JD040179/);
+  assert.match(sourceCatalogueText, /10\.5194\/essd-12-3469-2020/);
   assert.match(article, /gistemp-stations-robinson\.png/);
   assert.match(article, /noaa-drifting-buoy-deployment\.jpg/);
   assert.match(article, /gistemp-five-year-anomaly-1880-2025\.mp4/);
   assert.match(article, /c3s-global-temperature-datasets-1850-2025\.png/);
   assert.match(article, /NASA Scientific Visualization Studio/);
   assert.match(article, /C3S\/ECMWF/);
-  assert.match(article, /licence-to-use-copernicus-products/);
+  assert.match(sourceCatalogueText, /licence-to-use-copernicus-products/);
   assert.match(styles, /\.article-figure__media\s*\{/);
   assert.match(evidence, /slug: "gmst"[\s\S]*status: "hotovo"/);
 });
@@ -258,14 +284,14 @@ test("publishes a full stratospheric temperature article instead of the generic 
   assert.doesNotMatch(article, /atmosphere-with-ionosphere-cs\.svg/);
   assert.doesNotMatch(article, /jra3q-lower-stratosphere-comparison-2021\.png/);
   assert.doesNotMatch(article, /nasa-satellite-atmospheric-trends-1979-2005\.jpg/);
-  assert.match(article, /10\.1029\/2008JD010421/);
-  assert.match(article, /10\.1029\/2004JD005753/);
-  assert.match(article, /10\.1175\/JCLI-D-11-00668\.1/);
-  assert.match(article, /10\.1175\/2008JTECHA1176\.1/);
-  assert.match(article, /10\.1175\/JTECH-D-16-0018\.1/);
-  assert.match(article, /10\.1175\/JCLI-D-19-0998\.1/);
-  assert.match(article, /10\.5194\/acp-24-12925-2024/);
-  assert.match(article, /10\.1038\/s41612-022-00229-7/);
+  assert.match(sourceCatalogueText, /10\.1029\/2008JD010421/);
+  assert.match(sourceCatalogueText, /10\.1029\/2004JD005753/);
+  assert.match(sourceCatalogueText, /10\.1175\/JCLI-D-11-00668\.1/);
+  assert.match(sourceCatalogueText, /10\.1175\/2008JTECHA1176\.1/);
+  assert.match(sourceCatalogueText, /10\.1175\/JTECH-D-16-0018\.1/);
+  assert.match(sourceCatalogueText, /10\.1175\/JCLI-D-19-0998\.1/);
+  assert.match(sourceCatalogueText, /10\.5194\/acp-24-12925-2024/);
+  assert.match(sourceCatalogueText, /10\.1038\/s41612-022-00229-7/);
   assert.match(article, /noaa-radiosonde-balloon-1944\.jpg/);
   assert.match(styles, /\.article-figure--scroll-wide \.article-figure__media/);
   assert.match(evidence, /slug: "stratosfericke-ochlazovani"[\s\S]*status: "hotovo"/);
@@ -286,14 +312,14 @@ test("publishes a sourced ocean heat content article instead of the generic plac
   assert.match(article, /pan-2026-ohc-upper-2000m\.png/);
   assert.match(article, /noaa-ohc-trend-1993-2024\.png/);
   assert.match(article, /argo-float-deployment\.jpg/);
-  assert.match(article, /10\.1126\/science\.287\.5461\.2225/);
-  assert.match(article, /10\.1038\/nature07080/);
-  assert.match(article, /10\.1038\/nature09043/);
-  assert.match(article, /10\.1029\/2012GL051106/);
-  assert.match(article, /10\.1126\/sciadv\.1601545/);
-  assert.match(article, /10\.5194\/essd-16-3517-2024/);
-  assert.match(article, /10\.1007\/s00376-026-5876-0/);
-  assert.match(article, /10\.1029\/2024GL111229/);
+  assert.match(sourceCatalogueText, /10\.1126\/science\.287\.5461\.2225/);
+  assert.match(sourceCatalogueText, /10\.1038\/nature07080/);
+  assert.match(sourceCatalogueText, /10\.1038\/nature09043/);
+  assert.match(sourceCatalogueText, /10\.1029\/2012GL051106/);
+  assert.match(sourceCatalogueText, /10\.1126\/sciadv\.1601545/);
+  assert.match(sourceCatalogueText, /10\.5194\/essd-16-3517-2024/);
+  assert.match(sourceCatalogueText, /10\.1007\/s00376-026-5876-0/);
+  assert.match(sourceCatalogueText, /10\.1029\/2024GL111229/);
   assert.match(article, /CC BY 4\.0/);
   assert.doesNotMatch(article, /Teplo je energie uložená ve vodě/);
   assert.doesNotMatch(article, /Tepelná energie/);
@@ -326,14 +352,14 @@ test("publishes a sourced atmospheric carbon dioxide article instead of the gene
   assert.match(article, /noaa-global-co2-monthly\.png/);
   assert.match(article, /noaa-co2-800000-years\.png/);
   assert.equal((article.match(/unoptimized/g) ?? []).length, 5);
-  assert.match(article, /10\.1016\/0016-7037\(58\)90033-4/);
-  assert.match(article, /10\.1111\/j\.2153-3490\.1960\.tb01300\.x/);
-  assert.match(article, /10\.1029\/94JD01951/);
-  assert.match(article, /10\.1029\/95JD00859/);
-  assert.match(article, /10\.5194\/amt-14-3015-2021/);
-  assert.match(article, /10\.1038\/nature06949/);
-  assert.match(article, /10\.1002\/2014GL061957/);
-  assert.match(article, /10\.5194\/amt-10-549-2017/);
+  assert.match(sourceCatalogueText, /10\.1016\/0016-7037\(58\)90033-4/);
+  assert.match(sourceCatalogueText, /10\.1111\/j\.2153-3490\.1960\.tb01300\.x/);
+  assert.match(sourceCatalogueText, /10\.1029\/94JD01951/);
+  assert.match(sourceCatalogueText, /10\.1029\/95JD00859/);
+  assert.match(sourceCatalogueText, /10\.5194\/amt-14-3015-2021/);
+  assert.match(sourceCatalogueText, /10\.1038\/nature06949/);
+  assert.match(sourceCatalogueText, /10\.1002\/2014GL061957/);
+  assert.match(sourceCatalogueText, /10\.5194\/amt-10-549-2017/);
   assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
   assert.match(styles, /\.article-figure--sample/);
   assert.match(evidence, /slug: "atmosfericka-koncentrace-co2"[\s\S]*status: "hotovo"/);
@@ -366,13 +392,13 @@ test("publishes a sourced atmospheric humidity article instead of the generic pl
   assert.match(article, /nasa-water-vapor-noaa20\.jpg/);
   assert.match(article, /noaa-rawinsonde-launch\.jpg/);
   assert.equal((article.match(/unoptimized/g) ?? []).length, 4);
-  assert.match(article, /10\.1175\/JCLI3816\.1/);
-  assert.match(article, /10\.1175\/2008JCLI2274\.1/);
-  assert.match(article, /10\.5194\/cp-10-1983-2014/);
-  assert.match(article, /10\.5194\/essd-12-2853-2020/);
-  assert.match(article, /10\.1029\/2008JD010989/);
-  assert.match(article, /10\.1002\/2018EA000363/);
-  assert.match(article, /10\.1029\/2022JD036728/);
+  assert.match(sourceCatalogueText, /10\.1175\/JCLI3816\.1/);
+  assert.match(sourceCatalogueText, /10\.1175\/2008JCLI2274\.1/);
+  assert.match(sourceCatalogueText, /10\.5194\/cp-10-1983-2014/);
+  assert.match(sourceCatalogueText, /10\.5194\/essd-12-2853-2020/);
+  assert.match(sourceCatalogueText, /10\.1029\/2008JD010989/);
+  assert.match(sourceCatalogueText, /10\.1002\/2018EA000363/);
+  assert.match(sourceCatalogueText, /10\.1029\/2022JD036728/);
   assert.match(article, /Open Government Licence v3\.0/);
   assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
   assert.match(evidence, /slug: "narust-vlhkosti"[\s\S]*status: "hotovo"/);
@@ -405,10 +431,10 @@ test("publishes a sourced precipitation article with separate daily and sub-dail
   assert.match(article, /hadex3-rx1day-trend\.png/);
   assert.match(article, /gsdr-i-station-coverage\.png/);
   assert.equal((article.match(/unoptimized/g) ?? []).length, 7);
-  assert.match(article, /10\.1175\/JCLI-D-12-00502\.1/);
-  assert.match(article, /10\.1029\/2019JD032263/);
-  assert.match(article, /10\.1038\/s41597-023-02238-4/);
-  assert.match(article, /10\.1007\/s00382-022-06567-9/);
+  assert.match(sourceCatalogueText, /10\.1175\/JCLI-D-12-00502\.1/);
+  assert.match(sourceCatalogueText, /10\.1029\/2019JD032263/);
+  assert.match(sourceCatalogueText, /10\.1038\/s41597-023-02238-4/);
+  assert.match(sourceCatalogueText, /10\.1007\/s00382-022-06567-9/);
   assert.match(article, /Open Government Licence v3\.0/);
   assert.match(article, /CC BY 4\.0/);
   assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
@@ -438,11 +464,11 @@ test("publishes a sourced global mean sea-level article with tide-gauge and sate
   assert.match(article, /hamlington-global-mean-sea-level-1993-2023\.png/);
   assert.match(article, /copernicus-regional-sea-level-trends-1999-2025\.png/);
   assert.equal((article.match(/unoptimized/g) ?? []).length, 4);
-  assert.match(article, /10\.1007\/s10712-019-09525-z/);
-  assert.match(article, /10\.1038\/s41586-020-2591-3/);
-  assert.match(article, /10\.5194\/essd-11-1189-2019/);
-  assert.match(article, /10\.1038\/s43247-024-01761-5/);
-  assert.match(article, /psmsl\.org\/data\/obtaining\/complete\.php/);
+  assert.match(sourceCatalogueText, /10\.1007\/s10712-019-09525-z/);
+  assert.match(sourceCatalogueText, /10\.1038\/s41586-020-2591-3/);
+  assert.match(sourceCatalogueText, /10\.5194\/essd-11-1189-2019/);
+  assert.match(sourceCatalogueText, /10\.1038\/s43247-024-01761-5/);
+  assert.match(sourceCatalogueText, /psmsl\.org\/data\/obtaining\/complete\.php/);
   assert.match(article, /CC BY 4\.0/);
   assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
   assert.match(evidence, /slug: "gmsl"[\s\S]*status: "hotovo"/);
@@ -472,14 +498,14 @@ test("publishes a sourced ocean acidification article with measured and reconstr
   assert.match(article, /bats-ph-aragonite-1983-2023\.webp/);
   assert.match(article, /copernicus-surface-ph-trend-map\.png/);
   assert.equal((article.match(/unoptimized/g) ?? []).length, 4);
-  assert.match(article, /10\.1038\/425365a/);
-  assert.match(article, /10\.1038\/nature04095/);
-  assert.match(article, /10\.1073\/pnas\.0906044106/);
-  assert.match(article, /10\.3389\/fmars\.2023\.1289931/);
-  assert.match(article, /10\.1029\/2023GB007765/);
-  assert.match(article, /10\.5194\/essd-16-121-2024/);
-  assert.match(article, /10\.25921\/m6tp-mj50/);
-  assert.match(article, /10\.25921\/8dba-fr90/);
+  assert.match(sourceCatalogueText, /10\.1038\/425365a/);
+  assert.match(sourceCatalogueText, /10\.1038\/nature04095/);
+  assert.match(sourceCatalogueText, /10\.1073\/pnas\.0906044106/);
+  assert.match(sourceCatalogueText, /10\.3389\/fmars\.2023\.1289931/);
+  assert.match(sourceCatalogueText, /10\.1029\/2023GB007765/);
+  assert.match(sourceCatalogueText, /10\.5194\/essd-16-121-2024/);
+  assert.match(sourceCatalogueText, /10\.25921\/m6tp-mj50/);
+  assert.match(sourceCatalogueText, /10\.25921\/8dba-fr90/);
   assert.match(article, /CC BY 4\.0/);
   assert.match(evidence, /slug: "acidifikace-oceanu"[\s\S]*status: "hotovo"/);
 });
@@ -512,10 +538,10 @@ test("publishes a sourced Arctic sea ice article with extent, age, and thickness
   assert.match(article, /14,29 milionu km²/);
   assert.match(article, /95 000/);
   assert.match(article, /přibližně o 66 %/);
-  assert.match(article, /10\.1029\/JD089iD04p05355/);
-  assert.match(article, /10\.7265\/a98x-0f50/);
-  assert.match(article, /10\.5194\/tc-18-2473-2024/);
-  assert.match(article, /10\.1088\/1748-9326\/aae3ec/);
+  assert.match(sourceCatalogueText, /10\.1029\/JD089iD04p05355/);
+  assert.match(sourceCatalogueText, /10\.7265\/a98x-0f50/);
+  assert.match(sourceCatalogueText, /10\.5194\/tc-18-2473-2024/);
+  assert.match(sourceCatalogueText, /10\.1088\/1748-9326\/aae3ec/);
   assert.match(article, /Licence to use Copernicus Products/);
   assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
   assert.match(evidence, /slug: "ubytek-arktickeho-ledu"[\s\S]*status: "hotovo"/);
@@ -548,12 +574,12 @@ test("publishes a sourced mountain glaciers article with field and satellite evi
   assert.match(article, /−408 ± 132 Gt/);
   assert.match(article, /−9 583 ± 1 211 Gt/);
   assert.match(article, /26,4 ± 3,3 mm/);
-  assert.match(article, /10\.3189\/S002214300002757X/);
-  assert.match(article, /10\.5194\/essd-17-1977-2025/);
-  assert.match(article, /10\.1038\/s41586-021-03436-z/);
-  assert.match(article, /10\.1038\/s41586-024-08545-z/);
-  assert.match(article, /10\.1038\/s43017-026-00777-z/);
-  assert.match(article, /licence-to-use-copernicus-products/);
+  assert.match(sourceCatalogueText, /10\.3189\/S002214300002757X/);
+  assert.match(sourceCatalogueText, /10\.5194\/essd-17-1977-2025/);
+  assert.match(sourceCatalogueText, /10\.1038\/s41586-021-03436-z/);
+  assert.match(sourceCatalogueText, /10\.1038\/s41586-024-08545-z/);
+  assert.match(sourceCatalogueText, /10\.1038\/s43017-026-00777-z/);
+  assert.match(sourceCatalogueText, /licence-to-use-copernicus-products/);
   assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
   assert.match(evidence, /slug: "ustup-ledovcu"[\s\S]*status: "hotovo"/);
 });
@@ -588,11 +614,11 @@ test("publishes a sourced ice-sheet mass article with three independent measurem
   assert.match(article, /4 892 ± 457 Gt/);
   assert.match(article, /2 671 ± 530 Gt/);
   assert.match(article, /21,0 ± 1,9 mm/);
-  assert.match(article, /10\.1126\/science\.1073888/);
-  assert.match(article, /10\.1126\/science\.1228102/);
-  assert.match(article, /10\.5194\/essd-15-1597-2023/);
-  assert.match(article, /10\.5194\/essd-18-1729-2026/);
-  assert.match(article, /10\.5285\/77B64C55-7166-4A06-9DEF-2E400398E452/);
+  assert.match(sourceCatalogueText, /10\.1126\/science\.1073888/);
+  assert.match(sourceCatalogueText, /10\.1126\/science\.1228102/);
+  assert.match(sourceCatalogueText, /10\.5194\/essd-15-1597-2023/);
+  assert.match(sourceCatalogueText, /10\.5194\/essd-18-1729-2026/);
+  assert.match(sourceCatalogueText, /10\.5285\/77B64C55-7166-4A06-9DEF-2E400398E452/);
   assert.match(article, /CC BY 4\.0/);
   assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
   assert.match(evidence, /slug: "nestabilita-prikrovu"[\s\S]*status: "hotovo"/);
@@ -631,13 +657,13 @@ test("publishes a sourced snow-cover and permafrost article with distinct observ
   assert.match(article, /0,29 ± 0,12 °C/);
   assert.match(article, /9 z 20/);
   assert.match(article, /0,8 cm za rok/);
-  assert.match(article, /10\.5194\/essd-7-137-2015/);
-  assert.match(article, /10\.1038\/s41597-021-00939-2/);
-  assert.match(article, /10\.1126\/sciadv\.adv7926/);
-  assert.match(article, /10\.1038\/s41467-018-08240-4/);
-  assert.match(article, /10\.5194\/essd-7-245-2015/);
-  assert.match(article, /10\.1002\/ppp\.2088/);
-  assert.match(article, /10\.5285\/a6fbedd8ee5b472c8e84e55f746c1704/);
+  assert.match(sourceCatalogueText, /10\.5194\/essd-7-137-2015/);
+  assert.match(sourceCatalogueText, /10\.1038\/s41597-021-00939-2/);
+  assert.match(sourceCatalogueText, /10\.1126\/sciadv\.adv7926/);
+  assert.match(sourceCatalogueText, /10\.1038\/s41467-018-08240-4/);
+  assert.match(sourceCatalogueText, /10\.5194\/essd-7-245-2015/);
+  assert.match(sourceCatalogueText, /10\.1002\/ppp\.2088/);
+  assert.match(sourceCatalogueText, /10\.5285\/a6fbedd8ee5b472c8e84e55f746c1704/);
   assert.match(article, /CC BY 4\.0/);
   assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
   assert.match(evidence, /slug: "snehova-pokryvka-a-permafrost"[\s\S]*status: "hotovo"/);
@@ -668,7 +694,7 @@ test("publishes a sourced phenology article with organism, camera, and satellite
   assert.match(article, /denny-event-status-intensity\.png/);
   assert.match(article, /phenocam-greenness-comparison\.png/);
   assert.match(article, /buntgen-uk-flowering-1753-2019\.jpg/);
-  assert.match(article, /10\.1016\/j\.agrformet\.2018\.03\.003/);
+  assert.match(sourceCatalogueText, /10\.1016\/j\.agrformet\.2018\.03\.003/);
   assert.doesNotMatch(article, /10\.1016\/j\.agrformet\.2018\.02\.032/);
   assert.equal((article.match(/unoptimized/g) ?? []).length, 3);
   assert.match(article, /125 000/);
@@ -677,13 +703,13 @@ test("publishes a sourced phenology article with organism, camera, and satellite
   assert.match(article, /25,94 dne/);
   assert.match(article, /2 826 588/);
   assert.match(article, /5 500 výsledků pro 684 druhů/);
-  assert.match(article, /10\.1007\/s00484-014-0789-5/);
-  assert.match(article, /10\.1111\/gcb\.15000/);
-  assert.match(article, /10\.1098\/rspb\.2021\.2456/);
-  assert.match(article, /10\.1038\/s41558-019-0648-9/);
-  assert.match(article, /10\.1002\/ecm\.1552/);
-  assert.match(article, /10\.5194\/essd-17-6531-2025/);
-  assert.match(article, /10\.5067\/MODIS\/MCD12Q2\.061/);
+  assert.match(sourceCatalogueText, /10\.1007\/s00484-014-0789-5/);
+  assert.match(sourceCatalogueText, /10\.1111\/gcb\.15000/);
+  assert.match(sourceCatalogueText, /10\.1098\/rspb\.2021\.2456/);
+  assert.match(sourceCatalogueText, /10\.1038\/s41558-019-0648-9/);
+  assert.match(sourceCatalogueText, /10\.1002\/ecm\.1552/);
+  assert.match(sourceCatalogueText, /10\.5194\/essd-17-6531-2025/);
+  assert.match(sourceCatalogueText, /10\.5067\/MODIS\/MCD12Q2\.061/);
   assert.match(article, /CC BY 4\.0/);
   assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
   assert.match(evidence, /slug: "fenologicke-posuny"[\s\S]*status: "hotovo"/);
@@ -716,11 +742,11 @@ test("publishes a sourced heat-wave article that keeps definitions and observati
   assert.match(article, /1,69 °C/);
   assert.match(article, /133 homogenizovaných českých stanic/);
   assert.match(article, /18,5 tropického dne/);
-  assert.match(article, /10\.3354\/cr019193/);
-  assert.match(article, /10\.1175\/JCLI-D-12-00383\.1/);
-  assert.match(article, /10\.1038\/s41467-020-16970-7/);
-  assert.match(article, /10\.1038\/s41467-022-31432-y/);
-  assert.match(article, /10\.1002\/joc\.7505/);
+  assert.match(sourceCatalogueText, /10\.3354\/cr019193/);
+  assert.match(sourceCatalogueText, /10\.1175\/JCLI-D-12-00383\.1/);
+  assert.match(sourceCatalogueText, /10\.1038\/s41467-020-16970-7/);
+  assert.match(sourceCatalogueText, /10\.1038\/s41467-022-31432-y/);
+  assert.match(sourceCatalogueText, /10\.1002\/joc\.7505/);
   assert.match(article, /Open Government Licence v3\.0/);
   assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
   assert.match(evidence, /slug: "vlny-veder"[\s\S]*status: "hotovo"/);

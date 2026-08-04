@@ -1,13 +1,5 @@
 import Image from "next/image";
-import type { ReactNode } from "react";
-
-function ReferenceLink({ href, children }: { href: string; children: ReactNode }) {
-  return (
-    <a className="article-reference" href={href} target="_blank" rel="noreferrer">
-      {children}
-    </a>
-  );
-}
+import { SourceLink } from "./SourceLink";
 
 export function SnowPermafrostArticle() {
   return (
@@ -53,16 +45,16 @@ export function SnowPermafrostArticle() {
 
         <p>
           Toto vymezení odpovídá způsobu, jakým jsou pozorování zveřejňována v hlavních odborných souborech. Rozsah
-          sněhu nad severní polokoulí popisují <ReferenceLink href="https://doi.org/10.5194/essd-7-137-2015">Estilow,
-          Young a Robinson, 2015</ReferenceLink>; vodní hodnotu a hmotnost sněhu{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s41597-021-00939-2">Luojus et al., 2021</ReferenceLink>.
+          sněhu nad severní polokoulí popisují <SourceLink id="DOI_10_5194_essd_7_137_2015">Estilow,
+          Young a Robinson, 2015</SourceLink>; vodní hodnotu a hmotnost sněhu{" "}
+          <SourceLink id="DOI_10_1038_s41597_021_00939_2">Luojus et al., 2021</SourceLink>.
           Teplotu permafrostu a hloubku aktivní vrstvy shromažďuje Global Terrestrial Network for Permafrost (GTN-P);
           její databázi popsali{" "}
-          <ReferenceLink href="https://doi.org/10.5194/essd-7-245-2015">Biskaborn et al., 2015</ReferenceLink>.
+          <SourceLink id="DOI_10_5194_essd_7_245_2015">Biskaborn et al., 2015</SourceLink>.
           Globální změnu teploty vrtů vyhodnotili{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s41467-018-08240-4">Biskaborn et al., 2019</ReferenceLink> a
+          <SourceLink id="DOI_10_1038_s41467_018_08240_4">Biskaborn et al., 2019</SourceLink> a
           opakované měření sezónního rozmrzání shrnuje program Circumpolar Active Layer Monitoring (CALM).{" "}
-          <ReferenceLink href="https://doi.org/10.1080/1088937X.2021.1988001">Nelson, Shiklomanov a Nyland, 2021</ReferenceLink>
+          <SourceLink id="DOI_10_1080_1088937x_2021_1988001">Nelson, Shiklomanov a Nyland, 2021</SourceLink>
         </p>
 
         <h3>Sníh: plocha, trvání a množství vody</h3>
@@ -80,7 +72,7 @@ export function SnowPermafrostArticle() {
           V terénu se proto odebere svislý válec sněhu o známé ploše, změří se jeho délka a hmotnost a z nich se určí
           výška i vodní hodnota. Stejnou veličinu průběžně měří sněhové polštáře a ve velkých oblastech ji odhadují
           družicové mikrovlnné přístroje. Jednotnou definici SWE uvádí{" "}
-          <ReferenceLink href="https://space.oscar.wmo.int/variables/view/snow_water_equivalent">Světová meteorologická organizace</ReferenceLink>.
+          <SourceLink id="WEB_World_Meteorological_Organiz_WMO_OSCAR_nbsp_nbsp_Details_for_Variable_Snow_wa_142b8371">Světová meteorologická organizace</SourceLink>.
         </p>
 
         <figure className="article-figure">
@@ -97,7 +89,7 @@ export function SnowPermafrostArticle() {
             Měření sněhu u ledovce Sperry v americké Montaně. Kovová trubice vyřízne sloupec sněhu až k podkladu.
             Délka sloupce poskytne výšku sněhu, jeho zvážení množství vody. Jedno místo nereprezentuje celou krajinu;
             sněhový profil se proto opakuje na předem určených bodech trasy. Zdroj:{" "}
-            <ReferenceLink href="https://www.usgs.gov/media/images/snow-core-measurement">USGS</ReferenceLink>, fotografie
+            <SourceLink id="WEB_U_S_Geological_Survey_Snow_core_measurement_04ddf039">USGS</SourceLink>, fotografie
             vlády USA, volné dílo.
           </figcaption>
         </figure>
@@ -116,7 +108,7 @@ export function SnowPermafrostArticle() {
           tání. V zemině se obvykle zjišťuje na konci léta sondou zasouvanou až k tvrdé zmrzlé vrstvě. V kamenité půdě,
           kde sonda neprojde, se používají trubice naplněné kapalinou nebo teplotní čidla v několika hloubkách.
           Opakování na stejné síti bodů omezuje vliv náhodného výběru místa. Protokol sítě{" "}
-          <ReferenceLink href="https://nsidc.org/data/ggd313/versions/1">CALM</ReferenceLink> používá podle lokality
+          <SourceLink id="WEB_National_Snow_and_Ice_Data_C_Circumpolar_Active_Layer_Monitoring_CALM_Program_28cfbc3c">CALM</SourceLink> používá podle lokality
           čtvercové sítě o straně přibližně 100 až 1 000 metrů nebo opakované transekty.
         </p>
 
@@ -127,7 +119,7 @@ export function SnowPermafrostArticle() {
           měřit také hustotu. James E. Church zavedl roku 1909 na Mount Rose v Nevadě odběr celého sněhového sloupce
           přenosnou trubicí a váhou. Jeho postup se stal základem sněhoměrných tras, na nichž se během zimy opakovaně
           měří stejné body. Historii metody a její rozšíření v západních Spojených státech popisuje{" "}
-          <ReferenceLink href="https://www.nrcs.usda.gov/sites/default/files/2023-01/History-of-Snow-Survey-and-Water-Supply-Forecasting.pdf">historie programu Snow Survey</ReferenceLink>
+          <SourceLink id="WEB_nrcs_usda_gov_historie_programu_Snow_Survey_f7dd6c0d">historie programu Snow Survey</SourceLink>
           americké služby NRCS.
         </p>
 
@@ -138,7 +130,7 @@ export function SnowPermafrostArticle() {
           Rutgers Global Snow Lab zachoval původní mapy a spojil je s denním systémem Interactive Multisensor Snow and
           Ice Mapping System (IMS) používaným od roku 1997.
           Podrobný popis vzniku, kontrol a změn publikovali{" "}
-          <ReferenceLink href="https://doi.org/10.5194/essd-7-137-2015">Estilow, Young a Robinson, 2015</ReferenceLink>.
+          <SourceLink id="DOI_10_5194_essd_7_137_2015">Estilow, Young a Robinson, 2015</SourceLink>.
         </p>
 
         <p>
@@ -146,7 +138,7 @@ export function SnowPermafrostArticle() {
           GlobSnow využívá mikrovlnná měření družice Nimbus-7 od roku 1979 a měření navazujících družic. Družicový
           signál se v něm spojuje s výškou sněhu naměřenou stanicemi. Tím vznikají denní mapy SWE pro pevninu severně
           od 40° s výjimkou horských oblastí. Verzi 3 a celý výpočet popsali{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s41597-021-00939-2">Luojus et al., 2021</ReferenceLink>.
+          <SourceLink id="DOI_10_1038_s41597_021_00939_2">Luojus et al., 2021</SourceLink>.
         </p>
 
         <h3>Permafrost</h3>
@@ -154,7 +146,7 @@ export function SnowPermafrostArticle() {
           Teploty zmrzlé půdy se dlouho měřily v jednotlivých vrtech pro stavby, doly a místní výzkum. Příkladem jsou
           čtyři vrty v Utqiaġviku na Aljašce, v nichž USGS měřila teplotu v letech 1950–1961. Původní tabulky byly
           později digitalizovány a dnes jsou veřejně dostupné včetně popisu vrtů a dobových přístrojů.{" "}
-          <ReferenceLink href="https://doi.org/10.5066/P9WRGCI3">USGS: Permafrost ground temperature 1950–1961</ReferenceLink>
+          <SourceLink id="DOI_10_5066_p9wrgci3">USGS: Permafrost ground temperature 1950–1961</SourceLink>
         </p>
 
         <p>
@@ -162,16 +154,16 @@ export function SnowPermafrostArticle() {
           bylo měřit každoročně stejné body stejným postupem a uchovat i údaje o vegetaci, půdě a poloze. Druhou část
           systému tvoří vrty s teplotními čidly. Obě větve byly spojeny v síti Global Terrestrial Network for Permafrost,
           která spravuje údaje o teplotě permafrostu a tloušťce aktivní vrstvy. Vývoj sítě shrnují{" "}
-          <ReferenceLink href="https://doi.org/10.5194/essd-7-245-2015">Biskaborn et al., 2015</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1080/1088937X.2021.1988001">Nelson, Shiklomanov a Nyland, 2021</ReferenceLink>.
+          <SourceLink id="DOI_10_5194_essd_7_245_2015">Biskaborn et al., 2015</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1080_1088937x_2021_1988001">Nelson, Shiklomanov a Nyland, 2021</SourceLink>.
         </p>
 
         <p>
           Mezinárodní polární rok 2007–2009 rozšířil počet vrtů a sjednotil část jejich odečtů. Právě roky 2007–2016
           proto umožnily první jednotné globální vyhodnocení změny teploty permafrostu ze 154 vrtů. Některé místní
           záznamy jsou mnohem delší: například soubor severoaljašských vrtů zahrnuje měření od roku 1973.{" "}
-          <ReferenceLink href="https://doi.org/10.5194/essd-6-201-2014">Clow, 2014</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s41467-018-08240-4">Biskaborn et al., 2019</ReferenceLink>
+          <SourceLink id="DOI_10_5194_essd_6_201_2014">Clow, 2014</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1038_s41467_018_08240_4">Biskaborn et al., 2019</SourceLink>
         </p>
 
         <h2>Jak vzniká zveřejněný záznam</h2>
@@ -181,7 +173,7 @@ export function SnowPermafrostArticle() {
           Novější systém IMS dává analytikovi vedle několika družic také mikrovlnná data, hlášení stanic a předchozí
           mapu. Analytik označí buňky se sněhem a ledem a výslednou mapu zkontroluje vůči sousedním dnům. Denní produkt
           je od roku 1997 dostupný v rozlišení přibližně 24 km, od roku 2004 také 4 km a později 1 km.{" "}
-          <ReferenceLink href="https://doi.org/10.7265/N52R3PMC">NOAA/NCEI: IMS Daily Northern Hemisphere Snow and Ice Analysis</ReferenceLink>
+          <SourceLink id="DOI_10_7265_n52r3pmc">NOAA/NCEI: IMS Daily Northern Hemisphere Snow and Ice Analysis</SourceLink>
         </p>
 
         <p>
@@ -198,7 +190,7 @@ export function SnowPermafrostArticle() {
           průměrná velikost zrn pomocí družicového signálu a okolních staničních měření výšky. Potom se vypočítá SWE v
           jednotlivých buňkách o rozměru 25 × 25 km. Denní mapy se mohou zprůměrovat na měsíce a součet SWE násobený
           plochou buněk dává hmotnost sněhu.{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s41597-021-00939-2">Luojus et al., 2021, popis algoritmu a ověření</ReferenceLink>
+          <SourceLink id="DOI_10_1038_s41597_021_00939_2">Luojus et al., 2021, popis algoritmu a ověření</SourceLink>
         </p>
 
         <p>
@@ -222,7 +214,7 @@ export function SnowPermafrostArticle() {
           mají odlišnou hloubku, a proto Biskaborn et al. vybírali u každého místa nejhlubší vhodné čidlo, zpravidla
           mezi 10 a 25 metry. Každoroční hodnoty porovnali pouze tam, kde byly mezery dostatečně krátké. Při výpočtu
           regionálních a globálních změn omezili převahu hustě sledovaných oblastí prostorovým vážením.{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s41467-018-08240-4">Biskaborn et al., 2019, metody</ReferenceLink>
+          <SourceLink id="DOI_10_1038_s41467_018_08240_4">Biskaborn et al., 2019, metody</SourceLink>
         </p>
 
         <h3>Hloubka aktivní vrstvy</h3>
@@ -238,7 +230,7 @@ export function SnowPermafrostArticle() {
           Místa se výrazně liší půdou, sněhem, vegetací, vodou i ledem v podloží. Změna průměru vybrané sítě vrtů nebo
           sond proto popisuje tato monitorovací místa, nikoli každý metr arktické pevniny. Síť CALM uchovává jednotlivé
           body i souhrnné hodnoty, aby bylo možné rozdíl mezi prostorovou proměnlivostí a změnou v čase znovu
-          zkontrolovat. <ReferenceLink href="https://www.permafrost.org/data/circumpolar-active-layer-monitoring-network-calm/">International Permafrost Association: CALM</ReferenceLink>
+          zkontrolovat. <SourceLink id="WEB_International_Permafrost_Ass_Circumpolar_Active_Layer_Monitoring_Network_CALM_34543ac5">International Permafrost Association: CALM</SourceLink>
         </p>
 
         <h2>Zveřejňovaná data</h2>
@@ -250,8 +242,8 @@ export function SnowPermafrostArticle() {
               interpretovaných družicových map, novější z denních analýz IMS. Data, dokumentace i verze jsou veřejné.
             </p>
             <p>
-              <ReferenceLink href="https://www.ncei.noaa.gov/products/climate-data-records/snow-cover-extent">Popis produktu</ReferenceLink>{" · "}
-              <ReferenceLink href="https://doi.org/10.7289/V5N014G9">Data ke stažení a trvalý identifikátor</ReferenceLink>
+              <SourceLink id="WEB_NOAA_Snow_Cover_Extent_Northern_Hemisphere_CDR_85362472">Popis produktu</SourceLink>{" · "}
+              <SourceLink id="DOI_10_7289_v5n014g9">Data ke stažení a trvalý identifikátor</SourceLink>
             </p>
           </section>
 
@@ -262,8 +254,8 @@ export function SnowPermafrostArticle() {
               měření, hlášení stanic a ruční kontrolu. K dispozici jsou mřížky o velikosti 24, 4 a 1 km podle období.
             </p>
             <p>
-              <ReferenceLink href="https://nsidc.org/data/g02156/versions/1">Popis a metodika IMS</ReferenceLink>{" · "}
-              <ReferenceLink href="https://doi.org/10.7265/N52R3PMC">Archiv NCEI a soubory ke stažení</ReferenceLink>
+              <SourceLink id="WEB_National_Snow_and_Ice_Data_C_IMS_Daily_Northern_Hemisphere_Snow_and_Ice_Analy_254b6e7e">Popis a metodika IMS</SourceLink>{" · "}
+              <SourceLink id="DOI_10_7265_n52r3pmc">Archiv NCEI a soubory ke stažení</SourceLink>
             </p>
           </section>
 
@@ -274,8 +266,8 @@ export function SnowPermafrostArticle() {
               horské oblasti. Součástí jsou mapy nejistoty a opravené měsíční hodnoty.
             </p>
             <p>
-              <ReferenceLink href="https://doi.org/10.1594/PANGAEA.911944">Data v úložišti PANGAEA</ReferenceLink>{" · "}
-              <ReferenceLink href="https://github.com/fmidev/GlobSnow3.0">Zdrojový kód zpracování</ReferenceLink>
+              <SourceLink id="DOI_10_1594_pangaea_911944">Data v úložišti PANGAEA</SourceLink>{" · "}
+              <SourceLink id="WEB_GitHub_GitHub_fmidev_GlobSnow3_0_1859ddbe">Zdrojový kód zpracování</SourceLink>
             </p>
           </section>
 
@@ -286,7 +278,7 @@ export function SnowPermafrostArticle() {
               staniční výšky sněhu. Jde o jeden ze čtyř podkladů použitých v hodnocení Arctic Report Card 2025.
             </p>
             <p>
-              <ReferenceLink href="https://doi.org/10.5285/9d9bfc488ec54b1297eca2c9662f9c81">Data ke stažení z CEDA Archive</ReferenceLink>
+              <SourceLink id="DOI_10_5285_9d9bfc488ec54b1297eca2c9662f9c81">Data ke stažení z CEDA Archive</SourceLink>
             </p>
           </section>
 
@@ -297,9 +289,9 @@ export function SnowPermafrostArticle() {
               zobrazit její metadata a stáhnout dostupná pozorování. Pokrytí a délka záznamu se mezi místy liší.
             </p>
             <p>
-              <ReferenceLink href="https://data.gtn-p.org/">Datový portál GTN-P</ReferenceLink>{" · "}
-              <ReferenceLink href="https://doi.org/10.1594/PANGAEA.884711">Vrty použité v globálním vyhodnocení 2007–2016</ReferenceLink>{" · "}
-              <ReferenceLink href="https://doi.org/10.1594/PANGAEA.842821">Archiv metadat GTN-P</ReferenceLink>
+              <SourceLink id="WEB_International_Permafrost_Ass_Global_Terrestrial_Network_for_Permafrost_GTN_P_f5ca4a29">Datový portál GTN-P</SourceLink>{" · "}
+              <SourceLink id="DOI_10_1594_pangaea_884711">Vrty použité v globálním vyhodnocení 2007–2016</SourceLink>{" · "}
+              <SourceLink id="DOI_10_1594_pangaea_842821">Archiv metadat GTN-P</SourceLink>
             </p>
           </section>
 
@@ -310,8 +302,8 @@ export function SnowPermafrostArticle() {
               zpřístupňuje tabulky lokalit, roční hodnoty i popis terénních metod.
             </p>
             <p>
-              <ReferenceLink href="https://nsidc.org/data/ggd313/versions/1">Data CALM v NSIDC</ReferenceLink>{" · "}
-              <ReferenceLink href="https://www.permafrost.org/data/circumpolar-active-layer-monitoring-network-calm/">Popis monitorovací sítě</ReferenceLink>
+              <SourceLink id="WEB_National_Snow_and_Ice_Data_C_Circumpolar_Active_Layer_Monitoring_CALM_Program_28cfbc3c">Data CALM v NSIDC</SourceLink>{" · "}
+              <SourceLink id="WEB_International_Permafrost_Ass_Circumpolar_Active_Layer_Monitoring_Network_CALM_34543ac5">Popis monitorovací sítě</SourceLink>
             </p>
           </section>
 
@@ -323,9 +315,9 @@ export function SnowPermafrostArticle() {
               meteorologická data a model CryoGrid; nejde o náhradu jednotlivých vrtů.
             </p>
             <p>
-              <ReferenceLink href="https://doi.org/10.5285/5675b0be944f45a8af0e7ddbeb47a011">Teplota půdy</ReferenceLink>{" · "}
-              <ReferenceLink href="https://doi.org/10.5285/a6fbedd8ee5b472c8e84e55f746c1704">Aktivní vrstva</ReferenceLink>{" · "}
-              <ReferenceLink href="https://doi.org/10.5285/d235665772ec4b558e9a89ac85595e71">Rozsah permafrostu</ReferenceLink>
+              <SourceLink id="DOI_10_5285_5675b0be944f45a8af0e7ddbeb47a011">Teplota půdy</SourceLink>{" · "}
+              <SourceLink id="DOI_10_5285_a6fbedd8ee5b472c8e84e55f746c1704">Aktivní vrstva</SourceLink>{" · "}
+              <SourceLink id="DOI_10_5285_d235665772ec4b558e9a89ac85595e71">Rozsah permafrostu</SourceLink>
             </p>
           </section>
         </div>
@@ -344,7 +336,7 @@ export function SnowPermafrostArticle() {
           vytvořila umělé přírůstky v období nástupu sněhu, zejména od září do listopadu. Po opravě se pokles objevil
           ve všech měsících kromě ledna. Jarní květnové a červnové změny zobrazené níže neleží v hlavním období tohoto
           problému, ale každé použití podzimních hodnot musí změnu detekce uvést.{" "}
-          <ReferenceLink href="https://doi.org/10.1126/sciadv.adv7926">Elias Chereque et al., 2025</ReferenceLink>
+          <SourceLink id="DOI_10_1126_sciadv_adv7926">Elias Chereque et al., 2025</SourceLink>
         </p>
 
         <p>
@@ -360,7 +352,7 @@ export function SnowPermafrostArticle() {
           Globální průměr Biskaborna et al. proto používá prostorové vážení a uvádí nejistotu. Novější regionální
           měření, například z Aljašky do roku 2024, lze přidat jako aktuální stav regionu, nikoli jako prodloužení
           stejného globálního průměru za rok 2016.{" "}
-          <ReferenceLink href="https://doi.org/10.5194/essd-7-245-2015">Biskaborn et al., 2015</ReferenceLink>
+          <SourceLink id="DOI_10_5194_essd_7_245_2015">Biskaborn et al., 2015</SourceLink>
         </p>
 
         <h2 id="pozorovani">Pozorování</h2>
@@ -370,7 +362,7 @@ export function SnowPermafrostArticle() {
           1967 do roku 2025 klesl květnový rozsah o 15 %, což odpovídá trendu −2,5 % za desetiletí. Červnový rozsah
           klesl za stejné období o 50 %, tedy −8,7 % za desetiletí. Graf pod textem nezobrazuje tato procenta přímo:
           každý měsíc převádí na standardizovanou odchylku vůči období 1991–2020.{" "}
-          <ReferenceLink href="https://arctic.noaa.gov/report-card/report-card-2025/terrestrial-snow-cover-2025/">NOAA Arctic Report Card 2025</ReferenceLink>
+          <SourceLink id="WEB_NOAA_Terrestrial_Snow_Cover_NOAA_Arctic_33ece5d4">NOAA Arctic Report Card 2025</SourceLink>
         </p>
 
         <figure className="article-figure article-figure--scroll-mobile article-figure--scroll-wide">
@@ -390,7 +382,7 @@ export function SnowPermafrostArticle() {
             1991–2020 a svislá osa udává odchylku v násobcích směrodatné odchylky, nikoli v km². Černá patří
             severoamerické a červená euroasijské části Arktidy; kolečka jsou jednotlivé roky, silné čáry pětileté
             klouzavé průměry a plný bod rok 2025. Zdroj:{" "}
-            <ReferenceLink href="https://arctic.noaa.gov/report-card/report-card-2025/terrestrial-snow-cover-2025/">Mudryk et al., NOAA Arctic Report Card 2025, obr. 1</ReferenceLink>;
+            <SourceLink id="WEB_NOAA_Terrestrial_Snow_Cover_NOAA_Arctic_33ece5d4">Mudryk et al., NOAA Arctic Report Card 2025, obr. 1</SourceLink>;
             dílo vlády USA, volné dílo.
           </figcaption>
         </figure>
@@ -399,7 +391,7 @@ export function SnowPermafrostArticle() {
           Doba tání se v téže zprávě porovnává z týdenních map. V letech 2010–2024 začínalo květnové a červnové tání
           v severoamerické i euroasijské části Arktidy přibližně o jeden až dva týdny dříve než v letech 1967–1981.
           Jde o rozdíl mezi dvěma určenými obdobími, nikoli o údaj, že se každý rok přidává stejný počet dnů.{" "}
-          <ReferenceLink href="https://doi.org/10.25923/cfhv-c239">Mudryk et al., 2025, obr. 2</ReferenceLink>
+          <SourceLink id="DOI_10_25923_cfhv_c239">Mudryk et al., 2025, obr. 2</SourceLink>
         </p>
 
         <h3>Hmotnost sněhu během jara</h3>
@@ -427,7 +419,7 @@ export function SnowPermafrostArticle() {
             standardizovaná odchylka od průměru 1991–2020. Černá a červená kolečka jsou roční hodnoty, silné čáry
             pětileté průměry a barevné pásmo rozpětí čtyř použitých produktů. Plný bod označuje rok 2025. Graf ukazuje
             duben; květnová a červnová procenta v textu pocházejí z odděleného měsíčního vyhodnocení stejné zprávy.
-            Zdroj: <ReferenceLink href="https://arctic.noaa.gov/report-card/report-card-2025/terrestrial-snow-cover-2025/">Mudryk et al., NOAA Arctic Report Card 2025, obr. 4</ReferenceLink>;
+            Zdroj: <SourceLink id="WEB_NOAA_Terrestrial_Snow_Cover_NOAA_Arctic_33ece5d4">Mudryk et al., NOAA Arctic Report Card 2025, obr. 4</SourceLink>;
             dílo vlády USA, volné dílo.
           </figcaption>
         </figure>
@@ -438,7 +430,7 @@ export function SnowPermafrostArticle() {
           1 128 ± 31 Gt a na Eurasii 1 934 ± 35 Gt. V březnu klesala severoamerická hmotnost tempem −46 ± 42 Gt za
           desetiletí, zatímco euroasijská změna byla vzhledem k nejistotě zanedbatelná. Čísla nezahrnují horskou masku
           a nemají se přičítat k údajům Arctic Report Card bez sjednocení území a období.{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s41597-021-00939-2">Luojus et al., 2021</ReferenceLink>
+          <SourceLink id="DOI_10_1038_s41597_021_00939_2">Luojus et al., 2021</SourceLink>
         </p>
 
         <h3>Teplota permafrostu ve vrtech</h3>
@@ -454,7 +446,7 @@ export function SnowPermafrostArticle() {
           Ze 123 vrtů s úplným desetiletým výsledkem se 71 oteplilo, 12 ochladilo a 40 zůstalo v pásmu změny přibližně
           ±0,1 °C. Pět míst během období překročilo v použité hloubce 0 °C. Tato rozmanitost je podstatná: globální
           průměr popisuje společný posun sítě, ale jednotlivé vrty mohou mít jiný průběh.{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s41467-018-08240-4">Biskaborn et al., 2019</ReferenceLink>
+          <SourceLink id="DOI_10_1038_s41467_018_08240_4">Biskaborn et al., 2019</SourceLink>
         </p>
 
         <figure className="article-figure article-figure--scroll-mobile article-figure--scroll-wide">
@@ -474,8 +466,8 @@ export function SnowPermafrostArticle() {
             polokouli a v Antarktidě; barvu hodnoty udává čtverec u každého vrtu. Mapy (c) a (d) ukazují změnu za
             desetiletí 2007–2016; barvu změny udává kolečko. Modré pozadí vyznačuje souvislý a fialové nesouvislý
             permafrost, nikoli teplotu naměřenou ve vrtu. Zdroj:{" "}
-            <ReferenceLink href="https://doi.org/10.1038/s41467-018-08240-4">Biskaborn et al., 2019, obr. 2</ReferenceLink>,
-            licence <ReferenceLink href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</ReferenceLink>.
+            <SourceLink id="DOI_10_1038_s41467_018_08240_4">Biskaborn et al., 2019, obr. 2</SourceLink>,
+            licence <SourceLink id="WEB_Creative_Commons_Deed_Attribution_4_0_International_Creative_Comm_f3dd853d">CC BY 4.0</SourceLink>.
           </figcaption>
         </figure>
 
@@ -486,7 +478,7 @@ export function SnowPermafrostArticle() {
           posledních čtyřech desetiletích zvyšovala o 0,3 až 0,7 °C za desetiletí; v teplejším permafrostu vnitrozemí o
           0,02 až 0,3 °C za desetiletí. Jde o regionální měření v hloubce 20 metrů na severu a 15 metrů ve vnitrozemí,
           nikoli o novou globální hodnotu.{" "}
-          <ReferenceLink href="https://arctic.noaa.gov/report-card/report-card-2024/arctic-terrestrial-carbon-cycling/">NOAA Arctic Report Card 2024</ReferenceLink>
+          <SourceLink id="WEB_NOAA_Arctic_Terrestrial_Carbon_Cycling_NOAA_Arctic_4138f338">NOAA Arctic Report Card 2024</SourceLink>
         </p>
 
         <figure className="article-figure article-figure--scroll-mobile article-figure--scroll-wide">
@@ -506,7 +498,7 @@ export function SnowPermafrostArticle() {
             20 m na North Slope, dolní graf v hloubce 15 m ve vnitrozemí; každá barva patří jednomu vrtu. Vodorovná osa
             zachycuje roky přibližně 1978–2024 a svislá teplotu ve °C. Zápornější hodnota znamená chladnější půdu. Různý
             začátek křivek ukazuje, že vrty nemají shodně dlouhý záznam. Zdroj:{" "}
-            <ReferenceLink href="https://arctic.noaa.gov/report-card/report-card-2024/arctic-terrestrial-carbon-cycling/">NOAA Arctic Report Card 2024</ReferenceLink>;
+            <SourceLink id="WEB_NOAA_Arctic_Terrestrial_Carbon_Cycling_NOAA_Arctic_4138f338">NOAA Arctic Report Card 2024</SourceLink>;
             dílo vlády USA, volné dílo.
           </figcaption>
         </figure>
@@ -517,7 +509,7 @@ export function SnowPermafrostArticle() {
           severská místa zahrnutá do stejného rozboru vyšel průměr 0,5 cm za rok. Jde o lineární změny průměru
           vybraných monitorovacích míst; jednotlivé lokality mohou vykazovat menší, větší i opačnou změnu a výsledek
           není univerzální přírůstek hloubky na celé Arktidě.{" "}
-          <ReferenceLink href="https://doi.org/10.1002/ppp.2088">Strand et al., 2021</ReferenceLink>
+          <SourceLink id="DOI_10_1002_ppp_2088">Strand et al., 2021</SourceLink>
         </p>
 
         <div className="article-observation-summary">
@@ -538,39 +530,39 @@ export function SnowPermafrostArticle() {
           <section>
             <h3>Sněhová pokrývka</h3>
             <ul>
-              <li><ReferenceLink href="https://doi.org/10.5194/essd-7-137-2015">Estilow et al., 2015: A long-term Northern Hemisphere snow cover extent data record</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1038/s41597-021-00939-2">Luojus et al., 2021: GlobSnow v3.0 Northern Hemisphere snow water equivalent dataset</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.5194/tc-5-219-2011">Brown a Robinson, 2011: Northern Hemisphere spring snow cover variability and change</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.5194/tc-14-2495-2020">Mudryk et al., 2020: Historical Northern Hemisphere snow cover trends and projected changes</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1038/s41586-020-2258-0">Pulliainen et al., 2020: Patterns and trends of Northern Hemisphere snow mass</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1126/sciadv.adv7926">Elias Chereque et al., 2025: Artifacts in the NOAA snow-cover climate record</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.25923/cfhv-c239">Mudryk et al., 2025: Terrestrial Snow Cover, NOAA Arctic Report Card</ReferenceLink></li>
+              <li><SourceLink id="DOI_10_5194_essd_7_137_2015">Estilow et al., 2015: A long-term Northern Hemisphere snow cover extent data record</SourceLink></li>
+              <li><SourceLink id="DOI_10_1038_s41597_021_00939_2">Luojus et al., 2021: GlobSnow v3.0 Northern Hemisphere snow water equivalent dataset</SourceLink></li>
+              <li><SourceLink id="DOI_10_5194_tc_5_219_2011">Brown a Robinson, 2011: Northern Hemisphere spring snow cover variability and change</SourceLink></li>
+              <li><SourceLink id="DOI_10_5194_tc_14_2495_2020">Mudryk et al., 2020: Historical Northern Hemisphere snow cover trends and projected changes</SourceLink></li>
+              <li><SourceLink id="DOI_10_1038_s41586_020_2258_0">Pulliainen et al., 2020: Patterns and trends of Northern Hemisphere snow mass</SourceLink></li>
+              <li><SourceLink id="DOI_10_1126_sciadv_adv7926">Elias Chereque et al., 2025: Artifacts in the NOAA snow-cover climate record</SourceLink></li>
+              <li><SourceLink id="DOI_10_25923_cfhv_c239">Mudryk et al., 2025: Terrestrial Snow Cover, NOAA Arctic Report Card</SourceLink></li>
             </ul>
           </section>
 
           <section>
             <h3>Permafrost</h3>
             <ul>
-              <li><ReferenceLink href="https://doi.org/10.5194/essd-7-245-2015">Biskaborn et al., 2015: The new database of the Global Terrestrial Network for Permafrost</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1038/s41467-018-08240-4">Biskaborn et al., 2019: Permafrost is warming at a global scale</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1080/1088937X.2021.1988001">Nelson et al., 2021: The Circumpolar Active Layer Monitoring Network</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1002/ppp.2088">Strand et al., 2021: Active-layer monitoring in the Nordic Arctic</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.5194/essd-6-201-2014">Clow, 2014: Temperature data from deep boreholes in arctic Alaska</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1175/BAMS-D-25-0104.1">State of the Climate in 2024: permafrost temperature and active-layer thickness</ReferenceLink></li>
-              <li><ReferenceLink href="https://arctic.noaa.gov/report-card/report-card-2024/arctic-terrestrial-carbon-cycling/">NOAA Arctic Report Card 2024: permafrost observations in Alaska</ReferenceLink></li>
+              <li><SourceLink id="DOI_10_5194_essd_7_245_2015">Biskaborn et al., 2015: The new database of the Global Terrestrial Network for Permafrost</SourceLink></li>
+              <li><SourceLink id="DOI_10_1038_s41467_018_08240_4">Biskaborn et al., 2019: Permafrost is warming at a global scale</SourceLink></li>
+              <li><SourceLink id="DOI_10_1080_1088937x_2021_1988001">Nelson et al., 2021: The Circumpolar Active Layer Monitoring Network</SourceLink></li>
+              <li><SourceLink id="DOI_10_1002_ppp_2088">Strand et al., 2021: Active-layer monitoring in the Nordic Arctic</SourceLink></li>
+              <li><SourceLink id="DOI_10_5194_essd_6_201_2014">Clow, 2014: Temperature data from deep boreholes in arctic Alaska</SourceLink></li>
+              <li><SourceLink id="DOI_10_1175_bams_d_25_0104_1">State of the Climate in 2024: permafrost temperature and active-layer thickness</SourceLink></li>
+              <li><SourceLink id="WEB_NOAA_Arctic_Terrestrial_Carbon_Cycling_NOAA_Arctic_4138f338">NOAA Arctic Report Card 2024: permafrost observations in Alaska</SourceLink></li>
             </ul>
           </section>
 
           <section>
             <h3>Datové portály</h3>
             <ul>
-              <li><ReferenceLink href="https://doi.org/10.7289/V5N014G9">NOAA/Rutgers Snow Cover Extent CDR</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1594/PANGAEA.911944">GlobSnow v3 SWE</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.5285/9d9bfc488ec54b1297eca2c9662f9c81">ESA Snow CCI v3.1 SWE</ReferenceLink></li>
-              <li><ReferenceLink href="https://data.gtn-p.org/">GTN-P: teplota permafrostu a aktivní vrstva</ReferenceLink></li>
-              <li><ReferenceLink href="https://doi.org/10.1594/PANGAEA.884711">GTN-P: globální vrtná data 2007–2016</ReferenceLink></li>
-              <li><ReferenceLink href="https://nsidc.org/data/ggd313/versions/1">CALM: Circumpolar Active Layer Monitoring</ReferenceLink></li>
-              <li><ReferenceLink href="https://climate.esa.int/en/projects/permafrost/">ESA Permafrost CCI</ReferenceLink></li>
+              <li><SourceLink id="DOI_10_7289_v5n014g9">NOAA/Rutgers Snow Cover Extent CDR</SourceLink></li>
+              <li><SourceLink id="DOI_10_1594_pangaea_911944">GlobSnow v3 SWE</SourceLink></li>
+              <li><SourceLink id="DOI_10_5285_9d9bfc488ec54b1297eca2c9662f9c81">ESA Snow CCI v3.1 SWE</SourceLink></li>
+              <li><SourceLink id="WEB_International_Permafrost_Ass_Global_Terrestrial_Network_for_Permafrost_GTN_P_f5ca4a29">GTN-P: teplota permafrostu a aktivní vrstva</SourceLink></li>
+              <li><SourceLink id="DOI_10_1594_pangaea_884711">GTN-P: globální vrtná data 2007–2016</SourceLink></li>
+              <li><SourceLink id="WEB_National_Snow_and_Ice_Data_C_Circumpolar_Active_Layer_Monitoring_CALM_Program_28cfbc3c">CALM: Circumpolar Active Layer Monitoring</SourceLink></li>
+              <li><SourceLink id="WEB_European_Space_Agency_Permafrost_019b533c">ESA Permafrost CCI</SourceLink></li>
             </ul>
           </section>
         </div>

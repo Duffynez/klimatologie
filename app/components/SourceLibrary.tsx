@@ -1,7 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Source, SourceCategory, sourceCategoryMeta } from "../data/sources";
+import { sourceCategoryMeta } from "../data/sources";
+import type { Source, SourceCategory } from "../data/sources";
 import { SourceCard } from "./SourceCard";
 
 type CategoryFilter = "all" | SourceCategory;
@@ -22,12 +23,25 @@ export function SourceLibrary({ sources }: { sources: Source[] }) {
   const [category, setCategory] = useState<CategoryFilter>("all");
   const [period, setPeriod] = useState<PeriodFilter>("all");
   const [sortOrder, setSortOrder] = useState<SortOrder>("oldest");
+  const [query, setQuery] = useState("");
 
   const visibleSources = useMemo(() => {
     const selectedPeriod = periodOptions.find((option) => option.value === period) ?? periodOptions[0];
+    const normalizedQuery = normalizeSearchText(query);
 
     return sources
       .map((source, index) => ({ source, index }))
+      .filter(({ source }) => {
+        if (!normalizedQuery) return true;
+        return normalizeSearchText([
+          source.title,
+          source.author,
+          source.publication,
+          source.type,
+          source.citationLabel,
+          ...source.topics,
+        ].filter(Boolean).join(" ")).includes(normalizedQuery);
+      })
       .filter(({ source }) => category === "all" || source.category === category)
       .filter(({ source }) => selectedPeriod.includes(source.year))
       .sort((a, b) => {
@@ -37,11 +51,21 @@ export function SourceLibrary({ sources }: { sources: Source[] }) {
         return yearDifference || a.index - b.index;
       })
       .map(({ source }) => source);
-  }, [category, period, sortOrder, sources]);
+  }, [category, period, query, sortOrder, sources]);
 
   return (
     <section className="source-library" aria-label="Databáze zdrojů">
       <div className="source-filters">
+        <label className="source-filters__field source-filters__field--search">
+          <span>Hledat ve zdrojích</span>
+          <input
+            type="search"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="Název, autor, instituce nebo téma"
+          />
+        </label>
+
         <label className="source-filters__field">
           <span>Typ zdroje</span>
           <select value={category} onChange={(event) => setCategory(event.target.value as CategoryFilter)}>
@@ -83,4 +107,11 @@ export function SourceLibrary({ sources }: { sources: Source[] }) {
       )}
     </section>
   );
+}
+
+function normalizeSearchText(value: string) {
+  return value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLocaleLowerCase("cs");
 }

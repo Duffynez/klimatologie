@@ -1,13 +1,5 @@
 import Image from "next/image";
-import type { ReactNode } from "react";
-
-function ReferenceLink({ href, children }: { href: string; children: ReactNode }) {
-  return (
-    <a className="article-reference" href={href} target="_blank" rel="noreferrer">
-      {children}
-    </a>
-  );
-}
+import { SourceLink } from "./SourceLink";
 
 export function GlobalMeanSeaLevelArticle() {
   return (
@@ -63,12 +55,12 @@ export function GlobalMeanSeaLevelArticle() {
           jej počítali z výšek hladiny změřených družicemi a Frederikse a kol. v roce 2020 znovu sestavili vývoj od roku
           1900. Gregory a kol. pro sjednocení terminologie výslovně definovali „globální“ jako průměr vážený plochou přes
           spojený povrch světového oceánu. Stejnou definici používá současná analýza Hamlingtona a kol.{" "}
-          <ReferenceLink href="https://doi.org/10.1007/s10712-011-9119-1">Church &amp; White, 2011</ReferenceLink>,{" "}
-          <ReferenceLink href="https://doi.org/10.1038/nature14093">Hay et al., 2015</ReferenceLink>,{" "}
-          <ReferenceLink href="https://doi.org/10.5194/essd-11-1189-2019">Ablain et al., 2019</ReferenceLink>,{" "}
-          <ReferenceLink href="https://doi.org/10.1007/s10712-019-09525-z">Gregory et al., 2019</ReferenceLink>,{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s41586-020-2591-3">Frederikse et al., 2020</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s43247-024-01761-5">Hamlington et al., 2024</ReferenceLink>
+          <SourceLink id="DOI_10_1007_s10712_011_9119_1">Church &amp; White, 2011</SourceLink>,{" "}
+          <SourceLink id="DOI_10_1038_nature14093">Hay et al., 2015</SourceLink>,{" "}
+          <SourceLink id="DOI_10_5194_essd_11_1189_2019">Ablain et al., 2019</SourceLink>,{" "}
+          <SourceLink id="DOI_10_1007_s10712_019_09525_z">Gregory et al., 2019</SourceLink>,{" "}
+          <SourceLink id="DOI_10_1038_s41586_020_2591_3">Frederikse et al., 2020</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1038_s43247_024_01761_5">Hamlington et al., 2024</SourceLink>
         </p>
 
         <p>
@@ -100,8 +92,8 @@ export function GlobalMeanSeaLevelArticle() {
             Globální střední hladina moře z navazujících družicových misí od roku 1993 do konce roku 2025. Světlá křivka
             ponechává pravidelné kolísání během roku; vodorovné čáry po jednom centimetru usnadňují čtení celkové změny.
             Graf vyjadřuje rozdíl vůči počátku záznamu, nikoli absolutní výšku oceánu. Zdroj:{" "}
-            <ReferenceLink href="https://svs.gsfc.nasa.gov/5611/">NASA Scientific Visualization Studio</ReferenceLink>.
-            Použití podle <ReferenceLink href="https://www.nasa.gov/nasa-brand-center/images-and-media/">pravidel NASA pro média</ReferenceLink>.
+            <SourceLink id="WEB_NASA_NASA_Scientific_Visualization_Studio_Global_Mean_def00bc2">NASA Scientific Visualization Studio</SourceLink>.
+            Použití podle <SourceLink id="WEB_NASA_Guidelines_for_using_NASA_Images_and_Media_Guide_e6f9e9e4">pravidel NASA pro média</SourceLink>.
           </figcaption>
         </figure>
 
@@ -111,8 +103,8 @@ export function GlobalMeanSeaLevelArticle() {
           pravidelné odečty od roku 1682 a ve Stockholmu od roku 1774. Pozorovatelé zapisovali výšku vody na stupnici v
           určených hodinách nebo při vysoké a nízké vodě. Tyto záznamy jsou cenné svou délkou, ale jejich četnost, poloha
           stupnice a návaznost na dnešní přístroje se musí ověřovat jednotlivě.{" "}
-          <ReferenceLink href="https://psmsl.org/data/longrecords/ancill_rep.htm">PSMSL: dlouhý amsterdamský záznam</ReferenceLink> a{" "}
-          <ReferenceLink href="https://psmsl.org/data/obtaining/stations/78.php">PSMSL: Stockholm</ReferenceLink>
+          <SourceLink id="WEB_Permanent_Service_for_Mean_S_PSMSL_amsterdamska_mereni_od_roku_1682_a5054f03">PSMSL: dlouhý amsterdamský záznam</SourceLink> a{" "}
+          <SourceLink id="WEB_Permanent_Service_for_Mean_S_Data_and_Station_Information_for_STOCKHOLM_52369772">PSMSL: Stockholm</SourceLink>
         </p>
 
         <p>
@@ -120,8 +112,8 @@ export function GlobalMeanSeaLevelArticle() {
           souvislou čáru na papíru. Zachytilo celý průběh hladiny, nikoli jen několik ručních odečtů. Z denního záznamu tak
           bylo možné vypočítat průměr a současně dohledat mezery nebo neobvyklé výkyvy. Konstrukci a dochované záznamy
           popisují Matthäus a novější digitalizace historických měření v ústí Temže.{" "}
-          <ReferenceLink href="https://doi.org/10.1017/S0080455X00002083">Matthäus, 1972</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s41597-022-01223-7">Haigh et al., 2022</ReferenceLink>
+          <SourceLink id="DOI_10_1017_s0080455x00002083">Matthäus, 1972</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1038_s41597_022_01223_7">Haigh et al., 2022</SourceLink>
         </p>
 
         <p>
@@ -129,8 +121,8 @@ export function GlobalMeanSeaLevelArticle() {
           Mean Sea Level, zkráceně PSMSL, vznikla v roce 1933 a začala shromažďovat měsíční a roční průměry z celého světa.
           Její hlavní soubor dnes propojuje každou stanici s historií místní nuly a s výškovými body na souši. Díky tomu lze
           spojit starší a novější přístroj bez umělého skoku. Databázi a její současný systém popisují Holgate a kol.{" "}
-          <ReferenceLink href="https://psmsl.org/about_us/">PSMSL: historie služby</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.2112/JCOASTRES-D-12-00175.1">Holgate et al., 2013</ReferenceLink>
+          <SourceLink id="WEB_Permanent_Service_for_Mean_S_About_PSMSL_7904d751">PSMSL: historie služby</SourceLink> a{" "}
+          <SourceLink id="DOI_10_2112_jcoastres_d_12_00175_1">Holgate et al., 2013</SourceLink>
         </p>
 
         <p>
@@ -138,8 +130,8 @@ export function GlobalMeanSeaLevelArticle() {
           může sledovat povrch oceánu z oběžné dráhy, jeho mise však trvala jen 105 dní. Přesný a dlouhodobý globální
           záznam začal až misí TOPEX/Poseidon, vypuštěnou 10. srpna 1992. Pravidelná měření použitá v dnešních globálních
           souborech začínají na počátku roku 1993.{" "}
-          <ReferenceLink href="https://www.jpl.nasa.gov/missions/seasat/">NASA/JPL: Seasat</ReferenceLink> a{" "}
-          <ReferenceLink href="https://podaac.jpl.nasa.gov/TOPEX-POSEIDON">PO.DAAC: TOPEX/Poseidon</ReferenceLink>
+          <SourceLink id="WEB_NASA_NASA_JPL_Seasat_b80d8dde">NASA/JPL: Seasat</SourceLink> a{" "}
+          <SourceLink id="WEB_NASA_TOPEX_POSEIDON_PO_DAAC_JPL_NASA_b5a07e8b">PO.DAAC: TOPEX/Poseidon</SourceLink>
         </p>
 
         <p>
@@ -147,8 +139,8 @@ export function GlobalMeanSeaLevelArticle() {
           dobu letěla současně se svou předchůdkyní ve stejné nebo těsně související dráze. Překryv dovolil změřit rozdíl
           mezi přístroji dříve, než starší mise skončila. Sentinel-6B, vypuštěný 16. listopadu 2025, pokračuje ve stejné
           návaznosti. Dlouhý záznam tedy nevytváří jeden satelit, ale kalibrovaná posloupnost misí.{" "}
-          <ReferenceLink href="https://sealevel.jpl.nasa.gov/news/1596/happy-30th-anniversary-to-topexposeidon/">NASA/JPL: návaznost misí</ReferenceLink> a{" "}
-          <ReferenceLink href="https://science.nasa.gov/science-research/earth-science/sentinel-6b-extends-global-ocean-height-record/">NASA: Sentinel-6B</ReferenceLink>
+          <SourceLink id="WEB_NASA_Happy_30th_Anniversary_to_TOPEX_Poseidon_Ocean_S_16a22cc4">NASA/JPL: návaznost misí</SourceLink> a{" "}
+          <SourceLink id="WEB_NASA_Sentinel_6B_Extends_Global_Ocean_Height_Record_N_4996a256">NASA: Sentinel-6B</SourceLink>
         </p>
 
         <figure className="article-figure article-figure--wide">
@@ -165,7 +157,7 @@ export function GlobalMeanSeaLevelArticle() {
             Pobřežní měřicí stanice v San Francisku. Uvnitř historické budovy pracoval plovák v uklidňovací šachtě;
             současná stanice používá elektronická čidla. Každý přístroj měří moře vůči bodům na molu a pevnině, proto jde
             o relativní hladinu v jednom místě. Fotografie:{" "}
-            <ReferenceLink href="https://oceanservice.noaa.gov/facts/tide-gauge.html">NOAA Ocean Service</ReferenceLink>;
+            <SourceLink id="WEB_NOAA_What_is_a_tide_gauge_ecb1078b">NOAA Ocean Service</SourceLink>;
             dílo federální vlády USA je veřejnou doménou.
           </figcaption>
         </figure>
@@ -177,7 +169,7 @@ export function GlobalMeanSeaLevelArticle() {
           Dnešní stanice obvykle měří dobu návratu zvukového nebo mikrovlnného impulzu. Z jednotlivých odečtů se po
           odstranění zjevně chybných hodnot počítají minutové, hodinové, denní a měsíční průměry. Příliv se tím nemaže z
           původních dat; jeho střídání se při dostatečně dlouhém průměrování z velké části vyrovná.{" "}
-          <ReferenceLink href="https://oceanservice.noaa.gov/facts/tide-gauge.html">NOAA: jak pracuje pobřežní vodočet</ReferenceLink>
+          <SourceLink id="WEB_NOAA_What_is_a_tide_gauge_ecb1078b">NOAA: jak pracuje pobřežní vodočet</SourceLink>
         </p>
 
         <p>
@@ -186,7 +178,7 @@ export function GlobalMeanSeaLevelArticle() {
           navázat. PSMSL tuto historii používá pro soubor RLR, jehož název znamená <em>Revised Local Reference</em>, česky
           revidovaná místní reference. Pouze stanice s doloženou návazností místní nuly jsou vhodné pro dlouhodobé
           porovnání.{" "}
-          <ReferenceLink href="https://psmsl.org/data/obtaining/rlr.php">PSMSL: definice RLR</ReferenceLink>
+          <SourceLink id="WEB_Permanent_Service_for_Mean_S_Revised_Local_Reference_RLR_Definition_25cc4b55">PSMSL: definice RLR</SourceLink>
         </p>
 
         <p>
@@ -195,8 +187,8 @@ export function GlobalMeanSeaLevelArticle() {
           družicové navigace, který měří svislý pohyb pevniny. Pro globální rekonstrukci lze také použít geologické modely
           a srovnání stanice s družicovou hladinou v okolním oceánu. Význam této opravy rozebírají Wöppelmann a Marcos a
           její vliv na globální odhad přímo testovali Hamlington a kol.{" "}
-          <ReferenceLink href="https://doi.org/10.1002/2015RG000502">Wöppelmann &amp; Marcos, 2016</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1002/2016JC011747">Hamlington et al., 2016</ReferenceLink>
+          <SourceLink id="DOI_10_1002_2015rg000502">Wöppelmann &amp; Marcos, 2016</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1002_2016jc011747">Hamlington et al., 2016</SourceLink>
         </p>
 
         <h3>Družice</h3>
@@ -205,7 +197,7 @@ export function GlobalMeanSeaLevelArticle() {
           vznikne vzdálenost mezi anténou a mořskou hladinou. Současně musí být velmi přesně určena poloha družice vůči
           Zemi. Výška moře se vypočte jako výška družice nad referenčním povrchem Země minus změřená vzdálenost k oceánu.
           Jeden výsledek má přesnost řádově centimetrů; globální průměr je přesnější díky velkému počtu opakovaných měření.{" "}
-          <ReferenceLink href="https://sealevel.nasa.gov/faq/19/how-do-satellites-measure-sea-level-change/">NASA Sea Level: družicová altimetrie</ReferenceLink>
+          <SourceLink id="WEB_NASA_How_do_satellites_measure_sea_level_change_NASA_702bb114">NASA Sea Level: družicová altimetrie</SourceLink>
         </p>
 
         <p>
@@ -214,8 +206,8 @@ export function GlobalMeanSeaLevelArticle() {
           vln na tvar odraženého signálu. Poloha družice se určuje několika nezávislými systémy: navigačními družicemi,
           pozemními rádiovými majáky a laserovým měřením vzdálenosti. Každá z těchto oprav je zveřejněnou součástí
           metodiky, nikoli dodatečným posouváním výsledku podle očekávaného vývoje.{" "}
-          <ReferenceLink href="https://doi.org/10.1007/s10712-016-9389-8">Ablain et al., 2017</ReferenceLink> a{" "}
-          <ReferenceLink href="https://science.nasa.gov/science-research/earth-science/sentinel-6b-extends-global-ocean-height-record/">NASA: měřicí systém Sentinel-6</ReferenceLink>
+          <SourceLink id="DOI_10_1007_s10712_016_9389_8">Ablain et al., 2017</SourceLink> a{" "}
+          <SourceLink id="WEB_NASA_Sentinel_6B_Extends_Global_Ocean_Height_Record_N_4996a256">NASA: měřicí systém Sentinel-6</SourceLink>
         </p>
 
         <h3>Kontrola družic pobřežními stanicemi</h3>
@@ -224,7 +216,7 @@ export function GlobalMeanSeaLevelArticle() {
           vybraných stanic se porovnává s družicovou změnou v jejich okolí. Pokud rozdíl postupně narůstá, může ukázat
           pomalý posun přístroje, dráhy nebo některé opravy. Mitchum tento postup popsal v roce 2000 a síť stanic se od té
           doby používá ke kontrole stability celé posloupnosti družic.{" "}
-          <ReferenceLink href="https://doi.org/10.1080/01490410050128591">Mitchum, 2000</ReferenceLink>
+          <SourceLink id="DOI_10_1080_01490410050128591">Mitchum, 2000</SourceLink>
         </p>
 
         <h2>Jak vzniká globální výsledek</h2>
@@ -249,9 +241,9 @@ export function GlobalMeanSeaLevelArticle() {
           zahrnul neúplné pokrytí i pohyb pevniny. Frederikse a kol. vytvořili 5 000 možných průběhů odpovídajících
           dostupným stanicím a zveřejnili jejich rozptyl. Rozdíl mezi metodami je součástí nejistoty historického
           globálního výsledku, ne důvodem vybrat jedinou křivku bez srovnání.{" "}
-          <ReferenceLink href="https://doi.org/10.1007/s10712-011-9119-1">Church &amp; White, 2011</ReferenceLink>,{" "}
-          <ReferenceLink href="https://doi.org/10.1038/nature14093">Hay et al., 2015</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s41586-020-2591-3">Frederikse et al., 2020</ReferenceLink>
+          <SourceLink id="DOI_10_1007_s10712_011_9119_1">Church &amp; White, 2011</SourceLink>,{" "}
+          <SourceLink id="DOI_10_1038_nature14093">Hay et al., 2015</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1038_s41586_020_2591_3">Frederikse et al., 2020</SourceLink>
         </p>
 
         <h3>Z družicových měření</h3>
@@ -260,7 +252,7 @@ export function GlobalMeanSeaLevelArticle() {
           výšek se vytvoří mapa odchylek hladiny. Hodnota každé buňky se při průměrování násobí plochou oceánu, kterou
           zastupuje. NASA ve svém ukazateli používá měření zhruba mezi 66° jižní a 66° severní šířky; polární oblasti mimo
           dráhu družic nejsou přímo pokryty.{" "}
-          <ReferenceLink href="https://data.nasa.gov/dataset/nasa-ssh-global-mean-sea-level-from-simple-gridded-sea-surface-height">NASA SSH: popis globálního výpočtu</ReferenceLink>
+          <SourceLink id="WEB_NASA_NASA_SSH_popis_globalniho_vypoctu_2d3d3dce">NASA SSH: popis globálního výpočtu</SourceLink>
         </p>
 
         <p>
@@ -269,8 +261,8 @@ export function GlobalMeanSeaLevelArticle() {
           Beckley a kol. v roce 2017 zveřejnili opravu odvozenou z interního kalibračního režimu a porovnání s pobřežními
           stanicemi. Některé současné produkty první roky opravují, jiné je při výpočtu zrychlení raději vynechávají. Tato
           volba musí být uvedena u výsledku.{" "}
-          <ReferenceLink href="https://doi.org/10.1002/2017JC013090">Beckley et al., 2017</ReferenceLink> a{" "}
-          <ReferenceLink href="https://climate.copernicus.eu/climate-indicators/sea-level">Copernicus: popis ukazatele</ReferenceLink>
+          <SourceLink id="DOI_10_1002_2017jc013090">Beckley et al., 2017</SourceLink> a{" "}
+          <SourceLink id="WEB_Copernicus_Sea_level_Copernicus_b943a537">Copernicus: popis ukazatele</SourceLink>
         </p>
 
         <p>
@@ -296,8 +288,8 @@ export function GlobalMeanSeaLevelArticle() {
           nejistotu změny tempa na ±0,05 mm za rok za rok. Neznamená to, že je hladina každý rok o přesně stejné číslo
           výše. Jednotka „milimetr za rok za rok“ říká, o kolik se během dalšího roku změní roční tempo. Jde o odhad
           dlouhodobého průběhu přes měsíční a meziroční výkyvy.{" "}
-          <ReferenceLink href="https://doi.org/10.5194/essd-11-1189-2019">Ablain et al., 2019</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.5194/os-19-431-2023">Guérou et al., 2023</ReferenceLink>
+          <SourceLink id="DOI_10_5194_essd_11_1189_2019">Ablain et al., 2019</SourceLink> a{" "}
+          <SourceLink id="DOI_10_5194_os_19_431_2023">Guérou et al., 2023</SourceLink>
         </p>
 
         <figure className="article-figure article-figure--wide">
@@ -314,8 +306,8 @@ export function GlobalMeanSeaLevelArticle() {
             Modrá čára je družicový záznam globální střední hladiny; červená čára je kvadratické proložení, jehož sklon se
             v čase mění. Rámeček uvádí průměrný sklon 3,3 ± 0,3 mm za rok, změnu tempa 0,077 ± 0,061 mm za rok za rok a
             odhad sklonu 2,1 ± 1,0 mm za rok na začátku oproti 4,5 ± 1,0 mm za rok na konci. Intervaly jsou 90%. Obrázek 1
-            z práce <ReferenceLink href="https://doi.org/10.1038/s43247-024-01761-5">Hamlington et al., 2024</ReferenceLink>,{" "}
-            licence <ReferenceLink href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</ReferenceLink>.
+            z práce <SourceLink id="DOI_10_1038_s43247_024_01761_5">Hamlington et al., 2024</SourceLink>,{" "}
+            licence <SourceLink id="WEB_Creative_Commons_Deed_Attribution_4_0_International_Creative_Comm_f3dd853d">CC BY 4.0</SourceLink>.
           </figcaption>
         </figure>
 
@@ -326,7 +318,7 @@ export function GlobalMeanSeaLevelArticle() {
           dlouhodobé porovnání je určen soubor RLR. Kompletní archiv lze stáhnout jako ZIP; v jednotlivých textových
           souborech jsou hodnoty, značky chybějících měsíců a informace o kvalitě. Jde o místní relativní hladinu, nikoli o
           hotový globální průměr.{" "}
-          <ReferenceLink href="https://psmsl.org/data/obtaining/complete.php">Stáhnout kompletní archiv PSMSL</ReferenceLink>
+          <SourceLink id="WEB_Permanent_Service_for_Mean_S_Complete_PSMSL_Data_Set_05055002">Stáhnout kompletní archiv PSMSL</SourceLink>
         </p>
 
         <h3>Frederikse et al.: globální rekonstrukce 1900–2018</h3>
@@ -335,8 +327,8 @@ export function GlobalMeanSeaLevelArticle() {
           tabulky nejistot. Lze jej stáhnout ve formátu NetCDF a tabulkových souborech; zveřejněn je také zdrojový kód.
           Tento soubor je vhodný pro dlouhodobý vývoj před družicemi. Čísla jsou roční a jejich nejistota je v první části
           období větší kvůli menšímu počtu stanic.{" "}
-          <ReferenceLink href="https://doi.org/10.5281/zenodo.3862995">Stáhnout data ze Zenodo</ReferenceLink> a{" "}
-          <ReferenceLink href="https://github.com/thomasfrederikse/sealevelbudget_20c">výpočetní kód</ReferenceLink>
+          <SourceLink id="DOI_10_5281_zenodo_3862995">Stáhnout data ze Zenodo</SourceLink> a{" "}
+          <SourceLink id="WEB_GitHub_GitHub_thomasfrederikse_sealevelbudget_20c_4d484230">výpočetní kód</SourceLink>
         </p>
 
         <h3>NASA SSH: družicový globální průměr od roku 1993</h3>
@@ -346,7 +338,7 @@ export function GlobalMeanSeaLevelArticle() {
           zpracování. Datový portál uvádí verzi, datum aktualizace i trvalý identifikátor 10.5067/NSIND-GMSV1. Tento produkt
           zachovává sezónní kolísání a neobsahuje opravu GIA; přesná čísla se proto mohou lišit od grafu v primární studii,
           která tuto opravu přidala.{" "}
-          <ReferenceLink href="https://data.nasa.gov/dataset/nasa-ssh-global-mean-sea-level-from-simple-gridded-sea-surface-height">Stáhnout NASA SSH</ReferenceLink>
+          <SourceLink id="WEB_NASA_NASA_SSH_popis_globalniho_vypoctu_2d3d3dce">Stáhnout NASA SSH</SourceLink>
         </p>
 
         <h3>Copernicus: globální i regionální družicové mapy</h3>
@@ -356,9 +348,9 @@ export function GlobalMeanSeaLevelArticle() {
           stejný základ, odstraňuje pravidelné roční kolísání a pro přehledový graf data vyhlazuje. Globální křivku v CSV a
           mapu regionálních sklonů ve formátu NetCDF, určeném pro vícerozměrná vědecká data, lze stáhnout přímo. CSV je
           běžná textová tabulka, kterou otevře i tabulkový procesor.{" "}
-          <ReferenceLink href="https://cds.climate.copernicus.eu/datasets/satellite-sea-level-global">Copernicus Climate Data Store</ReferenceLink>,{" "}
-          <ReferenceLink href="https://climate.copernicus.eu/sites/default/files/custom-uploads/indicators-2025/sea-level/fig1_data.csv">globální data CSV</ReferenceLink> a{" "}
-          <ReferenceLink href="https://climate.copernicus.eu/sites/default/files/custom-uploads/indicators-2025/sea-level/fig2_data.nc">regionální data NetCDF</ReferenceLink>
+          <SourceLink id="WEB_Copernicus_Sea_level_gridded_data_from_satellite_observatio_0b1348c4">Copernicus Climate Data Store</SourceLink>,{" "}
+          <SourceLink id="WEB_Copernicus_globalni_data_CSV_e4635f0c">globální data CSV</SourceLink> a{" "}
+          <SourceLink id="WEB_Copernicus_regionalni_data_NetCDF_a6fb7ddf">regionální data NetCDF</SourceLink>
         </p>
 
         <h2>Srovnání výsledků</h2>
@@ -367,7 +359,7 @@ export function GlobalMeanSeaLevelArticle() {
           družic 3,2 ± 0,4 mm za rok a z pobřežních dat 2,8 ± 0,8 mm za rok. Rozpětí se překrývají. Shoda je důležitá,
           protože oba postupy mají jiné hlavní slabiny: pobřežní výpočet je prostorově řídký a družicový výpočet musí
           dlouhodobě udržet stabilitu několika navazujících přístrojů.{" "}
-          <ReferenceLink href="https://doi.org/10.1007/s10712-011-9119-1">Church &amp; White, 2011</ReferenceLink>
+          <SourceLink id="DOI_10_1007_s10712_011_9119_1">Church &amp; White, 2011</SourceLink>
         </p>
 
         <p>
@@ -375,7 +367,7 @@ export function GlobalMeanSeaLevelArticle() {
           produktů. Jejich měsíční hodnoty se při krátkých výkyvech lišily zhruba o 1 až 2 mm a odhady dlouhodobého sklonu
           přibližně o 0,15 mm za rok. Část chyb je však společná všem produktům, protože používají stejné dráhy a podobné
           atmosférické opravy. Malý rozptyl mezi křivkami proto není úplnou mírou nejistoty.{" "}
-          <ReferenceLink href="https://doi.org/10.5194/essd-11-1189-2019">Ablain et al., 2019</ReferenceLink>
+          <SourceLink id="DOI_10_5194_essd_11_1189_2019">Ablain et al., 2019</SourceLink>
         </p>
 
         <p>
@@ -398,7 +390,7 @@ export function GlobalMeanSeaLevelArticle() {
             Průměrná roční změna hladiny v jednotlivých částech oceánu od února 1999 do května 2025. Červená znamená
             vzestup, modrá pokles; stupnice sahá od −10 do +10 mm za rok. Mapa ukazuje, proč globální průměr nelze použít
             jako předpověď pro konkrétní pobřeží. Zdroj a kredit: C3S/ECMWF/CMEMS,{" "}
-            <ReferenceLink href="https://climate.copernicus.eu/climate-indicators/sea-level">Copernicus Climate Change Service</ReferenceLink>.
+            <SourceLink id="WEB_Copernicus_Sea_level_Copernicus_b943a537">Copernicus Climate Change Service</SourceLink>.
             Vytvořeno s použitím informací služby Copernicus Climate Change Service 2026; Evropská komise ani ECMWF
             nenesou odpovědnost za další použití.
           </figcaption>
@@ -411,9 +403,9 @@ export function GlobalMeanSeaLevelArticle() {
           nebyl rok od roku rovnoměrný a starší část má širší interval kvůli menšímu počtu stanic. Nezávislé rekonstrukce
           Churcha a Whitea, Haye a kol. a Dangendorfa a kol. se liší v jednotlivých desetiletích, ale všechny ukazují vyšší
           globální střední hladinu na konci 20. století než na jeho začátku.{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s41586-020-2591-3">Frederikse et al., 2020</ReferenceLink>,{" "}
-          <ReferenceLink href="https://doi.org/10.1038/nature14093">Hay et al., 2015</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s41558-019-0531-8">Dangendorf et al., 2019</ReferenceLink>
+          <SourceLink id="DOI_10_1038_s41586_020_2591_3">Frederikse et al., 2020</SourceLink>,{" "}
+          <SourceLink id="DOI_10_1038_nature14093">Hay et al., 2015</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1038_s41558_019_0531_8">Dangendorf et al., 2019</SourceLink>
         </p>
 
         <p>
@@ -421,7 +413,7 @@ export function GlobalMeanSeaLevelArticle() {
           červenec 2026 hodnotu 102,4 ± 4,0 mm vůči počátku svého záznamu. Křivka v průběhu každého roku klesá a stoupá o
           několik milimetrů, ale její dlouhodobá poloha se posunula přibližně o deset centimetrů výše. Číslo 102,4 mm
           patří přesně k produktu NASA, jeho nule, ponechanému sezónnímu průběhu a stavu dat v červenci 2026.{" "}
-          <ReferenceLink href="https://science.nasa.gov/earth/explore/earth-indicators/sea-leve/">NASA Earth Indicator</ReferenceLink>
+          <SourceLink id="WEB_NASA_Sea_Level_Earth_Indicator_NASA_Science_07caffec">NASA Earth Indicator</SourceLink>
         </p>
 
         <p>
@@ -429,14 +421,14 @@ export function GlobalMeanSeaLevelArticle() {
           pro začátek záznamu vyšel 2,1 ± 1,0 mm za rok a pro jeho konec 4,5 ± 1,0 mm za rok. Odpovídající změna tempa byla
           0,08 ± 0,06 mm za rok za rok. Všechny nejistoty jsou 90% intervaly a výpočet zahrnuje chyby měření, návaznost
           misí i časově související výkyvy.{" "}
-          <ReferenceLink href="https://doi.org/10.1038/s43247-024-01761-5">Hamlington et al., 2024</ReferenceLink>
+          <SourceLink id="DOI_10_1038_s43247_024_01761_5">Hamlington et al., 2024</SourceLink>
         </p>
 
         <p>
           Jednotlivé roky se od dlouhodobého průběhu výrazně odchylují. NASA vyčíslila přírůstek v roce 2024 na 5,9 mm,
           zatímco v roce 2025 na 0,8 mm. Jeden pomalý rok proto neruší změnu zjištěnou za tři desetiletí a jeden rychlý rok
           ji sám neurčuje. Pro sklon a změnu tempa se používá celý záznam s uvedenou nejistotou.{" "}
-          <ReferenceLink href="https://www.nasa.gov/earth/nasa-analysis-shows-la-nina-limited-sea-level-rise-in-2025/">NASA: roční změna 2025</ReferenceLink>
+          <SourceLink id="WEB_NASA_NASA_Analysis_Shows_La_Nina_Limited_Sea_Level_Ri_3e8936b8">NASA: roční změna 2025</SourceLink>
         </p>
 
         <p>
@@ -463,56 +455,56 @@ export function GlobalMeanSeaLevelArticle() {
           <section>
             <h3>Definice a primární práce</h3>
             <ul>
-              <li><ReferenceLink href="https://doi.org/10.1007/s10712-019-09525-z">Gregory et al. (2019): terminologie místní a globální hladiny</ReferenceLink> – otevřený článek a PDF.</li>
-              <li><ReferenceLink href="https://doi.org/10.1007/s10712-011-9119-1">Church &amp; White (2011): globální rekonstrukce od konce 19. století</ReferenceLink> – otevřený článek a PDF.</li>
-              <li><ReferenceLink href="https://doi.org/10.1038/nature14093">Hay et al. (2015): pravděpodobnostní rekonstrukce 20. století</ReferenceLink> – abstrakt; plný text podle přístupu vydavatele.</li>
-              <li><ReferenceLink href="https://doi.org/10.1038/s41586-020-2591-3">Frederikse et al. (2020): globální hladina od roku 1900</ReferenceLink> – článek, data a kód jsou dostupné samostatně.</li>
-              <li><ReferenceLink href="https://doi.org/10.1038/s43247-024-01761-5">Hamlington et al. (2024): tempo a jeho změna v družicovém období</ReferenceLink> – otevřený článek, PDF a obrázky CC BY 4.0.</li>
+              <li><SourceLink id="DOI_10_1007_s10712_019_09525_z">Gregory et al. (2019): terminologie místní a globální hladiny</SourceLink> – otevřený článek a PDF.</li>
+              <li><SourceLink id="DOI_10_1007_s10712_011_9119_1">Church &amp; White (2011): globální rekonstrukce od konce 19. století</SourceLink> – otevřený článek a PDF.</li>
+              <li><SourceLink id="DOI_10_1038_nature14093">Hay et al. (2015): pravděpodobnostní rekonstrukce 20. století</SourceLink> – abstrakt; plný text podle přístupu vydavatele.</li>
+              <li><SourceLink id="DOI_10_1038_s41586_020_2591_3">Frederikse et al. (2020): globální hladina od roku 1900</SourceLink> – článek, data a kód jsou dostupné samostatně.</li>
+              <li><SourceLink id="DOI_10_1038_s43247_024_01761_5">Hamlington et al. (2024): tempo a jeho změna v družicovém období</SourceLink> – otevřený článek, PDF a obrázky CC BY 4.0.</li>
             </ul>
           </section>
 
           <section>
             <h3>Historie měření</h3>
             <ul>
-              <li><ReferenceLink href="https://psmsl.org/data/longrecords/ancill_rep.htm">PSMSL: amsterdamská měření od roku 1682</ReferenceLink> – tabulky, popis oprav a odkazy na původní práce.</li>
-              <li><ReferenceLink href="https://doi.org/10.1017/S0080455X00002083">Matthäus (1972): historie samopisných vodočtů</ReferenceLink> – článek vydavatele.</li>
-              <li><ReferenceLink href="https://doi.org/10.1038/s41597-022-01223-7">Inayatillah et al. (2022): digitalizace historických měření v ústí Temže</ReferenceLink> – otevřený článek, PDF a data.</li>
-              <li><ReferenceLink href="https://psmsl.org/about_us/">PSMSL: mezinárodní služba založená v roce 1933</ReferenceLink>.</li>
-              <li><ReferenceLink href="https://podaac.jpl.nasa.gov/TOPEX-POSEIDON">NASA PO.DAAC: mise TOPEX/Poseidon</ReferenceLink> – popis mise a dat.</li>
+              <li><SourceLink id="WEB_Permanent_Service_for_Mean_S_PSMSL_amsterdamska_mereni_od_roku_1682_a5054f03">PSMSL: amsterdamská měření od roku 1682</SourceLink> – tabulky, popis oprav a odkazy na původní práce.</li>
+              <li><SourceLink id="DOI_10_1017_s0080455x00002083">Matthäus (1972): historie samopisných vodočtů</SourceLink> – článek vydavatele.</li>
+              <li><SourceLink id="DOI_10_1038_s41597_022_01223_7">Inayatillah et al. (2022): digitalizace historických měření v ústí Temže</SourceLink> – otevřený článek, PDF a data.</li>
+              <li><SourceLink id="WEB_Permanent_Service_for_Mean_S_About_PSMSL_7904d751">PSMSL: mezinárodní služba založená v roce 1933</SourceLink>.</li>
+              <li><SourceLink id="WEB_NASA_TOPEX_POSEIDON_PO_DAAC_JPL_NASA_b5a07e8b">NASA PO.DAAC: mise TOPEX/Poseidon</SourceLink> – popis mise a dat.</li>
             </ul>
           </section>
 
           <section>
             <h3>Měření, návaznost a nejistota</h3>
             <ul>
-              <li><ReferenceLink href="https://doi.org/10.1007/s10712-016-9389-8">Ablain et al. (2017): družicová altimetrie v globálním a regionálním měřítku</ReferenceLink>.</li>
-              <li><ReferenceLink href="https://doi.org/10.1080/01490410050128591">Mitchum (2000): kalibrace družic pobřežními stanicemi</ReferenceLink>.</li>
-              <li><ReferenceLink href="https://doi.org/10.1002/2017JC013090">Beckley et al. (2017): oprava posunu TOPEX/Poseidon</ReferenceLink> – otevřený článek.</li>
-              <li><ReferenceLink href="https://doi.org/10.5194/essd-11-1189-2019">Ablain et al. (2019): úplný rozpočet nejistot</ReferenceLink> – otevřený článek, PDF a data.</li>
-              <li><ReferenceLink href="https://doi.org/10.5194/os-19-431-2023">Guérou et al. (2023): aktualizovaný družicový výsledek a nejistoty</ReferenceLink> – otevřený článek a PDF.</li>
-              <li><ReferenceLink href="https://doi.org/10.1002/2015RG000502">Wöppelmann &amp; Marcos (2016): svislý pohyb pevniny</ReferenceLink>.</li>
-              <li><ReferenceLink href="https://doi.org/10.2112/JCOASTRES-D-12-00175.1">Holgate et al. (2013): databáze PSMSL</ReferenceLink>.</li>
+              <li><SourceLink id="DOI_10_1007_s10712_016_9389_8">Ablain et al. (2017): družicová altimetrie v globálním a regionálním měřítku</SourceLink>.</li>
+              <li><SourceLink id="DOI_10_1080_01490410050128591">Mitchum (2000): kalibrace družic pobřežními stanicemi</SourceLink>.</li>
+              <li><SourceLink id="DOI_10_1002_2017jc013090">Beckley et al. (2017): oprava posunu TOPEX/Poseidon</SourceLink> – otevřený článek.</li>
+              <li><SourceLink id="DOI_10_5194_essd_11_1189_2019">Ablain et al. (2019): úplný rozpočet nejistot</SourceLink> – otevřený článek, PDF a data.</li>
+              <li><SourceLink id="DOI_10_5194_os_19_431_2023">Guérou et al. (2023): aktualizovaný družicový výsledek a nejistoty</SourceLink> – otevřený článek a PDF.</li>
+              <li><SourceLink id="DOI_10_1002_2015rg000502">Wöppelmann &amp; Marcos (2016): svislý pohyb pevniny</SourceLink>.</li>
+              <li><SourceLink id="DOI_10_2112_jcoastres_d_12_00175_1">Holgate et al. (2013): databáze PSMSL</SourceLink>.</li>
             </ul>
           </section>
 
           <section>
             <h3>Stažení dat</h3>
             <ul>
-              <li><ReferenceLink href="https://psmsl.org/data/obtaining/complete.php">PSMSL: kompletní měsíční a roční pobřežní data</ReferenceLink> – ZIP a textové soubory.</li>
-              <li><ReferenceLink href="https://doi.org/10.5281/zenodo.3862995">Frederikse et al.: rekonstrukce 1900–2018</ReferenceLink> – NetCDF a tabulky.</li>
-              <li><ReferenceLink href="https://data.nasa.gov/dataset/nasa-ssh-global-mean-sea-level-from-simple-gridded-sea-surface-height">NASA SSH Global Mean Sea Level</ReferenceLink> – textový soubor a metadata.</li>
-              <li><ReferenceLink href="https://cds.climate.copernicus.eu/datasets/satellite-sea-level-global">Copernicus: globální družicové mapy hladiny</ReferenceLink> – NetCDF po bezplatném přihlášení.</li>
-              <li><ReferenceLink href="https://doi.org/10.17882/58344">Ablain et al.: matice nejistot globálního družicového záznamu</ReferenceLink> – volně stažitelná vědecká data.</li>
+              <li><SourceLink id="WEB_Permanent_Service_for_Mean_S_Complete_PSMSL_Data_Set_05055002">PSMSL: kompletní měsíční a roční pobřežní data</SourceLink> – ZIP a textové soubory.</li>
+              <li><SourceLink id="DOI_10_5281_zenodo_3862995">Frederikse et al.: rekonstrukce 1900–2018</SourceLink> – NetCDF a tabulky.</li>
+              <li><SourceLink id="WEB_NASA_NASA_SSH_popis_globalniho_vypoctu_2d3d3dce">NASA SSH Global Mean Sea Level</SourceLink> – textový soubor a metadata.</li>
+              <li><SourceLink id="WEB_Copernicus_Sea_level_gridded_data_from_satellite_observatio_0b1348c4">Copernicus: globální družicové mapy hladiny</SourceLink> – NetCDF po bezplatném přihlášení.</li>
+              <li><SourceLink id="DOI_10_17882_58344">Ablain et al.: matice nejistot globálního družicového záznamu</SourceLink> – volně stažitelná vědecká data.</li>
             </ul>
           </section>
 
           <section>
             <h3>Obrázky a licence</h3>
             <ul>
-              <li>Graf 1993–2025: <ReferenceLink href="https://svs.gsfc.nasa.gov/5611/">NASA Scientific Visualization Studio</ReferenceLink>, použití podle pravidel NASA.</li>
-              <li>Pobřežní stanice: <ReferenceLink href="https://oceanservice.noaa.gov/facts/tide-gauge.html">NOAA Ocean Service</ReferenceLink>, veřejná doména USA.</li>
-              <li>Graf tempa: obrázek 1 v <ReferenceLink href="https://doi.org/10.1038/s43247-024-01761-5">Hamlington et al. (2024)</ReferenceLink>, licence CC BY 4.0.</li>
-              <li>Regionální mapa: <ReferenceLink href="https://climate.copernicus.eu/climate-indicators/sea-level">C3S/ECMWF/CMEMS</ReferenceLink>, licence Copernicus s uvedeným kreditem a vyloučením odpovědnosti.</li>
+              <li>Graf 1993–2025: <SourceLink id="WEB_NASA_NASA_Scientific_Visualization_Studio_Global_Mean_def00bc2">NASA Scientific Visualization Studio</SourceLink>, použití podle pravidel NASA.</li>
+              <li>Pobřežní stanice: <SourceLink id="WEB_NOAA_What_is_a_tide_gauge_ecb1078b">NOAA Ocean Service</SourceLink>, veřejná doména USA.</li>
+              <li>Graf tempa: obrázek 1 v <SourceLink id="DOI_10_1038_s43247_024_01761_5">Hamlington et al. (2024)</SourceLink>, licence CC BY 4.0.</li>
+              <li>Regionální mapa: <SourceLink id="WEB_Copernicus_Sea_level_Copernicus_b943a537">C3S/ECMWF/CMEMS</SourceLink>, licence Copernicus s uvedeným kreditem a vyloučením odpovědnosti.</li>
             </ul>
           </section>
         </div>

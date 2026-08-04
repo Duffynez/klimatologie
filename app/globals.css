@@ -827,6 +827,18 @@ h3 {
   width: min(100%, 650px);
 }
 
+.article-reference--book {
+  color: var(--source-book);
+}
+
+.article-reference--politics {
+  color: var(--source-politics);
+}
+
+.article-reference--organization {
+  color: var(--source-organization);
+}
+
 .article-figure--instrument {
   width: min(100%, 620px);
 }
@@ -1234,7 +1246,7 @@ video.article-figure__media {
 
 .source-filters {
   display: grid;
-  grid-template-columns: repeat(3, minmax(150px, 1fr)) auto;
+  grid-template-columns: minmax(240px, 1.5fr) repeat(3, minmax(140px, 1fr)) auto;
   align-items: end;
   gap: 16px;
   margin-bottom: 20px;
@@ -1253,6 +1265,7 @@ video.article-figure__media {
   text-transform: uppercase;
 }
 
+.source-filters__field input,
 .source-filters__field select {
   width: 100%;
   min-height: 40px;
@@ -1267,6 +1280,7 @@ video.article-figure__media {
   text-transform: none;
 }
 
+.source-filters__field input:focus-visible,
 .source-filters__field select:focus-visible {
   border-color: var(--sea);
   outline: 3px solid rgba(40, 92, 88, 0.14);
@@ -1755,6 +1769,10 @@ video.article-figure__media {
 
   .source-filters {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .source-filters__field--search {
+    grid-column: 1 / -1;
   }
 
   .source-filters__count {

@@ -1,13 +1,5 @@
 import Image from "next/image";
-import type { ReactNode } from "react";
-
-function ReferenceLink({ href, children }: { href: string; children: ReactNode }) {
-  return (
-    <a className="article-reference" href={href} target="_blank" rel="noreferrer">
-      {children}
-    </a>
-  );
-}
+import { SourceLink } from "./SourceLink";
 
 export function OceanHeatArticle() {
   return (
@@ -67,12 +59,12 @@ export function OceanHeatArticle() {
           oceán. Domingues a kol. v roce 2008 upravili práci s nerovnoměrným pokrytím a historickými přístroji pro
           horních 700 metrů. Lyman a kol. pak v roce 2010 porovnali několik nezávisle zpracovaných výpočtů a
           ukázali, jak se na výsledku projevuje volba oprav a prostorového dopočtu.{" "}
-          <ReferenceLink href="https://doi.org/10.1126/science.287.5461.2225">
+          <SourceLink id="DOI_10_1126_science_287_5461_2225">
             Levitus et al., 2000
-          </ReferenceLink>
+          </SourceLink>
           ,{" "}
-          <ReferenceLink href="https://doi.org/10.1038/nature07080">Domingues et al., 2008</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1038/nature09043">Lyman et al., 2010</ReferenceLink>
+          <SourceLink id="DOI_10_1038_nature07080">Domingues et al., 2008</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1038_nature09043">Lyman et al., 2010</SourceLink>
         </p>
 
         <p>
@@ -81,9 +73,9 @@ export function OceanHeatArticle() {
           2017 znovu vyhodnotili chybu způsobenou řídkým historickým měřením. Čtvrtá verze datového souboru
           Institutu fyziky atmosféry Čínské akademie věd, označovaná IAPv4, zachovává stejnou cestu od teplotních
           profilů ke globálnímu součtu, ale používá novější kontrolu dat, opravy přístrojů a prostorový výpočet.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2012GL051106">Levitus et al., 2012</ReferenceLink>,{" "}
-          <ReferenceLink href="https://doi.org/10.1126/sciadv.1601545">Cheng et al., 2017</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.5194/essd-16-3517-2024">Cheng et al., 2024</ReferenceLink>
+          <SourceLink id="DOI_10_1029_2012gl051106">Levitus et al., 2012</SourceLink>,{" "}
+          <SourceLink id="DOI_10_1126_sciadv_1601545">Cheng et al., 2017</SourceLink> a{" "}
+          <SourceLink id="DOI_10_5194_essd_16_3517_2024">Cheng et al., 2024</SourceLink>
         </p>
 
         <p>
@@ -99,9 +91,9 @@ export function OceanHeatArticle() {
           <em> Challenger</em>. Její posádka v letech 1873–1876 zapisovala teplotu hlubokého oceánu na jednotlivých
           stanicích a v různých hloubkách. Původní zpráva zachovává tabulky i popis těchto pozorování. Šlo o
           jednotlivé průřezy oceánem, nikoli o pravidelné globální sledování.{" "}
-          <ReferenceLink href="https://escholarship.org/uc/item/38p2q583">
+          <SourceLink id="WEB_escholarship_org_Report_on_the_Deep_Sea_Temperature_Observations_8c66444c">
             Zpráva expedice Challenger
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <p>
@@ -110,13 +102,13 @@ export function OceanHeatArticle() {
           1967 se ve velkém používal jednorázový batytermograf, anglicky <em>eXpendable BathyThermograph</em> neboli
           XBT. Sonda se vypustila z plující lodi, měřila teplotu během pádu a hloubka se dopočítala z času a
           předpokládané rychlosti klesání. XBT byl hlavním zdrojem podpovrchových teplot přibližně do roku 2002.{" "}
-          <ReferenceLink href="https://elischolar.library.yale.edu/journal_of_marine_research/522/">
+          <SourceLink id="WEB_elischolar_library_yale_edu_A_bathythermograph_d06b1b5c">
             Spilhaus, 1938
-          </ReferenceLink>{" "}
+          </SourceLink>{" "}
           a{" "}
-          <ReferenceLink href="https://www.ncei.noaa.gov/products/climate-data-records/global-ocean-heat-content">
+          <SourceLink id="WEB_NOAA_Global_Ocean_Heat_Content_CDR_f355b1a3">
             NOAA/NCEI: historie měření XBT
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <p>
@@ -124,7 +116,7 @@ export function OceanHeatArticle() {
           na globální rozmístění v roce 2004 a cíle 3 000 aktivních plováků dosáhla v roce 2007. Argo tím výrazně
           zlepšilo pravidelnost měření v otevřeném oceánu do hloubky přibližně 2 000 metrů. Data jsou zveřejňována
           bez omezení v rychlé provozní podobě i po podrobnější odborné kontrole.{" "}
-          <ReferenceLink href="https://doi.org/10.5670/oceanog.2009.36">Roemmich et al., 2009</ReferenceLink>
+          <SourceLink id="DOI_10_5670_oceanog_2009_36">Roemmich et al., 2009</SourceLink>
         </p>
 
         <p>
@@ -133,7 +125,7 @@ export function OceanHeatArticle() {
           21. století většinu otevřeného oceánu, ale běžné plováky neklesají pod 2 000 metrů a jejich pokrytí je
           slabší pod mořským ledem, u pobřeží a v mělkých mořích. Současný soubor IAPv4 proto začíná rokem 1940,
           jeho autoři však údaje považují za podstatně spolehlivější až přibližně od roku 1957.{" "}
-          <ReferenceLink href="https://doi.org/10.5194/essd-16-3517-2024">Cheng et al., 2024</ReferenceLink>
+          <SourceLink id="DOI_10_5194_essd_16_3517_2024">Cheng et al., 2024</SourceLink>
         </p>
 
         <h2>Co se skutečně měří</h2>
@@ -148,7 +140,7 @@ export function OceanHeatArticle() {
           Plovák Argo většinu desetidenního cyklu unáší proud v hloubce okolo 1 000 metrů. Poté klesne přibližně
           do 2 000 metrů a při pomalém návratu k hladině zaznamenává tlak, teplotu a vodivost. Na hladině určí
           svou polohu a odešle data družici. Stejný cyklus opakuje obvykle čtyři až pět let.{" "}
-          <ReferenceLink href="https://argo.ucsd.edu/how-do-floats-work/">Argo: popis měřicího cyklu</ReferenceLink>
+          <SourceLink id="WEB_International_Argo_Program_How_do_floats_work_a29220d7">Argo: popis měřicího cyklu</SourceLink>
         </p>
 
         <figure className="article-figure article-figure--instrument">
@@ -164,9 +156,9 @@ export function OceanHeatArticle() {
             Plovák Argo při vypuštění z lodi. Po ponoření pořizuje opakované profily teploty, tlaku a vodivosti.
             Foto: Tomas Szumski / Marine Institute; zdroj: Argo Program. Argo dovoluje použití fotografie na
             webech při uvedení programu a fotografa.{" "}
-            <ReferenceLink href="https://argo.ucsd.edu/outreach/multimedia-resources/photos/">
+            <SourceLink id="WEB_International_Argo_Program_Photos_13d900af">
               Původní fotografie a podmínky použití
-            </ReferenceLink>
+            </SourceLink>
           </figcaption>
         </figure>
 
@@ -194,9 +186,9 @@ export function OceanHeatArticle() {
           kvality. Světová oceánská databáze WOD převádí data z tisíců výprav a programů do společného formátu,
           vyhledává duplicity a připojuje kontrolní příznaky. Původní naměřené hloubky zachovává a vedle nich
           nabízí hodnoty převedené na společné standardní hloubky.{" "}
-          <ReferenceLink href="https://www.ncei.noaa.gov/products/world-ocean-database">
+          <SourceLink id="WEB_NOAA_World_Ocean_Database_3d4b1d70">
             World Ocean Database
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <h3>2. Zohlední se vlastnosti jednotlivých přístrojů</h3>
@@ -206,14 +198,14 @@ export function OceanHeatArticle() {
           měnily s typem sondy a obdobím. Gouretski a Koltermann tento problém podrobně doložili v roce 2007;
           Levitus a kol. v roce 2009 ukázali, jak opravy mění dřívější globální výpočet. Současné postupy proto
           používají opravy určené pro konkrétní přístroj a období.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2006GL027834">
+          <SourceLink id="DOI_10_1029_2006gl027834">
             Gouretski &amp; Koltermann, 2007
-          </ReferenceLink>
+          </SourceLink>
           ,{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2008GL037155">Levitus et al., 2009</ReferenceLink> a{" "}
-          <ReferenceLink href="https://www.ncei.noaa.gov/products/xbt-corrections">
+          <SourceLink id="DOI_10_1029_2008gl037155">Levitus et al., 2009</SourceLink> a{" "}
+          <SourceLink id="WEB_NOAA_XBT_Corrections_in_the_World_Ocean_Database_6adbe6ee">
             přehled oprav NOAA/NCEI
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <h3>3. Teplota se porovná se stejným místem a částí roku</h3>
@@ -223,7 +215,7 @@ export function OceanHeatArticle() {
           průměrem celého oceánu. Výsledkem je teplotní odchylka vůči referenčnímu stavu. Levitus a kol. tento
           krok popisují jako nutnou součást definice: bez odečtení referenčního průměru by výsledek závisel i na
           použité teplotní stupnici.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2012GL051106">Levitus et al., 2012</ReferenceLink>
+          <SourceLink id="DOI_10_1029_2012gl051106">Levitus et al., 2012</SourceLink>
         </p>
 
         <h3>4. Pozorování se rozmístí do trojrozměrné mapy</h3>
@@ -233,7 +225,7 @@ export function OceanHeatArticle() {
           souvislost teplot. Starší období vyžadují více takového dopočtu než období Argo. Výběr postupu není
           drobnost: při společném experimentu sedmi výzkumných skupin vyšla pro horních 700 metrů jako největší
           průměrný zdroj rozdílů právě metoda prostorového výpočtu.{" "}
-          <ReferenceLink href="https://doi.org/10.1175/JCLI-D-15-0801.1">Boyer et al., 2016</ReferenceLink>
+          <SourceLink id="DOI_10_1175_jcli_d_15_0801_1">Boyer et al., 2016</SourceLink>
         </p>
 
         <h3>5. Buňky se převedou na jouly a sečtou</h3>
@@ -242,9 +234,9 @@ export function OceanHeatArticle() {
           vody. Tím vznikne změna obsahu tepla v joulech. Součet všech buněk v určené vrstvě dává hodnotu pro
           oceánskou pánev nebo pro celý světový oceán. NOAA výslovně upozorňuje, že globální výsledek je součet,
           nikoli prostý průměr teplot.{" "}
-          <ReferenceLink href="https://www.ncei.noaa.gov/products/world-ocean-database">
+          <SourceLink id="WEB_NOAA_World_Ocean_Database_3d4b1d70">
             NOAA/NCEI: popis výpočtu
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <h3>6. K výsledku se připojí nejistota</h3>
@@ -254,7 +246,7 @@ export function OceanHeatArticle() {
           IAPv4 například započítává chybu přístrojů, pokrytí a prostorového výpočtu, ale jeho zveřejněný interval
           zatím nezahrnuje volbu referenčního pole, svislé spojování hodnot ani všechny opravy přístrojů a kontrolu
           kvality. Autoři tuto hranici své nejistoty uvádějí přímo v metodice.{" "}
-          <ReferenceLink href="https://doi.org/10.5194/essd-16-3517-2024">Cheng et al., 2024</ReferenceLink>
+          <SourceLink id="DOI_10_5194_essd_16_3517_2024">Cheng et al., 2024</SourceLink>
         </p>
 
         <p>
@@ -278,11 +270,11 @@ export function OceanHeatArticle() {
               a veličiny a stažení v běžných tabulkových a oceánografických formátech.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://www.ncei.noaa.gov/products/world-ocean-database">
+              <SourceLink id="WEB_NOAA_World_Ocean_Database_3d4b1d70">
                 Popis a stažení WOD23
-              </ReferenceLink>{" "}
+              </SourceLink>{" "}
               ·{" "}
-              <ReferenceLink href="https://doi.org/10.25923/z885-h264">Metodická dokumentace</ReferenceLink>
+              <SourceLink id="DOI_10_25923_z885_h264">Metodická dokumentace</SourceLink>
             </p>
           </section>
 
@@ -294,9 +286,9 @@ export function OceanHeatArticle() {
               dosahuje 2 000 metrů. K dispozici jsou rychlá provozní data i později zkontrolované verze.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://argo.ucsd.edu/data/data-from-gdacs/">Stažení profilů Argo</ReferenceLink>{" "}
+              <SourceLink id="WEB_International_Argo_Program_Data_from_GDACs_b2737bdf">Stažení profilů Argo</SourceLink>{" "}
               ·{" "}
-              <ReferenceLink href="https://doi.org/10.5670/oceanog.2009.36">Popis programu</ReferenceLink>
+              <SourceLink id="DOI_10_5670_oceanog_2009_36">Popis programu</SourceLink>
             </p>
           </section>
 
@@ -308,10 +300,10 @@ export function OceanHeatArticle() {
               tříměsíční, roční a pětileté výpočty, mřížková data, dokumentace algoritmu a archivované verze.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://www.ncei.noaa.gov/products/climate-data-records/global-ocean-heat-content">
+              <SourceLink id="WEB_NOAA_Global_Ocean_Heat_Content_CDR_f355b1a3">
                 Data a dokumentace NOAA
-              </ReferenceLink>{" "}
-              · <ReferenceLink href="https://doi.org/10.7289/V53F4MVP">Trvalý záznam datového souboru</ReferenceLink>
+              </SourceLink>{" "}
+              · <SourceLink id="DOI_10_7289_v53f4mvp">Trvalý záznam datového souboru</SourceLink>
             </p>
           </section>
 
@@ -323,13 +315,13 @@ export function OceanHeatArticle() {
               17,6 milionu teplotních profilů do září 2023 a odděleně nabízí teplotu i vypočtený obsah tepla.
             </p>
             <p className="article-data-item__links">
-              <ReferenceLink href="https://doi.org/10.12157/IOCAS.20240117.001">
+              <SourceLink id="DOI_10_12157_iocas_20240117_001">
                 Stažení obsahu tepla
-              </ReferenceLink>{" "}
+              </SourceLink>{" "}
               ·{" "}
-              <ReferenceLink href="https://doi.org/10.5194/essd-16-3517-2024">
+              <SourceLink id="DOI_10_5194_essd_16_3517_2024">
                 Metoda a vyhodnocení IAPv4
-              </ReferenceLink>
+              </SourceLink>
             </p>
           </section>
         </div>
@@ -341,8 +333,8 @@ export function OceanHeatArticle() {
           zvláštním důrazem na opravy XBT. Boyer a kol. v roce 2016 drželi vstupní měření stejná a měnili postupně
           prostorový výpočet, opravy XBT a referenční pole. Tak lze určit, která část rozdílu vzniká až při
           zpracování a jakou míru nezávislosti jednotlivé výsledky skutečně mají.{" "}
-          <ReferenceLink href="https://doi.org/10.1038/nature09043">Lyman et al., 2010</ReferenceLink> a{" "}
-          <ReferenceLink href="https://doi.org/10.1175/JCLI-D-15-0801.1">Boyer et al., 2016</ReferenceLink>
+          <SourceLink id="DOI_10_1038_nature09043">Lyman et al., 2010</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1175_jcli_d_15_0801_1">Boyer et al., 2016</SourceLink>
         </p>
 
         <p>
@@ -351,7 +343,7 @@ export function OceanHeatArticle() {
           Institut mořských věd a služba Copernicus Marine používají oceánskou reanalýzu, tedy spojení měření s
           numerickým modelem. Všechny tři výsledky ukazují pokračující přírůstek mezi roky 2024 a 2025, jejich
           absolutní hodnoty však nelze položit přes sebe bez sjednocení referenčního stavu a metodiky.{" "}
-          <ReferenceLink href="https://doi.org/10.1007/s00376-026-5876-0">Pan et al., 2026</ReferenceLink>
+          <SourceLink id="DOI_10_1007_s00376_026_5876_0">Pan et al., 2026</SourceLink>
         </p>
 
         <h2 id="pozorovani">Pozorování</h2>
@@ -376,9 +368,9 @@ export function OceanHeatArticle() {
           o 0,022 °C za desetiletí. Ve stejném přibližném poměru představuje 300 ZJ průměrné zvýšení teploty této
           celé vrstvy asi o 0,10 °C. Jde o průměr přes světový oceán a všechny zahrnuté hloubky; změna na
           jednotlivých místech může být větší, menší nebo může mít opačné znaménko.{" "}
-          <ReferenceLink href="https://www.data.jma.go.jp/kaiyou/english/ohc/ohc_global_en.html">
+          <SourceLink id="WEB_data_jma_go_jp_Japan_Meteorological_Agency_Global_ocean_heat_co_b8363b79">
             Japan Meteorological Agency
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <figure className="article-figure article-figure--scroll-mobile">
@@ -413,10 +405,10 @@ export function OceanHeatArticle() {
           <figcaption>
             Globální změna obsahu tepla v horních 2 000 metrech oceánu, 1958–2025. Výřez z obr. 1a; popisky v
             původním grafu zůstaly anglicky. Zdroj: Pan et al., 2026. Ořez je úpravou podle licence{" "}
-            <ReferenceLink href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</ReferenceLink>.{" "}
-            <ReferenceLink href="https://doi.org/10.1007/s00376-026-5876-0">
+            <SourceLink id="WEB_Creative_Commons_Deed_Attribution_4_0_International_Creative_Comm_f3dd853d">CC BY 4.0</SourceLink>.{" "}
+            <SourceLink id="DOI_10_1007_s00376_026_5876_0">
               Původní článek a celý obrázek
-            </ReferenceLink>
+            </SourceLink>
           </figcaption>
         </figure>
 
@@ -434,7 +426,7 @@ export function OceanHeatArticle() {
           průměrovaných přes celou vrstvu. Výsledky italské reanalýzy a služby Copernicus Marine rovněž ukazují,
           že se obsah tepla mezi roky 2024 a 2025 dále zvětšil. Tento údaj popisuje meziroční rozdíl konkrétních
           produktů, nikoli přímo změřené množství jediným přístrojem.{" "}
-          <ReferenceLink href="https://doi.org/10.1007/s00376-026-5876-0">Pan et al., 2026</ReferenceLink>
+          <SourceLink id="DOI_10_1007_s00376_026_5876_0">Pan et al., 2026</SourceLink>
         </p>
 
         <p>
@@ -443,7 +435,7 @@ export function OceanHeatArticle() {
           pro 0–2 000 metrů je 6,4 ± 0,3 ZJ za rok; uvedené intervaly mají v této práci 90% hladinu spolehlivosti.
           Výsledek tedy není omezen pouze na vodu těsně pod hladinou. Zároveň stále popisuje horní 2 000 metrů,
           nikoli celý oceán až ke dnu.{" "}
-          <ReferenceLink href="https://doi.org/10.5194/essd-16-3517-2024">Cheng et al., 2024</ReferenceLink>
+          <SourceLink id="DOI_10_5194_essd_16_3517_2024">Cheng et al., 2024</SourceLink>
         </p>
 
         <p>
@@ -466,9 +458,9 @@ export function OceanHeatArticle() {
             Změna obsahu tepla ve vrstvě 0–2 000 metrů, 1993–2024. Oranžová označuje kladný a modrá záporný trend;
             šedé oblasti nemají v tomto výpočtu statisticky významnou změnu. Vizualizace: NOAA Climate.gov; data:
             Pacific Marine Environmental Laboratory (PMEL) / John Lyman. Nezměněný materiál NOAA, veřejná doména.{" "}
-            <ReferenceLink href="https://content-drupal.climate.gov/news-features/understanding-climate/climate-change-ocean-heat-content">
+            <SourceLink id="WEB_content_drupal_climate_gov_Climate_Change_Ocean_Heat_Content_a227e082">
               Původní mapa a popis
-            </ReferenceLink>
+            </SourceLink>
           </figcaption>
         </figure>
 
@@ -484,9 +476,9 @@ export function OceanHeatArticle() {
           a zjistili kladnou globální změnu jak mezi 2 000 a 4 000 metry, tak mezi 4 000 a 6 000 metry; jejich
           mapy současně obsahují regiony s ochlazením. Tento výsledek je veden odděleně, protože má jiné období,
           pokrytí i nejistotu než výpočty horních 2 000 metrů.{" "}
-          <ReferenceLink href="https://doi.org/10.1029/2024GL111229">
+          <SourceLink id="DOI_10_1029_2024gl111229">
             Johnson &amp; Purkey, 2024
-          </ReferenceLink>
+          </SourceLink>
         </p>
 
         <div className="article-observation-summary">
@@ -508,79 +500,79 @@ export function OceanHeatArticle() {
             <h3>Historické a primární práce</h3>
             <ul>
               <li>
-                <ReferenceLink href="https://escholarship.org/uc/item/38p2q583">
+                <SourceLink id="WEB_escholarship_org_Report_on_the_Deep_Sea_Temperature_Observations_8c66444c">
                   Report on the Deep-Sea Temperature Observations of Ocean-Water
-                </ReferenceLink>
+                </SourceLink>
                 , pozorování expedice HMS Challenger z let 1873–1876.
               </li>
               <li>
                 Spilhaus, A. F. (1938):{" "}
-                <ReferenceLink href="https://elischolar.library.yale.edu/journal_of_marine_research/522/">
+                <SourceLink id="WEB_elischolar_library_yale_edu_A_bathythermograph_d06b1b5c">
                   A bathythermograph
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Levitus, S. et al. (2000):{" "}
-                <ReferenceLink href="https://doi.org/10.1126/science.287.5461.2225">
+                <SourceLink id="DOI_10_1126_science_287_5461_2225">
                   Warming of the World Ocean
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Domingues, C. M. et al. (2008):{" "}
-                <ReferenceLink href="https://doi.org/10.1038/nature07080">
+                <SourceLink id="DOI_10_1038_nature07080">
                   Improved estimates of upper-ocean warming and multi-decadal sea-level rise
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Gouretski, V. V. &amp; Koltermann, K. P. (2007):{" "}
-                <ReferenceLink href="https://doi.org/10.1029/2006GL027834">
+                <SourceLink id="DOI_10_1029_2006gl027834">
                   How much is the ocean really warming?
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Levitus, S. et al. (2009):{" "}
-                <ReferenceLink href="https://doi.org/10.1029/2008GL037155">
+                <SourceLink id="DOI_10_1029_2008gl037155">
                   Global ocean heat content 1955–2008 in light of recently revealed instrumentation problems
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Lyman, J. M. et al. (2010):{" "}
-                <ReferenceLink href="https://doi.org/10.1038/nature09043">
+                <SourceLink id="DOI_10_1038_nature09043">
                   Robust warming of the global upper ocean
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Levitus, S. et al. (2012):{" "}
-                <ReferenceLink href="https://doi.org/10.1029/2012GL051106">
+                <SourceLink id="DOI_10_1029_2012gl051106">
                   World ocean heat content and thermosteric sea level change (0–2000 m), 1955–2010
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Cheng, L. et al. (2017):{" "}
-                <ReferenceLink href="https://doi.org/10.1126/sciadv.1601545">
+                <SourceLink id="DOI_10_1126_sciadv_1601545">
                   Improved estimates of ocean heat content from 1960 to 2015
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Johnson, G. C. &amp; Purkey, S. G. (2024):{" "}
-                <ReferenceLink href="https://doi.org/10.1029/2024GL111229">
+                <SourceLink id="DOI_10_1029_2024gl111229">
                   Refined estimates of global ocean deep and abyssal decadal warming trends
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Pan, Y. et al. (2026):{" "}
-                <ReferenceLink href="https://doi.org/10.1007/s00376-026-5876-0">
+                <SourceLink id="DOI_10_1007_s00376_026_5876_0">
                   Ocean Heat Content Sets Another Record in 2025
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
             </ul>
@@ -591,32 +583,32 @@ export function OceanHeatArticle() {
             <ul>
               <li>
                 Roemmich, D. et al. (2009):{" "}
-                <ReferenceLink href="https://doi.org/10.5670/oceanog.2009.36">
+                <SourceLink id="DOI_10_5670_oceanog_2009_36">
                   The Argo Program: Observing the Global Ocean with Profiling Floats
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Boyer, T. P. et al. (2016):{" "}
-                <ReferenceLink href="https://doi.org/10.1175/JCLI-D-15-0801.1">
+                <SourceLink id="DOI_10_1175_jcli_d_15_0801_1">
                   Sensitivity of Global Upper-Ocean Heat Content Estimates to Mapping Methods, XBT Bias
                   Corrections, and Baseline Climatologies
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Ishii, M. et al. (2017):{" "}
-                <ReferenceLink href="https://doi.org/10.2151/sola.2017-030">
+                <SourceLink id="DOI_10_2151_sola_2017_030">
                   Accuracy of Global Upper Ocean Heat Content Estimation Expected from Present Observational Data
                   Sets
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Cheng, L. et al. (2024):{" "}
-                <ReferenceLink href="https://doi.org/10.5194/essd-16-3517-2024">
+                <SourceLink id="DOI_10_5194_essd_16_3517_2024">
                   IAPv4 ocean temperature and ocean heat content gridded dataset
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
             </ul>
@@ -626,37 +618,37 @@ export function OceanHeatArticle() {
             <h3>Data ke stažení</h3>
             <ul>
               <li>
-                <ReferenceLink href="https://www.ncei.noaa.gov/products/world-ocean-database">
+                <SourceLink id="WEB_NOAA_World_Ocean_Database_3d4b1d70">
                   World Ocean Database 2023
-                </ReferenceLink>
+                </SourceLink>
                 : jednotlivé profily a metadata.
               </li>
               <li>
-                <ReferenceLink href="https://argo.ucsd.edu/data/data-from-gdacs/">
+                <SourceLink id="WEB_International_Argo_Program_Data_from_GDACs_b2737bdf">
                   Globální datová centra Argo
-                </ReferenceLink>
+                </SourceLink>
                 : rychlé i odborně zkontrolované profily.
               </li>
               <li>
-                <ReferenceLink href="https://www.ncei.noaa.gov/products/climate-data-records/global-ocean-heat-content">
+                <SourceLink id="WEB_NOAA_Global_Ocean_Heat_Content_CDR_f355b1a3">
                   Globální obsah tepla podle NOAA
-                </ReferenceLink>
+                </SourceLink>
                 : hotové globální a oblastní hodnoty od roku 1955.
               </li>
               <li>
-                <ReferenceLink href="https://www.data.jma.go.jp/kaiyou/english/ohc/ohc_global_en.html">
+                <SourceLink id="WEB_data_jma_go_jp_Japan_Meteorological_Agency_Global_ocean_heat_co_b8363b79">
                   Globální obsah tepla a průměrná teplota podle JMA
-                </ReferenceLink>
+                </SourceLink>
                 : aktuální hodnoty pro vrstvu 0–2 000 metrů a textový soubor ke stažení.
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.12157/IOCAS.20240117.001">IAPv4 OHC</ReferenceLink>: mřížková
+                <SourceLink id="DOI_10_12157_iocas_20240117_001">IAPv4 OHC</SourceLink>: mřížková
                 data a globální součty.
               </li>
               <li>
-                <ReferenceLink href="https://doi.org/10.57760/sciencedb.35026">
+                <SourceLink id="DOI_10_57760_sciencedb_35026">
                   Data použitá pro vyhodnocení roku 2025
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
             </ul>
@@ -667,20 +659,20 @@ export function OceanHeatArticle() {
             <ul>
               <li>
                 Fotografie plováku: Tomas Szumski / Marine Institute / Argo Program.{" "}
-                <ReferenceLink href="https://argo.ucsd.edu/outreach/multimedia-resources/photos/">
+                <SourceLink id="WEB_International_Argo_Program_Photos_13d900af">
                   Argo dovoluje použití na webech při uvedení kreditu
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
               <li>
                 Graf 1958–2025: Pan et al. (2026), výřez z obr. 1a,{" "}
-                <ReferenceLink href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</ReferenceLink>.
+                <SourceLink id="WEB_Creative_Commons_Deed_Attribution_4_0_International_Creative_Comm_f3dd853d">CC BY 4.0</SourceLink>.
               </li>
               <li>
                 Mapa 1993–2024: NOAA Climate.gov / PMEL, nezměněný materiál NOAA ve veřejné doméně.{" "}
-                <ReferenceLink href="https://oceanservice.noaa.gov/about/faq.html">
+                <SourceLink id="WEB_NOAA_NOAA_s_National_Ocean_Service_About_Us_4ba21b52">
                   Podmínky NOAA
-                </ReferenceLink>
+                </SourceLink>
                 .
               </li>
             </ul>
