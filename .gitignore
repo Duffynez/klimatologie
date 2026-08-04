@@ -40,3 +40,6 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+
+# Local archive of source documents. The manifest stays in /audits.
+/source-archive/
