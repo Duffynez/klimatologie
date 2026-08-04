@@ -775,6 +775,70 @@ test("uses one observation-only summary in every completed observation article",
   }
 });
 
+test("publishes a complete resistance thermometry method article with traceable real data", async () => {
+  const [article, methodPage, methods, sources, styles, sitemap] = await Promise.all([
+    readFile(new URL("app/components/ResistanceThermometryArticle.tsx", root), "utf8"),
+    readFile(new URL("app/metody/[slug]/page.tsx", root), "utf8"),
+    readFile(new URL("app/data/methods.ts", root), "utf8"),
+    readFile(new URL("app/data/sources.ts", root), "utf8"),
+    readFile(new URL("app/globals.css", root), "utf8"),
+    readFile(new URL("public/sitemap.xml", root), "utf8"),
+  ]);
+
+  assert.match(methods, /slug: "odporova-termometrie-a-termistory"/);
+  assert.match(methodPage, /ResistanceThermometryArticle/);
+  assert.match(methodPage, /Napsáno: 4\. srpna 2026/);
+  assert.match(methodPage, /title="Odporová termometrie a termistory"/);
+  assert.equal((article.match(/<dt>/g) ?? []).length, 4);
+  assert.match(article, /<dt>Elektrický odpor<\/dt>/);
+  assert.match(article, /<dt>Pt100<\/dt>/);
+  assert.match(article, /<dt>NTC termistor<\/dt>/);
+  assert.match(article, /<dt>ITS-90<\/dt>/);
+  assert.match(article, /Odporová termometrie je způsob měření teploty/);
+  assert.match(article, /Název <strong>termistor<\/strong> zahrnuje více druhů/);
+  assert.match(article, /<h2>Jak probíhá měření<\/h2>/);
+  assert.match(article, /<h2>Co přístroj měří přímo<\/h2>/);
+  assert.match(article, /R\(t\)/);
+  assert.match(article, /a \+ b ln\(R\) \+ c \[ln\(R\)\]/);
+  assert.match(article, /<h2>Kalibrace a návaznost<\/h2>/);
+  assert.match(article, /<h2>Jak se metoda vyvíjela<\/h2>/);
+  assert.match(article, /<h2>Použití v klimatologii<\/h2>/);
+  assert.match(article, /<h2>Skutečný výstup měření<\/h2>/);
+  assert.match(article, /T_DAILY_MEAN/);
+  assert.match(article, /T_DAILY_AVG/);
+  assert.match(article, /Blue Hill/);
+  assert.match(article, /CRND0103-2025-MA_Blue_Hill_0_W\.txt/);
+  assert.equal((article.match(/unoptimized/g) ?? []).length, 2);
+  assert.match(article, /uscrn-platinum-resistance-thermometer\.png/);
+  assert.match(article, /nist-sprt-calibration-laboratory\.png/);
+  assert.match(article, /href="\/pozorovani\/gmst"/);
+  assert.match(article, /href="\/pozorovani\/tepelny-obsah-oceanu"/);
+  assert.match(article, /<h2>Nejistoty a omezení<\/h2>/);
+  assert.match(article, /<h2>Co metoda umožňuje zjistit<\/h2>/);
+  for (const id of [
+    "1871_Siemens_Thermometry",
+    "1887_Callendar_Thermometry",
+    "1968_Steinhart_Hart",
+    "2013_Diamond_USCRN",
+    "2014_BIPM_Thermistors",
+    "2021_BIPM_IPRT",
+    "2021_BIPM_SPRT",
+    "2022_IEC_60751",
+    "2025_USCRN_Blue_Hill",
+    "2026_USCRN_Measurements",
+    "2026_USCRN_Daily01_Readme",
+    "2026_SeaBird_SBE41",
+    "2026_Argo_Data",
+  ]) {
+    assert.match(sources, new RegExp(`id: "${id}"`));
+    assert.match(article, new RegExp(`Citation id="${id}"`));
+  }
+  assert.match(styles, /\.method-flow/);
+  assert.match(styles, /\.method-data-output table/);
+  assert.match(styles, /\.method-comparison/);
+  assert.match(sitemap, /\/metody\/odporova-termometrie-a-termistory\//);
+});
+
 test("keeps the current catalogue of fourteen observations", async () => {
   const evidence = await readFile(new URL("app/data/evidence.ts", root), "utf8");
   const slugs = [...evidence.matchAll(/\{ slug: "([^"]+)"/g)].map((match) => match[1]);

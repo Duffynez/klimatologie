@@ -1013,6 +1013,165 @@ video.article-figure__media {
   line-height: 1.55;
 }
 
+.method-comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 32px 0 42px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.method-comparison section {
+  padding: 24px 26px 22px 0;
+}
+
+.method-comparison section + section {
+  padding-right: 0;
+  padding-left: 26px;
+  border-left: 1px solid var(--line);
+}
+
+.method-comparison h3 {
+  margin: 5px 0 10px;
+}
+
+.method-comparison p:last-child {
+  margin-bottom: 0;
+  font-size: 0.94rem;
+}
+
+.method-flow {
+  margin: 34px 0 42px;
+  padding: 24px 0 16px;
+  border-top: 4px solid var(--sea);
+  border-bottom: 1px solid var(--line);
+}
+
+.method-flow__track {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+}
+
+.method-flow__track > div {
+  min-height: 142px;
+  padding: 17px 14px;
+  background: var(--white);
+}
+
+.method-flow__track span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--coral);
+  font-weight: 800;
+}
+
+.method-flow__track strong,
+.method-flow__track small {
+  display: block;
+}
+
+.method-flow__track strong {
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.method-flow__track small {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.42;
+}
+
+.method-flow__track > b {
+  color: var(--coral);
+  font-size: 1.2rem;
+}
+
+.method-flow figcaption,
+.method-data-output figcaption {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 0.83rem;
+  line-height: 1.48;
+}
+
+.method-equation {
+  overflow-wrap: anywhere;
+  font-size: 1.04rem;
+}
+
+.method-data-output {
+  margin: 32px 0 40px;
+}
+
+.method-data-output__table-wrap {
+  overflow-x: auto;
+  border-top: 4px solid var(--sea);
+}
+
+.method-data-output table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  background: var(--white);
+  font-variant-numeric: tabular-nums;
+}
+
+.method-data-output caption {
+  padding: 17px 18px 13px;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.method-data-output th,
+.method-data-output td {
+  padding: 10px 18px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  text-align: right;
+}
+
+.method-data-output thead th {
+  color: var(--sea);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+}
+
+.method-data-output th:first-child {
+  color: var(--ink);
+  text-align: left;
+}
+
+.method-data-output tbody tr:hover {
+  background: var(--paper);
+}
+
+.method-conclusion {
+  margin: 30px 0 44px;
+  padding: 24px 26px 6px;
+  border-top: 4px solid var(--coral);
+  border-bottom: 1px solid var(--line);
+  background: var(--white);
+}
+
+.method-conclusion .eyebrow {
+  margin-bottom: 10px;
+}
+
+.method-conclusion p:last-child {
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.12rem;
+  line-height: 1.58;
+}
+
 @media (max-width: 900px) and (min-width: 701px) {
   .article-glossary--four dl {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1025,6 +1184,39 @@ video.article-figure__media {
 }
 
 @media (max-width: 700px) {
+  .method-comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .method-comparison section,
+  .method-comparison section + section {
+    padding: 21px 0;
+    border-left: 0;
+  }
+
+  .method-comparison section + section {
+    border-top: 1px solid var(--line);
+  }
+
+  .method-flow__track {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .method-flow__track > div {
+    min-height: 0;
+  }
+
+  .method-flow__track > b {
+    transform: rotate(90deg);
+    justify-self: center;
+  }
+
+  .method-conclusion {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
   .article-figure--scroll-mobile .article-figure__scroll {
     overflow-x: auto;
     overscroll-behavior-inline: contain;
