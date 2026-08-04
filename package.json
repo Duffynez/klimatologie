@@ -10,6 +10,7 @@
     "build": "vinext build",
     "start": "vinext start",
     "audit:sources": "node scripts/audit-source-links.mjs --check",
+    "audit:downloads": "node scripts/audit-source-downloads.mjs",
     "test": "vinext build && node --test tests/rendered-html.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next"
   },
