@@ -1,8 +1,16 @@
-import { Source, sourceCategoryMeta, sourceDownloadUrl, sourceViewUrl } from "../data/sources";
+import {
+  Source,
+  sourceCategoryMeta,
+  sourceDownloadUrl,
+  sourceDriveUrl,
+  sourceViewUrl,
+} from "../data/sources";
 
 export function SourceCard({ source }: { source: Source }) {
   const category = sourceCategoryMeta[source.category];
   const downloadUrl = sourceDownloadUrl(source);
+  const driveUrl = sourceDriveUrl(source);
+  const isRelatedMaterial = source.archiveRelation === "related-material";
 
   return (
     <article className={`source-card source-card--${source.category}`} id={source.id}>
@@ -17,10 +25,21 @@ export function SourceCard({ source }: { source: Source }) {
         <p className="source-card__publication">{source.publication}</p>
       </div>
       <div className="source-card__actions">
-        <a href={sourceViewUrl(source)} target="_blank" rel="noreferrer">
-          {source.externalUrl ? "Otevřít původní zdroj" : "Otevřít na Google Drive"}
-        </a>
-        {downloadUrl ? <a href={downloadUrl} target="_blank" rel="noreferrer">Stáhnout kopii</a> : null}
+        {source.externalUrl ? (
+          <a href={sourceViewUrl(source)} target="_blank" rel="noreferrer">
+            Otevřít původní zdroj
+          </a>
+        ) : null}
+        {driveUrl ? (
+          <a href={driveUrl} target="_blank" rel="noreferrer">
+            {isRelatedMaterial ? "Otevřít související soubor" : "Otevřít kopii na Google Drive"}
+          </a>
+        ) : null}
+        {downloadUrl ? (
+          <a href={downloadUrl} target="_blank" rel="noreferrer">
+            {isRelatedMaterial ? "Stáhnout související soubor" : "Stáhnout kopii"}
+          </a>
+        ) : null}
       </div>
     </article>
   );

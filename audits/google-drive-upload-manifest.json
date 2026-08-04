@@ -1,0 +1,4408 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-04T13:40:43.291Z",
+  "account": {
+    "email": "klimatologie.eu@gmail.com"
+  },
+  "sourceManifest": "audits/source-download-manifest.json",
+  "driveRoot": {
+    "name": "source-archive",
+    "folderId": "1BSll0S286z2jLyEvYXp9yAiD8yFwV1RS",
+    "driveUrl": "https://drive.google.com/drive/folders/1BSll0S286z2jLyEvYXp9yAiD8yFwV1RS"
+  },
+  "publicAccessVerification": {
+    "checked": true,
+    "permissionsChanged": false,
+    "root": {
+      "anyoneWithLink": true,
+      "shared": true,
+      "visibilityStatus": "permission_metadata_available",
+      "permissions": [
+        {
+          "type": "anyone",
+          "role": "reader",
+          "emailAddress": null,
+          "domain": null,
+          "displayName": null,
+          "allowFileDiscovery": false
+        },
+        {
+          "type": "user",
+          "role": "owner",
+          "emailAddress": null,
+          "domain": null,
+          "displayName": null,
+          "allowFileDiscovery": null
+        }
+      ],
+      "conclusion": "Root folder is publicly accessible to anyone with the link as a viewer."
+    },
+    "files": {
+      "checkedCount": 228,
+      "anyoneWithLinkCount": 228,
+      "notSharedCount": 0,
+      "indeterminateCount": 0,
+      "conclusion": "All 228 matched files have an anyone/reader permission with link-only discovery and are publicly accessible to anyone with the link."
+    },
+    "verifiedVia": "Google Drive connector metadata (root permissions and individual metadata reads for all 228 matched files)"
+  },
+  "summary": {
+    "localEntriesWithPath": 230,
+    "driveFiles": 228,
+    "matchedFiles": 228,
+    "unmatchedLocalFiles": 0,
+    "unmatchedDriveFiles": 0,
+    "ignoredLocalFiles": 2,
+    "sizeMismatchCount": 0
+  },
+  "matches": [
+    {
+      "localPath": "source-archive/existing-drive/1681__1681_Mariotte__De-la-nature-des-couleurs-O-povaze-barev.pdf",
+      "sourceId": "1681_Mariotte",
+      "driveFileId": "1EskyCLQ8c-cFoqLsgFsRhFyTWQZue3tf",
+      "driveUrl": "https://drive.google.com/file/d/1EskyCLQ8c-cFoqLsgFsRhFyTWQZue3tf/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 27563146,
+      "localSize": 27563146,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/existing-drive/1767__1767_Saussure__Voyages-dans-les-Alpes-Cesty-po-Alpach.pdf",
+      "sourceId": "1767_Saussure",
+      "driveFileId": "1CUmnpAXLEyCO-R7ku1Im9LopfZFvhJRW",
+      "driveUrl": "https://drive.google.com/file/d/1CUmnpAXLEyCO-R7ku1Im9LopfZFvhJRW/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 39474823,
+      "localSize": 39474823,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/existing-drive/1800__1801_Herschel__Experiments-on-the-Refrangibility-of-the-Invisible-Rays-of-the-Sun.pdf",
+      "sourceId": "1801_Herschel",
+      "driveFileId": "1zxzRhDP0btwuNJbHs_8T5w90_RA6X64j",
+      "driveUrl": "https://drive.google.com/file/d/1zxzRhDP0btwuNJbHs_8T5w90_RA6X64j/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 9768235,
+      "localSize": 9768235,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/existing-drive/1804__1804_Leslie__An-Experimental-Inquiry-into-the-Nature-and-Propagation-of-Heat.pdf",
+      "sourceId": "1804_Leslie",
+      "driveFileId": "1V56FWlRTsfzf8j9u3Gk9DXKjMD_Csh-C",
+      "driveUrl": "https://drive.google.com/file/d/1V56FWlRTsfzf8j9u3Gk9DXKjMD_Csh-C/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 44199739,
+      "localSize": 44199739,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/existing-drive/1824__1824_Fourier__Remarques-generales-sur-les-temperatures-du-globe-terrestre-et-des-espaces-planetaires.pdf",
+      "sourceId": "1824_Fourier",
+      "driveFileId": "12-cKSWYX0UJ4Gj-POaBW_r7UfYoIgBFH",
+      "driveUrl": "https://drive.google.com/file/d/12-cKSWYX0UJ4Gj-POaBW_r7UfYoIgBFH/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 88028800,
+      "localSize": 88028800,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/existing-drive/1840__1840_Agassiz__Etudes-sur-les-glaciers-Studie-o-ledovcich.pdf",
+      "sourceId": "1840_Agassiz",
+      "driveFileId": "1dEjTGQCa8KF4BgnzZ9fv6egx5j_dFJgp",
+      "driveUrl": "https://drive.google.com/file/d/1dEjTGQCa8KF4BgnzZ9fv6egx5j_dFJgp/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 70480986,
+      "localSize": 70480986,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/existing-drive/1856__1856_Foote__Circumstances-Affecting-the-Heat-of-the-Sun-s-Rays.pdf",
+      "sourceId": "1856_Foote",
+      "driveFileId": "1WPMm9i4NtBZp6FXIBDF5EeBbPePzbIwv",
+      "driveUrl": "https://drive.google.com/file/d/1WPMm9i4NtBZp6FXIBDF5EeBbPePzbIwv/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 27445083,
+      "localSize": 27445083,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/existing-drive/1861__1862_Tyndall__On-the-Absorption-and-Radiation-of-Heat-by-Gases-and-Vapours.pdf",
+      "sourceId": "1862_Tyndall",
+      "driveFileId": "1l0MpBqo_xA3mVdRJ7h3XS8maPZ_DPggs",
+      "driveUrl": "https://drive.google.com/file/d/1l0MpBqo_xA3mVdRJ7h3XS8maPZ_DPggs/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 4712619,
+      "localSize": 4712619,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/existing-drive/1864__1864_Croll__On-the-Physical-Cause-of-the-Change-of-Climate-during-Geological-Epochs.pdf",
+      "sourceId": "1864_Croll",
+      "driveFileId": "1bvHqB76e2CdgAFv8ZJdg4CoO5KzSyb5g",
+      "driveUrl": "https://drive.google.com/file/d/1bvHqB76e2CdgAFv8ZJdg4CoO5KzSyb5g/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 22878782,
+      "localSize": 22878782,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/existing-drive/1884__1884_Langley__Researches-on-Solar-Heat-and-its-Absorption-by-the-Earth-s-Atmosphere.pdf",
+      "sourceId": "1884_Langley",
+      "driveFileId": "11aIznPAcwBWNm8ayvEnqVqScmaQjaUna",
+      "driveUrl": "https://drive.google.com/file/d/11aIznPAcwBWNm8ayvEnqVqScmaQjaUna/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 15756165,
+      "localSize": 15756165,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/existing-drive/1894__1894_Hogbom__Om-sannolikheten-for-sekulara-forandringar-i-atmosfarens-kolsyrehalt.pdf",
+      "sourceId": "1894_Hogbom",
+      "driveFileId": "1MVynMn7UnM7h-bqQf8P_Fl-1h5CQwvcY",
+      "driveUrl": "https://drive.google.com/file/d/1MVynMn7UnM7h-bqQf8P_Fl-1h5CQwvcY/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 2435346,
+      "localSize": 2435346,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/existing-drive/1896__1896_Arrhenius__On-the-Influence-of-Carbonic-Acid-in-the-Air-upon-the-Temperature-of-the-Ground.pdf",
+      "sourceId": "1896_Arrhenius",
+      "driveFileId": "1BJeC3p3aw4BF8vY3tfQKw_5mC-9_IcEh",
+      "driveUrl": "https://drive.google.com/file/d/1BJeC3p3aw4BF8vY3tfQKw_5mC-9_IcEh/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 4518810,
+      "localSize": 4518810,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/existing-drive/1938__1938_Callendar__The-Artificial-Production-of-Carbon-Dioxide-and-its-Influence-on-Temperature.pdf",
+      "sourceId": "1938_Callendar",
+      "driveFileId": "1s14Ife4-_s58dQqCf_zn7kukS0hUb5H_",
+      "driveUrl": "https://drive.google.com/file/d/1s14Ife4-_s58dQqCf_zn7kukS0hUb5H_/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1035783,
+      "localSize": 1035783,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/existing-drive/1941__1941_Milankovic__Kanon-der-Erdbestrahlung-und-seine-Anwendung-auf-das-Eiszeitenproblem.pdf",
+      "sourceId": "1941_Milankovic",
+      "driveFileId": "1vap1TERiywcc8CG_k4AUxqqljShMsKlF",
+      "driveUrl": "https://drive.google.com/file/d/1vap1TERiywcc8CG_k4AUxqqljShMsKlF/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 42251942,
+      "localSize": 42251942,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/existing-drive/1952__1952_Libby__Radiocarbon-Dating.pdf",
+      "sourceId": "1952_Libby",
+      "driveFileId": "1lDMkyZVsEB9sCdNYiWVjg1wDY3tO4O9U",
+      "driveUrl": "https://drive.google.com/file/d/1lDMkyZVsEB9sCdNYiWVjg1wDY3tO4O9U/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 10284445,
+      "localSize": 10284445,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/existing-drive/1955__1955_Emiliani__Pleistocene-Temperatures.pdf",
+      "sourceId": "1955_Emiliani",
+      "driveFileId": "10RRkDp57tk0N-IgerSjeQbHJyEdNvQ-_",
+      "driveUrl": "https://drive.google.com/file/d/10RRkDp57tk0N-IgerSjeQbHJyEdNvQ-_/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 4758658,
+      "localSize": 4758658,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/existing-drive/1956__1956_Plass__The-Carbon-Dioxide-Theory-of-Climatic-Change.pdf",
+      "sourceId": "1956_Plass",
+      "driveFileId": "1JmsYBGlO4wsjVdhsPRXsQlnAG0SLia0A",
+      "driveUrl": "https://drive.google.com/file/d/1JmsYBGlO4wsjVdhsPRXsQlnAG0SLia0A/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 2369267,
+      "localSize": 2369267,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/open-access/2009__DOI_10_1073_pnas_0906044106__Physical-and-biogeochemical-modulation-of-ocean-acidification-in-the-central-North-Pacific.pdf",
+      "sourceId": "DOI_10_1073_pnas_0906044106",
+      "driveFileId": "1caWRUE4cd0qkaLlKeMoJG7w0wt58Pyfc",
+      "driveUrl": "https://drive.google.com/file/d/1caWRUE4cd0qkaLlKeMoJG7w0wt58Pyfc/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1624719,
+      "localSize": 1624719,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/open-access/2014__doi_10_1007_s00484_014_0789_5__standardized-phenology-monitoring-methods-to-track-plant-and-animal-activity-for-science-and-resource-management-applications.pdf",
+      "sourceId": "DOI_10_1007_s00484_014_0789_5",
+      "driveFileId": "1Bx3fU7fxS1zCTOFlzg2Hiyr1mk6eHTBg",
+      "driveUrl": "https://drive.google.com/file/d/1Bx3fU7fxS1zCTOFlzg2Hiyr1mk6eHTBg/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 745516,
+      "localSize": 745516,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/open-access/2018__DOI_10_1016_j_agrformet_2018_03_003__Evaluation-of-land-surface-phenology-from-VIIRS-data-using-time-series-of-PhenoCam-imagery.bin",
+      "sourceId": "DOI_10_1016_j_agrformet_2018_03_003",
+      "driveFileId": "1zFo-ypQVcnkqNfeU5AeX5F1DeSzl94Nq",
+      "driveUrl": "https://drive.google.com/file/d/1zFo-ypQVcnkqNfeU5AeX5F1DeSzl94Nq/view?usp=drivesdk",
+      "mimeType": "application/octet-stream",
+      "size": 30738,
+      "localSize": 30738,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/open-access/2018__DOI_10_1088_1748_9326_aae3ec__Arctic-sea-ice-thickness-volume-and-multiyear-ice-coverage-losses-and-coupled-variability-1958-2018.pdf",
+      "sourceId": "DOI_10_1088_1748_9326_aae3ec",
+      "driveFileId": "1ePokZdife-Pq9_-TfxHFKBrXSeFdZWNv",
+      "driveUrl": "https://drive.google.com/file/d/1ePokZdife-Pq9_-TfxHFKBrXSeFdZWNv/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1492114,
+      "localSize": 1492114,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/open-access/2018__DOI_10_1594_pangaea_884711__GTN-P-global-mean-annual-ground-temperature-data-for-permafrost-near-the-depth-of-zero-annual-amplitude-2007-2016.pdf",
+      "sourceId": "DOI_10_1594_pangaea_884711",
+      "driveFileId": "1r4qbozvjS6TJ9-N7-w1Am0Y8wH-_lcTj",
+      "driveUrl": "https://drive.google.com/file/d/1r4qbozvjS6TJ9-N7-w1Am0Y8wH-_lcTj/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 59538,
+      "localSize": 59538,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/open-access/2019__DOI_10_6084_m9_figshare_10062239_v1__Spring-and-fall-phenology-data.csv",
+      "sourceId": "DOI_10_6084_m9_figshare_10062239_v1",
+      "driveFileId": "1_F9fbIGGOwEaZY6JYQ9nqZqvhymACE-W",
+      "driveUrl": "https://drive.google.com/file/d/1_F9fbIGGOwEaZY6JYQ9nqZqvhymACE-W/view?usp=drivesdk",
+      "mimeType": "text/csv",
+      "size": 148030,
+      "localSize": 148030,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/open-access/2020__DOI_10_1594_pangaea_911944__GlobSnow-v3.0-snow-water-equivalent-SWE.bin",
+      "sourceId": "DOI_10_1594_pangaea_911944",
+      "driveFileId": "15WSGibT2zD3E47OMoAl74dQP6WgpH--g",
+      "driveUrl": "https://drive.google.com/file/d/15WSGibT2zD3E47OMoAl74dQP6WgpH--g/view?usp=drivesdk",
+      "mimeType": "application/octet-stream",
+      "size": 2617,
+      "localSize": 2617,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/open-access/2020__doi_10_5281_zenodo_3862995__data-supplement-of-the-causes-of-sea-level-rise-since-1900.xlsx",
+      "sourceId": "DOI_10_5281_zenodo_3862995",
+      "driveFileId": "1XI9d5VDB_d0d2Y8M0e8REJQMpHEzavJk",
+      "driveUrl": "https://docs.google.com/spreadsheets/d/1XI9d5VDB_d0d2Y8M0e8REJQMpHEzavJk/edit?usp=drivesdk&ouid=108224044250999653909&rtpof=true&sd=true",
+      "mimeType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": 271196,
+      "localSize": 271196,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/open-access/2022__DOI_10_1038_s41597_022_01223_7__Digitising-historical-sea-level-records-in-the-Thames-Estuary-UK.pdf",
+      "sourceId": "DOI_10_1038_s41597_022_01223_7",
+      "driveFileId": "1FmV_NwgOtJwrJ9l5VwrbOGZEhp_R7c3J",
+      "driveUrl": "https://drive.google.com/file/d/1FmV_NwgOtJwrJ9l5VwrbOGZEhp_R7c3J/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 191434,
+      "localSize": 191434,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/open-access/2022__doi_10_1038_s41612_022_00229_7__monitoring-global-climate-change-using-gnss-radio-occultation.pdf",
+      "sourceId": "DOI_10_1038_s41612_022_00229_7",
+      "driveFileId": "1oSngXtJ-TvECoa3tytcS3suWyldpTMfP",
+      "driveUrl": "https://drive.google.com/file/d/1oSngXtJ-TvECoa3tytcS3suWyldpTMfP/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 937961,
+      "localSize": 937961,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/open-access/2024__doi_10_1038_s43247_024_01761_5__the-rate-of-global-sea-level-rise-doubled-during-the-past-three-decades.pdf",
+      "sourceId": "DOI_10_1038_s43247_024_01761_5",
+      "driveFileId": "1Df0t9FRizEVgwAlCqgxJoO4B-4cMVnt7",
+      "driveUrl": "https://drive.google.com/file/d/1Df0t9FRizEVgwAlCqgxJoO4B-4cMVnt7/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 593063,
+      "localSize": 593063,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/open-access/2026__DOI_10_5281_zenodo_20757579__Recalculated-depth-and-temperature-consistent-surface-ocean-CO2-atlas-SOCAT-version-2026.pdf",
+      "sourceId": "DOI_10_5281_zenodo_20757579",
+      "driveFileId": "1h6K_Qlor3bxz90HpEoMoNw6AgTOh_QXg",
+      "driveUrl": "https://drive.google.com/file/d/1h6K_Qlor3bxz90HpEoMoNw6AgTOh_QXg/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 2165067,
+      "localSize": 2165067,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/1958__DOI_10_3402_tellusa_v10i2_9231__On-the-Amount-of-Carbon-Dioxide-in-the-Atmosphere.pdf",
+      "sourceId": "DOI_10_3402_tellusa_v10i2_9231",
+      "driveFileId": "1uhjczQRAz5bR3v6fE48VgQvx4RkA1Y7-",
+      "driveUrl": "https://drive.google.com/file/d/1uhjczQRAz5bR3v6fE48VgQvx4RkA1Y7-/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 338889,
+      "localSize": 338889,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/1960__DOI_10_1111_j_2153_3490_1960_tb01300_x__The-Concentration-and-Isotopic-Abundances-of-Carbon-Dioxide-in-the-Atmosphere.pdf",
+      "sourceId": "DOI_10_1111_j_2153_3490_1960_tb01300_x",
+      "driveFileId": "1y_H05UjKZKV322ahKmuHUhS_z3Aj0Pf4",
+      "driveUrl": "https://drive.google.com/file/d/1y_H05UjKZKV322ahKmuHUhS_z3Aj0Pf4/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 407138,
+      "localSize": 407138,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/1962__DOI_10_3189_s002214300002757x__Mass-Balance-Studies-in-Kebnekajse.pdf",
+      "sourceId": "DOI_10_3189_s002214300002757x",
+      "driveFileId": "1-jVWQuCK5o6R4B-Quafb5RCAyTKruG43",
+      "driveUrl": "https://drive.google.com/file/d/1-jVWQuCK5o6R4B-Quafb5RCAyTKruG43/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 6257444,
+      "localSize": 6257444,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/1976__DOI_10_1111_j_2153_3490_1976_tb00701_x__Atmospheric-carbon-dioxide-variations-at-Mauna-Loa-Observatory-Hawaii.pdf",
+      "sourceId": "DOI_10_1111_j_2153_3490_1976_tb00701_x",
+      "driveFileId": "1aqaxcQBsA8QSbxXl_iippP7jkF0Rx6kj",
+      "driveUrl": "https://drive.google.com/file/d/1aqaxcQBsA8QSbxXl_iippP7jkF0Rx6kj/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 908244,
+      "localSize": 908244,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/1986__DOI_10_3402_tellusb_v38i2_15083__Reassessment-of-late-19th-century-atmospheric-carbon-dioxide-variations-in-the-air-of-western-Europe-and-the-British-Isles-based-on-an-unpubl.pdf",
+      "sourceId": "DOI_10_3402_tellusb_v38i2_15083",
+      "driveFileId": "1gkZW_vDr_568CQ6Urk-MrQnFoJsKqrRK",
+      "driveUrl": "https://drive.google.com/file/d/1gkZW_vDr_568CQ6Urk-MrQnFoJsKqrRK/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1372381,
+      "localSize": 1372381,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/1990__1990_IPCC_FAR__First-Assessment-Report.pdf",
+      "sourceId": "1990_IPCC_FAR",
+      "driveFileId": "1D_nNABKQ0_M2H1QCESrTSiS4qxEafRq_",
+      "driveUrl": "https://drive.google.com/file/d/1D_nNABKQ0_M2H1QCESrTSiS4qxEafRq_/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 15212975,
+      "localSize": 15212975,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/1996__DOI_10_5067_8gq8lzqvl0vl__Sea-Ice-Concentrations-from-Nimbus-7-SMMR-and-DMSP-SSM-I-SSMIS-Passive-Microwave-Data.pdf",
+      "sourceId": "DOI_10_5067_8gq8lzqvl0vl",
+      "driveFileId": "14AJP7vE18awuKt_5dFy27Pu_r4r0akZq",
+      "driveUrl": "https://drive.google.com/file/d/14AJP7vE18awuKt_5dFy27Pu_r4r0akZq/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 498851,
+      "localSize": 498851,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2002__DOI_10_4267_2042_36222__Il-y-a-un-siecle.-Le-contexte-scientifique-de-la-surprenante-decouverte-de-la-stratosphere.pdf",
+      "sourceId": "DOI_10_4267_2042_36222",
+      "driveFileId": "1OeNDDMZahv-50t5Bkpi3L8jv8NHbVjQL",
+      "driveUrl": "https://drive.google.com/file/d/1OeNDDMZahv-50t5Bkpi3L8jv8NHbVjQL/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 964834,
+      "localSize": 964834,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2004__DOI_10_7265_n52r3pmc__IMS-Daily-Northern-Hemisphere-Snow-and-Ice-Analysis-at-1-km-4-km-and-24-km-Resolutions-Version-1.pdf",
+      "sourceId": "DOI_10_7265_n52r3pmc",
+      "driveFileId": "1nHm0P3MNtTF4ZQ04VJOsLDsp3gvuKqqf",
+      "driveUrl": "https://drive.google.com/file/d/1nHm0P3MNtTF4ZQ04VJOsLDsp3gvuKqqf/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 384597,
+      "localSize": 384597,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2006__DOI_10_1029_2005jd006290__Global-observed-changes-in-daily-climate-extremes-of-temperature-and-precipitation.pdf",
+      "sourceId": "DOI_10_1029_2005jd006290",
+      "driveFileId": "1ZQpGLGob9BJ5pysoopoE8EEav_xa9Rw5",
+      "driveUrl": "https://drive.google.com/file/d/1ZQpGLGob9BJ5pysoopoE8EEav_xa9Rw5/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 4210886,
+      "localSize": 4210886,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2006__DOI_10_1029_2005jd006548__Uncertainty-estimates-in-regional-and-global-observed-temperature-changes-A-new-data-set-from-1850.pdf",
+      "sourceId": "DOI_10_1029_2005jd006548",
+      "driveFileId": "14V4OvNiziOCRWhNZ1Lneqcce2YDbgBg6",
+      "driveUrl": "https://drive.google.com/file/d/14V4OvNiziOCRWhNZ1Lneqcce2YDbgBg6/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1771036,
+      "localSize": 1771036,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2006__DOI_10_5067_qozivyv3v9jp__Nimbus-7-SMMR-Polar-Gridded-Radiances-and-Sea-Ice-Concentrations-Version-1.pdf",
+      "sourceId": "DOI_10_5067_qozivyv3v9jp",
+      "driveFileId": "1fIe4Vcg4n9rxFhEhGPxmHnP68Ba5QVqt",
+      "driveUrl": "https://drive.google.com/file/d/1fIe4Vcg4n9rxFhEhGPxmHnP68Ba5QVqt/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 185383,
+      "localSize": 185383,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2007__DOI_10_1002_joc_1594__Phenological-data-series-of-cherry-tree-flowering-in-Kyoto-Japan-and-its-application-to-reconstruction-of-springtime-temperatures-since-the-9th-century.pdf",
+      "sourceId": "DOI_10_1002_joc_1594",
+      "driveFileId": "1f8QDoB1GIzj1GLZOVTbOIwpHemhitjgk",
+      "driveUrl": "https://drive.google.com/file/d/1f8QDoB1GIzj1GLZOVTbOIwpHemhitjgk/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 494617,
+      "localSize": 494617,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2007__WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a__Dickson-et-al.-2007-prirucka-standardnich-mericich-postupu.pdf",
+      "sourceId": "WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a",
+      "driveFileId": "1Tk9ujvf8k8y5ggOEJKAXdPjZQaVxeuYK",
+      "driveUrl": "https://drive.google.com/file/d/1Tk9ujvf8k8y5ggOEJKAXdPjZQaVxeuYK/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 5434312,
+      "localSize": 5434312,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2009__DOI_10_1029_2008gl037155__Global-ocean-heat-content-1955-2008-in-light-of-recently-revealed-instrumentation-problems.pdf",
+      "sourceId": "DOI_10_1029_2008gl037155",
+      "driveFileId": "1IJM321fJO02dubkf7B6ZisCQUZb5peT1",
+      "driveUrl": "https://drive.google.com/file/d/1IJM321fJO02dubkf7B6ZisCQUZb5peT1/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 156927,
+      "localSize": 156927,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2009__DOI_10_1029_2008jd010421__An-update-of-observed-stratospheric-temperature-trends.pdf",
+      "sourceId": "DOI_10_1029_2008jd010421",
+      "driveFileId": "1UoOZfkGK-Ul0ZcOS5S2bQ0i2JqqAxznd",
+      "driveUrl": "https://drive.google.com/file/d/1UoOZfkGK-Ul0ZcOS5S2bQ0i2JqqAxznd/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1141500,
+      "localSize": 1141500,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2009__DOI_10_5670_oceanog_2009_36__The-Argo-Program-Observing-the-Global-Oceans-with-Profiling-Floats.pdf",
+      "sourceId": "DOI_10_5670_oceanog_2009_36",
+      "driveFileId": "1UczFlpMseZ_VgUgBRs-oGAmrviPaBglJ",
+      "driveUrl": "https://drive.google.com/file/d/1UczFlpMseZ_VgUgBRs-oGAmrviPaBglJ/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 3667793,
+      "localSize": 3667793,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2011__DOI_10_1007_s10712_011_9119_1__Sea-Level-Rise-from-the-Late-19th-to-the-Early-21st-Century.pdf",
+      "sourceId": "DOI_10_1007_s10712_011_9119_1",
+      "driveFileId": "1JbwVc_X6BzIVZpeaFiYKZoqRLkMUB8CU",
+      "driveUrl": "https://drive.google.com/file/d/1JbwVc_X6BzIVZpeaFiYKZoqRLkMUB8CU/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 2695052,
+      "localSize": 2695052,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2011__DOI_10_5194_hess_15_3033_2011__Scaling-and-trends-of-hourly-precipitation-extremes-in-two-different-climate-zones-Hong-Kong-and-the-Netherlands.pdf",
+      "sourceId": "DOI_10_5194_hess_15_3033_2011",
+      "driveFileId": "12b2aCJGyCW9MhWi3Z6YY2ZnV9UJIguHD",
+      "driveUrl": "https://drive.google.com/file/d/12b2aCJGyCW9MhWi3Z6YY2ZnV9UJIguHD/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 588009,
+      "localSize": 588009,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2011__DOI_10_5194_tc_5_219_2011__Northern-Hemisphere-spring-snow-cover-variability-and-change-over-1922-2010-including-an-assessment-of-uncertainty.pdf",
+      "sourceId": "DOI_10_5194_tc_5_219_2011",
+      "driveFileId": "1xYUqV6IGde_zfe29fbXCUpAGx_rpwfkn",
+      "driveUrl": "https://drive.google.com/file/d/1xYUqV6IGde_zfe29fbXCUpAGx_rpwfkn/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 687503,
+      "localSize": 687503,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2011__DOI_10_5194_tc_5_271_2011__Co-registration-and-bias-corrections-of-satellite-elevation-data-sets-for-quantifying-glacier-thickness-change.pdf",
+      "sourceId": "DOI_10_5194_tc_5_271_2011",
+      "driveFileId": "1Hx3hN_Fg9embnGNWvjNYW4X2dIt5VenU",
+      "driveUrl": "https://drive.google.com/file/d/1Hx3hN_Fg9embnGNWvjNYW4X2dIt5VenU/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 7426384,
+      "localSize": 7426384,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2011__WEB_World_Glacier_Monitoring_Ser_glosar_UNESCO_a_WGMS_06fc9a79__glosar-UNESCO-a-WGMS.pdf",
+      "sourceId": "WEB_World_Glacier_Monitoring_Ser_glosar_UNESCO_a_WGMS_06fc9a79",
+      "driveFileId": "1HdNLAB5kFj4Oj-8Q1IY6LncZCzbN6P2j",
+      "driveUrl": "https://drive.google.com/file/d/1HdNLAB5kFj4Oj-8Q1IY6LncZCzbN6P2j/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 2861966,
+      "localSize": 2861966,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2012__DOI_10_1029_2012gl051106__World-ocean-heat-content-and-thermosteric-sea-level-change-0-2000-m-1955-2010.pdf",
+      "sourceId": "DOI_10_1029_2012gl051106",
+      "driveFileId": "19U19sfvVDxMhQPhaIwbH_khVGLDvqJNy",
+      "driveUrl": "https://drive.google.com/file/d/19U19sfvVDxMhQPhaIwbH_khVGLDvqJNy/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 6435819,
+      "localSize": 6435819,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2012__DOI_10_5194_cp_8_1649_2012__HadISD-a-quality-controlled-global-synoptic-report-database-for-selected-variables-at-long-term-stations-from-1973-2011.pdf",
+      "sourceId": "DOI_10_5194_cp_8_1649_2012",
+      "driveFileId": "19TABgPdHNqx1Ky1Bfr8hJxiE-oSez7sB",
+      "driveUrl": "https://drive.google.com/file/d/19TABgPdHNqx1Ky1Bfr8hJxiE-oSez7sB/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 5391609,
+      "localSize": 5391609,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2012__DOI_10_7265_n56d5qxc__Arctic-Sea-Ice-Charts-from-Danish-Meteorological-Institute-1893-1956.pdf",
+      "sourceId": "DOI_10_7265_n56d5qxc",
+      "driveFileId": "1q2zz5b3EVlp_r-3dI7lex5k1Dd9-ufwV",
+      "driveUrl": "https://drive.google.com/file/d/1q2zz5b3EVlp_r-3dI7lex5k1Dd9-ufwV/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1049705,
+      "localSize": 1049705,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2012__DOI_10_7289_v5d21vhz__Global-Historical-Climatology-Network-Daily-GHCN-Daily-Version-3.txt",
+      "sourceId": "DOI_10_7289_v5d21vhz",
+      "driveFileId": "1_6FDU-kCFzmDIY0qlPpGVjqVJhle3WK5",
+      "driveUrl": "https://drive.google.com/file/d/1_6FDU-kCFzmDIY0qlPpGVjqVJhle3WK5/view?usp=drivesdk",
+      "mimeType": "text/plain",
+      "size": 28567,
+      "localSize": 28567,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2012__DOI_10_7289_v5n014g9__NOAA-Climate-Data-Record-CDR-of-Northern-Hemisphere-NH-Snow-Cover-Extent-SCE-Version-1.gz",
+      "sourceId": "DOI_10_7289_v5n014g9",
+      "driveFileId": "1ANpuEe_4I-_iaKhXWhnEm8twBn6YPoU5",
+      "driveUrl": "https://drive.google.com/file/d/1ANpuEe_4I-_iaKhXWhnEm8twBn6YPoU5/view?usp=drivesdk",
+      "mimeType": "application/x-gzip",
+      "size": 3415508,
+      "localSize": 3415508,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2013__DOI_10_1002_jgrd_50150__Updated-analyses-of-temperature-and-precipitation-extreme-indices-since-the-beginning-of-the-twentieth-century-The-HadEX2-dataset.pdf",
+      "sourceId": "DOI_10_1002_jgrd_50150",
+      "driveFileId": "1Xid3WpFyx6rA6g604j0lg7FjQV7xjYNH",
+      "driveUrl": "https://drive.google.com/file/d/1Xid3WpFyx6rA6g604j0lg7FjQV7xjYNH/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 7392691,
+      "localSize": 7392691,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2013__DOI_10_1175_jcli_d_12_00383_1__On-the-Measurement-of-Heat-Waves.pdf",
+      "sourceId": "DOI_10_1175_jcli_d_12_00383_1",
+      "driveFileId": "11UBW7qmGDl49D_IGrVIM16IIG18PttM_",
+      "driveUrl": "https://drive.google.com/file/d/11UBW7qmGDl49D_IGrVIM16IIG18PttM_/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 4765032,
+      "localSize": 4765032,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2013__DOI_10_1175_jcli_d_12_00502_1__Global-Increasing-Trends-in-Annual-Maximum-Daily-Precipitation.pdf",
+      "sourceId": "DOI_10_1175_jcli_d_12_00502_1",
+      "driveFileId": "1rcc3vdn2CrlAYUXL90n_zxWJF1Gi-uZQ",
+      "driveUrl": "https://drive.google.com/file/d/1rcc3vdn2CrlAYUXL90n_zxWJF1Gi-uZQ/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 3053782,
+      "localSize": 3053782,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2013__DOI_10_5194_essd_5_71_2013__A-description-of-the-global-land-surface-precipitation-data-products-of-the-Global-Precipitation-Climatology-Centre-with-sample-applications-inclu.pdf",
+      "sourceId": "DOI_10_5194_essd_5_71_2013",
+      "driveFileId": "1iL4ngSzkJB4ZD45ZT6SscpXOoQU16DJR",
+      "driveUrl": "https://drive.google.com/file/d/1iL4ngSzkJB4ZD45ZT6SscpXOoQU16DJR/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 12029245,
+      "localSize": 12029245,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2013__DOI_10_5194_tc_7_877_2013__Density-assumptions-for-converting-geodetic-glacier-volume-change-to-mass-change.pdf",
+      "sourceId": "DOI_10_5194_tc_7_877_2013",
+      "driveFileId": "1bbPjWYrqM4_GpFKI1MBJPL_sar6kTKOm",
+      "driveUrl": "https://drive.google.com/file/d/1bbPjWYrqM4_GpFKI1MBJPL_sar6kTKOm/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 817284,
+      "localSize": 817284,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2014__2014_BIPM_Thermistors__Guide-on-Secondary-Thermometry-Thermistor-Thermometry.pdf",
+      "sourceId": "2014_BIPM_Thermistors",
+      "driveFileId": "1lQyGu93SI_lRm-PMPkGLL48MZl86WE6U",
+      "driveUrl": "https://drive.google.com/file/d/1lQyGu93SI_lRm-PMPkGLL48MZl86WE6U/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 695076,
+      "localSize": 695076,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2014__DOI_10_1016_j_agrformet_2014_05_008__Monitoring-vegetation-phenology-using-an-infrared-enabled-security-camera.pdf",
+      "sourceId": "DOI_10_1016_j_agrformet_2014_05_008",
+      "driveFileId": "1p2hnrbDYxDrIKfHcNxibpj_K-gaeT1HV",
+      "driveUrl": "https://drive.google.com/file/d/1p2hnrbDYxDrIKfHcNxibpj_K-gaeT1HV/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 4523106,
+      "localSize": 4523106,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2014__DOI_10_5194_amt_7_4463_2014__Reference-quality-upper-air-measurements-GRUAN-data-processing-for-the-Vaisala-RS92-radiosonde.pdf",
+      "sourceId": "DOI_10_5194_amt_7_4463_2014",
+      "driveFileId": "1M8Zgt7c1ngyYq7x4wdEL0V4HEw0u6r91",
+      "driveUrl": "https://drive.google.com/file/d/1M8Zgt7c1ngyYq7x4wdEL0V4HEw0u6r91/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 6152464,
+      "localSize": 6152464,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2014__DOI_10_5194_amt_7_647_2014__CO2-CO-and-CH4-measurements-from-tall-towers-in-the-NOAA-Earth-System-Research-Laboratory-s-Global-Greenhouse-Gas-Reference-Network-instrumentatio.pdf",
+      "sourceId": "DOI_10_5194_amt_7_647_2014",
+      "driveFileId": "1o74cKJSlyzmkJf8nsxlKZrsOuIeq3wjN",
+      "driveUrl": "https://drive.google.com/file/d/1o74cKJSlyzmkJf8nsxlKZrsOuIeq3wjN/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 3313870,
+      "localSize": 3313870,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2014__DOI_10_5194_cp_10_1983_2014__HadISDH-land-surface-multi-variable-humidity-and-temperature-record-for-climate-monitoring.pdf",
+      "sourceId": "DOI_10_5194_cp_10_1983_2014",
+      "driveFileId": "1D4gVMltl2ouP345lZFVv1Lws1olOQLeI",
+      "driveUrl": "https://drive.google.com/file/d/1D4gVMltl2ouP345lZFVv1Lws1olOQLeI/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 2694540,
+      "localSize": 2694540,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2014__DOI_10_5194_essd_6_201_2014__Temperature-data-acquired-from-the-DOI-GTN-P-Deep-Borehole-Array-on-the-Arctic-Slope-of-Alaska-1973-2013.pdf",
+      "sourceId": "DOI_10_5194_essd_6_201_2014",
+      "driveFileId": "19aV6Lq8ge9YHxyQ55Wz4oFs8L4VrL4ub",
+      "driveUrl": "https://drive.google.com/file/d/19aV6Lq8ge9YHxyQ55Wz4oFs8L4VrL4ub/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 4546577,
+      "localSize": 4546577,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2014__DOI_10_5670_oceanog_2014_16__A-Time-Series-View-of-Changing-Ocean-Chemistry-Due-to-Ocean-Uptake-of-Anthropogenic-CO2-and-Ocean-Acidification.pdf",
+      "sourceId": "DOI_10_5670_oceanog_2014_16",
+      "driveFileId": "1Uxsv16kSSbXgVLWIzZ4StJ2ZgZibk2Wo",
+      "driveUrl": "https://drive.google.com/file/d/1Uxsv16kSSbXgVLWIzZ4StJ2ZgZibk2Wo/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 2192246,
+      "localSize": 2192246,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2015__DOI_10_1002_2014gl061957__Revision-of-the-EPICA-Dome-C-CO2-record-from-800-to-600-kyr-before-present.pdf",
+      "sourceId": "DOI_10_1002_2014gl061957",
+      "driveFileId": "1djiJQTWLVsr0BdBJKCIhjQzFkrd51gC9",
+      "driveUrl": "https://drive.google.com/file/d/1djiJQTWLVsr0BdBJKCIhjQzFkrd51gC9/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 808796,
+      "localSize": 808796,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2015__DOI_10_3189_2015jog15j017__Historically-unprecedented-global-glacier-decline-in-the-early-21st-century.pdf",
+      "sourceId": "DOI_10_3189_2015jog15j017",
+      "driveFileId": "17dGnBMcXJW-a_vH4JdZUKrif-P4cH8PJ",
+      "driveUrl": "https://drive.google.com/file/d/17dGnBMcXJW-a_vH4JdZUKrif-P4cH8PJ/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 4683738,
+      "localSize": 4683738,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2015__DOI_10_5194_bg_12_1285_2015__Trends-and-drivers-in-global-surface-ocean-pH-over-the-past-3-decades.pdf",
+      "sourceId": "DOI_10_5194_bg_12_1285_2015",
+      "driveFileId": "1-0DqigCHimJYHt7Hz-_JRf82MPERolK8",
+      "driveUrl": "https://drive.google.com/file/d/1-0DqigCHimJYHt7Hz-_JRf82MPERolK8/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 983447,
+      "localSize": 983447,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2015__DOI_10_5194_essd_7_117_2015__A-metadata-template-for-ocean-acidification-data.pdf",
+      "sourceId": "DOI_10_5194_essd_7_117_2015",
+      "driveFileId": "1J-6_cOtu6nJZP_BrsdyFbzFQ4ddbRr0t",
+      "driveUrl": "https://drive.google.com/file/d/1J-6_cOtu6nJZP_BrsdyFbzFQ4ddbRr0t/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 92829,
+      "localSize": 92829,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2015__DOI_10_5194_essd_7_137_2015__A-long-term-Northern-Hemisphere-snow-cover-extent-data-record-for-climate-studies-and-monitoring.pdf",
+      "sourceId": "DOI_10_5194_essd_7_137_2015",
+      "driveFileId": "182G2mVt1xaQzG7kM7YwiSH3W182EXv1C",
+      "driveUrl": "https://drive.google.com/file/d/182G2mVt1xaQzG7kM7YwiSH3W182EXv1C/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1815622,
+      "localSize": 1815622,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2015__DOI_10_5194_essd_7_245_2015__The-new-database-of-the-Global-Terrestrial-Network-for-Permafrost-GTN-P.pdf",
+      "sourceId": "DOI_10_5194_essd_7_245_2015",
+      "driveFileId": "1YcvkzwAtIcceKYQyZtcIxRTAzLaHzRu7",
+      "driveUrl": "https://drive.google.com/file/d/1YcvkzwAtIcceKYQyZtcIxRTAzLaHzRu7/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 7266572,
+      "localSize": 7266572,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2016__DOI_10_1002_2015rg000502__Vertical-land-motion-as-a-key-to-understanding-sea-level-change-and-variability.pdf",
+      "sourceId": "DOI_10_1002_2015rg000502",
+      "driveFileId": "1XTrilcu0TzPVtAfND-MgqFG-n__FtHbZ",
+      "driveUrl": "https://drive.google.com/file/d/1XTrilcu0TzPVtAfND-MgqFG-n__FtHbZ/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 7931428,
+      "localSize": 7931428,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2016__DOI_10_1002_joc_4775__ICOADS-Release-3.0-a-major-update-to-the-historical-marine-climate-record.pdf",
+      "sourceId": "DOI_10_1002_joc_4775",
+      "driveFileId": "11ffG-tgSbTbs_g4k_rFjHCKaz6heRkJc",
+      "driveUrl": "https://drive.google.com/file/d/11ffG-tgSbTbs_g4k_rFjHCKaz6heRkJc/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 27893452,
+      "localSize": 27893452,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2016__DOI_10_5194_essd_8_297_2016__The-Global-Ocean-Data-Analysis-Project-version-2-GLODAPv2-an-internally-consistent-data-product-for-the-world-ocean.txt",
+      "sourceId": "DOI_10_5194_essd_8_297_2016",
+      "driveFileId": "1ThBvHX5nz-eEuKRwIzuDcrUR4IRjs_ZL",
+      "driveUrl": "https://drive.google.com/file/d/1ThBvHX5nz-eEuKRwIzuDcrUR4IRjs_ZL/view?usp=drivesdk",
+      "mimeType": "text/plain",
+      "size": 130916,
+      "localSize": 130916,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2016__DOI_10_5194_essd_8_383_2016__A-multi-decade-record-of-high-quality-f-CO2-data-in-version-3-of-the-Surface-Ocean-CO2-Atlas-SOCAT.pdf",
+      "sourceId": "DOI_10_5194_essd_8_383_2016",
+      "driveFileId": "1IGZEtmY4d4AAUEgrOt_Uauo5oeNWQMPM",
+      "driveUrl": "https://drive.google.com/file/d/1IGZEtmY4d4AAUEgrOt_Uauo5oeNWQMPM/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1529758,
+      "localSize": 1529758,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2017__DOI_10_1126_sciadv_1601545__Improved-estimates-of-ocean-heat-content-from-1960-to-2015.pdf",
+      "sourceId": "DOI_10_1126_sciadv_1601545",
+      "driveFileId": "1rI6-GQwUoeXcMaQQ5CcKjOI9sw4d7CvL",
+      "driveUrl": "https://drive.google.com/file/d/1rI6-GQwUoeXcMaQQ5CcKjOI9sw4d7CvL/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 9075218,
+      "localSize": 9075218,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2017__DOI_10_2151_sola_2017_030__Accuracy-of-Global-Upper-Ocean-Heat-Content-Estimation-Expected-from-Present-Observational-Data-Sets.pdf",
+      "sourceId": "DOI_10_2151_sola_2017_030",
+      "driveFileId": "1IohPb6vwsP1t_7IEMmL2SFdLyHTQXhNF",
+      "driveUrl": "https://drive.google.com/file/d/1IohPb6vwsP1t_7IEMmL2SFdLyHTQXhNF/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 680392,
+      "localSize": 680392,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2017__DOI_10_5067_96jo0kifdas8__CryoSat-2-Level-4-Sea-Ice-Elevation-Freeboard-and-Thickness-Version-1.pdf",
+      "sourceId": "DOI_10_5067_96jo0kifdas8",
+      "driveFileId": "1Kj1PE63IIuea9z3lWUe7Q-BJKOm_HZ3q",
+      "driveUrl": "https://drive.google.com/file/d/1Kj1PE63IIuea9z3lWUe7Q-BJKOm_HZ3q/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 335138,
+      "localSize": 335138,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2017__DOI_10_5194_amt_10_2209_2017__Comparisons-of-the-Orbiting-Carbon-Observatory-2-OCO-2-X-CO2-measurements-with-TCCON.pdf",
+      "sourceId": "DOI_10_5194_amt_10_2209_2017",
+      "driveFileId": "1mD2uPbWWCa9zFQ5m_oKyMXOB8ZfI51li",
+      "driveUrl": "https://drive.google.com/file/d/1mD2uPbWWCa9zFQ5m_oKyMXOB8ZfI51li/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 7456708,
+      "localSize": 7456708,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2017__DOI_10_5194_amt_10_549_2017__The-Orbiting-Carbon-Observatory-2-first-18-months-of-science-data-products.pdf",
+      "sourceId": "DOI_10_5194_amt_10_549_2017",
+      "driveFileId": "1ycSQvEWn_AduAr5m1obsrNuqLywdp4iV",
+      "driveUrl": "https://drive.google.com/file/d/1ycSQvEWn_AduAr5m1obsrNuqLywdp4iV/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 9282322,
+      "localSize": 9282322,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2017__DOI_10_5194_amt_10_59_2017__The-on-orbit-performance-of-the-Orbiting-Carbon-Observatory-2-OCO-2-instrument-and-its-radiometrically-calibrated-products.pdf",
+      "sourceId": "DOI_10_5194_amt_10_59_2017",
+      "driveFileId": "1i2rdzpBQTV3N50aCObkoK951HRmWC8Kw",
+      "driveUrl": "https://drive.google.com/file/d/1i2rdzpBQTV3N50aCObkoK951HRmWC8Kw/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 8346948,
+      "localSize": 8346948,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2018__DOI_10_1016_j_marchem_2018_10_006__Routine-uncertainty-propagation-for-the-marine-carbon-dioxide-system.pdf",
+      "sourceId": "DOI_10_1016_j_marchem_2018_10_006",
+      "driveFileId": "1q98YHSIYoW7X2AWP4cDJBPFH0J4Lciry",
+      "driveUrl": "https://drive.google.com/file/d/1q98YHSIYoW7X2AWP4cDJBPFH0J4Lciry/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1849574,
+      "localSize": 1849574,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2018__DOI_10_1029_2017jd028200__An-Ensemble-Version-of-the-E-OBS-Temperature-and-Precipitation-Data-Sets.pdf",
+      "sourceId": "DOI_10_1029_2017jd028200",
+      "driveFileId": "1OAthfaWiMGtHNt94QJNnm_vVuHuKKUU9",
+      "driveUrl": "https://drive.google.com/file/d/1OAthfaWiMGtHNt94QJNnm_vVuHuKKUU9/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 5147431,
+      "localSize": 5147431,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2018__DOI_10_1038_s41558_018_0245_3__Detection-of-continental-scale-intensification-of-hourly-rainfall-extremes.pdf",
+      "sourceId": "DOI_10_1038_s41558_018_0245_3",
+      "driveFileId": "1Biws5jkJCUifVjPvTS9Gg-qzImYBLHlA",
+      "driveUrl": "https://drive.google.com/file/d/1Biws5jkJCUifVjPvTS9Gg-qzImYBLHlA/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 523934,
+      "localSize": 523934,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2018__DOI_10_1038_s41586_018_0179_y__Mass-balance-of-the-Antarctic-Ice-Sheet-from-1992-to-2017.pdf",
+      "sourceId": "DOI_10_1038_s41586_018_0179_y",
+      "driveFileId": "1Z8Hc-SwArH8DSHw31yhWmG09PH_sLmod",
+      "driveUrl": "https://drive.google.com/file/d/1Z8Hc-SwArH8DSHw31yhWmG09PH_sLmod/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 5502846,
+      "localSize": 5502846,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2018__DOI_10_1038_sdata_2018_206__GHWR-a-multi-method-global-heatwave-and-warm-spell-record-and-toolbox.pdf",
+      "sourceId": "DOI_10_1038_sdata_2018_206",
+      "driveFileId": "1ntT35QF97CctB_QoOjY6CeOuaDQWUHXY",
+      "driveUrl": "https://drive.google.com/file/d/1ntT35QF97CctB_QoOjY6CeOuaDQWUHXY/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 4974908,
+      "localSize": 4974908,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2018__DOI_10_1038_sdata_2018_28__Tracking-vegetation-phenology-across-diverse-North-American-biomes-using-PhenoCam-imagery.txt",
+      "sourceId": "DOI_10_1038_sdata_2018_28",
+      "driveFileId": "1RmA0QZddpfbnixU9LPHz-FUVxLdxca3_",
+      "driveUrl": "https://drive.google.com/file/d/1RmA0QZddpfbnixU9LPHz-FUVxLdxca3_/view?usp=drivesdk",
+      "mimeType": "text/plain",
+      "size": 115748,
+      "localSize": 115748,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2018__DOI_10_1175_jcli_d_18_0094_1__The-Global-Historical-Climatology-Network-Monthly-Temperature-Dataset-Version-4.pdf",
+      "sourceId": "DOI_10_1175_jcli_d_18_0094_1",
+      "driveFileId": "17UnE2F5_H4haNjHUsCvXEvrWimgx-aQb",
+      "driveUrl": "https://drive.google.com/file/d/17UnE2F5_H4haNjHUsCvXEvrWimgx-aQb/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 2401868,
+      "localSize": 2401868,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2018__DOI_10_3133_ofr20181060__USA-National-Phenology-Network-observational-data-documentation.pdf",
+      "sourceId": "DOI_10_3133_ofr20181060",
+      "driveFileId": "1XloXA1o2hKPb4s7iyQtMig7YkJgAUgpx",
+      "driveUrl": "https://drive.google.com/file/d/1XloXA1o2hKPb4s7iyQtMig7YkJgAUgpx/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1085549,
+      "localSize": 1085549,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2019__DOI_10_1007_s10712_019_09525_z__Concepts-and-Terminology-for-Sea-Level-Mean-Variability-and-Change-Both-Local-and-Global.pdf",
+      "sourceId": "DOI_10_1007_s10712_019_09525_z",
+      "driveFileId": "1ZYkQ8vdl7Z6CYw7bfwiD0XUCZrLZU7M-",
+      "driveUrl": "https://drive.google.com/file/d/1ZYkQ8vdl7Z6CYw7bfwiD0XUCZrLZU7M-/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1255331,
+      "localSize": 1255331,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2019__DOI_10_1017_jog_2019_66__Reanalysis-of-the-US-Geological-Survey-Benchmark-Glaciers-long-term-insight-into-climate-forcing-of-glacier-mass-balance.pdf",
+      "sourceId": "DOI_10_1017_jog_2019_66",
+      "driveFileId": "1427lRHUYoZKBLkZMPlrTgSUChlI5OoSp",
+      "driveUrl": "https://drive.google.com/file/d/1427lRHUYoZKBLkZMPlrTgSUChlI5OoSp/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1483913,
+      "localSize": 1483913,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2019__DOI_10_1038_s41467_018_08240_4__Permafrost-is-warming-at-a-global-scale.pdf",
+      "sourceId": "DOI_10_1038_s41467_018_08240_4",
+      "driveFileId": "1xv1zuYswzQrrRqBDKvMv0V_m20aoWc3f",
+      "driveUrl": "https://drive.google.com/file/d/1xv1zuYswzQrrRqBDKvMv0V_m20aoWc3f/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 6060543,
+      "localSize": 6060543,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2019__DOI_10_1038_s41586_019_1071_0__Global-glacier-mass-changes-and-their-contributions-to-sea-level-rise-from-1961-to-2016.pdf",
+      "sourceId": "DOI_10_1038_s41586_019_1071_0",
+      "driveFileId": "1rAGM9hOSpQb0BMu3SXT4XE0_TMkNfXGB",
+      "driveUrl": "https://drive.google.com/file/d/1rAGM9hOSpQb0BMu3SXT4XE0_TMkNfXGB/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 398817,
+      "localSize": 398817,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2019__DOI_10_1038_s41586_019_1855_2__Mass-balance-of-the-Greenland-Ice-Sheet-from-1992-to-2018.pdf",
+      "sourceId": "DOI_10_1038_s41586_019_1855_2",
+      "driveFileId": "16cKFcPbMwYCGEYu6ZUCozTgjmxCFfc9w",
+      "driveUrl": "https://drive.google.com/file/d/16cKFcPbMwYCGEYu6ZUCozTgjmxCFfc9w/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 11883689,
+      "localSize": 11883689,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2019__DOI_10_1073_pnas_1812883116__Four-decades-of-Antarctic-Ice-Sheet-mass-balance-from-1979-2017.pdf",
+      "sourceId": "DOI_10_1073_pnas_1812883116",
+      "driveFileId": "1ur1PMUCSDGSFey5BLn-3BAClUoyTfkOQ",
+      "driveUrl": "https://drive.google.com/file/d/1ur1PMUCSDGSFey5BLn-3BAClUoyTfkOQ/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 2522860,
+      "localSize": 2522860,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2019__DOI_10_1073_pnas_1904242116__Forty-six-years-of-Greenland-Ice-Sheet-mass-balance-from-1972-to-2018.pdf",
+      "sourceId": "DOI_10_1073_pnas_1904242116",
+      "driveFileId": "1ENSueycY9C02FX9CMklHnmeIwd6vW4DL",
+      "driveUrl": "https://drive.google.com/file/d/1ENSueycY9C02FX9CMklHnmeIwd6vW4DL/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 7998951,
+      "localSize": 7998951,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2019__DOI_10_1088_1748_9326_aaf52c__Assessing-uncertainties-in-sea-ice-extent-climate-indicators.pdf",
+      "sourceId": "DOI_10_1088_1748_9326_aaf52c",
+      "driveFileId": "1sEgXWDio_Iflmdc45qU5u6W-LfSr7DUw",
+      "driveUrl": "https://drive.google.com/file/d/1sEgXWDio_Iflmdc45qU5u6W-LfSr7DUw/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 2443661,
+      "localSize": 2443661,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2019__DOI_10_1175_jcli_d_18_0143_1__GSDR-A-Global-Sub-Daily-Rainfall-Dataset.pdf",
+      "sourceId": "DOI_10_1175_jcli_d_18_0143_1",
+      "driveFileId": "1lUO0Ni-Qk0G4u8rMtAxYmZHCrm9Zc_ko",
+      "driveUrl": "https://drive.google.com/file/d/1lUO0Ni-Qk0G4u8rMtAxYmZHCrm9Zc_ko/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 3050745,
+      "localSize": 3050745,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2019__DOI_10_5067_2xxgzy3dugnq__Quicklook-Arctic-Weekly-EASE-Grid-Sea-Ice-Age-Version-1.pdf",
+      "sourceId": "DOI_10_5067_2xxgzy3dugnq",
+      "driveFileId": "1-VJaVE7fpFd8FNBprVO14FpChHdqYTiP",
+      "driveUrl": "https://drive.google.com/file/d/1-VJaVE7fpFd8FNBprVO14FpChHdqYTiP/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 786357,
+      "localSize": 786357,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2019__DOI_10_5067_utav7490fepb__EASE-Grid-Sea-Ice-Age-Version-4.pdf",
+      "sourceId": "DOI_10_5067_utav7490fepb",
+      "driveFileId": "16EQg61dmClgIXEHc7BgHbfChZ1MgKxKs",
+      "driveUrl": "https://drive.google.com/file/d/16EQg61dmClgIXEHc7BgHbfChZ1MgKxKs/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1016507,
+      "localSize": 1016507,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2019__DOI_10_5194_essd_11_1189_2019__Uncertainty-in-satellite-estimates-of-global-mean-sea-level-changes-trend-and-acceleration.pdf",
+      "sourceId": "DOI_10_5194_essd_11_1189_2019",
+      "driveFileId": "1JjqsGCTGLMESDS37bW0DSYDQKfUS1-So",
+      "driveUrl": "https://drive.google.com/file/d/1JjqsGCTGLMESDS37bW0DSYDQKfUS1-So/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 992475,
+      "localSize": 992475,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2019__DOI_10_5194_tc_13_49_2019__Version-2-of-the-EUMETSAT-OSI-SAF-and-ESA-CCI-sea-ice-concentration-climate-data-records.pdf",
+      "sourceId": "DOI_10_5194_tc_13_49_2019",
+      "driveFileId": "10OCvqCRvptYy_mQKjEJRQDYHZ4hqaCJj",
+      "driveUrl": "https://drive.google.com/file/d/10OCvqCRvptYy_mQKjEJRQDYHZ4hqaCJj/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 4096720,
+      "localSize": 4096720,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2019__DOI_10_7265_jj4s_tq79__Gridded-Monthly-Sea-Ice-Extent-and-Concentration-1850-Onward-Version-2.pdf",
+      "sourceId": "DOI_10_7265_jj4s_tq79",
+      "driveFileId": "1dpcIZp84Lk3ZUL2G4VGufDauLqPDq3UH",
+      "driveUrl": "https://drive.google.com/file/d/1dpcIZp84Lk3ZUL2G4VGufDauLqPDq3UH/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 3478307,
+      "localSize": 3478307,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2020__DOI_10_1029_2019jd032263__Development-of-an-Updated-Global-Land-In-Situ-Based-Data-Set-of-Temperature-and-Precipitation-Extremes-HadEX3.pdf",
+      "sourceId": "DOI_10_1029_2019jd032263",
+      "driveFileId": "1eBadqunzgeI0VxNIeHz9h_g6nUC692_-",
+      "driveUrl": "https://drive.google.com/file/d/1eBadqunzgeI0VxNIeHz9h_g6nUC692_-/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1084496,
+      "localSize": 1084496,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2020__DOI_10_1038_s41586_020_2591_3__The-causes-of-sea-level-rise-since-1900.pdf",
+      "sourceId": "DOI_10_1038_s41586_020_2591_3",
+      "driveFileId": "1H7eI26G3th3e0h9_s3hviMnxmF_O4PQ7",
+      "driveUrl": "https://drive.google.com/file/d/1H7eI26G3th3e0h9_s3hviMnxmF_O4PQ7/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 14039725,
+      "localSize": 14039725,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2020__DOI_10_1038_s43247_020_0001_2__Dynamic-ice-loss-from-the-Greenland-Ice-Sheet-driven-by-sustained-glacier-retreat.pdf",
+      "sourceId": "DOI_10_1038_s43247_020_0001_2",
+      "driveFileId": "1z7kXGc9pYtxs1C9rT1Lhlwos4u_lNJnO",
+      "driveUrl": "https://drive.google.com/file/d/1z7kXGc9pYtxs1C9rT1Lhlwos4u_lNJnO/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1550845,
+      "localSize": 1550845,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2020__DOI_10_1111_gcb_15000__Climate-change-fingerprints-in-recent-European-plant-phenology.pdf",
+      "sourceId": "DOI_10_1111_gcb_15000",
+      "driveFileId": "13MXYOmR5ZcrL_Psybmp-1vnsPH-sg8EG",
+      "driveUrl": "https://drive.google.com/file/d/13MXYOmR5ZcrL_Psybmp-1vnsPH-sg8EG/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1652393,
+      "localSize": 1652393,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2020__DOI_10_1175_jcli_d_19_0998_1__Observed-Temperature-Changes-in-the-Troposphere-and-Stratosphere-from-1979-to-2018.pdf",
+      "sourceId": "DOI_10_1175_jcli_d_19_0998_1",
+      "driveFileId": "1F6tcwiva5l2urBGnl6gNPXZEAb8sXwhM",
+      "driveUrl": "https://drive.google.com/file/d/1F6tcwiva5l2urBGnl6gNPXZEAb8sXwhM/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 4412590,
+      "localSize": 4412590,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2020__DOI_10_5194_amt_13_3081_2020__Evaluation-of-the-15-year-ROM-SAF-monthly-mean-GPS-radio-occultation-climate-data-record.pdf",
+      "sourceId": "DOI_10_5194_amt_13_3081_2020",
+      "driveFileId": "1lg6A6hSv23nh06NQnaJjZW34SRqwi3YU",
+      "driveUrl": "https://drive.google.com/file/d/1lg6A6hSv23nh06NQnaJjZW34SRqwi3YU/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 12493822,
+      "localSize": 12493822,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2020__DOI_10_5194_essd_12_2853_2020__Development-of-the-HadISDH.marine-humidity-climate-monitoring-dataset.pdf",
+      "sourceId": "DOI_10_5194_essd_12_2853_2020",
+      "driveFileId": "1qzlhYHiNF13mGL0IZmGwem9_rn_3wsUR",
+      "driveUrl": "https://drive.google.com/file/d/1qzlhYHiNF13mGL0IZmGwem9_rn_3wsUR/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 7891143,
+      "localSize": 7891143,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2020__DOI_10_5194_essd_12_3469_2020__The-Berkeley-Earth-Land-Ocean-Temperature-Record.pdf",
+      "sourceId": "DOI_10_5194_essd_12_3469_2020",
+      "driveFileId": "1GKiBk7aj4d53BAUIJjHAfZxkyqeK5qCX",
+      "driveUrl": "https://drive.google.com/file/d/1GKiBk7aj4d53BAUIJjHAfZxkyqeK5qCX/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 3892422,
+      "localSize": 3892422,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2020__DOI_10_5194_tc_14_1519_2020__An-enhancement-to-sea-ice-motion-and-age-products-at-the-National-Snow-and-Ice-Data-Center-NSIDC.pdf",
+      "sourceId": "DOI_10_5194_tc_14_1519_2020",
+      "driveFileId": "1wggqQS1osDGx5NT74mUZpFpPVOJHd7xL",
+      "driveUrl": "https://drive.google.com/file/d/1wggqQS1osDGx5NT74mUZpFpPVOJHd7xL/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 5555424,
+      "localSize": 5555424,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2020__DOI_10_5194_tc_14_2495_2020__Historical-Northern-Hemisphere-snow-cover-trends-and-projected-changes-in-the-CMIP6-multi-model-ensemble.pdf",
+      "sourceId": "DOI_10_5194_tc_14_2495_2020",
+      "driveFileId": "19BHkyujaukxtq1CaYf_VvnAr33GZH-3T",
+      "driveUrl": "https://drive.google.com/file/d/19BHkyujaukxtq1CaYf_VvnAr33GZH-3T/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 6985260,
+      "localSize": 6985260,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2020__WEB_World_Glacier_Monitoring_Ser_WGMS_2020_6e490990__WGMS-2020.pdf",
+      "sourceId": "WEB_World_Glacier_Monitoring_Ser_WGMS_2020_6e490990",
+      "driveFileId": "1kY4kGBVUQfjI7I5-mADzm1eu58niM8Kz",
+      "driveUrl": "https://drive.google.com/file/d/1kY4kGBVUQfjI7I5-mADzm1eu58niM8Kz/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 4492902,
+      "localSize": 4492902,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2021__2021_BIPM_IPRT__Guide-to-Secondary-Thermometry-Industrial-Platinum-Resistance-Thermometers.pdf",
+      "sourceId": "2021_BIPM_IPRT",
+      "driveFileId": "1i5FLbOVIBN_H253jPsB5fwTopnCHJRkI",
+      "driveUrl": "https://drive.google.com/file/d/1i5FLbOVIBN_H253jPsB5fwTopnCHJRkI/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1176720,
+      "localSize": 1176720,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2021__2021_BIPM_SPRT__Guide-to-the-Realization-of-the-ITS-90-Platinum-Resistance-Thermometry.pdf",
+      "sourceId": "2021_BIPM_SPRT",
+      "driveFileId": "16WQJNZOD6kV7wnp3oERBn8SJzk0oky9T",
+      "driveUrl": "https://drive.google.com/file/d/16WQJNZOD6kV7wnp3oERBn8SJzk0oky9T/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1186535,
+      "localSize": 1186535,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2021__DOI_10_1007_s00484_021_02185_y__The-International-Phenological-Garden-network-1959-to-2021-its-131-gardens-cloned-study-species-data-archiving-and-future.pdf",
+      "sourceId": "DOI_10_1007_s00484_021_02185_y",
+      "driveFileId": "1fW2LQN_scGPvKC19nEukvEYCTP5lGeTK",
+      "driveUrl": "https://drive.google.com/file/d/1fW2LQN_scGPvKC19nEukvEYCTP5lGeTK/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1414859,
+      "localSize": 1414859,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2021__DOI_10_1029_2019jd032361__An-Updated-Assessment-of-Near-Surface-Temperature-Change-From-1850-The-HadCRUT5-Data-Set.pdf",
+      "sourceId": "DOI_10_1029_2019jd032361",
+      "driveFileId": "1nCL5zJi6K7963H5kOZ-twDqzJ6_KIS8-",
+      "driveUrl": "https://drive.google.com/file/d/1nCL5zJi6K7963H5kOZ-twDqzJ6_KIS8-/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 6238514,
+      "localSize": 6238514,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2021__DOI_10_1038_s41586_021_03436_z__Accelerated-global-glacier-mass-loss-in-the-early-twenty-first-century.pdf",
+      "sourceId": "DOI_10_1038_s41586_021_03436_z",
+      "driveFileId": "1t_mGaW4C_4azpY3cebD_-rabXwoizOxE",
+      "driveUrl": "https://drive.google.com/file/d/1t_mGaW4C_4azpY3cebD_-rabXwoizOxE/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 474222,
+      "localSize": 474222,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2021__DOI_10_5194_amt_14_3015_2021__Revision-of-the-World-Meteorological-Organization-Global-Atmosphere-Watch-WMO-GAW-CO2-calibration-scale.pdf",
+      "sourceId": "DOI_10_5194_amt_14_3015_2021",
+      "driveFileId": "1j31wUUhTofWcfWT1g2mPgdi7_l-OSvD3",
+      "driveUrl": "https://drive.google.com/file/d/1j31wUUhTofWcfWT1g2mPgdi7_l-OSvD3/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 5057732,
+      "localSize": 5057732,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2021__WEB_GitHub_GitHub_rhugonnet_ww_tvol_study_Process_global_sc_300ee76a__GitHub-rhugonnet-ww_tvol_study-Process-global-scale-satellite-and-airborne-elevation-data-into-time-seri.zip",
+      "sourceId": "WEB_GitHub_GitHub_rhugonnet_ww_tvol_study_Process_global_sc_300ee76a",
+      "driveFileId": "1XR4q8w3p4O57F82DHe9J2baYwLHT_mMd",
+      "driveUrl": "https://drive.google.com/file/d/1XR4q8w3p4O57F82DHe9J2baYwLHT_mMd/view?usp=drivesdk",
+      "mimeType": "application/zip",
+      "size": 26070303,
+      "localSize": 26070303,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2021__WEB_NASA_NASA_Scientific_Visualization_Studio_3D_Water_Va_cbd0352b__NASA-Scientific-Visualization-Studio-3D-Water-Vapor-shows-an-Atmospheric-River.mp4",
+      "sourceId": "WEB_NASA_NASA_Scientific_Visualization_Studio_3D_Water_Va_cbd0352b",
+      "driveFileId": "1BMih2VOdQmGlOjWKaGKzWcKg37xGSnkF",
+      "driveUrl": "https://drive.google.com/file/d/1BMih2VOdQmGlOjWKaGKzWcKg37xGSnkF/view?usp=drivesdk",
+      "mimeType": "video/mp4",
+      "size": 87004134,
+      "localSize": 87004134,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2021__WEB_NOAA_Radiosonde_Atmospheric_Temperature_Products_for_960a4f75__Radiosonde-Atmospheric-Temperature-Products-for-Assessing-Climate-RATPAC.txt",
+      "sourceId": "WEB_NOAA_Radiosonde_Atmospheric_Temperature_Products_for_960a4f75",
+      "driveFileId": "1RjD2pUxOQg3Xoc5hveYtEdS-QMF7FoqS",
+      "driveUrl": "https://drive.google.com/file/d/1RjD2pUxOQg3Xoc5hveYtEdS-QMF7FoqS/view?usp=drivesdk",
+      "mimeType": "text/plain",
+      "size": 5823,
+      "localSize": 5823,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2022__DOI_10_1002_ecm_1552__Temporal-shifts-in-avian-phenology-across-the-circannual-cycle-in-a-rapidly-changing-climate-A-global-meta-analysis.pdf",
+      "sourceId": "DOI_10_1002_ecm_1552",
+      "driveFileId": "1-3WzRh-96FtjuQoJqqkxPW2rSf9mPvFZ",
+      "driveUrl": "https://drive.google.com/file/d/1-3WzRh-96FtjuQoJqqkxPW2rSf9mPvFZ/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1128616,
+      "localSize": 1128616,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2022__DOI_10_1038_s41467_022_31432_y__Accelerated-western-European-heatwave-trends-linked-to-more-persistent-double-jets-over-Eurasia.pdf",
+      "sourceId": "DOI_10_1038_s41467_022_31432_y",
+      "driveFileId": "1YHoIL9dZtV2R5OnGiCQvIGy-5aV_jPgb",
+      "driveUrl": "https://drive.google.com/file/d/1YHoIL9dZtV2R5OnGiCQvIGy-5aV_jPgb/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 2978403,
+      "localSize": 2978403,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2022__DOI_10_1098_rspb_2021_2456__Plants-in-the-UK-flower-a-month-earlier-under-recent-warming.pdf",
+      "sourceId": "DOI_10_1098_rspb_2021_2456",
+      "driveFileId": "1OOIM40Dbkyl8hGKQjAR1YGmG5W6k3uOn",
+      "driveUrl": "https://drive.google.com/file/d/1OOIM40Dbkyl8hGKQjAR1YGmG5W6k3uOn/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1456653,
+      "localSize": 1456653,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2022__DOI_10_48670_moi_00277__Global-ocean-acidification-mean-sea-water-pH-trend-map-from-Multi-Observations-Reprocessing.pdf",
+      "sourceId": "DOI_10_48670_moi_00277",
+      "driveFileId": "1tM4f16-H35UF1ESVGurojhasCpEAB_Dm",
+      "driveUrl": "https://drive.google.com/file/d/1tM4f16-H35UF1ESVGurojhasCpEAB_Dm/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1187846,
+      "localSize": 1187846,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2022__DOI_10_5067_04yyikxw0gjs__ICESat-2-and-CryoSat-2-L4-Monthly-Arctic-Snow-Depth-and-Sea-Ice-Thickness-Version-1.pdf",
+      "sourceId": "DOI_10_5067_04yyikxw0gjs",
+      "driveFileId": "1F6VyvR3M0gq8yt7KGnxb-O8haXXhfb3S",
+      "driveUrl": "https://drive.google.com/file/d/1F6VyvR3M0gq8yt7KGnxb-O8haXXhfb3S/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 279671,
+      "localSize": 279671,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2022__DOI_10_5194_gmd_15_15_2022__PyCO2SYS-v1.8-marine-carbonate-system-calculations-in-Python.pdf",
+      "sourceId": "DOI_10_5194_gmd_15_15_2022",
+      "driveFileId": "19olTmsLOryY3oGlXqx5GIw9D3nBfJf6n",
+      "driveUrl": "https://drive.google.com/file/d/19olTmsLOryY3oGlXqx5GIw9D3nBfJf6n/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 2069063,
+      "localSize": 2069063,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2022__WEB_NOAA_Ocean_Carbon_and_Acidification_Data_System_OCADS_23d31f11__Ocean-Carbon-and-Acidification-Data-System-OCADS.xlsx",
+      "sourceId": "WEB_NOAA_Ocean_Carbon_and_Acidification_Data_System_OCADS_23d31f11",
+      "driveFileId": "1RpS0OQPs-87JXcYfXLjpxw5oTVsmbb8R",
+      "driveUrl": "https://docs.google.com/spreadsheets/d/1RpS0OQPs-87JXcYfXLjpxw5oTVsmbb8R/edit?usp=drivesdk&ouid=108224044250999653909&rtpof=true&sd=true",
+      "mimeType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": 15227,
+      "localSize": 15227,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2023__DOI_10_1002_lno_12477__Uncertainty-sources-for-measurable-ocean-carbonate-chemistry-variables.pdf",
+      "sourceId": "DOI_10_1002_lno_12477",
+      "driveFileId": "1_lrgEdQbBESFCcHkKth0xXJNGDZhmt4M",
+      "driveUrl": "https://drive.google.com/file/d/1_lrgEdQbBESFCcHkKth0xXJNGDZhmt4M/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1125833,
+      "localSize": 1125833,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2023__DOI_10_1029_2023gb007765__Four-Decades-of-Trends-and-Drivers-of-Global-Surface-Ocean-Acidification.pdf",
+      "sourceId": "DOI_10_1029_2023gb007765",
+      "driveFileId": "1m19Mt1SeOy9iJ4iSLcII6sgMDsV_JhBT",
+      "driveUrl": "https://drive.google.com/file/d/1m19Mt1SeOy9iJ4iSLcII6sgMDsV_JhBT/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 11792251,
+      "localSize": 11792251,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2023__DOI_10_1038_s41467_023_42143_3__Heat-extremes-in-Western-Europe-increasing-faster-than-simulated-due-to-atmospheric-circulation-trends.pdf",
+      "sourceId": "DOI_10_1038_s41467_023_42143_3",
+      "driveFileId": "11eJ7poWdVWsOpSOFrXwthDkoIbLj52fg",
+      "driveUrl": "https://drive.google.com/file/d/11eJ7poWdVWsOpSOFrXwthDkoIbLj52fg/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 2634807,
+      "localSize": 2634807,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2023__DOI_10_13155_97828__BGC-Argo-quality-control-manual-for-pH.pdf",
+      "sourceId": "DOI_10_13155_97828",
+      "driveFileId": "1Um5xsTlJ1YmhF6QCzgW64q9ZXDR8xHld",
+      "driveUrl": "https://drive.google.com/file/d/1Um5xsTlJ1YmhF6QCzgW64q9ZXDR8xHld/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 4613326,
+      "localSize": 4613326,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2023__DOI_10_15138_9n0h_zh07__Trends-in-globally-averaged-CO2-determined-from-NOAA-Global-Monitoring-Laboratory-measurements.pdf",
+      "sourceId": "DOI_10_15138_9n0h_zh07",
+      "driveFileId": "1eBlxe3QO2BOw1EP-fDvc-XpRdsJjNGwS",
+      "driveUrl": "https://drive.google.com/file/d/1eBlxe3QO2BOw1EP-fDvc-XpRdsJjNGwS/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 37265,
+      "localSize": 37265,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2023__DOI_10_3389_fmars_2023_1289931__Forty-years-of-ocean-acidification-observations-1983-2023-in-the-Sargasso-Sea-at-the-Bermuda-Atlantic-Time-series-Study-site.pdf",
+      "sourceId": "DOI_10_3389_fmars_2023_1289931",
+      "driveFileId": "1Y7Mh0TUWOCJcvRQLPjy7EBpdV3cVYvgz",
+      "driveUrl": "https://drive.google.com/file/d/1Y7Mh0TUWOCJcvRQLPjy7EBpdV3cVYvgz/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 31120795,
+      "localSize": 31120795,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2023__DOI_10_5194_essd_15_1597_2023__Mass-balance-of-the-Greenland-and-Antarctic-ice-sheets-from-1992-to-2020.pdf",
+      "sourceId": "DOI_10_5194_essd_15_1597_2023",
+      "driveFileId": "1nFqGGXs5sM81G15fWm8ISPEwFjhz6LTq",
+      "driveUrl": "https://drive.google.com/file/d/1nFqGGXs5sM81G15fWm8ISPEwFjhz6LTq/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 3574079,
+      "localSize": 3574079,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2023__DOI_10_5194_os_19_431_2023__Current-observed-global-mean-sea-level-rise-and-acceleration-estimated-from-satellite-altimetry-and-the-associated-measurement-uncertainty.pdf",
+      "sourceId": "DOI_10_5194_os_19_431_2023",
+      "driveFileId": "1sOBMWRAGo2IbwjeTTlTaFVduHX4SP2JY",
+      "driveUrl": "https://drive.google.com/file/d/1sOBMWRAGo2IbwjeTTlTaFVduHX4SP2JY/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 5318316,
+      "localSize": 5318316,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2023__WEB_NASA_Algorithm_Theoretical_Basis_Document_79780237__Algorithm-Theoretical-Basis-Document.pdf",
+      "sourceId": "WEB_NASA_Algorithm_Theoretical_Basis_Document_79780237",
+      "driveFileId": "1WzqXrNwaVpYmttpVdPIBUXIh7amnB5ZS",
+      "driveUrl": "https://drive.google.com/file/d/1WzqXrNwaVpYmttpVdPIBUXIh7amnB5ZS/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 3532839,
+      "localSize": 3532839,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2024__DOI_10_1029_2023ea003279__Observed-Global-Changes-in-Sector-Relevant-Climate-Extremes-Indices-An-Extension-to-HadEX3.pdf",
+      "sourceId": "DOI_10_1029_2023ea003279",
+      "driveFileId": "1tO9Yef7l9bppsX-RjJwFJKJEzMdXGMXj",
+      "driveUrl": "https://drive.google.com/file/d/1tO9Yef7l9bppsX-RjJwFJKJEzMdXGMXj/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 2982729,
+      "localSize": 2982729,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2024__DOI_10_1029_2024gl111229__Refined-Estimates-of-Global-Ocean-Deep-and-Abyssal-Decadal-Warming-Trends.pdf",
+      "sourceId": "DOI_10_1029_2024gl111229",
+      "driveFileId": "1nBRiW5ghJ2g4yhsirE-TDfZ-TiGeAny6",
+      "driveUrl": "https://drive.google.com/file/d/1nBRiW5ghJ2g4yhsirE-TDfZ-TiGeAny6/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 2233898,
+      "localSize": 2233898,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2024__DOI_10_25921_tn91_wv50__NOAA-Climate-Data-Record-CDR-of-Mean-Layer-Temperature-NOAA-Version-5.gz",
+      "sourceId": "DOI_10_25921_tn91_wv50",
+      "driveFileId": "1LOrt5ai2DgPR-4RbYHP3ZzDU9fc3SWGD",
+      "driveUrl": "https://drive.google.com/file/d/1LOrt5ai2DgPR-4RbYHP3ZzDU9fc3SWGD/view?usp=drivesdk",
+      "mimeType": "application/x-gzip",
+      "size": 71820,
+      "localSize": 71820,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2024__DOI_10_25923_z885_h264__World-Ocean-Database-2023.pdf",
+      "sourceId": "DOI_10_25923_z885_h264",
+      "driveFileId": "1g_v9NNO_QfWsXTdsnovJ7xk67WbvYStl",
+      "driveUrl": "https://drive.google.com/file/d/1g_v9NNO_QfWsXTdsnovJ7xk67WbvYStl/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 12098307,
+      "localSize": 12098307,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2024__DOI_10_5067_viirs_vnp22q2_002__VIIRS-NPP-Land-Surface-Phenology-Yearly-L3-Global-500m-SIN-Grid-V002.pdf",
+      "sourceId": "DOI_10_5067_viirs_vnp22q2_002",
+      "driveFileId": "1lEgZz9XzLXMnEBUBy2Zh3E3qIvNJQKNL",
+      "driveUrl": "https://drive.google.com/file/d/1lEgZz9XzLXMnEBUBy2Zh3E3qIvNJQKNL/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 76766,
+      "localSize": 76766,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2024__DOI_10_5194_acp_24_12925_2024__Upper-stratospheric-temperature-trends-new-results-from-the-Optical-Spectrograph-and-InfraRed-Imager-System-OSIRIS.pdf",
+      "sourceId": "DOI_10_5194_acp_24_12925_2024",
+      "driveFileId": "1W6q7v0Ir6XtgU6yrtatPGiU-KIEZfhV2",
+      "driveUrl": "https://drive.google.com/file/d/1W6q7v0Ir6XtgU6yrtatPGiU-KIEZfhV2/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 7768772,
+      "localSize": 7768772,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2024__DOI_10_5194_bg_21_5561_2024__Ocean-acidification-trends-and-carbonate-system-dynamics-across-the-North-Atlantic-subpolar-gyre-water-masses-during-2009-2019.pdf",
+      "sourceId": "DOI_10_5194_bg_21_5561_2024",
+      "driveFileId": "1XV4tRquf-YoTXDA_kfR3v7JicA-f1qTd",
+      "driveUrl": "https://drive.google.com/file/d/1XV4tRquf-YoTXDA_kfR3v7JicA-f1qTd/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 7346907,
+      "localSize": 7346907,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2024__DOI_10_5194_essd_16_121_2024__CMEMS-LSCE-a-global-0.25-monthly-reconstruction-of-the-surface-ocean-carbonate-system.pdf",
+      "sourceId": "DOI_10_5194_essd_16_121_2024",
+      "driveFileId": "1vrX4mk5k4YoErair5PIJwYAYpE1PMYGQ",
+      "driveUrl": "https://drive.google.com/file/d/1vrX4mk5k4YoErair5PIJwYAYpE1PMYGQ/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 16381333,
+      "localSize": 16381333,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2024__DOI_10_5194_essd_16_3517_2024__IAPv4-ocean-temperature-and-ocean-heat-content-gridded-dataset.pdf",
+      "sourceId": "DOI_10_5194_essd_16_3517_2024",
+      "driveFileId": "1ptUFU0jskHDTL7POwSAa6cUYDF-WKYV0",
+      "driveUrl": "https://drive.google.com/file/d/1ptUFU0jskHDTL7POwSAa6cUYDF-WKYV0/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 21392556,
+      "localSize": 21392556,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2024__DOI_10_5194_os_20_725_2024__Anthropogenic-CO2-air-sea-CO2-fluxes-and-acidification-in-the-Southern-Ocean-results-from-a-time-series-analysis-at-station-OISO-KERFIX-51-S-68-E.pdf",
+      "sourceId": "DOI_10_5194_os_20_725_2024",
+      "driveFileId": "1M8MlV_ApqalFyO-j5UEFvTpRIPo-x3yR",
+      "driveUrl": "https://drive.google.com/file/d/1M8MlV_ApqalFyO-j5UEFvTpRIPo-x3yR/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 2660960,
+      "localSize": 2660960,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2024__DOI_10_5194_tc_18_2473_2024__Estimating-the-uncertainty-of-sea-ice-area-and-sea-ice-extent-from-satellite-retrievals.pdf",
+      "sourceId": "DOI_10_5194_tc_18_2473_2024",
+      "driveFileId": "15HZ_7earimJakDlkCCzavEuY_VOYr7n_",
+      "driveUrl": "https://drive.google.com/file/d/15HZ_7earimJakDlkCCzavEuY_VOYr7n_/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 5180759,
+      "localSize": 5180759,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2024__DOI_10_5285_9d9bfc488ec54b1297eca2c9662f9c81__ESA-Snow-Climate-Change-Initiative-Snow_cci-Snow-Water-Equivalent-SWE-level-3C-daily-global-climate-research-data-package-CRDP-1.pdf",
+      "sourceId": "DOI_10_5285_9d9bfc488ec54b1297eca2c9662f9c81",
+      "driveFileId": "1MbPNydEZdhXYPtCuzLiUB9_wSZzEHCrV",
+      "driveUrl": "https://drive.google.com/file/d/1MbPNydEZdhXYPtCuzLiUB9_wSZzEHCrV/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 412179,
+      "localSize": 412179,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2024__WEB_NOAA_State_of_the_Climate_in_2024_tabulka_2_8_4784f00d__State-of-the-Climate-in-2024-tabulka-2.8.pdf",
+      "sourceId": "WEB_NOAA_State_of_the_Climate_in_2024_tabulka_2_8_4784f00d",
+      "driveFileId": "1UGTAduBG83by7-3sA4L-s6DXjkAMDb_-",
+      "driveUrl": "https://drive.google.com/file/d/1UGTAduBG83by7-3sA4L-s6DXjkAMDb_-/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 44832945,
+      "localSize": 44832945,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2024__WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125__WMO-2024.pdf",
+      "sourceId": "WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125",
+      "driveFileId": "1NxqSbtZFNGvJUjXht4PzW3iPaa3Ren84",
+      "driveUrl": "https://drive.google.com/file/d/1NxqSbtZFNGvJUjXht4PzW3iPaa3Ren84/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 51154764,
+      "localSize": 51154764,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2025__2025_USCRN_Blue_Hill__USCRN-Daily01-MA-Blue-Hill-0-W-denni-data-za-rok-2025.txt",
+      "sourceId": "2025_USCRN_Blue_Hill",
+      "driveFileId": "1MANFaiQ9zKvszDCZYsT06mheMkqOUdlM",
+      "driveUrl": "https://drive.google.com/file/d/1MANFaiQ9zKvszDCZYsT06mheMkqOUdlM/view?usp=drivesdk",
+      "mimeType": "text/plain",
+      "size": 79205,
+      "localSize": 79205,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2025__DOI_10_1175_bams_d_25_0104_1__The-Arctic.pdf",
+      "sourceId": "DOI_10_1175_bams_d_25_0104_1",
+      "driveFileId": "17TiYmpARdVB16Jml15BdIM7WVE--vf5u",
+      "driveUrl": "https://drive.google.com/file/d/17TiYmpARdVB16Jml15BdIM7WVE--vf5u/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 14455395,
+      "localSize": 14455395,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2025__DOI_10_25923_cfhv_c239__NOAA-Arctic-Report-Card-2025-Terrestrial-Snow-Cover.pdf",
+      "sourceId": "DOI_10_25923_cfhv_c239",
+      "driveFileId": "15W_8AI8u4T-oPLLLewHyLTpFD1jvDTWP",
+      "driveUrl": "https://drive.google.com/file/d/15W_8AI8u4T-oPLLLewHyLTpFD1jvDTWP/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 4249915,
+      "localSize": 4249915,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2025__DOI_10_25923_mmxf_0r86__NOAA-Arctic-Report-Card-2025-Sea-Ice.pdf",
+      "sourceId": "DOI_10_25923_mmxf_0r86",
+      "driveFileId": "1XexAfXRynr2Zek_Kpd3W3xjwTSNSni5k",
+      "driveUrl": "https://drive.google.com/file/d/1XexAfXRynr2Zek_Kpd3W3xjwTSNSni5k/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 5271164,
+      "localSize": 5271164,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2025__DOI_10_26008_1912_bco_dmo_3782_8__Discrete-bottle-samples-collected-at-the-Bermuda-Atlantic-Time-series-Study-BATS-site-in-the-Sargasso-Sea-from-October-1988-through-December.pdf",
+      "sourceId": "DOI_10_26008_1912_bco_dmo_3782_8",
+      "driveFileId": "1jFsENUfgonPtddmBEz2XGt7eBWaunzPz",
+      "driveUrl": "https://drive.google.com/file/d/1jFsENUfgonPtddmBEz2XGt7eBWaunzPz/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 111534,
+      "localSize": 111534,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2025__DOI_10_3334_ornldaac_2364__PhenoCam-Dataset-v3.0-Digital-Camera-Imagery-from-the-PhenoCam-Network-2000-2023.pdf",
+      "sourceId": "DOI_10_3334_ornldaac_2364",
+      "driveFileId": "1ek0Fo894AkhTOMjwhqbUJkynvFjiDhZm",
+      "driveUrl": "https://drive.google.com/file/d/1ek0Fo894AkhTOMjwhqbUJkynvFjiDhZm/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 512593,
+      "localSize": 512593,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2025__DOI_10_3334_ornldaac_2389__PhenoCam-Dataset-v3.0-Vegetation-Phenology-from-Digital-Camera-Imagery-2000-2023.pdf",
+      "sourceId": "DOI_10_3334_ornldaac_2389",
+      "driveFileId": "1Pv7mPAMmjYizicYtPJ8RS45YcRJbAaRk",
+      "driveUrl": "https://drive.google.com/file/d/1Pv7mPAMmjYizicYtPJ8RS45YcRJbAaRk/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 633873,
+      "localSize": 633873,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2025__DOI_10_5067_txdhdj1jt0cg__ICESat-2-L4-Monthly-Gridded-Sea-Ice-Thickness-Version-4.pdf",
+      "sourceId": "DOI_10_5067_txdhdj1jt0cg",
+      "driveFileId": "1HrFR0xjd_QVz4-ZDGlBF4zD7D6lDB1bf",
+      "driveUrl": "https://drive.google.com/file/d/1HrFR0xjd_QVz4-ZDGlBF4zD7D6lDB1bf/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 849590,
+      "localSize": 849590,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2025__DOI_10_5194_essd_17_1977_2025__Annual-mass-change-of-the-world-s-glaciers-from-1976-to-2024-by-temporal-downscaling-of-satellite-data-with-in-situ-observations.pdf",
+      "sourceId": "DOI_10_5194_essd_17_1977_2025",
+      "driveFileId": "1wVpkjUuGGjV3qwuFPpKHTY1q51SJtJ1z",
+      "driveUrl": "https://drive.google.com/file/d/1wVpkjUuGGjV3qwuFPpKHTY1q51SJtJ1z/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 12458999,
+      "localSize": 12458999,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2025__DOI_10_5194_essd_17_6531_2025__Tracking-vegetation-phenology-across-diverse-biomes-using-Version-3.0-of-the-PhenoCam-Dataset.pdf",
+      "sourceId": "DOI_10_5194_essd_17_6531_2025",
+      "driveFileId": "1uRErX80hT4-lyS-zt2tdFrYZqT6ma6bo",
+      "driveUrl": "https://drive.google.com/file/d/1uRErX80hT4-lyS-zt2tdFrYZqT6ma6bo/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 13535787,
+      "localSize": 13535787,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2025__DOI_10_5194_essd_17_719_2025__A-global-monthly-3D-field-of-seawater-pH-over-3-decades-a-machine-learning-approach.pdf",
+      "sourceId": "DOI_10_5194_essd_17_719_2025",
+      "driveFileId": "1r-9SSBTvR5QhKgRX-6qqqulIE-VMD7on",
+      "driveUrl": "https://drive.google.com/file/d/1r-9SSBTvR5QhKgRX-6qqqulIE-VMD7on/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 3020202,
+      "localSize": 3020202,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2025__DOI_10_5285_5675b0be944f45a8af0e7ddbeb47a011__ESA-Permafrost-Climate-Change-Initiative-Permafrost_cci-Permafrost-Ground-Temperature-for-the-Northern-Hemisphere-v5.0.pdf",
+      "sourceId": "DOI_10_5285_5675b0be944f45a8af0e7ddbeb47a011",
+      "driveFileId": "1NETWcsiV_k4oe-9RtDdUhCgVhcYJNmOG",
+      "driveUrl": "https://drive.google.com/file/d/1NETWcsiV_k4oe-9RtDdUhCgVhcYJNmOG/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 411777,
+      "localSize": 411777,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2025__DOI_10_5285_a6fbedd8ee5b472c8e84e55f746c1704__ESA-Permafrost-Climate-Change-Initiative-Permafrost_cci-Permafrost-active-layer-thickness-for-the-Northern-Hemisphere-v5.0.pdf",
+      "sourceId": "DOI_10_5285_a6fbedd8ee5b472c8e84e55f746c1704",
+      "driveFileId": "1HeHVfMKIS755fq8mp2d1kAy-DPIek-Qa",
+      "driveUrl": "https://drive.google.com/file/d/1HeHVfMKIS755fq8mp2d1kAy-DPIek-Qa/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 411777,
+      "localSize": 411777,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2025__DOI_10_5285_d235665772ec4b558e9a89ac85595e71__ESA-Permafrost-Climate-Change-Initiative-Permafrost_cci-Permafrost-extent-for-the-Northern-Hemisphere-v5.0.pdf",
+      "sourceId": "DOI_10_5285_d235665772ec4b558e9a89ac85595e71",
+      "driveFileId": "15EZAsXbu2fXXPrf9dML9bxJXl-hq_8un",
+      "driveUrl": "https://drive.google.com/file/d/15EZAsXbu2fXXPrf9dML9bxJXl-hq_8un/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 411777,
+      "localSize": 411777,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2025__DOI_10_7265_a98x_0f50__Sea-Ice-Index-Version-4.pdf",
+      "sourceId": "DOI_10_7265_a98x_0f50",
+      "driveFileId": "1K5fUXpd8fC-I3DI5SM8pr-00lQ_5saxe",
+      "driveUrl": "https://drive.google.com/file/d/1K5fUXpd8fC-I3DI5SM8pr-00lQ_5saxe/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 2010615,
+      "localSize": 2010615,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2025__WEB_Copernicus_globalni_data_CSV_e4635f0c__globalni-data-CSV.csv",
+      "sourceId": "WEB_Copernicus_globalni_data_CSV_e4635f0c",
+      "driveFileId": "1HK9P8jYOCYA8f9OBRCchWmgKC_YlwitO",
+      "driveUrl": "https://drive.google.com/file/d/1HK9P8jYOCYA8f9OBRCchWmgKC_YlwitO/view?usp=drivesdk",
+      "mimeType": "text/csv",
+      "size": 867329,
+      "localSize": 867329,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2025__WEB_Copernicus_regionalni_data_NetCDF_a6fb7ddf__regionalni-data-NetCDF.nc",
+      "sourceId": "WEB_Copernicus_regionalni_data_NetCDF_a6fb7ddf",
+      "driveFileId": "19KuJCuJkqBYlTntojk9i6bBJCaO8sBCA",
+      "driveUrl": "https://drive.google.com/file/d/19KuJCuJkqBYlTntojk9i6bBJCaO8sBCA/view?usp=drivesdk",
+      "mimeType": "application/x-netcdf",
+      "size": 20763537,
+      "localSize": 20763537,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2025__WEB_NASA_NASA_Scientific_Visualization_Studio_Arctic_Sea_8c5c7d01__NASA-Scientific-Visualization-Studio-Arctic-Sea-Ice-Minimum-2025.jpg",
+      "sourceId": "WEB_NASA_NASA_Scientific_Visualization_Studio_Arctic_Sea_8c5c7d01",
+      "driveFileId": "1NRs3uiLrvuDi4hBZaKC0gyDiwtEhUyWe",
+      "driveUrl": "https://drive.google.com/file/d/1NRs3uiLrvuDi4hBZaKC0gyDiwtEhUyWe/view?usp=drivesdk",
+      "mimeType": "image/jpeg",
+      "size": 150794,
+      "localSize": 150794,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2026__2026_SeaBird_SBE41__SBE-41-41CP-Deep-Argo-CTD-Technical-Specifications.pdf",
+      "sourceId": "2026_SeaBird_SBE41",
+      "driveFileId": "1nXWDG5gObUJB7QuTQ2tsS-IoxfJWh7t1",
+      "driveUrl": "https://drive.google.com/file/d/1nXWDG5gObUJB7QuTQ2tsS-IoxfJWh7t1/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 185689,
+      "localSize": 185689,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2026__2026_USCRN_Daily01_Readme__USCRN-Daily01-Description-of-Data-Fields.txt",
+      "sourceId": "2026_USCRN_Daily01_Readme",
+      "driveFileId": "1Eb-8hsbdnRcChP55qd1MtmbmCx98ZRiq",
+      "driveUrl": "https://drive.google.com/file/d/1Eb-8hsbdnRcChP55qd1MtmbmCx98ZRiq/view?usp=drivesdk",
+      "mimeType": "text/plain",
+      "size": 20377,
+      "localSize": 20377,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2026__DOI_10_1038_s41598_026_43863_4__A-systematic-bias-in-float-pH-leads-to-overestimation-of-derived-pCO2-and-underestimation-of-carbon-uptake-by-the-Southern-Ocean.pdf",
+      "sourceId": "DOI_10_1038_s41598_026_43863_4",
+      "driveFileId": "1l8nkWNYlotcItnqsdn60UUq1OOhxXIUj",
+      "driveUrl": "https://drive.google.com/file/d/1l8nkWNYlotcItnqsdn60UUq1OOhxXIUj/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 3312050,
+      "localSize": 3312050,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2026__DOI_10_5194_essd_18_1405_2026__Synthesis-of-data-products-for-ocean-carbonate-chemistry.pdf",
+      "sourceId": "DOI_10_5194_essd_18_1405_2026",
+      "driveFileId": "1oBiDK80D5A-V9mqU66EvsLPYUfTl3lEb",
+      "driveUrl": "https://drive.google.com/file/d/1oBiDK80D5A-V9mqU66EvsLPYUfTl3lEb/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1606816,
+      "localSize": 1606816,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2026__DOI_10_5194_essd_18_1729_2026__Elevation-change-of-the-Greenland-Ice-Sheet-and-its-peripheral-glaciers-1992-2023.pdf",
+      "sourceId": "DOI_10_5194_essd_18_1729_2026",
+      "driveFileId": "1SlxQPSG0Egg6a42UJx1OpCcxXXgVFrUN",
+      "driveUrl": "https://drive.google.com/file/d/1SlxQPSG0Egg6a42UJx1OpCcxXXgVFrUN/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 7613677,
+      "localSize": 7613677,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2026__DOI_10_5194_tc_20_3783_2026__Uncertainty-of-the-satellite-retrieved-sea-ice-area-record-and-its-trend.pdf",
+      "sourceId": "DOI_10_5194_tc_20_3783_2026",
+      "driveFileId": "14QOEN5uuwh8xi1HxCPu4HPBDlnuPrK7T",
+      "driveUrl": "https://drive.google.com/file/d/14QOEN5uuwh8xi1HxCPu4HPBDlnuPrK7T/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 3756413,
+      "localSize": 3756413,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2026__WEB_Copernicus_Graphics_Gallery_Copernicus_4a265eb8__Graphics-Gallery-Copernicus.pdf",
+      "sourceId": "WEB_Copernicus_Graphics_Gallery_Copernicus_4a265eb8",
+      "driveFileId": "1dEpIE6xuh-X_6IC8BrpFUSvf73HoICTl",
+      "driveUrl": "https://drive.google.com/file/d/1dEpIE6xuh-X_6IC8BrpFUSvf73HoICTl/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1181312,
+      "localSize": 1181312,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2026__WEB_Copernicus_Licence_to_use_Copernicus_Products_rev_12_4244ad0f__Licence-to-use-Copernicus-Products-rev.-12.pdf",
+      "sourceId": "WEB_Copernicus_Licence_to_use_Copernicus_Products_rev_12_4244ad0f",
+      "driveFileId": "12dIljFA3DPjsVp3QpwWpi4NXnqD1XLUO",
+      "driveUrl": "https://drive.google.com/file/d/12dIljFA3DPjsVp3QpwWpi4NXnqD1XLUO/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 166903,
+      "localSize": 166903,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2026__WEB_GitHub_GitHub_fmidev_GlobSnow3_0_1859ddbe__GitHub-fmidev-GlobSnow3.0.zip",
+      "sourceId": "WEB_GitHub_GitHub_fmidev_GlobSnow3_0_1859ddbe",
+      "driveFileId": "1BoAbz7kfnDjIjvKkUsbUX931-4DAuYKt",
+      "driveUrl": "https://drive.google.com/file/d/1BoAbz7kfnDjIjvKkUsbUX931-4DAuYKt/view?usp=drivesdk",
+      "mimeType": "application/zip",
+      "size": 8549,
+      "localSize": 8549,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2026__WEB_GitHub_GitHub_thomasfrederikse_sealevelbudget_20c_4d484230__GitHub-thomasfrederikse-sealevelbudget_20c.zip",
+      "sourceId": "WEB_GitHub_GitHub_thomasfrederikse_sealevelbudget_20c_4d484230",
+      "driveFileId": "1LnFhHi2C22CTho65NvI5MkjlFyf-UpiU",
+      "driveUrl": "https://drive.google.com/file/d/1LnFhHi2C22CTho65NvI5MkjlFyf-UpiU/view?usp=drivesdk",
+      "mimeType": "application/zip",
+      "size": 439915,
+      "localSize": 439915,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2026__WEB_Met_Office_uzivatelska_prirucka_HadEX3_6eb86927__uzivatelska-prirucka-HadEX3.pdf",
+      "sourceId": "WEB_Met_Office_uzivatelska_prirucka_HadEX3_6eb86927",
+      "driveFileId": "1hEWdvrhTVbcGjm5wdDaCJ84mFs0SGqfK",
+      "driveUrl": "https://drive.google.com/file/d/1hEWdvrhTVbcGjm5wdDaCJ84mFs0SGqfK/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1307650,
+      "localSize": 1307650,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2026__WEB_NASA_Data_GISS_GISS_Surface_Temperature_Analysis_GIST_4f73fdd3__Data.GISS-GISS-Surface-Temperature-Analysis-GISTEMP-v4-Data-Downloads.gz",
+      "sourceId": "WEB_NASA_Data_GISS_GISS_Surface_Temperature_Analysis_GIST_4f73fdd3",
+      "driveFileId": "1ou2vb00K6-D8id64VTh169MQB_Udqfnv",
+      "driveUrl": "https://drive.google.com/file/d/1ou2vb00K6-D8id64VTh169MQB_Udqfnv/view?usp=drivesdk",
+      "mimeType": "application/x-gzip",
+      "size": 11474455,
+      "localSize": 11474455,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2026__WEB_National_Snow_and_Ice_Data_C_uzivatelske_prirucce_Sea_Ice_Index_v4_48d7d043__uzivatelske-prirucce-Sea-Ice-Index-v4.pdf",
+      "sourceId": "WEB_National_Snow_and_Ice_Data_C_uzivatelske_prirucce_Sea_Ice_Index_v4_48d7d043",
+      "driveFileId": "19hm34UFfjHMfqcn68UH4A-S5NdIVRpdA",
+      "driveUrl": "https://drive.google.com/file/d/19hm34UFfjHMfqcn68UH4A-S5NdIVRpdA/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 2010615,
+      "localSize": 2010615,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2026__WEB_NOAA_ClimateDashboard_atmospheric_carbon_dioxide_imag_5eb9863d__ClimateDashboard-atmospheric-carbon-dioxide-image-paleo-20250428-1400px.png.png",
+      "sourceId": "WEB_NOAA_ClimateDashboard_atmospheric_carbon_dioxide_imag_5eb9863d",
+      "driveFileId": "1NDMh7prb67Sodt1Ksw4UK8NjfLocwMuI",
+      "driveUrl": "https://drive.google.com/file/d/1NDMh7prb67Sodt1Ksw4UK8NjfLocwMuI/view?usp=drivesdk",
+      "mimeType": "image/png",
+      "size": 97537,
+      "localSize": 97537,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2026__WEB_NOAA_NASA_NOAA_prehled_druzic_a566a73a__NASA-NOAA-prehled-druzic.pdf",
+      "sourceId": "WEB_NOAA_NASA_NOAA_prehled_druzic_a566a73a",
+      "driveFileId": "1NsNVQat5L8QEkUu_O2PvZDOOaVyEW_RR",
+      "driveUrl": "https://drive.google.com/file/d/1NsNVQat5L8QEkUu_O2PvZDOOaVyEW_RR/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1498822,
+      "localSize": 1498822,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2026__WEB_scrippsco2_ucsd_edu_Mauna_Loa_Observatory_Hawaii_Scripps_CO2_4d2260fe__Mauna-Loa-Observatory-Hawaii-Scripps-CO2.zip",
+      "sourceId": "WEB_scrippsco2_ucsd_edu_Mauna_Loa_Observatory_Hawaii_Scripps_CO2_4d2260fe",
+      "driveFileId": "1tpc4iv_7OivnGooangazJDcSYrC84Uro",
+      "driveUrl": "https://drive.google.com/file/d/1tpc4iv_7OivnGooangazJDcSYrC84Uro/view?usp=drivesdk",
+      "mimeType": "application/zip",
+      "size": 4171757,
+      "localSize": 4171757,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2026__WEB_U_S_Geological_Survey_Grinnell_Glacier_Pair_248d244b__Grinnell-Glacier-Pair.jpg",
+      "sourceId": "WEB_U_S_Geological_Survey_Grinnell_Glacier_Pair_248d244b",
+      "driveFileId": "1Y0nf2ymw57sT2eFRt7byn6SOuXc8EsJM",
+      "driveUrl": "https://drive.google.com/file/d/1Y0nf2ymw57sT2eFRt7byn6SOuXc8EsJM/view?usp=drivesdk",
+      "mimeType": "image/jpeg",
+      "size": 236283,
+      "localSize": 236283,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/primary/2026__WEB_U_S_Geological_Survey_Prirucka_MCD12Q2_v6_1_dbceb14f__Prirucka-MCD12Q2-v6.1.pdf",
+      "sourceId": "WEB_U_S_Geological_Survey_Prirucka_MCD12Q2_v6_1_dbceb14f",
+      "driveFileId": "18b_ahtQc4WPuyd5lXL35ahiZXOojXVJ7",
+      "driveUrl": "https://drive.google.com/file/d/18b_ahtQc4WPuyd5lXL35ahiZXOojXVJ7/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 558236,
+      "localSize": 558236,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2000__2000_Argo__Zahajeni-programu-Argo.pdf",
+      "sourceId": "2000_Argo",
+      "driveFileId": "1qpVCoR693XfyfUdZmHiBkqnRpMayxp1T",
+      "driveUrl": "https://drive.google.com/file/d/1qpVCoR693XfyfUdZmHiBkqnRpMayxp1T/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 2715713,
+      "localSize": 2715713,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2020__WEB_NOAA_Precipitation_GPCP_Monthly_CDR_9894ca66__Precipitation-GPCP-Monthly-CDR.pdf",
+      "sourceId": "WEB_NOAA_Precipitation_GPCP_Monthly_CDR_9894ca66",
+      "driveFileId": "1Jmx8rPiU2XvdDbaDtBKZl3HbkpoWB6a5",
+      "driveUrl": "https://drive.google.com/file/d/1Jmx8rPiU2XvdDbaDtBKZl3HbkpoWB6a5/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 764154,
+      "localSize": 764154,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2020__WEB_NOAA_Snow_Cover_Extent_Northern_Hemisphere_CDR_85362472__Snow-Cover-Extent-Northern-Hemisphere-CDR.pdf",
+      "sourceId": "WEB_NOAA_Snow_Cover_Extent_Northern_Hemisphere_CDR_85362472",
+      "driveFileId": "1_5ekFttIJz8bHTCIprkOTd7OaaspfCYU",
+      "driveUrl": "https://drive.google.com/file/d/1_5ekFttIJz8bHTCIprkOTd7OaaspfCYU/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 2012875,
+      "localSize": 2012875,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2020__WEB_NOAA_World_Ocean_Database_3d4b1d70__World-Ocean-Database.pdf",
+      "sourceId": "WEB_NOAA_World_Ocean_Database_3d4b1d70",
+      "driveFileId": "1RWPuPUPvgcmGYfFqwRIhBnznC8F_i_9M",
+      "driveUrl": "https://drive.google.com/file/d/1RWPuPUPvgcmGYfFqwRIhBnznC8F_i_9M/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 12098307,
+      "localSize": 12098307,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2021__WEB_NOAA_Global_Historical_Climatology_Network_daily_GHCN_14491e06__Global-Historical-Climatology-Network-daily-GHCNd.pdf",
+      "sourceId": "WEB_NOAA_Global_Historical_Climatology_Network_daily_GHCN_14491e06",
+      "driveFileId": "1etAQ_-vambYIRMJfzPfPJHjq_DutzWl3",
+      "driveUrl": "https://drive.google.com/file/d/1etAQ_-vambYIRMJfzPfPJHjq_DutzWl3/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 104748,
+      "localSize": 104748,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2021__WEB_NOAA_Global_Ocean_Heat_Content_CDR_f355b1a3__Global-Ocean-Heat-Content-CDR.pdf",
+      "sourceId": "WEB_NOAA_Global_Ocean_Heat_Content_CDR_f355b1a3",
+      "driveFileId": "1sMBXHsf3X1X6CRJFxaMmINmsnGEuPAnc",
+      "driveUrl": "https://drive.google.com/file/d/1sMBXHsf3X1X6CRJFxaMmINmsnGEuPAnc/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1084673,
+      "localSize": 1084673,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2021__WEB_NOAA_Integrated_Global_Radiosonde_Archive_IGRA_ab0ea6c1__Integrated-Global-Radiosonde-Archive-IGRA.pdf",
+      "sourceId": "WEB_NOAA_Integrated_Global_Radiosonde_Archive_IGRA_ab0ea6c1",
+      "driveFileId": "1WqH9WQRA6uK2SxMtND4ra7Am27h8ALbO",
+      "driveUrl": "https://drive.google.com/file/d/1WqH9WQRA6uK2SxMtND4ra7Am27h8ALbO/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 634165,
+      "localSize": 634165,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2021__WEB_NOAA_International_Comprehensive_Ocean_Atmosphere_Dat_9d4f6713__International-Comprehensive-Ocean-Atmosphere-Data-Set-ICOADS.pdf",
+      "sourceId": "WEB_NOAA_International_Comprehensive_Ocean_Atmosphere_Dat_9d4f6713",
+      "driveFileId": "1KZkseKXdUN7efb0X4DbSuFkaY-4YN3so",
+      "driveUrl": "https://drive.google.com/file/d/1KZkseKXdUN7efb0X4DbSuFkaY-4YN3so/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1611834,
+      "localSize": 1611834,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2021__WEB_NOAA_Mean_Layer_Temperature_NOAA_CDR_743b717d__Mean-Layer-Temperature-NOAA-CDR.pdf",
+      "sourceId": "WEB_NOAA_Mean_Layer_Temperature_NOAA_CDR_743b717d",
+      "driveFileId": "18g_Nr2ErFcKqS-B_M9f0JSHiv6NGVurR",
+      "driveUrl": "https://drive.google.com/file/d/18g_Nr2ErFcKqS-B_M9f0JSHiv6NGVurR/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1301475,
+      "localSize": 1301475,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2022__WEB_nist_gov_Tuning_into_Weather_Forecasting_NIST_be922613__Tuning-into-Weather-Forecasting-NIST.pdf",
+      "sourceId": "WEB_nist_gov_Tuning_into_Weather_Forecasting_NIST_be922613",
+      "driveFileId": "1D6QAD6M5WWYnVwDin80IbciCBjv-dVAK",
+      "driveUrl": "https://drive.google.com/file/d/1D6QAD6M5WWYnVwDin80IbciCBjv-dVAK/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 32522291,
+      "localSize": 32522291,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2025__WEB_content_drupal_climate_gov_Climate_Change_Ocean_Heat_Content_a227e082__Climate-Change-Ocean-Heat-Content.csv",
+      "sourceId": "WEB_content_drupal_climate_gov_Climate_Change_Ocean_Heat_Content_a227e082",
+      "driveFileId": "1KckJ-_peoHfKDX8nam8pJGwbSvgDcjOd",
+      "driveUrl": "https://drive.google.com/file/d/1KckJ-_peoHfKDX8nam8pJGwbSvgDcjOd/view?usp=drivesdk",
+      "mimeType": "text/csv",
+      "size": 4822,
+      "localSize": 4822,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2025__WEB_Copernicus_Sea_ice_cover_for_September_2025_Copernicus_88c9834a__Sea-ice-cover-for-September-2025-Copernicus.pdf",
+      "sourceId": "WEB_Copernicus_Sea_ice_cover_for_September_2025_Copernicus_88c9834a",
+      "driveFileId": "1DkiGLm7FPBOXBnJ7Lb4jWnxyJMCMnOU4",
+      "driveUrl": "https://drive.google.com/file/d/1DkiGLm7FPBOXBnJ7Lb4jWnxyJMCMnOU4/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 283430,
+      "localSize": 283430,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2025__WEB_NASA_Sentinel_6B_Extends_Global_Ocean_Height_Record_N_4996a256__Sentinel-6B-Extends-Global-Ocean-Height-Record-NASA-Science.pdf",
+      "sourceId": "WEB_NASA_Sentinel_6B_Extends_Global_Ocean_Height_Record_N_4996a256",
+      "driveFileId": "1pIKmXJbuWGSoBLXUsMPSslWvQD3UJ3PE",
+      "driveUrl": "https://drive.google.com/file/d/1pIKmXJbuWGSoBLXUsMPSslWvQD3UJ3PE/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 2588963,
+      "localSize": 2588963,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2026__WEB_berkeleyearth_org_Data_Overview_Berkeley_Earth_b889a1aa__Data-Overview-Berkeley-Earth.pdf",
+      "sourceId": "WEB_berkeleyearth_org_Data_Overview_Berkeley_Earth_b889a1aa",
+      "driveFileId": "1nez6caSWCZmACjsL8BUMFoI2B3sWMpU8",
+      "driveUrl": "https://drive.google.com/file/d/1nez6caSWCZmACjsL8BUMFoI2B3sWMpU8/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 4372792,
+      "localSize": 4372792,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2026__WEB_Copernicus_Glaciers_Copernicus_5ae74590__Glaciers-Copernicus.pdf",
+      "sourceId": "WEB_Copernicus_Glaciers_Copernicus_5ae74590",
+      "driveFileId": "1AnOvAuNt7oFuomp65K9yJ8-Lpw3oUBX4",
+      "driveUrl": "https://drive.google.com/file/d/1AnOvAuNt7oFuomp65K9yJ8-Lpw3oUBX4/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 481767,
+      "localSize": 481767,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2026__WEB_Copernicus_Sea_ice_cover_for_March_2026_Copernicus_f75f3111__Sea-ice-cover-for-March-2026-Copernicus.pdf",
+      "sourceId": "WEB_Copernicus_Sea_ice_cover_for_March_2026_Copernicus_f75f3111",
+      "driveFileId": "12EaoalGsvo0l1-M1R8Od-uQo8PzT_NVI",
+      "driveUrl": "https://drive.google.com/file/d/12EaoalGsvo0l1-M1R8Od-uQo8PzT_NVI/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 483634,
+      "localSize": 483634,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2026__WEB_Copernicus_Sea_level_Copernicus_b943a537__Sea-level-Copernicus.pdf",
+      "sourceId": "WEB_Copernicus_Sea_level_Copernicus_b943a537",
+      "driveFileId": "1xqLs9ctIRqYIh5yyyLz775oHc1BJl4kD",
+      "driveUrl": "https://drive.google.com/file/d/1xqLs9ctIRqYIh5yyyLz775oHc1BJl4kD/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 751305,
+      "localSize": 751305,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2026__WEB_data_jma_go_jp_Japan_Meteorological_Agency_Global_ocean_heat_co_b8363b79__Japan-Meteorological-Agency-Global-ocean-heat-content.txt",
+      "sourceId": "WEB_data_jma_go_jp_Japan_Meteorological_Agency_Global_ocean_heat_co_b8363b79",
+      "driveFileId": "1m5VHyq3gbPlQji2SZIl9RYUjohqDSmz3",
+      "driveUrl": "https://drive.google.com/file/d/1m5VHyq3gbPlQji2SZIl9RYUjohqDSmz3/view?usp=drivesdk",
+      "mimeType": "text/plain",
+      "size": 4147,
+      "localSize": 4147,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2026__WEB_Deutscher_Wetterdienst_Wetter_und_Klima_Deutscher_Wetterdienst_Our_serv_386bcd1f__Wetter-und-Klima-Deutscher-Wetterdienst-Our-services-Global-Precipitation-Climatology-Ce.pdf",
+      "sourceId": "WEB_Deutscher_Wetterdienst_Wetter_und_Klima_Deutscher_Wetterdienst_Our_serv_386bcd1f",
+      "driveFileId": "1Qo_W7UNM92jFPNNk86QSKiy6fdCsAQqv",
+      "driveUrl": "https://drive.google.com/file/d/1Qo_W7UNM92jFPNNk86QSKiy6fdCsAQqv/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 880113,
+      "localSize": 880113,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2026__WEB_imbie_org_imbie_org_e2c3f887__imbie.org.xlsx",
+      "sourceId": "WEB_imbie_org_imbie_org_e2c3f887",
+      "driveFileId": "1jS-OngR4VIAl1adxOh6KF06_vWki5ZoQ",
+      "driveUrl": "https://docs.google.com/spreadsheets/d/1jS-OngR4VIAl1adxOh6KF06_vWki5ZoQ/edit?usp=drivesdk&ouid=108224044250999653909&rtpof=true&sd=true",
+      "mimeType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": 105120,
+      "localSize": 105120,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2026__WEB_NASA_Happy_30th_Anniversary_to_TOPEX_Poseidon_Ocean_S_16a22cc4__Happy-30th-Anniversary-to-TOPEX-Poseidon-Ocean-Surface-Topography-from-Space.pdf",
+      "sourceId": "WEB_NASA_Happy_30th_Anniversary_to_TOPEX_Poseidon_Ocean_S_16a22cc4",
+      "driveFileId": "1bMs_sHyNOPtg9BlDsc__i-boMNY4qIVz",
+      "driveUrl": "https://drive.google.com/file/d/1bMs_sHyNOPtg9BlDsc__i-boMNY4qIVz/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 6475059,
+      "localSize": 6475059,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2026__WEB_NASA_IMERG_Integrated_Multi_satellitE_Retrievals_for_6df632f1__IMERG-Integrated-Multi-satellitE-Retrievals-for-GPM-NASA-Global-Precipitation-Measurement-Mission.pdf",
+      "sourceId": "WEB_NASA_IMERG_Integrated_Multi_satellitE_Retrievals_for_6df632f1",
+      "driveFileId": "1_YQ8daqWQ-C7Pl5-UxeCaTBrCF9__at3",
+      "driveUrl": "https://drive.google.com/file/d/1_YQ8daqWQ-C7Pl5-UxeCaTBrCF9__at3/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 2079111,
+      "localSize": 2079111,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2026__WEB_NASA_Precipitation_Data_Directory_NASA_Global_Precipi_b0971da5__Precipitation-Data-Directory-NASA-Global-Precipitation-Measurement-Mission.gz",
+      "sourceId": "WEB_NASA_Precipitation_Data_Directory_NASA_Global_Precipi_b0971da5",
+      "driveFileId": "1JqgvEtuloOe_PZxt8kaj7oKpBda8XIz9",
+      "driveUrl": "https://drive.google.com/file/d/1JqgvEtuloOe_PZxt8kaj7oKpBda8XIz9/view?usp=drivesdk",
+      "mimeType": "application/x-gzip",
+      "size": 4842227,
+      "localSize": 4842227,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2026__WEB_National_Snow_and_Ice_Data_C_IMS_Daily_Northern_Hemisphere_Snow_and_Ice_Analy_254b6e7e__IMS-Daily-Northern-Hemisphere-Snow-and-Ice-Analysis-at-1-km-4-km-and-24-km-Resolut.pdf",
+      "sourceId": "WEB_National_Snow_and_Ice_Data_C_IMS_Daily_Northern_Hemisphere_Snow_and_Ice_Analy_254b6e7e",
+      "driveFileId": "1Yoj6rHTH5_XDMYJPM_1sxn5ae2nl2Eat",
+      "driveUrl": "https://drive.google.com/file/d/1Yoj6rHTH5_XDMYJPM_1sxn5ae2nl2Eat/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 384597,
+      "localSize": 384597,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2026__WEB_naturescalendar_woodlandtrus_Nature_s_Calendar_b68eee94__Nature-s-Calendar.pdf",
+      "sourceId": "WEB_naturescalendar_woodlandtrus_Nature_s_Calendar_b68eee94",
+      "driveFileId": "11IjkziocLPjqdBKeYbz5rGQJoxLwIvKJ",
+      "driveUrl": "https://drive.google.com/file/d/11IjkziocLPjqdBKeYbz5rGQJoxLwIvKJ/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 81253,
+      "localSize": 81253,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2026__WEB_NOAA_NOAA_s_National_Ocean_Service_About_Us_4ba21b52__NOAA-s-National-Ocean-Service-About-Us.pdf",
+      "sourceId": "WEB_NOAA_NOAA_s_National_Ocean_Service_About_Us_4ba21b52",
+      "driveFileId": "1PuXrL-C0Xo0IonnZ4dVn3J7H0NHb2E46",
+      "driveUrl": "https://drive.google.com/file/d/1PuXrL-C0Xo0IonnZ4dVn3J7H0NHb2E46/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 2409138,
+      "localSize": 2409138,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2026__WEB_NOAA_NOAA_WDS_Paleoclimatology_Antarctic_Ice_Cores_Re_1183d28b__NOAA-WDS-Paleoclimatology-Antarctic-Ice-Cores-Revised-800KYr-CO2-Data.txt",
+      "sourceId": "WEB_NOAA_NOAA_WDS_Paleoclimatology_Antarctic_Ice_Cores_Re_1183d28b",
+      "driveFileId": "1LZapLvQ6aNfFteT8LP476v9MJRW0eX6p",
+      "driveUrl": "https://drive.google.com/file/d/1LZapLvQ6aNfFteT8LP476v9MJRW0eX6p/view?usp=drivesdk",
+      "mimeType": "text/plain",
+      "size": 49865,
+      "localSize": 49865,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2026__WEB_NOAA_Trends_in_CO2_NOAA_Global_Monitoring_Laboratory_8f52d95b__Trends-in-CO2-NOAA-Global-Monitoring-Laboratory.csv",
+      "sourceId": "WEB_NOAA_Trends_in_CO2_NOAA_Global_Monitoring_Laboratory_8f52d95b",
+      "driveFileId": "1j9VYTuNDj3ov8hwCVxPG5J1rS4uyok6a",
+      "driveUrl": "https://drive.google.com/file/d/1j9VYTuNDj3ov8hwCVxPG5J1rS4uyok6a/view?usp=drivesdk",
+      "mimeType": "text/csv",
+      "size": 38644,
+      "localSize": 38644,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2026__WEB_NOAA_Trends_in_CO2_NOAA_Global_Monitoring_Laboratory_f1c52261__Trends-in-CO2-NOAA-Global-Monitoring-Laboratory.pdf",
+      "sourceId": "WEB_NOAA_Trends_in_CO2_NOAA_Global_Monitoring_Laboratory_f1c52261",
+      "driveFileId": "1yVQQ16WnUKQx6gBC8TJ8oCT0vy5HkrEj",
+      "driveUrl": "https://drive.google.com/file/d/1yVQQ16WnUKQx6gBC8TJ8oCT0vy5HkrEj/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 75313,
+      "localSize": 75313,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2026__WEB_NOAA_Trends_in_CO2_NOAA_Global_Monitoring_Laboratory_ff9ec92f__Trends-in-CO2-NOAA-Global-Monitoring-Laboratory.csv",
+      "sourceId": "WEB_NOAA_Trends_in_CO2_NOAA_Global_Monitoring_Laboratory_ff9ec92f",
+      "driveFileId": "1P5i0oNNbIGiK-G66sKKeFIuV4-Wvan3n",
+      "driveUrl": "https://drive.google.com/file/d/1P5i0oNNbIGiK-G66sKKeFIuV4-Wvan3n/view?usp=drivesdk",
+      "mimeType": "text/csv",
+      "size": 24643,
+      "localSize": 24643,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2026__WEB_pep725_eu_Dataset_PEP725_5a0c6dbb__Dataset-PEP725.zip",
+      "sourceId": "WEB_pep725_eu_Dataset_PEP725_5a0c6dbb",
+      "driveFileId": "1YYhW27RItkaEbFnNav-nnGyZBkY4-2rT",
+      "driveUrl": "https://drive.google.com/file/d/1YYhW27RItkaEbFnNav-nnGyZBkY4-2rT/view?usp=drivesdk",
+      "mimeType": "application/zip",
+      "size": 65285,
+      "localSize": 65285,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2026__WEB_phenocam_nau_edu_PhenoCam_Explorer_V3_173fd14b__PhenoCam-Explorer-V3.pdf",
+      "sourceId": "WEB_phenocam_nau_edu_PhenoCam_Explorer_V3_173fd14b",
+      "driveFileId": "15QhGQeTxrRrw6B8JTwBl3fQW5jc-0w_x",
+      "driveUrl": "https://drive.google.com/file/d/15QhGQeTxrRrw6B8JTwBl3fQW5jc-0w_x/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1339091,
+      "localSize": 1339091,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2026__WEB_psc_apl_uw_edu_Polar_Science_Center_raquo_PIOMAS_Data_dbaf6399__Polar-Science-Center-raquo-PIOMAS-Data.gz",
+      "sourceId": "WEB_psc_apl_uw_edu_Polar_Science_Center_raquo_PIOMAS_Data_dbaf6399",
+      "driveFileId": "12TFvRKGLzTTDG0zgyS0FxEjQpspz98tr",
+      "driveUrl": "https://drive.google.com/file/d/12TFvRKGLzTTDG0zgyS0FxEjQpspz98tr/view?usp=drivesdk",
+      "mimeType": "application/x-gzip",
+      "size": 86328,
+      "localSize": 86328,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2026__WEB_Remote_Sensing_Systems_Remote_Sensing_Systems_25160e34__Remote-Sensing-Systems.pdf",
+      "sourceId": "WEB_Remote_Sensing_Systems_Remote_Sensing_Systems_25160e34",
+      "driveFileId": "1ador3tfDfLdUG8jB_vpymWKm0cpJ-E4l",
+      "driveUrl": "https://drive.google.com/file/d/1ador3tfDfLdUG8jB_vpymWKm0cpJ-E4l/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 2628816,
+      "localSize": 2628816,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2026__WEB_Remote_Sensing_Systems_Remote_Sensing_Systems_e8e6fee6__Remote-Sensing-Systems.pdf",
+      "sourceId": "WEB_Remote_Sensing_Systems_Remote_Sensing_Systems_e8e6fee6",
+      "driveFileId": "1uYwp3-0kHilqD3ADi-fwvUizNpbSHNOc",
+      "driveUrl": "https://drive.google.com/file/d/1uYwp3-0kHilqD3ADi-fwvUizNpbSHNOc/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1099410,
+      "localSize": 1099410,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    },
+    {
+      "localPath": "source-archive/related/2026__WEB_World_Meteorological_Organiz_State_of_the_Global_Climate_2025_53cbb3f3__State-of-the-Global-Climate-2025.pdf",
+      "sourceId": "WEB_World_Meteorological_Organiz_State_of_the_Global_Climate_2025_53cbb3f3",
+      "driveFileId": "1bc6S7Vt7tF12CdOJ2RaHQnWu2zhK-B_L",
+      "driveUrl": "https://drive.google.com/file/d/1bc6S7Vt7tF12CdOJ2RaHQnWu2zhK-B_L/view?usp=drivesdk",
+      "mimeType": "application/pdf",
+      "size": 1324091,
+      "localSize": 1324091,
+      "sizeMatches": true,
+      "publicAccess": {
+        "anyoneWithLink": true,
+        "shared": true,
+        "visibilityStatus": "permission_metadata_available",
+        "permissionType": "anyone",
+        "role": "reader",
+        "allowFileDiscovery": false,
+        "verifiedVia": "Google Drive individual file metadata"
+      }
+    }
+  ],
+  "unmatchedLocal": [],
+  "unmatchedDrive": [],
+  "ignoredLocal": [
+    {
+      "localPath": "source-archive/primary/2026__DOI_10_5067_icfvi7dkhzjv__MEaSUREs-ITS_LIVE-Greenland-Ice-Sheet-Elevation-and-Mass-Change-Version-1.nc",
+      "sourceId": "DOI_10_5067_icfvi7dkhzjv",
+      "size": 1853161765,
+      "reason": "Intentionally excluded Greenland NetCDF (about 1.77 GiB)."
+    },
+    {
+      "localPath": "source-archive/related/1987__WEB_NASA_Arctic_Sea_ice_1973_1976_Satellite_passive_micro_d558d4bf__Arctic-Sea-ice-1973-1976-Satellite-passive-microwave-observations.pdf",
+      "sourceId": "WEB_NASA_Arctic_Sea_ice_1973_1976_Satellite_passive_micro_d558d4bf",
+      "size": 414518263,
+      "reason": "Known not uploaded Arctic Sea Ice PDF (414,518,263 bytes)."
+    }
+  ]
+}

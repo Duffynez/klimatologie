@@ -9,9 +9,10 @@ const sourceCatalogueText = (await Promise.all([
 ])).join("\n");
 
 test("keeps the source library, categories, and its download model in the site", async () => {
-  const [sources, articleSources, sourceCard, sourceLibrary, sourcePage, styles] = await Promise.all([
+  const [sources, articleSources, sourceArchive, sourceCard, sourceLibrary, sourcePage, styles] = await Promise.all([
     readFile(new URL("app/data/sources.ts", root), "utf8"),
     readFile(new URL("app/data/articleSources.ts", root), "utf8"),
+    readFile(new URL("app/data/sourceArchive.ts", root), "utf8"),
     readFile(new URL("app/components/SourceCard.tsx", root), "utf8"),
     readFile(new URL("app/components/SourceLibrary.tsx", root), "utf8"),
     readFile(new URL("app/zdroje/page.tsx", root), "utf8"),
@@ -24,12 +25,19 @@ test("keeps the source library, categories, and its download model in the site",
   assert.ok((articleSources.match(/^  \{ id:/gm) ?? []).length >= 496);
   assert.doesNotMatch(articleSources, /author: "doi\.org"|<\/?(?:sub|sup|i)>|�/);
   assert.match(sources, /drive\.google\.com\/uc\?export=download/);
+  assert.equal((sourceArchive.match(/"driveFileId":/g) ?? []).length, 228);
+  assert.match(sourceArchive, /"relation": "source-copy"/);
+  assert.match(sourceArchive, /"relation": "related-material"/);
+  assert.match(sources, /sourceArchiveFiles/);
+  assert.match(sources, /archiveRelation/);
   assert.match(sources, /SourceCategory/);
   assert.match(sources, /"science" \| "book" \| "politics" \| "organization"/);
   assert.doesNotMatch(sources, /"media"|Média a kultura/);
   assert.match(sourceCard, /source-card--\$\{source\.category\}/);
   assert.match(sourceCard, /source-card__body/);
   assert.match(sourceCard, /Google Drive/);
+  assert.match(sourceCard, /Otevřít související soubor/);
+  assert.match(sourceCard, /Stáhnout související soubor/);
   assert.match(sourceLibrary, /^"use client"/);
   assert.match(sourceLibrary, /Typ zdroje/);
   assert.match(sourceLibrary, /Všechna období/);

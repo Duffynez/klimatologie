@@ -1,4 +1,5 @@
 import { articleSources } from "./articleSources";
+import { sourceArchiveFiles } from "./sourceArchive";
 
 export type SourceCategory = "science" | "book" | "politics" | "organization";
 
@@ -18,12 +19,13 @@ export type Source = {
   category: SourceCategory;
   type: string;
   driveFileId?: string;
+  archiveRelation?: "source-copy" | "related-material";
   externalUrl?: string;
   citationLabel?: string;
   topics: string[];
 };
 
-export const sources: Source[] = [
+const sourceRecords: Source[] = [
   { id: "1681_Mariotte", title: "De la nature des couleurs (O povaze barev)", author: "Edme Mariotte", year: 1681, publication: "Paris", type: "Kniha", category: "book", driveFileId: "1hFTtUv6uDwtnOAyuGCC2vQjN6OgjEx8S", topics: ["historie", "záření"] },
   { id: "1767_Saussure", title: "Voyages dans les Alpes (Cesty po Alpách)", author: "Horace-Bénédict de Saussure", year: 1767, publication: "Neuchâtel", type: "Kniha", category: "book", driveFileId: "1WaJkNLg7jPsZ3it7opQ1LobD7AzOy8AV", topics: ["historie", "záření"] },
   { id: "1801_Herschel", title: "Experiments on the Refrangibility of the Invisible Rays of the Sun", author: "William Herschel", year: 1800, publication: "Philosophical Transactions of the Royal Society", type: "Studie", category: "science", driveFileId: "17-KtOmjoq0FuBnixuXs4qhBsmTrJoSqw", topics: ["historie", "záření"] },
@@ -70,6 +72,17 @@ export const sources: Source[] = [
   ...articleSources,
 ];
 
+export const sources: Source[] = sourceRecords.map((source) => {
+  const archiveFile = sourceArchiveFiles[source.id as keyof typeof sourceArchiveFiles];
+  if (!archiveFile) return source;
+
+  return {
+    ...source,
+    driveFileId: archiveFile.driveFileId,
+    archiveRelation: archiveFile.relation,
+  };
+});
+
 export const sourceById = (id: string) => sources.find((source) => source.id === id);
 
 export const sourceViewUrl = (source: Source) => {
@@ -80,3 +93,6 @@ export const sourceViewUrl = (source: Source) => {
 
 export const sourceDownloadUrl = (source: Source) =>
   source.driveFileId ? `https://drive.google.com/uc?export=download&id=${source.driveFileId}` : null;
+
+export const sourceDriveUrl = (source: Source) =>
+  source.driveFileId ? `https://drive.google.com/file/d/${source.driveFileId}/view` : null;
