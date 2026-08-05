@@ -2,7 +2,7 @@ import type { Source } from "./sources";
 
 // Sources cited by published article components.
 // Stable IDs are referenced from SourceLink components; do not rename them after publication.
-export const articleSources: Source[] = [
+const rawArticleSources: Source[] = [
   { id: "WEB_Permanent_Service_for_Mean_S_PSMSL_amsterdamska_mereni_od_roku_1682_a5054f03", title: "PSMSL: amsterdamská měření od roku 1682", author: "Permanent Service for Mean Sea Level", year: 1682, publication: "Permanent Service for Mean Sea Level", type: "Datový portál nebo soubor", category: "organization", externalUrl: "https://psmsl.org/data/longrecords/ancill_rep.htm", citationLabel: "PSMSL: amsterdamská měření od roku 1682", topics: ["pozorování","hladina moře","oceán"] },
   { id: "WEB_db_huntbot_org_Original_Linnaean_Dissertations_Hunt_Institute_f_b8827d4c", title: "Original Linnaean Dissertations | Hunt Institute for Botanical Documentation", author: "Hunt Institute for Botanical Documentation", year: 1756, publication: "Hunt Institute for Botanical Documentation", type: "Metodická dokumentace", category: "organization", externalUrl: "https://db.huntbot.org/linndiss/72/", citationLabel: "Berger a Linnaeus, 1756: Calendarium Florae, původní tisk a PDF", topics: ["pozorování","fenologie","živá příroda"] },
   { id: "WEB_Google_Books_Essais_sur_l_hygrometrie_1er_Essai_Description_d_bb9f5517", title: "Essais sur l'hygrométrie", author: "Horace-Bénédict de Saussure", year: 1783, publication: "Google Books, digitalizovaný původní svazek", type: "Kniha", category: "book", externalUrl: "https://books.google.com/books?id=Zmkfb8I-kVEC", citationLabel: "de Saussure 1783", topics: ["pozorování","vlhkost","atmosféra"] },
@@ -20,7 +20,6 @@ export const articleSources: Source[] = [
   { id: "DOI_10_3402_tellusa_v10i2_9231", title: "On the Amount of Carbon Dioxide in the Atmosphere", author: "G. S. Callendar", year: 1958, publication: "Tellus A: Dynamic Meteorology and Oceanography", type: "Studie", category: "science", externalUrl: "https://doi.org/10.3402/tellusa.v10i2.9231", citationLabel: "Callendar 1958", topics: ["pozorování","oxid uhličitý","atmosféra"] },
   { id: "DOI_10_1111_j_2153_3490_1960_tb01300_x", title: "The Concentration and Isotopic Abundances of Carbon Dioxide in the Atmosphere", author: "Charles D. Keeling", year: 1960, publication: "Tellus", type: "Studie", category: "science", externalUrl: "https://doi.org/10.1111/j.2153-3490.1960.tb01300.x", citationLabel: "Keeling 1960", topics: ["pozorování","oxid uhličitý","atmosféra"] },
   { id: "DOI_10_1126_sciadv_1601545", title: "Improved estimates of ocean heat content from 1960 to 2015", author: "Lijing Cheng a kol.", year: 2017, publication: "Science Advances", type: "Studie", category: "science", externalUrl: "https://doi.org/10.1126/sciadv.1601545", citationLabel: "Cheng et al. 2017", topics: ["pozorování","obsah tepla v oceánu","oceán"] },
-  { id: "DOI_10_1002_qj_49708737102", title: "Temperature fluctuations and trends over the earth", author: "G. S. Callendar", year: 1961, publication: "Quarterly Journal of the Royal Meteorological Society", type: "Studie", category: "science", externalUrl: "https://doi.org/10.1002/qj.49708737102", citationLabel: "Callendar 1961", topics: ["pozorování","globální teplota","atmosféra"] },
   { id: "DOI_10_3189_s002214300002757x", title: "Mass Balance Studies in Kebnekajse", author: "Valter Schytt", year: 1962, publication: "Journal of Glaciology", type: "Studie", category: "science", externalUrl: "https://doi.org/10.3189/S002214300002757X", citationLabel: "Schytt 1962", topics: ["pozorování","horské ledovce","kryosféra"] },
   { id: "DOI_10_1061_jrcea4_0000523", title: "Development of Rain Gages", author: "Asit K. Biswas", year: 1967, publication: "Journal of the Irrigation and Drainage Division", type: "Studie", category: "science", externalUrl: "https://doi.org/10.1061/JRCEA4.0000523", citationLabel: "Biswas 1967", topics: ["pozorování","srážky","extrémy"] },
   { id: "DOI_10_1029_jc075i036p07648", title: "A carbonate chemistry profile at the 1969 Geosecs Intercalibration Station in the eastern Pacific Ocean", author: "Taro Takahashi a kol.", year: 1970, publication: "Journal of Geophysical Research", type: "Studie", category: "science", externalUrl: "https://doi.org/10.1029/JC075i036p07648", citationLabel: "Takahashi et al. 1970", topics: ["pozorování","acidifikace oceánu","oceán"] },
@@ -33,7 +32,6 @@ export const articleSources: Source[] = [
   { id: "DOI_10_1029_jd089id04p05355", title: "Determination of sea ice parameters with the NIMBUS 7 SMMR", author: "D. J. Cavalieri a kol.", year: 1984, publication: "Journal of Geophysical Research: Atmospheres", type: "Studie", category: "science", externalUrl: "https://doi.org/10.1029/JD089iD04p05355", citationLabel: "Cavalieri et al. 1984", topics: ["pozorování","arktický mořský led","kryosféra"] },
   { id: "DOI_10_1016_0016_7037_84_90225_4", title: "pH scales and proton-transfer reactions in saline media such as sea water", author: "A.G Dickson", year: 1984, publication: "Geochimica et Cosmochimica Acta", type: "Studie", category: "science", externalUrl: "https://doi.org/10.1016/0016-7037(84)90225-4", citationLabel: "Dickson 1984", topics: ["pozorování","acidifikace oceánu","oceán"] },
   { id: "DOI_10_1016_0304_4203_85_90028_3", title: "Coulometric TCO₂ Analyses for Marine Studies: An Introduction", author: "Kenneth M. Johnson, A. E. King a J. McN. Sieburth", year: 1985, publication: "Marine Chemistry", type: "Studie", category: "science", externalUrl: "https://doi.org/10.1016/0304-4203(85)90028-3", citationLabel: "Johnson et al. 1985", topics: ["pozorování","acidifikace oceánu","oceán"] },
-  { id: "DOI_10_1038_322430a0", title: "Global temperature variations between 1861 and 1984", author: "P. D. Jones a kol.", year: 1986, publication: "Nature", type: "Studie", category: "science", externalUrl: "https://doi.org/10.1038/322430a0", citationLabel: "Jones et al. 1986", topics: ["pozorování","globální teplota","atmosféra"] },
   { id: "DOI_10_3402_tellusb_v38i2_15083", title: "Reassessment of late 19th century atmospheric carbon dioxide variations in the air of western Europe and the British Isles based on an unpublished analysis of contemporary air masses by G. S. Callendar", author: "Eric From a Charles D. Keeling", year: 1986, publication: "Tellus B: Chemical and Physical Meteorology", type: "Studie", category: "science", externalUrl: "https://doi.org/10.3402/tellusb.v38i2.15083", citationLabel: "From & Keeling 1986", topics: ["pozorování","oxid uhličitý","atmosféra"] },
   { id: "WEB_NASA_Arctic_Sea_ice_1973_1976_Satellite_passive_micro_d558d4bf", title: "Arctic Sea ice, 1973-1976: Satellite passive-microwave observations", author: "Parkinson, Claire L.", year: 1987, publication: "NASA", type: "Institucionální zdroj", category: "organization", externalUrl: "https://ntrs.nasa.gov/citations/19870015437", citationLabel: "Arctic Sea Ice, 1973–1976", topics: ["pozorování","arktický mořský led","kryosféra"] },
   { id: "DOI_10_1029_jd092id11p13345", title: "Global trends of measured surface air temperature", author: "James Hansen a Sergej Lebedeff", year: 1987, publication: "Journal of Geophysical Research: Atmospheres", type: "Studie", category: "science", externalUrl: "https://doi.org/10.1029/JD092iD11p13345", citationLabel: "Hansen & Lebedeff 1987", topics: ["pozorování","globální teplota","atmosféra"] },
@@ -45,7 +43,6 @@ export const articleSources: Source[] = [
   { id: "WEB_Copernicus_Sea_level_gridded_data_from_satellite_observatio_0b1348c4", title: "Sea level gridded data from satellite observations for the global ocean from 1993 to present", author: "Copernicus", year: 1993, publication: "Copernicus", type: "Datový portál nebo soubor", category: "organization", externalUrl: "https://cds.climate.copernicus.eu/datasets/satellite-sea-level-global", citationLabel: "Copernicus: globální družicové mapy hladiny", topics: ["pozorování","hladina moře","oceán"] },
   { id: "DOI_10_1016_0034_4257_94_90014_0", title: "An airborne multispectral video/radiometer remote sensing system: Development and calibration", author: "Christopher M.U. Neale a Blake G. Crowther", year: 1994, publication: "Remote Sensing of Environment", type: "Studie", category: "science", externalUrl: "https://doi.org/10.1016/0034-4257(94)90014-0", citationLabel: "Neale & Crowther 1994", topics: ["pozorování","fenologie","živá příroda"] },
   { id: "DOI_10_1029_94jd01951", title: "Evidence for interannual variability of the carbon cycle from the National Oceanic and Atmospheric Administration/Climate Monitoring and Diagnostics Laboratory Global Air Sampling Network", author: "Thomas J. Conway a kol.", year: 1994, publication: "Journal of Geophysical Research: Atmospheres", type: "Studie", category: "science", externalUrl: "https://doi.org/10.1029/94JD01951", citationLabel: "Conway et al. 1994", topics: ["pozorování","oxid uhličitý","atmosféra"] },
-  { id: "DOI_10_1029_94jd00548", title: "Interdecadal changes of surface temperature since the late nineteenth century", author: "D. E. Parker a kol.", year: 1994, publication: "Journal of Geophysical Research: Atmospheres", type: "Studie", category: "science", externalUrl: "https://doi.org/10.1029/94JD00548", citationLabel: "Parker et al. 1994", topics: ["pozorování","globální teplota","atmosféra"] },
   { id: "DOI_10_1029_95jd00859", title: "Extension and integration of atmospheric carbon dioxide data into a globally consistent measurement record", author: "Kenneth A. Masarie a Pieter P. Tans", year: 1995, publication: "Journal of Geophysical Research: Atmospheres", type: "Studie", category: "science", externalUrl: "https://doi.org/10.1029/95JD00859", citationLabel: "Masarie & Tans 1995", topics: ["pozorování","oxid uhličitý","atmosféra"] },
   { id: "DOI_10_2307_2261570", title: "The Responses of Species to Climate Over Two Centuries: An Analysis of the Marsham Phenological Record, 1736-1947", author: "T. H. Sparks a P. D. Carey", year: 1995, publication: "The Journal of Ecology", type: "Studie", category: "science", externalUrl: "https://doi.org/10.2307/2261570", citationLabel: "Sparks & Carey 1995", topics: ["pozorování","fenologie","živá příroda"] },
   { id: "DOI_10_1016_0967_0645_95_00093_3", title: "Seasonal and Interannual Variability of Oceanic Carbon Dioxide Species at the U.S. JGOFS Bermuda Atlantic Time-series Study (BATS) Site", author: "Nicholas R. Bates, Anthony F. Michaels a Anthony H. Knap", year: 1996, publication: "Deep Sea Research Part II", type: "Studie", category: "science", externalUrl: "https://doi.org/10.1016/0967-0645(95)00093-3", citationLabel: "Bates et al. 1996", topics: ["pozorování","acidifikace oceánu","oceán"] },
@@ -500,3 +497,48 @@ export const articleSources: Source[] = [
   { id: "WEB_World_Meteorological_Organiz_WMO_OSCAR_nbsp_nbsp_Details_for_Variable_Snow_wa_142b8371", title: "WMO OSCAR &nbsp;|&nbsp; Details for Variable: Snow water equivalent", author: "World Meteorological Organization", year: 2026, publication: "World Meteorological Organization", type: "Institucionální zdroj", category: "organization", externalUrl: "https://space.oscar.wmo.int/variables/view/snow_water_equivalent", citationLabel: "Světová meteorologická organizace", topics: ["pozorování","sníh","permafrost","kryosféra"] },
   { id: "DOI_10_1038_s41598_026_43863_4", title: "A systematic bias in float pH leads to overestimation of derived pCO₂ and underestimation of carbon uptake by the Southern Ocean", author: "Chuqing Zhang a kol.", year: 2026, publication: "Scientific Reports", type: "Studie", category: "science", externalUrl: "https://doi.org/10.1038/s41598-026-43863-4", citationLabel: "Zhang et al. 2026", topics: ["pozorování","acidifikace oceánu","oceán"] },
 ];
+
+const gmstOpenAccessSources: Record<string, true | string> = {
+  DOI_10_1029_2019jd032361: "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019JD032361",
+  DOI_10_1029_jd092id11p13345: "https://www.giss.nasa.gov/pubs/abs/ha00700d.html",
+  DOI_10_1029_2005jd006548: "https://www.metoffice.gov.uk/hadobs/hadcrut3/HadCRUT3_accepted.pdf",
+  DOI_10_1175_2008jcli2263_1: "https://www.ncei.noaa.gov/pub/data/ushcn/papers/menne-williams2009.pdf",
+  DOI_10_1029_2010rg000345: "https://www.giss.nasa.gov/pubs/abs/ha00510u.html",
+  DOI_10_1002_joc_4775: "https://repository.library.noaa.gov/view/noaa/14538",
+  DOI_10_1175_jcli_d_18_0094_1: "https://repository.library.noaa.gov/view/noaa/45291",
+  DOI_10_1029_2018jd029867: "https://www.metoffice.gov.uk/hadobs/hadsst4/HadSST4_accepted.pdf",
+  DOI_10_5194_essd_12_3469_2020: "https://essd.copernicus.org/articles/12/3469/2020/essd-12-3469-2020.html",
+  DOI_10_1029_2023jd040179: "https://repository.library.noaa.gov/view/noaa/66353",
+  DOI_10_1175_bams_d_24_0012_1: "https://repository.library.noaa.gov/view/noaa/66587",
+  DOI_10_25921_vvaa_wq11: true,
+  WEB_NOAA_raquo_NOAA_s_Array_of_Drifting_Ocean_Buoys_90005d3e: true,
+  WEB_NOAA_NOAAGlobalTemp_0f2189d0: true,
+  WEB_NOAA_Global_Historical_Climatology_Network_monthly_GH_3f6fc0cd: true,
+  WEB_NOAA_International_Comprehensive_Ocean_Atmosphere_Dat_9d4f6713: true,
+  WEB_NASA_NASA_Scientific_Visualization_Studio_Temperature_bec5836b: true,
+  WEB_World_Meteorological_Organiz_Guide_to_Instruments_and_Methods_of_Observation_93c4c4a4: true,
+  WEB_berkeleyearth_org_Data_Overview_Berkeley_Earth_b889a1aa: true,
+  WEB_NASA_Data_GISS_GISS_Surface_Temperature_Analysis_GIST_4f73fdd3: true,
+  WEB_NASA_Data_GISS_GISTEMP_Uncertainty_Analysis_Observati_77ee7299: true,
+  WEB_NASA_Data_GISS_Surface_Temperature_Animations_34f35b4b: true,
+  WEB_Copernicus_Graphics_Gallery_Copernicus_4a265eb8: true,
+  WEB_NASA_Guidelines_for_using_NASA_Images_and_Media_Guide_e6f9e9e4: true,
+  WEB_Intergovernmental_Panel_on_C_Chapter_2_Changing_State_of_the_Climate_System_9c4e122d: true,
+  WEB_NOAA_Index_of_data_noaa_global_surface_temperature_v6_aef36414: true,
+  WEB_NOAA_Index_of_data_noaa_global_surface_temperature_v6_382f4cae: true,
+  WEB_Copernicus_Licence_to_use_Copernicus_Products_rev_12_4244ad0f: true,
+  WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_2d3e1c4c: true,
+  WEB_NOAA_NOAA_s_National_Ocean_Service_About_Us_4ba21b52: true,
+  WEB_World_Meteorological_Organiz_State_of_the_Global_Climate_2025_53cbb3f3: true,
+};
+
+export const articleSources: Source[] = rawArticleSources.map((source) => {
+  const openAccessUrl = gmstOpenAccessSources[source.id];
+  if (!openAccessUrl) return source;
+
+  return {
+    ...source,
+    availability: "open-access",
+    ...(typeof openAccessUrl === "string" ? { openAccessUrl } : {}),
+  };
+});

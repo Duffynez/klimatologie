@@ -20,7 +20,9 @@ export type Source = {
   type: string;
   driveFileId?: string;
   archiveRelation?: "source-copy" | "related-material";
+  availability?: "open-access" | "archived";
   externalUrl?: string;
+  openAccessUrl?: string;
   citationLabel?: string;
   topics: string[];
 };
@@ -38,7 +40,7 @@ const sourceRecords: Source[] = [
   { id: "1884_Langley", title: "Researches on Solar Heat and its Absorption by the Earth's Atmosphere", author: "Samuel Pierpont Langley", year: 1884, publication: "Professional Papers of the Signal Service", type: "Report", category: "science", driveFileId: "1RFtDRgwXmn8ETxmUdINDzs8IDMoFmJyY", topics: ["historie", "atmosféra"] },
   { id: "1894_Hogbom", title: "Om sannolikheten för sekulära förändringar i atmosfärens kolsyrehalt", author: "Arvid Högbom", year: 1894, publication: "Svensk Kemisk Tidskrift", type: "Studie", category: "science", driveFileId: "1l_AeVv8G8S0BKzzUr4bTvQZN5-gN_VxH", topics: ["historie", "uhlík"] },
   { id: "1896_Arrhenius", title: "On the Influence of Carbonic Acid in the Air upon the Temperature of the Ground", author: "Svante Arrhenius", year: 1896, publication: "Philosophical Magazine and Journal of Science", type: "Studie", category: "science", driveFileId: "1-gReg5x8Tsm43c7GCDEB6JV80VXDj0VU", topics: ["historie", "uhlík"] },
-  { id: "1938_Callendar", title: "The Artificial Production of Carbon Dioxide and its Influence on Temperature", author: "Guy Stewart Callendar", year: 1938, publication: "Quarterly Journal of the Royal Meteorological Society", type: "Studie", category: "science", driveFileId: "1hL9njRIBCqEfW3qz8cV2GidMB7QeKCZr", externalUrl: "https://doi.org/10.1002/qj.49706427503", topics: ["historie", "teplota"] },
+  { id: "1938_Callendar", title: "The Artificial Production of Carbon Dioxide and its Influence on Temperature", author: "Guy Stewart Callendar", year: 1938, publication: "Quarterly Journal of the Royal Meteorological Society", type: "Studie", category: "science", driveFileId: "1hL9njRIBCqEfW3qz8cV2GidMB7QeKCZr", availability: "archived", externalUrl: "https://doi.org/10.1002/qj.49706427503", topics: ["historie", "teplota"] },
   { id: "1941_Milankovic", title: "Kanon der Erdbestrahlung und seine Anwendung auf das Eiszeitenproblem", author: "Milutin Milanković", year: 1941, publication: "Royal Serbian Academy", type: "Kniha", category: "book", driveFileId: "19N2a7IvozAvjVkxuqw9XHJV2UlU9m2Jt", topics: ["historie", "klima"] },
   { id: "1952_Libby", title: "Radiocarbon Dating", author: "Willard Libby", year: 1952, publication: "University of Chicago Press", type: "Kniha", category: "book", driveFileId: "1oQH4eoKfATFNVo0PQZDdZAhLhcOXBKqD", topics: ["historie", "metody"] },
   { id: "1955_Emiliani", title: "Pleistocene Temperatures", author: "Cesare Emiliani", year: 1955, publication: "The Journal of Geology", type: "Studie", category: "science", driveFileId: "1BUN9N05ph73dKAEPpzYsXT7QpjaJ6X6A", topics: ["historie", "teplota"] },
@@ -74,7 +76,7 @@ const sourceRecords: Source[] = [
 
 export const sources: Source[] = sourceRecords.map((source) => {
   const archiveFile = sourceArchiveFiles[source.id as keyof typeof sourceArchiveFiles];
-  if (!archiveFile) return source;
+  if (!archiveFile || source.availability === "open-access") return source;
 
   return {
     ...source,

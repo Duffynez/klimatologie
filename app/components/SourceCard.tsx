@@ -11,6 +11,7 @@ export function SourceCard({ source }: { source: Source }) {
   const downloadUrl = sourceDownloadUrl(source);
   const driveUrl = sourceDriveUrl(source);
   const isRelatedMaterial = source.archiveRelation === "related-material";
+  const isDoi = source.externalUrl?.startsWith("https://doi.org/");
 
   return (
     <article className={`source-card source-card--${source.category}`} id={source.id}>
@@ -27,7 +28,12 @@ export function SourceCard({ source }: { source: Source }) {
       <div className="source-card__actions">
         {source.externalUrl ? (
           <a href={sourceViewUrl(source)} target="_blank" rel="noreferrer">
-            Otevřít původní zdroj
+            {isDoi ? "Otevřít DOI" : source.availability === "open-access" ? "Otevřít veřejný zdroj" : "Otevřít původní zdroj"}
+          </a>
+        ) : null}
+        {source.openAccessUrl && source.openAccessUrl !== source.externalUrl ? (
+          <a href={source.openAccessUrl} target="_blank" rel="noreferrer">
+            Otevřít plný text
           </a>
         ) : null}
         {driveUrl ? (

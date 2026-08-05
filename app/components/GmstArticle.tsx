@@ -53,11 +53,13 @@ export function GmstArticle() {
 
         <p>
           Jednotlivý teploměr poskytne místní hodnotu. Globální číslo vznikne až spojením pozorování z mnoha
-          pevninských a oceánských oblastí. Jones, Wigley a Wright tak v roce 1986 sestavili globální výpočet pro
-          roky 1861–1984. Parker a kol. v roce 1994 popsali globální mapy založené na stejné dvojici měřených
-          veličin: teplotě vzduchu nad pevninou a teplotě vody u hladiny oceánu.{" "}
-          <SourceLink id="DOI_10_1038_322430a0">Jones et al., 1986</SourceLink> a{" "}
-          <SourceLink id="DOI_10_1029_94jd00548">Parker et al., 1994</SourceLink>
+          pevninských a oceánských oblastí. Hansen a Lebedeff v roce 1987 ukázali, jak lze pozemní stanice skládat
+          do oblastí a z nich vypočítat změnu teploty ve velkém měřítku. Brohan a kol. v roce 2006 podrobně popsali
+          výpočet HadCRUT3, v němž se pozemní teplota vzduchu spojuje s teplotou vody u hladiny oceánu. Tyto dvě
+          otevřeně dostupné práce zachycují cestu od pozemního výpočtu k dnešnímu společnému ukazateli pro pevninu
+          a oceán.{" "}
+          <SourceLink id="DOI_10_1029_jd092id11p13345">Hansen &amp; Lebedeff, 1987</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1029_2005jd006548">Brohan et al., 2006</SourceLink>
         </p>
 
         <p>
@@ -98,20 +100,18 @@ export function GmstArticle() {
 
         <p>
           Guy Stewart Callendar v roce 1938 porovnal roční teplotní rozdíly 147 stanic za období 1880–1935.
-          Stanice rozdělil podle zeměpisné šířky a z jejich skupin počítal průměry. V roce 1961 svůj výpočet
-          rozšířil na více než 400 stanic a skládal je nejprve do oblastí a šířkových pásů. Obě práce ukazují ranou
-          podobu cesty od jednotlivých stanic ke globálnímu číslu a současně omezení tehdejšího prostorového
-          pokrytí.{" "}
-          <SourceLink id="1938_Callendar">Callendar, 1938</SourceLink> a{" "}
-          <SourceLink id="DOI_10_1002_qj_49708737102">Callendar, 1961</SourceLink>
+          Stanice rozdělil podle zeměpisné šířky a z jejich skupin počítal průměry. Výsledkem byl raný globální
+          odhad založený na pevninských stanicích, jejichž rozmístění bylo tehdy podstatně řidší a méně rovnoměrné
+          než dnes. Pro tento historický krok uchováváme archivní kopii původní práce.{" "}
+          <SourceLink id="1938_Callendar">Callendar, 1938</SourceLink>
         </p>
 
         <p>
           Hansen a Lebedeff v roce 1987 zkoumali, jak dobře se měsíční změny na jedné stanici podobají změnám na
           okolních stanicích. Na tomto základě skládali pozemní měření do oblastí a odhadovali chybu způsobenou
-          nepravidelným rozmístěním stanic. Jones, Wigley a Wright o rok dříve zveřejnili výpočet, který spojil
-          pozemní a oceánská pozorování od roku 1861. Tyto práce patří k přímým předchůdcům dnešních globálních
-          produktů.{" "}
+          nepravidelným rozmístěním stanic. Práce zároveň zveřejnila regionální i globální výsledky a vysvětlila,
+          proč lze dlouhodobou změnu odhadnout i ze sítě, která nepokrývá celý povrch rovnoměrně. Patří tak k
+          přímým metodickým předchůdcům dnešního výpočtu NASA.{" "}
           <SourceLink id="DOI_10_1029_jd092id11p13345">
             Hansen &amp; Lebedeff, 1987
           </SourceLink>
@@ -528,30 +528,9 @@ export function GmstArticle() {
                 . Pro tento článek je použita část s výpočtem teplot ze 147 stanic.
               </li>
               <li>
-                Callendar, G. S. (1961):{" "}
-                <SourceLink id="DOI_10_1002_qj_49708737102">
-                  Temperature fluctuations and trends over the earth
-                </SourceLink>
-                .
-              </li>
-              <li>
-                Jones, P. D., Wigley, T. M. L. &amp; Wright, P. B. (1986):{" "}
-                <SourceLink id="DOI_10_1038_322430a0">
-                  Global temperature variations between 1861 and 1984
-                </SourceLink>
-                .
-              </li>
-              <li>
                 Hansen, J. &amp; Lebedeff, S. (1987):{" "}
                 <SourceLink id="DOI_10_1029_jd092id11p13345">
                   Global trends of measured surface air temperature
-                </SourceLink>
-                .
-              </li>
-              <li>
-                Parker, D. E. et al. (1994):{" "}
-                <SourceLink id="DOI_10_1029_94jd00548">
-                  Interdecadal changes of surface temperature since the late nineteenth century
                 </SourceLink>
                 .
               </li>

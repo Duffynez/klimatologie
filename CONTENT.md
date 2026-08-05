@@ -9,6 +9,18 @@
 5. Vložte ID souboru Google Drive jen u kopie, kterou smíme sdílet. Vedle kopie vždy dohledávejte autoritativní původní stránku nebo DOI pro budoucí rozšíření databáze.
 6. Ověřte, že funguje otevření i stažení zdroje.
 
+## Dostupnost vědeckých zdrojů
+
+Vědecký argument stavíme pouze ze studií, dat a metodických dokumentů, které si může čtenář bez předplatného
+otevřít v plném znění. U odborné práce uvádíme DOI jako trvalý bibliografický odkaz a vedle něj přímý odkaz na
+otevřenou verzi u vydavatele, autora nebo důvěryhodného institucionálního repozitáře. Samotný abstrakt nebo
+stránka vyžadující platbu nestačí. Pokud pro důležité tvrzení nenajdeme otevřený původní zdroj, tvrzení na webu
+nepoužijeme, dokud jej nedokážeme doložit jinak.
+
+Otevřené vědecké práce nekopírujeme na Google Drive. Vlastní archiv používáme pro historické prameny získané z
+knihoven a archivů a pro politické či institucionální dokumenty, u nichž hrozí zánik nebo změna původního
+odkazu. Každá taková kopie musí mít ověřené právo ke sdílení.
+
 ## Přidání odborné stránky
 
 Každá stránka o jevu musí mít tyto části:
