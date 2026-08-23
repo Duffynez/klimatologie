@@ -22,10 +22,10 @@ test("keeps the source library, categories, and its download model in the site",
   assert.match(sources, /1681_Mariotte/);
   assert.match(sources, /2000_Argo/);
   assert.match(sources, /\.\.\.articleSources/);
-  assert.ok((articleSources.match(/^  \{ id:/gm) ?? []).length >= 487);
+  assert.ok((articleSources.match(/^  \{ id:/gm) ?? []).length >= 486);
   assert.doesNotMatch(articleSources, /author: "doi\.org"|<\/?(?:sub|sup|i)>|�/);
   assert.match(sources, /drive\.google\.com\/uc\?export=download/);
-  assert.equal((sourceArchive.match(/"driveFileId":/g) ?? []).length, 228);
+  assert.equal((sourceArchive.match(/"driveFileId":/g) ?? []).length, 227);
   assert.match(sourceArchive, /"relation": "source-copy"/);
   assert.match(sourceArchive, /"relation": "related-material"/);
   assert.match(sources, /sourceArchiveFiles/);
@@ -340,17 +340,42 @@ test("publishes a sourced ocean heat content article instead of the generic plac
   assert.match(article, /pan-2026-ohc-upper-2000m\.png/);
   assert.match(article, /noaa-ohc-trend-1993-2024\.png/);
   assert.match(article, /argo-float-deployment\.jpg/);
-  assert.match(sourceCatalogueText, /10\.1126\/science\.287\.5461\.2225/);
   assert.match(sourceCatalogueText, /10\.1038\/nature07080/);
-  assert.match(sourceCatalogueText, /10\.1038\/nature09043/);
   assert.match(sourceCatalogueText, /10\.1029\/2012GL051106/);
   assert.match(sourceCatalogueText, /10\.1126\/sciadv\.1601545/);
+  assert.match(sourceCatalogueText, /10\.1175\/BAMS-D-15-00031\.1/);
   assert.match(sourceCatalogueText, /10\.5194\/essd-16-3517-2024/);
   assert.match(sourceCatalogueText, /10\.1007\/s00376-026-5876-0/);
   assert.match(sourceCatalogueText, /10\.1029\/2024GL111229/);
+  assert.match(sourceCatalogueText, /10\.1038\/s41597-026-06957-2/);
+  assert.match(article, /21,6 ± 6,5 terawattu/);
+  assert.match(article, /12,9 ± 1,8 terawattu/);
+  assert.match(article, /18,6 milionu profilů vodního sloupce/);
+  assert.match(article, /Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez/);
+  assert.match(article, /zdrojů tohoto článku nepoužívají/);
+  assert.doesNotMatch(
+    `${article}\n${sourceCatalogueText}`,
+    /DOI_10_1126_science_287_5461_2225|DOI_10_1029_2008gl037155|DOI_10_1038_nature09043/,
+  );
+  const oceanHeatSourceIds = [
+    ...article.matchAll(/<SourceLink id="([^"]+)"/g),
+  ].map((match) => match[1]);
+  assert.equal(new Set(oceanHeatSourceIds).size, 28);
+  for (const id of new Set(oceanHeatSourceIds)) {
+    const catalogueOccurrences = sourceCatalogueText.split(id).length - 1;
+    assert.ok(catalogueOccurrences >= 2, `${id} must exist and be marked as open access`);
+    if (id.startsWith("DOI_")) {
+      assert.match(sourceCatalogueText, new RegExp(`${id}:\\s*"https://`));
+    }
+  }
+  assert.match(sourceCatalogueText, /repository\.library\.noaa\.gov\/view\/noaa\/73259\/noaa_73259_DS1\.pdf/);
+  assert.match(sourceCatalogueText, /drum\.lib\.umd\.edu\/bitstreams\/e5f2ef03/);
+  assert.match(sourceCatalogueText, /msdc\.qdio\.ac\.cn\/data\/metadata-special-detail/);
+  assert.match(sourceCatalogueText, /scidb\.cn\/detail\?dataSetId=d216bc6517214dfba6646c4117a9b02f/);
   assert.match(article, /CC BY 4\.0/);
   assert.doesNotMatch(article, /Teplo je energie uložená ve vodě/);
   assert.doesNotMatch(article, /Tepelná energie/);
+  assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
   assert.match(evidence, /slug: "tepelny-obsah-oceanu"[\s\S]*status: "hotovo"/);
 });
 

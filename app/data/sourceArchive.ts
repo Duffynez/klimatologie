@@ -259,12 +259,6 @@ export const sourceArchiveFiles = {
     "mimeType": "application/pdf",
     "size": 1771036
   },
-  "DOI_10_1029_2008gl037155": {
-    "driveFileId": "1IJM321fJO02dubkf7B6ZisCQUZb5peT1",
-    "relation": "source-copy",
-    "mimeType": "application/pdf",
-    "size": 156927
-  },
   "DOI_10_1029_2008jd010421": {
     "driveFileId": "1UoOZfkGK-Ul0ZcOS5S2bQ0i2JqqAxznd",
     "relation": "source-copy",

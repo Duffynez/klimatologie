@@ -43,7 +43,11 @@ export function OceanHeatArticle() {
         <p className="article-prose__intro">
           Obsah tepla v oceánu vyjadřuje, jak se vůči zvolenému základu změnilo množství tepla ve vymezeném
           objemu mořské vody. Vychází z teplot vody změřených na mnoha místech a v mnoha hloubkách. Výsledek v
-          joulech říká, o kolik se obsah tepla v dané oblasti a vrstvě zvětšil nebo zmenšil.
+          joulech říká, o kolik se obsah tepla v dané oblasti a vrstvě zvětšil nebo zmenšil. Stejnou veličinu takto
+          vymezují a počítají například práce Levituse a kol., Chenga a kol. a současný soubor IAPv4.{" "}
+          <SourceLink id="DOI_10_1029_2012gl051106">Levitus et al., 2012</SourceLink>,{" "}
+          <SourceLink id="DOI_10_1126_sciadv_1601545">Cheng et al., 2017</SourceLink> a{" "}
+          <SourceLink id="DOI_10_5194_essd_16_3517_2024">Cheng et al., 2024</SourceLink>
         </p>
 
         <p>
@@ -54,17 +58,16 @@ export function OceanHeatArticle() {
         </p>
 
         <p>
-          Základ dnešního postupu je patrný už v globálním výpočtu Levituse a jeho spoluautorů z roku 2000:
-          teplotní odchylky v jednotlivých hloubkách byly převedeny na změnu obsahu tepla a sečteny přes světový
-          oceán. Domingues a kol. v roce 2008 upravili práci s nerovnoměrným pokrytím a historickými přístroji pro
-          horních 700 metrů. Lyman a kol. pak v roce 2010 porovnali několik nezávisle zpracovaných výpočtů a
-          ukázali, jak se na výsledku projevuje volba oprav a prostorového dopočtu.{" "}
-          <SourceLink id="DOI_10_1126_science_287_5461_2225">
-            Levitus et al., 2000
-          </SourceLink>
-          ,{" "}
-          <SourceLink id="DOI_10_1038_nature07080">Domingues et al., 2008</SourceLink> a{" "}
-          <SourceLink id="DOI_10_1038_nature09043">Lyman et al., 2010</SourceLink>
+          Jednotlivé výpočty se liší hlavně tím, jak zacházejí s nerovnoměrným pokrytím oceánu a s vlastnostmi
+          historických přístrojů. Domingues a kol. v roce 2008 použili pro horních 700 metrů postup, který měl
+          omezit chybu vznikající v řídce měřených oblastech. Boyer a kol. v roce 2016 ponechali vstupní profily
+          stejné a samostatně měnili prostorový výpočet, opravy sond XBT a referenční pole. Ishii a kol. v roce
+          2017 pak pomocí dobře pokrytého období zkoumali, jak přesný výsledek lze čekat od tehdejšího rozmístění
+          měření. Všechny tři práce převádějí teplotní odchylky v jednotlivých hloubkách na změnu obsahu tepla a
+          sčítají je přes přesně vymezenou část oceánu.{" "}
+          <SourceLink id="DOI_10_1038_nature07080">Domingues et al., 2008</SourceLink>,{" "}
+          <SourceLink id="DOI_10_1175_jcli_d_15_0801_1">Boyer et al., 2016</SourceLink> a{" "}
+          <SourceLink id="DOI_10_2151_sola_2017_030">Ishii et al., 2017</SourceLink>
         </p>
 
         <p>
@@ -73,8 +76,6 @@ export function OceanHeatArticle() {
           2017 znovu vyhodnotili chybu způsobenou řídkým historickým měřením. Čtvrtá verze datového souboru
           Institutu fyziky atmosféry Čínské akademie věd, označovaná IAPv4, zachovává stejnou cestu od teplotních
           profilů ke globálnímu součtu, ale používá novější kontrolu dat, opravy přístrojů a prostorový výpočet.{" "}
-          <SourceLink id="DOI_10_1029_2012gl051106">Levitus et al., 2012</SourceLink>,{" "}
-          <SourceLink id="DOI_10_1126_sciadv_1601545">Cheng et al., 2017</SourceLink> a{" "}
           <SourceLink id="DOI_10_5194_essd_16_3517_2024">Cheng et al., 2024</SourceLink>
         </p>
 
@@ -185,9 +186,12 @@ export function OceanHeatArticle() {
           U každého měření se uchovává poloha, datum, použitý přístroj, naměřené hodnoty a značky z kontroly
           kvality. Světová oceánská databáze WOD převádí data z tisíců výprav a programů do společného formátu,
           vyhledává duplicity a připojuje kontrolní příznaky. Původní naměřené hloubky zachovává a vedle nich
-          nabízí hodnoty převedené na společné standardní hloubky.{" "}
+          nabízí hodnoty převedené na společné standardní hloubky. Současné vydání WOD23 a jeho původ popisují
+          Garcia a kol.; podrobný postup kontroly a formáty doplňuje technická dokumentace NOAA.{" "}
+          <SourceLink id="DOI_10_1038_s41597_026_06957_2">Garcia et al., 2026</SourceLink>,{" "}
+          <SourceLink id="DOI_10_25923_z885_h264">Mishonov et al., 2024</SourceLink> a{" "}
           <SourceLink id="WEB_NOAA_World_Ocean_Database_3d4b1d70">
-            World Ocean Database
+            datový portál World Ocean Database
           </SourceLink>
         </p>
 
@@ -195,14 +199,15 @@ export function OceanHeatArticle() {
         <p>
           Historické přístroje se nechovaly stejně. U sond XBT se hloubka neurčovala tlakem, ale rovnicí popisující
           pád sondy. Porovnání XBT s lodními profily odhalilo odchylky teploty i vypočtené hloubky, které se navíc
-          měnily s typem sondy a obdobím. Gouretski a Koltermann tento problém podrobně doložili v roce 2007;
-          Levitus a kol. v roce 2009 ukázali, jak opravy mění dřívější globální výpočet. Současné postupy proto
-          používají opravy určené pro konkrétní přístroj a období.{" "}
+          měnily s typem sondy a obdobím. Gouretski a Koltermann tento problém doložili přímým porovnáním
+          přístrojů v roce 2007. Cheng a kol. v roce 2016 shrnuli výsledky dalších porovnání a popsali oddělené
+          chyby teploty i vypočtené hloubky. Současné postupy proto používají opravy určené pro konkrétní typ
+          přístroje a období.{" "}
           <SourceLink id="DOI_10_1029_2006gl027834">
             Gouretski &amp; Koltermann, 2007
           </SourceLink>
           ,{" "}
-          <SourceLink id="DOI_10_1029_2008gl037155">Levitus et al., 2009</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1175_bams_d_15_00031_1">Cheng et al., 2016</SourceLink> a{" "}
           <SourceLink id="WEB_NOAA_XBT_Corrections_in_the_World_Ocean_Database_6adbe6ee">
             přehled oprav NOAA/NCEI
           </SourceLink>
@@ -266,8 +271,10 @@ export function OceanHeatArticle() {
             <h3>World Ocean Database 2023</h3>
             <p>
               Archiv jednotlivých profilů z lodí, plováků, bójí a dalších platforem. Současné hlavní vydání
-              WOD23 obsahuje přes 18,6 milionu měřicích profilů; portál umožňuje výběr podle místa, času, přístroje
-              a veličiny a stažení v běžných tabulkových a oceánografických formátech.
+              WOD23 obsahuje přibližně 18,6 milionu profilů vodního sloupce a 3,6 miliardy jednotlivých měření.
+              Zahrnuje pozorování pořízená v letech 1772–2022 a NOAA jej doplňuje čtvrtletními aktualizacemi.
+              Portál umožňuje výběr podle místa, času, přístroje a veličiny.{" "}
+              <SourceLink id="DOI_10_1038_s41597_026_06957_2">Garcia et al., 2026</SourceLink>
             </p>
             <p className="article-data-item__links">
               <SourceLink id="WEB_NOAA_World_Ocean_Database_3d4b1d70">
@@ -329,12 +336,12 @@ export function OceanHeatArticle() {
         <h2>Srovnání výpočtů</h2>
         <p>
           Křivky různých výzkumných skupin často vycházejí ze stejných archivů profilů, ale jinak vybírají data,
-          opravují přístroje a doplňují prázdná místa. Lyman a kol. v roce 2010 porovnávali tehdejší výpočty se
-          zvláštním důrazem na opravy XBT. Boyer a kol. v roce 2016 drželi vstupní měření stejná a měnili postupně
-          prostorový výpočet, opravy XBT a referenční pole. Tak lze určit, která část rozdílu vzniká až při
-          zpracování a jakou míru nezávislosti jednotlivé výsledky skutečně mají.{" "}
-          <SourceLink id="DOI_10_1038_nature09043">Lyman et al., 2010</SourceLink> a{" "}
+          opravují přístroje a doplňují prázdná místa. Boyer a kol. v roce 2016 drželi vstupní měření stejná a
+          měnili postupně prostorový výpočet, opravy XBT a referenční pole. Ishii a kol. o rok později posuzovali
+          přesnost globálního výpočtu při tehdejším skutečném rozmístění měření. Tak lze rozlišit část rozdílu
+          vznikající při zpracování od části dané samotným pokrytím oceánu.{" "}
           <SourceLink id="DOI_10_1175_jcli_d_15_0801_1">Boyer et al., 2016</SourceLink>
+          {" "}a <SourceLink id="DOI_10_2151_sola_2017_030">Ishii et al., 2017</SourceLink>
         </p>
 
         <p>
@@ -472,10 +479,12 @@ export function OceanHeatArticle() {
 
         <p>
           Voda pod 2 000 metry se sleduje jinou a řidší sítí. Hlavním zdrojem jsou opakované lodní profily až ke
-          dnu a novější plováky Deep Argo. Johnson a Purkey v roce 2024 spojili dostupná lodní měření s Deep Argo
-          a zjistili kladnou globální změnu jak mezi 2 000 a 4 000 metry, tak mezi 4 000 a 6 000 metry; jejich
-          mapy současně obsahují regiony s ochlazením. Tento výsledek je veden odděleně, protože má jiné období,
-          pokrytí i nejistotu než výpočty horních 2 000 metrů.{" "}
+          dnu a novější plováky Deep Argo. Johnson a Purkey spojili obě měření a pro období přibližně mezi lety
+          1985 a 2015 vypočetli globální přírůstek 21,6 ± 6,5 terawattu ve vrstvě
+          2 000–4 000 metrů a 12,9 ± 1,8 terawattu mezi 4 000 a 6 000 metry. Terawatt zde vyjadřuje průměrnou
+          rychlost přibývání tepla, nikoli jeho celkové množství. Mapy současně obsahují oblasti s ochlazením;
+          kladný je součet přes celý oceán. Tento výsledek je veden odděleně, protože má jiné období, pokrytí i
+          nejistotu než výpočty horních 2 000 metrů.{" "}
           <SourceLink id="DOI_10_1029_2024gl111229">
             Johnson &amp; Purkey, 2024
           </SourceLink>
@@ -490,11 +499,17 @@ export function OceanHeatArticle() {
             v průměru 4,4 zettajoulu ročně na horní a 2,0 zettajoulu ročně na hlubší z těchto vrstev. Rok 2025 dosáhl
             nejvyšší hodnoty celého záznamu a proti roku 2024 přibylo přibližně 23 zettajoulů. Jednotlivé části oceánu
             se mění různými směry a rychlostmi, ale jejich globální součet roste. Kladná celková změna pokračuje také
-            pod hloubkou 2 000 metrů.
+            pod hloubkou 2 000 metrů: přibližně mezi lety 1985 a 2015 činil součet
+            pro vrstvy 2–6 kilometrů přibližně 34,5 terawattu.
           </p>
         </div>
 
         <h2>Prameny, data a licence</h2>
+        <p>
+          Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez
+          předplatného. U odborných prací vede databáze zvlášť na DOI a na veřejný plný text; datové portály vedou
+          k původnímu poskytovateli. Záznamy zdrojů tohoto článku nepoužívají kopie na Google Drivu.
+        </p>
         <div className="article-source-groups">
           <section>
             <h3>Historické a primární práce</h3>
@@ -513,13 +528,6 @@ export function OceanHeatArticle() {
                 .
               </li>
               <li>
-                Levitus, S. et al. (2000):{" "}
-                <SourceLink id="DOI_10_1126_science_287_5461_2225">
-                  Warming of the World Ocean
-                </SourceLink>
-                .
-              </li>
-              <li>
                 Domingues, C. M. et al. (2008):{" "}
                 <SourceLink id="DOI_10_1038_nature07080">
                   Improved estimates of upper-ocean warming and multi-decadal sea-level rise
@@ -530,20 +538,6 @@ export function OceanHeatArticle() {
                 Gouretski, V. V. &amp; Koltermann, K. P. (2007):{" "}
                 <SourceLink id="DOI_10_1029_2006gl027834">
                   How much is the ocean really warming?
-                </SourceLink>
-                .
-              </li>
-              <li>
-                Levitus, S. et al. (2009):{" "}
-                <SourceLink id="DOI_10_1029_2008gl037155">
-                  Global ocean heat content 1955–2008 in light of recently revealed instrumentation problems
-                </SourceLink>
-                .
-              </li>
-              <li>
-                Lyman, J. M. et al. (2010):{" "}
-                <SourceLink id="DOI_10_1038_nature09043">
-                  Robust warming of the global upper ocean
                 </SourceLink>
                 .
               </li>
@@ -569,6 +563,13 @@ export function OceanHeatArticle() {
                 .
               </li>
               <li>
+                Garcia, H. E. et al. (2026):{" "}
+                <SourceLink id="DOI_10_1038_s41597_026_06957_2">
+                  World Ocean Database 2023: A Foundational Data Resource for and by the Global Ocean and Coastal Communities
+                </SourceLink>
+                .
+              </li>
+              <li>
                 Pan, Y. et al. (2026):{" "}
                 <SourceLink id="DOI_10_1007_s00376_026_5876_0">
                   Ocean Heat Content Sets Another Record in 2025
@@ -585,6 +586,13 @@ export function OceanHeatArticle() {
                 Roemmich, D. et al. (2009):{" "}
                 <SourceLink id="DOI_10_5670_oceanog_2009_36">
                   The Argo Program: Observing the Global Ocean with Profiling Floats
+                </SourceLink>
+                .
+              </li>
+              <li>
+                Cheng, L. et al. (2016):{" "}
+                <SourceLink id="DOI_10_1175_bams_d_15_00031_1">
+                  XBT Science: Assessment of Instrumental Biases and Errors
                 </SourceLink>
                 .
               </li>
