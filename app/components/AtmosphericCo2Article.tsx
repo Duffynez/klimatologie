@@ -52,12 +52,14 @@ export function AtmosphericCo2Article() {
         </p>
 
         <p>
-          Charles David Keeling v roce 1958 takto vyhodnotil padesát vzorků venkovního vzduchu odebraných na západě
-          Severní Ameriky. O dva roky později zveřejnil první souvislá pozorování z observatoře Mauna Loa a z
-          jižního pólu. V obou pracích spojil odběr okolního vzduchu s přesným určením množství CO₂ a s kontrolou
-          pomocí referenčních plynů.{" "}
-          <SourceLink id="DOI_10_1016_0016_7037_58_90033_4">
-            Keeling, 1958
+          Charles David Keeling v roce 1957 popsal odběr venkovního vzduchu do skleněných baněk, oddělení CO₂ od
+          ostatních plynů a jeho přesné manometrické stanovení. Ukázal přitom, že vzorky ovlivněné okolní vegetací
+          nebo městem mají jinou hodnotu než vzduch přicházející z volné atmosféry. O tři roky později zveřejnil
+          první souvislá pozorování z observatoře Mauna Loa a z jižního pólu. Právě spojení dobře zvoleného místa,
+          opakovaného měření a referenčních plynů umožnilo oddělit místní výkyvy, pravidelné střídání během roku a
+          změnu mezi jednotlivými roky.{" "}
+          <SourceLink id="WEB_SCRIPPS_Keeling_Variations_1957">
+            Keeling, 1957
           </SourceLink>{" "}
           a{" "}
           <SourceLink id="DOI_10_1111_j_2153_3490_1960_tb01300_x">
@@ -66,13 +68,18 @@ export function AtmosphericCo2Article() {
         </p>
 
         <p>
-          Stejnou měřenou veličinu později rozšířila síť stanic. Conway a kol. popsali v roce 1994 týdenní odběry
-          vzduchu na desítkách míst a rozdíly mezi zeměpisnými šířkami. Masarie a Tans v roce 1995 ukázali, jak lze
-          z časově neúplných měření jednotlivých stanic sestavit vzájemně srovnatelný globální záznam. Andrews a
-          kol. v roce 2014 podrobně doložili měření na vysokých věžích včetně kalibrace a nejistot.{" "}
-          <SourceLink id="DOI_10_1029_94jd01951">Conway et al., 1994</SourceLink>,{" "}
-          <SourceLink id="DOI_10_1029_95jd00859">Masarie &amp; Tans, 1995</SourceLink> a{" "}
-          <SourceLink id="DOI_10_5194_amt_7_647_2014">Andrews et al., 2014</SourceLink>
+          Jedna stanice zachycuje změnu v čase na jednom místě; síť stanic navíc ukazuje prostorové rozdíly. NOAA
+          proto odebírá vzduch na ostrovech, pobřežích, lodích, vysokých věžích i v letadlech a u každého výsledku
+          zveřejňuje místo, čas, použitou stupnici a příznaky kvality. Andrews a kol. podrobně popsali jednu část
+          této sítě, měření na vysokých věžích, včetně přístrojů, kalibrace a rozpočtu nejistoty. Způsob výběru a
+          zpracování globálního produktu NOAA je veřejný spolu s výslednými tabulkami.{" "}
+          <SourceLink id="WEB_NOAA_Carbon_Cycle_Greenhouse_Gases_NOAA_Global_Monito_611ed2c8">
+            NOAA Global Greenhouse Gas Reference Network
+          </SourceLink>,{" "}
+          <SourceLink id="DOI_10_5194_amt_7_647_2014">Andrews et al., 2014</SourceLink> a{" "}
+          <SourceLink id="WEB_NOAA_Trends_in_CO2_NOAA_Global_Monitoring_Laboratory_ff9ec92f">
+            NOAA: globální zpracování a data
+          </SourceLink>
         </p>
 
         <p>
@@ -108,11 +115,11 @@ export function AtmosphericCo2Article() {
           Guy Stewart Callendar v roce 1958 znovu prošel třicet rozsáhlejších souborů měření z let 1866–1956.
           Porovnával použitou metodu, místo odběru a rozptyl hodnot a navrhl odhad 290 ppm pro rok 1900. Jeho práce
           je důležitá také tím, že ukazuje hranici starých chemických údajů: jednotlivé výsledky nelze spojit bez
-          znalosti odběru a kontroly přístroje. Pozdější rozbor Fraserové a kol. znovu vyhodnotil původní záznamy
+          znalosti odběru a kontroly přístroje. Pozdější rozbor Froma a Keelinga znovu vyhodnotil původní záznamy
           ze západní Evropy a Reisetova měření porovnal s moderním sezónním průběhem.{" "}
           <SourceLink id="DOI_10_3402_tellusa_v10i2_9231">Callendar, 1958</SourceLink> a{" "}
           <SourceLink id="DOI_10_3402_tellusb_v38i2_15083">
-            Fraser et al., 1986
+            From &amp; Keeling, 1986
           </SourceLink>
         </p>
 
@@ -156,12 +163,13 @@ export function AtmosphericCo2Article() {
         </p>
 
         <p>
-          Starší atmosféru zpřístupnil vzduch uzavřený v polárním ledu. Neftel a kol. v roce 1982 zveřejnili
-          měření CO₂ z antarktických a grónských ledových jader. Etheridge a kol. v roce 1996 spojili led,
-          pórovitý sníh nad ním a přímá měření do záznamu posledního tisíciletí. Lüthi a kol. v roce 2008 rozšířili
-          antarktická data na 800 000 let.{" "}
-          <SourceLink id="DOI_10_1038_295220a0">Neftel et al., 1982</SourceLink>,{" "}
-          <SourceLink id="DOI_10_1029_95jd03410">Etheridge et al., 1996</SourceLink> a{" "}
+          Starší atmosféru zpřístupnil vzduch uzavřený v polárním ledu. Stauffer a kol. v roce 1984 popsali
+          drcení malých vzorků ledu ve vakuu, odstranění vodní páry a měření uvolněného CO₂ infračerveným laserovým
+          spektrometrem. Novější záznam z antarktického Law Dome propojil led, vzduch v pórech nad ledem a přímá
+          měření posledních desetiletí; Rubino a kol. jej v roce 2019 znovu zpracovali s aktualizovanou kalibrací a
+          modelem stáří vzduchu. Lüthi a kol. mezitím rozšířili antarktická měření až na 800 000 let.{" "}
+          <SourceLink id="DOI_10_3189_1984aog5_1_160_164">Stauffer et al., 1984</SourceLink>,{" "}
+          <SourceLink id="DOI_10_5194_essd_11_473_2019">Rubino et al., 2019</SourceLink> a{" "}
           <SourceLink id="DOI_10_1038_nature06949">Lüthi et al., 2008</SourceLink>
         </p>
 
@@ -218,21 +226,21 @@ export function AtmosphericCo2Article() {
           Z ledového jádra se oddělí přesně zvážený kus ledu, jeho bubliny se otevřou drcením nebo tavením ve
           vakuové aparatuře a uvolněný vzduch se analyzuje proti standardům. Stáří vzduchu je mladší než okolní
           led, protože sníh zůstává před uzavřením bublinek po určitou dobu propustný. Jediný vzorek navíc obsahuje
-          směs vzduchu uzavřeného během několika let až staletí podle místa vrtu a rychlosti hromadění sněhu.
+          směs vzduchu uzavřeného během určitého časového rozmezí. Bereiter a kol. ukázali podrobně celý suchý
+          postup: vzorek se v chlazené vakuové komoře rozmělní, uvolněný vzduch se převede do analyzátoru a výsledek
+          se porovná se standardním plynem.{" "}
+          <SourceLink id="DOI_10_5194_amt_6_251_2013">Bereiter et al., 2013</SourceLink>
         </p>
 
         <p>
-          Na Law Dome, kde sněhu přibývá rychle, určili Levchenko a kol. průměrné stáří CO₂ u dna propustné vrstvy
-          na 8,9 ± 0,5 roku a celou šířku časového vyhlazení přibližně na 12,5 ± 1,5 roku. U pomalu narůstajícího
-          ledu v Antarktidě může být vyhlazení mnohem delší. Ledová data proto zachovávají skutečný vzduch, ale
-          rychlé změny v něm nejsou časově ostré stejně jako v denním měření stanice.{" "}
-          <SourceLink id="DOI_10_1029_96gl03156">
-            Levchenko et al., 1996
-          </SourceLink>{" "}
-          a{" "}
-          <SourceLink id="DOI_10_1029_2003jd003562">
-            Trudinger et al., 2003
-          </SourceLink>
+          Rychlost hromadění sněhu určuje, jak dlouho zůstávají póry propojené a jak široké rozpětí stáří se v
+          jedné vrstvě setká. Law Dome má vysoký přírůstek sněhu, a proto jeho měření zachycují změny posledních
+          dvou tisíciletí podrobněji a překrývají se s přímým pozorováním atmosféry. Ve velmi pomalu narůstajícím
+          ledu Východní Antarktidy je rozmezí stáří širší a rychlé změny se více vyhladí. Rubino a kol. tento vliv
+          zahrnuli do stáří plynu pro Law Dome; Fourteau a kol. jej samostatně vyčíslili pro několik vrtů s velmi
+          malým přírůstkem sněhu.{" "}
+          <SourceLink id="DOI_10_5194_essd_11_473_2019">Rubino et al., 2019</SourceLink> a{" "}
+          <SourceLink id="DOI_10_5194_cp_16_503_2020">Fourteau et al., 2020</SourceLink>
         </p>
 
         <h3>Světlo prošlé atmosférou</h3>
@@ -266,8 +274,10 @@ export function AtmosphericCo2Article() {
           Analyzátor nečte ppm přímo z jedné fyzikální vlastnosti. Měří elektrický nebo optický signál a jeho vztah
           k množství CO₂ určuje pomocí několika tlakových lahví. Ty tvoří kalibrační řetězec od pracovních lahví na
           stanici přes laboratorní standardy až k primárním standardům stupnice WMO CO₂ X2019. Změní-li se hodnota
-          některého standardu po nové kalibraci, lze s uloženými údaji přepočítat i starší měření.{" "}
-          <SourceLink id="DOI_10_1029_2005jd006003">Zhao &amp; Tans, 2006</SourceLink> a{" "}
+          některého standardu po nové kalibraci, lze s uloženými údaji přepočítat i starší měření. Tans, Crotwell
+          a Thoning popsali přenos stupnice pomocí laserové spektroskopie; Hall a kol. následně doložili revizi
+          primárních standardů na stupnici X2019.{" "}
+          <SourceLink id="DOI_10_5194_amt_10_2669_2017">Tans et al., 2017</SourceLink> a{" "}
           <SourceLink id="DOI_10_5194_amt_14_3015_2021">Hall et al., 2021</SourceLink>
         </p>
 
@@ -292,8 +302,11 @@ export function AtmosphericCo2Article() {
           Globální produkt NOAA používá stanice, které sledují vzduch nad mořským povrchem nebo jeho blízké
           pozadí. Pro každou stanici se nejprve proloží hladký průběh v čase. Ve 48 okamžicích každého roku se
           hodnoty stanic uspořádají podle zeměpisné šířky, mezi nimi se vypočte plynulý průběh a ten se plošně
-          zprůměruje. Globální číslo proto není prostým aritmetickým průměrem všech dostupných vzorků.{" "}
-          <SourceLink id="DOI_10_1029_95jd00859">Masarie &amp; Tans, 1995</SourceLink>
+          zprůměruje. Globální číslo proto není prostým aritmetickým průměrem všech dostupných vzorků. NOAA na
+          stejné stránce zveřejňuje výsledné tabulky, poznámky ke změnám i datovou citaci s verzí.{" "}
+          <SourceLink id="WEB_NOAA_Trends_in_CO2_NOAA_Global_Monitoring_Laboratory_ff9ec92f">
+            NOAA: metoda globálního průměru
+          </SourceLink>
         </p>
 
         <h3>7. Nejistota a verze zůstávají součástí výsledku</h3>
@@ -397,9 +410,10 @@ export function AtmosphericCo2Article() {
           <section className="article-data-item">
             <h3>OCO-2</h3>
             <p>
-              NASA zveřejňuje jednotlivé úspěšné výpočty XCO₂ i zjednodušené soubory Lite. Referenčním záznamem je
-              v době napsání článku zpětně zpracovaná verze 11.2r. Kvalitativní příznak odděluje doporučená měření
-              od výsledků ovlivněných oblačností, aerosoly nebo povrchem.
+              NASA zveřejňuje jednotlivé úspěšné výpočty XCO₂ i zjednodušené soubory Lite. Datové centrum nyní
+              nabízí zpětně zpracovaný referenční produkt XCO₂ ve verzi 11.3r; starší 11.2r zůstává součástí
+              dokumentovaného záznamu. Kvalitativní příznak odděluje doporučená měření od výsledků ovlivněných
+              oblačností, aerosoly nebo povrchem.
             </p>
             <p className="article-data-item__links">
               <SourceLink id="WEB_NASA_OCO_2_Data_Center_bd5da22f">
@@ -510,10 +524,14 @@ export function AtmosphericCo2Article() {
 
         <p>
           Na obou moderních grafech je dlouhodobá změna překryta pravidelným kolísáním během roku. Velikost a
-          načasování tohoto kolísání se mezi stanicemi liší. Conway a kol. doložili v celosvětové síti také rozdíly
-          mezi zeměpisnými šířkami: v jednom okamžiku nemá povrchový vzduch na všech místech přesně stejný molární
+          načasování tohoto kolísání se mezi stanicemi liší. Keeling už v prvních zveřejněných měřeních rozlišil
+          sezónní průběh a rozdíly mezi zeměpisnými šířkami; dnešní síť umožňuje totéž kontrolovat v jednotlivých
+          veřejných záznamech. V jednom okamžiku proto nemá povrchový vzduch na všech místech přesně stejný molární
           zlomek CO₂. Globální průměr tento prostorový obraz shrnuje do jednoho čísla.{" "}
-          <SourceLink id="DOI_10_1029_94jd01951">Conway et al., 1994</SourceLink>
+          <SourceLink id="DOI_10_1111_j_2153_3490_1960_tb01300_x">Keeling, 1960</SourceLink> a{" "}
+          <SourceLink id="WEB_NOAA_Carbon_Cycle_Greenhouse_Gases_NOAA_Global_Monito_f7a76e45">
+            jednotlivá měření NOAA
+          </SourceLink>
         </p>
 
         <p>
@@ -563,10 +581,10 @@ export function AtmosphericCo2Article() {
 
         <p>
           OCO-2 od roku 2014 zachycuje XCO₂ v úzkých stopách po celé Zemi. Po filtraci oblačnosti, aerosolů a
-          problematických odrazů lze sledovat rozdíly mezi oblastmi i jejich změnu v čase. Verze 11.2 je navázána
-          přes pozemní síť TCCON a měření z letadel na stupnici WMO; tým mise pro ni uvádí odchylku od pozemní
-          kontroly i náhodný rozptyl menší než 0,85 ppm. Tato hodnota popisuje kvalitu družicového XCO₂, nikoli
-          nejistotu globálního povrchového průměru.{" "}
+          problematických odrazů lze sledovat rozdíly mezi oblastmi i jejich změnu v čase. Validační stránka NASA,
+          aktualizovaná 18. března 2026, uvádí pro verzi 11.2 přesnost i náhodný rozptyl menší než 0,85 ppm při
+          porovnání s pozemní sítí TCCON. Jde o výsledek kontroly verze 11.2, nikoli automaticky o hodnocení novějšího
+          produktu 11.3r ani o nejistotu globálního povrchového průměru.{" "}
           <SourceLink id="WEB_NASA_Validation_9ba2b44b">
             OCO-2: kontrola verze 11.2
           </SourceLink>
@@ -585,6 +603,11 @@ export function AtmosphericCo2Article() {
         </div>
 
         <h2>Prameny, data a licence</h2>
+        <p>
+          Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez
+          předplatného. U studií vede záznam v databázi na DOI i na veřejný plný text; u dat a institucionálních
+          dokumentů přímo na stránku vydavatele nebo do jeho repozitáře.
+        </p>
         <div className="article-source-groups">
           <section>
             <h3>Historické a primární práce</h3>
@@ -597,17 +620,17 @@ export function AtmosphericCo2Article() {
                 </SourceLink>
               </li>
               <li>
+                Keeling, C. D. (1957): <em>Variations in concentration and isotopic abundances of atmospheric carbon
+                dioxide</em>, Proceedings of the Conference on Recent Research in Climatology, s. 43–49.{" "}
+                <SourceLink id="WEB_SCRIPPS_Keeling_Variations_1957">
+                  Veřejný úplný text u Scripps
+                </SourceLink>
+              </li>
+              <li>
                 Callendar, G. S. (1958): <em>On the Amount of Carbon Dioxide in the Atmosphere</em>, Tellus, 10,
                 243–248.{" "}
                 <SourceLink id="DOI_10_3402_tellusa_v10i2_9231">
                   DOI 10.3402/tellusa.v10i2.9231
-                </SourceLink>
-              </li>
-              <li>
-                Keeling, C. D. (1958): <em>The concentration and isotopic abundances of atmospheric carbon dioxide
-                in rural areas</em>, Geochimica et Cosmochimica Acta, 13, 322–334.{" "}
-                <SourceLink id="DOI_10_1016_0016_7037_58_90033_4">
-                  DOI 10.1016/0016-7037(58)90033-4
                 </SourceLink>
               </li>
               <li>
@@ -625,18 +648,17 @@ export function AtmosphericCo2Article() {
                 </SourceLink>
               </li>
               <li>
-                Conway, T. J. et al. (1994): <em>Evidence for interannual variability of the carbon cycle from the
-                NOAA/CMDL global air sampling network</em>, Journal of Geophysical Research, 99, 22831–22855.{" "}
-                <SourceLink id="DOI_10_1029_94jd01951">
-                  DOI 10.1029/94JD01951
+                Stauffer, B. et al. (1984): <em>Atmospheric CO₂ Concentration During the Last Glaciation</em>,
+                Annals of Glaciology, 5, 160–164.{" "}
+                <SourceLink id="DOI_10_3189_1984aog5_1_160_164">
+                  DOI 10.3189/1984AoG5-1-160-164
                 </SourceLink>
               </li>
               <li>
-                Etheridge, D. M. et al. (1996): <em>Natural and anthropogenic changes in atmospheric CO₂ over the
-                last 1000 years from air in Antarctic ice and firn</em>, Journal of Geophysical Research, 101,
-                4115–4128.{" "}
-                <SourceLink id="DOI_10_1029_95jd03410">
-                  DOI 10.1029/95JD03410
+                From, E. &amp; Keeling, C. D. (1986): <em>Reassessment of late 19th century atmospheric carbon dioxide
+                variations in the air of western Europe and the British Isles</em>, Tellus B, 38, 87–105.{" "}
+                <SourceLink id="DOI_10_3402_tellusb_v38i2_15083">
+                  DOI 10.3402/tellusb.v38i2.15083
                 </SourceLink>
               </li>
               <li>
@@ -653,6 +675,13 @@ export function AtmosphericCo2Article() {
                   DOI 10.1002/2014GL061957
                 </SourceLink>
               </li>
+              <li>
+                Rubino, M. et al. (2019): <em>Revised records of atmospheric trace gases over the last 2000 years
+                from Law Dome, Antarctica</em>, Earth System Science Data, 11, 473–492.{" "}
+                <SourceLink id="DOI_10_5194_essd_11_473_2019">
+                  DOI 10.5194/essd-11-473-2019
+                </SourceLink>
+              </li>
             </ul>
           </section>
 
@@ -660,21 +689,21 @@ export function AtmosphericCo2Article() {
             <h3>Metodické práce</h3>
             <ul>
               <li>
-                Masarie, K. A. &amp; Tans, P. P. (1995): globálně konzistentní zpracování měření CO₂.{" "}
-                <SourceLink id="DOI_10_1029_95jd00859">
-                  DOI 10.1029/95JD00859
-                </SourceLink>
-              </li>
-              <li>
-                Zhao, C. L. &amp; Tans, P. P. (2006): nejistota kalibrační stupnice WMO.{" "}
-                <SourceLink id="DOI_10_1029_2005jd006003">
-                  DOI 10.1029/2005JD006003
-                </SourceLink>
-              </li>
-              <li>
                 Andrews, A. E. et al. (2014): přístroje a nejistoty měření CO₂ na vysokých věžích NOAA.{" "}
                 <SourceLink id="DOI_10_5194_amt_7_647_2014">
                   DOI 10.5194/amt-7-647-2014
+                </SourceLink>
+              </li>
+              <li>
+                Bereiter, B. et al. (2013): suché uvolnění a měření CO₂ ze vzduchu uzavřeného v ledu.{" "}
+                <SourceLink id="DOI_10_5194_amt_6_251_2013">
+                  DOI 10.5194/amt-6-251-2013
+                </SourceLink>
+              </li>
+              <li>
+                Tans, P. P., Crotwell, A. M. &amp; Thoning, K. W. (2017): kalibrace měření CO₂ a přenos stupnice.{" "}
+                <SourceLink id="DOI_10_5194_amt_10_2669_2017">
+                  DOI 10.5194/amt-10-2669-2017
                 </SourceLink>
               </li>
               <li>
@@ -684,14 +713,9 @@ export function AtmosphericCo2Article() {
                 </SourceLink>
               </li>
               <li>
-                Levchenko, V. A. et al. (1996) a Trudinger, C. M. et al. (2003): stáří a časové vyhlazení vzduchu
-                v ledu.{" "}
-                <SourceLink id="DOI_10_1029_96gl03156">
-                  Levchenko et al.
-                </SourceLink>
-                {" · "}
-                <SourceLink id="DOI_10_1029_2003jd003562">
-                  Trudinger et al.
+                Fourteau, K. et al. (2020): stáří vzduchu a vyhlazení rychlých změn v pomalu narůstajícím ledu.{" "}
+                <SourceLink id="DOI_10_5194_cp_16_503_2020">
+                  DOI 10.5194/cp-16-503-2020
                 </SourceLink>
               </li>
               <li>
@@ -747,7 +771,7 @@ export function AtmosphericCo2Article() {
                 </SourceLink>
               </li>
               <li>
-                NASA/JPL: referenční soubory OCO-2 XCO₂ Lite v11.2r.{" "}
+                NASA/JPL: referenční soubory OCO-2 XCO₂ Lite v11.3r.{" "}
                 <SourceLink id="WEB_NASA_OCO_2_Data_Center_bd5da22f">
                   Datové centrum
                 </SourceLink>

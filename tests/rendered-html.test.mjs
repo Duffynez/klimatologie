@@ -22,7 +22,7 @@ test("keeps the source library, categories, and its download model in the site",
   assert.match(sources, /1681_Mariotte/);
   assert.match(sources, /2000_Argo/);
   assert.match(sources, /\.\.\.articleSources/);
-  assert.ok((articleSources.match(/^  \{ id:/gm) ?? []).length >= 493);
+  assert.ok((articleSources.match(/^  \{ id:/gm) ?? []).length >= 491);
   assert.doesNotMatch(articleSources, /author: "doi\.org"|<\/?(?:sub|sup|i)>|�/);
   assert.match(sources, /drive\.google\.com\/uc\?export=download/);
   assert.equal((sourceArchive.match(/"driveFileId":/g) ?? []).length, 228);
@@ -380,14 +380,25 @@ test("publishes a sourced atmospheric carbon dioxide article instead of the gene
   assert.match(article, /noaa-global-co2-monthly\.png/);
   assert.match(article, /noaa-co2-800000-years\.png/);
   assert.equal((article.match(/unoptimized/g) ?? []).length, 5);
-  assert.match(sourceCatalogueText, /10\.1016\/0016-7037\(58\)90033-4/);
+  assert.match(sourceCatalogueText, /keeling_proceeding_1957\.pdf/);
   assert.match(sourceCatalogueText, /10\.1111\/j\.2153-3490\.1960\.tb01300\.x/);
-  assert.match(sourceCatalogueText, /10\.1029\/94JD01951/);
-  assert.match(sourceCatalogueText, /10\.1029\/95JD00859/);
+  assert.match(sourceCatalogueText, /10\.3189\/1984AoG5-1-160-164/);
+  assert.match(sourceCatalogueText, /10\.5194\/amt-6-251-2013/);
+  assert.match(sourceCatalogueText, /10\.5194\/amt-10-2669-2017/);
+  assert.match(sourceCatalogueText, /10\.5194\/essd-11-473-2019/);
+  assert.match(sourceCatalogueText, /10\.5194\/cp-16-503-2020/);
   assert.match(sourceCatalogueText, /10\.5194\/amt-14-3015-2021/);
   assert.match(sourceCatalogueText, /10\.1038\/nature06949/);
   assert.match(sourceCatalogueText, /10\.1002\/2014GL061957/);
   assert.match(sourceCatalogueText, /10\.5194\/amt-10-549-2017/);
+  assert.match(sourceCatalogueText, /epic\.awi\.de\/id\/eprint\/18281/);
+  assert.match(sourceCatalogueText, /cambridge\.org\/core\/journals\/annals-of-glaciology/);
+  assert.match(article, /Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez/);
+  assert.match(article, /verzi 11\.3r/);
+  assert.doesNotMatch(
+    `${article}\n${sourceCatalogueText}`,
+    /10\.1016\/0016-7037\(58\)90033-4|10\.1029\/94JD01951|10\.1029\/95JD00859|10\.1038\/295220a0|10\.1029\/95JD03410|10\.1029\/96GL03156|10\.1029\/2003JD003562|10\.1029\/2005JD006003/,
+  );
   assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
   assert.match(styles, /\.article-figure--sample/);
   assert.match(evidence, /slug: "atmosfericka-koncentrace-co2"[\s\S]*status: "hotovo"/);
