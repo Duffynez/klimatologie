@@ -438,6 +438,27 @@ test("publishes a sourced atmospheric humidity article instead of the generic pl
   assert.match(sourceCatalogueText, /10\.1029\/2008JD010989/);
   assert.match(sourceCatalogueText, /10\.1002\/2018EA000363/);
   assert.match(sourceCatalogueText, /10\.1029\/2022JD036728/);
+  assert.match(sourceCatalogueText, /10\.7289\/V5X63K0Q/);
+  assert.match(sourceCatalogueText, /centaur\.reading\.ac\.uk\/105632/);
+  assert.match(sourceCatalogueText, /metoffice\.gov\.uk\/hadobs\/hadcruh\/data\/Willettetal2008\.pdf/);
+  assert.match(sourceCatalogueText, /repository\.library\.noaa\.gov\/view\/noaa\/59958/);
+  assert.match(sourceCatalogueText, /repository\.library\.noaa\.gov\/view\/noaa\/25912\/noaa_25912_DS1\.pdf/);
+  assert.match(article, /Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez/);
+  assert.match(article, /předběžné verze za rok[\s\S]*2025/);
+  assert.match(article, /Stith et al\., 2018/);
+  assert.doesNotMatch(article, /Fleming et al\., 2018|DOI_10_1175_jcli3594_1|WEB_repository_oceanbestpractice_WMO/);
+  assert.doesNotMatch(sourceCatalogueText, /DOI_10_1175_jcli3594_1/);
+  const humiditySourceIds = [
+    ...article.matchAll(/<SourceLink id="([^"]+)"/g),
+  ].map((match) => match[1]);
+  assert.equal(new Set(humiditySourceIds).size, 30);
+  for (const id of new Set(humiditySourceIds)) {
+    const catalogueOccurrences = sourceCatalogueText.split(id).length - 1;
+    assert.ok(catalogueOccurrences >= 2, `${id} must exist and be marked as open access`);
+    if (id.startsWith("DOI_")) {
+      assert.match(sourceCatalogueText, new RegExp(`${id}:\\s*"https://`));
+    }
+  }
   assert.match(article, /Open Government Licence v3\.0/);
   assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
   assert.match(evidence, /slug: "narust-vlhkosti"[\s\S]*status: "hotovo"/);

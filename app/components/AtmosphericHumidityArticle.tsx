@@ -56,7 +56,7 @@ export function AtmosphericHumidityArticle() {
           vzduch nasycení při své současné teplotě. Stejný vzduch proto může mít nezměněné množství vodní páry, ale po
           změně teploty jinou relativní vlhkost. Vymezení obou veličin i způsob jejich výpočtu z teploty a rosného bodu
           popisuje{" "}
-          <SourceLink id="WEB_repository_oceanbestpractice_WMO_kapitola_o_mereni_vlhkosti_0667b41b">
+          <SourceLink id="WEB_World_Meteorological_Organiz_Guide_to_Instruments_and_Methods_of_Observation_93c4c4a4">
             přístrojová příručka WMO
           </SourceLink>
           .
@@ -77,9 +77,10 @@ export function AtmosphericHumidityArticle() {
         <p>
           Radiosonda přidává třetí rozměr. Během výstupu měří tlak, teplotu a relativní vlhkost, takže pro každou
           dosaženou výšku vznikne samostatný údaj. Z těchto profilů lze také sečíst vodní páru mezi povrchem a zvolenou
-          horní hladinou. Archiv IGRA uchovává původní profily i odvozené veličiny; přesnost dlouhodobého srovnání
-          závisí na znalosti typu čidla a změn v provozu stanice.{" "}
-          <SourceLink id="DOI_10_1175_jcli3594_1">Durre et al., 2006</SourceLink> a{" "}
+          horní hladinou. Archiv IGRA uchovává původní profily i odvozené veličiny; jeho současná dokumentace popisuje
+          také původ dat, kontroly kvality a změny mezi verzemi. Přesnost dlouhodobého srovnání závisí na znalosti typu
+          čidla a změn v provozu stanice.{" "}
+          <SourceLink id="DOI_10_7289_v5x63k0q">IGRA, verze 2.2</SourceLink> a{" "}
           <SourceLink id="DOI_10_5194_amt_7_4463_2014">Dirksen et al., 2014</SourceLink>
         </p>
 
@@ -139,7 +140,7 @@ export function AtmosphericHumidityArticle() {
           obaluje navlhčený knot. Odpařování ochlazuje vlhký teploměr a z rozdílu obou teplot se společně s tlakem
           vypočte vlhkost. Tento princip se stal základem velké části historických staničních i lodních měření a WMO
           jej dodnes popisuje jako jednu z referenčních měřicích metod.{" "}
-          <SourceLink id="WEB_repository_oceanbestpractice_WMO_kapitola_o_mereni_vlhkosti_0667b41b">
+          <SourceLink id="WEB_World_Meteorological_Organiz_Guide_to_Instruments_and_Methods_of_Observation_93c4c4a4">
             WMO, kapitola o měření vlhkosti
           </SourceLink>
         </p>
@@ -150,9 +151,7 @@ export function AtmosphericHumidityArticle() {
           Väisälä. Pravidelné výstupy se během dalších desetiletí staly součástí meteorologických sítí. Historii
           jednotlivých konstrukcí shrnuje přehled vývoje atmosférických pozorovacích systémů a vlastní měření dnes
           uchovává archiv IGRA.{" "}
-          <SourceLink id="DOI_10_1175_amsmonographs_d_18_0006_1">
-            Fleming et al., 2018
-          </SourceLink>
+          <SourceLink id="DOI_10_1175_amsmonographs_d_18_0006_1">Stith et al., 2018</SourceLink>
         </p>
 
         <p>
@@ -172,7 +171,7 @@ export function AtmosphericHumidityArticle() {
           kapacitu či odpor podle množství pohlcené vodní páry. Kondenzační vlhkoměr naopak ochlazuje zrcátko a měří
           teplotu, při které se na jeho povrchu vytvoří rosa nebo jinovatka. Z teploty, tlaku a jednoho takového údaje
           lze podle standardních vztahů vypočítat další vlhkostní veličiny.{" "}
-          <SourceLink id="WEB_repository_oceanbestpractice_WMO_kapitola_o_mereni_vlhkosti_0667b41b">
+          <SourceLink id="WEB_World_Meteorological_Organiz_Guide_to_Instruments_and_Methods_of_Observation_93c4c4a4">
             WMO Guide No. 8
           </SourceLink>
         </p>
@@ -285,7 +284,9 @@ export function AtmosphericHumidityArticle() {
           HadISDH zprůměruje platná měření stanice nebo lodi za měsíc a poté je spojí v buňkách širokých pět stupňů
           zeměpisné délky i šířky. Zveřejňuje skutečné hodnoty i odchylky od průměru let 1991–2020. Prázdná buňka zůstane
           prázdná; HadISDH do ní nedopočítává chybějící pozorování. Globální průměr proto popisuje dostupné buňky mezi
-          70° jižní a 70° severní šířky, nikoli rovnoměrně pozorovaný celý povrch.
+          70° jižní a 70° severní šířky, nikoli rovnoměrně pozorovaný celý povrch.{" "}
+          <SourceLink id="DOI_10_5194_cp_10_1983_2014">Pevninská část</SourceLink> a{" "}
+          <SourceLink id="DOI_10_5194_essd_12_2853_2020">oceánská část</SourceLink>
         </p>
 
         <h3>5. Družicová měření se nejprve sjednotí mezi přístroji</h3>
@@ -302,7 +303,10 @@ export function AtmosphericHumidityArticle() {
           U HadISDH se odděleně vyčísluje nejistota přístroje, zaokrouhlení starých hlášení, výpočtu referenčního
           průměru, úprav známých zkreslení, zastoupení jednotlivých dnů v měsíci a zeměpisného pokrytí. U družicového
           souboru přibývá nejistota kalibrace, převodového výpočtu a spojení jednotlivých radiometrů. Proto je vedle
-          samotného čísla podstatná i verze souboru, maska dostupných míst a interval nejistoty.
+          samotného čísla podstatná i verze souboru, maska dostupných míst a interval nejistoty.{" "}
+          <SourceLink id="DOI_10_5194_cp_10_1983_2014">Willett et al., 2014</SourceLink>,{" "}
+          <SourceLink id="DOI_10_5194_essd_12_2853_2020">Willett et al., 2020</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1002_2018ea000363">Mears et al., 2018</SourceLink>
         </p>
 
         <h2>Zveřejňovaná data</h2>
@@ -353,12 +357,13 @@ export function AtmosphericHumidityArticle() {
             <p>
               Archiv jednotlivých radiosondážních profilů z více než 2 800 stanic. Obsahuje tlak, teplotu, relativní
               vlhkost, pokles rosného bodu, vítr a odvozené veličiny. Nejstarší části archivu začínají rokem 1905,
-              dostupnost vlhkosti je však u každé stanice a výšky jiná a často začíná mnohem později.
+              dostupnost vlhkosti je však u každé stanice a výšky jiná a často začíná mnohem později. Článek používá
+              verzi 2.2, která od roku 2023 přijímá také novější hlášení ve formátu BUFR.
             </p>
             <p className="article-data-item__links">
-              <SourceLink id="WEB_NOAA_Integrated_Global_Radiosonde_Archive_IGRA_ab0ea6c1">
-                Popis, dokumentace a stažení
-              </SourceLink>
+              <SourceLink id="DOI_10_7289_v5x63k0q">DOI a úplná dokumentace</SourceLink>
+              {" · "}
+              <SourceLink id="WEB_NOAA_Integrated_Global_Radiosonde_Archive_IGRA_ab0ea6c1">Stažení dat</SourceLink>
             </p>
           </section>
 
@@ -410,7 +415,8 @@ export function AtmosphericHumidityArticle() {
           HadISDH sleduje vzduch přibližně ve dvou metrech nad pevninou a kolem deseti metrů nad oceánem. Družicové a
           GNSS soubory sčítají vodní páru v celé výšce atmosféry. Radiosonda mezi těmito pohledy ukazuje, ve kterých
           výškách se vodní pára nacházela. Shodný směr změny těchto výsledků je vzájemně podpůrný, jejich číselné trendy
-          se však přímo odečítat nebo průměrovat nesmějí.
+          se však přímo odečítat nebo průměrovat nesmějí.{" "}
+          <SourceLink id="DOI_10_1029_2022jd036728">Allan et al., 2022</SourceLink>
         </p>
 
         <p>
@@ -425,7 +431,10 @@ export function AtmosphericHumidityArticle() {
           Relativní vlhkost nad oceánem je nejobtížnější součást srovnání. Lodní přístroje pracovaly v různých výškách
           a s různým prouděním vzduchu, pokrytí jižních oceánů je řídké a jednotlivé reanalýzy se v meziročním průběhu
           rozcházejí. Zpráva <em>State of the Climate in 2024</em> proto u oceánské relativní vlhkosti neuvádí
-          dlouhodobý rekord a výslovně označuje její nejistotu za velkou.
+          dlouhodobý rekord a výslovně označuje její nejistotu za velkou.{" "}
+          <SourceLink id="WEB_NOAA_State_of_the_Climate_in_2024_tabulka_2_8_4784f00d">
+            State of the Climate in 2024
+          </SourceLink>
         </p>
 
         <h2>Rozložení změn u povrchu</h2>
@@ -539,7 +548,16 @@ export function AtmosphericHumidityArticle() {
           <strong>−0,17 procentního bodu za desetiletí</strong>, s intervalem −0,28 až −0,07. Oceánský výsledek je
           −0,07 procentního bodu za desetiletí s intervalem −0,14 až 0,00. Oceánský interval dosahuje nuly a jednotlivé
           datové soubory se v průběhu relativní vlhkosti nad mořem neshodují natolik, aby zpráva za rok 2024 označila
-          dlouhodobý oceánský trend za spolehlivě určený.
+          dlouhodobý oceánský trend za spolehlivě určený.{" "}
+          <SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_fa0e4d55">
+            HadISDH.land 4.6.1.2024f
+          </SourceLink>,{" "}
+          <SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_0790df63">
+            HadISDH.marine 1.6.1.2024f
+          </SourceLink> a{" "}
+          <SourceLink id="WEB_NOAA_State_of_the_Climate_in_2024_tabulka_2_8_4784f00d">
+            State of the Climate in 2024
+          </SourceLink>
         </p>
 
         <p>
@@ -557,7 +575,10 @@ export function AtmosphericHumidityArticle() {
           Relativní vlhkost nad pevninou zůstala v roce 2024 u všech produktů kromě MERRA-2 pod průměrem let
           1991–2020. HadISDH uvádí odchylku <strong>−0,13 procentního bodu</strong>. Nad oceánem měla v témže souboru
           hodnotu +0,71 procentního bodu, zatímco ERA5 uváděla +0,03. Tento rozdíl je konkrétním příkladem nejistoty,
-          kvůli které nelze oceánskou relativní vlhkost shrnout jediným jistým dlouhodobým číslem.
+          kvůli které nelze oceánskou relativní vlhkost shrnout jediným jistým dlouhodobým číslem.{" "}
+          <SourceLink id="WEB_NOAA_State_of_the_Climate_in_2024_tabulka_2_8_4784f00d">
+            Willett et al., 2025, tabulka 2.6
+          </SourceLink>
         </p>
 
         <p>
@@ -576,7 +597,10 @@ export function AtmosphericHumidityArticle() {
           Všechny soubory označily rok 2024 za rok s nejvyšším množstvím vodní páry ve sloupci ve svém období.
           Globální odchylka mezi 60° jižní a 60° severní šířky dosáhla přibližně pěti procent nad průměr let 1991–2020.
           Pro období 1991–2024 leží trendy tří reanalýz mezi 0,37 a 0,42 kg/m² za desetiletí; družicový mikrovlnný
-          výsledek nad oceány je uveden výše.
+          výsledek nad oceány je uveden výše.{" "}
+          <SourceLink id="WEB_NOAA_State_of_the_Climate_in_2024_tabulka_2_8_4784f00d">
+            State of the Climate in 2024, tabulka 2.8
+          </SourceLink>
         </p>
 
         <p>
@@ -593,7 +617,10 @@ export function AtmosphericHumidityArticle() {
           pozorovaných buněk severní polokoule a v mnoha tropických oblastech; jednotlivé záporné oblasti se vyskytují
           zejména tam, kde je pozorování řídké nebo místně odlišné. Relativní vlhkost nad pevninou naopak v rozsáhlých
           částech středních zeměpisných šířek klesala, zatímco v některých tropických a oceánských buňkách vzrostla.
-          Bílé plochy na obou mapách zůstávají bez závěru.
+          Bílé plochy na obou mapách zůstávají bez závěru.{" "}
+          <SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_17fcf283">
+            Trendové mapy HadISDH.blend 1.5.1.2024f
+          </SourceLink>
         </p>
 
         <div className="article-observation-summary">
@@ -609,6 +636,13 @@ export function AtmosphericHumidityArticle() {
         </div>
 
         <h2>Prameny, data a licence</h2>
+        <p>
+          Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez
+          předplatného. U studií vede záznam v databázi na DOI i na veřejný plný text; u dat a institucionálních
+          dokumentů přímo na stránku vydavatele nebo do jeho repozitáře. Číselné výsledky v článku používají poslední
+          konečné a vzájemně sladěné verze HadISDH za rok 2024. Met Office už zveřejnil také předběžné verze za rok
+          2025, u nich však upozorňuje na změnu vstupní staniční databáze a horší prostorové pokrytí nad pevninou.
+        </p>
         <div className="article-source-groups">
           <section>
             <h3>Historické a primární práce</h3>
@@ -626,6 +660,12 @@ export function AtmosphericHumidityArticle() {
                 </SourceLink>
               </li>
               <li>
+                Bevis, M. et al. (1992): určení integrované vodní páry z GPS.{" "}
+                <SourceLink id="DOI_10_1029_92jd01517">
+                  DOI 10.1029/92JD01517
+                </SourceLink>
+              </li>
+              <li>
                 Dai, A. (2006): globální klimatologie a trendy povrchové vlhkosti v letech 1975–2005.{" "}
                 <SourceLink id="DOI_10_1175_jcli3816_1">DOI 10.1175/JCLI3816.1</SourceLink>
               </li>
@@ -636,33 +676,33 @@ export function AtmosphericHumidityArticle() {
                 </SourceLink>
               </li>
               <li>
-                Willett, K. M. et al. (2014): vznik víceproměnného HadISDH nad pevninou.{" "}
-                <SourceLink id="DOI_10_5194_cp_10_1983_2014">
-                  DOI 10.5194/cp-10-1983-2014
-                </SourceLink>
-              </li>
-              <li>
-                Willett, K. M. et al. (2020): vznik a nejistoty HadISDH.marine.{" "}
-                <SourceLink id="DOI_10_5194_essd_12_2853_2020">
-                  DOI 10.5194/essd-12-2853-2020
-                </SourceLink>
-              </li>
-              <li>
                 Durre, I. et al. (2009): radiosondážní změny vodní páry nad pevninou severní polokoule.{" "}
                 <SourceLink id="DOI_10_1029_2008jd010989">
                   DOI 10.1029/2008JD010989
                 </SourceLink>
               </li>
               <li>
-                Bevis, M. et al. (1992): určení integrované vodní páry z GPS.{" "}
-                <SourceLink id="DOI_10_1029_92jd01517">
-                  DOI 10.1029/92JD01517
+                Willett, K. M. et al. (2014): vznik víceproměnného HadISDH nad pevninou.{" "}
+                <SourceLink id="DOI_10_5194_cp_10_1983_2014">
+                  DOI 10.5194/cp-10-1983-2014
+                </SourceLink>
+              </li>
+              <li>
+                Stith, J. L. et al. (2018): vývoj přístrojů a sítí pro pozorování atmosféry.{" "}
+                <SourceLink id="DOI_10_1175_amsmonographs_d_18_0006_1">
+                  DOI 10.1175/AMSMONOGRAPHS-D-18-0006.1
                 </SourceLink>
               </li>
               <li>
                 Mears, C. A. et al. (2018): spojení družicových mikrovlnných radiometrů a vyčíslení nejistoty.{" "}
                 <SourceLink id="DOI_10_1002_2018ea000363">
                   DOI 10.1002/2018EA000363
+                </SourceLink>
+              </li>
+              <li>
+                Willett, K. M. et al. (2020): vznik a nejistoty HadISDH.marine.{" "}
+                <SourceLink id="DOI_10_5194_essd_12_2853_2020">
+                  DOI 10.5194/essd-12-2853-2020
                 </SourceLink>
               </li>
               <li>
@@ -680,7 +720,7 @@ export function AtmosphericHumidityArticle() {
               <li>
                 WMO: <em>Guide to Meteorological Instruments and Methods of Observation</em>, kapitola 4 o měření
                 vlhkosti.{" "}
-                <SourceLink id="WEB_repository_oceanbestpractice_WMO_kapitola_o_mereni_vlhkosti_0667b41b">
+                <SourceLink id="WEB_World_Meteorological_Organiz_Guide_to_Instruments_and_Methods_of_Observation_93c4c4a4">
                   Příručka WMO No. 8
                 </SourceLink>
               </li>
@@ -691,16 +731,15 @@ export function AtmosphericHumidityArticle() {
                 </SourceLink>
               </li>
               <li>
-                Durre, I. et al. (2006): vznik a kontrola archivu IGRA.{" "}
-                <SourceLink id="DOI_10_1175_jcli3594_1">
-                  DOI 10.1175/JCLI3594.1
-                </SourceLink>
-              </li>
-              <li>
                 Dirksen, R. J. et al. (2014): korekce a nejistota referenčních radiosondáží GRUAN.{" "}
                 <SourceLink id="DOI_10_5194_amt_7_4463_2014">
                   DOI 10.5194/amt-7-4463-2014
                 </SourceLink>
+              </li>
+              <li>
+                Durre, I. et al. (2016): Integrated Global Radiosonde Archive, verze 2; průběžně aktualizovaná data,
+                dokumentace a popis verze 2.2.{" "}
+                <SourceLink id="DOI_10_7289_v5x63k0q">DOI 10.7289/V5X63K0Q</SourceLink>
               </li>
             </ul>
           </section>
@@ -717,8 +756,10 @@ export function AtmosphericHumidityArticle() {
               </li>
               <li>
                 NOAA/NCEI: Integrated Global Radiosonde Archive, verze 2.2.{" "}
+                <SourceLink id="DOI_10_7289_v5x63k0q">DOI a dokumentace</SourceLink>
+                {" · "}
                 <SourceLink id="WEB_NOAA_Integrated_Global_Radiosonde_Archive_IGRA_ab0ea6c1">
-                  Profily, měsíční hodnoty a odvozené parametry
+                  Profily, měsíční hodnoty a odvozené parametry ke stažení
                 </SourceLink>
               </li>
               <li>
