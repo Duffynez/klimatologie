@@ -22,7 +22,7 @@ test("keeps the source library, categories, and its download model in the site",
   assert.match(sources, /1681_Mariotte/);
   assert.match(sources, /2000_Argo/);
   assert.match(sources, /\.\.\.articleSources/);
-  assert.ok((articleSources.match(/^  \{ id:/gm) ?? []).length >= 491);
+  assert.ok((articleSources.match(/^  \{ id:/gm) ?? []).length >= 487);
   assert.doesNotMatch(articleSources, /author: "doi\.org"|<\/?(?:sub|sup|i)>|�/);
   assert.match(sources, /drive\.google\.com\/uc\?export=download/);
   assert.equal((sourceArchive.match(/"driveFileId":/g) ?? []).length, 228);
@@ -495,6 +495,32 @@ test("publishes a sourced precipitation article with separate daily and sub-dail
   assert.match(sourceCatalogueText, /10\.1029\/2019JD032263/);
   assert.match(sourceCatalogueText, /10\.1038\/s41597-023-02238-4/);
   assert.match(sourceCatalogueText, /10\.1007\/s00382-022-06567-9/);
+  assert.match(sourceCatalogueText, /10\.3390\/atmos9040138/);
+  assert.match(article, /Hellmann, 1897/);
+  assert.match(article, /Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez/);
+  assert.match(article, /zdrojů tohoto článku nepoužívají/);
+  assert.match(sourceCatalogueText, /assets-eu\.researchsquare\.com\/files\/rs-2023755/);
+  assert.match(sourceCatalogueText, /repository\.library\.noaa\.gov\/view\/noaa\/46579\/noaa_46579_DS1\.pdf/);
+  assert.match(sourceCatalogueText, /eprints\.ncl\.ac\.uk\/fulltext\.aspx/);
+  assert.match(sourceCatalogueText, /nature\.com\/articles\/s41597-023-02238-4\.pdf/);
+  assert.match(sourceCatalogueText, /dspace\.library\.uvic\.ca\/bitstreams/);
+  assert.match(sourceCatalogueText, /ueaeprints\.uea\.ac\.uk\/id\/eprint\/68099\/1\/Accepted_manuscript\.pdf/);
+  assert.match(sourceCatalogueText, /repository\.library\.noaa\.gov\/view\/noaa\/25396\/noaa_25396_DS1\.pdf/);
+  assert.doesNotMatch(
+    `${article}\n${sourceCatalogueText}`,
+    /DOI_10_1038_095262a0|DOI_10_1061_jrcea4_0000523|DOI_10_1002_jgrd_50150|DOI_10_1175_jcli_d_18_0143_1|DOI_10_1175_1525_7541_2003_004_1147_tvgpcp_2_0_co_2|WEB_repository_oceanbestpractice_WMO_kapitola_o_mereni_vlhkosti_0667b41b/,
+  );
+  const precipitationSourceIds = [
+    ...article.matchAll(/<SourceLink id="([^"]+)"/g),
+  ].map((match) => match[1]);
+  assert.equal(new Set(precipitationSourceIds).size, 34);
+  for (const id of new Set(precipitationSourceIds)) {
+    const catalogueOccurrences = sourceCatalogueText.split(id).length - 1;
+    assert.ok(catalogueOccurrences >= 2, `${id} must exist and be marked as open access`);
+    if (id.startsWith("DOI_")) {
+      assert.match(sourceCatalogueText, new RegExp(`${id}:\\s*"https://`));
+    }
+  }
   assert.match(article, /Open Government Licence v3\.0/);
   assert.match(article, /CC BY 4\.0/);
   assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);

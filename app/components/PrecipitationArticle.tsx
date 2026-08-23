@@ -54,7 +54,7 @@ export function PrecipitationArticle() {
           Tato definice je společná přístrojové příručce WMO, staničnímu archivu GHCN-Daily, pozemnímu souboru GPCC,
           družicově-staničnímu souboru GPCP i globálnímu přehledu extrémů HadEX3. Liší se jejich prostorové pokrytí,
           časový krok a způsob, jakým se bodová měření převádějí do mapy, základní měřenou veličinou však zůstává výška
-          vody za přesně určený interval. <SourceLink id="WEB_repository_oceanbestpractice_WMO_kapitola_o_mereni_vlhkosti_0667b41b">WMO Guide No. 8</SourceLink>,{" "}
+          vody za přesně určený interval. <SourceLink id="WEB_World_Meteorological_Organiz_Guide_to_Instruments_and_Methods_of_Observation_93c4c4a4">WMO Guide No. 8</SourceLink>,{" "}
           <SourceLink id="WEB_NOAA_Global_Historical_Climatology_Network_daily_GHCN_14491e06">GHCN-Daily</SourceLink>,{" "}
           <SourceLink id="WEB_Deutscher_Wetterdienst_Download_GPCC_Products_7b2ee25a">GPCC</SourceLink>,{" "}
           <SourceLink id="WEB_NOAA_Precipitation_GPCP_Monthly_CDR_9894ca66">GPCP</SourceLink> a{" "}
@@ -93,28 +93,23 @@ export function PrecipitationArticle() {
 
         <h2>Historie měření</h2>
         <p>
-          Benedetto Castelli popsal v roce 1639 evropské měření deště nádobou se známou plochou otvoru. Christopher Wren
-          v roce 1662 představil přístroj, který nasbíranou vodu po dávkách vypouštěl a počet dávek zapisoval. Robert
-          Hooke jeho konstrukci dále upravil. Tyto přístroje zavedly dva principy používané dodnes: zachytit srážku na
-          známé ploše a převést objem vody na výšku vrstvy. Historii konstrukcí shrnuje <SourceLink id="DOI_10_1061_jrcea4_0000523">Middleton, 1967</SourceLink>.
-        </p>
-
-        <p>
           V pražském Klementinu byly srážky zapisovány už v roce 1752, pravidelné a spolehlivé denní měření však začíná
           1. května 1804. Klementinský archiv tak ukazuje i praktický rozdíl mezi prvním dochovaným údajem a souvislým
           záznamem vhodným pro dlouhodobé srovnání. <SourceLink id="WEB_Cesky_hydrometeorologicky_us_Historicka_stanice_Klementinum_34332b46">ČHMÚ: historická stanice Klementinum</SourceLink>
         </p>
 
         <p>
-          V 19. století se rozšířily standardizované sběrné srážkoměry a samopisné přístroje. George Hellmann v roce 1897
-          zavedl sifonový ombrograf, který průběžně kreslil narůstající množství vody na papírový pás. Přehled z roku 1915
-          rozlišoval tři hlavní způsoby automatického záznamu: překlápěcí nádobku, váženou nádobu a plovák. <SourceLink id="DOI_10_1038_095262a0">Mill, 1915</SourceLink>
+          Během 19. století se vedle ručně odečítaných nádob rozšířily přístroje, které zaznamenávaly i průběh deště v
+          čase. George Hellmann v roce 1897 zveřejnil původní popis nového registračního srážkoměru: přibývající voda
+          zvedala plovák s perem a po naplnění nádoby ji sifon vyprázdnil, takže přístroj mohl pokračovat v zápisu na
+          papírový pás poháněný hodinovým strojem. Záznam už neukazoval pouze celkový úhrn mezi dvěma odečty, ale také
+          začátek, konec a proměnlivou intenzitu srážky. <SourceLink id="WEB_DWD_Hellmann_1897_Ein_neuer_registrirender_Regenmesser">Hellmann, 1897</SourceLink>
         </p>
 
         <p>
           Ve 20. století se národní sítě rozrostly na tisíce stanic a přibylo měření radarem. Od roku 1979 poskytují
           družice souvislejší pohled také nad oceány. GPCP od roku 1979 spojuje družicové odhady se srážkoměry do měsíčních
-          globálních map; IMERG od června 2000 zveřejňuje odhady po půlhodině na mřížce 0,1°. <SourceLink id="DOI_10_1175_1525_7541_2003_004_1147_tvgpcp_2_0_co_2">Adler et al., 2003</SourceLink> a{" "}
+          globálních map; IMERG od června 2000 zveřejňuje odhady po půlhodině na mřížce 0,1°. <SourceLink id="DOI_10_3390_atmos9040138">Adler et al., 2018</SourceLink> a{" "}
           <SourceLink id="WEB_NASA_IMERG_Integrated_Multi_satellitE_Retrievals_for_6df632f1">NASA IMERG</SourceLink>
         </p>
 
@@ -124,6 +119,7 @@ export function PrecipitationArticle() {
           Sběrný srážkoměr zachytí vodu nálevkou se známou plochou a pozorovatel změří její objem. Denní úhrn vznikne
           rozdílem mezi dvěma pravidelnými odečty. Váhový přístroj místo přelévání průběžně váží nádobu a změnu hmotnosti
           převádí na milimetry vody. Dokáže proto zaznamenat i průběh srážky a po vhodné úpravě také vodní hodnotu sněhu.
+          Základní konstrukce, požadavky na umístění i zdroje chyb shrnuje <SourceLink id="WEB_World_Meteorological_Organiz_Guide_to_Instruments_and_Methods_of_Observation_93c4c4a4">WMO Guide No. 8, svazek I, kapitola 6</SourceLink>.
         </p>
 
         <figure className="article-figure article-figure--portrait">
@@ -146,7 +142,7 @@ export function PrecipitationArticle() {
           Vítr odklání kapky a zejména sněhové vločky nad ústím přístroje, smáčení stěn část vody zadrží a část se může
           odpařit. Zachycené množství je proto často o něco nižší než množství, které skutečně dopadlo na okolní povrch.
           Velikost chyby závisí na větru, druhu srážky, tvaru přístroje a jeho umístění. WMO proto předepisuje srovnávací
-          přístroje, ochranné štíty a evidenci typu srážkoměru. <SourceLink id="WEB_repository_oceanbestpractice_WMO_kapitola_o_mereni_vlhkosti_0667b41b">WMO, kapitola 6</SourceLink>
+          přístroje, ochranné štíty a evidenci typu srážkoměru. <SourceLink id="WEB_World_Meteorological_Organiz_Guide_to_Instruments_and_Methods_of_Observation_93c4c4a4">WMO, svazek I, kapitola 6</SourceLink>
         </p>
 
         <h3>Překlápěcí srážkoměr</h3>
@@ -176,7 +172,7 @@ export function PrecipitationArticle() {
           Převod závisí na velikosti a skupenství částic. Terén může paprsek zakrýt, s rostoucí vzdáleností radar sleduje
           vyšší vrstvu atmosféry a při silné srážce se signál zeslabuje. Pro klimatický záznam se proto radarové odhady
           obvykle upravují podle srážkoměrů. Radar výborně popisuje prostor konkrétní události, jeho dlouhodobý záznam je
-          však kratší a změny zařízení mohou vytvářet skoky.
+          však kratší a změny zařízení mohou vytvářet skoky. <SourceLink id="WEB_World_Meteorological_Organiz_Guide_to_Instruments_and_Methods_of_Observation_93c4c4a4">WMO Guide No. 8, svazek III, kapitola 7</SourceLink>
         </p>
 
         <h3>Družice</h3>
@@ -198,7 +194,9 @@ export function PrecipitationArticle() {
         <p>
           Ručně odečítaná stanice obvykle hlásí součet za den. Automatický přístroj ukládá jednotlivá překlopení nebo
           změnu hmotnosti v minutovém až hodinovém kroku. Spolu s hodnotou musí zůstat zachován začátek a konec měření,
-          protože „den“ může končit o místní pozorovací hodině, o půlnoci místního času nebo o půlnoci UTC.
+          protože „den“ může končit o místní pozorovací hodině, o půlnoci místního času nebo o půlnoci UTC. GHCN-Daily
+          proto ukládá vedle úhrnu také příznaky zdroje, měření a kvality; způsob vytvoření integrovaného archivu popsali
+          {" "}<SourceLink id="DOI_10_1175_jtech_d_11_00103_1">Menne et al., 2012</SourceLink>.
         </p>
 
         <h3>2. Kontroly označí chybné a podezřelé hodnoty</h3>
@@ -214,7 +212,9 @@ export function PrecipitationArticle() {
         <p>
           Z denních dat lze pro každý rok sečíst úhrn mokrých dnů, vybrat nejvyšší jednodenní nebo pětidenní hodnotu a
           spočítat množství vody připadající na nejvlhčí dny. Z hodinových dat lze posuvným oknem najít nejvyšší úhrn za
-          1, 3, 6, 12 nebo 24 hodin. Každý ukazatel má vlastní jednotku, interval a pravidlo pro chybějící data.
+          1, 3, 6, 12 nebo 24 hodin. Každý ukazatel má vlastní jednotku, interval a pravidlo pro chybějící data. Přesné
+          definice denních ukazatelů zveřejňuje HadEX3 a postup výpočtu kratších intervalů popisuje GSDR-I. <SourceLink id="DOI_10_1029_2019jd032263">Dunn et al., 2020</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1038_s41597_023_02238_4">Pritchard et al., 2023</SourceLink>
         </p>
 
         <h3>4. Stanice se převedou do mapy</h3>
@@ -222,7 +222,10 @@ export function PrecipitationArticle() {
           Srážkoměr měří bod, zatímco mapa potřebuje hodnotu pro plochu. GPCC nejprve počítá odchylku stanice od jejího
           dlouhodobého průměru a tu prostorově rozkládá do mřížky. HadEX3 vkládá již vypočtené extrémní ukazatele do buněk
           a okolním stanicím dává váhu podle vzdálenosti. E-OBS vytváří evropské denní mapy statistickou interpolací a
-          vedle nejlepšího odhadu zveřejňuje i nejistotu.
+          vedle nejlepšího odhadu zveřejňuje i soubor možných realizací, z něhož lze odhadnout nejistotu interpolace.{" "}
+          <SourceLink id="DOI_10_5194_essd_5_71_2013">Becker et al., 2013</SourceLink>,{" "}
+          <SourceLink id="DOI_10_1029_2019jd032263">Dunn et al., 2020</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1029_2017jd028200">Cornes et al., 2018</SourceLink>
         </p>
 
         <h3>5. Pokrytí a nejistota zůstávají součástí výsledku</h3>
@@ -230,7 +233,10 @@ export function PrecipitationArticle() {
           Počet dostupných stanic se mění mezi oblastmi i roky. Mřížkovaná hodnota v husté síti střední Evropy má jiné
           podklady než hodnota v oblasti s několika stanicemi. U krátkých intenzivních srážek je tento rozdíl ještě větší,
           protože hodinové záznamy jsou kratší a hůře dostupné. Seriózní výsledek proto uvádí mapu pokrytí, pravidlo pro
-          mezery a období, za které byl trend počítán.
+          mezery a období, za které byl trend počítán. Rozložení stanic a jeho proměny v čase jsou proto výslovnou
+          součástí dokumentace HadEX3, E-OBS i GSDR-I. <SourceLink id="DOI_10_1029_2019jd032263">Dunn et al., 2020</SourceLink>,{" "}
+          <SourceLink id="DOI_10_1029_2017jd028200">Cornes et al., 2018</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1038_s41597_023_02238_4">Pritchard et al., 2023</SourceLink>
         </p>
 
         <h2>Zveřejňovaná data</h2>
@@ -244,7 +250,8 @@ export function PrecipitationArticle() {
             <h3>GPCC Precipitation Analysis Monthly</h3>
             <p>
               Globální měsíční srážky nad pevninou od roku 1891. Verze 2025 je dostupná na mřížkách 0,25°, 0,5°, 1° a
-              2,5° a je sestavena výhradně z pozemních srážkoměrů.
+              2,5° a je sestavena výhradně z pozemních srážkoměrů. Vznik produktu, kontrolu stanic a převod odchylek do
+              mřížky popisují <SourceLink id="DOI_10_5194_essd_5_71_2013">Becker et al., 2013</SourceLink>.
             </p>
             <p className="article-data-item__links">
               <SourceLink id="WEB_Deutscher_Wetterdienst_Download_GPCC_Products_7b2ee25a">Stažení produktů GPCC</SourceLink>{" "}
@@ -256,7 +263,10 @@ export function PrecipitationArticle() {
             <h3>GHCN-Daily</h3>
             <p>
               Původní denní staniční údaje z více než 100 000 stanic ve 180 zemích a územích. Délka záznamu se mezi
-              stanicemi výrazně liší; přibližně polovina stanic hlásí pouze srážky.
+              stanicemi výrazně liší; přibližně polovina stanic hlásí pouze srážky. Archiv se průběžně doplňuje a znovu
+              kontroluje, takže počet dostupných stanic ani příznaky jednotlivých hodnot nejsou navždy neměnné.{" "}
+              <SourceLink id="WEB_NOAA_Global_Historical_Climatology_Network_daily_GHCN_14491e06">NOAA/NCEI</SourceLink> a{" "}
+              <SourceLink id="DOI_10_1175_jtech_d_11_00103_1">Menne et al., 2012</SourceLink>
             </p>
             <p className="article-data-item__links">
               <SourceLink id="WEB_NOAA_Global_Historical_Climatology_Network_daily_GHCN_14491e06">Dokumentace a přístup</SourceLink>{" "}
@@ -268,7 +278,8 @@ export function PrecipitationArticle() {
             <h3>HadEX3</h3>
             <p>
               Globální pozemní mapy 29 ukazatelů teplotních a srážkových extrémů pro roky 1901–2018. Srážková část
-              čerpá přibližně ze 17 000 stanic; obsahuje celkový úhrn i nejvyšší jednodenní a pětidenní hodnoty.
+              čerpá přibližně ze 17 000 stanic; obsahuje celkový úhrn i nejvyšší jednodenní a pětidenní hodnoty.{" "}
+              <SourceLink id="DOI_10_1029_2019jd032263">Dunn et al., 2020</SourceLink>
             </p>
             <p className="article-data-item__links">
               <SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_cd3aac80">NetCDF a diagnostické grafy</SourceLink>{" "}
@@ -280,7 +291,8 @@ export function PrecipitationArticle() {
             <h3>E-OBS 33.0e</h3>
             <p>
               Denní evropské mapy srážek od roku 1950 do konce roku 2025. Verze 33.0e byla vydána v květnu 2026;
-              samostatně jsou dostupné i odvozené ukazatele extrémů.
+              samostatně jsou dostupné i odvozené ukazatele extrémů. Nejlepší odhad doprovází ansámbl možných polí,
+              který zachycuje nejistotu vznikající při interpolaci mezi stanicemi. <SourceLink id="DOI_10_1029_2017jd028200">Cornes et al., 2018</SourceLink>
             </p>
             <p className="article-data-item__links">
               <SourceLink id="WEB_Copernicus_E_OBS_data_access_94a6a7b1">Denní E-OBS</SourceLink>{" "}
@@ -304,7 +316,9 @@ export function PrecipitationArticle() {
             <h3>GPCP a IMERG</h3>
             <p>
               GPCP spojuje družice a srážkoměry do měsíčních globálních map od ledna 1979. IMERG V07 poskytuje
-              půlhodinové odhady na mřížce 0,1° od června 2000 a je vhodný pro prostorový průběh jednotlivých událostí.
+              půlhodinové odhady na mřížce 0,1° od června 2000 a je vhodný pro prostorový průběh jednotlivých událostí.{" "}
+              <SourceLink id="DOI_10_3390_atmos9040138">Adler et al., 2018</SourceLink> a{" "}
+              <SourceLink id="WEB_NASA_Algorithm_Theoretical_Basis_Document_79780237">Huffman et al., 2023</SourceLink>
             </p>
             <p className="article-data-item__links">
               <SourceLink id="WEB_NOAA_Precipitation_GPCP_Monthly_CDR_9894ca66">GPCP Monthly</SourceLink>{" "}
@@ -317,7 +331,7 @@ export function PrecipitationArticle() {
         <p>
           HadEX3 označuje celkový roční úhrn z mokrých dnů zkratkou PRCPTOT. Graf níže porovnává čtyři generace globálních
           pozemních souborů. Každá čára je plošně vážená odchylka od průměru let 1961–1990, nikoli množství vody na celé
-          planetě. Starší část má řidší pokrytí a jednotlivé roky silně kolísají.
+          planetě. Starší část má řidší pokrytí a jednotlivé roky silně kolísají. <SourceLink id="DOI_10_1029_2019jd032263">Dunn et al., 2020</SourceLink>
         </p>
 
         <figure className="article-figure article-figure--scroll-mobile">
@@ -342,7 +356,8 @@ export function PrecipitationArticle() {
           Globální průměr zakrývá protichůdné změny. Mapa pro roky 1950–2018 ukazuje nárůst v rozsáhlých částech severní
           Eurasie, severní a východní části Severní Ameriky a v některých oblastech jižní a jihovýchodní Asie. Pokles je
           patrný například kolem Středomoří, v části západní Afriky, Chile a jihozápadní Austrálie. Šedé a bílé oblasti
-          nemají dostatečná data pro zobrazení.
+          nemají dostatečná data pro zobrazení. Jde o prostorové rozložení změn v HadEX3, nikoli o předpověď ani o
+          rovnoměrný vývoj všech míst. <SourceLink id="DOI_10_1029_2019jd032263">Dunn et al., 2020</SourceLink>
         </p>
 
         <figure className="article-figure article-figure--scroll-mobile">
@@ -366,7 +381,9 @@ export function PrecipitationArticle() {
         <h2>Nejvyšší jednodenní úhrny</h2>
         <p>
           Ukazatel Rx1day vybírá z každého roku jediný nejvyšší denní úhrn. Neříká, jak často silně pršelo ani kolik vody
-          spadlo za celý rok. Umožňuje však porovnávat stejnou, přesně definovanou část denního záznamu na tisících stanic.
+          spadlo za celý rok. Umožňuje však porovnávat stejnou, přesně definovanou část denního záznamu na tisících stanic.{" "}
+          <SourceLink id="DOI_10_1175_jcli_d_12_00502_1">Westra et al., 2013</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1029_2019jd032263">Dunn et al., 2020</SourceLink>
         </p>
 
         <figure className="article-figure article-figure--scroll-mobile">
@@ -419,7 +436,7 @@ export function PrecipitationArticle() {
         <p>
           Krátké přívalové srážky vyžadují automatický záznam. GSDR-I shromáždil hodinová měření 18 591 stanic, ale jejich
           délka a úplnost jsou velmi nerovnoměrné. Dlouhé záznamy se soustřeďují do Evropy, Severní Ameriky, východní Asie
-          a Austrálie; velká část Afriky, Jižní Ameriky a Blízkého východu zůstává řídká.
+          a Austrálie; velká část Afriky, Jižní Ameriky a Blízkého východu zůstává řídká. <SourceLink id="DOI_10_1038_s41597_023_02238_4">Pritchard et al., 2023</SourceLink>
         </p>
 
         <figure className="article-figure article-figure--scroll-mobile">
@@ -454,7 +471,10 @@ export function PrecipitationArticle() {
           Celkové množství srážek lze porovnávat v GPCC, GPCP, GHCN-Daily, E-OBS a HadEX3, pokud se sjednotí oblast,
           období a délka intervalu. Nad pevninou se produkty opírají z velké části o stejné národní stanice, liší se však
           kontrolami, počtem přijatých stanic a převodem do mřížky. Nad oceány je dlouhodobý globální přehled založen na
-          družicích a začíná až rokem 1979.
+          družicích a začíná až rokem 1979. <SourceLink id="DOI_10_5194_essd_5_71_2013">Becker et al., 2013</SourceLink>,{" "}
+          <SourceLink id="DOI_10_1029_2017jd028200">Cornes et al., 2018</SourceLink>,{" "}
+          <SourceLink id="DOI_10_1029_2019jd032263">Dunn et al., 2020</SourceLink> a{" "}
+          <SourceLink id="DOI_10_3390_atmos9040138">Adler et al., 2018</SourceLink>
         </p>
 
         <p>
@@ -514,33 +534,28 @@ export function PrecipitationArticle() {
         </div>
 
         <h2>Prameny, data a licence</h2>
+        <p>
+          Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez
+          předplatného. U odborné práce vede její záznam v databázi na DOI a samostatně na veřejný plný text; u dat a
+          institucionálních dokumentů přímo na stránku vydavatele nebo do jeho repozitáře. Odkazy na Google Drive se u
+          zdrojů tohoto článku nepoužívají.
+        </p>
         <div className="article-source-groups">
           <section>
             <h3>Historické a primární práce</h3>
             <ul>
               <li>
-                Middleton, W. E. K. (1967): vývoj srážkoměrů od Castelliho a Wrena. <SourceLink id="DOI_10_1061_jrcea4_0000523">DOI 10.1061/JRCEA4.0000523</SourceLink>
-              </li>
-              <li>
-                Mill, H. R. (1915): přehled principů samopisných srážkoměrů. <SourceLink id="DOI_10_1038_095262a0">DOI 10.1038/095262a0</SourceLink>
-              </li>
-              <li>
-                Alexander, L. V. et al. (2006): globální změny denních teplotních a srážkových extrémů. <SourceLink id="DOI_10_1029_2005jd006290">DOI 10.1029/2005JD006290</SourceLink>
+                Hellmann, G. (1897): původní popis registračního sifonového srážkoměru.{" "}
+                <SourceLink id="WEB_DWD_Hellmann_1897_Ein_neuer_registrirender_Regenmesser">Digitální archiv DWD</SourceLink>
               </li>
               <li>
                 Westra, S. et al. (2013): trendy ročních maxim denních srážek na 8 326 stanicích. <SourceLink id="DOI_10_1175_jcli_d_12_00502_1">DOI 10.1175/JCLI-D-12-00502.1</SourceLink>
-              </li>
-              <li>
-                Donat, M. G. et al. (2013): globální soubor extrémů HadEX2. <SourceLink id="DOI_10_1002_jgrd_50150">DOI 10.1002/jgrd.50150</SourceLink>
               </li>
               <li>
                 Dunn, R. J. H. et al. (2020): vývoj a vyhodnocení HadEX3. <SourceLink id="DOI_10_1029_2019jd032263">DOI 10.1029/2019JD032263</SourceLink>
               </li>
               <li>
                 Gu, G. &amp; Adler, R. F. (2023): globální srážky v GPCP v letech 1979–2020. <SourceLink id="DOI_10_1007_s00382_022_06567_9">DOI 10.1007/s00382-022-06567-9</SourceLink>
-              </li>
-              <li>
-                Lewis, E. et al. (2019): první vydání globálního hodinového archivu GSDR. <SourceLink id="DOI_10_1175_jcli_d_18_0143_1">DOI 10.1175/JCLI-D-18-0143.1</SourceLink>
               </li>
               <li>
                 Pritchard, D. et al. (2023): ukazatele hodinových srážek GSDR-I. <SourceLink id="DOI_10_1038_s41597_023_02238_4">DOI 10.1038/s41597-023-02238-4</SourceLink>
@@ -558,7 +573,9 @@ export function PrecipitationArticle() {
             <h3>Metody a nejistoty</h3>
             <ul>
               <li>
-                WMO: <em>Guide to Meteorological Instruments and Methods of Observation</em>, kapitola o měření srážek. <SourceLink id="WEB_repository_oceanbestpractice_WMO_kapitola_o_mereni_vlhkosti_0667b41b">Příručka WMO No. 8</SourceLink>
+                WMO: <em>Guide to Instruments and Methods of Observation</em>, svazek I, kapitola 6 o měření srážek a
+                svazek III, kapitola 7 o radaru.{" "}
+                <SourceLink id="WEB_World_Meteorological_Organiz_Guide_to_Instruments_and_Methods_of_Observation_93c4c4a4">Příručka WMO No. 8</SourceLink>
               </li>
               <li>
                 Menne, M. J. et al. (2012): vznik a struktura GHCN-Daily. <SourceLink id="DOI_10_1175_jtech_d_11_00103_1">DOI 10.1175/JTECH-D-11-00103.1</SourceLink>
@@ -571,6 +588,10 @@ export function PrecipitationArticle() {
               </li>
               <li>
                 Cornes, R. C. et al. (2018): soubor E-OBS a vyjádření nejistoty. <SourceLink id="DOI_10_1029_2017jd028200">DOI 10.1029/2017JD028200</SourceLink>
+              </li>
+              <li>
+                Adler, R. F. et al. (2018): postup vytvoření GPCP V2.3 a změny proti starším verzím.{" "}
+                <SourceLink id="DOI_10_3390_atmos9040138">DOI 10.3390/atmos9040138</SourceLink>
               </li>
               <li>
                 Huffman, G. J. et al.: popis algoritmu IMERG Version 07. <SourceLink id="WEB_NASA_Algorithm_Theoretical_Basis_Document_79780237">Algorithm Theoretical Basis Document</SourceLink>
