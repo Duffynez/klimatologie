@@ -307,6 +307,19 @@ test("publishes a full stratospheric temperature article instead of the generic 
   assert.match(sourceCatalogueText, /10\.1175\/JCLI-D-19-0998\.1/);
   assert.match(sourceCatalogueText, /10\.5194\/acp-24-12925-2024/);
   assert.match(sourceCatalogueText, /10\.1038\/s41612-022-00229-7/);
+  assert.match(sourceCatalogueText, /10\.1029\/2003JD003909/);
+  assert.match(sourceCatalogueText, /10\.1029\/2010RS004614/);
+  assert.match(sourceCatalogueText, /10\.5067\/GHRC\/AMSU-A\/DATA401/);
+  assert.match(sourceCatalogueText, /AlgorithmDescription_01B-10\.pdf/);
+  assert.match(sourceCatalogueText, /repository\.library\.noaa\.gov\/view\/noaa\/41066/);
+  assert.match(sourceCatalogueText, /wegc_steiner-etal_rs-2011_roforclimate\.pdf/);
+  assert.match(sourceCatalogueText, /ncei\.noaa\.gov\/pub\/data\/images\/Free_et_al_2005\.pdf/);
+  assert.match(sourceCatalogueText, /Zou_Wang_JGR_2011_AMSU-A-1\.pdf/);
+  assert.doesNotMatch(
+    `${article}\n${sourceCatalogueText}`,
+    /DOI_10_1002_2014jd021603|DOI_10_1007_s13143_017_0010_y|DOI_10_1016_s0273_1177_03_00591_x|DOI_10_1029_2009gl039777/,
+  );
+  assert.match(article, /Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez/);
   assert.match(article, /noaa-radiosonde-balloon-1944\.jpg/);
   assert.match(styles, /\.article-figure--scroll-wide \.article-figure__media/);
   assert.match(evidence, /slug: "stratosfericke-ochlazovani"[\s\S]*status: "hotovo"/);

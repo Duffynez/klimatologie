@@ -182,7 +182,7 @@ export function StratosphericCoolingArticle() {
           signál navigačních družic ohýbá při průchodu atmosférou. Z těchto zákrytových měření lze odvodit svislé
           profily teploty. Jejich globální klimatické zpracování začíná v roce 2002 a poskytuje další měření
           založené na odlišném fyzikálním principu.{" "}
-          <SourceLink id="DOI_10_1016_s0273_1177_03_00591_x">Wickert et al., 2004</SourceLink>{" "}
+          <SourceLink id="DOI_10_1029_2003jd003909">Hajj et al., 2004</SourceLink>{" "}
           a{" "}
           <SourceLink id="WEB_University_Corporation_for_A_RO_Climate_Data_Record_Constellation_Observing_S_03516764">
             klimatický soubor centra CDAAC
@@ -237,7 +237,7 @@ export function StratosphericCoolingArticle() {
           <SourceLink id="DOI_10_1175_2008jtecha1176_1">
             Mears &amp; Wentz, 2009
           </SourceLink>{" "}
-          a <SourceLink id="DOI_10_1002_2014jd021603">Zou et al., 2014</SourceLink>
+          a <SourceLink id="DOI_10_1175_jtech_d_16_0018_1">Zou &amp; Qian, 2016</SourceLink>
         </p>
 
         <figure className="article-figure article-figure--portrait">
@@ -354,7 +354,7 @@ export function StratosphericCoolingArticle() {
           rozdíl mezi produkty NOAA, RSS a UAH.{" "}
           <SourceLink id="DOI_10_1029_2011jd016205">Zou &amp; Wang, 2011</SourceLink>,{" "}
           <SourceLink id="DOI_10_1029_2010jd014954">Mears et al., 2011</SourceLink> a{" "}
-          <SourceLink id="DOI_10_1007_s13143_017_0010_y">Spencer et al., 2017</SourceLink>
+          <SourceLink id="WEB_NASA_UAH_Mean_Layer_Temperature_ATBD_2017">dokumentace UAH/NOAA, 2017</SourceLink>
         </p>
 
         <h3>6. Staré a nové kanály dostanou stejnou výškovou citlivost</h3>
@@ -462,7 +462,9 @@ export function StratosphericCoolingArticle() {
             <p className="article-data-item__links">
               <SourceLink id="WEB_nsstc_uah_edu_Index_of_data_msu_9b9f4900">Data UAH</SourceLink>
               {" · "}
-              <SourceLink id="DOI_10_1007_s13143_017_0010_y">Metodická práce</SourceLink>
+              <SourceLink id="DOI_10_5067_ghrc_amsu_a_data401">DOI dat</SourceLink>
+              {" · "}
+              <SourceLink id="WEB_NASA_UAH_Mean_Layer_Temperature_ATBD_2017">Metodická dokumentace</SourceLink>
             </p>
           </section>
 
@@ -620,7 +622,7 @@ export function StratosphericCoolingArticle() {
           krátké pro přímé zopakování celého výpočtu od roku 1979, ale ve společném období potvrzují pokles v
           dolní stratosféře a umožňují sledovat, jak se změna liší po kilometrových výškách. Výsledky několika
           zpracovatelských center se v globálním a šířkovém průměru navzájem blíží.{" "}
-          <SourceLink id="DOI_10_1029_2009gl039777">Steiner et al., 2009</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1029_2010rs004614">Steiner et al., 2011</SourceLink> a{" "}
           <SourceLink id="DOI_10_1038_s41612_022_00229_7">Gleisner et al., 2022</SourceLink>
         </p>
 
@@ -648,6 +650,11 @@ export function StratosphericCoolingArticle() {
         </div>
 
         <h2>Prameny, data a licence</h2>
+        <p>
+          Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez
+          předplatného. U studií vede záznam v databázi na DOI i na veřejný plný text; u dat a institucionálních
+          dokumentů přímo na stránku vydavatele nebo do jeho repozitáře.
+        </p>
         <div className="article-source-groups">
           <section>
             <h3>Historie a přímá měření</h3>
@@ -683,6 +690,13 @@ export function StratosphericCoolingArticle() {
                 Durre, I. et al. (2018):{" "}
                 <SourceLink id="DOI_10_1175_jtech_d_17_0223_1">
                   Overview of the Integrated Global Radiosonde Archive Version 2
+                </SourceLink>
+                .
+              </li>
+              <li>
+                Hajj, G. A. et al. (2004):{" "}
+                <SourceLink id="DOI_10_1029_2003jd003909">
+                  CHAMP and SAC-C atmospheric occultation results and intercomparisons
                 </SourceLink>
                 .
               </li>
@@ -749,9 +763,9 @@ export function StratosphericCoolingArticle() {
                 .
               </li>
               <li>
-                Zou, C.-Z. et al. (2014):{" "}
-                <SourceLink id="DOI_10_1002_2014jd021603">
-                  Recalibration and merging of SSU observations for stratospheric temperature trend studies
+                Steiner, A. K. et al. (2011):{" "}
+                <SourceLink id="DOI_10_1029_2010rs004614">
+                  GPS radio occultation for climate monitoring and change detection
                 </SourceLink>
                 .
               </li>
@@ -763,9 +777,9 @@ export function StratosphericCoolingArticle() {
                 .
               </li>
               <li>
-                Spencer, R. W. et al. (2017):{" "}
-                <SourceLink id="DOI_10_1007_s13143_017_0010_y">
-                  UAH Version 6 Global Satellite Temperature Products
+                NOAA/NASA (2017):{" "}
+                <SourceLink id="WEB_NASA_UAH_Mean_Layer_Temperature_ATBD_2017">
+                  Mean Layer Temperature – UAH: Climate Algorithm Theoretical Basis Document
                 </SourceLink>
                 .
               </li>
@@ -855,7 +869,8 @@ export function StratosphericCoolingArticle() {
               </li>
               <li>
                 <SourceLink id="WEB_nsstc_uah_edu_Index_of_data_msu_9b9f4900">UAH TLS v6.1</SourceLink>: textové a
-                mřížkové soubory dolní stratosféry.
+                mřížkové soubory dolní stratosféry; samostatně je uveden také{" "}
+                <SourceLink id="DOI_10_5067_ghrc_amsu_a_data401">záznam dat v NASA GHRC DAAC</SourceLink>.
               </li>
               <li>
                 <SourceLink id="WEB_NOAA_Center_for_Satellite_Applications_and_Research_N_aabcb47e">
