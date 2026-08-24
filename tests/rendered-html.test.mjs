@@ -22,7 +22,7 @@ test("keeps the source library, categories, and its download model in the site",
   assert.match(sources, /1681_Mariotte/);
   assert.match(sources, /2000_Argo/);
   assert.match(sources, /\.\.\.articleSources/);
-  assert.ok((articleSources.match(/^  \{ id:/gm) ?? []).length >= 486);
+  assert.ok((articleSources.match(/^  \{ id:/gm) ?? []).length >= 481);
   assert.doesNotMatch(articleSources, /author: "doi\.org"|<\/?(?:sub|sup|i)>|�/);
   assert.match(sources, /drive\.google\.com\/uc\?export=download/);
   assert.equal((sourceArchive.match(/"driveFileId":/g) ?? []).length, 227);
@@ -579,7 +579,30 @@ test("publishes a sourced global mean sea-level article with tide-gauge and sate
   assert.match(sourceCatalogueText, /10\.1038\/s41586-020-2591-3/);
   assert.match(sourceCatalogueText, /10\.5194\/essd-11-1189-2019/);
   assert.match(sourceCatalogueText, /10\.1038\/s43247-024-01761-5/);
+  assert.match(sourceCatalogueText, /10\.5067\/NSIND-GMSV1/);
   assert.match(sourceCatalogueText, /psmsl\.org\/data\/obtaining\/complete\.php/);
+  assert.match(article, /Po uzavření roku 2025/);
+  assert.match(article, /Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez/);
+  assert.match(article, /zdrojů tohoto článku nepoužívají/);
+  assert.doesNotMatch(
+    `${article}\n${sourceCatalogueText}`,
+    /DOI_10_1038_nature14093|DOI_10_1017_s0080455x00002083|DOI_10_2112_jcoastres_d_12_00175_1|DOI_10_1080_01490410050128591|WEB_NASA_Sea_Level_Earth_Indicator_NASA_Science_07caffec|WEB_NASA_NASA_SSH_popis_globalniho_vypoctu_2d3d3dce/,
+  );
+  const seaLevelSourceIds = [
+    ...article.matchAll(/<SourceLink id="([^"]+)"/g),
+  ].map((match) => match[1]);
+  assert.equal(new Set(seaLevelSourceIds).size, 35);
+  for (const id of new Set(seaLevelSourceIds)) {
+    const catalogueOccurrences = sourceCatalogueText.split(id).length - 1;
+    assert.ok(catalogueOccurrences >= 2, `${id} must exist and be marked as open access`);
+    if (id.startsWith("DOI_")) {
+      assert.match(sourceCatalogueText, new RegExp(`${id}:\\s*"https://`));
+    }
+  }
+  assert.match(sourceCatalogueText, /zanna-researchteam\.github\.io\/files\/Frederikse-et-al-2020\.pdf/);
+  assert.match(sourceCatalogueText, /nora\.nerc\.ac\.uk\/id\/eprint\/525251\/1\/s41558-019-0531-8\.pdf/);
+  assert.match(sourceCatalogueText, /scholarwolf\.unr\.edu\/server\/api\/core\/bitstreams/);
+  assert.match(sourceCatalogueText, /podaac\.jpl\.nasa\.gov\/dataset\/NASA_SSH_GMSL_INDICATOR/);
   assert.match(article, /CC BY 4\.0/);
   assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
   assert.match(evidence, /slug: "gmsl"[\s\S]*status: "hotovo"/);

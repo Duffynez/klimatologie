@@ -50,13 +50,12 @@ export function GlobalMeanSeaLevelArticle() {
         </p>
 
         <p>
-          Takto vymezenou veličinu používají práce založené na pobřežních stanicích i na družicích. Church a White v roce
-          2011 a Hay a kol. v roce 2015 odhadovali globální průměr z dlouhých pobřežních záznamů. Ablain a kol. v roce 2019
-          jej počítali z výšek hladiny změřených družicemi a Frederikse a kol. v roce 2020 znovu sestavili vývoj od roku
-          1900. Gregory a kol. pro sjednocení terminologie výslovně definovali „globální“ jako průměr vážený plochou přes
-          spojený povrch světového oceánu. Stejnou definici používá současná analýza Hamlingtona a kol.{" "}
+          Takto vymezenou veličinu používají práce založené na pobřežních stanicích i na družicích. Church a White
+          sestavili globální vývoj z dlouhých pobřežních záznamů, zatímco Ablain a kol. popsali výpočet z družicových
+          měření. Gregory a kol. vymezili globální střední hladinu jako průměr vážený plochou přes spojený povrch
+          světového oceánu. Stejné vymezení používají také rekonstrukce Frederikse a kol. od roku 1900 a družicová analýza
+          Hamlingtona a kol.{" "}
           <SourceLink id="DOI_10_1007_s10712_011_9119_1">Church &amp; White, 2011</SourceLink>,{" "}
-          <SourceLink id="DOI_10_1038_nature14093">Hay et al., 2015</SourceLink>,{" "}
           <SourceLink id="DOI_10_5194_essd_11_1189_2019">Ablain et al., 2019</SourceLink>,{" "}
           <SourceLink id="DOI_10_1007_s10712_019_09525_z">Gregory et al., 2019</SourceLink>,{" "}
           <SourceLink id="DOI_10_1038_s41586_020_2591_3">Frederikse et al., 2020</SourceLink> a{" "}
@@ -110,19 +109,19 @@ export function GlobalMeanSeaLevelArticle() {
         <p>
           Zásadní změnu přinesl samopisný vodočet. Zařízení spuštěné v Sheernessu v září 1831 převádělo pohyb plováku na
           souvislou čáru na papíru. Zachytilo celý průběh hladiny, nikoli jen několik ručních odečtů. Z denního záznamu tak
-          bylo možné vypočítat průměr a současně dohledat mezery nebo neobvyklé výkyvy. Konstrukci a dochované záznamy
-          popisují Matthäus a novější digitalizace historických měření v ústí Temže.{" "}
-          <SourceLink id="DOI_10_1017_s0080455x00002083">Matthäus, 1972</SourceLink> a{" "}
-          <SourceLink id="DOI_10_1038_s41597_022_01223_7">Haigh et al., 2022</SourceLink>
+          bylo možné vypočítat průměr a současně dohledat mezery nebo neobvyklé výkyvy. Historické souvislosti, konstrukci
+          raných přístrojů a digitalizaci dochovaných měření v ústí Temže podrobně popisují Inayatillah a kol.{" "}
+          <SourceLink id="DOI_10_1038_s41597_022_01223_7">Inayatillah et al., 2022</SourceLink>
         </p>
 
         <p>
           Jednotlivé přístavy dlouho uchovávaly údaje v odlišných výškových soustavách a formátech. Permanent Service for
           Mean Sea Level, zkráceně PSMSL, vznikla v roce 1933 a začala shromažďovat měsíční a roční průměry z celého světa.
           Její hlavní soubor dnes propojuje každou stanici s historií místní nuly a s výškovými body na souši. Díky tomu lze
-          spojit starší a novější přístroj bez umělého skoku. Databázi a její současný systém popisují Holgate a kol.{" "}
+          spojit starší a novější přístroj bez umělého skoku. Založení služby i způsob vedení revidované místní reference
+          popisuje přímo dokumentace PSMSL.{" "}
           <SourceLink id="WEB_Permanent_Service_for_Mean_S_About_PSMSL_7904d751">PSMSL: historie služby</SourceLink> a{" "}
-          <SourceLink id="DOI_10_2112_jcoastres_d_12_00175_1">Holgate et al., 2013</SourceLink>
+          <SourceLink id="WEB_Permanent_Service_for_Mean_S_Revised_Local_Reference_RLR_Definition_25cc4b55">PSMSL: definice RLR</SourceLink>
         </p>
 
         <p>
@@ -214,9 +213,9 @@ export function GlobalMeanSeaLevelArticle() {
         <p>
           Pobřežní stanice a družice neměří tutéž místní veličinu, ale v čase se mohou vzájemně kontrolovat. Průměr vhodně
           vybraných stanic se porovnává s družicovou změnou v jejich okolí. Pokud rozdíl postupně narůstá, může ukázat
-          pomalý posun přístroje, dráhy nebo některé opravy. Mitchum tento postup popsal v roce 2000 a síť stanic se od té
-          doby používá ke kontrole stability celé posloupnosti družic.{" "}
-          <SourceLink id="DOI_10_1080_01490410050128591">Mitchum, 2000</SourceLink>
+          pomalý posun přístroje, dráhy nebo některé opravy. Ablain a kol. zahrnuli porovnání s nezávislými odhady z
+          pobřežních stanic do rozboru stability a nejistot družicového záznamu.{" "}
+          <SourceLink id="DOI_10_5194_essd_11_1189_2019">Ablain et al., 2019</SourceLink>
         </p>
 
         <h2>Jak vzniká globální výsledek</h2>
@@ -237,12 +236,12 @@ export function GlobalMeanSeaLevelArticle() {
 
         <p>
           Jednotlivé metody vedou k mírně odlišným hodnotám, zejména v první polovině 20. století. Church a White použili
-          prostorové vzory z měření a oceánských modelů. Hay a kol. sestavili pravděpodobnostní odhad, který současně
-          zahrnul neúplné pokrytí i pohyb pevniny. Frederikse a kol. vytvořili 5 000 možných průběhů odpovídajících
-          dostupným stanicím a zveřejnili jejich rozptyl. Rozdíl mezi metodami je součástí nejistoty historického
-          globálního výsledku, ne důvodem vybrat jedinou křivku bez srovnání.{" "}
+          prostorové vzory z měření a oceánských modelů. Dangendorf a kol. znovu posoudili výběr stanic a zacházení s
+          jejich nerovnoměrným rozmístěním. Frederikse a kol. vytvořili 5 000 možných průběhů odpovídajících dostupným
+          stanicím a zveřejnili jejich rozptyl. Rozdíl mezi metodami je součástí nejistoty historického globálního
+          výsledku, ne důvodem vybrat jedinou křivku bez srovnání.{" "}
           <SourceLink id="DOI_10_1007_s10712_011_9119_1">Church &amp; White, 2011</SourceLink>,{" "}
-          <SourceLink id="DOI_10_1038_nature14093">Hay et al., 2015</SourceLink> a{" "}
+          <SourceLink id="DOI_10_1038_s41558_019_0531_8">Dangendorf et al., 2019</SourceLink> a{" "}
           <SourceLink id="DOI_10_1038_s41586_020_2591_3">Frederikse et al., 2020</SourceLink>
         </p>
 
@@ -252,7 +251,7 @@ export function GlobalMeanSeaLevelArticle() {
           výšek se vytvoří mapa odchylek hladiny. Hodnota každé buňky se při průměrování násobí plochou oceánu, kterou
           zastupuje. NASA ve svém ukazateli používá měření zhruba mezi 66° jižní a 66° severní šířky; polární oblasti mimo
           dráhu družic nejsou přímo pokryty.{" "}
-          <SourceLink id="WEB_NASA_NASA_SSH_popis_globalniho_vypoctu_2d3d3dce">NASA SSH: popis globálního výpočtu</SourceLink>
+          <SourceLink id="DOI_10_5067_nsind_gmsv1">NASA SSH: popis globálního výpočtu</SourceLink>
         </p>
 
         <p>
@@ -338,7 +337,7 @@ export function GlobalMeanSeaLevelArticle() {
           zpracování. Datový portál uvádí verzi, datum aktualizace i trvalý identifikátor 10.5067/NSIND-GMSV1. Tento produkt
           zachovává sezónní kolísání a neobsahuje opravu GIA; přesná čísla se proto mohou lišit od grafu v primární studii,
           která tuto opravu přidala.{" "}
-          <SourceLink id="WEB_NASA_NASA_SSH_popis_globalniho_vypoctu_2d3d3dce">Stáhnout NASA SSH</SourceLink>
+          <SourceLink id="DOI_10_5067_nsind_gmsv1">Otevřít data NASA SSH</SourceLink>
         </p>
 
         <h3>Copernicus: globální i regionální družicové mapy</h3>
@@ -401,19 +400,21 @@ export function GlobalMeanSeaLevelArticle() {
           Pobřežní stanice dokládají, že globální střední hladina stoupala už před začátkem družicového měření. Frederikse
           a kol. pro roky 1900–2018 odhadli průměrný sklon 1,56 ± 0,33 mm za rok; nejistota představuje 90% rozpětí. Vývoj
           nebyl rok od roku rovnoměrný a starší část má širší interval kvůli menšímu počtu stanic. Nezávislé rekonstrukce
-          Churcha a Whitea, Haye a kol. a Dangendorfa a kol. se liší v jednotlivých desetiletích, ale všechny ukazují vyšší
-          globální střední hladinu na konci 20. století než na jeho začátku.{" "}
+          Churcha a Whitea, Dangendorfa a kol. a Frederikse a kol. se liší v jednotlivých desetiletích, ale všechny ukazují
+          vyšší globální střední hladinu na konci 20. století než na jeho začátku.{" "}
+          <SourceLink id="DOI_10_1007_s10712_011_9119_1">Church &amp; White, 2011</SourceLink>,{" "}
           <SourceLink id="DOI_10_1038_s41586_020_2591_3">Frederikse et al., 2020</SourceLink>,{" "}
-          <SourceLink id="DOI_10_1038_nature14093">Hay et al., 2015</SourceLink> a{" "}
           <SourceLink id="DOI_10_1038_s41558_019_0531_8">Dangendorf et al., 2019</SourceLink>
         </p>
 
         <p>
-          Družice poskytují téměř globální a pravidelně opakované měření od roku 1993. Aktuální ukazatel NASA uvádí pro
-          červenec 2026 hodnotu 102,4 ± 4,0 mm vůči počátku svého záznamu. Křivka v průběhu každého roku klesá a stoupá o
-          několik milimetrů, ale její dlouhodobá poloha se posunula přibližně o deset centimetrů výše. Číslo 102,4 mm
-          patří přesně k produktu NASA, jeho nule, ponechanému sezónnímu průběhu a stavu dat v červenci 2026.{" "}
-          <SourceLink id="WEB_NASA_Sea_Level_Earth_Indicator_NASA_Science_07caffec">NASA Earth Indicator</SourceLink>
+          Družice poskytují téměř globální a pravidelně opakované měření od roku 1993. Po uzavření roku 2025 byla globální
+          střední hladina podle vyhodnocení NASA přibližně o deset centimetrů výše než na počátku družicového záznamu.
+          Průběžný datový soubor NASA SSH zveřejňuje přesnější hodnoty po jednotlivých týdnech, zachovává sezónní kolísání
+          a při novém zpracování se může o několik milimetrů změnit i ve starší části. Proto zde celkovou změnu uvádíme
+          za uzavřený rok a zaokrouhlenou na centimetry.{" "}
+          <SourceLink id="WEB_NASA_NASA_Analysis_Shows_La_Nina_Limited_Sea_Level_Ri_3e8936b8">NASA: roční změna 2025</SourceLink> a{" "}
+          <SourceLink id="DOI_10_5067_nsind_gmsv1">NASA SSH, verze 1</SourceLink>
         </p>
 
         <p>
@@ -442,7 +443,7 @@ export function GlobalMeanSeaLevelArticle() {
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
             Globální střední hladina moře během 20. století stoupala v průměru přibližně o 1,56 milimetru za rok.
-            Od začátku roku 1993 do července 2026 se zvýšila přibližně o 102 milimetrů, tedy o deset centimetrů.
+            Od začátku roku 1993 do konce roku 2025 se zvýšila přibližně o deset centimetrů.
             Průměrné tempo za roky 1993–2023 činilo 3,3 milimetru za rok a během tohoto období vzrostlo přibližně z
             2,1 na 4,5 milimetru za rok. Jednotlivé roky kolem dlouhodobého růstu výrazně kolísají: v roce 2024 hladina
             stoupla o 5,9 milimetru a v roce 2025 o 0,8 milimetru. Také jednotlivé části oceánu se mění různou rychlostí;
@@ -450,14 +451,19 @@ export function GlobalMeanSeaLevelArticle() {
           </p>
         </div>
 
-        <h2>Prameny a data</h2>
+        <h2>Prameny, data a licence</h2>
+        <p>
+          Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez
+          předplatného. U odborných prací vede databáze zvlášť na DOI a na veřejný plný text; datové portály vedou
+          k původnímu poskytovateli. Záznamy zdrojů tohoto článku nepoužívají kopie na Google Drivu.
+        </p>
         <div className="article-sources">
           <section>
             <h3>Definice a primární práce</h3>
             <ul>
               <li><SourceLink id="DOI_10_1007_s10712_019_09525_z">Gregory et al. (2019): terminologie místní a globální hladiny</SourceLink> – otevřený článek a PDF.</li>
               <li><SourceLink id="DOI_10_1007_s10712_011_9119_1">Church &amp; White (2011): globální rekonstrukce od konce 19. století</SourceLink> – otevřený článek a PDF.</li>
-              <li><SourceLink id="DOI_10_1038_nature14093">Hay et al. (2015): pravděpodobnostní rekonstrukce 20. století</SourceLink> – abstrakt; plný text podle přístupu vydavatele.</li>
+              <li><SourceLink id="DOI_10_1038_s41558_019_0531_8">Dangendorf et al. (2019): rekonstrukce globální hladiny od roku 1960</SourceLink> – veřejný plný text v institucionálním repozitáři.</li>
               <li><SourceLink id="DOI_10_1038_s41586_020_2591_3">Frederikse et al. (2020): globální hladina od roku 1900</SourceLink> – článek, data a kód jsou dostupné samostatně.</li>
               <li><SourceLink id="DOI_10_1038_s43247_024_01761_5">Hamlington et al. (2024): tempo a jeho změna v družicovém období</SourceLink> – otevřený článek, PDF a obrázky CC BY 4.0.</li>
             </ul>
@@ -467,7 +473,6 @@ export function GlobalMeanSeaLevelArticle() {
             <h3>Historie měření</h3>
             <ul>
               <li><SourceLink id="WEB_Permanent_Service_for_Mean_S_PSMSL_amsterdamska_mereni_od_roku_1682_a5054f03">PSMSL: amsterdamská měření od roku 1682</SourceLink> – tabulky, popis oprav a odkazy na původní práce.</li>
-              <li><SourceLink id="DOI_10_1017_s0080455x00002083">Matthäus (1972): historie samopisných vodočtů</SourceLink> – článek vydavatele.</li>
               <li><SourceLink id="DOI_10_1038_s41597_022_01223_7">Inayatillah et al. (2022): digitalizace historických měření v ústí Temže</SourceLink> – otevřený článek, PDF a data.</li>
               <li><SourceLink id="WEB_Permanent_Service_for_Mean_S_About_PSMSL_7904d751">PSMSL: mezinárodní služba založená v roce 1933</SourceLink>.</li>
               <li><SourceLink id="WEB_NASA_TOPEX_POSEIDON_PO_DAAC_JPL_NASA_b5a07e8b">NASA PO.DAAC: mise TOPEX/Poseidon</SourceLink> – popis mise a dat.</li>
@@ -478,12 +483,12 @@ export function GlobalMeanSeaLevelArticle() {
             <h3>Měření, návaznost a nejistota</h3>
             <ul>
               <li><SourceLink id="DOI_10_1007_s10712_016_9389_8">Ablain et al. (2017): družicová altimetrie v globálním a regionálním měřítku</SourceLink>.</li>
-              <li><SourceLink id="DOI_10_1080_01490410050128591">Mitchum (2000): kalibrace družic pobřežními stanicemi</SourceLink>.</li>
               <li><SourceLink id="DOI_10_1002_2017jc013090">Beckley et al. (2017): oprava posunu TOPEX/Poseidon</SourceLink> – otevřený článek.</li>
               <li><SourceLink id="DOI_10_5194_essd_11_1189_2019">Ablain et al. (2019): úplný rozpočet nejistot</SourceLink> – otevřený článek, PDF a data.</li>
               <li><SourceLink id="DOI_10_5194_os_19_431_2023">Guérou et al. (2023): aktualizovaný družicový výsledek a nejistoty</SourceLink> – otevřený článek a PDF.</li>
               <li><SourceLink id="DOI_10_1002_2015rg000502">Wöppelmann &amp; Marcos (2016): svislý pohyb pevniny</SourceLink>.</li>
-              <li><SourceLink id="DOI_10_2112_jcoastres_d_12_00175_1">Holgate et al. (2013): databáze PSMSL</SourceLink>.</li>
+              <li><SourceLink id="DOI_10_1002_2016jc011747">Hamlington et al. (2016): vliv svislého pohybu pevniny na globální výpočet</SourceLink> – veřejný plný text v univerzitním repozitáři.</li>
+              <li><SourceLink id="WEB_Permanent_Service_for_Mean_S_Revised_Local_Reference_RLR_Definition_25cc4b55">PSMSL: dokumentace revidované místní reference</SourceLink>.</li>
             </ul>
           </section>
 
@@ -492,7 +497,7 @@ export function GlobalMeanSeaLevelArticle() {
             <ul>
               <li><SourceLink id="WEB_Permanent_Service_for_Mean_S_Complete_PSMSL_Data_Set_05055002">PSMSL: kompletní měsíční a roční pobřežní data</SourceLink> – ZIP a textové soubory.</li>
               <li><SourceLink id="DOI_10_5281_zenodo_3862995">Frederikse et al.: rekonstrukce 1900–2018</SourceLink> – NetCDF a tabulky.</li>
-              <li><SourceLink id="WEB_NASA_NASA_SSH_popis_globalniho_vypoctu_2d3d3dce">NASA SSH Global Mean Sea Level</SourceLink> – textový soubor a metadata.</li>
+              <li><SourceLink id="DOI_10_5067_nsind_gmsv1">NASA SSH Global Mean Sea Level, verze 1</SourceLink> – průběžně aktualizovaný textový soubor, metadata a návod.</li>
               <li><SourceLink id="WEB_Copernicus_Sea_level_gridded_data_from_satellite_observatio_0b1348c4">Copernicus: globální družicové mapy hladiny</SourceLink> – NetCDF po bezplatném přihlášení.</li>
               <li><SourceLink id="DOI_10_17882_58344">Ablain et al.: matice nejistot globálního družicového záznamu</SourceLink> – volně stažitelná vědecká data.</li>
             </ul>
