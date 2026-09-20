@@ -2,11 +2,11 @@
 
 ## Přidání zdroje
 
-1. Nejdřív vytvořte záznam v `app/data/sources.ts`.
-2. ID tvořte jako `rok_Prijmeni` nebo jako stabilný popisný identifikátor, nikdy jej po zveřejnění neměňte.
+1. Nejdřív vytvořte záznam v centrálním katalogu. Základní a historické záznamy jsou v `app/data/sources.ts`, většina zdrojů odborných článků v `app/data/articleSources.ts`; výsledné pole vždy skládá `sources.ts`. Přesný postup popisuje `docs/SOURCES-AND-ARCHIVE.md`.
+2. ID tvořte jako `rok_Prijmeni`, stabilní popisný identifikátor nebo jednotným převodem DOI. Nikdy jej po zveřejnění neměňte.
 3. Uveďte autora, rok, název, vydavatele nebo časopis a volně pojmenovaný typ dokumentu.
 4. Zvolte kategorii `science`, `book`, `politics` nebo `organization`; určuje barevné značení karty, zatímco `type` popisuje konkrétní druh dokumentu.
-5. Vložte ID souboru Google Drive jen u kopie, kterou smíme sdílet. Vedle kopie vždy dohledávejte autoritativní původní stránku nebo DOI pro budoucí rozšíření databáze.
+5. ID souboru Google Drive používejte jen u kopie, kterou smíme sdílet a kterou má smysl dlouhodobě archivovat. Otevřeně dostupné vědecké práce na Drive nekopírujte. Vedle archivní kopie vždy uveďte autoritativní původní stránku nebo DOI.
 6. Ověřte, že funguje otevření i stažení zdroje.
 
 ## Dostupnost vědeckých zdrojů
@@ -31,7 +31,7 @@ Každá stránka o jevu musí mít tyto části:
 4. Datové soubory, grafy a zdroje.
 5. Datum poslední kontroly.
 
-Citujte přes komponentu `Citation` a ID zdroje. Značení citace automaticky přebírá barvu kategorie zdroje; barvu nepřidávejte ručně. Neopisujte adresy zdrojů přímo do odstavců.
+V souvislém článku citujte přes komponentu `SourceLink` a ID zdroje. Komponentu `Citation` používejte pro kompaktní hranaté citace, například na historické ose. Obě automaticky přebírají barvu kategorie zdroje; barvu nepřidávejte ručně. Neopisujte adresy zdrojů přímo do odborných odstavců.
 
 ## Milníky na stránce historie
 

@@ -2,6 +2,12 @@
 
 Tento dokument je závazný pro každou AI i člověka, kteří píší nebo upravují obsah projektu. Před prací s odborným textem jej vždy přečtěte společně se souborem `CONTENT.md`. Před psaním článku o měřicí nebo analytické metodě je navíc povinný soubor `METHODS.md`; před článkem o klimatickém mechanismu soubor `MECHANISMS.md`. Konkrétní redakční postup se může vyvíjet, ale následující cíle a standardy se nesmějí obejít kvůli rychlosti, stručnosti ani efektnímu vyznění textu.
 
+## Orientace v repozitáři
+
+Před strukturální změnou si přečtěte `docs/ARCHITECTURE.md`. Při přidávání tématu nebo článku postupujte podle `docs/CONTENT-WORKFLOW.md`. Při práci s citacemi, otevřeným přístupem nebo archivními kopiemi je povinný `docs/SOURCES-AND-ARCHIVE.md`. Příkazy, testy a nasazení popisuje `docs/DEVELOPMENT.md`.
+
+Dokumentace nenahrazuje prohlédnutí aktuálního kódu. Pokud se dokumentace a implementace rozcházejí, nejprve zjistěte skutečný stav, potom v jedné změně opravte kód nebo dokumentaci tak, aby znovu odpovídaly.
+
 ## Tři hlavní cíle
 
 ### 1. Zpřístupnit vědecké poznání bez ztráty přesnosti
