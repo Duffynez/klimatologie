@@ -154,6 +154,66 @@ test("publishes twenty mechanisms with evidence that distinguishes explanations"
   assert.match(styles, /\.mechanism-tile:hover/);
 });
 
+test("publishes a complete mechanism article on the origin of the atmospheric CO2 increase", async () => {
+  const [article, mechanismPage, mechanisms, styles, sitemap] = await Promise.all([
+    readFile(new URL("app/components/Co2OriginArticle.tsx", root), "utf8"),
+    readFile(new URL("app/mechanismy/[slug]/page.tsx", root), "utf8"),
+    readFile(new URL("app/data/mechanisms.ts", root), "utf8"),
+    readFile(new URL("app/globals.css", root), "utf8"),
+    readFile(new URL("public/sitemap.xml", root), "utf8"),
+  ]);
+
+  assert.match(mechanisms, /slug: "puvod-rustu-atmosferickeho-co2"/);
+  assert.match(mechanismPage, /Co2OriginArticle/);
+  assert.match(mechanismPage, /Napsáno: 25\. září 2026/);
+  assert.match(mechanismPage, /title="Původ růstu atmosférického CO₂"/);
+  assert.equal((article.match(/<dt>/g) ?? []).length, 4);
+  for (const heading of [
+    "Co potřebujeme vysvětlit",
+    "Co mechanismus popisuje",
+    "Kauzální řetězec",
+    "Kvantitativní základ",
+    "Předpovědi a rozlišující znaky",
+    "Historie vysvětlení",
+    "Důkazy, že mechanismus skutečně působí",
+    "Alternativní vysvětlení",
+    "Rozhodující porovnání",
+    "Modely a experimenty",
+    "Rozsah platnosti a nejistoty",
+    "Co by mohlo závěr změnit",
+    "Stav poznání",
+    "Prameny, data a licence",
+  ]) {
+    assert.match(article, new RegExp(`<h2>${heading}</h2>`));
+  }
+  assert.match(article, /Shrnutí mechanismu/);
+  assert.match(article, /1 ppm = 2,124 GtC/);
+  assert.equal((article.match(/unoptimized/g) ?? []).length, 2);
+  assert.match(article, /\/media\/co2-origin\/uhlikova-bilance-2023\.svg/);
+  assert.match(article, /\/media\/co2-origin\/otisky-v-atmosfere\.svg/);
+  assert.match(article, /\/media\/co2-origin\/scripps-mauna-loa-mesicne\.csv/);
+  assert.match(article, /href="\/pozorovani\/atmosfericka-koncentrace-co2"/);
+  assert.match(article, /href="\/pozorovani\/acidifikace-oceanu"/);
+  for (const id of [
+    "DOI_10_5194_essd_17_965_2025",
+    "DOI_10_18160_gcp_2024",
+    "DOI_10_1029_2019gb006170",
+    "DOI_10_1111_j_1600_0889_2006_00175_x",
+    "DOI_10_5194_acp_19_9269_2019",
+    "DOI_10_1017_9781108677950_008",
+    "DOI_10_3402_tellusa_v9i1_9075",
+    "WEB_Scripps_O2_Program_Atmospheric_Oxygen_Research",
+    "WEB_Scripps_O2_Program_Mauna_Loa_Data",
+    "DOI_10_5670_oceanog_2014_16",
+    "DOI_10_1038_nature06949",
+  ]) {
+    assert.match(sourceCatalogueText, new RegExp(`id: "${id}"`));
+    assert.match(article, new RegExp(`SourceLink id="${id}"`));
+  }
+  assert.match(styles, /\.mechanism-comparison table/);
+  assert.match(sitemap, /\/mechanismy\/puvod-rustu-atmosferickeho-co2\//);
+});
+
 test("adds projections and consequences as substantive top-level sections", async () => {
   const [projections, consequences, header, sitemap] = await Promise.all([
     readFile(new URL("app/projekce/page.tsx", root), "utf8"),

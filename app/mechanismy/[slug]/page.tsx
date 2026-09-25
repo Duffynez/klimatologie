@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Co2OriginArticle } from "../../components/Co2OriginArticle";
 import { PageLead } from "../../components/PageLead";
 import { climateMechanisms, mechanismBySlug } from "../../data/mechanisms";
 
@@ -28,6 +29,27 @@ export default async function MechanismDetail({ params }: { params: Promise<{ sl
 
   if (!mechanism) {
     notFound();
+  }
+
+  if (slug === "puvod-rustu-atmosferickeho-co2") {
+    return (
+      <div className="page-shell">
+        <PageLead
+          eyebrow="Mechanismy / Záření a složení atmosféry"
+          title="Původ růstu atmosférického CO₂"
+          meta="Napsáno: 25. září 2026"
+        >
+          <p>
+            Odkud pochází oxid uhličitý, kterého v atmosféře od průmyslové revoluce přibylo, a které nezávislé
+            důkazy odlišují spalování fosilních paliv od sopek, oceánu a přirozených změn vegetace.
+          </p>
+        </PageLead>
+        <Co2OriginArticle />
+        <Link className="text-link catalog-back-link" href="/mechanismy">
+          &larr; Zpět na všechny mechanismy
+        </Link>
+      </div>
+    );
   }
 
   return (

@@ -1165,6 +1165,34 @@ video.article-figure__media {
   background: var(--paper);
 }
 
+.mechanism-comparison table {
+  min-width: 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.mechanism-comparison th,
+.mechanism-comparison td {
+  padding: 11px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.mechanism-comparison tbody th {
+  width: 17%;
+}
+
+.mechanism-comparison td:last-child {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .mechanism-comparison table {
+    min-width: 720px;
+  }
+}
+
 .method-conclusion {
   margin: 30px 0 44px;
   padding: 24px 26px 6px;
