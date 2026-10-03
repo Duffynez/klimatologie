@@ -980,17 +980,49 @@ test("publishes a sourced phenology article with organism, camera, and satellite
   assert.match(article, /419 354/);
   assert.match(article, /25,94 dne/);
   assert.match(article, /2 826 588/);
-  assert.match(article, /5 500 výsledků pro 684 druhů/);
+  assert.match(article, /5 589 výsledků\s+pro 684 druhů/);
   assert.match(sourceCatalogueText, /10\.1007\/s00484-014-0789-5/);
   assert.match(sourceCatalogueText, /10\.1111\/gcb\.15000/);
   assert.match(sourceCatalogueText, /10\.1098\/rspb\.2021\.2456/);
-  assert.match(sourceCatalogueText, /10\.1038\/s41558-019-0648-9/);
+  assert.match(sourceCatalogueText, /10\.1111\/2041-210X\.13280/);
   assert.match(sourceCatalogueText, /10\.1002\/ecm\.1552/);
   assert.match(sourceCatalogueText, /10\.5194\/essd-17-6531-2025/);
   assert.match(sourceCatalogueText, /10\.5067\/MODIS\/MCD12Q2\.061/);
   assert.match(article, /CC BY 4\.0/);
   assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
   assert.match(evidence, /slug: "fenologicke-posuny"[\s\S]*status: "hotovo"/);
+});
+
+test("renders public phenology sources and preserves the meaning of dates and samples", async () => {
+  const [article, sourcesHtml, articleHtml] = await Promise.all([
+    readFile(new URL("app/components/PhenologyArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/fenologicke-posuny/index.html", root), "utf8"),
+  ]);
+  const ids = new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((match) => match[1]));
+  const cards = new Map([...sourcesHtml.matchAll(/<article\b[^>]*\bid="([^"]+)"[^>]*>([\s\S]*?)<\/article>/g)]
+    .map((match) => [match[1], match[2]]));
+  for (const id of ids) {
+    const card = cards.get(id);
+    assert.ok(card, `Missing rendered phenology source: ${id}`);
+    assert.doesNotMatch(card, /drive\.google\.com/, `Open source has a Drive archive: ${id}`);
+    assert.match(card, /Otevřít (?:veřejný zdroj|plný text|veřejná data)/, `Missing public access: ${id}`);
+    if (id.startsWith("DOI_")) {
+      assert.match(card, /Otevřít DOI/, `Missing DOI: ${id}`);
+      assert.match(card, /Otevřít (?:plný text|veřejná data)/, `Missing separate text or data: ${id}`);
+    }
+  }
+  assert.match(cards.get("DOI_10_1007_s00484_021_02185_y"), /Susanne S\. Renner a Frank-M\. Chmielewski/);
+  assert.match(cards.get("DOI_10_3334_ornldaac_2389"), /Datový soubor/);
+  assert.match(cards.get("DOI_10_6084_m9_figshare_c_5800155"), /Doplňkový materiál/);
+  assert.match(articleHtml, /číslo neoznačuje jednotlivé návštěvy/);
+  assert.match(articleHtml, /přechodová data z něj nepočítá/);
+  assert.match(articleHtml, /15 % tedy neznamená, že 15 % stromů má listy/);
+  assert.match(articleHtml, /VNP22Q2\.002 poskytuje výsledky od roku 2013/);
+  assert.match(articleHtml, /není to soubor všech 419 354 původních pozorování/);
+  assert.match(articleHtml, /Odborná revize: 3\. října 2026/);
+  assert.doesNotMatch(articleHtml, /Brügger a Vassella|Reed et al\., 1994|125 000 měření v čase/);
+  assert.equal((articleHtml.match(/class="article-figure__scroll"/g) ?? []).length, 3);
 });
 
 test("publishes a sourced heat-wave article that keeps definitions and observations distinct", async () => {

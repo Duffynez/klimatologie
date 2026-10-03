@@ -263,7 +263,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Živá příroda"
           title="Sezónní jevy v živé přírodě"
-          meta="Napsáno: 1. srpna 2026"
+          meta="Napsáno: 1. srpna 2026 · Odborná revize: 3. října 2026"
         >
           <p>
             Jak se sleduje rašení, kvetení, tah ptáků a sezóna vegetace v terénu, kamerami a z družic, jak se odlišují
