@@ -914,6 +914,39 @@ test("publishes a sourced snow-cover and permafrost article with distinct observ
   assert.match(evidence, /slug: "snehova-pokryvka-a-permafrost"[\s\S]*status: "hotovo"/);
 });
 
+test("renders open snow and permafrost sources with qualified trends and data coverage", async () => {
+  const [article, sourcesHtml, articleHtml] = await Promise.all([
+    readFile(new URL("app/components/SnowPermafrostArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/snehova-pokryvka-a-permafrost/index.html", root), "utf8"),
+  ]);
+  const ids = new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((match) => match[1]));
+  const cards = new Map([...sourcesHtml.matchAll(/<article\b[^>]*\bid="([^"]+)"[^>]*>([\s\S]*?)<\/article>/g)]
+    .map((match) => [match[1], match[2]]));
+  for (const id of ids) {
+    const card = cards.get(id);
+    assert.ok(card, `Missing rendered snow/permafrost source: ${id}`);
+    assert.doesNotMatch(card, /drive\.google\.com/, `Open source has a Drive archive: ${id}`);
+    assert.match(card, /Otevřít (?:veřejný zdroj|plný text|veřejná data)/, `Missing public access: ${id}`);
+    if (id.startsWith("DOI_")) {
+      assert.match(card, /Otevřít DOI/, `Missing DOI: ${id}`);
+      assert.match(card, /Otevřít (?:plný text|veřejná data)/, `Missing separate text or data: ${id}`);
+    }
+  }
+  assert.match(cards.get("DOI_10_1080_1088937x_2021_1988001"), /par\.nsf\.gov\/servlets\/purl\/10326621/);
+  assert.match(cards.get("DOI_10_1002_ppp_2088"), /doi\/full\/10\.1002\/ppp\.2088/);
+  assert.match(cards.get("DOI_10_6084_m9_figshare_32885756"), /ndownloader\.figshare\.com\/files\/66270764/);
+  assert.match(cards.get("DOI_10_7265_n52r3pmc"), /Datový soubor/);
+  assert.match(cards.get("DOI_10_1594_pangaea_842821"), /Datový soubor/);
+  assert.match(articleHtml, /0,29 ± 0,12 °C za desetiletí/);
+  assert.match(articleHtml, /průměr pouze 37 lokalit se statisticky průkazným/);
+  assert.match(articleHtml, /3 500 řádků pro 140 kódů lokalit/);
+  assert.match(articleHtml, /Z 316 registrovaných míst vybrala 156/);
+  assert.match(articleHtml, /Jediný panel porovnává dubnovou hmotnost/);
+  assert.match(articleHtml, /Odborná revize: 3\. října 2026/);
+  assert.doesNotMatch(articleHtml, /Čtyři nezávislé podklady|s úplným desetiletým výsledkem|severoamerické \(a\) a euroasijské \(b\)/);
+});
+
 test("publishes a sourced phenology article with organism, camera, and satellite observations", async () => {
   const [article, evidencePage, evidence] = await Promise.all([
     readFile(new URL("app/components/PhenologyArticle.tsx", root), "utf8"),
