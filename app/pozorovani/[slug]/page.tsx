@@ -225,7 +225,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Kryosféra"
           title="Změna hmotnosti ledových příkrovů"
-          meta="Napsáno: 1. srpna 2026"
+          meta="Napsáno: 1. srpna 2026 · Odborná revize: 3. října 2026"
         >
           <p>
             Jak se změna hmotnosti Grónska a Antarktidy odvozuje z výšky povrchu, gravitačního pole a toku ledu, jak

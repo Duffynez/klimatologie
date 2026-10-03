@@ -798,7 +798,7 @@ test("renders public mountain-glacier sources with separate DOI and full-text li
   assert.match(articleHtml, /Odborná revize: 3\. října 2026/);
 });
 
-test("publishes a sourced ice-sheet mass article with three independent measurement methods", async () => {
+test("publishes a sourced ice-sheet mass article with three measurement methods", async () => {
   const [article, evidencePage, evidence] = await Promise.all([
     readFile(new URL("app/components/IceSheetsArticle.tsx", root), "utf8"),
     readFile(new URL("app/pozorovani/[slug]/page.tsx", root), "utf8"),
@@ -836,6 +836,37 @@ test("publishes a sourced ice-sheet mass article with three independent measurem
   assert.match(article, /CC BY 4\.0/);
   assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
   assert.match(evidence, /slug: "nestabilita-prikrovu"[\s\S]*status: "hotovo"/);
+});
+
+test("renders open ice-sheet papers and distinguishes revised estimates and data access limits", async () => {
+  const [article, sourcesHtml, articleHtml] = await Promise.all([
+    readFile(new URL("app/components/IceSheetsArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/nestabilita-prikrovu/index.html", root), "utf8"),
+  ]);
+  const ids = new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((match) => match[1]));
+  const cards = new Map([...sourcesHtml.matchAll(/<article\b[^>]*\bid="([^"]+)"[^>]*>([\s\S]*?)<\/article>/g)]
+    .map((match) => [match[1], match[2]]));
+  for (const id of ids) {
+    const card = cards.get(id);
+    assert.ok(card, `Missing rendered ice-sheet source card: ${id}`);
+    assert.doesNotMatch(card, /drive\.google\.com/, `Open source has a Drive archive: ${id}`);
+    assert.match(card, /Otevřít (?:veřejný zdroj|plný text|veřejná data)/, `Missing public access: ${id}`);
+    if (id.startsWith("DOI_")) {
+      assert.match(card, /Otevřít DOI/, `Missing DOI: ${id}`);
+      assert.match(card, /Otevřít (?:plný text|veřejná data)/, `Missing separate text or data: ${id}`);
+    }
+  }
+  assert.match(cards.get("DOI_10_1038_274539a0"), /19810013163\.pdf#page=18/);
+  assert.match(cards.get("DOI_10_1038_s41597_026_08088_0"), /nature\.com\/articles\/s41597-026-08088-0/);
+  assert.match(cards.get("DOI_10_5067_temsc_3jc634"), /RL06\.3_V4/);
+  assert.match(articleHtml, /11 309 ± 565 Gt/);
+  assert.match(articleHtml, /160 ± 17 Gt za rok/);
+  assert.match(articleHtml, /23 ± 5 Gt za rok/);
+  assert.match(articleHtml, /dočasnou nedostupnost/);
+  assert.match(articleHtml, /1,85 GB/);
+  assert.match(articleHtml, /Odborná revize: 3\. října 2026/);
+  assert.doesNotMatch(articleHtml, /5 120 ± 544|intervaly zasahují na obě strany nuly/);
 });
 
 test("publishes a sourced snow-cover and permafrost article with distinct observables", async () => {
