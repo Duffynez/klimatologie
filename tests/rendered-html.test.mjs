@@ -769,6 +769,35 @@ test("publishes a sourced mountain glaciers article with field and satellite evi
   assert.match(evidence, /slug: "ustup-ledovcu"[\s\S]*status: "hotovo"/);
 });
 
+test("renders public mountain-glacier sources with separate DOI and full-text links", async () => {
+  const [article, sourcesHtml, articleHtml] = await Promise.all([
+    readFile(new URL("app/components/MountainGlaciersArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/ustup-ledovcu/index.html", root), "utf8"),
+  ]);
+  const ids = new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((match) => match[1]));
+  const cards = new Map([...sourcesHtml.matchAll(/<article\b[^>]*\bid="([^"]+)"[^>]*>([\s\S]*?)<\/article>/g)]
+    .map((match) => [match[1], match[2]]));
+  for (const id of ids) {
+    const card = cards.get(id);
+    assert.ok(card, `Missing rendered glacier source card: ${id}`);
+    assert.doesNotMatch(card, /drive\.google\.com/, `Public source has a Drive archive: ${id}`);
+    assert.match(card, /Otevřít (?:veřejný zdroj|plný text|veřejná data)/, `Missing public access: ${id}`);
+    if (id.startsWith("DOI_") || id === "WEB_World_Glacier_Monitoring_Ser_glosar_UNESCO_a_WGMS_06fc9a79" || id === "WEB_glims_org_GLIMS_Glacier_Database_2d3c95bb") {
+      assert.match(card, /Otevřít DOI/, `Missing DOI: ${id}`);
+      assert.match(card, /Otevřít (?:plný text|veřejná data)/, `Missing separate text or data: ${id}`);
+    }
+  }
+  assert.match(cards.get("DOI_10_1038_s43017_026_00777_z"), /livrepository\.liverpool\.ac\.uk\/3197897/);
+  assert.match(cards.get("DOI_10_1038_s41586_021_03436_z"), /dora\.lib4ri\.ch/);
+  assert.match(cards.get("DOI_10_7265_4m1f_gd79"), /nsidc-0770\/versions\/6/);
+  assert.match(cards.get("DOI_10_5067_f6jmovy5navz"), /nsidc-0770\/versions\/7/);
+  assert.match(articleHtml, /68% pokrytí/);
+  assert.match(articleHtml, /95% intervaly/);
+  assert.match(articleHtml, /1975\/76–2023\/24/);
+  assert.match(articleHtml, /Odborná revize: 3\. října 2026/);
+});
+
 test("publishes a sourced ice-sheet mass article with three independent measurement methods", async () => {
   const [article, evidencePage, evidence] = await Promise.all([
     readFile(new URL("app/components/IceSheetsArticle.tsx", root), "utf8"),
