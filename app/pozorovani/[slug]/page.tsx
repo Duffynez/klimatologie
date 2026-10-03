@@ -282,7 +282,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Extrémy"
           title="Vlny veder"
-          meta="Napsáno: 1. srpna 2026"
+          meta="Napsáno: 1. srpna 2026 · Odborná revize: 3. října 2026"
         >
           <p>
             Jak se z denních maxim a minim určují vlny veder, proč různé definice dávají různá čísla a co ukazují

@@ -527,7 +527,7 @@ test("publishes a sourced precipitation article with separate daily and sub-dail
   assert.match(article, /Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez/);
   assert.match(article, /zdrojů tohoto článku nepoužívají/);
   assert.match(sourceCatalogueText, /assets-eu\.researchsquare\.com\/files\/rs-2023755/);
-  assert.match(sourceCatalogueText, /repository\.library\.noaa\.gov\/view\/noaa\/46579\/noaa_46579_DS1\.pdf/);
+  assert.match(sourceCatalogueText, /agupubs\.onlinelibrary\.wiley\.com\/doi\/10\.1029\/2019JD032263/);
   assert.match(sourceCatalogueText, /eprints\.ncl\.ac\.uk\/fulltext\.aspx/);
   assert.match(sourceCatalogueText, /nature\.com\/articles\/s41597-023-02238-4\.pdf/);
   assert.match(sourceCatalogueText, /dspace\.library\.uvic\.ca\/bitstreams/);
@@ -1049,17 +1049,50 @@ test("publishes a sourced heat-wave article that keeps definitions and observati
   assert.match(article, /hadex3-wsdi-trend\.png/);
   assert.equal((article.match(/unoptimized/g) ?? []).length, 2);
   assert.match(article, /0,61 dne/);
-  assert.match(article, /1,69 °C/);
-  assert.match(article, /133 homogenizovaných českých stanic/);
+  assert.match(article, /6 °C·den/);
+  assert.match(article, /Od 3\. do 16\. srpna 2015/);
   assert.match(article, /18,5 tropického dne/);
   assert.match(sourceCatalogueText, /10\.3354\/cr019193/);
   assert.match(sourceCatalogueText, /10\.1175\/JCLI-D-12-00383\.1/);
   assert.match(sourceCatalogueText, /10\.1038\/s41467-020-16970-7/);
   assert.match(sourceCatalogueText, /10\.1038\/s41467-022-31432-y/);
-  assert.match(sourceCatalogueText, /10\.1002\/joc\.7505/);
+  assert.match(sourceCatalogueText, /dly-0-203-0-11755-TMA\.csv/);
   assert.match(article, /Open Government Licence v3\.0/);
   assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
   assert.match(evidence, /slug: "vlny-veder"[\s\S]*status: "hotovo"/);
+});
+
+test("gives every heat-wave source public access and preserves corrected measurement distinctions", async () => {
+  const [article, sourcesHtml, articleHtml] = await Promise.all([
+    readFile(new URL("app/components/HeatWavesArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/vlny-veder/index.html", root), "utf8"),
+  ]);
+  const ids = new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((match) => match[1]));
+  const cards = new Map([...sourcesHtml.matchAll(/<article\b[^>]*\bid="([^"]+)"[^>]*>([\s\S]*?)<\/article>/g)]
+    .map((match) => [match[1], match[2]]));
+  assert.equal(ids.size, 32);
+  for (const id of ids) {
+    const card = cards.get(id);
+    assert.ok(card, `Missing rendered heat-wave source: ${id}`);
+    assert.doesNotMatch(card, /drive\.google\.com/, `Open source has a Drive archive: ${id}`);
+    assert.match(card, /Otevřít (?:veřejný zdroj|plný text|veřejná data)/, `Missing public access: ${id}`);
+    if (id.startsWith("DOI_")) {
+      assert.match(card, /Otevřít DOI/, `Missing DOI: ${id}`);
+      assert.match(card, /Otevřít (?:plný text|veřejná data)/, `Missing separate text or data: ${id}`);
+    }
+  }
+  assert.ok(!cards.has("DOI_10_1002_joc_7505"));
+  assert.match(cards.get("DOI_10_1038_sdata_2018_206"), /Ehsan Raei/);
+  assert.match(cards.get("DOI_10_6084_m9_figshare_c_4004668"), /Datový soubor/);
+  assert.match(cards.get("WEB_CHMU_Straznice_denni_maxima_TMA"), /dly-0-203-0-11755-TMA\.csv/);
+  assert.match(articleHtml, /nikoli záporný počet dnů/);
+  assert.match(articleHtml, /WSDI tedy neudává počet událostí/);
+  assert.match(articleHtml, /nemusely připadat na stejné datum/);
+  assert.match(articleHtml, /neuvádí úplný seznam použitých stanic/);
+  assert.match(articleHtml, /Odborná revize: 3\. října 2026/);
+  assert.doesNotMatch(articleHtml, /Sadegh et al\., 2018|133 homogenizovaných českých stanic|souvislá zasažená plocha/);
+  assert.equal((articleHtml.match(/class="article-figure__scroll"/g) ?? []).length, 2);
 });
 
 test("keeps the main section headers free of status labels and explanatory side copy", async () => {
