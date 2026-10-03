@@ -698,13 +698,38 @@ test("publishes a sourced Arctic sea ice article with extent, age, and thickness
   assert.match(article, /14,29 milionu km²/);
   assert.match(article, /95 000/);
   assert.match(article, /přibližně o 66 %/);
-  assert.match(sourceCatalogueText, /10\.1029\/JD089iD04p05355/);
+  assert.match(sourceCatalogueText, /19980076134/);
   assert.match(sourceCatalogueText, /10\.7265\/a98x-0f50/);
   assert.match(sourceCatalogueText, /10\.5194\/tc-18-2473-2024/);
   assert.match(sourceCatalogueText, /10\.1088\/1748-9326\/aae3ec/);
   assert.match(article, /Licence to use Copernicus Products/);
   assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
   assert.match(evidence, /slug: "ubytek-arktickeho-ledu"[\s\S]*status: "hotovo"/);
+});
+
+test("renders public texts and versioned data for every Arctic sea ice source", async () => {
+  const [article, sourcesHtml] = await Promise.all([
+    readFile(new URL("app/components/ArcticSeaIceArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+  ]);
+  const ids = new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((match) => match[1]));
+  const cards = new Map([...sourcesHtml.matchAll(/<article\b[^>]*\bid="([^"]+)"[^>]*>([\s\S]*?)<\/article>/g)]
+    .map((match) => [match[1], match[2]]));
+  for (const id of ids) {
+    const card = cards.get(id);
+    assert.ok(card, `Missing rendered source card: ${id}`);
+    assert.doesNotMatch(card, /drive\.google\.com/, `Public source has a Drive archive: ${id}`);
+    assert.match(card, /Otevřít (?:veřejný zdroj|plný text|veřejná data)/, `Missing public access: ${id}`);
+    if (id.startsWith("DOI_")) {
+      assert.match(card, /Otevřít DOI/, `Missing DOI: ${id}`);
+      assert.match(card, /Otevřít (?:plný text|veřejná data)/, `Missing separate text or data: ${id}`);
+    }
+  }
+  assert.ok(ids.has("DOI_10_5067_mpyg15waa4wx"), "NASA Team must link to downloadable version 2");
+  assert.match(cards.get("DOI_10_5067_mpyg15waa4wx"), /nsidc-0051\/versions\/2/);
+  assert.ok(ids.has("DOI_10_15770_eum_saf_osi_0027"), "The current OSI SAF continuation must be available");
+  assert.ok(ids.has("WEB_NSIDC_Arctic_Sea_Ice_Minimum_2026"), "The preliminary 2026 minimum must have a source");
+  assert.doesNotMatch(article, /DOI_10_5067_8gq8lzqvl0vl/, "Retired NASA Team version 1 must not return");
 });
 
 test("publishes a sourced mountain glaciers article with field and satellite evidence", async () => {
