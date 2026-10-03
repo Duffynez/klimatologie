@@ -168,7 +168,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Oceány"
           title="Acidifikace oceánu"
-          meta="Napsáno: 31. července 2026"
+          meta="Napsáno: 31. července 2026 · Odborná kontrola: 3. října 2026"
         >
           <p>
             Co přesně znamená změna pH mořské vody, jak se měří celý uhličitanový systém, jak vznikají globální

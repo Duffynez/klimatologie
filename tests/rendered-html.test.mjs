@@ -22,7 +22,9 @@ test("keeps the source library, categories, and its download model in the site",
   assert.match(sources, /1681_Mariotte/);
   assert.match(sources, /2000_Argo/);
   assert.match(sources, /\.\.\.articleSources/);
-  assert.ok((articleSources.match(/^  \{ id:/gm) ?? []).length >= 481);
+  const articleSourceIds = [...articleSources.matchAll(/^  \{ id: "([^"]+)"/gm)].map((match) => match[1]);
+  assert.ok(articleSourceIds.length > 0);
+  assert.equal(new Set(articleSourceIds).size, articleSourceIds.length, "Article source IDs must be unique");
   assert.doesNotMatch(articleSources, /author: "doi\.org"|<\/?(?:sub|sup|i)>|�/);
   assert.match(sources, /drive\.google\.com\/uc\?export=download/);
   assert.equal((sourceArchive.match(/"driveFileId":/g) ?? []).length, 227);
@@ -632,8 +634,8 @@ test("publishes a sourced ocean acidification article with measured and reconstr
   assert.match(article, /bats-ph-aragonite-1983-2023\.webp/);
   assert.match(article, /copernicus-surface-ph-trend-map\.png/);
   assert.equal((article.match(/unoptimized/g) ?? []).length, 4);
-  assert.match(sourceCatalogueText, /10\.1038\/425365a/);
-  assert.match(sourceCatalogueText, /10\.1038\/nature04095/);
+  assert.match(sourceCatalogueText, /10\.5670\/oceanog\.2010\.22/);
+  assert.match(sourceCatalogueText, /10\.5194\/os-7-597-2011/);
   assert.match(sourceCatalogueText, /10\.1073\/pnas\.0906044106/);
   assert.match(sourceCatalogueText, /10\.3389\/fmars\.2023\.1289931/);
   assert.match(sourceCatalogueText, /10\.1029\/2023GB007765/);
@@ -642,6 +644,30 @@ test("publishes a sourced ocean acidification article with measured and reconstr
   assert.match(sourceCatalogueText, /10\.25921\/8dba-fr90/);
   assert.match(article, /CC BY 4\.0/);
   assert.match(evidence, /slug: "acidifikace-oceanu"[\s\S]*status: "hotovo"/);
+});
+
+test("renders open texts and data without Drive archives for every ocean acidification source", async () => {
+  const [article, sourcesHtml] = await Promise.all([
+    readFile(new URL("app/components/OceanAcidificationArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+  ]);
+  const ids = new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((match) => match[1]));
+  const cards = new Map([...sourcesHtml.matchAll(/<article\b[^>]*\bid="([^"]+)"[^>]*>([\s\S]*?)<\/article>/g)]
+    .map((match) => [match[1], match[2]]));
+  for (const id of ids) {
+    const card = cards.get(id);
+    assert.ok(card, `Missing rendered source card: ${id}`);
+    assert.doesNotMatch(card, /drive\.google\.com/, `Open source has a Drive archive: ${id}`);
+    assert.match(card, /Otevřít (?:veřejný zdroj|plný text|veřejná data)/, `Missing public access link: ${id}`);
+    if (id.startsWith("DOI_") || id.includes("9661bd2a") || id.includes("e42bd642")) {
+      assert.match(card, /Otevřít DOI/, `Missing DOI: ${id}`);
+      assert.match(card, /Otevřít (?:plný text|veřejná data)/, `Missing separate full-text or data link: ${id}`);
+    }
+  }
+  assert.ok(ids.has("DOI_10_26008_1912_bco_dmo_3782_10"), "BATS must cite the checked data version");
+  assert.match(cards.get("DOI_10_26008_1912_bco_dmo_3782_10"), /3782_v10_bats_bottle\.csv/);
+  assert.doesNotMatch(article, /DOI_10_1016_j_marchem_2007_01_013|DOI_10_1093_icesjms_5_3_401/,
+    "Unrelated papers must not return under incorrect bibliographic labels");
 });
 
 test("publishes a sourced Arctic sea ice article with extent, age, and thickness evidence", async () => {
