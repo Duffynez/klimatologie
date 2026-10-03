@@ -2,6 +2,8 @@
 
 Tento dokument je závazný pro všechny články o měřicích a analytických metodách na Klimatologie.eu, včetně postupů využívajících přírodní archivy a metod zpracování dat. Článek musí vysvětlit cestu od pozorované skutečnosti přes měření nebo vstupní data a jejich zpracování až ke zveřejněnému výsledku, jeho nejistotě a ověření.
 
+Jazyk a stavbu výkladu upravuje společný standard [STYLE.md](STYLE.md), který čteme před psaním i redakcí článku.
+
 ## Jak standard používat
 
 Následujících třináct bodů stanovuje povinný obsah článku. Pořadí, názvy oddílů a jejich spojování přizpůsobíme srozumitelnému výkladu. Princip, přístroj a převod signálu můžeme například vysvětlit společně na jednom příkladu. Každý požadavek musí být věcně pokrytý, ale stejnou informaci neopakujeme v několika oddílech.
@@ -91,9 +93,7 @@ Pro všechny odborné argumenty platí požadavek legálně veřejného plného 
 ## Společná pravidla
 
 - Rozlišujeme metodu, přístroj, měřicí platformu, pozorovací síť a datový produkt.
-- Potřebné odborné pojmy a zkratky vysvětlíme při prvním použití; slovníček slouží také k jejich rychlému připomenutí.
 - Článek obsahuje nejméně jedno popsané schéma principu nebo postupu a jeden skutečný příklad se vstupem, zpracováním a výsledkem.
-- Používáme přirozenou češtinu, nikoliv doslovný překlad anglické terminologie.
 - Klimatický závěr uvádíme pouze tehdy, když přímo ukazuje použití metody.
 - Technické údaje vždy vztahujeme ke konkrétnímu přístroji, verzi nebo datovému souboru.
 - Podrobné odvození, další varianty nebo rozsáhlejší technické údaje mohou být v rozbalitelných částech. Hlavní výklad musí obsahovat rozhodující kroky, předpoklady a omezení i bez jejich otevření.

@@ -2,6 +2,8 @@
 
 Tento dokument je závazný pro všechny články o klimatických mechanismech na Klimatologie.eu. Článek musí ukázat nejen to, jak určitý proces funguje, ale především proč dané vysvětlení odpovídá pozorované změně lépe než jiné možnosti.
 
+Jazyk a stavbu výkladu upravuje společný standard [STYLE.md](STYLE.md), který čteme před psaním i redakcí článku.
+
 ## 1. Datum a potřebné informace
 
 Na začátku uvedeme datum sepsání a poslední odborné kontroly. Slovníček bude obsahovat pouze pojmy nezbytné pro dané vysvětlení.
@@ -158,6 +160,3 @@ Zdroje budou vloženy přímo do argumentu, který podporují.
 - Pozorování, metody, mechanismy a politické důsledky držíme oddělené.
 - Konkurenční vysvětlení formulujeme v jejich nejsilnější odborné podobě.
 - Modelový výsledek vždy porovnáváme s měřením.
-- Nezačínáme výklad negativní definicí.
-- Nepoužíváme odborný pojem dříve, než jej vysvětlíme.
-- Píšeme přirozenou češtinou a zdroje zapojujeme do souvislého výkladu.

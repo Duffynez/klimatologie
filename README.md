@@ -10,6 +10,7 @@ Obsah projektu se řídí několika dokumenty. Nejsou to volná doporučení, al
 | --- | --- |
 | [`AGENTS.md`](AGENTS.md) | Před každou odbornou nebo strukturální změnou. Obsahuje cíle projektu a společné zásady. |
 | [`CONTENT.md`](CONTENT.md) | Před změnou článku, citace, obrázku, historické osy nebo databáze zdrojů. |
+| [`STYLE.md`](STYLE.md) | Před psaním a redakcí všech textů webu. Obsahuje pravidla jazyka, stavby výkladu a příklady úprav. |
 | [`METHODS.md`](METHODS.md) | Navíc před psaním článku o měřicí nebo analytické metodě. |
 | [`MECHANISMS.md`](MECHANISMS.md) | Navíc před psaním článku o klimatickém mechanismu. |
 | [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Před změnou směrování, datových katalogů, komponent nebo sestavení webu. |

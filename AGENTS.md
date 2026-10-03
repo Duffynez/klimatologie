@@ -1,6 +1,6 @@
 # Závazné zásady projektu Klimatologie.eu
 
-Tento dokument je závazný pro každou AI i člověka, kteří píší nebo upravují obsah projektu. Před prací s odborným textem jej vždy přečtěte společně se souborem `CONTENT.md`. Před psaním článku o měřicí nebo analytické metodě je navíc povinný soubor `METHODS.md`; před článkem o klimatickém mechanismu soubor `MECHANISMS.md`. Konkrétní redakční postup se může vyvíjet, ale následující cíle a standardy se nesmějí obejít kvůli rychlosti, stručnosti ani efektnímu vyznění textu.
+Tento dokument je závazný pro každou AI i člověka, kteří píší nebo upravují obsah projektu. Před prací s odborným textem jej vždy přečtěte společně se soubory `CONTENT.md` a [STYLE.md](STYLE.md). Před psaním článku o měřicí nebo analytické metodě je navíc povinný soubor `METHODS.md`; před článkem o klimatickém mechanismu soubor `MECHANISMS.md`. Konkrétní redakční postup se může vyvíjet, ale následující cíle a standardy se nesmějí obejít kvůli rychlosti, stručnosti ani efektnímu vyznění textu.
 
 ## Orientace v repozitáři
 
@@ -46,4 +46,4 @@ Citace nepřidáváme pouze jako seznam na konec článku. Studie, data, grafy a
 
 ## Jazyk platný pro celý web
 
-Píšeme přirozenou, přesnou a čitelnou češtinou. Text nesmí působit jako strojovitý překlad z angličtiny. Nevysvětlený odborný pojem, zkratka nebo veličina se v textu nesmí objevit jen proto, že je běžná v odborné literatuře. Čtenáře nepřesvědčujeme autoritativním tónem; umožňujeme mu sledovat, na čem vědecký závěr stojí.
+Závazná pravidla jazyka, stavby textu a redakční kontroly jsou soustředěna v [STYLE.md](STYLE.md). Platí pro všechny texty webu, včetně nadpisů, perexů, popisků a shrnutí.

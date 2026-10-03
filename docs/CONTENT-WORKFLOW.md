@@ -1,10 +1,10 @@
 # Postup práce s obsahem
 
-Tento dokument popisuje, které soubory je potřeba změnit při přidání nebo úpravě obsahu. Odborná a jazyková pravidla zůstávají v `AGENTS.md`, `CONTENT.md`, `METHODS.md` a `MECHANISMS.md`.
+Tento dokument popisuje, které soubory je potřeba změnit při přidání nebo úpravě obsahu. Odborná pravidla stanovují `AGENTS.md`, `CONTENT.md`, `METHODS.md` a `MECHANISMS.md`; společný jazyk a styl stanovuje [STYLE.md](../STYLE.md).
 
 ## 1. Než začne práce
 
-1. Přečtěte `AGENTS.md` a `CONTENT.md`.
+1. Přečtěte `AGENTS.md`, `CONTENT.md` a [STYLE.md](../STYLE.md).
 2. U metody navíc přečtěte `METHODS.md`.
 3. U mechanismu navíc přečtěte `MECHANISMS.md`.
 4. Ověřte, zda už téma, slug nebo zdrojové ID v repozitáři neexistuje.
@@ -139,7 +139,7 @@ Před zveřejněním ověřte:
 
 Změna je hotová až tehdy, když:
 
-1. text odpovídá příslušnému standardu;
+1. text odpovídá příslušnému odbornému standardu a prošel redakční kontrolou podle [STYLE.md](../STYLE.md);
 2. všechny citace mají existující záznam;
 3. odborné práce mají DOI, pokud existuje, a legálně otevřitelný plný text;
 4. nepoužité záznamy byly bezpečně posouzeny a případně odstraněny;

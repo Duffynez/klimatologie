@@ -1,5 +1,7 @@
 # Práce s obsahem
 
+Před psaním nebo úpravou textu přečtěte také [STYLE.md](STYLE.md), který stanovuje společná jazyková a stylistická pravidla webu.
+
 ## Přidání zdroje
 
 1. Nejdřív vytvořte záznam v centrálním katalogu. Základní a historické záznamy jsou v `app/data/sources.ts`, většina zdrojů odborných článků v `app/data/articleSources.ts`; výsledné pole vždy skládá `sources.ts`. Přesný postup popisuje `docs/SOURCES-AND-ARCHIVE.md`.
@@ -45,6 +47,7 @@ Každá karta odpovídá na tři otázky: co se stalo, co bylo nově zjištěno 
 
 ## Kontrolní otázky před zveřejněním
 
+- Prošel text jazykovou a redakční kontrolou podle [STYLE.md](STYLE.md)?
 - Je každé podstatné tvrzení navázané na zdroj?
 - Je zdroj dostupný, správně popsaný a lze jej legálně sdílet?
 - Má graf popis, jednotky, původ dat a omezení?

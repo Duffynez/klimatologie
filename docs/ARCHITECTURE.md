@@ -1,6 +1,6 @@
 # Architektura Klimatologie.eu
 
-Tento dokument popisuje současný technický stav repozitáře. Neurčuje odborný obsah článků; ten se řídí soubory `AGENTS.md`, `CONTENT.md`, `METHODS.md` a `MECHANISMS.md`.
+Tento dokument popisuje současný technický stav repozitáře. Neurčuje odborný obsah článků; ten se řídí soubory `AGENTS.md`, `CONTENT.md`, `METHODS.md` a `MECHANISMS.md`. Společný jazyk a styl stanovuje [STYLE.md](../STYLE.md).
 
 ## 1. Základní charakter projektu
 
