@@ -6,6 +6,7 @@ import { ResistanceThermometryArticle } from "../../components/ResistanceThermom
 import { HygrometryArticle } from "../../components/HygrometryArticle";
 import { RadiosoundingArticle } from "../../components/RadiosoundingArticle";
 import { PressureHeightArticle } from "../../components/PressureHeightArticle";
+import { ConductometryArticle } from "../../components/ConductometryArticle";
 import { measurementMethods, methodBySlug } from "../../data/methods";
 
 const combinedAnalysisSlug = "titrace-a-coulometrie";
@@ -70,6 +71,25 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "konduktometrie") {
+    return (
+      <div className="page-shell">
+        <PageLead
+          eyebrow="Metody / Přímá měření"
+          title="Konduktometrie"
+          meta="Napsáno: 4. října 2026 · Odborná revize: 4. října 2026"
+        >
+          <p>
+            Jak elektrická vodivost vypovídá o slanosti mořské vody. Od frekvence čidla
+            přes kalibraci k salinitě, s veřejnými daty a výpočtem ke stažení.
+          </p>
+        </PageLead>
+        <ConductometryArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "mereni-tlaku-a-hydrostaticke-vysky") {

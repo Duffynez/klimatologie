@@ -1411,6 +1411,72 @@ test("reproduces all pressure calibration residuals and detects incomplete or co
   assert.throws(() => parseCalibration(text.replace("32844.70", "")), /numerical/);
 });
 
+test("publishes conductometry with a reproducible signal conversion and open source cards", async () => {
+  const [html, article, catalogue, ...related] = await Promise.all([
+    readFile(new URL("dist/client/metody/konduktometrie/index.html", root), "utf8"),
+    readFile(new URL("app/components/ConductometryArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    ...["pozorovani/tepelny-obsah-oceanu", "pozorovani/acidifikace-oceanu", "metody/mereni-tlaku-a-hydrostaticke-vysky"]
+      .map((path) => readFile(new URL(`dist/client/${path}/index.html`, root), "utf8")),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "The full method must replace its catalogue fallback");
+  assert.match(body, /class="method-flow"/);
+  assert.match(body, /conductivity-temperature\.png/);
+  assert.match(body, /34,6424/);
+  assert.equal((body.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) ?? []).length, 6);
+  assert.doesNotMatch(body.replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
+  for (const page of related) assert.match(page, /href="\/metody\/konduktometrie\/?"/);
+  const ids = [...new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp(`<article[^>]*id="${id}"[\\s\\S]*?<\\/article>`))?.[0];
+    assert.ok(card, `Missing conductometry source: ${id}`);
+    assert.doesNotMatch(card, /drive\.google\.com/, `Open source has a Drive button: ${id}`);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/, `Missing open access: ${id}`);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const href = match[1];
+    const file = /\.[a-z0-9]+$/i.test(href) ? href : `${href.replace(/\/$/, "")}/index.html`;
+    await readFile(new URL(`dist/client${file}`, root));
+  }
+});
+
+test("reproduces conductivity calibration and matches independent published PSS-78 check values", async () => {
+  const base = new URL("public/data/methods/conductometry/", root);
+  const { practicalSalinity, parseCalibration, reproduceCalibration } = await import(new URL("reproduce.mjs", base));
+  // TEOS-10 gsw_SP_from_C v3.05 documentation. Conductivities there are in mS/cm.
+  const cases = [
+    [34.5487, 28.7856, 10, 20.009869599086951],
+    [34.7275, 28.4329, 50, 20.265511864874270],
+    [34.8605, 22.8103, 125, 22.981513062527689],
+    [34.6810, 10.2600, 250, 31.204503263727982],
+    [34.5680, 6.8863, 600, 34.032315787432829],
+    [34.5600, 4.4036, 1000, 36.400308494388170],
+  ];
+  for (const [c, t, p, expected] of cases) {
+    assert.ok(Math.abs(practicalSalinity(c / 10, t, p).SP - expected) < 1e-10);
+  }
+  for (const args of [[0, 15, 0], [0.1, 15, 0], [10, 15, 0], [4.2, 36, 0], [4.2, 15, -1], [4.2, 15, 10001], [NaN, 15, 0]]) {
+    assert.throws(() => practicalSalinity(...args), "Reject values outside the explicitly supported domain");
+  }
+  const metadata = JSON.parse(await readFile(new URL("example.json", base), "utf8"));
+  const bytes = await readFile(new URL("calibration.csv", base));
+  assert.equal(createHash("sha256").update(bytes).digest("hex"), metadata.csvSha256);
+  assert.deepEqual(await readFile(new URL("dist/client/data/methods/conductometry/calibration.csv", root)), bytes);
+  const text = bytes.toString("utf8");
+  const result = reproduceCalibration(text, metadata);
+  assert.equal(result.recordCount, 7);
+  assert.equal(result.selectedCount, 6);
+  assert.equal(result.excludedStep, 1);
+  assert.deepEqual(result.rows, metadata.rows, "The rendered results must agree with recalculation");
+  assert.ok(Math.abs(result.selected.calculatedSm - 4.252531092811017) < 1e-12);
+  assert.ok(Math.abs(result.selected.SP - 34.642394135890406) < 1e-10);
+  assert.throws(() => parseCalibration(text.replace("frequency_khz", "frequency_hz")), /columns/);
+  assert.throws(() => parseCalibration(text.trim().split(/\r?\n/).slice(0, -1).join("\n")), /row count/);
+  assert.throws(() => parseCalibration(text.replace("5.07771", "NaN")), /numerical/);
+  assert.throws(() => reproduceCalibration(text.replace("5.96800", "5968.00"), metadata));
+});
+
 test("keeps the current catalogue of fourteen observations", async () => {
   const evidence = await readFile(new URL("app/data/evidence.ts", root), "utf8");
   const slugs = [...evidence.matchAll(/\{ slug: "([^"]+)"/g)].map((match) => match[1]);

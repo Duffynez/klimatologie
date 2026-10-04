@@ -155,7 +155,8 @@ export function OceanAcidificationArticle() {
         <h2>Jak se chemie oceánu měří</h2>
         <h3>Odběr vody a doprovodné údaje</h3>
         <p>
-          Výzkumná loď spustí do oceánu rám s čidly teploty, vodivosti a tlaku. Vodivost se převádí na salinitu, tedy údaj o obsahu rozpuštěných solí, a
+          Výzkumná loď spustí do oceánu rám s čidly teploty, vodivosti a tlaku.
+          <Link href="/metody/konduktometrie"> Vodivost se spolu s teplotou a tlakem převádí na praktickou salinitu</Link>, tedy údaj o slanosti vody, a
           <Link href="/metody/mereni-tlaku-a-hydrostaticke-vysky"> z tlaku se odvozuje hloubka</Link>. Kolem rámu jsou Niskinovy lahve, které se na povel uzavřou ve vybraných hloubkách. Po vytažení
           se voda rozdělí do samostatných lahví pro DIC, alkalinitu, pH, živiny a další rozbory. U každého vzorku se
           zachová čas, poloha, tlak, teplota, salinita, číslo lahve a způsob analýzy. Bez těchto údajů nelze hodnotu pH

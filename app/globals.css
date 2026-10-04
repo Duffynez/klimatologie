@@ -1156,6 +1156,10 @@ video.article-figure__media {
   text-transform: uppercase;
 }
 
+.method-data-output__unit {
+  text-transform: none;
+}
+
 .method-data-output th:first-child {
   color: var(--ink);
   text-align: left;
