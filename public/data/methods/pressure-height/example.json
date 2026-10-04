@@ -1,0 +1,99 @@
+{
+  "title": "Vlastní přepis číselné tabulky kalibrace SBE 9plus 1207",
+  "sourceId": "2022_SeaBird_P1207_Calibration",
+  "sourceUrl": "https://www.aoml.noaa.gov/ftp/phod/instrument_calibration/Sea-Bird/Calibrations%20by%20Serial/SBE9Plus/1207/2022-06-SBE%209plus%20P1207%2007Jun22.pdf",
+  "sourceAuthor": "Sea-Bird Scientific",
+  "certificateDate": "2022-06-06",
+  "accessed": "2026-10-04",
+  "instrument": "SBE 9plus",
+  "instrumentSerialNumber": "1207",
+  "pressureSensorSerialNumber": "131013",
+  "pressureSensorRangePsia": 10000,
+  "sourcePdfSha256": "67fbac6d4286390c4cc26209e10997242a40dcbef70c844ff8a9275a6e94d43e",
+  "csvSha256": "fc0f22955290667b8a7fab82b8a613649e83e710790a42aa7216853d98c7e722",
+  "transcription": "Všech 11 řádků v původním pořadí. Zachovány vytištěné hodnoty. Přidáno pořadové číslo step. CSV není původní soubor výrobce.",
+  "units": {
+    "reference_psia": "psi absolute",
+    "frequency_hz": "Hz",
+    "internal_temperature_c": "°C",
+    "instrument_psia": "psi absolute",
+    "corrected_psia": "psi absolute",
+    "reported_residual_psi": "psi"
+  },
+  "calculation": "Residual = instrument pressure minus reference pressure. Before and after correction are read from separate printed columns. Convert psi to dbar using 0.689476 from the SBE 9plus manual. Keep both ascending and descending runs. No row rejected and no interpolation.",
+  "limitations": "Printed values and coefficients are rounded. This calculation does not reconstruct raw frequency conversion or refit coefficients. Residuals of the calibration table are not an independent validation, an uncertainty estimate, or measurements of ocean depth.",
+  "illustrativeHeightAssumptions": {
+    "densityKgM3": 1000,
+    "gravityMS2": 9.80665,
+    "dbarPa": 10000,
+    "hpaPa": 100
+  },
+  "rows": [
+    {
+      "step": 1,
+      "referenceDbar": 10.04566532,
+      "beforeDbar": 0.36542228,
+      "afterDbar": -0.0517107
+    },
+    {
+      "step": 2,
+      "referenceDbar": 1380.054472124,
+      "beforeDbar": 0.367490708,
+      "afterDbar": -0.060673888
+    },
+    {
+      "step": 3,
+      "referenceDbar": 2750.210826792,
+      "beforeDbar": 0.473670012,
+      "afterDbar": 0.033784324
+    },
+    {
+      "step": 4,
+      "referenceDbar": 4120.400276308,
+      "beforeDbar": 0.361285424,
+      "afterDbar": -0.090321356
+    },
+    {
+      "step": 5,
+      "referenceDbar": 5490.564215212,
+      "beforeDbar": 0.261311404,
+      "afterDbar": -0.201326992
+    },
+    {
+      "step": 6,
+      "referenceDbar": 6861.023249844,
+      "beforeDbar": 0.304058916,
+      "afterDbar": -0.169611096
+    },
+    {
+      "step": 7,
+      "referenceDbar": 5490.59731006,
+      "beforeDbar": 0.601223072,
+      "afterDbar": 0.138584676
+    },
+    {
+      "step": 8,
+      "referenceDbar": 4120.403723688,
+      "beforeDbar": 0.724639276,
+      "afterDbar": 0.273032496
+    },
+    {
+      "step": 9,
+      "referenceDbar": 2750.197726748,
+      "beforeDbar": 0.671549624,
+      "afterDbar": 0.231663936
+    },
+    {
+      "step": 10,
+      "referenceDbar": 1380.10342492,
+      "beforeDbar": 0.508143812,
+      "afterDbar": 0.079979216
+    },
+    {
+      "step": 11,
+      "referenceDbar": 10.047733748,
+      "beforeDbar": 0.233732364,
+      "afterDbar": -0.183400616
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SourceLink } from "./SourceLink";
 
 export function OceanHeatArticle() {
@@ -132,7 +133,7 @@ export function OceanHeatArticle() {
         <h2>Co se skutečně měří</h2>
         <p>
           Základním pozorováním je teplotní profil: teplota vody zaznamenaná na jednom místě v jednotlivých hloubkách.
-          Moderní přístroje současně měří tlak, podle něhož se určuje hloubka, a často také elektrickou vodivost,
+          Moderní přístroje současně měří <Link href="/metody/mereni-tlaku-a-hydrostaticke-vysky">tlak, z něhož se odvozuje hloubka</Link>, a často také elektrickou vodivost,
           z níž se spolu s teplotou a tlakem počítá slanost. Jeden profil popisuje jediný čas a místo. Globální
           součet vzniká až následným spojením mnoha profilů.
         </p>

@@ -106,6 +106,8 @@ export function RadiosoundingArticle() {
           a 4.4.2</SourceLink>. Přítomnost sloupce „tlak“ v souboru sama neříká, jak tlak vznikl.
           Chyba teploty nebo přízemního barometru může vstoupit i do vypočteného tlaku.
           Tlaková hladina, například 500 hektopascalů, zkráceně hPa, navíc nemá vždy stejnou výšku.
+          Kalibraci tlakoměrů a převod tlaku na svislou polohu rozvádí metoda
+          <Link href="/metody/mereni-tlaku-a-hydrostaticke-vysky"> měření tlaku a hydrostatické výšky</Link>.
         </p>
         <p>
           Družicový systém GPS, anglicky <em>Global Positioning System</em>, určuje polohu z časování

@@ -3,3 +3,5 @@ public/data/methods/resistance-thermometry/*.txt text eol=lf
 public/data/methods/hygrometry/*.txt text eol=lf
 # Keep the CHMI archive member byte-for-byte, including its original line endings.
 public/data/methods/radiosounding/*.csv binary
+# Keep the checksum of our pressure-calibration transcription stable across checkouts.
+public/data/methods/pressure-height/*.csv text eol=lf

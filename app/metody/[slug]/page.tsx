@@ -5,6 +5,7 @@ import { PageLead } from "../../components/PageLead";
 import { ResistanceThermometryArticle } from "../../components/ResistanceThermometryArticle";
 import { HygrometryArticle } from "../../components/HygrometryArticle";
 import { RadiosoundingArticle } from "../../components/RadiosoundingArticle";
+import { PressureHeightArticle } from "../../components/PressureHeightArticle";
 import { measurementMethods, methodBySlug } from "../../data/methods";
 
 const combinedAnalysisSlug = "titrace-a-coulometrie";
@@ -69,6 +70,27 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "mereni-tlaku-a-hydrostaticke-vysky") {
+    return (
+      <div className="page-shell">
+        <PageLead
+          eyebrow="Metody / Přímá měření"
+          title="Měření tlaku a hydrostatické výšky"
+          meta="Napsáno: 4. října 2026 · Odborná revize: 4. října 2026"
+        >
+          <p>
+            Jak tlakoměr převádí zatížení čidla na elektrický signál a za jakých podmínek
+            z tlaku získáme hloubku nebo výšku hladiny. S veřejným kalibračním protokolem a výpočtem ke stažení.
+          </p>
+        </PageLead>
+        <PressureHeightArticle />
+        <Link className="text-link" href="/metody">
+          &larr; Zpět na všechny metody
+        </Link>
+      </div>
+    );
   }
 
   if (slug === "odporova-termometrie-a-termistory") {

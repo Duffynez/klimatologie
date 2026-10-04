@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SourceLink } from "./SourceLink";
 
 export function GlobalMeanSeaLevelArticle() {
@@ -169,6 +170,11 @@ export function GlobalMeanSeaLevelArticle() {
           odstranění zjevně chybných hodnot počítají minutové, hodinové, denní a měsíční průměry. Příliv se tím nemaže z
           původních dat. Jeho střídání se při dostatečně dlouhém průměrování z velké části vyrovná.{" "}
           <SourceLink id="WEB_NOAA_What_is_a_tide_gauge_ecb1078b">NOAA: jak pracuje pobřežní vodočet</SourceLink>
+        </p>
+
+        <p>
+          Jinou možností je odvodit místní hladinu z tlaku vody nad ponořeným čidlem. Převod a potřebné opravy
+          vysvětluje <Link href="/metody/mereni-tlaku-a-hydrostaticke-vysky">měření tlaku a hydrostatické výšky</Link>.
         </p>
 
         <p>

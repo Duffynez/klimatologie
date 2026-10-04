@@ -1351,6 +1351,66 @@ test("reproduces the Prague sounding from unchanged data and rejects invalid or 
   assert.deepEqual(parseProfile(fromRows([rows[0], rows.at(-1)])).map((r) => r.elapsedSeconds), [0, 5254]);
 });
 
+test("publishes pressure and hydrostatic height with traceable calibration data and related articles", async () => {
+  const [html, article, catalogue, ...related] = await Promise.all([
+    readFile(new URL("dist/client/metody/mereni-tlaku-a-hydrostaticke-vysky/index.html", root), "utf8"),
+    readFile(new URL("app/components/PressureHeightArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    ...["pozorovani/tepelny-obsah-oceanu", "pozorovani/acidifikace-oceanu", "pozorovani/gmsl", "metody/radiosondaz"]
+      .map((path) => readFile(new URL(`dist/client/${path}/index.html`, root), "utf8")),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "The full method must replace its catalogue fallback");
+  assert.match(body, /class="method-flow"/);
+  assert.match(body, /calibration-residuals\.png/);
+  assert.equal((body.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) ?? []).length, 11);
+  assert.doesNotMatch(body.replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
+  for (const page of related) assert.match(page, /href="\/metody\/mereni-tlaku-a-hydrostaticke-vysky\/?"/);
+  const ids = [...new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
+  assert.equal(ids.length, 10);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp(`<article[^>]*id="${id}"[\\s\\S]*?<\\/article>`))?.[0];
+    assert.ok(card, `Missing pressure source card: ${id}`);
+    assert.doesNotMatch(card, /drive\.google\.com/, `Open source has a Drive button: ${id}`);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/, `Missing open access: ${id}`);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const href = match[1];
+    const file = /\.[a-z0-9]+$/i.test(href) ? href : `${href.replace(/\/$/, "")}/index.html`;
+    await readFile(new URL(`dist/client${file}`, root));
+  }
+});
+
+test("reproduces all pressure calibration residuals and detects incomplete or corrupted input", async () => {
+  const base = new URL("public/data/methods/pressure-height/", root);
+  const { parseCalibration, summarizeCalibration } = await import(new URL("reproduce.mjs", base));
+  const metadata = JSON.parse(await readFile(new URL("example.json", base), "utf8"));
+  const bytes = await readFile(new URL("calibration.csv", base));
+  assert.equal(createHash("sha256").update(bytes).digest("hex"), metadata.csvSha256);
+  assert.deepEqual(await readFile(new URL("dist/client/data/methods/pressure-height/calibration.csv", root)), bytes);
+  const text = bytes.toString("utf8");
+  const rows = parseCalibration(text);
+  const result = summarizeCalibration(text);
+  assert.equal(result.rowCount, 11);
+  assert.equal(result.selected.frequencyHz, 35196);
+  assert.equal(result.selected.internalTemperatureC, 23.5);
+  assert.ok(Math.abs(result.maxAbsBeforeDbar - 0.724639276) < 1e-9);
+  assert.ok(Math.abs(result.maxAbsAfterDbar - 0.273032496) < 1e-9);
+  assert.ok(Math.abs(result.illustrativeResidualHeightM - 0.27841566284) < 1e-9);
+  for (let index = 0; index < rows.length; index++) {
+    for (const key of ["referenceDbar", "beforeDbar", "afterDbar"]) {
+      assert.ok(Math.abs(rows[index][key] - metadata.rows[index][key]) < 1e-8, "Rendered table must match recalculation");
+    }
+  }
+  const lines = text.trim().split(/\r?\n/);
+  assert.throws(() => parseCalibration(lines.slice(0, -1).join("\n")), /row count/);
+  assert.throws(() => parseCalibration(text.replace("reference_psia", "reference_dbar")), /columns/);
+  assert.throws(() => parseCalibration(text.replace("11,14.573", "10,14.573")), /sequence/);
+  assert.throws(() => parseCalibration(text.replace("35", "NaN")), /numerical/);
+  assert.throws(() => parseCalibration(text.replace("-0.075", "0.075")), /Residual/);
+  assert.throws(() => parseCalibration(text.replace("32844.70", "")), /numerical/);
+});
+
 test("keeps the current catalogue of fourteen observations", async () => {
   const evidence = await readFile(new URL("app/data/evidence.ts", root), "utf8");
   const slugs = [...evidence.matchAll(/\{ slug: "([^"]+)"/g)].map((match) => match[1]);
