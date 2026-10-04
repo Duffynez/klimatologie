@@ -3,6 +3,11 @@ import type { Source } from "./sources";
 // Sources cited by published article components.
 // Stable IDs are referenced from SourceLink components; do not rename them after publication.
 const rawArticleSources: Source[] = [
+  { id: "WEB_CALM_Active_Layer_Protocol", title: "CALM Active Layer Protocol", author: "Fritz Nelson, Jerry Brown, Toni Lewkowicz a Al Taylor", year: 2026, publication: "CALM / George Washington University", type: "Metodická dokumentace, přístup 4. října 2026", category: "organization", externalUrl: "https://www2.gwu.edu/~calm/research/active_layer.html", topics: ["metody", "permafrost", "aktivní vrstva", "kryosféra"] },
+  { id: "WEB_GTN_P_Barrow_ALT_dataset_14", title: "Active Layer Thickness at Barrow, CALM U1, GTN-P dataset 14, export 4. října 2026", author: "Nikolay Shiklomanov, CALM / George Washington University, GTN-P a přispívající instituce", year: 2026, publication: "GTN-P Data Platform", type: "Datový soubor", category: "organization", externalUrl: "https://data.gtn-p.org/view/alt/2", topics: ["metody", "permafrost", "aktivní vrstva", "kryosféra"] },
+  { id: "DOI_10_1080_10889370009377698", title: "The Circumpolar Active Layer Monitoring (CALM) Program: Research Designs and Initial Results", author: "Jerry Brown, Kenneth M. Hinkel a Frederick E. Nelson", year: 2000, publication: "Polar Geography 24(3), 165–258", type: "Studie", category: "science", externalUrl: "https://doi.org/10.1080/10889370009377698", topics: ["metody", "permafrost", "aktivní vrstva", "kryosféra"] },
+  { id: "DOI_10_4095_202802", title: "Active layer monitoring in natural environments, lower Mackenzie Valley, Northwest Territories", author: "F. Mark Nixon, Alan E. Taylor, V. S. Allen a F. Wright", year: 1995, publication: "Geological Survey of Canada, Current Research 1995-B, 99–108", type: "Výzkumná zpráva", category: "science", externalUrl: "https://doi.org/10.4095/202802", topics: ["metody", "permafrost", "aktivní vrstva", "kryosféra"] },
+  { id: "DOI_10_1029_2023jf007262", title: "Widespread Permafrost Degradation and Thaw Subsidence in Northwest Canada", author: "H. Brendan O’Neill a kol.", year: 2023, publication: "Journal of Geophysical Research: Earth Surface", type: "Studie", category: "science", externalUrl: "https://doi.org/10.1029/2023JF007262", topics: ["metody", "permafrost", "aktivní vrstva", "kryosféra"] },
   { id: "DOI_10_5194_essd_14_3293_2022", title: "Rescue and homogenization of 140 years of glacier mass balance data in Switzerland", author: "Lea Geibel a kol.", year: 2022, publication: "Earth System Science Data", type: "Studie", category: "science", externalUrl: "https://doi.org/10.5194/essd-14-3293-2022", topics: ["metody", "horské ledovce", "hmotnostní bilance", "kryosféra"] },
   { id: "DOI_10_5194_tc_7_1227_2013", title: "Reanalysing glacier mass balance measurement series", author: "Michael Zemp a kol.", year: 2013, publication: "The Cryosphere", type: "Studie", category: "science", externalUrl: "https://doi.org/10.5194/tc-7-1227-2013", topics: ["metody", "horské ledovce", "hmotnostní bilance", "kryosféra"] },
   { id: "DOI_10_3189_2015jog15j015", title: "New long-term mass-balance series for the Swiss Alps", author: "Matthias Huss, Laurie Dhulst a Andreas Bauder", year: 2015, publication: "Journal of Glaciology", type: "Studie", category: "science", externalUrl: "https://doi.org/10.3189/2015JoG15J015", topics: ["metody", "horské ledovce", "hmotnostní bilance", "kryosféra"] },
@@ -518,6 +523,11 @@ const rawArticleSources: Source[] = [
 ];
 
 const articleOpenAccessSources: Record<string, true | string> = {
+  WEB_CALM_Active_Layer_Protocol: true,
+  WEB_GTN_P_Barrow_ALT_dataset_14: true,
+  DOI_10_1080_10889370009377698: "https://sites.lsa.umich.edu/gwk/wp-content/uploads/sites/647/2018/09/CALM_polar_geography2000.pdf",
+  DOI_10_4095_202802: "https://ostr-backend-prod.azure.cloud.nrcan-rncan.gc.ca/server/api/core/bitstreams/f40b2af4-b19d-47c3-926c-e5a456bc9e31/content",
+  DOI_10_1029_2023jf007262: "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023JF007262",
   DOI_10_5194_essd_14_3293_2022: "https://essd.copernicus.org/articles/14/3293/2022/essd-14-3293-2022.pdf",
   DOI_10_5194_tc_7_1227_2013: "https://tc.copernicus.org/articles/7/1227/2013/tc-7-1227-2013.pdf",
   DOI_10_3189_2015jog15j015: "https://sonar.ch/documents/304814/files/hus_nlt.pdf",

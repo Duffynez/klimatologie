@@ -270,6 +270,10 @@ export function SnowPermafrostArticle() {
 
         <h3>Hloubka aktivní vrstvy</h3>
         <p>
+          Postup terénního měření, porovnání přístrojů a opakovatelný výpočet z jednotlivých bodů
+          rozvádí metoda <Link href="/metody/mereni-hloubky-sezonniho-rozmrzani">Měření hloubky sezónního rozmrzání</Link>.
+        </p>
+        <p>
           Mechanická sonda se na konci období tání zatlačí svisle do půdy, dokud nenarazí na zmrzlé rozhraní. Odečtená
           vzdálenost se zapíše v každém bodu sítě a z bodů se vypočítá průměr i rozpětí. Pokud tání pokračuje po dni
           návštěvy, jednorázové měření může roční maximum podhodnotit. Teplotní čidla nebo mrazové trubice naopak

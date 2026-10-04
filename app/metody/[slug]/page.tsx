@@ -1,3 +1,4 @@
+import { ThawDepthArticle } from "../../components/ThawDepthArticle";
 import { GlacierBalanceArticle } from "../../components/GlacierBalanceArticle";
 import { SnowMeasurementArticle } from "../../components/SnowMeasurementArticle";
 import type { Metadata } from "next";
@@ -75,6 +76,25 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "mereni-hloubky-sezonniho-rozmrzani") {
+    return (
+      <div className="page-shell">
+        <PageLead
+          eyebrow="Metody / Přímá měření"
+          title="Měření hloubky sezónního rozmrzání"
+          meta="Napsáno: 4. října 2026 · Odborná revize: 4. října 2026"
+        >
+          <p>
+            Jak sondy, mrazové trubice a teplotní čidla sledují rozmrzání půdy nad permafrostem.
+            Skutečná data z Barrow ukazují výpočet průměru, chybějící měření i význam povrchové reference.
+          </p>
+        </PageLead>
+        <ThawDepthArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "terenni-mereni-bilance-ledovcu") {

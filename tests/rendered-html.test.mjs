@@ -1730,6 +1730,69 @@ test("preserves GLAMOS archive bytes and weights glacier balance by area", async
   assert.equal(result.winterMm + result.summerMm, result.publishedMeanMm);
 });
 
+test("publishes thaw depth with grid sampling, surface reference and open evidence", async () => {
+  const [html, article, catalogue, observation] = await Promise.all([
+    readFile(new URL("dist/client/metody/mereni-hloubky-sezonniho-rozmrzani/index.html", root), "utf8"),
+    readFile(new URL("app/components/ThawDepthArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/snehova-pokryvka-a-permafrost/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "Full article must replace the catalogue fallback");
+  const text = body.replace(/<!--[\s\S]*?-->/g, "");
+  assert.match(text, /class="method-flow"/);
+  assert.match(text, /barrow-grid\.png/);
+  assert.match(text, /35,60 cm/);
+  assert.match(text, /119 platných hodnot/);
+  assert.match(text, /Samostatné odečty obou vpichů v exportu nejsou/);
+  assert.match(text, /průměr měřených bodů sítě/);
+  assert.match(text, /Teplotní metoda vychází z jiného fyzikálního signálu/);
+  assert.match(text, /Povrch klesl o 7 cm/);
+  assert.match(text, /neznáme velikost společné chyby/i);
+  assert.doesNotMatch(text.replace(/&[^;\s]+;/g, ""), /;/);
+  assert.match(observation, /href="\/metody\/mereni-hloubky-sezonniho-rozmrzani\/?"/);
+  const ids = [...new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
+  assert.ok(ids.length >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp(`<article[^>]*id="${id}"[\\s\\S]*?<\\/article>`))?.[0];
+    assert.ok(card, `Missing thaw depth source: ${id}`);
+    assert.doesNotMatch(card, /drive\.google\.com/, `Open source has a Drive button: ${id}`);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/, `Missing open access: ${id}`);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const href = match[1];
+    const file = /\.[a-z0-9]+$/i.test(href) ? href : `${href.replace(/\/$/, "")}/index.html`;
+    await readFile(new URL(`dist/client${file}`, root));
+  }
+});
+
+test("preserves the GTN-P snapshot and excludes water-related missing readings", async () => {
+  const base = new URL("public/data/methods/thaw-depth/", root);
+  const metadata = JSON.parse(await readFile(new URL("example.json", base), "utf8"));
+  for (const name of ["barrow-gtnp.zip", "barrow-1996.csv", "reproduce.py", "plot.py", "example.json"]) {
+    const data = await readFile(new URL(name, base));
+    assert.deepEqual(await readFile(new URL(`dist/client/data/methods/thaw-depth/${name}`, root)), data);
+    if (name === metadata.archive.filename) {
+      assert.equal(createHash("sha256").update(data).digest("hex"), metadata.archive.sha256);
+    }
+  }
+  const csv = await readFile(new URL("barrow-1996.csv", base), "utf8");
+  const rows = csv.trim().split(/\r?\n/).slice(1).map((line) => line.split(","));
+  assert.equal(rows.length, 121);
+  assert.ok(rows.every((r) => r[1] === "1996-08-18" && r[6] === "14"));
+  const valid = rows.filter((r) => r[4] !== "").map((r) => Number(r[4]));
+  const missing = rows.filter((r) => r[4] === "");
+  assert.equal(valid.length, 119);
+  assert.equal(missing.length, 2);
+  assert.ok(missing.every((r) => r[5] === "no data entry - no measurement because of water"));
+  assert.equal(valid.reduce((sum, d) => sum + d, 0), 4236.5);
+  assert.equal(4236.5 / valid.length, metadata.result.meanCm);
+  assert.ok(Math.abs(metadata.result.meanCm - 35.60084033613445) < 1e-10);
+  assert.equal(Math.min(...valid), 19);
+  assert.equal(Math.max(...valid), 68);
+  assert.equal(metadata.license, "CC BY 4.0");
+});
+
 test("keeps the current catalogue of fourteen observations", async () => {
   const evidence = await readFile(new URL("app/data/evidence.ts", root), "utf8");
   const slugs = [...evidence.matchAll(/\{ slug: "([^"]+)"/g)].map((match) => match[1]);

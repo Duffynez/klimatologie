@@ -1,0 +1,89 @@
+{
+  "title": "CALM U1 Barrow, návštěva 18. srpna 1996",
+  "accessed": "2026-10-04",
+  "datasetLastModified": "2026-06-25T12:58:04.782667",
+  "provider": "Nikolay Shiklomanov, CALM / George Washington University, GTN-P a přispívající instituce",
+  "sourceUrl": "https://data.gtn-p.org/view/alt/2",
+  "downloadUrl": "https://data.gtn-p.org/api/data/?alt_data=14&combined=false",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "dataPolicyUrl": "https://data.gtn-p.org/data-policy",
+  "archive": {
+    "filename": "barrow-gtnp.zip",
+    "sha256": "8d00d55a747626d477836c00e9cf84865bea017c540c12f60d7c9a8d5e7c922f",
+    "modified": false,
+    "csvMember": "alt_dataset_14_alt_grid-transect.csv",
+    "metadataMember": "alt_metadata.json"
+  },
+  "selection": {
+    "datasetId": 14,
+    "activeLayerId": 2,
+    "siteId": 2,
+    "calmCode": "U1",
+    "date": "1996-08-18",
+    "unit": "cm",
+    "coordinatesUnit": "m",
+    "spacingM": 100
+  },
+  "inputLevel": "Zveřejněné hodnoty v uzlech sítě. Podle popisu lokality jde o průměry dvou vpichů. Jednotlivé odečty ani kalibrační list sondy v exportu nejsou.",
+  "processing": "Výběr data, kontrola 121 souřadnic a příznaků, vyloučení dvou prázdných měření kvůli vodě. Nevážený průměr 119 čísel, výběrová směrodatná odchylka se jmenovatelem n−1. Žádné doplňování neměřených míst.",
+  "derivedFiles": {
+    "barrow-1996.csv": "Beze změny hodnot vybraných 121 záznamů, nové pořadí podle souřadnic. Oddělovač čárka, desetinná tečka, UTF-8.",
+    "figure": "Vlastní graf Klimatologie.eu, bez prostorové interpolace, CC BY 4.0."
+  },
+  "result": {
+    "date": "1996-08-18",
+    "nodes": 121,
+    "valid": 119,
+    "missing": [
+      {
+        "xM": 1000.0,
+        "yM": 100.0,
+        "flag": "no data entry - no measurement because of water"
+      },
+      {
+        "xM": 1000.0,
+        "yM": 0.0,
+        "flag": "no data entry - no measurement because of water"
+      }
+    ],
+    "sumCm": 4236.5,
+    "meanCm": 35.60084033613445,
+    "minCm": 19.0,
+    "maxCm": 68.0,
+    "sampleSdCm": 8.461673270818723,
+    "incorrectZeroFilledMeanCm": 35.01239669421488,
+    "firstFive": [
+      {
+        "id": "396351",
+        "xM": 0.0,
+        "yM": 1000.0,
+        "depthCm": 36.0
+      },
+      {
+        "id": "396352",
+        "xM": 100.0,
+        "yM": 1000.0,
+        "depthCm": 31.0
+      },
+      {
+        "id": "396353",
+        "xM": 200.0,
+        "yM": 1000.0,
+        "depthCm": 54.0
+      },
+      {
+        "id": "396354",
+        "xM": 300.0,
+        "yM": 1000.0,
+        "depthCm": 40.5
+      },
+      {
+        "id": "396355",
+        "xM": 400.0,
+        "yM": 1000.0,
+        "depthCm": 31.0
+      }
+    ]
+  }
+}
