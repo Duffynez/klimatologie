@@ -1,3 +1,4 @@
+import { SnowMeasurementArticle } from "../../components/SnowMeasurementArticle";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -73,6 +74,25 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "mereni-vysky-hustoty-a-vodni-hodnoty-snehu") {
+    return (
+      <div className="page-shell">
+        <PageLead
+          eyebrow="Metody / Přímá měření"
+          title="Měření výšky, hustoty a vodní hodnoty sněhu"
+          meta="Napsáno: 4. října 2026 · Odborná revize: 4. října 2026"
+        >
+          <p>
+            Jak z výšky a vážení sněhu zjistíme množství uložené vody.
+            Odběr, kalibrace a prostorová proměnlivost, se skutečným profilem z Arktidy a výpočtem ke stažení.
+          </p>
+        </PageLead>
+        <SnowMeasurementArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "pobrezni-mereni-hladiny-a-vyskova-reference") {

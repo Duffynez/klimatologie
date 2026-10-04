@@ -1,0 +1,80 @@
+{
+  "title": "MOSAiC snow density profile PS122-1_10-11",
+  "citation": "Macfarlane, Amy R et al. (2022): Snowpit snow density cutter profiles measured during the MOSAiC expedition. PANGAEA.",
+  "doi": "https://doi.org/10.1594/PANGAEA.940214",
+  "sourceUrl": "https://download.pangaea.de/dataset/940214/files/metadata_DensityCutter_removedOvalues.xlsx",
+  "sourceFilename": "metadata_DensityCutter_removedOvalues.xlsx",
+  "localFilename": "density.xlsx",
+  "retrieved": "2026-10-04",
+  "published": "2022-01-20",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "sha256": "7a5176220aadc436c0b11a007a3906dfd0018534223ccfa153e1ad3dabc8f0ba",
+  "selection": {
+    "sheet": "Sheet1",
+    "event": "PS122-1_10-11",
+    "excelRows": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "location": "ds-coring-SYI",
+    "latitude": 85.922758,
+    "longitude": 113.808365,
+    "timestampAsStored": "2019-12-02T07:59:30",
+    "sensorScale": 1
+  },
+  "processing": [
+    "Select all four records with Event PS122-1_10-11.",
+    "Retain published density values. Original balance readings are not included in this file.",
+    "Top and Bottom are centimetres above the snow–ice interface.",
+    "Verify matching site and timestamp, positive finite density, contiguous intervals ending at zero, and no comments.",
+    "SWE in mm = sum(density in kg/m3 * interval thickness in cm / 100). Reference water density 1000 kg/m3.",
+    "Mean density = SWE in mm / total profile height in metres.",
+    "No interpolation, gap filling, density correction or exclusion within the selected profile.",
+    "Selection demonstrates a complete vertical profile and is not a representative sample of Arctic snow."
+  ],
+  "limitations": [
+    "Published layer densities, not raw masses or calibration certificates.",
+    "One sample per interval, no repeatability estimate or profile-specific uncertainty budget.",
+    "Water equivalent uses a freshwater reference and is not a salinity-corrected meltwater volume.",
+    "Number of decimal places in the calculation is not measurement uncertainty."
+  ],
+  "result": {
+    "count": 4,
+    "depthCm": 12.0,
+    "sweMm": 28.5,
+    "meanDensityKgM3": 237.5,
+    "layers": [
+      {
+        "excelRow": 2,
+        "topCm": 12.0,
+        "bottomCm": 9.0,
+        "densityKgM3": 174.0,
+        "sweMm": 5.22
+      },
+      {
+        "excelRow": 3,
+        "topCm": 9.0,
+        "bottomCm": 6.0,
+        "densityKgM3": 218.0,
+        "sweMm": 6.54
+      },
+      {
+        "excelRow": 4,
+        "topCm": 6.0,
+        "bottomCm": 3.0,
+        "densityKgM3": 288.0,
+        "sweMm": 8.64
+      },
+      {
+        "excelRow": 5,
+        "topCm": 3.0,
+        "bottomCm": 0.0,
+        "densityKgM3": 270.0,
+        "sweMm": 8.1
+      }
+    ]
+  }
+}

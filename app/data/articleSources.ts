@@ -3,6 +3,11 @@ import type { Source } from "./sources";
 // Sources cited by published article components.
 // Stable IDs are referenced from SourceLink components; do not rename them after publication.
 const rawArticleSources: Source[] = [
+  { id: "2009_Fierz_Snow_Classification", title: "The International Classification for Seasonal Snow on the Ground", author: "Charles Fierz, Richard L. Armstrong, Yves Durand, Pierre Etchevers, Ethan Greene, David M. McClung, Kouichi Nishimura, P. K. Satyawali a Sergey A. Sokratov", year: 2009, publication: "UNESCO-IHP, IHP-VII Technical Documents in Hydrology No. 83, IACS Contribution No. 1", type: "Odborná klasifikace a metodika", category: "science", externalUrl: "https://cryosphericsciences.org/wp-content/uploads/2019/02/snowclass_2009-11-23-tagged-highres.pdf", topics: ["metody", "sníh", "vodní hodnota", "hustota", "kryosféra"] },
+  { id: "DOI_10_5194_tc_10_371_2016", title: "Intercomparison of snow density measurements: bias, precision, and vertical resolution", author: "Martin Proksch, Nick Rutter, Charles Fierz a Martin Schneebeli", year: 2016, publication: "The Cryosphere 10, 371–384", type: "Experimentální porovnání metod", category: "science", externalUrl: "https://doi.org/10.5194/tc-10-371-2016", topics: ["metody", "sníh", "vodní hodnota", "hustota", "kryosféra"] },
+  { id: "DOI_10_1038_s41597_023_02273_1", title: "A Database of Snow on Sea Ice in the Central Arctic Collected during the MOSAiC expedition", author: "Amy R. Macfarlane a kol.", year: 2023, publication: "Scientific Data 10, 398, opravená verze po 28. červenci 2023", type: "Studie a popis měřicího programu", category: "science", externalUrl: "https://doi.org/10.1038/s41597-023-02273-1", topics: ["metody", "sníh", "vodní hodnota", "hustota", "kryosféra"] },
+  { id: "DOI_10_1594_PANGAEA_940214", title: "Snowpit snow density cutter profiles measured during the MOSAiC expedition", author: "Amy R. Macfarlane a kol.", year: 2022, publication: "PANGAEA, zveřejněno 20. ledna 2022, přístup 4. října 2026", type: "Datový soubor", category: "science", externalUrl: "https://doi.org/10.1594/PANGAEA.940214", topics: ["metody", "sníh", "vodní hodnota", "hustota", "kryosféra"] },
+  { id: "DOI_10_1038_092520a0", title: "Societies and Academies", author: "Redakce Nature", year: 1914, publication: "Nature 92, 520–522, zpráva o přednášce J. E. Churche na s. 520", type: "Dobová zpráva o vědeckém jednání", category: "science", externalUrl: "https://doi.org/10.1038/092520a0", topics: ["metody", "sníh", "vodní hodnota", "hustota", "kryosféra"] },
   { id: "2011_NOAA_Radar_Evaluation", title: "Test and Evaluation Report: Limited Acceptance of the Design Analysis WaterLog H-3611i Microwave Radar Water Level Sensor", author: "Robert Heitsenrether a Edgar Davis", year: 2011, publication: "NOAA Technical Report NOS CO-OPS 061, březen 2011", type: "Metodická a validační zpráva", category: "science", externalUrl: "https://tidesandcurrents.noaa.gov/publications/Technical_Report_NOS_CO-OPS_061.pdf", topics: ["metody", "hladina moře", "výšková reference", "kalibrace"]},
   { id: "2013_NOAA_Radar_Installation", title: "Field Installation Procedures for Design Analysis WaterLog H3611i Microwave Radar Water Level Sensor Using the Sutron Data Collection Platform", author: "NOAA CO-OPS", year: 2013, publication: "Field Installation Guide, verze 1.0, leden 2013", type: "Technická příručka", category: "science", externalUrl: "https://tidesandcurrents.noaa.gov/publications/WaterLogField_Installation_Guide_V_1.0_01_30_13.pdf", topics: ["metody", "hladina moře", "výšková reference", "kalibrace"]},
   { id: "2025_NOAA_Water_Level_Specifications", title: "Environmental Measurement Systems: Sensor Specifications and Measurement Algorithms", author: "NOAA CO-OPS", year: 2025, publication: "Aktualizace 12/2025, oddíl 1, s. 1–5", type: "Veřejná specifikace měření", category: "science", externalUrl: "https://tidesandcurrents.noaa.gov/publications/CO-OPS_Measurement_Spec.pdf", topics: ["metody", "hladina moře", "výšková reference", "kalibrace"]},
@@ -508,6 +513,11 @@ const rawArticleSources: Source[] = [
 ];
 
 const articleOpenAccessSources: Record<string, true | string> = {
+  "2009_Fierz_Snow_Classification": true,
+  "DOI_10_5194_tc_10_371_2016": "https://tc.copernicus.org/articles/10/371/2016/tc-10-371-2016.pdf",
+  "DOI_10_1038_s41597_023_02273_1": "https://www.nature.com/articles/s41597-023-02273-1.pdf",
+  "DOI_10_1594_PANGAEA_940214": "https://doi.pangaea.de/10.1594/PANGAEA.940214",
+  "DOI_10_1038_092520a0": "https://dbc.wroc.pl/Content/29344/PDF/031685.pdf",
   "2011_NOAA_Radar_Evaluation": true,
   "2013_NOAA_Radar_Installation": true,
   "2025_NOAA_Water_Level_Specifications": true,

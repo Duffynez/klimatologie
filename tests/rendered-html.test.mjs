@@ -1619,6 +1619,58 @@ test("reproduces NOAA tide heights, preserves negative values and validates refe
   reject((a) => { a[2].datums.find((d) => d.name === "MSL").value += 0.1; }, /disagrees/);
 });
 
+test("publishes snow measurement with a reproducible layer profile and open sources", async () => {
+  const [html, article, catalogue, observation] = await Promise.all([
+    readFile(new URL("dist/client/metody/mereni-vysky-hustoty-a-vodni-hodnoty-snehu/index.html", root), "utf8"),
+    readFile(new URL("app/components/SnowMeasurementArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/snehova-pokryvka-a-permafrost/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "Full article must replace the catalogue fallback");
+  assert.match(body, /class="method-flow"/);
+  assert.match(body, /snow-profile\.png/);
+  assert.match(body.replace(/<!--[\s\S]*?-->/g, ""), /28,5 mm SWE/);
+  assert.match(body.replace(/<!--[\s\S]*?-->/g, ""), /237,5 kg\/m³/);
+  assert.match(body, /již vypočtené hustoty/);
+  assert.match(body, /Původní hmotnosti nádobek a sněhu/);
+  assert.equal((body.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) ?? []).length, 4);
+  assert.doesNotMatch(body.replace(/&[^;\s]+;/g, ""), /;/);
+  assert.match(observation, /href="\/metody\/mereni-vysky-hustoty-a-vodni-hodnoty-snehu\/?"/);
+  const ids = [...new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
+  assert.ok(ids.length >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp(`<article[^>]*id="${id}"[\\s\\S]*?<\\/article>`))?.[0];
+    assert.ok(card, `Missing snow source: ${id}`);
+    assert.doesNotMatch(card, /drive\.google\.com/, `Open source has a Drive button: ${id}`);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/, `Missing open access: ${id}`);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const href = match[1];
+    const file = /\.[a-z0-9]+$/i.test(href) ? href : `${href.replace(/\/$/, "")}/index.html`;
+    await readFile(new URL(`dist/client${file}`, root));
+  }
+});
+
+test("preserves the original snow workbook and its published mass-per-area calculation", async () => {
+  const base = new URL("public/data/methods/snow-measurements/", root);
+  const metadata = JSON.parse(await readFile(new URL("example.json", base), "utf8"));
+  const original = await readFile(new URL("density.xlsx", base));
+  assert.equal(createHash("sha256").update(original).digest("hex"), metadata.sha256);
+  assert.deepEqual(await readFile(new URL("dist/client/data/methods/snow-measurements/density.xlsx", root)), original);
+  assert.equal(metadata.selection.event, "PS122-1_10-11");
+  assert.deepEqual(metadata.selection.excelRows, [2, 3, 4, 5]);
+  assert.equal(metadata.result.depthCm, 12);
+  assert.equal(metadata.result.sweMm, 28.5);
+  assert.equal(metadata.result.meanDensityKgM3, 237.5);
+  assert.deepEqual(metadata.result.layers.map((r) => r.densityKgM3), [174, 218, 288, 270]);
+  assert.deepEqual(metadata.result.layers.map((r) => r.sweMm), [5.22, 6.54, 8.64, 8.1]);
+  for (const name of ["reproduce.py", "plot.py", "example.json"]) {
+    assert.deepEqual(await readFile(new URL(`dist/client/data/methods/snow-measurements/${name}`, root)),
+      await readFile(new URL(name, base)));
+  }
+});
+
 test("keeps the current catalogue of fourteen observations", async () => {
   const evidence = await readFile(new URL("app/data/evidence.ts", root), "utf8");
   const slugs = [...evidence.matchAll(/\{ slug: "([^"]+)"/g)].map((match) => match[1]);

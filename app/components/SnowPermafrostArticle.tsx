@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SourceLink } from "./SourceLink";
 
 export function SnowPermafrostArticle() {
@@ -94,6 +95,12 @@ export function SnowPermafrostArticle() {
             vlády USA, volné dílo.
           </figcaption>
         </figure>
+
+        <p>
+          Odběr vzorku, výpočet množství vody a kontrolu výsledku podrobně vysvětluje metoda
+          <Link href="/metody/mereni-vysky-hustoty-a-vodni-hodnoty-snehu"> měření výšky, hustoty a vodní hodnoty sněhu</Link>.
+          Obsahuje také výpočet ze čtyř skutečných odběrů v arktickém sněhovém profilu.
+        </p>
 
         <h3>Permafrost: teplota a sezónní rozmrzání</h3>
         <p>
