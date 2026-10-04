@@ -3,6 +3,11 @@ import type { Source } from "./sources";
 // Sources cited by published article components.
 // Stable IDs are referenced from SourceLink components; do not rename them after publication.
 const rawArticleSources: Source[] = [
+  { id: "DOI_10_5194_essd_14_3293_2022", title: "Rescue and homogenization of 140 years of glacier mass balance data in Switzerland", author: "Lea Geibel a kol.", year: 2022, publication: "Earth System Science Data", type: "Studie", category: "science", externalUrl: "https://doi.org/10.5194/essd-14-3293-2022", topics: ["metody", "horské ledovce", "hmotnostní bilance", "kryosféra"] },
+  { id: "DOI_10_5194_tc_7_1227_2013", title: "Reanalysing glacier mass balance measurement series", author: "Michael Zemp a kol.", year: 2013, publication: "The Cryosphere", type: "Studie", category: "science", externalUrl: "https://doi.org/10.5194/tc-7-1227-2013", topics: ["metody", "horské ledovce", "hmotnostní bilance", "kryosféra"] },
+  { id: "DOI_10_3189_2015jog15j015", title: "New long-term mass-balance series for the Swiss Alps", author: "Matthias Huss, Laurie Dhulst a Andreas Bauder", year: 2015, publication: "Journal of Glaciology", type: "Studie", category: "science", externalUrl: "https://doi.org/10.3189/2015JoG15J015", topics: ["metody", "horské ledovce", "hmotnostní bilance", "kryosféra"] },
+  { id: "DOI_10_18750_massbalance_point_2021_r2021", title: "Swiss Glacier Point Mass Balance Observations, release 2021", author: "GLAMOS", year: 2021, publication: "Glacier Monitoring Switzerland", type: "Datový soubor", category: "organization", externalUrl: "https://doi.org/10.18750/massbalance.point.2021.r2021", topics: ["metody", "horské ledovce", "hmotnostní bilance", "kryosféra"] },
+  { id: "DOI_10_18750_massbalance_2021_r2021", title: "Swiss Glacier Mass Balance, release 2021", author: "GLAMOS", year: 2021, publication: "Glacier Monitoring Switzerland", type: "Datový soubor", category: "organization", externalUrl: "https://doi.org/10.18750/massbalance.2021.r2021", topics: ["metody", "horské ledovce", "hmotnostní bilance", "kryosféra"] },
   { id: "2009_Fierz_Snow_Classification", title: "The International Classification for Seasonal Snow on the Ground", author: "Charles Fierz, Richard L. Armstrong, Yves Durand, Pierre Etchevers, Ethan Greene, David M. McClung, Kouichi Nishimura, P. K. Satyawali a Sergey A. Sokratov", year: 2009, publication: "UNESCO-IHP, IHP-VII Technical Documents in Hydrology No. 83, IACS Contribution No. 1", type: "Odborná klasifikace a metodika", category: "science", externalUrl: "https://cryosphericsciences.org/wp-content/uploads/2019/02/snowclass_2009-11-23-tagged-highres.pdf", topics: ["metody", "sníh", "vodní hodnota", "hustota", "kryosféra"] },
   { id: "DOI_10_5194_tc_10_371_2016", title: "Intercomparison of snow density measurements: bias, precision, and vertical resolution", author: "Martin Proksch, Nick Rutter, Charles Fierz a Martin Schneebeli", year: 2016, publication: "The Cryosphere 10, 371–384", type: "Experimentální porovnání metod", category: "science", externalUrl: "https://doi.org/10.5194/tc-10-371-2016", topics: ["metody", "sníh", "vodní hodnota", "hustota", "kryosféra"] },
   { id: "DOI_10_1038_s41597_023_02273_1", title: "A Database of Snow on Sea Ice in the Central Arctic Collected during the MOSAiC expedition", author: "Amy R. Macfarlane a kol.", year: 2023, publication: "Scientific Data 10, 398, opravená verze po 28. červenci 2023", type: "Studie a popis měřicího programu", category: "science", externalUrl: "https://doi.org/10.1038/s41597-023-02273-1", topics: ["metody", "sníh", "vodní hodnota", "hustota", "kryosféra"] },
@@ -513,6 +518,11 @@ const rawArticleSources: Source[] = [
 ];
 
 const articleOpenAccessSources: Record<string, true | string> = {
+  DOI_10_5194_essd_14_3293_2022: "https://essd.copernicus.org/articles/14/3293/2022/essd-14-3293-2022.pdf",
+  DOI_10_5194_tc_7_1227_2013: "https://tc.copernicus.org/articles/7/1227/2013/tc-7-1227-2013.pdf",
+  DOI_10_3189_2015jog15j015: "https://sonar.ch/documents/304814/files/hus_nlt.pdf",
+  DOI_10_18750_massbalance_point_2021_r2021: "https://doi.glamos.ch/data/massbalance_point/massbalance_point_2021_r2021.html",
+  DOI_10_18750_massbalance_2021_r2021: "https://doi.glamos.ch/data/massbalance/massbalance_2021_r2021.html",
   "2009_Fierz_Snow_Classification": true,
   "DOI_10_5194_tc_10_371_2016": "https://tc.copernicus.org/articles/10/371/2016/tc-10-371-2016.pdf",
   "DOI_10_1038_s41597_023_02273_1": "https://www.nature.com/articles/s41597-023-02273-1.pdf",

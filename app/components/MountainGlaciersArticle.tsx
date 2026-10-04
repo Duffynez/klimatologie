@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SourceLink } from "./SourceLink";
 
 export function MountainGlaciersArticle() {
@@ -136,6 +137,10 @@ export function MountainGlaciersArticle() {
         </p>
 
         <h3>Tyče, sondy a sněhové jámy</h3>
+        <p>
+          Podrobný postup od odečtu tyče k bilanci celé plochy, včetně skutečných dat a výpočtu,
+          vysvětluje metoda <Link href="/metody/terenni-mereni-bilance-ledovcu">Terénní měření bilance ledovců</Link>.
+        </p>
         <p>
           Při přímém glaciologickém měření jsou body rozmístěny od spodní části ledovce po jeho nejvyšší část. Na jaře
           se sondou zjišťuje hloubka zimního sněhu a ve sněhové jámě nebo jádru také jeho hustota. Na podzim se u tyčí

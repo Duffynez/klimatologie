@@ -1671,6 +1671,65 @@ test("preserves the original snow workbook and its published mass-per-area calcu
   }
 });
 
+test("publishes glacier field balance with traceable point and area calculations", async () => {
+  const [html, article, catalogue, observation] = await Promise.all([
+    readFile(new URL("dist/client/metody/terenni-mereni-bilance-ledovcu/index.html", root), "utf8"),
+    readFile(new URL("app/components/GlacierBalanceArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/ustup-ledovcu/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "Full article must replace the catalogue fallback");
+  assert.match(body, /class="method-flow"/);
+  assert.match(body, /gries-balance\.png/);
+  assert.match(body, /−3 582 mm vodního ekvivalentu/);
+  assert.match(body, /−0,893 m vodního ekvivalentu/);
+  assert.match(body, /již zpracovaných bilancí deseti výškových pásem/);
+  assert.match(body, /Původní dvě délky odkryté tyče/);
+  assert.match(body, /necelý 1 mm/);
+  assert.match(body, /původní terénní zápisník ani celé/);
+  assert.equal((body.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) ?? []).length, 10);
+  assert.doesNotMatch(body.replace(/&[^;\s]+;/g, ""), /;/);
+  assert.match(observation, /href="\/metody\/terenni-mereni-bilance-ledovcu\/?"/);
+  const ids = [...new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
+  assert.ok(ids.length >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp(`<article[^>]*id="${id}"[\\s\\S]*?<\\/article>`))?.[0];
+    assert.ok(card, `Missing glacier source: ${id}`);
+    assert.doesNotMatch(card, /drive\.google\.com/, `Open source has a Drive button: ${id}`);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/, `Missing open access: ${id}`);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const href = match[1];
+    const file = /\.[a-z0-9]+$/i.test(href) ? href : `${href.replace(/\/$/, "")}/index.html`;
+    await readFile(new URL(`dist/client${file}`, root));
+  }
+});
+
+test("preserves GLAMOS archive bytes and weights glacier balance by area", async () => {
+  const base = new URL("public/data/methods/glacier-balance/", root);
+  const metadata = JSON.parse(await readFile(new URL("example.json", base), "utf8"));
+  for (const name of ["point.zip", "balance.zip", "reproduce.py", "plot.py", "example.json"]) {
+    const data = await readFile(new URL(name, base));
+    assert.deepEqual(await readFile(new URL(`dist/client/data/methods/glacier-balance/${name}`, root)), data);
+    if (metadata.archives[name]) {
+      assert.equal(createHash("sha256").update(data).digest("hex"), metadata.archives[name].sha256);
+    }
+  }
+  const result = metadata.result;
+  assert.equal(metadata.selection.glacierId, "B45-04");
+  assert.equal(result.point.calculatedMm, -3582);
+  assert.equal(result.points.length, 16);
+  assert.equal(result.bands.length, 10);
+  const area = result.bands.reduce((sum, b) => sum + b.areaKm2, 0);
+  const mean = result.bands.reduce((sum, b) => sum + b.areaKm2 * b.annualMm, 0) / area;
+  assert.ok(Math.abs(mean - result.meanMm) < 1e-9);
+  assert.ok(Math.abs(mean - (-892.8693525895442)) < 1e-9);
+  assert.ok(Math.abs(mean - result.publishedMeanMm) < 1);
+  assert.ok(Math.abs(mean - result.unweightedBandMeanMm) > 100);
+  assert.equal(result.winterMm + result.summerMm, result.publishedMeanMm);
+});
+
 test("keeps the current catalogue of fourteen observations", async () => {
   const evidence = await readFile(new URL("app/data/evidence.ts", root), "utf8");
   const slugs = [...evidence.matchAll(/\{ slug: "([^"]+)"/g)].map((match) => match[1]);

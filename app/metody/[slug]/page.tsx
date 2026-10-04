@@ -1,3 +1,4 @@
+import { GlacierBalanceArticle } from "../../components/GlacierBalanceArticle";
 import { SnowMeasurementArticle } from "../../components/SnowMeasurementArticle";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -74,6 +75,25 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "terenni-mereni-bilance-ledovcu") {
+    return (
+      <div className="page-shell">
+        <PageLead
+          eyebrow="Metody / Přímá měření"
+          title="Terénní měření bilance ledovců"
+          meta="Napsáno: 4. října 2026 · Odborná revize: 4. října 2026"
+        >
+          <p>
+            Jak z odečtů tyčí a měření sněhu zjistíme změnu hmotnosti ledovce.
+            Převod hustoty, odhad pro neměřená místa a kontrola výsledku na skutečných datech Griesgletscheru.
+          </p>
+        </PageLead>
+        <GlacierBalanceArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "mereni-vysky-hustoty-a-vodni-hodnoty-snehu") {
