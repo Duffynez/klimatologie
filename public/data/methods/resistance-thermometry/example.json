@@ -1,0 +1,87 @@
+{
+  "retrieved": "2026-10-04",
+  "station": "MA Blue Hill 0 W",
+  "wban": "94785",
+  "dateLST": "20250101",
+  "endTimeLST": "0100",
+  "utcOffsetHours": -5,
+  "dataloggerVersion": "2.623",
+  "subhourlySource": "https://www.ncei.noaa.gov/pub/data/uscrn/products/subhourly01/2025/CRNS0101-05-2025-MA_Blue_Hill_0_W.txt",
+  "hourlySource": "https://www.ncei.noaa.gov/pub/data/uscrn/products/hourly02/2025/CRNH0203-2025-MA_Blue_Hill_0_W.txt",
+  "subhourlyReadme": "https://www.ncei.noaa.gov/pub/data/uscrn/products/subhourly01/readme.txt",
+  "hourlyReadme": "https://www.ncei.noaa.gov/pub/data/uscrn/products/hourly02/readme.txt",
+  "selection": "12 periods ending 00:05 through 01:00 LST on 2025-01-01, equivalent to 05:05 through 06:00 UTC. Temperature is field 9 in subhourly01 and field 10 in hourly02. Original lines are preserved with LF line endings.",
+  "rows": [
+    {
+      "endLST": "0005",
+      "temperatureC": 5.1
+    },
+    {
+      "endLST": "0010",
+      "temperatureC": 5.5
+    },
+    {
+      "endLST": "0015",
+      "temperatureC": 5.6
+    },
+    {
+      "endLST": "0020",
+      "temperatureC": 5.4
+    },
+    {
+      "endLST": "0025",
+      "temperatureC": 5.4
+    },
+    {
+      "endLST": "0030",
+      "temperatureC": 5.2
+    },
+    {
+      "endLST": "0035",
+      "temperatureC": 5.2
+    },
+    {
+      "endLST": "0040",
+      "temperatureC": 5.3
+    },
+    {
+      "endLST": "0045",
+      "temperatureC": 5.4
+    },
+    {
+      "endLST": "0050",
+      "temperatureC": 5.5
+    },
+    {
+      "endLST": "0055",
+      "temperatureC": 5.6
+    },
+    {
+      "endLST": "0100",
+      "temperatureC": 5.7
+    }
+  ],
+  "publishedHourlyC": 5.4,
+  "sha256": {
+    "blue-hill-five-minute.txt": "a28a07c640d373e22b01ef6ed9a1ca35583786cf51e7431c869cd6a9df61d0a9",
+    "blue-hill-hourly.txt": "446d1d09ecc3b200e3445f80de5b88578b85370a37abecf4cb9d00ee678dbd72"
+  },
+  "annualFileSha256": {
+    "subhourly": "50d299e2233f890781456430354c70849b84ca697f3e874009563485bb0124bb",
+    "hourly": "dcaacf902c8810edbc01b3bfcc6eed9189f0d4d6d226be484cc2242cec3ad1a8"
+  },
+  "calibration": {
+    "source": "https://www.bipm.org/documents/20126/41773843/BIPM_CCT_Guide_to_IPRTs.pdf/b3bd8bba-3b0b-ab46-481f-29ceddf7bb31?download=true&t=1638374241171&version=1.1",
+    "version": "2021-11-22",
+    "location": "Table 5.3.1, point 5, p. 53. Approximate polynomial 5.2.1, p. 54.",
+    "resistanceOhm": 111.54535,
+    "referenceTemperatureC": 29.8655,
+    "coefficientsAscending": [
+      -246.6585,
+      2.3743,
+      0.00088611,
+      4.71085e-07
+    ],
+    "note": "Coefficients are rounded as published. The result differs slightly from the table calculated with unrounded coefficients. This point was included in the fit, so its residual is not independent validation. This is a separate laboratory sensor, not the Blue Hill thermometer."
+  }
+}

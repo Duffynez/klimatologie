@@ -75,11 +75,11 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Odporová termometrie a termistory"
-          meta="Napsáno: 4. srpna 2026"
+          meta="Napsáno: 4. srpna 2026 · Odborná revize: 4. října 2026"
         >
           <p>
-            Jak platinová čidla a termistory převádějí teplotu na elektrický odpor, jak se odpor měří a kalibruje
-            a co z této metody vstupuje do klimatologických dat.
+            Od elektrického signálu přes kalibraci k teplotě vzduchu, vody a půdy.
+            Dva příklady s dohledatelnými vstupy ukazují, co lze z měření vypočítat a jak se výsledek ověřuje.
           </p>
         </PageLead>
         <ResistanceThermometryArticle />

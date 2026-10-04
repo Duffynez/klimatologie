@@ -1165,6 +1165,48 @@ video.article-figure__media {
   background: var(--paper);
 }
 
+.method-data-output--compact table {
+  min-width: 0;
+}
+
+.method-details {
+  margin: 28px 0 36px;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  overflow-wrap: anywhere;
+}
+
+.method-details summary {
+  color: var(--sea);
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.method-details[open] summary {
+  margin-bottom: 18px;
+}
+
+.method-details p:last-child {
+  margin-bottom: 0;
+}
+
+.method-details ul {
+  margin: 18px 0;
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.method-details li + li {
+  margin-top: 8px;
+}
+
+.method-details a[download] {
+  color: var(--sea);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .method-conclusion {
   margin: 30px 0 44px;
   padding: 24px 26px 6px;

@@ -1,0 +1,2 @@
+# Preserve the published SHA-256 checksums of the NOAA data extracts.
+public/data/methods/resistance-thermometry/*.txt text eol=lf
