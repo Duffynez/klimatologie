@@ -1,0 +1,91 @@
+{
+  "retrieved": "2026-10-04",
+  "station": "MA Blue Hill 0 W",
+  "wban": "94785",
+  "dateLST": "20250101",
+  "endTimeLST": "0100",
+  "utcOffsetHours": -5,
+  "dataloggerVersion": "2.623",
+  "subhourlySource": "https://www.ncei.noaa.gov/pub/data/uscrn/products/subhourly01/2025/CRNS0101-05-2025-MA_Blue_Hill_0_W.txt",
+  "hourlySource": "https://www.ncei.noaa.gov/pub/data/uscrn/products/hourly02/2025/CRNH0203-2025-MA_Blue_Hill_0_W.txt",
+  "subhourlyReadme": "https://www.ncei.noaa.gov/pub/data/uscrn/products/subhourly01/readme.txt",
+  "hourlyReadme": "https://www.ncei.noaa.gov/pub/data/uscrn/products/hourly02/readme.txt",
+  "selection": "12 five-minute intervals ending 00:05 through 01:00 LST on 2025-01-01, or 05:05 through 06:00 UTC. Relative humidity is field 16 and its quality flag field 17 in subhourly01. Hourly relative humidity is field 27 and its quality flag field 28 in hourly02. Original NOAA lines, all columns, are preserved with LF line endings.",
+  "rows": [
+    {
+      "endLST": "0005",
+      "relativeHumidityPercent": 84,
+      "qualityFlag": 0
+    },
+    {
+      "endLST": "0010",
+      "relativeHumidityPercent": 80,
+      "qualityFlag": 0
+    },
+    {
+      "endLST": "0015",
+      "relativeHumidityPercent": 80,
+      "qualityFlag": 0
+    },
+    {
+      "endLST": "0020",
+      "relativeHumidityPercent": 82,
+      "qualityFlag": 0
+    },
+    {
+      "endLST": "0025",
+      "relativeHumidityPercent": 85,
+      "qualityFlag": 0
+    },
+    {
+      "endLST": "0030",
+      "relativeHumidityPercent": 86,
+      "qualityFlag": 0
+    },
+    {
+      "endLST": "0035",
+      "relativeHumidityPercent": 87,
+      "qualityFlag": 0
+    },
+    {
+      "endLST": "0040",
+      "relativeHumidityPercent": 87,
+      "qualityFlag": 0
+    },
+    {
+      "endLST": "0045",
+      "relativeHumidityPercent": 87,
+      "qualityFlag": 0
+    },
+    {
+      "endLST": "0050",
+      "relativeHumidityPercent": 86,
+      "qualityFlag": 0
+    },
+    {
+      "endLST": "0055",
+      "relativeHumidityPercent": 86,
+      "qualityFlag": 0
+    },
+    {
+      "endLST": "0100",
+      "relativeHumidityPercent": 86,
+      "qualityFlag": 0
+    }
+  ],
+  "sha256": {
+    "blue-hill-five-minute.txt": "a28a07c640d373e22b01ef6ed9a1ca35583786cf51e7431c869cd6a9df61d0a9",
+    "blue-hill-hourly.txt": "446d1d09ecc3b200e3445f80de5b88578b85370a37abecf4cb9d00ee678dbd72"
+  },
+  "annualFileSha256": {
+    "subhourly": "50d299e2233f890781456430354c70849b84ca697f3e874009563485bb0124bb",
+    "hourly": "dcaacf902c8810edbc01b3bfcc6eed9189f0d4d6d226be484cc2242cec3ad1a8"
+  },
+  "publishedHourlyPercent": 85,
+  "publishedHourlyQualityFlag": 0,
+  "format": {
+    "subhourly": "subhourly01, file format 05, 23 fields",
+    "hourly": "hourly02, file format 03, 38 fields"
+  },
+  "verificationLimit": "Public five-minute humidity averages are already calibrated and processed values. Electrical capacitance, individual sensor calibration coefficients and unrounded readings are not supplied in these products. This example verifies one complete-hour aggregation, not the individual sensor or every NOAA processing rule."
+}

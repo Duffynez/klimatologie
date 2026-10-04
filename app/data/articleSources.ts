@@ -3,6 +3,12 @@ import type { Source } from "./sources";
 // Sources cited by published article components.
 // Stable IDs are referenced from SourceLink components; do not rename them after publication.
 const rawArticleSources: Source[] = [
+  { id: "2013_NPL_Humidity", title: "The Beginner’s Guide to Humidity Measurement", author: "Stephanie Bell", year: 2013, publication: "National Physical Laboratory, Measurement Good Practice Guide 124", type: "Metodická příručka", category: "science", externalUrl: "https://eprintspublications.npl.co.uk/7464/", citationLabel: "Bell 2013, NPL", topics: ["metody", "hygrometrie", "vlhkost", "kalibrace"] },
+  { id: "2013_Vaisala_HMT330", title: "Vaisala HUMICAP Humidity and Temperature Transmitter Series HMT330: User’s Guide, M210566EN-K", author: "Vaisala", year: 2013, publication: "Vaisala", type: "Technická dokumentace přístroje", category: "organization", externalUrl: "https://docs.vaisala.com/v/u/M210566EN-K/en-US", citationLabel: "Vaisala, HMT330, verze K", topics: ["metody", "hygrometrie", "vlhkost", "HMT337"] },
+  { id: "2021_NIST_Humidity_Calibration", title: "Calibration of Hygrometers with the Hybrid Humidity Generator", author: "C. W. Meyer, T. Herman a W. W. Miller", year: 2021, publication: "NIST Special Publication 250-83, Revision 1", type: "Kalibrační metodika", category: "science", externalUrl: "https://doi.org/10.6028/NIST.SP.250-83r1", citationLabel: "Meyer a kol. 2021, NIST", topics: ["metody", "hygrometrie", "vlhkost", "kalibrace"] },
+  { id: "DOI_10_1175_jtech_d_12_00232_1", title: "Evolution and Accuracy of Surface Humidity Reports", author: "Bruce Ingleby, David Moore, Chris Sloan a Robert Dunn", year: 2013, publication: "Journal of Atmospheric and Oceanic Technology 30, 2025–2043", type: "Terénní porovnání přístrojů", category: "science", externalUrl: "https://doi.org/10.1175/JTECH-D-12-00232.1", citationLabel: "Ingleby a kol. 2013", topics: ["metody", "hygrometrie", "vlhkost", "ověření měření"] },
+  { id: "1938_Dunmore_Hygrometer", title: "An electric hygrometer and its application to radio meteorography", author: "Francis W. Dunmore", year: 1938, publication: "Journal of Research of the National Bureau of Standards 20, 723–744", type: "Původní metodická studie", category: "science", externalUrl: "https://doi.org/10.6028/jres.020.003", citationLabel: "Dunmore 1938", topics: ["metody", "hygrometrie", "vlhkost", "historie měření"] },
+  { id: "2026_USCRN_Instruments", title: "U.S. Climate Reference Network: Instruments", author: "NOAA National Centers for Environmental Information", year: 2026, publication: "U.S. Climate Reference Network, přístup 4. října 2026", type: "Dokumentace měřicí sítě", category: "organization", externalUrl: "https://www.ncei.noaa.gov/access/crn/instruments.html", citationLabel: "NOAA/NCEI, přístroje USCRN", topics: ["metody", "hygrometrie", "vlhkost", "USCRN"] },
   { id: "WEB_CHMU_Straznice_denni_maxima_TMA", title: "Strážnice (0-203-0-11755): denní maximální teplota TMA", author: "Český hydrometeorologický ústav", year: 2026, publication: "ČHMÚ, otevřená historická data", type: "Datový soubor", category: "organization", externalUrl: "https://opendata.chmi.cz/meteorology/climate/historical_csv/data/daily/temperature/dly-0-203-0-11755-TMA.csv", citationLabel: "ČHMÚ: Strážnice, denní maxima", topics: ["pozorování", "vlny veder", "extrémy"] },
   { id: "DOI_10_1111_nph_70869", title: "PEP725: 15 years of driving European and global phenology science", author: "Barbara Templ a kol.", year: 2026, publication: "New Phytologist", type: "Studie", category: "science", externalUrl: "https://doi.org/10.1111/nph.70869", citationLabel: "Templ et al. 2026", topics: ["pozorování", "fenologie", "živá příroda"] },
   { id: "DOI_10_1111_2041_210x_13280", title: "MistNet: Measuring historical bird migration in the US using archived weather radar data and convolutional neural networks", author: "Tsung-Yu Lin a kol.", year: 2019, publication: "Methods in Ecology and Evolution", type: "Metodická studie", category: "science", externalUrl: "https://doi.org/10.1111/2041-210X.13280", citationLabel: "Lin et al. 2019", topics: ["pozorování", "fenologie", "živá příroda"] },
@@ -462,6 +468,12 @@ const rawArticleSources: Source[] = [
 ];
 
 const articleOpenAccessSources: Record<string, true | string> = {
+  "2013_NPL_Humidity": "https://eprintspublications.npl.co.uk/7464/1/mgpg124.pdf",
+  "2013_Vaisala_HMT330": "https://docs.vaisala.com/api/khub/documents/ESFFxipyzfxm51Q3ptHcyg/content",
+  "2021_NIST_Humidity_Calibration": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.250-83r1.pdf",
+  DOI_10_1175_jtech_d_12_00232_1: "https://journals.ametsoc.org/view/journals/atot/30/9/jtech-d-12-00232_1.xml",
+  "1938_Dunmore_Hygrometer": "https://nvlpubs.nist.gov/nistpubs/jres/20/jresv20n6p723_A1b.pdf",
+  "2026_USCRN_Instruments": true,
   // Heat waves: full texts and public data verified 2026-10-03.
   DOI_10_3354_cr019193: "https://www.int-res.com/articles/cr2002/19/c019p193.pdf",
   DOI_10_1029_2005jd006290: "https://bibliotecadigital.exactas.uba.ar/download/paper/paper_01480227_v111_n5_p_Alexander.pdf",

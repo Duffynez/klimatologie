@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 
@@ -1222,6 +1223,68 @@ test("reproduces the published thermometry calculations and rejects incomplete o
   assert.throws(() => summarizeHour(subhourly.replace("0505", "0405"), hourly, metadata));
   const lab = metadata.calibration;
   assert.ok(Math.abs(calibratedTemperature(lab.resistanceOhm, lab.coefficientsAscending) - 29.862741854281) < 1e-10);
+});
+
+test("publishes hygrometry with a reproducible hour, source cards and observation links", async () => {
+  const [html, article, catalogue, observation] = await Promise.all([
+    readFile(new URL("dist/client/metody/hygrometrie/index.html", root), "utf8"),
+    readFile(new URL("app/components/HygrometryArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/narust-vlhkosti/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "The method must render its full article, not the catalogue fallback");
+  assert.match(body, /class="method-flow"/);
+  assert.match(body, /84,666/);
+  assert.match(body, /85 %/);
+  assert.equal((body.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) ?? []).length, 12);
+  assert.doesNotMatch(body.replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
+  assert.match(observation, /href="\/metody\/hygrometrie\/?"/);
+  const ids = [...new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
+  assert.ok(ids.length >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp(`<article[^>]*id="${id}"[\\s\\S]*?<\\/article>`))?.[0];
+    assert.ok(card, `Missing source card: ${id}`);
+    assert.doesNotMatch(card, /drive\.google\.com/, `Open source has a Drive button: ${id}`);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/, `Missing open access: ${id}`);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const href = match[1];
+    const file = /\.[a-z0-9]+$/i.test(href) ? href : `${href.replace(/\/$/, "")}/index.html`;
+    await readFile(new URL(`dist/client${file}`, root));
+  }
+});
+
+test("reproduces the NOAA humidity hour and rejects gaps, duplicates, wrong times and quality flags", async () => {
+  const base = new URL("public/data/methods/hygrometry/", root);
+  const { summarizeHumidityHour } = await import(new URL("reproduce.mjs", base));
+  const [metadataText, subhourly, hourly] = await Promise.all([
+    readFile(new URL("example.json", base), "utf8"),
+    readFile(new URL("blue-hill-five-minute.txt", base), "utf8"),
+    readFile(new URL("blue-hill-hourly.txt", base), "utf8"),
+  ]);
+  const metadata = JSON.parse(metadataText);
+  for (const [name, hash] of Object.entries(metadata.sha256)) {
+    const exported = await readFile(new URL(`dist/client/data/methods/hygrometry/${name}`, root));
+    assert.equal(createHash("sha256").update(exported).digest("hex"), hash);
+  }
+  const result = summarizeHumidityHour(subhourly, hourly, metadata);
+  assert.deepEqual(result, { count: 12, sumPercent: 1016, meanPercent: 1016 / 12,
+    roundedMeanPercent: 85, publishedHourlyPercent: 85, agreesAfterRounding: true });
+  const rows = subhourly.trim().split(/\r?\n/).map((row) => row.trim().split(/\s+/));
+  assert.deepEqual(rows.map((r) => ({ endLST: r[4], relativeHumidityPercent: Number(r[15]), qualityFlag: Number(r[16]) })), metadata.rows);
+  const changed = (index, value) => rows.map((r, i) => r.map((v, j) => i === 0 && j === index ? value : v).join(" ")).join("\n");
+  assert.throws(() => summarizeHumidityHour(rows.slice(1).map((r) => r.join(" ")).join("\n"), hourly, metadata));
+  assert.throws(() => summarizeHumidityHour(subhourly + rows[0].join(" "), hourly, metadata));
+  for (const [column, value] of [[15, "-9999"], [15, "101"], [16, "3"], [2, "0405"], [5, "2.000"]]) {
+    assert.throws(() => summarizeHumidityHour(changed(column, value), hourly, metadata));
+  }
+  const h = hourly.trim().split(/\s+/);
+  h[27] = "3";
+  assert.throws(() => summarizeHumidityHour(subhourly, h.join(" "), metadata));
+  h[27] = "0";
+  h[26] = "86";
+  assert.equal(summarizeHumidityHour(subhourly, h.join(" "), metadata).agreesAfterRounding, false);
 });
 
 test("keeps the current catalogue of fourteen observations", async () => {

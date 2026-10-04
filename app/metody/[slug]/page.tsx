@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageLead } from "../../components/PageLead";
 import { ResistanceThermometryArticle } from "../../components/ResistanceThermometryArticle";
+import { HygrometryArticle } from "../../components/HygrometryArticle";
 import { measurementMethods, methodBySlug } from "../../data/methods";
 
 const combinedAnalysisSlug = "titrace-a-coulometrie";
@@ -83,6 +84,27 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
           </p>
         </PageLead>
         <ResistanceThermometryArticle />
+        <Link className="text-link" href="/metody">
+          &larr; Zpět na všechny metody
+        </Link>
+      </div>
+    );
+  }
+
+  if (slug === "hygrometrie") {
+    return (
+      <div className="page-shell">
+        <PageLead
+          eyebrow="Metody / Přímá měření"
+          title="Hygrometrie"
+          meta="Napsáno: 4. října 2026 · Odborná revize: 4. října 2026"
+        >
+          <p>
+            Jak vlhkoměry převádějí odezvu čidla, ochlazení mokrého povrchu nebo vznik rosy na údaj
+            o vlhkosti vzduchu. S kalibrací, porovnáním přístrojů a výpočtem ze skutečných staničních dat.
+          </p>
+        </PageLead>
+        <HygrometryArticle />
         <Link className="text-link" href="/metody">
           &larr; Zpět na všechny metody
         </Link>

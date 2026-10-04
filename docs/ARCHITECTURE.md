@@ -82,7 +82,7 @@ Všech současných čtrnáct pozorování má vlastní komponentu. Obecná náh
 
 ### Metody
 
-`app/data/methods.ts` obsahuje 45 témat v pěti skupinách: přímá měření, laboratorní analýza, dálkový průzkum, přírodní archivy a zpracování dat a vyhodnocování výsledků. Katalog vytváří všechny jejich adresy. Plný článek má zatím odporová termometrie a termistory. Ostatní adresy zobrazují název a shrnutí z katalogu. Publikace dalšího plného metodického článku proto vyžaduje stejnou ruční vazbu jako u pozorování.
+`app/data/methods.ts` obsahuje 45 témat v pěti skupinách: přímá měření, laboratorní analýza, dálkový průzkum, přírodní archivy a zpracování dat a vyhodnocování výsledků. Katalog vytváří všechny jejich adresy. Plný článek mají odporová termometrie a termistory a hygrometrie. Ostatní adresy zobrazují název a shrnutí z katalogu. Publikace dalšího plného metodického článku proto vyžaduje stejnou ruční vazbu jako u pozorování.
 
 Titrace a coulometrie mají samostatné položky `/metody/titrace/` a `/metody/coulometrie/`. Původní adresa `/metody/titrace-a-coulometrie/` zůstává ve statickém exportu jako rozcestník na oba postupy, ale nezapočítává se mezi položky katalogu. Ostatní zavedené slugs zůstávají zachované i při zpřesnění názvu. Sitemap obsahuje všechny adresy metod včetně tohoto rozcestníku.
 

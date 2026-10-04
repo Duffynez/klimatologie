@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SourceLink } from "./SourceLink";
 
 export function AtmosphericHumidityArticle() {
@@ -165,6 +166,10 @@ export function AtmosphericHumidityArticle() {
 
         <h2>Jak se vlhkost měří</h2>
         <h3>Stanice, lodě a bóje</h3>
+        <p>
+          Princip čidel, jejich kalibraci a skutečný výpočet ze staničních dat podrobně vysvětluje
+          článek <Link href="/metody/hygrometrie">Hygrometrie</Link>.
+        </p>
         <p>
           Meteorologická stanice obvykle zaznamenává teplotu vzduchu a jeden přímý vlhkostní údaj: relativní vlhkost,
           rosný bod nebo rozdíl mezi suchým a vlhkým teploměrem. Moderní elektronické čidlo mění svou elektrickou
