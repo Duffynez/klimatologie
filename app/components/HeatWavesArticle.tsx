@@ -14,7 +14,7 @@ export function HeatWavesArticle() {
           </div>
           <div>
             <dt>Denní minimum</dt>
-            <dd>Nejnižší teplota vzduchu zaznamenaná během téhož dne; obvykle nastává v noci nebo ráno.</dd>
+            <dd>Nejnižší teplota vzduchu zaznamenaná během téhož dne. Obvykle nastává v noci nebo ráno.</dd>
           </div>
           <div>
             <dt>Percentil</dt>
@@ -22,7 +22,7 @@ export function HeatWavesArticle() {
           </div>
           <div>
             <dt>Referenční období</dt>
-            <dd>Určený úsek minulých měření, vůči němuž se posuzují další roky; například léta 1961–1990.</dd>
+            <dd>Určený úsek minulých měření, vůči němuž se posuzují další roky, například léta 1961–1990.</dd>
           </div>
         </dl>
         <p className="article-glossary__note">
@@ -45,7 +45,7 @@ export function HeatWavesArticle() {
           hranice každý den, jiné posuzují průměr za několik dnů. Metodické srovnání{" "}
           <SourceLink id="DOI_10_1175_jcli_d_12_00383_1">Perkins a Alexander, 2013</SourceLink>{" "}
           proto hodnotí zvlášť události z denních maxim, minim a kombinovaného ukazatele. Slova „vlna veder“ sama
-          o sobě ještě neurčují výpočet. Zde sledujeme teplotu vzduchu nad souší; zdravotní zátěž by vyžadovala
+          o sobě ještě neurčují výpočet. Zde sledujeme teplotu vzduchu nad souší. Zdravotní zátěž by vyžadovala
           další údaje, například vlhkost, a samostatné vyhodnocení.
         </p>
 
@@ -80,7 +80,7 @@ export function HeatWavesArticle() {
           Ukazatel EHF, anglicky <em>Excess Heat Factor</em>, kombinuje neobvyklost horka vzhledem k místnímu
           klimatu a k předchozím dnům. V původní práci se denní teplota vypočítá jako průměr maxima a minima.
           Průměr za tři dny se potom porovná s místním 95. percentilem všech dnů let 1971–2000 a s průměrem
-          předcházejících třiceti dnů. Překročení dlouhodobé hranice určuje výskyt horka; rozdíl proti nedávnému
+          předcházejících třiceti dnů. Překročení dlouhodobé hranice určuje výskyt horka. Rozdíl proti nedávnému
           počasí upravuje jeho intenzitu. Tato definice nevyžaduje, aby hranici samostatně překročil každý ze tří
           dnů. Výpočet i volbu pozorovacího dne vysvětlují{" "}
           <SourceLink id="DOI_10_3390_ijerph120100227">Nairn a Fawcett, 2015</SourceLink>.
@@ -111,7 +111,7 @@ export function HeatWavesArticle() {
         <p>
           Ze stejného seznamu událostí lze zveřejnit několik výsledků. Počet událostí říká, kolikrát byla podmínka
           splněna. Celkový počet dnů sečte všechny dny uvnitř událostí. Délka může označovat nejdelší událost nebo
-          průměrnou délku; intenzita může být absolutní teplotou či překročením hranice. Význam musí být uveden
+          průměrnou délku. Intenzita může být absolutní teplotou či překročením hranice. Význam musí být uveden
           u konkrétního výsledku. Jednotný rámec pro takové srovnání navrhli{" "}
           <SourceLink id="DOI_10_1175_jcli_d_12_00383_1">Perkins a Alexander, 2013</SourceLink> a
           součet denních překročení přidala globální analýza{" "}
@@ -121,7 +121,7 @@ export function HeatWavesArticle() {
         <p>
           Součet překročení současně zachycuje délku i velikost teplotní odchylky. Při překročení o 2 °C ve třech
           dnech dostaneme 6 °C·den, tedy šest stupňodnů. Autoři jej nazývají <em>cumulative heat</em> a v grafech
-          používají zkrácenou jednotku °C. Jde o součet denních teplotních odchylek; množství energie přijaté
+          používají zkrácenou jednotku °C. Jde o součet denních teplotních odchylek. Množství energie přijaté
           člověkem, půdou nebo atmosférou tím změřeno není. Dvě epizody se stejným součtem mohou mít jinou délku
           a jiné nejvyšší teploty.
         </p>
@@ -172,7 +172,7 @@ export function HeatWavesArticle() {
 
         <p>
           Maximum a minimum uchová speciální teploměr nebo se vyberou z průběžných elektronických odečtů.
-          Pozorovací den může končit například večer či ráno; nemusí odpovídat kalendářnímu dni od půlnoci.
+          Pozorovací den může končit například večer či ráno. Nemusí odpovídat kalendářnímu dni od půlnoci.
           Umístění stanice, kryt, typ čidla, interval záznamu i čas odečtu proto patří k metadatům, tedy popisu
           okolností měření. Přesun stanice může změnit denní maxima, přestože je nové čidlo správně kalibrované.
           Při spojování starých a nových měření se sledují překryvy a rozdíly vůči okolním stanicím. Konkrétní
@@ -196,7 +196,7 @@ export function HeatWavesArticle() {
           U percentilové definice se nejprve pro každou stanici a kalendářní den vytvoří místní hranice. Okolní dny
           se spojují do pohyblivého okna, aby výpočet nestál jen na třiceti hodnotách stejného data. Pro 15. červenec
           tak pětidenní okno zahrne 13.–17. červenec každého referenčního roku: při úplných třiceti letech až
-          150 měření. Z jejich rozdělení se určí hranice; velikost okna patří k definici ukazatele. Potom algoritmus
+          150 měření. Z jejich rozdělení se určí hranice. Velikost okna patří k definici ukazatele. Potom algoritmus
           prochází den po dni a označí úseky, v nichž je hranice překročena požadovaný počet dnů bez přerušení. Z těchto
           úseků se spočítají události, dny, délka a zvolená míra intenzity.{" "}
           <SourceLink id="DOI_10_1029_2005jd006290">Alexander et al., 2006</SourceLink>
@@ -208,7 +208,7 @@ export function HeatWavesArticle() {
           spoluautoři navrhli pro počty překročení opakované přepočítávání: hodnocený rok vynechají z určení
           hranice, doplní jej kopií jednoho ze zbývajících roků a výsledek průměrují přes všechny tyto náhrady.
           Hodnocený rok tak není současně použit k nastavení své vlastní hranice. Oprava omezuje umělý skok
-          na okrajích referenčního období; neopravuje chyby teploměru ani přesuny stanic. Postup a jeho zkoušku
+          na okrajích referenčního období. Neopravuje chyby teploměru ani přesuny stanic. Postup a jeho zkoušku
           na simulovaných i skutečných teplotách zveřejnili{" "}
           <SourceLink id="DOI_10_1175_jcli3366_1">Zhang et al., 2005</SourceLink>.
         </p>
@@ -217,11 +217,11 @@ export function HeatWavesArticle() {
         <p>
           HadEX3 neinterpoluje každou denní teplotu. Nejprve se na stanicích vypočítají roční ukazatele, například
           počet dnů WSDI, a teprve ty se převádějí do mřížky o velikosti 1,875° zeměpisné délky krát 1,25° šířky.
-          Hodnota v centru buňky je váženým průměrem dostupných stanic; váha zohledňuje vzdálenost i jejich
+          Hodnota v centru buňky je váženým průměrem dostupných stanic. Váha zohledňuje vzdálenost i jejich
           rozmístění kolem tohoto bodu. Není to přímé měření celé plochy buňky. Pro výpočet musí být v
           dosahu, v němž spolu stanice ještě dostatečně souvisejí, alespoň tři použitelné stanice. Z přibližně 37 000
           dodaných stanic prošlo požadavky na kvalitu a délku pro jednotlivé teplotní ukazatele nejvýše asi 7 000.{" "}
-          <SourceLink id="DOI_10_1029_2019jd032263">Dunn et al., 2020</SourceLink>;{" "}
+          <SourceLink id="DOI_10_1029_2019jd032263">Dunn et al., 2020</SourceLink>,{" "}
           <SourceLink id="WEB_Met_Office_uzivatelska_prirucka_HadEX3_6eb86927">HadEX3 Product User Guide</SourceLink>
         </p>
 
@@ -235,7 +235,7 @@ export function HeatWavesArticle() {
         <p>
           Buňka bez potřebného počtu stanic zůstane prázdná. Globální křivka HadEX3 vzniká plošným vážením
           dostupných buněk a pro dlouhodobé srovnání používá buňky s alespoň 90% úplností v čase. Trendová mapa
-          požaduje nejméně 66 % ročních hodnot a poslední platný rok alespoň 2009; trend se počítá jako medián sklonů
+          požaduje nejméně 66 % ročních hodnot a poslední platný rok alespoň 2009. Trend se počítá jako medián sklonů
           mezi všemi dvojicemi ročních hodnot. Tečky v mapě označují buňky, kde 95% interval odhadu nezahrnuje nulu.
           Tato pravidla i mapy pokrytí zveřejnili{" "}
           <SourceLink id="DOI_10_1029_2019jd032263">Dunn et al., 2020</SourceLink>.
@@ -262,30 +262,30 @@ export function HeatWavesArticle() {
           <section className="article-data-item">
             <h3>GHCN-Daily</h3>
             <p>
-              <strong>Obsah:</strong> denní staniční měření; teplotní maximum a minimum jsou dostupné z více než 25 000
+              <strong>Obsah:</strong> denní staniční měření. Teplotní maximum a minimum jsou dostupné z více než 25 000
               míst. Celý archiv obsahuje přes 100 000 stanic, z nichž mnoho měří pouze srážky. <strong>Období:</strong>{" "}
-              nejstarší maximum a minimum je z 2. ledna 1833 v belgickém Uccle; délka se liší podle stanice. <strong>Pokrytí:</strong>{" "}
+              nejstarší maximum a minimum je z 2. ledna 1833 v belgickém Uccle. Délka se liší podle stanice. <strong>Pokrytí:</strong>{" "}
               světová souš, velmi nerovnoměrně v místě i čase. <strong>Verze:</strong> GHCN-Daily v3, průběžné denní
               aktualizace a pravidelné přestavění archivu. <strong>Stažení:</strong>{" "}
               <SourceLink id="WEB_NOAA_Index_of_pub_data_ghcn_daily_96798b50">veřejné soubory NOAA</SourceLink>.{" "}
-              <strong>Metoda:</strong> <SourceLink id="DOI_10_1175_jtech_d_11_00103_1">Menne et al., 2012</SourceLink>;{" "}
+              <strong>Metoda:</strong> <SourceLink id="DOI_10_1175_jtech_d_11_00103_1">Menne et al., 2012</SourceLink>,{" "}
               <SourceLink id="DOI_10_7289_v5d21vhz">datový záznam a dokumentace formátu</SourceLink>.
               Počty stanic a nejstarší datum uvádí <SourceLink id="WEB_NOAA_Global_Historical_Climatology_Network_daily_GHCN_14491e06">správce archivu NOAA</SourceLink>,
-              americký Národní úřad pro oceán a atmosféru; nejde o počet stanic použitých v každé analýze vln veder.
+              americký Národní úřad pro oceán a atmosféru. Nejde o počet stanic použitých v každé analýze vln veder.
             </p>
           </section>
 
           <section className="article-data-item">
             <h3>E-OBS</h3>
             <p>
-              <strong>Obsah:</strong> evropské denní mapy maximální a minimální teploty odvozené ze stanic; vedle
+              <strong>Obsah:</strong> evropské denní mapy maximální a minimální teploty odvozené ze stanic. Vedle
               průměru poskytuje rozpětí odhadů prostorové interpolace mezi jejich 5. a 95. percentilem.
-              Aktuální vydání vychází z 20 variant výpočtu;
-              metodický článek z roku 2018 popisoval 100 variant. <strong>Období:</strong>{" "}
+              Aktuální vydání vychází z 20 variant výpočtu.
+              Metodický článek z roku 2018 popisoval 100 variant. <strong>Období:</strong>{" "}
               1. ledna 1950 až 31. prosince 2025. <strong>Pokrytí:</strong> evropská souš v mřížce 0,1° nebo 0,25°.
               <strong> Verze:</strong> 33.0e, vydaná v květnu 2026. <strong>Stažení:</strong>{" "}
               <SourceLink id="WEB_Copernicus_E_OBS_data_access_94a6a7b1">portál E-OBS</SourceLink>.{" "}
-              <strong>Metoda:</strong> <SourceLink id="DOI_10_1029_2017jd028200">Cornes et al., 2018</SourceLink>;{" "}
+              <strong>Metoda:</strong> <SourceLink id="DOI_10_1029_2017jd028200">Cornes et al., 2018</SourceLink>,{" "}
               <SourceLink id="DOI_10_24381_cds_151d3ec6">datový záznam</SourceLink>. Rozdíly mezi variantami
               vyjadřují nejistotu doplnění prostoru mezi stanicemi, nikoli veškeré chyby měření a změn staniční sítě.
             </p>
@@ -295,7 +295,7 @@ export function HeatWavesArticle() {
             <h3>HadEX3</h3>
             <p>
               <strong>Obsah:</strong> roční a u některých veličin i měsíční ukazatele extrémů převedené ze stanic
-              do globální mřížky. Původní sada obsahuje WSDI; po rozšíření soubor nabízí přes 80 ukazatelů.
+              do globální mřížky. Původní sada obsahuje WSDI. Po rozšíření soubor nabízí přes 80 ukazatelů.
               <strong> Období:</strong> 1901–2018. <strong>Pokrytí:</strong>{" "}
               světová souš s prázdnými místy tam, kde chybějí vhodné stanice. <strong>Verze:</strong> 3.0.4,
               původní ukazatele z ledna 2022 a rozšíření z března 2024. Percentilové ukazatele mají varianty pro
@@ -311,12 +311,12 @@ export function HeatWavesArticle() {
             <p>
               <strong>Obsah:</strong> hodinový stav atmosféry, včetně teploty ve dvou metrech, vytvořený propojením
               předpovědního systému a mnoha druhů pozorování. <strong>Období:</strong> od roku 1940, průběžně doplňované.
-              <strong> Pokrytí:</strong> celý svět; původní prostorové rozlišení přibližně 31 km, běžný výstup
+              <strong> Pokrytí:</strong> celý svět, původní prostorové rozlišení přibližně 31 km, běžný výstup
               převedený do mřížky 0,25°. <strong>Verze:</strong> pátá generace reanalýzy Evropského střediska pro
               střednědobé předpovědi počasí (ECMWF). Reanalýza je zpětná rekonstrukce počasí kombinující měření
               a fyzikální model, nikoli síť teploměrů v každé buňce. <strong>Stažení:</strong>{" "}
               <SourceLink id="WEB_Copernicus_ERA5_hourly_data_on_single_levels_from_1940_to_p_7e4f50d4">Copernicus Climate Data Store</SourceLink>.{" "}
-              <strong>Metoda:</strong> <SourceLink id="DOI_10_1002_qj_3803">Hersbach et al., 2020</SourceLink>;{" "}
+              <strong>Metoda:</strong> <SourceLink id="DOI_10_1002_qj_3803">Hersbach et al., 2020</SourceLink>,{" "}
               <SourceLink id="DOI_10_24381_cds_adbb2d47">datový záznam</SourceLink>. Stažení v datovém úložišti
               Copernicus vyžaduje bezplatný účet a přijetí podmínek produktu.
             </p>
@@ -332,7 +332,7 @@ export function HeatWavesArticle() {
               statický výzkumný archiv publikovaný v roce 2018. <strong>Stažení:</strong>{" "}
               <SourceLink id="DOI_10_6084_m9_figshare_c_4004668">Figshare</SourceLink>.{" "}
               <strong>Metoda:</strong> <SourceLink id="DOI_10_1038_sdata_2018_206">Raei et al., 2018</SourceLink>.
-              Archiv zahrnuje popis formátu i zdrojový kód, takže lze zkontrolovat konkrétní pravidlo; každá
+              Archiv zahrnuje popis formátu i zdrojový kód, takže lze zkontrolovat konkrétní pravidlo. Každá
               definice ovšem není novým nezávislým měřením.
             </p>
           </section>
@@ -343,7 +343,7 @@ export function HeatWavesArticle() {
           V <SourceLink id="WEB_CHMU_Straznice_denni_maxima_TMA">souboru denních maxim ze Strážnice</SourceLink>
           {" "}lze vybrat srpen 2015. Stanice má identifikátor <code>0-203-0-11755</code>, veličina{" "}
           <code>TMA</code> je denní maximum ve °C. Sloupec <code>DT</code> obsahuje datum s termínem
-          záznamu 20:00Z a <code>VALUE</code> hodnotu. Písmeno Z označuje světový čas UTC; tento údaj
+          záznamu 20:00Z a <code>VALUE</code> hodnotu. Písmeno Z označuje světový čas UTC. Tento údaj
           neříká, že maximum nastalo ve 20 hodin. Soubory <code>meta1.csv</code> a <code>meta2.csv</code>
           {" "}v <SourceLink id="WEB_Cesky_hydrometeorologicky_us_Index_of_meteorology_climate_historical_csv_13ecfbd3">metadatech ČHMÚ</SourceLink>
           {" "}spojují identifikátor s místem, jednotkou, výškou čidla dva metry a pozorovacím termínem.
@@ -354,7 +354,7 @@ export function HeatWavesArticle() {
           protože další čtyři připadly na 28.–31. srpen. Postup je jednoduchý: seřadit záznamy podle data,
           zkontrolovat chybějící dny a příznaky kvality, vybrat maxima alespoň 30 °C a teprve potom hledat
           nepřerušené úseky. Tento přímý přepočet veřejné textové tabulky CSV dokládá konkrétní událost. Pro WSDI by bylo
-          navíc třeba dlouhé referenční období a jeho místní percentily; jedna epizoda sama neurčuje klimatický trend.
+          navíc třeba dlouhé referenční období a jeho místní percentily. Jedna epizoda sama neurčuje klimatický trend.
         </p>
 
         <figure className="article-figure article-figure--scroll-mobile">
@@ -371,10 +371,10 @@ export function HeatWavesArticle() {
           </div>
           <figcaption>
             Vodorovná osa ukazuje roky, svislá odchylku ročního počtu dnů WSDI vůči průměru let 1961–1990 nad
-            pokrytou světovou souší. Přerušovaná nula znamená tento průměr; záporná hodnota znamená méně dnů
+            pokrytou světovou souší. Přerušovaná nula znamená tento průměr. Záporná hodnota znamená méně dnů
             vůči němu, nikoli záporný počet dnů. Zkratka „Ann“ označuje roční hodnoty. Černá
             je HadEX3, červená HadEX2, zelená starší HadEX a modrá GHCNDEX. Každá křivka používá vlastní dostupné
-            buňky, takže rozdíly nejsou pouze rozdíly v teplotě; mění se také vstupní stanice a pokrytí. HadEX3 pro
+            buňky, takže rozdíly nejsou pouze rozdíly v teplotě. Mění se také vstupní stanice a pokrytí. HadEX3 pro
             globální výpočet vybírá buňky s alespoň 90% úplností a váží je podle plochy. Všechny čtyři výpočty v době
             společného pokrytí zachycují vzestup od konce 20. století, jednotlivé roky i velikost odchylky se liší.
             Starší části s řídkým pokrytím nereprezentují stejnou plochu jako novější roky.
@@ -396,7 +396,7 @@ export function HeatWavesArticle() {
           zjistili, že výsledky z denních maxim, denních minim a ukazatele nadměrného tepla se v mnoha oblastech
           shodují ve směru dlouhodobých změn, avšak liší se v počtu nalezených dnů a v zeměpisném rozložení. GHWR
           ukazuje totéž systematicky: změna délky nebo hranice mění události, které do souboru vstoupí.{" "}
-          <SourceLink id="DOI_10_1175_jcli_d_12_00383_1">Perkins a Alexander, 2013</SourceLink>;{" "}
+          <SourceLink id="DOI_10_1175_jcli_d_12_00383_1">Perkins a Alexander, 2013</SourceLink>,{" "}
           <SourceLink id="DOI_10_1038_sdata_2018_206">Raei et al., 2018</SourceLink>
         </p>
 
@@ -433,7 +433,7 @@ export function HeatWavesArticle() {
           </div>
           <figcaption>
             Změna ročního počtu dnů WSDI v HadEX3 za desetiletí pro období označené v grafu jako 1950–2018. Červené
-            a žluté odstíny znamenají více dnů za desetiletí, modré méně; jednotlivé barevné třídy mají různé
+            a žluté odstíny znamenají více dnů za desetiletí, modré méně. Jednotlivé barevné třídy mají různé
             rozsahy, jejich hranice jsou uvedeny pod mapou. Tečky označují buňky, kde 95% interval odhadu sklonu nezahrnuje nulu. Šedá pevnina nemá
             dostatečné staniční pokrytí: pro mapu je potřeba alespoň 66 % ročních hodnot a poslední platný rok nejdříve
             2009. Prázdná oblast proto neznamená nulovou změnu. Zdroj:{" "}
@@ -458,7 +458,7 @@ export function HeatWavesArticle() {
 
         <p>
           V období 1950–2017 se počet dnů ve vlnách zvyšoval ve většině sledovaných oblastí
-          alespoň o jeden den za desetiletí; v mnoha nízkých zeměpisných šířkách činil sklon tři až pět dnů za
+          alespoň o jeden den za desetiletí. V mnoha nízkých zeměpisných šířkách činil sklon tři až pět dnů za
           desetiletí. V žádné z hodnocených oblastí nezjistili statisticky průkazný pokles tohoto počtu. Nejdelší
           událost se podle oblasti prodlužovala přibližně o 0,2 až více než jeden den za desetiletí.{" "}
           <SourceLink id="DOI_10_1038_s41467_020_16970_7">Perkins-Kirkpatrick a Lewis, 2020</SourceLink>
@@ -477,7 +477,7 @@ export function HeatWavesArticle() {
         <p>
           Autoři výsledky zkontrolovali také pomocí denních map HadGHCND s rozlišením 3,75° délky a 2,5° šířky.
           Porovnali společné období 1950–2014 a společně pokryté oblasti. Tím zkoušeli citlivost na výběr a
-          zpracování stanic; oba soubory však mohou čerpat z týchž původních teploměrů, takže nejde o zcela
+          zpracování stanic. Oba soubory však mohou čerpat z týchž původních teploměrů, takže nejde o zcela
           nezávislé měření.{" "}
           <SourceLink id="DOI_10_1038_s41467_020_16970_7">Perkins-Kirkpatrick a Lewis, 2020</SourceLink>
         </p>
@@ -486,7 +486,7 @@ export function HeatWavesArticle() {
           Stejná práce ukázala citlivost sklonu na zvolené počáteční datum. Ve Středomoří byl sklon počtu dnů do roku
           2017 něco přes dva dny za desetiletí při začátku v roce 1950, ale 6,4 dne za desetiletí při začátku na
           počátku osmdesátých let. Kratší interval zachytil jinou část kolísání a měl méně roků. Sklon proto vždy
-          uvádíme s oběma krajními roky; samotná hodnota „dnů za desetiletí“ není úplným výsledkem.{" "}
+          uvádíme s oběma krajními roky. Samotná hodnota „dnů za desetiletí“ není úplným výsledkem.{" "}
           <SourceLink id="DOI_10_1038_s41467_020_16970_7">Perkins-Kirkpatrick a Lewis, 2020</SourceLink>
         </p>
 
@@ -495,11 +495,11 @@ export function HeatWavesArticle() {
           Rousi a spoluautoři vyhledali v ERA5 události v červenci a srpnu 1979–2020. Denní maximum muselo překročit
           místní 90. percentil nejméně šest dnů po sobě. Hranice byla odvozena z patnáctidenních oken celého
           období 1979–2020. V posouvaném čtverci o velikosti 4° šířky a 4° délky musela zasažená plocha přesáhnout
-          40 000 km²; pravidlo nevyžaduje, aby všechny započtené body přímo sousedily. Pro
+          40 000 km². Pravidlo nevyžaduje, aby všechny započtené body přímo sousedily. Pro
           evropskou oblast 35–70° severní šířky a 10° západní až 50° východní délky zjistili průměrný sklon 0,61 dne
           ve vlnách za desetiletí. Ve zbytku severních středních zeměpisných šířek činil 0,21 dne za desetiletí.
           Sklony autoři získali proložením přímky metodou nejmenších čtverců. Čísla patří k této
-          prostorové a šestidenní definici; třídenní varianta je ve studii uvedena zvlášť.{" "}
+          prostorové a šestidenní definici. Třídenní varianta je ve studii uvedena zvlášť.{" "}
           <SourceLink id="DOI_10_1038_s41467_022_31432_y">Rousi et al., 2022</SourceLink>
         </p>
 
@@ -508,7 +508,7 @@ export function HeatWavesArticle() {
           pro západní Evropu mezi 5° západní a 15° východní délky a 45–55° severní šířky v letech 1950–2022. Nejvyšší
           denní maximum za červen až srpen nejprve určili v každém bodě a teprve potom zprůměrovali přes oblast.
           Nejteplejší dny různých míst tedy nemusely připadat na stejné datum. Takto získaný ukazatel se v obou
-          souborech měnil o 3,4 °C na každý stupeň změny globální průměrné teploty; 95% interval byl 2,4–4,3 °C.
+          souborech měnil o 3,4 °C na každý stupeň změny globální průměrné teploty. 95% interval byl 2,4–4,3 °C.
           Jde o statistický vztah ve sledovaném období, nikoli o změnu za desetiletí nebo předpověď pro další roky.
           Výsledek také neudává počet ani trvání vln veder.{" "}
           <SourceLink id="DOI_10_1038_s41467_023_42143_3">Vautard et al., 2023</SourceLink>
@@ -519,7 +519,7 @@ export function HeatWavesArticle() {
           Souhrn ČHMÚ z června 2026 dovoluje číst pevnou hranici 30 °C přímo v počtu dnů. Průměr pro Českou
           republiku činil 5 tropických dnů za rok v období 1961–1990, přibližně 11 v letech 1991–2020 a více než 13 v
           letech 2011–2025. Rok 2024 měl v průměru 18,5 tropického dne a rok 2015 téměř 26. V srpnu 2015 byl tropický
-          den alespoň na jedné stanici šestnáct dnů v řadě; nejdelší souvislý úsek na jedné stanici měl čtrnáct dnů.
+          den alespoň na jedné stanici šestnáct dnů v řadě. Nejdelší souvislý úsek na jedné stanici měl čtrnáct dnů.
           Celostátní průměr, výskyt někde na území a jediná stanice jsou tři různé souhrny a ČHMÚ je proto uvádí odděleně.{" "}
           <SourceLink id="WEB_Cesky_hydrometeorologicky_us_Vlny_veder_v_historii_a_dnes_27ba4cfb">ČHMÚ, 2026</SourceLink>
         </p>
@@ -538,9 +538,9 @@ export function HeatWavesArticle() {
           části Asie a Austrálii. Rozsáhlé části Afriky, Jižní Ameriky a vnitrozemí Asie mají kratší nebo řidší záznamy.
           HadEX3 v takových místech hodnotu nezveřejní, pokud nesplní minimální počet stanic a úplnost. ERA5 poskytne
           souvislou mapu i tam, ale je to reanalýza propojující pozorování s výpočtem atmosféry. Shodný směr ve více
-          souborech je proto užitečná kontrola; ani souvislá mapa však nenahrazuje údaj o vstupních měřeních a použité
+          souborech je proto užitečná kontrola. Ani souvislá mapa však nenahrazuje údaj o vstupních měřeních a použité
           definici.{" "}
-          <SourceLink id="DOI_10_1029_2019jd032263">Dunn et al., 2020</SourceLink>;{" "}
+          <SourceLink id="DOI_10_1029_2019jd032263">Dunn et al., 2020</SourceLink>,{" "}
           <SourceLink id="DOI_10_1002_qj_3803">Hersbach et al., 2020</SourceLink>
         </p>
 
@@ -554,7 +554,7 @@ export function HeatWavesArticle() {
             Evropě se v letech 1979–2020 počet dnů v dlouhých vlnách zvyšoval v průměru o 0,61 dne za desetiletí,
             zatímco ve zbytku severních středních šířek o 0,21 dne. V České republice vzrostl průměrný počet tropických
             dnů z pěti ročně v období 1961–1990 na přibližně jedenáct v letech 1991–2020 a více než třináct v období
-            2011–2025; rok 2024 měl v celostátním průměru 18,5 tropického dne.
+            2011–2025. Rok 2024 měl v celostátním průměru 18,5 tropického dne.
           </p>
         </div>
 
@@ -614,7 +614,7 @@ export function HeatWavesArticle() {
                 <SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_b4e2ac85">oficiální stránky HadEX3</SourceLink>{" "}
                 a zobrazují ukazatel WSDI z verze 3.0.4. Met Office je zpřístupňuje pod{" "}
                 <SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_cdb0d8ce">Open Government Licence v3.0</SourceLink>.
-                Soubory jsou převzaty beze změny; české vysvětlení barev, výběru buněk a omezení je doplněno v
+                Soubory jsou převzaty beze změny. České vysvětlení barev, výběru buněk a omezení je doplněno v
                 popiscích této stránky.
               </li>
             </ul>

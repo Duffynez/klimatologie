@@ -83,7 +83,7 @@ export function OceanAcidificationArticle() {
         <p>
           V tomto článku proto rozlišujeme tři úrovně. „Změřeno“ znamená laboratorní rozbor vzorku nebo odečet čidla.
           „Vypočteno“ znamená chemický výpočet z alespoň dvou změřených veličin. „Rekonstruováno“ znamená, že metoda
-          odhadla také místa a měsíce bez vzorku. Každý postup má vlastní předpoklady a nejistoty; z jeho popisu
+          odhadla také místa a měsíce bez vzorku. Každý postup má vlastní předpoklady a nejistoty. Z jeho popisu
           musí být zřejmé, kterou část výsledku určují měření a kterou výpočet.
         </p>
 
@@ -105,7 +105,7 @@ export function OceanAcidificationArticle() {
           </div>
           <figcaption>
             Vodorovná osa ukazuje roky 1985–2024, svislá osa povrchové pH na celkové stupnici. Křížky jsou plošné průměry
-            rekonstruované mapy celého hodnoceného oceánu; tyrkysový pás je 68% interval nejistoty ročních hodnot.
+            rekonstruované mapy celého hodnoceného oceánu. Tyrkysový pás je 68% interval nejistoty ročních hodnot.
             Číslo ±0,019 v rámečku zdroj definuje jako směrodatnou odchylku zbytků kolem přímky, nikoli jako standardní
             nejistotu jejího sklonu. Zdroj a kredit: E.U. Copernicus Marine Service Information, produkt{" "}
             <SourceLink id="DOI_10_48670_moi_00224">GLOBAL_OMI_HEALTH_carbon_ph_area_averaged</SourceLink>.
@@ -174,7 +174,7 @@ export function OceanAcidificationArticle() {
           />
           <figcaption>
             Odběrová růžice během výpravy West Coast Ocean Acidification 2026. Čidla na rámu průběžně měří tlak,
-            teplotu a vodivost; lahve se zavřou v určených hloubkách a přinesou vodu pro laboratorní rozbor. Fotografie:
+            teplotu a vodivost. Lahve se zavřou v určených hloubkách a přinesou vodu pro laboratorní rozbor. Fotografie:
             NOAA Ocean Acidification Program, červenec 2026. Zdroj:{" "}
             <SourceLink id="WEB_NOAA_Day_1_Images_from_the_field_NOAA_Ocean_Acidifica_0193e647">WCOA 2026, snímky z terénu</SourceLink>.
             Dílo NOAA je podle uvedeného kreditu federálním dílem USA a lze je použít s uvedením zdroje.
@@ -183,7 +183,7 @@ export function OceanAcidificationArticle() {
 
         <p>
           Při odběru pro DIC a alkalinitu se omezuje kontakt vody se vzduchem. Láhev se propláchne a naplní
-          přetékáním; před uzavřením se ponechá malý, předepsaný prostor pro tepelnou roztažnost vody. Příručka
+          přetékáním. Před uzavřením se ponechá malý, předepsaný prostor pro tepelnou roztažnost vody. Příručka
           doporučuje přibližně 1 % objemu, pokud vzorek nečeká mimořádně velká změna teploty. Konzervace omezuje biologické změny
           během skladování. Podmínky a důvody tohoto postupu uvádí kapitola o odběru vzorků v{" "}
           <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">příručce Dicksona, Sabina a Christiana (2007)</SourceLink>.
@@ -197,7 +197,7 @@ export function OceanAcidificationArticle() {
           přidáním barviva. Teplota měřicí nádobky se pečlivě udržuje a zapisuje. V konstrukci popsané{" "}
           <SourceLink id="DOI_10_5194_os_7_597_2011">Aßmannem a kol. (2011)</SourceLink> lze sledovat cestu
           od čerpané vody přes dávkování barviva a optický detektor až k výsledku. Autoři zároveň upozorňují,
-          že nečistoty v barvivu mohou posunout pH přibližně o 0,01; dobrá opakovatelnost sama takovou chybu neodhalí.
+          že nečistoty v barvivu mohou posunout pH přibližně o 0,01. Dobrá opakovatelnost sama takovou chybu neodhalí.
         </p>
 
         <p>
@@ -240,7 +240,7 @@ export function OceanAcidificationArticle() {
           o malé odchylky chování skutečného plynu od ideálního. Přístroj se
           během plavby kontroluje několika lahvemi plynu se známým obsahem CO₂. Výsledkem jsou tisíce bodů podél dráhy
           lodi, ale pouze v tenké povrchové vrstvě, z níž loď čerpá vodu. Standardní přístrojové uspořádání a opravy
-          shrnuje měřicí příručka; jednotnou kontrolu dat používá atlas SOCAT, z anglického Surface Ocean CO₂ Atlas,
+          shrnuje měřicí příručka. Jednotnou kontrolu dat používá atlas SOCAT, z anglického Surface Ocean CO₂ Atlas,
           tedy atlas CO₂ při povrchu oceánu.{" "}
           <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">Dickson a kol., 2007, standardní pracovní postup 5</SourceLink> a{" "}
           <SourceLink id="DOI_10_5194_essd_8_383_2016">Bakker a kol., 2016</SourceLink>
@@ -267,7 +267,7 @@ export function OceanAcidificationArticle() {
           a stupnice mořské vody také vazbu s fluoridy. Výsledek má stejný název „pH“, jeho číselná hodnota
           však závisí na zvolené definici. Převody mezi stupnicemi a jejich použití ve výpočtu vysvětlují{" "}
           <SourceLink id="DOI_10_5194_gmd_15_15_2022">Humphreys a kol. (2022)</SourceLink>. Proto musí údaj
-          o stupnici zůstat součástí zveřejněných dat; vzor takových metadat připravili{" "}
+          o stupnici zůstat součástí zveřejněných dat. Vzor takových metadat připravili{" "}
           <SourceLink id="DOI_10_5194_essd_7_117_2015">Jiang a kol. (2015)</SourceLink>.
         </p>
 
@@ -284,7 +284,7 @@ export function OceanAcidificationArticle() {
         <p>
           První kontrola probíhá uvnitř jedné plavby. Laboratoř opakuje část vzorků, měří referenční mořskou vodu a
           sleduje rozdíl mezi známou a získanou hodnotou. Podezřelé vzorky dostanou značku kvality a původní hodnota se
-          zachová. U DIC a celkové alkalinity lze měření přímo navázat na certifikovaný materiál; u pH se používají
+          zachová. U DIC a celkové alkalinity lze měření přímo navázat na certifikovaný materiál. U pH se používají
           pufry, tedy roztoky s dobře známým a stabilním pH, a nezávislá kontrola další dvojicí veličin. Pravidla pro doporučené nejistoty a úplná
           metadata shrnuje příručka Dicksona a kol. a novější doporučení skupiny Ocean Carbonate System Intercomparison Forum, která porovnává
           měření a výpočty oceánského uhličitanového systému.{" "}
@@ -317,7 +317,7 @@ export function OceanAcidificationArticle() {
         <p>
           U BATS je pH v dlouhém grafu vypočteno z laboratorně změřeného DIC a celkové alkalinity spolu s teplotou a
           salinitou. Bates a Johnson uvádějí výpočetní nejistotu pH 0,003 a používají stupnici mořské vody. Dlouhý záznam
-          na stanici tvoří navázaná chemická měření. Přístroje se během čtyřiceti let měnily; autoři popisují
+          na stanici tvoří navázaná chemická měření. Přístroje se během čtyřiceti let měnily. Autoři popisují
           původní kalibrace i pravidelné používání certifikované referenční vody při analýze DIC od roku 1991. Výsledek proto může být delší než životnost
           kteréhokoli jednotlivého přístroje.{" "}
           <SourceLink id="DOI_10_3389_fmars_2023_1289931">Bates a Johnson, 2023</SourceLink>
@@ -342,8 +342,8 @@ export function OceanAcidificationArticle() {
           <figcaption>
             Sezónně očištěné změny povrchové vody na spojených stanicích Hydrostation S a BATS u Bermud v letech
             1983–2023. Panel A ukazuje odchylku pH vypočteného ze změřeného DIC a celkové alkalinity na stupnici mořské
-            vody; sklon je −0,018 pH za desetiletí. Panel B ukazuje vypočtenou změnu nasycení aragonitem; sklon je −0,09
-            za desetiletí. Vodorovné osy udávají roky; svislé osy odchylky od obvyklé hodnoty příslušného měsíce,
+            vody. Sklon je −0,018 pH za desetiletí. Panel B ukazuje vypočtenou změnu nasycení aragonitem. Sklon je −0,09
+            za desetiletí. Vodorovné osy udávají roky, svislé osy odchylky od obvyklé hodnoty příslušného měsíce,
             označené řeckým písmenem Δ (delta). Zelené body jsou jednotlivé hodnoty, černé přímky jejich dlouhodobý sklon.
             Obrázek 7 z práce{" "}
             <SourceLink id="DOI_10_3389_fmars_2023_1289931">Bates a Johnson, 2023</SourceLink>, licence{" "}
@@ -416,7 +416,7 @@ export function OceanAcidificationArticle() {
         <p>
           GLODAPv3, zveřejněný v roce 2026, spojuje 1 181 výzkumných plaveb z období 1972–2023. Každý řádek odpovídá
           konkrétnímu vzorku a obsahuje polohu, datum, tlak, teplotu, salinitu, chemické hodnoty, značky kvality a
-          doporučené úpravy. DIC a celková alkalinita prošly společnou kontrolou mezi plavbami; dosažená vnitřní shoda je
+          doporučené úpravy. DIC a celková alkalinita prošly společnou kontrolou mezi plavbami. Dosažená vnitřní shoda je
           uváděna jako 1,2 mikromolu na kilogram pro DIC a 1,4 mikromolu na kilogram pro alkalinitu. pH a fCO₂ jsou v souboru také,
           ale bez stejné druhotné kontroly. Kompletní bodový soubor lze stáhnout jako CSV nebo NetCDF a regionální části
           jako menší soubory. Licence CC BY 4.0 dovoluje další použití s uvedením autora a zdroje.{" "}
@@ -428,7 +428,7 @@ export function OceanAcidificationArticle() {
           Surface Ocean CO₂ Atlas verze 2026 sdružuje desítky milionů povrchových měření CO₂ z let 1957–2025.
           Základem je měření plynu uvedeného do rovnováhy s mořskou vodou. Obsahuje fCO₂, teplotu, polohu, čas, hloubku přívodu vody a značku kvality, takže může být
           vstupem pro výpočet a mapování uhličitanového systému. Původní data jsou dostupná pod trvalým identifikátorem
-          NOAA; přepočtená varianta Forda a kol. navíc převádí hodnoty na společnou hloubku a teplotu těsně pod hladinou.
+          NOAA. Přepočtená varianta Forda a kol. navíc převádí hodnoty na společnou hloubku a teplotu těsně pod hladinou.
           Nabízí jednotlivé body v tabulce i měsíční buňky 1° × 1° ve formátu NetCDF. Oba balíky jsou velké, úplná
           tabulka má několik gigabajtů.{" "}
           <SourceLink id="DOI_10_25921_8dba_fr90">SOCAT v2026</SourceLink> a{" "}
@@ -441,7 +441,7 @@ export function OceanAcidificationArticle() {
           živin, hloubky a značek kvality. Verze 10, vydaná 24. července 2026, sahá od října 1988 do prosince
           2025. Na stránce BCO-DMO, pracoviště pro správu biologických a chemických oceánografických dat, je
           dostupný tabulkový soubor označený jako verze 10. Publikovaný trend Batese a Johnsona níže ovšem
-          vychází z období končícího rokem 2023; zveřejnění novějších odběrů tento výsledek samo nepřepočítává.{" "}
+          vychází z období končícího rokem 2023. Zveřejnění novějších odběrů tento výsledek samo nepřepočítává.{" "}
           <SourceLink id="DOI_10_26008_1912_bco_dmo_3782_10">Data BATS, verze 10</SourceLink>
         </p>
         <p>
@@ -456,7 +456,7 @@ export function OceanAcidificationArticle() {
           BGC-Argo poskytuje jednotlivé profily pH na celkové stupnici při teplotě a tlaku přímo v oceánu. Soubor
           rozlišuje okamžitě odeslaná data od později kontrolovaných hodnot a ke každému bodu připojuje značku kvality.
           Plováky obvykle měří od povrchu do přibližně 2 000 metrů a opakují profil v několikadenním cyklu. Uživatel má
-          stahovat upravenou proměnnou a současně kontrolovat stav následného zpracování; práce Zhang a kol. z roku 2026
+          stahovat upravenou proměnnou a současně kontrolovat stav následného zpracování. Práce Zhang a kol. z roku 2026
           ukazuje, že ani označení následně zkontrolovaných dat samo nezaručuje odstranění všech regionálních systematických chyb.{" "}
           <SourceLink id="WEB_International_Argo_Program_Biogeochemical_Argo_cf88bda9">BGC-Argo: přístup k datům</SourceLink>
         </p>
@@ -471,7 +471,7 @@ export function OceanAcidificationArticle() {
           soubor pro studium acidifikace oceánu a ETHZ jeho tvůrce na Spolkové vysoké technické škole v Curychu.
           Verze použitá v práci Ma a kol. sahá do
           roku 2021 a pokrývá 96 % povrchu oceánu bez trvalého ledu. Současná verze OceanSODA v2025 už končí
-          rokem 2024; ani zde nelze bez nového výpočtu připsat staršímu trendu delší období. Data lze stáhnout bezplatně, u každého výsledku má
+          rokem 2024. Ani zde nelze bez nového výpočtu připsat staršímu trendu delší období. Data lze stáhnout bezplatně, u každého výsledku má
           zůstat název a verze produktu.{" "}
           <SourceLink id="DOI_10_48670_moi_00224">Copernicus: globální pH</SourceLink>,{" "}
           <SourceLink id="DOI_10_48670_moi_00277">Copernicus: mapa sklonů</SourceLink> a{" "}
@@ -483,12 +483,12 @@ export function OceanAcidificationArticle() {
           Zhong a kol. v roce 2025 zveřejnili měsíční pole pH od povrchu do 2 000 metrů pro roky 1992–2020. Statistický
           model byl naučen na pozorováních GLODAP a poskytuje 41 hloubkových úrovní na mřížce 1° × 1°. Při porovnání
           s kontrolními vzorky byla odmocnina průměru čtverců odchylek, tedy chyba vyjádřená opět v jednotkách pH,
-          rovna 0,028; u povrchu 0,044 a ve 2 000 metrech 0,013. Jde o
+          rovna 0,028. U povrchu činila 0,044 a ve 2 000 metrech 0,013. Jde o
           rekonstrukci, nikoli o doplnění chybějících míst novým měřením. Datový balík je přesto užitečný pro přesně
           vymezené prostorové otázky, pokud se uvede tato chyba vůči kontrolním vzorkům.{" "}
           <SourceLink id="DOI_10_5194_essd_17_719_2025">Zhong a kol., 2025</SourceLink> a{" "}
           <SourceLink id="DOI_10_12157_iocas_20230720_001">datový záznam a soubory</SourceLink>.
-          Metadata portálu jsou veřejná; pro stažení souborů portál vyžaduje přihlášení.
+          Metadata portálu jsou veřejná. Pro stažení souborů portál vyžaduje přihlášení.
         </p>
 
         <h2>Srovnání výsledků</h2>
@@ -496,10 +496,10 @@ export function OceanAcidificationArticle() {
           Místní pozorování a globální rekonstrukce odpovídají na jiné otázky. BATS popisuje jeden bod v severním
           subtropickém Atlantiku, ale stojí na pravidelných laboratorních vzorcích. Copernicus popisuje téměř celý
           povrch oceánu, ale většinu buněk statisticky odhaduje. Ma a kol. porovnali OceanSODA s BATS a HOT. Pro BATS v
-          letech 1992–2021 dostali z rekonstrukce sklon −0,0174 ± 0,0004 pH za desetiletí; ze staničních dat vyšel sklon,
+          letech 1992–2021 dostali z rekonstrukce sklon −0,0174 ± 0,0004 pH za desetiletí. Ze staničních dat vyšel sklon,
           který se od něj v rámci uvedené nejistoty nelišil. Pro HOT v letech 1989–2021 vyšel z rekonstrukce −0,0182 ± 0,0005 a ze staničních
           dat −0,0180 ± 0,0006 za desetiletí. Toto porovnání kontroluje, zda globální metoda zachová změnu na dvou
-          dlouhých stanicích; samo nekontroluje oblasti bez stanice.{" "}
+          dlouhých stanicích. Samo nekontroluje oblasti bez stanice.{" "}
           <SourceLink id="DOI_10_1029_2023gb007765">Ma a kol., 2023</SourceLink>
         </p>
 
@@ -540,7 +540,7 @@ export function OceanAcidificationArticle() {
           <figcaption>
             Mapa rekonstruované změny povrchového pH v letech 1985–2024. Osy udávají zeměpisnou délku a šířku,
             barevná stupnice změnu za desetiletí. Všechny barevné
-            oblasti mají záporný sklon; modré odstíny jsou blíže −0,008 a hnědé blíže −0,026 pH za desetiletí. Purpurové
+            oblasti mají záporný sklon. Modré odstíny jsou blíže −0,008 a hnědé blíže −0,026 pH za desetiletí. Purpurové
             křížkování označuje oblasti s nejvyšší odhadovanou nejistotou, které produkt z hodnocení vylučuje. Mapa má
             rozlišení 0,25° × 0,25° a vznikla ze statisticky rekonstruovaných měsíčních polí, nikoli z přímého pH čidla v
             každé buňce. Zdroj a kredit: E.U. Copernicus Marine Service Information, produkt{" "}
@@ -562,9 +562,9 @@ export function OceanAcidificationArticle() {
           Nezávislé dlouhé odběry u Havaje ukazují podobnou změnu. Dore a kol. pro povrchovou vodu stanice ALOHA v
           období 1988–2007 vypočetli z DIC a alkalinity sklon pH −0,0019 ± 0,0002 za rok. Přímá měření pH byla dostupná
           jen v letech 1992–1998 a 2003–2007. Po převodu na teplotu a tlak při odběru dala sklon −0,0014 ± 0,0002 za rok.
-          Oba postupy tedy ukázaly pokles; autoři je v rámci svého
+          Oba postupy tedy ukázaly pokles. Autoři je v rámci svého
           statistického vyhodnocení označili za nerozlišitelné. Souhrn Batese a kol. porovnal sedm stanic v
-          Atlantiku, Tichém oceánu, Islandském moři a u Nového Zélandu. Všechny vykazovaly pokles pH; zveřejněné sklony
+          Atlantiku, Tichém oceánu, Islandském moři a u Nového Zélandu. Všechny vykazovaly pokles pH. Zveřejněné sklony
           ležely přibližně mezi −0,0013 a −0,0026 za rok. Stanice neměly stejnou délku, sezónnost ani kombinaci měřených
           vstupů, proto je rozpětí popisem různých míst, nikoli nejistotou jednoho globálního čísla.{" "}
           <SourceLink id="DOI_10_1073_pnas_0906044106">Dore a kol., 2009</SourceLink> a{" "}
@@ -573,7 +573,7 @@ export function OceanAcidificationArticle() {
 
         <p>
           Lauvset a kol. rozdělili oceán do 17 velkých oblastí podle teploty, hloubky promíchané vrstvy a obsahu chlorofylu.
-          Pro období 1991–2011 mělo dostatek dat 15 oblastí; statisticky významný pokles pH našli přibližně v 70 %
+          Pro období 1991–2011 mělo dostatek dat 15 oblastí. Statisticky významný pokles pH našli přibližně v 70 %
           všech 17 oblastí. Průměrná rychlost poklesu za toto období byla −0,018 ± 0,004 za desetiletí. Novější
           OceanSODA-ETHZ pokryl 96 % povrchu oceánu bez trvalého ledu a pro roky 1982–2021 odhadl globální sklon
           −0,0166 ± 0,0010 pH za desetiletí. Za celé období klesl jeho globální průměr přibližně o 0,06 pH a stav nasycení
@@ -584,11 +584,11 @@ export function OceanAcidificationArticle() {
         </p>
 
         <p>
-          CMEMS-LSCE odhadl globální povrchové pH 8,110 ± 0,017 v roce 1985 a 8,049 ± 0,014 v roce 2021;
-          sklon za toto období byl −0,017 ± 0,004 za desetiletí. Tyto hodnoty i postup výpočtu nejistoty
+          CMEMS-LSCE odhadl globální povrchové pH 8,110 ± 0,017 v roce 1985 a 8,049 ± 0,014 v roce 2021.
+          Sklon za toto období byl −0,017 ± 0,004 za desetiletí. Tyto hodnoty i postup výpočtu nejistoty
           zveřejnili <SourceLink id="DOI_10_5194_essd_16_121_2024">Chau a kol. (2024)</SourceLink>.
           Graf Copernicus v tomto článku zachycuje pozdější aktualizaci do roku 2024. Rozmezí nejistoty
-          ročního průměru a nejistota dlouhodobého sklonu vyjadřují různé věci; jejich velikosti nelze zaměňovat.
+          ročního průměru a nejistota dlouhodobého sklonu vyjadřují různé věci. Jejich velikosti nelze zaměňovat.
           Podobnost globálních sklonů OceanSODA a CMEMS-LSCE navíc částečně vychází ze společných vstupů SOCAT a GLODAP.
         </p>
 
@@ -627,14 +627,14 @@ export function OceanAcidificationArticle() {
         <h2>Prameny, data a licence</h2>
         <p>
           Všechny odborné práce a metodické dokumenty použité v tomto článku mají veřejný plný text.
-          Karty zdrojů nabízejí DOI a samostatný odkaz na článek nebo příručku; u dat odkazují na veřejný
+          Karty zdrojů nabízejí DOI a samostatný odkaz na článek nebo příručku. U dat odkazují na veřejný
           soubor či portál poskytovatele. Zdroje tohoto článku nepoužívají kopie na Google Drivu.
         </p>
         <div className="article-sources">
           <section>
             <h3>Staniční pozorování a změny v hloubce</h3>
             <ul>
-              <li><SourceLink id="DOI_10_1073_pnas_0906044106">Dore a kol. (2009): stanice ALOHA</SourceLink> – plný text v PubMed Central; přímé a vypočtené pH.</li>
+              <li><SourceLink id="DOI_10_1073_pnas_0906044106">Dore a kol. (2009): stanice ALOHA</SourceLink> – plný text v PubMed Central, přímé a vypočtené pH.</li>
               <li><SourceLink id="DOI_10_5670_oceanog_2014_16">Bates a kol. (2014): sedm dlouhodobých pozorování</SourceLink> – veřejné PDF vydavatele.</li>
               <li><SourceLink id="DOI_10_3389_fmars_2023_1289931">Bates a Johnson (2023): Bermudy 1983–2023</SourceLink> – otevřený článek, tabulka trendů a grafy.</li>
               <li><SourceLink id="DOI_10_1073_pnas_1504613112">Ríos a kol. (2015): vodní hmoty Atlantiku</SourceLink> – plný text a doplňky v PubMed Central.</li>
@@ -674,7 +674,7 @@ export function OceanAcidificationArticle() {
               <li><SourceLink id="DOI_10_25921_8dba_fr90">SOCAT v2026</SourceLink> – povrchové fCO₂, značky kvality a soubory ke stažení.</li>
               <li><SourceLink id="DOI_10_5194_essd_8_383_2016">Bakker a kol. (2016)</SourceLink> – otevřená metodika atlasu SOCAT.</li>
               <li><SourceLink id="DOI_10_5281_zenodo_20757579">Ford a kol. (2026)</SourceLink> – přepočtený SOCAT se sjednocenou hloubkou a teplotou.</li>
-              <li><SourceLink id="DOI_10_26008_1912_bco_dmo_3782_10">BATS, verze 10</SourceLink> – odběry do prosince 2025; přímý odkaz na textovou tabulku s hodnotami oddělenými čárkami (CSV).</li>
+              <li><SourceLink id="DOI_10_26008_1912_bco_dmo_3782_10">BATS, verze 10</SourceLink> – odběry do prosince 2025. Přímý odkaz na textovou tabulku s hodnotami oddělenými čárkami (CSV).</li>
               <li><SourceLink id="WEB_hahana_soest_hawaii_edu_HOT_the_Hawaii_Ocean_Time_series_d7da8037">HOT</SourceLink> – data z jednotlivých plaveb a analytické postupy.</li>
               <li><SourceLink id="WEB_International_Argo_Program_Biogeochemical_Argo_cf88bda9">BGC-Argo</SourceLink> – profily a jejich kontrolované varianty.</li>
               <li><SourceLink id="WEB_NOAA_Ocean_Carbon_and_Acidification_Data_System_OCADS_23d31f11">Datový systém NOAA pro oceánský uhlík a acidifikaci (OCADS)</SourceLink> – vyhledávání původních dat.</li>
@@ -693,8 +693,8 @@ export function OceanAcidificationArticle() {
           <section>
             <h3>Obrázky a licence</h3>
             <ul>
-              <li>Globální graf a mapa: <SourceLink id="DOI_10_48670_moi_00224">E.U. Copernicus Marine Service Information</SourceLink>; zachován kredit poskytovatele. Obrázky zobrazují aktualizaci do roku 2024.</li>
-              <li>Odběrová růžice: <SourceLink id="WEB_NOAA_Day_1_Images_from_the_field_NOAA_Ocean_Acidifica_0193e647">NOAA, WCOA 2026</SourceLink>; podle uvedeného kreditu federální dílo USA.</li>
+              <li>Globální graf a mapa: <SourceLink id="DOI_10_48670_moi_00224">E.U. Copernicus Marine Service Information</SourceLink>. Zachován kredit poskytovatele. Obrázky zobrazují aktualizaci do roku 2024.</li>
+              <li>Odběrová růžice: <SourceLink id="WEB_NOAA_Day_1_Images_from_the_field_NOAA_Ocean_Acidifica_0193e647">NOAA, WCOA 2026</SourceLink>, podle uvedeného kreditu federální dílo USA.</li>
               <li>Graf BATS: obrázek 7 z práce <SourceLink id="DOI_10_3389_fmars_2023_1289931">Batese a Johnsona (2023)</SourceLink>, licence <SourceLink id="WEB_Creative_Commons_Deed_Attribution_4_0_International_Creative_Comm_f3dd853d">CC BY 4.0</SourceLink>.</li>
               <li>Pravidla pro použití materiálů: <SourceLink id="WEB_NOAA_NOAA_s_National_Ocean_Service_About_Us_4ba21b52">NOAA Ocean Service</SourceLink>.</li>
             </ul>

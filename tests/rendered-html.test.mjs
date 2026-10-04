@@ -1015,11 +1015,11 @@ test("renders public phenology sources and preserves the meaning of dates and sa
   assert.match(cards.get("DOI_10_1007_s00484_021_02185_y"), /Susanne S\. Renner a Frank-M\. Chmielewski/);
   assert.match(cards.get("DOI_10_3334_ornldaac_2389"), /Datový soubor/);
   assert.match(cards.get("DOI_10_6084_m9_figshare_c_5800155"), /Doplňkový materiál/);
-  assert.match(articleHtml, /číslo neoznačuje jednotlivé návštěvy/);
+  assert.match(articleHtml, /Číslo neoznačuje jednotlivé návštěvy/);
   assert.match(articleHtml, /přechodová data z něj nepočítá/);
   assert.match(articleHtml, /15 % tedy neznamená, že 15 % stromů má listy/);
   assert.match(articleHtml, /VNP22Q2\.002 poskytuje výsledky od roku 2013/);
-  assert.match(articleHtml, /není to soubor všech 419 354 původních pozorování/);
+  assert.match(articleHtml, /Není to soubor všech 419 354 původních pozorování/);
   assert.match(articleHtml, /Odborná revize: 3\. října 2026/);
   assert.doesNotMatch(articleHtml, /Brügger a Vassella|Reed et al\., 1994|125 000 měření v čase/);
   assert.equal((articleHtml.match(/class="article-figure__scroll"/g) ?? []).length, 3);

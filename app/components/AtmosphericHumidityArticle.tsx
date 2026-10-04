@@ -77,7 +77,7 @@ export function AtmosphericHumidityArticle() {
         <p>
           Radiosonda přidává třetí rozměr. Během výstupu měří tlak, teplotu a relativní vlhkost, takže pro každou
           dosaženou výšku vznikne samostatný údaj. Z těchto profilů lze také sečíst vodní páru mezi povrchem a zvolenou
-          horní hladinou. Archiv IGRA uchovává původní profily i odvozené veličiny; jeho současná dokumentace popisuje
+          horní hladinou. Archiv IGRA uchovává původní profily i odvozené veličiny. Jeho současná dokumentace popisuje
           také původ dat, kontroly kvality a změny mezi verzemi. Přesnost dlouhodobého srovnání závisí na znalosti typu
           čidla a změn v provozu stanice.{" "}
           <SourceLink id="DOI_10_7289_v5x63k0q">IGRA, verze 2.2</SourceLink> a{" "}
@@ -105,7 +105,7 @@ export function AtmosphericHumidityArticle() {
           <figcaption>
             Dva způsoby zobrazení téhož přeletu družice NOAA-20 v lednu 2021. Bílá struktura znázorňuje rozložení
             vlhkosti s výškou, barva na povrchu celkové množství vodní páry ve sloupci. Jde o prostorovou orientaci,
-            nikoli o graf dlouhodobé změny; výška i hustota bílé vrstvy jsou ve vizualizaci zvětšeny. Data: přístroj
+            nikoli o graf dlouhodobé změny. Výška i hustota bílé vrstvy jsou ve vizualizaci zvětšeny. Data: přístroj
             ATMS na NOAA-20. Vizualizace a kredit:{" "}
             <SourceLink id="WEB_NASA_NASA_Scientific_Visualization_Studio_3D_Water_Va_cbd0352b">
               NASA Scientific Visualization Studio
@@ -147,7 +147,7 @@ export function AtmosphericHumidityArticle() {
 
         <p>
           Měření ve volné atmosféře umožnily radiosondy. V roce 1930 vznikly přístroje, které rádiem předávaly údaje o
-          tlaku, teplotě a vlhkosti během letu na balónu; v prosinci 1931 vypustil první finskou radiosondu Vilho
+          tlaku, teplotě a vlhkosti během letu na balónu. V prosinci 1931 vypustil první finskou radiosondu Vilho
           Väisälä. Pravidelné výstupy se během dalších desetiletí staly součástí meteorologických sítí. Historii
           jednotlivých konstrukcí shrnuje přehled vývoje atmosférických pozorovacích systémů a vlastní měření dnes
           uchovává archiv IGRA.{" "}
@@ -179,7 +179,7 @@ export function AtmosphericHumidityArticle() {
         <p>
           Čidlo potřebuje proudící okolní vzduch, ochranu před srážkami a slunečním zářením a známou výšku nad
           povrchem. Nad pevninou se běžně pracuje s měřením přibližně ve dvou metrech. Na lodích se výška přístroje
-          mezi plavidly liší a s výměnou lodního parku se v čase měnila; HadISDH.marine proto používá informace o
+          mezi plavidly liší a s výměnou lodního parku se v čase měnila. HadISDH.marine proto používá informace o
           výšce a typu ventilace při korekci známých rozdílů.{" "}
           <SourceLink id="DOI_10_5194_essd_12_2853_2020">Willett et al., 2020</SourceLink>
         </p>
@@ -187,7 +187,7 @@ export function AtmosphericHumidityArticle() {
         <h3>Radiosonda</h3>
         <p>
           Malou sondu vynese balón obvykle do výšky přes 25 kilometrů. Přístroj během letu opakovaně vysílá tlak,
-          teplotu, relativní vlhkost a polohu. Z každé sekundy letu tak vzniká bod s časem a výškou; spojením bodů
+          teplotu, relativní vlhkost a polohu. Z každé sekundy letu tak vzniká bod s časem a výškou. Spojením bodů
           vznikne svislý profil. Ve studii Durre a kol. byly z teploty, tlaku a poklesu rosného bodu vypočteny také
           součty vodní páry mezi povrchem a tlakovou hladinou 500 hPa.{" "}
           <SourceLink id="DOI_10_1029_2008jd010989">Durre et al., 2009</SourceLink>
@@ -209,7 +209,7 @@ export function AtmosphericHumidityArticle() {
             <SourceLink id="WEB_NOAA_NOAA_Photo_Library_NSSL_00df5c76">
               NOAA Photo Library, NSSL
             </SourceLink>
-            ; dílo federální vlády USA.
+            . Dílo federální vlády USA.
           </figcaption>
         </figure>
 
@@ -245,7 +245,7 @@ export function AtmosphericHumidityArticle() {
         <p>
           Rádiový signál navigační družice se ve vlhké atmosféře zpozdí. Přesně zaměřený přijímač GNSS změří celkové
           zpoždění, z tlaku u stanice se vypočte jeho suchá část a zbývající část se převede na množství vodní páry nad
-          přijímačem. Potřebná je také teplota, která tento převod zpřesňuje. Metodu formulovali Bevis a kol.; dnešní
+          přijímačem. Potřebná je také teplota, která tento převod zpřesňuje. Metodu formulovali Bevis a kol. Dnešní
           sítě poskytují téměř souvislá měření za každého počasí.{" "}
           <SourceLink id="DOI_10_1029_92jd01517">Bevis et al., 1992</SourceLink>
         </p>
@@ -255,7 +255,7 @@ export function AtmosphericHumidityArticle() {
         <p>
           Pozemní a lodní hlášení obsahuje čas, polohu, teplotu, tlak a rosný bod nebo relativní vlhkost. HadISDH
           provádí převody už z jednotlivých hodinových hodnot. To je důležité, protože vztahy mezi teplotou, rosným
-          bodem a relativní vlhkostí nejsou lineární; měsíční průměr jedné veličiny proto nelze beze zbytku převést na
+          bodem a relativní vlhkostí nejsou lineární. Měsíční průměr jedné veličiny proto nelze beze zbytku převést na
           měsíční průměr jiné.{" "}
           <SourceLink id="DOI_10_5194_cp_10_1983_2014">Willett et al., 2014</SourceLink>
         </p>
@@ -283,7 +283,7 @@ export function AtmosphericHumidityArticle() {
         <p>
           HadISDH zprůměruje platná měření stanice nebo lodi za měsíc a poté je spojí v buňkách širokých pět stupňů
           zeměpisné délky i šířky. Zveřejňuje skutečné hodnoty i odchylky od průměru let 1991–2020. Prázdná buňka zůstane
-          prázdná; HadISDH do ní nedopočítává chybějící pozorování. Globální průměr proto popisuje dostupné buňky mezi
+          prázdná. HadISDH do ní nedopočítává chybějící pozorování. Globální průměr proto popisuje dostupné buňky mezi
           70° jižní a 70° severní šířky, nikoli rovnoměrně pozorovaný celý povrch.{" "}
           <SourceLink id="DOI_10_5194_cp_10_1983_2014">Pevninská část</SourceLink> a{" "}
           <SourceLink id="DOI_10_5194_essd_12_2853_2020">oceánská část</SourceLink>
@@ -422,7 +422,7 @@ export function AtmosphericHumidityArticle() {
         <p>
           Pozorovací soubor ponechává nepozorovaná místa prázdná. Reanalýza naproti tomu kombinuje rozmanitá měření s
           výpočtovým modelem a vytváří souvislou mapu. Allan a kol. ukázali, že změna zeměpisného pokrytí může ovlivnit
-          globální průměr HadISDH; proto vedle čistě pozorovaných buněk porovnávali i variantu doplněnou reanalýzou.
+          globální průměr HadISDH. Proto vedle čistě pozorovaných buněk porovnávali i variantu doplněnou reanalýzou.
           Zpráva za rok 2024 z téhož důvodu ukazuje ERA5 jak na celé ploše, tak pouze v místech pokrytých HadISDH.{" "}
           <SourceLink id="DOI_10_1029_2022jd036728">Allan et al., 2022</SourceLink>
         </p>
@@ -441,7 +441,7 @@ export function AtmosphericHumidityArticle() {
         <p>
           Mapa měrné vlhkosti odpovídá na otázku, kde se mezi lety 1973 a 2024 měnilo množství vodní páry v jednom
           kilogramu vzduchu. Zelené buňky mají kladný trend a hnědé záporný. Bílá místa nemají dostatek pozorování pro
-          výpočet; neznamenají nulovou změnu.
+          výpočet. Neznamenají nulovou změnu.
         </p>
 
         <figure className="article-figure article-figure--scroll-mobile">
@@ -468,7 +468,7 @@ export function AtmosphericHumidityArticle() {
           </div>
           <figcaption>
             Lineární trend měrné vlhkosti u povrchu v souboru HadISDH.blend.1.5.1.2024f, 1973–2024. Výpočet používá
-            pozorované buňky nad pevninou a z lodí; intervaly zohledňují časovou závislost ročních hodnot. Zdroj:{" "}
+            pozorované buňky nad pevninou a z lodí. Intervaly zohledňují časovou závislost ročních hodnot. Zdroj:{" "}
             <SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_17fcf283">
               Met Office Hadley Centre
             </SourceLink>
@@ -596,7 +596,7 @@ export function AtmosphericHumidityArticle() {
           Zpráva za rok 2024 porovnala také tři reanalýzy, rádiové zákryty GNSS a 166 pozemních přijímačů GNSS.
           Všechny soubory označily rok 2024 za rok s nejvyšším množstvím vodní páry ve sloupci ve svém období.
           Globální odchylka mezi 60° jižní a 60° severní šířky dosáhla přibližně pěti procent nad průměr let 1991–2020.
-          Pro období 1991–2024 leží trendy tří reanalýz mezi 0,37 a 0,42 kg/m² za desetiletí; družicový mikrovlnný
+          Pro období 1991–2024 leží trendy tří reanalýz mezi 0,37 a 0,42 kg/m² za desetiletí. Družicový mikrovlnný
           výsledek nad oceány je uveden výše.{" "}
           <SourceLink id="WEB_NOAA_State_of_the_Climate_in_2024_tabulka_2_8_4784f00d">
             State of the Climate in 2024, tabulka 2.8
@@ -614,7 +614,7 @@ export function AtmosphericHumidityArticle() {
 
         <p>
           Zeměpisné mapy doplňují globální čísla. Měrná vlhkost v letech 1973–2024 rostla ve velké většině dobře
-          pozorovaných buněk severní polokoule a v mnoha tropických oblastech; jednotlivé záporné oblasti se vyskytují
+          pozorovaných buněk severní polokoule a v mnoha tropických oblastech. Jednotlivé záporné oblasti se vyskytují
           zejména tam, kde je pozorování řídké nebo místně odlišné. Relativní vlhkost nad pevninou naopak v rozsáhlých
           částech středních zeměpisných šířek klesala, zatímco v některých tropických a oceánských buňkách vzrostla.
           Bílé plochy na obou mapách zůstávají bez závěru.{" "}
@@ -638,7 +638,7 @@ export function AtmosphericHumidityArticle() {
         <h2>Prameny, data a licence</h2>
         <p>
           Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez
-          předplatného. U studií vede záznam v databázi na DOI i na veřejný plný text; u dat a institucionálních
+          předplatného. U studií vede záznam v databázi na DOI i na veřejný plný text a u dat a institucionálních
           dokumentů přímo na stránku vydavatele nebo do jeho repozitáře. Číselné výsledky v článku používají poslední
           konečné a vzájemně sladěné verze HadISDH za rok 2024. Met Office už zveřejnil také předběžné verze za rok
           2025, u nich však upozorňuje na změnu vstupní staniční databáze a horší prostorové pokrytí nad pevninou.
@@ -737,7 +737,7 @@ export function AtmosphericHumidityArticle() {
                 </SourceLink>
               </li>
               <li>
-                Durre, I. et al. (2016): Integrated Global Radiosonde Archive, verze 2; průběžně aktualizovaná data,
+                Durre, I. et al. (2016): Integrated Global Radiosonde Archive, verze 2, průběžně aktualizovaná data,
                 dokumentace a popis verze 2.2.{" "}
                 <SourceLink id="DOI_10_7289_v5x63k0q">DOI 10.7289/V5X63K0Q</SourceLink>
               </li>
@@ -790,14 +790,14 @@ export function AtmosphericHumidityArticle() {
                 <SourceLink id="WEB_NASA_NASA_Scientific_Visualization_Studio_3D_Water_Va_cbd0352b">
                   NASA Scientific Visualization Studio
                 </SourceLink>
-                ; stránka požaduje kredit NASA&apos;s Scientific Visualization Studio.
+                . Stránka požaduje kredit NASA&apos;s Scientific Visualization Studio.
               </li>
               <li>
                 Fotografie radiosondy pochází z{" "}
                 <SourceLink id="WEB_NOAA_NOAA_Photo_Library_NSSL_00df5c76">
                   NOAA Photo Library
                 </SourceLink>
-                . Kredit: NOAA Central Library; OAR/ERL/National Severe Storms Laboratory. Materiál NOAA je dílem
+                . Kredit: NOAA Central Library, OAR/ERL/National Severe Storms Laboratory. Materiál NOAA je dílem
                 federální vlády USA, pokud u položky není uvedeno jinak.
               </li>
               <li>

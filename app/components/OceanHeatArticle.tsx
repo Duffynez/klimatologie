@@ -155,7 +155,7 @@ export function OceanHeatArticle() {
           />
           <figcaption>
             Plovák Argo při vypuštění z lodi. Po ponoření pořizuje opakované profily teploty, tlaku a vodivosti.
-            Foto: Tomas Szumski / Marine Institute; zdroj: Argo Program. Argo dovoluje použití fotografie na
+            Foto: Tomas Szumski / Marine Institute. Zdroj: Argo Program. Argo dovoluje použití fotografie na
             webech při uvedení programu a fotografa.{" "}
             <SourceLink id="WEB_International_Argo_Program_Photos_13d900af">
               Původní fotografie a podmínky použití
@@ -187,7 +187,7 @@ export function OceanHeatArticle() {
           kvality. Světová oceánská databáze WOD převádí data z tisíců výprav a programů do společného formátu,
           vyhledává duplicity a připojuje kontrolní příznaky. Původní naměřené hloubky zachovává a vedle nich
           nabízí hodnoty převedené na společné standardní hloubky. Současné vydání WOD23 a jeho původ popisují
-          Garcia a kol.; podrobný postup kontroly a formáty doplňuje technická dokumentace NOAA.{" "}
+          Garcia a kol. Podrobný postup kontroly a formáty doplňuje technická dokumentace NOAA.{" "}
           <SourceLink id="DOI_10_1038_s41597_026_06957_2">Garcia et al., 2026</SourceLink>,{" "}
           <SourceLink id="DOI_10_25923_z885_h264">Mishonov et al., 2024</SourceLink> a{" "}
           <SourceLink id="WEB_NOAA_World_Ocean_Database_3d4b1d70">
@@ -317,7 +317,7 @@ export function OceanHeatArticle() {
           <section className="article-data-item">
             <h3>IAPv4</h3>
             <p>
-              Měsíční teplota a obsah tepla na mřížce 1° × 1° od roku 1940 do hloubky 6 000 metrů; autoři
+              Měsíční teplota a obsah tepla na mřížce 1° × 1° od roku 1940 do hloubky 6 000 metrů. Autoři
               označují období přibližně od roku 1957 za spolehlivější. Verze popsaná v roce 2024 používá přes
               17,6 milionu teplotních profilů do září 2023 a odděleně nabízí teplotu i vypočtený obsah tepla.
             </p>
@@ -364,7 +364,7 @@ export function OceanHeatArticle() {
           Graf níže ukazuje jediný konkrétní výpočet: IAP/CAS pro vrstvu od hladiny do 2 000 metrů. Sloupce jsou
           roční hodnoty, černá křivka měsíční hodnoty a zelené úsečky 95% intervaly nejistoty ve vybraných letech.
           Nula odpovídá průměru let 1981–2010. Modré sloupce proto znamenají méně a červené více tepla než tento
-          průměr; barva sama neoznačuje příčinu změny.
+          průměr. Barva sama neoznačuje příčinu změny.
         </p>
 
         <p>
@@ -373,7 +373,7 @@ export function OceanHeatArticle() {
           Měřítko lze převést také na teplotu. Japonská meteorologická agentura ve svém samostatném globálním
           výpočtu uvádí, že přírůstek 63,9 ZJ za desetiletí odpovídá zvýšení průměrné teploty vrstvy 0–2 000 metrů
           o 0,022 °C za desetiletí. Ve stejném přibližném poměru představuje 300 ZJ průměrné zvýšení teploty této
-          celé vrstvy asi o 0,10 °C. Jde o průměr přes světový oceán a všechny zahrnuté hloubky; změna na
+          celé vrstvy asi o 0,10 °C. Jde o průměr přes světový oceán a všechny zahrnuté hloubky. Změna na
           jednotlivých místech může být větší, menší nebo může mít opačné znaménko.{" "}
           <SourceLink id="WEB_data_jma_go_jp_Japan_Meteorological_Agency_Global_ocean_heat_co_b8363b79">
             Japan Meteorological Agency
@@ -410,7 +410,7 @@ export function OceanHeatArticle() {
             </p>
           </div>
           <figcaption>
-            Globální změna obsahu tepla v horních 2 000 metrech oceánu, 1958–2025. Výřez z obr. 1a; popisky v
+            Globální změna obsahu tepla v horních 2 000 metrech oceánu, 1958–2025. Výřez z obr. 1a. Popisky v
             původním grafu zůstaly anglicky. Zdroj: Pan et al., 2026. Ořez je úpravou podle licence{" "}
             <SourceLink id="WEB_Creative_Commons_Deed_Attribution_4_0_International_Creative_Comm_f3dd853d">CC BY 4.0</SourceLink>.{" "}
             <SourceLink id="DOI_10_1007_s00376_026_5876_0">
@@ -420,7 +420,7 @@ export function OceanHeatArticle() {
         </figure>
 
         <p>
-          Na začátku grafu, v roce 1958, leží roční hodnota přibližně 130 ZJ pod průměrem let 1981–2010; v roce
+          Na začátku grafu, v roce 1958, leží roční hodnota přibližně 130 ZJ pod průměrem let 1981–2010. V roce
           2025 přesahuje 300 ZJ nad tímto průměrem. Rozdíl mezi prvním a posledním rokem je tedy zhruba 460 ZJ.
           Při stejném orientačním převodu to odpovídá zvýšení průměrné teploty vrstvy 0–2 000 metrů asi o 0,16 °C.
           Změna referenčního období by posunula všechny sloupce nahoru nebo dolů, tento rozdíl mezi roky by však
@@ -439,7 +439,7 @@ export function OceanHeatArticle() {
         <p>
           Delší výpočet IAPv4 dovoluje oddělit dvě hloubkové vrstvy. Pro roky 1955–2023 autoři uvádějí průměrný
           přírůstek 4,4 ± 0,2 ZJ za rok v horních 700 metrech a 2,0 ± 0,1 ZJ za rok mezi 700 a 2 000 metry. Součet
-          pro 0–2 000 metrů je 6,4 ± 0,3 ZJ za rok; uvedené intervaly mají v této práci 90% hladinu spolehlivosti.
+          pro 0–2 000 metrů je 6,4 ± 0,3 ZJ za rok. Uvedené intervaly mají v této práci 90% hladinu spolehlivosti.
           Výsledek tedy není omezen pouze na vodu těsně pod hladinou. Zároveň stále popisuje horní 2 000 metrů,
           nikoli celý oceán až ke dnu.{" "}
           <SourceLink id="DOI_10_5194_essd_16_3517_2024">Cheng et al., 2024</SourceLink>
@@ -462,8 +462,8 @@ export function OceanHeatArticle() {
             unoptimized
           />
           <figcaption>
-            Změna obsahu tepla ve vrstvě 0–2 000 metrů, 1993–2024. Oranžová označuje kladný a modrá záporný trend;
-            šedé oblasti nemají v tomto výpočtu statisticky významnou změnu. Vizualizace: NOAA Climate.gov; data:
+            Změna obsahu tepla ve vrstvě 0–2 000 metrů, 1993–2024. Oranžová označuje kladný a modrá záporný trend.
+            Šedé oblasti nemají v tomto výpočtu statisticky významnou změnu. Vizualizace: NOAA Climate.gov. Data:
             Pacific Marine Environmental Laboratory (PMEL) / John Lyman. Nezměněný materiál NOAA, veřejná doména.{" "}
             <SourceLink id="WEB_content_drupal_climate_gov_Climate_Change_Ocean_Heat_Content_a227e082">
               Původní mapa a popis
@@ -482,8 +482,8 @@ export function OceanHeatArticle() {
           dnu a novější plováky Deep Argo. Johnson a Purkey spojili obě měření a pro období přibližně mezi lety
           1985 a 2015 vypočetli globální přírůstek 21,6 ± 6,5 terawattu ve vrstvě
           2 000–4 000 metrů a 12,9 ± 1,8 terawattu mezi 4 000 a 6 000 metry. Terawatt zde vyjadřuje průměrnou
-          rychlost přibývání tepla, nikoli jeho celkové množství. Mapy současně obsahují oblasti s ochlazením;
-          kladný je součet přes celý oceán. Tento výsledek je veden odděleně, protože má jiné období, pokrytí i
+          rychlost přibývání tepla, nikoli jeho celkové množství. Mapy současně obsahují oblasti s ochlazením.
+          Kladný je součet přes celý oceán. Tento výsledek je veden odděleně, protože má jiné období, pokrytí i
           nejistotu než výpočty horních 2 000 metrů.{" "}
           <SourceLink id="DOI_10_1029_2024gl111229">
             Johnson &amp; Purkey, 2024
@@ -495,7 +495,7 @@ export function OceanHeatArticle() {
           <p>
             Globální obsah tepla v oceánu dlouhodobě roste od hladiny do hloubky 2 000 metrů. Mezi roky 1958 a 2025
             se v této vrstvě zvýšil přibližně o 460 zettajoulů, což odpovídá zvýšení její průměrné teploty asi o
-            0,16 °C. Přírůstek probíhal v horních 700 metrech i mezi 700 a 2 000 metry; v letech 1955–2023 připadalo
+            0,16 °C. Přírůstek probíhal v horních 700 metrech i mezi 700 a 2 000 metry. V letech 1955–2023 připadalo
             v průměru 4,4 zettajoulu ročně na horní a 2,0 zettajoulu ročně na hlubší z těchto vrstev. Rok 2025 dosáhl
             nejvyšší hodnoty celého záznamu a proti roku 2024 přibylo přibližně 23 zettajoulů. Jednotlivé části oceánu
             se mění různými směry a rychlostmi, ale jejich globální součet roste. Kladná celková změna pokračuje také
@@ -507,7 +507,7 @@ export function OceanHeatArticle() {
         <h2>Prameny, data a licence</h2>
         <p>
           Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez
-          předplatného. U odborných prací vede databáze zvlášť na DOI a na veřejný plný text; datové portály vedou
+          předplatného. U odborných prací vede databáze zvlášť na DOI a na veřejný plný text. Datové portály vedou
           k původnímu poskytovateli. Záznamy zdrojů tohoto článku nepoužívají kopie na Google Drivu.
         </p>
         <div className="article-source-groups">

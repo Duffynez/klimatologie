@@ -15,7 +15,7 @@ export function SnowPermafrostArticle() {
           <div>
             <dt>Vodní hodnota sněhu</dt>
             <dd>
-              Výška vody, která by vznikla roztáním sněhu na daném místě. Značí se SWE; jeden milimetr odpovídá
+              Výška vody, která by vznikla roztáním sněhu na daném místě. Značí se SWE. Jeden milimetr odpovídá
               jednomu kilogramu vody na metr čtvereční.
             </dd>
           </div>
@@ -46,10 +46,10 @@ export function SnowPermafrostArticle() {
         <p>
           Toto vymezení odpovídá způsobu, jakým jsou pozorování zveřejňována v hlavních odborných souborech. Rozsah
           sněhu nad severní polokoulí popisují <SourceLink id="DOI_10_5194_essd_7_137_2015">Estilow,
-          Young a Robinson, 2015</SourceLink>; vodní hodnotu a hmotnost sněhu{" "}
+          Young a Robinson, 2015</SourceLink> a vodní hodnotu a hmotnost sněhu{" "}
           <SourceLink id="DOI_10_1038_s41597_021_00939_2">Luojus et al., 2021</SourceLink>.
-          Teplotu permafrostu a hloubku aktivní vrstvy shromažďuje celosvětová pozorovací síť Global Terrestrial Network for Permafrost (GTN-P);
-          její databázi popsali{" "}
+          Teplotu permafrostu a hloubku aktivní vrstvy shromažďuje celosvětová pozorovací síť Global Terrestrial Network for Permafrost (GTN-P).
+          Její databázi popsali{" "}
           <SourceLink id="DOI_10_5194_essd_7_245_2015">Biskaborn et al., 2015</SourceLink>.
           Globální změnu teploty vrtů vyhodnotili{" "}
           <SourceLink id="DOI_10_1038_s41467_018_08240_4">Biskaborn et al., 2019</SourceLink> a
@@ -88,8 +88,8 @@ export function SnowPermafrostArticle() {
           />
           <figcaption>
             Měření sněhu na ledovci Sperry v americké Montaně. Kovová trubice odebírá válec přes celou sněhovou vrstvu.
-            Délka sloupce poskytne výšku sněhu, jeho zvážení množství vody. Jedno místo nereprezentuje celou krajinu;
-            sněhový profil se proto opakuje na předem určených bodech trasy. Zdroj:{" "}
+            Délka sloupce poskytne výšku sněhu, jeho zvážení množství vody. Jedno místo nereprezentuje celou krajinu.
+            Sněhový profil se proto opakuje na předem určených bodech trasy. Zdroj:{" "}
             <SourceLink id="WEB_U_S_Geological_Survey_Snow_core_measurement_04ddf039">USGS</SourceLink>, fotografie
             vlády USA, volné dílo.
           </figcaption>
@@ -127,7 +127,7 @@ export function SnowPermafrostArticle() {
         <p>
           Souvislý obraz celé severní polokoule přinesly meteorologické družice. Americká Národní správa pro oceán
           a atmosféru (NOAA) začala v říjnu 1966
-          vytvářet týdenní mapy sněhové pokrývky z viditelných snímků. Zpočátku se kreslily ručně; při převodu do
+          vytvářet týdenní mapy sněhové pokrývky z viditelných snímků. Zpočátku se kreslily ručně. Při převodu do
           digitální podoby odpovídá buňka na 60° severní šířky přibližně 191 kilometrům. Přístroje, podkladové mapy
           i pracovní postup se v dalších desetiletích měnily. Soubor
           Rutgers Global Snow Lab zachoval původní mapy a spojil je s denním systémem Interactive Multisensor Snow and
@@ -208,7 +208,7 @@ export function SnowPermafrostArticle() {
           Pasivní mikrovlnný radiometr měří přirozené záření povrchu na několika frekvencích. Sněhová zrna záření
           rozptylují a rozdíl mezi kanály souvisí s množstvím sněhu. GlobSnow v3 kombinuje kanály kolem 19 a 37 GHz
           se staniční výškou sněhu. Gigahertz vyjadřuje miliardu kmitů za sekundu. Model nejprve přizpůsobí velikost
-          zrn tak, aby co nejlépe vysvětlil záření a naměřenou výšku; nejde o přímé měření jednotlivých zrn.
+          zrn tak, aby co nejlépe vysvětlil záření a naměřenou výšku. Nejde o přímé měření jednotlivých zrn.
           Potom odhadne SWE v buňkách o rozměru 25 × 25 km. Používá přitom stálou hustotu sněhu 240 kg/m³.
           U mokrého sněhu mikrovlnný odhad nefunguje a výpočet se opírá pouze o výšku dopočítanou mezi stanicemi.
           Součet SWE násobené plochou buněk dává hmotnost sněhu.{" "}
@@ -217,7 +217,7 @@ export function SnowPermafrostArticle() {
 
         <p>
           Denní mapy se ověřovaly pomocí nezávislých sněhoměrných tras z Kanady, Finska a Ruska. Pro roky
-          1980–2016 vyšla chyba označovaná RMSE 52,6 mm SWE; u hodnot pod 150 mm činila 32,7 mm. RMSE je odmocnina
+          1980–2016 vyšla chyba označovaná RMSE 52,6 mm SWE. U hodnot pod 150 mm činila 32,7 mm. RMSE je odmocnina
           průměru čtverců rozdílů od kontrolních měření: vyjadřuje velikost odchylek a větším chybám dává větší váhu.
           Hluboký sníh bývá podhodnocen, protože mikrovlnný signál postupně přestává růst. Hustý les mění záření
           a horské oblasti se kvůli složitému terénu a nedostatku stanic vynechávají.
@@ -234,7 +234,7 @@ export function SnowPermafrostArticle() {
         <h3>Teplota ve vrtu</h3>
         <p>
           Do vrtu se spustí kabel s elektrickými teploměry v přesně změřených hloubkách. V některých vrtech zůstává
-          kabel trvale a zapisovač ukládá hodnoty několikrát denně; jinde se přenosná sonda spouští při pravidelné
+          kabel trvale a zapisovač ukládá hodnoty několikrát denně. Jinde se přenosná sonda spouští při pravidelné
           návštěvě. Po vrtání je třeba počkat, než se teplota okolní horniny vrátí k původnímu stavu. Zveřejněný údaj
           musí uvádět hloubku čidla, datum, kalibraci a odhad nejistoty. Čidlo obvykle měří elektrický odpor,
           který se převádí na teplotu pomocí kalibrace. Clow popisuje porovnání každého přístroje s referenčním
@@ -246,7 +246,7 @@ export function SnowPermafrostArticle() {
         <p>
           Pro dlouhodobé porovnání se používá roční průměr v hloubce, kde je sezónní kolísání malé. Jednotlivé vrty
           mají odlišnou hloubku, a proto Biskaborn et al. vybírali čidlo nejblíže hloubce s ročním kolísáním nejvýše
-          0,1 °C; prostřední hodnota těchto hloubek byla 12 metrů. V každém vrtu pak porovnávali stále stejnou hloubku. Pro trend
+          0,1 °C. Prostřední hodnota těchto hloubek byla 12 metrů. V každém vrtu pak porovnávali stále stejnou hloubku. Pro trend
           požadovali nejméně pět ročních průměrů, alespoň jeden z let 2007–2009 a jeden z let 2015–2016.
           Kratší záznamy někdy prodloužili vypočteným trendem o jeden až tři roky. Blízké vrty seskupili,
           zohlednili kvalitu záznamu a deset geografických oblastí vážili podle jejich plochy permafrostu.{" "}
@@ -256,8 +256,8 @@ export function SnowPermafrostArticle() {
         <p>
           Kalibrace určuje přesnost jednotlivé teploty, stálost přístroje přesnost její změny. V globálním souboru
           uváděli autoři přesnost čidel od 0,01 do 0,25 °C. Stálá kalibrační odchylka se při rozdílu dvou teplot
-          odečte, měnící se chyba čidla však může trend zkreslit. Přenosné sondy lze znovu kontrolovat v lázni;
-          čidla trvale zamrzlá ve vrtu se kontrolují hůře a podezřelá měření se vyřazují.{" "}
+          odečte, měnící se chyba čidla však může trend zkreslit. Přenosné sondy lze znovu kontrolovat v lázni.
+          Čidla trvale zamrzlá ve vrtu se kontrolují hůře a podezřelá měření se vyřazují.{" "}
           <SourceLink id="DOI_10_1038_s41467_018_08240_4">Biskaborn et al., 2019, kontrola kvality</SourceLink>
         </p>
 
@@ -268,7 +268,7 @@ export function SnowPermafrostArticle() {
           návštěvy, jednorázové měření může roční maximum podhodnotit. Teplotní čidla nebo mrazové trubice naopak
           umožňují určit okamžik a hloubku maxima během celé sezóny, ale nemusí měřit přesně stejný objem půdy jako
           sonda. V běžné síti 100 × 100 metrů se měří 121 bodů a v každém se vpich dvakrát až třikrát opakuje.
-          Přesnost jednotlivého měření sondou je přibližně 2 cm; průměrování více bodů omezuje náhodné rozdíly,
+          Přesnost jednotlivého měření sondou je přibližně 2 cm. Průměrování více bodů omezuje náhodné rozdíly,
           neodstraní však společnou chybu způsobenou například příliš časnou návštěvou.{" "}
           <SourceLink id="DOI_10_1038_s43247_026_03824_1">Streletskiy et al., 2026, terénní metody</SourceLink>
         </p>
@@ -321,7 +321,7 @@ export function SnowPermafrostArticle() {
             <p>
               Produkt popsaný studií pokrývá roky 1979–2018 na nezaledněné pevnině severně od 40° mimo
               horské oblasti. Odkazovaný archiv PANGAEA poskytuje měsíční mapy pro roky 1980–2018 a jejich
-              opravenou variantu pro leden až květen. Denní mapy jsou odlišný výstup; jejich archiv odkazuje
+              opravenou variantu pro leden až květen. Denní mapy jsou odlišný výstup. Jejich archiv odkazuje
               metodická studie Luojuse et al.
             </p>
             <p>
@@ -361,7 +361,7 @@ export function SnowPermafrostArticle() {
             <h3>Circumpolar Active Layer Monitoring</h3>
             <p>
               Síť od roku 1991 soustřeďuje měření největší roční hloubky rozmrzání. Katalog NSIDC odkazuje na
-              provozovatele dat; skutečné pokrytí je nutné kontrolovat pro každou lokalitu. Ke studii z roku 2026
+              provozovatele dat. Skutečné pokrytí je nutné kontrolovat pro každou lokalitu. Ke studii z roku 2026
               je zveřejněn také doprovodný soubor CSV: 3 500 řádků pro 140 kódů lokalit a roky 2000–2024, včetně
               prázdných hodnot. Je to výběr pro grafy a mapy, nikoli úplný export všech 156 míst analyzovaných studií.
               Sloupec ALT udává tloušťku aktivní vrstvy v centimetrech, TREND její změnu v centimetrech za rok
@@ -405,7 +405,7 @@ export function SnowPermafrostArticle() {
           vytvořila umělé přírůstky v období nástupu sněhu, zejména od září do listopadu. Porovnali záznam s výpočtem
           sněhu řízeným třemi meteorologickými rekonstrukcemi a s nezávislým družicovým souborem japonské agentury
           JAXA. Pokles prahu, od kterého systém sníh rozpozná, zjistili od září do února. Autoři navrhli upravené
-          odhady trendů; neznamená to, že byl automaticky opraven celý veřejný archiv NOAA. Na jaře jejich model
+          odhady trendů. Neznamená to, že byl automaticky opraven celý veřejný archiv NOAA. Na jaře jejich model
           hůře vystihuje tání, takže tato práce sama neověřuje přesnost květnových a červnových trendů níže.{" "}
           <SourceLink id="DOI_10_1126_sciadv_adv7926">Elias Chereque et al., 2025</SourceLink>
         </p>
@@ -453,10 +453,10 @@ export function SnowPermafrostArticle() {
             Standardizované odchylky rozsahu sněhu v květnu (a) a červnu (b) v letech 1967–2025. Nula je průměr let
             1991–2020 a svislá osa vyjadřuje, kolikrát je rozdíl velký vůči běžnému kolísání v tomto období
             (směrodatné odchylce), nikoli plochu v km². Černá patří
-            severoamerické a červená euroasijské části Arktidy; kolečka jsou jednotlivé roky, silné čáry pětileté
+            severoamerické a červená euroasijské části Arktidy. Kolečka jsou jednotlivé roky, silné čáry pětileté
             klouzavé průměry a plný bod rok 2025. Zdroj:{" "}
-            <SourceLink id="WEB_NOAA_Terrestrial_Snow_Cover_NOAA_Arctic_33ece5d4">Mudryk et al., NOAA Arctic Report Card 2025, obr. 1</SourceLink>;
-            převzato bez úprav podle <SourceLink id="WEB_NOAA_Using_Content_FAQ">podmínek použití obsahu NOAA</SourceLink>.
+            <SourceLink id="WEB_NOAA_Terrestrial_Snow_Cover_NOAA_Arctic_33ece5d4">Mudryk et al., NOAA Arctic Report Card 2025, obr. 1</SourceLink>.
+            Převzato bez úprav podle <SourceLink id="WEB_NOAA_Using_Content_FAQ">podmínek použití obsahu NOAA</SourceLink>.
           </figcaption>
         </figure>
 
@@ -470,9 +470,9 @@ export function SnowPermafrostArticle() {
         <h3>Hmotnost sněhu během jara</h3>
         <p>
           Podle Arctic Report Card byla dubnová hmotnost sněhu v roce 2025 nad průměrem 1991–2020 v severoamerické
-          i euroasijské Arktidě. V červnu už rozsah zasněžené plochy klesl pod průměr; z toho však neplyne, že na
+          i euroasijské Arktidě. V červnu už rozsah zasněžené plochy klesl pod průměr. Z toho však neplyne, že na
           všech zbývajících zasněžených místech bylo málo vody. Z trendů hmotnosti za období 1981–2025 vychází
-          dubnový pokles přibližně o 3 %, který není statisticky průkazný; květnový činí 13 % a červnový 33 %.{" "}
+          dubnový pokles přibližně o 3 %, který není statisticky průkazný. Květnový činí 13 % a červnový 33 %.{" "}
           <SourceLink id="DOI_10_25923_cfhv_c239">Mudryk et al., 2025</SourceLink>
         </p>
 
@@ -502,9 +502,9 @@ export function SnowPermafrostArticle() {
             v letech 1981–2025. Svislá osa je standardizovaná odchylka od průměru 1991–2020, definovaná u předchozího
             grafu. Kolečka jsou roční hodnoty, silné čáry pětileté průměry a barevná pásma rozpětí dostupných
             datových produktů, nikoli úplný interval nejistoty. Plný bod označuje rok 2025. Graf ukazuje
-            duben; květnová a červnová procenta v textu pocházejí z odděleného měsíčního vyhodnocení stejné zprávy.
-            Zdroj: <SourceLink id="WEB_NOAA_Terrestrial_Snow_Cover_NOAA_Arctic_33ece5d4">Mudryk et al., NOAA Arctic Report Card 2025, obr. 4</SourceLink>;
-            převzato bez úprav podle <SourceLink id="WEB_NOAA_Using_Content_FAQ">podmínek NOAA</SourceLink>.
+            duben. Květnová a červnová procenta v textu pocházejí z odděleného měsíčního vyhodnocení stejné zprávy.
+            Zdroj: <SourceLink id="WEB_NOAA_Terrestrial_Snow_Cover_NOAA_Arctic_33ece5d4">Mudryk et al., NOAA Arctic Report Card 2025, obr. 4</SourceLink>.
+            Převzato bez úprav podle <SourceLink id="WEB_NOAA_Using_Content_FAQ">podmínek NOAA</SourceLink>.
           </figcaption>
         </figure>
 
@@ -532,7 +532,7 @@ export function SnowPermafrostArticle() {
         <p>
           V souvislém arktickém permafrostu, který zabírá více než 90 % plochy daného území, vyšlo oteplování
           0,39 ± 0,15 °C za desetiletí. V oblastech s méně souvislým permafrostem činilo 0,20 ± 0,10 °C a v horách
-          0,19 ± 0,05 °C za desetiletí. Pro Antarktidu je záznam kratší a pokrytí řídké; autoři tam rozdíl teplot
+          0,19 ± 0,05 °C za desetiletí. Pro Antarktidu je záznam kratší a pokrytí řídké. Autoři tam rozdíl teplot
           svým statistickým testem nepotvrdili. V pěti vrtech během sledování teplota v hloubce 10 metrů přesáhla
           0 °C. Takové měření dokládá změnu v dané hloubce, nikoli rozmrznutí celého tělesa permafrostu.{" "}
           <SourceLink id="DOI_10_1038_s41467_018_08240_4">Biskaborn et al., 2019</SourceLink>
@@ -552,8 +552,8 @@ export function SnowPermafrostArticle() {
           </div>
           <figcaption>
             Měření sítě GTN-P. Mapy (a) a (b) ukazují průměrnou roční teplotu půdy v letech 2014–2016 na severní
-            polokouli a v Antarktidě ve 129 vrtech; barvu hodnoty udává čtverec u každého vrtu. Mapy (c) a (d)
-            ukazují trend ze 123 vrtů za období 2007–2016 v °C za desetiletí; barvu změny udává kolečko.
+            polokouli a v Antarktidě ve 129 vrtech. Barvu hodnoty udává čtverec u každého vrtu. Mapy (c) a (d)
+            ukazují trend ze 123 vrtů za období 2007–2016 v °C za desetiletí. Barvu změny udává kolečko.
             Modré pozadí vyznačuje souvislý a fialové méně souvislý
             permafrost, nikoli teplotu naměřenou ve vrtu. Zdroj:{" "}
             <SourceLink id="DOI_10_1038_s41467_018_08240_4">Biskaborn et al., 2019, obr. 2</SourceLink>,
@@ -566,7 +566,7 @@ export function SnowPermafrostArticle() {
         <p>
           Aljašské vrty pokračují za konec globálního vyhodnocení. V roce 2024 zaznamenalo 9 z 20 dlouhodobě
           sledovaných míst nejvyšší teplotu za celou dobu svého měření. Ve studeném permafrostu severní Aljašky se teplota v
-          posledních čtyřech desetiletích zvyšovala o 0,3 až 0,7 °C za desetiletí; v teplejším permafrostu vnitrozemí o
+          posledních čtyřech desetiletích zvyšovala o 0,3 až 0,7 °C za desetiletí. V teplejším permafrostu vnitrozemí se zvyšovala o
           0,02 až 0,3 °C za desetiletí. Jde o regionální měření v hloubce 20 metrů na severu a 15 metrů ve vnitrozemí,
           nikoli o novou globální hodnotu.{" "}
           <SourceLink id="WEB_NOAA_Arctic_Terrestrial_Carbon_Cycling_NOAA_Arctic_4138f338">NOAA Arctic Report Card 2024</SourceLink>
@@ -588,11 +588,11 @@ export function SnowPermafrostArticle() {
             Nahoře jsou polohy dlouhodobých vrtů na Aljašce: žluté trojúhelníky označují sever, oranžové vnitrozemí.
             Barvy podkladu rozlišují, jak souvisle je permafrost v krajině zastoupen. Horní část grafu pod mapou
             ukazuje průměrnou roční teplotu v hloubce 15 m ve vnitrozemí (Interior), dolní část v hloubce 20 m
-            na severu (North Slope); každá barva křivky patří jednomu vrtu. Vodorovná osa
+            na severu (North Slope). Každá barva křivky patří jednomu vrtu. Vodorovná osa
             zachycuje roky přibližně 1978–2024 a svislá teplotu ve °C. Zápornější hodnota znamená chladnější půdu. Různý
             začátek křivek ukazuje, že vrty nemají shodně dlouhý záznam. Zdroj:{" "}
-            <SourceLink id="WEB_NOAA_Arctic_Terrestrial_Carbon_Cycling_NOAA_Arctic_4138f338">NOAA Arctic Report Card 2024</SourceLink>;
-            graf připravila Christina Shintani. Převzato bez úprav podle{" "}
+            <SourceLink id="WEB_NOAA_Arctic_Terrestrial_Carbon_Cycling_NOAA_Arctic_4138f338">NOAA Arctic Report Card 2024</SourceLink>.
+            Graf připravila Christina Shintani. Převzato bez úprav podle{" "}
             <SourceLink id="WEB_NOAA_Using_Content_FAQ">podmínek NOAA</SourceLink>.
           </figcaption>
         </figure>
@@ -608,7 +608,7 @@ export function SnowPermafrostArticle() {
         <p>
           Novější <SourceLink id="DOI_10_1038_s43247_026_03824_1">studie Streletského a kolegů z roku 2026</SourceLink>{" "}
           analyzuje období 2000–2024. Z 316 registrovaných míst vybrala 156 s alespoň deseti roky měření a návštěvou
-          nejméně jednou v letech 2019–2024; vyloučila místa narušená například požárem nebo se vznikající trvale
+          nejméně jednou v letech 2019–2024. Vyloučila místa narušená například požárem nebo se vznikající trvale
           nezamrzlou vrstvou. Statisticky průkazné zvětšení aktivní vrstvy zjistila u 55 % arktických a 38 %
           antarktických míst, v evropských a asijských vysokých horách u více než 90 %. Jde o podíly sledovaných
           lokalit, nikoli procenta rozlohy permafrostu. Prostorové mezery přetrvávají a po roce 2022 výrazně ubylo

@@ -51,7 +51,7 @@ export function IceSheetsArticle() {
 
         <p>
           Hmotnostní bilance je součet všech přírůstků a úbytků během zvoleného období. Sníh přidává hmotnost na
-          povrchu; voda odtékající z příkrovu a led překračující linii ukotvení ji z pevninské části odvádějí. Metoda
+          povrchu. Voda odtékající z příkrovu a led překračující linii ukotvení ji z pevninské části odvádějí. Metoda
           označovaná jako vstup–výstup tyto složky odhaduje odděleně. Výškoměry a gravitační družice naproti tomu
           sledují jejich výsledný součet. Toto rozdělení popisují metodické přehledy{" "}
           <SourceLink id="DOI_10_1007_s10712_023_09795_8">Otosaka et al., 2023</SourceLink> a{" "}
@@ -68,10 +68,10 @@ export function IceSheetsArticle() {
 
         <p>
           Do hlavního výsledku se započítává především led spočívající na pevnině. Za linií ukotvení pokračuje část
-          antarktického ledu jako plovoucí šelf; ten se sleduje samostatně a není součástí zde uváděné změny hmotnosti
+          antarktického ledu jako plovoucí šelf. Ten se sleduje samostatně a není součástí zde uváděné změny hmotnosti
           pevninského příkrovu. Zvláštní pozornost vyžadují také menší ledovce na okrajích Grónska a Antarktidy. Některá
           gravitační měření je kvůli hrubšímu prostorovému rozlišení zachytí spolu s příkrovem, zatímco výškové
-          výpočty je mohou oddělit. IMBIE tento rozdíl výslovně testovala; po odečtení okrajových ledovců se její odhad
+          výpočty je mohou oddělit. IMBIE tento rozdíl výslovně testovala. Po odečtení okrajových ledovců se její odhad
           úbytku ve vydání 1992–2020 změnil o 4,1 % v Grónsku a o 3,3 % v Antarktidě, tedy méně než uváděná
           nejistota výsledku. Šlo o test vlivu okrajových ledovců, nikoli o jejich úplné oddělení v hlavním souboru.{" "}
           <SourceLink id="DOI_10_5194_essd_15_1597_2023">Otosaka et al., 2023, oddíl 3</SourceLink>
@@ -93,7 +93,7 @@ export function IceSheetsArticle() {
             Změna hmotnosti pevninského ledu od dubna 2002 do března 2025 podle družic GRACE a GRACE-FO. Barva
             vyjadřuje změnu hmotnosti přepočtenou na metry vodního ekvivalentu: červená označuje úbytek, modrá
             přírůstek. Vodní ekvivalent je tloušťka vrstvy vody o stejné hmotnosti jako změna sněhu a ledu.
-            Malý graf má na vodorovné ose roky, na svislé změnu hmotnosti v Gt; žlutá křivka ukazuje Grónsko,
+            Malý graf má na vodorovné ose roky, na svislé změnu hmotnosti v Gt. Žlutá křivka ukazuje Grónsko,
             modrá Antarktidu. Šedé plochy kolem Antarktidy jsou plovoucí ledové šelfy. Vizualizace používá pouze
             gravitační měření a má hrubší prostorové rozlišení než fotografie nebo výšková mapa. Zdroj a kredit:{" "}
             <SourceLink id="WEB_NASA_NASA_Scientific_Visualization_Studio_GRACE_and_G_1879a9f3">NASA a JPL/Caltech, 2025</SourceLink>.
@@ -126,10 +126,10 @@ export function IceSheetsArticle() {
         </p>
 
         <p>
-          Třetí postup umožnila dvojice družic GRACE vypuštěná v roce 2002; název označuje experiment zaměřený na
+          Třetí postup umožnila dvojice družic GRACE vypuštěná v roce 2002. Název označuje experiment zaměřený na
           gravitační pole a klima. Isabella Velicogna a John Wahr zpracovali v roce 2006 celou Antarktidu z 34
-          měsíčních gravitačních map pořízených mezi dubnem 2002 a srpnem 2005. Původní GRACE měřila do roku 2017;
-          pokračující mise GRACE-FO poskytuje data od června 2018.{" "}
+          měsíčních gravitačních map pořízených mezi dubnem 2002 a srpnem 2005. Původní GRACE měřila do roku 2017.
+          Pokračující mise GRACE-FO poskytuje data od června 2018.{" "}
           <SourceLink id="DOI_10_1126_science_1123785">Velicogna a Wahr, 2006</SourceLink> a{" "}
           <SourceLink id="WEB_NASA_Overview_Mission_GRACE_FO_7d1519d7">NASA/JPL: přehled misí</SourceLink>
         </p>
@@ -137,7 +137,7 @@ export function IceSheetsArticle() {
         <p>
           Jednotlivé týmy zpočátku publikovaly výsledky s různými hranicemi, obdobími a korekcemi. Projekt IMBIE je
           poprvé převedl na společné zadání a v roce 2012 spojil výškoměrná, gravitační a vstupně-výstupní měření za
-          roky 1992–2011. Samostatná vyhodnocení Antarktidy a Grónska následovala v letech 2018 a 2020; společný
+          roky 1992–2011. Samostatná vyhodnocení Antarktidy a Grónska následovala v letech 2018 a 2020. Společný
           soubor vydaný v roce 2023 prodloužil záznam do konce roku 2020. <SourceLink id="DOI_10_1126_science_1228102">Shepherd et al., 2012</SourceLink>,{" "}
           <SourceLink id="DOI_10_1038_s41586_018_0179_y">IMBIE Team, 2018</SourceLink>,{" "}
           <SourceLink id="DOI_10_1038_s41586_019_1855_2">IMBIE Team, 2020</SourceLink> a{" "}
@@ -147,7 +147,7 @@ export function IceSheetsArticle() {
         <p>
           V září 2026 vyšlo další vyhodnocení IMBIE. Sahá do roku 2023 a pomocí starších snímků družic Landsat
           rozšiřuje začátek odhadu do roku 1972 pro Grónsko a 1979 pro Antarktidu. Tyto rané části stojí na metodě
-          vstup–výstup a na doplňování neúplného měření rychlosti ledu; tři družicové postupy jsou společně
+          vstup–výstup a na doplňování neúplného měření rychlosti ledu. Tři družicové postupy jsou společně
           k dispozici až od roku 2002. <SourceLink id="DOI_10_1038_s41597_026_08088_0">Otosaka et al., 2026, vstupní data</SourceLink>
         </p>
 
@@ -157,7 +157,7 @@ export function IceSheetsArticle() {
           Družicový výškoměr vysílá k povrchu radarový nebo laserový impuls a měří dobu jeho návratu. Z polohy družice
           a této doby se určí výška bodu na ledu. Opakované průlety ukážou, kde se povrch mezi dvěma daty zvýšil nebo
           snížil. Jednotlivé profily se spojí do mapy a chybějící místa se odhadnou podle okolních měření. Radar může
-          pronikat do sněhu různě hluboko, zatímco laser častěji ztrácí měření pod mraky; zpracování proto sleduje
+          pronikat do sněhu různě hluboko, zatímco laser častěji ztrácí měření pod mraky. Zpracování proto sleduje
           vlastnosti odrazu i rozdíly mezi družicemi. <SourceLink id="DOI_10_1007_s10712_023_09795_8">Otosaka et al., 2023</SourceLink> a{" "}
           <SourceLink id="DOI_10_5194_essd_18_1729_2026">Nilsson a Gardner, 2026</SourceLink>
         </p>
@@ -199,8 +199,8 @@ export function IceSheetsArticle() {
             Princip gravitačního měření ve čtyřech okamžicích přeletu. Družice udržují přibližně stejnou dráhu, ale
             jejich vzájemná vzdálenost se při průletu nad místem s větší hmotností nejprve zvětší a potom zmenší. Z
             mnoha takových změn vzniká měsíční mapa. Obrázek vysvětluje měření vzdálenosti, nikoli velikost změny
-            grónského nebo antarktického ledu. Zdroj: <SourceLink id="WEB_NASA_How_GRACE_FO_Measures_Gravity_GRACE_FO_3fe022bf">NASA/JPL</SourceLink>;
-            kredit podle zdrojové stránky: NASA.
+            grónského nebo antarktického ledu. Zdroj: <SourceLink id="WEB_NASA_How_GRACE_FO_Measures_Gravity_GRACE_FO_3fe022bf">NASA/JPL</SourceLink>.
+            Kredit podle zdrojové stránky: NASA.
           </figcaption>
         </figure>
 
@@ -214,7 +214,7 @@ export function IceSheetsArticle() {
 
         <p>
           Měsíční gravitační řešení rozezná změny na plochách o rozměru stovek kilometrů. Při vyhlazení může část
-          signálu přesáhnout hranici příkrovu nebo se naopak ztratit; tato vlastnost se označuje jako únik signálu.
+          signálu přesáhnout hranici příkrovu nebo se naopak ztratit. Tato vlastnost se označuje jako únik signálu.
           Týmy jej opravují různými maskami a výpočty soustředěné hmoty. GRACE proto výborně určuje celkovou změnu
           velkého území, ale nedává přesnou hmotnost jednotlivého údolního ledovce. Rozsah rozdílů mezi šestnácti
           gravitačními řešeními vyhodnotili <SourceLink id="DOI_10_5194_essd_15_1597_2023">Otosaka et al., 2023</SourceLink>.
@@ -223,11 +223,11 @@ export function IceSheetsArticle() {
         <h3>Vstup a výstup ledu</h3>
         <p>
           Třetí postup sestavuje účet přírůstků a úbytků. Množství ledu překračujícího linii ukotvení se vypočítá z
-          jeho rychlosti a tloušťky na profilech napříč proudem. Rychlost poskytují opakované radarové a optické snímky;
-          tloušťku poskytuje radar z letadel. Kde měření chybí, používají se mapy podloží odvozené kombinací měření
+          jeho rychlosti a tloušťky na profilech napříč proudem. Rychlost poskytují opakované radarové a optické snímky.
+          Tloušťku poskytuje radar z letadel. Kde měření chybí, používají se mapy podloží odvozené kombinací měření
           a výpočtu toku ledu. Součet všech profilů udává výstup ledu z pevninské
-          části. Základ metody popsali <SourceLink id="DOI_10_1126_science_1073888">Rignot a Thomas, 2002</SourceLink>;
-          novější antarktický výpočet zveřejnili <SourceLink id="DOI_10_1073_pnas_1812883116">Rignot et al., 2019</SourceLink>.
+          části. Základ metody popsali <SourceLink id="DOI_10_1126_science_1073888">Rignot a Thomas, 2002</SourceLink>.
+          Novější antarktický výpočet zveřejnili <SourceLink id="DOI_10_1073_pnas_1812883116">Rignot et al., 2019</SourceLink>.
         </p>
 
         <p>
@@ -236,7 +236,7 @@ export function IceSheetsArticle() {
           ukáže obě části účtu samostatně, zároveň však dědí nejistotu modelu sněhu, tloušťky i rychlosti ledu. Pro
           Grónsko jej zpracovali <SourceLink id="DOI_10_1073_pnas_1904242116">Mouginot et al., 2019</SourceLink>.
           Jejich výpočet například předpokládá, že povrchová rychlost u výstupního profilu odpovídá průměrné
-          rychlosti v celé tloušťce ledu. Měření toku není úplné všude; pro část ledovců se musí doplnit odhad.
+          rychlosti v celé tloušťce ledu. Měření toku není úplné všude. Pro část ledovců se musí doplnit odhad.
         </p>
 
         <h3>Jak IMBIE spojuje výsledky</h3>
@@ -245,7 +245,7 @@ export function IceSheetsArticle() {
           Z dodaných záznamů kumulované hmotnosti vypočítá rychlost změny v posuvných tříletých úsecích,
           aby mezi sebou šly porovnat výsledky s odlišným
           časovým rozlišením. Potom samostatně spojí všechna výšková, všechna gravitační a všechna vstupně-výstupní
-          řešení. Teprve tři výsledky měřicích skupin se spojí do konečného odhadu; skupina s mnoha podobnými výpočty
+          řešení. Teprve tři výsledky měřicích skupin se spojí do konečného odhadu. Skupina s mnoha podobnými výpočty
           tak automaticky nepřeváží metodu zastoupenou jedinou prací. Při obou spojeních mají přesnější odhady větší
           váhu. Převod na měsíční body sám nepřidává nové pozorování do let, v nichž byl původní odhad řidší.{" "}
           <SourceLink id="DOI_10_5194_essd_15_1597_2023">Otosaka et al., 2023, oddíl 3</SourceLink>
@@ -257,7 +257,7 @@ export function IceSheetsArticle() {
           korekci pohybu zemského pláště a únik signálu přes hranice. U vstupně-výstupního postupu pochází z měření toku
           ledu a modelovaného povrchového účtu. Výsledný interval tedy nevyjadřuje přesnost jednoho čidla, ale celý
           postup od družicového měření po kontinentální součet. Rozdíly mezi metodami se pak porovnávají s touto
-          nejistotou jako samostatná kontrola; jejich rozptyl není automaticky přičten k chybě výsledku. Údaje se
+          nejistotou jako samostatná kontrola. Jejich rozptyl není automaticky přičten k chybě výsledku. Údaje se
           symbolem ± přebíráme v podobě uvedené autory, nepřevádíme je na 95% intervaly spolehlivosti.{" "}
           <SourceLink id="DOI_10_5194_essd_15_1597_2023">Otosaka et al., 2023, rovnice 3–7 a oddíl 4</SourceLink>
         </p>
@@ -295,7 +295,7 @@ export function IceSheetsArticle() {
               Nové vydání spojuje 42 odhadů ze 27 družicových misí. Deset tabulek CSV obsahuje celkovou bilanci
               i její rozdělení na změny na povrchu a odtok ledu.
               Výsledky jsou pro Grónsko, Antarktidu a její tři oblasti, vždy v gigatunách a v milimetrech hladiny.
-              Záznam dat uvádí začátek 1. července 1971 pro Grónsko; roční výsledky studie začínají rokem 1972.
+              Záznam dat uvádí začátek 1. července 1971 pro Grónsko. Roční výsledky studie začínají rokem 1972.
               Antarktida začíná lednem 1979, oba záznamy končí prosincem 2023.
             </p>
             <p>
@@ -315,11 +315,11 @@ export function IceSheetsArticle() {
             <h3>NASA GRACE a GRACE-FO 2002–2025</h3>
             <p>
               Zde použitá vizualizace NASA zachycuje změny hmotnosti od dubna 2002 do března 2025, odvozené z
-              dvojic gravitačních družic. Původní měření GRACE končí v roce 2017 a GRACE-FO navazuje od června 2018;
-              mezera mezi misemi zůstává v datech označená. Obrázky a animace lze stáhnout přímo, vědecké soubory jsou
+              dvojic gravitačních družic. Původní měření GRACE končí v roce 2017 a GRACE-FO navazuje od června 2018.
+              Mezera mezi misemi zůstává v datech označená. Obrázky a animace lze stáhnout přímo, vědecké soubory jsou
               dostupné po bezplatné registraci NASA Earthdata. Datový produkt laboratoře JPL ve verzi RL06.3Mv04
               udává změnu jako výšku vrstvy vody. Jeho půlstupňová výstupní síť je jemnější než skutečné rozlišení
-              gravitačního měření; sousední body nejsou samostatně změřené ledovce. Tato datová verze není
+              gravitačního měření. Sousední body nejsou samostatně změřené ledovce. Tato datová verze není
               novým vydáním zde převzatého obrázku.
             </p>
             <p className="article-data-item__links">
@@ -401,10 +401,10 @@ export function IceSheetsArticle() {
             Srovnání průměrné roční změny hmotnosti ve třech skupinách měření ve vydání IMBIE z roku 2023. Panel a zachycuje roky
             2002–2019 pro celou Antarktidu (AIS), západní Antarktidu (WAIS), východní Antarktidu (EAIS) a Antarktický
             poloostrov (APIS). Panel b zachycuje Grónsko (GrIS) v letech 2003–2018. Růžová označuje družicové
-            výškoměry, zelená gravitační měření a modrá metodu vstup–výstup; úsečky vyjadřují nejistotu. Šedý obdélník
+            výškoměry, zelená gravitační měření a modrá metodu vstup–výstup. Úsečky vyjadřují nejistotu. Šedý obdélník
             je spojený odhad IMBIE s nejistotou spočtenou z chyb vstupních odhadů. Hodnoty pod nulou znamenají úbytek. Zdroj: obr. 3 v práci{" "}
-            <SourceLink id="DOI_10_5194_essd_15_1597_2023">Otosaka et al., 2023</SourceLink>;
-            licence CC BY 4.0, obrázek převzat beze změny.
+            <SourceLink id="DOI_10_5194_essd_15_1597_2023">Otosaka et al., 2023</SourceLink>.
+            Licence CC BY 4.0, obrázek převzat beze změny.
           </figcaption>
         </figure>
 
@@ -451,7 +451,7 @@ export function IceSheetsArticle() {
         <p>
           Antarktida ztratila ve stejném období 2 671 ± 530 Gt, což odpovídá 7,4 ± 1,5 mm globální hladiny. Západní
           Antarktida vykazovala průměrný úbytek 82 ± 9 Gt za rok a Antarktický poloostrov 13 ± 5 Gt za rok. Pro
-          východní Antarktidu vychází malý přírůstek 3 ± 15 Gt za rok; interval nejistoty je však větší než samotný
+          východní Antarktidu vychází malý přírůstek 3 ± 15 Gt za rok. Interval nejistoty je však větší než samotný
           odhad a zahrnuje přírůstek i úbytek. Přesné pozorování proto zní, že znaménko malé změny východní Antarktidy
           není pro celé období spolehlivě rozlišeno.{" "}
           <SourceLink id="DOI_10_5194_essd_15_1597_2023">Otosaka et al., 2023, tabulka 2</SourceLink>
@@ -483,11 +483,11 @@ export function IceSheetsArticle() {
           <figcaption>
             Kumulovaná změna hmotnosti od ledna 1992 do prosince 2020. Modrá křivka ukazuje Grónsko, fialová celou
             Antarktidu, zelená západní Antarktidu, žlutá východní Antarktidu a červená Antarktický poloostrov. Levá osa
-            je změna v gigatunách, pravá odpovídající příspěvek ke globální střední hladině moře; barevná pole
+            je změna v gigatunách, pravá odpovídající příspěvek ke globální střední hladině moře. Barevná pole
             vyjadřují nejistotu vypočtenou skládáním chyb v čase. Plné čáry jsou vyhodnocení z roku 2023,
-            čárkované starší vydání IMBIE; graf neobsahuje revizi publikovanou v roce 2026. Zdroj:
-            obr. 4 v práci <SourceLink id="DOI_10_5194_essd_15_1597_2023">Otosaka et al., 2023</SourceLink>;
-            licence CC BY 4.0, obrázek převzat beze změny.
+            čárkované starší vydání IMBIE. Graf neobsahuje revizi publikovanou v roce 2026. Zdroj:
+            obr. 4 v práci <SourceLink id="DOI_10_5194_essd_15_1597_2023">Otosaka et al., 2023</SourceLink>.
+            Licence CC BY 4.0, obrázek převzat beze změny.
           </figcaption>
         </figure>
 
@@ -496,9 +496,9 @@ export function IceSheetsArticle() {
           Vyhodnocení zveřejněné v září 2026 uvádí pro společné období 1979–2023 úbytek 11 309 ± 565 Gt,
           odpovídající 31,4 ± 1,6 mm globální hladiny. Obsahuje delší období i změněné výpočty. Pro stejné roky
           1992–2020 jako ve starším vydání vychází v Grónsku průměrný úbytek 180 ± 12 Gt za rok oproti dřívějším
-          169 ± 16; v Antarktidě 140 ± 13 oproti 92 ± 18 Gt za rok. Antarktická revize tedy přesahuje uvedené
-          nejistoty. Autoři ji spojují zejména s aktualizovanými výškovými odhady na Antarktickém poloostrově;
-          změnila se také váha vstupních výsledků. <SourceLink id="DOI_10_1038_s41597_026_08088_0">Otosaka et al., 2026, srovnání s předchozím vydáním</SourceLink>
+          169 ± 16, v Antarktidě pak 140 ± 13 oproti 92 ± 18 Gt za rok. Antarktická revize tedy přesahuje uvedené
+          nejistoty. Autoři ji spojují zejména s aktualizovanými výškovými odhady na Antarktickém poloostrově.
+          Změnila se také váha vstupních výsledků. <SourceLink id="DOI_10_1038_s41597_026_08088_0">Otosaka et al., 2026, srovnání s předchozím vydáním</SourceLink>
         </p>
         <p>
           Úbytek neroste každý rok. Pro roky 2020–2023 nové vydání udává v Grónsku průměrnou ztrátu 199 ± 29 Gt
@@ -522,7 +522,7 @@ export function IceSheetsArticle() {
           rozlišují za roky 1992–2023 příkrov s průměrným úbytkem 160 ± 17 Gt za rok a okolní ledovce s úbytkem
           23 ± 5 Gt za rok. Pro porovnání s gravitací používají stejné území včetně okolních ledovců a stejné roky
           2002–2023: výškoměry dávají úbytek 246 ± 23 Gt za rok, gravitační měření 267 ± 20 Gt za rok. Rozdíl leží
-          v uvedených nejistotách; takové srovnání je výstižnější než vedle sebe položit součty za odlišná období.{" "}
+          v uvedených nejistotách. Takové srovnání je výstižnější než vedle sebe položit součty za odlišná období.{" "}
           <SourceLink id="DOI_10_5194_essd_18_1729_2026">Nilsson a Gardner, 2026, oddíl 5.2 a tabulka 3</SourceLink>
         </p>
 
@@ -532,7 +532,7 @@ export function IceSheetsArticle() {
             Grónsko i Antarktida za sledovaná desetiletí ztratily hmotnost. Aktualizované vyhodnocení pro roky
             1979–2023 udává společný úbytek přibližně 11 310 gigatun, což odpovídá asi 31 milimetrům globální
             střední hladiny moře. Ztráty jsou nerovnoměrné v čase i prostoru. V Antarktidě se soustřeďují hlavně
-            na západě a na Antarktickém poloostrově; východní část v letech 2020–2023 hmotnost získávala.
+            na západě a na Antarktickém poloostrově. Východní část v letech 2020–2023 hmotnost získávala.
             Poslední čtyři roky tohoto vyhodnocení vykazují u obou příkrovů menší průměrný úbytek než předchozí
             desetiletí. Gravitační záznam od dubna 2002 do března 2025 jako celek ukazuje průměrnou ztrátu
             přibližně 264 gigatun ročně v Grónsku a 135 gigatun ročně v Antarktidě.
@@ -622,7 +622,7 @@ export function IceSheetsArticle() {
               <li>
                 <SourceLink id="WEB_NASA_Ice_Sheets_Earth_Indicator_NASA_Science_77404de9">NASA Ice Sheets Indicator</SourceLink> a{" "}
                 <SourceLink id="DOI_10_5067_temsc_3jc634">JPL RL06.3Mv04</SourceLink>:
-                současný gravitační záznam a měsíční vědecké soubory; stažení dat vyžaduje bezplatný účet Earthdata.
+                současný gravitační záznam a měsíční vědecké soubory. Stažení dat vyžaduje bezplatný účet Earthdata.
               </li>
               <li>
                 <SourceLink id="DOI_10_24381_cds_38b9366c">Copernicus, gravitační bilance v5</SourceLink>:
@@ -646,8 +646,8 @@ export function IceSheetsArticle() {
               </li>
               <li>
                 Podmínky dalšího použití materiálů NASA shrnuje{" "}
-                <SourceLink id="WEB_NASA_Guidelines_for_using_NASA_Images_and_Media_Guide_e6f9e9e4">NASA Images and Media</SourceLink>;
-                použití zde nevyjadřuje podporu webu ze strany NASA nebo JPL.
+                <SourceLink id="WEB_NASA_Guidelines_for_using_NASA_Images_and_Media_Guide_e6f9e9e4">NASA Images and Media</SourceLink>.
+                Použití zde nevyjadřuje podporu webu ze strany NASA nebo JPL.
               </li>
               <li>
                 Srovnávací a kumulovaný graf jsou obr. 3 a 4 v práci{" "}

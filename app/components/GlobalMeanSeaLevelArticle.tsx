@@ -45,7 +45,7 @@ export function GlobalMeanSeaLevelArticle() {
         <h2>Co pozorujeme</h2>
         <p className="article-prose__intro">
           Globální střední hladina moře vyjadřuje průměrnou změnu výšky světového oceánu. Jednotlivá pobřeží a jednotlivé
-          části oceánu se mohou vyvíjet odlišně; globální hodnota vzniká plošným průměrem přes oceán. Výsledek se uvádí v
+          části oceánu se mohou vyvíjet odlišně. Globální hodnota vzniká plošným průměrem přes oceán. Výsledek se uvádí v
           milimetrech nebo centimetrech vůči přesně určenému počátku.
         </p>
 
@@ -66,7 +66,7 @@ export function GlobalMeanSeaLevelArticle() {
           Plošné vážení je podstatné. Jeden centimetr změny v malé zátoce nemá v globálním průměru stejnou váhu jako jeden
           centimetr nad rozsáhlou částí Tichého oceánu. Družicový výpočet proto nejprve rozdělí oceán na stejně vymezené
           plochy a teprve potom jejich hodnoty zprůměruje. U staršího období, kdy jsou k dispozici hlavně body na pobřeží,
-          je nutné průběh mezi stanicemi statisticky odhadnout; zveřejněný výsledek proto vždy patří ke konkrétní metodě a
+          je nutné průběh mezi stanicemi statisticky odhadnout. Zveřejněný výsledek proto vždy patří ke konkrétní metodě a
           její nejistotě.
         </p>
 
@@ -89,7 +89,7 @@ export function GlobalMeanSeaLevelArticle() {
           />
           <figcaption>
             Globální střední hladina moře z navazujících družicových misí od roku 1993 do konce roku 2025. Světlá křivka
-            ponechává pravidelné kolísání během roku; vodorovné čáry po jednom centimetru usnadňují čtení celkové změny.
+            ponechává pravidelné kolísání během roku. Vodorovné čáry po jednom centimetru usnadňují čtení celkové změny.
             Graf vyjadřuje rozdíl vůči počátku záznamu, nikoli absolutní výšku oceánu. Zdroj:{" "}
             <SourceLink id="WEB_NASA_NASA_Scientific_Visualization_Studio_Global_Mean_def00bc2">NASA Scientific Visualization Studio</SourceLink>.
             Použití podle <SourceLink id="WEB_NASA_Guidelines_for_using_NASA_Images_and_Media_Guide_e6f9e9e4">pravidel NASA pro média</SourceLink>.
@@ -153,11 +153,11 @@ export function GlobalMeanSeaLevelArticle() {
             unoptimized
           />
           <figcaption>
-            Pobřežní měřicí stanice v San Francisku. Uvnitř historické budovy pracoval plovák v uklidňovací šachtě;
-            současná stanice používá elektronická čidla. Každý přístroj měří moře vůči bodům na molu a pevnině, proto jde
+            Pobřežní měřicí stanice v San Francisku. Uvnitř historické budovy pracoval plovák v uklidňovací šachtě.
+            Současná stanice používá elektronická čidla. Každý přístroj měří moře vůči bodům na molu a pevnině, proto jde
             o relativní hladinu v jednom místě. Fotografie:{" "}
-            <SourceLink id="WEB_NOAA_What_is_a_tide_gauge_ecb1078b">NOAA Ocean Service</SourceLink>;
-            dílo federální vlády USA je veřejnou doménou.
+            <SourceLink id="WEB_NOAA_What_is_a_tide_gauge_ecb1078b">NOAA Ocean Service</SourceLink>.
+            Dílo federální vlády USA je veřejnou doménou.
           </figcaption>
         </figure>
 
@@ -167,7 +167,7 @@ export function GlobalMeanSeaLevelArticle() {
           Klasický přístroj vedl vodu úzkým otvorem do šachty, kde vlny zeslábly a plovák sledoval pomalejší pohyb hladiny.
           Dnešní stanice obvykle měří dobu návratu zvukového nebo mikrovlnného impulzu. Z jednotlivých odečtů se po
           odstranění zjevně chybných hodnot počítají minutové, hodinové, denní a měsíční průměry. Příliv se tím nemaže z
-          původních dat; jeho střídání se při dostatečně dlouhém průměrování z velké části vyrovná.{" "}
+          původních dat. Jeho střídání se při dostatečně dlouhém průměrování z velké části vyrovná.{" "}
           <SourceLink id="WEB_NOAA_What_is_a_tide_gauge_ecb1078b">NOAA: jak pracuje pobřežní vodočet</SourceLink>
         </p>
 
@@ -195,7 +195,7 @@ export function GlobalMeanSeaLevelArticle() {
           Radarový výškoměr vyšle k oceánu krátký mikrovlnný impulz a změří dobu, za kterou se odraz vrátí. Z této doby
           vznikne vzdálenost mezi anténou a mořskou hladinou. Současně musí být velmi přesně určena poloha družice vůči
           Zemi. Výška moře se vypočte jako výška družice nad referenčním povrchem Země minus změřená vzdálenost k oceánu.
-          Jeden výsledek má přesnost řádově centimetrů; globální průměr je přesnější díky velkému počtu opakovaných měření.{" "}
+          Jeden výsledek má přesnost řádově centimetrů. Globální průměr je přesnější díky velkému počtu opakovaných měření.{" "}
           <SourceLink id="WEB_NASA_How_do_satellites_measure_sea_level_change_NASA_702bb114">NASA Sea Level: družicová altimetrie</SourceLink>
         </p>
 
@@ -223,8 +223,8 @@ export function GlobalMeanSeaLevelArticle() {
         <p>
           Archiv nejprve převede jednotlivé odečty na měsíční průměry a zachová značky chybějících nebo podezřelých dat.
           Výzkumný tým vybere stanice s dostatečně dlouhým a navázaným záznamem, opraví doložený svislý pohyb pevniny a
-          vyjádří každou stanici jako změnu vůči jejímu vlastnímu základu. Tím se odstraní nesrovnatelnost místních nul;
-          zachová se pouze změna v čase.
+          vyjádří každou stanici jako změnu vůči jejímu vlastnímu základu. Tím se odstraní nesrovnatelnost místních nul.
+          Zachová se pouze změna v čase.
         </p>
 
         <p>
@@ -249,7 +249,7 @@ export function GlobalMeanSeaLevelArticle() {
         <p>
           Družice během přibližně desetidenního cyklu opakovaně protne oceán po předem určených drahách. Z opravených
           výšek se vytvoří mapa odchylek hladiny. Hodnota každé buňky se při průměrování násobí plochou oceánu, kterou
-          zastupuje. NASA ve svém ukazateli používá měření zhruba mezi 66° jižní a 66° severní šířky; polární oblasti mimo
+          zastupuje. NASA ve svém ukazateli používá měření zhruba mezi 66° jižní a 66° severní šířky. Polární oblasti mimo
           dráhu družic nejsou přímo pokryty.{" "}
           <SourceLink id="DOI_10_5067_nsind_gmsv1">NASA SSH: popis globálního výpočtu</SourceLink>
         </p>
@@ -266,7 +266,7 @@ export function GlobalMeanSeaLevelArticle() {
 
         <p>
           Část produktů přidává opravu dlouhodobého pohybu oceánského dna po zániku dávných ledových příkrovů. Běžně se
-          označuje GIA, z anglického <em>glacial isostatic adjustment</em>. Oprava nemění samotné radarové měření; převádí
+          označuje GIA, z anglického <em>glacial isostatic adjustment</em>. Oprava nemění samotné radarové měření. Převádí
           změnu průměrné výšky hladiny na změnu objemu oceánu při stálé ploše pánví. NASA nabízí záznam i bez této opravy,
           zatímco studie Hamlingtona a kol. ji pro svůj výpočet použila. U přesného čísla proto uvádíme konkrétní datový
           soubor, nikoli jen slovo „družice“.
@@ -276,13 +276,13 @@ export function GlobalMeanSeaLevelArticle() {
         <p>
           Nejistota globálního výsledku má několik podob. Jednotlivý bod ovlivňuje šum radarového odrazu a krátkodobý stav
           oceánu. Celý záznam může ovlivnit pomalý posun dráhy, radiometru nebo propojení dvou misí. Výpočet dlouhodobého
-          sklonu navíc závisí na délce zvoleného období. Proto nestačí připojit ke každému měsíci stejnou chybovou úsečku;
-          je nutné popsat také chyby, které spolu v čase souvisejí.
+          sklonu navíc závisí na délce zvoleného období. Proto nestačí připojit ke každému měsíci stejnou chybovou úsečku.
+          Je nutné popsat také chyby, které spolu v čase souvisejí.
         </p>
 
         <p>
           Ablain a kol. sestavili pro období 1993–2017 úplnou matici těchto časových souvislostí. Pro sklon za celé období
-          odhadli 3,35 ± 0,40 mm za rok a pro změnu tempa 0,12 ± 0,07 mm za rok za rok; obě rozpětí představují 90% interval
+          odhadli 3,35 ± 0,40 mm za rok a pro změnu tempa 0,12 ± 0,07 mm za rok za rok. Obě rozpětí představují 90% interval
           spolehlivosti. Guérou a kol. výpočet aktualizovali do roku 2021 a zúžili nejistotu sklonu na ±0,30 mm za rok a
           nejistotu změny tempa na ±0,05 mm za rok za rok. Neznamená to, že je hladina každý rok o přesně stejné číslo
           výše. Jednotka „milimetr za rok za rok“ říká, o kolik se během dalšího roku změní roční tempo. Jde o odhad
@@ -302,7 +302,7 @@ export function GlobalMeanSeaLevelArticle() {
             unoptimized
           />
           <figcaption>
-            Modrá čára je družicový záznam globální střední hladiny; červená čára je kvadratické proložení, jehož sklon se
+            Modrá čára je družicový záznam globální střední hladiny. Červená čára je kvadratické proložení, jehož sklon se
             v čase mění. Rámeček uvádí průměrný sklon 3,3 ± 0,3 mm za rok, změnu tempa 0,077 ± 0,061 mm za rok za rok a
             odhad sklonu 2,1 ± 1,0 mm za rok na začátku oproti 4,5 ± 1,0 mm za rok na konci. Intervaly jsou 90%. Obrázek 1
             z práce <SourceLink id="DOI_10_1038_s43247_024_01761_5">Hamlington et al., 2024</SourceLink>,{" "}
@@ -314,7 +314,7 @@ export function GlobalMeanSeaLevelArticle() {
         <h3>PSMSL: jednotlivé pobřežní stanice</h3>
         <p>
           PSMSL zveřejňuje měsíční a roční průměry, souřadnice, historii místní nuly i poznámky ke každé stanici. Pro
-          dlouhodobé porovnání je určen soubor RLR. Kompletní archiv lze stáhnout jako ZIP; v jednotlivých textových
+          dlouhodobé porovnání je určen soubor RLR. Kompletní archiv lze stáhnout jako ZIP. V jednotlivých textových
           souborech jsou hodnoty, značky chybějících měsíců a informace o kvalitě. Jde o místní relativní hladinu, nikoli o
           hotový globální průměr.{" "}
           <SourceLink id="WEB_Permanent_Service_for_Mean_S_Complete_PSMSL_Data_Set_05055002">Stáhnout kompletní archiv PSMSL</SourceLink>
@@ -323,7 +323,7 @@ export function GlobalMeanSeaLevelArticle() {
         <h3>Frederikse et al.: globální rekonstrukce 1900–2018</h3>
         <p>
           Datový balíček k práci z roku 2020 obsahuje globální i oceánské rekonstrukce, jednotlivé pravděpodobné varianty a
-          tabulky nejistot. Lze jej stáhnout ve formátu NetCDF a tabulkových souborech; zveřejněn je také zdrojový kód.
+          tabulky nejistot. Lze jej stáhnout ve formátu NetCDF a tabulkových souborech. Zveřejněn je také zdrojový kód.
           Tento soubor je vhodný pro dlouhodobý vývoj před družicemi. Čísla jsou roční a jejich nejistota je v první části
           období větší kvůli menšímu počtu stanic.{" "}
           <SourceLink id="DOI_10_5281_zenodo_3862995">Stáhnout data ze Zenodo</SourceLink> a{" "}
@@ -335,7 +335,7 @@ export function GlobalMeanSeaLevelArticle() {
           Zkratka SSH znamená anglické <em>sea-surface height</em>, tedy výšku mořské hladiny. NASA zveřejňuje textový
           soubor vytvořený z jednoduchých mřížkových map této výšky. Obsahuje datum, globální průměr a doplňující varianty
           zpracování. Datový portál uvádí verzi, datum aktualizace i trvalý identifikátor 10.5067/NSIND-GMSV1. Tento produkt
-          zachovává sezónní kolísání a neobsahuje opravu GIA; přesná čísla se proto mohou lišit od grafu v primární studii,
+          zachovává sezónní kolísání a neobsahuje opravu GIA. Přesná čísla se proto mohou lišit od grafu v primární studii,
           která tuto opravu přidala.{" "}
           <SourceLink id="DOI_10_5067_nsind_gmsv1">Otevřít data NASA SSH</SourceLink>
         </p>
@@ -387,10 +387,10 @@ export function GlobalMeanSeaLevelArticle() {
           />
           <figcaption>
             Průměrná roční změna hladiny v jednotlivých částech oceánu od února 1999 do května 2025. Červená znamená
-            vzestup, modrá pokles; stupnice sahá od −10 do +10 mm za rok. Mapa ukazuje, proč globální průměr nelze použít
+            vzestup, modrá pokles. Stupnice sahá od −10 do +10 mm za rok. Mapa ukazuje, proč globální průměr nelze použít
             jako předpověď pro konkrétní pobřeží. Zdroj a kredit: C3S/ECMWF/CMEMS,{" "}
             <SourceLink id="WEB_Copernicus_Sea_level_Copernicus_b943a537">Copernicus Climate Change Service</SourceLink>.
-            Vytvořeno s použitím informací služby Copernicus Climate Change Service 2026; Evropská komise ani ECMWF
+            Vytvořeno s použitím informací služby Copernicus Climate Change Service 2026. Evropská komise ani ECMWF
             nenesou odpovědnost za další použití.
           </figcaption>
         </figure>
@@ -398,7 +398,7 @@ export function GlobalMeanSeaLevelArticle() {
         <h2 id="pozorovani">Pozorování</h2>
         <p>
           Pobřežní stanice dokládají, že globální střední hladina stoupala už před začátkem družicového měření. Frederikse
-          a kol. pro roky 1900–2018 odhadli průměrný sklon 1,56 ± 0,33 mm za rok; nejistota představuje 90% rozpětí. Vývoj
+          a kol. pro roky 1900–2018 odhadli průměrný sklon 1,56 ± 0,33 mm za rok. Nejistota představuje 90% rozpětí. Vývoj
           nebyl rok od roku rovnoměrný a starší část má širší interval kvůli menšímu počtu stanic. Nezávislé rekonstrukce
           Churcha a Whitea, Dangendorfa a kol. a Frederikse a kol. se liší v jednotlivých desetiletích, ale všechny ukazují
           vyšší globální střední hladinu na konci 20. století než na jeho začátku.{" "}
@@ -434,7 +434,7 @@ export function GlobalMeanSeaLevelArticle() {
 
         <p>
           Globální průměr současně nepopisuje všechny části oceánu. Mapa Copernicus pro únor 1999 až květen 2025 obsahuje
-          rozsáhlé oblasti se sklonem o několik milimetrů za rok vyšším i nižším než globální hodnota; místy se rozdíl
+          rozsáhlé oblasti se sklonem o několik milimetrů za rok vyšším i nižším než globální hodnota. Místy se rozdíl
           blíží ±5 mm za rok. Pobřežní výsledek navíc mění svislý pohyb souše. Pro konkrétní město je proto nutný místní
           vodočet a místní pohyb pevniny, zatímco globální střední hladina odpovídá na otázku, jak se mění oceán jako celek.
         </p>
@@ -446,15 +446,15 @@ export function GlobalMeanSeaLevelArticle() {
             Od začátku roku 1993 do konce roku 2025 se zvýšila přibližně o deset centimetrů.
             Průměrné tempo za roky 1993–2023 činilo 3,3 milimetru za rok a během tohoto období vzrostlo přibližně z
             2,1 na 4,5 milimetru za rok. Jednotlivé roky kolem dlouhodobého růstu výrazně kolísají: v roce 2024 hladina
-            stoupla o 5,9 milimetru a v roce 2025 o 0,8 milimetru. Také jednotlivé části oceánu se mění různou rychlostí;
-            jejich dlouhodobý průběh se místy liší od globální hodnoty přibližně o pět milimetrů za rok oběma směry.
+            stoupla o 5,9 milimetru a v roce 2025 o 0,8 milimetru. Také jednotlivé části oceánu se mění různou rychlostí.
+            Jejich dlouhodobý průběh se místy liší od globální hodnoty přibližně o pět milimetrů za rok oběma směry.
           </p>
         </div>
 
         <h2>Prameny, data a licence</h2>
         <p>
           Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez
-          předplatného. U odborných prací vede databáze zvlášť na DOI a na veřejný plný text; datové portály vedou
+          předplatného. U odborných prací vede databáze zvlášť na DOI a na veřejný plný text. Datové portály vedou
           k původnímu poskytovateli. Záznamy zdrojů tohoto článku nepoužívají kopie na Google Drivu.
         </p>
         <div className="article-sources">

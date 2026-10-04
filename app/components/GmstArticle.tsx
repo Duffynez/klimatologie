@@ -38,7 +38,7 @@ export function GmstArticle() {
         </dl>
         <p className="article-glossary__note">
           Nad pevninou se měří vzduch přibližně 1,25–2 metry nad zemí. Nad nezamrzlým oceánem se používá teplota
-          vody u hladiny; přesná hloubka závisí na přístroji.
+          vody u hladiny. Přesná hloubka závisí na přístroji.
         </p>
       </aside>
 
@@ -130,7 +130,7 @@ export function GmstArticle() {
           Meteorologická stanice měří teplotu okolního vzduchu v ochranném krytu, který omezuje přímé sluneční
           záření a vliv srážek. Světová meteorologická organizace uvádí pro běžné povrchové pozorování výšku
           přístroje 1,25 až 2 metry nad zemí. Současné automatické stanice často používají elektrický odporový
-          teploměr; starší záznamy vznikaly odečtem kapalinových teploměrů. Poloha stanice, výška přístroje, typ
+          teploměr. Starší záznamy vznikaly odečtem kapalinových teploměrů. Poloha stanice, výška přístroje, typ
           krytu a změny vybavení se zapisují jako doprovodné údaje.{" "}
           <SourceLink id="WEB_World_Meteorological_Organiz_Guide_to_Instruments_and_Methods_of_Observation_93c4c4a4">
             WMO: Guide to Instruments and Methods of Observation
@@ -158,7 +158,7 @@ export function GmstArticle() {
           <figcaption>
             Rozmístění 20 924 meteorologických stanic zobrazených pro GISTEMP v4. Velikost značek pouze omezuje
             jejich překrývání a nevyjadřuje význam stanice. Vizualizace: NASA Scientific Visualization Studio,
-            Mark SubbaRao a AJ Christensen; produkce Kathryn Mersmann. Nezměněný materiál NASA.{" "}
+            Mark SubbaRao a AJ Christensen. Produkce Kathryn Mersmann. Nezměněný materiál NASA.{" "}
             <SourceLink id="WEB_NASA_NASA_Scientific_Visualization_Studio_Temperature_bec5836b">Původní mapa a úplný kredit</SourceLink>
           </figcaption>
         </figure>
@@ -173,7 +173,7 @@ export function GmstArticle() {
         <h3>Nad oceánem</h3>
         <p>
           Lodě měřily teplotu vody vytažené v dřevěných, plátěných nebo izolovaných vědrech a později také vodu
-          proudící k sání lodního motoru. Vědro může během vytažení ztrácet teplo odpařováním; měření v útrobách
+          proudící k sání lodního motoru. Vědro může během vytažení ztrácet teplo odpařováním. Měření v útrobách
           lodi může naopak ovlivnit teplé okolí. Záznamy proto potřebují informaci o použitém způsobu. Datový
           produkt HadSST4 vytváří více možných oprav podle typu vědra, měření v sání motoru a období, v němž se
           jednotlivé metody používaly.{" "}
@@ -220,7 +220,7 @@ export function GmstArticle() {
           Každý měsíční údaj stanice nese její zeměpisnou polohu a identifikátor. Oceánské měření nese polohu
           lodi nebo bóje, čas a pokud možno také typ přístroje. Archivy hledají duplicity, nemožné souřadnice,
           chybné jednotky a hodnoty, které neodpovídají okolním pozorováním. Podezřelé údaje dostanou kontrolní
-          značku nebo se z konkrétního výpočtu vyřadí; původní archiv a zpracovaný vstup jsou zveřejňovány
+          značku nebo se z konkrétního výpočtu vyřadí. Původní archiv a zpracovaný vstup jsou zveřejňovány
           odděleně.
         </p>
 
@@ -270,7 +270,7 @@ export function GmstArticle() {
           chybějící hodnotu z prostorové souvislosti okolních dat a přidá nejistotu tohoto odhadu. GISTEMP
           rozšiřuje pozemní změny do vzdálenosti až 1 200 kilometrů, pokud má v dosahu vhodnou stanici. Berkeley
           Earth používá vlastní statistický prostorový výpočet. NOAAGlobalTemp v6 využívá neuronovou síť pro
-          pozemní oblasti a Arktidu; verze 6.1.0 přidala stejně založenou oceánskou rekonstrukci ERSST v6.{" "}
+          pozemní oblasti a Arktidu. Verze 6.1.0 přidala stejně založenou oceánskou rekonstrukci ERSST v6.{" "}
           <SourceLink id="DOI_10_1029_2019jd032361">Morice et al., 2021</SourceLink>,{" "}
           <SourceLink id="DOI_10_1029_2010rg000345">Hansen et al., 2010</SourceLink> a{" "}
           <SourceLink id="DOI_10_1175_bams_d_24_0012_1">Yin et al., 2024</SourceLink>
@@ -289,7 +289,7 @@ export function GmstArticle() {
           Nejistota zahrnuje přesnost jednotlivých měření, omezený počet pozorování uvnitř buňky, možné chyby
           oprav, chybějící oblasti i volbu prostorového postupu. Je největší v 19. století, kdy bylo měření málo,
           zejména nad oceány a v polárních oblastech. S rozšířením stanic a bójí se zmenšuje, ale zcela nemizí.
-          Brohan a kol. tyto složky oddělili pro HadCRUT3; novější HadCRUT5 je převádí do 200 možných realizací
+          Brohan a kol. tyto složky oddělili pro HadCRUT3. Novější HadCRUT5 je převádí do 200 možných realizací
           pozemní, oceánské a globální mapy.{" "}
           <SourceLink id="DOI_10_1029_2005jd006548">Brohan et al., 2006</SourceLink> a{" "}
           <SourceLink id="DOI_10_1029_2019jd032361">Morice et al., 2021</SourceLink>
@@ -375,7 +375,7 @@ export function GmstArticle() {
             <p>
               Nevládní výzkumná organizace Berkeley Earth spojuje vlastní pozemní výpočet s upraveným HadSST4.
               Globální měsíční hodnoty začínají rokem 1850 a jsou uváděny vůči letům 1951–1980. Portál současně
-              nabízí novou globální mřížku 0,25° × 0,25° jako předběžnou verzi; její výsledky mohou být před
+              nabízí novou globální mřížku 0,25° × 0,25° jako předběžnou verzi. Její výsledky mohou být před
               konečným vydáním změněny. Původní metodická práce z roku 2020 popisuje standardní globální produkt.
             </p>
             <p>
@@ -390,7 +390,7 @@ export function GmstArticle() {
 
         <p>
           Následující animace ukazuje jednu z těchto zpracovaných map. Každý snímek je pětiletým průměrem
-          GISTEMP v4; první zachycuje roky 1880–1884 a poslední roky 2021–2025. Barva vyjadřuje místní rozdíl
+          GISTEMP v4. První zachycuje roky 1880–1884 a poslední roky 2021–2025. Barva vyjadřuje místní rozdíl
           vůči průměru 1951–1980. Šedá místa nemají v daném výpočtu dostatek údajů a NASA je v této animaci
           nedopočítává.
         </p>
@@ -413,7 +413,7 @@ export function GmstArticle() {
         <h2>Srovnání dat</h2>
         <p>
           Jednotlivé produkty čerpají z velké části ze stejných mezinárodních archivů. GISTEMP a NOAAGlobalTemp
-          používají pozemní GHCN-M v4; HadCRUT5 a Berkeley Earth sdílejí část oceánských podkladů HadSST4. Shoda
+          používají pozemní GHCN-M v4. HadCRUT5 a Berkeley Earth sdílejí část oceánských podkladů HadSST4. Shoda
           jejich křivek proto není srovnáním čtyř zcela oddělených sítí teploměrů. Srovnává především několik
           způsobů, jak z mnoha společných i odlišných vstupů sestavit globální výsledek.
         </p>
@@ -421,7 +421,7 @@ export function GmstArticle() {
         <p>
           Největší metodické rozdíly se týkají oblastí bez přímého měření, polárních oblastí, zacházení s mořským
           ledem a oprav historických oceánských měření. V 19. století je pozorování méně, takže se křivky rozcházejí
-          více než v posledních desetiletích. Referenční období lze pro graf sjednotit; rozdíly vzniklé
+          více než v posledních desetiletích. Referenční období lze pro graf sjednotit. Rozdíly vzniklé
           pokrytím a metodou tím nezmizí.
         </p>
 
@@ -444,9 +444,9 @@ export function GmstArticle() {
             />
           </div>
           <figcaption>
-            Roční globální teplotní rozdíly vůči průměru 1850–1900. Sloupce: ERA5; bílé body: JRA-3Q, GISTEMP v4,
+            Roční globální teplotní rozdíly vůči průměru 1850–1900. Sloupce: ERA5. Bílé body: JRA-3Q, GISTEMP v4,
             NOAAGlobalTemp v6, Berkeley Earth a HadCRUT5. Obrázek byl aktualizován 28. ledna 2026. Zdroj a kredit:
-            C3S/ECMWF; nezměněný materiál. V přehledu ERA5 vychází rok 2025 jako třetí nejteplejší. Souhrn WMO
+            C3S/ECMWF. Nezměněný materiál. V přehledu ERA5 vychází rok 2025 jako třetí nejteplejší. Souhrn WMO
             níže používá devět produktů a připouští druhé i třetí místo podle konkrétního souboru.{" "}
             <SourceLink id="WEB_Copernicus_Graphics_Gallery_Copernicus_4a265eb8">
               Původní graf a data
@@ -476,8 +476,8 @@ export function GmstArticle() {
 
         <p>
           Nejnovější dokončené roční vyhodnocení zveřejnila Světová meteorologická organizace ve zprávě za rok
-          2025. Její souhrn devíti globálních produktů určil rok 2025 na 1,43 ± 0,13 °C nad průměrem 1850–1900;
-          uvedený interval má devadesátiprocentní úroveň nejistoty. Ve dvou produktech byl rok 2025 druhý
+          2025. Její souhrn devíti globálních produktů určil rok 2025 na 1,43 ± 0,13 °C nad průměrem 1850–1900.
+          Uvedený interval má devadesátiprocentní úroveň nejistoty. Ve dvou produktech byl rok 2025 druhý
           nejteplejší a v sedmi třetí. Rozdíl mezi blízkými roky je tedy menší než nejistota, s níž lze jejich
           přesné pořadí určit.{" "}
           <SourceLink id="WEB_World_Meteorological_Organiz_State_of_the_Global_Climate_2025_53cbb3f3">
@@ -496,7 +496,7 @@ export function GmstArticle() {
           Starší část grafu má širší rozpětí mezi produkty a větší uváděnou nejistotu, protože pozorování jsou
           řidší a větší část povrchu musí být ponechána prázdná nebo odhadnuta. V posledních desetiletích se roční
           křivky drží těsněji u sebe. WMO uvádí, že rozdíly mezi devíti produkty mění odhad dlouhodobého posunu
-          přibližně o 0,1 až 0,2 °C; tento rozptyl zahrnuje do nejistoty hodnot vztažených k období 1850–1900.
+          přibližně o 0,1 až 0,2 °C. Tento rozptyl zahrnuje do nejistoty hodnot vztažených k období 1850–1900.
           Přesná hodnota proto vždy patří ke konkrétnímu produktu a verzi, zatímco dlouhodobý posun je společným
           výsledkem všech zde srovnaných zpracování.{" "}
           <SourceLink id="WEB_World_Meteorological_Organiz_State_of_the_Global_Climate_2025_53cbb3f3">
@@ -509,7 +509,7 @@ export function GmstArticle() {
           <p>
             Globální teplota u povrchu dlouhodobě roste a meziroční kolísání se odehrává kolem tohoto vzestupného
             průběhu. Desetiletí 2011–2020 bylo v průměru o 1,09 °C teplejší než období 1850–1900. Rok 2024 dosáhl
-            1,55 °C nad tímto základem a byl nejteplejším rokem celého záznamu; rok 2025 následoval s hodnotou
+            1,55 °C nad tímto základem a byl nejteplejším rokem celého záznamu. Rok 2025 následoval s hodnotou
             1,43 °C. Roky 2023, 2024 a 2025 tvoří tři nejteplejší roky a všech jedenáct let od roku 2015 do roku
             2025 patří mezi jedenáct nejteplejších roků pozorovaného období.
           </p>
@@ -673,7 +673,7 @@ export function GmstArticle() {
                 <SourceLink id="WEB_NOAA_raquo_NOAA_s_Array_of_Drifting_Ocean_Buoys_90005d3e">
                   Původní stránka
                 </SourceLink>
-                . Neoznačené fotografie NOAA jsou materiálem veřejné domény; kredit NOAA/AOML je zachován.{" "}
+                . Neoznačené fotografie NOAA jsou materiálem veřejné domény. Kredit NOAA/AOML je zachován.{" "}
                 <SourceLink id="WEB_NOAA_NOAA_s_National_Ocean_Service_About_Us_4ba21b52">podmínky NOAA</SourceLink>.
               </li>
               <li>
@@ -681,14 +681,14 @@ export function GmstArticle() {
                 <SourceLink id="WEB_NASA_Data_GISS_Surface_Temperature_Animations_34f35b4b">
                   Původní MP4 a popis
                 </SourceLink>
-                ; použit beze změny podle pravidel NASA.
+                . Soubor je použit beze změny podle pravidel NASA.
               </li>
               <li>
                 Srovnávací graf: Copernicus Climate Change Service / ECMWF, aktualizace 28. ledna 2026.{" "}
                 <SourceLink id="WEB_Copernicus_Graphics_Gallery_Copernicus_4a265eb8">
                   Původní PNG a data
                 </SourceLink>
-                . Generováno s použitím informací Copernicus Climate Change Service 2026; Evropská komise ani
+                . Generováno s použitím informací Copernicus Climate Change Service 2026. Evropská komise ani
                 ECMWF nenesou odpovědnost za další použití těchto informací.{" "}
                 <SourceLink id="WEB_Copernicus_Licence_to_use_Copernicus_Products_rev_12_4244ad0f">
                   licence Copernicus

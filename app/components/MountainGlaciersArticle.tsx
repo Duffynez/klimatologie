@@ -45,7 +45,7 @@ export function MountainGlaciersArticle() {
           průvodci Světové meteorologické organizace (WMO) a současným globálním vyhodnocením. Pozorování shromažďuje
           Světová služba sledování ledovců, označovaná anglickou zkratkou WGMS. Slovo „ledovec“ v těchto přehledech
           zahrnuje údolní ledovce, menší ledové čapky a ledová pole vzniklá na souši. V globálních součtech se hodnotí
-          ledovce mimo hlavní grónský a antarktický ledový příkrov; započítávají se však samostatné ledovce na jejich
+          ledovce mimo hlavní grónský a antarktický ledový příkrov. Započítávají se však samostatné ledovce na jejich
           okrajích. <SourceLink id="WEB_World_Glacier_Monitoring_Ser_glosar_UNESCO_a_WGMS_06fc9a79">Cogley et al., 2011</SourceLink>,{" "}
           <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">WMO, 2024</SourceLink> a{" "}
           <SourceLink id="DOI_10_1038_s41586_024_08545_z">GlaMBIE Team, 2025</SourceLink>
@@ -53,7 +53,7 @@ export function MountainGlaciersArticle() {
 
         <p>
           Délka, plocha a hmotnost se nemusejí měnit stejným tempem. Poloha čela reaguje také na rychlost proudění ledu
-          a na tvar údolí; čelo některého ledovce se proto může dočasně posunout dopředu, i když ledovec jako celek
+          a na tvar údolí. Čelo některého ledovce se proto může dočasně posunout dopředu, i když ledovec jako celek
           ztrácí hmotnost. Hmotnostní bilance naproti tomu porovnává množství ledu a sněhu na začátku a na konci přesně
           vymezeného období. Při čtení výsledku je tedy vždy nutné uvést veličinu, oblast a období měření. Tento rozdíl
           podrobně vymezuje <SourceLink id="WEB_World_Glacier_Monitoring_Ser_glosar_UNESCO_a_WGMS_06fc9a79">glosář UNESCO a WGMS</SourceLink>.
@@ -71,11 +71,11 @@ export function MountainGlaciersArticle() {
           />
           <figcaption>
             Grinnellův ledovec v americké Montaně v letech 1938 a 2019, fotografovaný z vrcholu Mount Gould. Snímek
-            ukazuje změnu jednoho konkrétního ledovce. Opakovaná fotografie zachytí polohu čela a viditelný rozsah ledu;
-            sama o sobě však neurčí změnu hmotnosti ani vývoj ledovců v jiných oblastech. Fotografie: T. J. Hileman,
+            ukazuje změnu jednoho konkrétního ledovce. Opakovaná fotografie zachytí polohu čela a viditelný rozsah ledu.
+            Sama o sobě však neurčí změnu hmotnosti ani vývoj ledovců v jiných oblastech. Fotografie: T. J. Hileman,
             Glacier National Park Archives, a Lisa
-            McKeon, americká geologická služba USGS. Zdroj: <SourceLink id="WEB_U_S_Geological_Survey_Grinnell_Glacier_Pair_248d244b">USGS</SourceLink>;
-            licence: volné dílo.
+            McKeon, americká geologická služba USGS. Zdroj: <SourceLink id="WEB_U_S_Geological_Survey_Grinnell_Glacier_Pair_248d244b">USGS</SourceLink>.
+            Licence: volné dílo.
           </figcaption>
         </figure>
 
@@ -83,7 +83,7 @@ export function MountainGlaciersArticle() {
         <p>
           Nejstarší dlouhé záznamy sledují čelo ledovce. Jeho polohu bylo možné určit podle značek v terénu, měřických
           bodů, map, obrazů a později fotografií. Mezinárodně koordinované sledování začalo roku 1894 založením
-          Mezinárodní komise pro ledovce v Curychu; François-Alphonse Forel zveřejnil první společný přehled v roce 1895.
+          Mezinárodní komise pro ledovce v Curychu. François-Alphonse Forel zveřejnil první společný přehled v roce 1895.
           Původním cílem bylo každoročně shromažďovat posuny čel z různých zemí podle srovnatelného postupu. Historii
           sítě dokládají <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WGMS_2020_6e490990">WGMS, 2020</SourceLink> a{" "}
           <SourceLink id="DOI_10_3189_2015jog15j017">Zemp et al., 2015</SourceLink>.
@@ -109,8 +109,8 @@ export function MountainGlaciersArticle() {
         </p>
 
         <p>
-          Dnešní globální přehled spojuje obě tradice. Každoroční terénní měření popisují průběh jednotlivých let;
-          družicové změny výšky určují dlouhodobý úbytek u přibližně 200 000 ledovců. Dussaillant a kol. tento postup
+          Dnešní globální přehled spojuje obě tradice. Každoroční terénní měření popisují průběh jednotlivých let.
+          Družicové změny výšky určují dlouhodobý úbytek u přibližně 200 000 ledovců. Dussaillant a kol. tento postup
           použili pro roční hodnoty 1976–2024 a WGMS jej v roce 2026 doplnila o glaciologický rok 2025.{" "}
           <SourceLink id="DOI_10_5194_essd_17_1977_2025">Dussaillant et al., 2025</SourceLink> a{" "}
           <SourceLink id="DOI_10_1038_s43017_026_00777_z">WGMS Network, 2026</SourceLink>
@@ -128,7 +128,7 @@ export function MountainGlaciersArticle() {
         <h3>Poloha čela a plocha</h3>
         <p>
           Poloha čela se určuje vůči pevnému bodu nebo podél předem stanovené osy. Starší záznamy vznikaly pásmem,
-          teodolitem a opakovanou fotografií; dnes se používá také přesná družicová poloha a snímky z letadel či družic.
+          teodolitem a opakovanou fotografií. Dnes se používá také přesná družicová poloha a snímky z letadel či družic.
           Z obrysu ledovce lze vypočítat plochu. U suti na povrchu, trvalých sněhových polí a navazujících ledovců však
           nemusí být hranice na snímku jednoznačná, proto k obrysu patří datum, zdroj obrazu a popis kvality mapování. Na
           tato omezení upozorňují <SourceLink id="DOI_10_3189_2015jog15j017">Zemp et al., 2015</SourceLink> a dokumentace{" "}
@@ -140,7 +140,7 @@ export function MountainGlaciersArticle() {
           Při přímém glaciologickém měření jsou body rozmístěny od spodní části ledovce po jeho nejvyšší část. Na jaře
           se sondou zjišťuje hloubka zimního sněhu a ve sněhové jámě nebo jádru také jeho hustota. Na podzim se u tyčí
           zavrtaných do ledu odečte, o kolik klesl povrch. Hloubka a hustota sněhu se v každém bodě převedou na hmotnost vody
-          na metr čtvereční; u ledu se obdobně násobí změna výšky jeho hustotou. Jarní a podzimní návštěvy odpovídají
+          na metr čtvereční. U ledu se obdobně násobí změna výšky jeho hustotou. Jarní a podzimní návštěvy odpovídají
           běžnému režimu severní polokoule, termíny se však přizpůsobují místním sezonám. Standardní postup popisují{" "}
           <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">WMO, 2024, kapitola 3</SourceLink> a{" "}
           <SourceLink id="DOI_10_1017_jog_2019_66">O’Neel et al., 2019</SourceLink>.
@@ -149,8 +149,8 @@ export function MountainGlaciersArticle() {
         <p>
           Bodová měření se následně rozloží přes celou plochu ledovce, obvykle podle výškových pásem. Výsledkem je
           průměrná změna hmotnosti na metr čtvereční, vyjádřená v metrech vodního ekvivalentu. Hodnota −1 m vodního
-          ekvivalentu znamená, že ledovec za dané období ztratil v průměru 1 000 kg na každý metr čtvereční své plochy;
-          nejde nutně o přesně jeden metr ledu, protože čerstvý sníh, starší zrnitý sníh zvaný firn a led mají různou
+          ekvivalentu znamená, že ledovec za dané období ztratil v průměru 1 000 kg na každý metr čtvereční své plochy.
+          Nejde nutně o přesně jeden metr ledu, protože čerstvý sníh, starší zrnitý sníh zvaný firn a led mají různou
           hustotu. Vynásobením plošného průměru plochou ledovce získáme hmotnostní změnu zachycenou touto metodou.{" "}
           <SourceLink id="WEB_World_Glacier_Monitoring_Ser_glosar_UNESCO_a_WGMS_06fc9a79">Cogley et al., 2011</SourceLink>
         </p>
@@ -177,10 +177,10 @@ export function MountainGlaciersArticle() {
           />
           <figcaption>
             Měřicí tyč na Wolverine Glacier na Aljašce na konci léta 2019. Na začátku období byla pod sněhovým
-            povrchem; porovnání počátečního a konečného odečtu ukazuje úbytek sněhu a ledu v tomto bodě.
+            povrchem. Porovnání počátečního a konečného odečtu ukazuje úbytek sněhu a ledu v tomto bodě.
             Fotografie: Emily Baker, americká geologická služba USGS. Zdroj:{" "}
-            <SourceLink id="WEB_U_S_Geological_Survey_Ablation_Stake_on_Wolverine_Glacier_276f80c5">USGS</SourceLink>;
-            licence: volné dílo.
+            <SourceLink id="WEB_U_S_Geological_Survey_Ablation_Stake_on_Wolverine_Glacier_276f80c5">USGS</SourceLink>.
+            Licence: volné dílo.
           </figcaption>
         </figure>
 
@@ -192,15 +192,15 @@ export function MountainGlaciersArticle() {
           Změny výšky se násobí plochou mapových buněk a sečtou přes obrys ledovce, čímž vznikne změna objemu.
           Postup vyžaduje také odfiltrovat mraky a chybné body a
           odhadnout místa, kde výška chybí. Základní korekce popsali{" "}
-          <SourceLink id="DOI_10_5194_tc_5_271_2011">Nuth &amp; Kääb, 2011</SourceLink>; globální zpracování použili{" "}
+          <SourceLink id="DOI_10_5194_tc_5_271_2011">Nuth &amp; Kääb, 2011</SourceLink>. Globální zpracování použili{" "}
           <SourceLink id="DOI_10_1038_s41586_021_03436_z">Hugonnet et al., 2021</SourceLink>.
         </p>
 
         <p>
           Družicové snímky tedy umožňují odvodit výšku, nikoli přímo hmotnost. Povrch může klesat i zhutňováním firnu
           bez odpovídajícího úbytku hmotnosti. Změna objemu se proto převádí pomocí odhadu, který zohledňuje podíl
-          sněhu, firnu a ledu i změny jejich hustoty. Pro víceletá období se běžně používá 850 ± 60 kg na m³;
-          nejde o univerzální hustotu ledovcového ledu. Pro krátké intervaly, zejména do tří let, může být převod
+          sněhu, firnu a ledu i změny jejich hustoty. Pro víceletá období se běžně používá 850 ± 60 kg na m³.
+          Nejde o univerzální hustotu ledovcového ledu. Pro krátké intervaly, zejména do tří let, může být převod
           podstatně méně spolehlivý. Dussaillant a kol. do svého globálního výpočtu nepřijímají
           geodetická období kratší než pět let. <SourceLink id="DOI_10_5194_tc_7_877_2013">Huss, 2013</SourceLink> a{" "}
           <SourceLink id="DOI_10_5194_essd_17_1977_2025">Dussaillant et al., 2025</SourceLink>
@@ -220,7 +220,7 @@ export function MountainGlaciersArticle() {
           Přibližně 207 000 ledovců s geodetickým měřením představuje 96 % světové zaledněné plochy v tomto produktu.
           Ledovcům bez přímého geodetického záznamu se přiřadí průměr příslušné oblasti. Jednotlivé výsledky se násobí
           plochou, sečtou do 19 světových oblastí a nakonec do globální hodnoty v gigatunách. Nejistota zahrnuje chybu
-          výšky, převod objemu na hmotnost, řídkost terénních měření a změnu plochy; roste tam, kde jsou pozorované
+          výšky, převod objemu na hmotnost, řídkost terénních měření a změnu plochy. Roste tam, kde jsou pozorované
           ledovce vzdálenější. <SourceLink id="DOI_10_5194_essd_17_1977_2025">Dussaillant et al., 2025, metodika a ověření</SourceLink>
         </p>
 
@@ -244,7 +244,7 @@ export function MountainGlaciersArticle() {
             Žluté body označují přibližně 500 ledovců s glaciologickým terénním měřením v souhrnu za více let,
             světle modré body přibližně 200 000 ledovců s geodetickým družicovým měřením. Nejde o 500 terénních
             záznamů v každém roce: vyhodnocení roku 2025 využilo přibližně 150. Mapa ukazuje rozdíl v prostorovém
-            pokrytí obou metod; překrývající se body mohou splývat. Data: WGMS, inventář obrysů RGI 6.0 a globální
+            pokrytí obou metod. Překrývající se body mohou splývat. Data: WGMS, inventář obrysů RGI 6.0 a globální
             síť sledování ledovců GTN-G. Graf: klimatická služba Copernicus (C3S), Evropské středisko pro střednědobé
             předpovědi počasí (ECMWF) a WGMS, 2026. Zdroje:{" "}
             <SourceLink id="WEB_Copernicus_Glaciers_Copernicus_5ae74590">Copernicus Climate Indicator: Glaciers, obr. 3b</SourceLink> a{" "}
@@ -282,7 +282,7 @@ export function MountainGlaciersArticle() {
           typy pozorování: terénní měření, rozdíly výškových modelů, družicové výškoměry a družicové měření změn
           gravitačního pole. Autoři
           upozorňují, že některé vstupy sdílejí stejné snímky nebo podobné postupy, a jejich chyby tedy nejsou zcela
-          nezávislé. Náhodná nejistota může být proto spíše dolní hranicí skutečné nejistoty oblasti; známé systematické
+          nezávislé. Náhodná nejistota může být proto spíše dolní hranicí skutečné nejistoty oblasti. Známé systematické
           rozdíly mezi metodami zůstávají předmětem srovnání. <SourceLink id="DOI_10_1038_s41586_024_08545_z">GlaMBIE Team, 2025</SourceLink>
         </p>
 
@@ -293,7 +293,7 @@ export function MountainGlaciersArticle() {
             <h3>Fluctuations of Glaciers</h3>
             <p>
               Databáze WGMS obsahuje polohu čela, plochu, objem, terénní i geodetickou hmotnostní bilanci a popis metod
-              jednotlivých ledovců. Vydání z 10. února 2026 zahrnuje historické i současné záznamy; stažení je dostupné
+              jednotlivých ledovců. Vydání z 10. února 2026 zahrnuje historické i současné záznamy. Stažení je dostupné
               jako archiv tabulek CSV a má přidělené trvalé DOI.
             </p>
             <p className="article-data-item__links">
@@ -369,9 +369,9 @@ export function MountainGlaciersArticle() {
           </div>
           <figcaption>
             Roční globální změna hmotnosti ledovců v letech 1976–2025 v gigatunách. Modré sloupce označují rok s
-            přírůstkem, červené rok s úbytkem; nula znamená stejnou celkovou hmotnost na začátku a konci daného
+            přírůstkem, červené rok s úbytkem. Nula znamená stejnou celkovou hmotnost na začátku a konci daného
             glaciologického roku. Graf neukazuje interval nejistoty jednotlivých let, proto jsou přesná čísla v textu
-            uváděna s nejistotou z primární studie. Data: WGMS; graf: C3S/ECMWF/WGMS, 2026. Zdroj:{" "}
+            uváděna s nejistotou z primární studie. Data: WGMS. Graf: C3S/ECMWF/WGMS, 2026. Zdroj:{" "}
             <SourceLink id="WEB_Copernicus_Glaciers_Copernicus_5ae74590">Copernicus Climate Indicator: Glaciers, obr. 1</SourceLink>.
           </figcaption>
         </figure>
@@ -388,7 +388,7 @@ export function MountainGlaciersArticle() {
 
         <p>
           GlaMBIE sjednotila období, plochu a jednotky regionálních odhadů. Z 233 shromážděných podkladů zařadila do
-          výsledného součtu 195; dalších 38 vyřadila podle posouzení spolehlivosti dané metody v konkrétní oblasti.
+          výsledného součtu 195. Dalších 38 vyřadila podle posouzení spolehlivosti dané metody v konkrétní oblasti.
           Poté oddělila dlouhodobou změnu od meziročního kolísání a spojila výsledky nejprve uvnitř každé metody a pak
           mezi metodami. Rozdíly často spadaly do uváděných
           intervalů nejistoty, v některých oblastech však zůstaly systematické odchylky. Globální součet proto není
@@ -423,7 +423,7 @@ export function MountainGlaciersArticle() {
         <p>
           Velikost těchto čísel je srozumitelnější po převodu na objem vody. Jedna gigatuna je miliarda tun a přibližně jeden kilometr krychlový
           vody. Úbytek 408 Gt v roce 2025 tedy odpovídá asi 408 km³ vody rozložené mezi ledovce světa. Kumulovaných
-          9 583 Gt odpovídá 26,4 ± 3,3 mm globální střední hladiny moře; roční hodnota 2025 odpovídá 1,1 ± 0,4 mm. Tento
+          9 583 Gt odpovídá 26,4 ± 3,3 mm globální střední hladiny moře. Roční hodnota 2025 odpovídá 1,1 ± 0,4 mm. Tento
           přepočet popisuje tentýž hmotnostní úbytek v jiné jednotce, nikoli samostatné měření hladiny.{" "}
           <SourceLink id="DOI_10_1038_s43017_026_00777_z">WGMS Network, 2026</SourceLink>
         </p>
@@ -440,7 +440,7 @@ export function MountainGlaciersArticle() {
           GlaMBIE pro překrývající se, ale delší období 2000–2023 spojila čtyři měřicí postupy. Výsledkem je −6 542 ±
           387 Gt za celé období, v průměru −273 ± 16 Gt za rok. Průměrný roční úbytek vzrostl z 231 ± 23 Gt v letech
           2000–2011 na 314 ± 23 Gt v letech 2012–2023, tedy o 36 ± 10 %. Shoda s družicovým odhadem pro roky 2000–2019
-          se týká globální velikosti; GlaMBIE současně nachází větší rozdíly mezi metodami v některých jednotlivých
+          se týká globální velikosti. GlaMBIE současně nachází větší rozdíly mezi metodami v některých jednotlivých
           oblastech. <SourceLink id="DOI_10_1038_s41586_024_08545_z">GlaMBIE Team, 2025</SourceLink>
         </p>
 
@@ -473,10 +473,10 @@ export function MountainGlaciersArticle() {
           </div>
           <figcaption>
             Kumulovaná globální změna hmotnosti od začátku glaciologického roku 1976. Křivka sčítá kladné a záporné
-            roční hodnoty; světle modré pole vyjadřuje zveřejněnou nejistotu. Grafická verze Copernicus popisuje koncový
+            roční hodnoty. Světle modré pole vyjadřuje zveřejněnou nejistotu. Grafická verze Copernicus popisuje koncový
             součet jako −9 581 Gt, zatímco související recenzovaná práce WGMS uvádí −9 583 ± 1 211 Gt.
-            Rozdíl činí 2 Gt; podklady jej nevysvětlují, proto jej nepřisuzujeme automaticky zaokrouhlení.
-            V textu používáme údaj z práce. Data: WGMS; graf: C3S/ECMWF/WGMS, 2026. Zdroj:{" "}
+            Rozdíl činí 2 Gt. Podklady jej nevysvětlují, proto jej nepřisuzujeme automaticky zaokrouhlení.
+            V textu používáme údaj z práce. Data: WGMS. Graf: C3S/ECMWF/WGMS, 2026. Zdroj:{" "}
             <SourceLink id="WEB_Copernicus_Glaciers_Copernicus_5ae74590">Copernicus Climate Indicator: Glaciers, obr. 4</SourceLink>.
           </figcaption>
         </figure>
@@ -485,7 +485,7 @@ export function MountainGlaciersArticle() {
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
             U horských ledovců po celém světě dlouhodobě převažuje ústup čela a úbytek hmotnosti. Mezi roky 2000 a
-            2023 ztratilo hmotnost všech 19 sledovaných ledovcových oblastí; celkový úbytek činil přibližně 6 540
+            2023 ztratilo hmotnost všech 19 sledovaných ledovcových oblastí. Celkový úbytek činil přibližně 6 540
             gigatun. Průměrná roční ztráta vzrostla z 231 gigatun v letech 2000–2011 na 314 gigatun v letech
             2012–2023, tedy o 36 %. Od roku 1975 do roku 2025 ubylo přibližně 9 600 gigatun ledu a šest největších
             ročních ztrát nastalo během sedmi let 2019–2025. Samotný glaciologický rok 2025 přinesl úbytek asi
@@ -498,7 +498,7 @@ export function MountainGlaciersArticle() {
         <h2>Prameny a data</h2>
         <p>
           Karty zdrojů oddělují trvalý identifikátor DOI od veřejného plného textu nebo dat. U Hugonneta a kol.
-          (2021) a WGMS (2026) je dostupný recenzovaný autorský rukopis v institucionálním repozitáři; ostatní
+          (2021) a WGMS (2026) je dostupný recenzovaný autorský rukopis v institucionálním repozitáři. Ostatní
           citované studie lze celé číst u vydavatele. U rozsáhlých datových souborů vede odkaz nejprve na katalog
           s dokumentací a možnostmi stažení.
         </p>
@@ -589,11 +589,11 @@ export function MountainGlaciersArticle() {
               <li>
                 <SourceLink id="WEB_U_S_Geological_Survey_Grinnell_Glacier_Pair_248d244b">Grinnell Glacier Pair</SourceLink> a{" "}
                 <SourceLink id="WEB_U_S_Geological_Survey_Ablation_Stake_on_Wolverine_Glacier_276f80c5">Ablation Stake on Wolverine Glacier</SourceLink>:
-                USGS označuje oba soubory jako volné dílo; fotografové a původ jsou uvedeni u obrazů.
+                USGS označuje oba soubory jako volné dílo. Fotografové a původ jsou uvedeni u obrazů.
               </li>
               <li>
                 <SourceLink id="WEB_Copernicus_Glaciers_Copernicus_5ae74590">Copernicus Climate Indicator: Glaciers</SourceLink>,
-                obr. 1, 3b a 4; data WGMS, kredit C3S/ECMWF/WGMS.
+                obr. 1, 3b a 4. Data WGMS, kredit C3S/ECMWF/WGMS.
               </li>
               <li>
                 Převzetí grafů dovoluje{" "}

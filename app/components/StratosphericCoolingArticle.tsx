@@ -11,7 +11,7 @@ export function StratosphericCoolingArticle() {
           <div>
             <dt>Tlaková hladina</dt>
             <dd>
-              Plocha v atmosféře se stejným tlakem, například 50 hPa. Zkratka hPa znamená hektopascal; výška
+              Plocha v atmosféře se stejným tlakem, například 50 hPa. Zkratka hPa znamená hektopascal. Výška
               hladiny se mění podle místa a času.
             </dd>
           </div>
@@ -251,23 +251,23 @@ export function StratosphericCoolingArticle() {
           />
           <div className="article-figure__key" aria-label="Vysvětlení grafu váhových funkcí">
             <p>
-              <strong>TLS:</strong> dolní stratosféra, přibližně 13–22 km; maximum kolem 17 km.
+              <strong>TLS:</strong> dolní stratosféra, přibližně 13–22 km, maximum kolem 17 km.
             </p>
             <p>
-              <strong>SSU1:</strong> široká vrstva přibližně 20–40 km; maximum kolem 30 km.
+              <strong>SSU1:</strong> široká vrstva přibližně 20–40 km, maximum kolem 30 km.
             </p>
             <p>
-              <strong>SSU2:</strong> široká vrstva přibližně 25–45 km; maximum kolem 38 km.
+              <strong>SSU2:</strong> široká vrstva přibližně 25–45 km, maximum kolem 38 km.
             </p>
             <p>
-              <strong>SSU3:</strong> široká vrstva přibližně 35–55 km; maximum kolem 45 km.
+              <strong>SSU3:</strong> široká vrstva přibližně 35–55 km, maximum kolem 45 km.
             </p>
           </div>
           <figcaption>
-            Váhové funkce družicových měření. Výška na svislé ose ukazuje, odkud signál přichází; šířka křivky
+            Váhové funkce družicových měření. Výška na svislé ose ukazuje, odkud signál přichází. Šířka křivky
             ukazuje relativní příspěvek dané výšky. Překryv křivek je skutečnou vlastností měření, takže kanály
-            nejsou ostře oddělené výškové přihrádky. Graf: William Randel, NSF NCAR Climate Data Guide, beze změny;
-            stránka uvádí „Usage Restrictions: None“.{" "}
+            nejsou ostře oddělené výškové přihrádky. Graf: William Randel, NSF NCAR Climate Data Guide, beze změny.
+            Stránka uvádí „Usage Restrictions: None“.{" "}
             <SourceLink id="WEB_University_Corporation_for_A_Stratospheric_Temperature_Satellite_Datasets_Use_394cf021">
               Původní obrázek a odborný popis
             </SourceLink>
@@ -401,7 +401,7 @@ export function StratosphericCoolingArticle() {
             <p>
               Radiosondová měření z 85 pevninských stanic od roku 1958. NOAA zveřejňuje měsíční hodnoty na 13
               tlakových hladinách a průměry tří širších částí atmosféry. RATPAC-A je určen pro globální,
-              polokoulové, tropické a mimotropické průměry; RATPAC-B obsahuje jednotlivé stanice. Část RATPAC-B
+              polokoulové, tropické a mimotropické průměry. RATPAC-B obsahuje jednotlivé stanice. Část RATPAC-B
               po roce 1997 není homogenizovaná stejným způsobem jako starší údaje.
             </p>
             <p className="article-data-item__links">
@@ -537,7 +537,7 @@ export function StratosphericCoolingArticle() {
           </div>
           <div className="article-figure__key" aria-label="Vysvětlení srovnávacího grafu">
             <p>
-              <strong>TLS, dolní stopa:</strong> asi 13–22 km; UAH, NOAA a RSS v červených odstínech.
+              <strong>TLS, dolní stopa:</strong> asi 13–22 km, UAH, NOAA a RSS v červených odstínech.
             </p>
             <p>
               <strong>SSU1:</strong> široká vrstva s maximem kolem 30 km.
@@ -557,8 +557,8 @@ export function StratosphericCoolingArticle() {
           </div>
           <figcaption>
             Odsezónované globální měsíční odchylky teploty čtyř širokých vrstev, 1979–2024. Jednotlivé stopy jsou
-            svisle posunuté; šedá čára označuje jejich vlastní nulu. Graf: William Randel, NSF NCAR Climate Data
-            Guide, aktualizace odborného přehledu v roce 2025, beze změny; stránka uvádí „Usage Restrictions:
+            svisle posunuté. Šedá čára označuje jejich vlastní nulu. Graf: William Randel, NSF NCAR Climate Data
+            Guide, aktualizace odborného přehledu v roce 2025, beze změny. Stránka uvádí „Usage Restrictions:
             None“.{" "}
             <SourceLink id="WEB_University_Corporation_for_A_Stratospheric_Temperature_Satellite_Datasets_Use_394cf021">
               Původní graf, data a úplný kredit
@@ -652,7 +652,7 @@ export function StratosphericCoolingArticle() {
         <h2>Prameny, data a licence</h2>
         <p>
           Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez
-          předplatného. U studií vede záznam v databázi na DOI i na veřejný plný text; u dat a institucionálních
+          předplatného. U studií vede záznam v databázi na DOI i na veřejný plný text a u dat a institucionálních
           dokumentů přímo na stránku vydavatele nebo do jeho repozitáře.
         </p>
         <div className="article-source-groups">
@@ -869,7 +869,7 @@ export function StratosphericCoolingArticle() {
               </li>
               <li>
                 <SourceLink id="WEB_nsstc_uah_edu_Index_of_data_msu_9b9f4900">UAH TLS v6.1</SourceLink>: textové a
-                mřížkové soubory dolní stratosféry; samostatně je uveden také{" "}
+                mřížkové soubory dolní stratosféry. Samostatně je uveden také{" "}
                 <SourceLink id="DOI_10_5067_ghrc_amsu_a_data401">záznam dat v NASA GHRC DAAC</SourceLink>.
               </li>
               <li>
@@ -912,11 +912,11 @@ export function StratosphericCoolingArticle() {
                 <SourceLink id="WEB_University_Corporation_for_A_Stratospheric_Temperature_Satellite_Datasets_Use_394cf021">
                   Zdroj, kredit a odborný kontext
                 </SourceLink>
-                . Oba soubory jsou převzaty beze změny; zdrojová stránka uvádí „Usage Restrictions: None“.
+                . Oba soubory jsou převzaty beze změny. Zdrojová stránka uvádí „Usage Restrictions: None“.
               </li>
               <li>
                 NOAA uvádí, že její materiály lze bez zvláštního svolení použít, pokud u položky není uvedeno
-                jinak; požaduje uvedení zdroje a zakazuje dojem oficiálního schválení.{" "}
+                jinak. Požaduje uvedení zdroje a zakazuje dojem oficiálního schválení.{" "}
                 <SourceLink id="WEB_NOAA_NOAA_s_National_Ocean_Service_About_Us_4ba21b52">
                   Pravidla použití NOAA
                 </SourceLink>

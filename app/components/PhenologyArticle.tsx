@@ -22,7 +22,7 @@ export function PhenologyArticle() {
           </div>
           <div>
             <dt>Vegetační sezóna</dt>
-            <dd>Část roku, během níž je sledovaná vegetace aktivní; její začátek a konec závisejí na použité definici.</dd>
+            <dd>Část roku, během níž je sledovaná vegetace aktivní. Její začátek a konec závisejí na použité definici.</dd>
           </div>
         </dl>
         <p className="article-glossary__note">
@@ -50,9 +50,9 @@ export function PhenologyArticle() {
           U označené rostliny lze opakovaně odpovídat, zda je fáze přítomna, nepřítomna nebo zda si pozorovatel není
           jistý. Současně lze určit její intenzitu: počet květů, podíl otevřených květů nebo procento koruny s listy.
           Výsledek pak neobsahuje jen první zaznamenaný den, ale také trvání a velikost jevu. U pohyblivých živočichů
-          se stejná myšlenka převádí na počet zjištěných jedinců a jejich postupný součet během sezóny; z něj lze určit den,
+          se stejná myšlenka převádí na počet zjištěných jedinců a jejich postupný součet během sezóny. Z něj lze určit den,
           kdy bylo zaznamenáno například 10, 50 nebo 90 % celkového počtu.{" "}
-          <SourceLink id="DOI_10_1007_s00484_014_0789_5">Denny et al., 2014</SourceLink>;{" "}
+          <SourceLink id="DOI_10_1007_s00484_014_0789_5">Denny et al., 2014</SourceLink>,{" "}
           <SourceLink id="DOI_10_1111_j_2041_210x_2010_00020_x">Moussus et al., 2010</SourceLink>
         </p>
 
@@ -107,7 +107,7 @@ export function PhenologyArticle() {
           Jinou podobu mělo soustavné zapisování sezónních fází přímo za účelem poznávání přírody. Disertace{" "}
           <SourceLink id="WEB_db_huntbot_org_Original_Linnaean_Dissertations_Hunt_Institute_f_b8827d4c">Calendarium Florae</SourceLink>,
           kterou pod Linného vedením obhájil Alexander Malachias Berger 31. března 1756, uspořádala dobu kvetení
-          rostlin podle měsíců a ročních období. Vycházela z pozorování v Uppsale roku 1755; Hunt Institute
+          rostlin podle měsíců a ročních období. Vycházela z pozorování v Uppsale roku 1755. Hunt Institute
           zpřístupňuje katalogový záznam i digitalizovaný původní tisk.
         </p>
 
@@ -127,7 +127,7 @@ export function PhenologyArticle() {
           určoval sezónní přechody. Současný produkt MCD12Q2 už používá jiný výpočet, popsaný níže. Mezi
           jednotlivou rostlinou a družicovým pohledem dnes stojí automatické kamery, které fotografují stále
           stejný porost, často několikrát za hodinu.{" "}
-          <SourceLink id="DOI_10_1016_s0034_4257_02_00135_9">Zhang et al., 2003</SourceLink>;{" "}
+          <SourceLink id="DOI_10_1016_s0034_4257_02_00135_9">Zhang et al., 2003</SourceLink>,{" "}
           <SourceLink id="DOI_10_5194_essd_17_6531_2025">Young et al., 2025</SourceLink>
         </p>
 
@@ -149,8 +149,8 @@ export function PhenologyArticle() {
           kvetení, 8 zrání plodů a 9 stárnutí nebo nástup klidu. Databáze PEP725 uchovává původní druh, fázi, místo,
           rok a den roku a převádí záznamy partnerských sítí na odpovídající kódy BBCH. Druhá číslice upřesňuje fázi:
           například v obecné stupnici 61 znamená 10 % otevřených květů a 65 plné kvetení. Podrobnou definici je potřeba číst pro danou
-          skupinu rostlin; samotné shodné číslo neodstraní rozdíly starších pozorovacích pokynů.{" "}
-          <SourceLink id="WEB_openagrar_de_Meier_2001_stupnice_BBCH_f90d8917">Meier, 2001</SourceLink>;{" "}
+          skupinu rostlin. Samotné shodné číslo neodstraní rozdíly starších pozorovacích pokynů.{" "}
+          <SourceLink id="WEB_openagrar_de_Meier_2001_stupnice_BBCH_f90d8917">Meier, 2001</SourceLink>,{" "}
           <SourceLink id="DOI_10_1111_nph_70869">Templ et al., 2026</SourceLink>
         </p>
 
@@ -158,7 +158,7 @@ export function PhenologyArticle() {
         <p>
           U skupiny rostlin lze uvést den, kdy danou fázi dosáhlo 10, 50 nebo 90 % sledovaných jedinců. U ptáků,
           motýlů a dalších pohyblivých živočichů se během sezóny opakují sčítání na stejném místě a stejným postupem.
-          Denní počty se postupně sčítají. Den dosažení poloviny celkového počtu je medián průchodu; den největšího
+          Denní počty se postupně sčítají. Den dosažení poloviny celkového počtu je medián průchodu. Den největšího
           počtu je jiný ukazatel, vrchol aktivity. Vedle data musí zůstat informace o délce návštěvy, počtu pozorovatelů, ploše, zařízení a
           dnech bez měření, protože změna úsilí mění pravděpodobnost, že bude jedinec zaznamenán.
         </p>
@@ -168,9 +168,9 @@ export function PhenologyArticle() {
           počtu pozorovatelů roste šance zachytit mimořádně časného jedince, i kdyby se načasování celé populace
           nezměnilo. Moussus a kolegové porovnali deset ukazatelů na uměle vytvořených datech se známým posunem
           sezóny, různými počty jedinců a mezerami v pozorování. V průměru nejlépe vycházelo průměrné datum
-          a vyhlazení průběhu, první výskyt byl méně spolehlivý. Pořadí metod ale záviselo na tvaru sezóny;
-          ani prostřední datum není vždy nejlepší. Staré prameny někdy nic jiného než první datum
-          neobsahují; takový výsledek je použitelný, pokud je označen a porovnává se s obdobně vzniklými údaji.{" "}
+          a vyhlazení průběhu, první výskyt byl méně spolehlivý. Pořadí metod ale záviselo na tvaru sezóny.
+          Ani prostřední datum není vždy nejlepší. Staré prameny někdy nic jiného než první datum
+          neobsahují. Takový výsledek je použitelný, pokud je označen a porovnává se s obdobně vzniklými údaji.{" "}
           <SourceLink id="DOI_10_1111_j_2041_210x_2010_00020_x">Moussus et al., 2010</SourceLink>
         </p>
 
@@ -178,7 +178,7 @@ export function PhenologyArticle() {
           Meteorologický radar zachycuje záření rozptýlené objekty ve vzduchu. Z intenzity a změny frekvence
           vráceného signálu se odvozuje množství a pohyb rozptylujících objektů. Nejdříve se musí oddělit srážky:
           postup MistNet například využívá algoritmus naučený na radarových obrazech a ověřený proti ručnímu
-          označení deště. Zbylý signál ještě není seznam ptačích druhů; může obsahovat i hmyz a další objekty.
+          označení deště. Zbylý signál ještě není seznam ptačích druhů. Může obsahovat i hmyz a další objekty.
           Radar proto doplňuje druhově rozlišené odchyty, ale nenahrazuje je.{" "}
           <SourceLink id="DOI_10_1111_2041_210x_13280">Lin et al., 2019</SourceLink>
         </p>
@@ -227,9 +227,9 @@ export function PhenologyArticle() {
           <figcaption>
             Dva ukazatele ze stejných kamerových záběrů listnatého lesa: fialové body jsou cameraNDVI, zelená čára
             vyhlazený podíl zelené barvy Gcc. Vlevo je stanoviště Morgan Monroe v roce 2022, vpravo Harvard Forest v
-            roce 2019. Prudký jarní vrchol Gcc vzniká velmi sytou barvou mladých listů; cameraNDVI jej nemá a na podzim
+            roce 2019. Prudký jarní vrchol Gcc vzniká velmi sytou barvou mladých listů, zatímco cameraNDVI jej nemá a na podzim
             klesá pozvolněji. Vodorovná osa uvádí měsíce (Feb únor, Apr duben, Jun červen, Aug srpen,
-            Oct říjen, Dec prosinec), levá svislá osa cameraNDVI a pravá Gcc; hodnoty na obou
+            Oct říjen, Dec prosinec), levá svislá osa cameraNDVI a pravá Gcc. Hodnoty na obou
             osách jsou bezrozměrné. Graf ukazuje průběhy ukazatelů, nikoli dvě shodná měření data rašení. Zdroj:{" "}
             <SourceLink id="DOI_10_5194_essd_17_6531_2025">Young et al., 2025, obr. 5</SourceLink>,
             licence CC BY 4.0.
@@ -246,7 +246,7 @@ export function PhenologyArticle() {
         </p>
         <p>
           Ve verzi 6.1 je začátek zelenání den, kdy vyhlazený index vystoupá na 15 % rozdílu mezi minimem
-          a maximem daného cyklu. Další přechody používají 50 a 90 %; při poklesu se hledají stejné hranice
+          a maximem daného cyklu. Další přechody používají 50 a 90 %. Při poklesu se hledají stejné hranice
           v opačném směru. Hranice 15 % tedy neznamená, že 15 % stromů má listy. Podrobná data se ukládají
           pro nejvýše dva nejvýraznější cykly, spolu s hodnocením kvality. V souboru jsou data vyjádřena jako
           počet dnů od 1. ledna 1970, takže je před srovnáním s terénním dnem roku nutný převod.{" "}
@@ -266,8 +266,8 @@ export function PhenologyArticle() {
           začátku zelenání proto patří směsi odrazů v tomto bodu. Evropský produkt HR-VPP, tedy fenologie
           a produktivita vegetace ve vysokém rozlišení, využívá družice Sentinel-2 a vytváří
           desetimetrové mapy od roku 2017, ale i zde jde o vlastnost povrchu. Vyšší rozlišení zmenšuje mísení různých
-          porostů; nepřevádí družicový výsledek na datum prvního listu konkrétní rostliny.{" "}
-          <SourceLink id="DOI_10_1016_j_rse_2018_06_047">Zhang et al., 2018</SourceLink>;{" "}
+          porostů. Nepřevádí družicový výsledek na datum prvního listu konkrétní rostliny.{" "}
+          <SourceLink id="DOI_10_1016_j_rse_2018_06_047">Zhang et al., 2018</SourceLink>,{" "}
           <SourceLink id="DOI_10_2909_5ae0f2a2_7ad8_4f7c_878d_f1b09d78d7a1">Copernicus HR-VPP</SourceLink>
         </p>
 
@@ -286,14 +286,14 @@ export function PhenologyArticle() {
               Přibližně 16 milionů evropských pozorování rostlin. Nejstarší jednotlivé údaje sahají do konce
               osmnáctého století, soustavné sítě převážně k roku 1950. Podle portálu při revizi v říjnu 2026
               pochází asi 14 milionů záznamů z německé meteorologické služby DWD. Ukázkový soubor je dostupný
-              přímo; úplný výběr vyžaduje registraci, souhlas s podmínkami a uvedení účelu použití. Licence se
+              přímo. Úplný výběr vyžaduje registraci, souhlas s podmínkami a uvedení účelu použití. Licence se
               liší podle poskytovatele, celý archiv proto nelze označit jedinou licencí CC BY.
             </p>
             <p>
               V ukázkové tabulce lze sledovat celý zápis: číslo stanice, souřadnice, druh, kód fáze, rok,
               den roku, kalendářní datum a licenci. První řádek například zaznamenává sněženku
               (<i>Galanthus nivalis</i>), fázi 60, na stanici 3618 dne 7. ledna 2014. Číslo fáze je nutné
-              číst se slovníkem poskytovatele; samotný řádek není výpočtem klimatického trendu.
+              číst se slovníkem poskytovatele. Samotný řádek není výpočtem klimatického trendu.
             </p>
             <p>
               <SourceLink id="WEB_pep725_eu_Dataset_PEP725_5a0c6dbb">Data, ukázkový soubor a podmínky přístupu</SourceLink>{" · "}
@@ -334,7 +334,7 @@ export function PhenologyArticle() {
               Historická a dobrovolnická pozorování rostlin a živočichů ve Spojeném království. Úplný provozní archiv
               spravuje Woodland Trust, který vyřizuje žádosti o výzkumná data. Studie prvního kvetení 406 druhů
               v letech 1753–2019 odkazuje na tento archiv. Její veřejný doplněk obsahuje pět doplňujících
-              obrázků s popisky; není to soubor všech 419 354 původních pozorování.
+              obrázků s popisky. Není to soubor všech 419 354 původních pozorování.
             </p>
             <p>
               <SourceLink id="WEB_naturescalendar_woodlandtrus_Nature_s_Calendar_b68eee94">Portál a vkládání pozorování</SourceLink>{" · "}
@@ -358,7 +358,7 @@ export function PhenologyArticle() {
             <h3>PhenoCam v3</h3>
             <p>
               Kontrolovaná verze snímků a odvozených hodnot z 738 stanovišť za roky 2000–2023. Jednotlivá místa lze
-              prohlížet a stahovat v portálu; datový archiv laboratoře Oak Ridge vyžaduje bezplatný účet NASA Earthdata. Průběžná data jsou
+              prohlížet a stahovat v portálu. Datový archiv laboratoře Oak Ridge vyžaduje bezplatný účet NASA Earthdata. Průběžná data jsou
               novější, ale neprošla stejnou závěrečnou kontrolou jako verze 3.
             </p>
             <p>
@@ -372,7 +372,7 @@ export function PhenologyArticle() {
             <h3>MODIS a VIIRS</h3>
             <p>
               Globální každoroční mapy sezónního vývoje vegetace v rozlišení 500 metrů. MODIS MCD12Q2 začíná rokem
-              2001; citovaná verze VIIRS VNP22Q2.002 poskytuje výsledky od roku 2013. VIIRS je zobrazovací
+              2001. Citovaná verze VIIRS VNP22Q2.002 poskytuje výsledky od roku 2013. VIIRS je zobrazovací
               přístroj pro viditelné a infračervené záření na družici Suomi NPP. Oba produkty používají různé
               výpočty sezónních přechodů, takže je nelze prostě spojit do jednoho dlouhodobého záznamu.
               Soubory ve formátu HDF, který ukládá více datových vrstev v jednom souboru, jsou dostupné
@@ -416,8 +416,8 @@ export function PhenologyArticle() {
           definice a plochu, kterou každý přístroj vidí. Ve srovnání VIIRS a kamer PhenoCam pro roky 2013–2014
           činil průměrný absolutní rozdíl dat 7–11 dnů při jarním zelenání a 10–13 dnů při podzimním ústupu
           vegetace. Tato čísla platí pro družicový EVI2 a konkrétní kamerový index VCI, který zachycuje barevný
-          kontrast vegetace včetně podzimních odstínů; nejsou univerzální chybou všech družicových dat.{" "}
-          <SourceLink id="DOI_10_1016_j_agrformet_2014_05_008">Petach et al., 2014</SourceLink>;{" "}
+          kontrast vegetace včetně podzimních odstínů. Nejsou univerzální chybou všech družicových dat.{" "}
+          <SourceLink id="DOI_10_1016_j_agrformet_2014_05_008">Petach et al., 2014</SourceLink>,{" "}
           <SourceLink id="DOI_10_1016_j_agrformet_2018_03_003">Zhang et al., 2018</SourceLink>
         </p>
 
@@ -426,8 +426,8 @@ export function PhenologyArticle() {
           pozorování, ale 14 milionů dodala německá síť. PhenoCam má 738 stanovišť, většinu v Severní Americe. Globální
           souhrn ptačí fenologie od Romana a kolegů zahrnuje pět kontinentů, avšak 50,05 % podkladů pochází z Evropy,
           33,65 % ze Severní Ameriky a žádný z Jižní či Střední Ameriky. Počet záznamů proto není totéž co rovnoměrné
-          pokrytí planety. <SourceLink id="WEB_pep725_eu_Dataset_PEP725_5a0c6dbb">PEP725, datový portál</SourceLink>;{" "}
-          <SourceLink id="DOI_10_5194_essd_17_6531_2025">Young et al., 2025</SourceLink>;{" "}
+          pokrytí planety. <SourceLink id="WEB_pep725_eu_Dataset_PEP725_5a0c6dbb">PEP725, datový portál</SourceLink>,{" "}
+          <SourceLink id="DOI_10_5194_essd_17_6531_2025">Young et al., 2025</SourceLink>,{" "}
           <SourceLink id="DOI_10_1002_ecm_1552">Romano et al., 2023</SourceLink>
         </p>
 
@@ -436,9 +436,9 @@ export function PhenologyArticle() {
         <p>
           Evropské vyhodnocení pro roky 1971–2000 shromáždilo přes 125 000 dlouhodobých záznamů pro 542
           rostlinných a 19 živočišných druhů ve 21 zemích. Jeden takový záznam sleduje druh a fázi na určitém
-          místě po více let; číslo neoznačuje jednotlivé návštěvy. Do souhrnu rostlinných trendů vstoupilo
+          místě po více let. Číslo neoznačuje jednotlivé návštěvy. Do souhrnu rostlinných trendů vstoupilo
           103 199 kombinací s alespoň 15 pozorovanými roky. Pro každou autoři proložili datum fáze přímkou
-          podle roku a spočítali její sklon. U rašení, kvetení a zrání mělo 78 % trendů směr k dřívějším dnům;
+          podle roku a spočítali její sklon. U rašení, kvetení a zrání mělo 78 % trendů směr k dřívějším dnům.
           30 % všech těchto trendů bylo statisticky průkazných směrem dopředu a 3 % směrem dozadu.
           Průměrný posun jarních a letních fází činil 2,5 dne za desetiletí dopředu. Podzimní zbarvení a opad
           neměly obdobně jednotný směr.{" "}
@@ -448,7 +448,7 @@ export function PhenologyArticle() {
         <p>
           Novější zpracování vybralo pozorování z Německa, Rakouska a Švýcarska z období 1951–2018. Do výpočtu
           vstoupilo 96 996 kombinací druhu, fáze a stanice s nejméně 30 pozorovanými roky a posledním pozorováním v roce 2000
-          nebo později; samotných zápisů bylo přes 4,25 milionu. U rašení listů a kvetení mělo 89 % výsledků dřívější
+          nebo později. Samotných zápisů bylo přes 4,25 milionu. U rašení listů a kvetení mělo 89 % výsledků dřívější
           načasování a 54 % bylo statisticky průkazných. Průměr činil 0,240 dne za rok směrem k dřívějšímu datu. U
           zbarvení listů bylo 57 % výsledků pozdějších a průměrný posun činil 0,036 dne za rok směrem k pozdějšímu
           datu. Při posuzování průkaznosti autoři zohlednili, že současně testují mnoho trendů, mezi nimiž mohou
@@ -462,8 +462,8 @@ export function PhenologyArticle() {
           Autoři odstranili duplicity a při více datech stejného druhu, místa a roku ponechali nejčasnější.
           Soubor zahrnuje také Jersey, Guernsey a ostrov Man. Průměrný
           den roku byl 132 v části do roku 1986 a 106 v letech 1987–2019, tedy o 25,94 dne dříve v novější části.
-          Srovnání zahrnuje jiné počty pozorování, měnící se zastoupení míst a druhů a mimořádně dlouhé časové rozpětí;
-          neznamená proto, že každý druh na každém místě posunul kvetení přesně o 26 dnů. Autoři zveřejnili také
+          Srovnání zahrnuje jiné počty pozorování, měnící se zastoupení míst a druhů a mimořádně dlouhé časové rozpětí.
+          Neznamená proto, že každý druh na každém místě posunul kvetení přesně o 26 dnů. Autoři zveřejnili také
           oddělené výsledky pro růstové formy, sever a jih, města a venkov i soubor 25 druhů zaznamenávaných v obou
           částech. <SourceLink id="DOI_10_1098_rspb_2021_2456">Büntgen et al., 2022</SourceLink>
         </p>
@@ -485,7 +485,7 @@ export function PhenologyArticle() {
             1753–2019, modrá 122 574 pozorování do roku 1986 a červená 296 780 pozorování z let 1987–2019. Svislé čáry
             označují průměrný den každého souboru: 132 ve starší a 106 v novější části, rozdíl 25,94 dne. Graf zobrazuje
             rozdělení všech zahrnutých zápisů, nikoli křivku jediného druhu nebo stejné skupiny míst v každém roce.
-            Vodorovná osa je den roku (DOY); záporné hodnoty označují kvetení už na podzim předchozího roku.
+            Vodorovná osa je den roku (DOY). Záporné hodnoty označují kvetení už na podzim předchozího roku.
             Svislá osa uvádí počty pozorování v tisících.
             Zdroj: <SourceLink id="DOI_10_1098_rspb_2021_2456">Büntgen et al., 2022, obr. 2</SourceLink>,
             licence CC BY 4.0.
@@ -497,14 +497,14 @@ export function PhenologyArticle() {
           Druhově rozlišený pohled poskytlo 2 826 588 kroužkovacích záznamů lesňáčků, americké skupiny drobných
           pěvců. Šlo o 19 druhů v Severní Americe v období 1961–2018. Odchyty autoři seskupili do buněk o velikosti
           půl zeměpisného stupně: 46 pro jaro a 124 pro podzim. To nejsou nutně jednotlivé kroužkovací stanice.
-          Každá zařazená sezóna musela mít alespoň 25 dnů odchytů a 15 ptáků daného druhu; místa musela poskytovat
+          Každá zařazená sezóna musela mít alespoň 25 dnů odchytů a 15 ptáků daného druhu. Místa musela poskytovat
           nejméně deset let pozorování. Počítal se den dosažení poloviny odchytů, tedy medián průchodu.
         </p>
         <p>
           Ve statistickém modelu, který zohlednil také teplotu a polohu, mělo na jaře průkazný posun s rokem
           osm druhů: sedm k dřívějším a jeden k pozdějším dnům. Na podzim bylo průkazných dvanáct druhů,
           sedm dřívějších a pět pozdějších. Společný podzimní trend přes všechny druhy průkazný nebyl.
-          Výsledek tak závisí na části roku a druhu; model navíc odděluje změnu spojenou s rokem od souvislosti
+          Výsledek tak závisí na části roku a druhu. Model navíc odděluje změnu spojenou s rokem od souvislosti
           s teplotou, takže jeho sklon není prostým celkovým posunem pozorovaných dat.{" "}
           <SourceLink id="DOI_10_1111_1365_2656_13887">Horton et al., 2023</SourceLink>
         </p>
@@ -516,7 +516,7 @@ export function PhenologyArticle() {
           pocházející ze stejných studií. Předhnízdní tah a
           hnízdění se v průměru posunuly o přibližně 2–3 dny za desetiletí k dřívějším termínům. U tahu po hnízdění
           nebyla společná změna statisticky průkazná. Výsledek má výrazně nerovnoměrné zeměpisné pokrytí a zahrnuje
-          různé ukazatele počátku i středu sezóny; popisuje proto průměr přes zveřejněné podklady, ne jednotný posun
+          různé ukazatele počátku i středu sezóny. Popisuje proto průměr přes zveřejněné podklady, ne jednotný posun
           každého ptačího druhu na Zemi.{" "}
           <SourceLink id="DOI_10_1002_ecm_1552">Romano et al., 2023</SourceLink>
         </p>
@@ -588,7 +588,7 @@ export function PhenologyArticle() {
               <li>
                 Metodický obraz pochází z{" "}
                 <SourceLink id="DOI_10_1007_s00484_014_0789_5">Denny et al., 2014, obr. 1</SourceLink>.
-                Článek i obraz jsou zveřejněny pod licencí CC BY; převzatý soubor je z univerzitní výukové kopie se
+                Článek i obraz jsou zveřejněny pod licencí CC BY. Převzatý soubor je z univerzitní výukové kopie se
                 zachovaným odkazem na původní práci.
               </li>
               <li>
@@ -599,7 +599,7 @@ export function PhenologyArticle() {
               <li>
                 Kamerový graf pochází z{" "}
                 <SourceLink id="DOI_10_5194_essd_17_6531_2025">Young et al., 2025, obr. 5</SourceLink>,
-                publikovaného pod licencí CC BY 4.0. Všechny tři obrazy jsou převzaty beze změny; české vysvětlení je
+                publikovaného pod licencí CC BY 4.0. Všechny tři obrazy jsou převzaty beze změny. České vysvětlení je
                 uvedeno v popisku stránky.
               </li>
             </ul>

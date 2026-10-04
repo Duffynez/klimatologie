@@ -68,7 +68,7 @@ export function AtmosphericCo2Article() {
         </p>
 
         <p>
-          Jedna stanice zachycuje změnu v čase na jednom místě; síť stanic navíc ukazuje prostorové rozdíly. NOAA
+          Jedna stanice zachycuje změnu v čase na jednom místě. Síť stanic navíc ukazuje prostorové rozdíly. NOAA
           proto odebírá vzduch na ostrovech, pobřežích, lodích, vysokých věžích i v letadlech a u každého výsledku
           zveřejňuje místo, čas, použitou stupnici a příznaky kvality. Andrews a kol. podrobně popsali jednu část
           této sítě, měření na vysokých věžích, včetně přístrojů, kalibrace a rozpočtu nejistoty. Způsob výběru a
@@ -146,9 +146,9 @@ export function AtmosphericCo2Article() {
           />
           <figcaption>
             Observatoř Mauna Loa v roce 1958, kdy zde začalo pravidelné měření atmosférického CO₂. Stanice leží
-            přibližně 3 400 metrů nad mořem; nad okolní inverzní vrstvou často zachytává vzduch přenášený přes
+            přibližně 3 400 metrů nad mořem. Nad okolní inverzní vrstvou často zachytává vzduch přenášený přes
             rozsáhlou část Tichého oceánu. Fotografie: NOAA Global Monitoring Laboratory, galerie observatoře
-            Mauna Loa; dílo federální vlády USA.
+            Mauna Loa. Dílo federální vlády USA.
           </figcaption>
         </figure>
 
@@ -166,7 +166,7 @@ export function AtmosphericCo2Article() {
           Starší atmosféru zpřístupnil vzduch uzavřený v polárním ledu. Stauffer a kol. v roce 1984 popsali
           drcení malých vzorků ledu ve vakuu, odstranění vodní páry a měření uvolněného CO₂ infračerveným laserovým
           spektrometrem. Novější záznam z antarktického Law Dome propojil led, vzduch v pórech nad ledem a přímá
-          měření posledních desetiletí; Rubino a kol. jej v roce 2019 znovu zpracovali s aktualizovanou kalibrací a
+          měření posledních desetiletí. Rubino a kol. jej v roce 2019 znovu zpracovali s aktualizovanou kalibrací a
           modelem stáří vzduchu. Lüthi a kol. mezitím rozšířili antarktická měření až na 800 000 let.{" "}
           <SourceLink id="DOI_10_3189_1984aog5_1_160_164">Stauffer et al., 1984</SourceLink>,{" "}
           <SourceLink id="DOI_10_5194_essd_11_473_2019">Rubino et al., 2019</SourceLink> a{" "}
@@ -217,7 +217,7 @@ export function AtmosphericCo2Article() {
           <figcaption>
             Skleněné baňky NOAA pro odběr okolního vzduchu. V síti se vzorky zpravidla odebírají v párech a
             odesílají do laboratoře v Boulderu. Fotografie a popis: NOAA Global Monitoring Laboratory, „Surface
-            Flasks“; dílo federální vlády USA.
+            Flasks“. Dílo federální vlády USA.
           </figcaption>
         </figure>
 
@@ -237,7 +237,7 @@ export function AtmosphericCo2Article() {
           jedné vrstvě setká. Law Dome má vysoký přírůstek sněhu, a proto jeho měření zachycují změny posledních
           dvou tisíciletí podrobněji a překrývají se s přímým pozorováním atmosféry. Ve velmi pomalu narůstajícím
           ledu Východní Antarktidy je rozmezí stáří širší a rychlé změny se více vyhladí. Rubino a kol. tento vliv
-          zahrnuli do stáří plynu pro Law Dome; Fourteau a kol. jej samostatně vyčíslili pro několik vrtů s velmi
+          zahrnuli do stáří plynu pro Law Dome. Fourteau a kol. jej samostatně vyčíslili pro několik vrtů s velmi
           malým přírůstkem sněhu.{" "}
           <SourceLink id="DOI_10_5194_essd_11_473_2019">Rubino et al., 2019</SourceLink> a{" "}
           <SourceLink id="DOI_10_5194_cp_16_503_2020">Fourteau et al., 2020</SourceLink>
@@ -275,7 +275,7 @@ export function AtmosphericCo2Article() {
           k množství CO₂ určuje pomocí několika tlakových lahví. Ty tvoří kalibrační řetězec od pracovních lahví na
           stanici přes laboratorní standardy až k primárním standardům stupnice WMO CO₂ X2019. Změní-li se hodnota
           některého standardu po nové kalibraci, lze s uloženými údaji přepočítat i starší měření. Tans, Crotwell
-          a Thoning popsali přenos stupnice pomocí laserové spektroskopie; Hall a kol. následně doložili revizi
+          a Thoning popsali přenos stupnice pomocí laserové spektroskopie. Hall a kol. následně doložili revizi
           primárních standardů na stupnici X2019.{" "}
           <SourceLink id="DOI_10_5194_amt_10_2669_2017">Tans et al., 2017</SourceLink> a{" "}
           <SourceLink id="DOI_10_5194_amt_14_3015_2021">Hall et al., 2021</SourceLink>
@@ -286,7 +286,7 @@ export function AtmosphericCo2Article() {
           Záznam obsahuje i chvíle, kdy stanici ovlivní vzduch z bezprostředního okolí, porucha průtoku nebo práce
           na přístroji. NOAA původní hodnoty uchovává a přidává jim příznaky. Pro svůj záznam okolního vzduchu na
           Mauna Loa vybírá stabilní období a kontroluje směr větru i proměnlivost během hodiny. Výzkumník si může
-          pro jinou otázku zvolit jiný výběr; příznak není skryté smazání naměřené hodnoty.
+          pro jinou otázku zvolit jiný výběr. Příznak není skryté smazání naměřené hodnoty.
         </p>
 
         <h3>5. Z jednotlivých stanic vzniknou denní a měsíční hodnoty</h3>
@@ -314,7 +314,7 @@ export function AtmosphericCo2Article() {
           Nejistota zahrnuje opakovatelnost analýzy, návaznost referenčních plynů, spojení různých přístrojů i
           prostorový výpočet. NOAA u ročního globálního průměru zveřejňuje nejistotu a poslední rok označuje jako
           předběžný, dokud neskončí nové kalibrace a kontroly. Změna kalibrační stupnice může upravit starší
-          hodnoty o desetiny ppm; proto má citace obsahovat také verzi nebo datum stažení.
+          hodnoty o desetiny ppm. Proto má citace obsahovat také verzi nebo datum stažení.
         </p>
 
         <h2>Zveřejňovaná data</h2>
@@ -329,8 +329,8 @@ export function AtmosphericCo2Article() {
             <h3>Mauna Loa: NOAA a Scripps</h3>
             <p>
               Nejdelší souvislé přímé měření atmosférického CO₂. Scripps zahájil pozorování v březnu 1958, NOAA
-              měří na stejné observatoři nezávisle od roku 1974. Obě instituce zveřejňují měsíční a roční hodnoty;
-              souběh slouží jako dlouhodobá kontrola.
+              měří na stejné observatoři nezávisle od roku 1974. Obě instituce zveřejňují měsíční a roční hodnoty.
+              Souběh slouží jako dlouhodobá kontrola.
             </p>
             <p className="article-data-item__links">
               <SourceLink id="WEB_NOAA_Trends_in_CO2_NOAA_Global_Monitoring_Laboratory_8f52d95b">Data NOAA ke stažení</SourceLink>
@@ -345,7 +345,7 @@ export function AtmosphericCo2Article() {
             <h3>Globální průměr NOAA</h3>
             <p>
               Měsíční a roční globální hodnoty z povrchových míst sledujících mořské pozadí. Záznam začíná rokem
-              1979; tabulky obsahují hodnotu, dlouhodobý průběh a zveřejněnou nejistotu. Poslední úplný rok může
+              1979. Tabulky obsahují hodnotu, dlouhodobý průběh a zveřejněnou nejistotu. Poslední úplný rok může
               být ještě předběžný.
             </p>
             <p className="article-data-item__links">
@@ -411,7 +411,7 @@ export function AtmosphericCo2Article() {
             <h3>OCO-2</h3>
             <p>
               NASA zveřejňuje jednotlivé úspěšné výpočty XCO₂ i zjednodušené soubory Lite. Datové centrum nyní
-              nabízí zpětně zpracovaný referenční produkt XCO₂ ve verzi 11.3r; starší 11.2r zůstává součástí
+              nabízí zpětně zpracovaný referenční produkt XCO₂ ve verzi 11.3r. Starší 11.2r zůstává součástí
               dokumentovaného záznamu. Kvalitativní příznak odděluje doporučená měření od výsledků ovlivněných
               oblačností, aerosoly nebo povrchem.
             </p>
@@ -458,7 +458,7 @@ export function AtmosphericCo2Article() {
           <figcaption>
             Atmosférický CO₂ na Mauna Loa od roku 1958. Graf spojuje měření Scripps Institution of Oceanography a
             NOAA Global Monitoring Laboratory. Verze grafu: 6. července 2026. Zdroj: NOAA GML, převzato beze
-            změny; dílo federální vlády USA.
+            změny. Dílo federální vlády USA.
           </figcaption>
         </figure>
 
@@ -492,7 +492,7 @@ export function AtmosphericCo2Article() {
           <figcaption>
             Globální měsíční průměr CO₂ vypočtený NOAA z povrchových míst sledujících mořské pozadí. Poslední rok
             je předběžný. Verze grafu: 6. července 2026. Zdroj: NOAA GML, datová citace Lan, Tans a Thoning,
-            DOI 10.15138/9N0H-ZH07; převzato beze změny.
+            DOI 10.15138/9N0H-ZH07. Převzato beze změny.
           </figcaption>
         </figure>
 
@@ -518,14 +518,14 @@ export function AtmosphericCo2Article() {
         <p>
           Globální roční záznam NOAA začíná hodnotou 336,85 ± 0,10 ppm v roce 1979. Pro rok 2025 uvádí
           425,64 ± 0,09 ppm, zatím jako předběžnou hodnotu. Rozdíl mezi těmito dvěma roky je 88,79 ppm. Nejnovější
-          zveřejněný měsíční globální průměr v době napsání článku je 428,55 ppm pro duben 2026; měsíční číslo se
+          zveřejněný měsíční globální průměr v době napsání článku je 428,55 ppm pro duben 2026. Měsíční číslo se
           nesrovnává přímo s ročním průměrem.
         </p>
 
         <p>
           Na obou moderních grafech je dlouhodobá změna překryta pravidelným kolísáním během roku. Velikost a
           načasování tohoto kolísání se mezi stanicemi liší. Keeling už v prvních zveřejněných měřeních rozlišil
-          sezónní průběh a rozdíly mezi zeměpisnými šířkami; dnešní síť umožňuje totéž kontrolovat v jednotlivých
+          sezónní průběh a rozdíly mezi zeměpisnými šířkami. Dnešní síť umožňuje totéž kontrolovat v jednotlivých
           veřejných záznamech. V jednom okamžiku proto nemá povrchový vzduch na všech místech přesně stejný molární
           zlomek CO₂. Globální průměr tento prostorový obraz shrnuje do jednoho čísla.{" "}
           <SourceLink id="DOI_10_1111_j_2153_3490_1960_tb01300_x">Keeling, 1960</SourceLink> a{" "}
@@ -537,15 +537,14 @@ export function AtmosphericCo2Article() {
         <p>
           Ledová jádra prodlužují pozorování do období před přístroji. Složený antarktický záznam použitý v grafu
           NOAA se během posledních 800 000 let pohybuje přibližně mezi 170 a 300 ppm. Samostatně vyznačený moderní
-          roční průměr pro rok 2024 je 422,8 ppm. Bod pro rok 2024 pochází z přímého měření; fialová křivka ze
-          vzduchu uzavřeného v ledu. Graf tedy porovnává dvě metody a dvě velmi odlišná časová rozlišení.
+          roční průměr pro rok 2024 je 422,8 ppm. Bod pro rok 2024 pochází z přímého měření, zatímco fialová křivka pochází ze vzduchu uzavřeného v ledu. Graf tedy porovnává dvě metody a dvě velmi odlišná časová rozlišení.
         </p>
 
         <p>
           Převzatý graf NOAA odkazuje na práci Lüthiho a kol. z roku 2008. Současný archiv NOAA/NCEI místo jejího
           původního složeného souboru nabízí revizi Bereitera a kol. z roku 2015. Autoři v nejhlubší části jádra
           odhalili chybu při uvolňování vzduchu z ledu, která v nejstarších vzorcích dosahovala 10,1 ± 2,4 ppm, a
-          dotčené hodnoty opravili. Graf je vhodný pro pohled na celý rozsah; pro výpočet konkrétní hodnoty nebo
+          dotčené hodnoty opravili. Graf je vhodný pro pohled na celý rozsah. Pro výpočet konkrétní hodnoty nebo
           časového intervalu je určena revidovaná tabulka.{" "}
           <SourceLink id="DOI_10_1002_2014gl061957">
             Bereiter et al., 2015
@@ -574,8 +573,8 @@ export function AtmosphericCo2Article() {
           </div>
           <figcaption>
             Atmosférický CO₂ za posledních 800 000 let. Vodorovná osa směřuje od dávné minulosti vlevo k
-            současnosti vpravo. Graf: NOAA Climate.gov, zveřejněno 30. dubna 2025; ledová data podle Lüthi et al.
-            (2008) z archivu NOAA/NCEI, moderní hodnota NOAA GML. Převzato beze změny; dílo federální vlády USA.
+            současnosti vpravo. Graf: NOAA Climate.gov, zveřejněno 30. dubna 2025. Ledová data podle Lüthi et al.
+            (2008) z archivu NOAA/NCEI, moderní hodnota NOAA GML. Převzato beze změny. Dílo federální vlády USA.
           </figcaption>
         </figure>
 
@@ -597,7 +596,7 @@ export function AtmosphericCo2Article() {
             Přírůstek 111,37 ppm odpovídá přibližně 35 % hodnoty na začátku tohoto období. Globální povrchový průměr
             se mezi roky 1979 a 2025 zvýšil z 336,85 na 425,64 ppm. Dlouhodobý růst je doprovázen pravidelným sezónním
             kolísáním a rozdíly mezi zeměpisnými šířkami. Během předchozích 800 000 let se koncentrace zachycená v
-            antarktickém ledu pohybovala přibližně mezi 170 a 300 ppm; globální průměr roku 2024 dosáhl 422,8 ppm a
+            antarktickém ledu pohybovala přibližně mezi 170 a 300 ppm. Globální průměr roku 2024 dosáhl 422,8 ppm a
             ležel nad celým tímto historickým rozsahem.
           </p>
         </div>
@@ -605,7 +604,7 @@ export function AtmosphericCo2Article() {
         <h2>Prameny, data a licence</h2>
         <p>
           Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez
-          předplatného. U studií vede záznam v databázi na DOI i na veřejný plný text; u dat a institucionálních
+          předplatného. U studií vede záznam v databázi na DOI i na veřejný plný text a u dat a institucionálních
           dokumentů přímo na stránku vydavatele nebo do jeho repozitáře.
         </p>
         <div className="article-source-groups">
@@ -798,8 +797,8 @@ export function AtmosphericCo2Article() {
               </li>
               <li>
                 Grafy Mauna Loa a globálního průměru byly převzaty beze změny z{" "}
-                <SourceLink id="WEB_NOAA_Trends_in_CO2_NOAA_Global_Monitoring_Laboratory_f1c52261">NOAA GML Trends in CO₂</SourceLink>;
-                datum verze je vytištěno přímo v obrazu.
+                <SourceLink id="WEB_NOAA_Trends_in_CO2_NOAA_Global_Monitoring_Laboratory_f1c52261">NOAA GML Trends in CO₂</SourceLink>.
+                Datum verze je vytištěno přímo v obrazu.
               </li>
               <li>
                 Graf 800 000 let zveřejnila NOAA Climate.gov 30. dubna 2025.{" "}
