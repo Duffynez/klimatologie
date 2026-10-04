@@ -7,6 +7,7 @@ import { HygrometryArticle } from "../../components/HygrometryArticle";
 import { RadiosoundingArticle } from "../../components/RadiosoundingArticle";
 import { PressureHeightArticle } from "../../components/PressureHeightArticle";
 import { ConductometryArticle } from "../../components/ConductometryArticle";
+import { RainGaugeArticle } from "../../components/RainGaugeArticle";
 import { measurementMethods, methodBySlug } from "../../data/methods";
 
 const combinedAnalysisSlug = "titrace-a-coulometrie";
@@ -71,6 +72,25 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "srazkomery-a-disdrometry") {
+    return (
+      <div className="page-shell">
+        <PageLead
+          eyebrow="Metody / Přímá měření"
+          title="Srážkoměry a disdrometry"
+          meta="Napsáno: 4. října 2026 · Odborná revize: 4. října 2026"
+        >
+          <p>
+            Jak z vážení vody a průchodu kapek světlem vzniká údaj o srážkách.
+            Od přístroje a kalibrace k úhrnu a intenzitě deště, se skutečnými daty a výpočtem ke stažení.
+          </p>
+        </PageLead>
+        <RainGaugeArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "konduktometrie") {

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SourceLink } from "./SourceLink";
 
 export function PrecipitationArticle() {
@@ -100,7 +101,7 @@ export function PrecipitationArticle() {
 
         <p>
           Během 19. století se vedle ručně odečítaných nádob rozšířily přístroje, které zaznamenávaly i průběh deště v
-          čase. George Hellmann v roce 1897 zveřejnil původní popis nového registračního srážkoměru: přibývající voda
+          čase. Gustav Hellmann v roce 1897 zveřejnil původní popis nového registračního srážkoměru: přibývající voda
           zvedala plovák s perem a po naplnění nádoby ji sifon vyprázdnil, takže přístroj mohl pokračovat v zápisu na
           papírový pás poháněný hodinovým strojem. Záznam už neukazoval pouze celkový úhrn mezi dvěma odečty, ale také
           začátek, konec a proměnlivou intenzitu srážky. <SourceLink id="WEB_DWD_Hellmann_1897_Ein_neuer_registrirender_Regenmesser">Hellmann, 1897</SourceLink>
@@ -120,6 +121,10 @@ export function PrecipitationArticle() {
           rozdílem mezi dvěma pravidelnými odečty. Váhový přístroj místo přelévání průběžně váží nádobu a změnu hmotnosti
           převádí na milimetry vody. Dokáže proto zaznamenat i průběh srážky a po vhodné úpravě také vodní hodnotu sněhu.
           Základní konstrukce, požadavky na umístění i zdroje chyb shrnuje <SourceLink id="WEB_World_Meteorological_Organiz_Guide_to_Instruments_and_Methods_of_Observation_93c4c4a4">WMO Guide No. 8, svazek I, kapitola 6</SourceLink>.
+        </p>
+        <p>
+          Převod signálu váhového přístroje na úhrn, měření jednotlivých kapek a skutečný výpočet
+          pětiminutové intenzity vysvětluje metoda <Link href="/metody/srazkomery-a-disdrometry">Srážkoměry a disdrometry</Link>.
         </p>
 
         <figure className="article-figure article-figure--portrait">

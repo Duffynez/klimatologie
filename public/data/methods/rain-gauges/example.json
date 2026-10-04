@@ -1,0 +1,93 @@
+{
+  "retrieved": "2026-10-04",
+  "station": "MA Blue Hill 0 W",
+  "wban": "94785",
+  "dateLST": "20250607",
+  "startTimeLST": "1400",
+  "endTimeLST": "1500",
+  "utcOffsetHours": -5,
+  "dataVersion": "2.1.1",
+  "subhourlyFormat": "01",
+  "hourlyFormat": "03",
+  "dataloggerVersion": "2.623",
+  "selection": "First complete LST hour from June through August 2025 with published hourly precipitation at least 5 mm, all twelve five-minute precipitation values present and all five-minute air temperatures above 10 C. Hours crossing midnight are excluded.",
+  "subhourlySource": "https://www.ncei.noaa.gov/pub/data/uscrn/products/subhourly01/2025/CRNS0101-05-2025-MA_Blue_Hill_0_W.txt",
+  "hourlySource": "https://www.ncei.noaa.gov/pub/data/uscrn/products/hourly02/2025/CRNH0203-2025-MA_Blue_Hill_0_W.txt",
+  "subhourlyReadme": "https://www.ncei.noaa.gov/pub/data/uscrn/products/subhourly01/readme.txt",
+  "hourlyReadme": "https://www.ncei.noaa.gov/pub/data/uscrn/products/hourly02/readme.txt",
+  "inputLevel": "Official processed precipitation increments, not raw wire frequencies or bucket depths. Original full NOAA records are preserved byte-for-byte.",
+  "precipitationQC": "Precipitation has no separate flag in these products. Invalid derived values are represented by a missing-value sentinel. Do not use the radiation or humidity flag as a precipitation flag.",
+  "intervalMinutes": 5,
+  "sha256": {
+    "blue-hill-five-minute.txt": "b54f4fcc63c82d80d91ca412080ae96c4fb9d6c0a8406da37ae38b9155c8d3df",
+    "blue-hill-hourly.txt": "f6cb793c8287636048d743ed86a1ef0db71a69c85b598f6781f4336ba3ffecd7"
+  },
+  "annualFileSha256": {
+    "subhourly": "50d299e2233f890781456430354c70849b84ca697f3e874009563485bb0124bb",
+    "hourly": "dcaacf902c8810edbc01b3bfcc6eed9189f0d4d6d226be484cc2242cec3ad1a8"
+  },
+  "rows": [
+    {
+      "endTimeLST": "14:05",
+      "depthMm": 0.3,
+      "meanRateMmPerHour": 3.6
+    },
+    {
+      "endTimeLST": "14:10",
+      "depthMm": 0.3,
+      "meanRateMmPerHour": 3.6
+    },
+    {
+      "endTimeLST": "14:15",
+      "depthMm": 0.3,
+      "meanRateMmPerHour": 3.6
+    },
+    {
+      "endTimeLST": "14:20",
+      "depthMm": 0.5,
+      "meanRateMmPerHour": 6.0
+    },
+    {
+      "endTimeLST": "14:25",
+      "depthMm": 1.5,
+      "meanRateMmPerHour": 18.0
+    },
+    {
+      "endTimeLST": "14:30",
+      "depthMm": 2.6,
+      "meanRateMmPerHour": 31.2
+    },
+    {
+      "endTimeLST": "14:35",
+      "depthMm": 1.4,
+      "meanRateMmPerHour": 16.8
+    },
+    {
+      "endTimeLST": "14:40",
+      "depthMm": 0.6,
+      "meanRateMmPerHour": 7.2
+    },
+    {
+      "endTimeLST": "14:45",
+      "depthMm": 0.8,
+      "meanRateMmPerHour": 9.6
+    },
+    {
+      "endTimeLST": "14:50",
+      "depthMm": 0.5,
+      "meanRateMmPerHour": 6.0
+    },
+    {
+      "endTimeLST": "14:55",
+      "depthMm": 0.2,
+      "meanRateMmPerHour": 2.4
+    },
+    {
+      "endTimeLST": "15:00",
+      "depthMm": 0.2,
+      "meanRateMmPerHour": 2.4
+    }
+  ],
+  "hourlyDepthMm": 9.2,
+  "maxFiveMinuteRateMmPerHour": 31.2
+}

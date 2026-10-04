@@ -1477,6 +1477,74 @@ test("reproduces conductivity calibration and matches independent published PSS-
   assert.throws(() => reproduceCalibration(text.replace("5.96800", "5968.00"), metadata));
 });
 
+test("publishes rain gauges and disdrometers with open sources, data and an observation backlink", async () => {
+  const [html, article, catalogue, observation] = await Promise.all([
+    readFile(new URL("dist/client/metody/srazkomery-a-disdrometry/index.html", root), "utf8"),
+    readFile(new URL("app/components/RainGaugeArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/srazky-a-privalove-srazky/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "Full article must replace the catalogue fallback");
+  assert.match(body, /class="method-flow"/);
+  assert.match(body, /blue-hill-rain\.png/);
+  assert.match(body, /31,2 mm\/h/);
+  assert.match(body, /nepřiřazuje samostatný příznak kvality/);
+  assert.equal((body.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) ?? []).length, 12);
+  assert.doesNotMatch(body.replace(/&[^;\s]+;/g, ""), /;/, "No semicolons in Czech prose");
+  assert.match(observation, /href="\/metody\/srazkomery-a-disdrometry\/?"/);
+  const ids = [...new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp(`<article[^>]*id="${id}"[\\s\\S]*?<\\/article>`))?.[0];
+    assert.ok(card, `Missing rain method source: ${id}`);
+    assert.doesNotMatch(card, /drive\.google\.com/, `Open source has a Drive button: ${id}`);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/, `Missing open access: ${id}`);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const href = match[1];
+    const file = /\.[a-z0-9]+$/i.test(href) ? href : `${href.replace(/\/$/, "")}/index.html`;
+    await readFile(new URL(`dist/client${file}`, root));
+  }
+});
+
+test("reproduces the NOAA rain hour, distinguishes interval depth from intensity and rejects gaps", async () => {
+  const base = new URL("public/data/methods/rain-gauges/", root);
+  const { summarizeRainHour } = await import(new URL("reproduce.mjs", base));
+  const metadata = JSON.parse(await readFile(new URL("example.json", base), "utf8"));
+  const names = ["blue-hill-five-minute.txt", "blue-hill-hourly.txt"];
+  const buffers = await Promise.all(names.map((name) => readFile(new URL(name, base))));
+  for (let i = 0; i < names.length; i++) {
+    assert.equal(createHash("sha256").update(buffers[i]).digest("hex"), metadata.sha256[names[i]]);
+    assert.deepEqual(await readFile(new URL(`dist/client/data/methods/rain-gauges/${names[i]}`, root)), buffers[i]);
+  }
+  const [subhourly, hourly] = buffers.map((b) => b.toString("utf8"));
+  const result = summarizeRainHour(subhourly, hourly, metadata);
+  assert.equal(result.count, 12);
+  assert.equal(result.hourlyDepthMm, 9.2);
+  assert.equal(result.publishedHourlyDepthMm, 9.2);
+  assert.equal(result.hourlyMeanRateMmPerHour, 9.2);
+  assert.equal(result.maxFiveMinuteRateMmPerHour, 31.2);
+  assert.equal(result.agreesWithPublishedHour, true);
+  assert.deepEqual(result.rows, metadata.rows);
+  const lines = subhourly.trim().split(/\r?\n/);
+  const mutate = (index, field, value) => lines.map((line, i) => {
+    const columns = line.trim().split(/\s+/);
+    if (i === index) columns[field] = value;
+    return columns.join(" ");
+  }).join("\n");
+  for (const value of ["-9999.0", "NaN", "", "-0.1"])
+    assert.throws(() => summarizeRainHour(mutate(0, 9, value), hourly, metadata));
+  assert.throws(() => summarizeRainHour(lines.slice(1).join("\n"), hourly, metadata), /Expected 12/);
+  assert.throws(() => summarizeRainHour(mutate(0, 4, "1410"), hourly, metadata), /timestamp/);
+  assert.throws(() => summarizeRainHour(mutate(0, 2, "2005"), hourly, metadata), /timestamp/);
+  // Column 12 is a solar-radiation flag. It must not reject valid precipitation.
+  assert.equal(summarizeRainHour(mutate(0, 11, "3"), hourly, metadata).hourlyDepthMm, 9.2);
+  // A valid zero is dry, whereas a missing value must never be silently filled.
+  const dryFirst = summarizeRainHour(mutate(0, 9, "0.0"), hourly, metadata);
+  assert.equal(dryFirst.hourlyDepthMm, 8.9);
+  assert.equal(dryFirst.agreesWithPublishedHour, false);
+});
+
 test("keeps the current catalogue of fourteen observations", async () => {
   const evidence = await readFile(new URL("app/data/evidence.ts", root), "utf8");
   const slugs = [...evidence.matchAll(/\{ slug: "([^"]+)"/g)].map((match) => match[1]);
