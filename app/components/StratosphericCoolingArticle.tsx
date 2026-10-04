@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SourceLink } from "./SourceLink";
 
 export function StratosphericCoolingArticle() {
@@ -193,10 +194,15 @@ export function StratosphericCoolingArticle() {
         <h3>Radiosonda: teplota během jednoho výstupu</h3>
         <p>
           Současná radiosonda je malá jednorázová měřicí souprava zavěšená pod balónem naplněným heliem nebo
-          vodíkem. Teplotní čidlo je vystavené proudícímu vzduchu, tlakové čidlo určuje tlakovou hladinu a poloha
-          se sleduje pomocí družicové navigace. Přístroj vysílá hodnoty každou sekundu přijímači na zemi.
-          Typický výstup trvá déle než dvě hodiny a může překročit 35 kilometrů.{" "}
+          vodíkem. Teplotní čidlo je vystavené proudícímu vzduchu a poloha se sleduje pomocí družicové navigace.
+          Přístroj průběžně vysílá údaje přijímači na zemi. Podle popisu americké služby NOAA/NWS může výstup
+          trvat přes dvě hodiny a překročit 35 kilometrů.{" "}
           <SourceLink id="WEB_NOAA_Radiosonde_Observation_27e1f005">NOAA/NWS: radiosondové pozorování</SourceLink>
+        </p>
+        <p>
+          Tlak se podle provedení sondy měří samostatným čidlem nebo odvozuje z výšky, teploty a vlhkosti.
+          Obě varianty rozlišuje <SourceLink id="2023_GRUAN_RS41_TD8">dokumentace GRUAN pro RS41</SourceLink>.
+          Cestu od odečtů čidel k hotovému profilu vysvětluje článek <Link href="/metody/radiosondaz">Radiosondáž</Link>.
         </p>
 
         <p>

@@ -1,3 +1,5 @@
 # Preserve the published SHA-256 checksums of the NOAA data extracts.
 public/data/methods/resistance-thermometry/*.txt text eol=lf
 public/data/methods/hygrometry/*.txt text eol=lf
+# Keep the CHMI archive member byte-for-byte, including its original line endings.
+public/data/methods/radiosounding/*.csv binary

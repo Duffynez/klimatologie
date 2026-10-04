@@ -197,6 +197,11 @@ export function AtmosphericHumidityArticle() {
           součty vodní páry mezi povrchem a tlakovou hladinou 500 hPa.{" "}
           <SourceLink id="DOI_10_1029_2008jd010989">Durre et al., 2009</SourceLink>
         </p>
+        <p>
+          Přípravu sondy, určení její výšky a zpracování jednotlivých odečtů popisuje článek{" "}
+          <Link href="/metody/radiosondaz">Radiosondáž</Link>. Obsahuje také skutečný výstup z Prahy-Libuše,
+          na kterém lze sledovat cestu od zveřejněného souboru k výškovému profilu.
+        </p>
 
         <figure className="article-figure article-figure--portrait">
           <Image

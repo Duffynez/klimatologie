@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { PageLead } from "../../components/PageLead";
 import { ResistanceThermometryArticle } from "../../components/ResistanceThermometryArticle";
 import { HygrometryArticle } from "../../components/HygrometryArticle";
+import { RadiosoundingArticle } from "../../components/RadiosoundingArticle";
 import { measurementMethods, methodBySlug } from "../../data/methods";
 
 const combinedAnalysisSlug = "titrace-a-coulometrie";
@@ -108,6 +109,25 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <Link className="text-link" href="/metody">
           &larr; Zpět na všechny metody
         </Link>
+      </div>
+    );
+  }
+
+  if (slug === "radiosondaz") {
+    return (
+      <div className="page-shell">
+        <PageLead
+          eyebrow="Metody / Přímá měření"
+          title="Radiosondáž"
+          meta="Napsáno: 4. října 2026 · Odborná revize: 4. října 2026"
+        >
+          <p>
+            Jak přístroje pod meteorologickým balonem vytvářejí profil atmosféry.
+            Od odezvy čidel a družicové polohy přes kalibraci a korekce ke skutečnému výstupu z Prahy-Libuše.
+          </p>
+        </PageLead>
+        <RadiosoundingArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
       </div>
     );
   }

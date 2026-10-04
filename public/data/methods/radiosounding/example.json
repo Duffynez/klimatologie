@@ -1,0 +1,90 @@
+{
+  "station": "Praha-Libuš",
+  "nominalTimeUTC": "2025-01-01T12:00:00Z",
+  "launchTimeUTC": "2025-01-01T11:15:10Z",
+  "direction": "ascent",
+  "retrieved": "2026-10-04",
+  "sourceArchive": "https://opendata.chmi.cz/meteorology/weather/radiosounding/Praha/historical/ascent/202501_Praha_ascent_profil.zip",
+  "archiveMember": "25010112_Praha_ascent_111510.csv",
+  "archiveSha256": "16d729f2d3f605b3fa4e31d30ae05112fdf78f67b5ebd9dc8bf07d68b283dc8a",
+  "fileSha256": "768e98bee90ac4ac304e07101014600a06808fe9d2397c96a2635872ad376621",
+  "formatDocumentation": "https://opendata.chmi.cz/meteorology/weather/radiosounding/radiosondaz_popis_cz_1.0.pdf",
+  "formatVersion": "1.0 (2025-04-01)",
+  "dataProvenance": "Český hydrometeorologický ústav (ČHMÚ), opendata.chmi.cz",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "reuseStatement": "https://www.chmi.cz/-/kde-najdu-otev%C5%99en%C3%A1-data-%C4%8Dhm%C3%BA-",
+  "modifications": "Original CSV member reproduced byte-for-byte, including CR CR LF line endings and sep=, directive. Table and chart are our selections and visualisations of these data.",
+  "columns": [
+    "elapsedMinutes",
+    "elapsedSecondsWithinMinute",
+    "geopotentialHeightGpm",
+    "pressureHpa",
+    "temperatureC",
+    "relativeHumidityPercent",
+    "dewPointC",
+    "windFromDegrees",
+    "windSpeedMs",
+    "latitudeDegrees",
+    "longitudeDegrees"
+  ],
+  "recordCount": 5059,
+  "selectedRows": [
+    {
+      "elapsedSeconds": 0,
+      "heightGpm": 304.1,
+      "pressureHpa": 984.28,
+      "temperatureC": 7.8
+    },
+    {
+      "elapsedSeconds": 600,
+      "heightGpm": 4086.4,
+      "pressureHpa": 613.84,
+      "temperatureC": -10.1
+    },
+    {
+      "elapsedSeconds": 1200,
+      "heightGpm": 8224.2,
+      "pressureHpa": 348.69,
+      "temperatureC": -37.9
+    },
+    {
+      "elapsedSeconds": 1800,
+      "heightGpm": 12621.1,
+      "pressureHpa": 173.77,
+      "temperatureC": -76.2
+    },
+    {
+      "elapsedSeconds": 2400,
+      "heightGpm": 16553.7,
+      "pressureHpa": 88.73,
+      "temperatureC": -71.3
+    },
+    {
+      "elapsedSeconds": 3600,
+      "heightGpm": 24019.8,
+      "pressureHpa": 25.02,
+      "temperatureC": -72.1
+    },
+    {
+      "elapsedSeconds": 4800,
+      "heightGpm": 32174.7,
+      "pressureHpa": 6.76,
+      "temperatureC": -56.1
+    },
+    {
+      "elapsedSeconds": 5254,
+      "heightGpm": 34806.7,
+      "pressureHpa": 4.6,
+      "temperatureC": -35.5
+    }
+  ],
+  "calculation": {
+    "startElapsedSeconds": 600,
+    "endElapsedSeconds": 1200,
+    "temperatureDifferenceC": -27.799999999999997,
+    "heightDifferenceGpm": 4137.800000000001,
+    "temperatureGradientCPerGeopotentialKm": -6.718546087292761
+  },
+  "verificationLimit": "This public CSV already contains calibrated and processed quantities after CHMI monthly validation. It does not contain sensor electrical readings, serial number, model, calibration coefficients, processing software version or per-level measurement uncertainties. Our calculation reproduces a layer gradient from published values, not the upstream sensor processing or a climate trend."
+}

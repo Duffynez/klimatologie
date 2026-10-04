@@ -3,6 +3,12 @@ import type { Source } from "./sources";
 // Sources cited by published article components.
 // Stable IDs are referenced from SourceLink components; do not rename them after publication.
 const rawArticleSources: Source[] = [
+  { id: "2023_GRUAN_RS41_TD8", title: "GRUAN characterisation and data processing of the Vaisala RS41 radiosonde", author: "Michael Sommer a kol.", year: 2023, publication: "GRUAN Lead Centre, Deutscher Wetterdienst, Technical Document 8, verze 1.0.0 (28. června 2023)", type: "Metodická dokumentace", category: "science", externalUrl: "https://www.gruan.org/documentation/gruan/td/gruan-td-8", citationLabel: "Sommer a kol. 2023, GRUAN-TD-8", topics: ["metody", "radiosondáž", "kalibrace", "nejistoty"] },
+  { id: "2025_CHMU_Radiosonde_Format", title: "Popis radiosondážních dat ČHMÚ a AČR na serveru opendata.chmi.cz", author: "Český hydrometeorologický ústav", year: 2025, publication: "ČHMÚ, verze 1.0 (1. dubna 2025)", type: "Dokumentace datového formátu", category: "organization", externalUrl: "https://opendata.chmi.cz/meteorology/weather/radiosounding/radiosondaz_popis_cz_1.0.pdf", citationLabel: "ČHMÚ: popis radiosondážních dat", topics: ["metody", "radiosondáž", "Praha-Libuš", "veřejná data"] },
+  { id: "2025_CHMU_Prague_Radiosonde_January", title: "Praha-Libuš: validované vzestupné radiosondážní profily, leden 2025", author: "Český hydrometeorologický ústav", year: 2025, publication: "ČHMÚ, měsíční archiv 202501_Praha_ascent_profil.zip, přístup 4. října 2026", type: "Datový soubor", category: "organization", externalUrl: "https://opendata.chmi.cz/meteorology/weather/radiosounding/Praha/historical/ascent/202501_Praha_ascent_profil.zip", citationLabel: "ČHMÚ: Praha-Libuš, leden 2025", topics: ["metody", "radiosondáž", "teplota", "veřejná data"] },
+  { id: "2026_CHMU_Open_Data_Licence", title: "Kde najdu otevřená data ČHMÚ?", author: "Český hydrometeorologický ústav", year: 2026, publication: "ČHMÚ, přístup 4. října 2026", type: "Podmínky použití dat", category: "organization", externalUrl: "https://www.chmi.cz/-/kde-najdu-otev%C5%99en%C3%A1-data-%C4%8Dhm%C3%BA-", citationLabel: "ČHMÚ: otevřená data a licence", topics: ["zdroje", "licence", "radiosondáž"] },
+  { id: "DOI_10_5194_amt_9_3115_2016", title: "Comparison of Vaisala radiosondes RS41 and RS92 at the ARM Southern Great Plains site", author: "Michael P. Jensen, Donna J. Holdridge, Petteri Survo, Raisa Lehtinen, Shannon Baxter, Tami Toto a Karen L. Johnson", year: 2016, publication: "Atmospheric Measurement Techniques 9, 3115–3129", type: "Terénní porovnání přístrojů", category: "science", externalUrl: "https://doi.org/10.5194/amt-9-3115-2016", citationLabel: "Jensen a kol. 2016", topics: ["metody", "radiosondáž", "ověření měření", "nejistoty"] },
+  { id: "1938_Diamond_Radiometeorography", title: "A method for the investigation of upper-air phenomena and its application to radio meteorography", author: "Harry Diamond, Wilbur S. Hinman, Jr., a Francis W. Dunmore", year: 1938, publication: "Journal of Research of the National Bureau of Standards 20, 369–392", type: "Původní metodická studie", category: "science", externalUrl: "https://doi.org/10.6028/jres.020.029", citationLabel: "Diamond, Hinman a Dunmore 1938", topics: ["metody", "radiosondáž", "historie měření"] },
   { id: "2013_NPL_Humidity", title: "The Beginner’s Guide to Humidity Measurement", author: "Stephanie Bell", year: 2013, publication: "National Physical Laboratory, Measurement Good Practice Guide 124", type: "Metodická příručka", category: "science", externalUrl: "https://eprintspublications.npl.co.uk/7464/", citationLabel: "Bell 2013, NPL", topics: ["metody", "hygrometrie", "vlhkost", "kalibrace"] },
   { id: "2013_Vaisala_HMT330", title: "Vaisala HUMICAP Humidity and Temperature Transmitter Series HMT330: User’s Guide, M210566EN-K", author: "Vaisala", year: 2013, publication: "Vaisala", type: "Technická dokumentace přístroje", category: "organization", externalUrl: "https://docs.vaisala.com/v/u/M210566EN-K/en-US", citationLabel: "Vaisala, HMT330, verze K", topics: ["metody", "hygrometrie", "vlhkost", "HMT337"] },
   { id: "2021_NIST_Humidity_Calibration", title: "Calibration of Hygrometers with the Hybrid Humidity Generator", author: "C. W. Meyer, T. Herman a W. W. Miller", year: 2021, publication: "NIST Special Publication 250-83, Revision 1", type: "Kalibrační metodika", category: "science", externalUrl: "https://doi.org/10.6028/NIST.SP.250-83r1", citationLabel: "Meyer a kol. 2021, NIST", topics: ["metody", "hygrometrie", "vlhkost", "kalibrace"] },
@@ -468,6 +474,12 @@ const rawArticleSources: Source[] = [
 ];
 
 const articleOpenAccessSources: Record<string, true | string> = {
+  "2023_GRUAN_RS41_TD8": "https://www.gruan.org/gruan/editor/documents/gruan/GRUAN-TD-8_RS41_v1.0.0_20230628_final.pdf",
+  "2025_CHMU_Radiosonde_Format": true,
+  "2025_CHMU_Prague_Radiosonde_January": true,
+  "2026_CHMU_Open_Data_Licence": true,
+  DOI_10_5194_amt_9_3115_2016: "https://amt.copernicus.org/articles/9/3115/2016/amt-9-3115-2016.pdf",
+  "1938_Diamond_Radiometeorography": "https://nvlpubs.nist.gov/nistpubs/jres/20/jresv20n3p369_A1b.pdf",
   "2013_NPL_Humidity": "https://eprintspublications.npl.co.uk/7464/1/mgpg124.pdf",
   "2013_Vaisala_HMT330": "https://docs.vaisala.com/api/khub/documents/ESFFxipyzfxm51Q3ptHcyg/content",
   "2021_NIST_Humidity_Calibration": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.250-83r1.pdf",
@@ -746,7 +758,7 @@ const articleOpenAccessSources: Record<string, true | string> = {
   DOI_10_1002_2015jd024039: "https://repository.library.noaa.gov/view/noaa/41034",
   DOI_10_1029_2003jd003909: "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2003JD003909",
   DOI_10_1029_2004jd005753: "https://www.metoffice.gov.uk/hadobs/hadat/HadAT_paper.pdf",
-  DOI_10_1029_2005jd006169: "https://www.ncei.noaa.gov/pub/data/images/Free_et_al_2005.pdf",
+  DOI_10_1029_2005jd006169: "https://www.arl.noaa.gov/wp_arl/wp-content/uploads/documents/JournalPDFs/FreeEtal.JGR2005.pdf",
   DOI_10_1029_2008jd010421: "https://hal.science/hal-00355600",
   DOI_10_1029_2010jd014954: "https://images.remss.com/papers/rsspubs/Mears_JGR_2011_MSU_AMSU_Uncertainty.pdf",
   DOI_10_1029_2010rs004614: "https://wegcwww.uni-graz.at/publ/wegcpubl/arsclisys/2011/wegc_steiner-etal_rs-2011_roforclimate.pdf",

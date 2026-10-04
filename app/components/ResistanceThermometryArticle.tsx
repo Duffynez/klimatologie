@@ -454,7 +454,7 @@ export function ResistanceThermometryArticle() {
           <SourceLink id="DOI_10_5194_essd_6_201_2014">Clowův popis měření v aljašských vrtech</SourceLink>
           dokládá kalibraci termistorů pro dlouhodobé sledování permafrostu. Záznamy z různých
           hloubek využíváme v článku <Link href="/pozorovani/snehova-pokryvka-a-permafrost">Sněhová pokrývka a permafrost</Link>.
-          Elektrická kontaktní čidla na radiosondách tvoří také jednu z cest k{" "}
+          Elektrická kontaktní čidla na <Link href="/metody/radiosondaz">radiosondách</Link> tvoří také jednu z cest k{" "}
           <Link href="/pozorovani/stratosfericke-ochlazovani">teplotě stratosféry</Link>.
           Tam je nutné zohlednit ohřev sluncem a zpomalenou odezvu v řídkém vzduchu.
           Platinové odporové čidlo a jeho korekce popisuje například{" "}

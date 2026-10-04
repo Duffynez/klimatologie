@@ -341,7 +341,7 @@ test("publishes a full stratospheric temperature article instead of the generic 
   assert.match(sourceCatalogueText, /AlgorithmDescription_01B-10\.pdf/);
   assert.match(sourceCatalogueText, /repository\.library\.noaa\.gov\/view\/noaa\/41066/);
   assert.match(sourceCatalogueText, /wegc_steiner-etal_rs-2011_roforclimate\.pdf/);
-  assert.match(sourceCatalogueText, /ncei\.noaa\.gov\/pub\/data\/images\/Free_et_al_2005\.pdf/);
+  assert.match(sourceCatalogueText, /arl\.noaa\.gov\/wp_arl\/wp-content\/uploads\/documents\/JournalPDFs\/FreeEtal\.JGR2005\.pdf/);
   assert.match(sourceCatalogueText, /Zou_Wang_JGR_2011_AMSU-A-1\.pdf/);
   assert.doesNotMatch(
     `${article}\n${sourceCatalogueText}`,
@@ -1285,6 +1285,70 @@ test("reproduces the NOAA humidity hour and rejects gaps, duplicates, wrong time
   h[27] = "0";
   h[26] = "86";
   assert.equal(summarizeHumidityHour(subhourly, h.join(" "), metadata).agreesAfterRounding, false);
+});
+
+test("publishes radiosounding with its original profile, open sources and connected observations", async () => {
+  const [html, article, catalogue, ...related] = await Promise.all([
+    readFile(new URL("dist/client/metody/radiosondaz/index.html", root), "utf8"),
+    readFile(new URL("app/components/RadiosoundingArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    ...["pozorovani/stratosfericke-ochlazovani", "pozorovani/narust-vlhkosti", "metody/odporova-termometrie-a-termistory"]
+      .map((path) => readFile(new URL(`dist/client/${path}/index.html`, root), "utf8")),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "The method must render its full article, not the catalogue fallback");
+  assert.match(body, /class="method-flow"/);
+  assert.match(body, /−6,72 °C\/km/);
+  assert.match(body, /prague-temperature-profile\.png/);
+  assert.equal((body.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) ?? []).length, 8);
+  assert.doesNotMatch(body.replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
+  for (const page of related) assert.match(page, /href="\/metody\/radiosondaz\/?"/);
+  const ids = [...new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp(`<article[^>]*id="${id}"[\\s\\S]*?<\\/article>`))?.[0];
+    assert.ok(card, `Missing source card: ${id}`);
+    assert.doesNotMatch(card, /drive\.google\.com/, `Open source has a Drive button: ${id}`);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/, `Missing open access: ${id}`);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const href = match[1];
+    const file = /\.[a-z0-9]+$/i.test(href) ? href : `${href.replace(/\/$/, "")}/index.html`;
+    await readFile(new URL(`dist/client${file}`, root));
+  }
+});
+
+test("reproduces the Prague sounding from unchanged data and rejects invalid or incomplete profiles", async () => {
+  const base = new URL("public/data/methods/radiosounding/", root);
+  const { parseProfile, summarizeProfile } = await import(new URL("reproduce.mjs", base));
+  const metadata = JSON.parse(await readFile(new URL("example.json", base), "utf8"));
+  const bytes = await readFile(new URL(metadata.archiveMember, base));
+  const exported = await readFile(new URL(`dist/client/data/methods/radiosounding/${metadata.archiveMember}`, root));
+  assert.equal(createHash("sha256").update(bytes).digest("hex"), metadata.fileSha256);
+  assert.deepEqual(exported, bytes, "The static export must preserve original line endings and bytes");
+  const text = bytes.toString("utf8");
+  const result = summarizeProfile(text, metadata);
+  assert.equal(result.recordCount, 5059);
+  assert.equal(result.durationSeconds, 5254);
+  assert.deepEqual(result.selectedRows, metadata.selectedRows);
+  assert.ok(Math.abs(result.temperatureDifferenceC - (-27.8)) < 1e-10);
+  assert.ok(Math.abs(result.heightDifferenceGpm - 4137.8) < 1e-10);
+  assert.ok(Math.abs(result.temperatureGradientCPerGeopotentialKm - (-6.718546087292761)) < 1e-12);
+  const rows = text.trim().split(/[\r\n]+/).slice(1);
+  const fromRows = (dataRows) => `sep=,\n${dataRows.join("\n")}`;
+  assert.throws(() => parseProfile(rows.join("\n")), /delimiter/);
+  assert.throws(() => summarizeProfile(fromRows(rows.slice(1)), metadata));
+  assert.throws(() => summarizeProfile(fromRows([...rows, rows.at(-1)]), metadata), /time/);
+  assert.throws(() => parseProfile(fromRows([rows[1], rows[0]])), /time/);
+  for (const [column, value] of [[1, "60"], [2, ""], [3, "NaN"], [4, "-9999"], [5, "101"], [9, "91"]]) {
+    const cells = rows[0].split(",");
+    cells[column] = value;
+    assert.throws(() => parseProfile(fromRows([cells.join(",")])), `Invalid column ${column} must fail`);
+  }
+  const endpoints = structuredClone(metadata);
+  endpoints.calculation.endElapsedSeconds = 600.5;
+  assert.throws(() => summarizeProfile(text, endpoints), /endpoints/);
+  // Real transmission has gaps. Sampling frequency must not be assumed to be exactly one second.
+  assert.deepEqual(parseProfile(fromRows([rows[0], rows.at(-1)])).map((r) => r.elapsedSeconds), [0, 5254]);
 });
 
 test("keeps the current catalogue of fourteen observations", async () => {
