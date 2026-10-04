@@ -80,6 +80,10 @@ V `app/pozorovani/[slug]/page.tsx`:
 
 Bez kroků 3 a 4 vznikne pouze klikací dlaždice a jednoduchá detailní stránka se shrnutím.
 
+Při úpravě samotného katalogu měníme názvy, vymezení a zařazení témat, doplníme jejich adresy do sitemap a ověříme statický export. Taková změna nezakládá plné články a neoznačuje je jako hotové. Při rozdělení položky zachováme původní adresu s odkazy na nástupnická témata, jako u `/metody/titrace-a-coulometrie/`.
+
+Při psaní zachováme vymezení z katalogu. Absorpční spektroskopie se zaměřuje na plyny a spektrofotometrie na roztoky. Radarové měření srážek a vnitřní struktury sněhu a ledu, lidarové měření atmosféry a vegetace, altimetrie a sledování pohybu povrchu mají samostatná témata. Pozemní měření vodní páry pomocí GNSS odlišujeme od rádiových zákrytů. Společné principy propojíme odkazy a každé téma rozvine vlastní cestu od vstupu k výsledku podle `METHODS.md`.
+
 ## 5. Nový mechanismus
 
 Položka v `app/data/mechanisms.ts` dnes automaticky vytváří dlaždici a obecnou detailní stránku. Musí obsahovat:

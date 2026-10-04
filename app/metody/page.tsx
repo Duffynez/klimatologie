@@ -4,14 +4,14 @@ import { PageLead } from "../components/PageLead";
 import { measurementMethods, methodCategories } from "../data/methods";
 
 export const metadata: Metadata = {
-  title: "Metody měření",
-  description: "Přehled měřicích a analytických metod používaných v klimatologii.",
+  title: "Metody měření a zpracování dat",
+  description: "Přehled měření, laboratorních analýz, přírodních archivů a metod zpracování klimatických dat.",
 };
 
 export default function MethodsPage() {
   return (
     <div className="page-shell">
-      <PageLead eyebrow="Metody měření" title="Jak získáváme klimatická data." />
+      <PageLead eyebrow="Metody" title="Jak získáváme a vyhodnocujeme klimatická data." />
 
       <div className="method-catalog">
         {methodCategories.map((category) => {

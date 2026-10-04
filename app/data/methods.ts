@@ -2,7 +2,8 @@ export type MethodCategory =
   | "Přímá měření"
   | "Laboratorní analýza"
   | "Dálkový průzkum"
-  | "Přírodní archivy";
+  | "Přírodní archivy"
+  | "Zpracování dat a vyhodnocování výsledků";
 
 export type MeasurementMethod = {
   slug: string;
@@ -28,7 +29,7 @@ export const measurementMethods: MeasurementMethod[] = [
     slug: "radiosondaz",
     title: "Radiosondáž",
     category: "Přímá měření",
-    summary: "Balónový profil teploty, vlhkosti, tlaku a větru v jednotlivých výškách atmosféry.",
+    summary: "Měření teploty, vlhkosti a tlaku sondou nesenou balónem a určení větru z jejího pohybu.",
   },
   {
     slug: "mereni-tlaku-a-hydrostaticke-vysky",
@@ -49,6 +50,36 @@ export const measurementMethods: MeasurementMethod[] = [
     summary: "Množství srážek a velikost, rychlost i druh jednotlivých kapek nebo sněhových částic.",
   },
   {
+    slug: "pobrezni-mereni-hladiny-a-vyskova-reference",
+    title: "Pobřežní měření hladiny a výšková reference",
+    category: "Přímá měření",
+    summary: "Plovákové, tlakové, akustické a radarové vodočty, jejich návaznost na pevné výškové body a měření pohybu pevniny.",
+  },
+  {
+    slug: "mereni-vysky-hustoty-a-vodni-hodnoty-snehu",
+    title: "Měření výšky, hustoty a vodní hodnoty sněhu",
+    category: "Přímá měření",
+    summary: "Sněhové sondy, odběry a vážení vzorků pro určení množství vody ve sněhu a jeho prostorové proměnlivosti.",
+  },
+  {
+    slug: "terenni-mereni-bilance-ledovcu",
+    title: "Terénní měření bilance ledovců",
+    category: "Přímá měření",
+    summary: "Přírůstky a úbytky sněhu a ledu měřené tyčemi, sondami a ve sněhových jámách a převod bodových měření na bilanci povrchu ledovce.",
+  },
+  {
+    slug: "mereni-hloubky-sezonniho-rozmrzani",
+    title: "Měření hloubky sezónního rozmrzání",
+    category: "Přímá měření",
+    summary: "Hloubka rozmrzlé půdy z mechanických sond, mrazových trubic a teplotních profilů, včetně kontroly změn výšky povrchu.",
+  },
+  {
+    slug: "standardizovane-fenologicke-pozorovani",
+    title: "Standardizované fenologické pozorování",
+    category: "Přímá měření",
+    summary: "Opakovaný zápis vývojových fází rostlin a výskytu živočichů podle společných pravidel, s kontrolou četnosti a rozsahu pozorování.",
+  },
+  {
     slug: "plynova-chromatografie",
     title: "Plynová chromatografie",
     category: "Laboratorní analýza",
@@ -56,9 +87,9 @@ export const measurementMethods: MeasurementMethod[] = [
   },
   {
     slug: "absorpcni-spektroskopie",
-    title: "Absorpční spektroskopie",
+    title: "Absorpční spektroskopie plynů",
     category: "Laboratorní analýza",
-    summary: "Koncentrace plynů určená podle vlnových délek, které plyn pohlcuje.",
+    summary: "Koncentrace plynů určené z pohlcování světla při vybraných vlnových délkách a porovnání s referenčními vzorky.",
   },
   {
     slug: "hmotnostni-a-izotopova-spektrometrie",
@@ -68,7 +99,7 @@ export const measurementMethods: MeasurementMethod[] = [
   },
   {
     slug: "spektrofotometrie",
-    title: "Spektrofotometrie",
+    title: "Spektrofotometrie roztoků",
     category: "Laboratorní analýza",
     summary: "Vlastnosti roztoku určené z pohlcování světla, například při přesném měření pH mořské vody.",
   },
@@ -79,10 +110,34 @@ export const measurementMethods: MeasurementMethod[] = [
     summary: "Elektrochemické měření pH a aktivity iontů pomocí rozdílu elektrických potenciálů mezi elektrodami.",
   },
   {
-    slug: "titrace-a-coulometrie",
-    title: "Titrace a coulometrie",
+    slug: "titrace",
+    title: "Titrace",
     category: "Laboratorní analýza",
-    summary: "Stanovení alkality a rozpuštěného anorganického uhlíku v uhličitanovém systému oceánu.",
+    summary: "Stanovení množství látky přidáváním činidla známé koncentrace, například měření celkové alkalinity mořské vody.",
+  },
+  {
+    slug: "coulometrie",
+    title: "Coulometrie",
+    category: "Laboratorní analýza",
+    summary: "Stanovení množství látky z elektrického náboje spotřebovaného při reakci, například měření rozpuštěného anorganického uhlíku.",
+  },
+  {
+    slug: "opticke-a-multispektralni-snimkovani",
+    title: "Optické a multispektrální snímkování",
+    category: "Dálkový průzkum",
+    summary: "Odražené světlo v různých pásmech a obrazy z kamer, letadel a družic pro sledování vegetace, sněhu a obrysů ledovců.",
+  },
+  {
+    slug: "fotogrammetrie-a-porovnavani-vyskovych-modelu",
+    title: "Fotogrammetrie a porovnávání výškových modelů",
+    category: "Dálkový průzkum",
+    summary: "Výška povrchu odvozená ze snímků z různých směrů a změny objemu ledovců vypočtené porovnáním výškových modelů.",
+  },
+  {
+    slug: "mereni-radiacnich-toku",
+    title: "Měření radiačních toků",
+    category: "Dálkový průzkum",
+    summary: "Měření příchozího, odraženého a vyzařovaného záření pro určení toků energie u povrchu a na horní hranici atmosféry.",
   },
   {
     slug: "pasivni-infracervena-radiometrie",
@@ -98,21 +153,27 @@ export const measurementMethods: MeasurementMethod[] = [
   },
   {
     slug: "aktivni-radarove-mereni",
-    title: "Aktivní radarové měření",
+    title: "Radarové měření srážek a struktury sněhu a ledu",
     category: "Dálkový průzkum",
-    summary: "Srážky, led, sníh, oceán a pohyb povrchu z vlastností vyslaného a odraženého rádiového signálu.",
+    summary: "Vlastnosti srážkových částic a rozhraní uvnitř sněhu a ledu odvozené ze síly, času návratu a změny frekvence radarového signálu.",
   },
   {
     slug: "lidar-a-laserove-mereni-vzdalenosti",
-    title: "Lidar a laserové měření vzdálenosti",
+    title: "Lidarové měření atmosféry a vegetace",
     category: "Dálkový průzkum",
-    summary: "Výška povrchu, oblaka, aerosoly a vegetace měřené pomocí návratu krátkých laserových pulzů.",
+    summary: "Svislé rozložení aerosolů a oblaků a struktura vegetace odvozené z návratu krátkých laserových pulzů.",
   },
   {
     slug: "radarova-a-laserova-altimetrie",
     title: "Radarová a laserová altimetrie",
     category: "Dálkový průzkum",
-    summary: "Výška hladiny moře, ledovců a ledových příkrovů určená z doby návratu vyslaného signálu.",
+    summary: "Výška hladiny moře a povrchu ledu určená z doby návratu signálu, přesné polohy přístroje a oprav šíření signálu.",
+  },
+  {
+    slug: "radarova-interferometrie-a-sledovani-pohybu-povrchu",
+    title: "Radarová interferometrie a sledování pohybu povrchu",
+    category: "Dálkový průzkum",
+    summary: "Pohyb ledu a pevniny odvozený z rozdílů fáze radarových vln nebo z posunu rozpoznatelných útvarů na opakovaných snímcích.",
   },
   {
     slug: "druzicova-gravimetrie",
@@ -125,6 +186,12 @@ export const measurementMethods: MeasurementMethod[] = [
     title: "Rádiové zákryty GNSS",
     category: "Dálkový průzkum",
     summary: "Teplota a hustota atmosféry odvozené z ohybu rádiového signálu při průchodu atmosférou.",
+  },
+  {
+    slug: "pozemni-mereni-vodni-pary-pomoci-gnss",
+    title: "Pozemní měření vodní páry pomocí GNSS",
+    category: "Dálkový průzkum",
+    summary: "Množství vodní páry nad přijímačem odvozené ze zpoždění signálu navigačních družic a doprovodných měření tlaku a teploty.",
   },
   {
     slug: "ledova-jadra-a-analyza-uzavreneho-vzduchu",
@@ -186,6 +253,36 @@ export const measurementMethods: MeasurementMethod[] = [
     category: "Přírodní archivy",
     summary: "Minulé změny povrchové teploty odvozené z dnešního teplotního profilu pod zemí nebo v ledu.",
   },
+  {
+    slug: "kontrola-kvality-a-homogenizace",
+    title: "Kontrola kvality a homogenizace",
+    category: "Zpracování dat a vyhodnocování výsledků",
+    summary: "Odhalování chybných údajů a neklimatických změn spojených s přístrojem, stanovištěm nebo pozorovacím postupem.",
+  },
+  {
+    slug: "prostorove-zpracovani-a-plosne-prumery",
+    title: "Prostorové zpracování a plošné průměry",
+    category: "Zpracování dat a vyhodnocování výsledků",
+    summary: "Převod bodových měření do map, odhady v místech bez měření a výpočet regionálních či globálních hodnot podle plochy.",
+  },
+  {
+    slug: "analyza-casovych-zmen-a-extremu",
+    title: "Analýza časových změn a extrémů",
+    category: "Zpracování dat a vyhodnocování výsledků",
+    summary: "Referenční období, oddělení sezónního kolísání, odhad trendu a jeho průkaznosti a výpočet přesně vymezených ukazatelů extrémů.",
+  },
+  {
+    slug: "vycisleni-a-prenos-nejistoty",
+    title: "Vyčíslení a přenos nejistoty",
+    category: "Zpracování dat a vyhodnocování výsledků",
+    summary: "Vyhodnocení nejistot měření, pokrytí a výpočtu, jejich přenos do výsledku a zohlednění společných chyb vstupních dat.",
+  },
+  {
+    slug: "asimilace-dat-a-reanalyzy",
+    title: "Asimilace dat a reanalýzy",
+    category: "Zpracování dat a vyhodnocování výsledků",
+    summary: "Propojování pozorování s fyzikálním modelem a vytváření souvislých rekonstrukcí minulého stavu atmosféry, oceánu a pevniny.",
+  },
 ];
 
 export const methodCategories: MethodCategory[] = [
@@ -193,6 +290,7 @@ export const methodCategories: MethodCategory[] = [
   "Laboratorní analýza",
   "Dálkový průzkum",
   "Přírodní archivy",
+  "Zpracování dat a vyhodnocování výsledků",
 ];
 
 export function methodBySlug(slug: string) {

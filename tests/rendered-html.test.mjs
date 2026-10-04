@@ -102,16 +102,28 @@ test("replaces the temporary starter surface", async () => {
   assert.doesNotMatch(home, /SkeletonPreview|codex-preview/);
 });
 
-test("publishes a twenty-nine-item catalogue of measurement methods", async () => {
-  const [page, detailPage, methods, styles] = await Promise.all([
+test("publishes forty-five measurement and analysis methods with working routes", async () => {
+  const [page, detailPage, methods, styles, catalogueHtml, sitemap] = await Promise.all([
     readFile(new URL("app/metody/page.tsx", root), "utf8"),
     readFile(new URL("app/metody/[slug]/page.tsx", root), "utf8"),
     readFile(new URL("app/data/methods.ts", root), "utf8"),
     readFile(new URL("app/globals.css", root), "utf8"),
+    readFile(new URL("dist/client/metody/index.html", root), "utf8"),
+    readFile(new URL("public/sitemap.xml", root), "utf8"),
   ]);
 
   const methodRecords = [...methods.matchAll(/slug: "([^"]+)"/g)];
-  assert.equal(methodRecords.length, 29);
+  assert.equal(methodRecords.length, 45);
+  assert.equal(new Set(methodRecords.map((match) => match[1])).size, 45);
+  assert.equal((catalogueHtml.match(/class="method-tile"/g) ?? []).length, 45);
+  assert.equal((catalogueHtml.match(/class="method-catalog__group"/g) ?? []).length, 5);
+  assert.match(catalogueHtml, /Zpracování dat a vyhodnocování výsledků/);
+  for (const [, slug] of methodRecords) {
+    assert.ok(catalogueHtml.includes(`href="/metody/${slug}"`), `Missing catalogue link: ${slug}`);
+    assert.ok(sitemap.includes(`<loc>https://klimatologie.eu/metody/${slug}/</loc>`), `Missing sitemap entry: ${slug}`);
+    const html = await readFile(new URL(`dist/client/metody/${slug}/index.html`, root), "utf8");
+    assert.match(html, /<h1>[^<]+<\/h1>/, `Missing rendered method: ${slug}`);
+  }
   assert.match(methods, /title: "Plynová chromatografie"/);
   assert.match(methods, /title: "Družicová gravimetrie"/);
   assert.match(methods, /title: "Ledová jádra a analýza uzavřeného vzduchu"/);
@@ -126,6 +138,19 @@ test("publishes a twenty-nine-item catalogue of measurement methods", async () =
   assert.match(detailPage, /Zpět na všechny metody/);
   assert.match(styles, /\.method-catalog__grid/);
   assert.match(styles, /\.method-tile:hover/);
+});
+
+test("preserves the former titration and coulometry address as a two-method guide", async () => {
+  const [page, catalogue, sitemap] = await Promise.all([
+    readFile(new URL("dist/client/metody/titrace-a-coulometrie/index.html", root), "utf8"),
+    readFile(new URL("dist/client/metody/index.html", root), "utf8"),
+    readFile(new URL("public/sitemap.xml", root), "utf8"),
+  ]);
+  assert.match(page, /<h1>Titrace a coulometrie<\/h1>/);
+  assert.match(page, /href="\/metody\/titrace"/);
+  assert.match(page, /href="\/metody\/coulometrie"/);
+  assert.doesNotMatch(catalogue, /href="\/metody\/titrace-a-coulometrie"/);
+  assert.match(sitemap, /https:\/\/klimatologie\.eu\/metody\/titrace-a-coulometrie\//);
 });
 
 test("publishes twenty mechanisms with evidence that distinguishes explanations", async () => {

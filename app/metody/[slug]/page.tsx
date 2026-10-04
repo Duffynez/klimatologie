@@ -5,12 +5,23 @@ import { PageLead } from "../../components/PageLead";
 import { ResistanceThermometryArticle } from "../../components/ResistanceThermometryArticle";
 import { measurementMethods, methodBySlug } from "../../data/methods";
 
+const combinedAnalysisSlug = "titrace-a-coulometrie";
+
 export function generateStaticParams() {
-  return measurementMethods.map((method) => ({ slug: method.slug }));
+  return [
+    ...measurementMethods.map((method) => ({ slug: method.slug })),
+    { slug: combinedAnalysisSlug },
+  ];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
+  if (slug === combinedAnalysisSlug) {
+    return {
+      title: "Titrace a coulometrie",
+      description: "Dvě analytické metody používané při rozboru mořské vody.",
+    };
+  }
   const method = methodBySlug(slug);
 
   if (!method) {
@@ -25,6 +36,33 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function MethodDetail({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  if (slug === combinedAnalysisSlug) {
+    const relatedMethods = measurementMethods.filter((method) => ["titrace", "coulometrie"].includes(method.slug));
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Titrace a coulometrie" />
+        <section className="method-catalog__group">
+          <div className="method-catalog__heading">
+            <h2>Metody analýzy mořské vody</h2>
+          </div>
+          <div className="method-catalog__grid">
+            {relatedMethods.map((method) => (
+              <Link className="method-tile" href={`/metody/${method.slug}`} key={method.slug}>
+                <span>{String(measurementMethods.indexOf(method) + 1).padStart(2, "0")}</span>
+                <div>
+                  <h3>{method.title}</h3>
+                  <p>{method.summary}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+        <Link className="text-link catalog-back-link" href="/metody">
+          &larr; Zpět na všechny metody
+        </Link>
+      </div>
+    );
+  }
   const method = methodBySlug(slug);
 
   if (!method) {
