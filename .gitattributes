@@ -7,3 +7,6 @@ public/data/methods/radiosounding/*.csv binary
 public/data/methods/pressure-height/*.csv text eol=lf
 public/data/methods/conductometry/*.csv text eol=lf
 public/data/methods/rain-gauges/*.txt text eol=lf
+# Preserve the original NOAA API responses and their published checksums.
+public/data/methods/tide-gauges/water-level-*.json binary
+public/data/methods/tide-gauges/datums.json binary

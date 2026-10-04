@@ -196,6 +196,12 @@ export function GlobalMeanSeaLevelArticle() {
           <SourceLink id="DOI_10_1002_2016jc011747">Hamlington et al., 2016</SourceLink>
         </p>
 
+        <p>
+          Cestu od radarového signálu přes kalibraci a výškové body až k porovnání údajů podrobně vysvětluje
+          <Link href="/metody/pobrezni-mereni-hladiny-a-vyskova-reference"> pobřežní měření hladiny a výšková reference</Link>.
+          Součástí je výpočet se skutečnými daty ze San Franciska a rozlišení pohybu vody od pohybu pevniny.
+        </p>
+
         <h3>Družice</h3>
         <p>
           Radarový výškoměr vyšle k oceánu krátký mikrovlnný impulz a změří dobu, za kterou se odraz vrátí. Z této doby

@@ -8,6 +8,7 @@ import { RadiosoundingArticle } from "../../components/RadiosoundingArticle";
 import { PressureHeightArticle } from "../../components/PressureHeightArticle";
 import { ConductometryArticle } from "../../components/ConductometryArticle";
 import { RainGaugeArticle } from "../../components/RainGaugeArticle";
+import { TideGaugeArticle } from "../../components/TideGaugeArticle";
 import { measurementMethods, methodBySlug } from "../../data/methods";
 
 const combinedAnalysisSlug = "titrace-a-coulometrie";
@@ -72,6 +73,25 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "pobrezni-mereni-hladiny-a-vyskova-reference") {
+    return (
+      <div className="page-shell">
+        <PageLead
+          eyebrow="Metody / Přímá měření"
+          title="Pobřežní měření hladiny a výšková reference"
+          meta="Napsáno: 4. října 2026 · Odborná revize: 4. října 2026"
+        >
+          <p>
+            Jak vodočet měří výšku vody a jak se jeho údaj váže k pevnině.
+            Od radarového odrazu přes kalibraci a výškové body ke skutečným datům ze San Franciska.
+          </p>
+        </PageLead>
+        <TideGaugeArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "srazkomery-a-disdrometry") {

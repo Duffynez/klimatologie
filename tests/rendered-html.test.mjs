@@ -1545,6 +1545,80 @@ test("reproduces the NOAA rain hour, distinguishes interval depth from intensity
   assert.equal(dryFirst.agreesWithPublishedHour, false);
 });
 
+test("publishes coastal tide gauges with an actual datum conversion and open sources", async () => {
+  const [html, article, catalogue, observation] = await Promise.all([
+    readFile(new URL("dist/client/metody/pobrezni-mereni-hladiny-a-vyskova-reference/index.html", root), "utf8"),
+    readFile(new URL("app/components/TideGaugeArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/gmsl/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "Full article must replace the catalogue fallback");
+  assert.match(body, /class="method-flow"/);
+  assert.match(body, /san-francisco-datums\.png/);
+  assert.match(body, /0,951 m/);
+  assert.match(body, /0,969/);
+  assert.match(body, /0,018/);
+  assert.match(body, /od zveřejněných šestiminutových údajů/);
+  assert.equal((body.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) ?? []).length, 4);
+  assert.doesNotMatch(body.replace(/&[^;\s]+;/g, ""), /;/);
+  assert.match(observation, /href="\/metody\/pobrezni-mereni-hladiny-a-vyskova-reference\/?"/);
+  const ids = [...new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
+  assert.ok(ids.length >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp(`<article[^>]*id="${id}"[\\s\\S]*?<\\/article>`))?.[0];
+    assert.ok(card, `Missing tide gauge source: ${id}`);
+    assert.doesNotMatch(card, /drive\.google\.com/, `Open source has a Drive button: ${id}`);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/, `Missing open access: ${id}`);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const href = match[1];
+    const file = /\.[a-z0-9]+$/i.test(href) ? href : `${href.replace(/\/$/, "")}/index.html`;
+    await readFile(new URL(`dist/client${file}`, root));
+  }
+});
+
+test("reproduces NOAA tide heights, preserves negative values and validates reference and coverage", async () => {
+  const base = new URL("public/data/methods/tide-gauges/", root);
+  const { summarizeDay, reproduce } = await import(new URL("reproduce.mjs", base));
+  const metadata = JSON.parse(await readFile(new URL("example.json", base), "utf8"));
+  const names = ["water-level-mllw.json", "water-level-msl.json", "datums.json"];
+  const buffers = await Promise.all(names.map((name) => readFile(new URL(name, base))));
+  for (let i = 0; i < names.length; i++) {
+    assert.equal(createHash("sha256").update(buffers[i]).digest("hex"), metadata.sha256[names[i]]);
+    assert.deepEqual(await readFile(new URL(`dist/client/data/methods/tide-gauges/${names[i]}`, root)), buffers[i]);
+  }
+  const datasets = buffers.map((b) => JSON.parse(b));
+  const result = await reproduce();
+  assert.deepEqual(result, metadata.result);
+  assert.equal(result.count, 240);
+  assert.equal(result.offsetM, 0.951);
+  assert.equal(result.min.mllwM, -0.358, "Negative heights are valid below the reference zero");
+  assert.equal(result.max.mllwM, 1.973);
+  assert.equal(result.rangeM, 2.331);
+  assert.ok(Math.abs(result.meanMllwM - 0.9685166666666667) < 1e-12);
+  assert.ok(Math.abs(result.meanMslM - 0.0175166666666667) < 1e-12);
+  // Changing datum must preserve the physical range and all increments.
+  for (let i = 1; i < result.rows.length; i++) {
+    const a = result.rows[i], b = result.rows[i - 1];
+    assert.ok(Math.abs((a.mllwM - b.mllwM) - (a.mslM - b.mslM)) < 1e-12);
+  }
+  const reject = (mutate, pattern) => {
+    const inputs = structuredClone(datasets);
+    mutate(inputs);
+    assert.throws(() => summarizeDay(...inputs, metadata), pattern);
+  };
+  reject((a) => a[0].data.pop(), /240/);
+  reject((a) => { a[0].data[1].t = a[0].data[0].t; }, /timestamp/);
+  for (const value of ["", "NaN", "-99999.0"]) reject((a) => { a[0].data[0].v = value; });
+  reject((a) => { a[0].data[0].q = "p"; }, /Unverified/);
+  reject((a) => { a[0].data[0].f = "1,0,0,0"; }, /inferred/);
+  reject((a) => { a[1].metadata.id = "wrong"; }, /Station/);
+  reject((a) => { a[2].units = "feet"; }, /units/);
+  reject((a) => { a[2].epoch = "2002-2020"; }, /epoch/);
+  reject((a) => { a[2].datums.find((d) => d.name === "MSL").value += 0.1; }, /disagrees/);
+});
+
 test("keeps the current catalogue of fourteen observations", async () => {
   const evidence = await readFile(new URL("app/data/evidence.ts", root), "utf8");
   const slugs = [...evidence.matchAll(/\{ slug: "([^"]+)"/g)].map((match) => match[1]);
