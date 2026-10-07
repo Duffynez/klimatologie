@@ -17,7 +17,7 @@ export function ConductometryArticle() {
         <dl>
           <div><dt>Elektrická vodivost</dt><dd>Vlastnost látky určující, jak snadno v ní elektrické pole vyvolá proud. U vody závisí na rozpuštěných iontech, teplotě a tlaku.</dd></div>
           <div><dt>Iont</dt><dd>Částice s elektrickým nábojem. Pohyb iontů přenáší elektrický proud v mořské vodě.</dd></div>
-          <div><dt>Praktická salinita</dt><dd>Bezrozměrné číslo odvozené z vodivosti podle stupnice PSS-78. Její hodnota potřebuje také teplotu a tlak měřené vody.</dd></div>
+          <div><dt>Praktická salinita</dt><dd>Číselný údaj o slanosti vody získaný porovnáním vodivostí podle stupnice PSS-78. Výpočet potřebuje také teplotu a tlak. Výsledek nemá jednotku.</dd></div>
           <div><dt>CTD</dt><dd>Souprava pro měření vodivosti, teploty a tlaku vody. Anglická zkratka znamená Conductivity, Temperature, Depth. Hloubka se počítá z tlaku.</dd></div>
         </dl>
         <p className="article-glossary__note">Stejně slaná voda může mít při jiné teplotě výrazně jinou vodivost. Proto čidlo vodivosti pracuje společně s teploměrem a tlakoměrem.</p>
@@ -26,44 +26,73 @@ export function ConductometryArticle() {
       <div className="article-prose">
         <h2>Jak proud procházející vodou vypovídá o jejím složení</h2>
         <p className="article-prose__intro">
-          Konduktometrie je měření elektrické vodivosti látky. V mořské vodě využívá pohyb iontů,
-          tedy částic s elektrickým nábojem, které vznikají rozpuštěním solí. Elektrické pole
-          jejich pohyb usměrňuje a vytváří proud. Z odezvy vody na přiložené napětí přístroj určí
-          vodivost. Společně s teplotou a tlakem z ní můžeme vypočítat salinitu, veličinu
-          vyjadřující slanost vody podle stanovené stupnice.
+          Konduktometrie je měření elektrické vodivosti látky. Vodivost popisuje, jak snadno
+          látkou prochází elektrický proud. U mořské vody souvisí s rozpuštěnými solemi.
+          Měření vodivosti proto využíváme k určení salinity, tedy veličiny vyjadřující
+          slanost vody podle stanovené stupnice.
         </p>
         <p>
-          Podrobně projdeme čidlo Sea-Bird SBE 4C používané v lodních soupravách CTD.
+          Rozpuštěné soli jsou ve vodě přítomné v podobě iontů, částic s elektrickým nábojem.
+          Přiložené napětí vytváří elektrické pole, které jejich pohyb usměrňuje.
+          Tento pohyb nábojů představuje elektrický proud. Přístroj sleduje elektrickou
+          odezvu vody a z ní určuje vodivost.
+        </p>
+        <p>
+          Vodivost však ovlivňuje také teplota a tlak. Stejně slaná voda může mít při jiné
+          teplotě výrazně jinou vodivost. Abychom tyto vlivy odlišili od rozdílu ve slanosti,
+          potřebujeme současně znát teplotu a tlak měřené vody. Teprve z těchto tří údajů
+          vypočítáme salinitu.
+        </p>
+        <p>
+          Postup ukážeme na čidle Sea-Bird SBE 4C používaném v lodních soupravách CTD.
           Zkratka pochází z anglického Conductivity, Temperature, Depth, tedy vodivost,
           teplota a hloubka. Poslední údaj souprava odvozuje z tlaku. Navazujeme proto na
           <Link href="/metody/odporova-termometrie-a-termistory"> měření teploty</Link> a
           <Link href="/metody/mereni-tlaku-a-hydrostaticke-vysky"> měření tlaku a hydrostatické výšky</Link>.
-          Veřejný kalibrační protokol nám umožní sledovat převod frekvence čidla až na praktickou salinitu.
+          Na veřejném protokolu později projdeme celý výpočet od zaznamenaného signálu
+          přes vodivost až k výsledné salinitě.
         </p>
 
         <h2>Od elektrod k frekvenci</h2>
         <p>
-          Při měření mezi elektrodami záleží na vlastnostech vody i na geometrii prostoru,
-          kterým proud prochází. Delší a užší cesta klade větší elektrický odpor.
-          Vodivost vody proto získáme teprve po zohlednění rozměrů měřicí části.
-          Její jednotkou je siemens na metr, značka S/m. Siemens vyjadřuje převrácenou hodnotu
-          elektrického odporu v ohmech. Vodivost tak umožňuje porovnávat vzorky nezávisle
-          na rozměrech použité měřicí nádobky.
+          Elektrický kontakt s vodou zajišťují elektrody, vodivé části ponořené do vzorku.
+          Proud prochází vodou mezi nimi. Záleží přitom na vlastnostech vody i na rozměrech
+          prostoru, kterým proud teče. Delší a užší cesta klade větší elektrický odpor.
+          Při stejném napětí jí tedy prochází menší proud.
+        </p>
+        <p>
+          Chceme určit vlastnost vody, kterou půjde porovnávat mezi různými přístroji.
+          Proto při převodu elektrické odezvy na vodivost zohledníme rozměry měřicí části.
+          Vodivost vody vyjadřujeme v siemensech na metr, značka S/m. Siemens odpovídá
+          převrácené hodnotě ohmu, jednotky elektrického odporu. Údaj v S/m nám umožňuje
+          porovnávat vodu i tehdy, když měřicí nádobky nemají stejné rozměry.
         </p>
         <p>
           <SourceLink id="2025_SeaBird_SBE4_Datasheet">Technický list SBE 4 z května 2025</SourceLink>{" "}
           popisuje skleněnou průtočnou trubici se třemi platinovými elektrodami.
-          Dvě krajní elektrody jsou propojené. Odpor vody mezi nimi a prostřední elektrodou
-          ovlivňuje frekvenci elektronického obvodu, který vytváří pravidelné střídavé kmity.
-          Přístroj zaznamenává frekvenci, tedy počet kmitů za sekundu, nikoli počet gramů soli.
+          Dvě krajní elektrody jsou propojené. Voda mezi nimi a prostřední elektrodou
+          je součástí elektrického obvodu, který vytváří pravidelné střídavé kmity.
+          Její odpor ovlivňuje, jak rychle obvod kmitá.
+          Elektronika počítá kmity za sekundu a zaznamenává jejich frekvenci.
           Kilohertz, značka kHz, znamená tisíc kmitů za sekundu.
         </p>
         <p>
+          Zaznamenaná frekvence je tedy elektrický signál čidla. Abychom z něj získali
+          vodivost, potřebujeme znát vztah mezi frekvencí a vodivostí známých vzorků.
+          Tento vztah stanovujeme kalibrací. Její průběh a konkrétní převod ukážeme níže.
+        </p>
+        <p>
           Pro SBE 4 výrobce uvádí rozsah 0 až 7 S/m a výstup přibližně 2,5 až 7,5 kHz.
-          Rozlišení 0,00004 S/m se vztahuje k soupravě SBE 911plus při 24 odečtech za sekundu.
-          Počáteční přesnost ±0,0003 S/m je jiný údaj než rozlišení. Samotné rychlé odečítání
-          nezaručuje stejně rychlou odezvu: s čerpadlem dosáhne čidlo podle technického listu
-          63 % konečné změny přibližně za 0,060 sekundy.
+          Pro soupravu SBE 911plus při 24 odečtech za sekundu uvádí rozlišení 0,00004 S/m.
+          Rozlišení popisuje jemnost, s jakou lze změny údaje rozlišit. Výrobce zvlášť
+          udává počáteční přesnost ±0,0003 S/m, která vyjadřuje mez odchylky za stanovených
+          podmínek. Jemné rozlišení proto samo neurčuje, jak blízko je údaj skutečné vodivosti.
+        </p>
+        <p>
+          Při přechodu do vody s jinými vlastnostmi potřebuje čidlo určitý čas, než se jeho
+          odezva ustálí. S čerpadlem dosáhne podle technického listu 63 % konečné změny
+          přibližně za 0,060 sekundy. Tento čas popisuje reakci na změnu vody.
+          Počet odečtů za sekundu naproti tomu říká, jak často elektronika údaj zaznamená.
         </p>
         <figure className="method-flow">
           <div className="method-flow__track" aria-label="Od mořské vody k praktické salinitě">
@@ -73,31 +102,37 @@ export function ConductometryArticle() {
             <b aria-hidden="true">→</b>
             <div><span>3</span><strong>Vodivost v S/m</strong><small>Kalibrační vztah převede signál a opraví změny rozměrů trubice.</small></div>
             <b aria-hidden="true">→</b>
-            <div><span>4</span><strong>Praktická salinita</strong><small>Výpočet PSS-78 přidá teplotu a tlak vody. Výsledkem je bezrozměrné číslo.</small></div>
+            <div><span>4</span><strong>Praktická salinita</strong><small>Z vodivosti, teploty a tlaku výpočet určí údaj o slanosti podle společné stupnice.</small></div>
           </div>
           <figcaption>
             Vlastní schéma podle <SourceLink id="2025_SeaBird_SBE4_Datasheet">dokumentace SBE 4</SourceLink>{" "}
             a <SourceLink id="2015_TEOS10_SP_From_C">výpočtu PSS-78</SourceLink>.
             Šipky oddělují fyzikální odezvu, kalibraci přístroje a převod na jinou veličinu.
-            Teplota a tlak vstupují do posledních dvou kroků pokaždé z jiného důvodu.
+            Při převodu na vodivost opravujeme vliv teploty a tlaku na rozměry čidla.
+            Při výpočtu salinity zohledňujeme jejich vliv na vlastnosti samotné vody.
           </figcaption>
         </figure>
         <p>
           V soupravě <SourceLink id="2010_SeaBird_9plus_Manual">SBE 9plus</SourceLink> žene čerpadlo
-          vodu kolem teploměru a vodivostním čidlem. Zpracování musí přiřadit oběma údajům
-          tentýž vzorek. Ve vrstvě s rychlou změnou teploty by spojení vodivosti jedné vody
-          s teplotou jiné vytvořilo falešnou špičku salinity. Další oprava zohledňuje teplo
-          předávané stěnou vodivostní trubice. Časové posunutí údajů a tepelná odezva měřicí
-          části patří k postupu popsanému v manuálu, nikoli ke změnám samotného oceánu.
+          vodu kolem teploměru a vodivostním čidlem. Voda prochází oběma místy postupně.
+          Údaje proto musíme časově posunout tak, aby teplota a vodivost patřily stejnému
+          vzorku. Jinak bychom při průchodu mezi různě teplými vrstvami spojili vodivost
+          jedné vody s teplotou jiné. Výpočet by pak mohl ukázat krátký výkyv salinity,
+          který vznikl chybným spojením údajů.
+        </p>
+        <p>
+          Vodu ovlivňuje také teplo předávané stěnou vodivostní trubice. Proto zpracování
+          vedle časového sladění čidel opravuje i tuto tepelnou odezvu měřicí části.
+          Obě opravy popsané v manuálu pomáhají oddělit chování přístroje od změn oceánu.
         </p>
         <div className="method-comparison" aria-label="Další provedení konduktometrie">
           <section>
             <h3>Laboratorní salinometr</h3>
-            <p>Analyzuje odebraný vzorek v řízené teplotě a porovnává jej se standardní mořskou vodou. Odpadá pohyb čidla mezi vrstvami oceánu. Přibývá však riziko změny vzorku při odběru a skladování.</p>
+            <p>Určuje salinitu odebraného vzorku při řízené teplotě. Jeho vodivost porovnává se standardní mořskou vodou, která slouží jako reference. Odpadá pohyb čidla mezi vrstvami oceánu. Výsledek ale může ovlivnit změna vzorku při odběru a skladování.</p>
           </section>
           <section>
             <h3>Indukční čidlo</h3>
-            <p>Proud ve vodě vyvolává proměnné magnetické pole cívky. Další cívka snímá jeho účinek. Měření tak využívá jinou konstrukci než elektrody uvnitř trubice, ale stále potřebuje kalibraci a kontrolu geometrie měření.</p>
+            <p>Cívka, tvořená navinutým vodičem, vytváří proměnné magnetické pole. To vyvolává proud ve vodě a druhá cívka snímá jeho účinek. Také u tohoto provedení potřebujeme kalibraci a musíme zohlednit rozměry prostoru, ve kterém měření probíhá.</p>
           </section>
         </div>
         <p>
@@ -110,74 +145,125 @@ export function ConductometryArticle() {
 
         <h2>Jakou salinitu z vodivosti získáme</h2>
         <p>
-          Praktická salinita, značená S<sub>P</sub>, je číslo stanovené stupnicí PSS-78,
-          anglicky Practical Salinity Scale 1978. Stupnice vychází z poměru vodivostí vzorku
-          a referenčního roztoku chloridu draselného za stejných podmínek. Poměru jedna
-          při referenční teplotě 15 °C a atmosférickém tlaku přiřazuje hodnotu 35.
+          Pro srovnatelné vyjádření slanosti potřebujeme společnou stupnici. Praktická
+          salinita, značená S<sub>P</sub>, používá stupnici PSS-78, anglicky Practical
+          Salinity Scale 1978. Je založená na porovnání elektrické vodivosti vzorku
+          s vodivostí referenčního roztoku chloridu draselného za stejných podmínek.
+          Chlorid draselný je sůl použitá pro definici této reference.
+        </p>
+        <p>
+          Vodivost vzorku dělíme vodivostí reference a získáme jejich poměr. Pokud jsou
+          obě vodivosti stejné, vyjde jedna. Právě tomuto poměru při referenční teplotě
+          15 °C a atmosférickém tlaku přiřazuje stupnice praktickou salinitu 35.
           <SourceLink id="DOI_10_1109_joe_1980_1145448"> Lewisova původní práce z roku 1980</SourceLink>{" "}
           vysvětluje definici i laboratorní pokusy s ředěnou a zahušťovanou standardní mořskou vodou.
         </p>
         <p>
-          V oceánu se teplota a tlak liší od referenčních podmínek. Algoritmus proto nejprve
-          zohlední jejich vliv na vodivost a pak použije empirický vztah určený laboratorními
-          měřeními. S<sub>P</sub> nemá jednotku. Zápis „PSU“, který bývá i na přístrojových
-          protokolech, nepředstavuje fyzikální jednotku a v našem výsledku jej nepoužíváme.
-          Hodnota 35 rovněž není přesným tvrzením, že kilogram konkrétní vody obsahuje 35 gramů solí.
+          V oceánu měříme za jiných teplot a tlaků. Přímé porovnání vodivostí by proto
+          směšovalo rozdíly ve slanosti s vlivem těchto podmínek. Výpočet nejprve zohlední
+          teplotu a tlak vody. Pak použije empirický vztah, tedy převod určený laboratorními
+          měřeními, který opravenému poměru přiřadí praktickou salinitu.
         </p>
         <p>
-          Pro výpočty hustoty a obsahu tepla používá soustava TEOS-10, tedy termodynamický
-          popis mořské vody z roku 2010, <strong>absolutní salinitu S<sub>A</sub></strong> v gramech
-          na kilogram. Ta vyjadřuje hmotnostní podíl rozpuštěného materiálu.
+          Výsledná S<sub>P</sub> je číslo na této stupnici a nemá jednotku.
+          Právě to znamená označení bezrozměrná veličina. Zápis „PSU“, který bývá
+          i na přístrojových protokolech, nepředstavuje fyzikální jednotku a zde jej
+          nepoužíváme. Hodnota 35 vyjadřuje výsledek porovnání vodivostí. Sama není přesným
+          tvrzením, že kilogram konkrétní vody obsahuje 35 gramů solí.
+        </p>
+        <p>
+          Pro výpočty hustoty a obsahu tepla potřebujeme také údaj o hmotnosti rozpuštěných
+          látek. Ten vyjadřuje <strong>absolutní salinita S<sub>A</sub></strong> v gramech
+          na kilogram mořské vody. Používá ji soustava TEOS-10, termodynamický popis mořské
+          vody z roku 2010. Jde o soubor vztahů pro výpočty jejích fyzikálních vlastností.
+        </p>
+        <p>
+          Praktickou salinitu proto před těmito výpočty převádíme na absolutní.{" "}
           <SourceLink id="2015_TEOS10_SA_From_SP">Převod z praktické salinity</SourceLink>{" "}
           používá také polohu a tlak, aby odhadl odchylky složení od standardní mořské vody.
-          Samotná vodivost nerozpozná všechny změny poměrů rozpuštěných látek. Čísla
-          praktické a absolutní salinity proto nelze bez převodu zaměňovat.
+          Tyto doplňující údaje jsou potřebné, protože samotná vodivost nerozpozná všechny
+          změny vzájemných poměrů rozpuštěných látek. Praktická a absolutní salinita tak
+          představují dva různé údaje, mezi nimiž potřebujeme uvedený převod.
         </p>
 
         <h2>Kalibrace a skutečný převod signálu</h2>
         <p>
-          Kalibrace stanovuje vztah mezi odečtem přístroje a referenčními hodnotami včetně
-          jejich nejistot. Seřízení mění odezvu přístroje. Toto rozlišení přebíráme z
-          <SourceLink id="2012_VIM_Calibration"> metrologického slovníku VIM</SourceLink>.
-          U vodivostního čidla se určí koeficienty převodu frekvence, které odpovídají jeho
-          elektrickému obvodu a skutečným rozměrům měřicí trubice.
+          Vrátíme se nyní k čidlu a jeho frekvenci. Potřebujeme zjistit, jaká vodivost
+          odpovídá jeho odečtu. Při kalibraci porovnáváme odezvu čidla s referenčními
+          hodnotami a stanovujeme mezi nimi převodní vztah včetně nejistot.
+          U našeho přístroje má tento vztah podobu rovnice. Její koeficienty, tedy čísla
+          určující konkrétní podobu převodu, odpovídají elektrickému obvodu a skutečným
+          rozměrům měřicí trubice.
+        </p>
+        <p>
+          Seřízení znamená zásah, kterým odezvu přístroje měníme. Rozlišení kalibrace
+          a seřízení přebíráme z <SourceLink id="2012_VIM_Calibration">metrologického
+          slovníku VIM</SourceLink>, který vymezuje pojmy používané při měření.
         </p>
         <p>
           <SourceLink id="2025_SeaBird_SBE4_Datasheet">Sea-Bird popisuje kalibraci v lázni</SourceLink>,
-          z níž se při každém bodu odebere vzorek. Laboratorní salinometr Guildline Autosal
-          jej porovná se standardní mořskou vodou IAPSO. Tato zkratka označuje Mezinárodní
-          asociaci pro fyzikální vědy o oceánech. Návaznost výsledku vede přes tuto referenci,
-          salinometr a teploměr lázně až ke kalibrovanému čidlu. Každý článek tohoto řetězce
-          má vlastní nejistotu. Pouhá malá odchylka od proložené křivky celý řetězec neprověří.
+          při které se mění teplota vody. V každém kalibračním bodě máme odečet čidla
+          a údaje o vodě, ve které právě měřilo. Z lázně se odebere vzorek a laboratorní
+          salinometr Guildline Autosal jej porovná se standardní mořskou vodou IAPSO.
+          Tím získáme referenční salinitu lázně. Zkratka IAPSO označuje Mezinárodní
+          asociaci pro fyzikální vědy o oceánech.
+        </p>
+        <p>
+          Reference je tak s čidlem spojená přes laboratorní salinometr a teploměr lázně.
+          Tento doložený sled porovnání se označuje jako návaznost měření. Každá jeho část
+          má vlastní nejistotu, která přispívá k nejistotě výsledku. Dobrá shoda odečtů
+          s kalibrační křivkou ukazuje, jak dobře zvolený vztah popisuje tyto body.
+          Sama ale neověří správnost všech přístrojů a referencí, ze kterých body vznikly.
         </p>
         <p>
           Použijeme <SourceLink id="2014_SeaBird_C3860_Calibration">protokol čidla číslo 3860
           z 15. října 2014</SourceLink> ve veřejném archivu Atlantické oceánografické a
           meteorologické laboratoře amerického Národního úřadu pro oceán a atmosféru, zkráceně
-          NOAA AOML. Obsahuje šest bodů v lázni a jeden nulový bod. Nulový bod uchováváme
-          v datech, ale nepočítáme z něj salinitu. Jeho měřicí prostředí protokol samostatně
-          nepopisuje. Pro zbývajících šest bodů rekonstruujeme laboratorní výpočet s tlakem
-          p = 0 dbar. Je to zvolená referenční podmínka, nikoli doložený odečet barometru.
+          NOAA AOML. Obsahuje šest bodů měření vody v lázni a jeden nulový bod.
+          U šesti vodních bodů budeme postupovat od frekvence k vodivosti a potom k salinitě.
         </p>
         <p>
-          Převod frekvence na vodivost pro tento snímač zní:
+          Nulový bod uchováváme v datech, ale salinitu z něj nepočítáme. Protokol
+          samostatně nepopisuje jeho měřicí prostředí. Pro šest vodních bodů volíme při
+          výpočtu referenční atmosférický tlak. V použitém zápisu jej vyjadřuje p = 0 dbar.
+          Tuto podmínku jsme zvolili pro rekonstrukci laboratorního výpočtu, protokol
+          ji nedokládá odečtem barometru.
+        </p>
+        <p>
+          První převod určuje vodivost z frekvence čidla. Rovnice zároveň zohledňuje změny
+          rozměrů trubice s teplotou a tlakem. Pro tento snímač zní:
         </p>
         <p className="article-formula method-equation">C = (g + h f² + i f³ + j f⁴) / [10 (1 + a t + b p)]</p>
         <p>
           C je vodivost v S/m, f frekvence v kHz, t teplota vody ve °C a p tlak v dbar.
-          Decibar, značka dbar, je 10 000 pascalů. V navazujícím výpočtu PSS-78 znamená p
-          absolutní tlak po odečtení standardní atmosféry 10,1325 dbar. Nula tedy odpovídá
-          referenčnímu atmosférickému tlaku. Koeficienty g, h, i a j určují kalibrační
-          křivku konkrétního čidla. Písmena a a b zde označují koeficienty CTcor a CPcor
-          z protokolu, které opravují tepelnou roztažnost a stlačení skleněné trubice.
-          Jde o změny přístroje. Vliv teploty a tlaku na vodivost samotné vody zohlední až
-          následující výpočet salinity.
+          Decibar, značka dbar, je jednotka tlaku odpovídající 10 000 pascalům.
+          V navazujícím výpočtu PSS-78 se tlak zapisuje po odečtení standardního
+          atmosférického tlaku 10,1325 dbar od absolutního tlaku. Nula tak znamená
+          referenční atmosférický tlak, nikoli úplnou nepřítomnost tlaku.
+        </p>
+        <p>
+          Koeficienty g, h, i a j určují kalibrační křivku konkrétního čidla.
+          V čitateli násobí jednotlivé mocniny frekvence. Například f² znamená frekvenci
+          vynásobenou sebou samou. Součet těchto členů popisuje převod elektrického signálu.
+        </p>
+        <p>
+          Ve jmenovateli jsou členy a t a b p. Písmena a a b označují koeficienty CTcor
+          a CPcor z protokolu. Opravují vliv tepelné roztažnosti a stlačení skleněné
+          trubice, tedy změn prostoru, kterým proud prochází. Po tomto kroku známe
+          vodivost vody při její teplotě a tlaku. Vliv těchto podmínek na vodivost samotné
+          vody odlišíme od slanosti až při následujícím výpočtu salinity.
         </p>
         <p>
           Vytištěnému vzorci v protokolu chybí faktor 10 ve jmenovateli. Uvedený tvar
           dokládá <SourceLink id="DOI_10_7289_v5dr2sgz">zpráva NOAA, strana 13</SourceLink>,
           pro stejné sériové číslo, datum a koeficienty. Odpovídá také tabulkovým vodivostem.
           Frekvence v tabulce už jsou v kHz, takže je znovu nedělíme tisícem.
+        </p>
+        <p>
+          Každý řádek následující tabulky představuje jeden kalibrační bod. První dva
+          sloupce udávají teplotu a zaznamenanou frekvenci. Z nich při zvoleném tlaku
+          počítáme vodivost a salinitu v dalších dvou sloupcích. Poslední sloupec obsahuje
+          referenční salinitu lázně, se kterou můžeme výsledek porovnat.
         </p>
         <figure className="method-data-output method-data-output--compact">
           <div className="method-data-output__table-wrap" role="region" aria-label="Šest skutečných bodů kalibrace vodivosti" tabIndex={0}>
@@ -197,6 +283,12 @@ export function ConductometryArticle() {
             Počet desetinných míst zachycuje výpočet a není údajem o jeho nejistotě.
           </figcaption>
         </figure>
+        <p>
+          Na těchto bodech je vidět, proč potřebujeme současně měřit teplotu.
+          Vodivost se s ohříváním lázně výrazně mění, zatímco salinita zůstává téměř
+          stejná. Graf níže ukazuje právě tuto změnu vodivosti. Její růst bychom bez
+          znalosti teploty mohli mylně připsat většímu množství rozpuštěných solí.
+        </p>
         <figure className="article-figure">
           <Image className="article-figure__media" src="/media/conductometry/conductivity-temperature.png"
             alt="Šest kalibračních bodů. Při zvýšení teploty přibližně z −1 na 32,5 °C roste vodivost z 2,792 na 6,048 S/m, zatímco vypočtená praktická salinita všech bodů zůstává mezi 34,634 a 34,643."
@@ -210,27 +302,53 @@ export function ConductometryArticle() {
           </figcaption>
         </figure>
         <p>
-          Sledujme bod při 15,0000 °C. Frekvence 5,96800 kHz dává po dosazení koeficientů
-          vodivost přibližně 4,252531 S/m. Protokol tiskne 4,25254 S/m, rozdíl je přibližně
-          0,000009 S/m. Zpětný výpočet ze zaokrouhlených koeficientů a frekvencí proto
-          nemusí obnovit poslední tištěnou číslici.
+          Podrobně nyní projdeme jeden řádek, bod při 15,0000 °C. Čidlo zaznamenalo
+          frekvenci 5,96800 kHz. Po dosazení do uvedené rovnice s koeficienty z protokolu
+          dostaneme vodivost přibližně 4,252531 S/m. Tím je dokončen převod elektrického
+          signálu na vlastnost vody.
         </p>
         <p>
-          Další kroky stanovuje <SourceLink id="2015_TEOS10_SP_From_C">dokumentace výpočtu
-          gsw_SP_from_C v soustavě TEOS-10, příloha E</SourceLink>. Teplotu na stupnici ITS-90
-          převedeme pro starší vztah na stupnici IPTS-68 násobením 1,00024, tedy na 15,0036 °C.
-          Obě značky označují mezinárodní teplotní stupnice z let 1990 a 1968. Vodivost vydělíme
-          referenční hodnotou 4,2914 S/m, která odpovídá S<sub>P</sub> = 35 při 15 °C na stupnici
-          IPTS-68 a p = 0. Dostaneme poměr přibližně 0,9909426.
+          Protokol tiskne vodivost 4,25254 S/m. Náš výsledek se od ní liší přibližně
+          o 0,000009 S/m. Počítáme ze zaokrouhlených koeficientů a frekvencí, takže
+          zpětným výpočtem nemusíme obnovit poslední tištěnou číslici.
         </p>
         <p>
-          Tento poměr výpočet opraví o vliv teploty a tlaku vody. V našem bodě je tlaková
-          oprava rovna jedné a po teplotní opravě vychází poměr 0,9908609.
-          Dosazením jeho odmocniny do polynomu PSS-78, tedy součtu mocnin s laboratorně
-          určenými koeficienty, včetně malé teplotní opravy výsledné salinity získáme
-          <strong> S<sub>P</sub> ≈ 34,6424</strong>. Reference lázně byla 34,6427.
-          Jejich rozdíl asi −0,0003 popisuje tento kalibrační bod. Nepředstavuje nezávislou
-          zkoušku ani úplnou nejistotu budoucího měření v moři.
+          Dalším cílem je určit z vodivosti praktickou salinitu. Postup stanovuje
+          <SourceLink id="2015_TEOS10_SP_From_C"> dokumentace výpočtu gsw_SP_from_C
+          v soustavě TEOS-10, příloha E</SourceLink>. Nejdříve sjednotíme zápis teploty.
+          Náš údaj používá mezinárodní teplotní stupnici ITS-90 z roku 1990, zatímco
+          starší vztah PSS-78 pracuje se stupnicí IPTS-68 z roku 1968. Pro tento převod
+          násobíme teplotu 1,00024 a dostaneme 15,0036 °C. Jde o vyjádření téže teploty
+          na druhé stupnici.
+        </p>
+        <p>
+          Teď porovnáme vodivost vzorku s referencí. Hodnota 4,2914 S/m odpovídá
+          praktické salinitě 35 při 15 °C na stupnici IPTS-68 a p = 0.
+          Naši vodivost touto hodnotou vydělíme a získáme poměr přibližně 0,9909426.
+          Je o něco menší než jedna, protože vodivost vzorku je o něco menší než
+          uvedená referenční vodivost.
+        </p>
+        <p>
+          Tento poměr ještě obsahuje vliv podmínek, při kterých jsme měřili.
+          Výpočet jej proto opraví o teplotu a tlak vody. V našem bodě je tlakový
+          opravný faktor roven jedné, takže poměr nemění. Po teplotní opravě vychází
+          0,9908609. Nyní máme poměr připravený pro převod na stupnici salinity.
+        </p>
+        <p>
+          Převod PSS-78 nejprve používá odmocninu tohoto poměru. Je to číslo, které
+          vynásobené sebou samým dává původní poměr. Výpočet dále pracuje s jeho mocninami,
+          tedy opakovaným násobením. Jednotlivé členy násobí koeficienty určenými
+          laboratorním měřením a sčítá je. Takový součet
+          se nazývá polynom. Koeficienty zajišťují, aby vztah odpovídal laboratorně
+          zjištěné souvislosti mezi vodivostí a salinitou. Po zahrnutí malé teplotní
+          opravy výsledné salinity dostaneme <strong>S<sub>P</sub> ≈ 34,6424</strong>.
+        </p>
+        <p>
+          Referenční salinita lázně byla 34,6427. Rozdíl vypočtené a referenční salinity
+          činí asi −0,0003. To ukazuje shodu v tomto kalibračním bodě.
+          Kalibrační vztah čidla ale vznikl právě při kalibraci, ke které bod patří.
+          Porovnání proto nepředstavuje nezávislou zkoušku. Také neříká, jak velkou
+          nejistotu bude mít budoucí měření v moři, kde přibudou další vlivy.
         </p>
         <details className="method-details">
           <summary>Koeficienty, data a zopakování výpočtu</summary>
@@ -266,26 +384,42 @@ export function ConductometryArticle() {
 
         <h2>Kontrola v oceánu a nezávislost výsledků</h2>
         <p>
-          Odběr vody vedle ponořené soupravy umožňuje porovnat profil s laboratorním
-          salinometrem. <SourceLink id="DOI_10_7289_v5dr2sgz">Zpráva z plavby EN551</SourceLink>{" "}
+          Měření v různých hloubkách vytváří profil, tedy záznam toho, jak se salinita
+          s hloubkou mění. Jeho kontrolu umožňuje odběr vody vedle ponořené soupravy.
+          Salinitu odebraného vzorku změříme laboratorním salinometrem a porovnáme ji
+          s údajem soupravy v místě odběru.
+          <SourceLink id="DOI_10_7289_v5dr2sgz"> Zpráva z plavby EN551</SourceLink>{" "}
           uvádí konkrétní standardní mořskou vodu IAPSO, šarži P-157, a kontroly salinometru
-          během analýz. Tento postup prověřuje jiné čidlo v jiných podmínkách.
-          Oba výsledky však sdílejí stupnici a návaznost na standardní mořskou vodu.
-          Vzorky použité k opravě lodního čidla navíc nejsou nezávislými daty pro ověření téže opravy.
+          během analýz.
+        </p>
+        <p>
+          Takové porovnání používá jiné čidlo v jiných podmínkách, takže může odhalit
+          rozdíly mezi měřením v moři a v laboratoři. Oba výsledky přitom používají
+          stejnou stupnici a navazují na standardní mořskou vodu. Chybu této společné
+          reference jejich shoda sama nevyloučí. Pokud navíc odebrané vzorky použijeme
+          k nastavení opravy lodního čidla, jejich následná shoda s opravenými údaji
+          ještě neposkytuje nezávislé ověření téže opravy.
         </p>
         <p>
           <SourceLink id="DOI_10_1175_jtech_d_24_0051_1">Thierryová a spoluautoři v roce 2025</SourceLink>{" "}
-          porovnali čtyři plováky, z nichž každý nesl dvě nebo tři soupravy CTD.
+          porovnali čtyři plováky, tedy plovoucí platformy pro oceánská měření.
+          Každý nesl dvě nebo tři soupravy CTD.
           Zahrnuli elektrodová čidla Sea-Bird a indukční RBR a profily do 4 000 dbar.
-          Společná platforma omezila rozdíly způsobené měřením jiné vody. Zároveň vyšla
-          najevo tlaková závislost odchylek salinity. Autoři ji opravili pomocí lodního
-          referenčního profilu. Po opravách byly rozdíly salinity mezi soupravami pod
-          500 dbar menší než 0,004.
+          Soupravy na jednom plováku měřily blízko sebe. Tím se omezily rozdíly,
+          které by vznikly měřením vody na různých místech.
         </p>
         <p>
-          Toto porovnání ukazuje shodu různých konstrukcí i jejich původní nedostatky.
-          Konečná shoda však zčásti vychází ze společného lodního měření použitého k nastavení
-          oprav. Sama neprokazuje stejně malou absolutní chybu všech čidel.
+          Porovnání odhalilo odchylky salinity, jejichž velikost závisela na tlaku.
+          Autoři je opravili pomocí referenčního profilu změřeného z lodi.
+          Po opravách byly rozdíly salinity mezi soupravami v hloubkách odpovídajících
+          tlaku nad 500 dbar menší než 0,004.
+        </p>
+        <p>
+          Studie tak ukazuje, jak se podařilo přiblížit výsledky různých konstrukcí
+          po opravě jejich původních odchylek. Při hodnocení této shody musíme vzít
+          v úvahu společné lodní měření použité k nastavení oprav. Čidla mohou mít
+          malý vzájemný rozdíl a současně sdílet odchylku vůči skutečné hodnotě.
+          Rozdíl menší než 0,004 proto sám neurčuje absolutní chybu každého čidla.
           Studie navíc zkoušela jiné modely než náš laboratorní SBE 4C. Výsledek nelze
           vydávat za ověření čidla číslo 3860.
         </p>
@@ -293,18 +427,25 @@ export function ConductometryArticle() {
         <h2>Co omezuje přesnost a dlouhodobou srovnatelnost</h2>
         <p>
           Usazeniny, povlak organismů nebo bublina mění cestu proudu v měřicí části.
-          Pomalý posun odezvy se označuje jako drift. Kontrola před nasazením a po návratu
-          pomáhá určit, zda se převod změnil. Vyčištění může odezvu změnit znovu,
+          Čidlo pak může na stejnou vodu reagovat jinak než při kalibraci. Pomalý posun
+          jeho odezvy se označuje jako drift. Kontrola před nasazením a po návratu
+          pomáhá určit, zda původní převod stále odpovídá čidlu. Vyčištění může odezvu změnit znovu,
           proto potřebujeme uchovat pořadí údržby a kalibrací. Postup a omezení stability
           popisuje <SourceLink id="2010_SeaBird_9plus_Manual">manuál SBE 9plus</SourceLink>.
           V silně znečištěné nebo biologicky aktivní vodě nelze automaticky předpokládat
           stabilitu udanou výrobcem pro příznivější podmínky.
         </p>
         <p>
-          K nejistotě salinity přispívá vodivost, teplota, tlak, jejich časové sladění a
-          kalibrační reference. V klidné lázni odpadají rychlé přechody mezi vrstvami.
-          V ostrém teplotním rozhraní může rozhodovat sladění čidel, při dlouhém nasazení
-          drift a v hluboké vodě tlaková oprava. Náš protokol neuvádí úplný rozpočet nejistoty.
+          Salinitu počítáme z vodivosti, teploty a tlaku, takže nejistota každého z těchto
+          údajů přispívá k nejistotě výsledku. Přidává se jejich časové sladění a nejistota
+          kalibrační reference. Význam jednotlivých příspěvků se mění podle podmínek.
+          V klidné lázni odpadají rychlé přechody mezi vrstvami. Tam, kde se teplota
+          prudce mění s hloubkou, může rozhodovat sladění čidel. Při dlouhém nasazení
+          nabývá na významu drift a v hluboké vodě tlaková oprava.
+        </p>
+        <p>
+          Úplný rozpočet nejistoty by popsal velikost těchto příspěvků a jejich spojení
+          v nejistotu výsledné salinity. Náš protokol takový rozpočet neuvádí.
           Z jeho šesti vodních bodů proto nelze stanovit univerzální přesnost salinity
           pro všechny tyto situace.
         </p>
@@ -312,14 +453,19 @@ export function ConductometryArticle() {
           Praktický význam driftu ukázali <SourceLink id="DOI_10_5194_essd_15_383_2023">Wongová,
           Gilson a Cabanesová v roce 2023</SourceLink> na datech programu Argo dostupných
           v dubnu 2022. Popsali zvýšený výskyt posunu k vyšší salinitě u části plováků
-          nasazených po roce 2015 a způsob následných oprav. Kontrola s odstupem času
-          porovnává profily s lodními a prověřenými plovákovými měřeními a posuzuje stabilitu
+          nasazených po roce 2015 a způsob následných oprav.
+        </p>
+        <p>
+          Kontrola s odstupem času porovnává profily s lodními a prověřenými plovákovými
+          měřeními a posuzuje stabilitu
           v čase. Autoři výslovně upozorňují, že část referenčních dat slouží i ke korekcím,
           takže výsledné porovnání není zcela nezávislé. Studie popisuje určitý historický
           soubor, nikoli stav všech dnešních dat Argo.
         </p>
         <p>
-          Pro klimatickou analýzu proto záleží na verzi a příznacích kvality dat.
+          Oprava driftu může změnit hodnotu uloženou v datovém souboru, přestože jde
+          stále o totéž původní měření. Pro klimatickou analýzu proto potřebujeme znát
+          verzi dat a jejich příznaky kvality, tedy značky popisující výsledek kontroly.{" "}
           <SourceLink id="WEB_International_Argo_Program_Data_from_GDACs_b2737bdf">Globální datová centra
           Argo</SourceLink> zpřístupňují profily, technické údaje i informace o přístrojích.
           Sloupec <code>PSAL</code> obsahuje vypočtenou praktickou salinitu, nikoli původní
@@ -334,14 +480,18 @@ export function ConductometryArticle() {
           zasazuje vznik PSS-78 do vývoje elektrických salinometrů. V letech 1955–1959
           vznikaly laboratorní přístroje s teplotně řízenou lázní. V roce 1961 už byly dostupné
           menší přístroje s elektronickou kompenzací teplotního rozdílu vzorku a standardu.
+          Elektronika tedy zohledňovala rozdíl jejich teplot při porovnání vodivostí.
+        </p>
+        <p>
           Následné měření přímo v oceánu potřebovalo převodní vztahy i pro jeho chladné vrstvy.
           Lewis popsal, jak různé vztahy vedly k rozdílům i při zpracování stejných vstupů.
           Jeho práce představuje PSS-78 jako společnou definici založenou na reprodukovatelném
           vodivostním poměru. Laboratoře pak mohly porovnávat výsledky podle jednotného vztahu.
         </p>
         <p>
-          Rozšíření autonomních plováků přidalo dlouhé profily bez pravidelného návratu do
-          laboratoře. Tím vzrostl význam kontroly driftu a uchovávání původních i opravených
+          Rozšíření autonomních plováků umožnilo pořizovat profily při dlouhých nasazeních
+          bez pravidelného návratu do laboratoře. Tím vzrostl význam kontroly driftu
+          a uchovávání původních i opravených
           hodnot. Termodynamické výpočty TEOS-10 dále oddělily praktickou salinitu od
           odhadu absolutní salinity. Srovnatelný klimatický záznam tak vyžaduje doložit
           návaznost přístrojů i použitých převodů.
@@ -362,17 +512,23 @@ export function ConductometryArticle() {
           <SourceLink id="DOI_10_1175_jcli_d_20_0366_1"> Cheng a spoluautoři v roce 2020</SourceLink>.
           Pro období 1960–2017 rekonstruovali rozložení salinity v horních 2 000 metrech
           oceánu. Použili lodní odběry, soupravy CTD a Argo ze Světové oceánografické databáze
-          stažené v červenci 2018. Praktickou salinitu převedli na absolutní a z bodových
-          měření sestavili měsíční mapy. Doplnění mezer využívalo vztahy prostorové a časové
-          proměnlivosti z modelových simulací a autoři je prověřovali záměrným odebíráním
-          části hustěji rozmístěných měření.
+          stažené v červenci 2018. Praktickou salinitu převedli na absolutní a z měření
+          na jednotlivých místech sestavili měsíční mapy.
+        </p>
+        <p>
+          Pro mapu bylo potřeba odhadnout hodnoty také tam, kde měření chyběla.
+          Autoři k tomu využili vztahy z modelových simulací, které popisují, jak
+          spolu souvisejí změny salinity v prostoru a čase. Postup kontrolovali
+          v oblastech s hustěji rozmístěnými měřeními. Část z nich záměrně vynechali
+          a zkoušeli, jak dobře je dokáže doplnění mezer obnovit.
         </p>
         <p>
           Konduktometrie v takové práci poskytuje vstupy pro jednotlivé profily.
-          Globální mapa navíc závisí na výběru dat a doplnění míst bez měření.
-          Výklad změn salinity pomocí výparu, srážek a pohybu vody je další krok.
-          Rozdíl mezi mapami proto nelze celý připsat vlastnostem čidla a samotný profil
-          nedokládá změnu světového koloběhu vody.
+          Výsledná globální mapa závisí také na výběru dat a odhadech v místech bez
+          měření. Při porovnávání map proto potřebujeme znát i způsob jejich sestavení.
+          Vysvětlení změn salinity pomocí výparu, srážek a pohybu vody potom vyžaduje
+          další rozbor. Samotný profil ukazuje místní rozložení salinity, pro závěr
+          o změně světového koloběhu vody potřebujeme širší soubor podkladů.
         </p>
         <div className="method-conclusion">
           <h2>Co metoda umožňuje zjistit</h2>
