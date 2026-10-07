@@ -2,6 +2,8 @@
 
 Tento dokument je závazný pro psaní a redakci všech textů webu, včetně nadpisů, perexů, popisků a shrnutí. Soustřeďuje dosavadní jazyková pravidla projektu a původního zadání. Čteme jej společně s [AGENTS.md](AGENTS.md) a [CONTENT.md](CONTENT.md). Obsahové požadavky na metody a mechanismy dále stanovují [METHODS.md](METHODS.md) a [MECHANISMS.md](MECHANISMS.md).
 
+Před psaním a redakcí vysvětlujících textů povinně čteme také [EXPLANATION.md](EXPLANATION.md). Rozvádí pravidla návaznosti, tempa, vysvětlování pojmů a kontroly porozumění pro celý web.
+
 ## 1. Pro koho a jak píšeme
 
 Píšeme přirozenou, přesnou, čitelnou a dospělou češtinou pro člověka bez odborného vzdělání. Zjednodušení musí pomoci pochopení a zachovat věcný význam, předpoklady i rozsah platnosti tvrzení. Důležitou věc skutečně vysvětlíme. Délku textu volíme podle potřebného výkladu.
@@ -93,5 +95,6 @@ Následující věty jsou vytvořené ukázky formulací, nikoli citace skutečn
 7. Lze odstranit opakování bez ztráty potřebného vysvětlení?
 8. Odpovídá závěr otázce článku a obsahuje konkrétní poznatek?
 9. Neobsahuje autorský český text středníky?
+10. Prošel výklad kontrolou porozumění podle [EXPLANATION.md](EXPLANATION.md)?
 
 Text je připravený, když jeho jazyk umožňuje čtenáři sledovat význam, postup a důvody závěru bez domýšlení chybějících souvislostí.

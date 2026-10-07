@@ -1,10 +1,10 @@
 # Postup práce s obsahem
 
-Tento dokument popisuje, které soubory je potřeba změnit při přidání nebo úpravě obsahu. Odborná pravidla stanovují `AGENTS.md`, `CONTENT.md`, `METHODS.md` a `MECHANISMS.md`; společný jazyk a styl stanovuje [STYLE.md](../STYLE.md).
+Tento dokument popisuje, které soubory je potřeba změnit při přidání nebo úpravě obsahu. Odborná pravidla stanovují `AGENTS.md`, `CONTENT.md`, `METHODS.md` a `MECHANISMS.md`. Společný jazyk a styl stanovuje [STYLE.md](../STYLE.md), srozumitelný výklad [EXPLANATION.md](../EXPLANATION.md).
 
 ## 1. Než začne práce
 
-1. Přečtěte `AGENTS.md`, `CONTENT.md` a [STYLE.md](../STYLE.md).
+1. Přečtěte `AGENTS.md`, `CONTENT.md`, [STYLE.md](../STYLE.md) a [EXPLANATION.md](../EXPLANATION.md).
 2. U metody navíc přečtěte `METHODS.md`.
 3. U mechanismu navíc přečtěte `MECHANISMS.md`.
 4. Ověřte, zda už téma, slug nebo zdrojové ID v repozitáři neexistuje.
@@ -17,7 +17,7 @@ U pozorování najděte článek v `app/components/*Article.tsx` podle mapován�
 
 Při změně:
 
-- zachovejte zavedenou strukturu článku;
+- zachovejte povinný obsah a rozlišení jednotlivých vrstev poznání, pořadí výkladu při redakci přizpůsobte srozumitelné návaznosti podle [EXPLANATION.md](../EXPLANATION.md).
 - citace připojte přes `SourceLink` se stabilním ID;
 - zkontrolujte, že každý použitý zdroj existuje v katalogu;
 - neponechávejte v databázi odstraněný zdroj, pokud jej nepoužívá jiný článek, historie nebo stránka;

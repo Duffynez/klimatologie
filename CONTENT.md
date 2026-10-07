@@ -1,6 +1,6 @@
 # Práce s obsahem
 
-Před psaním nebo úpravou textu přečtěte také [STYLE.md](STYLE.md), který stanovuje společná jazyková a stylistická pravidla webu.
+Před psaním nebo úpravou textu přečtěte také [STYLE.md](STYLE.md), který stanovuje společná jazyková a stylistická pravidla webu, a [EXPLANATION.md](EXPLANATION.md) s pravidly srozumitelného výkladu.
 
 ## Přidání zdroje
 
@@ -47,7 +47,7 @@ Každá karta odpovídá na tři otázky: co se stalo, co bylo nově zjištěno 
 
 ## Kontrolní otázky před zveřejněním
 
-- Prošel text jazykovou a redakční kontrolou podle [STYLE.md](STYLE.md)?
+- Prošel text jazykovou a redakční kontrolou podle [STYLE.md](STYLE.md) a kontrolou porozumění podle [EXPLANATION.md](EXPLANATION.md)?
 - Je každé podstatné tvrzení navázané na zdroj?
 - Je zdroj dostupný, správně popsaný a lze jej legálně sdílet?
 - Má graf popis, jednotky, původ dat a omezení?
