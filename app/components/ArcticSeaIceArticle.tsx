@@ -157,7 +157,7 @@ export function ArcticSeaIceArticle() {
         </p>
 
         <h2>Jak vzniká zveřejněný záznam</h2>
-        <h3>Od mikrovlnného záření ke koncentraci</h3>
+        <h3>Výpočet koncentrace ledu z mikrovlnného záření</h3>
         <p>
           Pasivní mikrovlnný radiometr zaznamenává přirozené mikrovlnné záření povrchu. Jeho intenzitu vyjadřuje
           jako jasovou teplotu: teplotu ideálního zářiče, který by vysílal stejně silný signál. To je měřítko záření,
@@ -192,7 +192,7 @@ export function ArcticSeaIceArticle() {
           <SourceLink id="DOI_10_5194_tc_9_1797_2015">Ivanova et al., 2015</SourceLink>.
         </p>
 
-        <h3>Od denní mapy k měsíci, minimu a trendu</h3>
+        <h3>Výpočet měsíčních hodnot, minima a trendu</h3>
         <p>
           Denní rozsah vznikne součtem ploch všech buněk s koncentrací alespoň 15 %. Měsíční rozsah se počítá jako průměr denních
           součtů. Naproti tomu měsíční mapa koncentrace nejprve průměruje jednotlivé dny v každé buňce. Buňka s

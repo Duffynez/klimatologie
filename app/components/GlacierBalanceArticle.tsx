@@ -155,7 +155,7 @@ export function GlacierBalanceArticle() {
           <SourceLink id="DOI_10_5194_tc_7_1227_2013"> Zemp et al. (2013), rovnice 7 a 8</SourceLink>
         </p>
 
-        <h2>Griesgletscher: od úbytku 398 cm k bilanci bodu</h2>
+        <h2>Griesgletscher: bodová bilance při úbytku 398 cm</h2>
         <p>
           Použijeme dvě pevně označená vydání dat GLAMOS z roku 2021, otevřená 4. října 2026.
           GLAMOS je švýcarská síť sledování ledovců. Zvolili jsme Griesgletscher, identifikátor
@@ -340,7 +340,7 @@ export function GlacierBalanceArticle() {
           <SourceLink id="WEB_World_Glacier_Monitoring_Ser_glosar_UNESCO_a_WGMS_06fc9a79"> Cogley et al. (2011)</SourceLink>.
         </p>
 
-        <h2>Od sezonních návštěv k dlouhému klimatickému záznamu</h2>
+        <h2>Historie a klimatologické využití měření bilance</h2>
         <p>
           Valter Schytt v <SourceLink id="DOI_10_3189_s002214300002757x">původní práci z roku 1962</SourceLink>{" "}
           popsal šestnáct let bilance švédského Storglaciären od zimy 1945/46. Upozorňoval, že v horní

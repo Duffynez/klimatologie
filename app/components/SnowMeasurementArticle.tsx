@@ -22,7 +22,7 @@ export function SnowMeasurementArticle() {
       </aside>
 
       <div className="article-prose">
-        <h2>Od sněhové vrstvy k množství vody</h2>
+        <h2>Výška sněhu a zásoba vody</h2>
         <p className="article-prose__intro">
           Terénní měření sněhu zjišťuje, jak je pokrývka vysoká a kolik vody obsahuje.
           Výšku změříme tyčí nebo pravítkem. Dutým odběrákem vyjmeme známý objem sněhu a zvážíme jej.
@@ -375,7 +375,7 @@ export function SnowMeasurementArticle() {
           <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125"> WMO (2024), oddíl 2.4.2</SourceLink>
         </p>
 
-        <h2>Od horských odběrů k dnešním profilům</h2>
+        <h2>Historie měření sněhu</h2>
         <p>
           Přenosný odběrák spojený s váhou umožnil zjišťovat vodní zásobu horského sněhu přímo v terénu.
           Dochovaná <SourceLink id="DOI_10_1038_092520a0">zpráva v časopise Nature z ledna 1914</SourceLink>{" "}

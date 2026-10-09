@@ -346,7 +346,7 @@ export function HygrometryArticle() {
           jej nemůžeme vydávat za chybu přístroje ani z něj odvodit celkovou nejistotu hodiny.
         </p>
 
-        <h2>Od mechanických vlhkoměrů k elektrickému záznamu</h2>
+        <h2>Vývoj mechanických a elektrických vlhkoměrů</h2>
         <p>
           Mechanické vlhkoměry využívaly změnu délky vlasu či jiného materiálu při vlhnutí.
           <SourceLink id="1938_Dunmore_Hygrometer">Francis Dunmore v původní práci z roku 1938</SourceLink>

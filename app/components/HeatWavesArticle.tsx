@@ -158,7 +158,7 @@ export function HeatWavesArticle() {
         </p>
 
         <h2>Jak vzniká zveřejněný záznam</h2>
-        <h3>Od teploměru k dennímu maximu a minimu</h3>
+        <h3>Měření denní maximální a minimální teploty</h3>
         <p>
           Meteorologická stanice měří teplotu vzduchu čidlem, které se s okolním vzduchem tepelně vyrovnává.
           Dříve se běžně odečítala poloha kapaliny v teploměru, dnes se často měří elektrický odpor platinového
@@ -213,7 +213,7 @@ export function HeatWavesArticle() {
           <SourceLink id="DOI_10_1175_jcli3366_1">Zhang et al., 2005</SourceLink>.
         </p>
 
-        <h3>Od stanic k mapě</h3>
+        <h3>Výpočet map teplotních ukazatelů</h3>
         <p>
           HadEX3 neinterpoluje každou denní teplotu. Nejprve se na stanicích vypočítají roční ukazatele, například
           počet dnů WSDI, a teprve ty se převádějí do mřížky o velikosti 1,875° zeměpisné délky krát 1,25° šířky.

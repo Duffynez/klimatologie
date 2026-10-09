@@ -48,6 +48,8 @@ Citace zapojujeme přirozeně přímo do argumentu. Vysvětlíme, co práce udě
 
 Nadpis pojmenuje obsah oddílu nebo otázku, na kterou výklad odpovídá. Členění přizpůsobíme tématu a zachováme souvislou cestu od definice přes vysvětlení k výsledku. Seznam pomůže u kroků postupu nebo souběžných položek, tabulka při jejich porovnání.
 
+V nadpisech nepoužíváme šablonu „Od něčeho k něčemu“ ani její obměny, například „Od měření k závěru“ nebo „Od laboratorního vzorku ke společné stupnici“. Platí to i pro nadpisy s úvodním názvem a dvojtečkou. Místo této rétorické konstrukce přímo pojmenujeme obsah oddílu, například „Výpočet vodní hodnoty sněhu“, „Vývoj tlakoměrů“ nebo „Kontrola měření“. Věcné údaje o časovém, číselném či prostorovém rozsahu nejsou touto šablonou.
+
 Příklad musí čtenáři pomoci pochopit konkrétní krok. Rozlišíme skutečná data od ilustračních hodnot a vysvětlíme, co lze z ukázky vyvozovat. U obrázku popíšeme osy, barvy, panely a potřebné pojmy. Popisky musí být srozumitelné a čitelné i ve skutečné šířce článku.
 
 Technické podrobnosti lze přesunout do rozbalitelné části, pokud hlavní výklad zůstane srozumitelný a obsahuje rozhodující předpoklady i omezení.
@@ -96,5 +98,6 @@ Následující věty jsou vytvořené ukázky formulací, nikoli citace skutečn
 8. Odpovídá závěr otázce článku a obsahuje konkrétní poznatek?
 9. Neobsahuje autorský český text středníky?
 10. Prošel výklad kontrolou porozumění podle [EXPLANATION.md](EXPLANATION.md)?
+11. Pojmenovávají nadpisy přímo obsah bez šablony „Od něčeho k něčemu“ a jejích obměn?
 
 Text je připravený, když jeho jazyk umožňuje čtenáři sledovat význam, postup a důvody závěru bez domýšlení chybějících souvislostí.

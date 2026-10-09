@@ -88,7 +88,7 @@ export function ThawDepthArticle() {
           </figcaption>
         </figure>
 
-        <h2>Od dvojice vpichů k pravidelné síti</h2>
+        <h2>Měřicí síť a výpočet průměrné hloubky</h2>
         <p>
           Program CALM, anglicky <em>Circumpolar Active Layer Monitoring</em>, sleduje aktivní vrstvu
           na opakovaně navštěvovaných místech. Na lokalitě U1 Barrow na Aljašce pokrývá síť čtverec
@@ -334,7 +334,7 @@ export function ThawDepthArticle() {
           Shoda takto vybraného místa s původním průměrem není samostatným testem reprezentativnosti.
         </p>
 
-        <h2>Od místních měření k pozorování klimatu</h2>
+        <h2>Historie a klimatologické využití měření hloubky tání</h2>
         <p>
           Mechanické sondování využívá jednoduchý kontakt se zmrzlou půdou. Rozšíření jeho poznávací
           hodnoty spočívalo hlavně v opakování na stejných místech a ve spojení s průběžnými záznamy.

@@ -53,7 +53,7 @@ export function ConductometryArticle() {
           přes vodivost až k výsledné salinitě.
         </p>
 
-        <h2>Od elektrod k frekvenci</h2>
+        <h2>Elektrody a elektrický signál čidla</h2>
         <p>
           Elektrický kontakt s vodou zajišťují elektrody, vodivé části ponořené do vzorku.
           Proud prochází vodou mezi nimi. Záleží přitom na vlastnostech vody i na rozměrech
@@ -474,7 +474,7 @@ export function ConductometryArticle() {
           od skutečné změny oceánu.
         </p>
 
-        <h2>Od laboratorního vzorku ke společné stupnici</h2>
+        <h2>Vývoj salinometrů a společné stupnice salinity</h2>
         <p>
           <SourceLink id="DOI_10_1109_joe_1980_1145448">Lewisova práce z roku 1980</SourceLink>{" "}
           zasazuje vznik PSS-78 do vývoje elektrických salinometrů. V letech 1955–1959

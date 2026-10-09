@@ -414,7 +414,7 @@ export function OceanAcidificationArticle() {
         </p>
 
         <h2>Zveřejňovaná data</h2>
-        <h3>GLODAPv3: vzorky od hladiny do hlubokého oceánu</h3>
+        <h3>GLODAPv3: vzorky povrchové a hluboké vody</h3>
         <p>
           GLODAPv3, zveřejněný v roce 2026, spojuje 1 181 výzkumných plaveb z období 1972–2023. Každý řádek odpovídá
           konkrétnímu vzorku a obsahuje polohu, datum, tlak, teplotu, salinitu, chemické hodnoty, značky kvality a

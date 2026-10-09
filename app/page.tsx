@@ -67,7 +67,7 @@ export default function Home() {
       <section className="home-intro section-shell">
         <div>
           <p className="eyebrow">Jak web pracuje</p>
-          <h2>Od měření k závěru.</h2>
+          <h2>Jak dokládáme tvrzení.</h2>
         </div>
         <div className="home-intro__copy">
           <p>

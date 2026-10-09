@@ -305,7 +305,7 @@ export function PressureHeightArticle() {
           Z jeho jedenácti bodů nemůžeme určit celkovou nejistotu budoucího profilu ani dlouhodobé hladiny.
         </p>
 
-        <h2>Od rtuťového sloupce k elektronickému profilu</h2>
+        <h2>Vývoj tlakoměrů</h2>
         <p>
           Původní <SourceLink id="1648_Perier_PuyDeDome">dopis Florina Périera Blaisi Pascalovi
           z 22. září 1648</SourceLink> popisuje pokus uskutečněný o tři dny dříve na Puy-de-Dôme.

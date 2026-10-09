@@ -196,7 +196,7 @@ test("adds projections and consequences as substantive top-level sections", asyn
   assert.match(projections, /Ověřování modelů/);
   assert.match(projections, /Nejistota a časový horizont/);
   assert.match(consequences, /Co pozorované a očekávané změny způsobují/);
-  assert.match(consequences, /Od změny klimatu k riziku/);
+  assert.match(consequences, /fyzikální změny, vystavení lidí a přírody jejím účinkům a zranitelnosti/);
   assert.match(consequences, /Potraviny, sídla a infrastruktura/);
   assert.doesNotMatch(projections + consequences, /Obsah připravujeme/);
   assert.match(header, /href: "\/projekce", label: "Projekce"/);

@@ -352,7 +352,7 @@ export function RadiosoundingArticle() {
           může změnit charakter chyb, i když výsledný soubor dál obsahuje sloupce se stejnými názvy.
         </p>
 
-        <h2>Od jednotlivých výstupů ke klimatickému záznamu</h2>
+        <h2>Zpracování radiosondáží pro klimatologii</h2>
         <p>
           Radiosondáž poskytuje část měření pro články
           <Link href="/pozorovani/stratosfericke-ochlazovani"> Teplota stratosféry</Link> a

@@ -211,7 +211,7 @@ export function MountainGlaciersArticle() {
           <SourceLink id="DOI_10_5194_essd_17_1977_2025">Dussaillant et al., 2025</SourceLink>
         </p>
 
-        <h3>Od jednotlivých ledovců ke globálnímu součtu</h3>
+        <h3>Výpočet globální změny hmotnosti ledovců</h3>
         <p>
           Současný každoroční produkt WGMS využívá terénní měření k odhadu, jak se hmotnost měnila rok po roce i u
           okolních ledovců bez pravidelných návštěv. Tento roční průběh pak upraví tak, aby jeho součet odpovídal

@@ -218,7 +218,7 @@ export function TideGaugeArticle() {
           Číslo 1 cm z tohoto pokusu nelze přenést na každý radar ani na naši ukázku ze San Franciska.
         </p>
 
-        <h2>Od krátkých měření k veřejnému údaji</h2>
+        <h2>Průměrování a kontrola údajů</h2>
         <p>
           Přijímač nejprve zaznamenává odezvu na radarový odraz. Záznamová jednotka popsané sestavy už
           dostává přístrojem vypočítanou vzdálenost. Po převodu na výšku nad místní nulou následují
@@ -405,7 +405,7 @@ export function TideGaugeArticle() {
           Výpočet potřebuje, aby geodetické měření skutečně vystihovalo pohyb místa vodočtu.
         </p>
 
-        <h2>Od záznamu přílivu ke klimatologii</h2>
+        <h2>Historie vodočtů a využití v klimatologii</h2>
         <p>
           <SourceLink id="DOI_10_1098_rstl_1831_0013">Henry R. Palmer (1831)</SourceLink> popsal přístroj,
           ve kterém plovák a hodinový mechanismus společně vykreslovaly průběh hladiny na posouvaný papír.

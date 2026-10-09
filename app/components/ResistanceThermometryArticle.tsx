@@ -66,7 +66,7 @@ export function ResistanceThermometryArticle() {
           </section>
         </div>
 
-        <h2>Od vzduchu k elektrickému údaji</h2>
+        <h2>Odporová sonda a měřicí elektronika</h2>
         <p>
           Samotné čidlo je odporový prvek. Sonda k němu přidává pouzdro a přívody. Teploměr zahrnuje také
           elektroniku a výpočet teploty. Meteorologická stanice pak zajišťuje umístění, napájení, ukládání

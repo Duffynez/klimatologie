@@ -85,7 +85,7 @@ export function RainGaugeArticle() {
           i během krátké prudké přeháňky. Kratší intervaly nám umožní tyto průběhy rozlišit.
         </p>
 
-        <h2>Váhový srážkoměr: od nádoby ke kmitání struny</h2>
+        <h2>Váhový srážkoměr a snímače zatížení</h2>
         <p>
           Voda a sníh padají do nádoby zavěšené na snímačích zatížení. V provedení USCRN nese
           nádobu trojice snímačů s napnutými kovovými strunami. Elektronický impulz strunu rozkmitá.
@@ -448,7 +448,7 @@ export function RainGaugeArticle() {
           Chybu zachycení a předchozího zpracování samotným součtem nevyčíslíme.
         </p>
 
-        <h2>Od průběžného zápisu ke klimatickému záznamu</h2>
+        <h2>Historie záznamu srážek a využití v klimatologii</h2>
         <p>
           Hellmannův <SourceLink id="WEB_DWD_Hellmann_1897_Ein_neuer_registrirender_Regenmesser">původní popis registračního srážkoměru z roku 1897</SourceLink>{" "}
           ukazuje plovák zvedaný přibývající vodou, pero a papírový záznam poháněný hodinovým

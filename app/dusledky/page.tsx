@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 const consequenceTopics = [
   {
-    title: "Od změny klimatu k riziku",
+    title: "Klimatická rizika a zranitelnost",
     summary: "Rozlišení samotné fyzikální změny, vystavení lidí a přírody jejím účinkům a zranitelnosti konkrétního systému.",
   },
   {
