@@ -24,20 +24,25 @@ export function SnowMeasurementArticle() {
       <div className="article-prose">
         <h2>Od sněhové vrstvy k množství vody</h2>
         <p className="article-prose__intro">
-          Terénní měření sněhu spojuje měření výšky s odběrem a zvážením známého objemu.
-          Z hmotnosti a objemu získáme hustotu. Z hustoty a tloušťky jednotlivých vrstev vypočítáme,
-          kolik vody sněhová pokrývka obsahuje. Přístroji jsou měřicí tyč nebo pravítko, dutý odběrák a váha.
+          Terénní měření sněhu zjišťuje, jak je pokrývka vysoká a kolik vody obsahuje.
+          Výšku změříme tyčí nebo pravítkem. Dutým odběrákem vyjmeme známý objem sněhu a zvážíme jej.
+          Z hmotnosti a objemu získáme hustotu, která říká, jaká hmotnost připadá na jednotku objemu.
+          Z hustoty a tloušťky jednotlivých vrstev potom vypočítáme množství vody v celé pokrývce.
         </p>
         <p>
           Sníh tvoří ledová zrna, vzduch v pórech a při tání také kapalná voda. Při sesedání se zmenšuje
-          jeho objem a roste hustota. Výška proto může klesnout i bez úbytku vody.
+          objem, který sníh zaujímá. Pokud se jeho hmotnost nezmění, připadá na stejný objem více sněhu,
+          a hustota tedy roste. Výška proto může klesnout i bez úbytku vody.
           <strong> Vodní hodnota sněhu</strong>, označovaná SWE z anglického <em>snow water equivalent</em>,
-          vyjadřuje výšku vody odpovídající hmotnosti sněhu nad danou plochou. Při referenční hustotě vody
-          1 000 kg/m³ je 1 mm SWE roven 1 kg/m². Definice a rozlišení výšky, hustoty a vodní hodnoty stanovuje
+          vyjadřuje tuto zásobu jako výšku vodního sloupce se stejnou hmotností nad danou plochou.
+          Pro převod používáme referenční hustotu vody 1 000 kg/m³. Při ní je 1 mm SWE roven 1 kg/m²,
+          tedy jednomu kilogramu na metr čtvereční. Definice a rozlišení výšky, hustoty a vodní hodnoty stanovuje
           <SourceLink id="2009_Fierz_Snow_Classification"> mezinárodní klasifikace sněhu (Fierz et al., 2009)</SourceLink>.
         </p>
         <p>
-          Podrobně projdeme odběr malých vzorků v odkryté sněhové stěně a skutečný profil z Arktidy.
+          Podrobně projdeme odběr malých vzorků v odkryté sněhové stěně. Takto lze sledovat sníh od
+          povrchu k podkladu a sestavit sněhový profil, tedy popis polohy vrstev a jejich vlastností.
+          Výpočet ukážeme na skutečném profilu z Arktidy.
           Potom porovnáme trubici pro celý sněhový sloupec a automatické přístroje.
           Výsledky dlouhodobého sledování shrnuje článek
           <Link href="/pozorovani/snehova-pokryvka-a-permafrost"> Sněhová pokrývka a permafrost</Link>.
@@ -48,11 +53,14 @@ export function SnowMeasurementArticle() {
           Měřicí tyč zasuneme svisle až k předem určenému podkladu a odečteme polohu sněhového povrchu.
           Na pevnině je podkladem obvykle zem, na mořském ledu jeho horní povrch. Kámen, ledová krusta
           uvnitř sněhu nebo vegetace mohou sondu zastavit předčasně. V měkké půdě naopak hrozí zatlačení
-          pod skutečný podklad. Odkrytá stěna umožní rozhraní přímo prohlédnout.
+          pod skutečný podklad. V prvním případě bychom výšku podhodnotili, ve druhém nadhodnotili.
+          Odkrytá stěna umožní rozhraní přímo prohlédnout.
         </p>
         <p>
-          Na svahu odlišujeme svislou výšku od tloušťky měřené kolmo ke svahu.
+          Na svahu odlišujeme svislou výšku od tloušťky měřené kolmo ke svahu. Svislé měření míří
+          přímo dolů, zatímco kolmé měření sleduje směr nejkratší vzdálenosti mezi rovnoběžnými rozhraními.
           Pro dvě rovnoběžná rozhraní je kolmá tloušťka rovna svislé výšce násobené kosinem sklonu.
+          Kosinus zde vyjadřuje geometrický převod mezi oběma směry, na svahu proto vychází kolmá tloušťka menší.
           Záměna obou vzdáleností by změnila objem sněhu vztažený k vodorovné ploše.
           Zapisujeme proto směr měření, podklad, místo a čas. Výšku celé pokrývky rozlišujeme
           také od nového sněhu, který přibyl za určený interval.
@@ -76,9 +84,13 @@ export function SnowMeasurementArticle() {
         </p>
         <p>
           V odkryté stěně musí zůstat sníh nenarušený kopáním. Odběrák zasuneme tak, aby se úplně naplnil,
-          zarovnáme jeho okraje a vzorek vyjmeme bez ztráty zrn. Hmotnost prázdné nádobky odečteme
-          od hmotnosti nádobky se sněhem. Váha reaguje na tíhovou sílu vzorku a po kalibraci ji vyjadřuje
-          jako hmotnost. Její displej tak poskytuje údaj o hmotnosti, pravítko o poloze.
+          zarovnáme jeho okraje a vzorek vyjmeme bez ztráty zrn. Objem sněhu pak známe z objemu nádobky.
+          Hmotnost prázdné nádobky odečteme od hmotnosti nádobky se sněhem, aby ve výsledku zůstala
+          pouze hmotnost vzorku. Tu dále označujeme jako čistou hmotnost.
+        </p>
+        <p>
+          Váha reaguje na tíhovou sílu, kterou na ni vzorek působí, a po kalibraci ji vyjadřuje
+          jako hmotnost. Její displej tak poskytuje údaj o hmotnosti, pravítko o poloze odběru ve stěně.
           Hustota a vodní hodnota vzniknou až výpočtem. Stlačený, neúplný nebo vysypaný vzorek je nutné
           odebrat znovu. Postup pro souvislé odběry a jejich opakování uvádí
           <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125"> WMO (2024), oddíl 2.4.1</SourceLink>.
@@ -102,13 +114,18 @@ export function SnowMeasurementArticle() {
         <p>
           Třícentimetrový odběr poskytne průměrnou hustotu celého odebraného objemu.
           Tenkou ledovou krustu a vzdušnější sníh kolem ní sloučí do jednoho údaje.
-          Je to prostorové rozlišení vzorkování. Rozlišení vah je jiná vlastnost a ani jedno samo
+          Tato nejmenší rozlišovaná tloušťka je prostorovým rozlišením vzorkování. Rozlišení vah naproti
+          tomu popisuje, jak malé změny hmotnosti lze v jejich údaji rozeznat. Ani jedno samo
           neudává nejistotu výsledku. V níže vybraných datech jsou hustoty 174 až 288 kg/m³ uložené
           v celých kg/m³. Jde o rozsah tohoto profilu a podobu zveřejněných čísel,
           nikoli o provozní rozsah nebo kalibrační přesnost přístroje.
         </p>
 
         <h2>Výpočet hustoty a vodní hodnoty</h2>
+        <p>
+          Nejprve potřebujeme zjistit hustotu odebraného sněhu. Máme čistou hmotnost vzorku a jeho
+          známý objem. Hmotnost vydělíme objemem, čímž ji přepočteme na jednotku objemu:
+        </p>
         <div className="article-formula method-equation"><p>ρ = m / V</p></div>
         <p>
           Řecké písmeno ρ označuje hustotu v kilogramech na metr krychlový (kg/m³).
@@ -117,12 +134,20 @@ export function SnowMeasurementArticle() {
           Vzorec předpokládá, že odebraný sníh zachoval svůj objem a že se při přenosu neztratila
           zrna ani voda. Jde o vážení celého vzorku, takže se do jeho hmotnosti zahrne i voda mezi zrny.
         </p>
+        <p>
+          Z hustoty malého vzorku nyní chceme určit vodní hodnotu celého sněhového sloupce.
+          Profil rozdělíme na navazující intervaly, u každého známe hustotu a svislou tloušťku.
+          Jejich součin dává hmotnost sněhu v daném intervalu nad jednotkou vodorovné plochy.
+          Dělením hustotou vody převedeme tuto hmotnost na výšku odpovídajícího vodního sloupce.
+          Příspěvky všech intervalů pak sečteme:
+        </p>
         <div className="article-formula method-equation"><p>SWE = Σ (ρ<sub>i</sub> / ρ<sub>w</sub>) Δh<sub>i</sub></p></div>
         <p>
           Znak Σ znamená součet příspěvků všech intervalů. Index i označuje konkrétní interval,
           ρ<sub>i</sub> jeho hustotu a Δh<sub>i</sub> jeho svislou tloušťku v metrech.
           Referenční hustotu vody ρ<sub>w</sub> zde volíme 1 000 kg/m³.
           Výsledek této rovnice je v metrech vody, pro milimetry jej násobíme tisícem.
+          Při této volbě hustoty vody se dělení tisícem a následný převod na milimetry navzájem vyruší.
           Prakticky tedy hustota v kg/m³ násobená tloušťkou v metrech rovnou dává číselnou hodnotu SWE v mm.
           Tento součet navazujících odběrů popisuje
           <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125"> WMO (2024), rovnice 2.5 a 2.6</SourceLink>.
@@ -130,8 +155,9 @@ export function SnowMeasurementArticle() {
         <p>
           Výpočet přisuzuje naměřenou hustotu celému příslušnému intervalu. Vynechaná vrstva proto potřebuje
           další měření nebo výslovně označený odhad. Překrývající se odběry se nesmějí prostě sečíst,
-          protože by stejná výška vstoupila dvakrát. Při různě silných intervalech se průměrná hustota
-          váží jejich tloušťkami. Prostý průměr jednotlivých hustot je správný pouze pro stejně silné intervaly.
+          protože by stejná část sloupce vstoupila dvakrát. Průměrnou hustotu celého profilu počítáme
+          s ohledem na tloušťku intervalů. Silnější interval zaujímá větší část sloupce, a proto má
+          v průměru větší váhu. Prostý průměr jednotlivých hustot je správný pouze pro stejně silné intervaly.
         </p>
 
         <h2>Skutečný profil: 12 cm sněhu nad mořským ledem</h2>
@@ -149,6 +175,12 @@ export function SnowMeasurementArticle() {
           Předchozí vážení známe z popisu metody. Žádnou hodnotu v tomto profilu neopravujeme,
           nedoplňujeme ani nevyřazujeme.
         </p>
+        <p>
+          První záznam patří nejvyššímu intervalu, od 9 do 12 cm nad ledem. Rozdíl jeho hranic dává
+          tloušťku 0,03 m a zveřejněná hustota je 174 kg/m³. Vynásobením získáme příspěvek tohoto
+          intervalu: 174 × 0,03 = 5,22 mm vody. Tabulka stejným způsobem ukazuje všechny čtyři odběry.
+          Výšky v prvním sloupci určují jejich polohu, poslední sloupec množství vody v každém z nich.
+        </p>
         <div className="method-data-output method-data-output--compact">
           <div className="method-data-output__table-wrap" role="region" aria-label="Čtyři intervaly sněhového profilu" tabIndex={0}>
             <table>
@@ -159,11 +191,12 @@ export function SnowMeasurementArticle() {
           </div>
         </div>
         <p>
-          Nejvyšší interval má hustotu 174 kg/m³ a tloušťku 0,03 m.
-          Jeho příspěvek je 174 × 0,03 = 5,22 mm vody.
+          Odběry pokrývají celých 12 cm sněhu bez mezer a překryvů, takže můžeme jejich příspěvky sečíst.
           Součet 5,22 + 6,54 + 8,64 + 8,10 dává <strong>{number(example.result.sweMm)} mm SWE</strong>,
-          tedy 28,5 kg na metr čtvereční. Průměrná hustota celého profilu je
+          tedy 28,5 kg na metr čtvereční. Průměrnou hustotu celého profilu získáme, když hmotnost
+          na jednotku plochy vydělíme celkovou výškou sněhu v metrech:
           28,5 / 0,12 = <strong>{number(example.result.meanDensityKgM3)} kg/m³</strong>.
+          Výsledek říká, jaká hmotnost by připadala na metr krychlový sněhu s průměrnými vlastnostmi tohoto profilu.
           Desetinná místa ukazují výsledek výpočtu z publikovaných vstupů, ne jeho měřicí nejistotu.
         </p>
         <figure className="article-figure article-figure--scroll-mobile">
@@ -175,8 +208,9 @@ export function SnowMeasurementArticle() {
           <figcaption>
             Svislá osa obou panelů ukazuje výšku nad ledem. Vlevo je zveřejněná hustota,
             vpravo vypočtená vodní hodnota příslušného třícentimetrového intervalu.
-            Barvy spojují stejné odběry v obou panelech. Nejvíce vody obsahuje interval 3–6 cm,
-            který má nejvyšší hustotu. Hranice sloupců vymezují odběry, nemusí odpovídat přirozeným vrstvám sněhu.
+            Barvy spojují stejné odběry v obou panelech. Všechny intervaly mají stejnou tloušťku,
+            proto nejvíce vody obsahuje interval 3–6 cm s nejvyšší hustotou.
+            Hranice sloupců vymezují odběry, nemusí odpovídat přirozeným vrstvám sněhu.
             Vlastní graf z <SourceLink id="DOI_10_1594_PANGAEA_940214">dat Macfarlane et al. (2022)</SourceLink>,
             data i graf CC BY 4.0, graf Klimatologie.eu.
           </figcaption>
@@ -208,16 +242,21 @@ export function SnowMeasurementArticle() {
 
         <h2>Kalibrace a kontrola odběru</h2>
         <p>
-          Kalibrace váhy určuje vztah mezi jejím údajem a hmotností referenčních závaží včetně nejistot.
-          Závaží s doloženou návazností propojují vážení s jednotkou kilogram.
-          Seřízení znamená změnu odezvy přístroje a provádí se odděleně.
+          Při kalibraci váhy zjišťujeme, jak její údaj odpovídá hmotnosti referenčních závaží,
+          a zahrnujeme přitom nejistoty obou hodnot. Hmotnost závaží musí být doložena návaznými
+          kalibracemi, které propojují místní vážení s jednotkou kilogram.
+          Samotná kalibrace popisuje vztah mezi údajem a referencí. Seřízení znamená změnu odezvy
+          přístroje a provádí se odděleně.
           Rozlišení těchto úkonů odpovídá
           <SourceLink id="2012_VIM_Calibration"> mezinárodnímu metrologickému slovníku VIM</SourceLink>.
           Vynulování displeje nebo odečtení prázdné nádobky samo o sobě kalibraci nenahrazuje.
+          Odečtením nádobky odstraníme její hmotnost z výsledku, ale neověříme tím, zda váha správně měří
+          hmotnost vloženého sněhu.
         </p>
         <p>
           Před terénní prací ověříme váhu závažím, objem a nepoškozené hrany odběráku i délkovou stupnici.
           Zkouška objemu může vycházet z rozměrů nebo z hmotnosti vody známé hustoty, kterou pojme nádobka.
+          Ve druhém případě vydělíme hmotnost vody její hustotou a získáme objem, který vyplnila.
           V terénu kontrolujeme čistotu a suchost nádobky, stabilitu nuly a chráníme vážení před větrem.
           Sezónní ověření váhy kalibračním závažím požaduje
           <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125"> WMO (2024), oddíl 2.4.1.2</SourceLink>.
@@ -229,22 +268,31 @@ export function SnowMeasurementArticle() {
           Pro postup s navazujícími válcovými odběry doporučuje WMO při rozdílu výšky či hmotnosti
           opakovaných vzorků větším než 5 % třetí odběr. Tato hranice je pravidlem kontroly odběru,
           nikoli zárukou pětiprocentní nejistoty každého měření. Rozdíl sousedních vzorků může zahrnovat
-          také skutečnou proměnlivost sněhu.
+          také skutečnou proměnlivost sněhu. Opakování proto upozorní na nesoulad, ale samo nerozhodne,
+          zda vznikl při odběru, nebo zda se sníh mezi místy skutečně liší.
         </p>
 
         <h2>Porovnání s jiným měřicím principem</h2>
         <p>
           <SourceLink id="DOI_10_5194_tc_10_371_2016">Proksch et al. (2016)</SourceLink> porovnali odběráky
           s rentgenovou mikrotomografií, která ze série rentgenových snímků rekonstruuje prostorové
-          rozložení ledu a pórů. Hustotu tak určuje z podílu ledu v objemu.
+          rozložení ledu a pórů. Místo vážení tedy zjišťuje, jakou část objemu zaujímá led,
+          a z tohoto podílu určuje hustotu sněhu.
           Aby porovnání odpovídalo stejným výškám, autoři podrobnější tomografický profil zprůměrovali
-          na rozlišení odběrů.
+          na rozlišení odběrů. Porovnávali tak průměry přes odpovídající výškové intervaly,
+          nikoli podrobné změny z rentgenových snímků s jedinou hustotou velkého vzorku.
         </p>
         <p>
-          V terénním porovnání bez ledových vrstev činil u krabičkového odběráku odmocněný průměr
-          čtverců rozdílů 7 % průměrné tomografické hustoty. Tato míra shrnuje velikost rozdílů
-          bez vzájemného rušení kladných a záporných odchylek. Průměrná podepsaná odchylka byla −1 %.
-          U dalších dvou typů odběráků byla první míra 9 % a 5 %.
+          V terénním porovnání bez ledových vrstev autoři shrnuli rozdíly mezi oběma postupy tak,
+          aby se kladné a záporné odchylky vzájemně nerušily. Rozdíly umocnili na druhou,
+          čtverce zprůměrovali a výsledek odmocnili. U krabičkového odběráku tento odmocněný průměr
+          čtverců rozdílů činil 7 % průměrné tomografické hustoty. U dalších dvou typů odběráků
+          byla stejná míra 9 % a 5 %.
+        </p>
+        <p>
+          Průměrná odchylka krabičkového odběráku se zachováním znamének byla −1 %.
+          Při tomto průměrování se odchylky opačných směrů mohou vzájemně rušit.
+          Hodnota proto popisuje průměrný posun mezi postupy, zatímco předchozích 7 % celkovou velikost rozdílů.
           Výsledky patří tomuto experimentu v Davosu, nelze je připsat jako kalibrační certifikát
           arktickému profilu v našem příkladu.
         </p>
@@ -260,14 +308,19 @@ export function SnowMeasurementArticle() {
         <p>
           Chyba hmotnosti, objemu odběráku a tloušťky vzorkované vrstvy ovlivní různé části výpočtu.
           Ztráta zrn snižuje vypočtenou hustotu, stlačení sněhu při plnění ji může zvýšit.
-          Stejná chyba objemu všech odběrů posune celý profil stejným směrem a součtem mnoha vrstev nezmizí.
+          Stejná chyba objemu všech odběrů posune celý profil stejným směrem. Pokud bychom například
+          používali příliš velký objem v děliteli m/V, vycházely by všechny hustoty nižší.
+          Součtem mnoha vrstev taková společná chyba nezmizí.
           U mokrého sněhu může během manipulace odtékat voda. Ledová krusta zase ztěžuje úplné vyříznutí vzorku.
         </p>
         <p>
           Náš vybraný profil obsahuje jeden záznam pro každý interval. Chybí opakované odběry i úplný
-          rozpočet nejistoty, takže mu nemůžeme připojit doložený interval „±“.
-          Můžeme však spočítat citlivost: neproměřený 1 cm sněhu o průměrné hustotě tohoto profilu
-          by představoval 2,375 mm vody, tedy asi 8,3 % jeho vypočtené vodní hodnoty.
+          rozpočet nejistoty, tedy vyčíslení příspěvků jednotlivých nejistých vstupů k výsledku.
+          Nemůžeme mu proto připojit doložený interval „±“.
+          Citlivost výsledku na úplnost odběru můžeme ukázat výpočtem, kolik vody by chybělo,
+          kdybychom neproměřili 1 cm sněhu o průměrné hustotě tohoto profilu.
+          Hustotu 237,5 kg/m³ vynásobíme tloušťkou 0,01 m. Vyjde 2,375 mm vody,
+          tedy asi 8,3 % jeho vypočtené vodní hodnoty.
           Je to podmíněný výpočet, nikoli zjištěná chyba profilu. Ukazuje význam správně určeného podkladu
           a úplného pokrytí výšky.
         </p>
@@ -275,7 +328,8 @@ export function SnowMeasurementArticle() {
           Pro větší území přibývá nejistota výběru míst. Přesně zvážený vzorek v závěji nemůže sám
           určit průměrnou zásobu vody na větrem obnaženém svahu. Terénní trasy proto kombinují
           více vážených odběrů s hustší sítí rychlých měření výšky. Rozmístění bodů a poměr zastoupených
-          povrchů je součástí výsledku. Postupy pro takové trasy uvádí
+          povrchů jsou součástí výsledku. Při přechodu od bodů k území proto musíme vědět,
+          jakou část území jednotlivá měřená místa zastupují. Postupy pro takové trasy uvádí
           <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125"> WMO (2024), oddíly 2.3 a 2.4</SourceLink>.
         </p>
 
@@ -285,6 +339,9 @@ export function SnowMeasurementArticle() {
           <div><h3>Odběry v odkryté stěně</h3><p>Menší vzorky zachytí změny hustoty s výškou a dovolí prohlédnout rozhraní. Odkrytí stěny trvá déle a místo naruší, další návštěva potřebuje neporušený sníh vedle. Hustoty jednotlivých intervalů se převádějí na jejich příspěvky vody.</p></div>
         </div>
         <p>
+          U trubice nemusíme sčítat příspěvky jednotlivých intervalů, protože vážíme celý sněhový sloupec.
+          Jeho hmotnost nejprve vydělíme plochou řezu trubice, abychom získali hmotnost nad jednotkou plochy.
+          Dělením hustotou vody ji převedeme na výšku vodního sloupce.
           Pro úplný sloupec platí SWE v metrech vody = m / (A ρ<sub>w</sub>),
           kde m je hmotnost odebraného sněhu v kg, A plocha řezu trubice v m² a ρ<sub>w</sub> referenční
           hustota vody. Předpokladem je úplný vzorek nad touto plochou.
@@ -296,20 +353,22 @@ export function SnowMeasurementArticle() {
           odběrů. Výsledky a jejich rozptyl ukazuje obrázek 9 ve
           <SourceLink id="DOI_10_1038_s41597_023_02273_1"> studii Macfarlane et al. (2023)</SourceLink>.
           Odhad z malých odběrů přitom používal výšku naměřenou trubicí ETH.
-          Porovnání tak sdílí vstup o výšce a oba postupy využívají vážení. Ověřuje zejména různé způsoby
+          Porovnání sdílí vstup o výšce a oba postupy využívají vážení. Ověřuje zejména různé způsoby
           odběru, neposkytuje zcela nezávislou kontrolu celé měřicí sestavy.
         </p>
         <p>
           Automatické ultrazvukové čidlo nad sněhem měří vzdálenost z doby návratu zvuku.
           Rychlost zvuku se mění s teplotou, proto výpočet potřebuje i teplotu vzduchu.
-          Rozdíl proti vzdálenosti k holému podkladu dá výšku sněhu. Laserový přístroj používá světlo.
+          Sníh zkracuje vzdálenost mezi čidlem a sledovaným povrchem. Od známé vzdálenosti k holému
+          podkladu proto odečteme vzdálenost ke sněhu a dostaneme jeho výšku. Laserový přístroj používá světlo.
           Oba způsoby vyžadují stabilní polohu čidla a správně určenou vzdálenost bez sněhu.
           <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125"> WMO (2024), oddíl 2.3.2</SourceLink>
         </p>
         <p>
           Sněhový polštář je nádoba s kapalinou zapuštěná do úrovně terénu.
-          Tlak vyvolaný hmotností sněhu se převádí na vodní hodnotu.
-          Sněhová váha měří zatížení nosné plochy přímo silovým snímačem.
+          Sníh zatěžuje nádobu a zvyšuje tlak její kapaliny. Z tohoto tlaku se určuje hmotnost sněhu
+          nad měřenou plochou a převádí se na vodní hodnotu.
+          Sněhová váha měří zatížení nosné plochy přímo silovým snímačem, který reaguje na působící sílu.
           Zpevněná sněhová nebo ledová vrstva může část zatížení přenést do okolí jako most,
           takže přístroj nezaznamená celou hmotnost nad sebou. Ruční odběry v okolí pomáhají
           tento stav odhalit. Automatizace zvyšuje četnost měření, ale nenahrazuje kontrolu místa a odběrů.
@@ -336,7 +395,7 @@ export function SnowMeasurementArticle() {
 
         <h2>Jak měření vstupuje do klimatologie</h2>
         <p>
-          Místní výška a vodní hodnota určují dvě odlišné vlastnosti sněhové zásoby.
+          Místní výška říká, jak vysoká je sněhová pokrývka, vodní hodnota udává její zásobu vody.
           Při dlouhodobém porovnávání zachováváme termíny návštěv, sledujeme změny vegetace a okolí
           a evidujeme výměny přístrojů. Změna výšky při stejné vodní hodnotě může odrážet zhutnění.
           Úbytek SWE znamená úbytek hmotnosti nad danou plochou, jeho příčinu však samotné vážení neurčí.
@@ -348,7 +407,9 @@ export function SnowMeasurementArticle() {
           Konkrétní použití představuje <SourceLink id="DOI_10_1038_s41597_021_00939_2">GlobSnow v3.0
           (Luojus et al., 2021)</SourceLink>. Tento soubor spojuje družicové mikrovlnné měření s pozemní
           výškou sněhu a vytváří odhady vodní hodnoty pro mimohorské oblasti severní polokoule.
-          Sněhoměrné trasy poskytují referenční SWE pro opravu systematických odchylek a pro hodnocení výsledku.
+          Sněhoměrné trasy poskytují referenční SWE pro dvě úlohy. Porovnání s terénními hodnotami
+          slouží k opravě systematických odchylek, tedy soustavného nadhodnocování nebo podhodnocování.
+          Terénní hodnoty se používají také k hodnocení toho, jak odhady odpovídají měření.
           Kanadský soubor pro ověření pokrývá roky 1980–2016, soubor pro opravu roky 1981–2003.
           Oba vycházejí z kanadského terénního měření a období se překrývají.
           Ověření proto nelze automaticky považovat za nezávislé ve všech vstupech.
