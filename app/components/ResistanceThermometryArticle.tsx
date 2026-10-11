@@ -24,8 +24,10 @@ export function ResistanceThermometryArticle() {
         <h2>Co je odporová termometrie</h2>
         <p className="article-prose__intro">
           Odporová termometrie je způsob měření teploty založený na tom, že se elektrický odpor materiálu
-          mění s jeho teplotou. Elektronika změří odpor čidla a pomocí kalibračního vztahu jej převede na
-          teplotu. Tuto možnost využívají platinové odporové teploměry i polovodičové termistory.
+          mění s jeho teplotou. Odpor vyjadřuje, jak materiál brání průchodu elektrického proudu.
+          Elektronika změří odpor čidla. Z kalibrace známe vztah mezi jeho odporem a teplotou,
+          takže naměřenému odporu můžeme přiřadit teplotu. Tuto možnost využívají platinové
+          odporové teploměry i polovodičové termistory.
           Výsledek lze průběžně ukládat, takže metoda umožňuje sledovat i pomalé změny a krátké výkyvy.
         </p>
         <p>
@@ -51,7 +53,8 @@ export function ResistanceThermometryArticle() {
           <em> negative temperature coefficient</em>. Existují také termistory s opačným průběhem.
           Dále budeme slovem termistor označovat typ NTC, kterému se věnuje i{" "}
           <SourceLink id="2014_BIPM_Thermistors">příručka Whitea a spoluautorů</SourceLink>.
-          Závislost jeho odporu na teplotě je výrazně zakřivená, a proto potřebuje jiný převod než platina.
+          Při stejně velkém oteplení se jeho odpor v různých částech teplotního rozsahu mění různě.
+          Závislost je výrazně zakřivená, a proto potřebuje jiný převod než platina.
         </p>
         <div className="method-comparison" aria-label="Platinové čidlo a termistor">
           <section>
@@ -71,6 +74,12 @@ export function ResistanceThermometryArticle() {
           Samotné čidlo je odporový prvek. Sonda k němu přidává pouzdro a přívody. Teploměr zahrnuje také
           elektroniku a výpočet teploty. Meteorologická stanice pak zajišťuje umístění, napájení, ukládání
           a přenos údajů. Rozlišení těchto částí je potřebné, protože každá může ovlivnit výsledek jinak.
+        </p>
+        <p>
+          Odporový prvek reaguje na svou vlastní teplotu. Abychom z ní mohli určit teplotu vzduchu,
+          musí s ním sonda vyměňovat teplo a přiblížit se jeho teplotě. Výsledek však mohou ovlivnit
+          i jiné tepelné vlivy. Například sluneční záření může sondu ohřát nad teplotu okolního vzduchu.
+          Proto potřebujeme vedle kalibrace také vhodné umístění a ochranu sondy.
         </p>
         <p>
           <SourceLink id="2026_USCRN_Measurements">Dokumentace USCRN</SourceLink> popisuje tři platinové
@@ -107,18 +116,23 @@ export function ResistanceThermometryArticle() {
         <p>
           Elektronika potřebuje zjistit odpor, i když nakonec ukládá pouze teplotu. Zná-li proud
           <em> I</em> v ampérech a změří napětí <em>U</em> ve voltech přímo na odporovém prvku,
-          vypočítá odpor <em>R</em> v ohmech podle Ohmova zákona:
+          vypočítá odpor <em>R</em> v ohmech podle Ohmova zákona. Napětí vydělí proudem:
         </p>
         <p className="article-formula method-equation">R = U / I</p>
         <p>
           V přesných přístrojích lze také porovnávat úbytky napětí na čidle a na známém referenčním odporu.
-          Při stejném proudu jejich poměr určuje poměr odporů. Převodník v elektronice převádí napětí
-          na číslo a záznamník mu přiřadí čas. Veřejný sloupec teploty je tedy už výsledkem několika kroků.
+          Při stejném proudu jejich poměr určuje poměr odporů. Z tohoto poměru a známého referenčního
+          odporu pak získáme odpor čidla. Převodník v elektronice převádí napětí na číslo a záznamník
+          přiřadí měření čas. Teplota ve veřejném souboru vzniká až po převodu odporu na teplotu
+          a dalším zpracování. Samotné měřené napětí proto v takovém sloupci nenajdeme.
         </p>
         <p>
-          U dvouvodičového připojení se k odporu čidla přičítá odpor kabelů. Čtyřvodičové připojení vede
-          proud jedním párem vodičů a napětí snímá druhým párem, kterým protéká zanedbatelný proud.
-          Tím silně omezuje vliv přívodů. Třívodičové zapojení jej kompenzuje za předpokladu dostatečně
+          U dvouvodičového připojení teče měřicí proud čidlem i přívodními kabely. Měřené napětí
+          proto zahrnuje také úbytek na kabelech a k odporu čidla se přičítá jejich odpor.
+          Čtyřvodičové připojení vede proud jedním párem vodičů a napětí přímo na čidle snímá druhým
+          párem. Tímto druhým párem protéká zanedbatelný proud, takže na jeho odporu vzniká
+          zanedbatelný úbytek napětí. Takové uspořádání silně omezuje vliv přívodů.
+          Třívodičové zapojení jej kompenzuje za předpokladu dostatečně
           shodných odporů příslušných vodičů. Zapojení a jeho meze rozebírá{" "}
           <SourceLink id="2021_BIPM_IPRT">příručka BIPM v oddílu 4.4</SourceLink>.
           Změna nebo prodloužení kabelu proto může vyžadovat novou kontrolu celé sestavy.
@@ -127,12 +141,16 @@ export function ResistanceThermometryArticle() {
         <h2>Jak se odpor převádí na teplotu</h2>
         <p>
           Převodní vztah popisuje, jaký odpor očekáváme při určité teplotě. Pro platinová čidla se používá
-          například Callendarova–Van Dusenova rovnice. Pro nezáporné teploty má tvar:
+          například Callendarova–Van Dusenova rovnice. Do ní zadáme teplotu a získáme odpovídající
+          odpor. Při měření postupujeme opačně: odpor známe a hledáme teplotu, která mu podle
+          vztahu odpovídá. Pro nezáporné teploty má rovnice tvar:
         </p>
         <p className="article-formula method-equation">R(t) = R₀ [1 + At + Bt²]</p>
         <p>
           <em>R(t)</em> je odpor při teplotě <em>t</em> ve stupních Celsia a <em>R₀</em> odpor při 0 °C.
-          Koeficienty <em>A</em> a <em>B</em> určují sklon a zakřivení vztahu. Mají jednotky °C⁻¹ a °C⁻².
+          Člen s <em>A</em> popisuje změnu úměrnou teplotě. Člen s <em>B</em> obsahuje teplotu
+          násobenou sebou samou, tedy t², a zachycuje zakřivení vztahu. Koeficienty <em>A</em> a
+          <em> B</em> tak určují jeho sklon a zakřivení. Mají jednotky °C⁻¹ a °C⁻².
           Pro jmenovitou křivku běžného typu Pt100 uvádí otevřené doporučení{" "}
           <SourceLink id="2003_OIML_R84">OIML R 84, příloha A</SourceLink> hodnoty
           R₀ = 100 Ω, A = 3,9083 × 10⁻³ °C⁻¹ a B = −5,775 × 10⁻⁷ °C⁻².
@@ -142,7 +160,9 @@ export function ResistanceThermometryArticle() {
         <p>
           Ilustrační výpočet ukáže velikost signálu. Uvedené jmenovité křivce při 20 °C odpovídá
           107,7935 Ω. Při proudu 1 mA, tedy 0,001 A, by napětí na prvku bylo 0,1077935 V.
-          Z takového napětí a proudu dostaneme zpět odpor a řešením rovnice teplotu 20 °C.
+          Kdybychom při tomto známém proudu naměřili uvedené napětí, jeho vydělením proudem
+          bychom dostali zpět odpor. Potom bychom v převodní rovnici hledali teplotu, při níž
+          vychází právě tento odpor. Výsledkem by bylo 20 °C.
           Tato čísla jsme vytvořili dosazením do vztahu. Nejsou odečtem stanice Blue Hill.
         </p>
         <details className="method-details">
@@ -184,16 +204,20 @@ export function ResistanceThermometryArticle() {
         <p>
           Při porovnávací kalibraci umístíme zkoušenou sondu a referenční teploměr například do míchané
           kapalinové lázně. Po ustálení odečteme oba přístroje. Postup opakujeme při různých teplotách,
-          aby převod popsal celý zamýšlený rozsah. Musíme zkontrolovat také stejnoměrnost lázně,
-          dostatečné ponoření sond a stabilitu teploty během odečtu. Tento postup používá i{" "}
+          aby převod popsal celý zamýšlený rozsah. U každého bodu tak spojíme odezvu zkoušené sondy
+          s referenční teplotou. Musíme zkontrolovat také stejnoměrnost lázně, dostatečné ponoření
+          sond a stabilitu teploty během odečtu. Jinak by rozdíl přístrojů mohl vzniknout i tím,
+          že měří v různých teplotních podmínkách. Tento postup používá i{" "}
           <SourceLink id="2025_NIST_Thermometer_Calibrations">kalibrační laboratoř amerického metrologického institutu NIST</SourceLink>.
         </p>
         <p>
           Referenční teploměr má vlastní kalibraci. Ta může navazovat na etalonový platinový teploměr,
-          který podle <SourceLink id="2021_BIPM_SPRT">stupnice ITS-90</SourceLink> porovnáváme
+          který slouží jako reference pro další přístroje. Podle mezinárodní teplotní
+          <SourceLink id="2021_BIPM_SPRT"> stupnice ITS-90</SourceLink> jej porovnáváme
           s předepsanými pevnými body. Příkladem je trojný bod vody, při němž za stanovených podmínek
           společně existují led, voda a vodní pára. Dokumentovaný řetězec kalibrací s vyčíslenými
-          nejistotami vytváří metrologickou návaznost. Umožňuje porovnávat výsledky různých laboratoří.
+          nejistotami vytváří metrologickou návaznost. Výsledek běžné sondy tak dokážeme spojit
+          s referencemi a postupy společné stupnice. To umožňuje porovnávat výsledky různých laboratoří.
         </p>
         <figure className="article-figure">
           <Image src="/media/methods/resistance-thermometry/nist-sprt-calibration-laboratory.png"
@@ -215,9 +239,16 @@ export function ResistanceThermometryArticle() {
           V pátém bodě byl změřen odpor 111,54535 Ω při referenční teplotě 29,8655 °C.
         </p>
         <p>
-          Autoři proložili údaje křivkou tak, aby součet čtverců rozdílů mezi vypočtenými a referenčními
-          teplotami byl co nejmenší. Křivka umožňuje přímo vypočítat teplotu ze změřeného odporu.
-          Na straně 54 uvádějí následující přibližné koeficienty. Označíme-li r číselnou hodnotu
+          Z dvojic odporu a referenční teploty autoři určili převodní křivku. Její koeficienty
+          volili tak, aby součet čtverců rozdílů mezi vypočtenými a referenčními teplotami byl
+          co nejmenší. Každý rozdíl tedy násobili sebou samým a tyto příspěvky sčítali.
+          Kladné a záporné odchylky se při takovém hodnocení nemohou navzájem vyrušit.
+        </p>
+        <p>
+          Výsledná křivka umožňuje přímo vypočítat teplotu ze změřeného odporu. Následující rovnice
+          sčítá členy obsahující odpor a jeho mocniny, tedy opakované násobení odporu sebou samým.
+          Takovému součtu říkáme polynom. Na straně 54 autoři uvádějí následující přibližné koeficienty.
+          Označíme-li r číselnou hodnotu
           odporu v ohmech, vyjde číselná hodnota teploty ve °C:
         </p>
         <p className="article-formula method-equation">
@@ -226,15 +257,18 @@ export function ResistanceThermometryArticle() {
         <p>
           Po dosazení r = 111,54535 dostáváme přibližně <strong>29,8627 °C</strong>, o 0,0028 °C
           méně než referenčních 29,8655 °C. Malý rozdíl ukazuje, jak křivka vystihuje tento kalibrační bod.
-          Bod ale vstoupil už do určení křivky, takže nejde o nezávislý test. Tabulka příručky uvádí
+          Bod ale vstoupil už do určení křivky. Porovnání tedy zkouší, jak převod vystihuje údaje,
+          podle kterých vznikl, a nejde o nezávislý test. Tabulka příručky uvádí
           29,8631 °C, protože vytištěné koeficienty rovnice jsou zaokrouhlené. Rozdíl v posledních
           desetinných místech při opakování výpočtu tedy očekáváme.
         </p>
         <p>
           Také samotná kalibrace má omezení. Odpor při prvním a posledním návratu na 0,0100 °C
           v tabulce klesl z 99,96530 na 99,96272 Ω. Opakovatelnost sondy proto nelze považovat za
-          dokonalou. Rozdíly od křivky nepředstavují celou nejistotu, ke které přispívají i reference,
-          lázeň a měření odporu. Tento převod patří pouze uvedenému laboratornímu čidlu.
+          dokonalou: při stejné referenční teplotě nezopakovala přesně stejný odpor.
+          Rozdíly od křivky nepředstavují celou nejistotu, ke které přispívají i reference,
+          lázeň a měření odporu. I malý rozdíl od křivky proto musíme posuzovat spolu s těmito vlivy.
+          Tento převod patří pouze uvedenému laboratornímu čidlu.
           Koeficienty bychom nesměli převzít pro jiný Pt100 ani pro stanici Blue Hill.
         </p>
 
@@ -243,9 +277,10 @@ export function ResistanceThermometryArticle() {
           USCRN používá tři souběžná měření k odhalení závady jednotlivého čidla a k zachování záznamu,
           když jedno vypadne. <SourceLink id="2013_Diamond_USCRN">Diamond a spoluautoři (2013)</SourceLink>
           v příloze svého popisu sítě vysvětlují výběr pětiminutové teploty. Pokud se tři hodnoty
-          shodují v rozmezí 0,3 °C, použije se prostřední z nich, tedy medián. Když jeden přístroj
-          chybí nebo se odchyluje a zbývající dvojice se shoduje do 0,3 °C, použije se její průměr.
-          Výběr tedy vychází ze vzájemné shody měřicích sestav.
+          shodují v rozmezí 0,3 °C, seřadí se podle velikosti a použije se prostřední z nich,
+          tedy medián. Když jeden přístroj chybí nebo se odchyluje a zbývající dvojice se shoduje
+          do 0,3 °C, použije se její průměr. Z více souběžných měření tak vznikne jedna teplota
+          pro daný interval. Výběr vychází ze vzájemné shody měřicích sestav.
         </p>
         <p>
           Dokumentace se přitom vztahuje k určitým verzím postupu. Soubor{" "}
@@ -258,6 +293,7 @@ export function ResistanceThermometryArticle() {
         <p>
           U výsledného sloupce <code>AIR_TEMPERATURE</code> je krok zápisu 0,1 °C. Každý údaj
           zastupuje pětiminutový interval a jeho časová značka označuje konec intervalu.
+          Krok zápisu určuje, jak jemně jsou hodnoty uvedené, a interval říká, jakou dobu zastupují.
           Takové časové a číselné rozlišení neříká, jak velká je nejistota měření. Rozsah a požadavky
           sítě shrnuje <SourceLink id="2013_Diamond_USCRN">tabulka 2 v práci Diamonda a spoluautorů</SourceLink>:
           pro teploty od −50 do +50 °C uvádí požadavek přesnosti ±0,3 °C, v krajních pásmech
@@ -280,6 +316,12 @@ export function ResistanceThermometryArticle() {
           To je verze programu na stanici, nikoli označení všech následných úprav v archivu.
           Pro opakování uchováváme vybrané řádky i kontrolní součty stažených souborů.
         </p>
+        <p>
+          První řádek následující tabulky má časovou značku 00:05 a teplotu 5,1 °C.
+          Zastupuje tedy pět minut od 00:00 do 00:05 místního standardního času.
+          Další řádky pokrývají navazující pětiminutové intervaly až do 01:00. Pro hodinový
+          průměr potřebujeme všechny tyto části hodiny, nejen údaj na jejím konci.
+        </p>
         <figure className="method-data-output method-data-output--compact">
           <div className="method-data-output__table-wrap">
             <table>
@@ -300,7 +342,8 @@ export function ResistanceThermometryArticle() {
           Nejprve ověříme stanici, datum, pořadí a úplnost dvanácti intervalů. Hodnotu −9999,0,
           která znamená chybějící údaj, nesmíme zahrnout jako skutečnou teplotu. V této hodině
           nechybí žádné měření, takže nic nevyřazujeme ani nedoplňujeme. Intervaly jsou stejně dlouhé,
-          proto mají v průměru stejnou váhu. Jejich součet je 64,9 °C:
+          proto mají v průměru stejnou váhu. Jejich součet je 64,9 °C. Vydělíme jej počtem
+          intervalů, abychom získali průměrnou teplotu této hodiny:
         </p>
         <p className="article-formula method-equation">t̄ = (t₁ + t₂ + … + t₁₂) / 12 = 64,9 / 12 °C ≈ 5,4083 °C</p>
         <p>
@@ -308,7 +351,9 @@ export function ResistanceThermometryArticle() {
           na desetinu dostáváme <strong>5,4 °C</strong>. Stejnou hodnotu obsahuje sloupec
           <code> T_HR_AVG</code> v <SourceLink id="2025_USCRN_Blue_Hill_Hourly">hodinovém souboru NOAA</SourceLink>
           u záznamu končícího v 06:00 UTC. Vedlejší sloupec <code>T_CALC</code> má 5,7 °C,
-          protože zastupuje jen posledních pět minut hodiny. Význam obou polí rozlišuje{" "}
+          protože zastupuje jen posledních pět minut hodiny. Odpovídá tak poslednímu řádku
+          naší tabulky, zatímco <code>T_HR_AVG</code> shrnuje celou hodinu.
+          Význam obou polí rozlišuje{" "}
           <SourceLink id="2026_USCRN_Hourly_Readme">dokumentace Hourly02</SourceLink>.
         </p>
         <p>
@@ -317,12 +362,15 @@ export function ResistanceThermometryArticle() {
           Desetinná místa v hodnotě 5,4083 vznikla dělením už zaokrouhlených vstupů.
           Pokud byl každý vstup zaokrouhlen na nejbližší desetinu, samotné zaokrouhlení může posunout
           tento průměr až o 0,05 °C. Společná odchylka všech vstupů se průměrováním nezmenší.
+          Pokud například kalibrace posouvá všechny teploty stejným směrem o stejnou hodnotu,
+          o tutéž hodnotu se posune i jejich průměr.
         </p>
         <p>
           Hodinové ani denní extrémy tímto postupem nereprodukujeme. USCRN podle{" "}
           <SourceLink id="2026_USCRN_Measurements">popisu měření</SourceLink> vyhledává teplotní extrémy
-          i pomocí pětiminutového okna posouvaného po deseti sekundách. Minimum tak nemusí být
-          nejnižší hodnotou v uvedené tabulce. Pro porozumění výsledku je nutné znát také časový výběr.
+          i pomocí pětiminutového okna posouvaného po deseti sekundách. Tato okna mohou začínat
+          a končit jindy než intervaly v naší tabulce. Minimum tak nemusí být nejnižší hodnotou
+          v uvedené tabulce. Pro porozumění výsledku je nutné znát také časový výběr.
         </p>
         <details className="method-details">
           <summary>Data a výpočet ke stažení</summary>
@@ -361,6 +409,9 @@ export function ResistanceThermometryArticle() {
           V lednu 2003 při 744 hodinách porovnání ukazovala první sonda USCRN v průměru
           o 0,07 °C více než R. M. Young a o 0,02 °C méně než PMT.
           Směrodatné odchylky, které vyjadřují kolísání rozdílů kolem jejich průměru, byly 0,09 a 0,04 °C.
+          Průměrný rozdíl tedy popisuje vzájemný posun údajů. Směrodatná odchylka říká, jak moc
+          se jednotlivé rozdíly kolem tohoto posunu rozptylovaly. Malý průměrný rozdíl sám
+          nezaručuje, že se přístroje shodovaly v každé hodině.
         </p>
         <p>
           Porovnání má samostatné přístroje a kryty a používá nové terénní údaje, nikoli body
@@ -378,6 +429,7 @@ export function ResistanceThermometryArticle() {
           I proud v ampérech a R odpor v ohmech. Ilustrační Pt100 při 0 °C a proudu 1 mA
           uvolňuje 0,0001 W, tedy 100 mikrowattů. O kolik se ohřeje, závisí na odvodu tepla.
           Stejný výkon proto nemusí způsobit stejné oteplení ve vodě a v klidném vzduchu.
+          Výsledný odpor pak odpovídá teplotě čidla zvýšené tímto samohřevem.
           Vliv lze při ustálené teplotě zkoušet změnou měřicího proudu. Kalibrace a použití
           musí zohlednit rozdílné podmínky odvodu tepla.
         </p>
@@ -400,8 +452,9 @@ export function ResistanceThermometryArticle() {
           Kontrola tak propojuje laboratorní reference se souběžným terénním záznamem.
         </p>
         <p>
-          Sonda také potřebuje čas, aby se přizpůsobila nové teplotě. Krátký výkyv může tlumit
-          tepelná setrvačnost pouzdra i následné průměrování. Pro rychle stoupající radiosondu
+          Sonda také potřebuje čas, aby se přizpůsobila nové teplotě. Během rychlé změny její
+          teplota za okolím zaostává. Krátký výkyv tak může tlumit tepelná setrvačnost pouzdra
+          i následné průměrování. Pro rychle stoupající radiosondu
           nebo profil vody proto nestačí znát jen statickou kalibraci.
           <SourceLink id="2021_BIPM_IPRT">Příručka pro platinové teploměry</SourceLink> popisuje
           zkoušky vlastní odezvy, samohřevu a vedení tepla podél sondy.
@@ -414,6 +467,8 @@ export function ResistanceThermometryArticle() {
           měřicích vlivů a jejich vzájemné závislosti. Z dvanácti hodnot jej nemůžeme odhadnout
           jen jako směrodatnou odchylku teplot dělenou odmocninou z dvanácti. Teplota vzduchu se skutečně
           měnila, sousední intervaly spolu souvisejí a odchylka kalibrace může být společná.
+          Rozptyl uvedených teplot proto směšuje skutečný průběh počasí s vlivy měření.
+          Z jejich vzájemných rozdílů navíc nezjistíme posun, který mají všechny společný.
         </p>
         <p>
           Teploměr navíc zastupuje konkrétní místo. Ani přesný záznam Blue Hill sám nepopisuje
@@ -437,7 +492,9 @@ export function ResistanceThermometryArticle() {
           V oceánu pracují termistory například v sondách plováků Argo. Technický list konkrétního
           přístroje <SourceLink id="2026_SeaBird_SBE41">Sea-Bird SBE 41/41CP Deep z roku 2026</SourceLink>
           uvádí teplotní rozsah −5 až +35 °C, počáteční přesnost ±0,002 °C a rozlišení 0,0001 °C.
-          Tato odlišná čísla dobře ukazují rozdíl mezi rozlišením a přesností. Jde o specifikaci
+          Rozlišení popisuje jemnost rozlišitelné změny údaje. Počáteční přesnost naproti tomu
+          vymezuje odchylku za podmínek technické specifikace. Zápis malých změn tedy sám
+          nezaručuje stejně malou odchylku od skutečné teploty. Jde o specifikaci
           uvedeného modelu, nikoli všech termistorů nebo všech plováků Argo.
           V <SourceLink id="2026_Argo_Data">datech Argo</SourceLink> je teplota už zpracovanou
           veličinou. Vedle hodnoty je třeba číst příznaky kvality a rozlišit původně vydané
