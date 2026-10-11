@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SourceLink } from "./SourceLink";
+import { Equation, InlineMath } from "./Equation";
 import example from "../../public/data/methods/thaw-depth/example.json";
 
 const dataPath = "/data/methods/thaw-depth";
@@ -103,10 +104,8 @@ export function ThawDepthArticle() {
           může průměr končit polovinou centimetru. Jemnější zápis tím nezískává přesnost půl centimetru.
           WMO doporučuje oba vpichy provést do vzdálenosti 1 m od bodu a od sebe navzájem.
         </p>
-        <p className="article-formula method-equation">
-          d<sub>i</sub> = (d<sub>i,1</sub> + d<sub>i,2</sub>) / 2<br />
-          průměr sítě = (d<sub>1</sub> + d<sub>2</sub> + … + d<sub>n</sub>) / n
-        </p>
+        <Equation tex={String.raw`d_i = \frac{d_{i,1}+d_{i,2}}{2}`} />
+        <Equation tex={String.raw`\text{průměr sítě} = \frac{d_1+d_2+\cdots+d_n}{n}`} />
         <p>
           Ve druhém vztahu je <i>n</i> počet bodů s platnou hodnotou, všechny hloubky mají stejnou
           jednotku. Každý zahrnutý bod dostává stejnou váhu. Výsledkem je průměr měřených bodů sítě.
@@ -133,7 +132,7 @@ export function ThawDepthArticle() {
         </p>
         <p>
           Vybraný den má 121 záznamů. Dva nemají číselnou hloubku a nesou poznámku, že se kvůli vodě
-          neměřilo. Leží na souřadnicích x = 1 000 m, y = 100 m a x = 1 000 m, y = 0 m.
+          neměřilo. Leží na souřadnicích <InlineMath tex={String.raw`x = 1\,000\,\mathrm{m}`} />, <InlineMath tex={String.raw`y = 100\,\mathrm{m}`} /> a <InlineMath tex={String.raw`x = 1\,000\,\mathrm{m}`} />, <InlineMath tex={String.raw`y = 0\,\mathrm{m}`} />.
           Zbývá <strong>119 platných hodnot</strong>. Následující tabulka ukazuje prvních pět bodů
           při čtení horního okraje sítě zleva doprava. Celý výběr lze stáhnout pod grafem.
         </p>
@@ -150,7 +149,7 @@ export function ThawDepthArticle() {
         </div>
         <p>
           Součet všech 119 platných hloubek je <strong>{number(example.result.sumCm)} cm</strong>.
-          Dělením počtem bodů dostaneme 4 236,5 / 119 = <strong>35,60 cm</strong> po zaokrouhlení.
+          Dělením počtem bodů dostaneme <InlineMath tex={String.raw`\frac{4\,236{,}5}{119}`} /> = <strong>35,60 cm</strong> po zaokrouhlení.
           Nejmenší hodnota je {number(example.result.minCm)} cm a největší {number(example.result.maxCm)} cm.
           Rozložení po ploše popisuje výběrová směrodatná odchylka {number(example.result.sampleSdCm)} cm,
           vypočtená se jmenovatelem <i>n</i> − 1. Vyjadřuje rozdíly mezi body.
@@ -288,7 +287,7 @@ export function ThawDepthArticle() {
           rozhraní jako dříve. K oddělení obou změn změříme povrch vůči stabilnímu výškovému bodu
           a hloubku rozmrzání vůči témuž povrchu.
         </p>
-        <p className="article-formula method-equation">z<sub>rozhraní</sub> = z<sub>povrchu</sub> − d</p>
+        <Equation tex={String.raw`z_{\text{rozhraní}} = z_{\text{povrchu}} - d`} />
         <p>
           Symbol <i>z</i> označuje výšku vůči stejné pevné referenci, kladně vzhůru.
           V tomto vztahu je <i>d</i> svisle měřená hloubka, kladná směrem dolů.

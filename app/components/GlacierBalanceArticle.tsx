@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SourceLink } from "./SourceLink";
+import { Equation } from "./Equation";
 import example from "../../public/data/methods/glacier-balance/example.json";
 
 const dataPath = "/data/methods/glacier-balance";
@@ -124,7 +125,7 @@ export function GlacierBalanceArticle() {
           znaménko. Pokud známe hustotu ledu ρ<sub>i</sub>, násobením získáme změnu hmotnosti nad
           jednotkou plochy. Dělením hustotou vody ji převedeme na vodní ekvivalent:
         </p>
-        <div className="article-formula method-equation"><p>b = −(l<sub>2</sub> − l<sub>1</sub>) ρ<sub>i</sub> / ρ<sub>w</sub></p></div>
+        <Equation tex={String.raw`b = -(l_2-l_1)\frac{\rho_i}{\rho_w}`} />
         <p>
           b je bilance bodu v metrech vodního ekvivalentu, obě délky jsou v metrech.
           Hustoty ledu ρ<sub>i</sub> a referenční vody ρ<sub>w</sub> mají jednotku kg/m³.
@@ -171,7 +172,7 @@ export function GlacierBalanceArticle() {
           vodním ekvivalentu. Příspěvky sečteme a vydělíme celkovou plochou, abychom výsledek opět
           vyjádřili na jednotku plochy:
         </p>
-        <div className="article-formula method-equation"><p>B = Σ (A<sub>j</sub> b<sub>j</sub>) / Σ A<sub>j</sub></p></div>
+        <Equation tex={String.raw`B = \frac{\sum_j A_j b_j}{\sum_j A_j}`} />
         <p>
           B označuje průměrnou bilanci povrchu, b<sub>j</sub> bilanci výškového pásma j a A<sub>j</sub> jeho
           vodorovnou mapovou plochu. Znak Σ znamená součet přes všechna pásma. Plochy mohou být v km²,
@@ -202,7 +203,10 @@ export function GlacierBalanceArticle() {
           z centimetrů na metry, tedy na −3,98 m. Násobíme ji uvedenou hustotou ledu a získanou
           změnu hmotnosti na jednotku plochy vydělíme referenční hustotou vody 1 000 kg/m³:
         </p>
-        <div className="article-formula method-equation"><p>−3,98 m × 900 / 1 000 = −3,582 m vodního ekvivalentu</p></div>
+        <Equation tex={[
+          String.raw`-3{,}98\,\mathrm{m}\times\frac{900}{1\,000}`,
+          String.raw`= -3{,}582\,\mathrm{m}\ \text{vodního ekvivalentu}`,
+        ]} />
         <p>
           Výsledek je <strong>−3 582 mm vodního ekvivalentu</strong>, tedy úbytek 3 582 kg na metr čtvereční
           v tomto bodě za uvedené období. Shoduje se s publikovaným sloupcem <code>mb_we</code>.

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SourceLink } from "./SourceLink";
+import { Equation, InlineMath } from "./Equation";
 import example from "../../public/data/methods/resistance-thermometry/example.json";
 
 const dataPath = "/data/methods/resistance-thermometry";
@@ -118,7 +119,7 @@ export function ResistanceThermometryArticle() {
           <em> I</em> v ampérech a změří napětí <em>U</em> ve voltech přímo na odporovém prvku,
           vypočítá odpor <em>R</em> v ohmech podle Ohmova zákona. Napětí vydělí proudem:
         </p>
-        <p className="article-formula method-equation">R = U / I</p>
+        <Equation tex={String.raw`R = \frac{U}{I}`} />
         <p>
           V přesných přístrojích lze také porovnávat úbytky napětí na čidle a na známém referenčním odporu.
           Při stejném proudu jejich poměr určuje poměr odporů. Z tohoto poměru a známého referenčního
@@ -145,15 +146,15 @@ export function ResistanceThermometryArticle() {
           odpor. Při měření postupujeme opačně: odpor známe a hledáme teplotu, která mu podle
           vztahu odpovídá. Pro nezáporné teploty má rovnice tvar:
         </p>
-        <p className="article-formula method-equation">R(t) = R₀ [1 + At + Bt²]</p>
+        <Equation tex={String.raw`R(t) = R_0\left[1 + At + Bt^2\right]`} />
         <p>
-          <em>R(t)</em> je odpor při teplotě <em>t</em> ve stupních Celsia a <em>R₀</em> odpor při 0 °C.
+          <InlineMath tex={String.raw`R(t)`} /> je odpor při teplotě <em>t</em> ve stupních Celsia a <InlineMath tex={String.raw`R_0`} /> odpor při 0 °C.
           Člen s <em>A</em> popisuje změnu úměrnou teplotě. Člen s <em>B</em> obsahuje teplotu
-          násobenou sebou samou, tedy t², a zachycuje zakřivení vztahu. Koeficienty <em>A</em> a
+          násobenou sebou samou, tedy <InlineMath tex={String.raw`t^2`} />, a zachycuje zakřivení vztahu. Koeficienty <em>A</em> a
           <em> B</em> tak určují jeho sklon a zakřivení. Mají jednotky °C⁻¹ a °C⁻².
           Pro jmenovitou křivku běžného typu Pt100 uvádí otevřené doporučení{" "}
-          <SourceLink id="2003_OIML_R84">OIML R 84, příloha A</SourceLink> hodnoty
-          R₀ = 100 Ω, A = 3,9083 × 10⁻³ °C⁻¹ a B = −5,775 × 10⁻⁷ °C⁻².
+          <SourceLink id="2003_OIML_R84">OIML R 84, příloha A</SourceLink> hodnoty{" "}
+          <InlineMath tex={String.raw`R_0 = 100\,\Omega`} />, <InlineMath tex={String.raw`A = 3{,}9083\times 10^{-3}\,{}^\circ\mathrm{C}^{-1}`} /> a <InlineMath tex={String.raw`B = -5{,}775\times 10^{-7}\,{}^\circ\mathrm{C}^{-2}`} />.
           To jsou parametry jmenovité křivky. Kalibrace jednotlivého kusu může vyžadovat jiné koeficienty
           nebo jiný převodní vztah.
         </p>
@@ -168,7 +169,7 @@ export function ResistanceThermometryArticle() {
         <details className="method-details">
           <summary>Převod pod bodem mrazu a vztah pro termistor</summary>
           <p>
-            Pro záporné teploty přibývá v hranaté závorce platinové rovnice člen C(t − 100 °C)t³.
+            Pro záporné teploty přibývá v hranaté závorce platinové rovnice člen <InlineMath tex={String.raw`C(t-100\,{}^\circ\mathrm{C})t^3`} />.
             Koeficient C má jednotku °C⁻⁴ a pro uvedenou jmenovitou křivku je −4,183 × 10⁻¹² °C⁻⁴.
             Rozsah použitelnosti hotové sondy určují její konstrukce a kalibrace. Rozsah rovnice sám
             nezaručuje, že v něm lze používat každý teploměr.
@@ -177,9 +178,12 @@ export function ResistanceThermometryArticle() {
             Pro termistor lze použít například Steinhartovu–Hartovu rovnici v následující podobě,
             kterou rozebírá <SourceLink id="2014_BIPM_Thermistors">příručka pro termistory</SourceLink>:
           </p>
-          <p className="article-formula method-equation">1/T = a + b ln(R / 1 Ω) + c [ln(R / 1 Ω)]³</p>
+          <Equation tex={[
+            String.raw`\frac{1}{T} = a + b\ln\!\left(\frac{R}{1\,\Omega}\right)`,
+            String.raw`+ c\left[\ln\!\left(\frac{R}{1\,\Omega}\right)\right]^3`,
+          ]} />
           <p>
-            T je absolutní teplota v kelvinech, R odpor a ln přirozený logaritmus. Výraz R / 1 Ω
+            T je absolutní teplota v kelvinech, R odpor a ln přirozený logaritmus. Výraz <InlineMath tex={String.raw`\frac{R}{1\,\Omega}`} />{" "}
             je číselná hodnota odporu v ohmech, takže logaritmujeme bezrozměrné číslo.
             Koeficienty a, b a c mají v tomto zápisu jednotku K⁻¹ a určují se kalibrací.
             Po výpočtu převrácené hodnoty pravé strany získáme T. Od hodnoty v kelvinech odečteme
@@ -251,11 +255,14 @@ export function ResistanceThermometryArticle() {
           Označíme-li r číselnou hodnotu
           odporu v ohmech, vyjde číselná hodnota teploty ve °C:
         </p>
-        <p className="article-formula method-equation">
-          t / °C = −246,6585 + 2,37430r + 0,00088611r² + 0,000000471085r³
-        </p>
+        <Equation tex={[
+          String.raw`\frac{t}{{}^\circ\mathrm{C}} = -246{,}6585`,
+          String.raw`+ 2{,}37430r`,
+          String.raw`+ 0{,}00088611r^2`,
+          String.raw`+ 0{,}000000471085r^3`,
+        ]} />
         <p>
-          Po dosazení r = 111,54535 dostáváme přibližně <strong>29,8627 °C</strong>, o 0,0028 °C
+          Po dosazení <InlineMath tex={String.raw`r = 111{,}54535`} /> dostáváme přibližně <strong>29,8627 °C</strong>, o 0,0028 °C
           méně než referenčních 29,8655 °C. Malý rozdíl ukazuje, jak křivka vystihuje tento kalibrační bod.
           Bod ale vstoupil už do určení křivky. Porovnání tedy zkouší, jak převod vystihuje údaje,
           podle kterých vznikl, a nejde o nezávislý test. Tabulka příručky uvádí
@@ -345,9 +352,12 @@ export function ResistanceThermometryArticle() {
           proto mají v průměru stejnou váhu. Jejich součet je 64,9 °C. Vydělíme jej počtem
           intervalů, abychom získali průměrnou teplotu této hodiny:
         </p>
-        <p className="article-formula method-equation">t̄ = (t₁ + t₂ + … + t₁₂) / 12 = 64,9 / 12 °C ≈ 5,4083 °C</p>
+        <Equation tex={[
+          String.raw`\bar{t} = \frac{t_1+t_2+\cdots+t_{12}}{12}`,
+          String.raw`= \frac{64{,}9}{12}\,{}^\circ\mathrm{C} \approx 5{,}4083\,{}^\circ\mathrm{C}`,
+        ]} />
         <p>
-          Symbol t̄ označuje průměr a t₁ až t₁₂ jednotlivé pětiminutové teploty. Po zaokrouhlení
+          Symbol <InlineMath tex={String.raw`\bar{t}`} /> označuje průměr a <InlineMath tex={String.raw`t_1`} /> až <InlineMath tex={String.raw`t_{12}`} /> jednotlivé pětiminutové teploty. Po zaokrouhlení
           na desetinu dostáváme <strong>5,4 °C</strong>. Stejnou hodnotu obsahuje sloupec
           <code> T_HR_AVG</code> v <SourceLink id="2025_USCRN_Blue_Hill_Hourly">hodinovém souboru NOAA</SourceLink>
           u záznamu končícího v 06:00 UTC. Vedlejší sloupec <code>T_CALC</code> má 5,7 °C,
@@ -425,7 +435,7 @@ export function ResistanceThermometryArticle() {
         <h2>Co omezuje měření a jeho použití</h2>
         <h3>Ohřev čidla a výměna tepla s okolím</h3>
         <p>
-          Měřicí proud sám čidlo ohřívá. Elektrický výkon je P = I²R, kde P je výkon ve wattech,
+          Měřicí proud sám čidlo ohřívá. Elektrický výkon je <InlineMath tex={String.raw`P = I^2 R`} />, kde P je výkon ve wattech,
           I proud v ampérech a R odpor v ohmech. Ilustrační Pt100 při 0 °C a proudu 1 mA
           uvolňuje 0,0001 W, tedy 100 mikrowattů. O kolik se ohřeje, závisí na odvodu tepla.
           Stejný výkon proto nemusí způsobit stejné oteplení ve vodě a v klidném vzduchu.

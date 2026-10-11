@@ -1170,6 +1170,41 @@ test("uses one observation-only summary in every completed observation article",
   }
 });
 
+test("exports typeset equations and accessible fractions across every method article", async () => {
+  const methods = [
+    ["ResistanceThermometryArticle", "odporova-termometrie-a-termistory"],
+    ["HygrometryArticle", "hygrometrie"],
+    ["RadiosoundingArticle", "radiosondaz"],
+    ["PressureHeightArticle", "mereni-tlaku-a-hydrostaticke-vysky"],
+    ["ConductometryArticle", "konduktometrie"],
+    ["RainGaugeArticle", "srazkomery-a-disdrometry"],
+    ["TideGaugeArticle", "pobrezni-mereni-hladiny-a-vyskova-reference"],
+    ["SnowMeasurementArticle", "mereni-vysky-hustoty-a-vodni-hodnoty-snehu"],
+    ["GlacierBalanceArticle", "terenni-mereni-bilance-ledovcu"],
+    ["ThawDepthArticle", "mereni-hloubky-sezonniho-rozmrzani"],
+  ];
+  for (const [component, slug] of methods) {
+    const [source, html] = await Promise.all([
+      readFile(new URL(`app/components/${component}.tsx`, root), "utf8"),
+      readFile(new URL(`dist/client/metody/${slug}/index.html`, root), "utf8"),
+    ]);
+    const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+    assert.ok(body, slug);
+    assert.equal((body.match(/class="article-equation"/g) ?? []).length,
+      (source.match(/<Equation\b/g) ?? []).length, `${slug}: every display equation is exported`);
+    assert.equal((body.match(/class="article-math"/g) ?? []).length,
+      (source.match(/<InlineMath\b/g) ?? []).length, `${slug}: inline math is exported`);
+    assert.doesNotMatch(body, /katex-error|article-formula|method-equation/);
+    assert.match(body, /<mfrac>/, `${slug}: fractions have a numerator and denominator`);
+    const mathCount = (body.match(/<math\b/g) ?? []).length;
+    assert.ok(mathCount > 0, slug);
+    assert.equal((body.match(/class="katex-html" aria-hidden="true"/g) ?? []).length, mathCount,
+      `${slug}: visual math has a semantic MathML counterpart without duplicate speech`);
+    assert.equal((body.match(/<annotation encoding="application\/x-tex">/g) ?? []).length, mathCount,
+      `${slug}: the original equation remains available in the static export`);
+  }
+});
+
 test("publishes reproducible thermometry examples with open sources and working local links", async () => {
   const [html, article, catalogue] = await Promise.all([
     readFile(new URL("dist/client/metody/odporova-termometrie-a-termistory/index.html", root), "utf8"),
@@ -1180,9 +1215,9 @@ test("publishes reproducible thermometry examples with open sources and working 
   assert.ok(body);
   assert.match(html, /Odborná revize: 4\. října 2026/);
   assert.doesNotMatch(article, /<Citation\b/);
-  assert.doesNotMatch(body.replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
   assert.match(body, /29,8627 °C/);
-  assert.match(body, /5,4083 °C/);
+  assert.match(body, /<mn>5,4083<\/mn>/);
   assert.equal((body.match(/<tr>/g) ?? []).length, 13, "Header plus all twelve original values");
   assert.equal((body.match(/<details/g) ?? []).length, 2);
   assert.match(body, /class="method-flow"/);
@@ -1238,7 +1273,7 @@ test("publishes hygrometry with a reproducible hour, source cards and observatio
   assert.match(body, /84,666/);
   assert.match(body, /85 %/);
   assert.equal((body.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) ?? []).length, 12);
-  assert.doesNotMatch(body.replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
   assert.match(observation, /href="\/metody\/hygrometrie\/?"/);
   const ids = [...new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
   assert.ok(ids.length >= 5);
@@ -1301,7 +1336,7 @@ test("publishes radiosounding with its original profile, open sources and connec
   assert.match(body, /−6,72 °C\/km/);
   assert.match(body, /prague-temperature-profile\.png/);
   assert.equal((body.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) ?? []).length, 8);
-  assert.doesNotMatch(body.replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
   for (const page of related) assert.match(page, /href="\/metody\/radiosondaz\/?"/);
   const ids = [...new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
   for (const id of ids) {
@@ -1364,7 +1399,7 @@ test("publishes pressure and hydrostatic height with traceable calibration data 
   assert.match(body, /class="method-flow"/);
   assert.match(body, /calibration-residuals\.png/);
   assert.equal((body.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) ?? []).length, 11);
-  assert.doesNotMatch(body.replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
   for (const page of related) assert.match(page, /href="\/metody\/mereni-tlaku-a-hydrostaticke-vysky\/?"/);
   const ids = [...new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
   assert.equal(ids.length, 10);
@@ -1425,7 +1460,7 @@ test("publishes conductometry with a reproducible signal conversion and open sou
   assert.match(body, /conductivity-temperature\.png/);
   assert.match(body, /34,6424/);
   assert.equal((body.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) ?? []).length, 6);
-  assert.doesNotMatch(body.replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
   for (const page of related) assert.match(page, /href="\/metody\/konduktometrie\/?"/);
   const ids = [...new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
   for (const id of ids) {
@@ -1491,7 +1526,7 @@ test("publishes rain gauges and disdrometers with open sources, data and an obse
   assert.match(body, /31,2 mm\/h/);
   assert.match(body, /nepřiřazuje samostatný příznak kvality/);
   assert.equal((body.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) ?? []).length, 12);
-  assert.doesNotMatch(body.replace(/&[^;\s]+;/g, ""), /;/, "No semicolons in Czech prose");
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/, "No semicolons in Czech prose");
   assert.match(observation, /href="\/metody\/srazkomery-a-disdrometry\/?"/);
   const ids = [...new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
   for (const id of ids) {
@@ -1561,7 +1596,7 @@ test("publishes coastal tide gauges with an actual datum conversion and open sou
   assert.match(body, /0,018/);
   assert.match(body, /od zveřejněných šestiminutových údajů/);
   assert.equal((body.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) ?? []).length, 4);
-  assert.doesNotMatch(body.replace(/&[^;\s]+;/g, ""), /;/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
   assert.match(observation, /href="\/metody\/pobrezni-mereni-hladiny-a-vyskova-reference\/?"/);
   const ids = [...new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
   assert.ok(ids.length >= 5);
@@ -1635,7 +1670,7 @@ test("publishes snow measurement with a reproducible layer profile and open sour
   assert.match(body, /již vypočtené hustoty/);
   assert.match(body, /Původní hmotnosti nádobek a sněhu/);
   assert.equal((body.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) ?? []).length, 4);
-  assert.doesNotMatch(body.replace(/&[^;\s]+;/g, ""), /;/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
   assert.match(observation, /href="\/metody\/mereni-vysky-hustoty-a-vodni-hodnoty-snehu\/?"/);
   const ids = [...new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
   assert.ok(ids.length >= 5);
@@ -1689,7 +1724,7 @@ test("publishes glacier field balance with traceable point and area calculations
   assert.match(body, /necelý 1 mm/);
   assert.match(body, /původní terénní zápisník ani celé/);
   assert.equal((body.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) ?? []).length, 10);
-  assert.doesNotMatch(body.replace(/&[^;\s]+;/g, ""), /;/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
   assert.match(observation, /href="\/metody\/terenni-mereni-bilance-ledovcu\/?"/);
   const ids = [...new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
   assert.ok(ids.length >= 5);
@@ -1749,7 +1784,7 @@ test("publishes thaw depth with grid sampling, surface reference and open eviden
   assert.match(text, /Teplotní metoda vychází z jiného fyzikálního signálu/);
   assert.match(text, /Povrch klesl o 7 cm/);
   assert.match(text, /neznáme velikost společné chyby/i);
-  assert.doesNotMatch(text.replace(/&[^;\s]+;/g, ""), /;/);
+  assert.doesNotMatch(text.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
   assert.match(observation, /href="\/metody\/mereni-hloubky-sezonniho-rozmrzani\/?"/);
   const ids = [...new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
   assert.ok(ids.length >= 5);

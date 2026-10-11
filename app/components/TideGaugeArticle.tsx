@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SourceLink } from "./SourceLink";
+import { Equation, InlineMath } from "./Equation";
 import example from "../../public/data/methods/tide-gauges/example.json";
 
 const dataPath = "/data/methods/tide-gauges";
@@ -56,7 +57,10 @@ export function TideGaugeArticle() {
           Potom potřebujeme znát výšku radaru nad zvolenou nulou. Od ní odečteme vzdálenost k vodě
           a dostaneme výšku hladiny nad stejnou nulou:
         </p>
-        <div className="article-formula method-equation"><p>r = c Δt / 2 <span> a </span> h = H − r</p></div>
+        <Equation tex={[
+          String.raw`r = \frac{c\,\Delta t}{2}`,
+          String.raw`\text{a}\quad h = H-r`,
+        ]} />
         <p>
           r je vzdálenost k vodě, Δt doba letu signálu tam a zpět v sekundách a c rychlost jeho šíření ve vzduchu
           v metrech za sekundu, blízká rychlosti světla. Dělení dvěma převádí délku celé cesty na vzdálenost r.
@@ -264,15 +268,15 @@ export function TideGaugeArticle() {
           <SourceLink id="2026_NOAA_San_Francisco_Datums">Metadata stanice</SourceLink> uvádějí pro období
           1983–2001 výšku MLLW 1,822 m a MSL 2,773 m nad staniční nulou.
           Obě výšky jsou uvedeny vůči téže staniční nule, proto jejich odečtením získáme vzdálenost mezi
-          referencemi: 2,773 − 1,822 = <strong>0,951 m</strong>. Nula MSL leží výše než MLLW.
+          referencemi: <InlineMath tex={String.raw`2{,}773 - 1{,}822`} /> = <strong>0,951 m</strong>. Nula MSL leží výše než MLLW.
           Počítáme-li výšku téže vody od vyšší nuly, vyjde menší číslo. Při převodu z MLLW na MSL
           proto od každé výšky odečteme 0,951 m. Tyto reference nejsou znovu vypočtené z našeho jediného dne.
         </p>
-        <div className="article-formula method-equation"><p>h<sub>MSL</sub> = h<sub>MLLW</sub> − 0,951 m</p></div>
+        <Equation tex={String.raw`h_{\mathrm{MSL}} = h_{\mathrm{MLLW}} - 0{,}951\,\mathrm{m}`} />
         <p>
           h označuje výšku hladiny v metrech a index určuje použitou nulu.
           První záznam v 00:00 udává 0,035 m vůči MLLW. Voda tedy leží 0,035 m nad touto nulou.
-          Vůči MSL vyjde 0,035 − 0,951 = −0,916 m, tedy 0,916 m pod nulou MSL.
+          Vůči MSL vyjde <InlineMath tex={String.raw`0{,}035 - 0{,}951 = -0{,}916\,\mathrm{m}`} />, tedy 0,916 m pod nulou MSL.
           Záporná hodnota je platnou výškou vody pod referenční úrovní.
         </p>
         <p>
@@ -394,12 +398,12 @@ export function TideGaugeArticle() {
           Chceme-li určit změnu výšky mořského povrchu vůči Zemi jako celku, přičteme k relativní změně
           pohyb souše s jeho znaménkem:
         </p>
-        <div className="article-formula method-equation"><p>v<sub>moře</sub> = v<sub>relativní</sub> + v<sub>souše</sub></p></div>
+        <Equation tex={String.raw`v_{\text{moře}} = v_{\text{relativní}} + v_{\text{souše}}`} />
         <p>
           v označuje rychlost výškové změny za stejné období, například v milimetrech za rok.
           Index rozlišuje mořský povrch, relativní hladinu a souš. Kladné znaménko znamená pohyb vzhůru.
           Ilustračně: při relativním růstu 4 mm za rok
-          a poklesu souše o 2 mm za rok vyjde růst mořského povrchu 4 + (−2) = 2 mm za rok.
+          a poklesu souše o 2 mm za rok vyjde růst mořského povrchu <InlineMath tex={String.raw`4 + (-2) = 2`} /> mm za rok.
           Z relativního růstu v tomto případě připadá část na klesající pevninu.
           Tato vytvořená čísla pouze vysvětlují znaménka. Nejsou výsledkem pro San Francisco.
           Výpočet potřebuje, aby geodetické měření skutečně vystihovalo pohyb místa vodočtu.

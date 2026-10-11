@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SourceLink } from "./SourceLink";
+import { Equation, InlineMath } from "./Equation";
 import example from "../../public/data/methods/radiosounding/example.json";
 
 const dataPath = "/data/methods/radiosounding";
@@ -130,9 +131,9 @@ export function RadiosoundingArticle() {
           <p>
             Pro tenkou vrstvu s přibližně stálou virtuální teplotou lze hydrostatický vztah zapsat takto:
           </p>
-          <p className="article-formula method-equation">p₁ = p₀ × exp[−g₀ ΔH / (R<sub>d</sub> T<sub>v</sub>)]</p>
+          <Equation tex={String.raw`p_1 = p_0\times\exp\!\left[-\frac{g_0\,\Delta H}{R_d\,T_v}\right]`} />
           <p>
-            p₀ a p₁ jsou tlaky na dolní a horní hranici ve stejných jednotkách. ΔH je rozdíl
+            <InlineMath tex={String.raw`p_0`} /> a <InlineMath tex={String.raw`p_1`} /> jsou tlaky na dolní a horní hranici ve stejných jednotkách. ΔH je rozdíl
             geopotenciálních výšek v gpm, g₀ je standardní tíhové zrychlení 9,80665 m/s²
             a R<sub>d</sub> je měrná plynová konstanta suchého vzduchu přibližně 287,05 J/(kg·K).
             Značka exp znamená exponenciální funkci. Virtuální teplota T<sub>v</sub> v kelvinech
@@ -241,7 +242,10 @@ export function RadiosoundingArticle() {
           z 4 086,4 na 8 224,2 gpm. Průměrnou změnu teploty s geopotenciální výškou v této vrstvě
           získáme podílem obou rozdílů:
         </p>
-        <p className="article-formula method-equation">ΔT / ΔH = −27,8 / 4,1378 ≈ −6,72 °C/km</p>
+        <Equation tex={[
+          String.raw`\frac{\Delta T}{\Delta H} = \frac{-27{,}8}{4{,}1378}`,
+          String.raw`\approx -6{,}72\,\frac{{}^\circ\mathrm{C}}{\mathrm{km}}`,
+        ]} />
         <p>
           ΔT znamená rozdíl horní a dolní teploty. ΔH je rozdíl výšek, zde převedený z 4 137,8 gpm
           na 4,1378 geopotenciálního kilometru. Záporné znaménko vyjadřuje pokles teploty vzhůru.
@@ -317,7 +321,7 @@ export function RadiosoundingArticle() {
           uvádí teplotní rozsah −90 až +60 °C a rozlišení 0,01 °C. Rozšířenou nejistotu teploty za letu
           udává 0,3 °C do 16 km a 0,4 °C výše. Rozsah vlhkosti je 0–100 % RH, rozlišení 0,1 procentního
           bodu a rozšířená nejistota za letu čtyři procentní body při teplotách −60 až +60 °C.
-          Rozšířená nejistota zde používá faktor pokrytí k = 2, tedy dvojnásobek standardní nejistoty,
+          Rozšířená nejistota zde používá faktor pokrytí <InlineMath tex={String.raw`k = 2`} />, tedy dvojnásobek standardní nejistoty,
           který za obvyklých statistických předpokladů odpovídá přibližně 95% pokrytí.
         </p>
         <p>

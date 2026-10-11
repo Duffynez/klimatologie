@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SourceLink } from "./SourceLink";
+import { Equation, InlineMath } from "./Equation";
 import example from "../../public/data/methods/conductometry/example.json";
 
 const dataPath = "/data/methods/conductometry";
@@ -225,7 +226,7 @@ export function ConductometryArticle() {
         <p>
           Nulový bod uchováváme v datech, ale salinitu z něj nepočítáme. Protokol
           samostatně nepopisuje jeho měřicí prostředí. Pro šest vodních bodů volíme při
-          výpočtu referenční atmosférický tlak. V použitém zápisu jej vyjadřuje p = 0 dbar.
+          výpočtu referenční atmosférický tlak. V použitém zápisu jej vyjadřuje <InlineMath tex={String.raw`p = 0\,\mathrm{dbar}`} />.
           Tuto podmínku jsme zvolili pro rekonstrukci laboratorního výpočtu, protokol
           ji nedokládá odečtem barometru.
         </p>
@@ -233,7 +234,7 @@ export function ConductometryArticle() {
           První převod určuje vodivost z frekvence čidla. Rovnice zároveň zohledňuje změny
           rozměrů trubice s teplotou a tlakem. Pro tento snímač zní:
         </p>
-        <p className="article-formula method-equation">C = (g + h f² + i f³ + j f⁴) / [10 (1 + a t + b p)]</p>
+        <Equation tex={String.raw`C = \frac{g + h f^2 + i f^3 + j f^4}{10(1 + a t + b p)}`} />
         <p>
           C je vodivost v S/m, f frekvence v kHz, t teplota vody ve °C a p tlak v dbar.
           Decibar, značka dbar, je jednotka tlaku odpovídající 10 000 pascalům.
@@ -243,7 +244,7 @@ export function ConductometryArticle() {
         </p>
         <p>
           Koeficienty g, h, i a j určují kalibrační křivku konkrétního čidla.
-          V čitateli násobí jednotlivé mocniny frekvence. Například f² znamená frekvenci
+          V čitateli násobí jednotlivé mocniny frekvence. Například <InlineMath tex={String.raw`f^2`} /> znamená frekvenci
           vynásobenou sebou samou. Součet těchto členů popisuje převod elektrického signálu.
         </p>
         <p>
@@ -323,7 +324,7 @@ export function ConductometryArticle() {
         </p>
         <p>
           Teď porovnáme vodivost vzorku s referencí. Hodnota 4,2914 S/m odpovídá
-          praktické salinitě 35 při 15 °C na stupnici IPTS-68 a p = 0.
+          praktické salinitě 35 při 15 °C na stupnici IPTS-68 a <InlineMath tex={String.raw`p = 0`} />.
           Naši vodivost touto hodnotou vydělíme a získáme poměr přibližně 0,9909426.
           Je o něco menší než jedna, protože vodivost vzorku je o něco menší než
           uvedená referenční vodivost.
@@ -341,7 +342,7 @@ export function ConductometryArticle() {
           laboratorním měřením a sčítá je. Takový součet
           se nazývá polynom. Koeficienty zajišťují, aby vztah odpovídal laboratorně
           zjištěné souvislosti mezi vodivostí a salinitou. Po zahrnutí malé teplotní
-          opravy výsledné salinity dostaneme <strong>S<sub>P</sub> ≈ 34,6424</strong>.
+          opravy výsledné salinity dostaneme <strong><InlineMath tex={String.raw`S_P \approx 34{,}6424`} /></strong>.
         </p>
         <p>
           Referenční salinita lázně byla 34,6427. Rozdíl vypočtené a referenční salinity
@@ -353,8 +354,8 @@ export function ConductometryArticle() {
         <details className="method-details">
           <summary>Koeficienty, data a zopakování výpočtu</summary>
           <p>
-            Z protokolu přebíráme g = −10,3209641, h = 1,48289601,
-            i = −0,000612897590 a j = 0,000127926748.
+            Z protokolu přebíráme <InlineMath tex={String.raw`g = -10{,}3209641`} />, <InlineMath tex={String.raw`h = 1{,}48289601`} />,{" "}
+            <InlineMath tex={String.raw`i = -0{,}000612897590`} /> a <InlineMath tex={String.raw`j = 0{,}000127926748`} />.
             CTcor je 3,25 × 10⁻⁶ na °C a CPcor −9,57 × 10⁻⁸ na dbar.
             Hodnoty g až j jsou číselné koeficienty pro uvedené jednotky f a C.
             Nelze je použít beze změny s frekvencí zadanou v Hz.
@@ -375,7 +376,7 @@ export function ConductometryArticle() {
           </ul>
           <p>
             Metadata uvádějí přístup 4. října 2026 a kontrolní součty SHA-256 přepisu i původního
-            PDF pro rozpoznání změn souboru. Vstupní data, výběr i předpoklad p = 0 jsou zachované.
+            PDF pro rozpoznání změn souboru. Vstupní data, výběr i předpoklad <InlineMath tex={String.raw`p = 0`} /> jsou zachované.
             Program znovu neodhaduje kalibrační koeficienty. Naše funkce přijímá vodivost v S/m,
             zatímco původní gsw_SP_from_C v mS/cm, tedy milisiemensech na centimetr.
             Před použitím původní funkce by se vodivost v S/m násobila deseti.

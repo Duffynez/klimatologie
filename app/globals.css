@@ -797,23 +797,37 @@ h3 {
   color: var(--coral);
 }
 
-.article-formula {
+.article-equation {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
-  margin: 30px 0;
-  padding: 18px 20px;
-  border-left: 4px solid var(--sea);
-  background: var(--white);
+  justify-content: center;
+  gap: 1rem 0.75rem;
+  margin: 2rem 0;
+  padding: 0.5rem 0;
   color: var(--ink);
-  font-family: Georgia, "Times New Roman", serif;
-  line-height: 1.35;
+  font-size: clamp(1rem, 2.2vw, 1.15rem);
 }
 
-.article-formula b {
-  color: var(--coral);
-  font-size: 1.25rem;
+.article-equation__part {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.75rem 0.125rem;
+}
+
+.article-equation .katex-display {
+  margin: 0;
+}
+
+.article-math {
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.article-math .katex {
+  font-size: 1em;
 }
 .article-figure {
   margin: 34px 0 38px;
@@ -1109,11 +1123,6 @@ video.article-figure__media {
   color: var(--muted);
   font-size: 0.83rem;
   line-height: 1.48;
-}
-
-.method-equation {
-  overflow-wrap: anywhere;
-  font-size: 1.04rem;
 }
 
 .method-data-output {

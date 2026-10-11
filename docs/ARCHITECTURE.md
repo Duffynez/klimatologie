@@ -115,6 +115,8 @@ Samotná článková komponenta obvykle obsahuje:
 
 Články nejsou Markdown. Text, struktura i citace jsou JSX. Výhodou je přesná kontrola rozvržení a komponent; nevýhodou je nutnost při editaci zachovat validní TSX.
 
+Rovnice zapisujeme v TeXu přes `Equation` a `InlineMath` ze souboru `app/components/Equation.tsx`. KaTeX při sestavení vytvoří vizuální sazbu i sémantický MathML. Prohlížeč dostane hotové HTML, styly a lokálně přibalená písma. Samostatné rovnice jsou vystředěné bez rámečku a pozadí. Pole v atributu `tex` odděluje části dlouhé rovnice, mezi nimiž se může na menší obrazovce zalomit řádek. Čísla, zlomky ani jednotlivé členy se uvnitř části nelámou.
+
 ## 6. Datové katalogy
 
 | Soubor | Co je jeho zdrojem pravdy |

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SourceLink } from "./SourceLink";
+import { Equation } from "./Equation";
 import example from "../../public/data/methods/pressure-height/example.json";
 
 const dataPath = "/data/methods/pressure-height";
@@ -45,7 +46,7 @@ export function PressureHeightArticle() {
           a čidlem. Odečtením současného tlaku vzduchu získáme tlak odpovídající samotné vodě.
           Jestliže jsou hustota a tíhové zrychlení v tomto sloupci přibližně stálé, platí:
         </p>
-        <p className="article-formula method-equation">h = (p<sub>s</sub> − p₀) / (ρ g)</p>
+        <Equation tex={String.raw`h = \frac{p_s-p_0}{\rho g}`} />
         <p>
           h je kladná hloubka čidla pod hladinou v metrech. p<sub>s</sub> označuje absolutní tlak
           u čidla a p₀ tlak vzduchu nad hladinou, oba v pascalech, značka Pa. Řecké písmeno ρ
@@ -192,7 +193,10 @@ export function PressureHeightArticle() {
           byl 5 976,138 psia, údaj přístroje před opravou 5 977,189 psia a po opravě
           5 976,534 psia. Odečtením reference od opraveného údaje dostaneme:
         </p>
-        <p className="article-formula method-equation">(5 976,534 − 5 976,138) × 0,689476 ≈ 0,273 dbar</p>
+        <Equation tex={[
+          String.raw`(5\,976{,}534 - 5\,976{,}138)`,
+          String.raw`\times 0{,}689476 \approx 0{,}273\,\mathrm{dbar}`,
+        ]} />
         <p>
           Přístroj po opravě ukázal o 0,396 psi více než reference. Zároveň jde o největší
           absolutní rozdíl po opravě v této tabulce. Před opravou byl největší rozdíl asi

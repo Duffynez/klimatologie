@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SourceLink } from "./SourceLink";
+import { Equation, InlineMath } from "./Equation";
 import example from "../../public/data/methods/rain-gauges/example.json";
 
 const dataPath = "/data/methods/rain-gauges";
@@ -57,9 +58,7 @@ export function RainGaugeArticle() {
           K druhému postupu potřebujeme hustotu, tedy hmotnost připadající na jednotku
           objemu. Dělením hmotnosti hustotou dostaneme objem a dalším dělením plochou úhrn:
         </p>
-        <div className="article-formula method-equation">
-          <p>P = V / A = Δm / (ρ A)</p>
-        </div>
+        <Equation tex={String.raw`P = \frac{V}{A} = \frac{\Delta m}{\rho A}`} />
         <p>
           P je úhrn, V objem zachycené vody, A plocha otvoru, Δm přírůstek hmotnosti a ρ hustota
           kapalné vody. Značka Δ označuje změnu, zde hmotnost přidanou za sledovaný interval.
@@ -142,10 +141,13 @@ export function RainGaugeArticle() {
             Z rozdílu vypočítá obsah nádoby. Pro konkrétní strunu používá dva koeficienty,
             tedy čísla určující podobu převodu:
           </p>
-          <div className="article-formula method-equation"><p>H = 10 [a (f − f₀) + b (f − f₀)²]</p></div>
+          <Equation tex={[
+            String.raw`H = 10\bigl[a(f-f_0)`,
+            String.raw`+ b(f-f_0)^2\bigr]`,
+          ]} />
           <p>
             H je obsah nádoby vyjádřený výškou vody v milimetrech, f měřená frekvence v Hz
-            a f₀ frekvence prázdné nádoby při kalibraci. Koeficienty a a b patří konkrétní struně
+            a <InlineMath tex={String.raw`f_0`} /> frekvence prázdné nádoby při kalibraci. Koeficienty a a b patří konkrétní struně
             a jsou v jejím kalibračním protokolu. V uvedené konvenci dávají výsledek v centimetrech,
             proto se násobí deseti. Značky jsme upravili, aby se nepletly s plochou otvoru A.
             Rovnici obsahuje <SourceLink id="2016_Geonor_T200B_Manual">oddíl 7.2 manuálu</SourceLink>.
@@ -258,7 +260,10 @@ export function RainGaugeArticle() {
           Δt v hodinách. Pět minut je dvanáctina hodiny, takže dělení tímto časem odpovídá
           násobení úhrnu dvanácti:
         </p>
-        <div className="article-formula method-equation"><p>R = P / Δt = 2,6 / (5/60) = 31,2 mm/h</p></div>
+        <Equation tex={[
+          String.raw`R = \frac{P}{\Delta t} = \frac{2{,}6}{\frac{5}{60}}`,
+          String.raw`= 31{,}2\,\frac{\mathrm{mm}}{\mathrm{h}}`,
+        ]} />
         <p>
           R je průměrná intenzita. Výsledek 31,2 mm/h znamená, že při zachování této průměrné
           rychlosti přibývání vody po celou hodinu by spadlo 31,2 mm. V našem záznamu se
@@ -365,11 +370,11 @@ export function RainGaugeArticle() {
             průměru. Tento průměr zastupuje velikosti uvnitř třídy. Po zohlednění účinné
             plochy a sečtení příspěvků získáme přibližný úhrn kapalného deště:
           </p>
-          <div className="article-formula method-equation"><p>P ≈ Σ nᵢ πDᵢ³ / (6 Aᵢ)</p></div>
+          <Equation tex={String.raw`P \approx \sum_i \frac{n_i\,\pi D_i^3}{6 A_i}`} />
           <p>
-            Symbol Σ znamená součet přes velikostní třídy. nᵢ je počet kapek v třídě i
-            za zvolený interval, Dᵢ reprezentativní průměr koule o stejném objemu jako kapka
-            a Aᵢ účinná měřicí plocha pro tuto velikost. Objem koule je πDᵢ³/6.
+            Symbol Σ znamená součet přes velikostní třídy. <InlineMath tex={String.raw`n_i`} /> je počet kapek v třídě i
+            za zvolený interval, <InlineMath tex={String.raw`D_i`} /> reprezentativní průměr koule o stejném objemu jako kapka
+            a <InlineMath tex={String.raw`A_i`} /> účinná měřicí plocha pro tuto velikost. Objem koule je <InlineMath tex={String.raw`\frac{\pi D_i^3}{6}`} />.
             Součet objemů dělených plochou poskytne výšku vody. S rozměry v milimetrech
             a plochou v mm² vyjde P v mm. Následným dělením dobou v hodinách dostaneme mm/h.
           </p>

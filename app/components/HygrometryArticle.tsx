@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SourceLink } from "./SourceLink";
+import { Equation, InlineMath } from "./Equation";
 import example from "../../public/data/methods/hygrometry/example.json";
 
 const dataPath = "/data/methods/hygrometry";
@@ -39,20 +40,20 @@ export function HygrometryArticle() {
         <p>
           Vodní pára přispívá k celkovému tlaku vzduchu vlastním dílčím tlakem, který značíme <em>e</em>.
           Při nasycení vůči kapalné vodě je pára v rovnováze s vodním povrchem. Tlak páry při tomto
-          stavu označíme <em>eₛ</em>. Relativní vlhkost, anglicky <em>relative humidity</em> neboli RH,
+          stavu označíme <InlineMath tex={String.raw`e_s`} />. Relativní vlhkost, anglicky <em>relative humidity</em> neboli RH,
           porovnává oba tlaky:
         </p>
-        <p className="article-formula method-equation">RH = 100 × e / eₛ</p>
+        <Equation tex={String.raw`\mathrm{RH} = 100\times\frac{e}{e_s}`} />
         <p>
-          Tlaky e a eₛ dosazujeme ve stejných jednotkách, například v hektopascalech, značka hPa.
+          Tlaky e a <InlineMath tex={String.raw`e_s`} /> dosazujeme ve stejných jednotkách, například v hektopascalech, značka hPa.
           Výsledné RH je v procentech. Hodnota 50 % znamená, že tlak vodní páry je polovinou hodnoty
-          při nasycení. Hodnota eₛ závisí silně na teplotě, v přesných výpočtech také na celkovém tlaku
+          při nasycení. Hodnota <InlineMath tex={String.raw`e_s`} /> závisí silně na teplotě, v přesných výpočtech také na celkovém tlaku
           vzduchu. Vztahy mezi vlhkostními veličinami a tlakem uvádí
           <SourceLink id="2021_NIST_Humidity_Calibration"> kalibrační metodika amerického Národního
           institutu pro standardy a technologie, NIST, oddíl 3</SourceLink>.
         </p>
         <p>
-          Při ohřátí vzduchu za stálého tlaku a bez přidání či odebrání vody hodnota eₛ vzroste,
+          Při ohřátí vzduchu za stálého tlaku a bez přidání či odebrání vody hodnota <InlineMath tex={String.raw`e_s`} /> vzroste,
           zatímco e zůstane stejná. Relativní vlhkost proto klesne. <SourceLink id="2013_NPL_Humidity">NPL
           v oddílu 3.2</SourceLink> uvádí názorný příklad: ohřátí z 20 na 21 °C sníží původní RH 50 %
           přibližně na 47 %. To je ilustrace teplotní závislosti, nikoli měření na Blue Hill.
@@ -153,17 +154,20 @@ export function HygrometryArticle() {
         </div>
         <details className="method-details">
           <summary>Co se počítá z dvojice teploměrů psychrometru</summary>
-          <p className="article-formula method-equation">e ≈ eₛ(Tw) − A p (T − Tw)</p>
+          <Equation tex={[
+            String.raw`e \approx e_s(T_w)`,
+            String.raw`- A p(T-T_w)`,
+          ]} />
           <p>
-            T je teplota suchého teploměru, Tw teplota mokrého teploměru, obě ve °C. Tlak p je celkový
-            tlak vzduchu v hPa. eₛ(Tw) je tlak nasycené páry při teplotě mokrého povrchu, také v hPa.
+            T je teplota suchého teploměru, <InlineMath tex={String.raw`T_w`} /> teplota mokrého teploměru, obě ve °C. Tlak p je celkový
+            tlak vzduchu v hPa. <InlineMath tex={String.raw`e_s(T_w)`} /> je tlak nasycené páry při teplotě mokrého povrchu, také v hPa.
             Součinitel A má jednotku K⁻¹, kde K znamená kelvin, jednotku teplotního rozdílu. Rozdíl
-            jednoho kelvinu má stejnou velikost jako rozdíl jednoho stupně Celsia. Součin A p (T − Tw)
+            jednoho kelvinu má stejnou velikost jako rozdíl jednoho stupně Celsia. Součin <InlineMath tex={String.raw`A p(T-T_w)`} />{" "}
             tedy vychází v hPa.
           </p>
           <p>
             Součinitel A závisí na konstrukci, větrání a stavu mokrého povrchu. Po výpočtu e získáme RH
-            dělením hodnotou eₛ při teplotě suchého teploměru. <SourceLink id="DOI_10_1175_jtech_d_12_00232_1">Ingleby
+            dělením hodnotou <InlineMath tex={String.raw`e_s`} /> při teplotě suchého teploměru. <SourceLink id="DOI_10_1175_jtech_d_12_00232_1">Ingleby
             a spoluautoři, rovnice 3 a tabulka 3</SourceLink>, ukazují, proč nelze bez kontroly přenést
             jeden součinitel na každý psychrometr.
           </p>
@@ -252,7 +256,10 @@ export function HygrometryArticle() {
           příznak kvality 0. Žádná nechybí, takže stejně dlouhé intervaly mohou mít stejnou váhu.
           Sečtením RH dostaneme 1 016 a podělíme počtem intervalů:
         </p>
-        <p className="article-formula method-equation">Průměrná RH = 1 016 / 12 = 84,666… %</p>
+        <Equation tex={[
+          String.raw`\text{Průměrná RH} = \frac{1\,016}{12}`,
+          String.raw`= 84{,}666\ldots\,\%`,
+        ]} />
         <p>
           Po zaokrouhlení na celá procenta vychází <strong>85 %</strong>.
           <SourceLink id="2025_USCRN_Blue_Hill_Hourly"> Hodinový soubor NOAA</SourceLink> uvádí

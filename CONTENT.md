@@ -35,6 +35,8 @@ Každá stránka o jevu musí mít tyto části:
 
 V souvislém článku citujte přes komponentu `SourceLink` a ID zdroje. Komponentu `Citation` používejte pro kompaktní hranaté citace, například na historické ose. Obě automaticky přebírají barvu kategorie zdroje; barvu nepřidávejte ručně. Neopisujte adresy zdrojů přímo do odborných odstavců.
 
+Rovnice sázejte přes `Equation`, krátké matematické výrazy v odstavci přes `InlineMath`. Obě komponenty přijímají TeX v atributu `tex`, v JSX použijte `String.raw`. Dělení zapisujte jako skutečný zlomek pomocí `\frac{čitatel}{jmenovatel}`, indexy pomocí `_` a mocniny pomocí `^`. Jednotky a popisné zkratky sázejte vzpřímeně, například `\mathrm{m}` nebo `\mathrm{RH}`. Českou desetinnou čárku zapisujte jako `{,}`. Delší rovnice rozdělte mezi úplnými členy pomocí pole v `tex`, aby zůstaly čitelné na mobilu. Samostatné rovnice mají jednotnou volnou sazbu uprostřed, bez rámečku a barevného pozadí.
+
 ## Milníky na stránce historie
 
 Časová osa sleduje pouze dvě souběžné historie: vývoj vědeckého poznání a formální politická rozhodnutí. Kandidát na vědecký milník musí přinést nový fyzikální poznatek, měřicí možnost, metodu, zásadní pozorování, ověření hypotézy, modelový postup, odbornou syntézu nebo důležitou pozorovací infrastrukturu. Politický milník musí změnit právní rámec, závazky, vykazování nebo trvalý způsob mezinárodního rozhodování.

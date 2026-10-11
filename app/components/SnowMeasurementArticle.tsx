@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SourceLink } from "./SourceLink";
+import { Equation, InlineMath } from "./Equation";
 import example from "../../public/data/methods/snow-measurements/example.json";
 
 const dataPath = "/data/methods/snow-measurements";
@@ -126,7 +127,7 @@ export function SnowMeasurementArticle() {
           Nejprve potřebujeme zjistit hustotu odebraného sněhu. Máme čistou hmotnost vzorku a jeho
           známý objem. Hmotnost vydělíme objemem, čímž ji přepočteme na jednotku objemu:
         </p>
-        <div className="article-formula method-equation"><p>ρ = m / V</p></div>
+        <Equation tex={String.raw`\rho = \frac{m}{V}`} />
         <p>
           Řecké písmeno ρ označuje hustotu v kilogramech na metr krychlový (kg/m³).
           m je čistá hmotnost sněhu v kilogramech a V objem vzorku v metrech krychlových,
@@ -141,7 +142,7 @@ export function SnowMeasurementArticle() {
           Dělením hustotou vody převedeme tuto hmotnost na výšku odpovídajícího vodního sloupce.
           Příspěvky všech intervalů pak sečteme:
         </p>
-        <div className="article-formula method-equation"><p>SWE = Σ (ρ<sub>i</sub> / ρ<sub>w</sub>) Δh<sub>i</sub></p></div>
+        <Equation tex={String.raw`\mathrm{SWE} = \sum_i \frac{\rho_i}{\rho_w}\,\Delta h_i`} />
         <p>
           Znak Σ znamená součet příspěvků všech intervalů. Index i označuje konkrétní interval,
           ρ<sub>i</sub> jeho hustotu a Δh<sub>i</sub> jeho svislou tloušťku v metrech.
@@ -178,7 +179,7 @@ export function SnowMeasurementArticle() {
         <p>
           První záznam patří nejvyššímu intervalu, od 9 do 12 cm nad ledem. Rozdíl jeho hranic dává
           tloušťku 0,03 m a zveřejněná hustota je 174 kg/m³. Vynásobením získáme příspěvek tohoto
-          intervalu: 174 × 0,03 = 5,22 mm vody. Tabulka stejným způsobem ukazuje všechny čtyři odběry.
+          intervalu: <InlineMath tex={String.raw`174\times 0{,}03 = 5{,}22`} /> mm vody. Tabulka stejným způsobem ukazuje všechny čtyři odběry.
           Výšky v prvním sloupci určují jejich polohu, poslední sloupec množství vody v každém z nich.
         </p>
         <div className="method-data-output method-data-output--compact">
@@ -192,10 +193,10 @@ export function SnowMeasurementArticle() {
         </div>
         <p>
           Odběry pokrývají celých 12 cm sněhu bez mezer a překryvů, takže můžeme jejich příspěvky sečíst.
-          Součet 5,22 + 6,54 + 8,64 + 8,10 dává <strong>{number(example.result.sweMm)} mm SWE</strong>,
+          Součet <InlineMath tex={String.raw`5{,}22 + 6{,}54 + 8{,}64 + 8{,}10`} /> dává <strong>{number(example.result.sweMm)} mm SWE</strong>,
           tedy 28,5 kg na metr čtvereční. Průměrnou hustotu celého profilu získáme, když hmotnost
-          na jednotku plochy vydělíme celkovou výškou sněhu v metrech:
-          28,5 / 0,12 = <strong>{number(example.result.meanDensityKgM3)} kg/m³</strong>.
+          na jednotku plochy vydělíme celkovou výškou sněhu v metrech:{" "}
+          <InlineMath tex={String.raw`\frac{28{,}5}{0{,}12}`} /> = <strong>{number(example.result.meanDensityKgM3)} kg/m³</strong>.
           Výsledek říká, jaká hmotnost by připadala na metr krychlový sněhu s průměrnými vlastnostmi tohoto profilu.
           Desetinná místa ukazují výsledek výpočtu z publikovaných vstupů, ne jeho měřicí nejistotu.
         </p>
@@ -342,7 +343,7 @@ export function SnowMeasurementArticle() {
           U trubice nemusíme sčítat příspěvky jednotlivých intervalů, protože vážíme celý sněhový sloupec.
           Jeho hmotnost nejprve vydělíme plochou řezu trubice, abychom získali hmotnost nad jednotkou plochy.
           Dělením hustotou vody ji převedeme na výšku vodního sloupce.
-          Pro úplný sloupec platí SWE v metrech vody = m / (A ρ<sub>w</sub>),
+          Pro úplný sloupec platí <InlineMath tex={String.raw`\mathrm{SWE} = \frac{m}{A\rho_w}`} /> v metrech vody,
           kde m je hmotnost odebraného sněhu v kg, A plocha řezu trubice v m² a ρ<sub>w</sub> referenční
           hustota vody. Předpokladem je úplný vzorek nad touto plochou.
           Obě varianty gravimetrického měření, tedy měření založeného na vážení, rozebírá

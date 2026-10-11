@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "katex/dist/katex-swap.min.css";
 import "./globals.css";
 import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
