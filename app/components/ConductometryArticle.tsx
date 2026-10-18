@@ -94,6 +94,21 @@ export function ConductometryArticle() {
           tepelná oprava řeší její výměnu tepla s měřicí trubicí.
         </p>
 
+        <figure className="article-figure">
+          <Image className="article-figure__media"
+            src="/media/methods/conductometry/nasa-roger-revelle-ctd.jpg"
+            alt="Příprava soupravy CTD na lodi Roger Revelle. Pod kruhem šedých lahví jsou upevněné měřicí přístroje, hadice a kabely."
+            width={1280} height={853} sizes="(max-width: 700px) 100vw, 770px" unoptimized />
+          <figcaption>
+            Souprava CTD na lodi Roger Revelle, srpen 2018. Měřicí přístroje jsou upevněné
+            pod šedými odběrovými lahvemi. Společný záznam vodivosti, teploty a tlaku umožňuje
+            vypočítat salinitu vody v jednotlivých hloubkách.
+            Foto: NASA / Katy Mersmann. Zdroj:{" "}
+            <SourceLink id="2018_NASA_Roger_Revelle_CTD_Photo">A conductivity, temperature and depth device</SourceLink>,
+            {" "}<SourceLink id="WEB_CC_BY_2_0">CC BY 2.0</SourceLink>.
+          </figcaption>
+        </figure>
+
         <h3>Kalibrace a výpočet vodivosti</h3>
         <p>
           Kalibrace stanovuje vztah mezi odečtem přístroje a referenční hodnotou.{" "}

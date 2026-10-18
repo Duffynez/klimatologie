@@ -36,6 +36,19 @@ export function ResistanceThermometryArticle() {
           <em> U.S. Climate Reference Network</em>, zkráceně USCRN.
         </p>
 
+        <figure className="article-figure article-figure--instrument">
+          <Image className="article-figure__media"
+            src="/media/methods/resistance-thermometry/noaa-uscrn-mauna-loa.jpg"
+            alt="Stožár stanice USCRN na Mauna Loa se třemi bílými kryty teplotních sond a solárním panelem v sopečné krajině."
+            width={640} height={480} sizes="(max-width: 700px) 100vw, 620px" unoptimized />
+          <figcaption>
+            Stanice USCRN u observatoře Mauna Loa. Teplotní sondy jsou uvnitř tří bílých krytů
+            na ramenech stožáru. Kryty je chrání před sluncem a ventilátory k nim přivádějí
+            okolní vzduch. Foto: <SourceLink id="WEB_NOAA_MLO_USCRN_Photos">NOAA Mauna Loa Observatory</SourceLink>,
+            {" "}<SourceLink id="WEB_NOAA_Using_Content_FAQ">volně použitelné dílo NOAA</SourceLink>.
+          </figcaption>
+        </figure>
+
         <h3>Proč odpor platiny prozrazuje její teplotu</h3>
         <p>
           Čidlem platinového teploměru je tenký platinový drátek nebo vrstva platiny na podkladu.

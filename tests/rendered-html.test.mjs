@@ -1411,7 +1411,7 @@ test("publishes pressure and hydrostatic height with traceable calibration data 
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
   for (const page of related) assert.match(page, /href="\/metody\/mereni-tlaku-a-hydrostaticke-vysky\/?"/);
   const ids = [...new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
-  assert.equal(ids.length, 10);
+  assert.equal(ids.length, 12, "Ten method sources plus the photograph and NOAA reuse policy");
   for (const id of ids) {
     const card = catalogue.match(new RegExp(`<article[^>]*id="${id}"[\\s\\S]*?<\\/article>`))?.[0];
     assert.ok(card, `Missing pressure source card: ${id}`);

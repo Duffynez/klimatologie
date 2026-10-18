@@ -41,6 +41,21 @@ export function PressureHeightArticle() {
           {" "}popisuje snímač, kalibraci i převod jeho signálu.
         </p>
 
+        <figure className="article-figure">
+          <Image className="article-figure__media"
+            src="/media/methods/pressure-height/noaa-atomic-ctd-deployment.jpg"
+            alt="Posádka výzkumné lodi spouští nad oceán zelený rám soupravy CTD s měřicími přístroji a šedými odběrovými lahvemi."
+            width={3840} height={2160} sizes="(max-width: 700px) 100vw, 770px" unoptimized />
+          <figcaption>
+            Spouštění soupravy CTD z lodi Ronald H. Brown během výpravy ATOMIC v lednu 2020.
+            Při sestupu měří přístroje na rámu tlak, teplotu a vodivost. Z tlaku se určuje
+            hloubka, do které jednotlivé odečty patří. Šedé válce nahoře slouží k odběru vody.
+            Foto: Richard Marchbanks, CIRES/NOAA. Zdroj:{" "}
+            <SourceLink id="2020_NOAA_ATOMIC_Photos">fotogalerie ATOMIC</SourceLink>,
+            {" "}<SourceLink id="WEB_NOAA_Using_Content_FAQ">podmínky použití NOAA</SourceLink>.
+          </figcaption>
+        </figure>
+
         <h3>Proč tlak s hloubkou roste</h3>
         <p>
           Každá vrstva klidné vody je v rovnováze. Tlak na její spodní straně musí být větší

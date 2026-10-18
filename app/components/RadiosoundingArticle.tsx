@@ -58,6 +58,20 @@ export function RadiosoundingArticle() {
           <SourceLink id="2023_GRUAN_RS41_TD8"> Kapitola 2 dokumentace</SourceLink> zachycuje
           uspořádání i jednotlivé součásti.
         </p>
+        <figure className="article-figure">
+          <Image className="article-figure__media"
+            src="/media/methods/radiosounding/noaa-atomic-radiosonde-launch.png"
+            alt="Vypouštění bílého balonu a malé radiosondy s vyčnívajícím raménkem z paluby výzkumné lodi Ronald H. Brown."
+            width={1666} height={916} sizes="(max-width: 700px) 100vw, 770px" unoptimized />
+          <figcaption>
+            Vypouštění radiosondy z lodi Ronald H. Brown při výzkumu atmosféry a oceánu ATOMIC
+            v lednu 2020. Balon vlevo vynáší malý přístroj, který právě pouští výzkumnice vpravo.
+            Z bílé skříňky vyčnívá raménko s čidly vystavenými vzduchu.
+            Foto: Richard Marchbanks, CIRES/NOAA. Zdroj:{" "}
+            <SourceLink id="2020_NOAA_ATOMIC_Photos">fotogalerie ATOMIC</SourceLink>,
+            {" "}<SourceLink id="WEB_NOAA_Using_Content_FAQ">podmínky použití NOAA</SourceLink>.
+          </figcaption>
+        </figure>
         <figure className="method-flow">
           <div className="method-flow__track" aria-label="Cesta od vzduchu kolem sondy k výškovému profilu">
             <div><span>1</span><strong>Sonda pod balonem</strong><small>Čidla reagují na vzduch v právě procházené vrstvě.</small></div>

@@ -3,6 +3,10 @@ import type { Source } from "./sources";
 // Sources cited by published article components.
 // Stable IDs are referenced from SourceLink components; do not rename them after publication.
 const rawArticleSources: Source[] = [
+  { id: "WEB_NOAA_MLO_USCRN_Photos", title: "U.S. Climate Reference Network: fotografie měřidel na Mauna Loa", author: "NOAA Mauna Loa Observatory", year: 2026, publication: "NOAA Global Monitoring Laboratory, fotografie bez data, přístup 18. října 2026", type: "Fotografie měřicí stanice", category: "organization", externalUrl: "https://gml.noaa.gov/obop/mlo/programs/coop/crn/crn.html", citationLabel: "NOAA: měřidla USCRN na Mauna Loa", topics: ["metody", "odporová termometrie", "hygrometrie", "fotografie"] },
+  { id: "2020_NOAA_ATOMIC_Photos", title: "ATOMIC: vypouštění radiosondy a spouštění CTD z lodi Ronald H. Brown", author: "Richard Marchbanks, CIRES/NOAA", year: 2020, publication: "NOAA Physical Sciences Laboratory, fotogalerie ATOMIC, leden 2020", type: "Fotografie měření v terénu", category: "organization", externalUrl: "https://psl.noaa.gov/atomic/", citationLabel: "Marchbanks, CIRES/NOAA: ATOMIC 2020", topics: ["metody", "radiosondáž", "tlak", "oceán", "fotografie"] },
+  { id: "2018_NASA_Roger_Revelle_CTD_Photo", title: "A conductivity, temperature and depth device", author: "Katy Mersmann / NASA Goddard Space Flight Center", year: 2018, publication: "NASA, 8. srpna 2018, fotografie převzatá z Wikimedia Commons pod licencí CC BY 2.0", type: "Fotografie měřicí soupravy", category: "organization", externalUrl: "https://commons.wikimedia.org/wiki/File:A_conductivity,_temperature_and_depth_device.jpg", citationLabel: "NASA / Katy Mersmann: CTD na lodi Roger Revelle", topics: ["metody", "konduktometrie", "salinita", "oceán", "fotografie"] },
+  { id: "WEB_CC_BY_2_0", title: "Creative Commons Attribution 2.0 Generic (CC BY 2.0)", author: "Creative Commons", year: 2004, publication: "Creative Commons", type: "Licenční podmínky", category: "organization", externalUrl: "https://creativecommons.org/licenses/by/2.0/", citationLabel: "Creative Commons: CC BY 2.0", topics: ["zdroje", "licence", "fotografie"] },
   { id: "WEB_CALM_Active_Layer_Protocol", title: "CALM Active Layer Protocol", author: "Fritz Nelson, Jerry Brown, Toni Lewkowicz a Al Taylor", year: 2026, publication: "CALM / George Washington University", type: "Metodická dokumentace, přístup 4. října 2026", category: "organization", externalUrl: "https://www2.gwu.edu/~calm/research/active_layer.html", topics: ["metody", "permafrost", "aktivní vrstva", "kryosféra"] },
   { id: "WEB_GTN_P_Barrow_ALT_dataset_14", title: "Active Layer Thickness at Barrow, CALM U1, GTN-P dataset 14, export 4. října 2026", author: "Nikolay Shiklomanov, CALM / George Washington University, GTN-P a přispívající instituce", year: 2026, publication: "GTN-P Data Platform", type: "Datový soubor", category: "organization", externalUrl: "https://data.gtn-p.org/view/alt/2", topics: ["metody", "permafrost", "aktivní vrstva", "kryosféra"] },
   { id: "DOI_10_1080_10889370009377698", title: "The Circumpolar Active Layer Monitoring (CALM) Program: Research Designs and Initial Results", author: "Jerry Brown, Kenneth M. Hinkel a Frederick E. Nelson", year: 2000, publication: "Polar Geography 24(3), 165–258", type: "Studie", category: "science", externalUrl: "https://doi.org/10.1080/10889370009377698", topics: ["metody", "permafrost", "aktivní vrstva", "kryosféra"] },
@@ -523,6 +527,10 @@ const rawArticleSources: Source[] = [
 ];
 
 const articleOpenAccessSources: Record<string, true | string> = {
+  WEB_NOAA_MLO_USCRN_Photos: true,
+  "2020_NOAA_ATOMIC_Photos": true,
+  "2018_NASA_Roger_Revelle_CTD_Photo": true,
+  WEB_CC_BY_2_0: true,
   WEB_CALM_Active_Layer_Protocol: true,
   WEB_GTN_P_Barrow_ALT_dataset_14: true,
   DOI_10_1080_10889370009377698: "https://sites.lsa.umich.edu/gwk/wp-content/uploads/sites/647/2018/09/CALM_polar_geography2000.pdf",

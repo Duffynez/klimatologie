@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SourceLink } from "./SourceLink";
 import { Equation, InlineMath } from "./Equation";
@@ -138,6 +139,19 @@ export function HygrometryArticle() {
           ze tří teplotních krytů. Uspořádání popisuje
           <SourceLink id="2026_USCRN_Measurements"> dokumentace měření USCRN</SourceLink>.
         </p>
+        <figure className="article-figure article-figure--portrait">
+          <Image className="article-figure__media"
+            src="/media/methods/hygrometry/noaa-uscrn-sensor-shields.jpg"
+            alt="Pohled na měřicí stožár USCRN na Mauna Loa s bílými větranými kryty čidel, kabely a skříní elektroniky."
+            width={480} height={640} sizes="(max-width: 700px) 100vw, 460px" unoptimized />
+          <figcaption>
+            Měřidla stanice USCRN na Mauna Loa. Vlhkoměr této sítě pracuje společně s teploměrem
+            uvnitř jednoho z větraných krytů. Na fotografii vidíme jejich bílé pláště,
+            vlastní čidla jsou schovaná uvnitř. Foto:{" "}
+            <SourceLink id="WEB_NOAA_MLO_USCRN_Photos">NOAA Mauna Loa Observatory</SourceLink>,
+            {" "}<SourceLink id="WEB_NOAA_Using_Content_FAQ">volně použitelné dílo NOAA</SourceLink>.
+          </figcaption>
+        </figure>
         <figure className="method-flow">
           <div className="method-flow__track" aria-label="Postup kapacitního měření vlhkosti">
             <div><span>1</span><strong>Vzduch u sondy</strong><small>Pára projde filtrem k citlivé vrstvě.</small></div>

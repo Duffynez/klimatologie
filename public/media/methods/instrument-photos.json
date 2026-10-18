@@ -1,0 +1,72 @@
+[
+  {
+    "file": "/media/methods/resistance-thermometry/noaa-uscrn-mauna-loa.jpg",
+    "sourceId": "WEB_NOAA_MLO_USCRN_Photos",
+    "sourcePage": "https://gml.noaa.gov/obop/mlo/programs/coop/crn/crn.html",
+    "downloadUrl": "https://gml.noaa.gov/obop/mlo/programs/coop/crn/img/img_crn_3.jpg",
+    "credit": "NOAA Mauna Loa Observatory",
+    "licence": "NOAA public-domain content",
+    "licenceUrl": "https://www.noaa.gov/office-education/outreach-communication/faq",
+    "accessed": "2026-10-18",
+    "changes": "None. Downloaded as supplied by the source, using its 1280-pixel preview for the NASA photograph.",
+    "width": 640,
+    "height": 480,
+    "sha256": "1208ef859650b45a8bf91f954b3d93865ea3a4995c737ee7e09a8cf60c1e4748"
+  },
+  {
+    "file": "/media/methods/hygrometry/noaa-uscrn-sensor-shields.jpg",
+    "sourceId": "WEB_NOAA_MLO_USCRN_Photos",
+    "sourcePage": "https://gml.noaa.gov/obop/mlo/programs/coop/crn/crn.html",
+    "downloadUrl": "https://gml.noaa.gov/obop/mlo/programs/coop/crn/img/img_crn_4.jpg",
+    "credit": "NOAA Mauna Loa Observatory",
+    "licence": "NOAA public-domain content",
+    "licenceUrl": "https://www.noaa.gov/office-education/outreach-communication/faq",
+    "accessed": "2026-10-18",
+    "changes": "None. Downloaded as supplied by the source, using its 1280-pixel preview for the NASA photograph.",
+    "width": 480,
+    "height": 640,
+    "sha256": "6947330d36acf1309c67e73be3b8f5bd47a738e06497dfa4a5b7ceb35177da27"
+  },
+  {
+    "file": "/media/methods/radiosounding/noaa-atomic-radiosonde-launch.png",
+    "sourceId": "2020_NOAA_ATOMIC_Photos",
+    "sourcePage": "https://psl.noaa.gov/atomic/",
+    "downloadUrl": "https://psl.noaa.gov/atomic/img/gallery/atomic-010920-marchbanks3.png",
+    "credit": "Richard Marchbanks, CIRES/NOAA",
+    "licence": "NOAA content reuse policy",
+    "licenceUrl": "https://www.noaa.gov/office-education/outreach-communication/faq",
+    "accessed": "2026-10-18",
+    "changes": "None. Downloaded as supplied by the source, using its 1280-pixel preview for the NASA photograph.",
+    "width": 1666,
+    "height": 916,
+    "sha256": "e01d4fea2cd5d8886b594111d3d53a381c77f77b5adf2d9719657f352b9fa096"
+  },
+  {
+    "file": "/media/methods/pressure-height/noaa-atomic-ctd-deployment.jpg",
+    "sourceId": "2020_NOAA_ATOMIC_Photos",
+    "sourcePage": "https://psl.noaa.gov/atomic/",
+    "downloadUrl": "https://psl.noaa.gov/atomic/img/gallery/atomic-010920-marchbanks1.jpg",
+    "credit": "Richard Marchbanks, CIRES/NOAA",
+    "licence": "NOAA content reuse policy",
+    "licenceUrl": "https://www.noaa.gov/office-education/outreach-communication/faq",
+    "accessed": "2026-10-18",
+    "changes": "None. Downloaded as supplied by the source, using its 1280-pixel preview for the NASA photograph.",
+    "width": 3840,
+    "height": 2160,
+    "sha256": "cf864fc4a2f43f3e37ebca4ccfeab569a6d484ed65b3621e10f6e7c0e8d046bb"
+  },
+  {
+    "file": "/media/methods/conductometry/nasa-roger-revelle-ctd.jpg",
+    "sourceId": "2018_NASA_Roger_Revelle_CTD_Photo",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:A_conductivity,_temperature_and_depth_device.jpg",
+    "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/A_conductivity%2C_temperature_and_depth_device.jpg/1280px-A_conductivity%2C_temperature_and_depth_device.jpg",
+    "credit": "NASA / Katy Mersmann",
+    "licence": "CC BY 2.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "accessed": "2026-10-18",
+    "changes": "None. Downloaded as supplied by the source, using its 1280-pixel preview for the NASA photograph.",
+    "width": 1280,
+    "height": 853,
+    "sha256": "97a93171788f6b2f9660ae5666f801eedda9f304236f9f6fad533d53384236b8"
+  }
+]
