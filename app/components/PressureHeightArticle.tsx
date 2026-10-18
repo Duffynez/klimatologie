@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SourceLink } from "./SourceLink";
-import { Equation } from "./Equation";
+import { Equation, InlineMath } from "./Equation";
 import example from "../../public/data/methods/pressure-height/example.json";
 
 const dataPath = "/data/methods/pressure-height";
@@ -25,138 +25,366 @@ export function PressureHeightArticle() {
       </aside>
 
       <div className="article-prose">
-        <h2>Jak tlak vypovídá o výšce</h2>
+        <h2>Jak z tlaku určujeme hloubku</h2>
         <p className="article-prose__intro">
-          Měření tlaku využívá sílu, kterou kapalina nebo plyn působí na jednotku plochy.
-          V klidné vodě tlak roste směrem dolů podle tíhy vodního sloupce nad čidlem.
-          Z rozdílu tlaků a známé hustoty proto můžeme určit hloubku ponoření nebo výšku hladiny.
-          Obdobný vztah platí ve vzduchu, jehož hustota se s výškou výrazně mění.
+          Měření tlaku zjišťuje, jakou silou kapalina nebo plyn působí na jednotku plochy.
+          V klidné vodě tlak roste s hloubkou, protože směrem dolů přibývá voda, jejíž tíhu
+          musí nižší vrstvy nést. Ze změřeného tlaku proto můžeme vypočítat hloubku ponoření
+          přístroje. Pevně umístěné čidlo zase umožňuje sledovat změny výšky hladiny nad ním.
+          Takové určení výšky nebo hloubky z tlaku se opírá o hydrostatickou rovnováhu.
         </p>
         <p>
-          Podrobně si ukážeme oceánografickou soupravu SBE 9plus s křemenným tlakoměrem Digiquartz.
-          Její <SourceLink id="2010_SeaBird_9plus_Manual">technická dokumentace</SourceLink> popisuje
-          převod elektrického signálu na tlak. Veřejný kalibrační protokol konkrétního kusu nám
-          pak umožní přepočítat rozdíly vůči laboratorní referenci. Pro výšku hladiny a atmosféru
-          následně odlišíme další provedení i potřebné vstupy.
-        </p>
-
-        <h2>Vodní sloupec nad čidlem</h2>
-        <p>
-          Ponořené absolutní čidlo nese tlak vzduchu nad hladinou i příspěvek vody mezi hladinou
-          a čidlem. Odečtením současného tlaku vzduchu získáme tlak odpovídající samotné vodě.
-          Jestliže jsou hustota a tíhové zrychlení v tomto sloupci přibližně stálé, platí:
-        </p>
-        <Equation tex={String.raw`h = \frac{p_s-p_0}{\rho g}`} />
-        <p>
-          h je kladná hloubka čidla pod hladinou v metrech. p<sub>s</sub> označuje absolutní tlak
-          u čidla a p₀ tlak vzduchu nad hladinou, oba v pascalech, značka Pa. Řecké písmeno ρ
-          označuje hustotu vody v kilogramech na metr krychlový a g místní tíhové zrychlení v m/s².
-          Pascal je síla jednoho newtonu působící na metr čtvereční.
-          <SourceLink id="DOI_10_3133_twri08a3"> Příručka americké geologické služby USGS z roku 2004</SourceLink>{" "}
-          vysvětluje tento převod i různé tlakové reference ponorných čidel.
-        </p>
-        <p>
-          Pro představu vezměme ilustrační sloupec vody o hustotě 1 000 kg/m³ a standardní tíhové
-          zrychlení 9,80665 m/s². Rozdíl jednoho hektopascalu, značka hPa, tedy 100 Pa, odpovídá přibližně 10,2 mm vody.
-          Neodečtená změna tlaku vzduchu o 10 hPa by tak vytvořila zdánlivou změnu hladiny asi
-          10,2 cm. Tato čísla jsou výpočtem pro zvolené podmínky, nikoli záznamem určité stanice.
-        </p>
-        <p>
-          Hustota mořské vody závisí na teplotě, obsahu solí a tlaku. V hlubokém oceánu proto
-          nestačí dělit tlak jednou hustotou. Převod zohledňuje její změny ve vodním sloupci
-          i tíhové zrychlení závislé na zeměpisné šířce. Postup
-          <SourceLink id="2021_TEOS10_Height_From_Pressure"> gsw_z_from_p v soustavě TEOS-10</SourceLink>,
-          která popisuje termodynamické vlastnosti mořské vody, ukazuje také rozdíl mezi převodem
-          pro referenční oceán a výpočtem s údaji o skutečném
-          rozložení hustoty. Hloubka tak obsahuje fyzikální předpoklady, které samotný sloupec
-          „tlak“ v datovém souboru neprozradí.
+          Postup vysvětlíme na oceánografické soupravě SBE 9plus s křemenným tlakoměrem Digiquartz.
+          Souprava se spouští z lodi a současně měří tlak, teplotu a elektrickou vodivost vody.
+          Tlak přiřazuje ostatním údajům svislou polohu ve vodním sloupci.
+          <SourceLink id="2010_SeaBird_9plus_Manual"> Technická dokumentace SBE 9plus</SourceLink>
+          {" "}popisuje snímač, kalibraci i převod jeho signálu.
         </p>
 
-        <h2>Jak vzniká signál tlakoměru</h2>
+        <h3>Proč tlak s hloubkou roste</h3>
         <p>
-          V tlakoměrech Digiquartz přenáší pružný tlakový člen zatížení na křemenný rezonátor.
-          Ten kmitá s frekvencí, která se mění podle mechanického napětí. Elektronika kmity
-          udržuje a měří jejich frekvenci nebo periodu, tedy dobu jednoho kmitu.
-          Frekvence se udává v hertzech, značka Hz, tedy v počtu kmitů za sekundu.
-          <SourceLink id="2026_Paroscientific_Quartz_Principle"> Technický popis výrobce Paroscientific</SourceLink>{" "}
-          ukazuje pro vyšší tlaky zahnutou pružnou trubici, která se tlakem narovnává a napíná
-          rezonátor. Pro malé tlaky používá jiné provedení s pružným měchem. Uzavření měřicí
-          části ve vakuu poskytuje referenci pro absolutní tlak.
+          Každá vrstva klidné vody je v rovnováze. Tlak na její spodní straně musí být větší
+          než na horní, aby výsledná síla vyvážila tíhu vody mezi nimi. Tomuto stavu říkáme
+          <strong> hydrostatická rovnováha</strong>. Čím vyšší je sloupec vody, tím větší tlakový
+          rozdíl odpovídá jeho tíze. U stejné výšky sloupce rozhoduje také hustota, tedy
+          hmotnost vody v jednotce objemu. Hustší voda vytváří větší tlakový rozdíl.
         </p>
         <p>
-          U SBE 9plus vede tlak z okolní vody dovnitř přístroje přes olejem naplněnou kapiláru.
-          Elektronika zaznamenává frekvenční signál a vnitřní teplotu tlakoměru.
-          Kalibrační vztah převádí oba vstupy na tlak, protože teplota ovlivňuje také odezvu
-          samotného snímače. Tento vnitřní teploměr má jinou úlohu než čidlo měřící teplotu
-          mořské vody. Zapojení a zpracování popisuje
-          <SourceLink id="2010_SeaBird_9plus_Manual"> manuál SBE 9plus, strany 7–10 a 44–46</SourceLink>.
+          Na volnou hladinu působí ještě tlak vzduchu. Ten se přenáší do vody, takže ponořené
+          čidlo zaznamenává společně tlak vzduchu nad hladinou a příspěvek vodního sloupce.
+          <strong> Absolutní tlakoměr</strong> porovnává toto zatížení s vakuem, prostředím
+          s téměř nulovým tlakem uzavřeným uvnitř snímače. Výsledkem je absolutní tlak.
+          Pro samotnou vodu pak potřebujeme odečíst tlak vzduchu změřený ve stejném čase.
+          Rozlišení obou příspěvků vysvětluje
+          <SourceLink id="DOI_10_3133_twri08a3"> příručka americké geologické služby USGS z roku 2004</SourceLink>.
+        </p>
+        <p>
+          Základní jednotkou tlaku je pascal, značka Pa. Jeden pascal odpovídá síle jednoho
+          newtonu rozložené na metr čtvereční. V oceánografii se používá větší jednotka
+          <strong> decibar</strong>, značená dbar, která odpovídá 10 000 Pa. V meteorologii
+          se běžně setkáme s hektopascalem, hPa, rovným 100 Pa.
+          Jednotka říká, jak tlak číselně vyjadřujeme, tlaková reference určuje, vůči čemu jej měříme.
+        </p>
+
+        <h3>Křemenný tlakoměr</h3>
+        <p>
+          U SBE 9plus se tlak okolní vody přenáší do přístroje úzkou trubičkou, kapilárou,
+          naplněnou olejem. Olej přenese tlak na měřicí část a současně ji odděluje
+          od mořské vody. Uvnitř tlakoměru působí tlak na zahnutou pružnou trubici.
+          Ta se pod jeho vlivem snaží narovnat a přenáší sílu na křemenný rezonátor.
+          Je to malý pružný prvek z křemene, který elektronika udržuje v kmitání.
+        </p>
+        <p>
+          Mechanické napětí mění rychlost kmitání rezonátoru. Elektronika proto může
+          zjišťovat tlak měřením <strong>frekvence</strong>, počtu kmitů za sekundu,
+          nebo periody, doby jednoho kmitu. Jednotkou frekvence je hertz, značka Hz.
+          <SourceLink id="2026_Paroscientific_Quartz_Principle"> Popis technologie Digiquartz</SourceLink>
+          {" "}ukazuje přenos síly z pružného členu na křemen.
+          Olejový přívod a zapojení v konkrétní soupravě popisuje
+          <SourceLink id="2010_SeaBird_9plus_Manual"> manuál SBE 9plus</SourceLink>.
+        </p>
+        <p>
+          Elektronika zaznamenává vedle kmitání také teplotu uvnitř tlakoměru.
+          Odezva jeho součástí se totiž s teplotou mění. Pro převod na tlak proto používáme
+          oba údaje společně. Vnitřní teploměr popisuje stav snímače, zatímco samostatné
+          čidlo na soupravě měří teplotu mořské vody. Každý z těchto teploměrů tak poskytuje
+          jiný vstup pro další zpracování.
         </p>
         <figure className="method-flow">
-          <div className="method-flow__track" aria-label="Od tlaku vody k vypočtené hloubce">
-            <div><span>1</span><strong>Tlak vody a vzduchu</strong><small>Zatíží pružný člen a změní napětí křemenného rezonátoru.</small></div>
+          <div className="method-flow__track" aria-label="Cesta od tlaku vody k vypočtené hloubce">
+            <div><span>1</span><strong>Tlak na snímač</strong><small>Tlak vody a vzduchu zatíží pružný člen uvnitř přístroje.</small></div>
             <b aria-hidden="true">→</b>
-            <div><span>2</span><strong>Frekvence a teplota</strong><small>Elektronika změří kmitání a teplotu tlakoměru.</small></div>
+            <div><span>2</span><strong>Kmitání křemene</strong><small>Elektronika změří frekvenci a vnitřní teplotu tlakoměru.</small></div>
             <b aria-hidden="true">→</b>
-            <div><span>3</span><strong>Kalibrovaný tlak</strong><small>Vztah určený v laboratoři převede signál na tlak se známou referencí.</small></div>
+            <div><span>3</span><strong>Údaj o tlaku</strong><small>Kalibrační vztah převede oba odečty na tlak.</small></div>
             <b aria-hidden="true">→</b>
-            <div><span>4</span><strong>Hloubka nebo hladina</strong><small>Výpočet přidá hustotu, tíhové zrychlení a příslušnou výškovou referenci.</small></div>
+            <div><span>4</span><strong>Hloubka pod hladinou</strong><small>Výpočet využije tlak vzduchu, hustotu vody a tíhové zrychlení.</small></div>
           </div>
           <figcaption>
             Vlastní schéma podle <SourceLink id="2026_Paroscientific_Quartz_Principle">Paroscientific</SourceLink>,{" "}
             <SourceLink id="2010_SeaBird_9plus_Manual">Sea-Bird</SourceLink> a{" "}
             <SourceLink id="DOI_10_3133_twri08a3">USGS</SourceLink>.
-            Šipky označují mechanickou odezvu, převod signálu a následný hydrostatický výpočet.
-            Poslední krok potřebuje další údaje, které tlakové čidlo samo nezískává.
+            Šipky označují přenos mechanického zatížení na rezonátor, převod elektrických
+            odečtů na tlak a následný výpočet hloubky.
           </figcaption>
         </figure>
+
+        <h3>Kalibrace a převod na tlak</h3>
         <p>
-          Manuál z roku 2010 uvádí pro SBE 9plus záznam 24 souborů měření za sekundu.
-          U tlakoměru s rozsahem 10 000 psia, přibližně 6 895 dbar absolutního tlaku,
-          odpovídá uvedené rozlišení 0,001 % plného rozsahu asi 0,069 dbar. Značka psia
-          znamená absolutní tlak v librách síly na čtvereční palec. Výrobcem udaná počáteční
-          přesnost 0,015 % rozsahu odpovídá přibližně 1,03 dbar. Jsou to specifikace tohoto
-          provedení, které samy nevyjadřují nejistotu každého následného měření hloubky.
+          Vztah mezi frekvencí, vnitřní teplotou a tlakem získáme <strong>kalibrací</strong>.
+          Snímač vystavujeme známým tlakům a zaznamenáváme jeho odezvu. Známý tlak lze vytvořit
+          závažím působícím na píst o známé účinné ploše. Síla, kterou závaží zatěžuje píst,
+          dělená touto plochou určuje tlak. Takový přístroj slouží jako tlakový etalon,
+          tedy referenční měřidlo pro porovnání.
         </p>
-        <div className="method-comparison" aria-label="Jiná provedení měření tlaku">
-          <section>
-            <h3>Membránová čidla</h3>
-            <p>Průhyb membrány může měnit elektrický odpor nebo kapacitu. Přístroj pak zaznamenává jinou elektrickou odezvu než křemenný tlakoměr. Převod opět vyžaduje kalibraci při různých tlacích a teplotách.</p>
-          </section>
-          <section>
-            <h3>Čidla s odvětranou referencí</h3>
-            <p>Tenká trubička přivádí vzduch nad hladinou na druhou stranu membrány. Čidlo tak rovnou sleduje rozdíl vůči místní atmosféře. Ucpání nebo zavlhnutí trubičky tuto výhodu poruší.</p>
-          </section>
-        </div>
         <p>
-          Obě varianty a jejich provozní omezení rozebírá
-          <SourceLink id="DOI_10_3133_twri08a3"> příručka USGS, oddíly o konstrukci a instalaci</SourceLink>.
-          U absolutního záznamníku se tlak vzduchu měří zvlášť. U odvětraného přístroje by jeho
-          opětovné odečtení bylo chybou. Rozhoduje konstrukce čidla i to, jaké opravy již provedl software.
+          Kalibrace pokrývá více tlaků a teplot, aby popisovala chování snímače v celém
+          zamýšleném rozsahu. Ze souboru porovnání se určí koeficienty, číselné parametry
+          převodního vztahu pro daný kus. Při měření do něj software dosadí odečet kmitání
+          a vnitřní teplotu. Výsledný tlak už zahrnuje opravu teplotního vlivu na snímač.
+          Tento postup dokládají <SourceLink id="2026_Paroscientific_Quartz_Principle">výrobce
+          tlakoměru</SourceLink> a <SourceLink id="2010_SeaBird_9plus_Manual">manuál soupravy,
+          strany 44–46</SourceLink>.
+        </p>
+        <p>
+          Aby byla reference dohledatelná, potřebujeme znát hmotnost závaží, účinnou plochu
+          pístu i místní tíhové zrychlení, které spolu s hmotností určuje tíhu závaží.
+          Zohledníme také korekce použité při měření. Doložený řetězec porovnání
+          těchto veličin, včetně jejich nejistot, zajišťuje metrologickou návaznost.
+          Kalibrace tím určuje vztah mezi odečtem a referenční hodnotou. Seřízení je naopak
+          zásah, který odezvu přístroje upravuje. Rozdíl vymezuje
+          <SourceLink id="2012_VIM_Calibration"> mezinárodní metrologický slovník VIM</SourceLink>.
+        </p>
+        <p>
+          Při přípravě měření lze počátek tlakové stupnice porovnat s barometrem,
+          přístrojem měřícím tlak vzduchu. Snímač je přitom teplotně ustálený a orientovaný
+          stejně jako při použití. Kontrola pístovým etalonem naopak postupně prověří celý
+          tlakový rozsah. <SourceLink id="2010_SeaBird_9plus_Manual">Manuál na stranách 31–32</SourceLink>
+          {" "}popisuje oba postupy i úpravu posunu a sklonu převodu podle porovnání.
         </p>
 
-        <h2>Kalibrace a skutečný protokol</h2>
+        <h3>Výpočet hloubky ve vodě</h3>
         <p>
-          Kalibrace určuje vztah mezi odečtem a referenčními hodnotami včetně jejich nejistot.
-          Seřízení mění odezvu přístroje. Toto rozlišení stanovuje
-          <SourceLink id="2012_VIM_Calibration"> metrologický slovník VIM</SourceLink>.
-          Pro tlakoměr můžeme vytvořit známý tlak závažím působícím na píst o známé účinné ploše.
-          Reference přitom potřebuje doloženou hmotnost, plochu, tíhové zrychlení a příslušné korekce.
-          Návaznost je řetězec takových porovnání s vyčíslenou nejistotou.
+          Nyní máme tlak u ponořeného čidla. Pro určení hloubky nejprve odečteme současný
+          tlak vzduchu nad hladinou. Zbývající rozdíl odpovídá tíze vodního sloupce.
+          Když známe hustotu vody a tíhové zrychlení, víme, jaký tlak připadá na metr
+          jeho výšky. Tlakový rozdíl tímto příspěvkem vydělíme a získáme hloubku:
+        </p>
+        <Equation tex={String.raw`h = \frac{p_s-p_0}{\rho g}`} />
+        <p>
+          <em>h</em> je hloubka čidla pod hladinou v metrech, kladná směrem dolů.{" "}
+          <InlineMath tex={String.raw`p_s`} /> je absolutní tlak u čidla a{" "}
+          <InlineMath tex={String.raw`p_0`} /> tlak vzduchu nad hladinou, oba v pascalech.
+          Řecké písmeno <InlineMath tex={String.raw`\rho`} /> označuje hustotu vody
+          v kilogramech na metr krychlový. <em>g</em> je místní tíhové zrychlení v m/s²,
+          které určuje tíhu jednotky hmotnosti.
         </p>
         <p>
-          <SourceLink id="2010_SeaBird_9plus_Manual">Sea-Bird na stranách 31–32</SourceLink> popisuje
-          kontrolu v celém rozsahu pomocí pístového tlakového etalonu i kontrolu počátku stupnice
-          barometrem. Jediný bod u atmosférického tlaku neprověří chování čidla v hlubokém moři.
-          Před porovnáním musí být přístroj teplotně ustálený a v předepsané poloze.
+          V tomto tvaru předpokládáme hydrostatickou rovnováhu a přibližně stálou hustotu
+          i tíhové zrychlení mezi hladinou a čidlem. Dvojnásobný tlakový rozdíl pak
+          odpovídá dvojnásobné hloubce. Při stejném rozdílu tlaků naopak vyjde menší
+          hloubka pro hustší vodu, protože každý metr jejího sloupce přispívá větší tíhou.
+          Vztah i jeho použití u ponorných čidel rozebírá
+          <SourceLink id="DOI_10_3133_twri08a3"> příručka USGS</SourceLink>.
         </p>
         <p>
-          Použijeme <SourceLink id="2022_SeaBird_P1207_Calibration">kalibrační protokol Sea-Bird Scientific
-          z 6. června 2022</SourceLink>, zveřejněný v archivu Atlantické oceánografické
-          a meteorologické laboratoře amerického Národního úřadu pro oceán a atmosféru, zkráceně NOAA AOML.
-          Patří soupravě <strong>SBE 9plus, sériové číslo 1207</strong>, s tlakovým snímačem číslo
-          131013 a rozsahem 10 000 psia. Tabulka zachovává jedenáct bodů při postupném zvýšení
-          a následném snížení tlaku. Obsahuje referenci, frekvenci, vnitřní teplotu a tlak před
-          opravou i po ní. Jde o laboratorní kalibraci, nikoli o profil oceánu.
+          V oceánu se hustota s hloubkou mění. Ovlivňují ji teplota, obsah rozpuštěných solí
+          i stlačení vody vyšším tlakem. Výpočet proto může rozdělit vodní sloupec na
+          tenké vrstvy. Pro každou použije její hustotu a tlakový rozdíl, určí její
+          tloušťku a tloušťky sečte. Tím zachová stejný hydrostatický princip a současně
+          zapojí proměnlivé vlastnosti vody.
+        </p>
+        <p>
+          Výpočty vlastností mořské vody sjednocuje soustava TEOS-10, anglicky
+          <em> Thermodynamic Equation of Seawater 2010</em>. Její postup
+          <SourceLink id="2021_TEOS10_Height_From_Pressure"> gsw_z_from_p</SourceLink>
+          {" "}převádí tlak na výšku s využitím zeměpisné šířky pro určení tíhového zrychlení.
+          V základním použití vychází z referenčního oceánu se stanoveným obsahem solí
+          a teplotou. Další vstupy umožňují přidat vliv skutečného rozložení hustoty
+          a výškové reference hladiny. Výstupní souřadnice <em>z</em> je v metrech a roste
+          vzhůru, takže pod hladinou vychází záporná. Hloubka kladná dolů je její opačná hodnota.
+        </p>
+        <p>
+          Tlak v oceánografickém souboru bývá také vyjádřen vůči pevné referenční atmosféře.
+          TEOS-10 používá absolutní tlak zmenšený o 10,1325 dbar, tedy 101 325 Pa.
+          Tato dohoda dává datům společný tlakový počátek. Aktuální tlak vzduchu nad místem
+          měření se může od referenční hodnoty lišit.
+          <SourceLink id="2010_SeaBird_9plus_Manual"> Manuál SBE 9plus na straně 46</SourceLink>
+          {" "}používá obdobně zaokrouhlenou hodnotu 14,7 psi. Jednotka psi vyjadřuje libru
+          síly na čtvereční palec, značka psia výslovně označuje absolutní tlak v těchto jednotkách.
+        </p>
+        <p>
+          Při použití jednoduchého vzorce pro hloubku proto nejprve zjistíme, jaký tlak
+          soubor obsahuje. Pokud už software odečetl pevnou referenční atmosféru,
+          jejím přičtením obnovíme absolutní tlak. Teprve od něj odečteme současný tlak
+          vzduchu nad hladinou. U výpočtu podle TEOS-10 naopak předáváme tlak v konvenci,
+          kterou tento postup vyžaduje. Význam sloupce určuje dokumentace přístroje
+          a použitého zpracování.
+        </p>
+
+        <h3>Výsledek a použití v klimatologii</h3>
+        <p>
+          Při spouštění soupravy do oceánu vzniká posloupnost měření v různých hloubkách.
+          Manuál SBE 9plus z roku 2010 uvádí záznam 24 souborů měření za sekundu.
+          Každý spojuje tlak s dalšími odečty. Tato kombinace se označuje
+          <strong> CTD</strong>, z anglického <em>Conductivity, Temperature, Depth</em>,
+          tedy vodivost, teplota a hloubka. Tlak je změřený, hloubka vzniká popsaným výpočtem.
+          Profil lze také ponechat v tlakové souřadnici a teplotu porovnávat při stejných
+          hodnotách tlaku.
+        </p>
+        <p>
+          Takové profily tvoří podklad pro <Link href="/pozorovani/tepelny-obsah-oceanu">měření
+          obsahu tepla v oceánu</Link>. Potřebujeme při něm vědět, jaká teplota patří ke které
+          vrstvě a kolik vody tato vrstva obsahuje. Teplotní údaje dodává
+          <Link href="/metody/odporova-termometrie-a-termistory"> termometrie</Link>.
+          Hustota závisí také na salinitě, která vyjadřuje obsah solí a odvozuje se
+          <Link href="/metody/konduktometrie"> z elektrické vodivosti</Link> spolu s teplotou
+          a tlakem. Lodní soupravy CTD i samostatně se pohybující plováky programu Argo
+          tak propojují několik měřicích metod.
+        </p>
+        <p>
+          Význam tlakové souřadnice doložili
+          <SourceLink id="DOI_10_1175_2011jtecho831_1"> Barker a spoluautoři v roce 2011</SourceLink>
+          {" "}na tehdejších datech Argo z let 2000–2008, stažených v lednu 2009.
+          Využili záznamy tlaku při vynoření, kdy je přístroj na hladině, k rozpoznání
+          posunu tlakové stupnice. U části plováků mohli posun opravit i v ponořených
+          profilech za předpokladu, že je stejný v celém měřeném rozsahu.
+          Přepočet změnil odhady oceánského oteplování a příspěvku teplotní
+          roztažnosti vody ke změnám hladiny. Práce ukazuje, proč při sledování teplotních
+          změn potřebujeme také správné přiřazení hloubky.
+        </p>
+        <p>
+          Při výzkumu <Link href="/pozorovani/acidifikace-oceanu">acidifikace oceánu</Link>
+          {" "}tlak pomáhá určit, ze které vrstvy pochází odebraný vzorek. Zároveň patří
+          k podmínkám potřebným pro přepočty chemických veličin. Údaje o chemickém složení
+          dodávají další metody, tlak je spojuje s místem odběru a podmínkami ve vodě.
+        </p>
+
+        <h3>Vývoj přístrojů a další použití</h3>
+        <p>
+          Souvislost tlaku s výškou umožnily sledovat už kapalinové barometry.
+          <SourceLink id="1648_Perier_PuyDeDome"> Florin Périer v dopise Blaisi Pascalovi
+          z 22. září 1648</SourceLink> popsal pokus provedený o tři dny dříve na Puy-de-Dôme.
+          Rtuťový sloupec v trubici byl na vrcholu nižší než dole v Clermontu.
+          Tlak okolního vzduchu vyvažoval tíhu rtuťového sloupce, takže menší výška rtuti
+          odpovídala menšímu tlaku. Druhé uspořádání zůstalo dole a sloužilo ke kontrole
+          změn během dne. Porovnání se opakovalo i po návratu.
+        </p>
+        <p>
+          Pružné a později elektronické snímače umožnily zaznamenávat tlak v krátkých
+          intervalech a měřit s pohybujícím se přístrojem. Vedle křemenného rezonátoru
+          mohou využívat membránu, která se tlakem prohýbá. Její deformace mění elektrický
+          odpor, tedy míru, s jakou snímací prvek brání průchodu proudu, nebo elektrickou
+          kapacitu, množství náboje uloženého při daném napětí. Kalibrace opět přiřadí
+          elektrické odezvě hodnotu tlaku. Digiquartz pro malé tlaky používá také pružný
+          měch místo zahnuté trubice. Konstrukce popisují
+          <SourceLink id="DOI_10_3133_twri08a3"> USGS</SourceLink> a
+          <SourceLink id="2026_Paroscientific_Quartz_Principle"> výrobce křemenných tlakoměrů</SourceLink>.
+        </p>
+        <p>
+          Pro měření hladiny se používají i <strong>čidla s odvětranou referencí</strong>.
+          Na jednu stranu membrány působí voda, na druhou přivádí tenká trubička vzduch
+          z prostoru nad hladinou. Atmosférický tlak tak působí na obě strany a výsledný
+          rozdíl odpovídá vodnímu sloupci. Čidlo tento rozdíl poskytuje přímo,
+          zatímco absolutní záznamník potřebuje samostatný barometr.
+          <SourceLink id="DOI_10_3133_twri08a3"> Příručka USGS</SourceLink> vysvětluje
+          obě uspořádání i jejich instalaci.
+        </p>
+        <p>
+          U pevně upevněného snímače změna hloubky ponoření ukazuje, o kolik se nad ním
+          zvedla nebo klesla hladina. Pro výšku vody vůči pobřeží ještě potřebujeme znát
+          polohu čidla vůči pevnému výškovému bodu. Tuto návaznost rozvíjí
+          <Link href="/metody/pobrezni-mereni-hladiny-a-vyskova-reference"> pobřežní měření
+          hladiny a výšková reference</Link>. Tak vzniká místní záznam využitelný při
+          sledování <Link href="/pozorovani/gmsl">změn výšky mořské hladiny</Link>.
+          Globální průměr pak vyžaduje spojení měření z více míst a další prostorové zpracování.
+        </p>
+        <p>
+          Hydrostatický vztah platí také v atmosféře. Směrem vzhůru tlak klesá, protože
+          nad daným místem ubývá vzduchu. Jeho hustota se výrazně mění s tlakem, teplotou
+          a vlhkostí, proto při určování výšky postupujeme po vrstvách.
+          <Link href="/metody/radiosondaz"> Radiosondáž</Link> vysvětluje i opačný výpočet,
+          kdy známe výšku z družicové navigace a dopočítáváme tlak.
+          <SourceLink id="2023_GRUAN_RS41_TD8"> Dokumentace referenční sítě výškových měření
+          GRUAN, oddíl 4.4.2</SourceLink>, uvádí potřebné vstupy: počáteční tlak na stanici,
+          teplotu, vlhkost a tíhové zrychlení. Místa se stejnou hodnotou tlaku tvoří
+          tlakovou hladinu. Na těchto hladinách pak můžeme porovnávat
+          výšková měření <Link href="/pozorovani/stratosfericke-ochlazovani">teploty</Link>
+          {" "}a <Link href="/pozorovani/narust-vlhkosti">vlhkosti atmosféry</Link>.
+        </p>
+
+        <h2>Nejistoty a ověření měření</h2>
+        <p>
+          Na vypočtenou hloubku působí nejistota tlaku i hustoty vody. Při sledování
+          výšky hladiny záleží také na poloze čidla vůči pevnému bodu.
+          Důležité jsou teplotní změny snímače a jeho dlouhodobá stabilita.
+          <SourceLink id="DOI_10_3133_ofr20131173"> Nezávislá zkouška tří záznamníků
+          Level TROLL 100 v USGS</SourceLink> ukázala, že se většina výsledků při 0 až 50 °C
+          vešla do výrobcem udané tlakové meze. Čtyři záznamy ji těsně překročily.
+          Tento výsledek patří zkoušeným přístrojům a podmínkám.
+        </p>
+        <details className="method-details">
+          <summary>Podrobnosti o přesnosti a kontrole výsledku</summary>
+          <p>
+            <SourceLink id="DOI_10_3133_ofr20131173">Carnley, Fulfordová a Brooks v roce 2013</SourceLink>
+            {" "}zkoušeli tři absolutní záznamníky Level TROLL 100 s keramickým odporovým čidlem.
+            Použili samostatný kalibrovaný regulátor tlaku a barometr.
+            V teplotně kompenzovaném rozsahu 0 až 50 °C se většina tlakových rozdílů vešla
+            do ±0,039 psi, čtyři dosáhly +0,040 psi. Při −20 °C byly odchylky větší.
+            Zkouška ověřovala hotové přístroje, nenastavovala jejich kalibrační koeficienty.
+            Všechny kusy sdílely přívod tlaku a referenční přístroje s vlastní nejistotou.
+            Výsledek se nevztahuje na SBE 9plus.
+          </p>
+          <p>
+            <SourceLink id="2010_SeaBird_9plus_Manual">Manuál SBE 9plus z roku 2010</SourceLink>
+            {" "}uvádí pro rozsah 10 000 psia, přibližně 6 895 dbar absolutního tlaku,
+            rozlišení 0,001 % rozsahu, tedy asi 0,069 dbar. Udaná počáteční přesnost
+            0,015 % rozsahu odpovídá asi 1,03 dbar. Rozlišení popisuje nejmenší rozlišitelnou
+            změnu údaje. Ani jeden parametr sám neurčuje nejistotu hloubky během celého nasazení.
+          </p>
+          <p>
+            V provozu se může pomalu posouvat odezva čidla, což označujeme jako drift.
+            Porovnání s barometrem kontroluje počátek absolutní tlakové stupnice,
+            porovnání v celém rozsahu prověří i další změny převodu. Ruční odečet hladiny
+            vůči pevnému bodu kontroluje také instalaci. Pravidelné kontroly, záznam zásahů a souběžná
+            měření při výměně přístroje doporučuje
+            <SourceLink id="DOI_10_3133_twri08a3"> USGS</SourceLink>.
+            Shoda dvou záznamníků sdílejících chybný barometr tuto společnou chybu neodhalí.
+          </p>
+          <p>
+            Posun upevnění nebo podloží mění hloubku ponoření stejně jako pohyb hladiny.
+            U odvětraného čidla může přenos atmosférického tlaku narušit ucpaná či zavlhlá
+            trubička. Rychlé proudění, vlny a svislé zrychlení přidávají k hydrostatickému
+            tlaku účinky pohybu. Měření proto zahrnuje vhodné umístění a ochranu tlakového
+            vstupu i časové průměrování.
+          </p>
+          <p>
+            Nejistota převodu závisí také na hustotě a tíhovém zrychlení. U jednoduchého
+            vzorce způsobí chyba hustoty o 0,1 % přibližně stejně velkou relativní chybu
+            hloubky s opačným znaménkem. To popisuje citlivost výpočtu, nikoli chybu konkrétního
+            měření. V mělké vodě může rozhodovat barometr a upevnění, ve velké hloubce také
+            popis hustoty a stabilita tlakoměru. Jednotky a tlaková reference se ověřují
+            podle verze zpracování, aby se atmosférický tlak neodečetl dvakrát.
+          </p>
+          <p>
+            <SourceLink id="2022_SeaBird_P1207_Calibration">Kalibrační protokol použitý níže</SourceLink>
+            {" "}neuvádí úplný rozpočet nejistoty ani nedokládá vyhrazení bodů pro nezávislé
+            ověření. Menší rozdíly po opravě znamenají lepší shodu v této zkoušce.
+            Počet desetinných míst v tabulce zachycuje přepočet, nikoli jeho nejistotu.
+            Rozdíly mezi zvyšováním a snižováním tlaku nelze celé připsat mechanické paměti
+            snímače, protože se měnila i teplota. Z protokolu neodvodíme celkovou nejistotu
+            budoucího oceánského profilu nebo dlouhodobého záznamu hladiny.
+          </p>
+          <p>
+            <SourceLink id="DOI_10_1175_2011jtecho831_1">Barkerova studie</SourceLink> hodnotí
+            historický soubor Argo, nikoli všechna současná data. U některých tehdejších
+            plováků řídicí program nezachoval záporné tlakové odchylky, což znemožnilo
+            jejich opravu. Porovnání před opravou a po ní sdílí původní profily,
+            takže nepředstavuje dvě nezávislá pozorování oceánu.
+          </p>
+        </details>
+
+        <h2>Skutečný příklad z kalibračního protokolu</h2>
+        <p>
+          Na <SourceLink id="2022_SeaBird_P1207_Calibration">protokolu Sea-Bird Scientific
+          z 6. června 2022</SourceLink> si ukážeme, jak vyhodnotit rozdíly mezi tlakoměrem
+          a laboratorní referencí. Dokument patří soupravě <strong>SBE 9plus číslo 1207</strong>
+          {" "}s tlakovým snímačem 131013 a rozsahem 10 000 psia.
+          Zveřejnila jej Atlantická oceánografická a meteorologická laboratoř amerického
+          Národního úřadu pro oceán a atmosféru, zkráceně NOAA AOML.
+        </p>
+        <p>
+          Laboratoř tlak nejprve zvyšovala a potom snižovala. Protokol obsahuje jedenáct
+          záznamů v tomto pořadí. U každého uvádí referenční tlak, odečtenou frekvenci,
+          vnitřní teplotu a tlak přístroje před opravou i po ní. Přepočet začneme
+          u těchto zveřejněných tlaků. Od údaje přístroje odečteme referenci, takže
+          kladný rozdíl znamená, že přístroj ukazoval více.
+        </p>
+        <p>
+          Tabulka vyjadřuje všechny tlaky a rozdíly v decibarech. Původní hodnoty v psi
+          jsme vynásobili převodním faktorem 0,689476 podle manuálu Sea-Bird.
+          První sloupec určuje tlak nastavený při zkoušce, další dva ukazují,
+          jak se po opravě změnila shoda s referencí.
         </p>
         <figure className="method-data-output method-data-output--compact">
           <div className="method-data-output__table-wrap" role="region" aria-label="Všech jedenáct kalibračních bodů" tabIndex={0}>
@@ -173,7 +401,7 @@ export function PressureHeightArticle() {
             Vlastní výpočet ze všech řádků <SourceLink id="2022_SeaBird_P1207_Calibration">protokolu</SourceLink>{" "}
             v původním pořadí. Rozdíl je údaj přístroje minus reference. Kladné číslo znamená,
             že přístroj ukazuje více. Původní jednotky psi jsme převedli na dbar násobením 0,689476
-            podle manuálu Sea-Bird. Desetinná místa zachycují přepočet, nikoli deklarovanou nejistotu.
+            podle manuálu Sea-Bird.
           </figcaption>
         </figure>
         <figure className="article-figure">
@@ -184,32 +412,58 @@ export function PressureHeightArticle() {
             Vlastní graf stejných jedenácti bodů. Vodorovná osa je absolutní referenční tlak,
             svislá rozdíl od reference. Oranžová znamená stav před opravou, zelená po opravě.
             Kruhy a plné čáry sledují zvyšování tlaku, čtverce a přerušované čáry jeho snižování.
-            Spojnice pouze vedou mezi měřenými body. Rozdíly mezi oběma směry nemůžeme celé připsat
-            mechanické paměti čidla, protože se při zkoušce měnila také jeho teplota.
+            Spojnice pouze vedou mezi měřenými body.
           </figcaption>
         </figure>
+        <h3>Rozdíl mezi přístrojem a referencí</h3>
         <p>
-          Osmý řádek uvádí frekvenci 35 196,00 Hz a vnitřní teplotu 23,5 °C. Referenční tlak
-          byl 5 976,138 psia, údaj přístroje před opravou 5 977,189 psia a po opravě
-          5 976,534 psia. Odečtením reference od opraveného údaje dostaneme:
+          Podívejme se na osmý řádek, zaznamenaný při snižování tlaku.
+          Frekvence byla 35 196,00 Hz a vnitřní teplota 23,5 °C.
+          Referenční tlak měl hodnotu 5 976,138 psia, údaj přístroje před opravou
+          5 977,189 psia a po opravě 5 976,534 psia.
+          Od opraveného údaje odečteme referenci a výsledek převedeme na dbar:
         </p>
         <Equation tex={[
           String.raw`(5\,976{,}534 - 5\,976{,}138)`,
           String.raw`\times 0{,}689476 \approx 0{,}273\,\mathrm{dbar}`,
         ]} />
         <p>
-          Přístroj po opravě ukázal o 0,396 psi více než reference. Zároveň jde o největší
-          absolutní rozdíl po opravě v této tabulce. Před opravou byl největší rozdíl asi
-          0,725 dbar. V ilustrační vodě s hustotou 1 000 kg/m³ by rozdíl 0,273 dbar odpovídal
-          přibližně 0,278 m vodního sloupce. To je převod tlakové odchylky za zadaných podmínek,
-          nikoli hloubka naměřená tímto přístrojem ani její celková nejistota.
+          Přístroj po opravě ukázal o 0,396 psi, tedy přibližně <strong>0,273 dbar</strong>,
+          více než reference. Je to největší velikost rozdílu po opravě v celé tabulce.
+          Před opravou dosahovala největší odchylka přibližně 0,725 dbar.
+          Stejný postup lze zopakovat pro všech jedenáct řádků a získat obě křivky v grafu.
+        </p>
+
+        <h3>Co by tlakový rozdíl znamenal pro výšku vody</h3>
+        <p>
+          Pro představu převedeme rozdíl 0,273 dbar na výšku vodního sloupce.
+          Jde o <strong>ilustrační výpočet</strong> pro zvolenou hustotu 1 000 kg/m³
+          a standardní tíhové zrychlení 9,80665 m/s². Laboratorní protokol neposkytuje
+          měření hloubky v oceánu. Ukazujeme, jak velká změna hloubky by za těchto podmínek
+          vytvořila stejný tlakový rozdíl.
         </p>
         <p>
-          Přepočet začíná u tlaků vytištěných v protokolu. Neobnovuje převod původní frekvence
-          a teploty na tlak. Koeficienty i odečty v dokumentu jsou zaokrouhlené, takže z nich
-          nelze požadovat přesnou reprodukci interního výpočtu. Protokol také neuvádí úplný
-          rozpočet nejistoty ani neprokazuje, že tabulkové body byly vyhrazeny pro nezávislé
-          ověření. Menší rozdíly po opravě proto dokládají lepší shodu v této zkoušce.
+          Nejprve převedeme decibary na pascaly násobením 10 000.
+          Potom tlakový rozdíl Δp vydělíme součinem hustoty a tíhového zrychlení,
+          stejně jako v hlavním výkladu. Výsledné Δh je odpovídající rozdíl hloubek
+          v metrech:
+        </p>
+        <Equation tex={[
+          String.raw`\Delta h = \frac{\Delta p}{\rho g} = \frac{0{,}273\times10\,000}{1\,000\times9{,}80665}`,
+          String.raw`\approx 0{,}278\,\mathrm{m}`,
+        ]} />
+        <p>
+          V takové vodě by tedy tlakový rozdíl odpovídal přibližně 27,8 cm výšky
+          vodního sloupce. Řecké písmeno <InlineMath tex={String.raw`\rho`} /> opět
+          označuje hustotu v kg/m³ a <em>g</em> tíhové zrychlení v m/s².
+          Skript ke stažení počítá s nezaokrouhleným tlakovým rozdílem z tabulky.
+        </p>
+        <p>
+          Stejný převod ukazuje význam tlaku vzduchu nad hladinou.
+          Za zvolených podmínek odpovídá 1 hPa, tedy 100 Pa, přibližně 10,2 mm vody.
+          Změna atmosférického tlaku o 10 hPa by bez jejího odečtení vypadala
+          jako změna hladiny asi o 10,2 cm. I tento údaj je ilustrací pro zadanou
+          hustotu a tíhové zrychlení, nikoli záznamem konkrétní stanice.
         </p>
         <details className="method-details">
           <summary>Data a výpočet ke stažení</summary>
@@ -219,6 +473,11 @@ export function PressureHeightArticle() {
             v Node.js 22 nebo novějším. Skript ověří kontrolní součet CSV a vstupní hodnoty,
             vypočítá rozdíly a vypíše použitý osmý řádek i oba ilustrační převody na výšku.
             Žádný řádek nevyřazuje, neprokládá křivku ani znovu neodhaduje kalibrační koeficienty.
+          </p>
+          <p>
+            Přepočítáváme vytištěné hodnoty tlaku. Převod původní frekvence a vnitřní teploty
+            znovu nesestavujeme, odečty i koeficienty v PDF jsou zaokrouhlené a neumožňují
+            přesně zopakovat interní výpočet přístroje.
           </p>
           <ul>
             <li><a href={`${dataPath}/calibration.csv`} download>Přepis všech číselných sloupců protokolu</a></li>
@@ -234,135 +493,14 @@ export function PressureHeightArticle() {
             Datum kalibrace přebíráme z dokumentu. Jeho název souboru uvádí následující den.
           </p>
         </details>
-
-        <h2>Kdy tlak ještě není hloubkou</h2>
-        <p>
-          V oceánských datech se často ukládá tlak po odečtení pevné referenční atmosféry.
-          TEOS-10 definuje tuto veličinu jako absolutní tlak minus 10,1325 dbar, což je
-          101 325 Pa. Nejde o odečtení právě změřeného tlaku vzduchu nad danou hladinou.
-          Dokumentace <SourceLink id="2021_TEOS10_Height_From_Pressure">převodu tlaku na výšku</SourceLink>{" "}
-          navíc používá souřadnici z kladnou vzhůru, takže pod hladinou vychází záporná.
-          Hloubka kladná dolů má opačné znaménko.
-        </p>
-        <p>
-          <SourceLink id="2010_SeaBird_9plus_Manual">Manuál SBE 9plus na straně 46</SourceLink>{" "}
-          uvádí vlastní převod s odečtením 14,7 psi. Je to zaokrouhlená standardní atmosféra.
-          Při přesném zpracování proto ověříme jednotky, referenci i verzi použitého programu.
-          Automatické odečtení barometru od každého dostupného sloupce „tlak“ může jednu
-          opravu provést dvakrát.
-        </p>
-        <p>
-          Pevně upevněný záznamník umožňuje z hloubky ponoření sledovat pohyb hladiny.
-          Posun jeho závěsu nebo podloží však změní stejný údaj. Výšku moře vůči pobřeží
-          proto musíme navázat na stabilní body a kontrolovat polohu přístroje. Tento další
-          krok rozvíjí metoda <Link href="/metody/pobrezni-mereni-hladiny-a-vyskova-reference">pobřežního
-          měření hladiny a výškové reference</Link>. Tlak sám neodliší vzestup vody od poklesu čidla.
-        </p>
-        <p>
-          Ve vzduchu je hustota mnohem menší a mění se s tlakem, teplotou a vlhkostí.
-          Pro výšku tlakové hladiny proto potřebujeme stav celé vrstvy mezi oběma tlaky.
-          <Link href="/metody/radiosondaz"> Radiosondáž</Link> vysvětluje výpočet po vrstvách
-          i opačný postup, kdy se tlak odvozuje z výšky zjištěné navigací. Zpracování sítě referenčních výškových měření
-          <SourceLink id="2023_GRUAN_RS41_TD8"> GRUAN, oddíl 4.4.2</SourceLink>, výslovně zahrnuje
-          teplotu, vlhkost, tíhové zrychlení a počáteční tlak změřený na stanici.
-        </p>
-
-        <h2>Nezávislá kontrola a meze výsledku</h2>
-        <p>
-          Doloženou zkoušku mimo laboratoř výrobce provedli
-          <SourceLink id="DOI_10_3133_ofr20131173"> Carnley, Fulfordová a Brooks z USGS v roce 2013</SourceLink>.
-          Zkoušeli tři absolutní záznamníky Level TROLL 100 s keramickým odporovým snímačem,
-          tedy jiné přístroje než uvedený SBE 9plus. Tlak určoval samostatný laboratorní
-          regulátor s doloženou kalibrací. Další barometr umožnil odečíst tlak vzduchu.
-          Zkouška měnila tlak i teplotu a prověřovala výstupy hotových přístrojů.
-        </p>
-        <p>
-          V teplotním rozsahu 0 až 50 °C, pro který výrobce kompenzoval odezvu, se většina
-          výsledků vešla do udané meze ±0,039 psi. Čtyři záznamy dosáhly +0,040 psi
-          a mez těsně překročily. Při −20 °C, mimo kompenzovaný rozsah, byly odchylky větší.
-          Nejde o nové nastavení koeficientů ze stejné kalibrační tabulky. Jde o samostatné
-          porovnání s externí referencí za řízených podmínek. Tlaková reference a barometr
-          přesto mají vlastní nejistotu a společný přívod tlaku sdílejí všechny zkoušené kusy.
-          Výsledek nelze přenést na SBE 9plus ani na všechny dnešní záznamníky hladiny.
-        </p>
-        <p>
-          V terénu přibývá drift, tedy pomalý posun odezvy čidla, a nejistota jeho polohy.
-          Opakované porovnání s barometrem prověří počátek absolutní tlakové stupnice.
-          Ruční odečet hladiny vůči pevnému bodu zase kontroluje celý převod včetně instalace.
-          Pravidelné kontroly, záznam zásahů a souběžná měření při výměně přístroje doporučuje
-          <SourceLink id="DOI_10_3133_twri08a3"> příručka USGS</SourceLink>.
-          Dva záznamníky sdílející stejný chybný barometr mohou souhlasně ukazovat chybnou hladinu.
-        </p>
-        <p>
-          Celkovou nejistotu hloubky skládáme z nejistoty tlaku, jeho reference, hustoty,
-          tíhového zrychlení a polohy čidla. V mělké vodě může rozhodovat barometr a upevnění,
-          ve velké hloubce také převod hustoty a stabilita tlakoměru. Pro odhad vlivu hustoty
-          je užitečný jednoduchý důsledek vzorce: chyba hustoty o 0,1 % způsobí přibližně
-          stejně velkou relativní chybu vypočtené hloubky, ale opačného znaménka.
-          Jde o citlivost výpočtu, nikoli o odhad skutečné chyby konkrétních dat.
-        </p>
-        <p>
-          Při rychlém proudění může tlakový vstup zachytit i účinek pohybu vody.
-          Vlny a svislé zrychlení rovněž omezují jednoduchý předpoklad klidného sloupce.
-          Umístění vstupu, ochrana proti nečistotám a vhodné časové průměrování jsou proto
-          součástí měření. Kalibrační protokol našeho přístroje tyto vlivy v oceánu nevyčísluje.
-          Z jeho jedenácti bodů nemůžeme určit celkovou nejistotu budoucího profilu ani dlouhodobé hladiny.
-        </p>
-
-        <h2>Vývoj tlakoměrů</h2>
-        <p>
-          Původní <SourceLink id="1648_Perier_PuyDeDome">dopis Florina Périera Blaisi Pascalovi
-          z 22. září 1648</SourceLink> popisuje pokus uskutečněný o tři dny dříve na Puy-de-Dôme.
-          Rtuťový sloupec v trubici byl na vrcholu nižší než dole v Clermontu. Druhé uspořádání
-          ponechané dole sloužilo jako kontrola a porovnání se opakovalo po návratu.
-          Podstatná byla vazba výšky rtuťového sloupce na tlak vzduchu a kontrola, zda rozdíl
-          nezpůsobila pouze změna během dne.
-        </p>
-        <p>
-          Tlak tak získal pozorovatelný protějšek ve výšce kapaliny. Pružné a později elektronické
-          snímače umožnily ukládat údaje v krátkých intervalech a nést tlakoměr na pohybující se
-          soupravě. Křemenné provedení popsané výše převádí mechanické zatížení na frekvenci.
-          Pro klimatický záznam ale nestačí zachovat jednotku tlaku. Při změně přístroje je potřeba
-          doložit i návaznost jeho odezvy, teplotních oprav a stability.
-        </p>
-
-        <h2>Proč na tlaku záleží v klimatických pozorováních</h2>
-        <p>
-          V <Link href="/pozorovani/tepelny-obsah-oceanu">měření obsahu tepla v oceánu</Link>{" "}
-          tlak přiřazuje teplotním údajům svislou polohu. Soupravy CTD na lodích a plováky
-          programu Argo používají různé snímače, ale chybná tlaková souřadnice může v obou
-          případech přiřadit teplotu nesprávné vrstvě. Teplotu dodává
-          <Link href="/metody/odporova-termometrie-a-termistory"> termometrie</Link> a hustota navazuje
-          také na salinitu odvozenou <Link href="/metody/konduktometrie">z elektrické vodivosti</Link>.
-        </p>
-        <p>
-          <SourceLink id="DOI_10_1175_2011jtecho831_1">Barker a spoluautoři v roce 2011</SourceLink>{" "}
-          zpracovali tlakové chyby v tehdejších datech Argo z let 2000–2008, stažených v lednu 2009.
-          Záznamy při vynoření umožnily rozpoznat a u části plováků opravit posun tlakové stupnice.
-          U některých přístrojů však firmware záporné odchylky nezachoval, což opravu omezilo.
-          Studie doložila, že tlakové chyby ovlivnily odhady oceánského oteplování a výšky hladiny
-          odvozené z teplotní roztažnosti. Popisuje konkrétní historický soubor, nikoli stav všech
-          současných dat Argo. Srovnání před opravou a po ní navíc sdílí původní profily,
-          takže nepředstavuje dvě nezávislá pozorování oceánu.
-        </p>
-        <p>
-          U <Link href="/pozorovani/acidifikace-oceanu">acidifikace oceánu</Link> tlak pomáhá určit,
-          odkud pochází odebraný vzorek, a patří k podmínkám potřebným pro chemické přepočty.
-          Chemické složení měří další metody. U
-          <Link href="/pozorovani/gmsl"> výšky mořské hladiny</Link> může ponorné tlakové čidlo
-          poskytovat místní záznam po navázání na výškovou referenci. Globální průměr vyžaduje
-          další prostorové zpracování a měření. V atmosféře navazuje určování tlakových hladin
-          na radiosondové záznamy <Link href="/pozorovani/stratosfericke-ochlazovani">teploty stratosféry</Link>{" "}
-          a <Link href="/pozorovani/narust-vlhkosti">vlhkosti</Link>.
-        </p>
         <div className="method-conclusion">
           <h2>Co metoda umožňuje zjistit</h2>
           <p>
-            Tlakové měření zpřístupňuje zatížení čidla okolní kapalinou nebo plynem.
-            S určenou tlakovou referencí a popisem tekutiny umožňuje odvodit hloubku,
-            výšku hladiny nebo polohu tlakové hladiny v atmosféře. Spolehlivost těchto údajů
-            stojí na doložené kalibraci, kontrolách během provozu a správném převodu mezi
-            tlakem a výškou. Klimatický vývoj pak dokládají navazující srovnatelné časové záznamy.
+            Měření tlaku a hydrostatický převod umožňují určit hloubku ve vodě, sledovat
+            výšku hladiny nad pevným čidlem i přiřadit výšku tlakovým hladinám v atmosféře.
+            Tlak tak propojuje měření teploty, vlhkosti nebo chemického složení s jejich
+            svislou polohou. Opakovaná srovnatelná měření pak ukazují, jak se jednotlivé
+            vrstvy oceánu a atmosféry mění v čase.
           </p>
         </div>
       </div>

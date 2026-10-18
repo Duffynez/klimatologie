@@ -198,11 +198,11 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Měření tlaku a hydrostatické výšky"
-          meta="Napsáno: 4. října 2026 · Odborná revize: 4. října 2026"
+          meta="18. října 2026"
         >
           <p>
-            Jak tlakoměr převádí zatížení čidla na elektrický signál a za jakých podmínek
-            z tlaku získáme hloubku nebo výšku hladiny. S veřejným kalibračním protokolem a výpočtem ke stažení.
+            Jak tlakoměr měří působení vodního sloupce a jak z jeho údaje vypočítáme hloubku.
+            Princip přístroje, kalibrace a skutečný protokol s výpočtem ke stažení.
           </p>
         </PageLead>
         <PressureHeightArticle />
