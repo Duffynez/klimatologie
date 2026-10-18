@@ -68,5 +68,33 @@
     "width": 1280,
     "height": 853,
     "sha256": "97a93171788f6b2f9660ae5666f801eedda9f304236f9f6fad533d53384236b8"
+  },
+  {
+    "file": "/media/rain-gauges/noaa-uscrn-precipitation-gauges.png",
+    "sourceId": "2018_NOAA_USCRN_Precipitation_Photo",
+    "sourcePage": "https://www.ncei.noaa.gov/news/what-is-a-uscrn-station",
+    "downloadUrl": "https://www.ncei.noaa.gov/sites/default/files/styles/max_1300x1300/public/Precipitation-Gauges.png?itok=dKBzJQY9",
+    "credit": "NOAA NCEI",
+    "licence": "NOAA content reuse policy",
+    "licenceUrl": "https://www.noaa.gov/office-education/outreach-communication/faq",
+    "accessed": "2026-10-18",
+    "changes": "None. Downloaded as supplied by the source.",
+    "width": 1300,
+    "height": 975,
+    "sha256": "1b568bf64ba26aa69f62249ff55631ff2ada98766b1fe5159a6bbbe7b3811f9e"
+  },
+  {
+    "file": "/media/rain-gauges/nasa-impacts-parsivel.png",
+    "sourceId": "2022_NASA_IMPACTS_Parsivel_Photo",
+    "sourcePage": "https://wallops-prf.gsfc.nasa.gov/Field_Campaigns/IMPACTS_2022/",
+    "downloadUrl": "https://wallops-prf.gsfc.nasa.gov/Field_Campaigns/IMPACTS_2022/img/Parsivel.png",
+    "credit": "NASA Wallops Precipitation Science Research Facility",
+    "licence": "NASA Images and Media Usage Guidelines, educational use",
+    "licenceUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "accessed": "2026-10-18",
+    "changes": "None. Downloaded as supplied by the source.",
+    "width": 400,
+    "height": 400,
+    "sha256": "0c511adaab02dbad90ae76ee4a4b7829c56e1e6f78960f49779bd206c1091612"
   }
 ]

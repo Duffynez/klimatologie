@@ -160,11 +160,11 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Srážkoměry a disdrometry"
-          meta="Napsáno: 4. října 2026 · Odborná revize: 4. října 2026"
+          meta="18. října 2026"
         >
           <p>
-            Jak z vážení vody a průchodu kapek světlem vzniká údaj o srážkách.
-            Od přístroje a kalibrace k úhrnu a intenzitě deště, se skutečnými daty a výpočtem ke stažení.
+            Srážkoměr zachycuje vodu, disdrometr sleduje jednotlivé padající částice.
+            Jak jejich měření určí množství a intenzitu srážek a jak se používají v klimatologii.
           </p>
         </PageLead>
         <RainGaugeArticle />
