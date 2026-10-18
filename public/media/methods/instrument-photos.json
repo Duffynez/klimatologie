@@ -110,5 +110,19 @@
     "width": 1120,
     "height": 754,
     "sha256": "a8298ac61c2fd9dbe5ecb72be919c53e3591feca817390bd35a012952716c493"
+  },
+  {
+    "file": "/media/snow-permafrost/usgs-snow-core-measurement.jpg",
+    "sourceId": "WEB_U_S_Geological_Survey_Snow_core_measurement_04ddf039",
+    "sourcePage": "https://www.usgs.gov/media/images/snow-core-measurement",
+    "downloadUrl": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/Glacier_2015_Zach_photo_v2.jpg",
+    "credit": "USGS",
+    "licence": "Public Domain",
+    "licenceUrl": "https://www.usgs.gov/media/images/snow-core-measurement",
+    "accessed": "2026-10-18",
+    "changes": "None. Existing local image matches the original supplied by USGS.",
+    "width": 1000,
+    "height": 667,
+    "sha256": "5f174fef3c9d8bee4d7d8734d4dbaaf3d3f141d1d4f0608855eb6e880ef899d8"
   }
 ]

@@ -122,11 +122,11 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Měření výšky, hustoty a vodní hodnoty sněhu"
-          meta="Napsáno: 4. října 2026 · Odborná revize: 4. října 2026"
+          meta="18. října 2026"
         >
           <p>
-            Jak z výšky a vážení sněhu zjistíme množství uložené vody.
-            Odběr, kalibrace a prostorová proměnlivost, se skutečným profilem z Arktidy a výpočtem ke stažení.
+            Jak ze změřené výšky a zvážených vzorků určíme zásobu vody ve sněhu.
+            Sněhový profil ukazuje, jak se tato zásoba rozkládá mezi jednotlivé vrstvy.
           </p>
         </PageLead>
         <SnowMeasurementArticle />
