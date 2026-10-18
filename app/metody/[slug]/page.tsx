@@ -141,11 +141,12 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Pobřežní měření hladiny a výšková reference"
-          meta="Napsáno: 4. října 2026 · Odborná revize: 4. října 2026"
+          meta="18. října 2026"
         >
           <p>
-            Jak vodočet měří výšku vody a jak se jeho údaj váže k pevnině.
-            Od radarového odrazu přes kalibraci a výškové body ke skutečným datům ze San Franciska.
+            Jak z radarového odrazu získáme výšku mořské hladiny a jak oddělíme
+            pohyb vody od pohybu pobřeží. Výšková reference umožňuje spojit měření
+            do dlouhého záznamu změn hladiny.
           </p>
         </PageLead>
         <TideGaugeArticle />

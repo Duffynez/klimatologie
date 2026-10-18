@@ -96,5 +96,19 @@
     "width": 400,
     "height": 400,
     "sha256": "0c511adaab02dbad90ae76ee4a4b7829c56e1e6f78960f49779bd206c1091612"
+  },
+  {
+    "file": "/media/tide-gauges/noaa-radar-levelling.jpeg",
+    "sourceId": "2013_NOAA_Radar_Installation",
+    "sourcePage": "https://tidesandcurrents.noaa.gov/publications/WaterLogField_Installation_Guide_V_1.0_01_30_13.pdf",
+    "downloadUrl": "https://tidesandcurrents.noaa.gov/publications/WaterLogField_Installation_Guide_V_1.0_01_30_13.pdf",
+    "credit": "NOAA CO-OPS",
+    "licence": "NOAA content reuse policy",
+    "licenceUrl": "https://www.noaa.gov/office-education/outreach-communication/faq",
+    "accessed": "2026-10-18",
+    "changes": "Original embedded JPEG extracted from figure 3-9, page 29 (lower pair), without pixel edits.",
+    "width": 1120,
+    "height": 754,
+    "sha256": "a8298ac61c2fd9dbe5ecb72be919c53e3591feca817390bd35a012952716c493"
   }
 ]
