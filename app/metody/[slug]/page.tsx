@@ -219,11 +219,12 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Odporová termometrie a termistory"
-          meta="Napsáno: 4. srpna 2026 · Odborná revize: 4. října 2026"
+        meta="Napsáno: 4. srpna 2026 · Odborná revize: 4. října 2026 · Redakční úprava: 18. října 2026"
         >
           <p>
-            Od elektrického signálu přes kalibraci k teplotě vzduchu, vody a půdy.
-            Dva příklady s dohledatelnými vstupy ukazují, co lze z měření vypočítat a jak se výsledek ověřuje.
+            Elektrický odpor čidla se mění s teplotou. Této závislosti využívají teploměry
+            na meteorologických stanicích, v oceánu i ve vrtech. Jak takové měření funguje
+            a jak z něj vznikne údaj o teplotě?
           </p>
         </PageLead>
         <ResistanceThermometryArticle />
