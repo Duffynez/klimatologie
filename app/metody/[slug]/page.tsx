@@ -179,11 +179,11 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Konduktometrie"
-          meta="Napsáno: 4. října 2026 · Odborná revize: 4. října 2026"
+          meta="18. října 2026"
         >
           <p>
-            Jak elektrická vodivost vypovídá o slanosti mořské vody. Od frekvence čidla
-            přes kalibraci k salinitě, s veřejnými daty a výpočtem ke stažení.
+            Jak elektrický proud ve vodě umožňuje určit její slanost. Princip čidla,
+            kalibrace a výpočet salinity s původními daty ke stažení.
           </p>
         </PageLead>
         <ConductometryArticle />
