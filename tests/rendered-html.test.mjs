@@ -1213,13 +1213,22 @@ test("publishes reproducible thermometry examples with open sources and working 
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.match(html, /Odborná revize: 4\. října 2026/);
+  const displayedDate = html.match(/<p class="page-lead__meta">([^<]*)<\/p>/)?.[1];
+  assert.equal(displayedDate, "18. října 2026", "Show only the last edit date, without a label");
   assert.doesNotMatch(article, /<Citation\b/);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
   assert.match(body, /29,8627 °C/);
   assert.match(body, /<mn>5,4083<\/mn>/);
   assert.equal((body.match(/<tr>/g) ?? []).length, 13, "Header plus all twelve original values");
   assert.equal((body.match(/<details/g) ?? []).length, 2);
+  const uncertaintyDetails = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertaintyDetails);
+  const uncertaintyWords = uncertaintyDetails
+    .replace(/<math\b[\s\S]*?<\/math>/g, " ")
+    .replace(/<[^>]*>/g, " ")
+    .replace(/&[^;\s]+;/g, " ")
+    .trim().split(/\s+/).length;
+  assert.ok(uncertaintyWords <= 600, `Uncertainty supplement exceeds 600 words: ${uncertaintyWords}`);
   assert.match(body, /class="method-flow"/);
   const ids = [...new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
   assert.ok(ids.length >= 5);

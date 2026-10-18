@@ -1,40 +1,40 @@
 # Postup práce s obsahem
 
-Tento dokument popisuje, které soubory je potřeba změnit při přidání nebo úpravě obsahu. Odborná pravidla stanovují `AGENTS.md`, `CONTENT.md`, `METHODS.md` a `MECHANISMS.md`. Společný jazyk a styl stanovuje [STYLE.md](../STYLE.md), srozumitelný výklad [EXPLANATION.md](../EXPLANATION.md).
+Tento dokument popisuje, které soubory je potřeba změnit při přidání nebo úpravě obsahu. Výběr odborných a redakčních pravidel podle úkolu určuje [AGENTS.md](../AGENTS.md). Společným standardem jazyka a vysvětlování je [STYLE.md](../STYLE.md).
 
 ## 1. Než začne práce
 
-1. Přečtěte `AGENTS.md`, `CONTENT.md`, [STYLE.md](../STYLE.md) a [EXPLANATION.md](../EXPLANATION.md).
-2. U metody navíc přečtěte `METHODS.md`.
-3. U mechanismu navíc přečtěte `MECHANISMS.md`.
-4. Ověřte, zda už téma, slug nebo zdrojové ID v repozitáři neexistuje.
-5. Zkontrolujte aktuální stav Gitu a nezasahujte do cizích rozpracovaných změn.
-6. Oddělte rešerši od publikace. Zdroj musí skutečně dokládat tvrzení, ke kterému bude připojen.
+1. Použijte příslušná pravidla podle rozcestníku v AGENTS.md.
+2. Ověřte, zda už téma, slug nebo zdrojové ID v repozitáři neexistuje.
+3. Zkontrolujte aktuální stav Gitu a nezasahujte do cizích rozpracovaných změn.
+4. Oddělte rešerši od publikace. Zdroj musí skutečně dokládat tvrzení, ke kterému bude připojen.
 
 ## 2. Úprava existujícího článku
 
-U pozorování najděte článek v `app/components/*Article.tsx` podle mapování v `app/pozorovani/[slug]/page.tsx`. Hlavička článku, datum a perex jsou v route, nikoliv uvnitř článkové komponenty.
+U pozorování najděte článek v `app/components/*Article.tsx` podle mapování v `app/pozorovani/[slug]/page.tsx`. Hlavička článku, datum a perex jsou v route, nikoliv uvnitř článkové komponenty. Obsah a stavbu pozorovacího článku stanovuje [OBSERVATIONS.md](../OBSERVATIONS.md).
 
 Při změně:
 
-- zachovejte povinný obsah a rozlišení jednotlivých vrstev poznání, pořadí výkladu při redakci přizpůsobte srozumitelné návaznosti podle [EXPLANATION.md](../EXPLANATION.md).
-- citace připojte přes `SourceLink` se stabilním ID;
-- zkontrolujte, že každý použitý zdroj existuje v katalogu;
-- neponechávejte v databázi odstraněný zdroj, pokud jej nepoužívá jiný článek, historie nebo stránka;
-- při změně obrázku upravte soubor v `public/media`, alternativní text, popisek, zdroj a licenci;
-- při změně názvu nebo shrnutí ověřte také katalogový záznam v `app/data`;
-- při významné odborné revizi aktualizujte datum v route.
+- zachovejte povinný obsah a rozlišení jednotlivých vrstev poznání, pořadí výkladu při redakci přizpůsobte srozumitelné návaznosti podle [STYLE.md](../STYLE.md) a struktury příslušného tematického standardu.
+- citace připojte přes `SourceLink` se stabilním ID.
+- zkontrolujte, že každý použitý zdroj existuje v katalogu.
+- neponechávejte v databázi odstraněný zdroj, pokud jej nepoužívá jiný článek, historie nebo stránka.
+- při změně obrázku upravte soubor v `public/media`, alternativní text, popisek, zdroj a licenci.
+- při změně názvu nebo shrnutí ověřte také katalogový záznam v `app/data`.
+- při každé úpravě článku aktualizujte datum v route podle [STYLE.md, oddílu 7](../STYLE.md#7-členění-příklady-obrazy-a-podrobnosti), včetně změn vysvětlení a jazyka.
 
 ## 3. Nové pozorování
+
+Článek připravte podle [OBSERVATIONS.md](../OBSERVATIONS.md). Následující kroky popisují jeho technické připojení k webu.
 
 ### Krok 1: katalog
 
 Přidejte položku do `evidenceTopics` v `app/data/evidence.ts`.
 
-- `slug` je část veřejné adresy a po zveřejnění se nemění;
-- `title` je název dlaždice;
-- `category` určuje odbornou oblast;
-- `summary` musí popsat, co stránka vysvětlí;
+- `slug` je část veřejné adresy a po zveřejnění se nemění.
+- `title` je název dlaždice.
+- `category` určuje odbornou oblast.
+- `summary` musí popsat, co stránka vysvětlí.
 - `status` je interní stav, i když se nyní na dlaždici nezobrazuje.
 
 Tím vznikne dlaždice a statická adresa, nikoliv plný článek.
@@ -55,10 +55,10 @@ Vytvořte `app/components/<Nazev>Article.tsx`. Použijte existující plné pozo
 
 V `app/pozorovani/[slug]/page.tsx`:
 
-1. importujte komponentu;
-2. přidejte větev pro nový slug;
-3. nastavte kategorii, nadpis, datum a perex v `PageLead`;
-4. vložte článkovou komponentu;
+1. importujte komponentu.
+2. přidejte větev pro nový slug.
+3. nastavte kategorii, nadpis, datum podle STYLE.md a perex v `PageLead`.
+4. vložte článkovou komponentu.
 5. zachovejte návratový odkaz na katalog.
 
 ### Krok 6: vyhledávání a testy
@@ -74,7 +74,7 @@ V `app/pozorovani/[slug]/page.tsx`:
 2. Připravte zdroje podle `METHODS.md` a `docs/SOURCES-AND-ARCHIVE.md`.
 3. Vytvořte komponentu `app/components/<Nazev>Article.tsx`.
 4. Importujte ji v `app/metody/[slug]/page.tsx` a přidejte větev pro slug.
-5. Doplňte `PageLead` s datem a přesným perexem.
+5. Doplňte `PageLead` s datem podle STYLE.md a přesným perexem.
 6. Přidejte adresu do sitemap XML.
 7. Přidejte test, který rozlišuje plný článek od obecné katalogové stránky.
 
@@ -88,9 +88,9 @@ Při psaní zachováme vymezení z katalogu. Absorpční spektroskopie se zamě�
 
 Položka v `app/data/mechanisms.ts` dnes automaticky vytváří dlaždici a obecnou detailní stránku. Musí obsahovat:
 
-- stabilní slug;
-- název a kategorii;
-- stručné vymezení mechanismu;
+- stabilní slug.
+- název a kategorii.
+- stručné vymezení mechanismu.
 - rozlišující důkazy, které musí vysvětlení objasnit.
 
 Plný mechanismový článek zatím nemá samostatný registr. Při jeho prvním zavedení je potřeba vytvořit článkovou komponentu a rozšířit `app/mechanismy/[slug]/page.tsx` obdobně jako u metod. Tento krok nesmí zrušit automatické adresy ostatních katalogových položek.
@@ -131,25 +131,27 @@ Do odborného odstavce nevkládejte ručně externí URL. Čtenář má nejprve 
 
 Před zveřejněním ověřte:
 
-- že obrázek je čitelný v reálné šířce článku;
-- že popisek vysvětluje osy, barvy, panely a zkratky potřebné k přečtení;
-- že alternativní text popisuje obsah, nikoliv pouze název souboru;
-- že zdroj a licence odpovídají konkrétní verzi obrázku;
-- že čtenář pozná, zda jde o měření, rekonstrukci, model nebo ilustraci;
-- že obrázek není zaměněn za důkaz tvrzení, které ve skutečnosti nezobrazuje;
+- že obrázek je čitelný v reálné šířce článku.
+- že popisek vysvětluje osy, barvy, panely a zkratky potřebné k přečtení.
+- že alternativní text popisuje obsah, nikoliv pouze název souboru.
+- že zdroj a licence odpovídají konkrétní verzi obrázku.
+- že čtenář pozná, zda jde o měření, rekonstrukci, model nebo ilustraci.
+- že obrázek není zaměněn za důkaz tvrzení, které ve skutečnosti nezobrazuje.
 - že soubor funguje po statickém exportu a na živé adrese.
 
-## 10. Definice hotové změny
+## 10. Dokončení a zveřejnění změny
 
-Změna je hotová až tehdy, když:
+Rozsah kontroly odpovídá zadání a dotčeným souborům. U samotné redakční dokumentace zkontrolujeme zachování požadavků, návaznost odkazů a diff. Build webu ani nasazení nejsou součástí takové úpravy.
 
-1. text odpovídá příslušnému odbornému standardu a prošel redakční kontrolou podle [STYLE.md](../STYLE.md);
-2. všechny citace mají existující záznam;
-3. odborné práce mají DOI, pokud existuje, a legálně otevřitelný plný text;
-4. nepoužité záznamy byly bezpečně posouzeny a případně odstraněny;
-5. obrázky a odkazy fungují;
-6. stránka nepřetéká na počítači ani mobilu;
-7. prošly lint, audit zdrojových vazeb, build a testy;
-8. sitemap obsahuje každou novou veřejnou adresu;
-9. commit obsahuje pouze související změny;
+Při zveřejnění článku nebo jiné změny webu ověříme příslušné body:
+
+1. text prošel oddělenou kontrolou obsahu a čtivosti podle [STYLE.md](../STYLE.md) a příslušného odborného standardu.
+2. všechny citace mají existující záznam.
+3. odborné práce mají DOI, pokud existuje, a legálně otevřitelný plný text.
+4. nepoužité záznamy byly bezpečně posouzeny a případně odstraněny.
+5. obrázky a odkazy fungují.
+6. stránka nepřetéká na počítači ani mobilu.
+7. prošly povinné kontroly podle [docs/DEVELOPMENT.md](DEVELOPMENT.md).
+8. sitemap obsahuje každou novou veřejnou adresu.
+9. commit obsahuje pouze související změny.
 10. GitHub Pages dokončil nasazení a změna je ověřená na živém webu.

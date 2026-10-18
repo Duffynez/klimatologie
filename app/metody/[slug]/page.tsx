@@ -219,7 +219,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Odporová termometrie a termistory"
-        meta="Napsáno: 4. srpna 2026 · Odborná revize: 4. října 2026 · Redakční úprava: 18. října 2026"
+          meta="18. října 2026"
         >
           <p>
             Elektrický odpor čidla se mění s teplotou. Této závislosti využívají teploměry

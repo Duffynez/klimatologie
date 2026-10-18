@@ -2,15 +2,17 @@
 
 Tento dokument je závazný pro všechny články o klimatických mechanismech na Klimatologie.eu. Článek musí ukázat nejen to, jak určitý proces funguje, ale především proč dané vysvětlení odpovídá pozorované změně lépe než jiné možnosti.
 
-Jazyk a stavbu výkladu upravuje společný standard [STYLE.md](STYLE.md), který čteme před psaním i redakcí článku.
+Jazyk a srozumitelné vysvětlování upravuje společný standard [STYLE.md](STYLE.md). Výběr podkladů pro konkrétní úkol řídí [AGENTS.md](AGENTS.md).
 
 ## 1. Datum a potřebné informace
 
-Na začátku uvedeme datum sepsání a poslední odborné kontroly. Slovníček bude obsahovat pouze pojmy nezbytné pro dané vysvětlení.
+Datum pod nadpisem uvedeme podle [STYLE.md, oddílu 7](STYLE.md#7-členění-příklady-obrazy-a-podrobnosti). Slovníček bude obsahovat pouze pojmy nezbytné pro dané vysvětlení.
 
 ## 2. Co potřebujeme vysvětlit
 
 Nejprve přesně vymezíme pozorování, na které mechanismus odpovídá. Odkážeme na příslušné články a uvedeme jeho velikost, časový průběh, prostorové rozložení a další podstatné vlastnosti.
+
+Obsah a stavbu těchto pozorovacích článků stanovuje [OBSERVATIONS.md](OBSERVATIONS.md).
 
 Tato část nebude pozorování znovu dokazovat. Stanoví otázku, kterou musí vysvětlení zodpovědět.
 
@@ -106,6 +108,8 @@ Uvedeme:
 - zda výsledek vzniká také v nezávislých modelech.
 
 ## 12. Rozsah platnosti a nejistoty
+
+Hlavní omezení shrneme v krátkém odstavci. Rozbor zpřístupníme v rozbalovacím oddílu podle [STYLE.md, oddílu 6](STYLE.md#6-přesnost-předpoklady-a-zdroje), včetně limitu jeho délky. Rozhodující podmínky a doložené intervaly nejistoty zůstávají u příslušných závěrů.
 
 Oddělíme čtyři různé otázky:
 

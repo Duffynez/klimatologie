@@ -1,13 +1,13 @@
 # Práce s obsahem
 
-Před psaním nebo úpravou textu přečtěte také [STYLE.md](STYLE.md), který stanovuje společná jazyková a stylistická pravidla webu, a [EXPLANATION.md](EXPLANATION.md) s pravidly srozumitelného výkladu.
+Tento dokument stanovuje obsahové a citační požadavky. Společná pravidla jazyka a vysvětlování obsahuje [STYLE.md](STYLE.md). Potřebné podklady podle druhu úkolu vybíráme podle [AGENTS.md](AGENTS.md).
 
 ## Přidání zdroje
 
-1. Nejdřív vytvořte záznam v centrálním katalogu. Základní a historické záznamy jsou v `app/data/sources.ts`, většina zdrojů odborných článků v `app/data/articleSources.ts`; výsledné pole vždy skládá `sources.ts`. Přesný postup popisuje `docs/SOURCES-AND-ARCHIVE.md`.
+1. Nejdřív vytvořte záznam v centrálním katalogu. Základní a historické záznamy jsou v `app/data/sources.ts`, většina zdrojů odborných článků v `app/data/articleSources.ts`. Výsledné pole vždy skládá `sources.ts`. Přesný postup popisuje `docs/SOURCES-AND-ARCHIVE.md`.
 2. ID tvořte jako `rok_Prijmeni`, stabilní popisný identifikátor nebo jednotným převodem DOI. Nikdy jej po zveřejnění neměňte.
 3. Uveďte autora, rok, název, vydavatele nebo časopis a volně pojmenovaný typ dokumentu.
-4. Zvolte kategorii `science`, `book`, `politics` nebo `organization`; určuje barevné značení karty, zatímco `type` popisuje konkrétní druh dokumentu.
+4. Zvolte kategorii `science`, `book`, `politics` nebo `organization`. Kategorie určuje barevné značení karty, zatímco `type` popisuje konkrétní druh dokumentu.
 5. ID souboru Google Drive používejte jen u kopie, kterou smíme sdílet a kterou má smysl dlouhodobě archivovat. Otevřeně dostupné vědecké práce na Drive nekopírujte. Vedle archivní kopie vždy uveďte autoritativní původní stránku nebo DOI.
 6. Ověřte, že funguje otevření i stažení zdroje.
 
@@ -25,15 +25,9 @@ odkazu. Každá taková kopie musí mít ověřené právo ke sdílení.
 
 ## Přidání odborné stránky
 
-Každá stránka o jevu musí mít tyto části:
+Povinný obsah, stavbu výkladu a doprovod článku stanovuje příslušný tematický standard: [OBSERVATIONS.md](OBSERVATIONS.md) pro pozorování, [METHODS.md](METHODS.md) pro metody a [MECHANISMS.md](MECHANISMS.md) pro mechanismy. Následující pravidla citací a sazby platí společně.
 
-1. Co přesně pozorujeme.
-2. Jak se veličina měří.
-3. Co data ukazují a jaké mají limity.
-4. Datové soubory, grafy a zdroje.
-5. Datum poslední kontroly.
-
-V souvislém článku citujte přes komponentu `SourceLink` a ID zdroje. Komponentu `Citation` používejte pro kompaktní hranaté citace, například na historické ose. Obě automaticky přebírají barvu kategorie zdroje; barvu nepřidávejte ručně. Neopisujte adresy zdrojů přímo do odborných odstavců.
+V souvislém článku citujte přes komponentu `SourceLink` a ID zdroje. Komponentu `Citation` používejte pro kompaktní hranaté citace, například na historické ose. Obě automaticky přebírají barvu kategorie zdroje. Barvu nepřidávejte ručně. Neopisujte adresy zdrojů přímo do odborných odstavců.
 
 Rovnice sázejte přes `Equation`, krátké matematické výrazy v odstavci přes `InlineMath`. Obě komponenty přijímají TeX v atributu `tex`, v JSX použijte `String.raw`. Dělení zapisujte jako skutečný zlomek pomocí `\frac{čitatel}{jmenovatel}`, indexy pomocí `_` a mocniny pomocí `^`. Jednotky a popisné zkratky sázejte vzpřímeně, například `\mathrm{m}` nebo `\mathrm{RH}`. Českou desetinnou čárku zapisujte jako `{,}`. Delší rovnice rozdělte mezi úplnými členy pomocí pole v `tex`, aby zůstaly čitelné na mobilu. Samostatné rovnice mají jednotnou volnou sazbu uprostřed, bez rámečku a barevného pozadí.
 
@@ -43,13 +37,14 @@ Rovnice sázejte přes `Equation`, krátké matematické výrazy v odstavci pře
 
 Každý kandidát musí mít přímou klimatickou souvislost, doložitelný a trvalý dopad, primární zdroj a význam, který není obsažen v jiném milníku. Do jedné věty musí jít přesně shrnout, co po události bylo nově možné vědět, měřit nebo rozhodnout. Bez splnění těchto podmínek na osu nepatří.
 
-Nezařazujeme popularizační knihy, noviny, časopisy, filmy, fotografie, umění, aktivismus, kampaně, ceny, firemní komunikaci, lobbing, jednotlivé projevy ani obecné ekologické události bez přímého klimatického rozhodnutí. Samotný vznik organizace nestačí; musí vytvořit zásadní vědeckou možnost nebo formální politický rámec. Opakované studie a aktualizace téhož poznatku patří do odborných článků a zdrojů, nikoli mezi nové historické milníky.
+Nezařazujeme popularizační knihy, noviny, časopisy, filmy, fotografie, umění, aktivismus, kampaně, ceny, firemní komunikaci, lobbing, jednotlivé projevy ani obecné ekologické události bez přímého klimatického rozhodnutí. Samotný vznik organizace nestačí. Musí vytvořit zásadní vědeckou možnost nebo formální politický rámec. Opakované studie a aktualizace téhož poznatku patří do odborných článků a zdrojů, nikoli mezi nové historické milníky.
 
 Každá karta odpovídá na tři otázky: co se stalo, co bylo nově zjištěno nebo rozhodnuto a proč to změnilo další vývoj.
 
-## Kontrolní otázky před zveřejněním
+## Obsahová kontrola před zveřejněním
 
-- Prošel text jazykovou a redakční kontrolou podle [STYLE.md](STYLE.md) a kontrolou porozumění podle [EXPLANATION.md](EXPLANATION.md)?
+Úplnost ověříme podle požadavků na příslušný druh článku. Čtivost posoudíme samostatně podle [STYLE.md](STYLE.md). Při obsahové kontrole také ověříme:
+
 - Je každé podstatné tvrzení navázané na zdroj?
 - Je zdroj dostupný, správně popsaný a lze jej legálně sdílet?
 - Má graf popis, jednotky, původ dat a omezení?

@@ -4,20 +4,9 @@
 
 ## Co je pro projekt závazné
 
-Obsah projektu se řídí několika dokumenty. Nejsou to volná doporučení, ale součást redakčního systému.
+Cíle projektu, společné zásady a rozcestník závazných podkladů podle úkolu obsahuje [AGENTS.md](AGENTS.md). Pravidla používáme podle rozsahu práce. Již přečtené a nezměněné znění dostupné v aktuálním kontextu není nutné znovu načítat.
 
-| Dokument | Kdy jej číst |
-| --- | --- |
-| [`AGENTS.md`](AGENTS.md) | Před každou odbornou nebo strukturální změnou. Obsahuje cíle projektu a společné zásady. |
-| [`CONTENT.md`](CONTENT.md) | Před změnou článku, citace, obrázku, historické osy nebo databáze zdrojů. |
-| [`STYLE.md`](STYLE.md) | Před psaním a redakcí všech textů webu. Obsahuje pravidla jazyka, stavby výkladu a příklady úprav. |
-| [`EXPLANATION.md`](EXPLANATION.md) | Před psaním a redakcí vysvětlujících textů celého webu. Určuje tempo, návaznost, vysvětlování pojmů a kontrolu porozumění. |
-| [`METHODS.md`](METHODS.md) | Navíc před psaním článku o měřicí nebo analytické metodě. |
-| [`MECHANISMS.md`](MECHANISMS.md) | Navíc před psaním článku o klimatickém mechanismu. |
-| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Před změnou směrování, datových katalogů, komponent nebo sestavení webu. |
-| [`docs/CONTENT-WORKFLOW.md`](docs/CONTENT-WORKFLOW.md) | Při přidávání a zveřejňování nového tématu. |
-| [`docs/SOURCES-AND-ARCHIVE.md`](docs/SOURCES-AND-ARCHIVE.md) | Při práci se zdroji, otevřeným přístupem, Google Drivem nebo lokálním archivem. |
-| [`docs/DEVELOPMENT.md`](docs/DEVELOPMENT.md) | Při lokálním vývoji, testování a nasazení. |
+Jazyk a srozumitelné vysvětlování mají společný standard [STYLE.md](STYLE.md). Odborný obsah a citace upravuje [CONTENT.md](CONTENT.md), zvláštní požadavky na pozorování [OBSERVATIONS.md](OBSERVATIONS.md), na metody [METHODS.md](METHODS.md) a na mechanismy [MECHANISMS.md](MECHANISMS.md). Technické postupy jsou v adresáři `docs` a rozcestník v AGENTS.md určuje, kdy je použít.
 
 ## Jak web funguje v jedné minutě
 

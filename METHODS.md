@@ -1,103 +1,116 @@
 # Standard metodického článku
 
-Tento dokument je závazný pro všechny články o měřicích a analytických metodách na Klimatologie.eu, včetně postupů využívajících přírodní archivy a metod zpracování dat. Článek musí vysvětlit cestu od pozorované skutečnosti přes měření nebo vstupní data a jejich zpracování až ke zveřejněnému výsledku, jeho nejistotě a ověření.
+Tento dokument je závazný pro články o měřicích a analytických metodách, přírodních archivech a zpracování dat na Klimatologie.eu. Čtenář má pochopit, jak metoda funguje, jak vzniká její výsledek a co umožňuje zjistit.
 
-Jazyk a stavbu výkladu upravuje společný standard [STYLE.md](STYLE.md), který čteme před psaním i redakcí článku.
+Oddíl A určuje povinný obsah, oddíl B jeho uspořádání pro čtenáře. Obsahový seznam není osnovou článku. Společná pravidla vysvětlování stanovuje [STYLE.md](STYLE.md), odborné a citační zásady [CONTENT.md](CONTENT.md). Výběr podkladů pro konkrétní úkol řídí [AGENTS.md](AGENTS.md).
 
-## Jak standard používat
+## A. Povinný obsah
 
-Následujících třináct bodů stanovuje povinný obsah článku. Pořadí, názvy oddílů a jejich spojování přizpůsobíme srozumitelnému výkladu. Princip, přístroj a převod signálu můžeme například vysvětlit společně na jednom příkladu. Každý požadavek musí být věcně pokrytý, ale stejnou informaci neopakujeme v několika oddílech.
+### A1. Vymezení, princip a průběh
 
-Konkrétní provedení požadavků odpovídá druhu metody:
+Vymezíme metodu a rozsah článku. Pro podrobné vysvětlení zvolíme jedno reprezentativní provedení a odlišíme jeho vlastnosti od vlastností společných celé metodě. Rozsah musí umožnit souvisle vysvětlit celý postup.
 
-- U přístrojových metod vysvětlíme měřicí princip, přístroj, zaznamenaný signál, kalibraci a převod na výslednou veličinu.
-- U přírodních archivů vysvětlíme vznik a uchování záznamu, výběr a odběr vzorku, měřenou vlastnost, určení stáří a vztah mezi záznamem a rekonstruovanou veličinou. Navazující analytické metody propojíme odkazy.
-- U metod zpracování dat vysvětlíme původ a stav vstupních dat, matematický nebo statistický princip, postup výpočtu, předpoklady a ověření výsledku. Schéma zachytí tok dat a jednotlivé kroky postupu.
+Vysvětlíme fyzikální, chemický, biologický, matematický nebo statistický vztah, který umožňuje získat hledanou informaci. Popíšeme rozhodující kroky od vstupu k výsledku, jejich účel a potřebné předpoklady:
 
-Pro podrobný výklad zvolíme jeden reprezentativní přístroj nebo postup a uvedeme, které vlastnosti jsou společné celé metodě a které patří jen zvolenému příkladu. Další důležité varianty přehledně porovnáme. Rozsah článku vymezíme tak, aby se jedna cesta od vstupu k výsledku dala skutečně pochopit.
+- U přístrojových metod měřicí uspořádání, vznik a záznam signálu, kalibraci a převod na výslednou veličinu.
+- U přírodních archivů vznik a uchování záznamu, výběr místa, odběr a přípravu vzorku, měřenou vlastnost, určení stáří a vztah k rekonstruované veličině.
+- U zpracování dat původ, stav, pokrytí a výběr vstupních dat, návazné operace a vznik výsledku. Uvedeme, jaké období, území nebo soubor vzorků data pokrývají.
 
-## 1. Datum a potřebné informace
+Rozlišujeme měření, převzaté vstupy, výpočet a interpretaci. Již zpracované hodnoty označujeme podle jejich skutečného významu. Rozlišujeme také metodu, přístroj, měřicí platformu, pozorovací síť a datový produkt.
 
-Na začátku uvedeme datum sepsání a poslední odborné kontroly. Vedle článku bude stručný slovníček pouze těch pojmů a zkratek, které jsou nezbytné pro jeho pochopení.
+### A2. Kalibrace, vztahy a zpracování
 
-## 2. Přesná a srozumitelná definice
+Kalibrace určuje vztah mezi údaji přístroje a referenčními hodnotami včetně příslušných nejistot a umožňuje získat výsledek měření. Seřízení označuje zásah do odezvy přístroje. Terminologii opíráme o [mezinárodní metrologický slovník VIM](https://jcgm.bipm.org/vim/en/2.39.html). Uvedeme použité reference a vysvětlíme jejich úlohu.
 
-První odstavec řekne, co metoda je, jakou vlastnost nebo vztah využívá a co umožňuje měřit či zjistit. Definice začne kladným vymezením, nikoliv výčtem toho, čím metoda není. Vymezíme také rozsah článku a jeho návaznost na související metody.
+U rekonstrukcí objasníme, jak se stanovuje vztah mezi měřenou vlastností a rekonstruovanou veličinou. U výběru a vyřazování údajů, korekcí a dalších operací vysvětlíme účel a potřebné vstupy. Označíme empiricky určené vztahy, modelové předpoklady a volby parametrů.
 
-## 3. Princip metody
+Vysvětlíme význam použitých vztahů a operací. U každé rovnice objasníme **každý použitý symbol**, uvedeme jednotky veličin a podmínky použití. Čtenář má rozumět důvodu výpočtu a významu získaného údaje.
 
-Vysvětlíme fyzikální, chemický, biologický, matematický nebo statistický princip, na kterém metoda stojí. Ukážeme, proč umožňuje získat požadovanou informaci a za jakých předpokladů tento vztah platí. Výklad musí být pochopitelný bez předchozího odborného vzdělání.
+### A3. Výsledek, použití, historie a varianty
 
-## 4. Přístroj, vzorek nebo postup zpracování
+Vysvětlíme význam a způsob čtení výsledku včetně místa, období, vzorku nebo souboru dat, ke kterému se vztahuje.
 
-Popíšeme hlavní části přístroje a postup od vzorku nebo příchozího signálu až po zaznamenaný údaj. U přírodního archivu zahrneme výběr místa, odběr a přípravu vzorku; u výpočetní metody výběr vstupů a jednotlivé kroky zpracování.
+Popíšeme konkrétní použití v klimatologii, vlastnosti a změny poznávané metodou, její podíl na výsledku a návazné využití jejích údajů. Uvedeme konkrétní měřicí či výzkumné programy a datové soubory. Propojíme článek s odpovídajícími pozorováními a dalšími částmi webu. Klimatické závěry zařadíme, pokud objasňují použití metody.
 
-Článek musí obsahovat popsané schéma, které pomůže pochopit princip a průběh postupu. Podle druhu metody zobrazí přístroj, měřicí uspořádání, práci se vzorkem nebo tok dat. Popisek vysvětlí význam částí, šipek a použitých značek.
+Obsah a stavbu navazujících článků o pozorování stanovuje [OBSERVATIONS.md](OBSERVATIONS.md).
 
-## 5. Co se zaznamenává a co vstupuje do zpracování
+Stručná historie doložená původními publikacemi zachytí vznik principu, první použitelné provedení a změny, které rozšířily možnosti metody. Důležité varianty porovnáme podle podstatných rozdílů a použití.
 
-Přesně oddělíme zaznamenaný signál přístroje od odvozené veličiny. Uvedeme jednotky, rozsah, rozlišení a podmínky měření relevantní pro konkrétní provedení metody. Čtenář musí poznat, co zaznamenalo čidlo a co bylo následně vypočteno.
+### A4. Nejistoty a ověření
 
-U přírodního archivu rozlišíme změřenou vlastnost vzorku, odhad jeho stáří a rekonstruovanou klimatickou veličinu. U zpracování dat uvedeme původ vstupů, jejich verzi, pokrytí a předchozí úpravy. Již zpracované hodnoty nesmíme vydávat za surová měření.
+Popíšeme hlavní vlivy na výsledek a jejich význam pro použitelnost metody. Odhady nejistoty a technické parametry vztáhneme ke konkrétnímu provedení a podmínkám. Údaje jednoho provedení nezobecňujeme na celou metodu.
 
-## 6. Od vstupu k výsledku
+Uvedeme konkrétní doložené ověření nebo porovnání s jiným přístrojem, postupem či daty a jeho výsledek. Podrobné doložení zahrne kontrolu stability, původ odhadů nejistoty a rozsah nezávislosti porovnání. Rozlišíme data použitá k nastavení vztahu či parametrů od dat použitých k ověření. Uvedeme společné reference, vstupy či části zpracování a případné mezery v ověření.
 
-Krok za krokem ukážeme převod signálu nebo vstupních dat na zveřejněný výsledek. Vysvětlíme výběr a vyřazování údajů, použité rovnice, korekce, referenční materiály a předpoklady tam, kde jsou součástí daného postupu. Každý symbol ve vzorci bude popsán a čtenář musí rozumět tomu, co výpočet dělá.
+Podrobný rozbor podle povahy metody zahrne relevantní vlivy měření, výběru a pokrytí dat, zpracování a interpretačních předpokladů. Rozlišení, citlivost a mez detekce popíšeme podle skutečného významu. Rozlišení nezaměňujeme za nejistotu. Nevyčíslenou důležitou nejistotu věcně přiznáme bez vymyšleného odhadu.
 
-Uvedeme, kde do výsledku vstupují empiricky určené vztahy, modelové předpoklady nebo volba parametrů. Podrobný příklad musí zachovat kroky rozhodující pro pochopení výsledku; na úplnou technickou dokumentaci odkážeme u příslušného postupu.
+Způsob umístění těchto informací stanovuje oddíl B. Hlavní vysvětlení zůstává souvislé, nejistoty mají krátké shrnutí a dostupné podrobné doložení.
 
-## 7. Kalibrace a kontrola správnosti
+### A5. Skutečný příklad a jeho opakovatelnost
 
-Kalibraci vysvětlíme jako určení vztahu mezi údaji přístroje a referenčními hodnotami včetně jejich nejistot, který umožňuje z údaje přístroje získat výsledek měření. Seřízení popíšeme zvlášť jako zásah do odezvy přístroje. Terminologii opíráme o [mezinárodní metrologický slovník VIM](https://jcgm.bipm.org/vim/en/2.39.html).
+Zařadíme alespoň jeden skutečný příklad s dohledatelnými vstupy, vysvětleným zpracováním a konkrétním výsledkem. Zachováme kroky rozhodující pro pochopení. Samotný převzatý graf nestačí. Kde je to přiměřené, umožníme zopakovat malý výpočet pomocí uvedených hodnot, tabulky nebo zveřejněného skriptu.
 
-U přístrojů uvedeme použité reference, návaznost měření na ně a způsob kontroly stability. U rekonstrukcí z přírodních archivů vysvětlíme, jak se stanovuje a ověřuje vztah mezi měřenou vlastností a rekonstruovanou veličinou. U metod zpracování dat popíšeme kontrolu výpočtu a ověření, že postup poskytuje použitelné výsledky pro zamýšlený účel.
+Zpřístupníme přesný zdroj dat, verzi nebo datum přístupu u průběžně měněných dat, vybraný vzorek či rozsah a nastavení potřebné k zopakování. Technické údaje mohou být v doplňku podle oddílu B.
 
-Uvedeme konkrétní doložené porovnání s jiným přístrojem, postupem nebo nezávislými daty. Vysvětlíme, co porovnávané výsledky sdílejí, například vstupní měření, kalibrační reference nebo část zpracování, a v čem poskytují samostatnou kontrolu. Odlišíme data použitá k nastavení vztahu či parametrů od dat použitých k ověření. Rozsah nezávislosti a případné chybějící ověření otevřeně pojmenujeme.
+Pokud nejsou nejnižší úrovně dat veřejné, jednou stručně vymezíme, od kterého kroku pracujeme s veřejnými daty. Předchozí kroky doložíme metodickou dokumentací. Příklad nemusí opakovat celý postup měření, jeho rozsah však musí být zřejmý. Doplňkové vytvořené hodnoty označíme jako ilustrační. Povinný skutečný příklad zůstává zachován.
 
-## 8. Použití v klimatologii
+### A6. Schéma, slovníček a údaje o článku
 
-Ukážeme, které veličiny, pozorování nebo odvozené výsledky se metodou získávají. Článek bude propojen se všemi částmi webu, kde se metoda používá, a uvede konkrétní měřicí či výzkumné programy a datové soubory. U každého příkladu objasníme, kterou část výsledku metoda zajišťuje a na které další postupy navazuje.
+Článek obsahuje alespoň jedno popsané schéma principu nebo postupu. Podle metody znázorní měřicí uspořádání, práci se vzorkem nebo tok dat. Popisek vysvětlí části, šipky a značky.
 
-## 9. Historie metody
+Datum pod nadpisem uvedeme podle [STYLE.md, oddílu 7](STYLE.md#7-členění-příklady-obrazy-a-podrobnosti). Vedle textu bude stručný slovníček potřebných pojmů a zkratek. Jejich vysvětlení při prvním použití a pravidla obrazového doprovodu stanovuje STYLE.md.
 
-Stručně popíšeme vznik principu, první použitelné provedení a změny, které umožnily současná měření nebo zpracování dat. Vybereme především změny, které rozšířily poznávací možnosti metody nebo zlepšily spolehlivost výsledků. Historie bude založena na původních publikacích, nikoliv na tradovaném příběhu o vynálezci.
+### A7. Zdroje
 
-## 10. Skutečný příklad od vstupu k výsledku
+Použijeme alespoň pět skutečně potřebných zdrojů. Jejich soubor doloží princip a jeho původ, současné provedení, kalibraci nebo jiné ověření správnosti, primární klimatologickou aplikaci a data skutečného příkladu. Jeden dokument může plnit více rolí. Minimální počet nenahrazuje doložení všech podstatných tvrzení.
 
-Použijeme alespoň jeden skutečný příklad s dohledatelným vstupem, vysvětleným zpracováním a konkrétním výsledkem. Může jít například o chromatogram, spektrum, radarový obraz, výškový profil, rozbor vzorku nebo výpočet nad veřejnými daty. Vysvětlíme, jak se výstup čte a jak z něj vznikne konkrétní údaj nebo interpretace. Samotný převzatý graf bez vysvětlení vzniku výsledku nestačí.
+Zahrneme původní práci, současný metodický popis, kalibrační či odborný standard nebo odpovídající veřejnou metodickou dokumentaci, primární klimatologickou aplikaci a konkrétní datový soubor. Citace doprovodí příslušná tvrzení a vysvětlíme přínos zdroje.
 
-Uvedeme přesný zdroj dat, verzi nebo datum přístupu u průběžně měněných dat, vybraný vzorek či rozsah a nastavení potřebné k zopakování příkladu. Kde je to přiměřené, umožníme zopakovat alespoň malý výpočet pomocí uvedených hodnot, tabulky nebo zveřejněného skriptu.
+Požadavek legálně veřejného plného textu podle [CONTENT.md](CONTENT.md) platí i pro metodické dokumenty a normy. DOI, abstrakt nebo odkaz na placenou normu nestačí. Otevřená metodická dokumentace musí tvrzení skutečně dokládat a nesmí být vydávána za úplné znění normy. Odkazy před zveřejněním otevřeme a ověříme. U odborné práce uvedeme DOI, pokud existuje. Způsob otevření, legálního stažení a archivace materiálů určuje [docs/SOURCES-AND-ARCHIVE.md](docs/SOURCES-AND-ARCHIVE.md).
 
-Pokud nejsou nejnižší úrovně dat veřejně dostupné, přesně řekneme, od kterého kroku může čtenář postup samostatně ověřit a které předchozí kroky zná z metodické dokumentace. Doplňkový výpočet s vytvořenými hodnotami označíme jako ilustrační; povinný skutečný příklad jím nenahrazujeme.
+## B. Stavba článku
 
-## 11. Nejistoty a omezení
+Článek má čtyři hlavní oddíly v závazném pořadí. Konkrétní nadpisy a pododdíly přizpůsobíme tématu. Délku určuje náročnost vysvětlení.
 
-U zvoleného příkladu vysvětlíme hlavní zdroje nejistoty, způsob zjištění jejich vlivu a důsledky pro použitelnost výsledku. Rozlišíme příspěvky měření, výběru a pokrytí dat, jejich zpracování a interpretačních předpokladů podle toho, které se na výsledku podílejí. Ukážeme, které vlivy jsou rozhodující a kde zůstává jejich velikost neznámá.
+### 1. Jak metoda funguje
 
-Podle povahy metody popíšeme citlivost, mez detekce, rušivé vlivy, časové a prostorové rozlišení, nejistotu stáří nebo závislost na volbě parametrů. Rozlišení přístroje nebo dat odlišíme od nejistoty výsledku. Číselné odhady použijeme tam, kde jsou doložené pro dané provedení, data a podmínky; technické údaje jednoho přístroje nepřenášíme na celou rodinu metod.
+Hlavní a nejrozsáhlejší oddíl poskytne úplné vysvětlení metody, které čtenář pochopí bez pozdějšího příkladu a technických doplňků. Výklad postupuje takto:
 
-Uvedeme situace, ve kterých metoda poskytuje méně spolehlivý výsledek nebo přestávají platit její předpoklady. Obecná věta o „existující nejistotě“ ani pouhý seznam rušivých vlivů nestačí.
+1. **Definice.** První odstavec řekne, co metoda je a co umožňuje měřit nebo zjistit. Může mít několik vět. Definici nepředchází otázka, příběh ani výčet toho, čím metoda není.
+2. **Princip.** Vysvětlíme, proč sledovaný vztah poskytuje hledanou informaci. Potřebné pojmy a podmínky objasníme před použitím v dalším kroku.
+3. **Průběh měření nebo analýzy.** Souvisle provedeme čtenáře od vstupu k výsledku. Části přístroje, práci se vzorkem, kalibraci, korekce a operace s daty představujeme v místě jejich úlohy. Vysvětlíme, co krok dělá, proč je potřebný a co poskytuje dál. Dokončíme jednu cestu k výsledku před přechodem k jiné.
+4. **Význam výsledku a použití v klimatologii.** Objasníme celý výstup a navážeme jeho použitím.
 
-## 12. Co metoda umožňuje zjistit
+Rozhodující vztahy, výpočty a význam veličin vysvětlíme už v tomto oddílu. Podrobné dosazování konkrétních dat patří až do příkladu. Kalibrace, potřebné korekce a podmínky fungování jsou součástí postupu. Opakované výhrady a výčty toho, co výsledek neprokazuje, do něj nevkládáme. Schéma umístíme k vysvětlovanému ději.
 
-Závěrečné shrnutí přesně řekne, jaké poznání metoda zpřístupňuje a jaký druh tvrzení lze jejími výsledky podpořit. Nebude znovu opakovat celý technický postup.
+Historii a varianty zařadíme stručně na konci tohoto oddílu, po dokončení hlavního vysvětlení. Pokud článek zahrnuje více samostatných postupů, každý vysvětlíme souvisle až k výsledku a teprve potom popíšeme jejich společné použití.
 
-## 13. Zdroje a data
+### 2. Nejistoty a omezení
 
-Každý článek použije alespoň pět skutečně potřebných zdrojů. Jejich soubor musí doložit princip a jeho původ, současné konkrétní provedení, kalibraci nebo jiné ověření správnosti, primární klimatologickou aplikaci a data skutečného příkladu. Jeden dokument může plnit více těchto rolí; dosažení minimálního počtu nenahrazuje doložení všech podstatných tvrzení.
+Jeden krátký souvislý odstavec shrne hlavní vlivy, jejich praktický význam a doložené ověření nebo porovnání včetně jeho výsledku. Podstatná omezení zůstanou viditelná zde. Naváže rozbalovací rozbor podle [STYLE.md, oddílu 6](STYLE.md#6-přesnost-předpoklady-a-zdroje), který stanovuje také jeho maximální délku. Vybereme rozhodující podrobnosti pro posouzení metody, úplnou technickou dokumentaci zpřístupníme citacemi.
 
-Použijeme původní práci, současný metodický popis, kalibrační či odborný standard nebo odpovídající veřejnou metodickou dokumentaci, primární klimatologickou aplikaci a konkrétní datový soubor. Zdroje zapojíme přímo tam, kde dokládají výklad, a vysvětlíme jejich přínos pro příslušné tvrzení.
+Podmínky nutné k pochopení fungování zůstávají u příslušného kroku prvního oddílu. Rozbor spolehlivosti soustředíme sem.
 
-Pro všechny odborné argumenty platí požadavek legálně veřejného plného textu podle `CONTENT.md`, včetně metodických dokumentů a norem. Samotný DOI, abstrakt nebo odkaz na placenou normu nestačí. Pokud tvrzení dokládáme otevřenou metodickou dokumentací, musí je skutečně obsahovat; nesmíme ji vydávat za úplné znění normy. Odkazy na plné texty a data před zveřejněním otevřeme a ověříme. U odborné práce uvedeme DOI, pokud existuje, a dostupné materiály nabídneme k otevření nebo legálnímu stažení podle `docs/SOURCES-AND-ARCHIVE.md`.
+### 3. Skutečný příklad s výpočtem nebo vyhodnocením
 
-## Společná pravidla
+Představíme vstupy, provedeme výpočet nebo vyhodnocení a vysvětlíme výsledek. Použijeme už objasněné pojmy a vztahy. Vyžaduje-li příklad nový rozhodující princip, doplníme jej do hlavního výkladu.
 
-- Rozlišujeme metodu, přístroj, měřicí platformu, pozorovací síť a datový produkt.
-- Článek obsahuje nejméně jedno popsané schéma principu nebo postupu a jeden skutečný příklad se vstupem, zpracováním a výsledkem.
-- Klimatický závěr uvádíme pouze tehdy, když přímo ukazuje použití metody.
-- Technické údaje vždy vztahujeme ke konkrétnímu přístroji, verzi nebo datovému souboru.
-- Podrobné odvození, další varianty nebo rozsáhlejší technické údaje mohou být v rozbalitelných částech. Hlavní výklad musí obsahovat rozhodující kroky, předpoklady a omezení i bez jejich otevření.
+V souvislém příkladu ponecháme údaje potřebné k pochopení kroků, technické podrobnosti pro opakování mohou být v doplňku. Také případný doplňkový ilustrační výpočet patří do tohoto oddílu.
 
-## Kritérium hotového článku
+### 4. Shrnutí
 
-Čtenář dokáže vysvětlit, odkud výsledek pochází, které předpoklady potřebuje, jak se ověřuje a jaké tvrzení jím lze podpořit. Při odborné kontrole posoudíme splnění tohoto cíle spolu s dohledatelností zdrojů a skutečného příkladu; samotná přítomnost všech předepsaných oddílů nestačí.
+Krátký souvislý odstavec řekne, jaké poznání metoda zpřístupňuje a jaká tvrzení její výsledky podpírají. Naváže na vysvětlení a použití metody. Neopakuje celý postup ani rozbor nejistot a nepřináší nové pojmy nebo další výpočet.
+
+### Doprovodné části
+
+Citace patří k tvrzením, přehled zdrojů a dat může následovat za shrnutím.
+
+Rozbalitelné doplňky slouží samostatné kontrole a opakování postupu. Mohou obsahovat potřebné odvození, identifikátory a koeficienty, technické specifikace, verze a předchozí úpravy dat nebo postup stažení. Rozbor nejistot má rozsah podle oddílu B.2 a neopakuje se v podkladech k příkladu. Přesun zachová zdroje a dohledatelnost. Základní princip a rozhodující kroky zůstávají v prvním oddílu.
+
+## C. Redakční kontrola
+
+Při obsahové kontrole projdeme požadavky oddílu A včetně doplňků. Potom povinně provedeme samostatnou redakci odstavců a vět podle [STYLE.md, oddílu 9](STYLE.md#9-dvě-samostatné-redakční-kontroly), včetně souvislého přečtení hlavního textu a uvedení konkrétních oprav při odevzdání.
+
+Při této kontrole ověříme také definici na začátku, úplnost a návaznost hlavního výkladu, krátké shrnutí nejistot, pozdější umístění příkladu a věcný závěr podle oddílu B. Zvlášť prověříme věty, které přecházejí od vysvětlování fungování k posuzování spolehlivosti. Jejich umístění musí odpovídat úloze dané pasáže a oddílu B.
+
+Hotový článek umožňuje sledovat vznik výsledku, rozumět jeho významu a dohledat jeho oporu. Samotná přítomnost všech oddílů tento cíl nezaručuje.

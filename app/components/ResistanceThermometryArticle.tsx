@@ -462,208 +462,109 @@ export function ResistanceThermometryArticle() {
 
         <h2>Nejistoty a ověření měření</h2>
         <p>
-          Výsledek ovlivňuje kalibrace, postupné změny čidla a výměna tepla s okolím.
-          Sonda může reagovat se zpožděním nebo být ohřátá sluncem či měřicím proudem.
-          Vedle laboratorních kontrol se proto porovnávají i celé sestavy venku.
-          V <SourceLink id="2004_Hubbard_USCRN">pokusu u Lincolnu</SourceLink> se první sonda USCRN
-          v lednu 2003 lišila od dvou srovnávacích přístrojů v měsíčním průměru o +0,07 °C
-          a −0,02 °C. Jde o výsledek konkrétního porovnání.
-          Jemnost zápisu ani shoda několika sond samy neurčují nejistotu měření.
-          Záznam jedné stanice navíc zastupuje její místo, oblastní teplotu získáváme
-          až spojením více stanovišť.
+          Výsledek ovlivňuje kalibrace, změny čidla a výměna tepla s okolím.
+          Sonda může za teplotou vzduchu zaostávat nebo ji ohřívá slunce či měřicí proud.
+          V <SourceLink id="2004_Hubbard_USCRN">terénním pokusu u Lincolnu</SourceLink> se první
+          sonda USCRN v lednu 2003 lišila od dvou srovnávacích přístrojů v měsíčním průměru
+          o +0,07 °C a −0,02 °C. Tyto rozdíly patří danému porovnání.
+          Nejistotu jednotlivého údaje je třeba posoudit podle konkrétního měření.
         </p>
         <details className="method-details">
-          <summary>Podrobnosti kontrol, technických parametrů a nejistot</summary>
-          <h3>Výměna tepla a rychlost odezvy</h3>
+          <summary>Podrobnosti nejistot a ověření</summary>
+          <h3>Výměna tepla s okolím</h3>
           <p>
-            Sonda potřebuje čas, aby se přizpůsobila nové teplotě.
-            Při rychlé změně proto její údaj za okolím zaostává.
-            Pouzdro tlumí krátké výkyvy svou tepelnou setrvačností, tedy tím, že se samo zahřívá
-            a ochlazuje postupně. Další vyhlazení může přinést časové průměrování.
-            Doba odezvy se proto určuje pro konkrétní sondu a prostředí.
-            Zkoušky odezvy a vedení tepla podél sondy popisuje{" "}
+            Sonda se nové teplotě přizpůsobuje postupně. Při rychlé změně proto za okolím
+            zaostává, což ovlivňuje zejména měření během výstupu radiosondy nebo pohybu sondy
+            vodou. Odezva závisí na pouzdře a prostředí. U radiosondy RS41 se opravuje
+            také ohřev sluncem, jak popisuje{" "}
+            <SourceLink id="2017_Vaisala_RS41">technická dokumentace Vaisaly</SourceLink>.
+          </p>
+          <p>
+            Čidlo zahřívá i měřicí proud. Tento samohřev závisí na elektrickém výkonu{" "}
+            <InlineMath tex={String.raw`P = I^2 R`} />, kde <em>P</em> je výkon ve wattech,
+            <em> I</em> proud v ampérech a <em>R</em> odpor v ohmech.
+            Druhá mocnina znamená proud vynásobený sebou samým.
+            Oteplení závisí také na odvodu tepla do okolí. Samohřev zkoušíme změnou proudu
+            při ustálené teplotě.
+          </p>
+          <p>
+            Venku působí také záření, proudění vzduchu a smáčení sondy.
+            Kontrolujeme proto celou sestavu včetně krytu, ventilátoru a přívodů.
+            Zkoušky odezvy, samohřevu a vedení tepla podél sondy shrnuje{" "}
             <SourceLink id="2021_BIPM_IPRT">příručka BIPM</SourceLink>.
           </p>
-          <p>
-            Odezva je zvlášť důležitá při měření vodního profilu nebo při výstupu radiosondy,
-            která postupně prochází místy s různou teplotou.
-            U radiosond se navíc mění podmínky odvodu tepla v řídkém vzduchu a působí ohřev sluncem.{" "}
-            <SourceLink id="2017_Vaisala_RS41">Technická dokumentace Vaisala RS41, kapitola 2</SourceLink>,
-            popisuje opravy slunečního ohřevu a zpomalené odezvy tohoto přístroje.
-          </p>
-          <p>
-            Čidlo zahřívá také proud použitý k měření odporu. Tomuto jevu říkáme samohřev.
-            Elektrický výkon se vypočítá jako{" "}
-            <InlineMath tex={String.raw`P = I^2 R`} />, kde <em>P</em> je výkon ve wattech (W),{" "}
-            <em> I</em> proud v ampérech a <em>R</em> odpor v ohmech.
-            Druhá mocnina proudu znamená proud vynásobený sebou samým.
-            Teplota čidla závisí na tom, jak rychle se toto teplo odvádí do okolí.
-            Stejný výkon proto nemusí způsobit stejné oteplení ve vodě a v klidném vzduchu.
-          </p>
-          <p>
-            Samohřev lze zkoušet při ustálené teplotě změnou měřicího proudu.
-            S proudem se změní i výkon uvolněný v čidle, a můžeme tak posoudit jeho vliv na údaj.
-            Při použití laboratorní kalibrace v terénu je třeba zohlednit rozdílné podmínky
-            odvodu tepla.
-          </p>
-          <p>
-            Venku výměnu tepla ovlivňuje také sluneční záření, proudění vzduchu a případné
-            smáčení sondy. Porucha ventilátoru změní proudění kolem čidla a voda na povrchu
-            jeho výměnu tepla s okolím.
-            Tyto vlivy proto posuzujeme na celé sestavě včetně krytu a ventilátoru.
-          </p>
 
-          <h3>Stabilita čidla a kontrola kalibrace</h3>
+          <h3>Kalibrace a její stálost</h3>
           <p>
-            Stárnutí, mechanické namáhání, znečištění čidla nebo porušení izolace mohou změnit
-            vztah mezi odporem a teplotou. Posun zjistíme opakováním měření při známé teplotě.{" "}
-            <SourceLink id="2013_Diamond_USCRN">Popis údržby USCRN</SourceLink> uvádí výměnu jedné
-            ze tří teplotních sond za nedávno kalibrovanou při každoroční servisní návštěvě.
-            Laboratorní kontrola se tak průběžně propojuje s terénním záznamem.
+            Stárnutí, namáhání nebo znečištění může změnit vztah odporu a teploty.
+            Posun zjistíme opakováním měření při známé teplotě.{" "}
+            <SourceLink id="2013_Diamond_USCRN">USCRN</SourceLink> při každoroční údržbě
+            vyměňuje jednu ze tří sond za nedávno kalibrovanou.
+            Připojením známého rezistoru samostatně prověříme elektroniku.
+            Výměnu tepla s okolím tato zkouška neposoudí.
           </p>
           <p>
-            Elektroniku lze prověřit připojením rezistoru se známým odporem.
-            Taková kontrola vyzkouší elektrickou část měření.
-            Výměnu tepla mezi sondou a prostředím posuzujeme při dalších zkouškách.
-            Kontrola musí odpovídat i použitým přívodům, protože laboratorní kalibrace může
-            proběhnout s jiným kabelem než následné měření v terénu.
-            Změna nebo prodloužení kabelu proto může vyžadovat kontrolu celé sestavy.
-          </p>
-          <p>
-            K nejistotě kalibrace přispívá reference, stejnoměrnost a stabilita lázně,
-            měření odporu i opakovatelnost čidla.
-            Rozdíly mezi kalibračními body a proloženou křivkou vyjadřují jen to,
-            jak dobře křivka tyto body vystihuje. Pro celkovou nejistotu musíme posoudit
-            i ostatní uvedené příspěvky.
-          </p>
-          <p>
-            K nezávislému ověření převodu slouží další měření, která nebyla použita při určení
-            jeho koeficientů.
-            Vztah se kontroluje v celém používaném rozsahu, včetně teplot mezi kalibračními body.
-            Tím zkoušíme, jak se křivka osvědčuje i mimo údaje, podle kterých jsme ji sestavili.
-          </p>
-          <p>
-            Používaný teplotní rozsah vyplývá z konstrukce sondy a její kalibrace.
-            Rozsah samotné rovnice nezaručuje použitelnost každého hotového přístroje.
-            U termistorů mohou některé rozsahy a požadované nejistoty vyžadovat převodní vztah
-            s více členy než uvedená Steinhartova–Hartova rovnice.
-          </p>
-          <p>
-            Kalibrační koeficienty odpovídají konkrétnímu zápisu rovnice.
-            U termistorového vztahu zde používáme číselnou hodnotu odporu v ohmech.
-            Pokud bychom místo ní dosadili hodnotu v kiloohmech, museli bychom přepočítat
-            také koeficienty.
-          </p>
-
-          <h3>Co ukázalo terénní porovnání</h3>
-          <p>
-            <SourceLink id="2004_Hubbard_USCRN">Hubbard, Lin a Baker (2004)</SourceLink> porovnávali
-            od listopadu 2002 do října 2003 u Lincolnu v Nebrasce dvě sestavy USCRN se soustavou
-            R. M. Young a přístrojem <em>Precision Meteorological Thermometer</em>, označeným PMT.
-            Srovnávací přístroje výrobci zkalibrovali před pokusem.
-            V lednu 2003 při 744 hodinách porovnání ukazovala první sonda USCRN v průměru
-            o 0,07 °C více než R. M. Young a o 0,02 °C méně než PMT.
-          </p>
-          <p>
-            Vedle průměrného rozdílu autoři v tabulce 1 původního konferenčního příspěvku uvádějí
-            i směrodatné odchylky 0,09 °C a 0,04 °C.
-            Průměrný rozdíl vyjadřuje vzájemný posun údajů za sledovaný měsíc.
-            Směrodatná odchylka popisuje, jak moc jednotlivé hodinové rozdíly kolísaly kolem tohoto
-            posunu. Doplňuje tak informaci, kterou samotný měsíční průměr neposkytuje.
-          </p>
-          <p>
-            Pokus použil samostatné přístroje a kryty a nová terénní měření.
-            Porovnávané údaje tedy nebyly body použitými při předchozí kalibraci.
-            Všechny přístroje však sledovaly stejné místo a počasí.
-            Autoři zkoumali i souvislost rozdílů se slunečním zářením a zjistili různou odezvu
-            sestav na oslunění. To dokládá význam krytu a dalších podmínek venkovního měření.
-          </p>
-          <p>
-            Z rozdílu dvou přístrojů samotného neurčíme, který je blíže teplotě vzduchu.
-            Případné shodné ovlivnění zářením by porovnání nemuselo odhalit.
-            Uvedené výsledky patří danému pokusu a měsíci, nelze je přiřadit jako nejistotu
-            všem pozdějším údajům USCRN.
-            Také tři stejné sondy na běžné stanici sdílejí typ přístroje, prostředí a zpracování.
-            Jejich souběh pomáhá zachytit jednotlivou závadu a udržet záznam i při výpadku
-            jedné sondy. Společný vliv může zůstat skrytý.
-          </p>
-
-          <h3>Rozlišení a požadovaná přesnost</h3>
-          <p>
-            Označení Pt100 určuje jmenovitý odpor čidla, nikoli nejistotu hotového teploměru.
-            Také rozlišení, krok zápisu a nejistota vyjadřují různé vlastnosti.
-            U pětiminutových dat USCRN krok 0,1 °C říká, jak jemně se teplota zapisuje,
-            délka intervalu pak vymezuje dobu, kterou údaj zastupuje.
-          </p>
-          <p>
-            <SourceLink id="2013_Diamond_USCRN">Tabulka 2 v popisu USCRN</SourceLink> uvádí
-            požadavek přesnosti ±0,3 °C pro teploty od −50 do +50 °C a ±0,6 °C v krajních pásmech
-            od −60 do −50 °C a od +50 do +60 °C.
-            To jsou technické požadavky sítě, nikoli individuální intervaly nejistoty
-            každého řádku veřejných dat.
-          </p>
-          <p>
-            U termistorového přístroje pro Argo{" "}
-            <SourceLink id="2026_SeaBird_SBE41">Sea-Bird SBE 41/41CP Deep, technický list z roku 2026</SourceLink>,
-            výrobce uvádí teplotní rozsah −5 až +35 °C, počáteční přesnost ±0,002 °C
-            a rozlišení 0,0001 °C.
-            Rozlišení označuje jemnost rozlišitelné změny údaje.
-            Počáteční přesnost vymezuje odchylku za podmínek technické specifikace.
-            Uvedené parametry patří tomuto modelu, ne všem termistorům nebo všem plovákům Argo.
-          </p>
-          <h3>Dostupnost a verze dat</h3>
-          <p>
-            <SourceLink id="2026_Argo_Data">Veřejná data Argo</SourceLink> obsahují zpracované
-            teploty spolu s příznaky kvality. Rozlišují také původně vydané a později upravené
-            údaje, takže lze sledovat změny provedené při následném zpracování.
-          </p>
-          <p>
-            Dokumentace zpracování USCRN se také vztahuje k určitým verzím.{" "}
-            <SourceLink id="2017_USCRN_Subhourly_Readme">Subhourly01 README,
-            aktualizovaný 6. července 2017</SourceLink>, zaznamenává například změnu kontroly
-            otáček ventilátorů v roce 2016. Ta může ovlivnit přijatelnost teploty.
-            Pro dohledání konkrétního výsledku proto uchováváme původ dat i použitou verzi dokumentace.
-          </p>
-
-          <h3>Nejistota průměru a rozsah jeho použití</h3>
-          <p>
-            Kalibrační posun společný všem vstupům se přenese i do jejich průměru.
-            Pokud například kalibrace posouvá každou teplotu o stejnou hodnotu stejným směrem,
-            posune se o tutéž hodnotu také průměr.
-            Větší počet měření tento společný vliv neodstraní.
-          </p>
-          <p>
-            Průměr ovlivňuje i zaokrouhlení vstupních hodnot.
-            Jsou-li všechny vstupy zaokrouhlené na nejbližší desetinu stupně, může samotné
-            zaokrouhlení posunout jejich průměr až o 0,05 °C.
-            Počet desetinných míst vzniklých dělením sám nezvýší přesnost původního měření.
+            K nejistotě kalibrace přispívá referenční teploměr, podmínky lázně, měření odporu
+            a opakovatelnost čidla. Pro nezávislé ověření převodní křivky potřebujeme další
+            měření v používaném rozsahu, také mezi kalibračními body.
+            Shoda s body použitými k sestavení křivky sama celkovou nejistotu neurčuje.
           </p>
 
           <p>
-            Nejistotu hodinového průměru nemůžeme odhadnout pouhým sledováním toho,
-            jak moc jeho dvanáct vstupních teplot kolísá.
-            Teplota vzduchu se během hodiny skutečně mění a sousední intervaly spolu souvisejí.
-            Rozptyl hodnot proto mísí změny počasí s vlivy měření.
-            Kalibrační posun navíc může být společný všem vstupům a z jejich vzájemných rozdílů
-            jej nezjistíme. Samotná směrodatná odchylka dvanácti teplot vydělená odmocninou
-            z dvanácti tak není odhadem nejistoty tohoto průměru.
+            Použitelný rozsah určuje konstrukce sondy a její kalibrace.
+            U termistoru může být pro větší rozsah nebo menší nejistotu potřeba převodní rovnice
+            s více členy. Koeficienty vždy odpovídají konkrétnímu zápisu rovnice a jednotkám.
+            Záměna ohmů za kiloohmy proto vyžaduje také jejich přepočet.
+          </p>
+
+          <h3>Porovnání přístrojů v terénu</h3>
+          <p>
+            <SourceLink id="2004_Hubbard_USCRN">Hubbard, Lin a Baker (2004)</SourceLink>{" "}
+            porovnávali u Lincolnu v Nebrasce dvě sestavy USCRN se samostatně kalibrovanými
+            přístroji R. M. Young a <em>Precision Meteorological Thermometer</em> (PMT).
+            Pokus trval od listopadu 2002 do října 2003.
+            Za 744 hodin ledna 2003 ukazovala první sonda USCRN v průměru o 0,07 °C více
+            než R. M. Young a o 0,02 °C méně než PMT.
           </p>
           <p>
-            Místní měření se vztahuje ke stanovišti, na kterém teploměr pracuje.
-            Pro výsledek za větší území propojujeme více stanic.
-            Posuzujeme jejich okolí a jednotlivým měřením přiřazujeme váhy podle zastoupené
-            plochy. Tento postup vysvětluje článek o{" "}
-            <Link href="/pozorovani/gmst">globální teplotě</Link>.
+            Směrodatné odchylky těchto rozdílů byly 0,09 °C a 0,04 °C.
+            Popisují kolísání hodinových rozdílů kolem měsíčního průměru.
+            Porovnání využilo nová terénní měření, nezahrnutá do kalibrace.
+            Přístroje však sdílely místo a počasí a jejich odezva na oslunění se lišila.
+            Výsledky proto patří tomuto pokusu. Společný vliv prostředí může porovnání přehlédnout.
+            Obdobně tři sondy USCRN pomáhají zachytit jednotlivou závadu a překlenout výpadek,
+            ale sdílejí typ přístroje i zpracování.
+          </p>
+
+          <h3>Rozlišení a přesnost</h3>
+          <p>
+            Rozlišení říká, jak malou změnu přístroj rozezná.
+            Nejistota vyjadřuje, jak přesně známe výsledek měření.
+            Pětiminutová data USCRN se zapisují po 0,1 °C.{" "}
+            <SourceLink id="2013_Diamond_USCRN">Požadavky sítě</SourceLink> stanovují přesnost
+            ±0,3 °C mezi −50 a +50 °C a ±0,6 °C v pásmech −60 až −50 °C a +50 až +60 °C.
+            Nejde o nejistotu každého zveřejněného údaje.
           </p>
           <p>
-            Pro dlouhodobý záznam propojujeme také měření z různých dob.
-            USCRN je konkrétní referenční síť, zatímco historická měření mohou pocházet
-            z jiného vybavení. Změna přístroje nebo okolí stanice může v řadě vytvořit skok,
-            který souvisí s podmínkami měření.
-            Rozpoznání a úpravě těchto skoků se věnuje{" "}
+            <SourceLink id="2026_SeaBird_SBE41">Sea-Bird SBE 41/41CP Deep</SourceLink> má podle
+            technického listu z roku 2026 rozsah −5 až +35 °C, počáteční přesnost ±0,002 °C
+            a rozlišení 0,0001 °C. Parametry platí pro tento model a podmínky specifikace.
+          </p>
+
+          <h3>Průměrování a dlouhodobé záznamy</h3>
+          <p>
+            Společný kalibrační posun se přenese i do průměru.
+            Kolísání vstupních teplot navíc zahrnuje skutečné změny počasí a souvislost sousedních
+            intervalů, takže samo neurčuje nejistotu průměru.
+            Zaokrouhlení všech vstupů na nejbližší desetinu stupně může průměr posunout
+            až o 0,05 °C.
+          </p>
+          <p>
+            Oblastní teplotu získáváme{" "}
+            <Link href="/pozorovani/gmst">propojením více stanic podle zastoupené plochy</Link>.
+            Změny přístrojů či okolí mohou vytvořit skok v dlouhodobém záznamu.
+            Jeho rozpoznání a úpravě se věnuje{" "}
             <Link href="/metody/kontrola-kvality-a-homogenizace">kontrola kvality a homogenizace</Link>.
-            Takto propojený teplotní záznam popisuje stav prostředí a jeho změny.
-            Určení příčin změn vyžaduje další poznatky.
           </p>
         </details>
 
@@ -815,12 +716,9 @@ export function ResistanceThermometryArticle() {
             Nepatří sondám stanice Blue Hill ani libovolnému jinému Pt100.
           </p>
           <p>
-            Tabulka 5.3.1 příručky BIPM umožňuje zkontrolovat i opakovatelnost laboratorního čidla.
-            Při prvním a posledním návratu na referenčních 0,0100 °C se odpor změnil
-            z 99,96530 na 99,96272 Ω.
-            Sonda tedy při stejné referenční teplotě nezopakovala přesně stejný odpor.
-            Tuto změnu je třeba zahrnout do posouzení kalibrace spolu s referencemi,
-            podmínkami lázně a měřením odporu.
+            Tabulka 5.3.1 příručky BIPM obsahuje také opakované návraty na referenčních
+            0,0100 °C. Při prvním byl odpor 99,96530 Ω, při posledním 99,96272 Ω.
+            Tyto údaje slouží k posouzení opakovatelnosti čidla.
           </p>
 
           <h3>Samohřev v ilustračním výpočtu</h3>
@@ -847,22 +745,8 @@ export function ResistanceThermometryArticle() {
             Uchováváme původní vybrané řádky, datum stažení a kontrolní součty vybraných
             i celých ročních souborů.
             Značka −9999,0 znamená chybějící údaj a při výpočtu se nesmí použít jako teplota.
-          </p>
-
-          <h3>Co o výsledku Blue Hill víme</h3>
-          <p>
-            Čtyři desetinná místa ve výsledku 5,4083 °C vznikla dělením vstupů zapsaných
-            po desetinách stupně. Vyjadřují výsledek výpočtu, nikoli přesnost čidel.
-            Známe počet a délku intervalů, krok zápisu i postup výpočtu.
-            Použité dva veřejné soubory ale neposkytují všechny číselné příspěvky k nejistotě
-            měření a jejich vzájemné závislosti, tedy úplný rozpočet nejistoty.
-            Neumožňují ani samostatně vyčíslit zbývající vliv záření v této hodině.
-            Takovou nejistotu proto příkladu nepřiřazujeme.
-          </p>
-          <p>
-            Záznam Blue Hill zastupuje toto stanoviště.
-            Pro průměr Massachusetts nebo celé Země bychom potřebovali další stanice
-            a prostorové spojení jejich údajů popsané výše.
+            Tyto soubory neobsahují úplný rozpočet nejistoty hodiny, který by zahrnoval
+            i zbývající vliv záření.
           </p>
 
           <h3>Proč se teplotní extrémy počítají jinak</h3>

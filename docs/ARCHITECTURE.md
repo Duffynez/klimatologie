@@ -1,6 +1,6 @@
 # Architektura Klimatologie.eu
 
-Tento dokument popisuje současný technický stav repozitáře. Odborný obsah článků se řídí soubory `AGENTS.md`, `CONTENT.md`, `METHODS.md` a `MECHANISMS.md`. Společný jazyk a styl stanovuje [STYLE.md](../STYLE.md), srozumitelný výklad [EXPLANATION.md](../EXPLANATION.md).
+Tento dokument popisuje současný technický stav repozitáře. Odborný obsah článků se řídí soubory `AGENTS.md`, `CONTENT.md`, [OBSERVATIONS.md](../OBSERVATIONS.md), `METHODS.md` a `MECHANISMS.md`. Společný jazyk a srozumitelný výklad stanovuje [STYLE.md](../STYLE.md). Podklady pro konkrétní úkol vybíráme podle [AGENTS.md](../AGENTS.md).
 
 ## 1. Základní charakter projektu
 
@@ -100,7 +100,7 @@ Plné odborné články jsou komponenty `app/components/*Article.tsx`. Route jim
 
 - nadřazenou kategorii;
 - nadpis stránky;
-- datum sepsání nebo kontroly;
+- datum poslední úpravy ve formátu podle [STYLE.md](../STYLE.md);
 - úvodní perex;
 - odkaz zpět do katalogu.
 
