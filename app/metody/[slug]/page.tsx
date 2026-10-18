@@ -263,11 +263,11 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Radiosondáž"
-          meta="Napsáno: 4. října 2026 · Odborná revize: 4. října 2026"
+          meta="18. října 2026"
         >
           <p>
-            Jak přístroje pod meteorologickým balonem vytvářejí profil atmosféry.
-            Od odezvy čidel a družicové polohy přes kalibraci a korekce ke skutečnému výstupu z Prahy-Libuše.
+            Jak sonda pod meteorologickým balonem měří teplotu, vlhkost a vítr v různých výškách.
+            Princip měření, vznik výškového profilu a výpočet ze skutečného letu z Prahy-Libuše.
           </p>
         </PageLead>
         <RadiosoundingArticle />
