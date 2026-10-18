@@ -241,11 +241,12 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Hygrometrie"
-          meta="Napsáno: 4. října 2026 · Odborná revize: 4. října 2026"
+          meta="18. října 2026"
         >
           <p>
-            Jak vlhkoměry převádějí odezvu čidla, ochlazení mokrého povrchu nebo vznik rosy na údaj
-            o vlhkosti vzduchu. S kalibrací, porovnáním přístrojů a výpočtem ze skutečných staničních dat.
+            Vodní pára mění elektrické vlastnosti některých materiálů a při ochlazení se sráží
+            v rosu. Vlhkoměry využívají tyto děje k měření vlhkosti vzduchu.
+            Jak jejich údaj vzniká a co znamená pro sledování atmosféry?
           </p>
         </PageLead>
         <HygrometryArticle />
