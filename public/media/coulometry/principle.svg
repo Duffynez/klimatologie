@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="630" viewBox="0 0 900 630">
+<title>Coulometrické měření rozpuštěného uhlíku</title>
+<desc>Uhlík ze známé dávky vody se převede na CO₂. Ten se zachytí v roztoku, jehož kyselost průběžně vyrovnává elektricky vytvářený hydroxid. Měří se celkový prošlý náboj.</desc>
+<defs><marker id="blue" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#35718a"/></marker><marker id="orange" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#b96645"/></marker></defs>
+<rect width="900" height="630" rx="8" fill="#f4f8fa"/>
+<g font-family="Arial, sans-serif" fill="#203e47">
+<text x="38" y="37" font-size="23" font-weight="bold">CO₂ přeneseme do nádoby, kde měříme spotřebu činidla</text>
+<g fill="#e5f1f6" stroke="#769aaa" stroke-width="1.5">
+<rect x="38" y="68" width="235" height="130" rx="10"/>
+<rect x="332" y="68" width="235" height="130" rx="10"/>
+<rect x="626" y="68" width="235" height="130" rx="10"/>
+</g>
+<g font-size="20" text-anchor="middle" font-weight="bold"><text x="155" y="100">1. Známá dávka vody</text><text x="449" y="100">2. Oddělení CO₂</text><text x="743" y="100">3. Úprava plynu</text></g>
+<g font-size="18" text-anchor="middle">
+<text x="155" y="135">Odměřený objem</text><text x="155" y="161">+ hustota → hmotnost</text>
+<text x="449" y="135">Kyselina uvolní CO₂</text><text x="449" y="161">Nosný plyn jej odnese</text>
+<text x="743" y="135">Odstranění vodní páry</text><text x="743" y="161">a unášené kyseliny</text>
+</g>
+<g fill="none" stroke="#35718a" stroke-width="3" marker-end="url(#blue)"><path d="M273 137H322"/><path d="M567 137H616"/><path d="M743 198V229H190V267"/></g>
+<text x="393" y="220" font-size="17" fill="#35718a">Proud nosného plynu s CO₂</text>
+<rect x="38" y="280" width="823" height="218" rx="12" fill="#e8f1ed" stroke="#709487" stroke-width="1.5"/>
+<text x="62" y="310" font-size="21" font-weight="bold">4. Měřicí nádoba coulometru</text>
+<g font-size="19">
+<text x="64" y="353">CO₂ se zachytí</text><text x="64" y="379">v roztoku s ethanolaminem</text><text x="64" y="419" font-weight="bold">Vzniká H⁺</text>
+<text x="383" y="353">Barvivo ukazuje</text><text x="383" y="379">změnu kyselosti</text><text x="383" y="419" font-weight="bold">Světelný detektor</text>
+<text x="660" y="353">Proud na katodě</text><text x="660" y="379">vytváří OH⁻</text><text x="660" y="419" font-weight="bold">H⁺ + OH⁻ → voda</text>
+</g>
+<g fill="none" stroke="#b96645" stroke-width="3" marker-end="url(#orange)"><path d="M305 403H367"/><path d="M570 403H645"/><path d="M746 435V462H463V435"/></g>
+<text x="486" y="486" font-size="16" fill="#8f4d35">Obnovení původní barvy</text>
+<path d="M746 498V533" fill="none" stroke="#b96645" stroke-width="3" marker-end="url(#orange)"/>
+<rect x="38" y="546" width="823" height="60" rx="10" fill="#fff" stroke="#b96645" stroke-width="1.5"/>
+<text x="450" y="583" font-size="20" text-anchor="middle">Sečtený náboj → kalibrace → množství uhlíku na kilogram vody</text>
+</g></svg>

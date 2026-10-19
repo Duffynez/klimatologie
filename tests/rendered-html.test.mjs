@@ -2355,3 +2355,73 @@ test("reproduces the initial Gran estimate without claiming to repeat the final 
     assert.deepEqual(await readFile(new URL("dist/client/data/methods/titration/" + file, root)), await readFile(new URL(file, base)));
   }
 });
+
+test("publishes coulometry with a complete charge-to-carbon explanation and open evidence", async () => {
+  const [html, source, catalogue, observation] = await Promise.all([
+    readFile(new URL("dist/client/metody/coulometrie/index.html", root), "utf8"),
+    readFile(new URL("app/components/CoulometryArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/acidifikace-oceanu/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.match(html, /<p class="page-lead__meta">19\. října 2026<\/p>/);
+  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]).slice(1), [
+    "Jak elektrický náboj určí množství uhlíku", "Nejistoty a ověření",
+    "Příklad: dva rozbory z původního výpisu přístroje", "Shrnutí",
+  ]);
+  assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
+  assert.match(body, /Místo ani datum odběru nejsou uvedeny/);
+  assert.match(body, /2122,132 µmol\/kg/);
+  assert.doesNotMatch(body, /_vinext\/image|katex-error/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  assert.match(observation, /href="\/metody\/coulometrie"/);
+  const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
+  assert.ok(ids.length >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
+    assert.ok(card, "Missing coulometry source " + id);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const href = match[1];
+    const file = /\.[a-z0-9]+$/i.test(href) ? href : href.replace(/\/$/, "") + "/index.html";
+    await readFile(new URL("dist/client" + file, root));
+  }
+});
+
+test("reproduces both original SOMMA sample analyses from all twenty published readings", async () => {
+  const base = new URL("public/data/methods/coulometry/", root);
+  const meta = JSON.parse(await readFile(new URL("example.json", base), "utf8"));
+  const csv = (await readFile(new URL("somma-1992-counts.csv", base), "utf8")).replace(/\r\n/g, "\n");
+  assert.equal(createHash("sha256").update(csv).digest("hex"), meta.csv_sha256_lf);
+  assert.equal(meta.source_doi, "10.2172/10194787");
+  const rows = csv.trim().split("\n").slice(1).map(r => r.split(",").map(Number));
+  assert.equal(rows.length, 20);
+  const concentrations = [];
+  for (const replicate of [1, 2]) {
+    const series = rows.filter(r => r[0] === replicate);
+    assert.deepEqual(series.map(r => r[1]), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+    const count = series.at(-1)[2];
+    assert.equal(count, replicate === 1 ? 301133 : 301107);
+    const amount = (
+      count / meta.counts_per_umol_nominal
+      - meta.background_umol_per_min * meta.analysis_duration_min
+      - meta.electronic_intercept_umol_per_min * meta.significant_current_duration_min
+    ) / meta.electronic_slope;
+    assert.ok(Math.abs(amount - meta.published_corrected_umol[replicate - 1]) < 0.000005);
+    const concentration = amount * meta.gas_calibration_factor * meta.published_volume_factor_per_kg;
+    concentrations.push(concentration);
+  }
+  assert.deepEqual(concentrations.map(v => v.toFixed(3)), ["2122.224", "2122.041"]);
+  assert.equal(((concentrations[0] + concentrations[1]) / 2).toFixed(3), meta.published_mean_umol_per_kg.toFixed(3));
+  assert.match(meta.sample_context, /collection place, collection date and identifier are not provided/);
+  assert.match(meta.reported_result_stage, /No additional preservative or headspace correction/);
+  for (const file of ["somma-1992-counts.csv", "example.json", "reproduce.py"]) {
+    assert.deepEqual(await readFile(new URL("dist/client/data/methods/coulometry/" + file, root)), await readFile(new URL(file, base)));
+  }
+});

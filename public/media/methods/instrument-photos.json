@@ -250,5 +250,19 @@
     "width": 688,
     "height": 542,
     "sha256": "afdfe40f7d80aa67eca39876cc6a45ad2e1e4e8925ded49a0ede4131598ce70b"
+  },
+  {
+    "file": "/media/coulometry/coulometer-usgs.jpg",
+    "sourceId": "2018_USGS_Coulometer_Photo",
+    "sourcePage": "https://www.usgs.gov/media/images/coulmeter",
+    "downloadUrl": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/Coulometer_amann.JPG",
+    "credit": "Adrian Mann / U.S. Geological Survey, Woods Hole Coastal and Marine Science Center. Published November 6, 2018. Capture date and precise model are not specified on the source page.",
+    "licence": "Public Domain, explicitly stated on the USGS image page",
+    "licenceUrl": "https://www.usgs.gov/media/images/coulmeter",
+    "accessed": "2026-10-19",
+    "changes": "None. Original JPEG bytes retained.",
+    "width": 2868,
+    "height": 4032,
+    "sha256": "a27a2e8b10627c6d17e3e047a2bfe740ee46d648536272d219222b04327c6767"
   }
 ]

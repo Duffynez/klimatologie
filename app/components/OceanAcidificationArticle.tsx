@@ -222,7 +222,9 @@ export function OceanAcidificationArticle() {
           náboje spotřebovaného při navazující reakci. Výsledný náboj se po odečtení pozadí a kalibraci převede
           na množství uhlíku v kilogramu původní vody. Laboratoř tedy změří společný součet, nikoli každou
           rozpuštěnou formu zvlášť. Svůj postup a laboratorní přesnost i správnost přibližně ±0,05 % uvádí{" "}
-          <SourceLink id="WEB_NOAA_Laboratory_Analysis_1a101421">laboratoř NOAA PMEL</SourceLink>.
+          <SourceLink id="WEB_NOAA_Laboratory_Analysis_1a101421">laboratoř NOAA PMEL</SourceLink>.{" "}
+          Vznik měřicího signálu a převod náboje na množství uhlíku vysvětluje{" "}
+          <Link href="/metody/coulometrie">článek o coulometrii</Link>.
         </p>
 
         <h3>Celková alkalinita: titrace známou kyselinou</h3>

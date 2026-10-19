@@ -1,0 +1,39 @@
+{
+  "title": "SOMMA analysis printout, Johnson 1992, Figure 10",
+  "source_id": "DOI_10_2172_10194787",
+  "source_url": "https://digital.library.unt.edu/ark:/67531/metadc1395112/m2/1/high_res_d/10194787.pdf",
+  "source_doi": "10.2172/10194787",
+  "source_version": "SOMMA Manual, Version 1.0, January 1992",
+  "source_pages": "Printed pp. 45-50, PDF pp. 52-57. Figure 10 on printed p. 50.",
+  "accessed": "2026-10-19",
+  "sample_context": "Two replicate analyses from the original printed instrument record. Sample collection place, collection date and identifier are not provided. The earlier system-cleaning readings are separate and are not included in the CSV.",
+  "data_level": "20 cumulative instrument counts, transcribed from Figure 10. The calculation uses the final reading of each replicate and the published calibration inputs. The record provides counts, not the continuous current waveform.",
+  "selection": "All ten minute readings from each of the two sample analyses. No interpolation or rejected values. Use minute 10 as the final reading.",
+  "counts_per_umol_nominal": 4824.45,
+  "historical_faraday_C_per_mol": 96489,
+  "historical_scaling_note": "The 1992 manual uses F = 96489 C/mol and a nominal 10000 counts/s at 0.200 A. Preserve the published count scale for reproduction, not as the modern Faraday constant.",
+  "background_umol_per_min": 0.002901885,
+  "analysis_duration_min": 10,
+  "electronic_slope": 1.000046,
+  "electronic_intercept_umol_per_min": 0.0004151785,
+  "significant_current_duration_min": 4,
+  "gas_calibration_factor": 1.002843,
+  "sample_salinity": 34.9,
+  "sample_temperature_C": 10.02,
+  "sample_density_g_per_ml": 1.026871,
+  "sample_volume_ml": 28.70801,
+  "published_volume_factor_per_kg": 33.92198,
+  "published_corrected_umol": [
+    62.38455,
+    62.37916
+  ],
+  "published_final_umol_per_kg": [
+    2122.224,
+    2122.04
+  ],
+  "published_mean_umol_per_kg": 2122.132,
+  "reported_result_stage": "Instrument printout concentration, with electronic/background correction and gas calibration. No additional preservative or headspace correction is invented.",
+  "rounding": "Use the printed volume factor to reproduce printed results. Recalculating it from rounded volume and density changes concentrations by approximately 0.00084 umol/kg.",
+  "csv_sha256_lf": "8f788ce5fff291c50c8d3a4d7ee83f12a992f4a275002e76b24da163386c9de2",
+  "source_pdf_sha256": "c0f2efefd9ffcb62d713757d284a5e1eccff3352151d9388d5b8900e271caf0c"
+}

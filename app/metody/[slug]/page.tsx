@@ -1,3 +1,4 @@
+import { CoulometryArticle } from "../../components/CoulometryArticle";
 import { TitrationArticle } from "../../components/TitrationArticle";
 import { PotentiometryArticle } from "../../components/PotentiometryArticle";
 import { SpectrophotometryArticle } from "../../components/SpectrophotometryArticle";
@@ -83,6 +84,18 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "coulometrie") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Coulometrie" meta="19. října 2026">
+          <p>Jak elektrický proud vytváří měřicí činidlo a prošlý náboj umožňuje určit množství rozpuštěného anorganického uhlíku v mořské vodě.</p>
+        </PageLead>
+        <CoulometryArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "titrace") {
