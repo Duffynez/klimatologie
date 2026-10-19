@@ -2286,3 +2286,72 @@ test("reproduces published potentiometric control results and the SOP 6a illustr
     assert.deepEqual(await readFile(new URL("dist/client/data/methods/potentiometry/" + file, root)), await readFile(new URL(file, base)));
   }
 });
+
+test("publishes titration with open sources, full data and a clearly scoped calculation", async () => {
+  const [html, source, catalogue, observation] = await Promise.all([
+    readFile(new URL("dist/client/metody/titrace/index.html", root), "utf8"),
+    readFile(new URL("app/components/TitrationArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/acidifikace-oceanu/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.match(html, /<p class="page-lead__meta">19\. října 2026<\/p>/);
+  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]).slice(1), [
+    "Jak ze spotřeby kyseliny zjistíme alkalinitu", "Nejistoty a ověření", "Příklad: přepočet zveřejněné titrace", "Shrnutí",
+  ]);
+  assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
+  assert.match(body, /Konečnou hodnotu zde přebíráme ze zdroje/);
+  assert.match(body, /Příručka u tohoto vzorku neuvádí místo ani datum odběru/);
+  assert.doesNotMatch(body, /_vinext\/image|katex-error/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  assert.match(observation, /href="\/metody\/titrace"/);
+  const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
+  assert.ok(ids.length >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
+    assert.ok(card, "Missing titration source " + id);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const href = match[1];
+    const file = /\.[a-z0-9]+$/i.test(href) ? href : href.replace(/\/$/, "") + "/index.html";
+    await readFile(new URL("dist/client" + file, root));
+  }
+});
+
+test("reproduces the initial Gran estimate without claiming to repeat the final nonlinear fit", async () => {
+  const base = new URL("public/data/methods/titration/", root);
+  const meta = JSON.parse(await readFile(new URL("example.json", base), "utf8"));
+  const csv = (await readFile(new URL("sop3b-titration.csv", base), "utf8")).replace(/\r\n/g, "\n");
+  assert.equal(createHash("sha256").update(csv).digest("hex"), meta.csv_sha256_lf);
+  const rows = csv.trim().split("\n").slice(1).map(r => r.split(",").map(Number));
+  assert.equal(rows.length, 22);
+  assert.deepEqual(rows[0], [3.5, 0.18607, 1]);
+  assert.deepEqual(rows.at(-1), [4.55, 0.21820, 0]);
+  const selected = rows.filter(r => r[2] === 1);
+  assert.equal(selected.length, 21);
+  const m0 = meta.sample_mass_kg;
+  const q = meta.gas_constant_J_per_mol_K * (meta.temperature_C + 273.15) / meta.faraday_constant_C_per_mol;
+  const x = selected.map(r => r[0] * meta.acid_density_g_per_ml / 1000);
+  const y = selected.map((r, i) => (m0 + x[i]) * Math.exp((r[1] - meta.gran_reference_potential_V) / q));
+  const mean = a => a.reduce((s, v) => s + v, 0) / a.length;
+  const mx = mean(x), my = mean(y);
+  const slope = x.reduce((s, v, i) => s + (v - mx) * (y[i] - my), 0) / x.reduce((s, v) => s + (v - mx) ** 2, 0);
+  const intercept = my - slope * mx;
+  const equivalence = -intercept / slope;
+  const estimate = equivalence * meta.acid_concentration_mol_per_kg_solution / m0 * 1e6;
+  assert.ok(Math.abs(equivalence - 0.0031614268491929165) < 1e-12);
+  assert.equal(estimate.toFixed(2), "2263.38");
+  assert.equal(meta.published_final_alkalinity_umol_per_kg, 2260.06);
+  assert.equal((estimate - meta.published_final_alkalinity_umol_per_kg).toFixed(2), "3.32");
+  assert.match(meta.data_level, /initial Gran estimate only/);
+  assert.match(meta.data_level, /final nonlinear result is quoted/);
+  for (const file of ["sop3b-titration.csv", "example.json", "reproduce.py"]) {
+    assert.deepEqual(await readFile(new URL("dist/client/data/methods/titration/" + file, root)), await readFile(new URL(file, base)));
+  }
+});

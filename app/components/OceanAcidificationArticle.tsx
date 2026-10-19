@@ -235,6 +235,8 @@ export function OceanAcidificationArticle() {
           <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">standardním pracovním postupu 3b příručky (2007)</SourceLink>{" "}
           stanoveny cíle opakovatelnosti pod 1 a systematické odchylky pod 2 mikromoly na kilogram. Alkalinita
           vyjadřuje jinou vlastnost vzorku než pH, a obě veličiny se proto mohou měnit odlišně.
+          Princip reakce, práci přístroje a přepočet titrační křivky vysvětluje{" "}
+          <Link href="/metody/titrace">článek o titraci</Link>.
         </p>
 
         <h3>Množství rozpuštěného CO₂</h3>

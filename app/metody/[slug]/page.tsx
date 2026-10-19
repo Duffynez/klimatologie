@@ -1,3 +1,4 @@
+import { TitrationArticle } from "../../components/TitrationArticle";
 import { PotentiometryArticle } from "../../components/PotentiometryArticle";
 import { SpectrophotometryArticle } from "../../components/SpectrophotometryArticle";
 import { IsotopeMassSpectrometryArticle } from "../../components/IsotopeMassSpectrometryArticle";
@@ -82,6 +83,18 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "titrace") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Titrace" meta="19. října 2026">
+          <p>Titrace určuje množství reagujících látek podle spotřeby známého činidla. Při rozboru mořské vody tak získáváme celkovou alkalinitu, jeden z podkladů pro sledování acidifikace oceánu.</p>
+        </PageLead>
+        <TitrationArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "potenciometrie") {

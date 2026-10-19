@@ -236,5 +236,19 @@
     "width": 873,
     "height": 582,
     "sha256": "777b47b6a88b203c35da77116c0acb0d31315fc7157aa2d6b538e25943cbb66e"
+  },
+  {
+    "file": "/media/titration/vindta-noc.jpg",
+    "sourceId": "2011_Hartman_VINDTA",
+    "sourcePage": "https://nora.nerc.ac.uk/id/eprint/275961/",
+    "downloadUrl": "https://nora.nerc.ac.uk/id/eprint/275961/1/NOC_ID_01.pdf",
+    "credit": "S. E. Hartman, C. Dumousseaud and A. Roberts (2011), National Oceanography Centre Internal Document 01, Figure 1.1, p. 9. NERC Open Research Archive (NORA). Individual photographer and capture date not stated. No separate copyright notice appears in this deposited report.",
+    "licence": "NORA Access/use policy: unmodified educational reuse with authors, full bibliographic citation, original metadata link and any original copyright notice",
+    "licenceUrl": "https://nora.nerc.ac.uk/policies.html",
+    "accessed": "2026-10-19",
+    "changes": "None. Original embedded JPEG extracted from PDF page 9, xref 30. VINDTA 3C laboratory system for the DEFRApH ocean-acidification project. Its instrument-specific workflow is distinguished from SOP 3b in the caption.",
+    "width": 688,
+    "height": 542,
+    "sha256": "afdfe40f7d80aa67eca39876cc6a45ad2e1e4e8925ded49a0ede4131598ce70b"
   }
 ]
