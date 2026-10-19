@@ -1,0 +1,46 @@
+{
+  "title": "Reproduction of NOAA Analysis of Methane in Air, Table A1",
+  "source": {
+    "id": "2015_NOAA_CH4_Analysis",
+    "title": "Analysis of Methane in Air",
+    "institution": "NOAA ESRL Global Monitoring Division",
+    "version": "1.2.1",
+    "date": "2015-09-22",
+    "url": "https://gml.noaa.gov/ccl/docs/TP_analysis_CH4_v1.2.1.pdf",
+    "printed_page": 8,
+    "pdf_page": 9,
+    "sha256": "2d7f81ea8a9fbe196643f415509d58d78befd2d1c9e2ccaf008a29be037b16f3"
+  },
+  "accessed": "2026-10-19",
+  "measurement_date": "2015-07-23",
+  "selection": "All 41 records in Table A1: 20 unknown-sample injections and 21 bracketing reference injections. No filtering or invented inputs.",
+  "table": {
+    "file": "noaa-table-a1.csv",
+    "type": "Transcription, not raw chromatograms",
+    "sha256_lf": "0245856c991380749b86c2c91d78a79ee7fa8193c974464f96ee38f2b67952a9",
+    "columns": {
+      "date": "Date as printed",
+      "time": "Time as printed, time zone unspecified",
+      "port": "S = unknown sample, R = reference",
+      "baseline_code": "BB copied unchanged, not interpreted or used in the calculation",
+      "area": "Peak area in the instrument units of the original table, physical unit not specified",
+      "reported_ratio": "NOAA response ratio, printed to nine decimal places",
+      "reported_ch4_ppb": "NOAA calibrated dry-air mole fraction in ppb, input to the mean calculation"
+    }
+  },
+  "calibration_scale": "WMO CH4 X2004A, as specified by the technical procedure",
+  "calculation": "For each S row divide its area by the arithmetic mean of the immediately preceding and following R areas. Compare with published ratios. Compute the arithmetic mean and sample standard deviation (N-1 denominator) of the 20 published ppb values.",
+  "scope": "Original chromatograms and numerical calibration coefficients are not provided in Table A1. The ratio-to-ppb conversion is not reproduced or inferred by fitting the rounded outputs.",
+  "result": {
+    "reference_mean_first": 8224596.5,
+    "ratio_first": 0.9987438289525814,
+    "sum_ppb": 37035.83,
+    "mean_ppb": 1851.7915,
+    "published_mean_ppb": 1851.79,
+    "published_sample_sd_ppb": 0.74,
+    "n": 20
+  },
+  "license": "Public Domain",
+  "license_url": "https://gml.noaa.gov/about/disclaimer.html",
+  "credit": "Data provided by NOAA Global Monitoring Laboratory, Boulder, Colorado, USA. Transcription, calculation and figure by Klimatologie.eu."
+}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500" role="img" aria-labelledby="title desc">
+  <title id="title">Schematický pík metanu</title>
+  <desc id="desc">Elektrická odezva v čase. Plocha nad základní úrovní je modrá. Svislice od maxima označuje retenční čas. Ilustrace bez naměřených dat.</desc>
+  <rect width="1000" height="500" fill="white"/>
+  <g font-family="Arial, sans-serif" font-size="25" fill="#203440">
+    <path d="M110 60 V400 H950" fill="none" stroke="#203440" stroke-width="2"/>
+    <path d="M110 60 l-6 12 m6-12 l6 12 M950 400 l-12-6 m12 6 l-12 6" fill="none" stroke="#203440" stroke-width="2"/>
+    <text transform="translate(42 270) rotate(-90)" text-anchor="middle">Elektrická odezva</text>
+    <text x="525" y="475" text-anchor="middle">Čas od vpuštění vzorku</text>
+    <path d="M340 350 C430 350 455 342 490 285 C530 218 540 110 590 110 C642 110 656 225 695 285 C730 340 770 350 850 350 Z" fill="#c2dfec"/>
+    <path d="M110 350 H340 C430 350 455 342 490 285 C530 218 540 110 590 110 C642 110 656 225 695 285 C730 340 770 350 850 350 H940" fill="none" stroke="#246e97" stroke-width="4"/>
+    <path d="M110 350 H940" stroke="#7d888e" stroke-width="2"/>
+    <path d="M590 110 V400" stroke="#b86624" stroke-width="2" stroke-dasharray="7 7"/>
+    <text x="590" y="77" text-anchor="middle">Pík metanu</text>
+    <text x="590" y="436" text-anchor="middle" fill="#97511c">Retenční čas</text>
+    <text x="170" y="318" font-size="23">Základní úroveň</text>
+    <text x="725" y="185" fill="#246e97">Plocha píku</text>
+    <path d="M727 200 L674 277" fill="none" stroke="#246e97" stroke-width="2"/>
+  </g>
+</svg>

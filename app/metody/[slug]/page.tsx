@@ -1,3 +1,4 @@
+import { GasChromatographyArticle } from "../../components/GasChromatographyArticle";
 import { PhenologyMonitoringArticle } from "../../components/PhenologyMonitoringArticle";
 import { ThawDepthArticle } from "../../components/ThawDepthArticle";
 import { GlacierBalanceArticle } from "../../components/GlacierBalanceArticle";
@@ -77,6 +78,18 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "plynova-chromatografie") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Plynová chromatografie" meta="19. října 2026">
+          <p>Jak oddělení plynů ve vzorku a porovnání s referenčními směsmi umožňují měřit zastoupení metanu ve vzduchu.</p>
+        </PageLead>
+        <GasChromatographyArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "standardizovane-fenologicke-pozorovani") {

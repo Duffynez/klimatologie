@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SourceLink } from "./SourceLink";
 
 export function AtmosphericCo2Article() {
@@ -202,6 +203,9 @@ export function AtmosphericCo2Article() {
           okolnosti odběru a uzavřené baňky putují do centrální laboratoře. Tatáž porce vzduchu se tam může
           analyzovat na CO₂ i na desítky dalších plynů a izotopů. Dvojice vzorků slouží také jako kontrola, zda se
           při odběru nebo přepravě nestala chyba.
+          Při rozboru metanu a dalších plynů se uplatňuje také <Link href="/metody/plynova-chromatografie">plynová chromatografie</Link>,
+          která složky vzduchu před měřením odděluje. Její místo mezi analyzátory ukazuje{" "}
+          <SourceLink id="WEB_NOAA_Aircraft_Analysis">popis laboratorní sestavy NOAA</SourceLink>.
         </p>
 
         <figure className="article-figure article-figure--sample">

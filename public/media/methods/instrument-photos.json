@@ -166,5 +166,19 @@
     "width": 1280,
     "height": 960,
     "sha256": "8c3465214aa7d37f155a90a3b31c6d64fe6e83bb5460fc30526fc4f565288708"
+  },
+  {
+    "file": "/media/gas-chromatography/noaa-analysis-system.jpg",
+    "sourceId": "WEB_NOAA_Aircraft_Analysis",
+    "sourcePage": "https://gml.noaa.gov/ccgg/aircraft/analysis.html",
+    "downloadUrl": "https://gml.noaa.gov/ccgg/aircraft/images/analysis_system.jpg",
+    "credit": "NOAA Global Monitoring Laboratory, Boulder, Colorado, USA",
+    "licence": "Public Domain",
+    "licenceUrl": "https://gml.noaa.gov/about/disclaimer.html",
+    "accessed": "2026-10-19",
+    "changes": "None. Original image including English instrument labels. Date taken and individual photographer are not specified. Shows the laboratory system, not a single exposed detector.",
+    "width": 563,
+    "height": 413,
+    "sha256": "406c9fd583747a97bbf19731e40ad542eab67195f928a1368741a713e8cf77a2"
   }
 ]

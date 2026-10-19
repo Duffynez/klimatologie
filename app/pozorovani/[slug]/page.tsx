@@ -73,7 +73,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Atmosféra"
           title="Oxid uhličitý v atmosféře"
-          meta="Napsáno: 31. července 2026"
+          meta="19. října 2026"
         >
           <p>
             Co přesně znamená údaj v ppm, jak se CO₂ měří na stanicích, v odebraném vzduchu, v ledu a z družic a

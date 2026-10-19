@@ -417,7 +417,8 @@ test("publishes a sourced atmospheric carbon dioxide article instead of the gene
 
   assert.match(evidencePage, /AtmosphericCo2Article/);
   assert.match(evidencePage, /title="Oxid uhličitý v atmosféře"/);
-  assert.match(evidencePage, /Napsáno: 31\. července 2026/);
+  assert.match(evidencePage, /title="Oxid uhličitý v atmosféře"\s+meta="19\. října 2026"/);
+  assert.match(article, /href="\/metody\/plynova-chromatografie"/);
   assert.match(article, /Atmosférický oxid uhličitý popisujeme podílem molekul CO₂ v suchém vzduchu/);
   assert.match(article, /Potřebné informace/);
   assert.equal((article.match(/<dt>/g) ?? []).length, 4);
@@ -1185,6 +1186,7 @@ test("exports typeset equations and accessible fractions across every method art
     ["GlacierBalanceArticle", "terenni-mereni-bilance-ledovcu"],
     ["ThawDepthArticle", "mereni-hloubky-sezonniho-rozmrzani"],
     ["PhenologyMonitoringArticle", "standardizovane-fenologicke-pozorovani"],
+    ["GasChromatographyArticle", "plynova-chromatografie"],
   ];
   for (const [component, slug] of methods) {
     const [source, html] = await Promise.all([
@@ -1908,6 +1910,72 @@ test("preserves the phenology snapshot and brackets onset with actual negative a
   assert.match(metadata.acknowledgement, /National Ecological Observatory Network/);
   for (const file of ["harvard-leaves.json", "selected-visits.csv", "example.json", "reproduce.py", "plot.py", "leaf-onset.png"]) {
     assert.deepEqual(await readFile(new URL(`dist/client/data/methods/phenology-monitoring/${file}`, root)), await readFile(new URL(file, base)));
+  }
+});
+
+test("publishes the complete chromatography method with accessible sources and reproducible inputs", async () => {
+  const [html, source, catalogue] = await Promise.all([
+    readFile(new URL("dist/client/metody/plynova-chromatografie/index.html", root), "utf8"),
+    readFile(new URL("app/components/GasChromatographyArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<div class="article-prose">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "A full article must replace the catalogue placeholder");
+  assert.equal((body.match(/<h2>/g) ?? []).length, 4);
+  assert.equal((body.match(/<details\b/g) ?? []).length, 2);
+  assert.match(html, /<p class="page-lead__meta">19\. října 2026<\/p>/);
+  assert.match(body, /noaa-analysis-system\.jpg/);
+  assert.match(body, /class="method-flow__track"/);
+  assert.match(body, /repeated-analyses\.png/);
+  assert.match(body, /<strong>1 851,79 ppb<\/strong>/);
+  assert.match(body, /koeficienty tehdejší křivky tabulka neobsahuje/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
+  assert.ok(ids.length >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp(`<article[^>]*id="${id}"[\\s\\S]*?<\\/article>`))?.[0];
+    assert.ok(card, `Missing chromatography source ${id}`);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const href = match[1];
+    const file = /\.[a-z0-9]+$/i.test(href) ? href : `${href.replace(/\/$/, "")}/index.html`;
+    await readFile(new URL(`dist/client${file}`, root));
+  }
+});
+
+test("recomputes the NOAA chromatographic response ratios and mean from all twenty analyses", async () => {
+  const base = new URL("public/data/methods/gas-chromatography/", root);
+  const meta = JSON.parse(await readFile(new URL("example.json", base), "utf8"));
+  const csv = (await readFile(new URL("noaa-table-a1.csv", base), "utf8")).replace(/\r\n/g, "\n");
+  assert.equal(createHash("sha256").update(csv).digest("hex"), meta.table.sha256_lf);
+  const rows = csv.trim().split("\n").slice(1).map((line) => line.split(","));
+  assert.equal(rows.length, 41);
+  const values = [];
+  for (let i = 0; i < rows.length; i++) {
+    assert.equal(rows[i][0], "2015-07-23");
+    assert.equal(rows[i][2], i % 2 ? "S" : "R");
+    if (i % 2) {
+      const ratio = Number(rows[i][4]) / ((Number(rows[i - 1][4]) + Number(rows[i + 1][4])) / 2);
+      assert.ok(Math.abs(ratio - Number(rows[i][5])) <= 0.5e-9, `NOAA ratio at ${rows[i][1]}`);
+      values.push(Number(rows[i][6]));
+    }
+  }
+  assert.equal(values.length, 20);
+  assert.equal(rows[1][4], "8214265");
+  const mean = values.reduce((a, b) => a + b, 0) / values.length;
+  const sd = Math.sqrt(values.reduce((sum, x) => sum + (x - mean) ** 2, 0) / (values.length - 1));
+  assert.ok(Math.abs(mean - 1851.7915) < 1e-9);
+  assert.equal(Number(sd.toFixed(2)), 0.74);
+  assert.equal(meta.result.mean_ppb, 1851.7915);
+  assert.equal(meta.license, "Public Domain");
+  assert.match(meta.scope, /conversion is not reproduced/);
+  for (const file of ["noaa-table-a1.csv", "example.json", "reproduce.py", "plot.py", "repeated-analyses.png"]) {
+    assert.deepEqual(await readFile(new URL(`dist/client/data/methods/gas-chromatography/${file}`, root)), await readFile(new URL(file, base)));
   }
 });
 
