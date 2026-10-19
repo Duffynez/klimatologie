@@ -983,7 +983,8 @@ test("publishes a sourced phenology article with organism, camera, and satellite
   assert.match(evidencePage, /PhenologyArticle/);
   assert.match(evidencePage, /title="Sezónní jevy v živé přírodě"/);
   assert.match(evidencePage, /Napsáno: 1\. srpna 2026/);
-  assert.match(article, /Fenologické pozorování je datum nebo sled opakovaných záznamů/);
+  assert.match(article, /Fenologické pozorování/);
+  assert.match(article, /je datum nebo sled opakovaných záznamů/);
   assert.equal((article.match(/<dt>/g) ?? []).length, 4);
   assert.match(article, /<dt>Fenologie<\/dt>/);
   assert.match(article, /<dt>Fenofáze<\/dt>/);
@@ -1046,7 +1047,8 @@ test("renders public phenology sources and preserves the meaning of dates and sa
   assert.match(articleHtml, /15 % tedy neznamená, že 15 % stromů má listy/);
   assert.match(articleHtml, /VNP22Q2\.002 poskytuje výsledky od roku 2013/);
   assert.match(articleHtml, /Není to soubor všech 419 354 původních pozorování/);
-  assert.match(articleHtml, /Odborná revize: 3\. října 2026/);
+  assert.match(articleHtml, /<p class="page-lead__meta">19\. října 2026<\/p>/);
+  assert.match(articleHtml, /href="\/metody\/standardizovane-fenologicke-pozorovani\/?"/);
   assert.doesNotMatch(articleHtml, /Brügger a Vassella|Reed et al\., 1994|125 000 měření v čase/);
   assert.equal((articleHtml.match(/class="article-figure__scroll"/g) ?? []).length, 3);
 });
@@ -1182,6 +1184,7 @@ test("exports typeset equations and accessible fractions across every method art
     ["SnowMeasurementArticle", "mereni-vysky-hustoty-a-vodni-hodnoty-snehu"],
     ["GlacierBalanceArticle", "terenni-mereni-bilance-ledovcu"],
     ["ThawDepthArticle", "mereni-hloubky-sezonniho-rozmrzani"],
+    ["PhenologyMonitoringArticle", "standardizovane-fenologicke-pozorovani"],
   ];
   for (const [component, slug] of methods) {
     const [source, html] = await Promise.all([
@@ -1195,7 +1198,9 @@ test("exports typeset equations and accessible fractions across every method art
     assert.equal((body.match(/class="article-math"/g) ?? []).length,
       (source.match(/<InlineMath\b/g) ?? []).length, `${slug}: inline math is exported`);
     assert.doesNotMatch(body, /katex-error|article-formula|method-equation/);
-    assert.match(body, /<mfrac>/, `${slug}: fractions have a numerator and denominator`);
+    if (source.includes("\\frac")) {
+      assert.match(body, /<mfrac>/, `${slug}: fractions have a numerator and denominator`);
+    }
     const mathCount = (body.match(/<math\b/g) ?? []).length;
     assert.ok(mathCount > 0, slug);
     assert.equal((body.match(/class="katex-html" aria-hidden="true"/g) ?? []).length, mathCount,
@@ -1835,6 +1840,75 @@ test("preserves the GTN-P snapshot and excludes water-related missing readings",
   assert.equal(Math.min(...valid), 19);
   assert.equal(Math.max(...valid), 68);
   assert.equal(metadata.license, "CC BY 4.0");
+});
+
+test("publishes the full phenology method with traceable observations and bounded uncertainty", async () => {
+  const [html, article, catalogue] = await Promise.all([
+    readFile(new URL("dist/client/metody/standardizovane-fenologicke-pozorovani/index.html", root), "utf8"),
+    readFile(new URL("app/components/PhenologyMonitoringArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<div class="article-prose">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "The complete method must replace the catalogue placeholder");
+  assert.equal((body.match(/<h2>/g) ?? []).length, 4);
+  assert.equal((body.match(/<details\b/g) ?? []).length, 2);
+  assert.match(html, /<p class="page-lead__meta">19\. října 2026<\/p>/);
+  assert.match(body, /class="method-flow"/);
+  assert.match(body, /nps-field-observations\.jpg/);
+  assert.match(body, /leaf-onset\.png/);
+  assert.match(body, /13\. května 2016/);
+  assert.match(body, /<td>352210<\/td><td>11\. 5\.<\/td><td>13\. 5\.<\/td><td>2<\/td>/);
+  assert.match(body, /href="\/pozorovani\/fenologicke-posuny\/?"/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  const details = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  const words = details.replace(/<[^>]*>/g, " ").replace(/&[^;\s]+;/g, " ").trim().split(/\s+/);
+  assert.ok(words.length <= 600, `Uncertainty supplement has ${words.length} words`);
+  const ids = [...new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
+  assert.ok(ids.length >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp(`<article[^>]*id="${id}"[\\s\\S]*?<\\/article>`))?.[0];
+    assert.ok(card, `Missing phenology source: ${id}`);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const href = match[1];
+    const file = /\.[a-z0-9]+$/i.test(href) ? href : `${href.replace(/\/$/, "")}/index.html`;
+    await readFile(new URL(`dist/client${file}`, root));
+  }
+});
+
+test("preserves the phenology snapshot and brackets onset with actual negative and positive visits", async () => {
+  const base = new URL("public/data/methods/phenology-monitoring/", root);
+  const metadata = JSON.parse(await readFile(new URL("example.json", base), "utf8"));
+  const snapshot = await readFile(new URL("harvard-leaves.json", base));
+  assert.equal(createHash("sha256").update(snapshot).digest("hex"), metadata.snapshot.sha256);
+  const rows = JSON.parse(snapshot);
+  assert.equal(rows.length, 930);
+  assert.ok(rows.every((r) => r.site_id === 57027 && r.species_id === 3 && r.phenophase_id === 483 && r.dataset_id === 16));
+  const expected = [
+    [352210, "2016-05-11", "2016-05-13", 132, 134, 2],
+    [352216, "2016-04-27", "2016-04-29", 118, 120, 2],
+    [352219, "2016-04-22", "2016-04-25", 113, 116, 3],
+  ];
+  for (const [id, noDate, yesDate, noDay, yesDay, width] of expected) {
+    const visits = rows.filter((r) => r.individual_id === id).sort((a, b) => a.observation_date.localeCompare(b.observation_date));
+    assert.equal(visits.length, 31);
+    assert.ok(visits.filter((r) => r.observation_date < yesDate).every((r) => r.phenophase_status === 0));
+    assert.equal(visits.find((r) => r.observation_date === noDate).day_of_year, noDay);
+    assert.equal(visits.find((r) => r.observation_date === yesDate).phenophase_status, 1);
+    assert.equal(visits.find((r) => r.observation_date === yesDate).day_of_year, yesDay);
+    assert.equal((Date.parse(yesDate) - Date.parse(noDate)) / 86400000, width);
+    const result = metadata.result.plants.find((r) => r.individualId === id);
+    assert.deepEqual([result.lastNo, result.firstYes, result.intervalDays], [noDate, yesDate, width]);
+  }
+  const csv = await readFile(new URL("selected-visits.csv", base), "utf8");
+  assert.equal(csv.trim().split(/\r?\n/).length, 94);
+  assert.equal(metadata.license, "CC BY 4.0");
+  assert.match(metadata.acknowledgement, /National Ecological Observatory Network/);
+  for (const file of ["harvard-leaves.json", "selected-visits.csv", "example.json", "reproduce.py", "plot.py", "leaf-onset.png"]) {
+    assert.deepEqual(await readFile(new URL(`dist/client/data/methods/phenology-monitoring/${file}`, root)), await readFile(new URL(file, base)));
+  }
 });
 
 test("keeps the current catalogue of fourteen observations", async () => {

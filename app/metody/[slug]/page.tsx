@@ -1,3 +1,4 @@
+import { PhenologyMonitoringArticle } from "../../components/PhenologyMonitoringArticle";
 import { ThawDepthArticle } from "../../components/ThawDepthArticle";
 import { GlacierBalanceArticle } from "../../components/GlacierBalanceArticle";
 import { SnowMeasurementArticle } from "../../components/SnowMeasurementArticle";
@@ -76,6 +77,18 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "standardizovane-fenologicke-pozorovani") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Přímá měření" title="Standardizované fenologické pozorování" meta="19. října 2026">
+          <p>Jak opakované návštěvy rostlin a společné definice vývojových fází vytvářejí záznam přírodního kalendáře.</p>
+        </PageLead>
+        <PhenologyMonitoringArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "mereni-hloubky-sezonniho-rozmrzani") {

@@ -3,6 +3,10 @@ import type { Source } from "./sources";
 // Sources cited by published article components.
 // Stable IDs are referenced from SourceLink components; do not rename them after publication.
 const rawArticleSources: Source[] = [
+  { id: "2021_NPS_Phenology_Field_Photo", title: "Park Recruits Adopt-a-Plot Volunteers", author: "National Park Service, Great Smoky Mountains National Park", year: 2021, publication: "NPS, 4. února 2021, fotografie bez uvedeného data pořízení", type: "Fotografie fenologického pozorování v terénu", category: "organization", externalUrl: "https://www.nps.gov/grsm/learn/news/park-recruits-adopt-a-plot-volunteers-2021.htm", citationLabel: "NPS: fenologická pozorování v Great Smoky Mountains", topics: ["metody", "fenologie", "fotografie"] },
+  { id: "2016_USANPN_Focus_On_Leaves", title: "Nature’s Notebook Nugget: Focus on Leaves", author: "Patty Guertin, USA National Phenology Network", year: 2016, publication: "USA-NPN, 10. května 2016, aktualizováno 18. října 2023", type: "Metodické pokyny a referenční fotografie", category: "organization", externalUrl: "https://www.usanpn.org/nn/faq/Nugget7", citationLabel: "USA-NPN: jak pozorovat listové fáze", topics: ["metody", "fenologie", "listy", "definice fází"] },
+  { id: "DOI_10_5334_cstp_464", title: "Do Carefully Timed Email Messages Increase Accuracy and Precision in Citizen Scientists’ Reports of Events?", author: "Theresa Crimmins a Erin Posthumus", year: 2022, publication: "Citizen Science: Theory and Practice 7(1), 29, s. 1–11", type: "Primární studie kvality fenologických záznamů", category: "science", externalUrl: "https://doi.org/10.5334/cstp.464", citationLabel: "Crimmins a Posthumus 2022", topics: ["metody", "fenologie", "četnost pozorování", "ověření"] },
+  { id: "2022_USANPN_Data_Terms", title: "USA-NPN Website Terms of Use: Data Use Policy and Data Attribution Policy", author: "USA National Phenology Network", year: 2022, publication: "USA-NPN, verze 2.5, 2. března 2022, přístup 19. října 2026", type: "Podmínky použití a citování dat", category: "organization", externalUrl: "https://www.usanpn.org/about/terms", citationLabel: "USA-NPN: licence a citování dat", topics: ["fenologie", "data", "licence"] },
   { id: "2015_USGS_Frost_Probes_Photo", title: "USGS Researchers with frost probes", author: "U.S. Geological Survey, EROS Center", year: 2015, publication: "USGS EROS Center, přibližné datum fotografie 2015", type: "Fotografie ručního sondování v terénu", category: "organization", externalUrl: "https://www.usgs.gov/media/images/usgs-researchers-frost-probes", citationLabel: "USGS: sondování při výzkumu permafrostu", topics: ["metody", "permafrost", "aktivní vrstva", "fotografie"] },
   { id: "2018_NOAA_USCRN_Precipitation_Photo", title: "What’s a USCRN Station? Fotografie váhového a překlápěcího srážkoměru", author: "NOAA National Centers for Environmental Information", year: 2018, publication: "NOAA NCEI, 27. srpna 2018, aktualizováno 17. července 2019", type: "Fotografie měřicí stanice", category: "organization", externalUrl: "https://www.ncei.noaa.gov/news/what-is-a-uscrn-station", citationLabel: "NOAA NCEI: srážkoměry na stanici USCRN", topics: ["metody", "srážkoměry", "srážky", "fotografie"] },
   { id: "2022_NASA_IMPACTS_Parsivel_Photo", title: "IMPACTS 2022: Parsivel Disdrometer", author: "NASA Wallops Precipitation Science Research Facility", year: 2022, publication: "NASA, přehled přístrojů kampaně IMPACTS 2022, fotografie bez data pořízení", type: "Fotografie optického disdrometru v terénu", category: "organization", externalUrl: "https://wallops-prf.gsfc.nasa.gov/Field_Campaigns/IMPACTS_2022/", citationLabel: "NASA: disdrometr Parsivel, IMPACTS 2022", topics: ["metody", "disdrometry", "srážky", "fotografie"] },
@@ -530,6 +534,10 @@ const rawArticleSources: Source[] = [
 ];
 
 const articleOpenAccessSources: Record<string, true | string> = {
+  "2021_NPS_Phenology_Field_Photo": true,
+  "2016_USANPN_Focus_On_Leaves": true,
+  "DOI_10_5334_cstp_464": "https://theoryandpractice.citizenscienceassociation.org/articles/10.5334/cstp.464",
+  "2022_USANPN_Data_Terms": true,
   "2015_USGS_Frost_Probes_Photo": true,
   WEB_NOAA_MLO_USCRN_Photos: true,
   "2020_NOAA_ATOMIC_Photos": true,
@@ -632,7 +640,7 @@ const articleOpenAccessSources: Record<string, true | string> = {
   WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_cdb0d8ce: true,
   WEB_CHMU_Straznice_denni_maxima_TMA: true,
 
-  DOI_10_1007_s00484_014_0789_5: "https://link.springer.com/content/pdf/10.1007/s00484-014-0789-5.pdf",
+  DOI_10_1007_s00484_014_0789_5: "https://www.usanpn.org/files/reports/standardized_phenology_monitoring_methods_denny_et_al_2014.pdf",
   WEB_openagrar_de_Meier_2001_stupnice_BBCH_f90d8917: true,
   DOI_10_1111_nph_70869: "https://nph.onlinelibrary.wiley.com/doi/10.1111/nph.70869",
   DOI_10_1111_j_2041_210x_2010_00020_x: "https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/j.2041-210X.2010.00020.x",

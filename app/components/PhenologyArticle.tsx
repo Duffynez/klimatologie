@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SourceLink } from "./SourceLink";
 
 export function PhenologyArticle() {
@@ -34,7 +35,8 @@ export function PhenologyArticle() {
       <div className="article-prose">
         <h2>Co pozorujeme</h2>
         <p className="article-prose__intro">
-          Fenologické pozorování je datum nebo sled opakovaných záznamů o přesně vymezené, sezónně se opakující fázi
+          <Link href="/metody/standardizovane-fenologicke-pozorovani">Fenologické pozorování</Link>{" "}
+          je datum nebo sled opakovaných záznamů o přesně vymezené, sezónně se opakující fázi
           organismu či porostu. U rostlin může jít o rašení listů, otevření květů, dozrávání plodů, zbarvení listů nebo
           jejich opad. U živočichů se zaznamenává například začátek a průběh tahu, snášení vajec, líhnutí nebo doba, kdy
           jsou jedinci určitého vývojového stadia přítomni. Každá fáze má vlastní definici a vlastní datum nebo průběh.

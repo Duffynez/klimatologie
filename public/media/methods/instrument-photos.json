@@ -152,5 +152,19 @@
     "width": 3648,
     "height": 2736,
     "sha256": "97174ca5ef1e8f428fe9f376537cbc073a8b7a0402d126969b147ca54ccba6b6"
+  },
+  {
+    "file": "/media/phenology-monitoring/nps-field-observations.jpg",
+    "sourceId": "2021_NPS_Phenology_Field_Photo",
+    "sourcePage": "https://www.nps.gov/grsm/learn/news/park-recruits-adopt-a-plot-volunteers-2021.htm",
+    "downloadUrl": "https://www.nps.gov/grsm/learn/news/images/NPS-Staff-and-AmeriCorp-members-record-phenology-observations.jpg",
+    "credit": "National Park Service (NPS Photo)",
+    "licence": "Public Domain",
+    "licenceUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+    "accessed": "2026-10-19",
+    "changes": "None. Original photograph published on 4 February 2021. Date taken not specified.",
+    "width": 1280,
+    "height": 960,
+    "sha256": "8c3465214aa7d37f155a90a3b31c6d64fe6e83bb5460fc30526fc4f565288708"
   }
 ]

@@ -1,0 +1,71 @@
+{
+  "title": "Rozvinuté listy tří javorů červených v Harvard Forest, jaro 2016",
+  "accessed": "2026-10-19",
+  "sourceDoi": "https://doi.org/10.5066/F78S4N1V",
+  "source": "USA National Phenology Network, Plant and Animal Phenology Data, Status and Intensity, 2016-01-01–2016-05-31",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://www.usanpn.org/about/terms",
+  "acknowledgement": "Data were provided by the USA National Phenology Network and the many participants who contribute to its Nature’s Notebook program. This material is based in part upon work supported by the National Ecological Observatory Network (NEON), a program sponsored by the U.S. National Science Foundation (NSF) and operated under cooperative agreement by Battelle.",
+  "snapshot": {
+    "filename": "harvard-leaves.json",
+    "sha256": "abc0d05c992c905e40ccc10ac36f77146a3b6c0dd8eb891c57ce4c82c4c2fe6e",
+    "requestUrl": "https://services.usanpn.org/npn_portal/observations/getObservations.json?request_src=klimatologie_eu_method_example&species_id%5B0%5D=3&phenophase_id%5B0%5D=483&station_id%5B0%5D=57027&start_date=2016-01-01&end_date=2016-05-31&additional_field%5B0%5D=site_name&additional_field%5B1%5D=plant_nickname&additional_field%5B2%5D=observed_status_conflict_flag&additional_field%5B3%5D=dataset_id&additional_field%5B4%5D=partner_group",
+    "description": "Unmodified response from USA-NPN public getObservations API. Dataset ID 16, partner group NEON."
+  },
+  "selection": {
+    "siteId": 57027,
+    "siteName": "HARV_053.phenology.phe - primary",
+    "speciesId": 3,
+    "species": "Acer rubrum",
+    "phenophaseId": 483,
+    "phenophase": "Leaves",
+    "requestStart": "2016-01-01",
+    "requestEnd": "2016-05-31",
+    "rule": "Select the three smallest individual_id values in this site/species/phase export, retain all their visits. The sample illustrates processing and does not estimate forest-wide phenology.",
+    "observedStart": "2016-03-11",
+    "observedEnd": "2016-05-23"
+  },
+  "processing": "Sort per individual by date. Select first recorded yes in the requested period and latest preceding no. Compute elapsed calendar days. Unknown status is not converted to no. Fail on duplicate dates or reported conflicts. Missing flag -9999 is not proof of a quality check. No interpolation or midpoint date.",
+  "result": {
+    "snapshotRows": 930,
+    "selectedRows": 93,
+    "plants": [
+      {
+        "individualId": 352210,
+        "plantTag": "NEON.PLA.D01.HARV.06554",
+        "visitCount": 31,
+        "lastNo": "2016-05-11",
+        "firstYes": "2016-05-13",
+        "lastNoDay": 132,
+        "firstYesDay": 134,
+        "intervalDays": 2,
+        "lastNoObservationId": 45842558,
+        "firstYesObservationId": 45843144
+      },
+      {
+        "individualId": 352216,
+        "plantTag": "NEON.PLA.D01.HARV.06054",
+        "visitCount": 31,
+        "lastNo": "2016-04-27",
+        "firstYes": "2016-04-29",
+        "lastNoDay": 118,
+        "firstYesDay": 120,
+        "intervalDays": 2,
+        "lastNoObservationId": 45840163,
+        "firstYesObservationId": 45840375
+      },
+      {
+        "individualId": 352219,
+        "plantTag": "NEON.PLA.D01.HARV.06017",
+        "visitCount": 31,
+        "lastNo": "2016-04-22",
+        "firstYes": "2016-04-25",
+        "lastNoDay": 113,
+        "firstYesDay": 116,
+        "intervalDays": 3,
+        "lastNoObservationId": 45839151,
+        "firstYesObservationId": 45839377
+      }
+    ]
+  }
+}
