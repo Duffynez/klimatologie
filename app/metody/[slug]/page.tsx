@@ -103,11 +103,11 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Terénní měření bilance ledovců"
-          meta="Napsáno: 4. října 2026 · Odborná revize: 4. října 2026"
+          meta="19. října 2026"
         >
           <p>
-            Jak z odečtů tyčí a měření sněhu zjistíme změnu hmotnosti ledovce.
-            Převod hustoty, odhad pro neměřená místa a kontrola výsledku na skutečných datech Griesgletscheru.
+            Jak měřicí tyče a odběry sněhu zachycují přírůstky a ztráty na povrchu ledovce.
+            Vysvětlení postupu a dva výpočty se skutečnými daty Griesgletscheru.
           </p>
         </PageLead>
         <GlacierBalanceArticle />

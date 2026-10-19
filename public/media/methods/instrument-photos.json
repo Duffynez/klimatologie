@@ -124,5 +124,19 @@
     "width": 1000,
     "height": 667,
     "sha256": "5f174fef3c9d8bee4d7d8734d4dbaaf3d3f141d1d4f0608855eb6e880ef899d8"
+  },
+  {
+    "file": "/media/mountain-glaciers/usgs-ablation-stake.jpg",
+    "sourceId": "WEB_U_S_Geological_Survey_Ablation_Stake_on_Wolverine_Glacier_276f80c5",
+    "sourcePage": "https://www.usgs.gov/media/images/ablation-stake-wolverine-glacier",
+    "downloadUrl": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/AblationStake.jpg",
+    "credit": "Emily Baker, USGS",
+    "licence": "Public Domain",
+    "licenceUrl": "https://www.usgs.gov/media/images/ablation-stake-wolverine-glacier",
+    "accessed": "2026-10-19",
+    "changes": "None. Existing local image matches the original supplied by USGS.",
+    "width": 4032,
+    "height": 3024,
+    "sha256": "07cfaafd187d2a87251f10afdb6c008154b875cfb77348ce1a4ea75b5f0df29f"
   }
 ]
