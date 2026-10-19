@@ -1188,6 +1188,7 @@ test("exports typeset equations and accessible fractions across every method art
     ["PhenologyMonitoringArticle", "standardizovane-fenologicke-pozorovani"],
     ["GasChromatographyArticle", "plynova-chromatografie"],
     ["AbsorptionSpectroscopyArticle", "absorpcni-spektroskopie"],
+    ["IsotopeMassSpectrometryArticle", "hmotnostni-a-izotopova-spektrometrie"],
   ];
   for (const [component, slug] of methods) {
     const [source, html] = await Promise.all([
@@ -2081,4 +2082,69 @@ test("keeps the current catalogue of fourteen observations", async () => {
   assert.match(evidence, /title: "Oxid uhličitý v atmosféře"/);
   assert.match(evidence, /title: "Obsah tepla v oceánu"/);
   assert.match(evidence, /title: "Sněhová pokrývka a permafrost"/);
+});
+
+test("publishes isotope mass spectrometry with an honest example and open sources", async () => {
+  const slug = "hmotnostni-a-izotopova-spektrometrie";
+  const [html, source, catalogue, observation] = await Promise.all([
+    readFile(new URL(`dist/client/metody/${slug}/index.html`, root), "utf8"),
+    readFile(new URL("app/components/IsotopeMassSpectrometryArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/srazky-a-privalove-srazky/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.match(html, /<p class="page-lead__meta">19\. října 2026<\/p>/);
+  const headings = [...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]);
+  assert.deepEqual(headings.slice(1), ["Jak změříme izotopové složení vody", "Nejistoty a ověření", "Příklad: stejná voda ve třech laboratořích", "Shrnutí"]);
+  assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
+  assert.match(body, /Začínáme zveřejněnými průměry δ¹⁸O po kalibraci/);
+  assert.match(body, /97,531 % referenčního poměru/);
+  assert.match(body, /standardní chybu průměru/);
+  assert.equal((body.match(/<tr>/g) ?? []).length, 4);
+  assert.doesNotMatch(body, /_vinext\/image|katex-error/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  assert.match(observation, /href="\/metody\/hmotnostni-a-izotopova-spektrometrie"/);
+  const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
+  assert.ok(ids.length >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp(`<article[^>]*id="${id}"[\\s\\S]*?<\\/article>`))?.[0];
+    assert.ok(card, `Missing isotope source ${id}`);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const href = match[1];
+    const file = /\.[a-z0-9]+$/i.test(href) ? href : `${href.replace(/\/$/, "")}/index.html`;
+    await readFile(new URL(`dist/client${file}`, root));
+  }
+});
+
+test("reproduces the isotope comparison while preserving distinct uncertainty meanings", async () => {
+  const base = new URL("public/data/methods/isotope-mass-spectrometry/", root);
+  const meta = JSON.parse(await readFile(new URL("example.json", base), "utf8"));
+  const csv = (await readFile(new URL("gisp-comparison.csv", base), "utf8")).replace(/\r\n/g, "\n");
+  assert.equal(createHash("sha256").update(csv).digest("hex"), meta.table_sha256_lf);
+  const rows = csv.trim().split("\n").slice(1).map(line => line.split(","));
+  assert.deepEqual(rows.map(r => [r[0], r[1], Number(r[3]), Number(r[4]), Number(r[5])]), [
+    ["GISP", "LSCE", 3, -24.69, 0.08],
+    ["GISP", "JHU", 9, -24.79, 0.08],
+    ["GISP", "Los_Gatos_Research", 26, -24.74, 0.03],
+  ]);
+  assert.equal(rows[0][6], "standard_error_of_mean");
+  assert.equal(rows[1][6], "standard_error_of_mean");
+  assert.equal(rows[2][6], "convolved_instrumental_precision_limit");
+  for (const row of rows) {
+    assert.ok(Math.abs(1 + Number(row[4]) / 1000 - meta.expected[row[1] + "_relative_ratio"]) < 1e-12);
+  }
+  assert.equal(Number((Number(rows[0][4]) - Number(rows[1][4])).toFixed(2)), 0.10);
+  assert.equal(Number((100 * (1 + Number(rows[0][4]) / 1000)).toFixed(3)), 97.531);
+  assert.match(meta.data_level, /NOT raw ion currents/);
+  assert.match(meta.method_context.independence, /share VSMOW2 and SLAP2/);
+  for (const file of ["gisp-comparison.csv", "example.json", "reproduce.py"]) {
+    assert.deepEqual(await readFile(new URL(`dist/client/data/methods/isotope-mass-spectrometry/${file}`, root)), await readFile(new URL(file, base)));
+  }
 });

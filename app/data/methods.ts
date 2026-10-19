@@ -95,7 +95,7 @@ export const measurementMethods: MeasurementMethod[] = [
     slug: "hmotnostni-a-izotopova-spektrometrie",
     title: "Hmotnostní a izotopová spektrometrie",
     category: "Laboratorní analýza",
-    summary: "Rozlišení molekul a izotopů podle jejich hmotnosti při analýze vody, uhlíku a vzorků minulého prostředí.",
+    summary: "Rozlišení iontů podle poměru hmotnosti a náboje a měření izotopového složení vody, uhlíku a vzorků minulého prostředí.",
   },
   {
     slug: "spektrofotometrie",

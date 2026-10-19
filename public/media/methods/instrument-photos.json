@@ -194,5 +194,19 @@
     "width": 426,
     "height": 277,
     "sha256": "947978be05f6b930827eba5eaf6997a55fbb49e13dcc5ba09f556f34458696c3"
+  },
+  {
+    "file": "/media/isotope-mass-spectrometry/usgs-irms-laboratory.jpg",
+    "sourceId": "2023_USGS_IRMS_Photo",
+    "sourcePage": "https://www.usgs.gov/media/images/reston-stable-isotope-lab-rsil-delta-v-plus-isotope-ratio-mass-spectrometer-and",
+    "downloadUrl": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/media/images/5B146%20DeltaV%20and%20peripherals%204.jpg",
+    "credit": "U.S. Geological Survey",
+    "licence": "Public Domain",
+    "licenceUrl": "https://www.usgs.gov/media/images/reston-stable-isotope-lab-rsil-delta-v-plus-isotope-ratio-mass-spectrometer-and",
+    "accessed": "2026-10-19",
+    "changes": "None. Delta V Plus and peripherals at RSIL, Reston, Virginia. Page published 2023-01-30. Capture date and individual photographer not stated. Modern equipment differs from the DuPont instrument in the 2008 procedure.",
+    "width": 1280,
+    "height": 960,
+    "sha256": "af0c0195e48ec92c62df2ea39c7c086c28e90269e8f8d78d8adcdf285a0b475a"
   }
 ]

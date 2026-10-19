@@ -1,3 +1,4 @@
+import { IsotopeMassSpectrometryArticle } from "../../components/IsotopeMassSpectrometryArticle";
 import { AbsorptionSpectroscopyArticle } from "../../components/AbsorptionSpectroscopyArticle";
 import { GasChromatographyArticle } from "../../components/GasChromatographyArticle";
 import { PhenologyMonitoringArticle } from "../../components/PhenologyMonitoringArticle";
@@ -79,6 +80,18 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "hmotnostni-a-izotopova-spektrometrie") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Hmotnostní a izotopová spektrometrie" meta="19. října 2026">
+          <p>Jak z vody připravíme plyn, rozlišíme jeho ionty podle hmotnosti a získáme izotopový záznam koloběhu vody.</p>
+        </PageLead>
+        <IsotopeMassSpectrometryArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "absorpcni-spektroskopie") {

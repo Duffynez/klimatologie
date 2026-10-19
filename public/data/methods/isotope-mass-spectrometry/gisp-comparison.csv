@@ -1,0 +1,4 @@
+sample,laboratory,method,high_precision_measurements,delta18O_permil,reported_uncertainty_permil,uncertainty_kind
+GISP,LSCE,IRMS,3,-24.69,0.08,standard_error_of_mean
+GISP,JHU,IRMS,9,-24.79,0.08,standard_error_of_mean
+GISP,Los_Gatos_Research,OA-ICOS,26,-24.74,0.03,convolved_instrumental_precision_limit

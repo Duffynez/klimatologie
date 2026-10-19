@@ -1,0 +1,38 @@
+{
+  "source": {
+    "doi": "10.1021/ac402366t",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3933304/",
+    "table": "Table 1",
+    "version": "Public author manuscript, final article Analytical Chemistry 85(21), 10392–10398 (2013)",
+    "accessed": "2026-10-19",
+    "selection": "Three experimental GISP rows, HP measurement count and oxygen-18 columns only. No weighted average, assigned IAEA value, oxygen-17 or 17O-excess rows."
+  },
+  "data_level": "Published calibrated laboratory means, NOT raw ion currents or individual replicate measurements. Measurement calendar dates are not specified in the table.",
+  "scale": "VSMOW–SLAP, normalized using VSMOW2 and SLAP2",
+  "table_sha256_lf": "f67d054608faa10e1c14d0e8299acae25324cd39b0bd1316060618fb2db244e5",
+  "units": {
+    "delta18O_permil": "per mille relative difference of 18O/16O from VSMOW",
+    "reported_uncertainty_permil": "per mille, see uncertainty_kind",
+    "high_precision_measurements": "count of high-precision measurements, each already combining multiple individual readings"
+  },
+  "uncertainty": {
+    "standard_error_of_mean": "IRMS standard error of mean as reported by authors. Not the standard deviation of individual readings.",
+    "convolved_instrumental_precision_limit": "OA-ICOS measured limit of instrumental precision convolved with reference-water uncertainty, as described in text and table caption. Not labelled as an IRMS standard error or a common confidence interval.",
+    "comparison": "Different uncertainty definitions are preserved. No pooled uncertainty, weighted consensus or significance test is computed."
+  },
+  "method_context": {
+    "LSCE_and_JHU": "Water fluorinated with CoF3 to O2, purified, measured by dual-inlet Thermo MAT 253 at m/z 32, 33, 34. This is different sample preparation from the CO2 equilibration explained in the main article.",
+    "Los_Gatos_Research": "OA-ICOS optical measurement of water vapour.",
+    "independence": "Separate sample preparations and instruments. IRMS and optical absorption use different physics but share VSMOW2 and SLAP2 calibration materials. GISP is a validation material."
+  },
+  "expected": {
+    "LSCE_relative_ratio": 0.97531,
+    "JHU_relative_ratio": 0.97521,
+    "Los_Gatos_Research_relative_ratio": 0.97526,
+    "LSCE_relative_ratio_percent": 97.531,
+    "LSCE_depletion_percent": 2.469,
+    "LSCE_minus_JHU_permil": 0.1,
+    "LSCE_minus_optical_permil": 0.05,
+    "JHU_minus_optical_permil": -0.05
+  }
+}

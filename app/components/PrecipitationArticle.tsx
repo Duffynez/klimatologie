@@ -577,6 +577,10 @@ export function PrecipitationArticle() {
             <h3>Metody a nejistoty</h3>
             <ul>
               <li>
+                <Link href="/metody/hmotnostni-a-izotopova-spektrometrie">Hmotnostní a izotopová spektrometrie</Link>:
+                jak rozbor odebrané vody doplňuje měření srážkových úhrnů o informace z izotopového složení.
+              </li>
+              <li>
                 WMO: <em>Guide to Instruments and Methods of Observation</em>, svazek I, kapitola 6 o měření srážek a
                 svazek III, kapitola 7 o radaru.{" "}
                 <SourceLink id="WEB_World_Meteorological_Organiz_Guide_to_Instruments_and_Methods_of_Observation_93c4c4a4">Příručka WMO No. 8</SourceLink>
