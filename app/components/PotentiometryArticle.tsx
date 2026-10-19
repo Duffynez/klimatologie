@@ -25,14 +25,16 @@ export function PotentiometryArticle() {
           Potenciometrie je metoda, která určuje vlastnosti roztoku z elektrického napětí mezi
           dvěma elektrodami při téměř nulovém odběru proudu. Používá se například k měření pH,
           tedy kyselosti vody. Vysvětlíme si ji na skleněné elektrodě ponořené do vzorku mořské
-          vody a ukážeme, jak se napětí převádí na údaj využitelný při sledování oceánu.
+          vody a ukážeme, jak se napětí převádí na údaj využitelný při sledování oceánu.{" "}
+          <SourceLink id="2016_Harvey_Analytical_Chemistry">(Harvey, oddíl 11.2)</SourceLink>
         </p>
         <h3>Na co reaguje skleněný povrch</h3>
         <p>
           Kyselost vody souvisí s vodíkovými ionty, kladně nabitými částicemi vodíku, které se
           ve vodě vážou na její molekuly. Jejich chemické působení závisí na tom, kolik jich
           roztok obsahuje, i na okolních iontech. Veličinu, která obojí zahrnuje, nazýváme{" "}
-          <strong>aktivita</strong>. Právě na aktivitu vodíkových iontů reaguje skleněná elektroda.
+          <strong>aktivita</strong>. Právě na aktivitu vodíkových iontů reaguje skleněná elektroda.{" "}
+          <SourceLink id="2016_Harvey_Analytical_Chemistry">(Harvey, oddíl 11.2)</SourceLink>
         </p>
         <p>
           Obecná definice pH vyjadřuje tuto aktivitu pomocí záporného desítkového logaritmu. Znamená to,
@@ -45,7 +47,8 @@ export function PotentiometryArticle() {
           s ionty původně přítomnými ve skle. Tato výměna mění elektrický náboj povrchu.
           Ustálí se podle aktivity vodíkových iontů v okolním roztoku, takže povrch získá
           elektrický potenciál závislý na pH. Potenciál zde popisuje elektrický stav povrchu,
-          který můžeme porovnat s jinou elektrodou.
+          který můžeme porovnat s jinou elektrodou.{" "}
+          <SourceLink id="2016_Harvey_Analytical_Chemistry">(Harvey, oddíl 11.2)</SourceLink>
         </p>
         <p>
           Uvnitř baňky je roztok se stálým složením a vnitřní elektrický kontakt.
@@ -60,13 +63,15 @@ export function PotentiometryArticle() {
           přidáme <strong>referenční elektrodu</strong>, která poskytuje srovnávací potenciál.
           Běžné provedení obsahuje stříbrný vodič pokrytý chloridem stříbrným, ponořený do
           roztoku chloridu draselného. Stálé složení tohoto vnitřního roztoku udržuje také
-          potenciál referenční elektrody.
+          potenciál referenční elektrody.{" "}
+          <SourceLink id="2016_Harvey_Analytical_Chemistry">(Harvey, oddíl 11.2)</SourceLink>
         </p>
         <p>
           Referenční roztok má spojení se vzorkem přes malý porézní otvor, označovaný jako
           kapalný spoj nebo diafragma. Ionty jím procházejí a vytvářejí elektrické spojení
           mezi oběma roztoky. Skleněná a referenční elektroda mohou být samostatné, nebo mohou
-          být zabudované do jediné sondy. Takové sondě říkáme kombinovaná elektroda.
+          být zabudované do jediné sondy. Takové sondě říkáme kombinovaná elektroda.{" "}
+          <SourceLink id="2016_Harvey_Analytical_Chemistry">(Harvey, oddíl 11.2)</SourceLink>
         </p>
         <p>
           Obě elektrody připojíme k pH-metru. Jeho měřicí obvod má velmi vysoký vstupní odpor,
@@ -102,21 +107,24 @@ export function PotentiometryArticle() {
           částí článku. Kladné číslo <InlineMath tex="s" /> udává změnu napětí připadající na
           jeden stupeň pH, v milivoltech na stupeň. Při 25 °C má ideální hodnotu přibližně
           59,16 mV na stupeň pH. Znaménko minus vyjadřuje, že při tomto zapojení s rostoucím
-          pH napětí klesá. Při jiné teplotě se mění i hodnota <InlineMath tex="s" />.
+          pH napětí klesá. Při jiné teplotě se mění i hodnota <InlineMath tex="s" />.{" "}
+          <SourceLink id="2008_USGS_pH_Field_Manual">(USGS, oddíly 6.4.1 a 6.4.3)</SourceLink>
         </p>
         <p>
           Kalibrací zjistíme, kam převodní přímka patří a jaký má sklon. Použijeme k tomu
           roztoky se známým pH. Obvykle jde o <strong>pufry</strong>: směsi, které přijímají nebo
           uvolňují vodíkové ionty, a tím brání velké změně pH při malém přídavku kyseliny nebo
           zásady. Například pufr TRIS obsahuje látku tris(hydroxymethyl)aminomethan a její
-          podobu s navázaným vodíkovým iontem. Jejich poměr určuje pH pufru při dané teplotě.
+          podobu s navázaným vodíkovým iontem. Jejich poměr určuje pH pufru při dané teplotě.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 6a, oddíly 2–3 a 7–8)</SourceLink>
         </p>
         <p>
           Pro mořskou vodu připravíme pufry v umělé mořské vodě s obdobným obsahem solí.
           Důvod souvisí s kapalným spojem reference. Různé ionty se v něm pohybují různou
           rychlostí, čímž na rozhraní roztoků vzniká další příspěvek k napětí. Podobné složení
           pufru a vzorku pomáhá tento příspěvek při jejich výměně zachovat. Převod pak
-          vztahujeme k prostředí, ve kterém budeme měřit.
+          vztahujeme k prostředí, ve kterém budeme měřit.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 6a, oddíly 2–3 a 7–8)</SourceLink>
         </p>
         <p>
           Dva pufry s různým známým pH poskytují dva body převodní přímky. Z rozdílu jejich
@@ -132,20 +140,23 @@ export function PotentiometryArticle() {
           iontů je v mořské vodě navázána v hydrogensíranovém iontu. Ten vzniká, když síranový
           iont přijme vodíkový iont. Celková stupnice vychází ze součtu koncentrací volných vodíkových iontů a hydrogensíranu,
           vyjádřeného na kilogram roztoku. I zde znamená desetinásobný součet pHₜ nižší o jeden
-          stupeň.
+          stupeň.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 6a, oddíly 2–3 a 7–8)</SourceLink>
         </p>
         <p>
           Pufrům lze přiřadit hodnoty právě na této stupnici.
           Když s nimi kalibrujeme, dostaneme na stejné stupnici i výsledek pro vzorek.
           Elektroda přitom stále reaguje na volné vodíkové ionty. Vazbu na celkovou stupnici
-          zajišťuje kalibrace v odpovídajícím prostředí.
+          zajišťuje kalibrace v odpovídajícím prostředí.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 6a, oddíly 2–3 a 7–8)</SourceLink>
         </p>
         <p>
           Vzorek nalijeme do měřicí nádobky, ponoříme elektrody a ustálíme stejnou teplotu,
           jakou měly pufry. Nádobku během měření uzavřeme kolem elektrod, aby si voda
           nevyměňovala oxid uhličitý s okolním vzduchem. Ten se totiž účastní reakcí určujících
           pH vody. Po ustálení odečteme napětí. Známe-li napětí jednoho referenčního pufru
-          a sklon převodu, získáme pH vzorku:
+          a sklon převodu, získáme pH vzorku:{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 6a, oddíly 2–3 a 7–8)</SourceLink>
         </p>
         <Equation tex={String.raw`\mathrm{pH}_{\mathrm{vzorek}} = \mathrm{pH}_{\mathrm{pufr}} + \frac{E_{\mathrm{pufr}}-E_{\mathrm{vzorek}}}{s}`} />
         <p>
@@ -153,7 +164,8 @@ export function PotentiometryArticle() {
           v milivoltech, sklon <InlineMath tex="s" /> v milivoltech na stupeň pH.
           Rozdíl napětí vydělený sklonem říká, o kolik se pH vzorku liší od pufru.
           Přičtením k jeho známé hodnotě získáme výsledek. Jde o stejnou přímku jako výše,
-          jen vyjádřenou pomocí změřeného referenčního bodu místo posunu <InlineMath tex="E_0" />.
+          jen vyjádřenou pomocí změřeného referenčního bodu místo posunu <InlineMath tex="E_0" />.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 6a, oddíly 2–3 a 7–8)</SourceLink>
         </p>
         <p>
           Výsledkem je pH konkrétního vzorku na zvolené stupnici a při teplotě měření.
@@ -171,7 +183,8 @@ export function PotentiometryArticle() {
           dlouhodobý vývoj zasadit do denních a sezonních změn. Přístroj ponechaný ve vodě
           může zachytit i kolísání mezi jednotlivými odběry. Taková měření pomáhají popsat
           prostředí, kterému jsou vystaveny mořské organismy, a volit podmínky laboratorních
-          experimentů s okyselováním.
+          experimentů s okyselováním.{" "}
+          <SourceLink id="DOI_10_4319_lom_2010_8_172">(Martz a kol., 2010, úvod a terénní zkoušky)</SourceLink>
         </p>
         <p>
           Skleněné rozhraní zkoumali již <SourceLink id="DOI_10_1515_zpch_1909_6720">Haber a Klemensiewicz (1909)</SourceLink>.
@@ -238,7 +251,8 @@ export function PotentiometryArticle() {
           <p>
             Kontrolní roztok prověřil použití kalibrace na dalším vzorku. Sdílel však se
             dvěma kalibračními roztoky prostředí umělé mořské vody a postup přiřazení referenčních
-            hodnot. Studie zkoušela nové elektrody. Dlouhodobou stabilitu v oceánu tím neověřila.
+            hodnot. Studie zkoušela nové elektrody. Dlouhodobou stabilitu v oceánu tím neověřila.{" "}
+            <SourceLink id="DOI_10_1515_pac_2020_0202">(Stoica a kol., 2021, oddíly 2–3)</SourceLink>
           </p>
           <h3>Stabilita a teplota</h3>
           <p>
@@ -291,7 +305,8 @@ export function PotentiometryArticle() {
           Rozdíly jsou vypočtené z publikovaných zaokrouhlených čísel. Třetí desetinné místo
           tedy nepředstavuje vyšší rozlišení měření. Uvedené „±“ označuje rozšířenou nejistotu
           s koeficientem 2, tedy přibližně 95% pokrytí za obvyklých předpokladů. Referenční hodnota je 8,101 ± 0,005. Výsledky ukazují, že převod získaný ze dvou pufrů fungoval také pro třetí roztok,
-          který se na kalibraci nepodílel.
+          který se na kalibraci nepodílel.{" "}
+          <SourceLink id="DOI_10_1515_pac_2020_0202">(Stoica a kol., 2021, tabulka 7)</SourceLink>
         </p>
         <h3>Jak vypadá samotný převod napětí</h3>
         <p>

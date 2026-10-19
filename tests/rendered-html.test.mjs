@@ -1223,7 +1223,7 @@ test("publishes reproducible thermometry examples with open sources and working 
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
   const displayedDate = html.match(/<p class="page-lead__meta">([^<]*)<\/p>/)?.[1];
-  assert.equal(displayedDate, "18. října 2026", "Show only the last edit date, without a label");
+  assert.equal(displayedDate, "19. října 2026", "Show only the last edit date, without a label");
   assert.doesNotMatch(article, /<Citation\b/);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
   assert.match(body, /29,8627 °C/);
@@ -1420,7 +1420,7 @@ test("publishes pressure and hydrostatic height with traceable calibration data 
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
   for (const page of related) assert.match(page, /href="\/metody\/mereni-tlaku-a-hydrostaticke-vysky\/?"/);
   const ids = [...new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
-  assert.equal(ids.length, 12, "Ten method sources plus the photograph and NOAA reuse policy");
+  assert.equal(ids.length, 13, "Eleven method sources plus the photograph and NOAA reuse policy");
   for (const id of ids) {
     const card = catalogue.match(new RegExp(`<article[^>]*id="${id}"[\\s\\S]*?<\\/article>`))?.[0];
     assert.ok(card, `Missing pressure source card: ${id}`);

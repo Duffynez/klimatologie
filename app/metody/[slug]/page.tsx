@@ -226,7 +226,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Měření výšky, hustoty a vodní hodnoty sněhu"
-          meta="18. října 2026"
+          meta="19. října 2026"
         >
           <p>
             Jak ze změřené výšky a zvážených vzorků určíme zásobu vody ve sněhu.
@@ -245,7 +245,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Pobřežní měření hladiny a výšková reference"
-          meta="18. října 2026"
+          meta="19. října 2026"
         >
           <p>
             Jak z radarového odrazu získáme výšku mořské hladiny a jak oddělíme
@@ -265,7 +265,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Srážkoměry a disdrometry"
-          meta="18. října 2026"
+          meta="19. října 2026"
         >
           <p>
             Srážkoměr zachycuje vodu, disdrometr sleduje jednotlivé padající částice.
@@ -284,7 +284,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Konduktometrie"
-          meta="18. října 2026"
+          meta="19. října 2026"
         >
           <p>
             Jak elektrický proud ve vodě umožňuje určit její slanost. Princip čidla,
@@ -303,7 +303,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Měření tlaku a hydrostatické výšky"
-          meta="18. října 2026"
+          meta="19. října 2026"
         >
           <p>
             Jak tlakoměr měří působení vodního sloupce a jak z jeho údaje vypočítáme hloubku.
@@ -324,7 +324,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Odporová termometrie a termistory"
-          meta="18. října 2026"
+          meta="19. října 2026"
         >
           <p>
             Elektrický odpor čidla se mění s teplotou. Této závislosti využívají teploměry
@@ -346,7 +346,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Hygrometrie"
-          meta="18. října 2026"
+          meta="19. října 2026"
         >
           <p>
             Vodní pára mění elektrické vlastnosti některých materiálů a při ochlazení se sráží
@@ -368,7 +368,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Radiosondáž"
-          meta="18. října 2026"
+          meta="19. října 2026"
         >
           <p>
             Jak sonda pod meteorologickým balonem měří teplotu, vlhkost a vítr v různých výškách.

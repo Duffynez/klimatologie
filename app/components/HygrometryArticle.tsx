@@ -26,7 +26,8 @@ export function HygrometryArticle() {
           Hygrometrie je měření vlhkosti plynů, tedy obsahu vodní páry v nich. V meteorologii se
           používá k měření vlhkosti vzduchu u země i ve vyšších vrstvách atmosféry. Vlhkoměr může
           vyjadřovat výsledek jako relativní vlhkost v procentech, rosný bod ve stupních Celsia nebo
-          jinou vlhkostní veličinu. Každá popisuje přítomnost vodní páry jiným způsobem.
+          jinou vlhkostní veličinu. Každá popisuje přítomnost vodní páry jiným způsobem.{" "}
+          <SourceLink id="2013_NPL_Humidity">(NPL, oddíl 2.1)</SourceLink>
         </p>
         <p>
           Podrobně zde vysvětlíme kapacitní vlhkoměr, který převádí změnu elektrické vlastnosti
@@ -40,7 +41,8 @@ export function HygrometryArticle() {
           Vzduch je směs plynů a vodní pára tvoří jednu z jejích složek. Každý plyn přispívá k celkovému
           tlaku svým dílem. Příspěvek vodní páry se nazývá její <strong>dílčí tlak</strong>
           {" "}a značíme jej <em>e</em>. Při stejné teplotě je větší dílčí tlak spojen s větším
-          množstvím páry v daném objemu vzduchu.
+          množstvím páry v daném objemu vzduchu.{" "}
+          <SourceLink id="2021_NIST_Humidity_Calibration">(NIST, oddíl 3)</SourceLink>
         </p>
         <p>
           Pro určení relativní vlhkosti tento tlak porovnáváme s tlakem páry při nasycení.
@@ -61,7 +63,8 @@ export function HygrometryArticle() {
           Oba tlaky, <em>e</em> i <InlineMath tex={String.raw`e_s`} />, dosazujeme ve stejných
           jednotkách, například v hektopascalech, značka hPa. Jejich podíl říká, jak velkou část
           hodnoty při nasycení skutečný tlak páry dosahuje. Násobení stem jej převede na procenta.
-          Při nasycení se oba tlaky rovnají a RH je 100 %.
+          Při nasycení se oba tlaky rovnají a RH je 100 %.{" "}
+          <SourceLink id="2021_NIST_Humidity_Calibration">(NIST, oddíl 3)</SourceLink>
         </p>
         <p>
           Relativní vlhkost se proto může měnit i bez přidání nebo odebrání vody. Když vzduch
@@ -77,7 +80,8 @@ export function HygrometryArticle() {
           Kapacitní vlhkoměr využívá tenkou vrstvu polymeru, materiálu tvořeného dlouhými
           molekulárními řetězci. Tato vrstva přijímá vodu z okolního vzduchu a při vysychání ji zase
           uvolňuje. Po ustálení odpovídá obsah vody ve vrstvě vlhkosti jejího okolí. Abychom tuto změnu
-          mohli měřit elektricky, je vrstva umístěna mezi dvěma vodivými elektrodami.
+          mohli měřit elektricky, je vrstva umístěna mezi dvěma vodivými elektrodami.{" "}
+          <SourceLink id="2013_NPL_Humidity">(NPL, oddíl 3.1)</SourceLink>
         </p>
         <p>
           Elektrody oddělené izolační vrstvou tvoří <strong>kondenzátor</strong>, součástku schopnou
@@ -85,13 +89,15 @@ export function HygrometryArticle() {
           elektrická kapacita. Její jednotkou je farad, značka F. Kapacita závisí také na materiálu
           mezi elektrodami. Když polymer přijme vodu, změní se jeho chování v elektrickém poli,
           a tím i kapacita čidla. Elektronika měří právě tuto změnu.
-          Princip shrnuje <SourceLink id="2013_NPL_Humidity">NPL v oddílu 3.1</SourceLink>.
+          Princip shrnuje <SourceLink id="2013_NPL_Humidity">NPL v oddílu 3.1</SourceLink>.{" "}
+          <SourceLink id="2016_OpenStax_University_Physics_2">(University Physics 2, oddíl 8.1)</SourceLink>
         </p>
         <p>
           K získání vlhkosti zbývá určit, jaká RH jednotlivým odečtům kapacity odpovídá.
           Tento vztah zjišťujeme měřením ve známých podmínkách, tedy kalibrací. Protože odezvu
           polymeru ovlivňuje také teplota, patří ke čidlu i její měření. Převod pak může zohlednit
-          současně kapacitu a teplotu.
+          současně kapacitu a teplotu.{" "}
+          <SourceLink id="DOI_10_1175_jtech_d_12_00232_1">(Ingleby a kol., oddíl 2d)</SourceLink>
         </p>
 
         <h3>Kalibrace a převod na vlhkost</h3>
@@ -102,7 +108,8 @@ export function HygrometryArticle() {
           přístroje a referenční vlhkostí včetně nejistoty tohoto vztahu. Pokud podle výsledku
           změníme nastavení přístroje, provádíme <strong>seřízení</strong>. Rozdíl mezi kalibrací
           a seřízením vymezuje <SourceLink id="2012_VIM_Calibration">mezinárodní metrologický
-          slovník VIM, heslo 2.39</SourceLink>.
+          slovník VIM, heslo 2.39</SourceLink>.{" "}
+          <SourceLink id="2021_NIST_Humidity_Calibration">(NIST, kalibrační postup)</SourceLink>
         </p>
         <p>
           Známou vlhkost může připravit laboratorní generátor. NIST používá zařízení,
@@ -185,7 +192,8 @@ export function HygrometryArticle() {
           plyne, že RH vydělíme stem a vynásobíme tlakem při nasycení. Pro získaný tlak páry
           pak hledáme teplotu, při níž by právě nastalo nasycení. Tato teplota je
           <strong>rosný bod</strong>. Vyjadřuje, na kolik by se vzduch musel ochladit při
-          nezměněném tlaku a obsahu páry, aby dosáhl nasycení vůči kapalné vodě.
+          nezměněném tlaku a obsahu páry, aby dosáhl nasycení vůči kapalné vodě.{" "}
+          <SourceLink id="2013_NPL_Humidity">(NPL, oddíl 2.1)</SourceLink>
         </p>
         <p>
           Pro sledování množství páry se používá také <strong>měrná vlhkost</strong>.
@@ -220,7 +228,9 @@ export function HygrometryArticle() {
           globálních navigačních družicových systémů, GNSS</Link>,
           {" "}a <Link href="/metody/pasivni-mikrovlnna-radiometrie">mikrovlnná radiometrie</Link>.
           Jejich výsledky doplňují místní údaje vlhkoměrů. Při společném vyhodnocení proto
-          rozlišujeme údaj z jedné výšky a obsah páry v celém sloupci.
+          rozlišujeme údaj z jedné výšky a obsah páry v celém sloupci.{" "}
+          <SourceLink id="DOI_10_1002_2018ea000363">(Mears a kol., metody)</SourceLink>
+          <SourceLink id="DOI_10_1029_92jd01517">(Bevis a kol.: GPS meteorologie)</SourceLink>
         </p>
 
         <h3>Vývoj elektrického měření</h3>
@@ -237,7 +247,8 @@ export function HygrometryArticle() {
           vlhkoměr reagoval slabě a přibližně o dvě minuty později. Balon za tu dobu vystoupal
           asi o 670 metrů. Rychlejší odezva umožnila podrobněji rozlišit vlhkost v jednotlivých
           výškách. Dunmoreovo čidlo měřilo odpor, zatímco zde popsané polymerní čidlo měří kapacitu.
-          Obě provedení poskytují elektrický signál vhodný pro automatický a vzdálený záznam.
+          Obě provedení poskytují elektrický signál vhodný pro automatický a vzdálený záznam.{" "}
+          <SourceLink id="1938_Dunmore_Hygrometer">(Dunmore, letové porovnání)</SourceLink>
         </p>
 
         <h3>Další způsoby měření vlhkosti</h3>
@@ -247,13 +258,15 @@ export function HygrometryArticle() {
           kterých proudí vzduch. Jeden měří teplotu vzduchu, druhý je obalený navlhčeným knotem.
           Voda se z knotu odpařuje a odebírá teplo, takže mokrý teploměr se ochladí.
           Při stejné teplotě a proudění je v sušším vzduchu odpařování intenzivnější a rozdíl
-          teplot větší. Za ustálených podmínek tento rozdíl umožňuje určit vlhkost.
+          teplot větší. Za ustálených podmínek tento rozdíl umožňuje určit vlhkost.{" "}
+          <SourceLink id="2013_NPL_Humidity">(NPL, oddíl 3.1)</SourceLink>
         </p>
         <p>
           Při odpařování je u mokrého povrchu pára nasycená, zatímco v okolním vzduchu je její tlak nižší.
           Výpočet vychází z tlaku nasycené páry při teplotě mokrého povrchu a odečítá tento rozdíl.
           Jeho velikost určuje z ochlazení teploměru, celkového tlaku vzduchu a vztahu pro dané
-          provedení psychrometru. Výsledkem je tlak páry v okolním vzduchu:
+          provedení psychrometru. Výsledkem je tlak páry v okolním vzduchu:{" "}
+          <SourceLink id="DOI_10_1175_jtech_d_12_00232_1">(Ingleby a kol., rovnice 3)</SourceLink>
         </p>
         <Equation tex={[
           String.raw`e \approx e_s(T_w)`,
@@ -295,7 +308,8 @@ export function HygrometryArticle() {
           a společně s teplotou vzduchu z něj vypočteme RH. Pod nulou se může na zrcátku vytvořit
           kapalná voda i led. Nad ledem nastává rovnováha při jiném tlaku páry než nad vodou
           stejné teploty. Teplotu rovnováhy s ledem označujeme jako <strong>bod ojínění</strong>
-          a při převodu používáme vztah pro nasycení nad ledem.
+          a při převodu používáme vztah pro nasycení nad ledem.{" "}
+          <SourceLink id="2021_NIST_Humidity_Calibration">(NIST, oddíl 3)</SourceLink>
         </p>
 
         <h4>Vyhřívaná kapacitní sonda</h4>
@@ -330,7 +344,8 @@ export function HygrometryArticle() {
             čidly. Tuto odlišnost popisuje <SourceLink id="2026_USCRN_Measurements">dokumentace sítě</SourceLink>.
             Znečištění polymeru může změnit příjem vody a po orosení může sonda zůstávat vlhká
             déle než okolí. U psychrometru vysychající knot zmenšuje ochlazení a vede k příliš vysoké RH.
-            U zrcátka prach a soli ovlivňují tvorbu a optické rozpoznání kondenzátu.
+            U zrcátka prach a soli ovlivňují tvorbu a optické rozpoznání kondenzátu.{" "}
+            <SourceLink id="2013_NPL_Humidity">(NPL, oddíly 3 a 4)</SourceLink>
           </p>
           <h3>Kalibrace a stálost odezvy</h3>
           <p>
@@ -369,7 +384,8 @@ export function HygrometryArticle() {
             nikoli celkovou nejistotu měření. Datový soubor neobsahuje úplné vyčíslení vlivů
             konkrétní sondy, takže z něj interval nejistoty jednotlivé hodiny neurčíme.
             Průměrování může omezit rychlé kolísání, trvalý posun kalibrace však zachová.
-            Rozptyl naměřených hodnot navíc obsahuje skutečné změny vlhkosti.
+            Rozptyl naměřených hodnot navíc obsahuje skutečné změny vlhkosti.{" "}
+            <SourceLink id="2017_USCRN_Subhourly_Readme">(USCRN: formát pětiminutových dat)</SourceLink>
           </p>
           <h3>Dlouhodobé záznamy</h3>
           <p>

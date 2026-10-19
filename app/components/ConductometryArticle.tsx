@@ -31,7 +31,8 @@ export function ConductometryArticle() {
           určuje, jak snadno jí prochází elektrický proud. V mořské vodě proud přenášejí
           částice rozpuštěných solí. Vodivost proto využíváme k určení salinity,
           číselného údaje o slanosti vody. K výpočtu potřebujeme vedle vodivosti znát
-          také teplotu a tlak vody.
+          také teplotu a tlak vody.{" "}
+          <SourceLink id="2015_TEOS10_SP_From_C">(TEOS-10: výpočet salinity)</SourceLink>
         </p>
         <p>
           Celý postup vysvětlíme na čidle Sea-Bird SBE 4C používaném v lodních
@@ -49,7 +50,8 @@ export function ConductometryArticle() {
           připojené k přístroji. Napětí mezi nimi vytváří elektrické pole.
           To usměrňuje pohyb iontů, kladných jedním směrem a záporných
           opačným. Pohyb těchto nábojů tvoří elektrický proud. Měřením elektrické
-          odezvy tak získáme informaci o rozpuštěných látkách.
+          odezvy tak získáme informaci o rozpuštěných látkách.{" "}
+          <SourceLink id="2019_OpenStax_Chemistry_2e">(Chemistry 2e, oddíl 11.2)</SourceLink>
         </p>
         <p>
           Na velikost proudu působí také vzdálenost elektrod a šířka vodní cesty mezi nimi.
@@ -60,7 +62,8 @@ export function ConductometryArticle() {
         <p>
           Výslednou vodivost vody vyjadřujeme v <strong>siemensech na metr</strong>,
           značka S/m. Siemens odpovídá převrácené hodnotě ohmu, jednotky elektrického odporu.
-          Zahrnutí rozměrů umožňuje porovnávat vodu měřenou různými přístroji.
+          Zahrnutí rozměrů umožňuje porovnávat vodu měřenou různými přístroji.{" "}
+          <SourceLink id="2016_OpenStax_University_Physics_2">(University Physics 2, oddíl 9.3)</SourceLink>
         </p>
 
         <h3>Jak čidlo zaznamená elektrickou odezvu</h3>
@@ -76,7 +79,8 @@ export function ConductometryArticle() {
           Elektronika zjišťuje <strong>frekvenci</strong>, počet kmitů za sekundu.
           Jeden kmit za sekundu odpovídá hertzu, tisíc kmitů kilohertzu se značkou kHz.
           Frekvence je zaznamenaný signál čidla. Jakou vodivost konkrétní hodnota
-          představuje, určíme porovnáním se známými vzorky při kalibraci.
+          představuje, určíme porovnáním se známými vzorky při kalibraci.{" "}
+          <SourceLink id="2025_SeaBird_SBE4_Datasheet">(Sea-Bird: výstup a kalibrace SBE 4)</SourceLink>
         </p>
         <p>
           Při měření v oceánu žene čerpadlo soupravy
@@ -91,7 +95,8 @@ export function ConductometryArticle() {
           Po přechodu soupravy do jiné vrstvy si stěna ještě chvíli uchovává
           teplotu předchozí vody. Zpracování popsané v manuálu proto opravuje
           i tuto tepelnou odezvu. Časové sladění řeší cestu vody mezi čidly,
-          tepelná oprava řeší její výměnu tepla s měřicí trubicí.
+          tepelná oprava řeší její výměnu tepla s měřicí trubicí.{" "}
+          <SourceLink id="2010_SeaBird_9plus_Manual">(Sea-Bird: zpracování dat)</SourceLink>
         </p>
 
         <figure className="article-figure">
@@ -128,7 +133,8 @@ export function ConductometryArticle() {
           odpovídaly referenčním hodnotám. Tím převod přizpůsobíme elektrickému
           obvodu a rozměrům daného kusu.
           Reference je s čidlem propojena přes salinometr, standardní mořskou vodu
-          a měření teploty. Tento doložený sled porovnání tvoří návaznost měření.
+          a měření teploty. Tento doložený sled porovnání tvoří návaznost měření.{" "}
+          <SourceLink id="2025_SeaBird_SBE4_Datasheet">(Sea-Bird: kalibrace SBE 4)</SourceLink>
         </p>
         <p>
           Kalibrací tedy zjišťujeme, co odečty znamenají. Zásah, kterým měníme
@@ -146,7 +152,8 @@ export function ConductometryArticle() {
           <em> t</em> teplota vody ve stupních Celsia a <em>p</em> tlak v decibarech,
           značených dbar. Jeden decibar odpovídá 10 000 pascalům.
           Tlak zde zapisujeme vůči referenční atmosféře: od absolutního tlaku
-          odečteme 10,1325 dbar. Nulový údaj tak označuje referenční atmosférický tlak.
+          odečteme 10,1325 dbar. Nulový údaj tak označuje referenční atmosférický tlak.{" "}
+          <SourceLink id="2015_TEOS10_SP_From_C">(TEOS-10: vstupní jednotky)</SourceLink>
         </p>
         <p>
           Čitatel obsahuje koeficienty <em>g</em>, <em>h</em>, <em>i</em> a <em>j</em>
@@ -164,7 +171,8 @@ export function ConductometryArticle() {
           a je uveden na decibar. Vynásobením teplotou a tlakem dostaneme
           příspěvky <em>a t</em> a <em>b p</em> bez jednotky.
           Číslo 10 převádí výsledek na S/m. Koeficienty čitatele jsou stanovené
-          pro frekvenci v kHz, a v těchto jednotkách ji proto dosazujeme.
+          pro frekvenci v kHz, a v těchto jednotkách ji proto dosazujeme.{" "}
+          <SourceLink id="DOI_10_7289_v5dr2sgz">(Zpráva EN551, s. 13)</SourceLink>
         </p>
         <p>
           Po této opravě máme vodivost vody při teplotě a tlaku, za kterých jsme
@@ -180,7 +188,8 @@ export function ConductometryArticle() {
           Scale 1978</em>. Jejím základem je poměr vodivosti vzorku a vodivosti
           referenčního roztoku chloridu draselného za stejných podmínek.
           Chlorid draselný je sůl použitá k definici této reference.
-          Vodivost vzorku dělíme vodivostí reference, takže při jejich shodě vyjde jedna.
+          Vodivost vzorku dělíme vodivostí reference, takže při jejich shodě vyjde jedna.{" "}
+          <SourceLink id="DOI_10_1109_joe_1980_1145448">(Lewis: definice PSS-78)</SourceLink>
         </p>
         <p>
           Poměru jedna při referenční teplotě 15 °C a standardním atmosférickém
@@ -203,7 +212,8 @@ export function ConductometryArticle() {
           Potom vodivost vzorku vydělíme hodnotou 4,2914 S/m. Ta odpovídá
           referenční vodivosti vody se salinitou 35 při teplotě 15 °C na IPTS-68
           a referenčním atmosférickém tlaku. Vznikne vodivostní poměr,
-          který ještě obsahuje vliv teploty a tlaku měřeného vzorku.
+          který ještě obsahuje vliv teploty a tlaku měřeného vzorku.{" "}
+          <SourceLink id="2015_TEOS10_SP_From_C">(TEOS-10, příloha E)</SourceLink>
         </p>
         <p>
           Z vodivostního poměru, teploty a tlaku výpočet určí dva opravné faktory.
@@ -218,14 +228,16 @@ export function ConductometryArticle() {
           Z jeho mocnin sestaví polynom, tedy součet členů násobených pevnými
           koeficienty. Po přičtení malé teplotní opravy dostaneme praktickou
           salinitu. Tento empirický vztah zachycuje laboratorně zjištěnou
-          souvislost mezi vodivostí a salinitou.
+          souvislost mezi vodivostí a salinitou.{" "}
+          <SourceLink id="2015_TEOS10_SP_From_C">(TEOS-10, příloha E)</SourceLink>
         </p>
         <p>
           Výsledná <InlineMath tex={String.raw`S_P`} /> nemá jednotku,
           protože vychází z poměru vodivostí a z přiřazené stupnice.
           Hodnota 35 tedy vyjadřuje polohu vzorku na této stupnici slanosti.
           Pro hmotnost rozpuštěných látek používáme jinou veličinu,
-          absolutní salinitu.
+          absolutní salinitu.{" "}
+          <SourceLink id="2015_TEOS10_SA_From_SP">(TEOS-10: praktická a absolutní salinita)</SourceLink>
         </p>
         <figure className="method-flow">
           <div className="method-flow__track" aria-label="Postup měření a výpočtu salinity">
@@ -251,7 +263,8 @@ export function ConductometryArticle() {
           rozložení s hloubkou. Každá hodnota patří k vodě v určité vrstvě.
           Profily pořizují také samostatně se pohybující plováky programu Argo.
           Opakování měření umožňuje sledovat, jak se slanost jednotlivých vrstev
-          a oblastí mění v čase.
+          a oblastí mění v čase.{" "}
+          <SourceLink id="WEB_International_Argo_Program_Data_from_GDACs_b2737bdf">(Argo: profily oceánu)</SourceLink>
         </p>
         <p>
           Pro výpočty hustoty a obsahu tepla převádíme praktickou salinitu
@@ -271,7 +284,9 @@ export function ConductometryArticle() {
           {" "}pomáhá určit změny objemu související s hustotou vody.
           U <Link href="/pozorovani/acidifikace-oceanu">acidifikace oceánu</Link>
           {" "}patří k podmínkám chemických přepočtů. Měření pH a množství uhlíku
-          dodávají další metody, které se s údaji o salinitě propojují.
+          dodávají další metody, které se s údaji o salinitě propojují.{" "}
+          <SourceLink id="DOI_10_1175_2011jtecho831_1">(Barker a kol., výpočty tepla a objemu)</SourceLink>
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(Dickson a kol., kapitola 2)</SourceLink>
         </p>
         <p>
           <SourceLink id="WEB_International_Argo_Program_Data_from_GDACs_b2737bdf">Globální
@@ -281,7 +296,8 @@ export function ConductometryArticle() {
           profily s dalšími měřeními a podle potřeby opravuje dlouhodobý posun
           odezvy čidla. Upravený výsledek je v <code>PSAL_ADJUSTED</code>.
           Doprovázejí jej příznaky kvality, značky popisující výsledek kontroly
-          a použitelnost hodnoty.
+          a použitelnost hodnoty.{" "}
+          <SourceLink id="DOI_10_5194_essd_15_383_2023">(Wong a kol., zpracování Argo)</SourceLink>
         </p>
         <p>
           Jak se profily využívají pro klimatické mapy, ukázali
@@ -299,7 +315,8 @@ export function ConductometryArticle() {
           s vynechanými hodnotami. Měření vodivosti tak dodává údaje pro jednotlivé
           profily, další zpracování z nich vytváří obraz širší oblasti.
           Vysvětlení změn pomocí výparu, srážek a pohybu vody navazuje dalším
-          rozborem těchto map a dalších podkladů.
+          rozborem těchto map a dalších podkladů.{" "}
+          <SourceLink id="DOI_10_1175_jcli_d_20_0366_1">(Cheng a kol., metody)</SourceLink>
         </p>
 
         <h3>Vývoj a další provedení metody</h3>
@@ -358,7 +375,8 @@ export function ConductometryArticle() {
             odezvy přibližně za 0,060 sekundy. Tento parametr popisuje rychlost
             reakce, počet odečtů za sekundu četnost záznamu.
             V prudce se měnících vrstvách záleží také na časovém sladění čidel
-            a opravě tepla předávaného stěnou trubice.
+            a opravě tepla předávaného stěnou trubice.{" "}
+            <SourceLink id="2025_SeaBird_SBE4_Datasheet">(Sea-Bird: dynamická odezva SBE 4)</SourceLink>
           </p>
           <p>
             Usazeniny, organismy nebo bublina mění cestu proudu a odezvu čidla.
@@ -383,7 +401,8 @@ export function ConductometryArticle() {
             čidlo a podmínky, ale sdílí stupnici a standardní mořskou vodu.
             Shoda nevyloučí chybu společné reference. Vzorek se navíc může změnit
             při odběru či skladování. Použijeme-li jej k nastavení opravy CTD,
-            následná shoda s ním není nezávislým ověřením této opravy.
+            následná shoda s ním není nezávislým ověřením této opravy.{" "}
+            <SourceLink id="DOI_10_7289_v5dr2sgz">(Zpráva EN551: odběry a salinometrie)</SourceLink>
           </p>
           <p>
             <SourceLink id="DOI_10_1175_jtech_d_24_0051_1">Thierryová a spoluautoři</SourceLink>
@@ -409,7 +428,8 @@ export function ConductometryArticle() {
             proto převod na absolutní salinitu přidává odhad jejich složení.
             Klimatické mapy navíc závisejí na pokrytí, výběru dat a doplnění
             mezer podle zvoleného postupu. Jeden místní profil sám
-            neurčuje změnu světového koloběhu vody.
+            neurčuje změnu světového koloběhu vody.{" "}
+            <SourceLink id="2015_TEOS10_SA_From_SP">(TEOS-10, metodická příloha)</SourceLink>
           </p>
         </details>
 
@@ -519,7 +539,8 @@ export function ConductometryArticle() {
             <InlineMath tex={String.raw`i = -0{,}000612897590`} /> a <InlineMath tex={String.raw`j = 0{,}000127926748`} />.
             CTcor je 3,25 × 10⁻⁶ na °C a CPcor −9,57 × 10⁻⁸ na dbar.
             Hodnoty g až j jsou číselné koeficienty pro uvedené jednotky f a C.
-            Nelze je použít beze změny s frekvencí zadanou v Hz.
+            Nelze je použít beze změny s frekvencí zadanou v Hz.{" "}
+            <SourceLink id="2014_SeaBird_C3860_Calibration">(Sea-Bird: původní protokol)</SourceLink>
           </p>
           <p>
             Vzorec vytištěný v protokolu postrádá faktor 10 ve jmenovateli.
@@ -535,7 +556,8 @@ export function ConductometryArticle() {
             včetně mezikroků. Používá původní rozsah PSS-78, tedy salinitu mezi 2 a 42,
             teplotu na stupnici IPTS-68 od −2 do 35 °C a tlak od 0 do 10 000 dbar.
             Mimo něj výpočet odmítne. Úplná knihovna GSW, anglicky Gibbs SeaWater,
-            je soubor programů pro výpočty vlastností mořské vody. Má navíc rozšíření pro nízké salinity.
+            je soubor programů pro výpočty vlastností mořské vody. Má navíc rozšíření pro nízké salinity.{" "}
+            <SourceLink id="2015_TEOS10_SP_From_C">(TEOS-10, příloha E)</SourceLink>
           </p>
           <ul>
             <li><a href={`${dataPath}/calibration.csv`} download>Přepis všech sedmi řádků a číselných sloupců protokolu</a></li>

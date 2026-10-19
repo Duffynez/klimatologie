@@ -28,7 +28,8 @@ export function SnowMeasurementArticle() {
           Terénní měření sněhu zjišťuje výšku sněhové pokrývky, její hustotu
           a množství vody, které obsahuje. Výšku odečteme měřicí tyčí nebo
           pravítkem. Hustotu určíme zvážením vzorku známého objemu.
-          Spojením těchto údajů vypočítáme zásobu vody nad danou plochou.
+          Spojením těchto údajů vypočítáme zásobu vody nad danou plochou.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíly 2.3 a 2.4)</SourceLink>
         </p>
         <p>
           Tuto zásobu vyjadřujeme jako <strong>vodní hodnotu sněhu</strong>.
@@ -45,13 +46,15 @@ export function SnowMeasurementArticle() {
           Sníh tvoří ledová zrna a póry, tedy mezery mezi nimi vyplněné vzduchem.
           Při tání se v něm nachází také kapalná voda. Hustota popisuje hmotnost
           celého tohoto materiálu v jednotce objemu. Objem vzorku proto zahrnuje
-          i póry. Čím více hmoty připadá na stejný objem, tím je sníh hustší.
+          i póry. Čím více hmoty připadá na stejný objem, tím je sníh hustší.{" "}
+          <SourceLink id="2009_Fierz_Snow_Classification">(Klasifikace sněhu, hustota a obsah vody)</SourceLink>
         </p>
         <p>
           Při sesedání se zrna přeskupují a pokrývka zaujímá menší objem.
           Pokud se její hmotnost nezmění, hustota přitom roste. Sníh tedy může
           být nižší a stále obsahovat stejnou zásobu vody. Společné měření výšky
-          a hustoty umožňuje sledovat tuto zásobu i během zhutňování.
+          a hustoty umožňuje sledovat tuto zásobu i během zhutňování.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, kapitola 2)</SourceLink>
         </p>
         <p>
           Pro podrobné vysvětlení zvolíme odběry v odkryté sněhové stěně.
@@ -69,7 +72,8 @@ export function SnowMeasurementArticle() {
           obvykle zem, na mořském ledu horní povrch ledu. Měřicí tyč zasuneme
           svisle až k tomuto rozhraní a odečteme polohu povrchu sněhu.
           V odkryté stěně lze přímo prohlédnout podklad i rozhraní uvnitř sněhu.
-          Pravítko u stěny potom ukazuje, v jaké výšce vzorky odebíráme.
+          Pravítko u stěny potom ukazuje, v jaké výšce vzorky odebíráme.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíl 2.3.1)</SourceLink>
         </p>
         <p>
           Pro zásobu vody nad vodorovnou plochou používáme svislou výšku.
@@ -87,7 +91,8 @@ export function SnowMeasurementArticle() {
           Při expedici MOSAiC se vzorkovalo po 3 cm. Takto vymezené odběry
           pokrývají sněhový sloupec postupně od povrchu až k ledu.
           Interval je úsek zvolený pro měření, může zahrnovat i více tenkých
-          vrstev vzniklých při různém sněžení nebo přeměně sněhu.
+          vrstev vzniklých při různém sněžení nebo přeměně sněhu.{" "}
+          <SourceLink id="DOI_10_1038_s41597_023_02273_1">(Macfarlane a kol., měření hustoty)</SourceLink>
         </p>
 
         <h3>Odběr známého objemu a vážení</h3>
@@ -116,14 +121,16 @@ export function SnowMeasurementArticle() {
           Objem lze zjistit z rozměrů nádobky nebo z hmotnosti vody, kterou
           pojme. Ve druhém případě vydělíme hmotnost vody její známou hustotou
           a dostaneme objem. Pravítko, nádobka a váha tak poskytují tři potřebné
-          údaje: polohu odběru, objem a hmotnost.
+          údaje: polohu odběru, objem a hmotnost.{" "}
+          <SourceLink id="DOI_10_5194_tc_10_371_2016">(Proksch a kol., rozměry odběráků v oddílu 2.2)</SourceLink>
         </p>
         <p>
           V odkryté stěně vybereme sníh nenarušený kopáním. Odběrák zasuneme
           tak, aby se úplně naplnil, a sníh zarovnáme s jeho hranami.
           Vzorek vyjmeme bez stlačení a bez ztráty zrn či vody.
           Tím zachováme spojení mezi odebranou hmotností a známým objemem,
-          který sníh zaujímal ve stěně. Odběr opakujeme v dalších intervalech.
+          který sníh zaujímal ve stěně. Odběr opakujeme v dalších intervalech.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíl 2.4.1.2)</SourceLink>
         </p>
         <p>
           Váha reaguje na tíhovou sílu vzorku a pomocí kalibračního vztahu
@@ -145,7 +152,8 @@ export function SnowMeasurementArticle() {
           zapisovaných kg/m³. m je čistá hmotnost sněhu v kilogramech a V objem
           vzorku v metrech krychlových včetně pórů. Nádobka o objemu 100 cm³
           představuje 0,0001 m³. Při dosazování tedy převedeme odečtené gramy
-          na kilogramy a objem nádobky na metry krychlové.
+          na kilogramy a objem nádobky na metry krychlové.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíl 2.4.1)</SourceLink>
         </p>
         <p>
           Výsledná hustota je průměrem přes celý odebraný objem. Přiřadíme ji
@@ -166,7 +174,8 @@ export function SnowMeasurementArticle() {
           Hmotnost nad jednotkou plochy proto vydělíme hustotou vody.
           Voda má vyšší hustotu než sníh s póry, takže stejné hmotnosti
           odpovídá nižší vrstva. Pro tento převod používáme
-          referenční hustotu vody 1 000 kg/m³.
+          referenční hustotu vody 1 000 kg/m³.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, rovnice 2.5 a 2.6)</SourceLink>
         </p>
         <p>
           Výpočet můžeme zapsat jako součet vodních hodnot všech intervalů:
@@ -195,7 +204,8 @@ export function SnowMeasurementArticle() {
           získáme také průměrnou hustotu profilu: vydělíme ji celkovou svislou
           výškou. Silnější interval má v tomto průměru větší váhu, protože
           tvoří větší část objemu sloupce. Prostý průměr hustot můžeme použít
-          tehdy, když mají všechny intervaly stejnou tloušťku.
+          tehdy, když mají všechny intervaly stejnou tloušťku.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíl 2.4.1)</SourceLink>
         </p>
         <figure className="method-flow">
           <div className="method-flow__track" aria-label="Od odběru sněhu k vodní hodnotě">
@@ -230,7 +240,8 @@ export function SnowMeasurementArticle() {
           Pro dlouhodobé porovnání zachováváme termíny měření a zaznamenáváme
           změny okolí nebo použitého přístroje. Výška celé pokrývky popisuje
           stav v daný okamžik. Nový sníh naproti tomu označuje přírůstek
-          za stanovený časový interval.
+          za stanovený časový interval.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíly 2.2 a 2.3)</SourceLink>
         </p>
 
         <h3>Použití v klimatologii</h3>
@@ -240,7 +251,8 @@ export function SnowMeasurementArticle() {
           výsledkem sněžení, tání a odtoku vody, výparu i přenosu sněhu větrem.
           Měření proto navazuje na <Link href="/metody/srazkomery-a-disdrometry">srážkoměry
           a disdrometry</Link>. Dlouhodobé výsledky shrnuje článek
-          o <Link href="/pozorovani/snehova-pokryvka-a-permafrost">sněhové pokrývce a permafrostu</Link>.
+          o <Link href="/pozorovani/snehova-pokryvka-a-permafrost">sněhové pokrývce a permafrostu</Link>.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, kapitola 2)</SourceLink>
         </p>
         <p>
           Terénní údaje pomáhají také vytvářet a kontrolovat družicové odhady.
@@ -259,7 +271,8 @@ export function SnowMeasurementArticle() {
           vykládat družicová měření jeho výšky. Na <Link href="/pozorovani/ustup-ledovcu">horských
           ledovcích</Link> se výška zimního sněhu pomocí hustoty převádí na
           přírůstek hmotnosti. Na něj navazuje <Link href="/metody/terenni-mereni-bilance-ledovcu">terénní
-          měření bilance ledovců</Link>, které zahrnuje i úbytek sněhu a ledu během roku.
+          měření bilance ledovců</Link>, které zahrnuje i úbytek sněhu a ledu během roku.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, kapitoly 2 a 3)</SourceLink>
         </p>
         <p>
           Na <Link href="/pozorovani/nestabilita-prikrovu">ledovcových příkrovech</Link>{" "}
@@ -322,7 +335,8 @@ export function SnowMeasurementArticle() {
           zvuku. Výpočet používá i teplotu vzduchu, protože na ní závisí rychlost
           zvuku. Od známé vzdálenosti čidla k holému podkladu odečteme vzdálenost
           ke sněhu a získáme jeho výšku. Laserový přístroj využívá světlo.
-          Oba postupy vycházejí ze stálé polohy čidla vůči podkladu.
+          Oba postupy vycházejí ze stálé polohy čidla vůči podkladu.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíl 2.3.2)</SourceLink>
         </p>
         <p>
           Automaticky lze sledovat také hmotnost sněhu. Sněhový polštář je nádoba
@@ -361,7 +375,8 @@ export function SnowMeasurementArticle() {
             stlačení při odběru ji může zvýšit. Společná chyba objemu odběráku
             posune celý profil a součtem vrstev nezmizí. Příliš velký objem
             dosazený do výpočtu vede k podhodnocení hustoty. Neúplný nebo stlačený
-            vzorek odebíráme znovu.
+            vzorek odebíráme znovu.{" "}
+            <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíly 2.3.1 a 2.4.1.3)</SourceLink>
           </p>
           <p>
             V terénu chráníme vážení před větrem, kontrolujeme čistotu a suchost
@@ -398,7 +413,8 @@ export function SnowMeasurementArticle() {
             princip, sdílejí však profil a nejistotu přiřazení sousedních vzorků.
             Tomografie také potřebuje rozlišit led od vzduchu v obraze.
             Výsledky jsou ověřením, v našem výpočtu z nich neurčujeme opravu
-            ani nejistotu arktického profilu.
+            ani nejistotu arktického profilu.{" "}
+            <SourceLink id="DOI_10_5194_tc_10_371_2016">(Proksch a kol., výsledky a diskuse)</SourceLink>
           </p>
           <p>
             <SourceLink id="DOI_10_1038_s41597_023_02273_1">Porovnání při MOSAiC, obrázek 9</SourceLink>,
@@ -408,7 +424,8 @@ export function SnowMeasurementArticle() {
           </p>
           <p>
             U automatických polštářů a vah může pevná sněhová či ledová vrstva přenášet část
-            zatížení do okolí. Ruční odběry pomáhají tuto odchylku odhalit.
+            zatížení do okolí. Ruční odběry pomáhají tuto odchylku odhalit.{" "}
+            <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíl 2.4.2)</SourceLink>
           </p>
           <h3>Rozsah výsledků</h3>
           <p>
@@ -417,7 +434,8 @@ export function SnowMeasurementArticle() {
             proto neuvádíme. Sníh na mořském ledu může obsahovat sůl.
             Počítáme hmotnostní ekvivalent s referencí 1 000 kg/m³,
             bez korekce na slanost a bez určení přesného objemu roztáté slané vody.
-            Desetinná místa výsledku vyjadřují výpočet ze zveřejněných vstupů.
+            Desetinná místa výsledku vyjadřují výpočet ze zveřejněných vstupů.{" "}
+            <SourceLink id="DOI_10_1038_s41597_023_02273_1">(Macfarlane a kol., složení sněhu)</SourceLink>
           </p>
           <p>
             Jeden profil nezastupuje průměrný arktický sníh a jediný bod

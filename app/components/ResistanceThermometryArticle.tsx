@@ -28,7 +28,8 @@ export function ResistanceThermometryArticle() {
           z materiálu, jehož odpor se mění s teplotou. Elektronika odpor změří a podle předem
           určeného vztahu mu přiřadí teplotu. Tak pracují platinové odporové teploměry i termistory.
           S vhodnou sondou měříme teplotu vzduchu, vody nebo půdy a při opakovaném měření sledujeme
-          její průběh.
+          její průběh.{" "}
+          <SourceLink id="2021_BIPM_IPRT">(BIPM, kapitola 2)</SourceLink>
         </p>
         <p>
           Podrobně si vysvětlíme platinový teploměr používaný při měření vzduchu.
@@ -55,7 +56,8 @@ export function ResistanceThermometryArticle() {
           Elektrický proud v tomto kovu přenášejí elektrony, částice nesoucí elektrický náboj.
           Napětí přivedené na konce čidla usměrňuje jejich pohyb, a kovem tak prochází proud.
           Jak velký proud při daném napětí prochází, závisí na elektrickém odporu materiálu.
-          Větší odpor znamená při stejném napětí menší proud.
+          Větší odpor znamená při stejném napětí menší proud.{" "}
+          <SourceLink id="2016_OpenStax_University_Physics_2">(University Physics 2, oddíly 9.1 a 9.3)</SourceLink>
         </p>
         <p>
           Atomy platiny kmitají a tento tepelný pohyb narušuje usměrněný pohyb elektronů.
@@ -73,7 +75,8 @@ export function ResistanceThermometryArticle() {
           teplotní sondu. Vzduch a sonda si vyměňují teplo, takže se teplota čidla přibližuje
           teplotě vzduchu. Spolu s teplotou se mění i odpor platiny uvnitř.
           Výměna tepla tak propojuje veličinu, kterou chceme zjistit, s odporem, který změříme
-          elektricky.
+          elektricky.{" "}
+          <SourceLink id="2016_OpenStax_University_Physics_2">(University Physics 2, oddíl 1.1)</SourceLink>
         </p>
         <p>
           Při měření venku umisťujeme sondu do krytu, který ji chrání před přímým slunečním
@@ -107,13 +110,15 @@ export function ResistanceThermometryArticle() {
           Ve vztahu je <em>R</em> odpor v ohmech (Ω), <em>U</em> napětí ve voltech (V)
           a <em>I</em> proud v ampérech (A).
           Elektronický převodník převede měřené napětí na číselný údaj.
-          Jeho vydělením známým proudem přístroj získá hodnotu odporu pro další výpočet.
+          Jeho vydělením známým proudem přístroj získá hodnotu odporu pro další výpočet.{" "}
+          <SourceLink id="2021_BIPM_IPRT">(BIPM, oddíly 3.3 a 4.4)</SourceLink>
         </p>
         <p>
           Abychom určili odpor samotného čidla, potřebujeme snímat napětí přímo mezi jeho konci.
           Měřicí proud totiž prochází také přívodními kabely a i ty mají odpor.
           Při jednoduchém dvouvodičovém zapojení tak do změřeného odporu vstupují čidlo i přívody.
-          Čtyřvodičové zapojení oddělí vedení proudu od snímání napětí.
+          Čtyřvodičové zapojení oddělí vedení proudu od snímání napětí.{" "}
+          <SourceLink id="2021_BIPM_IPRT">(BIPM, oddíl 4.4)</SourceLink>
         </p>
         <p>
           Jedním párem vodičů přivedeme proud k čidlu a zpět. Druhý pár připojíme přímo na jeho
@@ -129,14 +134,16 @@ export function ResistanceThermometryArticle() {
           Kalibrace určí vztah mezi změřeným odporem a známou teplotou.
           U platinového čidla využíváme opakovatelnosti, tedy schopnosti poskytovat při stejné
           teplotě stejný odpor. Vztah proto můžeme nejprve zjistit v laboratoři a potom podle něj
-          převádět odpor na teplotu při běžném měření.
+          převádět odpor na teplotu při běžném měření.{" "}
+          <SourceLink id="2021_BIPM_IPRT">(BIPM, oddíl 5.1)</SourceLink>
         </p>
         <p>
           Do míchané kapalinové lázně vložíme zkoušenou sondu a referenční teploměr.
           Referenční teploměr poskytuje známou teplotu lázně, zkoušená sonda svůj odpor.
           Oba přístroje dostatečně ponoříme a lázeň necháme ustálit.
           Míchání pomáhá udržovat rovnoměrnou teplotu kapaliny, takže oba přístroje porovnáváme
-          při stejné teplotě.
+          při stejné teplotě.{" "}
+          <SourceLink id="2025_NIST_Thermometer_Calibrations">(NIST: porovnávací kalibrace)</SourceLink>
         </p>
         <p>
           Společně odečteme teplotu reference a odpor sondy.
@@ -160,7 +167,8 @@ export function ResistanceThermometryArticle() {
           Tato návaznost může vést až k etalonovému platinovému teploměru.
           Etalon je přístroj určený k uchovávání a předávání referenčních hodnot.
           Jeho kalibrace využívá přesně předepsané teplotní stavy, například trojný bod vody.
-          Při něm za stanovených podmínek společně existují led, kapalná voda a vodní pára.
+          Při něm za stanovených podmínek společně existují led, kapalná voda a vodní pára.{" "}
+          <SourceLink id="2021_BIPM_SPRT">(BIPM: etalonové platinové teploměry)</SourceLink>
         </p>
         <p>
           Předepsané teplotní stavy a kalibrační postupy vymezuje{" "}
@@ -187,7 +195,8 @@ export function ResistanceThermometryArticle() {
           Kalibrace poskytla několik dvojic odporu a teploty.
           Při měření se ale čidlo dostává i na teploty mezi těmito body.
           Proto soubor bodů popíšeme souvislou křivkou. Její rovnice nám umožní přiřadit teplotu
-          také odporům mezi kalibračními hodnotami.
+          také odporům mezi kalibračními hodnotami.{" "}
+          <SourceLink id="2021_BIPM_IPRT">(BIPM, oddíl 5.2)</SourceLink>
         </p>
         <p>
           Pro platinová čidla se používá například Callendarova–Van Dusenova rovnice.
@@ -202,7 +211,8 @@ export function ResistanceThermometryArticle() {
           Právě podle odporu při 0 °C se pojmenovávají běžná platinová čidla.
           Typ Pt100 má při této teplotě jmenovitě 100 Ω.
           Jmenovitá hodnota je předepsaná pro daný typ, skutečný vztah jednotlivého kusu
-          zjišťujeme kalibrací.
+          zjišťujeme kalibrací.{" "}
+          <SourceLink id="2003_OIML_R84">(OIML R 84, příloha A)</SourceLink>
         </p>
         <p>
           Čísla <em>A</em> a <em>B</em> jsou koeficienty určující tvar křivky.
@@ -234,7 +244,8 @@ export function ResistanceThermometryArticle() {
           a jeho mocniny. Mocniny vyjadřují opakované násobení odporu sebou samým.
           Každý člen má vlastní koeficient a společně určují průběh křivky.
           Koeficienty určíme z naměřených kalibračních dvojic.
-          Takový vztah nazýváme empirický, protože je přizpůsobený měřením.
+          Takový vztah nazýváme empirický, protože je přizpůsobený měřením.{" "}
+          <SourceLink id="2021_BIPM_IPRT">(BIPM, oddíl 5.2.1)</SourceLink>
         </p>
         <p>
           K nalezení koeficientů slouží například metoda nejmenších čtverců.
@@ -259,7 +270,8 @@ export function ResistanceThermometryArticle() {
           <figcaption>
             Celý postup pro jednu sondu. První šipka spojuje teplotu sondy s jejím elektrickým
             chováním, další dvě označují výpočty. Schéma shrnuje princip, nezobrazuje elektrické
-            zapojení konkrétní stanice. Dalším krokem USCRN je porovnání výsledků tří sond.
+            zapojení konkrétní stanice. Dalším krokem USCRN je porovnání výsledků tří sond.{" "}
+            <SourceLink id="2021_BIPM_IPRT">(BIPM, kapitoly 2, 3 a 5)</SourceLink>
           </figcaption>
         </figure>
 
@@ -270,7 +282,8 @@ export function ResistanceThermometryArticle() {
           i jejich přenos.
           Na stanici USCRN pracují současně tři teploměry, každý ve vlastním krytu.
           Při zpracování jejich výsledky porovnáme a pro daný časový interval z nich vybereme
-          jednu výslednou teplotu.
+          jednu výslednou teplotu.{" "}
+          <SourceLink id="2013_Diamond_USCRN">(Diamond a kol., příloha)</SourceLink>
         </p>
         <p>
           Výběr výsledné pětiminutové teploty popisují{" "}
@@ -315,7 +328,9 @@ export function ResistanceThermometryArticle() {
           <Link href="/pozorovani/gmst">globální teploty u povrchu</Link> a denní teplotní
           charakteristiky pro sledování <Link href="/pozorovani/vlny-veder">vln veder</Link>.
           K oblastnímu výsledku se dostaneme spojením více stanic. Každé měření při něm přispívá
-          podle toho, jakou část území zastupuje.
+          podle toho, jakou část území zastupuje.{" "}
+          <SourceLink id="DOI_10_1029_2019jd032361">(Morice a kol., metody)</SourceLink>
+          <SourceLink id="DOI_10_1175_jtech_d_11_00103_1">(Menne a kol.: denní teplotní data)</SourceLink>
         </p>
 
         <p>
@@ -323,7 +338,9 @@ export function ResistanceThermometryArticle() {
           Pomáhá například převést relativní vlhkost na množství vodní páry, jak vysvětluje
           článek o <Link href="/pozorovani/narust-vlhkosti">vlhkosti atmosféry</Link>.
           Teplotu vzorku používáme také při stanovení a přepočtu pH v měřeních{" "}
-          <Link href="/pozorovani/acidifikace-oceanu">acidifikace oceánu</Link>.
+          <Link href="/pozorovani/acidifikace-oceanu">acidifikace oceánu</Link>.{" "}
+          <SourceLink id="2021_NIST_Humidity_Calibration">(NIST, oddíl 3)</SourceLink>
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(Dickson a kol., kapitola 2 a SOP 6)</SourceLink>
         </p>
         <p>
           Pro měření ve výšce vynáší balón{" "}
@@ -342,7 +359,8 @@ export function ResistanceThermometryArticle() {
           jeho odpor a z kalibračního vztahu vypočítá teplotu.
           Čidlo je ale z jiného materiálu. Pro přesná měření se často používá polovodičová keramika.
           Při oteplení v ní přibývá pohyblivých nosičů elektrického náboje, tedy částic, které
-          mohou přenášet proud. Proud díky tomu prochází snáze a odpor klesá.
+          mohou přenášet proud. Proud díky tomu prochází snáze a odpor klesá.{" "}
+          <SourceLink id="2014_BIPM_Thermistors">(BIPM, princip termistoru)</SourceLink>
         </p>
         <p>
           Směr změny odporu rozlišuje různé typy termistorů.
@@ -355,7 +373,8 @@ export function ResistanceThermometryArticle() {
         <p>
           U termistoru závisí velikost změny odporu výrazně na tom, v jaké části teplotního rozsahu
           měříme. Stejné oteplení proto může vyvolat různě velkou změnu odporu.
-          Kalibrační křivka je silně zakřivená a pro její popis se používá jiný vztah než u platiny.
+          Kalibrační křivka je silně zakřivená a pro její popis se používá jiný vztah než u platiny.{" "}
+          <SourceLink id="2014_BIPM_Thermistors">(BIPM, kalibrační vztahy)</SourceLink>
         </p>
         <p>
           Jedním z používaných převodů je Steinhartova–Hartova rovnice.
@@ -380,7 +399,8 @@ export function ResistanceThermometryArticle() {
           V tomto zápisu mají jednotku K⁻¹.
           Rovnice sčítá konstantu <em>a</em>, člen s logaritmem a člen s jeho třetí mocninou.
           Nastavením koeficientů přizpůsobíme jejich společný průběh naměřeným kalibračním bodům.
-          Jde tedy opět o empirický převod.
+          Jde tedy opět o empirický převod.{" "}
+          <SourceLink id="2014_BIPM_Thermistors">(BIPM, Steinhartova–Hartova rovnice)</SourceLink>
         </p>
         <p>
           Po dosazení odporu získáme na pravé straně převrácenou hodnotu teploty, tedy{" "}
@@ -393,7 +413,9 @@ export function ResistanceThermometryArticle() {
           <section>
             <h4>Platinové čidlo</h4>
             <p>Odpor s teplotou roste. Vhodné provedení nabízí stabilní vztah mezi odporem a teplotou a dobře popsanou kalibraci.</p>
-            <p>Vedle Pt100 s jmenovitými 100 Ω při 0 °C se používá Pt1000 s jmenovitými 1 000 Ω při 0 °C.</p>
+            <p>Vedle Pt100 s jmenovitými 100 Ω při 0 °C se používá Pt1000 s jmenovitými 1 000 Ω při 0 °C.{" "}
+              <SourceLink id="2021_BIPM_IPRT">(BIPM, kapitola 2)</SourceLink>
+            </p>
           </section>
           <section>
             <h4>NTC termistor</h4>
@@ -403,13 +425,15 @@ export function ResistanceThermometryArticle() {
             </p>
             <p>
               Kalibrace popisuje průběh závislosti v používaném rozsahu.
-              Jmenovitý údaj, například 10 kΩ při 25 °C, určuje odpor při jediné teplotě.
+              Jmenovitý údaj, například 10 kΩ při 25 °C, určuje odpor při jediné teplotě.{" "}
+              <SourceLink id="2014_BIPM_Thermistors">(BIPM, konstrukce a charakteristiky čidel)</SourceLink>
             </p>
           </section>
         </div>
         <p>
           Pro měření ve vodě a půdě se konstrukce sondy přizpůsobuje danému prostředí.
-          Princip zůstává stejný: výměna tepla propojí teplotu okolí s teplotou čidla.
+          Princip zůstává stejný: výměna tepla propojí teplotu okolí s teplotou čidla.{" "}
+          <SourceLink id="2021_BIPM_IPRT">(BIPM, oddíly 2.5 a 4.3)</SourceLink>
         </p>
         <p>
           V oceánu měří termistory například v sondách autonomních plováků Argo.
@@ -418,7 +442,8 @@ export function ResistanceThermometryArticle() {
           části <Link href="/pozorovani/gmsl">změny hladiny moře</Link> způsobené oteplováním vody.
           Teploměr v těchto výpočtech poskytuje teplotu. Energie nebo změna objemu vody se z ní
           a z dalších údajů teprve odvozují.{" "}
-          Naměřené profily zpřístupňují <SourceLink id="2026_Argo_Data">veřejná data Argo</SourceLink>.
+          Naměřené profily zpřístupňují <SourceLink id="2026_Argo_Data">veřejná data Argo</SourceLink>.{" "}
+          <SourceLink id="2026_SeaBird_SBE41">(Sea-Bird: SBE 41)</SourceLink>
         </p>
         <p>
           Termistory mohou dlouhodobě měřit i teplotu v různých hloubkách půdy a hornin.{" "}
@@ -433,7 +458,8 @@ export function ResistanceThermometryArticle() {
           To je součástka, jejíž odpor slouží jako srovnávací hodnota.
           Čidlem i rezistorem necháme procházet stejný proud a změříme napětí na obou.
           Podle Ohmova zákona se při stejném proudu poměr napětí rovná poměru odporů.
-          Ze známého referenčního odporu a tohoto poměru získáme odpor čidla.
+          Ze známého referenčního odporu a tohoto poměru získáme odpor čidla.{" "}
+          <SourceLink id="2021_BIPM_IPRT">(BIPM, oddíl 4.4.3)</SourceLink>
         </p>
         <p>
           Jinou variantou je připojení čidla třemi vodiči.
@@ -498,7 +524,8 @@ export function ResistanceThermometryArticle() {
             <em> I</em> proud v ampérech a <em>R</em> odpor v ohmech.
             Druhá mocnina znamená proud vynásobený sebou samým.
             Oteplení závisí také na odvodu tepla do okolí. Samohřev zkoušíme změnou proudu
-            při ustálené teplotě.
+            při ustálené teplotě.{" "}
+            <SourceLink id="2021_BIPM_IPRT">(BIPM, oddíl 4.1)</SourceLink>
           </p>
           <p>
             Venku působí také záření, proudění vzduchu a smáčení sondy.
@@ -520,14 +547,16 @@ export function ResistanceThermometryArticle() {
             K nejistotě kalibrace přispívá referenční teploměr, podmínky lázně, měření odporu
             a opakovatelnost čidla. Pro nezávislé ověření převodní křivky potřebujeme další
             měření v používaném rozsahu, také mezi kalibračními body.
-            Shoda s body použitými k sestavení křivky sama celkovou nejistotu neurčuje.
+            Shoda s body použitými k sestavení křivky sama celkovou nejistotu neurčuje.{" "}
+            <SourceLink id="2021_BIPM_IPRT">(BIPM, oddíl 5.3)</SourceLink>
           </p>
 
           <p>
             Použitelný rozsah určuje konstrukce sondy a její kalibrace.
             U termistoru může být pro větší rozsah nebo menší nejistotu potřeba převodní rovnice
             s více členy. Koeficienty vždy odpovídají konkrétnímu zápisu rovnice a jednotkám.
-            Záměna ohmů za kiloohmy proto vyžaduje také jejich přepočet.
+            Záměna ohmů za kiloohmy proto vyžaduje také jejich přepočet.{" "}
+            <SourceLink id="2014_BIPM_Thermistors">(BIPM, kalibrační vztahy)</SourceLink>
           </p>
 
           <h3>Porovnání přístrojů v terénu</h3>
@@ -546,7 +575,8 @@ export function ResistanceThermometryArticle() {
             Přístroje však sdílely místo a počasí a jejich odezva na oslunění se lišila.
             Výsledky proto patří tomuto pokusu. Společný vliv prostředí může porovnání přehlédnout.
             Obdobně tři sondy USCRN pomáhají zachytit jednotlivou závadu a překlenout výpadek,
-            ale sdílejí typ přístroje i zpracování.
+            ale sdílejí typ přístroje i zpracování.{" "}
+            <SourceLink id="2004_Hubbard_USCRN">(Hubbard a kol., výsledky porovnání)</SourceLink>
           </p>
 
           <h3>Rozlišení a přesnost</h3>
@@ -577,7 +607,8 @@ export function ResistanceThermometryArticle() {
             <Link href="/pozorovani/gmst">propojením více stanic podle zastoupené plochy</Link>.
             Změny přístrojů či okolí mohou vytvořit skok v dlouhodobém záznamu.
             Jeho rozpoznání a úpravě se věnuje{" "}
-            <Link href="/metody/kontrola-kvality-a-homogenizace">kontrola kvality a homogenizace</Link>.
+            <Link href="/metody/kontrola-kvality-a-homogenizace">kontrola kvality a homogenizace</Link>.{" "}
+            <SourceLink id="DOI_10_1029_2019jd032361">(Morice a kol., metody)</SourceLink>
           </p>
         </details>
 
@@ -647,7 +678,8 @@ export function ResistanceThermometryArticle() {
           Tabulka příručky uvádí vypočtenou teplotu 29,8631 °C.
           Drobný rozdíl vzniká tím, že používáme zaokrouhlené koeficienty vytištěné v příručce.
           Výsledek s těmito koeficienty lze zopakovat skriptem připojeným na konci příkladů.
-          Převod patří tomuto laboratornímu čidlu.
+          Převod patří tomuto laboratornímu čidlu.{" "}
+          <SourceLink id="2021_BIPM_IPRT">(BIPM, oddíl 5.3.1)</SourceLink>
         </p>
 
         <h3>Blue Hill: průměrná teplota jedné hodiny</h3>

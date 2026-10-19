@@ -27,7 +27,8 @@ export function IsotopeMassSpectrometryArticle() {
           poměru jejich hmotnosti a náboje. Umožňuje určit složení vzorku a zastoupení izotopů,
           tedy různě těžkých atomů stejného prvku. Její provedení zaměřené na přesné porovnávání
           izotopových poměrů se označuje zkratkou <strong>IRMS</strong> z anglického
-          isotope ratio mass spectrometry.
+          isotope ratio mass spectrometry.{" "}
+          <SourceLink id="2025_FIRMS_IRMS_Guide">(FIRMS, kapitola 6)</SourceLink>
         </p>
         <p>
           V klimatologii se takto zkoumá voda ze srážek a ledových jader i uhlík z plynů,
@@ -45,7 +46,8 @@ export function IsotopeMassSpectrometryArticle() {
           Nejrozšířenější kyslík ¹⁶O má osm neutronů, kyslík ¹⁸O jich má deset.
           Číslo u značky prvku udává součet protonů a neutronů. Oba jsou stabilní izotopy,
           které se samovolně radioaktivně nerozpadají. Voda obsahuje molekuly s oběma podobami
-          kyslíku a také malé množství molekul s izotopem ¹⁷O.
+          kyslíku a také malé množství molekul s izotopem ¹⁷O.{" "}
+          <SourceLink id="2019_OpenStax_Chemistry_2e">(Chemistry 2e, oddíl 2.3)</SourceLink>
         </p>
         <p>
           Molekula vody s ¹⁸O má větší hmotnost než molekula s ¹⁶O. Tato odlišnost ovlivňuje
@@ -60,7 +62,8 @@ export function IsotopeMassSpectrometryArticle() {
           Měřenou veličinou bude <strong>poměr počtu atomů ¹⁸O k počtu atomů ¹⁶O</strong>,
           označený <InlineMath tex={String.raw`R`} />. Tento poměr nemá jednotku.
           Porovnáváním stejných izotopů v různých vodách zjistíme i malé rozdíly ve složení.
-          Přístroj k tomu potřebuje oddělit částice obsahující lehký a těžký kyslík.
+          Přístroj k tomu potřebuje oddělit částice obsahující lehký a těžký kyslík.{" "}
+          <SourceLink id="2025_FIRMS_IRMS_Guide">(FIRMS, oddíl 3.2)</SourceLink>
         </p>
 
         <h3>Jak připravíme vodu k měření</h3>
@@ -68,7 +71,8 @@ export function IsotopeMassSpectrometryArticle() {
           Odebranou vodu uchováváme v těsně uzavřené nádobce. U srážek k ní patří místo a období
           odběru, u roztátého vzorku ledového jádra také hloubka, ze které pochází.
           Pro popisovaný rozbor USGS obvykle odměřuje 2 ml vody. Voda se uzavře do skleněné
-          nádoby s malým množstvím oxidu uhličitého a nádoba se udržuje při stálé teplotě.
+          nádoby s malým množstvím oxidu uhličitého a nádoba se udržuje při stálé teplotě.{" "}
+          <SourceLink id="DOI_10_3133_tm10C2">(USGS, postup analýzy)</SourceLink>
         </p>
         <p>
           Oxid uhličitý se rozpouští a reaguje s vodou. Při těchto reakcích se mezi CO₂ a vodou
@@ -82,7 +86,8 @@ export function IsotopeMassSpectrometryArticle() {
           Poměr ¹⁸O/¹⁶O v CO₂ se od poměru ve vodě liší, protože i při této výměně působí
           frakcionace. Převod zjistíme pomocí vod se známým složením, které připravíme stejně
           jako vzorky. Z nádoby pak odebereme CO₂, odstraníme doprovodnou vodní páru
-          a plyn přivedeme do spektrometru.
+          a plyn přivedeme do spektrometru.{" "}
+          <SourceLink id="DOI_10_3133_tm10C2">(USGS, postup analýzy)</SourceLink>
         </p>
         <figure className="article-figure article-figure--instrument">
           <Image src="/media/isotope-mass-spectrometry/usgs-irms-laboratory.jpg" alt="Laboratoř USGS v Restonu s hmotnostním spektrometrem Delta V Plus, přístroji pro přípravu vzorků, plynovými lahvemi a počítači." width={1280} height={960} className="article-figure__media" unoptimized />
@@ -103,7 +108,8 @@ export function IsotopeMassSpectrometryArticle() {
           Když náraz jeden elektron z neutrální molekuly vyrazí, zůstane v ní převaha
           kladného náboje a vznikne <strong>iont CO₂⁺</strong>. Elektrické pole tyto ionty
           urychlí a soustava elektrod z nich vytvoří úzký svazek. Vnitřek přístroje se čerpá
-          na vysoké vakuum, aby ionty mohly prolétnout bez častých srážek s okolním plynem.
+          na vysoké vakuum, aby ionty mohly prolétnout bez častých srážek s okolním plynem.{" "}
+          <SourceLink id="2025_FIRMS_IRMS_Guide">(FIRMS, oddíl 6.1)</SourceLink>
         </p>
         <p>
           Svazek vstoupí do magnetického pole, které zakřiví jeho dráhu. U iontů se stejným
@@ -113,7 +119,8 @@ export function IsotopeMassSpectrometryArticle() {
           <InlineMath tex={String.raw`m`} /> je hmotnost vyjádřená v atomových hmotnostních
           jednotkách a <InlineMath tex={String.raw`z`} /> počet elementárních nábojů iontu.
           Atomová hmotnostní jednotka přibližně odpovídá hmotnosti jednoho protonu nebo neutronu.
-          Zde sledujeme kladné ionty s jedním nábojem, takže <InlineMath tex={String.raw`z=1`} />.
+          Zde sledujeme kladné ionty s jedním nábojem, takže <InlineMath tex={String.raw`z=1`} />.{" "}
+          <SourceLink id="2025_FIRMS_IRMS_Guide">(FIRMS, oddíl 6.1)</SourceLink>
         </p>
         <p>
           Většina molekul CO₂ obsahuje jeden uhlík ¹²C a dva kyslíky ¹⁶O. Součet těchto
@@ -130,14 +137,16 @@ export function IsotopeMassSpectrometryArticle() {
           Dopadající ionty na něj přenášejí náboj, a vzniká tak elektrický proud.
           Více iontů za sekundu znamená větší proud. Zesilovače převedou velmi malé proudy
           na měřitelná napětí, která elektronika zaznamená. Pro určení složení se porovnávají
-          velikosti jednotlivých signálů, zejména signálu 46 vůči 44.
+          velikosti jednotlivých signálů, zejména signálu 46 vůči 44.{" "}
+          <SourceLink id="2025_FIRMS_IRMS_Guide">(FIRMS, oddíl 6.1)</SourceLink>
         </p>
         <p>
           V provedení se <strong>dvojím vstupem</strong> má přístroj dva zásobníky plynu:
           jeden se vzorkem, druhý s pracovním CO₂. Ventil je opakovaně střídá, takže stejný
           zdroj iontů a stejné detektory postupně změří oba plyny za podobného tlaku.
           Odezvu vzorku tak porovnáváme s plynem měřeným jen o krátkou chvíli dříve a po něm.
-          Průměr těchto porovnání popisuje, jak se vzorek liší od pracovního plynu.
+          Průměr těchto porovnání popisuje, jak se vzorek liší od pracovního plynu.{" "}
+          <SourceLink id="2025_FIRMS_IRMS_Guide">(FIRMS, oddíl 6.2.1)</SourceLink>
         </p>
         <p>
           Převod na poměr atomů kyslíku zahrnuje ještě složení jednotlivých svazků.
@@ -158,7 +167,8 @@ export function IsotopeMassSpectrometryArticle() {
             oranžová větev přivádí pracovní plyn. Ventil střídá oba plyny.
             Barevné křivky uvnitř přístroje znázorňují rozdělení iontů do tří svazků,
             detektory měří jejich elektrické proudy. Referenční vody procházejí celým
-            postupem stejně jako vzorek. Schéma není v měřítku, rozestupy drah jsou zvětšené.
+            postupem stejně jako vzorek. Schéma není v měřítku, rozestupy drah jsou zvětšené.{" "}
+            <SourceLink id="DOI_10_3133_tm10C2">(USGS, postup analýzy)</SourceLink>
           </figcaption>
         </figure>
 
@@ -168,7 +178,8 @@ export function IsotopeMassSpectrometryArticle() {
           výsledků zajišťují <strong>referenční vody se známým izotopovým složením</strong>.
           Laboratoř je zpracuje od ustavení rovnováhy s CO₂ až po odečet signálů stejně
           jako neznámou vodu. Kalibrace tak propojí odezvu celého postupu s vlastností
-          původního kapalného vzorku.
+          původního kapalného vzorku.{" "}
+          <SourceLink id="DOI_10_3133_tm10C2">(USGS, kalibrace a normalizace)</SourceLink>
         </p>
         <p>
           Výsledek se obvykle zapisuje jako <InlineMath tex={String.raw`\delta^{18}\mathrm{O}`} />,
@@ -182,7 +193,8 @@ export function IsotopeMassSpectrometryArticle() {
           <InlineMath tex={String.raw`R_{\mathrm{VSMOW}}`} /> stejný poměr v referenci.
           Oba jsou bezrozměrné. Promile, značka ‰, znamená tisícinu.
           Nulová delta označuje shodný poměr, záporná menší zastoupení těžkého kyslíku
-          vůči lehkému a kladná větší.
+          vůči lehkému a kladná větší.{" "}
+          <SourceLink id="2025_FIRMS_IRMS_Guide">(FIRMS, oddíl 3.3)</SourceLink>
         </p>
         <p>
           Stupnice má dva pevné body: VSMOW s δ¹⁸O = 0 ‰ a vodu SLAP s δ¹⁸O = −55,5 ‰.
@@ -191,7 +203,8 @@ export function IsotopeMassSpectrometryArticle() {
           Stejným převodem pak zpracuje vzorky. V metodice USGS se takto používají laboratorní
           vody navázané na tyto mezinárodní reference. Novější materiály VSMOW2 a SLAP2
           tutéž stupnici přenášejí do dalších měření, například do níže uvedeného{" "}
-          <SourceLink id="DOI_10_1021_ac402366t">porovnání tří laboratoří</SourceLink>.
+          <SourceLink id="DOI_10_1021_ac402366t">porovnání tří laboratoří</SourceLink>.{" "}
+          <SourceLink id="2025_FIRMS_IRMS_Guide">(FIRMS, oddíl 4.2.4)</SourceLink>
         </p>
 
         <h3>Co se z izotopů dozvíme o klimatu</h3>
@@ -200,7 +213,8 @@ export function IsotopeMassSpectrometryArticle() {
           kyslíkem se přednostně odstraňují do srážek. Ve zbývající páře jejich podíl klesá.
           Další srážky tak mohou mít stále zápornější δ¹⁸O. Rozbor odebrané vody zachycuje
           výsledek tohoto vývoje. Spolu s místem odběru a meteorologickými údaji pomáhá
-          sledovat původ vlhkosti a podmínky, za kterých vznikl déšť nebo sníh.
+          sledovat původ vlhkosti a podmínky, za kterých vznikl déšť nebo sníh.{" "}
+          <SourceLink id="DOI_10_3402_tellusa_v16i4_8993">(Dansgaard, oddíl 2)</SourceLink>
         </p>
         <p>
           <SourceLink id="DOI_10_3402_tellusa_v16i4_8993">Dansgaardova studie z roku 1964</SourceLink>{" "}
@@ -217,7 +231,8 @@ export function IsotopeMassSpectrometryArticle() {
           jádra</Link> vytvoří řadu hodnot podle hloubky. Určení stáří vrstev ji převede na časovou řadu.
           Vztah k tehdejší teplotě a pohybu vlhkosti je následná interpretace, kterou rozvíjí{" "}
           <Link href="/metody/izotopova-paleotermometrie">izotopová paleotermometrie</Link>.
-          Hmotnostní spektrometr k ní dodává změřené izotopové složení.
+          Hmotnostní spektrometr k ní dodává změřené izotopové složení.{" "}
+          <SourceLink id="DOI_10_3402_tellusa_v16i4_8993">(Dansgaard, oddíl 2.3.1)</SourceLink>
         </p>
 
         <h3>Jak se metoda vyvíjela a jaká má další provedení</h3>
@@ -271,7 +286,8 @@ export function IsotopeMassSpectrometryArticle() {
             Odpařování z netěsné nádobky mění složení samotného vzorku. Při přípravě CO₂
             je důležitá stálá teplota a dostatek času pro rovnováhu. Rozpuštěné soli mohou
             ovlivnit vztah mezi vodou a CO₂, proto USGS stanovuje pro slané vody odlišné
-            podmínky. Tyto vlivy se týkají přípravy před vstupem do spektrometru.
+            podmínky. Tyto vlivy se týkají přípravy před vstupem do spektrometru.{" "}
+            <SourceLink id="DOI_10_3133_tm10C2">(USGS, interference a omezení)</SourceLink>
           </p>
           <p>
             Zbytky předchozího plynu mohou ovlivnit další měření. Proměny odezvy se sledují
@@ -296,7 +312,8 @@ export function IsotopeMassSpectrometryArticle() {
             přístrojové přesnosti se zahrnutím nejistoty referencí. Tyto údaje proto
             neslučujeme do jedné společné chyby. Samostatně by bylo nutné posoudit nejistotu
             klimatické interpretace. Izotopové složení srážek závisí na teplotě i na dalších
-            dějích v koloběhu vody, jak dokládá <SourceLink id="DOI_10_3402_tellusa_v16i4_8993">Dansgaardova studie</SourceLink>.
+            dějích v koloběhu vody, jak dokládá <SourceLink id="DOI_10_3402_tellusa_v16i4_8993">Dansgaardova studie</SourceLink>.{" "}
+            <SourceLink id="DOI_10_1021_ac402366t">(Berman a kol., tabulka 1)</SourceLink>
           </p>
         </details>
 
@@ -325,7 +342,8 @@ export function IsotopeMassSpectrometryArticle() {
           LSCE je francouzská Laboratoire des Sciences du Climat et de l’Environnement,
           JHU je americká Johns Hopkins University. Počty v tabulce označují opakovaná měření
           s vysokou přesností, z nichž každé už zahrnuje více dílčích odečtů.
-          Význam uvedených nejistot je rozepsán v předchozím rozbalovacím oddílu.
+          Význam uvedených nejistot je rozepsán v předchozím rozbalovacím oddílu.{" "}
+          <SourceLink id="DOI_10_1021_ac402366t">(Berman a kol., tabulka 1)</SourceLink>
         </p>
         <p>
           Pro výsledek LSCE upravíme již vysvětlenou definici delty. Přičtení jedničky

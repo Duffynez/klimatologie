@@ -24,7 +24,8 @@ export function CoulometryArticle() {
           náboje spotřebovaného při chemické reakci. V oceánografii se používá zejména
           ke stanovení celkového rozpuštěného anorganického uhlíku v mořské vodě.
           Vysvětlíme si provedení, při němž uhlík nejprve převedeme na plynný CO₂
-          a potom změříme jeho množství v coulometru.
+          a potom změříme jeho množství v coulometru.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(měřicí příručka, SOP 2)</SourceLink>
         </p>
         <h3>Které formy uhlíku měříme společně</h3>
         <p>
@@ -33,7 +34,8 @@ export function CoulometryArticle() {
           obvykle tvoří hydrogenuhličitanové a uhličitanové ionty, tedy elektricky
           nabité částice obsahující uhlík a kyslík. Hydrogenuhličitan obsahuje také vodík.
           Součtu uhlíku ve všech těchto formách říkáme rozpuštěný anorganický uhlík,
-          anglicky <em>dissolved inorganic carbon</em>, zkráceně DIC.
+          anglicky <em>dissolved inorganic carbon</em>, zkráceně DIC.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(Dickson a kol., kap. 2 a SOP 2, oddíly 2–3)</SourceLink>
         </p>
         <p>
           Pro jeho změření převedeme všechny uvedené formy na CO₂. Přidáme kyselinu,
@@ -41,7 +43,8 @@ export function CoulometryArticle() {
           až vznikne rozpuštěný CO₂ a voda. Každá původní částice obsahovala jeden
           atom uhlíku a poskytne jednu molekulu CO₂. Když tento plyn celý zachytíme
           a změříme, zjistíme původní součet uhlíku. Chemické reakce podrobněji
-          vysvětluje <Link href="/metody/titrace">článek o titraci</Link>.
+          vysvětluje <Link href="/metody/titrace">článek o titraci</Link>.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(Dickson a kol., kap. 2 a SOP 2, oddíly 2–3)</SourceLink>
         </p>
         <h3>Jak připravíme vzorek a uvolníme CO₂</h3>
         <p>
@@ -49,7 +52,8 @@ export function CoulometryArticle() {
           lahve. Při delším uchování se biologická aktivita ve vzorku zastavuje
           přídavkem konzervačního roztoku. Tím se uchovává složení vody z doby odběru.
           Před rozborem se vzorek nechá ustálit na pracovní teplotě a připojí se
-          k dávkovacímu zařízení.
+          k dávkovacímu zařízení.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 1 a SOP 2, oddíl 6)</SourceLink>
         </p>
         <p>
           Kalibrovaná pipeta odměří část vzorku, zpravidla několik desítek mililitrů.
@@ -57,7 +61,8 @@ export function CoulometryArticle() {
           a přepočtem podle hustoty. Pro mořský vzorek pak potřebujeme jeho teplotu
           a salinitu, údaj o slanosti. Z nich určíme hustotu a násobením objemu
           hustotou získáme hmotnost analyzované vody. K této hmotnosti se bude
-          vztahovat výsledek.
+          vztahovat výsledek.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 12 a SOP 2, oddíl 8.3)</SourceLink>
         </p>
         <p>
           Odměřená voda se vypustí do skleněné extrakční nádoby. Slovo extrakce zde
@@ -75,7 +80,8 @@ export function CoulometryArticle() {
           V měřicí nádobě je roztok obsahující ethanolamin, látku, která váže CO₂.
           Při jejich reakci se pro každou zachycenou molekulu CO₂ uvolní jeden
           vodíkový iont. Roztok se tím okyseluje. Abychom zjistili, kolik CO₂
-          přibylo, budeme tuto vznikající kyselost průběžně vyrovnávat.
+          přibylo, budeme tuto vznikající kyselost průběžně vyrovnávat.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 2, oddíl 3)</SourceLink>
         </p>
         <p>
           K vyrovnání slouží hydroxidové ionty OH⁻. Jsou to záporně nabité částice
@@ -94,12 +100,14 @@ export function CoulometryArticle() {
         <p>
           Značka e⁻ označuje elektron, H₂ molekulu vodíku a H₂O vodu.
           Rovnice ukazuje rozhodující poměr: na každý vzniklý OH⁻ připadá jeden
-          elektron.
+          elektron.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 2, oddíl 3)</SourceLink>
         </p>
         <p>
           Druhá, stříbrná elektroda se nazývá anoda a uzavírá elektrický
           obvod. Je v odděleném prostoru, propojeném s měřicím roztokem porézní
-          přepážkou, přes kterou mohou procházet ionty.
+          přepážkou, přes kterou mohou procházet ionty.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 2, oddíly 4.3 a 5.5)</SourceLink>
         </p>
         <p>
           Množství dodávaného proudu řídí barva roztoku. Obsahuje barvivo
@@ -107,7 +115,8 @@ export function CoulometryArticle() {
           roztok a detektor sleduje, kolik světla jím projde. Jakmile přicházející
           CO₂ roztok okyselí, elektronika zvýší tvorbu OH⁻. Tím obnoví původní
           barevný stav. Po celou analýzu tak přidává právě tolik činidla, kolik
-          reakce se zachyceným CO₂ potřebuje.
+          reakce se zachyceným CO₂ potřebuje.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 2, oddíl 3)</SourceLink>
         </p>
         <figure className="article-figure">
           <div style={{ overflowX: "auto" }}>
@@ -137,7 +146,8 @@ export function CoulometryArticle() {
           <InlineMath tex="t" /> doba v sekundách, s. Jeden ampér znamená jeden
           coulomb za sekundu. Při proměnném proudu přístroj sčítá náboj
           z jednotlivých časových úseků. Silnější proud po kratší dobu může
-          vytvořit stejné množství činidla jako slabší proud po delší dobu.
+          vytvořit stejné množství činidla jako slabší proud po delší dobu.{" "}
+          <SourceLink id="2016_Harvey_Analytical_Chemistry">(Harvey, oddíl 11.3)</SourceLink>
         </p>
         <p>
           Celý řetězec nyní spojuje jeden elektron, jeden vytvořený OH⁻,
@@ -175,7 +185,8 @@ export function CoulometryArticle() {
         <p>
           Odezva bývá ukládána jako počet elektronických impulzů, v dokumentaci
           označených <em>counts</em>. Jsou to jednotky přístrojového odečtu,
-          jejichž součet odpovídá prošlému náboji.
+          jejichž součet odpovídá prošlému náboji.{" "}
+          <SourceLink id="DOI_10_2172_10194787">(Johnson, kap. 4)</SourceLink>
         </p>
         <p>
           Před měřením vzorku necháme soustavou proudit nosný plyn a změříme její
@@ -183,7 +194,8 @@ export function CoulometryArticle() {
           Za dobu následného rozboru se nasčítá určitý příspěvek. Ten odečteme,
           aby výsledek odpovídal uhlíku ze vzorku. Stejně zacházíme s případným CO₂
           přineseným přidávanou kyselinou. V automatickém systému lze kyselinu
-          nejprve odplynit a teprve potom přidat vodu.
+          nejprve odplynit a teprve potom přidat vodu.{" "}
+          <SourceLink id="DOI_10_2172_10194787">(Johnson, kap. 4)</SourceLink>
         </p>
         <p>
           Kalibrace propojí odezvu celé měřicí části se známým množstvím CO₂.
@@ -191,7 +203,8 @@ export function CoulometryArticle() {
           čistým CO₂. Z jejího objemu, teploty a tlaku se vypočte množství plynu.
           Porovnáním s odezvou coulometru získáme převodní koeficient.
           Jinou možností jsou roztoky s přesně známým množstvím uhličitanu sodného,
-          které projdou stejnou přípravou jako vzorky.
+          které projdou stejnou přípravou jako vzorky.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 2, oddíly 4.4 a 7.4)</SourceLink>
         </p>
         <p>
           Elektroniku lze navíc zkontrolovat přivedením známého proudu po známou
@@ -214,7 +227,8 @@ export function CoulometryArticle() {
           <InlineMath tex={String.raw`n_\mathrm{C}`} /> jeho naměřené látkové množství
           a <InlineMath tex={String.raw`m_\mathrm{vody}`} /> hmotnost vzorku.
           Při množství v mikromolech a hmotnosti v kilogramech má výsledek jednotku
-          µmol/kg. Mikromol je miliontina molu.
+          µmol/kg. Mikromol je miliontina molu.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 2, oddíl 8.3)</SourceLink>
         </p>
         <p>
           Přídavek konzervačního roztoku vodu mírně zředí. Pro návrat ke složení
@@ -297,7 +311,8 @@ export function CoulometryArticle() {
             před analýzou. Netěsnost plynové cesty a neúplné oddělení CO₂ snižují
             množství dopravené do měřicí nádoby. Pevné uhličitanové částice mohou
             při okyselení uvolnit další uhlík. Výsledek by pak zahrnul i jejich
-            příspěvek k rozpuštěnému uhlíku.
+            příspěvek k rozpuštěnému uhlíku.{" "}
+            <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 1 a SOP 2, oddíl 3)</SourceLink>
           </p>
           <p>
             Při práci se mění pozadí, složení měřicího roztoku a odezva elektrody.
@@ -315,7 +330,8 @@ export function CoulometryArticle() {
             Dokumentace uvádí 166 párových porovnání. Průměr devíti průměrných
             rozdílů za jednotlivé plavby činil −4,16 µmol/kg, coulometrie vycházela
             níže. Směrodatná odchylka těchto devíti rozdílů byla 1,21 µmol/kg.
-            Příčina rozdílu nebyla v této zprávě uzavřena.
+            Příčina rozdílu nebyla v této zprávě uzavřena.{" "}
+            <SourceLink id="DOI_10_3334_CDIAC_otg_ndp080">(NDP-080, tabulky 8–10)</SourceLink>
           </p>
           <p>
             Porovnání používá odlišný způsob extrakce i detekce, zároveň zahrnuje
@@ -418,7 +434,8 @@ export function CoulometryArticle() {
             minutami významného průchodu proudu uvedenými ve výpisu.
             Po obou odečtech dělíme koeficientem 1,000046 a následně násobíme
             plynovým koeficientem 1,002843. Předchozí odečty proplachu soustavy
-            nejsou odečty vzorku a do tohoto výpočtu nevstupují.
+            nejsou odečty vzorku a do tohoto výpočtu nevstupují.{" "}
+            <SourceLink id="DOI_10_2172_10194787">(Johnson, oddíly 4.1–4.2 a obr. 10)</SourceLink>
           </p>
           <p>
             Pro přesné zopakování používáme publikovanou převrácenou hmotnost
@@ -433,7 +450,8 @@ export function CoulometryArticle() {
             96 489 C/mol a jmenovitého převodu elektroniky. Výsledkem je
             koncentrace ve fázi zobrazené přístrojem. Další opravu na
             konzervační roztok nebo výměnu s plynem nad vzorkem nepřidáváme,
-            protože výpis potřebné údaje neobsahuje.
+            protože výpis potřebné údaje neobsahuje.{" "}
+            <SourceLink id="DOI_10_2172_10194787">(Johnson, oddíly 4.1–4.2 a obr. 10)</SourceLink>
           </p>
         </details>
         <h2>Shrnutí</h2>

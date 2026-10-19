@@ -31,7 +31,8 @@ export function PhenologyMonitoringArticle() {
           Standardizované fenologické pozorování je opakované sledování vývojových fází rostlin
           a aktivity živočichů podle společných pravidel. Zjišťuje, kdy se objevují listy,
           otevírají květy, dozrávají plody nebo nastávají další pravidelně se vracející události.
-          Spojením pozorování z více let poznáváme, jak se jejich načasování mění.
+          Spojením pozorování z více let poznáváme, jak se jejich načasování mění.{" "}
+          <SourceLink id="DOI_10_1007_s00484_014_0789_5">(Denny a kol., popis metody)</SourceLink>
         </p>
         <p>
           V průběhu roku se mění podmínky, ve kterých organismy žijí. Na jaře například teplo
@@ -39,7 +40,9 @@ export function PhenologyMonitoringArticle() {
           vyrůstá a rozvíjí se, mění se i jeho vzhled. Právě takové viditelné změny nám dovolují
           rozpoznat postup vývoje a přiřadit mu datum. Vymezenou část vývoje nazýváme <strong>fenofází</strong>.
           Může jí být rašení pupenů nebo přítomnost rozvinutých listů. Její hranice určujeme
-          popisem znaků, které má pozorovatel hledat.
+          popisem znaků, které má pozorovatel hledat.{" "}
+          <SourceLink id="2016_USANPN_Focus_On_Leaves">(USA-NPN: vývoj listových pupenů)</SourceLink>
+          <SourceLink id="DOI_10_1111_gcb_15000">(Menzel a kol., vliv teploty na jarní vývoj)</SourceLink>
         </p>
         <p>
           Podrobně projdeme sledování označených rostlin v americké národní fenologické síti
@@ -56,7 +59,8 @@ export function PhenologyMonitoringArticle() {
           a každému sledovanému jedinci přidělíme trvalé označení. Díky němu spojujeme jednotlivé
           návštěvy do záznamu o téže rostlině. Výběr přizpůsobíme otázce výzkumu. Chceme-li poznat
           vývoj v určitém porostu, sledujeme v něm více jedinců. Chceme-li porovnat různá prostředí,
-          zařadíme rostliny z míst, která tato prostředí zastupují.
+          zařadíme rostliny z míst, která tato prostředí zastupují.{" "}
+          <SourceLink id="DOI_10_3133_ofr20181060">(USGS, výběr míst a rostlin)</SourceLink>
         </p>
         <p>
           Pro vybraný druh pak použijeme společný popis sledované fáze. U fáze nazvané
@@ -94,7 +98,8 @@ export function PhenologyMonitoringArticle() {
           list splňující definici. Pokud rostlinu prohlédneme a takový list nenajdeme, zapíšeme <strong>ne</strong>.
           Když stav nedokážeme posoudit, použijeme <strong>nevím</strong>. Každý zápis patří
           ke konkrétní rostlině, fázi a datu návštěvy. Jedno „ano“ tak říká, že na dané rostlině
-          byly při této návštěvě živé rozvinuté listy.
+          byly při této návštěvě živé rozvinuté listy.{" "}
+          <SourceLink id="DOI_10_3133_ofr20181060">(USGS, zaznamenávání fenofází)</SourceLink>
         </p>
         <p>
           Sledované fáze posuzujeme samostatně. Na jedné větvi už mohou být rozvinuté listy,
@@ -119,7 +124,8 @@ export function PhenologyMonitoringArticle() {
           Při dřívější návštěvě fáze ještě neprobíhala, při pozdější už ano. Její nástup proto
           klademe mezi tyto návštěvy. Délku tohoto rozmezí získáme odečtením obou dat.
           Počítáme přitom s tím, že pozorovatel fázi správně rozpoznal a že mezi návštěvami
-          nezůstalo nezachycené její dřívější opakování.
+          nezůstalo nezachycené její dřívější opakování.{" "}
+          <SourceLink id="DOI_10_3133_ofr20181060">(USGS, zpracování stavových záznamů)</SourceLink>
         </p>
         <p>
           Pro výpočty můžeme datum vyjádřit jako <strong>pořadový den roku</strong>.
@@ -149,7 +155,8 @@ export function PhenologyMonitoringArticle() {
           </div>
           <figcaption>
             Schéma opakovaného sledování rostliny. Šipky ukazují, jak určení jedince a fáze
-            umožní spojit jednotlivé zápisy a získat časové rozmezí nástupu.
+            umožní spojit jednotlivé zápisy a získat časové rozmezí nástupu.{" "}
+            <SourceLink id="DOI_10_3133_ofr20181060">(USGS: fenologické pozorování)</SourceLink>
           </figcaption>
         </figure>
         <p>
@@ -157,7 +164,8 @@ export function PhenologyMonitoringArticle() {
           obdobně ohraničí ukončení fáze. Pokud se fáze později vrátí, nový přechod z „ne“
           na „ano“ založí další období jejího výskytu. Tím lze zachytit i opakované kvetení
           nebo nové rašení listů. Úplný výstup tedy tvoří jak původní datované zápisy,
-          tak údaje o nástupu a konci jednotlivých období.
+          tak údaje o nástupu a konci jednotlivých období.{" "}
+          <SourceLink id="DOI_10_1007_s00484_014_0789_5">(Denny a kol., stavové pozorování)</SourceLink>
         </p>
         <p>
           Zápis přítomnosti lze doplnit údajem o <strong>intenzitě</strong>, tedy o tom, v jakém
@@ -174,7 +182,8 @@ export function PhenologyMonitoringArticle() {
           U stejného druhu a stejné fáze porovnáváme, zda nástup přichází dříve, nebo později.
           Záznamy z více míst pak ukážou, jak se načasování liší mezi oblastmi. Pro srovnání
           spojíme údaje se stejným významem fáze a zachováme informaci o zastoupených rostlinách,
-          místech a letech. Právě tuto cestu sleduje článek o <Link href="/pozorovani/fenologicke-posuny">fenologických posunech</Link>.
+          místech a letech. Právě tuto cestu sleduje článek o <Link href="/pozorovani/fenologicke-posuny">fenologických posunech</Link>.{" "}
+          <SourceLink id="DOI_10_1111_gcb_15000">(Menzel a kol., metody)</SourceLink>
         </p>
         <p>
           Vztah ke klimatu zkoumáme připojením údajů o podmínkách, za kterých vývoj probíhal.
@@ -182,7 +191,8 @@ export function PhenologyMonitoringArticle() {
           Oteplení může urychlit růst, důležitý je však i předchozí zimní chlad,
           který u mnoha dřevin pomáhá ukončit období vegetačního klidu. Účinky těchto podmínek
           rozlišujeme porovnáním více sezón a míst. Tak zjišťujeme, která část proměnlivosti
-          načasování souvisí s teplotou.
+          načasování souvisí s teplotou.{" "}
+          <SourceLink id="DOI_10_1111_gcb_15000">(Menzel a kol., diskuse)</SourceLink>
         </p>
         <p>
           <SourceLink id="DOI_10_1111_gcb_15000">Menzel a kolegové (2020)</SourceLink>{" "}
@@ -249,7 +259,8 @@ export function PhenologyMonitoringArticle() {
             Pokud prvnímu „ano“ nepředchází „ne“, nemáme spodní hranici nástupu.
             Rozmezí mezi návštěvami vyjadřuje časové pokrytí, nikoli statistický interval
             spolehlivosti. Denní rozlišení databáze také neznamená, že datum známe s přesností
-            jednoho dne. Chybná odpověď nebo nezachycené opakování fáze může změnit i určené hranice.
+            jednoho dne. Chybná odpověď nebo nezachycené opakování fáze může změnit i určené hranice.{" "}
+            <SourceLink id="DOI_10_3133_ofr20181060">(USGS, intervaly mezi návštěvami)</SourceLink>
           </p>
           <h3>Co skutečně ověřovalo porovnání šeříků</h3>
           <p>
@@ -257,13 +268,15 @@ export function PhenologyMonitoringArticle() {
             skupiny podle doručení a otevření připomínky. U skupiny bez doručené zprávy činilo
             průměrné rozmezí 6,5 dne. Hodnoty 5,2, 7,0 a 6,5 dne pocházejí z výsledků
             pro rašení listových pupenů, z obrázku 2a. Výběr zahrnoval případy, kdy teplotní model
-            předpověděl nástup nejpozději v den jeho nahlášení, a vylučoval výrazně odlehlé hodnoty.
+            předpověděl nástup nejpozději v den jeho nahlášení, a vylučoval výrazně odlehlé hodnoty.{" "}
+            <SourceLink id="DOI_10_5334_cstp_464">(Crimmins a Posthumus, obr. 2a a metody)</SourceLink>
           </p>
           <p>
             Skupiny nevznikly náhodným rozdělením a pozorovatelé se mohli lišit i motivací.
             Studie zároveň porovnávala hlášená data s modelem, který sloužil k načasování
             připomínek. To je společná reference, nikoli nezávislé terénní určení skutečného
-            data nástupu. Uváděné délky rozmezí proto nepřevádíme na obecnou chybu metody.
+            data nástupu. Uváděné délky rozmezí proto nepřevádíme na obecnou chybu metody.{" "}
+            <SourceLink id="DOI_10_5334_cstp_464">(Crimmins a kol., obr. 2a)</SourceLink>
           </p>
           <h3>Výběr míst a změny v čase</h3>
           <p>
@@ -271,7 +284,8 @@ export function PhenologyMonitoringArticle() {
             Proměna výběru míst nebo četnosti návštěv tak může posunout souhrnný výsledek.
             Dlouhodobé srovnání proto prověřuje stálost výběru, definic a způsobu pozorování.
             U živočichů navíc nezjištěný výskyt závisí na délce hledání, počasí a možnosti
-            zvíře zahlédnout nebo slyšet. Samotný první záznam druhu nemusí být jeho skutečným příchodem.
+            zvíře zahlédnout nebo slyšet. Samotný první záznam druhu nemusí být jeho skutečným příchodem.{" "}
+            <SourceLink id="DOI_10_1007_s00484_014_0789_5">(Denny a kol., výběr a sledování organismů)</SourceLink>
           </p>
           <p>
             Určení klimatické příčiny vyžaduje další analýzu. Načasování ovlivňuje také délka dne,

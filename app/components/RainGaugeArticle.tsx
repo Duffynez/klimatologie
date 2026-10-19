@@ -28,7 +28,8 @@ export function RainGaugeArticle() {
           Srážkoměr je přístroj, který zachycuje déšť nebo sníh a měří množství vody spadlé
           na určitou plochu. Disdrometr měří vlastnosti jednotlivých padajících kapek či
           vloček, především jejich velikost a rychlost. Společně umožňují popsat, kolik
-          vody při srážkách spadlo, jak rychle přibývala a z jakých částic srážky sestávaly.
+          vody při srážkách spadlo, jak rychle přibývala a z jakých částic srážky sestávaly.{" "}
+          <SourceLink id="WEB_World_Meteorological_Organiz_prirucka_WMO_c_8_f7933a04">(WMO, svazek I, kapitola 6)</SourceLink>
         </p>
         <p>
           Váhový srážkoměr si vysvětlíme na přístroji Geonor T-200B v americké referenční
@@ -59,13 +60,15 @@ export function RainGaugeArticle() {
           Δm je hmotnost přidané vody a ρ její hustota. Značka Δ znamená změnu za sledovaný
           interval. Dosadíme-li objem v m³ a plochu v m², vyjde úhrn v metrech.
           Stejného výsledku dosáhneme s hmotností v kilogramech a hustotou v kg/m³.
-          Násobením tisícem převedeme metry na milimetry.
+          Násobením tisícem převedeme metry na milimetry.{" "}
+          <SourceLink id="WEB_World_Meteorological_Organiz_prirucka_WMO_c_8_f7933a04">(WMO, kapitola 6)</SourceLink>
         </p>
         <p>
           Vážením lze měřit i zachycený sníh. Jeho hmotnost převedeme pomocí hustoty
           kapalné vody na objem, který by vznikl po roztání. Tak získáme <strong>vodní hodnotu
           sněhu</strong>. Výška samotné sněhové vrstvy je jiná veličina, protože mezi
-          vločkami zůstává vzduch.
+          vločkami zůstává vzduch.{" "}
+          <SourceLink id="WEB_World_Meteorological_Organiz_prirucka_WMO_c_8_f7933a04">(WMO, kapitola 6)</SourceLink>
         </p>
         <p>
           Úhrn vždy patří určitému místu a době. Chceme-li vyjádřit sílu deště, potřebujeme
@@ -77,7 +80,8 @@ export function RainGaugeArticle() {
           R je průměrná intenzita a Δt délka intervalu. S úhrnem P v milimetrech a časem
           v hodinách vyjde intenzita v mm/h. Kratší intervaly podrobněji zachycují,
           kdy déšť zesílil a kdy zeslábl. Poznáme tak, zda hodinový úhrn vznikl
-          rovnoměrným deštěm, nebo krátkou prudkou přeháňkou.
+          rovnoměrným deštěm, nebo krátkou prudkou přeháňkou.{" "}
+          <SourceLink id="WEB_World_Meteorological_Organiz_prirucka_WMO_c_8_f7933a04">(WMO, kapitola 6)</SourceLink>
         </p>
 
         <h3>Váhový srážkoměr</h3>
@@ -105,19 +109,22 @@ export function RainGaugeArticle() {
           zatížení, a tím i napnutí struny. Napjatější struna kmitá rychleji.
           Elektronický impulz ji rozkmitá a elektronika změří její frekvenci, tedy
           počet kmitů za sekundu. Jednotkou je hertz, značka Hz. Změnu hmotnosti tak
-          přístroj nejprve zaznamená jako změnu frekvence.
+          přístroj nejprve zaznamená jako změnu frekvence.{" "}
+          <SourceLink id="2016_Geonor_T200B_Manual">(Geonor, popis váhového snímače)</SourceLink>
         </p>
         <p>
           Abychom z frekvence zjistili množství vody, potřebujeme kalibraci. Při ní
           porovnáváme odezvu snímače se známým zatížením. Známou hmotnost můžeme podle
           plochy otvoru vyjádřit rovnou v milimetrech vody. Získáme tak dvojice hodnot:
           frekvenci a odpovídající obsah nádoby. Kalibrační vztah potom umožní převádět
-          i hodnoty mezi těmito body.
+          i hodnoty mezi těmito body.{" "}
+          <SourceLink id="2016_Geonor_T200B_Manual">(Geonor, oddíl 7.2)</SourceLink>
         </p>
         <p>
           Známé zatížení při kalibraci se opírá o doložený sled porovnání
           s referencemi pro měření hmotnosti. Tím se i odečet srážkoměru propojuje
-          s referenčními měřeními. Tomuto propojení říkáme metrologická návaznost.
+          s referenčními měřeními. Tomuto propojení říkáme metrologická návaznost.{" "}
+          <SourceLink id="2012_VIM_Calibration">(VIM, heslo 2.39 a poznámka 1)</SourceLink>
         </p>
         <p>
           Převod pro Geonor začíná odečtením frekvence prázdné nádoby od právě měřené
@@ -142,7 +149,8 @@ export function RainGaugeArticle() {
           Veličina H popisuje veškerý obsah nádoby v okamžiku odečtu. Srážkový úhrn
           za určitou dobu získáváme z jeho přírůstku. V síti USCRN každý ze tří snímačů
           poskytuje vlastní záznam obsahu nádoby, převedený vlastním kalibračním vztahem.
-          Tyto záznamy se následně zpracují společně do pětiminutových úhrnů.
+          Tyto záznamy se následně zpracují společně do pětiminutových úhrnů.{" "}
+          <SourceLink id="2015_USCRN_OAP2">(NOAA OAP 2.0)</SourceLink>
         </p>
 
         <h3>Zpracování přírůstků vody</h3>
@@ -159,7 +167,8 @@ export function RainGaugeArticle() {
           v předchozích hodinách. Klidnější záznam má na společný výsledek větší vliv.
           Algoritmus zároveň kontroluje chybné odečty a zohledňuje kladné i záporné
           změny. Při kolísání kolem stálého obsahu se totiž zdánlivé přírůstky a úbytky
-          střídají. Zachování obou znamének umožňuje tyto výkyvy vzájemně vyrovnat.
+          střídají. Zachování obou znamének umožňuje tyto výkyvy vzájemně vyrovnat.{" "}
+          <SourceLink id="2015_USCRN_OAP2">(NOAA OAP 2.0)</SourceLink>
         </p>
         <p>
           Velmi malé příspěvky se přenášejí do dalšího vhodného intervalu, dokud
@@ -167,7 +176,8 @@ export function RainGaugeArticle() {
           kdy se drobné množství objeví ve výsledku. Hotové úhrny se zapisují s krokem
           0,1 mm. Tento krok určuje odstup sousedních zapisovaných hodnot.
           Zpracované pětiminutové úhrny už můžeme sčítat za delší dobu nebo převádět
-          na průměrnou intenzitu deště.
+          na průměrnou intenzitu deště.{" "}
+          <SourceLink id="2015_USCRN_OAP2">(NOAA OAP 2.0)</SourceLink>
         </p>
         <figure className="method-flow">
           <div className="method-flow__track" aria-label="Postup měření váhovým srážkoměrem">
@@ -210,13 +220,15 @@ export function RainGaugeArticle() {
           Velikost poklesu napětí nese informaci o velikosti částice. Větší částice
           zastíní větší část světla. Převod mezi zastíněním a velikostí se určuje
           kalibrací. Výrobce používá referenční částice o rozměrech 0,5, 1, 2 a 4 mm,
-          jejichž známé velikosti porovnává s optickou odezvou.
+          jejichž známé velikosti porovnává s optickou odezvou.{" "}
+          <SourceLink id="2024_OTT_Parsivel2_Manual">(Parsivel², popis měření a technické údaje)</SourceLink>
         </p>
         <p>
           Doba poklesu napětí ukazuje, jak dlouho částice procházela světelným pásem.
           Signál začne při vstupu částice a skončí, když pás celá opustí. K určení
           uražené dráhy proto potřebujeme rozměr částice i tloušťku pásu.
-          Dráha dělená dobou průchodu pak dává rychlost pádu.
+          Dráha dělená dobou průchodu pak dává rychlost pádu.{" "}
+          <SourceLink id="2024_OTT_Parsivel2_Manual">(Parsivel², Measurement of particle speed)</SourceLink>
         </p>
         <p>
           Každou částici přístroj zařadí podle velikosti a rychlosti do příslušného
@@ -230,13 +242,15 @@ export function RainGaugeArticle() {
           Manuál z února 2024 uvádí měřicí plochu 180 × 30 mm, tedy 54 cm².
           Pokrývá velikosti kapalných částic od 0,2 do 8 mm, pevných od 0,2 do 25 mm
           a rychlosti od 0,2 do 20 m/s. Velikostní i rychlostní třídy mají různou
-          šířku, takže částice seskupují s různou podrobností v různých částech rozsahu.
+          šířku, takže částice seskupují s různou podrobností v různých částech rozsahu.{" "}
+          <SourceLink id="2024_OTT_Parsivel2_Manual">(Parsivel², technické údaje a třídění)</SourceLink>
         </p>
         <p>
           Velikost a rychlost společně pomáhají rozlišovat i druh srážek.
           Přístroj porovnává zastoupení částic v tabulce s pravidly pro déšť, sníh
           a další druhy. Označení druhu srážky tak vzniká zpracováním těchto dvou
-          měřených vlastností.
+          měřených vlastností.{" "}
+          <SourceLink id="2024_OTT_Parsivel2_Manual">(Parsivel², rozpoznávání druhu srážek)</SourceLink>
         </p>
 
         <h3>Úhrn deště z počtu a velikosti kapek</h3>
@@ -252,7 +266,8 @@ export function RainGaugeArticle() {
           přibližně kulové, větší jsou zploštělé. Při převodu používáme průměr koule,
           která má stejný objem jako kapka. Tento průměr se proto nazývá objemově
           ekvivalentní. Zpracování každé třídě přiřadí jeden takový průměr,
-          který při výpočtu zastupuje kapky v daném rozmezí velikostí.
+          který při výpočtu zastupuje kapky v daném rozmezí velikostí.{" "}
+          <SourceLink id="DOI_10_1175_jtech_d_13_00174_1">(Tokay a kol., oddíl 2)</SourceLink>
         </p>
         <p>
           Objem koule o průměru D je <InlineMath tex={String.raw`\pi D^3/6`} />.
@@ -275,13 +290,15 @@ export function RainGaugeArticle() {
           reprezentativní objemově ekvivalentní průměr a <InlineMath tex={String.raw`A_i`} />{" "}
           účinná plocha pro tuto velikost. Symbol Σ znamená součet přes všechny třídy.
           S průměrem v milimetrech a plochou v mm² vyjde úhrn P v milimetrech.
-          Dělením dobou v hodinách získáme intenzitu v mm/h.
+          Dělením dobou v hodinách získáme intenzitu v mm/h.{" "}
+          <SourceLink id="DOI_10_1175_jtech_d_13_00174_1">(Tokay a kol., oddíl 5, rovnice 6)</SourceLink>
         </p>
         <p>
           Rovnice ukazuje geometrický základ převodu kapalného deště. Konkrétní
           zpracování přístroje k němu přidává svá pravidla pro okraje pásu, třídění
           a filtrování. U sněhu potřebujeme navíc vztah mezi rozměrem a hmotností
-          vločky. Teprve hmotnost umožní určit vodní hodnotu sněžení.
+          vločky. Teprve hmotnost umožní určit vodní hodnotu sněžení.{" "}
+          <SourceLink id="2024_OTT_Parsivel2_Manual">(Parsivel², měření kapalných a pevných částic)</SourceLink>
         </p>
 
         <h3>Využití měření v klimatologii</h3>
@@ -290,7 +307,8 @@ export function RainGaugeArticle() {
           Disdrometr k němu přidává rozdělení velikostí a rychlostí částic.
           Tato měření slouží také ke kontrole <Link href="/metody/aktivni-radarove-mereni">radarových
           odhadů srážek</Link>. Radar sleduje odraz vyslaného záření od částic ve vzduchu,
-          zatímco pozemní přístroje zachycují srážky dopadající na měřicí místo.
+          zatímco pozemní přístroje zachycují srážky dopadající na měřicí místo.{" "}
+          <SourceLink id="DOI_10_1175_jtech_d_13_00174_1">(Tokay a kol., úvod)</SourceLink>
         </p>
         <p>
           Pro klimatologii spojujeme místní měření do dlouhých řad a porovnáváme je
@@ -313,13 +331,15 @@ export function RainGaugeArticle() {
           buněk pokrývajících území. Hodnoty mezi stanicemi vznikají odhadem
           z okolních měření. Dlouhodobé změny srážek, včetně pokrytí území daty,
           rozebírá článek <Link href="/pozorovani/srazky-a-privalove-srazky">Srážky
-          a přívalové srážky</Link>.
+          a přívalové srážky</Link>.{" "}
+          <SourceLink id="DOI_10_1038_s41597_023_02238_4">(Pritchard a kol., metody)</SourceLink>
         </p>
         <p>
           Měření padajícího sněhu určuje, kolik vody do krajiny přibývá sněžením.
           Na zemi potom sníh taje, přesouvá se větrem a slehává.
           Výsledná <Link href="/pozorovani/snehova-pokryvka-a-permafrost">sněhová
-          pokrývka</Link> proto vyžaduje další měření, která sledují její vývoj po dopadu.
+          pokrývka</Link> proto vyžaduje další měření, která sledují její vývoj po dopadu.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, kapitola 2)</SourceLink>
         </p>
 
         <h3>Další provedení a vývoj záznamu</h3>
@@ -384,14 +404,17 @@ export function RainGaugeArticle() {
             10 %, postupně pro deset skupin. Výsledné koeficienty využily celý soubor,
             odhad nejistoty vycházel z odděleného ověřování. U zmenšeného dvojitého
             větrolamu se tento postup nezdařil a odvození i kontrola použily stejná data.
-            Také chráněná reference má vlastní chyby zachycení.
+            Také chráněná reference má vlastní chyby zachycení.{" "}
+            <SourceLink id="DOI_10_5194_hess_21_1973_2017">(Kochendorfer a kol., metody)</SourceLink>
           </p>
           <p>
             Překlápěcí srážkoměry ovlivňuje voda přitékající během pohybu nádobky.
             Proto se kalibrují při různých rychlostech přítoku.
             U váhového přístroje mohou velmi slabé srážky dosáhnout vykazovacího prahu
             až v pozdějším intervalu. Pravidla zpracování tak ovlivňují i časové
-            rozdělení malých úhrnů.
+            rozdělení malých úhrnů.{" "}
+          <SourceLink id="2015_USCRN_OAP2">(NOAA OAP 2.0)</SourceLink>
+            <SourceLink id="WEB_World_Meteorological_Organiz_prirucka_WMO_c_8_f7933a04">(WMO, kapitola 6)</SourceLink>
           </p>
           <h3>Optické měření a nezávislé porovnání</h3>
           <p>
@@ -407,7 +430,8 @@ export function RainGaugeArticle() {
             bez ohledu na znaménko a vydělili je průměrným referenčním úhrnem.
             Tak získali uvedenou odchylku přibližně 6 %. Optika a sběr vody mají
             různé principy, ale sdílejí počasí včetně větru. I referenční srážkoměry
-            mají vlastní chyby.
+            mají vlastní chyby.{" "}
+            <SourceLink id="DOI_10_1175_jtech_d_13_00174_1">(Tokay a kol., vyhodnocení srážkových úhrnů)</SourceLink>
           </p>
           <h3>Časové a prostorové rozlišení</h3>
           <p>
@@ -433,7 +457,8 @@ export function RainGaugeArticle() {
         <p>
           Sloupec PRECIPITATION v souboru obsahuje již zpracované úhrny v milimetrech.
           Odtud začíná náš výpočet. Čas každého řádku označuje <strong>konec předchozích
-          pěti minut</strong>, takže 14:30 patří dešti od 14:25 do 14:30.
+          pěti minut</strong>, takže 14:30 patří dešti od 14:25 do 14:30.{" "}
+          <SourceLink id="2017_USCRN_Subhourly_Readme">(USCRN: formát pětiminutových dat)</SourceLink>
         </p>
         <div className="method-data-output method-data-output--compact">
           <div className="method-data-output__table-wrap" role="region" aria-label="Pětiminutové srážky na Blue Hill" tabIndex={0}>
@@ -504,7 +529,8 @@ export function RainGaugeArticle() {
             záporným číslem. Náš skript vyžaduje všech dvanáct platných úhrnů ve správném
             časovém pořadí a bez mezer. Chybějící měření nenahrazuje nulou.
             Příznaky kvality jiných veličin, například slunečního záření, k tomuto
-            srážkovému poli nepřevádí.
+            srážkovému poli nepřevádí.{" "}
+            <SourceLink id="2017_USCRN_Subhourly_Readme">(USCRN: chybějící údaje a příznaky)</SourceLink>
           </p>
           <p>
             Uložte <a href={`${dataPath}/blue-hill-five-minute.txt`} download>12 původních pětiminutových záznamů</a>,

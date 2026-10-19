@@ -28,7 +28,8 @@ export function TideGaugeArticle() {
           Pobřežní vodočet je přístroj, který opakovaně měří výšku mořské hladiny vůči
           zvolené místní nule. Tato nula se nazývá výšková reference. Její polohu
           uchováváme pomocí značek na pevnině, jejichž výškové vztahy jsou změřené.
-          Záznam vodočtu tak ukazuje, jak voda stoupá a klesá vzhledem ke konkrétnímu pobřeží.
+          Záznam vodočtu tak ukazuje, jak voda stoupá a klesá vzhledem ke konkrétnímu pobřeží.{" "}
+          <SourceLink id="2026_NOAA_Tidal_Datums">(NOAA: výškové reference)</SourceLink>
         </p>
         <p>
           Podrobně si vysvětlíme radarový vodočet WaterLog H-3611i. Jeho použití
@@ -43,7 +44,8 @@ export function TideGaugeArticle() {
           Radar vysílá krátké impulzy mikrovlnného záření, tedy elektromagnetických
           vln, které se vzduchem šíří rychlostí blízkou rychlosti světla.
           Anténa míří svisle dolů. Část záření se od vody odrazí a vrátí se k přístroji.
-          Přijímač zachytí odraz a elektronika změří dobu mezi vysláním a návratem impulzu.
+          Přijímač zachytí odraz a elektronika změří dobu mezi vysláním a návratem impulzu.{" "}
+          <SourceLink id="2011_NOAA_Radar_Evaluation">(NOAA, popis mikrovlnných snímačů)</SourceLink>
         </p>
         <p>
           Rychlost šíření vynásobená dobou letu udává délku uražené cesty.
@@ -56,14 +58,16 @@ export function TideGaugeArticle() {
           v metrech za sekundu a Δt doba letu tam a zpět v sekundách. Značka Δt
           označuje časový rozdíl mezi vysláním a přijetím. Při svislém zaměření
           tak dostáváme svislou vzdálenost mezi měřicím počátkem radaru a vodou.
-          Měřicí počátek je místo, od kterého přístroj vzdálenosti počítá.
+          Měřicí počátek je místo, od kterého přístroj vzdálenosti počítá.{" "}
+          <SourceLink id="2011_NOAA_Radar_Evaluation">(NOAA, princip měření vzdálenosti)</SourceLink>
         </p>
         <p>
           Radar osvětluje určitou plochu vody. Jeho záření se rozbíhá do svazku,
           který se směrem od antény rozšiřuje. Přístroj se proto vysouvá na pevném
           rameni nad volnou vodu, aby ve svazku nebyly pilíře, žebříky ani jiné
           překážky. Technik při instalaci prohlédne záznam síly odrazů podle
-          vzdálenosti a ověří, že přístroj sleduje odraz od hladiny.
+          vzdálenosti a ověří, že přístroj sleduje odraz od hladiny.{" "}
+          <SourceLink id="2013_NOAA_Radar_Installation">(NOAA, instalace a kontrola odrazů)</SourceLink>
         </p>
         <p>
           Popsaný model pracuje na frekvenci 26 GHz, tedy 26 miliard kmitů za sekundu.
@@ -78,7 +82,8 @@ export function TideGaugeArticle() {
           vzdálenostmi. Před radar se umístí pevný terč a jeho poloha se změří
           referenčním měřidlem. Radar sleduje terč v několika polohách.
           Pro každou tak získáme dvojici hodnot: vzdálenost podle radaru
-          a vzdálenost podle reference.
+          a vzdálenost podle reference.{" "}
+          <SourceLink id="2011_NOAA_Radar_Evaluation">(NOAA, laboratorní zkoušky)</SourceLink>
         </p>
         <p>
           <SourceLink id="2011_NOAA_Radar_Evaluation">Heitsenrether a Davis ve zprávě NOAA z roku 2011</SourceLink>{" "}
@@ -91,7 +96,8 @@ export function TideGaugeArticle() {
           Opakuje-li se určitá závislost rozdílu na vzdálenosti, lze z ní určit
           vztah pro opravu odečtů. Kalibrace tak poskytuje doložené spojení mezi
           údajem přístroje a měřenou vzdáleností. Záznamová jednotka stanice již
-          od radaru přebírá vypočítanou vzdálenost v metrech.
+          od radaru přebírá vypočítanou vzdálenost v metrech.{" "}
+          <SourceLink id="2011_NOAA_Radar_Evaluation">(NOAA, laboratorní zkoušky)</SourceLink>
         </p>
 
         <h3>Výška přístroje a výška vody</h3>
@@ -99,14 +105,16 @@ export function TideGaugeArticle() {
           Vzdálenost k vodě nyní známe. Abychom ji převedli na výšku hladiny,
           potřebujeme ještě výšku měřicího počátku radaru nad zvolenou nulou.
           Tuto výšku označíme H. Určuje se geodetickým měřením, které propojuje
-          přístroj se značkami na pobřeží.
+          přístroj se značkami na pobřeží.{" "}
+          <SourceLink id="2013_NOAA_Radar_Installation">(NOAA, připojení výškové reference)</SourceLink>
         </p>
         <p>
           Značky bývají například kovové body zasazené do skalního podloží nebo
           stabilních staveb. Měření výškových rozdílů mezi nimi se nazývá
           <strong> nivelace</strong>. Nivelační přístroj vodorovně zaměřuje svislé měřicí latě
           postavené na jednotlivých bodech. Rozdíl odečtů určí, o kolik leží jeden
-          bod výše než druhý. Stejným postupem lze připojit i bod na držáku vodočtu.
+          bod výše než druhý. Stejným postupem lze připojit i bod na držáku vodočtu.{" "}
+          <SourceLink id="2013_NOAA_Radar_Installation">(NOAA, nivelační připojení)</SourceLink>
         </p>
         <p>
           U popsaného radaru stojí lať na označeném místě montážního límce,
@@ -136,7 +144,8 @@ export function TideGaugeArticle() {
         <p>
           Všechny tři veličiny jsou v metrech. H popisuje polohu měřicího počátku
           radaru, r vzdálenost od něj k vodě a h polohu vody. Když voda stoupá,
-          vzdálenost r se zkracuje. Odečítáme tedy menší číslo a výsledná výška h roste.
+          vzdálenost r se zkracuje. Odečítáme tedy menší číslo a výsledná výška h roste.{" "}
+          <SourceLink id="2013_NOAA_Radar_Installation">(NOAA, výpočet výšky hladiny)</SourceLink>
         </p>
         <p>
           Při výměně přístroje změříme výšku nového čidla vůči stejným pobřežním
@@ -154,13 +163,15 @@ export function TideGaugeArticle() {
           zvolíme za nulu, však můžeme odvodit z dlouhodobého měření vody.
           Jedna stanice proto může zveřejňovat stejné měření vůči několika
           různým nulám. Často se používá střední hladina nebo reference založená
-          na odlivových stavech.
+          na odlivových stavech.{" "}
+          <SourceLink id="2026_NOAA_Tidal_Datums">(NOAA: definice referencí)</SourceLink>
         </p>
         <p>
           <strong>MSL</strong> je zkratka anglického <em>mean sea level</em>, tedy
           střední hladiny moře. NOAA tuto referenci určuje zprůměrováním hodinových
           výšek za stanovené dlouhé období. Průměrná úroveň z tohoto období potom
-          slouží jako pevná nula pro vyjadřování dalších výšek.
+          slouží jako pevná nula pro vyjadřování dalších výšek.{" "}
+          <SourceLink id="2026_NOAA_Tidal_Datums">(NOAA: Mean Sea Level)</SourceLink>
         </p>
         <p>
           <strong>MLLW</strong>, anglicky <em>mean lower low water</em>, označuje
@@ -186,7 +197,8 @@ export function TideGaugeArticle() {
           Pro dlouhodobé klimatické záznamy potřebujeme udržet stejnou nulu
           po mnoho desetiletí. Tuto návaznost sleduje Stálá služba pro střední
           hladinu moře, zkráceně PSMSL z anglického <em>Permanent Service for Mean
-          Sea Level</em>. Shromažďuje pobřežní záznamy i údaje o jejich výškových referencích.
+          Sea Level</em>. Shromažďuje pobřežní záznamy i údaje o jejich výškových referencích.{" "}
+          <SourceLink id="WEB_Permanent_Service_for_Mean_S_Revised_Local_Reference_RLR_Definition_25cc4b55">(PSMSL: návaznost dlouhých záznamů)</SourceLink>
         </p>
         <p>
           PSMSL převádí hodnoty jednotlivé stanice k <strong>revidované místní
@@ -212,7 +224,8 @@ export function TideGaugeArticle() {
           neobvykle vzdálené od ostatních. Postup používá hranici tří směrodatných
           odchylek od průměru. Směrodatná odchylka vyjadřuje, jak jsou hodnoty
           kolem průměru rozptýlené. Hranice kontroly tak vychází z kolísání
-          konkrétního souboru krátkých odečtů.
+          konkrétního souboru krátkých odečtů.{" "}
+          <SourceLink id="2025_NOAA_Water_Level_Specifications">(NOAA, mikrovlnná čidla)</SourceLink>
         </p>
         <p>
           NOAA rozlišuje předběžné a ověřené údaje. U ověřených záznamů připojuje
@@ -260,7 +273,8 @@ export function TideGaugeArticle() {
           navigačních systémů, označovaných GNSS z anglického <em>Global Navigation
           Satellite Systems</em>. Ze signálů družic určují polohu antény vůči Zemi
           jako celku. Dlouhodobá změna její výšky ukazuje, zda podloží pod přijímačem
-          stoupá, nebo klesá.
+          stoupá, nebo klesá.{" "}
+          <SourceLink id="DOI_10_1002_2015rg000502">(Wöppelmann a Marcos, měření GNSS)</SourceLink>
         </p>
         <p>
           Přijímač se k vodočtu připojuje měřením výškových rozdílů a toto spojení
@@ -275,7 +289,8 @@ export function TideGaugeArticle() {
           znamená pohyb vzhůru, záporná pokles. Přičtení záporné hodnoty pro
           klesající pevninu zmenší relativní růst o část způsobenou poklesem pobřeží.
           Výsledkem je rychlost změny mořského povrchu vůči Zemi jako celku.
-          Vztah používá pohyb souše v místě vodočtu a rychlosti za stejné období.
+          Vztah používá pohyb souše v místě vodočtu a rychlosti za stejné období.{" "}
+          <SourceLink id="DOI_10_1002_2015rg000502">(Wöppelmann a Marcos, vztah hladiny a pohybu souše)</SourceLink>
         </p>
 
         <h3>Použití v klimatologii</h3>
@@ -291,14 +306,16 @@ export function TideGaugeArticle() {
           prostorové rozdíly změn hladiny. Blízké záznamy postupně slučovali,
           přičemž jejich výškové nuly sladili podle společného období měření.
           Tím získali vývoj pro jednotlivé oceánské oblasti. Globální výsledek
-          potom vytvořili průměrováním těchto oblastí s vahami podle jejich plochy.
+          potom vytvořili průměrováním těchto oblastí s vahami podle jejich plochy.{" "}
+          <SourceLink id="DOI_10_1038_s41586_020_2591_3">(Frederikse a kol., metody)</SourceLink>
         </p>
         <p>
           Pobřežní záznamy slouží také k porovnávání s <Link href="/metody/radarova-a-laserova-altimetrie">družicovou
           altimetrií</Link>, která měří výšku hladiny z oběžné dráhy.
           Při porovnání se sladí výškový systém, období a oblast, ke které se údaje vztahují.
           Výsledky dlouhodobých měření a jejich prostorové pokrytí rozebírá článek
-          o <Link href="/pozorovani/gmsl">globální střední hladině moře</Link>.
+          o <Link href="/pozorovani/gmsl">globální střední hladině moře</Link>.{" "}
+          <SourceLink id="DOI_10_1002_2015rg000502">(Wöppelmann a Marcos, porovnání s altimetrií)</SourceLink>
         </p>
 
         <h3>Další vodočty a vývoj záznamu</h3>
@@ -322,7 +339,8 @@ export function TideGaugeArticle() {
           Pro převod na výšku vodního sloupce potřebujeme hustotu vody.
           Podle konstrukce také odečítáme atmosférický tlak, aby zůstal tlak
           způsobený vodou. Postup vysvětluje <Link href="/metody/mereni-tlaku-a-hydrostaticke-vysky">měření
-          tlaku a hydrostatické výšky</Link>.
+          tlaku a hydrostatické výšky</Link>.{" "}
+          <SourceLink id="2011_NOAA_Radar_Evaluation">(NOAA, tlakové referenční měření)</SourceLink>
         </p>
         <p>
           Akustický vodočet měří dobu návratu zvuku v trubici. Převod na vzdálenost
@@ -351,7 +369,8 @@ export function TideGaugeArticle() {
             <SourceLink id="2012_VIM_Calibration"> slovník VIM</SourceLink>.
             Laboratorní zkouška NOAA požadovala rozdíly vůči terči v mezích ±1 cm
             s přihlédnutím k nejistotě reference. Dlouhé sledování pevného terče
-            prověřuje šum, pohyblivý terč odezvu na změnu a vodní nádrž rozpoznání hladiny.
+            prověřuje šum, pohyblivý terč odezvu na změnu a vodní nádrž rozpoznání hladiny.{" "}
+            <SourceLink id="2011_NOAA_Radar_Evaluation">(NOAA, laboratorní zkoušky)</SourceLink>
           </p>
           <p>
             <SourceLink id="2025_NOAA_Water_Level_Specifications">Specifikace NOAA</SourceLink>{" "}
@@ -376,7 +395,8 @@ export function TideGaugeArticle() {
             dat, na kterých se hodnotila shoda. Přístroje sdílely vodu i místní
             výškové prostředí. Za bouří se rozdíly blížily 5 cm, bez souběžného
             měření vln však nešlo vlivy rozdělit mezi přístroje. Studie odhalila
-            také účinek předpokládané hustoty vody a chyb hodin.
+            také účinek předpokládané hustoty vody a chyb hodin.{" "}
+            <SourceLink id="2003_Woodworth_Smith_Radar_Bubbler">(Woodworth a Smith, výsledky a diskuse)</SourceLink>
           </p>
           <h3>Stabilita a průměrování</h3>
           <p>
@@ -384,7 +404,8 @@ export function TideGaugeArticle() {
             radaru. U plováku záleží na volném pohybu a průchodnosti spojení s mořem.
             Nivelace mezi více značkami odhalí pohyb jedné z nich, společné
             zvedání pobřeží však ponechá jejich rozdíly stejné. Chyba výškové nuly
-            posouvá všechny hodnoty, a proto ji průměrování neodstraní.
+            posouvá všechny hodnoty, a proto ji průměrování neodstraní.{" "}
+            <SourceLink id="2013_NOAA_Radar_Installation">(NOAA, instalace a výšková kontrola)</SourceLink>
           </p>
           <p>
             Pole <code>s</code> v prvním záznamu našeho příkladu obsahuje 0,052 m.
@@ -401,7 +422,8 @@ export function TideGaugeArticle() {
             měření. Tyto meze rozebírají <SourceLink id="DOI_10_1002_2015rg000502">Wöppelmann
             a Marcos</SourceLink>. U „metrických“ dat PSMSL může chybět doložení
             návaznosti nuly, proto se jejich použitelnost pro trend posuzuje zvlášť.
-            Jednodenní průměr z příkladu zachycuje i přílivový průběh, nikoli dlouhodobou MSL.
+            Jednodenní průměr z příkladu zachycuje i přílivový průběh, nikoli dlouhodobou MSL.{" "}
+            <SourceLink id="WEB_Permanent_Service_for_Mean_S_Revised_Local_Reference_RLR_Definition_25cc4b55">(PSMSL: RLR a metrická data)</SourceLink>
           </p>
           <p>
             Pobřežní stanice pokrývají oceán nerovnoměrně, proto globální rekonstrukce
@@ -410,7 +432,8 @@ export function TideGaugeArticle() {
             Pokud se pohyb souše odvodí z rozdílu
             družice a vodočtu, následná shoda opraveného vodočtu s toutéž družicí
             není nezávislým ověřením. Také obě výškové reference našeho příkladu
-            vycházejí ze stejných měření, jejich shoda kontroluje převod nuly.
+            vycházejí ze stejných měření, jejich shoda kontroluje převod nuly.{" "}
+            <SourceLink id="DOI_10_1038_s41586_020_2591_3">(Frederikse a kol., metody)</SourceLink>
           </p>
         </details>
 

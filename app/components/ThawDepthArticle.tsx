@@ -27,7 +27,8 @@ export function ThawDepthArticle() {
         <p className="article-prose__intro">
           Měření hloubky sezónního rozmrzání zjišťuje vzdálenost od povrchu půdy k hranici,
           pod kterou půda zůstává zmrzlá. Tuto hranici lze v jemnozrnné vlhké půdě nahmatat
-          kovovou sondou. Opakováním měření sledujeme, jak hluboko rozmrzání během léta postupuje.
+          kovovou sondou. Opakováním měření sledujeme, jak hluboko rozmrzání během léta postupuje.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíl 4.3.1)</SourceLink>
         </p>
         <p>
           V oblastech s <strong>permafrostem</strong> zůstává část půdy nebo hornin při teplotě
@@ -43,14 +44,16 @@ export function ThawDepthArticle() {
           Ve zmrzlé vlhké půdě spojuje led jednotlivá zrna a vytváří pevnou hmotu.
           Když led roztaje, lze půdou snáze protlačit kovovou tyč. Při zasouvání sondy proto
           postupujeme rozmrzlou vrstvou až k místu, kde hrot narazí na výrazný odpor zmrzlé půdy.
-          Poloha hrotu tím vyznačí spodní hranici vrstvy, kterou chceme změřit.
+          Poloha hrotu tím vyznačí spodní hranici vrstvy, kterou chceme změřit.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíl 4.3.4.3)</SourceLink>
         </p>
         <p>
           Ruční sonda má pevnou tyč se zúženým hrotem, rukojeť a délkovou stupnici.
           WMO popisuje běžné nerezové provedení dlouhé přibližně 1–1,3 m, s průměrem kolem 1 cm
           a stupnicí po centimetrech. Tyč pomalu zatlačujeme do půdy. Jakmile se zastaví
           na zmrzlé vrstvě, palcem označíme místo, kde tyč prochází povrchem. Sondu vytáhneme
-          a na stupnici přečteme vzdálenost mezi hrotem a označeným místem. To je naměřená hloubka.
+          a na stupnici přečteme vzdálenost mezi hrotem a označeným místem. To je naměřená hloubka.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíly 4.3.4.1 a 4.3.4.3)</SourceLink>
         </p>
         <figure className="article-figure">
           <Image className="article-figure__media" src="/media/thaw-depth/usgs-frost-probes.jpg"
@@ -76,14 +79,16 @@ export function ThawDepthArticle() {
           Horním koncem měřené vzdálenosti je povrch půdy. V trávě jej hledáme pod listy,
           u měkkého mechu zachováváme stejný způsob přiložení a stlačení. Je-li nad půdou voda,
           její výšku změříme zvlášť. Díky tomu odečet zahrnuje rozmrzlou půdu až k jejímu povrchu,
-          nikoli také vodní sloupec nad ní. Při opakovaných návštěvách používáme stejný postup.
+          nikoli také vodní sloupec nad ní. Při opakovaných návštěvách používáme stejný postup.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíl 4.3.4.3)</SourceLink>
         </p>
         <p>
           K určení vzdálenosti patří také směr sondy. WMO popisuje zasunutí kolmo k místnímu
           povrchu, zatímco <SourceLink id="WEB_CALM_Active_Layer_Protocol">protokol programu CALM</SourceLink>{" "}
           používá svislé sondování. Na vodorovné půdě oba směry splývají. Na svahu míří kolmice
           k povrchu šikmo vůči svislici, a měří se tedy jiná vzdálenost. Pro srovnání v čase
-          zachováváme zvolený směr a uvádíme jej v popisu měření.
+          zachováváme zvolený směr a uvádíme jej v popisu měření.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíl 4.3.4.3)</SourceLink>
         </p>
 
         <h3>Jak spojíme měření na více místech</h3>
@@ -92,13 +97,15 @@ export function ThawDepthArticle() {
           podloží. Proto sondování opakujeme v síti pevných bodů. Takto pracuje mezinárodní
           program CALM, anglicky <em>Circumpolar Active Layer Monitoring</em>, který sleduje
           aktivní vrstvu na opakovaně navštěvovaných lokalitách. Pravidelná síť rozkládá měření
-          po celé sledované ploše a při další návštěvě umožňuje vrátit se na stejná místa.
+          po celé sledované ploše a při další návštěvě umožňuje vrátit se na stejná místa.{" "}
+          <SourceLink id="WEB_CALM_Active_Layer_Protocol">(CALM: uspořádání sítě)</SourceLink>
         </p>
         <p>
           U každého bodu lze provést dva blízké vpichy a vypočítat jejich průměr.
           WMO doporučuje vzdálenost do 1 m od bodu i mezi oběma vpichy.
           Označíme-li hloubky z těchto vpichů <InlineMath tex={String.raw`d_{i,1}`} /> a{" "}
-          <InlineMath tex={String.raw`d_{i,2}`} />, je hodnota bodu <InlineMath tex={String.raw`d_i`} />:
+          <InlineMath tex={String.raw`d_{i,2}`} />, je hodnota bodu <InlineMath tex={String.raw`d_i`} />:{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíl 4.3.4.3)</SourceLink>
         </p>
         <Equation tex={String.raw`d_i = \frac{d_{i,1}+d_{i,2}}{2}`} />
         <p>
@@ -118,7 +125,8 @@ export function ThawDepthArticle() {
           Každý zahrnutý bod tak dostává stejnou váhu. Výsledkem je <strong>průměr měřených bodů sítě</strong>{" "}
           v centimetrech pro danou návštěvu. Jako průměr celé plochy jej lze použít tehdy,
           když body dostatečně zastupují její různé půdy, porosty a vlhkostní podmínky.
-          Rozmístění bodů je proto součástí měřicího postupu.
+          Rozmístění bodů je proto součástí měřicího postupu.{" "}
+          <SourceLink id="DOI_10_1080_10889370009377698">(Brown a kol., návrh měřicí sítě)</SourceLink>
         </p>
         <p>
           Vedle průměru popisujeme i rozdíly mezi místy. Nejmenší a největší hodnota vymezují
@@ -139,7 +147,8 @@ export function ThawDepthArticle() {
           <figcaption>
             Sondování v síti se dvěma vpichy na bod. Šipky ukazují postup od kontaktu
             se zmrzlou půdou přes délkový odečet ke dvěma úrovním průměrování.
-            Výsledná hloubka se vztahuje k ploše pokryté body a k datu návštěvy.
+            Výsledná hloubka se vztahuje k ploše pokryté body a k datu návštěvy.{" "}
+            <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíl 4.3.4)</SourceLink>
           </figcaption>
         </figure>
 
@@ -156,7 +165,8 @@ export function ThawDepthArticle() {
           V půdě bohaté na led může s rozmrzáním klesat i povrch. Led roztaje a půda sesedne.
           Při příštím sondování pak začínáme měřit z nižšího místa. Chceme-li sledovat,
           kam se posunula samotná hranice rozmrzání, změříme také výšku povrchu vůči pevnému
-          výškovému bodu. Od této výšky odečteme svislou hloubku zjištěnou sondou:
+          výškovému bodu. Od této výšky odečteme svislou hloubku zjištěnou sondou:{" "}
+          <SourceLink id="DOI_10_1029_2023jf007262">(O’Neill a kol., metody a výsledky)</SourceLink>
         </p>
         <Equation tex={String.raw`z_{\text{rozhraní}} = z_{\text{povrchu}} - d`} />
         <p>
@@ -174,7 +184,8 @@ export function ThawDepthArticle() {
           Tvoří ji vnější trubka pevně ukotvená v permafrostu a vyjímatelná průhledná trubice s vodou
           uvnitř. Voda v ní v zimě zamrzne. Při letním odtávání ledu shora klesá malá skleněná
           kulička a zůstává na rozhraní vody a ledu. Při opětovném zamrznutí uvázne v ledu
-          v nejnižší dosažené poloze. Tím uchová údaj i po skončení léta.
+          v nejnižší dosažené poloze. Tím uchová údaj i po skončení léta.{" "}
+          <SourceLink id="DOI_10_4095_202802">(Nixon a kol., konstrukce měřidla)</SourceLink>
         </p>
         <p>
           <SourceLink id="DOI_10_4095_202802">Nixon a spoluautoři (1995)</SourceLink>{" "}
@@ -189,7 +200,8 @@ export function ThawDepthArticle() {
           Průběžný záznam ukáže, jakých teplot půda v každé hloubce během roku dosáhla.
           Pro sledování rozmrzání vybereme nejvyšší roční teplotu každého čidla a hledáme hloubku,
           kde tato maxima přecházejí z kladných do záporných hodnot. Tam podle teplotního měření
-          leží největší roční hloubka dosažená teplotou 0 °C.
+          leží největší roční hloubka dosažená teplotou 0 °C.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíl 4.3.6)</SourceLink>
         </p>
         <p>
           Hledaná hloubka obvykle leží mezi dvěma čidly. Jedno za rok zaznamenalo maximum nad nulou,
@@ -198,7 +210,8 @@ export function ThawDepthArticle() {
           <strong>přímková interpolace</strong>. WMO uvádí v okolí rozhraní rozestupy čidel
           přibližně 2–20 cm podle podmínek a požadované přesnosti. Bližší čidla zkracují úsek,
           pro který průběh teploty dopočítáváme. Samotný převod elektrického signálu čidla na teplotu
-          vysvětluje <Link href="/metody/odporova-termometrie-a-termistory">odporová termometrie</Link>.
+          vysvětluje <Link href="/metody/odporova-termometrie-a-termistory">odporová termometrie</Link>.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíl 4.3.6)</SourceLink>
         </p>
 
         <h3>Dlouhodobé sledování aktivní vrstvy</h3>
@@ -206,7 +219,8 @@ export function ThawDepthArticle() {
           Spojení těchto postupů rozšířilo jednoduché sondování o záznam dění mezi návštěvami.
           Nixonova zpráva dokumentuje instalace z let 1990–1992, které spojovaly sondy, mrazové trubice,
           pohyb povrchu a automatické teplotní záznamníky. Autoři přitom upravili trubici popsanou
-          J. Rossem Mackayem v roce 1973.
+          J. Rossem Mackayem v roce 1973.{" "}
+          <SourceLink id="DOI_10_4095_202802">(Nixon a kol., úvod a terénní zkoušky)</SourceLink>
         </p>
         <p>
           Porovnání různých lokalit zase usnadnilo sjednocení měřicích postupů. V programu CALM
@@ -232,7 +246,8 @@ export function ThawDepthArticle() {
           orientační přesnost ±2 cm. Metody se ověřují také vzájemným porovnáním.
           Na aljašském West Docku například v roce 1998 vyšel průměr sondované sítě 34 cm
           a hloubka z teplotního profilu 33 cm podle{" "}
-          <SourceLink id="DOI_10_1080_10889370009377698">Browna a spoluautorů (2000), tabulky 2</SourceLink>.
+          <SourceLink id="DOI_10_1080_10889370009377698">Browna a spoluautorů (2000), tabulky 2</SourceLink>.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíl 4.3.4.4)</SourceLink>
         </p>
         <details className="method-details">
           <summary>Podrobnosti o nejistotách a ověření</summary>
@@ -252,30 +267,35 @@ export function ThawDepthArticle() {
             výkop však narušuje místo pro další měření. Teplotní metoda vychází z jiného fyzikálního signálu.
             Brownova tabulka uvádí pro West Dock také dvojice 30 a 22 cm v roce 1996 a 28 a 26 cm
             v roce 2000, vždy sonda a teplota. Sondy pokrývaly síť o straně 100 m, teplotní profil jedno místo.
-            Rozdíl proto zahrnuje prostorovou proměnlivost i různé vymezení hranice a neurčuje chybu konkrétní sondy.
+            Rozdíl proto zahrnuje prostorovou proměnlivost i různé vymezení hranice a neurčuje chybu konkrétní sondy.{" "}
+            <SourceLink id="DOI_10_1080_10889370009377698">(Brown a kol., tabulka 2)</SourceLink>
           </p>
           <h3>Jiné přístroje a jiná vymezení hranice</h3>
           <p>
             U mrazových trubic uvádí WMO orientační přesnost kolem 2 cm i při milimetrovém odečtu.
             Trubice může měnit tok tepla v půdě, nedostatečné ukotvení dovoluje zdvih přístroje mrazem.
-            U teplotních čidel záleží na kalibraci, skutečné hloubce, četnosti záznamu a interpolaci.
+            U teplotních čidel záleží na kalibraci, skutečné hloubce, četnosti záznamu a interpolaci.{" "}
+            <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíl 4.3.5.3)</SourceLink>
           </p>
           <p>
             Teplota 0 °C a mechanicky pevná hranice nemusejí ležet ve stejné hloubce.
             Rozpuštěné soli snižují teplotu mrznutí a část vody v jemných pórech zůstává kapalná i pod nulou.
             Během tání se teplo spotřebovává na změnu ledu ve vodu, takže teplota dlouho zůstává téměř
-            stejná. Přesnou polohu hranice pak z teplotního profilu určujeme obtížně.
+            stejná. Přesnou polohu hranice pak z teplotního profilu určujeme obtížně.{" "}
+            <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíly 4.1 a 4.3.6)</SourceLink>
           </p>
           <p>
             Pokud půda nad permafrostem v zimě nezamrzne úplně, zůstane mezi ním a sezónně promrzající
             půdou trvale nezamrzlá vrstva. Aktivní vrstva pak nesahá až k permafrostu.
             Samotná hloubka rozmrzání také neurčuje teplotu hlubšího podloží, jeho celkovou
-            zmrzlou tloušťku ani obsah uhlíku. Tyto veličiny vyžadují další měření.
+            zmrzlou tloušťku ani obsah uhlíku. Tyto veličiny vyžadují další měření.{" "}
+            <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíly 4.1 a 4.3.1)</SourceLink>
           </p>
           <h3>Pokrytí plochy a sezóny</h3>
           <p>
             Stejný kalendářní termín nezaručuje zachycení maxima, jehož načasování ovlivňuje počasí,
-            sníh a půda.
+            sníh a půda.{" "}
+            <SourceLink id="WEB_CALM_Active_Layer_Protocol">(CALM: termín měření)</SourceLink>
           </p>
           <p>
             Výpadek zaplavených bodů nenahradí více vpichů v suché části sítě.

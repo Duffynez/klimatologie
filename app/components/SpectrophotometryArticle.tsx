@@ -26,7 +26,8 @@ export function SpectrophotometryArticle() {
           Spektrofotometrie roztoků je metoda, která měří, jak silně roztok pohlcuje světlo při
           zvolených vlnových délkách. Umožňuje určit koncentraci rozpuštěné látky nebo jinou
           vlastnost, která ovlivňuje pohlcování. V klimatologii se používá například ke zjišťování
-          pH mořské vody. Právě na tomto použití si vysvětlíme celý postup.
+          pH mořské vody. Právě na tomto použití si vysvětlíme celý postup.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(měřicí příručka, SOP 6b)</SourceLink>
         </p>
         <p>
           pH popisuje kyselost roztoku. Když přibývají vodíkové ionty, jeho hodnota klesá.
@@ -35,7 +36,8 @@ export function SpectrophotometryArticle() {
           koncentrace vodíkových iontů. Mořská voda přitom může mít stále pH vyšší než sedm
           a zároveň postupně okyselovat. Pro sledování této změny potřebujeme zachytit i malé
           rozdíly mezi jednotlivými odběry. Souvislosti vysvětluje článek o{" "}
-          <Link href="/pozorovani/acidifikace-oceanu">acidifikaci oceánu</Link>.
+          <Link href="/pozorovani/acidifikace-oceanu">acidifikaci oceánu</Link>.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(Dickson a kol., kap. 2)</SourceLink>
         </p>
 
         <h3>Proč barvivo reaguje na pH</h3>
@@ -44,7 +46,8 @@ export function SpectrophotometryArticle() {
           anglicky meta-cresol purple, zkráceně mCP. V rozsahu pH obvyklém pro mořskou vodu se uplatňují dvě jeho chemické
           podoby. Jedna má navázaný vodíkový iont, druhá jej odevzdala okolní vodě. Tyto podoby
           do sebe průběžně přecházejí. Jejich poměr se ustálí podle toho, kolik vodíkových iontů
-          je ve vodě k dispozici. Při nižším pH roste zastoupení podoby s navázaným iontem.
+          je ve vodě k dispozici. Při nižším pH roste zastoupení podoby s navázaným iontem.{" "}
+          <SourceLink id="DOI_10_3389_fmars_2018_00177">(Müller a Rehder, 2018, teoretické vztahy)</SourceLink>
         </p>
         <p>
           Navázání iontu mění také způsob, jakým molekula pohlcuje světlo. Podoba s navázaným
@@ -88,7 +91,8 @@ export function SpectrophotometryArticle() {
         <p>
           Zeslabení světla vyjadřujeme veličinou zvanou <strong>absorbance</strong>.
           Přístroj porovná intenzitu světla po průchodu vzorkem s referenční intenzitou.
-          Použije jejich poměr a jeho záporný dekadický logaritmus:
+          Použije jejich poměr a jeho záporný dekadický logaritmus:{" "}
+          <SourceLink id="2016_Harvey_Analytical_Chemistry">(Harvey, oddíl 10.2)</SourceLink>
         </p>
         <Equation tex={String.raw`A_\lambda=-\log_{10}\!\left(\frac{I_\lambda}{I_{0,\lambda}}\right)`} />
         <p>
@@ -114,7 +118,8 @@ export function SpectrophotometryArticle() {
           přidali více barviva. Proto použijeme <strong>poměr absorbancí</strong> při 578 a 434
           nanometrech. Při stejném pH zvýší více barviva obě absorbance stejným násobkem,
           který se při dělení vykrátí. Změna zastoupení jeho chemických podob naopak mění
-          obě absorbance různě. Poměr tak zachovává informaci potřebnou k určení pH.
+          obě absorbance různě. Poměr tak zachovává informaci potřebnou k určení pH.{" "}
+          <SourceLink id="2016_Harvey_Analytical_Chemistry">(Harvey, oddíl 10.2)</SourceLink>
         </p>
         <Equation tex={String.raw`R=\frac{A_{578}}{A_{434}}`} />
         <p>
@@ -140,7 +145,8 @@ export function SpectrophotometryArticle() {
         <p>
           Používáme celkovou stupnici pH, označenou pHₜ. Ta započítává volné vodíkové ionty
           i jejich podíl vázaný v hydrogensíranu, jedné z rozpuštěných sirných sloučenin.
-          Pro čištěný mCP můžeme převod na tuto stupnici zapsat pomocí tří kalibračních parametrů:
+          Pro čištěný mCP můžeme převod na tuto stupnici zapsat pomocí tří kalibračních parametrů:{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 6b, oddíly 2–3)</SourceLink>
         </p>
         <Equation tex={String.raw`\mathrm{pH}_{\mathrm T}=P+\log_{10}\!\left(\frac{R-e_{\mathrm a}}{1-R\,e_{\mathrm b}}\right)`} />
         <p>
@@ -156,7 +162,8 @@ export function SpectrophotometryArticle() {
           434 a 578 nanometrech. Tyto dva poměry zohledňují překryv spekter.
           Všechny tři parametry jsou bezrozměrné a vybírají se pro teplotu a salinitu vzorku.
           Salinita vyjadřuje jeho slanost, jejíž měření popisuje{" "}
-          <Link href="/metody/konduktometrie">konduktometrie</Link>.
+          <Link href="/metody/konduktometrie">konduktometrie</Link>.{" "}
+          <SourceLink id="DOI_10_1021_es200665d">(Liu a kol., 2011, rovnice 1–4)</SourceLink>
         </p>
         <p>
           V příkladu použijeme kalibraci čištěného barviva od{" "}
@@ -184,7 +191,8 @@ export function SpectrophotometryArticle() {
           <figcaption>
             Vlastní schéma měřicího postupu. Horní šipka sleduje světlo, spodní šipky zpracování
             jeho signálu. Fialová a žlutá označují dvě měřené vlnové délky. Schéma znázorňuje
-            funkce součástí, nikoli konstrukci určitého modelu přístroje.
+            funkce součástí, nikoli konstrukci určitého modelu přístroje.{" "}
+            <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(schéma podle SOP 6b)</SourceLink>
           </figcaption>
         </figure>
 
@@ -244,7 +252,8 @@ export function SpectrophotometryArticle() {
             Ve studii Liua a kolegů dosáhly rozdíly při použití nečištěných barviv až 0,018 pH
             při pH 8,2. Po vyčištění se výrazně zmenšily. Všechny výsledky ale využívaly
             společný způsob kalibrace a referenční barvivo. Shoda dodavatelů proto
-            neověřuje nezávisle správnost referenční stupnice.
+            neověřuje nezávisle správnost referenční stupnice.{" "}
+            <SourceLink id="DOI_10_1021_es200665d">(Liu a kol., 2011, výsledky čištění)</SourceLink>
           </p>
           <p>
             Stejní autoři uvádějí průměrnou absolutní odchylku kalibračního vztahu od

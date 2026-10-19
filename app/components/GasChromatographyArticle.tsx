@@ -26,7 +26,8 @@ export function GasChromatographyArticle() {
           Plynová chromatografie je metoda, která odděluje látky přítomné v plynném vzorku,
           aby bylo možné určit jejich zastoupení. V klimatologii se používá k měření metanu,
           oxidu dusného a dalších plynů v ovzduší i ve vzduchu získaném z ledových jader.
-          Přístroj, který rozdělení a následné měření provádí, se nazývá plynový chromatograf.
+          Přístroj, který rozdělení a následné měření provádí, se nazývá plynový chromatograf.{" "}
+          <SourceLink id="DOI_10_5194_essd_11_473_2019">(Rubino a kol., 2019, oddíl 2)</SourceLink>
         </p>
         <p>
           Podrobně projdeme stanovení metanu ve vzduchu pomocí plamenového ionizačního detektoru.
@@ -43,7 +44,8 @@ export function GasChromatographyArticle() {
           <strong> nosného plynu</strong>, například helia. Nosný plyn unáší vzorek dlouhou úzkou
           trubicí zvanou <strong>kolona</strong>. Uvnitř kolony je materiál, na kterém se molekuly
           jednotlivých látek různě dlouho zadržují. Tento materiál zůstává na místě, a proto
-          mu říkáme <strong>stacionární fáze</strong>.
+          mu říkáme <strong>stacionární fáze</strong>.{" "}
+          <SourceLink id="2016_Harvey_Analytical_Chemistry">(Harvey, oddíly 12.2 a 12.4)</SourceLink>
         </p>
         <p>
           Představme si cestu jedné molekuly kolonou. Část času se pohybuje s nosným plynem,
@@ -69,7 +71,8 @@ export function GasChromatographyArticle() {
           Vzduch můžeme nasávat přímo na měřicí stanici nebo odebrat do uzavřené baňky
           a dopravit do laboratoře. Při laboratorní analýze otevře soustava ventilů cestu
           od vybrané baňky k přístroji. Proud vzduchu nejprve propláchne přívodní vedení.
-          Tím nahradí plyn, který v něm zůstal po předchozím vzorku, právě analyzovaným vzduchem.
+          Tím nahradí plyn, který v něm zůstal po předchozím vzorku, právě analyzovaným vzduchem.{" "}
+          <SourceLink id="2015_NOAA_CH4_Analysis">(NOAA, oddíl 5.1)</SourceLink>
         </p>
         <p>
           Před měřením se vzduch vysuší. Například analytický systém NOAA pro vzorky z letadel
@@ -120,7 +123,8 @@ export function GasChromatographyArticle() {
           metanu, signál vzroste, dosáhne maxima a zase klesne. V grafu se objeví vrchol,
           kterému se v chromatografii říká <strong>pík</strong>. Doba od vstupu vzorku po maximum
           píku je jeho retenční čas. Měřením známé směsi předem zjistíme, ve které části
-          záznamu metan hledat.
+          záznamu metan hledat.{" "}
+          <SourceLink id="2016_Harvey_Analytical_Chemistry">(Harvey, oddíly 12.2 a 12.4)</SourceLink>
         </p>
         <p>
           Pro určení množství metanu sečteme odezvu během průchodu celého píku.
@@ -141,7 +145,8 @@ export function GasChromatographyArticle() {
             Schematický chromatogram, nikoli naměřená data. Vodorovná osa je čas od vpuštění vzorku,
             svislá elektrická odezva. Modrá plocha patří píku metanu, šedá čára označuje základní
             úroveň signálu. Přerušovaná svislice ukazuje čas maxima, tedy retenční čas.
-            Schéma zobrazuje jen vybraný pík.
+            Schéma zobrazuje jen vybraný pík.{" "}
+            <SourceLink id="2016_Harvey_Analytical_Chemistry">(schéma podle Harveyho, oddíl 12.2)</SourceLink>
           </figcaption>
         </figure>
 
@@ -158,7 +163,8 @@ export function GasChromatographyArticle() {
           <figcaption>
             Čtyři kroky jedné analýzy. Šipky sledují cestu vzorku a následné zpracování
             signálu. Referenční směsi procházejí stejnou dávkovací smyčkou, kolonami a detektorem
-            jako neznámý vzorek. Schéma shrnuje popsané uspořádání, nezobrazuje časový průběh měření.
+            jako neznámý vzorek. Schéma shrnuje popsané uspořádání, nezobrazuje časový průběh měření.{" "}
+            <SourceLink id="2015_NOAA_CH4_Analysis">(NOAA, oddíly 5–6)</SourceLink>
           </figcaption>
         </figure>
 
@@ -168,7 +174,8 @@ export function GasChromatographyArticle() {
           potřebujeme změřit také směsi, jejichž obsah metanu je už určený.
           Tyto <strong>referenční plyny</strong> se uchovávají v tlakových lahvích.
           Kalibrací zjišťujeme vztah mezi jejich známým složením a odezvou chromatografu.
-          Stejný vztah potom použijeme na neznámý vzorek.
+          Stejný vztah potom použijeme na neznámý vzorek.{" "}
+          <SourceLink id="2015_NOAA_CH4_Analysis">(NOAA, oddíly 5–6)</SourceLink>
         </p>
         <p>
           Zastoupení metanu vyjadřujeme <strong>molárním zlomkem</strong>. Ten říká,
@@ -176,7 +183,8 @@ export function GasChromatographyArticle() {
           Jednotka <strong>ppb</strong> znamená počet na miliardu. Hodnota 1 850 ppb tedy
           odpovídá 1 850 molekulám metanu na miliardu molekul suchého vzduchu.
           V odborných datech najdeme i zápis nmol/mol, který má pro tuto veličinu stejný význam.
-          Propojovat takto vyjádřená měření umožňuje společná kalibrační stupnice.
+          Propojovat takto vyjádřená měření umožňuje společná kalibrační stupnice.{" "}
+          <SourceLink id="2015_NOAA_CH4_Analysis">(NOAA, oddíl 4)</SourceLink>
         </p>
         <p>
           NOAA udržuje pro metan stupnici <strong>WMO X2004A</strong>. WMO je Světová meteorologická
@@ -193,7 +201,8 @@ export function GasChromatographyArticle() {
           Z obou referenčních ploch uděláme průměr a plochu vzorku jím vydělíme.
           Tak získáme poměr odezev ve stejných podmínkách. Průběžné porovnávání zachytí
           pomalé společné změny odezvy, například při změně tlaku ovlivňující množství plynu
-          v dávkovací smyčce.
+          v dávkovací smyčce.{" "}
+          <SourceLink id="2015_NOAA_CH4_Analysis">(NOAA, oddíly 5–6)</SourceLink>
         </p>
         <Equation tex={String.raw`r = \frac{S}{(R_1 + R_2)/2}`} />
         <p>
@@ -202,7 +211,8 @@ export function GasChromatographyArticle() {
           <InlineMath tex={String.raw`R_2`} /> plochu následující reference.
           Všechny tři plochy jsou ve stejných přístrojových jednotkách, které se při dělení
           vykrátí. Výsledný poměr <InlineMath tex={String.raw`r`} /> je proto bez jednotky.
-          Výpočet předpokládá stejný způsob dávkování a vyhodnocení všech tří píků.
+          Výpočet předpokládá stejný způsob dávkování a vyhodnocení všech tří píků.{" "}
+          <SourceLink id="2015_NOAA_CH4_Analysis">(NOAA, oddíly 5–6)</SourceLink>
         </p>
         <p>
           K převodu poměru na ppb ještě potřebujeme kalibrační křivku. Tu vytvoříme měřením
@@ -226,7 +236,8 @@ export function GasChromatographyArticle() {
         </p>
         <p>
           Jednu lahev obvykle analyzujeme opakovaně. Každá dávka poskytne vlastní hodnotu
-          v ppb a z těchto hodnot vypočteme aritmetický průměr:
+          v ppb a z těchto hodnot vypočteme aritmetický průměr:{" "}
+          <SourceLink id="2015_NOAA_CH4_Analysis">(NOAA, oddíly 5–6)</SourceLink>
         </p>
         <Equation tex={String.raw`\bar{x} = \frac{x_1 + x_2 + \dots + x_N}{N}`} />
         <p>
@@ -311,7 +322,8 @@ export function GasChromatographyArticle() {
             z let 1994–2013, provedených s odstupem delším než rok. Přibližně 95 % posuzovaných
             rozdílů nepřesáhlo velikost 1 ppb. Před vyhodnocením autoři vyřadili jeden rozdíl
             větší než 5 ppb jako zjevný problém měření nebo odběru. Výsledek charakterizuje
-            dlouhodobé opakování hodnot v této sestavě.
+            dlouhodobé opakování hodnot v této sestavě.{" "}
+            <SourceLink id="2015_NOAA_CH4_Analysis">(NOAA, oddíl 6.2)</SourceLink>
           </p>
           <p>
             Rozšíření stupnice X2004A zahrnovalo porovnání referenčních lahví také optickým
@@ -386,7 +398,8 @@ export function GasChromatographyArticle() {
             Vodorovná osa ukazuje pořadí analýzy, svislá molární zlomek metanu v ppb.
             Modré body jsou jednotlivé výsledky, oranžová přerušovaná čára jejich aritmetický
             průměr. Jde o opakované rozbory jedné lahve během dvou hodin, nikoli o vývoj
-            metanu v atmosféře. Vlastní graf ze zveřejněné tabulky NOAA.
+            metanu v atmosféře. Vlastní graf ze zveřejněné tabulky NOAA.{" "}
+            <SourceLink id="2015_NOAA_CH4_Analysis">(NOAA, příloha A, tabulka A1)</SourceLink>
           </figcaption>
         </figure>
         <details className="method-details">
@@ -396,7 +409,8 @@ export function GasChromatographyArticle() {
             z 22. září 2015, tištěná strana 8, devátá strana PDF. Přepis obsahuje všech 41 řádků,
             tedy 20 dávek vzorku a 21 referencí. Žádný řádek nevyřazujeme.
             Označení S znamená vzorek a R referenci. Kód BB zachováváme podle předlohy,
-            pro tento výpočet jej nevyužíváme. Přístup ke zdroji je z 19. října 2026.
+            pro tento výpočet jej nevyužíváme. Přístup ke zdroji je z 19. října 2026.{" "}
+            <SourceLink id="2015_NOAA_CH4_Analysis">(NOAA, příloha A, tabulka A1)</SourceLink>
           </p>
           <ul>
             <li><a href={`${dataPath}/noaa-table-a1.csv`}>Přepis celé tabulky A1, CSV</a></li>

@@ -28,7 +28,8 @@ export function GlacierBalanceArticle() {
           Terénní měření bilance ledovce zjišťuje, kolik sněhu a ledu na jeho povrchu za určenou dobu
           přibylo nebo ubylo. Výsledkem je změna hmotnosti na jednotku plochy. K jejímu určení potřebujeme
           změřit tloušťku přidané či ztracené vrstvy a znát její hustotu. Na horském ledovci k tomu
-          slouží především tyče ukotvené v ledu, sněhové sondy a odběry sněhu.
+          slouží především tyče ukotvené v ledu, sněhové sondy a odběry sněhu.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíly 3.7–3.9)</SourceLink>
         </p>
         <p>
           Sníh na ledovec přinášejí srážky, vítr i laviny. Takovému přírůstku hmotnosti říkáme
@@ -68,7 +69,8 @@ export function GlacierBalanceArticle() {
           z různých stran popíše jeho nerovné okolí. Měřicí pásmo přitom porovnáváme se známou referenční
           délkou. Tato kalibrace určuje vztah mezi údajem stupnice a skutečnou délkou včetně nejistoty.
           Navazující kalibrace referencí propojují měření s jednotkou metr.
-          <SourceLink id="2012_VIM_Calibration"> VIM, 2012</SourceLink>
+          <SourceLink id="2012_VIM_Calibration"> VIM, 2012</SourceLink>{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíl 3.8)</SourceLink>
         </p>
         <p>
           Tyč se pohybuje spolu s ledem, ve kterém drží. Při odečtu nás zajímá právě změna povrchu vůči
@@ -91,7 +93,8 @@ export function GlacierBalanceArticle() {
           Je to výška vrstvy vody, která by měla nad stejnou plochou stejnou hmotnost jako sledovaný
           sníh nebo led. Hmotnost na metr čtvereční proto vydělíme referenční hustotou vody
           1 000 kg/m³. Jeden metr vodního ekvivalentu tak odpovídá 1 000 kg/m² a jeden milimetr 1 kg/m².
-          Tím získáme společné vyjádření pro materiály s různou hustotou.
+          Tím získáme společné vyjádření pro materiály s různou hustotou.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_glosar_UNESCO_a_WGMS_06fc9a79">(Cogley a kol., oddíl 7.2.2)</SourceLink>
         </p>
         <p>
           U svislé, pevně ukotvené tyče označíme odkrytou délku při první návštěvě jako{" "}
@@ -128,14 +131,16 @@ export function GlacierBalanceArticle() {
           Váhu kalibrujeme pomocí referenčních závaží a samostatně ověřujeme objem odběráku.
           Závaží mají doloženou návaznost na jednotku kilogram. Kalibrace popisuje vztah mezi údajem
           váhy a hmotností, zatímco případné seřízení mění její odezvu.
-          <SourceLink id="2012_VIM_Calibration"> VIM, 2012</SourceLink>
+          <SourceLink id="2012_VIM_Calibration"> VIM, 2012</SourceLink>{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíl 2.4.1.2)</SourceLink>
         </p>
         <p>
           Hustotu každé vrstvy násobíme její tloušťkou. Tím dostaneme hmotnost sněhu nad jednotkou
           plochy, stejně jako předtím u ledu. Příspěvky všech vrstev sečteme a vydělením hustotou vody
           získáme vodní ekvivalent zimního přírůstku. Na konci léta stejným postupem určíme, kolik
           letošního sněhu zůstalo. Podrobnosti odběru a převodu rozvádí článek o
-          <Link href="/metody/mereni-vysky-hustoty-a-vodni-hodnoty-snehu"> měření sněhu</Link>.
+          <Link href="/metody/mereni-vysky-hustoty-a-vodni-hodnoty-snehu"> měření sněhu</Link>.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíl 3.7)</SourceLink>
         </p>
 
         <h3>Měření spojíme do sezon a let</h3>
@@ -144,7 +149,8 @@ export function GlacierBalanceArticle() {
           Jejich propojením rozlišíme zimní přírůstek a letní změnu, obvykle úbytek. Součet těchto
           dvou složek dává roční bilanci. Každý odečet proto patří k určitému místu a datu.
           V zápisu jej doprovází označení bodu, poloha a druh povrchu, podle kterého volíme převod
-          tloušťky na hmotnost.
+          tloušťky na hmotnost.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_glosar_UNESCO_a_WGMS_06fc9a79">(Cogley a kol., sezonní a roční bilance)</SourceLink>
         </p>
         <p>
           Výsledek lze vztáhnout ke skutečným dnům návštěv, nebo k pevně vymezenému období.
@@ -160,7 +166,8 @@ export function GlacierBalanceArticle() {
           Dosud máme změnu hmotnosti v jednotlivých místech. Pro celý ledovec potřebujeme zjistit,
           jakou plochu jejich hodnoty zastupují. Tyče a sněhová měření se proto rozmísťují do různých
           nadmořských výšek, na různě orientované svahy i do míst s odlišným ukládáním sněhu.
-          Takto sestavená síť poskytne podklady také pro odhad v plochách mezi měřicími body.
+          Takto sestavená síť poskytne podklady také pro odhad v plochách mezi měřicími body.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíl 3.9)</SourceLink>
         </p>
         <p>
           Jednou z možností je rozdělit ledovec na výšková pásma a určit průměrnou bilanci každého
@@ -238,7 +245,8 @@ export function GlacierBalanceArticle() {
         <p>
           Tyto záznamy jsou jedním z podkladů pozorování <Link href="/pozorovani/ustup-ledovcu">horských ledovců</Link>.
           Stejný princip terénních odečtů se uplatňuje také při sledování povrchu
-          <Link href="/pozorovani/nestabilita-prikrovu"> ledových příkrovů</Link>.
+          <Link href="/pozorovani/nestabilita-prikrovu"> ledových příkrovů</Link>.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, kapitola 3)</SourceLink>
         </p>
 
         <h3>Historie měření a provedení tyčí</h3>
@@ -294,7 +302,8 @@ export function GlacierBalanceArticle() {
           <p>
             Geodetické měření má jiné zdroje chyb než tyče. Před porovnáním se sjednotí období
             a plocha a posoudí změny uvnitř ledovce a u podloží. Obě metody však mohou sdílet obrys,
-            mapu výšek či opravy na společná data, takže jsou nezávislé jen částečně.
+            mapu výšek či opravy na společná data, takže jsou nezávislé jen částečně.{" "}
+            <SourceLink id="DOI_10_5194_tc_7_1227_2013">(Zemp a kol., sjednocení porovnávaných bilancí)</SourceLink>
           </p>
           <p>
             Zemp et al. použili test s pětiprocentní hladinou významnosti. Rozdíl se považuje za
@@ -344,7 +353,8 @@ export function GlacierBalanceArticle() {
         <p>
           U tyče <strong>22</strong> v nadmořské výšce 2 479 m uvádí soubor změnu tloušťky ledu
           <strong> −398 cm</strong> a hustotu <strong>900 kg/m³</strong>. Veřejný záznam tedy začíná
-          už rozdílem odečtů. Původní dvě délky odkryté tyče v něm nejsou.
+          už rozdílem odečtů. Původní dvě délky odkryté tyče v něm nejsou.{" "}
+          <SourceLink id="DOI_10_18750_massbalance_point_2021_r2021">(GLAMOS: původní bodová data)</SourceLink>
         </p>
         <p>
           Centimetry nejprve převedeme na metry: −398 cm je −3,98 m. Vynásobením hustotou ledu
@@ -415,7 +425,8 @@ export function GlacierBalanceArticle() {
           V souhrnné tabulce GLAMOS je hodnota −0,892 m a plocha 4,10187 km². Náš přepočet se liší
           o necelý 1 mm vody a součet ploch o 10 m². Vstupní tabulky obsahují zaokrouhlená čísla,
           která omezují přesnou shodu. Bez původních nezaokrouhlených mezivýsledků nelze celý rozdíl
-          rozložit. Obě hodnoty proto ponecháváme.
+          rozložit. Obě hodnoty proto ponecháváme.{" "}
+          <SourceLink id="DOI_10_18750_massbalance_2021_r2021">(GLAMOS: původní souhrnná tabulka)</SourceLink>
         </p>
         <p>
           Součet příspěvků pásem zároveň dává celkovou ztrátu

@@ -31,7 +31,8 @@ export function RadiosoundingArticle() {
           pod balonem. Radiosonda během výstupu opakovaně měří teplotu a vlhkost vzduchu,
           podle provedení také tlak, a své údaje vysílá rádiem na zem. Z její polohy a pohybu
           získáváme výšku a vítr. Uspořádáním těchto údajů podle výšky vzniká <strong>výškový profil</strong>,
-          tedy záznam toho, jak se vlastnosti atmosféry mění směrem vzhůru.
+          tedy záznam toho, jak se vlastnosti atmosféry mění směrem vzhůru.{" "}
+          <SourceLink id="2023_GRUAN_RS41_TD8">(GRUAN, kapitola 2)</SourceLink>
         </p>
         <p>
           Podrobně si postup vysvětlíme na sondě Vaisala RS41-SGP, která má čidla teploty,
@@ -96,7 +97,8 @@ export function RadiosoundingArticle() {
           elektronika odečíst. Aby z ní vznikl údaj ve stupních nebo procentech, potřebujeme
           <strong> kalibraci</strong>. V laboratoři vystavíme čidlo známým podmínkám a jeho odečty
           porovnáme s referenčními přístroji. Z těchto porovnání stanovíme vztah, podle kterého
-          pak převádíme odečet při letu na měřenou veličinu.
+          pak převádíme odečet při letu na měřenou veličinu.{" "}
+          <SourceLink id="2017_Vaisala_RS41">(Vaisala, kapitoly 2–4)</SourceLink>
         </p>
         <p>
           Referenční teploměry a vlhkoměry výrobce mají doložený řetězec porovnání až k jednotkám
@@ -123,7 +125,8 @@ export function RadiosoundingArticle() {
           Při nasycení je pára v rovnováze s kapalnou vodou, do které se vrací stejné množství
           molekul, jaké se z ní vypařuje. Poměr vyjádřený v procentech říká, jak blízko je vzduch
           tomuto stavu. Tlak při nasycení s teplotou roste, a proto údaj o relativní vlhkosti
-          vždy patří k určité teplotě.
+          vždy patří k určité teplotě.{" "}
+          <SourceLink id="2021_NIST_Humidity_Calibration">(NIST, oddíl 3)</SourceLink>
         </p>
         <p>
           Čidlo obsahuje tenkou vrstvu polymeru, látky tvořené dlouhými molekulovými řetězci,
@@ -132,7 +135,8 @@ export function RadiosoundingArticle() {
           <strong> kapacitu</strong>, tedy množství náboje, které se v čidle uloží při daném napětí.
           Elektronika změnu kapacity odečte a kalibrační vztah ji převede na relativní vlhkost
           u povrchu čidla. Podrobnější vysvětlení nabízí
-          <Link href="/metody/hygrometrie"> hygrometrie</Link>.
+          <Link href="/metody/hygrometrie"> hygrometrie</Link>.{" "}
+          <SourceLink id="2023_GRUAN_RS41_TD8">(GRUAN, oddíl 2.1.2)</SourceLink>
         </p>
         <p>
           Vlhkostní prvek RS41 se za letu vyhřívá, aby na něm voda nekondenzovala a nenamrzala.
@@ -166,7 +170,8 @@ export function RadiosoundingArticle() {
           Ke každému odečtu potřebujeme znát místo měření. Přijímač družicového systému GPS,
           anglicky <em>Global Positioning System</em>, sleduje časování signálů několika družic.
           Z doby jejich cesty a známých poloh družic určuje polohu sondy. Opakovaná určení polohy
-          poskytují zeměpisnou šířku, délku a výšku podél celé dráhy letu.
+          poskytují zeměpisnou šířku, délku a výšku podél celé dráhy letu.{" "}
+          <SourceLink id="2023_GRUAN_RS41_TD8">(GRUAN, příloha D.1)</SourceLink>
         </p>
         <p>
           Výška z GPS se nejprve vztahuje k referenčnímu elipsoidu, hladké ploše, která matematicky
@@ -184,7 +189,8 @@ export function RadiosoundingArticle() {
           a proto jeho posun za známý čas poskytuje rychlost a směr proudění. Software odděluje
           plynulý pohyb soupravy od kývání sondy na závěsu a od drobných výkyvů navigačních údajů.
           Svislý pohyb má jiný význam: výstup zajišťuje i vlastní vztlak balonu, takže rychlost
-          stoupání není přímo rychlostí svislého proudění vzduchu.
+          stoupání není přímo rychlostí svislého proudění vzduchu.{" "}
+          <SourceLink id="2023_GRUAN_RS41_TD8">(GRUAN, oddíl 4.4.3)</SourceLink>
         </p>
         <p>
           Konkrétní výpočet větru se liší podle zpracování. Software výrobce využívá spolu
@@ -204,7 +210,8 @@ export function RadiosoundingArticle() {
           Její základ vzniká v laboratoři: čidlo se ozařuje při různém tlaku a proudění
           a zjišťuje se, o kolik se ohřeje nad teplotu vzduchu. Při letu software tento vztah
           použije spolu s odhadem osvětlení a větrání čidla. Odhadnutý příspěvek slunečního
-          ohřevu od naměřené teploty odečte.
+          ohřevu od naměřené teploty odečte.{" "}
+          <SourceLink id="2023_GRUAN_RS41_TD8">(GRUAN, oddíl 4.1)</SourceLink>
         </p>
         <p>
           Další zpracování se týká rychlosti odezvy. Čidlo potřebuje určitý čas, aby se přizpůsobilo
@@ -218,7 +225,8 @@ export function RadiosoundingArticle() {
           či dopočítané veličiny. Zvolíme-li teplotu a vyneseme ji proti výšce, dostaneme
           teplotní profil. Ukáže, ve kterých vrstvách se směrem vzhůru ochlazuje a kde naopak
           otepluje. Stejným způsobem lze číst změny vlhkosti nebo větru.
-          Jednotlivé body vznikají postupně během letu na místech, kam sondu unáší vítr.
+          Jednotlivé body vznikají postupně během letu na místech, kam sondu unáší vítr.{" "}
+          <SourceLink id="2023_GRUAN_RS41_TD8">(GRUAN, kapitola 7)</SourceLink>
         </p>
         <p>
           K porovnání dvou výšek můžeme vypočítat průměrnou změnu teploty na kilometr.
@@ -234,7 +242,8 @@ export function RadiosoundingArticle() {
           úroveň se zvoleným tlakem vzduchu. Její výška se mění podle stavu atmosféry,
           takže umožňuje porovnávat měření při stejném tlaku i tehdy, když se nacházejí
           v různých nadmořských výškách. Převody vysvětluje
-          <Link href="/metody/mereni-tlaku-a-hydrostaticke-vysky"> měření tlaku a hydrostatické výšky</Link>.
+          <Link href="/metody/mereni-tlaku-a-hydrostaticke-vysky"> měření tlaku a hydrostatické výšky</Link>.{" "}
+          <SourceLink id="2023_GRUAN_RS41_TD8">(GRUAN, oddíl 4.4.2)</SourceLink>
         </p>
 
         <h3>Využití opakovaných sondáží</h3>
@@ -243,7 +252,8 @@ export function RadiosoundingArticle() {
           opakované výstupy z mnoha stanic a porovnáváme stejné tlakové hladiny či výšky
           ve srovnatelných termínech. Tak lze sledovat dlouhodobé změny popsané v článcích
           <Link href="/pozorovani/stratosfericke-ochlazovani"> Teplota stratosféry</Link> a
-          <Link href="/pozorovani/narust-vlhkosti"> Vlhkost atmosféry</Link>.
+          <Link href="/pozorovani/narust-vlhkosti"> Vlhkost atmosféry</Link>.{" "}
+          <SourceLink id="DOI_10_1029_2005jd006169">(Free a kol., metody)</SourceLink>
         </p>
         <p>
           <SourceLink id="WEB_NOAA_Integrated_Global_Radiosonde_Archive_IGRA_ab0ea6c1">Integrovaný
@@ -283,14 +293,16 @@ export function RadiosoundingArticle() {
           jejichž tloušťku známe z navigace a teplotu a vlhkost z čidel.
           Výpočet předpokládá <strong>hydrostatickou rovnováhu</strong>: rozdíl tlaku mezi
           dolní a horní hranicí vrstvy vyvažuje tíhu vzduchu uvnitř. Z vlastností vrstvy
-          tak můžeme určit, o kolik v ní tlak klesne.
+          tak můžeme určit, o kolik v ní tlak klesne.{" "}
+          <SourceLink id="2023_GRUAN_RS41_TD8">(GRUAN, oddíl 4.4.2)</SourceLink>
         </p>
         <p>
           Teplota a vlhkost vstupují do výpočtu proto, že ovlivňují hustotu vzduchu, a tedy
           hmotnost dané vrstvy. Jejich společný vliv vyjadřuje <strong>virtuální teplota</strong>.
           Je to teplota, kterou by měl suchý vzduch se stejným tlakem a hustotou jako měřený
           vlhký vzduch. Díky tomuto přepočtu můžeme použít vztah pro suchý vzduch i tehdy,
-          když obsahuje vodní páru.
+          když obsahuje vodní páru.{" "}
+          <SourceLink id="2023_GRUAN_RS41_TD8">(GRUAN, oddíl 4.4.2)</SourceLink>
         </p>
         <p>
           Pro vrstvu s přibližně stálou virtuální teplotou platí v geopotenciální výšce:
@@ -305,7 +317,8 @@ export function RadiosoundingArticle() {
           T<sub>v</sub> je virtuální teplota v kelvinech. Teplotu v kelvinech získáme přičtením
           273,15 k údaji ve stupních Celsia.
           Značka exp označuje exponenciální funkci. Záporný výraz v jejím argumentu zajistí,
-          že při postupu vzhůru dostaneme menší tlak.
+          že při postupu vzhůru dostaneme menší tlak.{" "}
+          <SourceLink id="2023_GRUAN_RS41_TD8">(GRUAN, oddíl 4.4.2)</SourceLink>
         </p>
         <p>
           Vypočtený tlak na horní hranici se stane výchozím tlakem pro další vrstvu.
@@ -367,7 +380,8 @@ export function RadiosoundingArticle() {
             a teplotní měření. U výpočtu změny teploty na kilometr potřebujeme nejistoty obou
             teplot a výšek i jejich společné chyby. Pražský soubor použitý níže tyto podklady
             neobsahuje, proto nejistotu výsledku nevyčíslujeme. Počet desetinných míst
-            vyjadřuje způsob zápisu, nikoli přesnost měření.
+            vyjadřuje způsob zápisu, nikoli přesnost měření.{" "}
+            <SourceLink id="2023_GRUAN_RS41_TD8">(GRUAN, příloha D.3)</SourceLink>
           </p>
           <p>
             Při sestupu se mění větrání a orientace sondy i procházená část atmosféry.
@@ -463,7 +477,8 @@ export function RadiosoundingArticle() {
           Dráhu můžeme sledovat i v zeměpisných souřadnicích. Od startu do posledního záznamu
           se délka změnila z 14,44690° na 17,65844° východní délky a šířka z 50,00780°
           na 50,24151° severní šířky. Sonda tedy během výstupu postupovala převážně na východ.
-          Profil spojuje měření z těchto postupně navštívených míst.
+          Profil spojuje měření z těchto postupně navštívených míst.{" "}
+          <SourceLink id="2025_CHMU_Prague_Radiosonde_January">(ČHMÚ: původní profil)</SourceLink>
         </p>
         <details className="method-details">
           <summary>Data a skript pro zopakování výpočtu</summary>

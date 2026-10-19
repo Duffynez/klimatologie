@@ -26,14 +26,16 @@ export function TitrationArticle() {
           podle jejich reakce s postupně přidávaným činidlem známé koncentrace. V oceánografii
           se tak měří například celková alkalinita, která popisuje schopnost mořské vody
           neutralizovat kyselinu. Vysvětlíme si její stanovení kyselinou chlorovodíkovou
-          v otevřené nádobě, s průběžným měřením pomocí skleněné elektrody.
+          v otevřené nádobě, s průběžným měřením pomocí skleněné elektrody.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(měřicí příručka, SOP 3b)</SourceLink>
         </p>
         <h3>Co přidaná kyselina ve vodě mění</h3>
         <p>
           Kyselina chlorovodíková dodává do vody vodíkové ionty, kladně nabité částice
           vodíku. Budeme je zapisovat značkou H⁺. Část látek rozpuštěných v mořské vodě
           tyto ionty přijímá a přechází přitom do jiné chemické formy. Právě na této
-          reakci je měření založeno.
+          reakci je měření založeno.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(Dickson a kol., kap. 2)</SourceLink>
         </p>
         <p>
           Největší podíl mají v běžné mořské vodě hydrogenuhličitanové a uhličitanové ionty.
@@ -51,7 +53,8 @@ export function TitrationArticle() {
           Rovnice ukazují celkovou bilanci při okyselování. Na převedení jednoho
           uhličitanového iontu na CO₂ jsou potřeba dva vodíkové ionty,
           na převedení jednoho hydrogenuhličitanového iontu jeden.
-          Z množství spotřebované kyseliny proto získáváme informaci o složení vzorku.
+          Z množství spotřebované kyseliny proto získáváme informaci o složení vzorku.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(Dickson a kol., kap. 2)</SourceLink>
         </p>
         <p>
           Kyselinu přijímají také další složky vody, například boritanové ionty obsahující bor.
@@ -68,7 +71,8 @@ export function TitrationArticle() {
           kyselost, tedy chemické působení vodíkových iontů. Alkalinita popisuje bilanci,
           která se projeví až při přidávání kyseliny. Dva vzorky se stejným pH tak mohou
           spotřebovat různé množství kyseliny. Pro popis uhličitanového systému oceánu
-          potřebujeme právě více takových, vzájemně se doplňujících údajů.
+          potřebujeme právě více takových, vzájemně se doplňujících údajů.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(Dickson a kol., kap. 2)</SourceLink>
         </p>
         <h3>Co dělá byreta a co elektroda</h3>
         <p>
@@ -76,7 +80,8 @@ export function TitrationArticle() {
           zjistit vážením, při práci na lodi se používá také přesně odměřený objem
           a převod na hmotnost podle hustoty vody. Nádobou je zde otevřená kádinka
           obklopená vodním pláštěm. V plášti cirkuluje voda ze stálé teplotní lázně,
-          takže vzorek během rozboru zůstává přibližně na stejné teplotě.
+          takže vzorek během rozboru zůstává přibližně na stejné teplotě.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 3b, oddíly 3–5)</SourceLink>
         </p>
         <p>
           Kyselinu dávkuje <strong>byreta</strong>. V automatickém provedení ji píst
@@ -84,7 +89,8 @@ export function TitrationArticle() {
           roztoku říkáme titrant. Míchadlo každou dávku rozptýlí v celé nádobě.
           Z objemu a hustoty titrantu vypočteme jeho hmotnost a ze známé koncentrace
           množství přidané kyseliny. Titrant obsahuje také chlorid sodný,
-          aby se solné prostředí vzorku při jeho přidávání měnilo co nejméně.
+          aby se solné prostředí vzorku při jeho přidávání měnilo co nejméně.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 3b, oddíly 3–5)</SourceLink>
         </p>
         <p>
           Aby dávka znamenala známé množství kyseliny, kalibrujeme dávkování i koncentraci
@@ -92,7 +98,8 @@ export function TitrationArticle() {
           vypočteme skutečný objem. Porovnání s údajem byrety poskytne převod
           pro její další použití. Koncentraci kyseliny stanovíme samostatným
           rozborem. V referenčním postupu se k tomu používá coulometrie,
-          při níž se množství reagující látky určuje z prošlého elektrického náboje.
+          při níž se množství reagující látky určuje z prošlého elektrického náboje.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 12 a SOP 3b, oddíly 4–5)</SourceLink>
         </p>
         <p>
           Skleněná elektroda spolu s referenční elektrodou sleduje, jak se vzorek
@@ -100,7 +107,8 @@ export function TitrationArticle() {
           zvýšení koncentrace vodíkových iontů vyvolá přibližně stejný přírůstek
           napětí, ať začínáme u nižší, nebo u vyšší koncentrace. Při stálé teplotě a téměř stálém solném
           prostředí lze tuto odezvu použít při výpočtu titrace. Podrobněji ji vysvětluje{" "}
-          <Link href="/metody/potenciometrie">článek o potenciometrii</Link>.
+          <Link href="/metody/potenciometrie">článek o potenciometrii</Link>.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 3b, oddíl 7.2)</SourceLink>
         </p>
         <figure className="article-figure">
           <div style={{ overflowX: "auto" }}>
@@ -123,7 +131,8 @@ export function TitrationArticle() {
           Vzorek potom několik minut intenzivně mícháme a probubláváme vzduchem,
           aby vzniklý CO₂ unikl. Otevřená nádoba je záměrnou součástí metody:
           po odstranění většiny uhlíku se závěrečný výpočet obejde bez znalosti
-          jeho původního celkového množství.
+          jeho původního celkového množství.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 3b, oddíly 3 a 6.3)</SourceLink>
         </p>
         <p>
           Potom pokračujeme malými dávkami kyseliny přibližně k pH 3.
@@ -165,7 +174,8 @@ export function TitrationArticle() {
           Značka <InlineMath tex={String.raw`m_0`} /> znamená původní hmotnost mořské vody
           v kilogramech. Výsledek má jednotku mol/kg, v oceánografii obvykle používáme
           milionkrát menší mikromol, tedy µmol/kg. Přebytek se určuje vůči stejné
-          chemické referenci jako alkalinita.
+          chemické referenci jako alkalinita.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 3b, oddíly 7.2–7.3)</SourceLink>
         </p>
         <p>
           Přidané množství známe z dávkování. Přebytek odvozujeme z odezvy elektrody,
@@ -184,7 +194,8 @@ export function TitrationArticle() {
           <InlineMath tex={String.raw`s`} /> je změna napětí v milivoltech odpovídající
           desetinásobné koncentraci H⁺ při dané teplotě. Pomocná veličina{" "}
           <InlineMath tex={String.raw`G`} /> má při tomto zápisu jednotku kilogram.
-          Sama není hmotností žádné látky, slouží k přehlednému přepočtu křivky.
+          Sama není hmotností žádné látky, slouží k přehlednému přepočtu křivky.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 3b, oddíly 7.2–7.3)</SourceLink>
         </p>
         <p>
           V kyselé části titrace roste tato veličina přibližně po přímce s hmotností
@@ -192,7 +203,8 @@ export function TitrationArticle() {
           ukáže odhad dávky, která by právě vyrovnala původní alkalinitu bez
           přebytku kyseliny. Tomuto stavu říkáme bod ekvivalence.
           Známe-li hmotnost takové dávky a koncentraci titrantu, můžeme spočítat
-          spotřebu kyseliny a první odhad alkalinity.
+          spotřebu kyseliny a první odhad alkalinity.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 3b, oddíly 7.2–7.3)</SourceLink>
         </p>
         <p>
           Pro konečný výsledek se použije podrobnější popis roztoku. Při nízkém pH
@@ -200,7 +212,8 @@ export function TitrationArticle() {
           jak se vodík rozdělí mezi volné ionty a tyto vázané formy. Z celkové
           slanosti vody, označované jako salinita, odhadne množství síranů a fluoridů.
           Změřená teplota pak pomáhá určit chemické rovnováhy, tedy ustálené
-          zastoupení jednotlivých forem látek za daných podmínek.
+          zastoupení jednotlivých forem látek za daných podmínek.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 3b, oddíly 7.2–7.3)</SourceLink>
         </p>
         <p>
           Program pak hledá alkalinitu a výchozí posun odezvy elektrody, při nichž
@@ -226,7 +239,8 @@ export function TitrationArticle() {
           uhlíkem, tedy součtem uhlíku v CO₂, hydrogenuhličitanech a uhličitanech,
           poskytuje podklad pro výpočet jejich vzájemného zastoupení i pH.
           Chemické rovnováhy při něm počítáme pro teplotu, salinitu a tlak vody,
-          kterou chceme popsat.
+          kterou chceme popsat.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(Dickson a kol., kap. 2)</SourceLink>
         </p>
         <p>
           Takto využívá alkalinitu program Hawaii Ocean Time-series na stanici
@@ -280,7 +294,8 @@ export function TitrationArticle() {
             rozptylem opakovaných titrací i změnou průměru. Průběžně měřené referenční
             vzorky a dvojice opakovaných rozborů se proto zapisují do kontrolních
             grafů, které umožní odhalit změnu v čase. Předepsaný postup zahrnuje
-            rovněž kontrolu vah, teploměrů a voltmetru.
+            rovněž kontrolu vah, teploměrů a voltmetru.{" "}
+            <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 3b, oddíl 8)</SourceLink>
           </p>
           <p>
             Dickson a kolegové ověřili výsledek na roztocích připravených ze
@@ -288,7 +303,8 @@ export function TitrationArticle() {
             sodného byla vypočtená alkalinita 2172,0 µmol/kg a otevřená titrace
             poskytla 2172,21 µmol/kg, se směrodatnou odchylkou 0,51 µmol/kg
             ze čtyř rozborů. Roztoky sloužily k ověření celého postupu,
-            koncentrace titrační kyseliny byla stanovena samostatně coulometricky.
+            koncentrace titrační kyseliny byla stanovena samostatně coulometricky.{" "}
+            <SourceLink id="DOI_10_1016_S0304_4203_02_00133_0">(Dickson a kol., 2003, oddíl 3.3 a tabulka 3)</SourceLink>
           </p>
           <p>
             U přirozené mořské vody porovnali otevřenou titraci s coulometrickou
@@ -297,7 +313,8 @@ export function TitrationArticle() {
             oba postupy však sdílely laboratoř, potenciometrické určení konce
             reakce a návaznost na měření kyseliny. Také srovnání s uzavřenými
             titracemi v Miami mělo společný prvek: obě laboratoře používaly
-            coulometrickou kalibraci kyseliny.
+            coulometrickou kalibraci kyseliny.{" "}
+            <SourceLink id="DOI_10_1016_S0304_4203_02_00133_0">(Dickson a kol., 2003, tabulka 3 a oddíly 3.3–4)</SourceLink>
           </p>
           <p>
             Dlouhodobé sledování referenční šarže 35 dalo směrodatnou odchylku
@@ -305,7 +322,8 @@ export function TitrationArticle() {
             statistiky nezahrnuli období problémů s elektrodami.
             Směrodatná odchylka popisuje rozptyl, uvedená odchylka do 2 µmol/kg
             vychází z kontroly správnosti. Ani jedna není obecným parametrem
-            libovolného titrátoru.
+            libovolného titrátoru.{" "}
+            <SourceLink id="DOI_10_1016_S0304_4203_02_00133_0">(Dickson a kol., 2003, oddíl 4)</SourceLink>
           </p>
           <p>
             Výpočet otevřené titrace předpokládá odstranění většiny CO₂ a používá
@@ -366,7 +384,8 @@ export function TitrationArticle() {
             Vodorovná osa udává hmotnost přidaného titrantu, svislá pomocnou
             veličinu G. Modré body jsou přepočtené odečty, oranžová přímka
             jejich proložení. Přerušovaný úsek vede k odhadnutému bodu ekvivalence.
-            Vlastní výpočet z dat příručky, stále jde o počáteční Granův odhad.
+            Vlastní výpočet z dat příručky, stále jde o počáteční Granův odhad.{" "}
+            <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 3b, oddíl 7.4)</SourceLink>
           </figcaption>
         </figure>
         <p>
@@ -382,7 +401,8 @@ export function TitrationArticle() {
           <strong>2260,06 µmol/kg</strong>. Rozdíl proti našemu prvnímu odhadu
           je přibližně 3,32 µmol/kg. Ukazuje význam zpřesnění chemického popisu,
           není odhadem nejistoty měření. Konečnou hodnotu zde přebíráme ze zdroje,
-          přiložený skript opakuje výpočet Granova odhadu.
+          přiložený skript opakuje výpočet Granova odhadu.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 3b, oddíl 7.4)</SourceLink>
         </p>
         <details className="article-details">
           <summary>Data, nastavení a opakování výpočtu</summary>
@@ -412,7 +432,8 @@ export function TitrationArticle() {
             <InlineMath tex={String.raw`\ln(10)`} />, faktor 1000 převádí volty
             na milivolty. Číselné konstanty přebíráme z kapitoly 5 příručky.
             Její konečný výsledek 2260,06 µmol/kg předchází případné opravě
-            na zředění konzervačním roztokem.
+            na zředění konzervačním roztokem.{" "}
+            <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(měřicí příručka, kap. 5 a SOP 3b)</SourceLink>
           </p>
         </details>
         <h2>Shrnutí</h2>

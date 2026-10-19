@@ -26,7 +26,8 @@ export function AbsorptionSpectroscopyArticle() {
           Absorpční spektroskopie plynů je metoda, která určuje složení plynné směsi podle toho,
           jak pohlcuje světlo různých vlnových délek. V klimatologii umožňuje soustavně měřit
           oxid uhličitý, metan, vodní páru a další plyny. V popsaném provedení vzduch prochází měřicí
-          komorou, ve které jej osvětluje známý zdroj záření.
+          komorou, ve které jej osvětluje známý zdroj záření.{" "}
+          <SourceLink id="2016_Harvey_Analytical_Chemistry">(Harvey, oddíl 10.1)</SourceLink>
         </p>
         <p>
           Podrobně projdeme laserové měření CO₂ metodou <strong>CRDS</strong>, z anglického
@@ -43,7 +44,8 @@ export function AbsorptionSpectroscopyArticle() {
           se nazývá <strong>vlnová délka</strong>. Ve viditelné oblasti ji vnímáme jako barvu.
           Při měření CO₂ využíváme také infračervené záření, které má delší vlny a oko je nevidí.
           Molekuly plynu přijímají energii záření při určitých změnách svého kmitání a otáčení.
-          Proto pohlcují některé vlnové délky výrazně silněji než jiné.
+          Proto pohlcují některé vlnové délky výrazně silněji než jiné.{" "}
+          <SourceLink id="2016_Harvey_Analytical_Chemistry">(Harvey, oddíl 10.1)</SourceLink>
         </p>
         <p>
           Změříme-li pohlcování při mnoha vlnových délkách, dostaneme <strong>absorpční spektrum</strong>.
@@ -52,7 +54,8 @@ export function AbsorptionSpectroscopyArticle() {
           Tuto možnost rozlišení plynů vysvětluje <SourceLink id="WEB_NIST_Greenhouse_Gas_Measurement">americký
           metrologický ústav NIST</SourceLink>. U stejného plynu, teploty a tlaku závisí síla
           absorpce na počtu molekul v dráze světla. Delší průchod vzorkem nebo více molekul
-          v jednotce objemu znamená větší zeslabení svazku.
+          v jednotce objemu znamená větší zeslabení svazku.{" "}
+          <SourceLink id="2016_Harvey_Analytical_Chemistry">(Harvey, oddíl 10.2)</SourceLink>
         </p>
 
         <h3>Jak přivedeme vzduch do přístroje</h3>
@@ -60,7 +63,8 @@ export function AbsorptionSpectroscopyArticle() {
           Čerpadlo nasává vzduch přívodní trubicí do měřicí komory. Na stanici může trubice
           vést k odběrovému místu na stožáru, v laboratoři k baňce se vzorkem nebo k tlakové
           lahvi. Ventily vybírají, který plyn právě proudí do přístroje. Po přepnutí necháme
-          nový vzorek propláchnout vedení i komoru, aby zaznamenaná odezva už patřila tomuto plynu.
+          nový vzorek propláchnout vedení i komoru, aby zaznamenaná odezva už patřila tomuto plynu.{" "}
+          <SourceLink id="2021_NOAA_CO2_Analysis">(NOAA, oddíl 5)</SourceLink>
         </p>
         <p>
           Teplota a tlak uvnitř komory se udržují stálé. Při stlačení by totiž stejný vzduch
@@ -102,7 +106,8 @@ export function AbsorptionSpectroscopyArticle() {
           který tento unikající podíl převádí na elektrický signál. Když přístroj rychle
           přeruší přívod laserového světla, začne množství světla uvnitř klesat.
           Ubývá ho průchodem zrcadly i pohlcováním plynem. Detektor zaznamenává pokles
-          a elektronika k odečtům přiřazuje čas.
+          a elektronika k odečtům přiřazuje čas.{" "}
+          <SourceLink id="DOI_10_5194_amt_3_375_2010">(Chen a kol., oddíl 2)</SourceLink>
         </p>
         <p>
           Průběh poklesu je přibližně exponenciální: za stejné časové úseky zbývá stejný
@@ -122,14 +127,16 @@ export function AbsorptionSpectroscopyArticle() {
             modré svislice zrcadla. Pro přehlednost jsou průchody nakresleny vedle sebe.
             Dole je vodorovně čas od vypnutí přívodu světla a svisle signál detektoru.
             Oranžová křivka klesá rychleji, protože k ostatním ztrátám přibývá absorpce CO₂.
-            Schéma má dvě zrcadla, používané analyzátory mohou mít i tři.
+            Schéma má dvě zrcadla, používané analyzátory mohou mít i tři.{" "}
+            <SourceLink id="WEB_NOAA_CSL_CRDS_Principle">(NOAA: princip CRDS)</SourceLink>
           </figcaption>
         </figure>
         <p>
           Pro určení absorpce potřebujeme od celkového ubývání oddělit ztráty, které způsobuje
           samotná dutina a ostatní pozadí. Změříme je mimo vybranou absorpční čáru a odhadneme
           jejich průběh také pod ní. Získáme tak dobu slábnutí, jaká by při dané vlnové délce
-          odpovídala pozadí bez sledované absorpce.
+          odpovídala pozadí bez sledované absorpce.{" "}
+          <SourceLink id="DOI_10_5194_amt_3_375_2010">(Chen a kol., oddíl 2)</SourceLink>
         </p>
         <p>
           Rychlost slábnutí vyjadřuje obrácená hodnota časové konstanty. Od rychlosti celkového
@@ -164,14 +171,16 @@ export function AbsorptionSpectroscopyArticle() {
           Této veličině říkáme <strong>molární zlomek</strong>. Jednotka <strong>ppm</strong>{" "}
           znamená počet na milion. Stejnou hodnotu v odborných datech vyjadřuje jednotka
           µmol/mol, mikromol na mol. Tato podoba výsledku umožňuje porovnávat složení vzduchu
-          i tehdy, když měl při odběru různou teplotu nebo tlak.
+          i tehdy, když měl při odběru různou teplotu nebo tlak.{" "}
+          <SourceLink id="2021_NOAA_CO2_Analysis">(NOAA, oddíl 4)</SourceLink>
         </p>
         <p>
           Pro přesný převod potřebujeme ještě vědět, které molekuly vybraná čára zachycuje.
           Atomy téhož prvku mohou mít různý počet neutronů v jádře. Takovým podobám atomu
           říkáme <strong>izotopy</strong>. Například uhlík ¹²C a ¹³C se liší hmotností,
           stejně jako kyslík ¹⁶O a ¹⁸O. Jejich kombinace vytvářejí různé izotopové podoby
-          molekuly, zvané <strong>izotopology</strong>. Každá má trochu odlišné absorpční spektrum.
+          molekuly, zvané <strong>izotopology</strong>. Každá má trochu odlišné absorpční spektrum.{" "}
+          <SourceLink id="DOI_10_5194_amt_10_2669_2017">(Tans a kol., oddíly 1–2)</SourceLink>
         </p>
         <p>
           Vybraná čára CO₂ proto může sledovat pouze nejběžnější podobu ¹⁶O¹²C¹⁶O.
@@ -203,7 +212,8 @@ export function AbsorptionSpectroscopyArticle() {
           <InlineMath tex={String.raw`R_2`} /> následující reference. Všechny tři údaje musí
           být ve stejných přístrojových jednotkách, které se při dělení vykrátí.
           Poměr <InlineMath tex={String.raw`r`} /> je proto bez jednotky.
-          Referenci i vzorek měříme stejným postupem za řízené teploty a tlaku.
+          Referenci i vzorek měříme stejným postupem za řízené teploty a tlaku.{" "}
+          <SourceLink id="2021_NOAA_CO2_Analysis">(NOAA, oddíl 6.1)</SourceLink>
         </p>
         <p>
           Stejné porovnání nejprve provedeme pro soubor směsí s různým známým obsahem CO₂.
@@ -234,7 +244,8 @@ export function AbsorptionSpectroscopyArticle() {
         </p>
         <p>
           Opakovaná měření téhož vzorku následně zprůměrujeme.
-          Součet výsledků vydělíme jejich počtem:
+          Součet výsledků vydělíme jejich počtem:{" "}
+          <SourceLink id="2021_NOAA_CO2_Analysis">(NOAA, oddíl 6.1)</SourceLink>
         </p>
         <Equation tex={String.raw`\bar{x}=\frac{x_1+x_2+\cdots+x_N}{N}`} />
         <p>
@@ -305,7 +316,8 @@ export function AbsorptionSpectroscopyArticle() {
             Při následném sjednocení byly hodnoty lahví pro NDIR upraveny pomocí CRDS
             a korekcí složení směsí. Zlepšená shoda tedy ověřuje návaznost měření,
             nikoli dva zcela nezávislé způsoby určení absolutní hodnoty.
-            Celkovou nejistotu porovnání autoři odhadli na 0,14 ppm.
+            Celkovou nejistotu porovnání autoři odhadli na 0,14 ppm.{" "}
+            <SourceLink id="DOI_10_5194_amt_3_375_2010">(Chen a kol., oddíly 5–6)</SourceLink>
           </p>
           <p>
             Vlhkost mění podíl CO₂ ve směsi i tvar jeho absorpční čáry.{" "}
@@ -388,7 +400,8 @@ export function AbsorptionSpectroscopyArticle() {
             Přepis obsahuje všech 16 zveřejněných řádků. U prvních sedmi vzorků lze poměr
             ověřit z obou sousedních referencí. Reference následující po osmém vzorku v tabulce
             chybí, proto jeho poměr přebíráme a chybějící odezvu nedoplňujeme.
-            Pro převod všech osmi měření používáme zveřejněné poměry a koeficienty.
+            Pro převod všech osmi měření používáme zveřejněné poměry a koeficienty.{" "}
+            <SourceLink id="2021_NOAA_CO2_Analysis">(NOAA, příloha A.1)</SourceLink>
           </p>
           <p>
             Příklad má datum měření 2017. Tabulka výslovně neuvádí verzi stupnice použité
