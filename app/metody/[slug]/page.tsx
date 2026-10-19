@@ -84,11 +84,11 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Měření hloubky sezónního rozmrzání"
-          meta="Napsáno: 4. října 2026 · Odborná revize: 4. října 2026"
+          meta="19. října 2026"
         >
           <p>
-            Jak sondy, mrazové trubice a teplotní čidla sledují rozmrzání půdy nad permafrostem.
-            Skutečná data z Barrow ukazují výpočet průměru, chybějící měření i význam povrchové reference.
+            Jak kovová sonda najde zmrzlou půdu a jak měření v síti ukáže tloušťku aktivní vrstvy.
+            Mrazové trubice a teplotní čidla doplňují záznam mezi návštěvami, měření povrchu zachycuje sesedání terénu.
           </p>
         </PageLead>
         <ThawDepthArticle />

@@ -3,6 +3,7 @@ import type { Source } from "./sources";
 // Sources cited by published article components.
 // Stable IDs are referenced from SourceLink components; do not rename them after publication.
 const rawArticleSources: Source[] = [
+  { id: "2015_USGS_Frost_Probes_Photo", title: "USGS Researchers with frost probes", author: "U.S. Geological Survey, EROS Center", year: 2015, publication: "USGS EROS Center, přibližné datum fotografie 2015", type: "Fotografie ručního sondování v terénu", category: "organization", externalUrl: "https://www.usgs.gov/media/images/usgs-researchers-frost-probes", citationLabel: "USGS: sondování při výzkumu permafrostu", topics: ["metody", "permafrost", "aktivní vrstva", "fotografie"] },
   { id: "2018_NOAA_USCRN_Precipitation_Photo", title: "What’s a USCRN Station? Fotografie váhového a překlápěcího srážkoměru", author: "NOAA National Centers for Environmental Information", year: 2018, publication: "NOAA NCEI, 27. srpna 2018, aktualizováno 17. července 2019", type: "Fotografie měřicí stanice", category: "organization", externalUrl: "https://www.ncei.noaa.gov/news/what-is-a-uscrn-station", citationLabel: "NOAA NCEI: srážkoměry na stanici USCRN", topics: ["metody", "srážkoměry", "srážky", "fotografie"] },
   { id: "2022_NASA_IMPACTS_Parsivel_Photo", title: "IMPACTS 2022: Parsivel Disdrometer", author: "NASA Wallops Precipitation Science Research Facility", year: 2022, publication: "NASA, přehled přístrojů kampaně IMPACTS 2022, fotografie bez data pořízení", type: "Fotografie optického disdrometru v terénu", category: "organization", externalUrl: "https://wallops-prf.gsfc.nasa.gov/Field_Campaigns/IMPACTS_2022/", citationLabel: "NASA: disdrometr Parsivel, IMPACTS 2022", topics: ["metody", "disdrometry", "srážky", "fotografie"] },
   { id: "WEB_NOAA_MLO_USCRN_Photos", title: "U.S. Climate Reference Network: fotografie měřidel na Mauna Loa", author: "NOAA Mauna Loa Observatory", year: 2026, publication: "NOAA Global Monitoring Laboratory, fotografie bez data, přístup 18. října 2026", type: "Fotografie měřicí stanice", category: "organization", externalUrl: "https://gml.noaa.gov/obop/mlo/programs/coop/crn/crn.html", citationLabel: "NOAA: měřidla USCRN na Mauna Loa", topics: ["metody", "odporová termometrie", "hygrometrie", "fotografie"] },
@@ -529,6 +530,7 @@ const rawArticleSources: Source[] = [
 ];
 
 const articleOpenAccessSources: Record<string, true | string> = {
+  "2015_USGS_Frost_Probes_Photo": true,
   WEB_NOAA_MLO_USCRN_Photos: true,
   "2020_NOAA_ATOMIC_Photos": true,
   "2018_NOAA_USCRN_Precipitation_Photo": true,

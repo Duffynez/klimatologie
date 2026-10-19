@@ -138,5 +138,19 @@
     "width": 4032,
     "height": 3024,
     "sha256": "07cfaafd187d2a87251f10afdb6c008154b875cfb77348ce1a4ea75b5f0df29f"
+  },
+  {
+    "file": "/media/thaw-depth/usgs-frost-probes.jpg",
+    "sourceId": "2015_USGS_Frost_Probes_Photo",
+    "sourcePage": "https://www.usgs.gov/media/images/usgs-researchers-frost-probes",
+    "downloadUrl": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/DSCN1299.JPG",
+    "credit": "USGS, EROS Center",
+    "licence": "Public Domain",
+    "licenceUrl": "https://www.usgs.gov/media/images/usgs-researchers-frost-probes",
+    "accessed": "2026-10-19",
+    "changes": "None. Original image supplied by USGS.",
+    "width": 3648,
+    "height": 2736,
+    "sha256": "97174ca5ef1e8f428fe9f376537cbc073a8b7a0402d126969b147ca54ccba6b6"
   }
 ]
