@@ -105,6 +105,8 @@ V souvislém příkladu ponecháme údaje potřebné k pochopení kroků, techni
 
 Krátký souvislý odstavec řekne, jaké poznání metoda zpřístupňuje a jaká tvrzení její výsledky podpírají. Naváže na vysvětlení a použití metody. Neopakuje celý postup ani rozbor nejistot a nepřináší nové pojmy nebo další výpočet.
 
+Odstavec shrnutí vždy vložíme do samostatného obdélníkového rámečku pomocí existující třídy `method-conclusion`, jako v článku o odporové termometrii. Nadpis zůstane před rámečkem. Zachováme jednotný vzhled se světlým pozadím, barevnou horní hranou a dostatečným vnitřním odsazením.
+
 ### Doprovodné části
 
 Citace patří k tvrzením, přehled zdrojů a dat může následovat za shrnutím.

@@ -188,8 +188,8 @@ export function AtmosphericCo2Article() {
         <h2>Co se skutečně měří</h2>
         <h3>Vzduch nasávaný na stanici</h3>
         <p>
-          Stanice vede okolní vzduch potrubím do analyzátoru. Současný systém NOAA na Mauna Loa používá
-          spektroskopii v optické dutině: laser prochází měřicí komorou a přístroj sleduje, jak rychle po vypnutí
+          Stanice vede okolní vzduch potrubím do analyzátoru. Současný systém NOAA na Mauna Loa používá{" "}
+          <Link href="/metody/absorpcni-spektroskopie">absorpční spektroskopii v optické dutině</Link>: laser prochází měřicí komorou a přístroj sleduje, jak rychle po vypnutí
           zdroje světlo zaniká na vlnové délce pohlcované CO₂. Od dubna 2019 tím nahradil starší infračervený
           analyzátor. Vzduch se před měřením vysuší a přístroj pravidelně dostává referenční plyn z tlakové lahve.{" "}
           <SourceLink id="WEB_NOAA_Carbon_Cycle_Greenhouse_Gases_NOAA_Global_Monito_66691a03">

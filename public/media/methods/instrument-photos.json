@@ -180,5 +180,19 @@
     "width": 563,
     "height": 413,
     "sha256": "406c9fd583747a97bbf19731e40ad542eab67195f928a1368741a713e8cf77a2"
+  },
+  {
+    "file": "/media/absorption-spectroscopy/noaa-aircraft-crds.jpg",
+    "sourceId": "WEB_NOAA_CSL_CO2_CH4_Instrument",
+    "sourcePage": "https://www.csl.noaa.gov/groups/csl7/instruments/co2_ch4.html",
+    "downloadUrl": "https://www.csl.noaa.gov/groups/csl7/instruments/images/co2_ch4rack.jpg",
+    "credit": "Image provided by NOAA Chemical Sciences Laboratory, Boulder, Colorado, USA",
+    "licence": "Public Domain",
+    "licenceUrl": "https://www.csl.noaa.gov/disclaimer.html",
+    "accessed": "2026-10-19",
+    "changes": "None. Photograph of a CO2/CH4 CRDS instrument installed in an aircraft rack. Individual photographer, exact date, aircraft and model number are not specified on the image page.",
+    "width": 426,
+    "height": 277,
+    "sha256": "947978be05f6b930827eba5eaf6997a55fbb49e13dcc5ba09f556f34458696c3"
   }
 ]

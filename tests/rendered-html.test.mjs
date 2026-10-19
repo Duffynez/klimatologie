@@ -1187,6 +1187,7 @@ test("exports typeset equations and accessible fractions across every method art
     ["ThawDepthArticle", "mereni-hloubky-sezonniho-rozmrzani"],
     ["PhenologyMonitoringArticle", "standardizovane-fenologicke-pozorovani"],
     ["GasChromatographyArticle", "plynova-chromatografie"],
+    ["AbsorptionSpectroscopyArticle", "absorpcni-spektroskopie"],
   ];
   for (const [component, slug] of methods) {
     const [source, html] = await Promise.all([
@@ -1976,6 +1977,82 @@ test("recomputes the NOAA chromatographic response ratios and mean from all twen
   assert.match(meta.scope, /conversion is not reproduced/);
   for (const file of ["noaa-table-a1.csv", "example.json", "reproduce.py", "plot.py", "repeated-analyses.png"]) {
     assert.deepEqual(await readFile(new URL(`dist/client/data/methods/gas-chromatography/${file}`, root)), await readFile(new URL(file, base)));
+  }
+});
+
+test("publishes absorption spectroscopy with a boxed conclusion and complete source links", async () => {
+  const [html, source, catalogue, observation] = await Promise.all([
+    readFile(new URL("dist/client/metody/absorpcni-spektroskopie/index.html", root), "utf8"),
+    readFile(new URL("app/components/AbsorptionSpectroscopyArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/atmosfericka-koncentrace-co2/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<div class="article-prose">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "The article must replace the catalogue placeholder");
+  assert.equal((body.match(/<h2>/g) ?? []).length, 4);
+  assert.equal((body.match(/<details\b/g) ?? []).length, 2);
+  assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
+  assert.match(body, /Příklad výpočtu z osmi měření/);
+  assert.match(html, /<p class="page-lead__meta">19\. října 2026<\/p>/);
+  assert.match(body, /noaa-aircraft-crds\.jpg/);
+  assert.match(body, /crds-principle\.svg/);
+  assert.match(body, /repeat-measurements\.png/);
+  assert.match(body, /386,727 ppm podoby ¹⁶O¹²C¹⁶O/);
+  assert.match(body, /Reference následující po osmém vzorku/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  assert.match(observation, /href="\/metody\/absorpcni-spektroskopie"/);
+  const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
+  assert.ok(ids.length >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp(`<article[^>]*id="${id}"[\\s\\S]*?<\\/article>`))?.[0];
+    assert.ok(card, `Missing spectroscopy source ${id}`);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    if (id.startsWith("DOI_") || id === "1862_Tyndall") assert.match(card, /Otevřít DOI/);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const href = match[1];
+    const file = /\.[a-z0-9]+$/i.test(href) ? href : `${href.replace(/\/$/, "")}/index.html`;
+    await readFile(new URL(`dist/client${file}`, root));
+  }
+});
+
+test("reproduces the optical response calibration without inventing the missing reference", async () => {
+  const base = new URL("public/data/methods/absorption-spectroscopy/", root);
+  const meta = JSON.parse(await readFile(new URL("example.json", base), "utf8"));
+  const csv = (await readFile(new URL("noaa-table-a1.csv", base), "utf8")).replace(/\r\n/g, "\n");
+  assert.equal(createHash("sha256").update(csv).digest("hex"), meta.table.sha256_lf);
+  const rows = csv.trim().split("\n").slice(1).map((line) => line.split(","));
+  assert.equal(rows.length, 16);
+  const values = [];
+  for (let i = 0; i < rows.length; i++) {
+    const row = rows[i];
+    assert.equal(row[0], "2017-01-24");
+    assert.equal(row[2], i % 2 ? "SMP" : "REF");
+    assert.equal(row[5], "10");
+    if (i % 2) {
+      const ratio = Number(row[7]);
+      if (i < rows.length - 1) {
+        const calculated = Number(row[3]) / ((Number(rows[i - 1][3]) + Number(rows[i + 1][3])) / 2);
+        assert.ok(Math.abs(ratio - calculated) < 0.5e-9);
+      }
+      const value = 0.18436648 + 395.56334783 * ratio;
+      assert.ok(Math.abs(value - Number(row[8])) < 0.0005);
+      values.push(value);
+    }
+  }
+  assert.equal(values.length, 8);
+  const mean = values.reduce((a, b) => a + b, 0) / 8;
+  const sd = Math.sqrt(values.reduce((sum, x) => sum + (x - mean) ** 2, 0) / 7);
+  assert.equal(Number(mean.toFixed(3)), 386.728);
+  assert.equal(Number(sd.toFixed(3)), 0.003);
+  assert.match(meta.table.x626_meaning, /NOT total CO2/);
+  assert.match(meta.table.missing_data, /not printed/);
+  assert.match(meta.calibration.scope, /Do not relabel these values as X2019/);
+  for (const file of ["noaa-table-a1.csv", "example.json", "reproduce.py", "plot.py", "repeat-measurements.png"]) {
+    assert.deepEqual(await readFile(new URL(`dist/client/data/methods/absorption-spectroscopy/${file}`, root)), await readFile(new URL(file, base)));
   }
 });
 

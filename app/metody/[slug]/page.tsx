@@ -1,3 +1,4 @@
+import { AbsorptionSpectroscopyArticle } from "../../components/AbsorptionSpectroscopyArticle";
 import { GasChromatographyArticle } from "../../components/GasChromatographyArticle";
 import { PhenologyMonitoringArticle } from "../../components/PhenologyMonitoringArticle";
 import { ThawDepthArticle } from "../../components/ThawDepthArticle";
@@ -78,6 +79,18 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "absorpcni-spektroskopie") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Absorpční spektroskopie plynů" meta="19. října 2026">
+          <p>Jak slábnutí laserového světla mezi zrcadly umožňuje měřit CO₂ a jak referenční směsi propojí optický signál se složením vzduchu.</p>
+        </PageLead>
+        <AbsorptionSpectroscopyArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "plynova-chromatografie") {

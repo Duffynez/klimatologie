@@ -1,0 +1,56 @@
+{
+  "source": {
+    "title": "Analysis of Carbon Dioxide in Air",
+    "institution": "NOAA Global Monitoring Laboratory",
+    "url": "https://gml.noaa.gov/ccl/docs/TP_analysis_CO2_v2.1.pdf",
+    "version": "2.1",
+    "effective_date": "2021-04-15",
+    "signature_date": "2024-05-24",
+    "accessed": "2026-10-19",
+    "location": "Table A1, section 10.2, page 9 of 9",
+    "pdf_sha256": "d03a86a1667a1a83b01fb9221f9c7ed5e5814f9347c02a709d166e6ef27dfab1"
+  },
+  "licence": {
+    "name": "Public Domain, NOAA GML attribution",
+    "url": "https://gml.noaa.gov/about/disclaimer.html"
+  },
+  "table": {
+    "file": "noaa-table-a1.csv",
+    "sha256_lf": "ec130033c9c7cade4864672e23c52bffec2b4558042fc332bdddfa6799cda8df",
+    "measurement_date": "2017-01-24",
+    "rows": 16,
+    "sample_count": 8,
+    "selection": "All rows printed in Table A1. No rows excluded or filled in.",
+    "signal_meaning": "Instrument response Sig in the source, not raw light intensity. Signal units are not specified in Table A1.",
+    "signal_sd_meaning": "Printed Sig_sd, standard deviation of N instrument readings.",
+    "n_meaning": "Number of readings used for each printed signal mean.",
+    "flag_meaning": "Original printed quality marker, a dot on all rows.",
+    "ratio_meaning": "Sample response divided by mean of bracketing reference responses.",
+    "x626_meaning": "Dry-air mole fraction of 16O12C16O, NOT total CO2, in micromol/mol (ppm).",
+    "missing_data": "Reference after last SMP at 12:21:16 is not printed. Its ratio is used as published, not reconstructed.",
+    "rounding": "Published signals have four decimals. Reconstructed ratios may differ from printed ratios due to rounding. Calibration uses the published ratios."
+  },
+  "calibration": {
+    "equation": "x626 = c0 + c1 * r",
+    "c0_ppm": 0.18436648,
+    "c1_ppm": 395.56334783,
+    "scope": "Coefficients printed for this 2017 episode only. The table does not explicitly state the scale version for this episode. Do not relabel these values as X2019."
+  },
+  "result": {
+    "x626_ppm_from_published_ratios": [
+      386.7273055264353,
+      386.7321871737109,
+      386.726551187131,
+      386.72572050410054,
+      386.7328738716827,
+      386.7255148111597,
+      386.7257568959286,
+      386.72975129461497
+    ],
+    "mean_x626_ppm": 386.72820765809547,
+    "sample_sd_x626_ppm": 0.002999862851159275,
+    "published_mean_x626_ppm": 386.728,
+    "published_sd_x626_ppm": 0.003,
+    "mean_published_ratio": 0.977198325625
+  }
+}

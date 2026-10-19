@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 510" role="img" aria-labelledby="title desc">
+  <title id="title">Měření slábnutí světla v optické dutině</title>
+  <desc id="desc">Laser vstupuje do komory mezi dvěma zrcadly. Po vypnutí vstupu detektor sleduje unikající světlo. Při absorpci plynem klesá signál rychleji než bez ní.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#c56f42"/></marker></defs>
+  <rect width="1000" height="510" fill="#f6f6ef"/>
+  <g font-family="Arial, sans-serif" fill="#244840">
+    <text x="40" y="38" font-size="24" font-weight="bold">Světlo prochází vzorkem opakovaně</text>
+    <rect x="40" y="105" width="125" height="65" rx="4" fill="#e5ece6" stroke="#244840"/>
+    <text x="102" y="145" text-anchor="middle" font-size="21">Laser</text>
+    <rect x="250" y="70" width="430" height="140" fill="#e5ece6" stroke="#8ca19a"/>
+    <text x="465" y="100" text-anchor="middle" font-size="20">Komora se vzorkem plynu</text>
+    <path d="M265 112V190 M665 112V190" stroke="#287da1" stroke-width="10"/>
+    <g fill="none" stroke="#c56f42" stroke-width="2" marker-end="url(#arrow)">
+      <path d="M165 125H650"/>
+      <path d="M650 141H285"/>
+      <path d="M285 157H650"/>
+      <path d="M650 173H285"/>
+      <path d="M285 189H820"/>
+    </g>
+    <rect x="825" y="140" width="135" height="65" rx="4" fill="#e5ece6" stroke="#244840"/>
+    <text x="892" y="180" text-anchor="middle" font-size="21">Detektor</text>
+    <text x="265" y="238" text-anchor="middle" font-size="18">Zrcadlo</text>
+    <text x="665" y="238" text-anchor="middle" font-size="18">Zrcadlo</text>
+    <text x="40" y="295" font-size="24" font-weight="bold">Po vypnutí přívodu světla</text>
+    <path d="M100 330V455H550" stroke="#244840" fill="none" stroke-width="2"/>
+    <path d="M103 335C220 363 340 389 535 411" stroke="#287da1" fill="none" stroke-width="4"/>
+    <path d="M103 335C160 399 225 439 535 452" stroke="#c56f42" fill="none" stroke-width="4"/>
+    <text x="330" y="490" text-anchor="middle" font-size="18">Čas od vypnutí</text>
+    <text x="70" y="400" text-anchor="middle" font-size="18" transform="rotate(-90 70 400)">Signál</text>
+    <path d="M600 345H650" stroke="#287da1" stroke-width="4"/><text x="665" y="352" font-size="19">Pozadí bez absorpce CO₂</text>
+    <path d="M600 390H650" stroke="#c56f42" stroke-width="4"/><text x="665" y="397" font-size="19">S absorpcí CO₂</text>
+    <text x="600" y="450" font-size="18">Rychlejší pokles → silnější absorpce</text>
+  </g>
+</svg>
