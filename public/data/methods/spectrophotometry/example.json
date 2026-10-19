@@ -1,0 +1,36 @@
+{
+  "source_id": "DOI_10_26008_1912_bco_dmo_905235_1",
+  "doi": "10.26008/1912/bco-dmo.905235.1",
+  "source_url": "https://www.bco-dmo.org/dataset/905235",
+  "download_url": "https://datadocs.bco-dmo.org/dataset/905235/file/YVl5ygMuDDDNAV/905235_v1_rawph.csv",
+  "author": "Ryan J. Woosley",
+  "version": "1, 2023-07-28",
+  "accessed": "2026-10-19",
+  "licence": "CC BY 4.0",
+  "source_sha256": "e29a43ef75ca386fe41080961495ca232e1bed6385445f0fb59a828f2d88e424",
+  "subset_sha256_lf": "472830c7c564187f2356dfbebd5cf4361589a82ff1b5ed7432510cd86deb2162",
+  "selection": {
+    "Batch": "2",
+    "Bottle": "15",
+    "Calculated_Temperature": "25.001",
+    "Rep": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "flag": "2 = good"
+  },
+  "sample_context": "Atlantic surface seawater collected 2019-10-10 at 39 degrees 46.406 minutes N, 70 degrees 53.065 minutes W. Seawater was subsequently modified in a laboratory experiment. These values do not describe the original ocean pH.",
+  "data_level": "Published absorbances, not raw detector currents. Subtract A730 from A578 and A434, then calculate R. raw_pHt is BEFORE indicator perturbation correction. Do not present it as unperturbed seawater pH.",
+  "temperature": "Use Calculated_Temperature = 25.001 degrees C as specified by the dataset for the pH calculation. Measured_Temperature records individual readings (24.978, 24.996, 25.011, 24.982 degrees C). No additional temperature correction is inferred.",
+  "method": "Purified m-cresol purple, Agilent 8454, Liu et al. (2011), DOI 10.1021/es200665d, eqs 18 and 19. Validity 20 <= S <= 40, 278.15 <= T <= 308.15 K.",
+  "rounding": "Calculate from published absorbances without rounding intermediates, then round pH to four decimals. Coefficients in the article worked substitution are rounded for display only.",
+  "expected": {
+    "R_A": 0.928961715207634,
+    "P_A": 7.650283975568488,
+    "e_a_A": 0.005706673274,
+    "e_b_A": 0.056620530362,
+    "raw_pHt_A": 7.639071506207879
+  }
+}

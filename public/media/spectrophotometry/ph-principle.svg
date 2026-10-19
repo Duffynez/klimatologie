@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img" aria-labelledby="title desc">
+<title id="title">Měření pH mořské vody pomocí indikátoru</title>
+<desc id="desc">Světlo prochází roztokem do detektoru. Po odečtení pozadí se dvě absorbance vydělí. Kalibrace, teplota a salinita určují pH směsi. Korekce přídavku indikátoru poskytne pH původní vody.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#385965"/></marker></defs>
+<rect width="1100" height="590" rx="18" fill="#f1f7f7"/>
+<g font-family="Arial, sans-serif" fill="#193f49">
+<text x="44" y="49" font-size="29" font-weight="700">Dvě barvy světla, jeden chemický poměr</text>
+<text x="44" y="85" font-size="19">Schéma principu • jednotlivý vzorek v uzavřené kyvetě</text>
+<rect x="45" y="145" width="180" height="115" rx="12" fill="white" stroke="#85a7ad" stroke-width="2"/>
+<text x="135" y="190" text-anchor="middle" font-size="24" font-weight="700">Zdroj světla</text><text x="135" y="225" text-anchor="middle" font-size="19">a optika</text>
+<path d="M225 190H392" stroke="#7357a5" stroke-width="7"/><path d="M225 218H392" stroke="#ba901b" stroke-width="7"/>
+<text x="308" y="158" text-anchor="middle" font-size="20">434 a 578 nm</text>
+<rect x="394" y="127" width="280" height="150" rx="13" fill="#e9e0ef" stroke="#7357a5" stroke-width="2"/>
+<path d="M411 145V259M657 145V259" stroke="white" stroke-width="8"/>
+<text x="534" y="167" text-anchor="middle" font-size="24" font-weight="700">Mořská voda</text>
+<text x="534" y="202" text-anchor="middle" font-size="22">+ indikátor</text>
+<text x="534" y="243" text-anchor="middle" font-size="18">kyveta se známou teplotou</text>
+<path d="M676 190H835" stroke="#7357a5" stroke-width="4"/><path d="M676 218H835" stroke="#ba901b" stroke-width="4"/>
+<text x="756" y="158" text-anchor="middle" font-size="19">prošlé světlo</text>
+<rect x="837" y="145" width="215" height="115" rx="12" fill="white" stroke="#85a7ad" stroke-width="2"/>
+<text x="944" y="191" text-anchor="middle" font-size="24" font-weight="700">Detektor</text>
+<text x="944" y="227" text-anchor="middle" font-size="19">signál pro každou barvu</text>
+<path d="M944 261V306H158V345" stroke="#385965" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+<rect x="45" y="356" width="226" height="112" rx="10" fill="white" stroke="#85a7ad" stroke-width="2"/>
+<text x="158" y="387" text-anchor="middle" font-size="20" font-weight="700">Absorbance</text>
+<text x="158" y="417" text-anchor="middle" font-size="20">odečtení pozadí</text>
+<text x="158" y="446" text-anchor="middle" font-size="20">včetně 730 nm</text>
+<path d="M276 411H315" stroke="#385965" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="326" y="356" width="182" height="112" rx="10" fill="white" stroke="#85a7ad" stroke-width="2"/>
+<text x="417" y="390" text-anchor="middle" font-size="21" font-weight="700">Poměr R</text>
+<text x="417" y="430" text-anchor="middle" font-size="24">A₅₇₈ / A₄₃₄</text>
+<path d="M513 411H554" stroke="#385965" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="566" y="356" width="226" height="112" rx="10" fill="#dceceb" stroke="#6d9b9c" stroke-width="2"/>
+<text x="679" y="390" text-anchor="middle" font-size="21" font-weight="700">Kalibrační vztah</text>
+<text x="679" y="424" text-anchor="middle" font-size="19">teplota a salinita</text>
+<text x="679" y="451" text-anchor="middle" font-size="18">→ pH směsi s barvivem</text>
+<path d="M797 411H839" stroke="#385965" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="850" y="356" width="202" height="112" rx="10" fill="#193f49"/>
+<text x="951" y="390" text-anchor="middle" font-size="21" font-weight="700" fill="white">Korekce přídavku</text>
+<text x="951" y="427" text-anchor="middle" font-size="21" fill="white">pH původní vody</text>
+<text x="44" y="521" font-size="20">Více barviva zesílí obě absorbance. Jejich poměr zachycuje změnu jeho chemických podob.</text>
+<text x="44" y="553" font-size="18">Barvy a tloušťky paprsků jsou schematické. Nejde o naměřené spektrum ani měřítko intenzity.</text>
+</g></svg>

@@ -1,3 +1,4 @@
+import { SpectrophotometryArticle } from "../../components/SpectrophotometryArticle";
 import { IsotopeMassSpectrometryArticle } from "../../components/IsotopeMassSpectrometryArticle";
 import { AbsorptionSpectroscopyArticle } from "../../components/AbsorptionSpectroscopyArticle";
 import { GasChromatographyArticle } from "../../components/GasChromatographyArticle";
@@ -80,6 +81,18 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "spektrofotometrie") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Spektrofotometrie roztoků" meta="19. října 2026">
+          <p>Jak přidané barvivo a měření pohlcovaného světla umožňují určit pH mořské vody a sledovat acidifikaci oceánu.</p>
+        </PageLead>
+        <SpectrophotometryArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "hmotnostni-a-izotopova-spektrometrie") {

@@ -3,6 +3,12 @@ import type { Source } from "./sources";
 // Sources cited by published article components.
 // Stable IDs are referenced from SourceLink components; do not rename them after publication.
 const rawArticleSources: Source[] = [
+  { id: "DOI_10_1002_andp_18521620505", title: "Bestimmung der Absorption des rothen Lichts in farbigen Flüssigkeiten", author: "August Beer", year: 1852, publication: "Annalen der Physik und Chemie 86 (celková řada 162), s. 78–88", type: "Původní práce o pohlcování světla v roztocích", category: "science", externalUrl: "https://doi.org/10.1002/andp.18521620505", citationLabel: "Beer 1852", topics: ["metody", "spektrofotometrie", "historie", "absorpce"] },
+  { id: "DOI_10_1021_es200665d", title: "Purification and Characterization of meta-Cresol Purple for Spectrophotometric Seawater pH Measurements", author: "Xuewu Liu, Mark C. Patsavas a Robert H. Byrne", year: 2011, publication: "Environmental Science & Technology 45(11), s. 4862–4868", type: "Původní metoda čištění, kalibrace a ověření indikátoru", category: "science", externalUrl: "https://doi.org/10.1021/es200665d", citationLabel: "Liu, Patsavas a Byrne 2011", topics: ["metody", "spektrofotometrie", "pH", "kalibrace", "oceán"] },
+  { id: "DOI_10_3389_fmars_2018_00177", title: "Metrology of pH Measurements in Brackish Waters—Part 2: Experimental Characterization of Purified meta-Cresol Purple for Spectrophotometric pHT Measurements", author: "Jens D. Müller a Gregor Rehder", year: 2018, publication: "Frontiers in Marine Science 5, článek 177", type: "Primární studie kalibrace a metrologické návaznosti", category: "science", externalUrl: "https://doi.org/10.3389/fmars.2018.00177", citationLabel: "Müller a Rehder 2018", topics: ["metody", "spektrofotometrie", "pH", "kalibrace", "salinita"] },
+  { id: "DOI_10_26008_1912_bco_dmo_905235_1", title: "Raw pH data acquired during the pH internal consistency experiment", author: "Ryan J. Woosley", year: 2023, publication: "BCO-DMO, verze 1 z 28. července 2023, přístup 19. října 2026", type: "Datový soubor a metodika experimentu", category: "science", externalUrl: "https://doi.org/10.26008/1912/bco-dmo.905235.1", citationLabel: "Woosley 2023: absorbance a pH", topics: ["metody", "spektrofotometrie", "pH", "data", "ověření"] },
+  { id: "2006_NOAA_P16N_pH_Method", title: "NDP-090: pH Measurements, Section P16N_2006", author: "NOAA NCEI, University of Miami a University of South Florida", year: 2006, publication: "OCADS, dokumentace měření na řezu P16N v roce 2006, přístup 19. října 2026", type: "Veřejná metodická dokumentace oceánografické plavby", category: "science", externalUrl: "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/ndp_090/ph090.html", citationLabel: "NOAA: měření pH na P16N", topics: ["metody", "spektrofotometrie", "pH", "oceán"] },
+  { id: "2011_USGS_Shipboard_pH_Photo", title: "CTD rosette used on Coast Guard ice breaker in Canadian Basin", author: "U.S. Geological Survey", year: 2011, publication: "Fotografie palubní analýzy pH, zveřejněna 17. srpna 2011. Původní název stránky odkazuje na odběr vzorků. Přístup 19. října 2026", type: "Fotografie spektrofotometru a licence Public Domain", category: "organization", externalUrl: "https://www.usgs.gov/media/images/ctd-rosette-used-coast-guard-ice-breaker-canadian-basin-2", citationLabel: "USGS: palubní měření pH", topics: ["metody", "spektrofotometrie", "fotografie", "acidifikace oceánu"] },
   { id: "DOI_10_3133_tm10C2", title: "Determination of the δ(18O/16O) of Water: RSIL Lab Code 489", author: "Kinga Révész a Tyler B. Coplen", year: 2008, publication: "U.S. Geological Survey, Techniques and Methods 10–C2, 28 s.", type: "Veřejný laboratorní postup, kalibrace a ověření", category: "science", externalUrl: "https://doi.org/10.3133/tm10C2", citationLabel: "Révész a Coplen 2008", topics: ["metody", "izotopy", "hmotnostní spektrometrie", "voda", "kalibrace"] },
   { id: "2025_FIRMS_IRMS_Guide", title: "Good Practice Guide for Isotope Ratio Mass Spectrometry, 3rd Edition", author: "Philip J. H. Dunn, Christopher Brodie, Ethan Strak a Jim F. Carter (eds.)", year: 2025, publication: "FIRMS Network, ISBN 978-0-948926-42-6", type: "Veřejná odborná metodická příručka", category: "science", externalUrl: "https://www.forensic-isotopes.org/wp-content/uploads/FIRMS_GPG_3rd_Edition_final.pdf", citationLabel: "FIRMS: příručka IRMS 2025", topics: ["metody", "izotopy", "hmotnostní spektrometrie", "kalibrace"] },
   { id: "DOI_10_1063_1_1745698", title: "Improvements in Mass Spectrometers for the Measurement of Small Differences in Isotope Abundance Ratios", author: "C. R. McKinney, J. M. McCrea, S. Epstein, H. A. Allen a H. C. Urey", year: 1950, publication: "Review of Scientific Instruments 21(8), s. 724–730", type: "Původní studie konstrukce izotopového spektrometru", category: "science", externalUrl: "https://doi.org/10.1063/1.1745698", citationLabel: "McKinney et al. 1950", topics: ["metody", "izotopy", "historie", "hmotnostní spektrometrie"] },
@@ -556,6 +562,12 @@ const rawArticleSources: Source[] = [
 ];
 
 const articleOpenAccessSources: Record<string, true | string> = {
+  DOI_10_1002_andp_18521620505: "https://zenodo.org/records/1799630/files/article.pdf",
+  DOI_10_1021_es200665d: "https://europepmc.org/article/PMC/3103190#free-full-text",
+  DOI_10_3389_fmars_2018_00177: "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2018.00177/full",
+  DOI_10_26008_1912_bco_dmo_905235_1: "https://www.bco-dmo.org/dataset/905235",
+  "2006_NOAA_P16N_pH_Method": true,
+  "2011_USGS_Shipboard_pH_Photo": true,
   "DOI_10_3133_tm10C2": "https://pubs.usgs.gov/tm/2007/tm10c2/pdf/tm10c2.pdf",
   "2025_FIRMS_IRMS_Guide": true,
   "DOI_10_1063_1_1745698": "https://authors.library.caltech.edu/records/1m3xb-kg611/files/MCKrsi50.pdf?download=1",
@@ -861,7 +873,7 @@ const articleOpenAccessSources: Record<string, true | string> = {
   DOI_10_5194_essd_7_117_2015: "https://essd.copernicus.org/articles/7/117/2015/essd-7-117-2015.pdf",
   DOI_10_5194_essd_8_297_2016: "https://essd.copernicus.org/articles/8/297/2016/essd-8-297-2016.pdf",
   DOI_10_5194_essd_8_383_2016: "https://essd.copernicus.org/articles/8/383/2016/",
-  DOI_10_1073_pnas_0906044106: "https://pmc.ncbi.nlm.nih.gov/articles/PMC2716384/",
+  DOI_10_1073_pnas_0906044106: "https://hahana.soest.hawaii.edu/cmoreserver/summercourse/2015/documents/Bottjer_05-30/Dore_2009_OA_NPSG.pdf",
   DOI_10_1073_pnas_1504613112: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4538673/",
   DOI_10_5670_oceanog_2014_16: "https://tos.org/oceanography/assets/docs/27-1_bates.pdf",
   DOI_10_3389_fmars_2023_1289931: "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2023.1289931/full",

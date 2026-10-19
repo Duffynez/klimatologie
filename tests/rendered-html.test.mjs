@@ -2148,3 +2148,78 @@ test("reproduces the isotope comparison while preserving distinct uncertainty me
     assert.deepEqual(await readFile(new URL(`dist/client/data/methods/isotope-mass-spectrometry/${file}`, root)), await readFile(new URL(file, base)));
   }
 });
+
+test("publishes solution spectrophotometry with the correct data level and connected sources", async () => {
+  const [html, source, catalogue, observation] = await Promise.all([
+    readFile(new URL("dist/client/metody/spektrofotometrie/index.html", root), "utf8"),
+    readFile(new URL("app/components/SpectrophotometryArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/acidifikace-oceanu/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.match(html, /<p class="page-lead__meta">19\. října 2026<\/p>/);
+  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]).slice(1), [
+    "Jak změříme pH pomocí světla", "Nejistoty a ověření", "Příklad: výpočet ze skutečných absorbancí", "Shrnutí",
+  ]);
+  assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
+  assert.match(body, /pH před korekcí přídavku indikátoru/);
+  assert.match(body, /Výsledek 7,6391 souhlasí s publikovaným údajem/);
+  assert.match(body, /Calculated_Temperature/);
+  assert.doesNotMatch(body, /_vinext\/image|katex-error/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  assert.match(observation, /href="\/metody\/spektrofotometrie"/);
+  assert.doesNotMatch(observation, /m-kresolové\s+červeně/);
+  const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
+  assert.ok(ids.length >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp(`<article[^>]*id="${id}"[\\s\\S]*?<\\/article>`))?.[0];
+    assert.ok(card, `Missing spectrophotometry source ${id}`);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const href = match[1];
+    const file = /\.[a-z0-9]+$/i.test(href) ? href : `${href.replace(/\/$/, "")}/index.html`;
+    await readFile(new URL(`dist/client${file}`, root));
+  }
+});
+
+test("reproduces four measured pH values from absorbances before dye correction", async () => {
+  const base = new URL("public/data/methods/spectrophotometry/", root);
+  const meta = JSON.parse(await readFile(new URL("example.json", base), "utf8"));
+  const csv = (await readFile(new URL("woosley-batch2-bottle15.csv", base), "utf8")).replace(/\r\n/g, "\n");
+  assert.equal(createHash("sha256").update(csv).digest("hex"), meta.subset_sha256_lf);
+  const [header, ...lines] = csv.trim().split("\n");
+  const keys = header.split(",");
+  const rows = lines.map(line => Object.fromEntries(line.split(",").map((v, i) => [keys[i], v])));
+  assert.equal(rows.length, 4);
+  assert.deepEqual(rows.map(r => r.Rep), ["A", "B", "C", "D"]);
+  const calculated = [];
+  for (const row of rows) {
+    assert.equal(row.Batch, "2"); assert.equal(row.Bottle, "15"); assert.equal(row.flag, "2");
+    const s = Number(row.Practical_Salinity);
+    const t = Number(row.Calculated_Temperature) + 273.15;
+    assert.ok(t >= 278.15 && t <= 308.15 && s >= 20 && s <= 40);
+    const a = -246.64209 + 0.315971 * s + 2.8855e-4 * s * s;
+    const b = 7229.23864 - 7.098137 * s - 0.057034 * s * s;
+    const c = 44.493382 - 0.052711 * s;
+    const p = a + b / t + c * Math.log(t) - 0.0781344 * t;
+    const ea = -0.007762 + 4.5174e-5 * t;
+    const eb = -0.020813 + 2.60262e-4 * t + 1.0436e-4 * (s - 35);
+    const r = (Number(row.A578) - Number(row.A730)) / (Number(row.A434) - Number(row.A730));
+    const ph = p + Math.log10((r - ea) / (1 - r * eb));
+    assert.ok(Math.abs(r - Number(row.R)) < 0.5e-6);
+    assert.ok(Math.abs(ph - Number(row.raw_pHt)) < 0.5e-4);
+    calculated.push(Number(ph.toFixed(4)));
+  }
+  assert.deepEqual(calculated, [7.6391, 7.6378, 7.6381, 7.6376]);
+  assert.match(meta.data_level, /BEFORE indicator perturbation correction/);
+  assert.match(meta.sample_context, /modified in a laboratory experiment/);
+  for (const file of ["woosley-batch2-bottle15.csv", "example.json", "reproduce.py"]) {
+    assert.deepEqual(await readFile(new URL(`dist/client/data/methods/spectrophotometry/${file}`, root)), await readFile(new URL(file, base)));
+  }
+});

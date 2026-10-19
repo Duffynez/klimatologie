@@ -208,5 +208,19 @@
     "width": 1280,
     "height": 960,
     "sha256": "af0c0195e48ec92c62df2ea39c7c086c28e90269e8f8d78d8adcdf285a0b475a"
+  },
+  {
+    "file": "/media/spectrophotometry/usgs-shipboard-ph.jpg",
+    "sourceId": "2011_USGS_Shipboard_pH_Photo",
+    "sourcePage": "https://www.usgs.gov/media/images/ctd-rosette-used-coast-guard-ice-breaker-canadian-basin-2",
+    "downloadUrl": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/228.JPG",
+    "credit": "U.S. Geological Survey",
+    "licence": "Public Domain",
+    "licenceUrl": "https://www.usgs.gov/media/images/ctd-rosette-used-coast-guard-ice-breaker-canadian-basin-2",
+    "accessed": "2026-10-19",
+    "changes": "None. The source page title refers to CTD sampling, but the photograph shows shipboard spectrophotometric pH analysis. Individual photographer, instrument model and capture date not stated.",
+    "width": 2592,
+    "height": 3872,
+    "sha256": "3b287f5dcd26e0ea815c7fd4be9c1d26488236ce61878d94f8f5b42dd25c40c6"
   }
 ]

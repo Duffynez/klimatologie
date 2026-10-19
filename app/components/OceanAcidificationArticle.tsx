@@ -193,13 +193,14 @@ export function OceanAcidificationArticle() {
 
         <h3>pH: světlo, barvivo a přesná teplota</h3>
         <p>
-          Při spektrofotometrickém měření se do vzorku přidá malé známé množství barviva, obvykle m-kresolové
-          červeně. Jeho dvě formy pohlcují různě silně světlo při dvou zvolených vlnových délkách. Přístroj
+          Při spektrofotometrickém měření se do vzorku přidá malé známé množství barviva, obvykle m-kresolového
+          purpuru. Jeho dvě formy pohlcují různě silně světlo při dvou zvolených vlnových délkách. Přístroj
           zaznamená zeslabení světla, z jeho poměru a kalibrace vypočte pH a opraví i malou změnu způsobenou
           přidáním barviva. Teplota měřicí nádobky se pečlivě udržuje a zapisuje. V konstrukci popsané{" "}
           <SourceLink id="DOI_10_5194_os_7_597_2011">Aßmannem a kol. (2011)</SourceLink> lze sledovat cestu
           od čerpané vody přes dávkování barviva a optický detektor až k výsledku. Autoři zároveň upozorňují,
-          že nečistoty v barvivu mohou posunout pH přibližně o 0,01. Dobrá opakovatelnost sama takovou chybu neodhalí.
+          že nečistoty v barvivu mohou posunout pH přibližně o 0,01. Dobrá opakovatelnost sama takovou chybu neodhalí. Celý postup vysvětluje článek o{" "}
+          <Link href="/metody/spektrofotometrie">spektrofotometrii roztoků</Link>.
         </p>
 
         <p>
