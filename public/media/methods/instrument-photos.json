@@ -222,5 +222,19 @@
     "width": 2592,
     "height": 3872,
     "sha256": "3b287f5dcd26e0ea815c7fd4be9c1d26488236ce61878d94f8f5b42dd25c40c6"
+  },
+  {
+    "file": "/media/potentiometry/seafet-pap-frame.jpg",
+    "sourceId": "2019_NOC_Discovery_103",
+    "sourcePage": "https://nora.nerc.ac.uk/id/eprint/525366/",
+    "downloadUrl": "https://nora.nerc.ac.uk/id/eprint/525366/7/NOC_CR61_Final_keywords%20updated%2016.10.23.pdf",
+    "credit": "© National Oceanography Centre, 2019. Susan E. Hartman et al., RRS Discovery Cruise 103, NOC Cruise Report 61, p. 60. NERC Open Research Archive (NORA).",
+    "licence": "NORA Access/use policy: unmodified educational reuse with attribution, bibliographic citation, original link and copyright notice",
+    "licenceUrl": "https://nora.nerc.ac.uk/policies.html",
+    "accessed": "2026-10-19",
+    "changes": "None. Original JPEG stream extracted from PDF page 60, image xref 1170. Photograph of SeaFET 257 in grey housing on the PAP frame. Individual photographer and exact capture date not specified.",
+    "width": 873,
+    "height": 582,
+    "sha256": "777b47b6a88b203c35da77116c0acb0d31315fc7157aa2d6b538e25943cbb66e"
   }
 ]

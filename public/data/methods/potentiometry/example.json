@@ -1,0 +1,70 @@
+{
+  "accessed": "2026-10-19",
+  "actual_experiment": {
+    "source_doi": "10.1515/pac-2020-0202",
+    "source_url": "https://www.degruyterbrill.com/document/doi/10.1515/pac-2020-0202/pdf",
+    "tables": [
+      3,
+      7
+    ],
+    "data_level": "Published processed and rounded pHT values, not raw electrode voltages.",
+    "temperature_C": 25,
+    "practical_salinity": 35,
+    "scale": "total hydrogen ion concentration scale, mol per kg solution",
+    "calibration_buffers": [
+      {
+        "buffer": 1,
+        "pHT": "7.622",
+        "U": "0.005"
+      },
+      {
+        "buffer": 3,
+        "pHT": "8.209",
+        "U": "0.005"
+      }
+    ],
+    "control_buffer": 2,
+    "reference_pHT": "8.101",
+    "reference_U": "0.005",
+    "coverage_factor": 2,
+    "results": [
+      {
+        "electrode": "Unitrode 1",
+        "pHT": "8.10",
+        "U": "0.01"
+      },
+      {
+        "electrode": "Unitrode 2",
+        "pHT": "8.10",
+        "U": "0.01"
+      },
+      {
+        "electrode": "Primatrode 1",
+        "pHT": "8.09",
+        "U": "0.01"
+      },
+      {
+        "electrode": "Primatrode 2",
+        "pHT": "8.10",
+        "U": "0.01"
+      }
+    ],
+    "rounding_note": "Differences calculated from displayed rounded values do not increase measurement resolution.",
+    "independence": "Buffer 2 was not used for calibration. All three buffers share artificial seawater matrix and reference assignment methodology."
+  },
+  "handbook_illustration": {
+    "source_id": "WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a",
+    "source_url": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/Handbook_2007/Guide_all_in_one.pdf",
+    "location": "SOP 6a, version 3.0, 12 October 2007, section 8.3, page 6 of 7",
+    "data_level": "Worked example in a methodological guide. No actual ocean sample identification is supplied.",
+    "temperature_C": 25,
+    "practical_salinity": 35,
+    "scale": "total hydrogen ion concentration scale, mol per kg solution",
+    "pHT_TRIS": "8.0936",
+    "pHT_AMP": "6.7866",
+    "E_TRIS_mV": "-72.4",
+    "E_AMP_mV": "4.9",
+    "E_sample_mV": "-67.0",
+    "ideal_slope_mV_per_pH": "59.16"
+  }
+}

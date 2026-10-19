@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560">
+<title>Potenciometrické měření pH</title>
+<desc>Skleněná elektroda a reference jsou ponořeny do vody. Voltmetr čte jejich rozdíl potenciálů. Změření pufru a vzorku umožní převod na pH.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#365b69"/></marker></defs>
+<rect width="900" height="560" rx="18" fill="#f1f6f6"/>
+<g font-family="Arial, sans-serif" fill="#143c47" font-size="21">
+<text x="34" y="40" font-size="27" font-weight="bold">Napětí mezi dvěma elektrodami</text>
+<rect x="350" y="68" width="220" height="78" rx="10" fill="white" stroke="#365b69" stroke-width="2"/>
+<text x="460" y="100" text-anchor="middle" font-weight="bold">pH-metr</text>
+<text x="460" y="129" text-anchor="middle">odečet napětí E</text>
+<path d="M350 105H278V186M570 105H636V186" fill="none" stroke="#253d44" stroke-width="4"/>
+<path d="M180 238V392H731V238" fill="none" stroke="#365b69" stroke-width="3"/>
+<path d="M183 270H728V389H183Z" fill="#d1e9ee"/>
+<text x="454" y="370" text-anchor="middle">vzorek mořské vody</text>
+<path d="M253 180H303V289Q329 330 278 335Q227 330 253 289Z" fill="#ffeed7" stroke="#cc7a24" stroke-width="4"/>
+<path d="M278 186V299" stroke="#253d44" stroke-width="3"/>
+<text x="34" y="190" font-weight="bold">Skleněná</text><text x="34" y="215" font-weight="bold">elektroda</text>
+<path d="M151 208H247" stroke="#365b69" stroke-width="2"/>
+<text x="34" y="307">citlivá baňka</text><path d="M165 303L244 318" stroke="#cc7a24" stroke-width="2"/>
+<rect x="610" y="180" width="52" height="150" rx="5" fill="#fff" stroke="#547c65" stroke-width="3"/>
+<path d="M636 185V277" stroke="#253d44" stroke-width="3"/>
+<rect x="620" y="315" width="32" height="15" rx="3" fill="#648d6b"/>
+<text x="699" y="190" font-weight="bold">Referenční</text><text x="699" y="215" font-weight="bold">elektroda</text>
+<path d="M667 205H690" stroke="#365b69" stroke-width="2"/>
+<text x="700" y="307">kapalný spoj</text><path d="M655 323L696 304" stroke="#547c65" stroke-width="2"/>
+<text x="457" y="214" text-anchor="middle" font-size="18">Uvnitř obou elektrod:</text>
+<text x="457" y="239" text-anchor="middle" font-size="18">roztok stálého složení</text>
+<text x="34" y="437" font-size="24" font-weight="bold">Převod pomocí známého pufru</text>
+<rect x="34" y="460" width="220" height="69" rx="8" fill="white" stroke="#a5bdbf"/>
+<text x="144" y="489" text-anchor="middle">pufr → jeho napětí</text><text x="144" y="515" text-anchor="middle">a známé pH</text>
+<rect x="326" y="460" width="220" height="69" rx="8" fill="white" stroke="#a5bdbf"/>
+<text x="436" y="489" text-anchor="middle">vzorek → jeho napětí</text><text x="436" y="515" text-anchor="middle">při stejné teplotě</text>
+<rect x="618" y="460" width="248" height="69" rx="8" fill="#def0e3" stroke="#547c65"/>
+<text x="742" y="489" text-anchor="middle">rozdíl napětí a sklon</text><text x="742" y="515" text-anchor="middle" font-weight="bold">→ pH vzorku</text>
+<path d="M263 494H315M555 494H607" stroke="#365b69" stroke-width="3" marker-end="url(#arrow)"/>
+</g></svg>

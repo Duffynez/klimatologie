@@ -1,3 +1,4 @@
+import { PotentiometryArticle } from "../../components/PotentiometryArticle";
 import { SpectrophotometryArticle } from "../../components/SpectrophotometryArticle";
 import { IsotopeMassSpectrometryArticle } from "../../components/IsotopeMassSpectrometryArticle";
 import { AbsorptionSpectroscopyArticle } from "../../components/AbsorptionSpectroscopyArticle";
@@ -81,6 +82,18 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "potenciometrie") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Potenciometrie" meta="19. října 2026">
+          <p>Jak elektrody vytvářejí měřitelné napětí a kalibrace umožňuje určit pH mořské vody.</p>
+        </PageLead>
+        <PotentiometryArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "spektrofotometrie") {

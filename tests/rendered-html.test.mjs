@@ -2223,3 +2223,66 @@ test("reproduces four measured pH values from absorbances before dye correction"
     assert.deepEqual(await readFile(new URL(`dist/client/data/methods/spectrophotometry/${file}`, root)), await readFile(new URL(file, base)));
   }
 });
+
+test("publishes potentiometry with connected sources and distinct actual and illustrative examples", async () => {
+  const [html, source, catalogue, observation] = await Promise.all([
+    readFile(new URL("dist/client/metody/potenciometrie/index.html", root), "utf8"),
+    readFile(new URL("app/components/PotentiometryArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/acidifikace-oceanu/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.match(html, /<p class="page-lead__meta">19\. října 2026<\/p>/);
+  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]).slice(1), [
+    "Jak měříme pH pomocí elektrod", "Nejistoty a ověření", "Příklad kalibrace a kontroly výsledku", "Shrnutí",
+  ]);
+  assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
+  assert.match(body, /přebíráme již vypočtené hodnoty/);
+  assert.match(body, /není přiřazen ke konkrétnímu odběru v oceánu/);
+  assert.doesNotMatch(body, /_vinext\/image|katex-error/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  assert.match(observation, /href="\/metody\/potenciometrie"/);
+  const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
+  assert.ok(ids.length >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
+    assert.ok(card, "Missing potentiometry source " + id);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const href = match[1];
+    const file = /\.[a-z0-9]+$/i.test(href) ? href : href.replace(/\/$/, "") + "/index.html";
+    await readFile(new URL("dist/client" + file, root));
+  }
+});
+
+test("reproduces published potentiometric control results and the SOP 6a illustration separately", async () => {
+  const base = new URL("public/data/methods/potentiometry/", root);
+  const meta = JSON.parse(await readFile(new URL("example.json", base), "utf8"));
+  const actual = meta.actual_experiment;
+  assert.equal(actual.source_doi, "10.1515/pac-2020-0202");
+  assert.deepEqual(actual.tables, [3, 7]);
+  assert.deepEqual(actual.calibration_buffers.map(b => [b.buffer, Number(b.pHT)]), [[1, 7.622], [3, 8.209]]);
+  assert.equal(actual.control_buffer, 2);
+  assert.equal(Number(actual.reference_pHT), 8.101);
+  assert.deepEqual(actual.results.map(r => Number(r.pHT)), [8.10, 8.10, 8.09, 8.10]);
+  const diffs = actual.results.map(r => Number((Number(r.pHT) - Number(actual.reference_pHT)).toFixed(3)));
+  assert.deepEqual(diffs, [-0.001, -0.001, -0.011, -0.001]);
+  assert.match(actual.data_level, /not raw electrode voltages/);
+  const ex = meta.handbook_illustration;
+  assert.match(ex.data_level, /No actual ocean sample identification/);
+  const slope = (Number(ex.E_AMP_mV) - Number(ex.E_TRIS_mV)) / (Number(ex.pHT_TRIS) - Number(ex.pHT_AMP));
+  const ph = Number(ex.pHT_TRIS) + (Number(ex.E_TRIS_mV) - Number(ex.E_sample_mV)) / Number(ex.ideal_slope_mV_per_pH);
+  assert.equal(slope.toFixed(2), "59.14");
+  assert.equal(ph.toFixed(4), "8.0023");
+  const csv = (await readFile(new URL("control-results.csv", base), "utf8")).trim().split("\n").slice(1);
+  assert.deepEqual(csv.map(r => Number(r.split(",")[5])), diffs);
+  for (const file of ["control-results.csv", "example.json", "reproduce.py"]) {
+    assert.deepEqual(await readFile(new URL("dist/client/data/methods/potentiometry/" + file, root)), await readFile(new URL(file, base)));
+  }
+});

@@ -1,0 +1,5 @@
+electrode,pHT,U_k2,reference_pHT,reference_U_k2,difference_from_displayed_values
+Unitrode 1,8.10,0.01,8.101,0.005,-0.001
+Unitrode 2,8.10,0.01,8.101,0.005,-0.001
+Primatrode 1,8.09,0.01,8.101,0.005,-0.011
+Primatrode 2,8.10,0.01,8.101,0.005,-0.001

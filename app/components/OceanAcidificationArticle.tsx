@@ -210,7 +210,9 @@ export function OceanAcidificationArticle() {
           tlak, stárnutí referenční elektrody a posun kalibrace. Plovák proto neposílá „hotové“ číslo bez další kontroly:
           surový potenciál se převádí pomocí laboratorní kalibrace a později se porovnává s nezávislými lodními daty.{" "}
           <SourceLink id="DOI_10_4319_lom_2010_8_172">Martz a kol., 2010</SourceLink> a{" "}
-          <SourceLink id="DOI_10_13155_97828">BGC-Argo: postup kontroly pH</SourceLink>
+          <SourceLink id="DOI_10_13155_97828">BGC-Argo: postup kontroly pH</SourceLink>.{" "}
+          Princip elektrod a převod napětí na pH vysvětluje článek o{" "}
+          <Link href="/metody/potenciometrie">potenciometrii</Link>.
         </p>
 
         <h3>DIC: uvolnění a spočítání oxidu uhličitého</h3>
