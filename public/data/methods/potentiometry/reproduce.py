@@ -19,4 +19,3 @@ pht = v["pHT_TRIS"] + (v["E_TRIS_mV"] - v["E_sample_mV"]) / v["ideal_slope_mV_pe
 print("Separate methodological illustration, not identified as an ocean sample")
 print(f"Observed slope: {slope:.2f} mV per pH")
 print(f"Sample pHT at 25 C: {pht:.4f}")
-
