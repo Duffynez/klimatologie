@@ -1,3 +1,4 @@
+import { OpticalImagingArticle } from "../../components/OpticalImagingArticle";
 import { CoulometryArticle } from "../../components/CoulometryArticle";
 import { TitrationArticle } from "../../components/TitrationArticle";
 import { PotentiometryArticle } from "../../components/PotentiometryArticle";
@@ -84,6 +85,18 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "opticke-a-multispektralni-snimkovani") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Optické a multispektrální snímkování" meta="26. října 2026">
+          <p>Jak družice měří odražené světlo v několika pásmech a jak z těchto měření rozpoznáváme vegetaci, sníh a led.</p>
+        </PageLead>
+        <OpticalImagingArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "coulometrie") {

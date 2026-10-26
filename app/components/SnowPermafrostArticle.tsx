@@ -186,6 +186,8 @@ export function SnowPermafrostArticle() {
         <h3>Mapa rozsahu sněhu</h3>
         <p>
           Viditelné a blízké infračervené snímky rozeznávají sníh podle toho, jak odráží různé vlnové délky světla.
+          Princip měření a porovnání pásem podrobněji vysvětluje metoda{" "}
+          <Link href="/metody/opticke-a-multispektralni-snimkovani">optického a multispektrálního snímkování</Link>.
           Novější systém IMS dává analytikovi vedle několika družic také mikrovlnná data, hlášení stanic a předchozí
           mapu. Analytik označí buňky se sněhem a ledem a výslednou mapu zkontroluje vůči sousedním dnům. Denní produkt
           je od roku 1997 dostupný v rozlišení přibližně 24 km, od roku 2004 také 4 km a od roku 2014 také 1 km.{" "}

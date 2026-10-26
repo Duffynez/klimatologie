@@ -240,6 +240,10 @@ export function PhenologyArticle() {
 
         <h3>Družice</h3>
         <p>
+          Jak z odraženého světla vzniká odrazivost a vegetační index, vysvětluje metoda{" "}
+          <Link href="/metody/opticke-a-multispektralni-snimkovani">optického a multispektrálního snímkování</Link>.
+        </p>
+        <p>
           Družicový přístroj měří záření, které k němu přichází v několika pásmech vlnových délek. Po korekcích
           vlivu atmosféry a úhlu pozorování vzniká odhad odrazivosti povrchu. Produkt MCD12Q2 z přístrojů MODIS
           na družicích Terra a Aqua z ní počítá EVI2, dvoupásmový vylepšený vegetační index využívající červené

@@ -4,6 +4,81 @@ import { readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 
 const root = new URL("../", import.meta.url);
+
+test("publishes optical imaging with open evidence, a reproducible scene and reciprocal observation links", async () => {
+  const [html, source, catalogue] = await Promise.all([
+    readFile(new URL("dist/client/metody/opticke-a-multispektralni-snimkovani/index.html", root), "utf8"),
+    readFile(new URL("app/components/OpticalImagingArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.match(html, /<p class="page-lead__meta">26\. října 2026<\/p>/);
+  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]).slice(1), [
+    "Jak z odraženého světla poznáváme povrch", "Nejistoty a ověření",
+    "Příklad: tři povrchy u Aletschského ledovce", "Shrnutí",
+  ]);
+  assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
+  assert.doesNotMatch(body, /_vinext\/image|katex-error/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  for (const slug of ["ustup-ledovcu", "snehova-pokryvka-a-permafrost", "fenologicke-posuny"]) {
+    assert.ok(body.includes(`href="/pozorovani/${slug}"`));
+    const observation = await readFile(new URL(`dist/client/pozorovani/${slug}/index.html`, root), "utf8");
+    assert.match(observation, /href="\/metody\/opticke-a-multispektralni-snimkovani"/);
+  }
+  const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
+  assert.ok(ids.length >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
+    assert.ok(card, "Missing optical source " + id);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const href = match[1];
+    const file = /\.[a-z0-9]+$/i.test(href) ? href : href.replace(/\/$/, "") + "/index.html";
+    await readFile(new URL("dist/client" + file, root));
+  }
+});
+
+test("recalculates Aletsch indices from stored integers including the required additive offset", async () => {
+  const base = new URL("public/data/methods/optical-imaging/", root);
+  const meta = JSON.parse(await readFile(new URL("example.json", base), "utf8"));
+  const csv = (await readFile(new URL("samples.csv", base), "utf8")).replace(/\r\n/g, "\n");
+  assert.equal(createHash("sha256").update(csv).digest("hex"), meta.csv_sha256_lf);
+  const lines = csv.trim().split("\n").map(line => line.split(","));
+  const rows = lines.slice(1).map(values => Object.fromEntries(lines[0].map((key, i) => [key, i ? Number(values[i]) : values[i]])));
+  assert.equal(meta.source_product_id, "LC08_L2SP_195028_20230820_20230826_02_T1");
+  assert.equal(meta.source_processing.LaSRC, "1.6.0");
+  assert.deepEqual(rows.map(r => [r.label, r.source_row, r.source_col]), [["A", 2277, 5429], ["B", 2562, 5439], ["C", 2717, 5609]]);
+  const actual = rows.map(row => {
+    assert.equal(row.source_row, row.crop_row + meta.window.window_row);
+    assert.equal(row.source_col, row.crop_col + meta.window.window_col);
+    assert.equal(row.qa_pixel & 31, 0);
+    assert.equal(row.qa_radsat, 0);
+    assert.notEqual((row.qa_aerosol >> 6) & 3, 3);
+    // Independent constants from USGS Table 6-1 and the saved source metadata.
+    const rho = key => row[key] * 0.0000275 - 0.2;
+    const ndsi = (rho("green") - rho("swir16")) / (rho("green") + rho("swir16"));
+    const ndvi = (rho("nir08") - rho("red")) / (rho("nir08") + rho("red"));
+    const expected = meta.results.find(r => r.label === row.label);
+    assert.ok(Math.abs(ndsi - expected.ndsi) < 1e-12);
+    assert.ok(Math.abs(ndvi - expected.ndvi) < 1e-12);
+    return [ndsi.toFixed(3), ndvi.toFixed(3)];
+  });
+  assert.deepEqual(actual, [["0.976", "-0.089"], ["-0.309", "0.105"], ["-0.585", "0.681"]]);
+  const rawIndex = (rows[0].green - rows[0].swir16) / (rows[0].green + rows[0].swir16);
+  assert.ok(Math.abs(rawIndex - meta.results[0].ndsi) > 0.4, "Using stored DN directly must not reproduce the reflectance index");
+  const tif = await readFile(new URL("aletsch-20230820.tif", base));
+  assert.equal(createHash("sha256").update(tif).digest("hex"), meta.tif_sha256);
+  for (const file of ["samples.csv", "example.json", "aletsch-20230820.tif", "source-MTL.txt", "reproduce.py", "plot.py", "download.py"]) {
+    assert.deepEqual(await readFile(new URL("dist/client/data/methods/optical-imaging/" + file, root)), await readFile(new URL(file, base)));
+  }
+});
+
 const sourceCatalogueText = (await Promise.all([
   readFile(new URL("app/data/sources.ts", root), "utf8"),
   readFile(new URL("app/data/articleSources.ts", root), "utf8"),
@@ -822,7 +897,7 @@ test("renders public mountain-glacier sources with separate DOI and full-text li
   assert.match(articleHtml, /68% pokrytí/);
   assert.match(articleHtml, /95% intervaly/);
   assert.match(articleHtml, /1975\/76–2023\/24/);
-  assert.match(articleHtml, /Odborná revize: 3\. října 2026/);
+  assert.match(articleHtml, /<p class="page-lead__meta">26\. října 2026<\/p>/);
 });
 
 test("publishes a sourced ice-sheet mass article with three measurement methods", async () => {
@@ -970,7 +1045,7 @@ test("renders open snow and permafrost sources with qualified trends and data co
   assert.match(articleHtml, /3 500 řádků pro 140 kódů lokalit/);
   assert.match(articleHtml, /Z 316 registrovaných míst vybrala 156/);
   assert.match(articleHtml, /Jediný panel porovnává dubnovou hmotnost/);
-  assert.match(articleHtml, /Odborná revize: 3\. října 2026/);
+  assert.match(articleHtml, /<p class="page-lead__meta">26\. října 2026<\/p>/);
   assert.doesNotMatch(articleHtml, /Čtyři nezávislé podklady|s úplným desetiletým výsledkem|severoamerické \(a\) a euroasijské \(b\)/);
 });
 
@@ -1048,7 +1123,7 @@ test("renders public phenology sources and preserves the meaning of dates and sa
   assert.match(articleHtml, /15 % tedy neznamená, že 15 % stromů má listy/);
   assert.match(articleHtml, /VNP22Q2\.002 poskytuje výsledky od roku 2013/);
   assert.match(articleHtml, /Není to soubor všech 419 354 původních pozorování/);
-  assert.match(articleHtml, /<p class="page-lead__meta">19\. října 2026<\/p>/);
+  assert.match(articleHtml, /<p class="page-lead__meta">26\. října 2026<\/p>/);
   assert.match(articleHtml, /href="\/metody\/standardizovane-fenologicke-pozorovani\/?"/);
   assert.doesNotMatch(articleHtml, /Brügger a Vassella|Reed et al\., 1994|125 000 měření v čase/);
   assert.equal((articleHtml.match(/class="article-figure__scroll"/g) ?? []).length, 3);

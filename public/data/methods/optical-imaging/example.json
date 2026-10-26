@@ -1,0 +1,121 @@
+{
+  "title": "Three selected Landsat 8 surface-reflectance pixels near Aletsch Glacier",
+  "source_doi": "10.5066/P9OGBGM6",
+  "provider": "USGS, distributed by Microsoft Planetary Computer",
+  "license": "Landsat data: public domain. Credit USGS.",
+  "accessed": "2026-10-26",
+  "stac_item_url": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/landsat-c2-l2/items/LC08_L2SP_195028_20230820_02_T1",
+  "source_product_id": "LC08_L2SP_195028_20230820_20230826_02_T1",
+  "acquisition_utc": "2023-08-20T10:16:52.713434Z",
+  "crs": "EPSG:32632",
+  "pixel_size_m": 30,
+  "source_transform": [
+    30.0,
+    0.0,
+    258885.0,
+    0.0,
+    -30.0,
+    5218515.0
+  ],
+  "crop_transform": [
+    30.0,
+    0.0,
+    418455.0,
+    0.0,
+    -30.0,
+    5153505.0
+  ],
+  "window": {
+    "window_col": 5319,
+    "window_row": 2167,
+    "width": 341,
+    "height": 598
+  },
+  "indexing": "Zero-based rows from top, columns from left. Coordinates refer to pixel centres.",
+  "data_stage": "Collection 2 Level-2 surface reflectance, already radiometrically and geometrically processed and atmospherically corrected by USGS. Stored integers are not raw instrument counts.",
+  "source_processing": {
+    "LPGS": "16.3.0",
+    "LaSRC": "1.6.0",
+    "evidence": "source-MTL.txt, LEVEL2_PROCESSING_RECORD"
+  },
+  "reflectance_scale": 2.75e-05,
+  "reflectance_offset": -0.2,
+  "band_order": [
+    "blue",
+    "green",
+    "red",
+    "nir08",
+    "swir16",
+    "qa_pixel",
+    "qa_radsat",
+    "qa_aerosol"
+  ],
+  "assets": {
+    "blue": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/oli-tirs/2023/195/028/LC08_L2SP_195028_20230820_20230826_02_T1/LC08_L2SP_195028_20230820_20230826_02_T1_SR_B2.TIF",
+    "green": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/oli-tirs/2023/195/028/LC08_L2SP_195028_20230820_20230826_02_T1/LC08_L2SP_195028_20230820_20230826_02_T1_SR_B3.TIF",
+    "red": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/oli-tirs/2023/195/028/LC08_L2SP_195028_20230820_20230826_02_T1/LC08_L2SP_195028_20230820_20230826_02_T1_SR_B4.TIF",
+    "nir08": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/oli-tirs/2023/195/028/LC08_L2SP_195028_20230820_20230826_02_T1/LC08_L2SP_195028_20230820_20230826_02_T1_SR_B5.TIF",
+    "swir16": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/oli-tirs/2023/195/028/LC08_L2SP_195028_20230820_20230826_02_T1/LC08_L2SP_195028_20230820_20230826_02_T1_SR_B6.TIF",
+    "qa_pixel": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/oli-tirs/2023/195/028/LC08_L2SP_195028_20230820_20230826_02_T1/LC08_L2SP_195028_20230820_20230826_02_T1_QA_PIXEL.TIF",
+    "qa_radsat": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/oli-tirs/2023/195/028/LC08_L2SP_195028_20230820_20230826_02_T1/LC08_L2SP_195028_20230820_20230826_02_T1_QA_RADSAT.TIF",
+    "qa_aerosol": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/oli-tirs/2023/195/028/LC08_L2SP_195028_20230820_20230826_02_T1/LC08_L2SP_195028_20230820_20230826_02_T1_SR_QA_AEROSOL.TIF"
+  },
+  "crop_processing": "Exact integer window, no interpolation or reprojection. Eight downloaded bands combined losslessly into one GeoTIFF.",
+  "selection": "Three manually selected examples visible in the colour composite. Labels are image interpretation, not independently surveyed land-cover truth. No estimate of regional area or mean is made.",
+  "quality_filter": {
+    "qa_pixel_bits_0_to_4": "all zero (fill, dilated cloud, cirrus, cloud, cloud shadow)",
+    "qa_radsat": "zero (no saturation or terrain occlusion flag)",
+    "qa_aerosol_high": "excluded when bits 6-7 equal 3",
+    "snow_bit": "retained",
+    "aerosol_interpolation": "All three points have interpolated aerosol estimates (bit 5). A/B medium, C low aerosol category. This is not a valid direct aerosol retrieval at these pixels."
+  },
+  "colour_rendering": "Display only: RGB = B4,B3,B2, sqrt(clip(surface_reflectance / 0.65, 0, 1)). No quality masking on the contextual colour image. Indices use original scaled values, never display colours.",
+  "results": [
+    {
+      "label": "A",
+      "interpretation": "Ledovcový povrch",
+      "reflectance": {
+        "blue": 0.4376425,
+        "green": 0.48211,
+        "red": 0.5097475,
+        "nir08": 0.42612,
+        "swir16": 0.005975000000000008
+      },
+      "ndvi": -0.08935826919943263,
+      "ndsi": 0.9755165596156407
+    },
+    {
+      "label": "B",
+      "interpretation": "Odkrytý svah",
+      "reflectance": {
+        "blue": 0.1683075,
+        "green": 0.22482000000000002,
+        "red": 0.24412499999999998,
+        "nir08": 0.30135249999999997,
+        "swir16": 0.42614749999999996
+      },
+      "ndvi": 0.1049126682585441,
+      "ndsi": -0.309274272525126
+    },
+    {
+      "label": "C",
+      "interpretation": "Vegetace",
+      "reflectance": {
+        "blue": 0.037599999999999995,
+        "green": 0.06650250000000002,
+        "red": 0.060645000000000004,
+        "nir08": 0.3191175,
+        "swir16": 0.253805
+      },
+      "ndvi": 0.6806161745827984,
+      "ndsi": -0.5847583962286239
+    }
+  ],
+  "csv_sha256_lf": "9d5490341b16759ee66318ae3e75530a8b53788bfd97a20bfb6fbfc429398e91",
+  "tif_sha256": "0772ef62b73b6c568dd20ff47a855d14591c44323f0e8dafdcd9ec499bbb5165",
+  "software": {
+    "python": "3.14.0",
+    "numpy": "2.5.4",
+    "rasterio": "1.5.2"
+  }
+}

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="990" viewBox="0 0 450 990" role="img" aria-labelledby="title desc">
+<title id="title">Od slunečního světla k mapě povrchu</title><desc id="desc">Šest navazujících kroků od osvětlení povrchu přes záznam pásem, kalibraci a atmosférickou korekci až k mapě povrchu.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 Z" fill="#577880"/></marker></defs>
+<rect width="450" height="990" rx="14" fill="#f3f7f5"/><g font-family="Arial, sans-serif" fill="#203b42">
+<text x="25" y="39" font-size="24" font-weight="bold">Od světla k mapě</text>
+<rect x="25" y="65" width="400" height="110" rx="10" fill="white" stroke="#c6d7d7" stroke-width="2"/>
+<text x="45" y="100" font-size="21" font-weight="bold">Slunce → povrch</text>
+<text x="45" y="132" font-size="18">Část záření se pohltí,</text>
+<text x="45" y="157" font-size="18">část se odrazí.</text>
+<path d="M225 180 V200" fill="none" stroke="#577880" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="25" y="210" width="400" height="110" rx="10" fill="white" stroke="#c6d7d7" stroke-width="2"/>
+<text x="45" y="245" font-size="21" font-weight="bold">Atmosféra → přístroj</text>
+<text x="45" y="277" font-size="18">Světlo se cestou rozptyluje</text>
+<text x="45" y="302" font-size="18">a pohlcuje.</text>
+<path d="M225 325 V345" fill="none" stroke="#577880" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="25" y="355" width="400" height="135" rx="10" fill="white" stroke="#c6d7d7" stroke-width="2"/>
+<text x="45" y="390" font-size="21" font-weight="bold">Záznam oddělených pásem</text>
+<text x="45" y="422" font-size="18">Filtry vyberou vlnové délky.</text>
+<text x="45" y="447" font-size="18">Detektory vytvoří elektrický signál,</text>
+<text x="45" y="472" font-size="18">elektronika jej zapíše jako číslo.</text>
+<path d="M225 495 V515" fill="none" stroke="#577880" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="25" y="525" width="400" height="110" rx="10" fill="white" stroke="#c6d7d7" stroke-width="2"/>
+<text x="45" y="560" font-size="21" font-weight="bold">Kalibrace a přiřazení polohy</text>
+<text x="45" y="592" font-size="18">Level 1: jasnost měřená</text>
+<text x="45" y="617" font-size="18">nad atmosférou</text>
+<path d="M225 640 V660" fill="none" stroke="#577880" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="25" y="670" width="400" height="110" rx="10" fill="white" stroke="#c6d7d7" stroke-width="2"/>
+<text x="45" y="705" font-size="21" font-weight="bold">Atmosférická korekce</text>
+<text x="45" y="737" font-size="18">Level 2: odhad odrazivosti</text>
+<text x="45" y="762" font-size="18">povrchu</text>
+<path d="M225 785 V805" fill="none" stroke="#577880" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="25" y="815" width="400" height="135" rx="10" fill="white" stroke="#c6d7d7" stroke-width="2"/>
+<text x="45" y="850" font-size="21" font-weight="bold">Porovnání pásem a vyhodnocení</text>
+<text x="45" y="882" font-size="18">Indexy, rozlišení druhů povrchu,</text>
+<text x="45" y="907" font-size="18">jejich hranice a porovnání snímků</text>
+<text x="45" y="932" font-size="18">z různých období</text>
+</g></svg>

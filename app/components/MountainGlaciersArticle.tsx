@@ -130,7 +130,9 @@ export function MountainGlaciersArticle() {
         <p>
           Poloha čela se určuje vůči pevnému bodu nebo podél předem stanovené osy. Starší záznamy vznikaly pásmem,
           teodolitem a opakovanou fotografií. Dnes se používá také přesná družicová poloha a snímky z letadel či družic.
-          Z obrysu ledovce lze vypočítat plochu. U suti na povrchu, trvalých sněhových polí a navazujících ledovců však
+          Z obrysu ledovce lze vypočítat plochu. Rozlišení ledu podle odraženého světla vysvětluje metoda{" "}
+          <Link href="/metody/opticke-a-multispektralni-snimkovani">optického a multispektrálního snímkování</Link>.
+          U suti na povrchu, trvalých sněhových polí a navazujících ledovců však
           nemusí být hranice na snímku jednoznačná, proto k obrysu patří datum, zdroj obrazu a popis kvality mapování. Na
           tato omezení upozorňují <SourceLink id="DOI_10_3189_2015jog15j017">Zemp et al., 2015</SourceLink> a dokumentace{" "}
           <SourceLink id="DOI_10_5067_f6jmovy5navz">Randolph Glacier Inventory v7</SourceLink>.
