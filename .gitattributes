@@ -10,3 +10,7 @@ public/data/methods/rain-gauges/*.txt text eol=lf
 # Preserve the original NOAA API responses and their published checksums.
 public/data/methods/tide-gauges/water-level-*.json binary
 public/data/methods/tide-gauges/datums.json binary
+# Preserve the upstream README bytes and reproducible photogrammetry table hashes.
+public/data/methods/photogrammetry/source-README.md binary
+public/data/methods/photogrammetry/*.csv text eol=lf
+public/data/methods/photogrammetry/*.geojson text eol=lf

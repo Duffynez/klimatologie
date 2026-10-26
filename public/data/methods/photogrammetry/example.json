@@ -1,0 +1,112 @@
+{
+  "title": "Scott Turnerbreen: fixed 400 x 400 m patch, DEM labels 1990 and 2009",
+  "accessed": "2026-10-26",
+  "data_attribution": "Norwegian Polar Institute, CC BY 4.0. Modified example copies distributed by GlacioHack/xdem-data.",
+  "dem_doi": "10.21334/NPOLAR.2014.DCE53A47",
+  "outlines_doi": "10.21334/NPOLAR.2013.89F430F8",
+  "upstream_commit": "ca0e87271925d28928526bbce200162f002d6a93",
+  "upstream_root": "https://raw.githubusercontent.com/GlacioHack/xdem-data/ca0e87271925d28928526bbce200162f002d6a93/",
+  "date_scope": "Years follow the DEM file labels in the frozen repository. Exact acquisition dates are not supplied in this subset. No annual rate is calculated. Outline file 2010 represents imagery from 2001-2010, not a single 2010 survey.",
+  "grid": {
+    "crs": "EPSG:25833",
+    "height_reference": "Above mean sea level according to upstream README. No vertical CRS is encoded in the supplied GeoTIFFs.",
+    "affine": [
+      20.0,
+      0.0,
+      502810.0,
+      0.0,
+      -20.0,
+      8674030.0
+    ],
+    "rows": 985,
+    "cols": 1332,
+    "cell_size_m": 20,
+    "cell_area_m2": 400
+  },
+  "patch": {
+    "row_start": 208,
+    "row_stop_exclusive": 228,
+    "col_start": 917,
+    "col_stop_exclusive": 937,
+    "index_base": 0,
+    "bounds_easting_northing_m": [
+      521150.0,
+      8669470.0,
+      521550.0,
+      8669870.0
+    ],
+    "inside_both_outline_products": true,
+    "selection": "Interior fixed patch, not a whole-glacier sample or representative random sample."
+  },
+  "mask": {
+    "file": "excluded-glaciers.tif",
+    "meaning": "1 excludes union of 1990 and 2001-2010 glacier outlines, each buffered 100 m in EPSG:25833. Rasterization uses pixel centres. 0 is only a candidate for stable terrain, not proof of stability.",
+    "source_crs": "EPSG:32633",
+    "source_paths": [
+      "data/Longyearbyen/glacier_mask/CryoClim_GAO_SJ_1990.shp",
+      "data/Longyearbyen/glacier_mask/CryoClim_GAO_SJ_2010.shp"
+    ]
+  },
+  "fit": {
+    "method": "Robust least-squares minimization of elevation residuals, three translations only. This is not the Nuth-Kaab cosine-fitting implementation.",
+    "stable_selection": "Outside excluded-glaciers, both DEMs valid, reference height >50 m, reference slope 5-45 degrees, absolute initial dh <50 m, >5 cells from grid edges.",
+    "held_out": "400 m blocks where (row//20 + col//20)%5 == 0, excluded from fit. Spatially correlated cells, not independent observations.",
+    "sample_count": 12000,
+    "rng": "numpy.default_rng(42)",
+    "loss": "soft_l1",
+    "f_scale_m": 3,
+    "bounds_row_col_z": [
+      [
+        -2,
+        -2,
+        -20
+      ],
+      [
+        2,
+        2,
+        20
+      ]
+    ],
+    "tolerances": 1e-11,
+    "resampling": "bilinear, scipy.ndimage.map_coordinates order=1, prefilter=False",
+    "parameter_convention": "aligned_old[row,col] = bilinear(old,row+dr,col+dc) + dz. dr and dc in pixels, dz in metres."
+  },
+  "interpretation": "Volume difference between surfaces over a fixed patch. No glacier-wide mass balance, local melt amount, density conversion or annual rate. Control-terrain residual scatter is not the uncertainty of the patch mean. No formal uncertainty interval was estimated for this educational calculation.",
+  "sha256": {
+    "DEM_1990.tif": "c9b0b556021545118492509433865e353b47b98105cf4519d3fb41980304e2c2",
+    "DEM_2009_ref.tif": "6180136b56438dc67179b70ce99380ab30fa99cb082b3228659f3fe4cff2650a",
+    "excluded-glaciers.tif": "0e5cf4ac25d10e2f78fe951e4e585d2111b0575273d5438fc7e271743753e537",
+    "scott-outline-1990.geojson": "04d7329cbfcb3ee4378c04ef5780161c51c744a8fb88e7fbc8fc1fb2d643dca8",
+    "source-README.md": "313ce7d345c2b8c36a836e3c2586ec54c92e9c0e149534d2e47844f665a2aa28"
+  },
+  "results": {
+    "parameters_row_col_z": [
+      0.11114386836186348,
+      -0.5142748554000951,
+      -1.9169740974697187
+    ],
+    "fit_count": 12000,
+    "before": {
+      "count": 160866,
+      "median_m": -2.6534805297851562,
+      "nmad_m": 3.9055004104614257,
+      "rmse_m": 5.089089233323659
+    },
+    "after": {
+      "count": 160866,
+      "median_m": -0.0945416581607077,
+      "nmad_m": 2.55431378780125,
+      "rmse_m": 3.269601002117742
+    },
+    "patch_cells": 400,
+    "area_m2": 160000,
+    "mean_dh_m": -17.318124310916428,
+    "volume_change_m3": -2770899.8897466287,
+    "csv_sha256_lf": "fd6793702b2365e58f6d5bd21f513c91c76417bd53861b9e8c102a6fe9726c77",
+    "versions": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "rasterio": "1.5.2"
+    }
+  }
+}

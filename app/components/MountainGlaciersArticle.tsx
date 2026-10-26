@@ -166,6 +166,11 @@ export function MountainGlaciersArticle() {
 
         <h3>Rozdíl dvou výškových map</h3>
         <p>
+          Jak se ze snímků určí výška povrchu a jak se změna výšky převádí
+          na změnu objemu, vysvětluje <Link href="/metody/fotogrammetrie-a-porovnavani-vyskovych-modelu">fotogrammetrie a porovnávání výškových modelů</Link>.
+          Článek obsahuje také opakovatelný výpočet pro část ledovce na Špicberkách.
+        </p>
+        <p>
           Měření označované jako geodetická metoda začíná výškovými modely téhož ledovce z různých dat. Nejprve se
           podle okolního stabilního terénu opraví jejich vzájemný posun a další systematické rozdíly. Potom se
           v každém místě odečte starší výška od novější: kladný rozdíl značí vzestup, záporný pokles povrchu.

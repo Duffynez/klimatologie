@@ -5,6 +5,80 @@ import test from "node:test";
 
 const root = new URL("../", import.meta.url);
 
+test("publishes photogrammetry with its actual example, accessible sources and a glacier backlink", async () => {
+  const path = "fotogrammetrie-a-porovnavani-vyskovych-modelu";
+  const [html, source, catalogue, observation] = await Promise.all([
+    readFile(new URL(`dist/client/metody/${path}/index.html`, root), "utf8"),
+    readFile(new URL("app/components/PhotogrammetryArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/ustup-ledovcu/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
+    "Jak ze snímků určíme výšku povrchu", "Nejistoty a ověření",
+    "Příklad: změna části ledovce Scott Turnerbreen", "Shrnutí",
+  ]);
+  assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
+  assert.doesNotMatch(body, /_vinext\/image|katex-error|Potřebné informace/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  assert.match(body, /href="\/pozorovani\/ustup-ledovcu"/);
+  assert.ok(observation.includes(`href="/metody/${path}"`));
+  const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
+  assert.ok(ids.length >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
+    assert.ok(card, "Missing source " + id);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const m of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const file = /\.[a-z0-9]+$/i.test(m[1]) ? m[1] : m[1].replace(/\/$/, "") + "/index.html";
+    await readFile(new URL("dist/client" + file, root));
+  }
+});
+
+test("recomputes glacier patch volume from aligned heights and preserves source rasters", async () => {
+  const base = new URL("public/data/methods/photogrammetry/", root);
+  const meta = JSON.parse(await readFile(new URL("example.json", base), "utf8"));
+  const csv = (await readFile(new URL("patch.csv", base), "utf8")).replace(/\r\n/g, "\n");
+  assert.equal(createHash("sha256").update(csv).digest("hex"), meta.results.csv_sha256_lf);
+  const lines = csv.trim().split("\n").map(line => line.split(","));
+  const rows = lines.slice(1).map(values => Object.fromEntries(lines[0].map((key, i) => [key, Number(values[i])])));
+  assert.equal(rows.length, 400);
+  assert.equal(new Set(rows.map(r => `${r.row},${r.col}`)).size, 400);
+  let volume = 0, rawVolume = 0, area = 0;
+  for (const row of rows) {
+    assert.ok(row.row >= 208 && row.row < 228 && row.col >= 917 && row.col < 937);
+    assert.equal(row.easting_m, 502810 + 20 * (row.col + 0.5));
+    assert.equal(row.northing_m, 8674030 - 20 * (row.row + 0.5));
+    assert.equal(row.area_m2, 20 * 20);
+    const difference = row.z2009_m - row.z1990_aligned_m;
+    assert.ok(Math.abs(difference - row.dh_m) < 2e-9);
+    volume += difference * row.area_m2;
+    rawVolume += (row.z2009_m - row.z1990_raw_m) * row.area_m2;
+    area += row.area_m2;
+  }
+  assert.equal(area, 160000);
+  assert.ok(Math.abs(volume + 2770899.8897466287) < 0.001);
+  assert.ok(Math.abs(volume - meta.results.volume_change_m3) < 0.001);
+  assert.equal((volume / area).toFixed(2), "-17.32");
+  assert.ok(Math.abs(rawVolume - volume) > 100000, "Omitting coregistration must change this example materially");
+  assert.equal(meta.results.fit_count, 12000);
+  assert.equal(meta.results.after.count, 160866);
+  assert.ok(Math.abs(meta.results.after.median_m) < 0.1);
+  assert.ok(meta.results.after.nmad_m < meta.results.before.nmad_m);
+  for (const [name, expectedHash] of Object.entries(meta.sha256)) {
+    const data = await readFile(new URL(name, base));
+    assert.equal(createHash("sha256").update(data).digest("hex"), expectedHash);
+  }
+  for (const name of ["DEM_1990.tif", "DEM_2009_ref.tif", "excluded-glaciers.tif", "patch.csv", "example.json", "process.py", "reproduce.py", "plot.py", "build-mask.py", "source-README.md", "scott-outline-1990.geojson"]) {
+    assert.deepEqual(await readFile(new URL("dist/client/data/methods/photogrammetry/" + name, root)), await readFile(new URL(name, base)));
+  }
+});
+
 test("publishes optical imaging with open evidence, a reproducible scene and reciprocal observation links", async () => {
   const [html, source, catalogue] = await Promise.all([
     readFile(new URL("dist/client/metody/opticke-a-multispektralni-snimkovani/index.html", root), "utf8"),

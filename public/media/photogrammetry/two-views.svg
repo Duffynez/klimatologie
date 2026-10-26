@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="560" viewBox="0 0 560 560" role="img" aria-labelledby="title desc">
+<title id="title">Dva pohledy určují polohu bodu</title>
+<desc id="desc">Směry pozorování z poloh A a B se protínají v bodě P na povrchu ledovce. Jeho výšku měříme od společné výškové reference.</desc>
+<rect width="560" height="560" rx="16" fill="#f5f8fb"/>
+<g font-family="Arial,sans-serif" fill="#192a40">
+<text x="28" y="44" font-size="26" font-weight="bold">Dva pohledy na stejný bod</text>
+<text x="67" y="102" font-size="24">Poloha A</text><text x="387" y="102" font-size="24">Poloha B</text>
+<g stroke="#34465c" stroke-width="3" fill="#fff"><rect x="77" y="118" width="86" height="50" rx="7"/><circle cx="120" cy="143" r="15"/><rect x="397" y="118" width="86" height="50" rx="7"/><circle cx="440" cy="143" r="15"/></g>
+<path d="M28 396 L96 370 L160 382 L215 340 L250 342 L280 320 L330 346 L392 352 L462 382 L532 390 L532 448 L28 448 Z" fill="#d7e8ef" stroke="#9bb5c4" stroke-width="2"/>
+<path d="M120 168 L280 320" stroke="#12629a" stroke-width="4"/><path d="M440 168 L280 320" stroke="#be5f1c" stroke-width="4"/>
+<text x="28" y="237" fill="#12629a" font-size="23">Směr ze</text><text x="28" y="266" fill="#12629a" font-size="23">snímku A</text>
+<text x="429" y="237" fill="#a94e14" font-size="23">Směr ze</text><text x="429" y="266" fill="#a94e14" font-size="23">snímku B</text>
+<circle cx="280" cy="320" r="7" fill="#192a40"/><text x="271" y="295" font-size="26" font-weight="bold">P</text>
+<path d="M280 333 L280 447 M270 334 L290 334 M270 447 L290 447" stroke="#192a40" stroke-width="2"/>
+<text x="298" y="404" font-size="23">Výška P</text><text x="47" y="420" font-size="23">Povrch</text>
+<path d="M28 449 H532" stroke="#536779" stroke-width="2" stroke-dasharray="9 6"/>
+<text x="28" y="484" font-size="23">Společná výšková reference</text>
+<text x="28" y="530" font-size="21" fill="#536779">Průsečík směrů určuje polohu P.</text>
+</g></svg>

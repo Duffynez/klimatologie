@@ -1,3 +1,4 @@
+import { PhotogrammetryArticle } from "../../components/PhotogrammetryArticle";
 import { OpticalImagingArticle } from "../../components/OpticalImagingArticle";
 import { CoulometryArticle } from "../../components/CoulometryArticle";
 import { TitrationArticle } from "../../components/TitrationArticle";
@@ -85,6 +86,18 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "fotogrammetrie-a-porovnavani-vyskovych-modelu") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Fotogrammetrie a porovnávání výškových modelů" meta="26. října 2026">
+          <p>Jak různé pohledy na stejný povrch umožňují určit jeho výšku a jak porovnáním dvou výškových map zjistíme změnu objemu ledovce.</p>
+        </PageLead>
+        <PhotogrammetryArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "opticke-a-multispektralni-snimkovani") {
