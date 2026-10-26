@@ -10,18 +10,6 @@ const number = (value: number, digits = 2) => value.toLocaleString("cs-CZ", { ma
 export function ThawDepthArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div><dt>Permafrost</dt><dd>Půda nebo hornina s teplotou nejvýše 0 °C po dobu alespoň dvou po sobě jdoucích let.</dd></div>
-          <div><dt>Aktivní vrstva</dt><dd>Vrstva nad permafrostem, která během roku rozmrzá a znovu zamrzá.</dd></div>
-          <div><dt>Rozhraní rozmrzání</dt><dd>Hranice, kam v daném okamžiku proniklo rozmrzání. Její hloubka se během léta mění.</dd></div>
-          <div><dt>CALM</dt><dd>Mezinárodní program sledování aktivní vrstvy, anglicky Circumpolar Active Layer Monitoring.</dd></div>
-        </dl>
-        <p className="article-glossary__note">Sonda měří hloubku od povrchu půdy. Opakování během sezóny ukáže postup rozmrzání, měření výšky povrchu zachytí i sesedání terénu.</p>
-      </aside>
-
       <div className="article-prose">
         <h2>Jak se měří hloubka rozmrzlé půdy</h2>
         <p className="article-prose__intro">

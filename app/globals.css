@@ -767,6 +767,10 @@ h3 {
   scroll-margin-top: 106px;
 }
 
+.article-prose > h2:first-child {
+  margin-top: 0;
+}
+
 .article-prose h3 {
   margin: 34px 0 10px;
   color: var(--ink);
@@ -908,66 +912,6 @@ video.article-figure__media {
   color: var(--muted);
   font-size: 0.83rem;
   line-height: 1.45;
-}
-
-.article-glossary {
-  order: -1;
-  margin: 0 0 52px;
-  padding: 24px 0 28px;
-  border-top: 4px solid var(--sea);
-  border-bottom: 1px solid var(--line);
-}
-
-.article-glossary h2 {
-  margin: 0 0 15px;
-  font-size: 1.55rem;
-}
-
-.article-glossary dl {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  column-gap: 28px;
-  margin: 0;
-}
-
-.article-glossary dl > div {
-  padding: 14px 0;
-  border-top: 1px solid var(--line);
-}
-
-.article-glossary dl > div:nth-child(-n + 3) {
-  border-top: 0;
-}
-
-.article-glossary--four dl {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.article-glossary--four dl > div:nth-child(4) {
-  border-top: 0;
-}
-
-.article-glossary dt {
-  color: var(--sea);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.article-glossary dd {
-  margin: 4px 0 0;
-  color: var(--muted);
-  font-size: 0.87rem;
-  line-height: 1.4;
-}
-
-.article-glossary__note {
-  max-width: 770px;
-  margin: 14px 0 0;
-  color: var(--muted);
-  font-size: 0.88rem;
-  line-height: 1.5;
 }
 
 .article-data-list {
@@ -1237,17 +1181,6 @@ video.article-figure__media {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.12rem;
   line-height: 1.58;
-}
-
-@media (max-width: 900px) and (min-width: 701px) {
-  .article-glossary--four dl {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .article-glossary--four dl > div:nth-child(3),
-  .article-glossary--four dl > div:nth-child(4) {
-    border-top: 1px solid var(--line);
-  }
 }
 
 @media (max-width: 700px) {
@@ -1834,10 +1767,6 @@ video.article-figure__media {
     justify-self: end;
   }
 
-  .article-glossary dl {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .source-card__actions {
     grid-column: 2;
     justify-content: flex-end;
@@ -2019,22 +1948,6 @@ video.article-figure__media {
 
   .article-prose h2 {
     margin-top: 46px;
-  }
-
-  .article-glossary {
-    margin-bottom: 38px;
-  }
-
-  .article-glossary dl {
-    grid-template-columns: 1fr;
-  }
-
-  .article-glossary dl > div:nth-child(-n + 3) {
-    border-top: 1px solid var(--line);
-  }
-
-  .article-glossary dl > div:first-child {
-    border-top: 0;
   }
 
   .timeline li {

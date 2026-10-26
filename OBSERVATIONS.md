@@ -84,7 +84,7 @@ Podstatné nejistoty a omezení vysvětlíme ve vztahu ke konkrétním měření
 
 Příklad, výpočet nebo ukázku dat zařadíme tam, kde pomůže pochopit konkrétní krok nebo ověřit údaj. Rozsah odpovídá úloze příkladu. Skutečná data a ilustrační hodnoty rozlišujeme podle STYLE.md.
 
-Článek doprovází věcný název, perex vymezující obsah, datum podle [STYLE.md, oddílu 7](STYLE.md#7-členění-příklady-obrazy-a-podrobnosti) a stručný slovníček potřebných pojmů. Vysvětlení při prvním použití zůstává v textu podle STYLE.md.
+Článek doprovází věcný název, perex vymezující obsah a datum podle [STYLE.md, oddílu 7](STYLE.md#7-členění-příklady-obrazy-a-podrobnosti). Potřebné pojmy a zkratky vysvětlujeme přímo v textu podle [STYLE.md, oddílu 4](STYLE.md#4-pojmy-veličiny-a-označení).
 
 ## Redakční kontrola a připojení k webu
 

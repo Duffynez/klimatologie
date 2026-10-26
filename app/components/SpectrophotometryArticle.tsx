@@ -8,18 +8,6 @@ const dataPath = "/data/methods/spectrophotometry";
 export function SpectrophotometryArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div><dt>Absorbance</dt><dd>Bezrozměrné vyjádření zeslabení světla při průchodu vzorkem. Větší hodnota znamená větší zeslabení.</dd></div>
-          <div><dt>Indikátor</dt><dd>Barvivo, jehož chemické podoby se v roztoku střídají podle pH a odlišně pohlcují světlo.</dd></div>
-          <div><dt>Kyveta</dt><dd>Průhledná měřicí nádobka. Vymezuje délku dráhy světla v roztoku.</dd></div>
-          <div><dt style={{ textTransform: "none" }}>pHₜ</dt><dd>pH na celkové stupnici používané pro mořskou vodu. Zahrnuje volné vodíkové ionty i jejich vazbu v hydrogensíranu.</dd></div>
-        </dl>
-        <p className="article-glossary__note">Přístroj měří světlo. Chemické vlastnosti indikátoru umožňují z tohoto měření určit pH.</p>
-      </aside>
-
       <div className="article-prose">
         <h2>Jak změříme pH pomocí světla</h2>
         <p className="article-prose__intro">

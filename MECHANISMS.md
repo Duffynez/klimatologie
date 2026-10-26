@@ -4,9 +4,9 @@ Tento dokument je závazný pro všechny články o klimatických mechanismech n
 
 Jazyk a srozumitelné vysvětlování upravuje společný standard [STYLE.md](STYLE.md). Výběr podkladů pro konkrétní úkol řídí [AGENTS.md](AGENTS.md).
 
-## 1. Datum a potřebné informace
+## 1. Datum článku
 
-Datum pod nadpisem uvedeme podle [STYLE.md, oddílu 7](STYLE.md#7-členění-příklady-obrazy-a-podrobnosti). Slovníček bude obsahovat pouze pojmy nezbytné pro dané vysvětlení.
+Datum pod nadpisem uvedeme podle [STYLE.md, oddílu 7](STYLE.md#7-členění-příklady-obrazy-a-podrobnosti). Potřebné pojmy a zkratky vysvětlujeme přímo v textu podle [STYLE.md, oddílu 4](STYLE.md#4-pojmy-veličiny-a-označení).
 
 ## 2. Co potřebujeme vysvětlit
 

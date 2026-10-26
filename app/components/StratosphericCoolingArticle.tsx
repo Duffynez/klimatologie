@@ -5,42 +5,6 @@ import { SourceLink } from "./SourceLink";
 export function StratosphericCoolingArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div>
-            <dt>Tlaková hladina</dt>
-            <dd>
-              Plocha v atmosféře se stejným tlakem, například 50 hPa. Zkratka hPa znamená hektopascal. Výška
-              hladiny se mění podle místa a času.
-            </dd>
-          </div>
-          <div>
-            <dt>Radiosonda</dt>
-            <dd>
-              Přístroj nesený balónem. Během výstupu měří teplotu, tlak a vlhkost a vysílá údaje na zem.
-            </dd>
-          </div>
-          <div>
-            <dt>Vrstvová teplota</dt>
-            <dd>
-              Průměrná teplota široké části atmosféry odvozená z družicového měření záření.
-            </dd>
-          </div>
-          <div>
-            <dt>Váhová funkce</dt>
-            <dd>
-              Křivka ukazující, jak silně jednotlivé výšky přispívají k jedné družicové hodnotě.
-            </dd>
-          </div>
-        </dl>
-        <p className="article-glossary__note">
-          Změna o jeden kelvin má stejnou velikost jako změna o jeden stupeň Celsia. Zápis −0,5 K za desetiletí
-          tedy znamená pokles o 0,5 °C za desetiletí.
-        </p>
-      </aside>
-
       <div className="article-prose">
         <h2>Co pozorujeme</h2>
         <p className="article-prose__intro">

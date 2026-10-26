@@ -8,18 +8,6 @@ const dataPath = "/data/methods/absorption-spectroscopy";
 export function AbsorptionSpectroscopyArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div><dt>Absorpční čára</dt><dd>Úzká část spektra, v níž daný plyn pohlcuje světlo. Její poloha pomáhá určit látku, síla její množství.</dd></div>
-          <div><dt>Optická dutina</dt><dd>Prostor mezi zrcadly, ve kterém světlo opakovaně prochází vzorkem plynu.</dd></div>
-          <div><dt>CRDS</dt><dd>Laserová metoda, která určuje absorpci z rychlosti slábnutí světla v optické dutině.</dd></div>
-          <div><dt>Izotopolog</dt><dd>Podoba molekuly s určitým zastoupením izotopů. U CO₂ rozlišujeme například molekuly s uhlíkem ¹²C a ¹³C.</dd></div>
-        </dl>
-        <p className="article-glossary__note">Světlo umožňuje rozlišit plyny ve směsi. Referenční směsi propojí optický signál s jejich zastoupením ve vzduchu.</p>
-      </aside>
-
       <div className="article-prose">
         <h2>Jak absorpční spektroskopie měří složení vzduchu</h2>
         <p className="article-prose__intro">

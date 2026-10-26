@@ -38,7 +38,7 @@ Odborný pojem používáme, když je potřebný. Při prvním použití vysvět
 
 Nepředpokládáme znalost jednotek, stupnic nebo názvů datových souborů. U veličiny vysvětlíme, co její hodnota představuje. U čísel uvedeme jednotku, období, oblast a případnou referenci, vůči které se změna vyjadřuje. U třídění objasníme význam skupin a zařazení případu. U abstraktního vztahu vysvětlíme, co spojuje a jak pomáhá odpovědět na otázku textu.
 
-Pojmenování a značky používáme jednotně. Změnu významu nebo konvence výslovně označíme. Slovníček obsahuje jen pojmy potřebné pro článek a slouží k připomenutí. Vysvětlení při prvním použití zůstává v souvislém textu.
+Pojmenování a značky používáme jednotně. Změnu významu nebo konvence výslovně označíme. Do článků nevkládáme samostatný blok „Potřebné informace“ ani úvodní či postranní slovníček. Potřebné pojmy a zkratky vysvětlujeme přímo v souvislém výkladu při prvním použití.
 
 ## 5. Výpočty a postupy
 

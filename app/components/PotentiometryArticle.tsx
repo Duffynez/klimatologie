@@ -8,17 +8,6 @@ const dataPath = "/data/methods/potentiometry";
 export function PotentiometryArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div><dt>Elektroda</dt><dd>Část měřicí soustavy vytvářející elektrický kontakt s roztokem. Její potenciál závisí na dějích na jejím povrchu.</dd></div>
-          <div><dt>Aktivita iontu</dt><dd>Veličina vyjadřující chemické působení iontu v roztoku. Zahrnuje jeho koncentraci i vliv okolních iontů.</dd></div>
-          <div><dt>Pufr</dt><dd>Roztok, který při malém přídavku kyseliny nebo zásady mění pH jen málo. Pufr se známým pH slouží jako reference.</dd></div>
-          <div><dt style={{ textTransform: "none" }}>pHₜ</dt><dd>pH na celkové stupnici pro mořskou vodu. Vychází ze součtu koncentrací volných vodíkových iontů a hydrogensíranu.</dd></div>
-        </dl>
-        <p className="article-glossary__note">Měřeným signálem je napětí. Známé roztoky mu při kalibraci přiřadí hodnotu pH.</p>
-      </aside>
       <div className="article-prose">
         <h2>Jak měříme pH pomocí elektrod</h2>
         <p className="article-prose__intro">

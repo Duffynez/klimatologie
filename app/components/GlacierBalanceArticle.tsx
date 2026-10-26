@@ -10,18 +10,6 @@ const number = (value: number, digits = 3) => value.toLocaleString("cs-CZ", { ma
 export function GlacierBalanceArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div><dt>Hmotnostní bilance</dt><dd>Přírůstek nebo úbytek hmotnosti za určené období. Kladná hodnota znamená přírůstek.</dd></div>
-          <div><dt>Vodní ekvivalent</dt><dd>Hmotnost přepočtená na vrstvu vody. Jeden metr odpovídá 1 000 kg na metr čtvereční.</dd></div>
-          <div><dt>Firn</dt><dd>Starší sníh, který přečkal alespoň jednu sezonu tání a postupně se mění v led.</dd></div>
-          <div><dt>Geodetická bilance</dt><dd>Odhad změny hmotnosti z rozdílu dvou map výšky povrchu a z předpokládané hustoty změněného objemu.</dd></div>
-        </dl>
-        <p className="article-glossary__note">Odečet u tyče popisuje jedno místo. Bilance celého ledovce vyžaduje měření rozmístěná po jeho povrchu a výpočet pro plochy mezi nimi.</p>
-      </aside>
-
       <div className="article-prose">
         <h2>Jak změříme přírůstek a úbytek na povrchu ledovce</h2>
         <p className="article-prose__intro">

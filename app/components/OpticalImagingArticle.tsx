@@ -6,17 +6,6 @@ import { SourceLink } from "./SourceLink";
 export function OpticalImagingArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div><dt>Spektrální pásmo</dt><dd>Vybraný rozsah vlnových délek záření. Přístroj v něm zaznamenává samostatný obraz.</dd></div>
-          <div><dt>Pixel</dt><dd>Jeden obrazový prvek. V použitých datech odpovídá buňce mapové sítě o velikosti 30 × 30 metrů.</dd></div>
-          <div><dt>Odrazivost povrchu</dt><dd>Údaj o síle odrazu v daném pásmu po zohlednění osvětlení a atmosféry. U družicového měření záleží také na směru pohledu.</dd></div>
-          <div><dt>Spektrální index</dt><dd>Číslo vypočtené porovnáním vybraných pásem. Zdůrazňuje rozdíl, podle kterého rozpoznáváme vlastnosti povrchu.</dd></div>
-        </dl>
-        <p className="article-glossary__note">Družice nese přístroj. Přístroj měří světlo. Datový produkt obsahuje zpracované výsledky těchto měření.</p>
-      </aside>
       <div className="article-prose">
         <h2>Jak z odraženého světla poznáváme povrch</h2>
         <p className="article-prose__intro">

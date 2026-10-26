@@ -12,18 +12,6 @@ const number = (value: number, digits = 3) => value.toLocaleString("cs-CZ", {
 export function PressureHeightArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div><dt>Absolutní tlak</dt><dd>Tlak vztažený k vakuu. Ponořené čidlo zaznamenává společně tlak vody i vzduchu nad hladinou.</dd></div>
-          <div><dt>Hydrostatická rovnováha</dt><dd>Stav, při němž rozdíl tlaku mezi dvěma výškami vyvažuje tíhu kapaliny nebo plynu mezi nimi.</dd></div>
-          <div><dt>Decibar</dt><dd>Jednotka tlaku se značkou dbar. Jeden dbar je 10 000 pascalů. V oceánografii se běžně používá jako svislá souřadnice.</dd></div>
-          <div><dt>CTD</dt><dd>Souprava pro měření vodivosti, teploty a tlaku vody. Anglická zkratka znamená Conductivity, Temperature, Depth. Hloubka vzniká výpočtem z tlaku.</dd></div>
-        </dl>
-        <p className="article-glossary__note">Tlak potřebuje určenou referenci. Hloubka navíc potřebuje hustotu vody, tíhové zrychlení a vymezení hladiny, od které ji počítáme.</p>
-      </aside>
-
       <div className="article-prose">
         <h2>Jak z tlaku určujeme hloubku</h2>
         <p className="article-prose__intro">

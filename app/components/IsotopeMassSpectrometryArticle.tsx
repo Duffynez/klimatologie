@@ -8,18 +8,6 @@ const dataPath = "/data/methods/isotope-mass-spectrometry";
 export function IsotopeMassSpectrometryArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div><dt>Izotopy</dt><dd>Atomy stejného prvku s různým počtem neutronů v jádře. Liší se hmotností.</dd></div>
-          <div><dt>Iont</dt><dd>Elektricky nabitý atom nebo molekula. Jeho pohyb lze řídit elektrickým a magnetickým polem.</dd></div>
-          <div><dt>IRMS</dt><dd>Hmotnostní spektrometrie izotopových poměrů. Porovnává zastoupení izotopů ve vzorku a v referenci.</dd></div>
-          <div><dt style={{ textTransform: "none" }}>δ¹⁸O</dt><dd>Relativní rozdíl poměru ¹⁸O/¹⁶O vůči referenci, obvykle vyjádřený v promile.</dd></div>
-        </dl>
-        <p className="article-glossary__note">Izotopové složení vody uchovává informace o jejím vypařování, kondenzaci a pohybu v prostředí.</p>
-      </aside>
-
       <div className="article-prose">
         <h2>Jak změříme izotopové složení vody</h2>
         <p className="article-prose__intro">

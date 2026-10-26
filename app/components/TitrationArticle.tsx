@@ -8,17 +8,6 @@ const dataPath = "/data/methods/titration";
 export function TitrationArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div><dt>Titrant</dt><dd>Roztok se známou koncentrací, který při titraci přidáváme ke vzorku. Zde je to kyselina chlorovodíková.</dd></div>
-          <div><dt>Celková alkalinita</dt><dd>Bilance schopnosti látek ve vodě přijímat a uvolňovat vodíkové ionty podle společné chemické reference. V mořské vodě ji tvoří hlavně hydrogenuhličitany a uhličitany.</dd></div>
-          <div><dt>Byreta</dt><dd>Zařízení, které dávkuje roztok a umožňuje určit přidaný objem.</dd></div>
-          <div><dt>Granův graf</dt><dd>Převod části titrační křivky na přibližnou přímku. Její průsečík s vodorovnou osou poskytuje odhad spotřeby kyseliny.</dd></div>
-        </dl>
-        <p className="article-glossary__note">Spotřebu činidla zjišťujeme ze známých dávek a z reakce vzorku na jejich přidávání.</p>
-      </aside>
       <div className="article-prose">
         <h2>Jak ze spotřeby kyseliny zjistíme alkalinitu</h2>
         <p className="article-prose__intro">

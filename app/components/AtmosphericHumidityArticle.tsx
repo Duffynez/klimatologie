@@ -5,43 +5,6 @@ import { SourceLink } from "./SourceLink";
 export function AtmosphericHumidityArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div>
-            <dt>Měrná vlhkost</dt>
-            <dd>
-              Hmotnost vodní páry připadající na hmotnost vlhkého vzduchu. Obvykle se uvádí v gramech vodní páry na
-              kilogram vzduchu, tedy v g/kg.
-            </dd>
-          </div>
-          <div>
-            <dt>Relativní vlhkost</dt>
-            <dd>
-              Poměr skutečného tlaku vodní páry k tlaku při nasycení za stejné teploty. Udává se v procentech.
-            </dd>
-          </div>
-          <div>
-            <dt>Rosný bod</dt>
-            <dd>
-              Teplota, při které by se vzduch při daném množství vodní páry právě nasytil a začala by vznikat rosa.
-            </dd>
-          </div>
-          <div>
-            <dt>Vodní pára ve sloupci</dt>
-            <dd>
-              Celková hmotnost vodní páry nad jedním metrem čtverečním povrchu. Hodnota 25 kg/m² odpovídá 25 mm
-              kapalné vody po úplném zkondenzování.
-            </dd>
-          </div>
-        </dl>
-        <p className="article-glossary__note">
-          Tyto veličiny se navzájem doplňují, ale nejsou zaměnitelné. Údaj o měrné vlhkosti, relativní vlhkosti a
-          vodní páře v celém sloupci popisuje pokaždé jinou vlastnost vzduchu.
-        </p>
-      </aside>
-
       <div className="article-prose">
         <h2>Co pozorujeme</h2>
         <p className="article-prose__intro">

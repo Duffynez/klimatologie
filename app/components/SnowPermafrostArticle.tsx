@@ -5,36 +5,6 @@ import { SourceLink } from "./SourceLink";
 export function SnowPermafrostArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div>
-            <dt>Rozsah sněhu</dt>
-            <dd>Plocha území, na níž je podle pravidel daného souboru přítomen sníh. Obvykle se uvádí v km².</dd>
-          </div>
-          <div>
-            <dt>Vodní hodnota sněhu</dt>
-            <dd>
-              Výška vody, která by vznikla roztáním sněhu na daném místě. Značí se SWE. Jeden milimetr odpovídá
-              jednomu kilogramu vody na metr čtvereční.
-            </dd>
-          </div>
-          <div>
-            <dt>Permafrost</dt>
-            <dd>Půda nebo hornina, jejíž teplota zůstává nejvýše 0 °C alespoň dva roky po sobě.</dd>
-          </div>
-          <div>
-            <dt>Aktivní vrstva</dt>
-            <dd>Vrchní vrstva půdy nad permafrostem, která během roku rozmrzá a znovu zamrzá.</dd>
-          </div>
-        </dl>
-        <p className="article-glossary__note">
-          Sněhová pokrývka a permafrost se často vyskytují na stejném území, ale popisují se jinými veličinami a měří
-          jinými přístroji. Tento článek proto vede obě pozorování souběžně a jejich výsledky neslučuje do jednoho čísla.
-        </p>
-      </aside>
-
       <div className="article-prose">
         <h2>Co pozorujeme</h2>
         <p className="article-prose__intro">

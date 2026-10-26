@@ -5,33 +5,6 @@ import { SourceLink } from "./SourceLink";
 export function PhenologyArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div>
-            <dt>Fenologie</dt>
-            <dd>Sledování každoročně se opakujících fází života rostlin a živočichů a jejich načasování.</dd>
-          </div>
-          <div>
-            <dt>Fenofáze</dt>
-            <dd>Přesně popsaná pozorovatelná fáze, například první otevřený květ, přítomnost listů nebo tah ptáků.</dd>
-          </div>
-          <div>
-            <dt>Den roku</dt>
-            <dd>Pořadové číslo dne od 1. ledna. Například 1. duben je v nepřestupném roce den 91.</dd>
-          </div>
-          <div>
-            <dt>Vegetační sezóna</dt>
-            <dd>Část roku, během níž je sledovaná vegetace aktivní. Její začátek a konec závisejí na použité definici.</dd>
-          </div>
-        </dl>
-        <p className="article-glossary__note">
-          Jedno datum nemůže popsat veškerou živou přírodu. U každého výsledku proto uvádíme organismus nebo porost,
-          konkrétní fázi, místo, období a způsob, kterým bylo datum určeno.
-        </p>
-      </aside>
-
       <div className="article-prose">
         <h2>Co pozorujeme</h2>
         <p className="article-prose__intro">

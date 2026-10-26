@@ -4,44 +4,6 @@ import { SourceLink } from "./SourceLink";
 export function GmstArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div>
-            <dt>SST</dt>
-            <dd>
-              Zkratka anglického <em>sea-surface temperature</em>. V převzatých grafech označuje teplotu vody
-              měřenou u mořské hladiny.
-            </dd>
-          </div>
-          <div>
-            <dt>Referenční období</dt>
-            <dd>
-              Víceleté období, jehož průměr tvoří nulu grafu. Jeho změna posune celou křivku, nikoli rozdíl mezi
-              dvěma roky.
-            </dd>
-          </div>
-          <div>
-            <dt>Mřížka</dt>
-            <dd>
-              Rozdělení povrchu Země na zeměpisné buňky. V každé buňce se nejprve spojí místní pozorování.
-            </dd>
-          </div>
-          <div>
-            <dt>Plošné vážení</dt>
-            <dd>
-              Průměr, v němž každá buňka přispívá podle své skutečné plochy. Hustá síť stanic tak sama nezíská
-              větší váhu.
-            </dd>
-          </div>
-        </dl>
-        <p className="article-glossary__note">
-          Nad pevninou se měří vzduch přibližně 1,25–2 metry nad zemí. Nad nezamrzlým oceánem se používá teplota
-          vody u hladiny. Přesná hloubka závisí na přístroji.
-        </p>
-      </aside>
-
       <div className="article-prose">
         <h2>Co pozorujeme</h2>
         <p className="article-prose__intro">

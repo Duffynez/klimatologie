@@ -5,44 +5,6 @@ import { SourceLink } from "./SourceLink";
 export function PrecipitationArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div>
-            <dt>Úhrn srážek</dt>
-            <dd>
-              Výška vrstvy vody, která za určenou dobu dopadla na vodorovnou plochu. Jeden milimetr znamená jeden litr
-              vody na metr čtvereční.
-            </dd>
-          </div>
-          <div>
-            <dt>Intenzita</dt>
-            <dd>
-              Množství srážek za jednotku času. Hodnota 20 mm/h znamená, že při stejné rychlosti by za hodinu napršelo
-              20 mm.
-            </dd>
-          </div>
-          <div>
-            <dt>Rx1day</dt>
-            <dd>
-              Nejvyšší jednodenní úhrn v daném měsíci nebo roce. Jde o denní údaj, nikoli o nejvyšší hodinovou intenzitu.
-            </dd>
-          </div>
-          <div>
-            <dt>Přívalová srážka</dt>
-            <dd>
-              Krátká a velmi intenzivní srážka, obvykle spojená s konvekcí. Pro měření je nutné uvést délku intervalu a
-              naměřený úhrn nebo intenzitu.
-            </dd>
-          </div>
-        </dl>
-        <p className="article-glossary__note">
-          Denní úhrn a hodinová intenzita odpovídají na jiné otázky. Silná hodinová srážka se může v denním součtu
-          ztratit a vysoký denní úhrn může naopak vznikat po mnoho hodin.
-        </p>
-      </aside>
-
       <div className="article-prose">
         <h2>Co pozorujeme</h2>
         <p className="article-prose__intro">

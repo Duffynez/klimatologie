@@ -54,7 +54,7 @@ Zpřístupníme přesný zdroj dat, verzi nebo datum přístupu u průběžně m
 
 Pokud nejsou nejnižší úrovně dat veřejné, jednou stručně vymezíme, od kterého kroku pracujeme s veřejnými daty. Předchozí kroky doložíme metodickou dokumentací. Příklad nemusí opakovat celý postup měření, jeho rozsah však musí být zřejmý. Doplňkové vytvořené hodnoty označíme jako ilustrační. Povinný skutečný příklad zůstává zachován.
 
-### A6. Schéma, fotografie, slovníček a údaje o článku
+### A6. Schéma, fotografie a údaje o článku
 
 Článek obsahuje alespoň jedno popsané schéma principu nebo postupu. Podle metody znázorní měřicí uspořádání, práci se vzorkem nebo tok dat. Popisek vysvětlí části, šipky a značky.
 
@@ -62,7 +62,7 @@ U přístrojových metod přidáme také dohledatelnou fotografii měřidla v ko
 
 Krátký popisek vysvětlí viditelné součásti a jejich úlohu. Rozliší vlastní čidlo od krytu, nosné konstrukce nebo odběrových nádob. Typ přístroje, místo a dobu uvedeme pouze podle ověřeného původu snímku. Doplníme výstižný alternativní text, autora, odkaz na původní zdroj a ověřenou licenci nebo podmínky použití. Snímek uložíme na web, aby zobrazení nezáviselo na cizím serveru. Technický postup a kontrolu zobrazení stanovuje [docs/CONTENT-WORKFLOW.md, oddíl 9](docs/CONTENT-WORKFLOW.md#9-obrázky-a-grafy).
 
-Datum pod nadpisem uvedeme podle [STYLE.md, oddílu 7](STYLE.md#7-členění-příklady-obrazy-a-podrobnosti). Vedle textu bude stručný slovníček potřebných pojmů a zkratek. Jejich vysvětlení při prvním použití a pravidla obrazového doprovodu stanovuje STYLE.md.
+Datum pod nadpisem uvedeme podle [STYLE.md, oddílu 7](STYLE.md#7-členění-příklady-obrazy-a-podrobnosti). Vysvětlování pojmů a zkratek přímo v textu a pravidla obrazového doprovodu stanovuje [STYLE.md](STYLE.md).
 
 ### A7. Zdroje
 

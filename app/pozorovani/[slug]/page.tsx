@@ -35,7 +35,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Atmosféra"
           title="Globální teplota u povrchu"
-          meta="Napsáno: 30. července 2026"
+          meta="26. října 2026"
         >
           <p>
             Jak se z měření meteorologických stanic, lodí a bójí počítá globální změna teploty, jak se měření
@@ -54,7 +54,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Atmosféra"
           title="Teplota stratosféry"
-          meta="Napsáno: 30. července 2026"
+          meta="26. října 2026"
         >
           <p>
             Jak se teplota stratosféry měří balóny, družicemi a rádiovými zákryty, jak se měření vyvíjela a co
@@ -73,7 +73,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Atmosféra"
           title="Oxid uhličitý v atmosféře"
-          meta="19. října 2026"
+          meta="26. října 2026"
         >
           <p>
             Co přesně znamená údaj v ppm, jak se CO₂ měří na stanicích, v odebraném vzduchu, v ledu a z družic a
@@ -92,7 +92,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Atmosféra"
           title="Vlhkost atmosféry"
-          meta="Napsáno: 31. července 2026"
+          meta="26. října 2026"
         >
           <p>
             Co přesně vyjadřuje měrná a relativní vlhkost, jak se vodní pára měří u povrchu, ve výšce a v celém
@@ -111,7 +111,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Atmosféra"
           title="Srážky a přívalové srážky"
-          meta="19. října 2026"
+          meta="26. října 2026"
         >
           <p>
             Jak se měří celkové úhrny, nejvyšší denní a hodinové srážky, jak se z bodových měření vytvářejí mapy a co
@@ -130,7 +130,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Oceány"
           title="Obsah tepla v oceánu"
-          meta="Napsáno: 30. července 2026"
+          meta="26. října 2026"
         >
           <p>
             Jak se z teplot naměřených v různých hloubkách počítá změna obsahu tepla, jak se měření vyvíjela a co
@@ -149,7 +149,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Oceány"
           title="Globální střední hladina moře"
-          meta="Napsáno: 31. července 2026"
+          meta="26. října 2026"
         >
           <p>
             Jak se výška moře měří na pobřeží a z družic, jak z jednotlivých měření vzniká globální průměr a co ukazují
@@ -168,7 +168,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Oceány"
           title="Acidifikace oceánu"
-          meta="19. října 2026"
+          meta="26. října 2026"
         >
           <p>
             Co přesně znamená změna pH mořské vody, jak se měří celý uhličitanový systém, jak vznikají globální
@@ -187,7 +187,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Kryosféra"
           title="Arktický mořský led"
-          meta="Napsáno: 31. července 2026 · Odborná kontrola: 3. října 2026"
+          meta="26. října 2026"
         >
           <p>
             Co přesně znamenají rozsah, plocha, stáří, tloušťka a objem mořského ledu, jak vznikají družicová data a
@@ -225,7 +225,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Kryosféra"
           title="Změna hmotnosti ledových příkrovů"
-          meta="Napsáno: 1. srpna 2026 · Odborná revize: 3. října 2026"
+          meta="26. října 2026"
         >
           <p>
             Jak se změna hmotnosti Grónska a Antarktidy odvozuje z výšky povrchu, gravitačního pole a toku ledu, jak
@@ -282,7 +282,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Extrémy"
           title="Vlny veder"
-          meta="Napsáno: 1. srpna 2026 · Odborná revize: 3. října 2026"
+          meta="26. října 2026"
         >
           <p>
             Jak se z denních maxim a minim určují vlny veder, proč různé definice dávají různá čísla a co ukazují

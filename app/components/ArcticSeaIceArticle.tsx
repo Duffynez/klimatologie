@@ -4,33 +4,6 @@ import { SourceLink } from "./SourceLink";
 export function ArcticSeaIceArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div>
-            <dt>Koncentrace ledu</dt>
-            <dd>Podíl jedné mapové buňky pokrytý mořským ledem. Udává se od 0 do 100 %.</dd>
-          </div>
-          <div>
-            <dt>Rozsah ledu</dt>
-            <dd>Součet celých ploch buněk, v nichž led pokrývá alespoň 15 %. Udává se v km².</dd>
-          </div>
-          <div>
-            <dt>Plocha ledu</dt>
-            <dd>Součet ploch skutečně pokrytých ledem. Každá buňka se započítá podle své koncentrace.</dd>
-          </div>
-          <div>
-            <dt>Víceletý led</dt>
-            <dd>Led, který přežil alespoň jedno letní období tání. Jeho stáří lze sledovat po celých letech.</dd>
-          </div>
-        </dl>
-        <p className="article-glossary__note">
-          Rozsah a plocha se vyjadřují v milionech km², tloušťka v metrech a objem v km³. Stejný ledový pokryv proto
-          může být popsán několika různými čísly, která nelze zaměňovat.
-        </p>
-      </aside>
-
       <div className="article-prose">
         <h2>Co pozorujeme</h2>
         <p className="article-prose__intro">

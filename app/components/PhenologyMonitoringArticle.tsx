@@ -13,18 +13,6 @@ const shortDate = (iso: string) => {
 export function PhenologyMonitoringArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div><dt>Fenologie</dt><dd>Studium načasování opakujících se událostí v životě rostlin a živočichů a jejich vztahu k prostředí.</dd></div>
-          <div><dt>Fenofáze</dt><dd>Vymezená část vývoje nebo aktivity organismu, rozpoznatelná podle určených znaků.</dd></div>
-          <div><dt>Stav fáze</dt><dd>Zápis, zda sledovaná fáze při návštěvě právě probíhá. Odlišuje se od její intenzity, například množství květů.</dd></div>
-          <div><dt>Pořadový den roku</dt><dd>Datum vyjádřené počtem dní od začátku roku. První leden má číslo 1.</dd></div>
-        </dl>
-        <p className="article-glossary__note">Společná pravidla určují, na jaké znaky se dívat. Opakované návštěvy ukazují, kdy se tyto znaky objevily.</p>
-      </aside>
-
       <div className="article-prose">
         <h2>Jak se sleduje sezónní vývoj rostlin a živočichů</h2>
         <p className="article-prose__intro">

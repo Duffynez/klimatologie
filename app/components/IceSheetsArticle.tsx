@@ -4,33 +4,6 @@ import { SourceLink } from "./SourceLink";
 export function IceSheetsArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div>
-            <dt>Ledový příkrov</dt>
-            <dd>Souvislá masa ledovcového ledu na pevnině o ploše větší než 50 000 km². Dnes existuje v Grónsku a Antarktidě.</dd>
-          </div>
-          <div>
-            <dt>Gigatuna</dt>
-            <dd>Jedna miliarda tun, značená Gt. Jedna gigatuna vody má objem přibližně jeden kilometr krychlový.</dd>
-          </div>
-          <div>
-            <dt>Firn</dt>
-            <dd>Starší stlačený sníh mezi čerstvým sněhem a ledem. Jeho proměny mohou měnit výšku povrchu bez stejné změny hmotnosti.</dd>
-          </div>
-          <div>
-            <dt>Linie ukotvení</dt>
-            <dd>Hranice, na níž led přestává spočívat na podloží a začíná plout na moři jako ledový šelf.</dd>
-          </div>
-        </dl>
-        <p className="article-glossary__note">
-          Změna za celé období se uvádí v gigatunách, rychlost změny v gigatunách za rok. Přepočet na milimetry
-          vyjadřuje odpovídající příspěvek ke globální střední hladině moře, nikoli výšku ledu na příkrovu.
-        </p>
-      </aside>
-
       <div className="article-prose">
         <h2>Co pozorujeme</h2>
         <p className="article-prose__intro">

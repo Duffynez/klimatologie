@@ -10,18 +10,6 @@ const number = (value: number) => value.toLocaleString("cs-CZ", { maximumFractio
 export function SnowMeasurementArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div><dt>Výška sněhu</dt><dd>Svislá vzdálenost od podkladu k povrchu sněhu v daném místě. Podkladem může být půda nebo led.</dd></div>
-          <div><dt>Hustota sněhu</dt><dd>Hmotnost sněhu dělená jeho objemem, včetně pórů mezi zrny. Udává se v kg/m³.</dd></div>
-          <div><dt>Vodní hodnota</dt><dd>Množství vody uložené ve sněhu, vyjádřené výškou vodního sloupce. Zkratka SWE vychází z anglického snow water equivalent.</dd></div>
-          <div><dt>Sněhový profil</dt><dd>Popis sněhu od povrchu k podkladu. Zahrnuje polohy vrstev a měření jejich vlastností, například hustoty.</dd></div>
-        </dl>
-        <p className="article-glossary__note">Jeden milimetr vodní hodnoty odpovídá jednomu kilogramu vody na metr čtvereční. K převodu výšky sněhu na zásobu vody potřebujeme jeho hustotu.</p>
-      </aside>
-
       <div className="article-prose">
         <h2>Jak měříme zásobu vody ve sněhu</h2>
         <p className="article-prose__intro">

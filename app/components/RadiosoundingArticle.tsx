@@ -12,18 +12,6 @@ const number = (value: number, digits = 1) => value.toLocaleString("cs-CZ", {
 export function RadiosoundingArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div><dt>Výškový profil</dt><dd>Průběh veličiny, například teploty, podle výšky nebo tlaku vzduchu.</dd></div>
-          <div><dt>Tlaková hladina</dt><dd>Místa se stejným tlakem vzduchu. Jejich výška se mění podle stavu atmosféry.</dd></div>
-          <div><dt>Geopotenciální výška</dt><dd>Výšková souřadnice zohledňující tíhové pole Země. Udává se v geopotenciálních metrech, značka gpm.</dd></div>
-          <div><dt>UTC</dt><dd>Koordinovaný světový čas. Umožňuje porovnávat termíny měření z různých zemí.</dd></div>
-        </dl>
-        <p className="article-glossary__note">Radiosonda měří postupně během letu. Vítr ji přitom unáší, takže jednotlivé výšky obvykle odpovídají různým místům i časům.</p>
-      </aside>
-
       <div className="article-prose">
         <h2>Jak radiosondáž měří atmosféru</h2>
         <p className="article-prose__intro">

@@ -9,18 +9,6 @@ const dataPath = "/data/methods/resistance-thermometry";
 export function ResistanceThermometryArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div><dt>Elektrický odpor</dt><dd>Veličina vyjadřující, jak materiál brání průchodu elektrického proudu. Značí se <em>R</em> a měří v ohmech, značka Ω.</dd></div>
-          <div><dt>Pt100</dt><dd>Platinové čidlo s jmenovitým odporem 100 Ω při 0 °C. Jeho skutečný převod mezi odporem a teplotou se určuje kalibrací.</dd></div>
-          <div><dt>NTC termistor</dt><dd>Polovodičové čidlo, jehož odpor při oteplení klesá. NTC označuje právě tento směr změny odporu.</dd></div>
-          <div><dt>ITS-90</dt><dd>Mezinárodní teplotní stupnice z roku 1990. Stanovuje referenční teploty a postupy, podle kterých lze kalibrovat teploměry a porovnávat jejich výsledky.</dd></div>
-        </dl>
-        <p className="article-glossary__note">Odpor čidla odpovídá jeho vlastní teplotě. Teplotu vzduchu, vody nebo půdy zjišťujeme tím, že čidlu umožníme vyměňovat si s okolím teplo.</p>
-      </aside>
-
       <div className="article-prose">
         <h2>Jak odporový teploměr měří teplotu</h2>
         <p className="article-prose__intro">

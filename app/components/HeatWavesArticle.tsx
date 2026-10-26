@@ -4,33 +4,6 @@ import { SourceLink } from "./SourceLink";
 export function HeatWavesArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div>
-            <dt>Denní maximum</dt>
-            <dd>Nejvyšší teplota vzduchu zaznamenaná na stanici během vymezeného pozorovacího dne.</dd>
-          </div>
-          <div>
-            <dt>Denní minimum</dt>
-            <dd>Nejnižší teplota vzduchu zaznamenaná během téhož dne. Obvykle nastává v noci nebo ráno.</dd>
-          </div>
-          <div>
-            <dt>Percentil</dt>
-            <dd>Hranice v seřazeném souboru hodnot. Pod 90. percentilem nebo na něm leží přibližně 90 % srovnávaných měření.</dd>
-          </div>
-          <div>
-            <dt>Referenční období</dt>
-            <dd>Určený úsek minulých měření, vůči němuž se posuzují další roky, například léta 1961–1990.</dd>
-          </div>
-        </dl>
-        <p className="article-glossary__note">
-          Vlna veder se vždy určuje z denních teplot podle zveřejněného pravidla. K číslu proto patří teplotní
-          veličina, hranice, nejkratší délka události, roční období, území a sledované roky.
-        </p>
-      </aside>
-
       <div className="article-prose">
         <h2>Co pozorujeme</h2>
         <p className="article-prose__intro">

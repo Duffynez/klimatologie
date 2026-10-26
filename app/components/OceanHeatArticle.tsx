@@ -5,40 +5,6 @@ import { SourceLink } from "./SourceLink";
 export function OceanHeatArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div>
-            <dt>Teplotní profil</dt>
-            <dd>Teplota vody zaznamenaná na jednom místě postupně od hladiny do hloubky.</dd>
-          </div>
-          <div>
-            <dt>OHC</dt>
-            <dd>
-              Zkratka anglického <em>ocean heat content</em>. V převzatých grafech označuje obsah tepla v oceánu.
-            </dd>
-          </div>
-          <div>
-            <dt>Zettajoule</dt>
-            <dd>
-              Zkráceně ZJ. Jeden zettajoule je 10<sup>21</sup> joulů. Hodnota v grafu neudává veškeré teplo v
-              oceánu, ale změnu vůči určenému referenčnímu stavu.
-            </dd>
-          </div>
-          <div>
-            <dt>Referenční stav</dt>
-            <dd>
-              Dlouhodobý průměr, vůči němuž je změna vypočtena. Posouvá nulu grafu, nikoli rozdíl mezi dvěma roky.
-            </dd>
-          </div>
-        </dl>
-        <p className="article-glossary__note">
-          Každý údaj v článku doprovází hloubka. Hodnoty pro 0–700 m, 700–2 000 m a 0–2 000 m popisují odlišné
-          objemy vody a nelze je zaměňovat.
-        </p>
-      </aside>
-
       <div className="article-prose">
         <h2>Co pozorujeme</h2>
         <p className="article-prose__intro">

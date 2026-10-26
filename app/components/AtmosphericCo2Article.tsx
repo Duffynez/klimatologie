@@ -5,45 +5,6 @@ import { SourceLink } from "./SourceLink";
 export function AtmosphericCo2Article() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div>
-            <dt>ppm</dt>
-            <dd>
-              Počet částic z milionu. Hodnota 425 ppm znamená přibližně 425 molekul CO₂ na milion molekul
-              suchého vzduchu, tedy 0,0425 %.
-            </dd>
-          </div>
-          <div>
-            <dt>Molární zlomek</dt>
-            <dd>
-              Podíl molekul CO₂ mezi všemi molekulami ve vzorku. U atmosférických měření se uvádí po odstranění
-              vlivu vodní páry.
-            </dd>
-          </div>
-          <div>
-            <dt>Referenční plyn</dt>
-            <dd>
-              Vzduch v tlakové lahvi, jehož obsah CO₂ byl přesně určen. Přístroj podle něj převádí svůj signál na
-              hodnotu v ppm.
-            </dd>
-          </div>
-          <div>
-            <dt>XCO₂</dt>
-            <dd>
-              Průměrný molární zlomek CO₂ v celém sloupci suchého vzduchu nad místem měření. Používá se u
-              družicových a pozemních spektrometrů.
-            </dd>
-          </div>
-        </dl>
-        <p className="article-glossary__note">
-          Číslo v ppm potřebuje vždy místo nebo vymezenou oblast, čas, způsob měření a kalibrační stupnici. Hodnota
-          z jedné stanice, globální průměr u povrchu a družicové XCO₂ nejsou totožné výsledky.
-        </p>
-      </aside>
-
       <div className="article-prose">
         <h2>Co pozorujeme</h2>
         <p className="article-prose__intro">

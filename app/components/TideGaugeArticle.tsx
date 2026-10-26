@@ -10,18 +10,6 @@ const number = (value: number) => value.toLocaleString("cs-CZ", { minimumFractio
 export function TideGaugeArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div><dt>Relativní hladina</dt><dd>Výška hladiny vzhledem k místní pevnině. Mění se při pohybu vody i při pohybu souše.</dd></div>
-          <div><dt>Výšková reference</dt><dd>Nula, od které se počítají výšky. Její návaznost na fyzické body musí být známá i po výměně přístroje.</dd></div>
-          <div><dt>Nivelace</dt><dd>Geodetické měření výškového rozdílu mezi body, například mezi značkou na pevnině a uložením čidla.</dd></div>
-          <div><dt>GNSS</dt><dd>Globální družicové navigační systémy. Dlouhodobé geodetické měření jejich signálů umožňuje určit pohyb pevniny.</dd></div>
-        </dl>
-        <p className="article-glossary__note">Číslo o výšce hladiny potřebuje místo, čas, jednotku a výškovou nulu. Při porovnávání výšek převádíme údaje ke společné nule.</p>
-      </aside>
-
       <div className="article-prose">
         <h2>Jak pobřežní vodočet měří hladinu</h2>
         <p className="article-prose__intro">

@@ -5,43 +5,6 @@ import { SourceLink } from "./SourceLink";
 export function GlobalMeanSeaLevelArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div>
-            <dt>Střední hladina</dt>
-            <dd>
-              Průměrná výška mořské hladiny za určenou dobu. Průměrování potlačí příliv, odliv, vlny a krátké výkyvy.
-            </dd>
-          </div>
-          <div>
-            <dt>Relativní hladina</dt>
-            <dd>
-              Výška moře vůči pevnému bodu na pobřeží. Změní se při pohybu vody i při pohybu samotné pevniny.
-            </dd>
-          </div>
-          <div>
-            <dt>Výškový bod</dt>
-            <dd>
-              Stabilně označený bod na souši, ke kterému je přístroj geodeticky připojen. Umožňuje zachovat stejnou nulu
-              měření po výměně přístroje.
-            </dd>
-          </div>
-          <div>
-            <dt>Družicová altimetrie</dt>
-            <dd>
-              Měření výšky oceánu z oběžné dráhy radarovým impulzem. Výška hladiny vznikne z polohy družice a vzdálenosti
-              mezi družicí a mořem.
-            </dd>
-          </div>
-        </dl>
-        <p className="article-glossary__note">
-          Hodnota v milimetrech vyjadřuje změnu vůči zvolené nule grafu. Nejde o hloubku oceánu ani o výšku hladiny v
-          jednom přístavu.
-        </p>
-      </aside>
-
       <div className="article-prose">
         <h2>Co pozorujeme</h2>
         <p className="article-prose__intro">

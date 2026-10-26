@@ -5,33 +5,6 @@ import { SourceLink } from "./SourceLink";
 export function MountainGlaciersArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div>
-            <dt>Hmotnostní bilance</dt>
-            <dd>Změna hmotnosti ledovce mezi dvěma určenými daty. Kladná hodnota znamená přírůstek, záporná úbytek.</dd>
-          </div>
-          <div>
-            <dt>Vodní ekvivalent</dt>
-            <dd>Hmotnostní změna přepočtená na vrstvu vody. Jeden metr vodního ekvivalentu odpovídá 1 000 kg na m².</dd>
-          </div>
-          <div>
-            <dt>Výškový model</dt>
-            <dd>Digitální mapa nadmořské výšky povrchu. Porovnání dvou map ukazuje, kde povrch stoupl nebo klesl.</dd>
-          </div>
-          <div>
-            <dt>Gigatuna</dt>
-            <dd>Jedna miliarda tun, tedy 10¹² kg. Jedna gigatuna vody má objem přibližně jeden kilometr krychlový.</dd>
-          </div>
-        </dl>
-        <p className="article-glossary__note">
-          Poloha čela se měří v metrech, plocha v km², změna výšky v metrech, bilance v metrech vodního ekvivalentu a
-          celková hmotnostní změna v gigatunách. Tato čísla popisují různé vlastnosti ledovce.
-        </p>
-      </aside>
-
       <div className="article-prose">
         <h2>Co pozorujeme</h2>
         <p className="article-prose__intro">

@@ -10,18 +10,6 @@ const number = (value: number) => value.toLocaleString("cs-CZ", { minimumFractio
 export function RainGaugeArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div><dt>Srážkový úhrn</dt><dd>Množství vody spadlé na jednotku vodorovné plochy za určenou dobu. Jeden milimetr odpovídá jednomu litru na metr čtvereční.</dd></div>
-          <div><dt>Intenzita srážek</dt><dd>Úhrn dělený délkou intervalu, obvykle v milimetrech za hodinu. Vždy potřebuje údaj o tom, přes jak dlouhý interval se počítala.</dd></div>
-          <div><dt>Vodní hodnota sněhu</dt><dd>Množství kapalné vody, které by vzniklo roztáním sněhu. Liší se od výšky sněhové vrstvy.</dd></div>
-          <div><dt>Disdrometr</dt><dd>Přístroj pro měření vlastností jednotlivých srážkových částic. Z jejich velikostí a počtů vzniká rozdělení velikostí kapek či vloček.</dd></div>
-        </dl>
-        <p className="article-glossary__note">Stejný hodinový úhrn může vzniknout z dlouhého mírného deště i z krátké prudké přeháňky. Rozliší je měření v kratších intervalech.</p>
-      </aside>
-
       <div className="article-prose">
         <h2>Jak se měří srážky</h2>
         <p className="article-prose__intro">

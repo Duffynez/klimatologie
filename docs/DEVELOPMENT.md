@@ -97,7 +97,7 @@ Každou uživatelsky viditelnou změnu zkontrolujte v prohlížeči.
 
 - hlavička a navigace se vejdou nebo se chovají podle existujícího návrhu;
 - nadpis, perex a první obsah mají správnou hierarchii;
-- text nepřekrývá slovníček ani obrázky;
+- text a obrázky se nepřekrývají;
 - obrázky mají nenulové přirozené rozměry a nejsou rozbité;
 - odkazy na zdroje vedou na správné karty;
 - stránka nemá vodorovné přetékání.
@@ -106,7 +106,7 @@ Každou uživatelsky viditelnou změnu zkontrolujte v prohlížeči.
 
 - nejdelší nadpis se vejde do šířky;
 - navigace zůstává ovladatelná;
-- slovníček se změní na běžný blok a nepřekrývá text;
+- nadpis, perex a začátek výkladu mají přiměřené rozestupy;
 - obrázky, popisky, zdrojové karty a tlačítka se vejdou;
 - nevzniká vodorovný posun celé stránky.
 

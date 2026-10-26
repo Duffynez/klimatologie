@@ -106,7 +106,6 @@ Plné odborné články jsou komponenty `app/components/*Article.tsx`. Route jim
 
 Samotná článková komponenta obvykle obsahuje:
 
-- blok potřebných informací;
 - jednotlivé výkladové kapitoly;
 - obrázky a popisky;
 - citace přes `SourceLink`;

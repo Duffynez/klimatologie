@@ -6,17 +6,6 @@ import { SourceLink } from "./SourceLink";
 export function CoulometryArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div><dt>Elektrický náboj</dt><dd>Veličina, kterou při měření sčítáme z proudu procházejícího po určitou dobu. Jednotkou je coulomb, značka C.</dd></div>
-          <div><dt>Elektrolýza</dt><dd>Chemická přeměna vyvolaná průchodem elektrického proudu. Zde vytváří hydroxidové ionty potřebné k měření.</dd></div>
-          <div><dt>Rozpuštěný anorganický uhlík</dt><dd>Součet uhlíku v rozpuštěném CO₂, kyselině uhličité, hydrogenuhličitanech a uhličitanech. Běžná zkratka je DIC.</dd></div>
-          <div><dt>Pozadí</dt><dd>Odezva měřicí soustavy při chodu bez vzorku. Její příspěvek za dobu rozboru se odečítá.</dd></div>
-        </dl>
-        <p className="article-glossary__note">Elektrický proud vytváří činidlo. Celkový prošlý náboj určuje, kolik ho vzniklo.</p>
-      </aside>
       <div className="article-prose">
         <h2>Jak elektrický náboj určí množství uhlíku</h2>
         <p className="article-prose__intro">

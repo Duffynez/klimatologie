@@ -14,7 +14,7 @@ test("publishes optical imaging with open evidence, a reproducible scene and rec
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
   assert.match(html, /<p class="page-lead__meta">26\. října 2026<\/p>/);
-  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]).slice(1), [
+  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak z odraženého světla poznáváme povrch", "Nejistoty a ověření",
     "Příklad: tři povrchy u Aletschského ledovce", "Shrnutí",
   ]);
@@ -326,29 +326,19 @@ test("publishes the global surface temperature article instead of the generic pl
 
   assert.match(evidencePage, /GmstArticle/);
   assert.match(evidencePage, /title="Globální teplota u povrchu"/);
-  assert.match(evidencePage, /Napsáno: 30\. července 2026/);
+  assert.match(evidencePage, /meta="26\. října 2026"/);
   assert.match(article, /Globální teplota u povrchu vyjadřuje, jak se průměrná teplota/);
   assert.match(article, /Historie globálního výpočtu/);
   assert.match(article, /Jak vzniká globální výpočet/);
   assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
-  assert.match(article, /Potřebné informace/);
-  assert.equal((article.match(/<dt>/g) ?? []).length, 4);
-  assert.match(article, /<dt>SST<\/dt>/);
-  assert.match(article, /<dt>Referenční období<\/dt>/);
-  assert.match(article, /<dt>Mřížka<\/dt>/);
-  assert.match(article, /<dt>Plošné vážení<\/dt>/);
+  assert.doesNotMatch(article, /Potřebné informace|article-glossary/);
   assert.match(article, /NOAAGlobalTemp v6\.1\.0/);
   assert.match(article, /HadCRUT\.5\.1\.0\.0/);
   assert.match(article, /NASA GISTEMP v4/);
   assert.match(article, /Berkeley Earth Land\/Ocean/);
   assert.match(article, /1,43 ± 0,13 °C/);
   assert.match(article, /1,09 °C/);
-  assert.doesNotMatch(article, /<dt>Teplota u povrchu<\/dt>/);
-  assert.doesNotMatch(article, /<dt>Anomálie<\/dt>/);
-  assert.doesNotMatch(article, /<dt>Homogenizace<\/dt>/);
   assert.doesNotMatch(article, /časová řada/);
-  assert.doesNotMatch(styles, /\.article-glossary\s*\{\s*position: fixed/);
-  assert.match(styles, /\.article-glossary dl\s*\{\s*display: grid/);
   assert.match(styles, /\.article-figure--scroll-wide \.article-figure__media/);
   assert.match(sourceCatalogueText, /10\.1002\/qj\.49706427503/);
   assert.doesNotMatch(sourceCatalogueText, /10\.1002\/qj\.49708737102/);
@@ -384,12 +374,10 @@ test("publishes a full stratospheric temperature article instead of the generic 
 
   assert.match(evidencePage, /StratosphericCoolingArticle/);
   assert.match(evidencePage, /title="Teplota stratosféry"/);
-  assert.match(evidencePage, /Napsáno: 30\. července 2026/);
+  assert.match(evidencePage, /meta="26\. října 2026"/);
   assert.match(article, /Teplotou stratosféry označujeme teplotu vzduchu mezi tropopauzou a stratopauzou/);
-  assert.match(article, /Potřebné informace/);
-  assert.match(article, /Tlaková hladina/);
-  assert.match(article, /Vrstvová teplota/);
-  assert.match(article, /Váhová funkce/);
+  assert.doesNotMatch(article, /Potřebné informace|article-glossary/);
+  assert.match(article, /váhová funkce/);
   assert.match(article, /noaa-atmosphere-temperature-profile\.png/);
   assert.match(article, /ncar-stratospheric-weighting-functions\.png/);
   assert.match(article, /ncar-stratospheric-temperature-1979-2024\.png/);
@@ -436,7 +424,7 @@ test("publishes a sourced ocean heat content article instead of the generic plac
   ]);
 
   assert.match(evidencePage, /OceanHeatArticle/);
-  assert.match(evidencePage, /Napsáno: 30\. července 2026/);
+  assert.match(evidencePage, /meta="26\. října 2026"/);
   assert.match(article, /Obsah tepla v oceánu vyjadřuje/);
   assert.match(article, /Jak vzniká globální výpočet/);
   assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
@@ -492,15 +480,10 @@ test("publishes a sourced atmospheric carbon dioxide article instead of the gene
 
   assert.match(evidencePage, /AtmosphericCo2Article/);
   assert.match(evidencePage, /title="Oxid uhličitý v atmosféře"/);
-  assert.match(evidencePage, /title="Oxid uhličitý v atmosféře"\s+meta="19\. října 2026"/);
+  assert.match(evidencePage, /title="Oxid uhličitý v atmosféře"\s+meta="26\. října 2026"/);
   assert.match(article, /href="\/metody\/plynova-chromatografie"/);
   assert.match(article, /Atmosférický oxid uhličitý popisujeme podílem molekul CO₂ v suchém vzduchu/);
-  assert.match(article, /Potřebné informace/);
-  assert.equal((article.match(/<dt>/g) ?? []).length, 4);
-  assert.match(article, /<dt>ppm<\/dt>/);
-  assert.match(article, /<dt>Molární zlomek<\/dt>/);
-  assert.match(article, /<dt>Referenční plyn<\/dt>/);
-  assert.match(article, /<dt>XCO₂<\/dt>/);
+  assert.doesNotMatch(article, /Potřebné informace|article-glossary/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
   assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
   assert.match(article, /315,98 ± 0,12 ppm/);
@@ -542,14 +525,9 @@ test("publishes a sourced atmospheric humidity article instead of the generic pl
 
   assert.match(evidencePage, /AtmosphericHumidityArticle/);
   assert.match(evidencePage, /title="Vlhkost atmosféry"/);
-  assert.match(evidencePage, /Napsáno: 31\. července 2026/);
+  assert.match(evidencePage, /meta="26\. října 2026"/);
   assert.match(article, /Vlhkost atmosféry popisuje množství vodní páry ve vzduchu/);
-  assert.match(article, /Potřebné informace/);
-  assert.equal((article.match(/<dt>/g) ?? []).length, 4);
-  assert.match(article, /<dt>Měrná vlhkost<\/dt>/);
-  assert.match(article, /<dt>Relativní vlhkost<\/dt>/);
-  assert.match(article, /<dt>Rosný bod<\/dt>/);
-  assert.match(article, /<dt>Vodní pára ve sloupci<\/dt>/);
+  assert.doesNotMatch(article, /Potřebné informace|article-glossary/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
   assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
   assert.match(article, /\+0,10 g\/kg za desetiletí/);
@@ -602,13 +580,8 @@ test("publishes a sourced precipitation article with separate daily and sub-dail
 
   assert.match(evidencePage, /PrecipitationArticle/);
   assert.match(evidencePage, /title="Srážky a přívalové srážky"/);
-  assert.match(evidencePage, /Napsáno: 31\. července 2026/);
+  assert.match(evidencePage, /meta="26\. října 2026"/);
   assert.match(article, /Srážkový úhrn udává, jak vysoká vrstva vody dopadla/);
-  assert.equal((article.match(/<dt>/g) ?? []).length, 4);
-  assert.match(article, /<dt>Úhrn srážek<\/dt>/);
-  assert.match(article, /<dt>Intenzita<\/dt>/);
-  assert.match(article, /<dt>Rx1day<\/dt>/);
-  assert.match(article, /<dt>Přívalová srážka<\/dt>/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
   assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
   assert.match(article, /Celkové úhrny/);
@@ -665,13 +638,8 @@ test("publishes a sourced global mean sea-level article with tide-gauge and sate
 
   assert.match(evidencePage, /GlobalMeanSeaLevelArticle/);
   assert.match(evidencePage, /title="Globální střední hladina moře"/);
-  assert.match(evidencePage, /Napsáno: 31\. července 2026/);
+  assert.match(evidencePage, /meta="26\. října 2026"/);
   assert.match(article, /Globální střední hladina moře vyjadřuje průměrnou změnu výšky světového oceánu/);
-  assert.equal((article.match(/<dt>/g) ?? []).length, 4);
-  assert.match(article, /<dt>Střední hladina<\/dt>/);
-  assert.match(article, /<dt>Relativní hladina<\/dt>/);
-  assert.match(article, /<dt>Výškový bod<\/dt>/);
-  assert.match(article, /<dt>Družicová altimetrie<\/dt>/);
   assert.match(article, /Jak vzniká globální výsledek/);
   assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
   assert.match(article, /nasa-global-mean-sea-level-1993-2025\.png/);
@@ -721,13 +689,8 @@ test("publishes a sourced ocean acidification article with measured and reconstr
 
   assert.match(evidencePage, /OceanAcidificationArticle/);
   assert.match(evidencePage, /title="Acidifikace oceánu"/);
-  assert.match(evidencePage, /Napsáno: 31\. července 2026/);
+  assert.match(evidencePage, /meta="26\. října 2026"/);
   assert.match(article, /Acidifikace oceánu je dlouhodobý posun chemického stavu mořské vody/);
-  assert.equal((article.match(/<dt>/g) ?? []).length, 4);
-  assert.match(article, /<dt>pH<\/dt>/);
-  assert.match(article, /<dt>DIC<\/dt>/);
-  assert.match(article, /<dt>Celková alkalinita<\/dt>/);
-  assert.match(article, /<dt>Stav nasycení Ω<\/dt>/);
   assert.match(article, /Jak se chemie oceánu měří/);
   assert.match(article, /Jak vzniká zveřejněný výsledek/);
   assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
@@ -781,13 +744,8 @@ test("publishes a sourced Arctic sea ice article with extent, age, and thickness
 
   assert.match(evidencePage, /ArcticSeaIceArticle/);
   assert.match(evidencePage, /title="Arktický mořský led"/);
-  assert.match(evidencePage, /Napsáno: 31\. července 2026/);
+  assert.match(evidencePage, /meta="26\. října 2026"/);
   assert.match(article, /Arktický mořský led je zmrzlá mořská voda/);
-  assert.equal((article.match(/<dt>/g) ?? []).length, 4);
-  assert.match(article, /<dt>Koncentrace ledu<\/dt>/);
-  assert.match(article, /<dt>Rozsah ledu<\/dt>/);
-  assert.match(article, /<dt>Plocha ledu<\/dt>/);
-  assert.match(article, /<dt>Víceletý led<\/dt>/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
   assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
   assert.match(article, /nasa-minimum-2025\.jpg/);
@@ -843,13 +801,8 @@ test("publishes a sourced mountain glaciers article with field and satellite evi
 
   assert.match(evidencePage, /MountainGlaciersArticle/);
   assert.match(evidencePage, /title="Horské ledovce"/);
-  assert.match(evidencePage, /Napsáno: 31\. července 2026/);
+  assert.match(evidencePage, /meta="26\. října 2026"/);
   assert.match(article, /Horský ledovec je dlouhodobě přetrvávající masa ledu/);
-  assert.equal((article.match(/<dt>/g) ?? []).length, 4);
-  assert.match(article, /<dt>Hmotnostní bilance<\/dt>/);
-  assert.match(article, /<dt>Vodní ekvivalent<\/dt>/);
-  assert.match(article, /<dt>Výškový model<\/dt>/);
-  assert.match(article, /<dt>Gigatuna<\/dt>/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
   assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
   assert.match(article, /usgs-grinnell-1938-2019\.jpg/);
@@ -909,13 +862,8 @@ test("publishes a sourced ice-sheet mass article with three measurement methods"
 
   assert.match(evidencePage, /IceSheetsArticle/);
   assert.match(evidencePage, /title="Změna hmotnosti ledových příkrovů"/);
-  assert.match(evidencePage, /Napsáno: 1\. srpna 2026/);
+  assert.match(evidencePage, /meta="26\. října 2026"/);
   assert.match(article, /Změna hmotnosti ledového příkrovu vyjadřuje, o kolik se mezi dvěma určenými okamžiky změnila/);
-  assert.equal((article.match(/<dt>/g) ?? []).length, 4);
-  assert.match(article, /<dt>Ledový příkrov<\/dt>/);
-  assert.match(article, /<dt>Gigatuna<\/dt>/);
-  assert.match(article, /<dt>Firn<\/dt>/);
-  assert.match(article, /<dt>Linie ukotvení<\/dt>/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
   assert.match(article, /Výška povrchu/);
   assert.match(article, /Změna gravitačního pole/);
@@ -967,7 +915,7 @@ test("renders open ice-sheet papers and distinguishes revised estimates and data
   assert.match(articleHtml, /23 ± 5 Gt za rok/);
   assert.match(articleHtml, /dočasnou nedostupnost/);
   assert.match(articleHtml, /1,85 GB/);
-  assert.match(articleHtml, /Odborná revize: 3\. října 2026/);
+  assert.match(articleHtml, /<p class="page-lead__meta">26\. října 2026<\/p>/);
   assert.doesNotMatch(articleHtml, /5 120 ± 544|intervaly zasahují na obě strany nuly/);
 });
 
@@ -980,13 +928,8 @@ test("publishes a sourced snow-cover and permafrost article with distinct observ
 
   assert.match(evidencePage, /SnowPermafrostArticle/);
   assert.match(evidencePage, /title="Sněhová pokrývka a permafrost"/);
-  assert.match(evidencePage, /Napsáno: 1\. srpna 2026/);
+  assert.match(evidencePage, /meta="26\. října 2026"/);
   assert.match(article, /Sníh na souši pozorujeme jako plochu, dobu trvání, výšku a množství vody/);
-  assert.equal((article.match(/<dt>/g) ?? []).length, 4);
-  assert.match(article, /<dt>Rozsah sněhu<\/dt>/);
-  assert.match(article, /<dt>Vodní hodnota sněhu<\/dt>/);
-  assert.match(article, /<dt>Permafrost<\/dt>/);
-  assert.match(article, /<dt>Aktivní vrstva<\/dt>/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
   assert.match(article, /Mapa rozsahu sněhu/);
   assert.match(article, /Teplota ve vrtu/);
@@ -1058,14 +1001,9 @@ test("publishes a sourced phenology article with organism, camera, and satellite
 
   assert.match(evidencePage, /PhenologyArticle/);
   assert.match(evidencePage, /title="Sezónní jevy v živé přírodě"/);
-  assert.match(evidencePage, /Napsáno: 1\. srpna 2026/);
+  assert.match(evidencePage, /meta="26\. října 2026"/);
   assert.match(article, /Fenologické pozorování/);
   assert.match(article, /je datum nebo sled opakovaných záznamů/);
-  assert.equal((article.match(/<dt>/g) ?? []).length, 4);
-  assert.match(article, /<dt>Fenologie<\/dt>/);
-  assert.match(article, /<dt>Fenofáze<\/dt>/);
-  assert.match(article, /<dt>Den roku<\/dt>/);
-  assert.match(article, /<dt>Vegetační sezóna<\/dt>/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
   assert.match(article, /Jednotlivá rostlina/);
   assert.match(article, /Populace a pohybliví živočichové/);
@@ -1138,13 +1076,8 @@ test("publishes a sourced heat-wave article that keeps definitions and observati
 
   assert.match(evidencePage, /HeatWavesArticle/);
   assert.match(evidencePage, /title="Vlny veder"/);
-  assert.match(evidencePage, /Napsáno: 1\. srpna 2026/);
+  assert.match(evidencePage, /meta="26\. října 2026"/);
   assert.match(article, /Vlna veder je souvislé období několika dnů/);
-  assert.equal((article.match(/<dt>/g) ?? []).length, 4);
-  assert.match(article, /<dt>Denní maximum<\/dt>/);
-  assert.match(article, /<dt>Denní minimum<\/dt>/);
-  assert.match(article, /<dt>Percentil<\/dt>/);
-  assert.match(article, /<dt>Referenční období<\/dt>/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
   assert.match(article, /Standardní ukazatel WSDI/);
   assert.match(article, /Jaké výsledky lze srovnávat/);
@@ -1194,7 +1127,7 @@ test("gives every heat-wave source public access and preserves corrected measure
   assert.match(articleHtml, /WSDI tedy neudává počet událostí/);
   assert.match(articleHtml, /nemusely připadat na stejné datum/);
   assert.match(articleHtml, /neuvádí úplný seznam použitých stanic/);
-  assert.match(articleHtml, /Odborná revize: 3\. října 2026/);
+  assert.match(articleHtml, /<p class="page-lead__meta">26\. října 2026<\/p>/);
   assert.doesNotMatch(articleHtml, /Sadegh et al\., 2018|133 homogenizovaných českých stanic|souvislá zasažená plocha/);
   assert.equal((articleHtml.match(/class="article-figure__scroll"/g) ?? []).length, 2);
 });
@@ -1298,7 +1231,7 @@ test("publishes reproducible thermometry examples with open sources and working 
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
   const displayedDate = html.match(/<p class="page-lead__meta">([^<]*)<\/p>/)?.[1];
-  assert.equal(displayedDate, "19. října 2026", "Show only the last edit date, without a label");
+  assert.equal(displayedDate, "26. října 2026", "Show only the last edit date, without a label");
   assert.doesNotMatch(article, /<Citation\b/);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
   assert.match(body, /29,8627 °C/);
@@ -1931,7 +1864,7 @@ test("publishes the full phenology method with traceable observations and bounde
   assert.ok(body, "The complete method must replace the catalogue placeholder");
   assert.equal((body.match(/<h2>/g) ?? []).length, 4);
   assert.equal((body.match(/<details\b/g) ?? []).length, 2);
-  assert.match(html, /<p class="page-lead__meta">19\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">26\. října 2026<\/p>/);
   assert.match(body, /class="method-flow"/);
   assert.match(body, /nps-field-observations\.jpg/);
   assert.match(body, /leaf-onset\.png/);
@@ -2000,7 +1933,7 @@ test("publishes the complete chromatography method with accessible sources and r
   assert.ok(body, "A full article must replace the catalogue placeholder");
   assert.equal((body.match(/<h2>/g) ?? []).length, 4);
   assert.equal((body.match(/<details\b/g) ?? []).length, 2);
-  assert.match(html, /<p class="page-lead__meta">19\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">26\. října 2026<\/p>/);
   assert.match(body, /noaa-analysis-system\.jpg/);
   assert.match(body, /class="method-flow__track"/);
   assert.match(body, /repeated-analyses\.png/);
@@ -2069,7 +2002,7 @@ test("publishes absorption spectroscopy with a boxed conclusion and complete sou
   assert.equal((body.match(/<details\b/g) ?? []).length, 2);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
   assert.match(body, /Příklad výpočtu z osmi měření/);
-  assert.match(html, /<p class="page-lead__meta">19\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">26\. října 2026<\/p>/);
   assert.match(body, /noaa-aircraft-crds\.jpg/);
   assert.match(body, /crds-principle\.svg/);
   assert.match(body, /repeat-measurements\.png/);
@@ -2169,9 +2102,9 @@ test("publishes isotope mass spectrometry with an honest example and open source
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.match(html, /<p class="page-lead__meta">19\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">26\. října 2026<\/p>/);
   const headings = [...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]);
-  assert.deepEqual(headings.slice(1), ["Jak změříme izotopové složení vody", "Nejistoty a ověření", "Příklad: stejná voda ve třech laboratořích", "Shrnutí"]);
+  assert.deepEqual(headings, ["Jak změříme izotopové složení vody", "Nejistoty a ověření", "Příklad: stejná voda ve třech laboratořích", "Shrnutí"]);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
   assert.match(body, /Začínáme zveřejněnými průměry δ¹⁸O po kalibraci/);
   assert.match(body, /97,531 % referenčního poměru/);
@@ -2233,8 +2166,8 @@ test("publishes solution spectrophotometry with the correct data level and conne
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.match(html, /<p class="page-lead__meta">19\. října 2026<\/p>/);
-  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]).slice(1), [
+  assert.match(html, /<p class="page-lead__meta">26\. října 2026<\/p>/);
+  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak změříme pH pomocí světla", "Nejistoty a ověření", "Příklad: výpočet ze skutečných absorbancí", "Shrnutí",
   ]);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
@@ -2308,8 +2241,8 @@ test("publishes potentiometry with connected sources and distinct actual and ill
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.match(html, /<p class="page-lead__meta">19\. října 2026<\/p>/);
-  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]).slice(1), [
+  assert.match(html, /<p class="page-lead__meta">26\. října 2026<\/p>/);
+  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak měříme pH pomocí elektrod", "Nejistoty a ověření", "Příklad kalibrace a kontroly výsledku", "Shrnutí",
   ]);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
@@ -2371,8 +2304,8 @@ test("publishes titration with open sources, full data and a clearly scoped calc
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.match(html, /<p class="page-lead__meta">19\. října 2026<\/p>/);
-  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]).slice(1), [
+  assert.match(html, /<p class="page-lead__meta">26\. října 2026<\/p>/);
+  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak ze spotřeby kyseliny zjistíme alkalinitu", "Nejistoty a ověření", "Příklad: přepočet zveřejněné titrace", "Shrnutí",
   ]);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
@@ -2440,8 +2373,8 @@ test("publishes coulometry with a complete charge-to-carbon explanation and open
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.match(html, /<p class="page-lead__meta">19\. října 2026<\/p>/);
-  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]).slice(1), [
+  assert.match(html, /<p class="page-lead__meta">26\. října 2026<\/p>/);
+  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak elektrický náboj určí množství uhlíku", "Nejistoty a ověření",
     "Příklad: dva rozbory z původního výpisu přístroje", "Shrnutí",
   ]);

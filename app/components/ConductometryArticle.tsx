@@ -12,18 +12,6 @@ const number = (value: number, digits = 4) => value.toLocaleString("cs-CZ", {
 export function ConductometryArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div><dt>Elektrická vodivost</dt><dd>Vlastnost látky určující, jak snadno v ní elektrické pole vyvolá proud. U vody závisí na rozpuštěných iontech, teplotě a tlaku.</dd></div>
-          <div><dt>Iont</dt><dd>Částice s elektrickým nábojem. Pohyb iontů přenáší elektrický proud v mořské vodě.</dd></div>
-          <div><dt>Praktická salinita</dt><dd>Číselný údaj o slanosti vody získaný porovnáním vodivostí podle stupnice PSS-78. Výpočet potřebuje také teplotu a tlak. Výsledek nemá jednotku.</dd></div>
-          <div><dt>CTD</dt><dd>Souprava pro měření vodivosti, teploty a tlaku vody. Anglická zkratka znamená Conductivity, Temperature, Depth. Hloubka se počítá z tlaku.</dd></div>
-        </dl>
-        <p className="article-glossary__note">Stejně slaná voda může mít při jiné teplotě výrazně jinou vodivost. Proto čidlo vodivosti pracuje společně s teploměrem a tlakoměrem.</p>
-      </aside>
-
       <div className="article-prose">
         <h2>Jak konduktometrie měří slanost vody</h2>
         <p className="article-prose__intro">

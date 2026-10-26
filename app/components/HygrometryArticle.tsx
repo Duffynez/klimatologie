@@ -9,17 +9,6 @@ const dataPath = "/data/methods/hygrometry";
 export function HygrometryArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div><dt>Relativní vlhkost</dt><dd>Poměr skutečného tlaku vodní páry k tlaku při nasycení za dané teploty. Vyjadřuje se v procentech a značí RH.</dd></div>
-          <div><dt>Rosný bod</dt><dd>Teplota, při které by při ochlazení vzduchu za stejného tlaku a obsahu vodní páry nastalo nasycení vůči kapalné vodě.</dd></div>
-          <div><dt>Elektrická kapacita</dt><dd>Veličina vyjadřující, kolik elektrického náboje se uloží při daném napětí. U vlhkoměru se mění podle vody přijaté citlivou vrstvou.</dd></div>
-          <div><dt>Procentní bod</dt><dd>Jednotka rozdílu dvou procentních údajů. Změna RH z 80 na 82 % je nárůst o dva procentní body.</dd></div>
-        </dl>
-      </aside>
-
       <div className="article-prose">
         <h2>Jak se měří vlhkost vzduchu</h2>
         <p className="article-prose__intro">

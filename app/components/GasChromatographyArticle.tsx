@@ -8,18 +8,6 @@ const dataPath = "/data/methods/gas-chromatography";
 export function GasChromatographyArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div><dt>Kolona</dt><dd>Trubice, ve které se složky vzorku oddělují díky rozdílnému zadržování na její náplni nebo v povlaku.</dd></div>
-          <div><dt>Chromatogram</dt><dd>Záznam odezvy detektoru v čase. Oddělené látky se v něm objevují jako samostatné vrcholy, zvané píky.</dd></div>
-          <div><dt>Referenční plyn</dt><dd>Směs s určeným složením, vůči které porovnáváme odezvu vzorku.</dd></div>
-          <div><dt>Molární zlomek</dt><dd>Podíl molekul sledovaného plynu mezi všemi molekulami směsi. Jednotka ppb znamená počet na miliardu.</dd></div>
-        </dl>
-        <p className="article-glossary__note">Oddělení plynů umožní změřit jejich odezvy zvlášť. Kalibrace propojí tyto odezvy se složením vzduchu.</p>
-      </aside>
-
       <div className="article-prose">
         <h2>Jak plynová chromatografie měří složení vzduchu</h2>
         <p className="article-prose__intro">

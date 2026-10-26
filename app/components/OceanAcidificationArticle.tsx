@@ -5,45 +5,6 @@ import { SourceLink } from "./SourceLink";
 export function OceanAcidificationArticle() {
   return (
     <article className="article-layout">
-      <aside className="article-glossary article-glossary--four" aria-label="Potřebné informace">
-        <p className="eyebrow">Potřebné informace</p>
-        <h2>Pojmy pro tento článek</h2>
-        <dl>
-          <div>
-            <dt>pH</dt>
-            <dd>
-              Číselné vyjádření kyselosti vody. Nižší pH znamená vyšší koncentraci vodíkových iontů, tedy nabitých
-              částic vodíku. Na stejné stupnici pH odpovídá rozdíl jedné jednotky desetinásobné koncentraci.
-            </dd>
-          </div>
-          <div>
-            <dt>DIC</dt>
-            <dd>
-              Rozpuštěný anorganický uhlík, z anglického dissolved inorganic carbon. Součet uhlíku v rozpuštěném
-              CO₂ včetně kyseliny uhličité, hydrogenuhličitanu a uhličitanu, vztažený na kilogram vody.
-            </dd>
-          </div>
-          <div>
-            <dt>Celková alkalinita</dt>
-            <dd>
-              Schopnost vzorku vázat přidané vodíkové ionty, určená laboratorní titrací. V datech se často označuje
-              zkratkou TA, z anglického total alkalinity.
-            </dd>
-          </div>
-          <div>
-            <dt>Stav nasycení Ω</dt>
-            <dd>
-              Poměr popisující nasycení vody minerálem uhličitanu vápenatého, například aragonitem. Hodnota 1
-              odpovídá rovnováze s minerálem, vyšší hodnota přesycení a nižší nenasycení.
-            </dd>
-          </div>
-        </dl>
-        <p className="article-glossary__note">
-          Z vhodné dvojice změřených veličin, například DIC a celkové alkalinity, lze dopočítat ostatní veličiny
-          uhličitanového systému. Výpočet potřebuje také teplotu, obsah solí, tlak a podle podmínek další údaje.
-        </p>
-      </aside>
-
       <div className="article-prose">
         <h2>Co pozorujeme</h2>
         <p className="article-prose__intro">
