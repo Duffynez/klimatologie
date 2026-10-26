@@ -378,13 +378,11 @@ export function PhotogrammetryArticle() {
           zde je zaokrouhlujeme.
         </p>
         <p>
-          Výsledek se vztahuje pouze k vyznačenému čtverci. Zahrnuje změny
-          způsobené táním, přísunem sněhu i prouděním ledu, které výškové
-          modely samy neoddělují. V ukázce jej nepřevádíme na hmotnost.
+          Výsledek se vztahuje k vyznačenému čtverci. Pro údaj o změně
+          objemu celého ledovce bychom museli zahrnout celou jeho plochu.
           Roky přebíráme z označení souborů, přesné dny snímkování tento
           výřez dat neuvádí, a proto z něj nepočítáme roční rychlost změny.{" "}
-          <SourceLink id="2026_xDEM_Longyearbyen_Frozen">(dokumentace vstupů)</SourceLink>{" "}
-          <SourceLink id="DOI_10_5194_tc_7_877_2013">(význam výškové změny: Huss 2013)</SourceLink>
+          <SourceLink id="2026_xDEM_Longyearbyen_Frozen">(dokumentace vstupů)</SourceLink>
         </p>
         <details className="method-details">
           <summary>Data, prostorové zarovnání a zopakování výpočtu</summary>
