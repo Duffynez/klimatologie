@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SourceLink } from "./SourceLink";
 
 export function ArcticSeaIceArticle() {
@@ -140,6 +141,13 @@ export function ArcticSeaIceArticle() {
           typické hodnoty pro otevřenou vodu, jednoletý led a víceletý led a z jejich poměrů vypočte koncentraci. Její
           vstupy, kontrolu a propojení přístrojů popisuje původní příručka tvůrců souboru.{" "}
           <SourceLink id="WEB_NASA_Cavalieri_1997_Sea_Ice_User_Guide">Cavalieri et al., 1997</SourceLink>
+        </p>
+
+        <p>
+          Jednotlivé kroky tohoto převodu, od přijímací antény přes kalibraci
+          a referenční povrchy až po výpočet koncentrace, vysvětluje článek o{" "}
+          <Link href="/metody/pasivni-mikrovlnna-radiometrie">pasivní mikrovlnné radiometrii</Link>.
+          Obsahuje také skutečné měření a stažitelný výpočet.
         </p>
 
         <p>

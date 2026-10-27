@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="650" viewBox="0 0 560 650" role="img" aria-labelledby="title desc">
+  <title id="title">Směšovací model NASA Team</title>
+  <desc id="desc">Z referencí vody, jednoletého a víceletého ledu počítáme modelovou směs. Hledáme podíly, při kterých její polarizační a frekvenční poměr odpovídají družicovému měření.</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#526d69"/></marker></defs>
+  <rect width="560" height="650" rx="12" fill="#f2f5f1"/>
+  <g font-family="Arial, sans-serif" text-anchor="middle" fill="#214744">
+    <text x="280" y="38" font-size="24" font-weight="bold">Tři povrchy ve společné stopě</text>
+    <text x="280" y="70" font-size="19">Reference pro každý ze tří kanálů</text>
+    <rect x="18" y="96" width="166" height="98" rx="8" fill="#b6d5e0"/>
+    <rect x="197" y="96" width="166" height="98" rx="8" fill="#fff" stroke="#b9ccc5"/>
+    <rect x="376" y="96" width="166" height="98" rx="8" fill="#ccdad2"/>
+    <g font-size="20"><text x="101" y="127">Otevřená voda</text><text x="280" y="127">Jednoletý led</text><text x="459" y="127">Víceletý led</text></g>
+    <g font-size="22"><text x="101" y="164">podíl 1 − f − m</text><text x="280" y="164">podíl f</text><text x="459" y="164">podíl m</text></g>
+    <g fill="none" stroke="#526d69" stroke-width="2.5" marker-end="url(#arrow)">
+      <path d="M101 194 V219 L245 253"/><path d="M280 194 V250"/><path d="M459 194 V219 L315 253"/>
+    </g>
+    <rect x="34" y="259" width="492" height="100" rx="8" fill="#e1e9e2" stroke="#9bb4a9"/>
+    <text x="280" y="289" font-size="21">Sečíst příspěvky podle podílů</text>
+    <text x="280" y="326" font-size="24" font-weight="bold">Modelové teploty: 19V, 19H, 37V</text>
+    <g fill="none" stroke="#526d69" stroke-width="2.5" marker-end="url(#arrow)"><path d="M150 359 V402"/><path d="M410 359 V402"/></g>
+    <rect x="34" y="410" width="232" height="93" rx="8" fill="#fff" stroke="#9bb4a9"/>
+    <rect x="294" y="410" width="232" height="93" rx="8" fill="#fff" stroke="#9bb4a9"/>
+    <g font-size="21"><text x="150" y="442">Porovnat polarizace</text><text x="410" y="442">Porovnat frekvence</text></g>
+    <g font-size="24" font-weight="bold"><text x="150" y="480">P: 19V a 19H</text><text x="410" y="480">G: 37V a 19V</text></g>
+    <g fill="none" stroke="#526d69" stroke-width="2.5" marker-end="url(#arrow)"><path d="M150 503 V522 L250 552"/><path d="M410 503 V522 L310 552"/></g>
+    <rect x="34" y="560" width="492" height="68" rx="8" fill="#214744"/>
+    <text x="280" y="587" font-size="21" fill="#fff">Najít f a m tak, aby oba poměry</text>
+    <text x="280" y="614" font-size="21" fill="#fff">souhlasily s družicovým měřením</text>
+  </g>
+</svg>

@@ -1,0 +1,74 @@
+{
+  "data_source": "https://doi.org/10.7289/V5SJ1HKZ",
+  "source_url": "https://noaa-cdr-microwave-imager-brit-temp-rss-pds.s3.amazonaws.com/data/1992/RSS_SSMI_FCDR_V07R00_F11_D19920301_S0056_E0249_R01322.nc",
+  "source_sha256": "859d1629607e5a650e9dde768d1e0ad330362e23fe42eab4877f99361d52997b",
+  "source_filename": "RSS_SSMI_FCDR_V07R00_F11_D19920301_S0056_E0249_R01322.nc",
+  "accessed": "2026-10-27",
+  "version": "RSS Version-7 SSM/I FCDR, V07R00",
+  "platform": "DMSP F11",
+  "instrument": "SSM/I",
+  "orbit": 1322,
+  "scan_index_zero_based": 797,
+  "footprint_index_zero_based": 44,
+  "scan_start_UTC": "1992-03-01T01:47:20.297200+00:00",
+  "selection": "One ocean footprint north of Alaska with all fourteen scan quality flags zero, no land in the file footprint mask, positive three-channel brightness temperatures, and both retrieved ice fractions within [0,1]. A single winter case, not a regional statistic.",
+  "tie_points_source": "NASA TM-104647 (1997), printed page 14, Table 3, DMSP SSMI F11 ARCTIC. Values already include the listed tuning adjustments.",
+  "tie_points_order": [
+    "open_water",
+    "first_year",
+    "multiyear"
+  ],
+  "channel_order": [
+    "19V",
+    "19H",
+    "37V"
+  ],
+  "tie_points_K": [
+    [
+      185.1,
+      113.6,
+      204.8
+    ],
+    [
+      251.4,
+      235.3,
+      242.0
+    ],
+    [
+      222.5,
+      198.3,
+      185.1
+    ]
+  ],
+  "method": "Solve NASA Team polarization/gradient-ratio mixing equations using fixed published F11 tie points. Reapplication to RSS V7 reprocessed swath temperatures, not reproduction of an official NSIDC concentration map. No daily gridding, coastal correction, inter-sensor retuning, or gap filling. The historical 37V/19V GR>0.05 weather screen is evaluated and not triggered. G22 is supplied for inspection but not used as an additional filter.",
+  "results": {
+    "P": 0.0425274004498972,
+    "G": -0.03853981710545541,
+    "G22": -0.007573599211964221,
+    "f": 0.6616473905797101,
+    "m": 0.32103249747463025,
+    "total_fraction": 0.9826798880543404,
+    "matrix_K": [
+      [
+        -63.39515128458066,
+        -52.49259559493245
+      ],
+      [
+        -25.11112892958539,
+        -56.41784523723348
+      ]
+    ],
+    "rhs_K": [
+      -58.79706548561569,
+      -34.72667468941708
+    ]
+  },
+  "files": {
+    "sample.csv": "Exact decoded float32 values copied as Python float decimal strings. Geolocation decoded with documented scale 0.01.",
+    "reproduce.py": "Python standard library reconstruction of ratios and linear system.",
+    "extract.py": "Original orbit download, hash check and extraction using h5py."
+  },
+  "sha256": {
+    "sample.csv": "8dda0cad3f7f34ea28f740916548a3f97d75d13b28b6b020cd720d923a340634"
+  }
+}

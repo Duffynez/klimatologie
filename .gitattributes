@@ -19,3 +19,4 @@ public/data/methods/radiative-fluxes/*.dat binary
 public/data/methods/radiative-fluxes/source-README.txt binary
 public/data/methods/radiative-fluxes/*.csv text eol=lf
 public/data/methods/infrared-radiometry/*.csv text eol=lf
+public/data/methods/microwave-radiometry/*.csv text eol=lf

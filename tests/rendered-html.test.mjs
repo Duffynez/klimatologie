@@ -5,6 +5,71 @@ import test from "node:test";
 
 const root = new URL("../", import.meta.url);
 
+test("publishes microwave radiometry with the full signal-to-ice explanation and reciprocal observation link", async () => {
+  const slug = "pasivni-mikrovlnna-radiometrie";
+  const [html, source, catalogue, observation] = await Promise.all([
+    readFile(new URL(`dist/client/metody/${slug}/index.html`, root), "utf8"),
+    readFile(new URL("app/components/MicrowaveRadiometryArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/ubytek-arktickeho-ledu/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
+    "Jak mikrovlny rozliší led a vodu", "Nejistoty a ověření", "Příklad: zimní měření severně od Aljašky", "Shrnutí",
+  ]);
+  assert.match(html, /<p class="page-lead__meta">27\. října 2026<\/p>/);
+  assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
+  assert.match(body, /matematické jádro metody, nikoli oficiální/);
+  assert.doesNotMatch(body, /_vinext\/image|katex-error|Potřebné informace/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  assert.match(body, /href="\/pozorovani\/ubytek-arktickeho-ledu"/);
+  assert.ok(observation.includes(`href="/metody/${slug}"`));
+  const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
+  assert.ok(ids.length >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
+    assert.ok(card, "Missing microwave source " + id);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const m of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const file = /\.[a-z0-9]+$/i.test(m[1]) ? m[1] : m[1].replace(/\/$/, "") + "/index.html";
+    await readFile(new URL("dist/client" + file, root));
+  }
+});
+
+test("independently recovers microwave ice fractions with a three-channel scaled mixture", async () => {
+  const base = new URL("public/data/methods/microwave-radiometry/", root);
+  const meta = JSON.parse(await readFile(new URL("example.json", base), "utf8"));
+  const lines = (await readFile(new URL("sample.csv", base), "utf8")).trim().split(/\r?\n/).map(r => r.split(","));
+  const row = Object.fromEntries(lines[0].map((key, i) => [key, Number(lines[1][i])]));
+  assert.deepEqual([row.scan, row.footprint, row.latitude_deg, row.longitude_deg], [797, 44, 76.92, -157.84]);
+  for (let i = 1; i <= 14; i++) assert.equal(row[`quality_${i}`], 0);
+  assert.equal(row.land_percentage_raw, 0);
+  assert.deepEqual(meta.tie_points_K, [[185.1, 113.6, 204.8], [251.4, 235.3, 242], [222.5, 198.3, 185.1]]);
+  const [water, first, old] = meta.tie_points_K;
+  const observed = [row.TB_19V_K, row.TB_19H_K, row.TB_37V_K];
+  // Solve M_j = scale * observed_j directly, rather than using the two ratio equations.
+  const matrix = observed.map((v, j) => [first[j] - water[j], old[j] - water[j], -v]);
+  const rhs = water.map(v => -v);
+  const det = a => a[0][0] * (a[1][1] * a[2][2] - a[1][2] * a[2][1])
+    - a[0][1] * (a[1][0] * a[2][2] - a[1][2] * a[2][0])
+    + a[0][2] * (a[1][0] * a[2][1] - a[1][1] * a[2][0]);
+  const solution = [0, 1, 2].map(k => det(matrix.map((r, i) => r.map((v, j) => j === k ? rhs[i] : v))) / det(matrix));
+  assert.ok(Math.abs(solution[0] - meta.results.f) < 1e-12);
+  assert.ok(Math.abs(solution[1] - meta.results.m) < 1e-12);
+  assert.equal(((solution[0] + solution[1]) * 100).toFixed(2), "98.27");
+  for (const [name, expected] of Object.entries(meta.sha256)) {
+    const bytes = await readFile(new URL(name, base));
+    assert.equal(createHash("sha256").update(bytes).digest("hex"), expected);
+    assert.deepEqual(await readFile(new URL("dist/client/data/methods/microwave-radiometry/" + name, root)), bytes);
+  }
+});
+
 test("publishes thermal infrared radiometry with its source trail and temperature observation link", async () => {
   const slug = "pasivni-infracervena-radiometrie";
   const [html, source, catalogue, observation] = await Promise.all([

@@ -1,3 +1,4 @@
+import { MicrowaveRadiometryArticle } from "../../components/MicrowaveRadiometryArticle";
 import { InfraredRadiometryArticle } from "../../components/InfraredRadiometryArticle";
 import { RadiativeFluxArticle } from "../../components/RadiativeFluxArticle";
 import { PhotogrammetryArticle } from "../../components/PhotogrammetryArticle";
@@ -88,6 +89,18 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "pasivni-mikrovlnna-radiometrie") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Pasivní mikrovlnná radiometrie" meta="27. října 2026">
+          <p>Jak družice zachytí přirozené mikrovlnné záření a jak z několika měřených kanálů vypočítáme podíl mořské hladiny pokrytý ledem.</p>
+        </PageLead>
+        <MicrowaveRadiometryArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "pasivni-infracervena-radiometrie") {
