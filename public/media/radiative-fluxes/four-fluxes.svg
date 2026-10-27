@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="460" viewBox="0 0 560 460" role="img" aria-labelledby="title desc">
+  <title id="title">Čtyři složky radiační bilance</title>
+  <desc id="desc">Sluneční a tepelné záření měříme směrem dolů a vzhůru. Příchozí toky přičítáme, odchozí odečítáme.</desc>
+  <defs>
+    <marker id="orange" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto"><path d="M0 0L6 3L0 6Z" fill="#b66017"/></marker>
+    <marker id="blue" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto"><path d="M0 0L6 3L0 6Z" fill="#267a9d"/></marker>
+  </defs>
+  <rect width="560" height="460" rx="12" fill="#f4f7f5"/>
+  <g font-family="Arial, sans-serif" text-anchor="middle" fill="#233e38">
+    <text x="280" y="40" font-size="25" font-weight="bold">Záření nad povrchem</text>
+    <text x="145" y="90" font-size="22" fill="#a45110">Sluneční</text>
+    <text x="415" y="90" font-size="22" fill="#226c8b">Tepelné</text>
+    <path d="M100 130V310" stroke="#b66017" stroke-width="7" marker-end="url(#orange)"/>
+    <path d="M195 310V130" stroke="#b66017" stroke-width="7" marker-end="url(#orange)"/>
+    <path d="M365 130V310" stroke="#267a9d" stroke-width="7" marker-end="url(#blue)"/>
+    <path d="M460 310V130" stroke="#267a9d" stroke-width="7" marker-end="url(#blue)"/>
+    <text x="66" y="225" font-size="22">S↓</text>
+    <text x="231" y="225" font-size="22">S↑</text>
+    <text x="328" y="225" font-size="22">L↓</text>
+    <text x="499" y="225" font-size="22">L↑</text>
+    <rect x="30" y="350" width="500" height="50" rx="4" fill="#d7e3d8"/>
+    <text x="280" y="383" font-size="23">Zemský povrch</text>
+    <text x="280" y="434" font-size="21">Bilance = příjem dolů − výdej vzhůru</text>
+  </g>
+</svg>

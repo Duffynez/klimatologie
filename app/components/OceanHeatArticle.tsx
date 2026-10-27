@@ -321,6 +321,18 @@ export function OceanHeatArticle() {
           <SourceLink id="DOI_10_1007_s00376_026_5876_0">Pan et al., 2026</SourceLink>
         </p>
 
+        <p>
+          S ukládáním tepla v oceánu souvisí také radiační bilance celé Země,
+          tedy rozdíl mezi přijatou sluneční energií a zářením odcházejícím
+          do vesmíru. Jak vzniká její družicový záznam a jakou úlohu v něm
+          mají oceánská měření, vysvětluje článek o{' '}
+          <Link href="/metody/mereni-radiacnich-toku">měření radiačních toků</Link>.
+          U produktu CERES EBAF slouží odhad ukládání tepla k nastavení
+          dlouhodobého průměru bilance, takže tento průměr není nezávislou
+          kontrolou oceánských dat.{" "}
+          <SourceLink id="DOI_10_1175_JCLI_D_17_0208_1">(Loeb a kol. 2018)</SourceLink>
+        </p>
+
         <h2 id="pozorovani">Pozorování</h2>
         <p className="article-prose__intro">
           Globální výpočty z teplotních profilů ukazují dlouhodobý přírůstek obsahu tepla v horních 2 000

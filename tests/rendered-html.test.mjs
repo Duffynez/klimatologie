@@ -5,6 +5,78 @@ import test from "node:test";
 
 const root = new URL("../", import.meta.url);
 
+test("publishes radiative fluxes with a complete example and reciprocal ocean connection", async () => {
+  const slug = "mereni-radiacnich-toku";
+  const [html, source, catalogue, ocean] = await Promise.all([
+    readFile(new URL(`dist/client/metody/${slug}/index.html`, root), "utf8"),
+    readFile(new URL("app/components/RadiativeFluxArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/tepelny-obsah-oceanu/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
+    "Jak měříme přenos energie zářením", "Nejistoty a ověření",
+    "Příklad: jedna hodina na stanici Table Mountain", "Shrnutí",
+  ]);
+  assert.match(html, /<p class="page-lead__meta">27\. října 2026<\/p>/);
+  assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
+  assert.doesNotMatch(body, /_vinext\/image|katex-error|Potřebné informace|RTV/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  assert.match(body, /href="\/pozorovani\/tepelny-obsah-oceanu"/);
+  assert.ok(ocean.includes(`href="/metody/${slug}"`));
+  const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
+  assert.ok(ids.length >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
+    assert.ok(card, "Missing source " + id);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const m of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const file = /\.[a-z0-9]+$/i.test(m[1]) ? m[1] : m[1].replace(/\/$/, "") + "/index.html";
+    await readFile(new URL("dist/client" + file, root));
+  }
+});
+
+test("recomputes SURFRAD radiation from quality checked end-of-minute records", async () => {
+  const base = new URL("public/data/methods/radiative-fluxes/", root);
+  const metadata = JSON.parse(await readFile(new URL("example.json", base), "utf8"));
+  const raw = await readFile(new URL("tbl23172.dat", base), "utf8");
+  const all = raw.trim().split(/\r?\n/).slice(2).map(line => line.trim().split(/\s+/).map(Number));
+  assert.equal(all.length, 1440);
+  const rows = all.filter(r => r[4] * 60 + r[5] > 1080 && r[4] * 60 + r[5] <= 1140);
+  assert.deepEqual(rows.map(r => r[4] * 60 + r[5]), Array.from({length: 60}, (_, i) => 1081 + i));
+  let sum = 0, directPyranometerSum = 0;
+  for (const r of rows) {
+    assert.equal(r.length, 48);
+    assert.deepEqual(r.slice(0, 4), [2023, 172, 6, 21]);
+    for (const i of [10, 12, 14, 16, 22]) {
+      assert.equal(r[i + 1], 0, "Only measurements that passed NOAA QC");
+      assert.ok(r[i] >= 0);
+    }
+    assert.ok(r[7] >= 0 && r[7] < 90);
+    const net = r[12] * Math.cos(r[7] * Math.PI / 180) + r[14] - r[10] + r[16] - r[22];
+    assert.ok(Math.abs(net - r[36]) < 0.16, "Compare against NOAA's independently supplied net column");
+    sum += net;
+    directPyranometerSum += r[8] - r[10] + r[16] - r[22];
+  }
+  assert.ok(Math.abs(sum / 60 - 658.0361937036682) < 1e-8);
+  assert.ok(Math.abs(sum * 60 / 1e6 - metadata.results.net_energy_MJ_m2) < 1e-10);
+  assert.ok(Math.abs(directPyranometerSum - sum) / 60 > 10, "The example must use NOAA's preferred component sum");
+  const csv = (await readFile(new URL("hour.csv", base), "utf8")).trim().split(/\r?\n/);
+  assert.equal(csv.length, 61);
+  assert.match(csv[1], /^2023-06-21T18:01:00Z,/);
+  assert.match(csv.at(-1), /^2023-06-21T19:00:00Z,/);
+  for (const [name, expected] of Object.entries(metadata.sha256)) {
+    const bytes = await readFile(new URL(name, base));
+    assert.equal(createHash("sha256").update(bytes).digest("hex"), expected);
+    assert.deepEqual(await readFile(new URL("dist/client/data/methods/radiative-fluxes/" + name, root)), bytes);
+  }
+});
+
 test("publishes photogrammetry with its actual example, accessible sources and a glacier backlink", async () => {
   const path = "fotogrammetrie-a-porovnavani-vyskovych-modelu";
   const [html, source, catalogue, observation] = await Promise.all([
@@ -525,7 +597,7 @@ test("publishes a sourced ocean heat content article instead of the generic plac
   const oceanHeatSourceIds = [
     ...article.matchAll(/<SourceLink id="([^"]+)"/g),
   ].map((match) => match[1]);
-  assert.equal(new Set(oceanHeatSourceIds).size, 28);
+  assert.equal(new Set(oceanHeatSourceIds).size, 29);
   for (const id of new Set(oceanHeatSourceIds)) {
     const catalogueOccurrences = sourceCatalogueText.split(id).length - 1;
     assert.ok(catalogueOccurrences >= 2, `${id} must exist and be marked as open access`);

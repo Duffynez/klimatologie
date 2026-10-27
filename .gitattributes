@@ -14,3 +14,7 @@ public/data/methods/tide-gauges/datums.json binary
 public/data/methods/photogrammetry/source-README.md binary
 public/data/methods/photogrammetry/*.csv text eol=lf
 public/data/methods/photogrammetry/*.geojson text eol=lf
+
+public/data/methods/radiative-fluxes/*.dat binary
+public/data/methods/radiative-fluxes/source-README.txt binary
+public/data/methods/radiative-fluxes/*.csv text eol=lf

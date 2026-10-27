@@ -1,3 +1,4 @@
+import { RadiativeFluxArticle } from "../../components/RadiativeFluxArticle";
 import { PhotogrammetryArticle } from "../../components/PhotogrammetryArticle";
 import { OpticalImagingArticle } from "../../components/OpticalImagingArticle";
 import { CoulometryArticle } from "../../components/CoulometryArticle";
@@ -86,6 +87,18 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "mereni-radiacnich-toku") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Měření radiačních toků" meta="27. října 2026">
+          <p>Jak přístroje měří sluneční a tepelné záření a jak ze čtyř měřených složek zjistíme, kolik energie povrch zářením získává.</p>
+        </PageLead>
+        <RadiativeFluxArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "fotogrammetrie-a-porovnavani-vyskovych-modelu") {

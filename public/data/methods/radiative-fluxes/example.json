@@ -1,0 +1,28 @@
+{
+  "station": "Table Mountain, Colorado, NOAA SURFRAD",
+  "file_version": 1,
+  "accessed": "2026-10-27",
+  "source_url": "https://gml.noaa.gov/aftp/data/radiation/surfrad/Boulder_CO/2023/tbl23172.dat",
+  "documentation_url": "https://gml.noaa.gov/aftp/data/radiation/surfrad/Boulder_CO/README_SURFRAD.txt",
+  "license": "CC0 1.0, NOAA GML",
+  "period_start_utc": "2023-06-21T18:00:00Z",
+  "period_end_utc": "2023-06-21T19:00:00Z",
+  "timestamps": "End of each one-minute mean. Select 18:01 through 19:00 inclusive. Zenith angle is at midpoint of each minute.",
+  "processing": "Already calibrated one-minute fluxes. SW down = direct_normal * cos(zenith) + diffuse, evaluated for each minute. Net = SW down - SW up + LW down - LW up. All five input flux quality flags must be zero, all 60 minutes present. No gap filling or replacement of negative readings.",
+  "sha256": {
+    "tbl23172.dat": "b85ce2336079c56fb899462eb68d5e0400acc543a95d281d06cc1a09645bfa67",
+    "source-README.txt": "ed3e5c16f169a9def997877e6037735977f2761c9c3c39d493c8f3127e82f3a6"
+  },
+  "results": {
+    "count": 60,
+    "means": {
+      "sw_down_W_m2": 935.5611937036682,
+      "sw_up_W_m2": 151.54833333333332,
+      "lw_down_W_m2": 364.69166666666666,
+      "lw_up_W_m2": 490.6683333333333,
+      "net_W_m2": 658.0361937036682
+    },
+    "net_energy_MJ_m2": 2.3689302973332054,
+    "max_difference_from_noaa_net_W_m2": 0.15357269689388886
+  }
+}
