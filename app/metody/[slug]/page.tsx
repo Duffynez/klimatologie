@@ -1,4 +1,5 @@
 import { RadarArticle } from "../../components/RadarArticle";
+import { LidarArticle } from "../../components/LidarArticle";
 import { MicrowaveRadiometryArticle } from "../../components/MicrowaveRadiometryArticle";
 import { InfraredRadiometryArticle } from "../../components/InfraredRadiometryArticle";
 import { RadiativeFluxArticle } from "../../components/RadiativeFluxArticle";
@@ -90,6 +91,18 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "lidar-a-laserove-mereni-vzdalenosti") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Lidarové měření atmosféry a vegetace" meta="27. října 2026">
+          <p>Jak návrat laserového světla odhaluje vrstvy oblaků a aerosolu i výšku porostu a jak se z jednoho skutečného pulzu GEDI vypočítá výškový ukazatel.</p>
+        </PageLead>
+        <LidarArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "aktivni-radarove-mereni") {

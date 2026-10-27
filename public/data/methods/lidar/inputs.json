@@ -1,0 +1,26 @@
+{
+  "shot_number": "19640521100108408",
+  "beam": "BEAM0101",
+  "version": "001",
+  "date": "2019-04-18",
+  "subset_indices_zero_based": [
+    38,
+    38
+  ],
+  "latitude_deg": -13.734262118336755,
+  "longitude_deg": -44.124580832073285,
+  "sample_count": 878,
+  "rx_sample_start_index_one_based": 30121,
+  "elevation_bin0_m": 840.0280378228053,
+  "elevation_lastbin_m": 708.6271757492796,
+  "noise_mean_corrected_counts": 204.1875,
+  "ground_bin": 384.75,
+  "rh98_bin": 312.0,
+  "rh100_bin": 299.25,
+  "selected_algorithm": 1,
+  "quality_flag": 1,
+  "degrade_flag": 0,
+  "product_ground_elevation_m": 782.3809814453125,
+  "product_rh98_m": 10.899999618530273,
+  "product_rh100_m": 12.8100004196167
+}

@@ -5,6 +5,69 @@ import test from "node:test";
 
 const root = new URL("../", import.meta.url);
 
+test("publishes lidar with accessible sources, local illustrations and a reciprocal humidity link", async () => {
+  const slug = "lidar-a-laserove-mereni-vzdalenosti";
+  const [html, source, catalogue, observation] = await Promise.all([
+    readFile(new URL(`dist/client/metody/${slug}/index.html`, root), "utf8"),
+    readFile(new URL("app/components/LidarArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/narust-vlhkosti/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
+    "Jak lidar rozpoznává vrstvy atmosféry a porostu", "Nejistoty a ověření", "Příklad: výška porostu z jednoho pulzu GEDI", "Shrnutí",
+  ]);
+  assert.match(html, /<p class="page-lead__meta">27\. října 2026<\/p>/);
+  assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
+  assert.match(body, /10,90 metru/);
+  assert.match(body, /historické produkty V001/);
+  assert.doesNotMatch(body, /_vinext\/image|katex-error|Potřebné informace/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  assert.match(body, /href="\/pozorovani\/narust-vlhkosti"/);
+  assert.ok(observation.includes(`href="/metody/${slug}"`));
+  const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
+  assert.ok(ids.length >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
+    assert.ok(card, "Missing lidar source " + id);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const m of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const file = /\.[a-z0-9]+$/i.test(m[1]) ? m[1] : m[1].replace(/\/$/, "") + "/index.html";
+    await readFile(new URL("dist/client" + file, root));
+  }
+});
+
+test("GEDI example preserves shot identity and agrees with the published independent RH field", async () => {
+  const base = new URL("public/data/methods/lidar/", root);
+  const inputs = JSON.parse(await readFile(new URL("inputs.json", base), "utf8"));
+  const result = JSON.parse(await readFile(new URL("result.json", base), "utf8"));
+  const meta = JSON.parse(await readFile(new URL("provenance.json", base), "utf8"));
+  const rows = (await readFile(new URL("waveform.csv", base), "utf8")).trim().split(/\r?\n/).slice(1);
+  assert.equal(inputs.shot_number, "19640521100108408");
+  assert.equal(typeof inputs.shot_number, "string", "The shot exceeds safe JavaScript integer precision");
+  assert.equal(inputs.version, "001");
+  assert.equal(inputs.beam, "BEAM0101");
+  assert.equal(rows.length, 878);
+  rows.forEach((row, i) => assert.equal(Number(row.split(",")[0]), i));
+  // Test against a separately stored NASA L2A result, including the reference ground.
+  assert.ok(Math.abs(result.rh98_m - inputs.product_rh98_m) < 0.005);
+  assert.ok(Math.abs(result.rh100_m - inputs.product_rh100_m) < 0.005);
+  assert.ok(Math.abs(inputs.elevation_bin0_m - inputs.ground_bin * result.vertical_step_m - inputs.product_ground_elevation_m) < 0.001);
+  assert.equal(result.rh98_m.toFixed(2), "10.90");
+  assert.equal(result.rh100_m.toFixed(2), "12.81");
+  for (const [name, expected] of Object.entries(meta.sha256)) {
+    const bytes = await readFile(new URL(name, base));
+    assert.equal(createHash("sha256").update(bytes).digest("hex"), expected);
+    assert.deepEqual(await readFile(new URL("dist/client/data/methods/lidar/" + name, root)), bytes);
+  }
+});
+
 test("publishes radar with a complete explanation, real echo and reciprocal precipitation link", async () => {
   const slug = "aktivni-radarove-mereni";
   const [html, source, catalogue, observation] = await Promise.all([
@@ -864,7 +927,7 @@ test("publishes a sourced atmospheric humidity article instead of the generic pl
 
   assert.match(evidencePage, /AtmosphericHumidityArticle/);
   assert.match(evidencePage, /title="Vlhkost atmosféry"/);
-  assert.match(evidencePage, /meta="26\. října 2026"/);
+  assert.match(evidencePage, /title="Vlhkost atmosféry"\s+meta="27\. října 2026"/);
   assert.match(article, /Vlhkost atmosféry popisuje množství vodní páry ve vzduchu/);
   assert.doesNotMatch(article, /Potřebné informace|article-glossary/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
@@ -897,7 +960,7 @@ test("publishes a sourced atmospheric humidity article instead of the generic pl
   const humiditySourceIds = [
     ...article.matchAll(/<SourceLink id="([^"]+)"/g),
   ].map((match) => match[1]);
-  assert.equal(new Set(humiditySourceIds).size, 30);
+  assert.equal(new Set(humiditySourceIds).size, 31);
   for (const id of new Set(humiditySourceIds)) {
     const catalogueOccurrences = sourceCatalogueText.split(id).length - 1;
     assert.ok(catalogueOccurrences >= 2, `${id} must exist and be marked as open access`);

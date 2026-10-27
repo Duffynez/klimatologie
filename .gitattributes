@@ -22,3 +22,5 @@ public/data/methods/infrared-radiometry/*.csv text eol=lf
 public/data/methods/microwave-radiometry/*.csv text eol=lf
 # Keep the radar example files byte-for-byte to preserve their published hashes.
 public/data/radar/* text eol=lf
+# Keep the lidar example checksums stable on Windows and in the Pages build.
+public/data/methods/lidar/* text eol=lf

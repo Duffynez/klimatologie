@@ -195,6 +195,15 @@ export function AtmosphericHumidityArticle() {
           <SourceLink id="DOI_10_5194_amt_7_4463_2014">Dirksen et al., 2014</SourceLink>
         </p>
 
+        <h3>Ramanův lidar</h3>
+        <p>
+          Výškové rozložení vodní páry lze sledovat také ze země Ramanovým lidarem.
+          Ten rozlišuje světlo rozptýlené vodní párou a dusíkem. Princip a úlohu
+          kalibrace této varianty vysvětluje článek o{" "}
+          <Link href="/metody/lidar-a-laserove-mereni-vzdalenosti">lidarovém měření</Link>.{" "}
+          <SourceLink id="DOI_10_5194_amt_10_2745_2017">Davidová a kol., 2017</SourceLink>
+        </p>
+
         <h3>Mikrovlnný radiometr na družici</h3>
         <p>
           Povrch oceánu a atmosféra vyzařují mikrovlnné záření. Radiometr měří jeho intenzitu v několika přesně

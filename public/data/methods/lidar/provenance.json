@@ -1,0 +1,52 @@
+{
+  "retrieved": "2026-10-27",
+  "source_institution": "NASA GEDI / LP DAAC",
+  "distribution": "rGEDI public matched V001 subsets, Cerrado, Brazil",
+  "repository_commit": "d91c170a9088f21dc4e62ba5436b6959860bd43b",
+  "selection": "One shot used in the rGEDI tutorial, not a representative forest sample.",
+  "shot_number": "19640521100108408",
+  "beam": "BEAM0101",
+  "units": {
+    "rh": "m",
+    "elevations": "m above WGS84 reference ellipsoid",
+    "waveform": "digitizer counts"
+  },
+  "original_products": [
+    {
+      "doi": "10.5067/GEDI/GEDI01_B.001",
+      "granule": "GEDI01_B_2019108080338_O01964_T05337_02_003_01.h5",
+      "level": "L1B, corrected geolocated waveform, PGE003"
+    },
+    {
+      "doi": "10.5067/GEDI/GEDI02_A.001",
+      "granule": "GEDI02_A_2019108080338_O01964_T05337_02_001_01.h5",
+      "level": "L2A, processed ground and RH metrics, PGE001"
+    }
+  ],
+  "download_archives": [
+    {
+      "url": "https://raw.githubusercontent.com/carlos-alberto-silva/rGEDI/d91c170a9088f21dc4e62ba5436b6959860bd43b/inst/extdata/GEDI01_B_2019108080338_O01964_T05337_02_003_01_sub.zip",
+      "sha256": "ba3d3a396cd073af0337f4c0abb0068c723dc2627d8a26f75e06efc177d0d1ed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/carlos-alberto-silva/rGEDI/d91c170a9088f21dc4e62ba5436b6959860bd43b/inst/extdata/GEDI02_A_2019108080338_O01964_T05337_02_001_01_sub.zip",
+      "sha256": "f2cacaf9bd903f42d2df671afa4dd3269f5162f3b3300eb0fffb6bffbee05177"
+    }
+  ],
+  "processing": "Match exact shot number in both files. Convert one-based rx_sample_start_index to Python slice. Read rx_processing_a1/zcross and rx_cumulative[98,100]. Interpolate vertical sample spacing from L1B endpoints. Multiply bin differences by that spacing. Plot L1B signal minus published mean noise, without additional smoothing. RH stored in the product is in metres.",
+  "scope": "Reproduces only the final height conversion. NASA waveform processing and selection of the ground return are inputs, not independently repeated or validated here.",
+  "quality_flags": {
+    "quality_flag": 1,
+    "degrade_flag": 0,
+    "selected_algorithm": 1
+  },
+  "rights": "NASA public data. Data.gov metadata for GEDI01_B.001 and GEDI02_A.001 links to https://www.usa.gov/government-works. rGEDI distributes these example subsets publicly. No rGEDI software code is copied.",
+  "sha256": {
+    "inputs.json": "5ac6bba4261c26ec49878ca117a519b0b26ed339919461df2687827715cd6905",
+    "waveform.csv": "0647aa5d730ffab40e8caf5a541ea3f9faac6187e33223ea52d6448f5871471f",
+    "result.json": "0b019ddc96ce583d4ff60eee756675bd433ba1bd09391bf9fa779c83b984515d",
+    "extract.py": "4d794f5cd16ebf18143ce321a853d37baa2794ee3fa04d8fde4b5721732e83c9",
+    "reproduce.py": "d7ba44542606c45d52cc09025d4147d6bd37c3e31f08b4c4bd06e91e2cc0439a",
+    "plot.py": "b7da6e01fab0e8181ea8892d9891bd4c2723312a4d8916e00fc7eb178b5a2d5b"
+  }
+}

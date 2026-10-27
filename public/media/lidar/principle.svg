@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="830" viewBox="0 0 760 830" role="img" aria-labelledby="title desc">
+<title id="title">Čas návratu rozlišuje vrstvy</title><desc id="desc">Dva diagramy ukazují návraty laserového světla z atmosféry a z porostu. Přístroj míří dolů, vyšší vrstvy vracejí světlo dříve.</desc>
+<defs><marker id="blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#256e9b"/></marker><marker id="orange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#bd6529"/></marker></defs>
+<rect width="760" height="830" rx="18" fill="#f3f7f7"/>
+<g font-family="Arial, sans-serif" fill="#183c48">
+<text x="34" y="48" font-size="27" font-weight="bold">Čas návratu rozlišuje vrstvy</text>
+<text x="34" y="81" font-size="26">Přístroj míří dolů. Vyšší vrstva se ozve dříve.</text>
+<rect x="26" y="107" width="708" height="306" rx="12" fill="white" stroke="#cbdcde"/>
+<text x="48" y="143" font-size="23" font-weight="bold">Atmosféra</text>
+<rect x="172" y="164" width="117" height="38" rx="7" fill="#d7e7ef" stroke="#256e9b"/>
+<text x="199" y="190" font-size="28">Lidar</text>
+<path d="M222 206V346" stroke="#256e9b" stroke-width="4" marker-end="url(#blue)"/>
+<ellipse cx="190" cy="268" rx="105" ry="24" fill="#d3e1e6"/>
+<text x="325" y="270" font-size="28">Oblak</text>
+<text x="325" y="297" font-size="26">dřívější návrat</text>
+<g fill="#d1b091"><circle cx="115" cy="350" r="4"/><circle cx="141" cy="360" r="5"/><circle cx="161" cy="340" r="4"/><circle cx="189" cy="358" r="4"/><circle cx="215" cy="343" r="5"/><circle cx="239" cy="362" r="4"/><circle cx="267" cy="345" r="5"/></g>
+<path d="M260 257L276 210M286 344L304 210" stroke="#bd6529" stroke-width="3" fill="none" marker-end="url(#orange)"/>
+<text x="325" y="349" font-size="28">Aerosolová vrstva</text>
+<text x="325" y="377" font-size="26">pozdější návrat</text>
+<rect x="26" y="429" width="708" height="307" rx="12" fill="white" stroke="#cbdcde"/>
+<text x="48" y="465" font-size="23" font-weight="bold">Porost</text>
+<rect x="172" y="481" width="117" height="38" rx="7" fill="#d7e7ef" stroke="#256e9b"/>
+<text x="199" y="507" font-size="28">Lidar</text>
+<path d="M224 523V677" stroke="#256e9b" stroke-width="4" marker-end="url(#blue)"/>
+<path d="M130 675V594M184 675V573M260 675V606" stroke="#8e6c48" stroke-width="10"/>
+<g fill="#83b698" stroke="#4b896b" stroke-width="2"><ellipse cx="128" cy="596" rx="33" ry="35"/><ellipse cx="181" cy="575" rx="38" ry="42"/><ellipse cx="268" cy="607" rx="30" ry="39"/></g>
+<path d="M79 682H305" stroke="#8e6c48" stroke-width="7"/>
+<path d="M234 573L279 527M300 674L312 529" stroke="#bd6529" stroke-width="3" fill="none" marker-end="url(#orange)"/>
+<text x="341" y="575" font-size="28">Koruny</text><text x="341" y="603" font-size="26">dřívější část návratu</text>
+<text x="341" y="667" font-size="28">Půda</text><text x="341" y="695" font-size="26">pozdější část návratu</text>
+<path d="M86 774H126" stroke="#256e9b" stroke-width="4" marker-end="url(#blue)"/><text x="145" y="781" font-size="26">Vyslané světlo</text>
+<path d="M392 774H432" stroke="#bd6529" stroke-width="4" marker-end="url(#orange)"/><text x="451" y="781" font-size="26">Vrácené světlo</text>
+</g></svg>

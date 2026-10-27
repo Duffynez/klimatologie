@@ -1,0 +1,9 @@
+{
+  "shot_number": "19640521100108408",
+  "vertical_step_m": 0.14982994535179678,
+  "rh98_m": 10.900128524343216,
+  "rh100_m": 12.810460327578625,
+  "product_rh98_m": 10.899999618530273,
+  "product_rh100_m": 12.8100004196167,
+  "scope": "Final conversion of processed bin positions to relative height, not a new waveform retrieval."
+}
