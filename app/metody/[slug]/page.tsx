@@ -1,3 +1,4 @@
+import { InfraredRadiometryArticle } from "../../components/InfraredRadiometryArticle";
 import { RadiativeFluxArticle } from "../../components/RadiativeFluxArticle";
 import { PhotogrammetryArticle } from "../../components/PhotogrammetryArticle";
 import { OpticalImagingArticle } from "../../components/OpticalImagingArticle";
@@ -87,6 +88,18 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "pasivni-infracervena-radiometrie") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Pasivní infračervená radiometrie" meta="27. října 2026">
+          <p>Jak družice zachytí tepelné záření a jak z něj po oddělení vlivu atmosféry a vlastností povrchu získáme teplotní mapu.</p>
+        </PageLead>
+        <InfraredRadiometryArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "mereni-radiacnich-toku") {

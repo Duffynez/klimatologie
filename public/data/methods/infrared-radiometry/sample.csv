@@ -1,0 +1,2 @@
+label,crop_row,crop_col,source_row,source_col,lwir11,trad,urad,drad,atran,emis,qa,cdist,qa_pixel,qa_radsat
+C,550,290,2717,5609,46546,9724,1907,938,7333,9850,252,242,21824,0

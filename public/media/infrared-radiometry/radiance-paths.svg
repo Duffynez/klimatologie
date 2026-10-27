@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="570" viewBox="0 0 600 570" role="img" aria-labelledby="title desc">
+<title id="title">Tři příspěvky k tepelnému záření zachycenému družicí</title>
+<desc id="desc">Z povrchu přichází vlastní vyzařování a odražené záření atmosféry. Atmosféra obě složky zeslabuje a přidává své záření směrem k družici.</desc>
+<defs><marker id="arrow-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="#a85e16"/></marker><marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="#266485"/></marker><marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="#287061"/></marker></defs>
+<rect width="600" height="570" rx="14" fill="#f3f6f5"/>
+<g font-family="Arial,sans-serif" fill="#233e44" text-anchor="middle">
+<rect x="180" y="25" width="240" height="67" rx="8" fill="#e0e8e8" stroke="#738b90"/>
+<text x="300" y="53" font-size="21" font-weight="bold">Radiometr na družici</text><text x="300" y="77" font-size="17">zachycené záření</text>
+<rect x="25" y="205" width="550" height="142" rx="14" fill="#dcebf2"/>
+<text x="300" y="235" font-size="22" font-weight="bold">Atmosféra</text>
+<text x="300" y="264" font-size="17">část záření pohltí</text><text x="300" y="287" font-size="17">a sama vyzařuje</text>
+<path d="M120 437 L120 360 M120 195 L232 104" fill="none" stroke="#a85e16" stroke-width="5" marker-end="url(#arrow-orange)"/>
+<path d="M120 350 L120 205" fill="none" stroke="#a85e16" stroke-width="3" stroke-dasharray="7 5"/>
+<path d="M302 199 L302 105" fill="none" stroke="#266485" stroke-width="4" marker-end="url(#arrow-blue)"/>
+<path d="M433 310 L465 437 L510 355 M510 195 L371 104" fill="none" stroke="#287061" stroke-width="4" marker-end="url(#arrow-green)"/>
+<path d="M510 348 L510 205" fill="none" stroke="#287061" stroke-width="3" stroke-dasharray="7 5"/>
+<rect x="25" y="445" width="550" height="37" rx="5" fill="#c9d8c3"/><text x="300" y="471" font-size="21" font-weight="bold">Povrch</text>
+<text x="119" y="507" font-size="17" fill="#8b4b0b">vlastní tepelné</text><text x="119" y="530" font-size="17" fill="#8b4b0b">vyzařování</text>
+<text x="461" y="507" font-size="17" fill="#287061">odražené záření</text><text x="461" y="530" font-size="17" fill="#287061">atmosféry</text>
+<text x="365" y="158" font-size="16" text-anchor="start" fill="#266485">záření</text><text x="365" y="179" font-size="16" text-anchor="start" fill="#266485">atmosféry</text>
+</g></svg>

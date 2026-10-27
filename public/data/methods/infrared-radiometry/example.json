@@ -1,0 +1,129 @@
+{
+  "title": "Landsat 8 thermal radiometry: vegetation pixel C south of Aletsch Glacier",
+  "accessed": "2026-10-27",
+  "source_doi": "10.5066/P9OGBGM6",
+  "stac_item_url": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/landsat-c2-l2/items/LC08_L2SP_195028_20230820_02_T1",
+  "source_product_id": "LC08_L2SP_195028_20230820_20230826_02_T1",
+  "acquisition_utc": "2023-08-20T10:16:52.713434Z",
+  "license": "USGS Landsat data are public domain. Credit USGS.",
+  "data_stage": "Collection 2 Level 2 temperature and intermediate bands. Radiometric calibration and atmospheric modelling already performed by USGS. Integers are storage encoding, not raw detector counts.",
+  "source_processing": {
+    "LPGS": "16.3.0",
+    "surface_temperature": "st_1.5.0",
+    "evidence": "../optical-imaging/source-MTL.txt"
+  },
+  "window": {
+    "window_col": 5319,
+    "window_row": 2167,
+    "width": 341,
+    "height": 598
+  },
+  "crs": "EPSG:32632",
+  "crop_transform": [
+    30.0,
+    0.0,
+    418455.0,
+    0.0,
+    -30.0,
+    5153505.0
+  ],
+  "source_transform": [
+    30.0,
+    0.0,
+    258885.0,
+    0.0,
+    -30.0,
+    5218515.0
+  ],
+  "indexing": "Zero-based rows from top, columns from left. Pixel centre.",
+  "band_order": [
+    "lwir11",
+    "trad",
+    "urad",
+    "drad",
+    "atran",
+    "emis",
+    "qa",
+    "cdist",
+    "qa_pixel",
+    "qa_radsat"
+  ],
+  "assets": {
+    "lwir11": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/oli-tirs/2023/195/028/LC08_L2SP_195028_20230820_20230826_02_T1/LC08_L2SP_195028_20230820_20230826_02_T1_ST_B10.TIF",
+    "trad": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/oli-tirs/2023/195/028/LC08_L2SP_195028_20230820_20230826_02_T1/LC08_L2SP_195028_20230820_20230826_02_T1_ST_TRAD.TIF",
+    "urad": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/oli-tirs/2023/195/028/LC08_L2SP_195028_20230820_20230826_02_T1/LC08_L2SP_195028_20230820_20230826_02_T1_ST_URAD.TIF",
+    "drad": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/oli-tirs/2023/195/028/LC08_L2SP_195028_20230820_20230826_02_T1/LC08_L2SP_195028_20230820_20230826_02_T1_ST_DRAD.TIF",
+    "atran": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/oli-tirs/2023/195/028/LC08_L2SP_195028_20230820_20230826_02_T1/LC08_L2SP_195028_20230820_20230826_02_T1_ST_ATRAN.TIF",
+    "emis": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/oli-tirs/2023/195/028/LC08_L2SP_195028_20230820_20230826_02_T1/LC08_L2SP_195028_20230820_20230826_02_T1_ST_EMIS.TIF",
+    "qa": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/oli-tirs/2023/195/028/LC08_L2SP_195028_20230820_20230826_02_T1/LC08_L2SP_195028_20230820_20230826_02_T1_ST_QA.TIF",
+    "cdist": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/oli-tirs/2023/195/028/LC08_L2SP_195028_20230820_20230826_02_T1/LC08_L2SP_195028_20230820_20230826_02_T1_ST_CDIST.TIF",
+    "qa_pixel": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/oli-tirs/2023/195/028/LC08_L2SP_195028_20230820_20230826_02_T1/LC08_L2SP_195028_20230820_20230826_02_T1_QA_PIXEL.TIF",
+    "qa_radsat": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/oli-tirs/2023/195/028/LC08_L2SP_195028_20230820_20230826_02_T1/LC08_L2SP_195028_20230820_20230826_02_T1_QA_RADSAT.TIF"
+  },
+  "crop_processing": "Integer window with no interpolation or reprojection. Bands combined losslessly as int32. Original per-band fill values retained.",
+  "scales": {
+    "lwir11": {
+      "scale": 0.00341802,
+      "offset": 149,
+      "unit": "K"
+    },
+    "trad": {
+      "scale": 0.001,
+      "unit": "W/(m2 sr um)"
+    },
+    "urad": {
+      "scale": 0.001,
+      "unit": "W/(m2 sr um)"
+    },
+    "drad": {
+      "scale": 0.001,
+      "unit": "W/(m2 sr um)"
+    },
+    "atran": {
+      "scale": 0.0001,
+      "unit": "1"
+    },
+    "emis": {
+      "scale": 0.0001,
+      "unit": "1"
+    },
+    "qa": {
+      "scale": 0.01,
+      "unit": "K"
+    },
+    "cdist": {
+      "scale": 0.01,
+      "unit": "km"
+    }
+  },
+  "selection": "Same vegetation-interpreted pixel C as optical-imaging article. Selected for connecting the two methods, not as a regional sample. Image interpretation is not field-verified land cover.",
+  "point": {
+    "longitude": 8.05288608,
+    "latitude": 46.38256209,
+    "crop_row": 550,
+    "crop_col": 290,
+    "source_row": 2717,
+    "source_col": 5609
+  },
+  "quality": {
+    "qa_pixel": 21824,
+    "qa_radsat": 0,
+    "bits_0_to_4": "All zero: no fill, dilated cloud, cirrus, cloud or shadow flag.",
+    "nearest_cloud_km": 2.42,
+    "product_uncertainty_K": 2.52
+  },
+  "K1": 774.8853,
+  "K2": 1321.0789,
+  "planck_approximation": "K1/K2 band approximation from the source Level-1 metadata. Official Level-2 processing uses a band-response lookup table. Rounded intermediate bands and this approximation need not reproduce ST_B10 exactly. Comparison is not independent validation.",
+  "results": {
+    "blackbody_equivalent_radiance": 10.808081219658575,
+    "brightness_temperature_K": 300.88877620365713,
+    "approximate_surface_temperature_K": 308.21159872305276,
+    "product_surface_temperature_K": 308.09515892
+  },
+  "plot_mask": "Exclude QA_PIXEL bits 0 to 4, nonzero QA_RADSAT and ST_B10 fill 0. No ST_QA threshold applied to the contextual map. Point C is the worked example.",
+  "sha256": {
+    "aletsch-thermal.tif": "c390f54ffd5db803c898806554ed2e5a1e5247caee8d408cdd1d605544f75384",
+    "sample.csv": "9c980a696d1c48b8a09d16efd3b6827f681c104536f3f4229ad2e646421c36e5"
+  }
+}

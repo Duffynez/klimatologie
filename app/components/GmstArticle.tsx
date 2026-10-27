@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import { SourceLink } from "./SourceLink";
 
@@ -169,7 +170,13 @@ export function GmstArticle() {
         </figure>
 
         <p>
-          Družice mohou mapovat teplotu velmi tenké vrstvy na samotném povrchu oceánu, ale hlavní historické
+          <Link href="/metody/pasivni-infracervena-radiometrie">Pasivní infračervená radiometrie</Link>{" "}
+          umožňuje družicím mapovat teplotu velmi tenké vrstvy na samotném povrchu oceánu. Její princip,
+          převod záření na teplotu a návaznost na družicové klimatické záznamy vysvětluje samostatný článek.{" "}
+          <SourceLink id="DOI_10_1038_s41597_019_0236_x">Merchant a kol., 2019</SourceLink>
+        </p>
+        <p>
+          Hlavní historické
           produkty popsané v tomto článku stojí nad oceánem na přímých měřeních z lodí a bójí. GISTEMP v4
           například používá oceánský produkt ERSST v5, HadCRUT5 používá HadSST4 a NOAAGlobalTemp v6.1.0 používá
           ERSST v6. Každý z nich začíná jednotlivými pozorováními z mezinárodních námořních archivů a následně

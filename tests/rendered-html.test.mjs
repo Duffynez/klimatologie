@@ -5,6 +5,70 @@ import test from "node:test";
 
 const root = new URL("../", import.meta.url);
 
+test("publishes thermal infrared radiometry with its source trail and temperature observation link", async () => {
+  const slug = "pasivni-infracervena-radiometrie";
+  const [html, source, catalogue, observation] = await Promise.all([
+    readFile(new URL(`dist/client/metody/${slug}/index.html`, root), "utf8"),
+    readFile(new URL("app/components/InfraredRadiometryArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/gmst/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
+    "Jak ze záření zjistíme teplotu", "Nejistoty a ověření",
+    "Příklad: teplota jednoho místa u Aletschského ledovce", "Shrnutí",
+  ]);
+  assert.match(html, /<p class="page-lead__meta">27\. října 2026<\/p>/);
+  assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
+  assert.doesNotMatch(body, /_vinext\/image|katex-error|Potřebné informace/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  assert.match(body, /href="\/pozorovani\/gmst"/);
+  assert.ok(observation.includes(`href="/metody/${slug}"`));
+  const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
+  assert.ok(ids.length >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
+    assert.ok(card, "Missing source " + id);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const m of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const file = /\.[a-z0-9]+$/i.test(m[1]) ? m[1] : m[1].replace(/\/$/, "") + "/index.html";
+    await readFile(new URL("dist/client" + file, root));
+  }
+});
+
+test("recomputes infrared surface temperature from separate atmospheric and emissivity inputs", async () => {
+  const base = new URL("public/data/methods/infrared-radiometry/", root);
+  const meta = JSON.parse(await readFile(new URL("example.json", base), "utf8"));
+  const lines = (await readFile(new URL("sample.csv", base), "utf8")).trim().split(/\r?\n/).map(line => line.split(","));
+  assert.equal(lines.length, 2);
+  const row = Object.fromEntries(lines[0].map((key, i) => [key, lines[1][i]]));
+  assert.deepEqual([Number(row.source_row), Number(row.source_col)], [2717, 5609]);
+  assert.equal(Number(row.qa_pixel) & 31, 0);
+  assert.equal(Number(row.qa_radsat), 0);
+  const L = Number(row.trad) / 1000, U = Number(row.urad) / 1000, D = Number(row.drad) / 1000;
+  const tau = Number(row.atran) / 10000, emissivity = Number(row.emis) / 10000;
+  const B = ((L - U) / tau - (1 - emissivity) * D) / emissivity;
+  const temperature = meta.K2 / Math.log1p(meta.K1 / B);
+  const official = Number(row.lwir11) * 0.00341802 + 149;
+  assert.ok(Math.abs(B - 10.808081219658575) < 1e-10);
+  assert.ok(Math.abs(temperature - 308.21159872305276) < 1e-9);
+  assert.ok(Math.abs(official - meta.results.product_surface_temperature_K) < 1e-9);
+  assert.ok(Math.abs(official - temperature) < 0.13, "Approximation agrees with separately supplied USGS output");
+  const brightness = meta.K2 / Math.log1p(meta.K1 / L);
+  assert.ok(temperature - brightness > 7, "At-sensor brightness temperature is not surface temperature");
+  assert.equal(Number(row.qa) / 100, 2.52);
+  for (const [name, expected] of Object.entries(meta.sha256)) {
+    const bytes = await readFile(new URL(name, base));
+    assert.equal(createHash("sha256").update(bytes).digest("hex"), expected);
+    assert.deepEqual(await readFile(new URL("dist/client/data/methods/infrared-radiometry/" + name, root)), bytes);
+  }
+});
+
 test("publishes radiative fluxes with a complete example and reciprocal ocean connection", async () => {
   const slug = "mereni-radiacnich-toku";
   const [html, source, catalogue, ocean] = await Promise.all([
