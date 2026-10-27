@@ -1,0 +1,31 @@
+{
+  "accessed": "2026-10-27",
+  "original_url": "https://unidata-nexrad-level2.s3.amazonaws.com/2017/08/27/KHGX/KHGX20170827_120416_V06",
+  "original_sha256": "70995375338dd2287ea39fb81ed836d3680b2935ed66ca2b9087446e5367ae5b",
+  "original_bytes": 16555888,
+  "dataset_doi": "10.7289/V5W9574V",
+  "file_format": "Archive II AR2V0006",
+  "parser": "MetPy 1.7.1",
+  "selection": {
+    "sweep_index": 0,
+    "ray_index": 160,
+    "gate_index": 112,
+    "indices_start_at": 0,
+    "selection_purpose": "One fixed archive cell for a worked example, not a representative statistical sample."
+  },
+  "level_of_input": "NOAA Level II processed equivalent reflectivity, not receiver voltages",
+  "assumption": {
+    "zr_a": 250,
+    "zr_b": 1.2,
+    "reference": "Fulton et al. (1998), page 382, tropical relationship",
+    "status": "Chosen illustrative conversion for actual reflectivity. Not independently validated for this cell and not the official NOAA rain estimate."
+  },
+  "processing": "No averaging or gap filling. Decode one REF gate, convert dBZ to linear reflectivity, then apply the selected Z-R relation.",
+  "original_use": "NOAA public data. Derived extract and calculations by Klimatologie.eu, not official NOAA products.",
+  "sha256": {
+    "reflectivity.csv": "d8f26bbc6cc102dd6ee043b2b6a7284ce7888d77d8bacd18788bb9f7fe672dd0",
+    "extract.py": "d1bea12aa82e5d4e878cf965ff0b66958d6d937b3812b81ee957da04ef43505f",
+    "reproduce.py": "ec6e6d63eafc8b8cb4d1cd03a81a0e8e0f5a418b02d128c69f2921874c47588a",
+    "result.json": "a93feb680108d57e6f6025a3f3ab6841353c2bf7bf353f10939f606fe440e210"
+  }
+}

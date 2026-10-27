@@ -20,3 +20,5 @@ public/data/methods/radiative-fluxes/source-README.txt binary
 public/data/methods/radiative-fluxes/*.csv text eol=lf
 public/data/methods/infrared-radiometry/*.csv text eol=lf
 public/data/methods/microwave-radiometry/*.csv text eol=lf
+# Keep the radar example files byte-for-byte to preserve their published hashes.
+public/data/radar/* text eol=lf

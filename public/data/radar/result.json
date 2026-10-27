@@ -1,0 +1,10 @@
+{
+  "station": "KHGX",
+  "observed_at_utc": "2017-08-27T12:04:19.890Z",
+  "observed_reflectivity_dbz": 41.0,
+  "linear_reflectivity_mm6_m_minus3": 12589.254117941662,
+  "assumed_zr_a": 250.0,
+  "assumed_zr_b": 1.2,
+  "estimated_rain_rate_mm_h": 26.204949439868127,
+  "scope": "One radar volume, one time, assumed tropical Z-R relation. Not a surface rain total."
+}

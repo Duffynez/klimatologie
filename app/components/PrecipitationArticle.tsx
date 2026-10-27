@@ -133,6 +133,8 @@ export function PrecipitationArticle() {
           Radar vysílá krátké mikrovlnné pulzy a měří energii rozptýlenou kapkami a ledovými částicemi zpět k anténě.
           Získá mnoho měření v prostoru během několika minut, takže zachytí pohyb a vnitřní členění srážkové oblasti mezi
           stanicemi. Odrazivost se následně převádí na odhad intenzity a jednotlivé snímky se sčítají na časový úhrn.
+          Jednotlivé kroky a skutečný výpočet vysvětluje článek o{" "}
+          <Link href="/metody/aktivni-radarove-mereni">radarovém měření srážek</Link>.
         </p>
 
         <p>

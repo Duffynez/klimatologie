@@ -1,3 +1,4 @@
+import { RadarArticle } from "../../components/RadarArticle";
 import { MicrowaveRadiometryArticle } from "../../components/MicrowaveRadiometryArticle";
 import { InfraredRadiometryArticle } from "../../components/InfraredRadiometryArticle";
 import { RadiativeFluxArticle } from "../../components/RadiativeFluxArticle";
@@ -89,6 +90,18 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "aktivni-radarove-mereni") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Radarové měření srážek a struktury sněhu a ledu" meta="27. října 2026">
+          <p>Jak čas a síla radarového echa ukážou rozložení deště, jak se počítá jeho intenzita a jak radar odhaluje vrstvy uvnitř ledovce.</p>
+        </PageLead>
+        <RadarArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "pasivni-mikrovlnna-radiometrie") {

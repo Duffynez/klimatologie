@@ -5,6 +5,70 @@ import test from "node:test";
 
 const root = new URL("../", import.meta.url);
 
+test("publishes radar with a complete explanation, real echo and reciprocal precipitation link", async () => {
+  const slug = "aktivni-radarove-mereni";
+  const [html, source, catalogue, observation] = await Promise.all([
+    readFile(new URL(`dist/client/metody/${slug}/index.html`, root), "utf8"),
+    readFile(new URL("app/components/RadarArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/srazky-a-privalove-srazky/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "Radar must render the full article instead of its catalogue placeholder");
+  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
+    "Jak radar měří déšť a rozpoznává vrstvy ledu", "Nejistoty a ověření", "Příklad: radarové měření u Houstonu", "Shrnutí",
+  ]);
+  assert.match(html, /<p class="page-lead__meta">27\. října 2026<\/p>/);
+  assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
+  assert.match(body, /41 dBZ/);
+  assert.match(body, /26,2 mm\/h/);
+  assert.match(body, /nikoli oficiální srážkový produkt NOAA/);
+  assert.doesNotMatch(body, /_vinext\/image|katex-error|Potřebné informace/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  assert.match(body, /href="\/pozorovani\/srazky-a-privalove-srazky"/);
+  assert.ok(observation.includes(`href="/metody/${slug}"`));
+  const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
+  assert.ok(ids.length >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
+    assert.ok(card, "Missing radar source " + id);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const m of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const file = /\.[a-z0-9]+$/i.test(m[1]) ? m[1] : m[1].replace(/\/$/, "") + "/index.html";
+    await readFile(new URL("dist/client" + file, root));
+  }
+});
+
+test("radar example keeps observed reflectivity separate from the assumed rainfall conversion", async () => {
+  const base = new URL("public/data/radar/", root);
+  const meta = JSON.parse(await readFile(new URL("provenance.json", base), "utf8"));
+  const result = JSON.parse(await readFile(new URL("result.json", base), "utf8"));
+  const lines = (await readFile(new URL("reflectivity.csv", base), "utf8")).trim().split(/\r?\n/).map(line => line.split(","));
+  const sample = Object.fromEntries(lines[0].map((key, i) => [key, lines[1][i]]));
+  assert.equal(sample.station, "KHGX");
+  assert.equal(sample.observed_at_utc, "2017-08-27T12:04:19.890Z");
+  assert.equal(Number(sample.reflectivity_dbz), 41);
+  assert.equal(Number(sample.range_km), 2.125 + Number(sample.gate_index) * 0.250);
+  assert.deepEqual([Number(sample.sweep_index), Number(sample.ray_index), Number(sample.gate_index)], [0, 160, 112]);
+  assert.equal(meta.original_sha256, "70995375338dd2287ea39fb81ed836d3680b2935ed66ca2b9087446e5367ae5b");
+  assert.equal(result.assumed_zr_a, 250);
+  assert.equal(result.assumed_zr_b, 1.2);
+  // Reverse the result through Z = a R^b and the logarithmic definition.
+  const recoveredDbz = 10 * Math.log10(250 * result.estimated_rain_rate_mm_h ** 1.2);
+  assert.ok(Math.abs(recoveredDbz - Number(sample.reflectivity_dbz)) < 1e-10);
+  assert.equal(result.estimated_rain_rate_mm_h.toFixed(1), "26.2");
+  for (const [name, expected] of Object.entries(meta.sha256)) {
+    const bytes = await readFile(new URL(name, base));
+    assert.equal(createHash("sha256").update(bytes).digest("hex"), expected);
+    assert.deepEqual(await readFile(new URL("dist/client/data/radar/" + name, root)), bytes);
+  }
+});
+
 test("publishes microwave radiometry with the full signal-to-ice explanation and reciprocal observation link", async () => {
   const slug = "pasivni-mikrovlnna-radiometrie";
   const [html, source, catalogue, observation] = await Promise.all([

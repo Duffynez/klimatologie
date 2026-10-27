@@ -1,0 +1,2 @@
+station,observed_at_utc,sweep_index,ray_index,gate_index,azimuth_deg,elevation_deg,range_km,reflectivity_dbz
+KHGX,2017-08-27T12:04:19.890Z,0,160,112,199.20135498046875,0.46142578125,30.125,41.0
