@@ -1,3 +1,4 @@
+import { IceCoreArticle } from "../../components/IceCoreArticle";
 import { GnssWaterVaporArticle } from "../../components/GnssWaterVaporArticle";
 import { RadioOccultationArticle } from "../../components/RadioOccultationArticle";
 import { GravimetryArticle } from "../../components/GravimetryArticle";
@@ -96,6 +97,18 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "ledova-jadra-a-analyza-uzavreneho-vzduchu") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Přírodní archivy" title="Ledová jádra a analýza uzavřeného vzduchu" meta="28. října 2026">
+          <p>Jak led uchovává vzorky minulé atmosféry, jak změříme jejich složení a proč potřebujeme rozlišit stáří ledu a vzduchu.</p>
+        </PageLead>
+        <IceCoreArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "pozemni-mereni-vodni-pary-pomoci-gnss") {

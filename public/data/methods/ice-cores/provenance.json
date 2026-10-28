@@ -1,0 +1,38 @@
+{
+  "title": "Law Dome Ice Core 2000-Year CO2, CH4, N2O and d13C-CO2",
+  "citation": "Rubino, Mauro et al. (2019), v3, CSIRO. DOI: 10.25919/5bfe29ff807fb",
+  "doi": "https://doi.org/10.25919/5bfe29ff807fb",
+  "method_doi": "https://doi.org/10.5194/essd-11-473-2019",
+  "source_url": "https://data.csiro.au/dap/ws/v2/collections/63432/data/53592973",
+  "metadata_url": "https://data.csiro.au/dap/ws/v2/collections/63432",
+  "collection_version": 3,
+  "data_version": 1,
+  "metadata_published": "2024-09-04",
+  "data_last_update_as_stated_in_workbook": "11/2018",
+  "accessed": "2026-10-28",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "selection": {
+    "sheet": "CO2byCore",
+    "excel_rows": [
+      2,
+      5
+    ],
+    "sample_ids": [
+      "DE08 200",
+      "DE08 205"
+    ]
+  },
+  "columns": {
+    "ice_year_ce": "Calendar year of ice, not years before present",
+    "gas_year_ce": "Calendar year assigned to CO2",
+    "co2_ppm": "Published corrected CO2 dry-air mole fraction, WMO X2007",
+    "uncertainty_ppm": "Published concentration uncertainty, see Rubino et al. 2019 supplement S1.3"
+  },
+  "processing": "Select two samples from one core. Copy calendar years to 2 decimals and concentration and uncertainty to 3 decimals. Calculate gas_year_ce minus ice_year_ce and the later-minus-earlier concentration difference. No interpolation, fitting, recalibration or additional correction.",
+  "scope": "Processed published data. The example does not reproduce raw chromatograms, the extraction correction or the firn model. Neither the delta-age nor its uncertainty is independently inferred here.",
+  "sha256": {
+    "de08-extract.csv": "d6a966aa4fc406a31938dad2e364e08b55d9e002e8d813a2b76aa106fcf63d4e",
+    "Law_Dome_GHG_2000years.xlsx": "e2fb9ef0b36b46857c63bc171f3a8fff6af302ccae4d3d9e6f27df04fa6514d4"
+  }
+}

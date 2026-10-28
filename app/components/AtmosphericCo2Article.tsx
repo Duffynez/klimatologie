@@ -208,6 +208,13 @@ export function AtmosphericCo2Article() {
           <SourceLink id="DOI_10_5194_cp_16_503_2020">Fourteau et al., 2020</SourceLink>
         </p>
 
+        <p>
+          Celý postup odběru, uvolnění plynu a datování vysvětluje metoda{" "}
+          <Link href="/metody/ledova-jadra-a-analyza-uzavreneho-vzduchu">ledových jader a analýzy uzavřeného vzduchu</Link>.
+          Obsahuje také dvě skutečná měření z Law Dome, na kterých lze rozlišit
+          datum ledu od data analyzovaného vzduchu.
+        </p>
+
         <h3>Světlo prošlé atmosférou</h3>
         <p>
           OCO-2 měří sluneční světlo ve třech úzkých částech spektra: v jednom pásmu kyslíku a ve dvou pásmech

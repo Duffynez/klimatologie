@@ -951,7 +951,7 @@ test("publishes a sourced atmospheric carbon dioxide article instead of the gene
 
   assert.match(evidencePage, /AtmosphericCo2Article/);
   assert.match(evidencePage, /title="Oxid uhličitý v atmosféře"/);
-  assert.match(evidencePage, /title="Oxid uhličitý v atmosféře"\s+meta="26\. října 2026"/);
+  assert.match(evidencePage, /title="Oxid uhličitý v atmosféře"\s+meta="28\. října 2026"/);
   assert.match(article, /href="\/metody\/plynova-chromatografie"/);
   assert.match(article, /Atmosférický oxid uhličitý popisujeme podílem molekul CO₂ v suchém vzduchu/);
   assert.doesNotMatch(article, /Potřebné informace|article-glossary/);
@@ -2902,5 +2902,42 @@ test("reproduces both original SOMMA sample analyses from all twenty published r
   assert.match(meta.reported_result_stage, /No additional preservative or headspace correction/);
   for (const file of ["somma-1992-counts.csv", "example.json", "reproduce.py"]) {
     assert.deepEqual(await readFile(new URL("dist/client/data/methods/coulometry/" + file, root)), await readFile(new URL(file, base)));
+  }
+});
+
+test("ice-core method publishes reproducible dated measurements and reciprocal CO2 links", async () => {
+  const slug = "ledova-jadra-a-analyza-uzavreneho-vzduchu";
+  const [html, source, catalogue, observation] = await Promise.all([
+    readFile(new URL(`dist/client/metody/${slug}/index.html`, root), "utf8"),
+    readFile(new URL("app/components/IceCoreArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/atmosfericka-koncentrace-co2/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "Full article must replace the catalogue placeholder");
+  assert.equal([...body.matchAll(/<h2>/g)].length, 4);
+  assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
+  assert.doesNotMatch(body, /katex-error|Potřebné informace/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  assert.match(body, /31 let mladší/);
+  assert.match(body, /o 38,3 ppm více/);
+  assert.ok(observation.includes(`href="/metody/${slug}"`));
+  assert.ok(body.includes('href="/pozorovani/atmosfericka-koncentrace-co2"'));
+  const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
+  assert.ok(ids.length >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
+    assert.ok(card, "Missing ice-core source " + id);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const file = /\.[a-z0-9]+$/i.test(match[1]) ? match[1] : match[1].replace(/\/$/, "") + "/index.html";
+    await readFile(new URL("dist/client" + file, root));
+  }
+  const base = new URL("public/data/methods/ice-cores/", root);
+  const metadata = JSON.parse(await readFile(new URL("provenance.json", base), "utf8"));
+  for (const [name, sha] of Object.entries(metadata.sha256)) {
+    assert.equal(createHash("sha256").update(await readFile(new URL(name, base))).digest("hex"), sha);
   }
 });
