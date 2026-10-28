@@ -1,0 +1,65 @@
+{
+  "title": "Yamal tree-ring width comparison: YAD011 and YAD021",
+  "citation": "Briffa et al. (2013), Quaternary Science Reviews 72, 83–107. DOI: 10.1016/j.quascirev.2013.04.008",
+  "source_page": "https://crudata.uea.ac.uk/cru/papers/briffa2013qsr/",
+  "source_url": "https://crudata.uea.ac.uk/cru/papers/briffa2013qsr/raw-2016-03-09.zip",
+  "archive_member": "raw-2016-03-09/yam/yad.raw",
+  "archive_sha256": "e5b35373aacb460d3610fe0df6a7c16c1ca4ecef814f3dc3197de1d565070c34",
+  "data_version": "2016-03-09",
+  "accessed": "2026-10-28",
+  "species": "Larix sibirica",
+  "site": "YAD, Yadayakhodyyakha, Yamal, northwest Siberia",
+  "site_coordinates_degrees_minutes": {
+    "latitude": "67°26′ N",
+    "longitude": "70°50′ E",
+    "elevation_m": 30
+  },
+  "site_metadata": "Briffa et al. (2013), supplementary material SM2, tables YT1 and YT2",
+  "selection": {
+    "series": [
+      "YAD011",
+      "YAD021"
+    ],
+    "csv_years": [
+      1949,
+      1990
+    ],
+    "comparison_anchor_years": [
+      1950,
+      1989
+    ],
+    "number_of_pairs_per_alignment": 40,
+    "second_series_year_offsets": [
+      -1,
+      0,
+      1
+    ],
+    "rule": "First two series in yad.raw, a fixed four-decade interval. No selection by strongest correlation."
+  },
+  "format": {
+    "id_columns": [
+      1,
+      8
+    ],
+    "year_columns": [
+      9,
+      12
+    ],
+    "value_field_width": 6,
+    "width_unit_mm": 0.001,
+    "series_end_marker": -9999,
+    "zero": "A recorded zero width is retained, not treated as a missing value."
+  },
+  "processing": "Convert original integer widths to millimetres. Compute Pearson correlation on 40 pairs of unfiltered widths. Hold YAD011 years 1950–1989 fixed. Compare YAD021 from the same years, previous years, and following years. No detrending, standardisation, climate calibration, date revision, significance test, or independent redating is performed.",
+  "scope": "The data already carry calendar dates assigned by the original investigators. This is a narrow reproducible comparison, not the full COFECHA procedure or evidence sufficient to date unknown wood.",
+  "rights": "Public supplementary measurement data accompanying the CC BY open-access study. Original authors and source retained. The extracted yad.raw bytes are unchanged.",
+  "expected_correlations": {
+    "-1": 0.20022625788465803,
+    "0": 0.5129744544236889,
+    "1": -0.060879669183509
+  },
+  "sha256": {
+    "yad.raw": "a075fea09adf1cc9aee217984ed7d07d0e87ad522d454d2687e8534c7fddbc48",
+    "comparison.csv": "904730cb5c094117d48789a3cdb6289991f397979513ffdad4a1221798bf0da0"
+  }
+}

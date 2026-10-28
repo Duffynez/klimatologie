@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="620" viewBox="0 0 720 620" role="img" aria-labelledby="title desc">
+<title id="title">Křížové datování letokruhů</title><desc id="desc">Dva záznamy růstu sdílejí překryv. Staré dřevo prodlužuje časovou osu živého stromu do minulosti. Ilustrační hodnoty.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10" fill="none" stroke="#24676b" stroke-width="1.5"/></marker></defs>
+<rect width="720" height="620" fill="#f3f7f6"/>
+<g font-family="Arial, sans-serif" fill="#233d40">
+<text x="30" y="45" font-size="29" font-weight="bold">Shodné pořadí růstových změn</text>
+<rect x="286" y="93" width="154" height="331" rx="8" fill="#dfeadf"/>
+<text x="30" y="100" font-size="25" font-weight="bold">Živý strom</text>
+<text x="30" y="282" font-size="25" font-weight="bold">Staré dřevo</text>
+
+<rect x="286" y="143" width="27" height="86" rx="2" fill="#24676b"/>
+<rect x="327" y="192" width="27" height="37" rx="2" fill="#24676b"/>
+<rect x="368" y="157" width="27" height="72" rx="2" fill="#24676b"/>
+<rect x="409" y="180" width="27" height="49" rx="2" fill="#24676b"/>
+<rect x="450" y="136" width="27" height="93" rx="2" fill="#24676b"/>
+<rect x="491" y="176" width="27" height="53" rx="2" fill="#24676b"/>
+<rect x="532" y="166" width="27" height="63" rx="2" fill="#24676b"/>
+<rect x="573" y="144" width="27" height="85" rx="2" fill="#24676b"/>
+<rect x="614" y="181" width="27" height="48" rx="2" fill="#24676b"/>
+<rect x="655" y="154" width="27" height="75" rx="2" fill="#24676b"/>
+<rect x="40" y="357" width="27" height="54" rx="2" fill="#ae5c43"/>
+<rect x="81" y="369" width="27" height="42" rx="2" fill="#ae5c43"/>
+<rect x="122" y="342" width="27" height="69" rx="2" fill="#ae5c43"/>
+<rect x="163" y="385" width="27" height="26" rx="2" fill="#ae5c43"/>
+<rect x="204" y="348" width="27" height="63" rx="2" fill="#ae5c43"/>
+<rect x="245" y="377" width="27" height="34" rx="2" fill="#ae5c43"/>
+<rect x="286" y="338" width="27" height="73" rx="2" fill="#ae5c43"/>
+<rect x="327" y="380" width="27" height="31" rx="2" fill="#ae5c43"/>
+<rect x="368" y="350" width="27" height="61" rx="2" fill="#ae5c43"/>
+<rect x="409" y="369" width="27" height="42" rx="2" fill="#ae5c43"/>
+<path d="M299 236 V300" stroke="#749284" stroke-dasharray="5 5"/>
+<path d="M340 236 V300" stroke="#749284" stroke-dasharray="5 5"/>
+<path d="M381 236 V300" stroke="#749284" stroke-dasharray="5 5"/>
+<path d="M422 236 V300" stroke="#749284" stroke-dasharray="5 5"/>
+<text x="290" y="461" font-size="24" font-weight="bold">Společné roky</text>
+<path d="M55 502 H673" stroke="#24676b" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="30" y="543" font-size="25">starší</text><text x="575" y="543" font-size="25">novější</text>
+<text x="30" y="592" font-size="23">Vlastní schéma, nikoli skutečná měření.</text></g></svg>

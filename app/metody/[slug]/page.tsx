@@ -1,3 +1,4 @@
+import { DendrochronologyArticle } from "../../components/DendrochronologyArticle";
 import { SedimentCoreArticle } from "../../components/SedimentCoreArticle";
 import { IceCoreArticle } from "../../components/IceCoreArticle";
 import { GnssWaterVaporArticle } from "../../components/GnssWaterVaporArticle";
@@ -98,6 +99,18 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "dendrochronologie") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Přírodní archivy" title="Dendrochronologie" meta="28. října 2026">
+          <p>Jak přiřazujeme letokruhům konkrétní roky, měříme růst stromů a využíváme jej k poznání minulého klimatu.</p>
+        </PageLead>
+        <DendrochronologyArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "sedimentarni-jadra-a-stratigrafie") {

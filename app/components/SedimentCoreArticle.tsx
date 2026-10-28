@@ -256,7 +256,11 @@ export function SedimentCoreArticle() {
           Jinde se stáří opírá například o rozpad radioaktivních prvků
           v datovatelném materiálu. Způsob datování se tak volí podle
           zachovaných složek a stáří záznamu.{" "}
-          <SourceLink id="WEB_NCAR_Lake_Sediment_Guide">(Broadmanová a Laroccová, Climate Data Guide)</SourceLink>
+          <SourceLink id="WEB_NCAR_Lake_Sediment_Guide">(Broadmanová a Laroccová, Climate Data Guide)</SourceLink>{" "}
+          Jiný způsob sestavení ročního záznamu vysvětluje článek o{" "}
+          <Link href="/metody/dendrochronologie">dendrochronologii</Link>,
+          která přiřazuje kalendářní roky letokruhům dřeva.{" "}
+          <SourceLink id="WEB_NPS_Dendrochronology_2019">(Eakin a Hortonová 2019)</SourceLink>
         </p>
 
         <h2>Nejistoty a kontrola návaznosti</h2>

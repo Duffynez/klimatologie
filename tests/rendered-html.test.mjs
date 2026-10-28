@@ -2979,3 +2979,45 @@ test("sediment-core method publishes dated source data and links to the ice arch
     assert.equal(createHash("sha256").update(await readFile(new URL(name, base))).digest("hex"), sha);
   }
 });
+
+test("dendrochronology publishes the full method, open evidence and unchanged measurement files", async () => {
+  const [html, source, catalogue, sediment] = await Promise.all([
+    readFile(new URL("dist/client/metody/dendrochronologie/index.html", root), "utf8"),
+    readFile(new URL("app/components/DendrochronologyArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/metody/sedimentarni-jadra-a-stratigrafie/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "Full article must replace the catalogue placeholder");
+  assert.equal([...body.matchAll(/<h2>/g)].length, 4);
+  assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
+  assert.doesNotMatch(body, /katex-error|Potřebné informace/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  assert.match(body, /YAD011/);
+  assert.match(body, /−0,061/);
+  assert.match(body, /bez standardizace a převodu na teplotu/);
+  assert.ok(sediment.includes('href="/metody/dendrochronologie"'));
+  assert.ok(body.includes('href="/metody/sedimentarni-jadra-a-stratigrafie"'));
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
+  assert.ok(ids.length >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
+    assert.ok(card, "Missing dendrochronology source " + id);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const file = /\.[a-z0-9]+$/i.test(match[1]) ? match[1] : match[1].replace(/\/$/, "") + "/index.html";
+    await readFile(new URL("dist/client" + file, root));
+  }
+  const base = new URL("public/data/methods/dendrochronology/", root);
+  const metadata = JSON.parse(await readFile(new URL("provenance.json", base), "utf8"));
+  for (const [name, sha] of Object.entries(metadata.sha256)) {
+    const original = await readFile(new URL(name, base));
+    assert.equal(createHash("sha256").update(original).digest("hex"), sha);
+    assert.deepEqual(await readFile(new URL("dist/client/data/methods/dendrochronology/" + name, root)), original);
+  }
+});
