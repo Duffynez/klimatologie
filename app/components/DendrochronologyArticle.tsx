@@ -263,9 +263,12 @@ export function DendrochronologyArticle() {
           hustotu pozdního dřeva nebo izotopové složení jednotlivých letokruhů.
           Hustota vypovídá o množství hmoty v objemu dřeva, izotopová analýza
           zjišťuje poměry různých hmotnostních variant atomů.
-          Datování přitom těmto rozborům poskytuje stejnou roční časovou osu.{" "}
+          Datování přitom těmto rozborům poskytuje stejnou roční časovou osu.
+          Obdobné spojení růstových vrstev a chemického rozboru využívá
+          v tropickém oceánu <Link href="/metody/koralova-sclerochronologie">korálová sclerochronologie</Link>.{" "}
           <SourceLink id="DOI_10_1016_j_quascirev_2013_04_008">(Briffa a kol. 2013)</SourceLink>{" "}
-          <SourceLink id="WEB_NCEI_ITRDB">(NOAA: typy letokruhových dat)</SourceLink>
+          <SourceLink id="WEB_NCEI_ITRDB">(NOAA: typy letokruhových dat)</SourceLink>{" "}
+          <SourceLink id="WEB_NCAR_Coral_Geochemistry_2023">(Lawmanová a NCAR 2023, korálové archivy)</SourceLink>
         </p>
 
         <h2>Nejistoty a kontrola výsledku</h2>

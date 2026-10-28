@@ -1,3 +1,4 @@
+import { CoralSclerochronologyArticle } from "../../components/CoralSclerochronologyArticle";
 import { DendrochronologyArticle } from "../../components/DendrochronologyArticle";
 import { SedimentCoreArticle } from "../../components/SedimentCoreArticle";
 import { IceCoreArticle } from "../../components/IceCoreArticle";
@@ -99,6 +100,18 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "koralova-sclerochronologie") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Přírodní archivy" title="Korálová sclerochronologie" meta="28. října 2026">
+          <p>Jak růstové vrstvy a chemické složení korálové kostry uchovávají záznam teploty moře. Odběr, datování, laboratorní měření a výpočet se skutečnými daty z Fidži.</p>
+        </PageLead>
+        <CoralSclerochronologyArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "dendrochronologie") {

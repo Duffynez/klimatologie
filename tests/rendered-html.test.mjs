@@ -3021,3 +3021,62 @@ test("dendrochronology publishes the full method, open evidence and unchanged me
     assert.deepEqual(await readFile(new URL("dist/client/data/methods/dendrochronology/" + name, root)), original);
   }
 });
+
+test("coral sclerochronology publishes a sourced method and a reproducible negative temperature conversion", async () => {
+  const [html, source, catalogue, dendro] = await Promise.all([
+    readFile(new URL("dist/client/metody/koralova-sclerochronologie/index.html", root), "utf8"),
+    readFile(new URL("app/components/CoralSclerochronologyArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/metody/dendrochronologie/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "Full article must replace the catalogue placeholder");
+  assert.equal([...body.matchAll(/<h2>/g)].length, 4);
+  assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
+  assert.doesNotMatch(body, /katex-error|Potřebné informace/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  assert.match(html, /28\. října 2026/);
+  assert.match(body, /26,32 °C/);
+  assert.match(body, /26,16 °C/);
+  assert.match(body, /není nezávislou zkouškou převodu/);
+  assert.ok(dendro.includes('href="/metody/koralova-sclerochronologie"'));
+  assert.ok(body.includes('href="/metody/dendrochronologie"'));
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
+  assert.ok(ids.length >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
+    assert.ok(card, "Missing coral source " + id);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const file = /\.[a-z0-9]+$/i.test(match[1]) ? match[1] : match[1].replace(/\/$/, "") + "/index.html";
+    await readFile(new URL("dist/client" + file, root));
+  }
+  const base = new URL("public/data/methods/coral-sclerochronology/", root);
+  const metadata = JSON.parse(await readFile(new URL("provenance.json", base), "utf8"));
+  for (const [name, sha] of Object.entries(metadata.sha256)) {
+    const original = await readFile(new URL(name, base));
+    assert.equal(createHash("sha256").update(original).digest("hex"), sha);
+    assert.deepEqual(await readFile(new URL("dist/client/data/methods/coral-sclerochronology/" + name, root)), original);
+  }
+  const rows = (await readFile(new URL("annual-comparison.csv", base), "utf8")).trim().split("\n").slice(1).map(row => row.split(",").map(Number));
+  assert.equal(rows.length, 115);
+  assert.equal(rows[0][0], 1883);
+  assert.equal(rows.at(-1)[0], 1997);
+  const average = values => values.reduce((a, b) => a + b, 0) / values.length;
+  const variance = values => average(values.map(value => (value - average(values)) ** 2));
+  const measured = rows.map(row => row[2]);
+  const inferred = rows.map(row => row[3]);
+  assert.ok(Math.abs(average(measured) - average(inferred)) < 1e-7, "Scaling preserves the reference mean");
+  assert.ok(Math.abs(variance(measured) - variance(inferred)) < 1e-7, "Scaling preserves reference variability");
+  const byRatio = [...rows].sort((a, b) => a[1] - b[1]);
+  assert.ok(byRatio[0][3] > byRatio.at(-1)[3], "Higher Sr/Ca must mean lower temperature");
+  const year1900 = rows.find(row => row[0] === 1900);
+  assert.equal(year1900[1], 9.18979);
+  assert.equal(year1900[3].toFixed(2), "26.32");
+  assert.equal(year1900[2].toFixed(2), "26.16");
+});

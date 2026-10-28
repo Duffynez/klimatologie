@@ -1,0 +1,18 @@
+{
+  "calibration_first_year": 1883,
+  "calibration_last_year": 1997,
+  "annual_pairs": 115,
+  "monthly_values": 1380,
+  "mean_SrCa_mmol_mol": 9.131107217391305,
+  "sd_SrCa_mmol_mol": 0.05742504077472338,
+  "mean_ERSST_degC": 26.64666241811594,
+  "sd_ERSST_degC": 0.3240074641003922,
+  "slope_degC_per_mmol_mol": -5.642267897927374,
+  "correlation_SrCa_ERSST": -0.3931435538265064,
+  "correlation_reconstructed_ERSST": 0.39314355382650656,
+  "calibration_RMSE_degC": 0.355399246865956,
+  "example_year": 1900,
+  "example_SrCa_mmol_mol": 9.18979,
+  "example_reconstructed_degC": 26.315558437641847,
+  "example_ERSST_degC": 26.159211916666667
+}

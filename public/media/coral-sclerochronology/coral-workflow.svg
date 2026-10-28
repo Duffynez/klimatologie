@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="760" viewBox="0 0 640 760" role="img" aria-labelledby="title desc">
+<title id="title">Datování a chemické měření korálové kostry</title>
+<desc id="desc">Ilustrační pásy ročních přírůstků obsahují místa odběru prášku. Datování přiřadí rok, chemický rozbor poměr stroncia a vápníku. Obě informace společně umožní srovnání s teplotou.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#385f67"/></marker></defs>
+<rect width="640" height="760" rx="18" fill="#f5f8f7"/>
+<g font-family="Arial, sans-serif" fill="#173e46">
+<text x="32" y="44" font-size="27" font-weight="700">Dvě informace z jednoho vzorku</text>
+<text x="32" y="77" font-size="21">Podélný řez kostrou, ilustrační uspořádání</text>
+<g stroke="#93b2b5" stroke-width="1">
+<rect x="55" y="105" width="315" height="54" fill="#e1ebe7"/><rect x="55" y="159" width="315" height="16" fill="#769d9f"/>
+<rect x="55" y="175" width="315" height="45" fill="#e1ebe7"/><rect x="55" y="220" width="315" height="16" fill="#769d9f"/>
+<rect x="55" y="236" width="315" height="62" fill="#e1ebe7"/><rect x="55" y="298" width="315" height="16" fill="#769d9f"/>
+</g>
+<path d="M210 112V310" stroke="#bc5f23" stroke-width="3" stroke-dasharray="4 5"/>
+<g fill="#c56828" stroke="#fff" stroke-width="2">
+<circle cx="210" cy="119" r="5"/><circle cx="210" cy="136" r="5"/><circle cx="210" cy="153" r="5"/><circle cx="210" cy="170" r="5"/>
+<circle cx="210" cy="187" r="5"/><circle cx="210" cy="204" r="5"/><circle cx="210" cy="221" r="5"/><circle cx="210" cy="238" r="5"/>
+<circle cx="210" cy="255" r="5"/><circle cx="210" cy="272" r="5"/><circle cx="210" cy="289" r="5"/><circle cx="210" cy="306" r="5"/>
+</g>
+<g font-size="22"><text x="80" y="143">rok C</text><text x="80" y="207">rok B</text><text x="80" y="278">rok A</text>
+<text x="440" y="124">mladší</text><text x="440" y="301">starší</text><text x="440" y="205">směr růstu</text></g>
+<path d="M413 295V128" stroke="#385f67" stroke-width="3" marker-end="url(#arrow)"/>
+<g fill="none" stroke="#385f67" stroke-width="3" marker-end="url(#arrow)">
+<path d="M145 328V369"/><path d="M285 328V346H480V369"/>
+</g>
+<rect x="30" y="380" width="265" height="104" rx="10" fill="#dce9ed"/>
+<rect x="345" y="380" width="265" height="104" rx="10" fill="#f6e5d3"/>
+<g font-size="23" text-anchor="middle"><text x="162" y="414" font-weight="700">Počítání pásů</text><text x="162" y="450">poloha → rok</text>
+<text x="478" y="414" font-weight="700">Rozbor prášku</text><text x="478" y="450">poloha → Sr/Ca</text></g>
+<g fill="none" stroke="#385f67" stroke-width="3"><path d="M162 484V516H478V484"/><path d="M320 516V549" marker-end="url(#arrow)"/></g>
+<rect x="65" y="560" width="510" height="65" rx="10" fill="#dcebe3"/>
+<text x="320" y="601" text-anchor="middle" font-size="24" font-weight="700">Sr/Ca přiřazené jednotlivým rokům</text>
+<path d="M320 628V665" stroke="#385f67" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="320" y="704" text-anchor="middle" font-size="24">Porovnání s teplotou moře</text>
+<text x="320" y="736" text-anchor="middle" font-size="21">určí převod chemického záznamu na teplotu</text>
+</g>
+</svg>

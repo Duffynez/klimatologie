@@ -1,0 +1,31 @@
+{
+  "accessed": "2026-10-28",
+  "study_doi": "10.1126/sciadv.ado5107",
+  "inputs": {
+    "f14-original.txt": {
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/coral/south_pacific/dolivo2024/dolivo2024-f14-srca-sst.txt",
+      "doi": "10.25921/t9g1-vr70",
+      "file_version": "2025-04-02",
+      "variables": [
+        "Year",
+        "Sr/Ca"
+      ],
+      "units": "year CE, mmol/mol"
+    },
+    "ersst-fiji-original.txt": {
+      "url": "https://psl.noaa.gov/thredds/dodsC/Datasets/noaa.ersst.v5/sst.mnmean.nc.ascii?sst[348:1:1727][53:1:53][90:1:90]",
+      "doi": "10.7289/V5T72FNM",
+      "version": 5,
+      "latitude": -18,
+      "longitude": 180,
+      "units": "degrees Celsius",
+      "time_units": "days since 1800-1-1",
+      "months": "1883-01 to 1997-12",
+      "provider": "NOAA Physical Sciences Laboratory"
+    }
+  },
+  "sha256": {
+    "f14-original.txt": "b3d7b8da68959931891dd23ebe78ba95d2079133913ce2614fe08ed043c17d9b",
+    "ersst-fiji-original.txt": "28a26b0914ac5923962af5fc32221b8a222ea411a1e71293dadac9825f3803af"
+  }
+}
