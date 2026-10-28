@@ -3142,3 +3142,71 @@ test("speleothems connect measured isotope values to a dated, reproducible 21-sa
   assert.equal(Number(processed[38][4]).toFixed(2), "-5.05");
   assert.equal((values[48][0] - values[28][0]).toFixed(1), "291.7");
 });
+
+
+test("pollen analysis publishes the complete method with linked open sources and reproducible inputs", async () => {
+  const [html, source, catalogue, sediment] = await Promise.all([
+    readFile(new URL("dist/client/metody/pylova-analyza-a-mikrofosilie/index.html", root), "utf8"),
+    readFile(new URL("app/components/PollenAnalysisArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/metody/sedimentarni-jadra-a-stratigrafie/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "Full article must replace the placeholder");
+  assert.equal([...body.matchAll(/<h2>/g)].length, 4);
+  assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
+  assert.match(body, /88,1 %/);
+  assert.match(body, /85,2 procentního bodu/);
+  assert.match(body, /Jednotlivé počty zrn tento soubor neobsahuje/);
+  assert.doesNotMatch(body, /katex-error|Potřebné informace/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  assert.match(html, /28\. října 2026/);
+  assert.ok(sediment.includes('href="/metody/pylova-analyza-a-mikrofosilie"'));
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  for (const id of new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
+    assert.ok(card, "Missing pollen source " + id);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const file = /\.[a-z0-9]+$/i.test(match[1]) ? match[1] : match[1].replace(/\/$/, "") + "/index.html";
+    await readFile(new URL("dist/client" + file, root));
+  }
+});
+
+test("pollen example retains published denominators, chronology and all eleven selected samples", async () => {
+  const base = new URL("public/data/methods/pollen/", root);
+  const original = await readFile(new URL("pg1351-original.tsv", base));
+  const metadata = JSON.parse(await readFile(new URL("provenance.json", base), "utf8"));
+  assert.equal(createHash("sha256").update(original).digest("hex"), metadata.sha256["pg1351-original.tsv"]);
+  assert.deepEqual(await readFile(new URL("dist/client/data/methods/pollen/pg1351-original.tsv", root)), original);
+  const [header, ...lines] = original.toString("utf8").split("*/")[1].trim().split(/\r?\n/);
+  const names = header.split("\t");
+  const input = lines.map(line => Object.fromEntries(line.split("\t").map((v, i) => [names[i], v])));
+  assert.equal(input.length, 19);
+  const selected = input.filter(row => ["5e", "6"].includes(row.MIS));
+  const rows = (await readFile(new URL("selected-pollen.csv", base), "utf8")).trim().split(/\r?\n/).slice(1).map(line => line.split(","));
+  assert.equal(rows.length, 11);
+  assert.equal(rows.length, selected.length);
+  assert.deepEqual(rows.map(row => row[0]).sort(), selected.map(row => row["Sample ID"]).sort());
+  for (const row of rows) {
+    const published = selected.find(r => r["Sample ID"] === row[0]);
+    assert.equal(Number(row[2]), Number(published["Age [ka BP]"]));
+    assert.equal(Number(row[3]), Number(published["Age [ka BP]"]) * 1000);
+    assert.equal(Number(row[4]), Number(published["Depth sed [m]"]));
+    for (const [index, column] of [[5, "Bet.Se.N-T [%]"], [6, "Alnus [%]"], [7, "Poac [%]"], [8, "Artemisia [%]"]]) {
+      assert.equal(Number(row[index]), Number(published[column]), "Do not renormalize selected taxa");
+    }
+    assert.ok(Math.abs(Number(row[9]) - Number(published["Poac [%]"]) - Number(published["Artemisia [%]"])) < 1e-10);
+  }
+  const older = rows.find(row => row[0] === "117");
+  const younger = rows.find(row => row[0] === "109");
+  assert.equal(older[9], "88.1");
+  assert.equal(younger[9], "2.9");
+  assert.ok(Math.abs(Number(older[9]) - Number(younger[9]) - 85.2) < 1e-10);
+  assert.equal(rows[0][3], "117460");
+  assert.equal(rows.at(-1)[3], "144460");
+});

@@ -265,6 +265,9 @@ export function SedimentCoreArticle() {
           v datovatelném materiálu. Způsob datování se tak volí podle
           zachovaných složek a stáří záznamu.{" "}
           <SourceLink id="WEB_NCAR_Lake_Sediment_Guide">(Broadmanová a Laroccová, Climate Data Guide)</SourceLink>{" "}
+          Zachovaný pyl v těchto vrstvách umožňuje sledovat někdejší vegetaci.
+          Jeho rozbor vysvětluje článek o{" "}
+          <Link href="/metody/pylova-analyza-a-mikrofosilie">pylové analýze a mikrofosiliích</Link>.{" "}
           Jiný způsob sestavení ročního záznamu vysvětluje článek o{" "}
           <Link href="/metody/dendrochronologie">dendrochronologii</Link>,
           která přiřazuje kalendářní roky letokruhům dřeva.{" "}

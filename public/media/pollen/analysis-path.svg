@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="950" viewBox="0 0 700 950" role="img" aria-labelledby="title desc">
+<title id="title">Postup pylové analýzy</title>
+<desc id="desc">Ukládání pylu, odběr, příprava, určení, počítání, výpočet procent, datování a porovnání s moderními vzorky se známým klimatem.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#4a7c78"/></marker></defs>
+<rect width="700" height="950" fill="#f3f5ef"/>
+<g font-family="Arial, sans-serif" fill="#193b3d">
+<rect x="32" y="24" width="636" height="126" rx="8" fill="white" stroke="#ceddd7"/>
+<rect x="32" y="24" width="7" height="126" fill="#408b7a"/>
+<text x="62" y="60" font-size="25" font-weight="bold">Pyl se ukládá do vrstev</text>
+<text x="62" y="97" font-size="23">Jezero přijímá pyl z okolní vegetace.</text>
+<text x="62" y="126" font-size="23">Starší usazeniny překrývají mladší.</text>
+<path d="M350 150 V169" stroke="#4a7c78" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="32" y="174" width="636" height="126" rx="8" fill="white" stroke="#ceddd7"/>
+<rect x="32" y="174" width="7" height="126" fill="#408b7a"/>
+<text x="62" y="210" font-size="25" font-weight="bold">Odebereme a připravíme vzorek</text>
+<text x="62" y="247" font-size="23">Známe jeho hloubku v jádře.</text>
+<text x="62" y="276" font-size="23">Oddělíme pyl od okolního materiálu.</text>
+<path d="M350 300 V319" stroke="#4a7c78" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="32" y="324" width="636" height="126" rx="8" fill="white" stroke="#ceddd7"/>
+<rect x="32" y="324" width="7" height="126" fill="#408b7a"/>
+<text x="62" y="360" font-size="25" font-weight="bold">Určíme a spočítáme zrna</text>
+<text x="62" y="397" font-size="23">Znaky zrn porovnáme s referencemi.</text>
+<text x="62" y="426" font-size="23">Zapíšeme počet v každém pylovém typu.</text>
+<path d="M350 450 V469" stroke="#4a7c78" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="32" y="474" width="636" height="126" rx="8" fill="white" stroke="#ceddd7"/>
+<rect x="32" y="474" width="7" height="126" fill="#408b7a"/>
+<text x="62" y="510" font-size="25" font-weight="bold">Vypočítáme procentní složení</text>
+<text x="62" y="547" font-size="23">Počet daného typu dělíme pylovou sumou.</text>
+<text x="62" y="576" font-size="23">Vzorky můžeme vzájemně porovnat.</text>
+<path d="M350 600 V619" stroke="#4a7c78" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="32" y="624" width="636" height="126" rx="8" fill="white" stroke="#ceddd7"/>
+<rect x="32" y="624" width="7" height="126" fill="#408b7a"/>
+<text x="62" y="660" font-size="25" font-weight="bold">Přiřadíme stáří</text>
+<text x="62" y="697" font-size="23">Datování propojí hloubku s časem.</text>
+<text x="62" y="726" font-size="23">Získáme záznam proměn vegetace.</text>
+<path d="M350 750 V769" stroke="#4a7c78" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="32" y="774" width="636" height="126" rx="8" fill="white" stroke="#ceddd7"/>
+<rect x="32" y="774" width="7" height="126" fill="#c06042"/>
+<text x="62" y="810" font-size="25" font-weight="bold">Odhadneme klimatické podmínky</text>
+<text x="62" y="847" font-size="23">Přidáme dnešní pylové vzorky</text>
+<text x="62" y="876" font-size="23">se známými teplotami a srážkami.</text>
+<text x="350" y="931" text-anchor="middle" font-size="19" fill="#58726f">Šipky vyjadřují návaznost kroků a předávání informace.</text></g></svg>

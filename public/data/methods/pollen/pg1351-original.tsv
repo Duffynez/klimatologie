@@ -1,0 +1,63 @@
+/* DATA DESCRIPTION:
+Citation:	Andreev, Andrei A; Dietze, Elisabeth; Herzschuh, Ulrike (2020): Pollen data of Lake El'gygytgyn sediments, core PG1351 (MIS 5e, 6, 7e, 8) [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.915749
+Abstract:	Pollen from sediment core PG1351 was analysed by Lozhkin et al. (2007), but there was no sediment left to sample the same core depths for Monosaccharide anhydrides (MA) analyses (doi:10.1594/PANGAEA.915603). Therefore, we sampled 19 of the 44 MA sample's core depths for parallel pollen analyses to enable a direct comparison of MA and pollen records without age bias. These new pollen samples were prepared using standard pollen preparation procedures as have been used previously for the El'gygytgyn sediments (Andreev et al., 2012).
+Keyword(s):	Chukotka; El'gygytgyn; PG1351; Pollen; Siberia
+Supplement to:	Dietze, Elisabeth; Mangelsdorf, Kai; Andreev, Andrei A; Karger, Cornelia; Schreuder, Laura T; Hopmans, Ellen C; Rach, Oliver; Sachse, Dirk; Wennrich, Volker; Herzschuh, Ulrike (2020): Relationships between low-temperature fires, climate and vegetation during three late glacials and interglacials of the last 430 kyr in northeastern Siberia reconstructed from monosaccharide anhydrides in Lake El'gygytgyn sediments. Climate of the Past, 16(2), 799-818, https://doi.org/10.5194/cp-16-799-2020
+Related to:	Dietze, Elisabeth; Karger, Cornelia; Mangelsdorf, Kai (2020): Monosaccharide anhydrides (MA) records of Lake El'gygytgyn sediments (MIS 5e, 6, 7e, 8,11c, 12c) [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.915603
+Further details:	Andreev, Andrei A; Morozova, E; Fedorov, Grigory B; Schirrmeister, Lutz; Bobrov, Anatoly A; Kienast, Frank; Schwamborn, Georg (2012): Vegetation history of central Chukotka deduced from permafrost paleoenvironmental records of the El'gygytgyn Impact Crater. Climate of the Past, 8(4), 1287-1300, https://doi.org/10.5194/cp-8-1287-2012
+	Lisiecki, Lorraine E; Raymo, Maureen E (2005): A Pliocene-Pleistocene stack of 57 globally distributed benthic d18O records. Paleoceanography, 20, PA1003, https://doi.org/10.1029/2004PA001071
+	Lozhkin, Anatoly V; Anderson, Patricia M; Matrosova, T V; Minyuk, Pavel S (2006): The pollen record from El'gygytgyn Lake: implications for vegetation and climate histories of northern Chukotka since the late middle Pleistocene. Journal of Paleolimnology, 37(1), 135-153, https://doi.org/10.1007/s10933-006-9018-5
+	Nowaczyk, Norbert R; Haltia, Eeva; Ulbricht, D; Wennrich, Volker; Sauerbrey, M A; Rosén, Peter; Vogel, Hendrik; Francke, Alexander; Meyer-Jacob, Carsten; Andreev, Andrei A; Lozhkin, Anatoly V (2013): Chronology of Lake El'gygytgyn sediments – a combined magnetostratigraphic, palaeoclimatic and orbital tuning study based on multi-parameter analyses. Climate of the Past, 9(6), 2413-2432, https://doi.org/10.5194/cp-9-2413-2013
+Project(s):	Lake Elgygytgyn - Climate History of the Arctic since 3.6 Million Years (ELGYGYTGYN) (URI: http://elgygytgyn.uni-koeln.de/)
+	Polar Terrestrial Environmental Systems @ AWI (AWI_Envi) (URI: https://www.awi.de/en/science/geosciences/polar-terrestrial-environmental-systems.html)
+Coverage:	LATITUDE: 67.506660 * LONGITUDE: 172.138330
+	DATE/TIME START: 1998-05-10T00:00:00 * DATE/TIME END: 1998-05-10T00:00:00
+	MINIMUM DEPTH, sediment/rock: 4.970 m * MAXIMUM DEPTH, sediment/rock: 12.240 m
+Event(s):	PG1351 * LATITUDE: 67.506660 * LONGITUDE: 172.138330 * DATE/TIME: 1998-05-10T00:00:00 * LAKE WATER DEPTH: 175 m * RECOVERY: 12.46 m * LOCATION: Elgygytgyn crater lake, Sibiria, Russia * CAMPAIGN: RU-Land_1998_Elgygytgyn (Elgygytgyn1998) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Composite Core (COMPCORE) * COMMENT: total core
+Parameter(s):	Marine isotope stage (MIS) * PI: Dietze, Elisabeth (https://orcid.org/0000-0003-4817-8441, elisabeth.dietze@uni-goettingen.de) * COMMENT: after Lisiecki and Raymo (2005, Paleoceanography)
+	Sample ID (Sample ID) * PI: Dietze, Elisabeth (https://orcid.org/0000-0003-4817-8441, elisabeth.dietze@uni-goettingen.de)
+	AGE [ka BP] (Age) * GEOCODE * PI: Dietze, Elisabeth (https://orcid.org/0000-0003-4817-8441, elisabeth.dietze@uni-goettingen.de) * COMMENT: age model of Nowaczyk et al. (2013)
+	DEPTH, sediment/rock [m] (Depth sed) * GEOCODE * PI: Dietze, Elisabeth (https://orcid.org/0000-0003-4817-8441, elisabeth.dietze@uni-goettingen.de) * METHOD/DEVICE: Counting, palynology
+	Betula sect. Albae-type [%] (Bet.Se.A-T) * PI: Dietze, Elisabeth (https://orcid.org/0000-0003-4817-8441, elisabeth.dietze@uni-goettingen.de) * METHOD/DEVICE: Counting, palynology
+	Betula sect. Nanae-type [%] (Bet.Se.N-T) * PI: Dietze, Elisabeth (https://orcid.org/0000-0003-4817-8441, elisabeth.dietze@uni-goettingen.de) * METHOD/DEVICE: Counting, palynology
+	Pinus subgen. Haploxylon [%] (Pinus s/g Haplo) * PI: Dietze, Elisabeth (https://orcid.org/0000-0003-4817-8441, elisabeth.dietze@uni-goettingen.de) * METHOD/DEVICE: Counting, palynology
+	Alnus [%] (Alnus) * PI: Dietze, Elisabeth (https://orcid.org/0000-0003-4817-8441, elisabeth.dietze@uni-goettingen.de) * METHOD/DEVICE: Counting, palynology
+	Larix [%] (Lar) * PI: Dietze, Elisabeth (https://orcid.org/0000-0003-4817-8441, elisabeth.dietze@uni-goettingen.de) * METHOD/DEVICE: Counting, palynology
+	Populus [%] (Populus) * PI: Dietze, Elisabeth (https://orcid.org/0000-0003-4817-8441, elisabeth.dietze@uni-goettingen.de) * METHOD/DEVICE: Counting, palynology
+	Cyperaceae [%] (Cyperac) * PI: Dietze, Elisabeth (https://orcid.org/0000-0003-4817-8441, elisabeth.dietze@uni-goettingen.de) * METHOD/DEVICE: Counting, palynology
+	Ericales [%] (Ericales) * PI: Dietze, Elisabeth (https://orcid.org/0000-0003-4817-8441, elisabeth.dietze@uni-goettingen.de) * METHOD/DEVICE: Counting, palynology
+	Salix [%] (Salix) * PI: Dietze, Elisabeth (https://orcid.org/0000-0003-4817-8441, elisabeth.dietze@uni-goettingen.de) * METHOD/DEVICE: Counting, palynology
+	Artemisia [%] (Artemisia) * PI: Dietze, Elisabeth (https://orcid.org/0000-0003-4817-8441, elisabeth.dietze@uni-goettingen.de) * METHOD/DEVICE: Counting, palynology
+	Chenopodiaceae [%] (Chenopod) * PI: Dietze, Elisabeth (https://orcid.org/0000-0003-4817-8441, elisabeth.dietze@uni-goettingen.de) * METHOD/DEVICE: Counting, palynology
+	Cichoriaceae [%] (Cichoriaceae) * PI: Dietze, Elisabeth (https://orcid.org/0000-0003-4817-8441, elisabeth.dietze@uni-goettingen.de) * METHOD/DEVICE: Counting, palynology
+	Poaceae [%] (Poac) * PI: Dietze, Elisabeth (https://orcid.org/0000-0003-4817-8441, elisabeth.dietze@uni-goettingen.de) * METHOD/DEVICE: Counting, palynology
+	Thalictrum [%] (Tha) * PI: Dietze, Elisabeth (https://orcid.org/0000-0003-4817-8441, elisabeth.dietze@uni-goettingen.de) * METHOD/DEVICE: Counting, palynology
+	Botryococcus [%] (Bot) * PI: Dietze, Elisabeth (https://orcid.org/0000-0003-4817-8441, elisabeth.dietze@uni-goettingen.de) * METHOD/DEVICE: Counting, palynology
+	Pediastrum [%] (Ped) * PI: Dietze, Elisabeth (https://orcid.org/0000-0003-4817-8441, elisabeth.dietze@uni-goettingen.de) * METHOD/DEVICE: Counting, palynology
+	Selaginella [%] (Selaginella) * PI: Dietze, Elisabeth (https://orcid.org/0000-0003-4817-8441, elisabeth.dietze@uni-goettingen.de) * METHOD/DEVICE: Counting, palynology
+	Sphagnum [%] (Sph) * PI: Dietze, Elisabeth (https://orcid.org/0000-0003-4817-8441, elisabeth.dietze@uni-goettingen.de) * METHOD/DEVICE: Counting, palynology
+	Picea [%] (Picea) * PI: Dietze, Elisabeth (https://orcid.org/0000-0003-4817-8441, elisabeth.dietze@uni-goettingen.de) * METHOD/DEVICE: Counting, palynology
+	Pollen, total [#/g] (Pollen tot) * PI: Dietze, Elisabeth (https://orcid.org/0000-0003-4817-8441, elisabeth.dietze@uni-goettingen.de) * METHOD/DEVICE: Counting, palynology
+License:	Creative Commons Attribution 4.0 International (CC-BY-4.0) (URI: https://creativecommons.org/licenses/by/4.0/)
+Size:	418 data points
+*/
+MIS	Sample ID	Age [ka BP]	Depth sed [m]	Bet.Se.A-T [%]	Bet.Se.N-T [%]	Pinus s/g Haplo [%]	Alnus [%]	Lar [%]	Populus [%]	Cyperac [%]	Ericales [%]	Salix [%]	Artemisia [%]	Chenopod [%]	Cichoriaceae [%]	Poac [%]	Tha [%]	Bot [%]	Ped [%]	Selaginella [%]	Sph [%]	Picea [%]	Pollen tot [#/g]
+5e	101	117.460	4.970	3.2	17.0	12.0	22.6	0.0	0.4	25.8	8.5	1.8	1.8	0.0	0.0	6.4	0.0	0.0	0.0	0.0	0.3	0	16852
+5e	103	120.400	5.180	3.5	27.7	14.2	18.4	0.0	0.4	14.2	7.1	0.4	4.3	0.0	0.0	8.9	0.0	1.4	0.0	0.0	0.0	0	56270
+5e	109	125.590	5.765	0.0	45.2	0.0	49.7	0.0	0.3	1.6	0.0	0.3	0.0	0.0	0.0	2.9	0.0	0.3	0.0	0.0	0.9	0	3832175
+5e	127	127.630	5.915	0.0	40.9	0.3	11.0	0.0	0.0	9.3	0.3	0.7	2.1	0.7	0.0	32.3	2.4	0.0	0.3	0.0	1.4	0	1347381
+5e	113	129.880	6.020	0.0	18.3	0.3	19.3	0.0	0.0	11.4	0.3	3.1	13.4	0.0	0.0	30.3	1.0	2.3	1.3	0.3	0.0	0	22449
+5e	115	131.850	6.120	0.3	18.0	1.6	33.2	0.0	0.0	8.9	0.0	0.0	9.7	0.0	0.0	25.1	0.3	27.4	0.3	0.8	1.5	0	4551
+6	117	134.246	6.220	0.0	0.7	0.0	0.0	0.0	0.0	7.0	0.3	2.0	47.2	0.3	0.0	40.9	0.7	7.6	0.3	0.0	0.3	0	15461
+6	119	136.070	6.320	0.0	0.6	0.0	0.3	0.3	0.3	5.2	0.3	3.3	44.8	0.0	1.2	40.9	0.0	14.5	0.0	0.9	1.8	0	7411
+6	121	137.900	6.420	0.3	0.3	0.0	0.0	0.0	0.0	3.3	0.0	4.0	46.3	0.0	0.3	43.7	0.0	12.0	0.0	0.0	0.0	0	14413
+6	124	139.910	6.520	0.0	0.3	0.0	0.6	0.3	0.0	12.0	0.0	5.4	36.7	0.0	0.0	41.0	0.3	1.2	0.0	0.0	0.0	0	43742
+6	125	144.460	6.570	0.0	1.6	0.0	1.9	0.0	0.0	10.0	0.0	7.2	32.9	0.3	0.3	43.3	0.3	10.1	0.6	0.0	0.3	0	72742
+7e	152	232.620	11.600	0.3	16.3	0.3	1.4	1.7	0.7	35.9	3.7	0.7	2.4	0.0	0.0	33.2	0.0	1.4	0.0	3.3	12.2	0	23860
+7e	154	237.100	11.705	0.7	26.4	4.7	1.7	2.7	0.0	19.6	6.8	0.7	5.1	0.0	0.0	27.4	0.0	13.9	0.3	5.3	13.6	0	13651
+7e	155	239.190	11.755	0.0	32.0	2.7	1.0	1.3	0.0	27.7	4.3	2.7	3.0	0.0	0.0	23.3	0.0	9.9	0.6	2.7	21.7	0	42984
+8	132	246.180	12.030	0.0	2.8	0.3	1.2	0.0	0.0	14.1	0.0	0.9	12.6	0.3	0.0	59.5	3.1	6.5	0.0	2.4	0.0	0	6769
+8	133	250.030	12.100	0.3	0.6	1.0	0.6	0.0	0.0	5.8	0.0	0.3	29.8	0.3	0.3	53.1	0.0	13.8	0.6	1.6	0.3	0	23204
+8	134	251.060	12.130	0.0	0.9	0.0	0.6	0.0	0.0	8.1	0.0	3.1	27.8	0.0	0.0	56.3	0.9	0.0	0.3	0.6	0.0	0	21082
+8	136	253.610	12.200	0.0	1.5	4.5	0.0	0.0	0.0	7.5	0.0	0.0	6.0	0.0	1.5	70.1	0.0	1.2	0.0	17.9	1.2	0	1597
+8	137	254.630	12.240	0.0	0.3	0.0	0.6	0.3	0.0	6.1	0.6	1.2	11.3	0.0	0.3	76.8	1.5	0.1	0.1	7.0	0.3	0	10957

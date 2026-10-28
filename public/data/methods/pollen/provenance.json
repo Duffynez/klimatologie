@@ -1,0 +1,23 @@
+{
+  "dataset": "Andreev, A. A., Dietze, E., Herzschuh, U. (2020): Pollen data of Lake Elgygytgyn sediments, core PG1351",
+  "doi": "10.1594/PANGAEA.915749",
+  "url": "https://doi.pangaea.de/10.1594/PANGAEA.915749?format=textfile",
+  "publication_date": "2020-04-29",
+  "accessed": "2026-10-28",
+  "license": "CC BY 4.0",
+  "selection": {
+    "MIS": [
+      "5e",
+      "6"
+    ],
+    "rows": 11,
+    "age_ka_BP": [
+      117.46,
+      144.46
+    ]
+  },
+  "processing": "Published pollen percentages, not grain counts. Retain denominator. Poaceae + Artemisia. Retain published chronology. No smoothing.",
+  "sha256": {
+    "pg1351-original.tsv": "68cf0d3e7d650875cb369ea91586082367844b1d077689cc9e04608223ebfc0a"
+  }
+}

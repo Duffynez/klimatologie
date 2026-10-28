@@ -1,3 +1,4 @@
+import { PollenAnalysisArticle } from "../../components/PollenAnalysisArticle";
 import { SpeleothemArticle } from "../../components/SpeleothemArticle";
 import { CoralSclerochronologyArticle } from "../../components/CoralSclerochronologyArticle";
 import { DendrochronologyArticle } from "../../components/DendrochronologyArticle";
@@ -101,6 +102,21 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "pylova-analyza-a-mikrofosilie") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Přírodní archivy" title="Pylová analýza a mikrofosilie" meta="28. října 2026">
+          <p>
+            Jak z pylu uchovaného v jezerních vrstvách poznáváme minulou vegetaci a klima.
+            Příprava vzorku, mikroskopický rozbor a vyhodnocení skutečných dat z Čukotky.
+          </p>
+        </PageLead>
+        <PollenAnalysisArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "krapniky-a-jeskynni-sedimenty") {
