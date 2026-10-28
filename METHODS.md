@@ -105,7 +105,7 @@ V souvislém příkladu ponecháme údaje potřebné k pochopení kroků, techni
 
 Shrnutí tvoří dva krátké souvislé odstavce. První uzavře vysvětlení: spojí princip metody s poznáním, které zpřístupňuje, a s tvrzeními, která její výsledky podpírají.
 
-Druhý odstavec samostatně odpoví, k čemu metoda jako celek slouží. Pojmenuje hlavní veličiny nebo jevy, které umožňuje měřit, určovat či rekonstruovat, a její hlavní použití. Je-li to pro danou metodu podstatné a doložitelné, uvede také časový, prostorový nebo měřicí rozsah. Popíše možnosti celé metody, nikoli jen použitého záznamu, přístroje nebo konkrétního příkladu. Rozliší přímé měření od odvozené rekonstrukce. Musí být srozumitelný i čtenáři, který si přečte pouze shrnutí, nemá však být úplným katalogem všech aplikací.
+Druhý odstavec samostatně odpoví, k čemu metoda jako celek slouží. Pojmenuje hlavní veličiny nebo jevy, které umožňuje měřit, určovat či rekonstruovat, a její hlavní použití. Uvede také podstatný časový, prostorový nebo měřicí rozsah konkrétními číselnými mezemi a jednotkami. Obecné výrazy jako „stovky až tisíce let“ nestačí. Čísla doloží zdrojem a vztáhne k celé metodě nebo k jasně označené variantě. Přibližné meze označí jako přibližné. Popíše možnosti celé metody, nikoli jen použitého záznamu, přístroje nebo konkrétního příkladu. Musí být srozumitelný i čtenáři, který si přečte pouze shrnutí, nemá však být úplným katalogem všech aplikací.
 
 Oba odstavce navážou na vysvětlení a použití metody v hlavním textu. Neopakují celý postup ani rozbor nejistot a nepřinášejí nové pojmy nebo další výpočet. Podstatná tvrzení o využití a rozsahu musí mít oporu ve výkladu a jeho zdrojích.
 
