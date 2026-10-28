@@ -1,0 +1,21 @@
+{
+  "dataset_doi": "10.25921/0n13-nf40",
+  "publication_doi": "10.1029/98PA00070",
+  "accessed": "2026-10-28",
+  "source_url": "https://www.ncei.noaa.gov/pub/data/paleo/paleocean/by_contributor/bemis1998/lab_forams.txt",
+  "source_readme_url": "https://www.ncei.noaa.gov/pub/data/paleo/paleocean/by_contributor/bemis1998/readme_bemis1998.txt",
+  "archive_version": "Original receipt February 1998, contribution 98-003. NOAA metadata publication 2003-11-14.",
+  "encoding": "latin-1",
+  "selection": {
+    "Species": "O. universa",
+    "Irradiance": "LL",
+    "[CO32-]": "171"
+  },
+  "input_level": "Published calcite minus water delta18O difference, water already adjusted by -0.27 per mille. Not raw instrument signals.",
+  "equation": "T_C = 16.5 - 4.80 * delta_difference_per_mille (Bemis et al. 1998, equation 1)",
+  "note": "The selected data were used to establish this calibration. Residuals are in-sample, not an independent validation.",
+  "sha256": {
+    "bemis1998-original.txt": "56128bb17bb08689741e59d48e1f38e35a5d4bce4fb18d90917a7c305669639c",
+    "bemis1998-readme.txt": "3370de7d7667b01ecdaf61df92a4915ec08e240f20dadde0afafc5d0284d0d7a"
+  }
+}

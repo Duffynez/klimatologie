@@ -47,3 +47,7 @@ public/data/methods/speleothems/*-original.txt binary
 
 # Preserve the PANGAEA pollen export and its checksum on every platform.
 public/data/methods/pollen/pg1351-original.tsv binary
+
+# Preserve NOAA source bytes and reproducible isotope example outputs.
+public/data/methods/isotope-temperature/* text eol=lf
+public/data/methods/isotope-temperature/bemis1998-*.txt binary

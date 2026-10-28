@@ -1,3 +1,4 @@
+import { IsotopePaleothermometryArticle } from "../../components/IsotopePaleothermometryArticle";
 import { PollenAnalysisArticle } from "../../components/PollenAnalysisArticle";
 import { SpeleothemArticle } from "../../components/SpeleothemArticle";
 import { CoralSclerochronologyArticle } from "../../components/CoralSclerochronologyArticle";
@@ -102,6 +103,22 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "izotopova-paleotermometrie") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Přírodní archivy" title="Izotopová paleotermometrie" meta="28. října 2026">
+          <p>
+            Jak z izotopového složení mořských schránek určujeme teplotu vody,
+            ve které vznikly. Od přípravy vzorku a laboratorního měření
+            k výpočtu teploty a rekonstrukci minulého klimatu.
+          </p>
+        </PageLead>
+        <IsotopePaleothermometryArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "pylova-analyza-a-mikrofosilie") {

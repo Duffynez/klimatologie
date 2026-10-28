@@ -3210,3 +3210,73 @@ test("pollen example retains published denominators, chronology and all eleven s
   assert.equal(rows[0][3], "117460");
   assert.equal(rows.at(-1)[3], "144460");
 });
+
+
+test("isotope paleothermometry publishes its complete calibrated pathway with open sources", async () => {
+  const [html, source, catalogue, massSpectrometry] = await Promise.all([
+    readFile(new URL("dist/client/metody/izotopova-paleotermometrie/index.html", root), "utf8"),
+    readFile(new URL("app/components/IsotopePaleothermometryArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/metody/hmotnostni-a-izotopova-spektrometrie/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "Full article must replace the placeholder");
+  assert.equal([...body.matchAll(/<h2>/g)].length, 4);
+  assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
+  assert.match(body, /19,1 °C/);
+  assert.match(body, /95 000 000/);
+  assert.match(body, /Vzorky byly součástí kalibrace/);
+  assert.doesNotMatch(body, /katex-error|Potřebné informace/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  assert.match(massSpectrometry, /href="\/metody\/izotopova-paleotermometrie"/);
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  for (const id of new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
+    assert.ok(card, "Missing isotope source " + id);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const file = /\.[a-z0-9]+$/i.test(match[1]) ? match[1] : match[1].replace(/\/$/, "") + "/index.html";
+    await readFile(new URL("dist/client" + file, root));
+  }
+});
+
+test("isotope example preserves NOAA bytes, selects all 39 low-light samples and applies the offset only once", async () => {
+  const base = new URL("public/data/methods/isotope-temperature/", root);
+  const metadata = JSON.parse(await readFile(new URL("provenance.json", base), "utf8"));
+  for (const [name, hash] of Object.entries(metadata.sha256)) {
+    const original = await readFile(new URL(name, base));
+    assert.equal(createHash("sha256").update(original).digest("hex"), hash);
+    assert.deepEqual(await readFile(new URL("dist/client/data/methods/isotope-temperature/" + name, root)), original);
+  }
+  const raw = await readFile(new URL("bemis1998-original.txt", base));
+  const [header, ...lines] = raw.toString("latin1").trim().split(/\r?\n/);
+  const names = header.split("\t");
+  const input = lines.map((line, index) => ({ ...Object.fromEntries(line.split("\t").map((v, i) => [names[i], v])), number: index + 1 }));
+  assert.equal(input.length, 135);
+  const selected = input.filter(r => r.Species === "O. universa" && r.Irradiance === "LL" && r["[CO32-]"] === "171");
+  const rows = (await readFile(new URL("selected-results.csv", base), "utf8")).trim().split(/\r?\n/).slice(1).map(line => line.split(",").map(Number));
+  assert.equal(selected.length, 39);
+  assert.deepEqual(rows.map(r => r[0]), selected.map(r => r.number));
+  for (const row of rows) {
+    const original = input[row[0] - 1];
+    assert.equal(row[1], Number(original["T(°C)"]));
+    assert.equal(row[2], Number(original["dc-dw (VPDB)"]));
+    assert.ok(Math.abs(row[3] - (16.5 - 4.8 * row[2])) < 1e-10, "Published D is already adjusted: no extra 0.27");
+    assert.ok(Math.abs(row[4] - (row[3] - row[1])) < 1e-10);
+  }
+  const groups = (await readFile(new URL("group-means.csv", base), "utf8")).trim().split(/\r?\n/).slice(1).map(line => line.split(",").map(Number));
+  assert.deepEqual(groups.map(r => r.slice(0, 2)), [[15, 6], [17, 4], [18, 2], [19, 5], [22, 13], [24, 6], [25, 3]]);
+  for (const [bath, n, meanD, meanT] of groups) {
+    const measurements = rows.filter(r => r[1] === bath);
+    assert.equal(n, measurements.length);
+    assert.ok(Math.abs(meanD - measurements.reduce((sum, r) => sum + r[2], 0) / n) < 1e-10);
+    assert.ok(Math.abs(meanT - measurements.reduce((sum, r) => sum + r[3], 0) / n) < 1e-10);
+  }
+  const nineteen = groups.find(r => r[0] === 19);
+  assert.equal(nineteen[2], -0.542);
+  assert.equal(nineteen[3], 19.1016);
+});
