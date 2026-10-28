@@ -2941,3 +2941,41 @@ test("ice-core method publishes reproducible dated measurements and reciprocal C
     assert.equal(createHash("sha256").update(await readFile(new URL(name, base))).digest("hex"), sha);
   }
 });
+
+test("sediment-core method publishes dated source data and links to the ice archive", async () => {
+  const slug = "sedimentarni-jadra-a-stratigrafie";
+  const [html, source, catalogue, ice] = await Promise.all([
+    readFile(new URL(`dist/client/metody/${slug}/index.html`, root), "utf8"),
+    readFile(new URL("app/components/SedimentCoreArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/metody/ledova-jadra-a-analyza-uzavreneho-vzduchu/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "Full article must replace the catalogue placeholder");
+  assert.equal([...body.matchAll(/<h2>/g)].length, 4);
+  assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
+  assert.doesNotMatch(body, /katex-error|Potřebné informace/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  assert.match(body, /8,33 centimetru za tisíc let/);
+  assert.match(body, /120 let na centimetr/);
+  assert.ok(ice.includes(`href="/metody/${slug}"`));
+  assert.ok(body.includes('href="/metody/ledova-jadra-a-analyza-uzavreneho-vzduchu"'));
+  assert.ok(body.includes('href="/pozorovani/atmosfericka-koncentrace-co2"'));
+  const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
+  assert.ok(ids.length >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
+    assert.ok(card, "Missing sediment-core source " + id);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const file = /\.[a-z0-9]+$/i.test(match[1]) ? match[1] : match[1].replace(/\/$/, "") + "/index.html";
+    await readFile(new URL("dist/client" + file, root));
+  }
+  const base = new URL("public/data/methods/sediment-cores/", root);
+  const metadata = JSON.parse(await readFile(new URL("provenance.json", base), "utf8"));
+  for (const [name, sha] of Object.entries(metadata.sha256)) {
+    assert.equal(createHash("sha256").update(await readFile(new URL(name, base))).digest("hex"), sha);
+  }
+});

@@ -33,3 +33,5 @@ public/data/methods/gnss-water/* text eol=lf
 
 public/data/methods/ice-cores/* text eol=lf
 public/data/methods/ice-cores/*.xlsx binary
+
+public/data/methods/sediment-cores/* text eol=lf

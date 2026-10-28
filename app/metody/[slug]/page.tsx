@@ -1,3 +1,4 @@
+import { SedimentCoreArticle } from "../../components/SedimentCoreArticle";
 import { IceCoreArticle } from "../../components/IceCoreArticle";
 import { GnssWaterVaporArticle } from "../../components/GnssWaterVaporArticle";
 import { RadioOccultationArticle } from "../../components/RadioOccultationArticle";
@@ -97,6 +98,18 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "sedimentarni-jadra-a-stratigrafie") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Přírodní archivy" title="Sedimentární jádra a stratigrafie" meta="28. října 2026">
+          <p>Jak odebíráme usazeniny ze dna, spojujeme jejich vrstvy a určujeme časovou osu záznamu minulého prostředí.</p>
+        </PageLead>
+        <SedimentCoreArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "ledova-jadra-a-analyza-uzavreneho-vzduchu") {

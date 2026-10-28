@@ -222,6 +222,12 @@ export function IceCoreArticle() {
           <SourceLink id="DOI_10_5194_cp_16_503_2020">(Fourteau a kol. 2020)</SourceLink>
         </p>
 
+        <p>
+          Záznam prostředí oceánu doplňují také usazeniny na jeho dně.
+          Jejich odběr, spojování vrstev z více vrtů a přiřazení stáří vysvětluje
+          metoda <Link href="/metody/sedimentarni-jadra-a-stratigrafie">sedimentárních jader a stratigrafie</Link>.
+        </p>
+
         <h3>Vývoj metody a další provedení</h3>
         <p>
           Suché rozbíjení ledu a optické měření uvolněného CO₂ bylo použitelné

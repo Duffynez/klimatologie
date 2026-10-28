@@ -1,0 +1,32 @@
+{
+  "title": "Age-depth control points from IODP Site 397-U1385",
+  "citation": "Hodell, D. A. et al. (2026), Supplementary material. DOI: 10.14379/iodp.proc.397.204supp.2026",
+  "doi": "https://doi.org/10.14379/iodp.proc.397.204supp.2026",
+  "method_doi": "https://doi.org/10.14379/iodp.proc.397.204.2026",
+  "source_url": "https://publications.iodp.org/proceedings/397/204/SUPP_MAT/TABLES/397-U1385TABLES.XLSX",
+  "source_filename": "397-U1385TABLES.XLSX",
+  "source_sha256": "cae55f333fd2686c2ea124d05b5b98105f4478e6eaa9ec2345abb54984333597",
+  "publication_date": "2026-01-29",
+  "accessed": "2026-10-28",
+  "license": "CC BY 4.0",
+  "license_url": "https://iodp.tamu.edu/scienceops/copyright.html",
+  "selection": {
+    "sheet": "Table 11",
+    "rows": [
+      3,
+      4
+    ],
+    "columns": {
+      "A": "Depth CCSF (m)",
+      "C": "Age (thousands of years)",
+      "D": "Interval sedimentation rate (cm/kyr)",
+      "E": "Age model"
+    }
+  },
+  "processing": "Extract two adjacent published age-depth control points. Calculate thickness, duration, average accumulation rate and the nominal time represented by 1 cm. No age tuning, interpolation of ages or proxy-to-temperature conversion is performed.",
+  "scope": "CCSF is the composite depth coordinate, not the original borehole depth. Ages are published estimates assigned on the LR04 chronology. The interval lies below the piston-cored upper part. 1 cm / rate describes nominal spacing, not effective temporal resolution.",
+  "source_note": "The workbook Citation sheet retains a 2025 draft citation. The definitive publication and supplement DOI are dated 2026. Use the linked definitive record.",
+  "sha256": {
+    "age-depth-points.csv": "20f709ac575355de601bbf5985c8da7f438a3d6df908b80aa7dcf5d29983c3fb"
+  }
+}
