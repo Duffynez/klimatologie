@@ -1,0 +1,24 @@
+{
+  "sample_count": 1008,
+  "age_range_calBP": [
+    -57.3,
+    8162.8
+  ],
+  "complete_mean_count": 988,
+  "example_center_row": 39,
+  "example_center_age_calBP": 496.9,
+  "example_center_depth_mm": 7.6,
+  "example_center_delta_permil": -4.95,
+  "example_count": 21,
+  "example_depth_range_mm": [
+    5.6,
+    9.6
+  ],
+  "example_age_range_calBP": [
+    351.0,
+    642.7
+  ],
+  "example_age_span_years": 291.70000000000005,
+  "example_delta_sum_permil": -105.97,
+  "example_mean_delta_permil": -5.046190476190477
+}

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="820" viewBox="0 0 680 820" role="img" aria-labelledby="title desc">
+  <title id="title">Od vody k datovanému záznamu v krápníku</title>
+  <desc id="desc">Voda rozpouští vápenec a v jeskyni ukládá vrstvy kalcitu. Ve známých místech řezu se zvlášť určí stáří uranovým datováním a izotopové složení kyslíku. Spojením vznikne časový záznam.</desc>
+  <defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9Z" fill="#427589"/></marker></defs>
+  <rect width="680" height="820" rx="18" fill="#f4f8f9"/>
+  <g font-family="Arial, sans-serif" text-anchor="middle" fill="#193a47">
+    <text x="340" y="40" font-size="28" font-weight="700">Jak vznikne jeskynní záznam</text>
+    <rect x="45" y="66" width="590" height="106" rx="12" fill="#e3f0f5" stroke="#8db4c4"/>
+    <text x="340" y="101" font-size="27" font-weight="700">Srážková voda</text>
+    <text x="340" y="132" font-size="23">Přijímá CO₂ z půdy a rozpouští vápenec.</text>
+    <text x="340" y="159" font-size="23">Puklinami přináší rozpuštěné látky.</text>
+    <path d="M340 174V203" stroke="#427589" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="45" y="216" width="590" height="112" rx="12" fill="#f3ead8" stroke="#c5b180"/>
+    <text x="340" y="252" font-size="27" font-weight="700">Nová vrstva kalcitu</text>
+    <text x="340" y="284" font-size="23">V jeskyni z vody uniká CO₂.</text>
+    <text x="340" y="313" font-size="23">Na stalagmitu přibývá pevný minerál.</text>
+    <path d="M340 330V358" stroke="#427589" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="45" y="371" width="590" height="84" rx="12" fill="#fff" stroke="#a2b8bf"/>
+    <text x="340" y="405" font-size="27" font-weight="700">Řez podél osy růstu</text>
+    <text x="340" y="437" font-size="23">Každý vzorek má známou polohu v řezu.</text>
+    <path d="M340 456V479H175V508M340 479H505V508" fill="none" stroke="#427589" stroke-width="3" marker-end="url(#arrow)"/>
+    <path d="M175 479V508" stroke="#427589" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="30" y="522" width="290" height="122" rx="12" fill="#eeeaf4" stroke="#b7a7c9"/>
+    <text x="175" y="558" font-size="26" font-weight="700">Uran a thorium</text>
+    <text x="175" y="592" font-size="22">Radioaktivní přeměna</text>
+    <text x="175" y="625" font-size="25">→ stáří vrstvy</text>
+    <rect x="360" y="522" width="290" height="122" rx="12" fill="#e3f0f5" stroke="#8db4c4"/>
+    <text x="505" y="558" font-size="26" font-weight="700">Stabilní kyslík</text>
+    <text x="505" y="592" font-size="22">Izotopové složení</text>
+    <text x="505" y="625" font-size="25">→ δ¹⁸O kalcitu</text>
+    <path d="M175 646V672H505V646M340 672V691" fill="none" stroke="#427589" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="45" y="706" width="590" height="88" rx="12" fill="#dcece9" stroke="#7ea69c"/>
+    <text x="340" y="742" font-size="27" font-weight="700">Časový záznam</text>
+    <text x="340" y="777" font-size="23">Jak se složení vrstev měnilo v čase.</text>
+  </g>
+</svg>

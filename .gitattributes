@@ -41,3 +41,6 @@ public/data/methods/dendrochronology/yad.raw binary
 
 public/data/methods/coral-sclerochronology/* text eol=lf
 public/data/methods/coral-sclerochronology/*-original.txt binary
+
+public/data/methods/speleothems/* text eol=lf
+public/data/methods/speleothems/*-original.txt binary

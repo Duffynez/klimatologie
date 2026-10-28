@@ -1,0 +1,32 @@
+{
+  "access_date": "2026-10-28",
+  "dataset_doi": "10.25921/s829-3m55",
+  "study_doi": "10.5194/cp-8-1751-2012",
+  "input_url": "https://www.ncei.noaa.gov/pub/data/paleo/speleothem/europe/germany/bunker2012bu4-noaa.txt",
+  "file_version": "2025-03-20",
+  "sample": "Bu4",
+  "sha256": {
+    "bu4-original.txt": "d3ca5640c48ad853c5035ed7ed96016621ae076482a1d3c4b301c595dd940a81"
+  },
+  "scope": "Published oxygen isotope values and published age model. No reconstruction of raw mass-spectrometer signals, iscam chronology or quantitative rainfall.",
+  "processing": "Centered unweighted mean of 21 successive samples in depth order, following the smoothing length reported for oxygen in Fig. 4c of Fohlmeister et al. (2012). First and last ten samples have no complete window and remain blank. No resampling or detrending.",
+  "example_selection": "Complete window whose central published age is closest to 500 cal BP.",
+  "units": {
+    "age_calBP": "calendar years before 1950 CE",
+    "depth_mm": "mm below top",
+    "d18OcarbVPDB": "per mille VPDB",
+    "100*Mg/Ca": "100 times molar Mg/Ca, retained only in original file and not used"
+  },
+  "image": {
+    "file": "bunker-samples.png",
+    "origin": "Figure 1, embedded raster extracted unchanged from publication PDF",
+    "pdf_url": "https://cp.copernicus.org/articles/8/1751/2012/cp-8-1751-2012.pdf",
+    "credit": "Fohlmeister et al. (2012), Fig. 1",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "dimensions": [
+      1033,
+      453
+    ]
+  }
+}

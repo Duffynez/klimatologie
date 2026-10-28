@@ -3080,3 +3080,65 @@ test("coral sclerochronology publishes a sourced method and a reproducible negat
   assert.equal(year1900[3].toFixed(2), "26.32");
   assert.equal(year1900[2].toFixed(2), "26.16");
 });
+
+test("speleothems connect measured isotope values to a dated, reproducible 21-sample record", async () => {
+  const [html, source, catalogue, coral] = await Promise.all([
+    readFile(new URL("dist/client/metody/krapniky-a-jeskynni-sedimenty/index.html", root), "utf8"),
+    readFile(new URL("app/components/SpeleothemArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/metody/koralova-sclerochronologie/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "Full article must replace the catalogue placeholder");
+  assert.equal([...body.matchAll(/<h2>/g)].length, 4);
+  assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
+  assert.doesNotMatch(body, /katex-error|Potřebné informace/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  assert.match(html, /28\. října 2026/);
+  assert.match(body, /−5,05 ‰/);
+  assert.match(body, /přibližně 292 let/);
+  assert.match(body, /již kalibrovanými hodnotami/);
+  assert.match(body, /není zcela nezávislou/);
+  assert.ok(coral.includes('href="/metody/krapniky-a-jeskynni-sedimenty"'));
+  assert.ok(body.includes('href="/metody/koralova-sclerochronologie"'));
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
+  assert.ok(ids.length >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
+    assert.ok(card, "Missing speleothem source " + id);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const file = /\.[a-z0-9]+$/i.test(match[1]) ? match[1] : match[1].replace(/\/$/, "") + "/index.html";
+    await readFile(new URL("dist/client" + file, root));
+  }
+  const base = new URL("public/data/methods/speleothems/", root);
+  const metadata = JSON.parse(await readFile(new URL("provenance.json", base), "utf8"));
+  const original = await readFile(new URL("bu4-original.txt", base));
+  assert.equal(createHash("sha256").update(original).digest("hex"), metadata.sha256["bu4-original.txt"]);
+  assert.deepEqual(await readFile(new URL("dist/client/data/methods/speleothems/bu4-original.txt", root)), original);
+  const values = original.toString("utf8").split(/\r?\n/).filter(line => line.trim() && !line.startsWith("#")).slice(1)
+    .map(line => line.split("\t").map(Number));
+  const processed = (await readFile(new URL("bu4-processed.csv", base), "utf8")).trim().split("\n").slice(1).map(line => line.split(","));
+  assert.equal(values.length, 1008);
+  assert.equal(processed.length, values.length);
+  const centers = processed.filter(row => row[4] !== "");
+  assert.equal(centers.length, 988);
+  for (let i = 0; i < processed.length; i++) {
+    assert.equal(Number(processed[i][1]), values[i][0], "Retain the published chronology");
+    assert.equal(Number(processed[i][3]), values[i][3], "Retain measured delta, not carbon or Mg/Ca");
+    if (i < 10 || i >= values.length - 10) {
+      assert.equal(processed[i][4], "", "Never pad incomplete windows");
+    } else {
+      const expected = values.slice(i-10,i+11).reduce((sum, row) => sum + row[3], 0) / 21;
+      assert.ok(Math.abs(Number(processed[i][4]) - expected) < 1e-9);
+    }
+  }
+  assert.equal(Number(processed[38][1]), 496.9);
+  assert.equal(Number(processed[38][4]).toFixed(2), "-5.05");
+  assert.equal((values[48][0] - values[28][0]).toFixed(1), "291.7");
+});

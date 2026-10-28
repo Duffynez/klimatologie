@@ -1,3 +1,4 @@
+import { SpeleothemArticle } from "../../components/SpeleothemArticle";
 import { CoralSclerochronologyArticle } from "../../components/CoralSclerochronologyArticle";
 import { DendrochronologyArticle } from "../../components/DendrochronologyArticle";
 import { SedimentCoreArticle } from "../../components/SedimentCoreArticle";
@@ -100,6 +101,18 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "krapniky-a-jeskynni-sedimenty") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Přírodní archivy" title="Krápníky a jeskynní sedimenty" meta="28. října 2026">
+          <p>Jak vznikají vrstvy krápníku, jak určujeme jejich stáří a co jejich složení vypovídá o minulém prostředí. Postup a ověřitelný výpočet se skutečnými daty z Bunkerhöhle.</p>
+        </PageLead>
+        <SpeleothemArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "koralova-sclerochronologie") {

@@ -283,6 +283,13 @@ export function CoralSclerochronologyArticle() {
           <SourceLink id="WEB_NCAR_Coral_Geochemistry_2023">(Lawmanová a NCAR 2023, spojené analýzy a databáze)</SourceLink>
         </p>
 
+        <p>
+          Jak se izotopové složení vody promítá do minerálu rostoucího
+          v jeskyni, vysvětluje navazující článek o{" "}
+          <Link href="/metody/krapniky-a-jeskynni-sedimenty">krápnících a jeskynních sedimentech</Link>.
+          Ukazuje také další využití uranového datování.
+        </p>
+
         <h2>Nejistoty a kontrola výsledku</h2>
         <p>
           Rekonstrukci ovlivňuje datování, zachování kostry, růst korálu
