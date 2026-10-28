@@ -1,0 +1,29 @@
+{
+  "title": "Greenland mass change between April 2019 and April 2020",
+  "retrieved": "2026-10-28",
+  "snapshot_created": "2023-01-24",
+  "source_url": "https://www.nasa.gov/wp-content/uploads/2023/06/greenland-and-antarctica-ice-sheet-mass-copy.xlsx",
+  "landing_url": "https://www.nasa.gov/stem-content/antarctic-ice-mass-data-set/",
+  "provider": "NASA Office of STEM Engagement, original JPL data",
+  "underlying_dataset": "Wiese, Yuan, Boening, Landerer and Watkins (2022), JPL GRACE and GRACE-FO Mascon Ocean, Ice, and Hydrology Equivalent Water Height RL06.1M CRI Filtered Version 3.0",
+  "dataset_doi": "10.5067/TEMSC-3MJ62",
+  "original_sheet": "Greenland Original Data",
+  "original_cells": [
+    "A207",
+    "A219"
+  ],
+  "derived_sheet": "Greenland & Ant Derived Data",
+  "derived_rows": [
+    173,
+    185
+  ],
+  "reference": "April 2002",
+  "gia_model": "ICE6G-D, already removed in source",
+  "input_status": "Processed monthly regional mass anomalies, not raw range measurements.",
+  "selection": "Two existing monthly records. Decimal years are rounded to two places and are not exact days.",
+  "operation": "M(2020-04) - M(2019-04)",
+  "result_gt": "-516.04",
+  "uncertainty": "Source column is 1-sigma, measurement plus leakage. No covariance supplied for selected months. No uncertainty interval for their difference calculated.",
+  "workbook_sha256": "89bddbed54e5661eb40d15948df1f0e0b4f40919a991b8e5717e9b6b74fb7c49",
+  "csv_sha256": "4817e91bd320dd460b84951936cdf2e4a3d9fb0cf7ae769e250d8a12e22a819d"
+}

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="850" viewBox="0 0 640 850" role="img" aria-labelledby="title desc">
+<title id="title">Od pohybu družic ke změně hmotnosti</title>
+<desc id="desc">Čtyři navazující kroky. Měření vzdálenosti, drah a dalších sil. Výpočet měsíčního rozložení hmoty. Oddělení příspěvku podloží a pobřežních oblastí. Součet změny hmotnosti vybraného území.</desc>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10" fill="none" stroke="#277a83" stroke-width="2"/></marker></defs>
+<rect width="640" height="850" rx="18" fill="#f5f8f6"/>
+<g font-family="Arial, sans-serif" fill="#173f44">
+<text x="320" y="48" text-anchor="middle" font-size="27" font-weight="700">Od pohybu družic ke hmotnosti</text>
+<rect x="35" y="80" width="570" height="143" rx="12" fill="#fff" stroke="#8db6b5" stroke-width="2"/>
+<text x="60" y="118" font-size="25" font-weight="700">1. Záznamy z družic</text>
+<text x="60" y="157" font-size="24">Změny vzájemné vzdálenosti</text>
+<text x="60" y="192" font-size="24">+ dráhy, natočení a další síly</text>
+<path d="M320 230V264" stroke="#277a83" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="35" y="280" width="570" height="163" rx="12" fill="#fff" stroke="#8db6b5" stroke-width="2"/>
+<text x="60" y="319" font-size="25" font-weight="700">2. Společné vyhodnocení přeletů</text>
+<text x="60" y="357" font-size="24">Hledání rozložení hmoty, které</text>
+<text x="60" y="391" font-size="24">vysvětluje naměřený pohyb</text>
+<text x="60" y="424" font-size="21" fill="#486468">Se započtením atmosféry, oceánu a slapů</text>
+<path d="M320 450V484" stroke="#277a83" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="35" y="500" width="570" height="133" rx="12" fill="#fff" stroke="#8db6b5" stroke-width="2"/>
+<text x="60" y="539" font-size="25" font-weight="700">3. Měsíční mapa vody a ledu</text>
+<text x="60" y="577" font-size="24">Odečtení modelu změn podloží</text>
+<text x="60" y="611" font-size="24">a rozdělení pobřežních oblastí</text>
+<path d="M320 640V674" stroke="#277a83" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="35" y="690" width="570" height="125" rx="12" fill="#e2efeb" stroke="#277a83" stroke-width="2"/>
+<text x="60" y="730" font-size="25" font-weight="700">4. Hmotnost vybraného území</text>
+<text x="60" y="769" font-size="24">Součet příspěvků jednotlivých ploch</text>
+<text x="60" y="800" font-size="21" fill="#486468">Porovnání měsíců ukáže přírůstek či úbytek</text>
+</g></svg>

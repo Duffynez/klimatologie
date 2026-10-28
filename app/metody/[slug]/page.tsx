@@ -1,3 +1,4 @@
+import { GravimetryArticle } from "../../components/GravimetryArticle";
 import { InterferometryArticle } from "../../components/InterferometryArticle";
 import { AltimetryArticle } from "../../components/AltimetryArticle";
 import { RadarArticle } from "../../components/RadarArticle";
@@ -93,6 +94,18 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "druzicova-gravimetrie") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Družicová gravimetrie" meta="28. října 2026">
+          <p>Jak změny vzdálenosti mezi družicemi umožňují měřit přesuny vody a úbytek hmotnosti ledových příkrovů.</p>
+        </PageLead>
+        <GravimetryArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "radarova-interferometrie-a-sledovani-pohybu-povrchu") {

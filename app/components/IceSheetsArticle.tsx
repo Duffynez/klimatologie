@@ -158,7 +158,7 @@ export function IceSheetsArticle() {
           GRACE a GRACE-FO tvoří vždy dvě družice letící po téměř stejné dráze přibližně 220 kilometrů za sebou. Když
           první přeletí nad oblastí s větší hmotností, nepatrně zrychlí a vzdálenost mezi družicemi se změní. Přístroje
           opakovaně měří tuto vzdálenost s mikrometrovou přesností. Z měsíce přeletů pak vznikne globální mapa změny
-          gravitačního pole a z ní mapa přesunu hmoty. <SourceLink id="WEB_NASA_How_GRACE_FO_Measures_Gravity_GRACE_FO_3fe022bf">NASA/JPL: jak GRACE-FO měří gravitaci</SourceLink>
+          gravitačního pole a z ní mapa přesunu hmoty. Podrobný postup od měření vzdálenosti k hmotnostní bilanci vysvětluje článek o <Link href="/metody/druzicova-gravimetrie/">družicové gravimetrii</Link>. <SourceLink id="WEB_NASA_How_GRACE_FO_Measures_Gravity_GRACE_FO_3fe022bf">NASA/JPL: jak GRACE-FO měří gravitaci</SourceLink>
         </p>
 
         <figure className="article-figure">
