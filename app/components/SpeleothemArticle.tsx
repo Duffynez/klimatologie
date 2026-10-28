@@ -119,7 +119,7 @@ export function SpeleothemArticle() {
           podle izotopu thorium 232 a ve výpočtu se opravuje.
           Výsledkem je stáří konkrétní odebrané části kalcitu.
           U vhodných vzorků má uran-thoriové datování časový dosah
-          přibližně 600 000 let.{" "}
+          přibližně 600 000 let.{" "}
           <SourceLink id="DOI_10_3285_eg_57_1_2_3">(Scholz a Hoffmann 2008, výpočet, časový dosah a počáteční thorium)</SourceLink>
         </p>
         <p>
@@ -485,7 +485,7 @@ export function SpeleothemArticle() {
             Jejich složení vypovídá také o půdě a vegetaci nad jeskyní.
             Jeskynní sedimenty umožňují zjišťovat, kdy docházelo k povodním.
             Při datování pomocí uranu a thoria lze takto zkoumat minulost
-            až přibližně 600 000 let nazpět.
+            až přibližně 600 000 let nazpět.
           </p>
         </div>
       </div>
