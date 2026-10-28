@@ -59,3 +59,5 @@ if "--plot" in sys.argv:
     fig.subplots_adjust(left=.15, right=.97, bottom=.15, top=.84, wspace=.19)
     fig.text(.15, .96, "Jezero Elgygytgyn · jádro PG1351", color="#193b3d", fontsize=17, weight="bold")
     fig.savefig(BASE / "elgygytgyn-pollen.svg", metadata={"Date": None, "Creator": "Klimatologie.eu, data doi:10.1594/PANGAEA.915749"})
+    svg = BASE / "elgygytgyn-pollen.svg"
+    svg.write_text("\n".join(line.rstrip() for line in svg.read_text(encoding="utf-8").splitlines()) + "\n", encoding="utf-8")

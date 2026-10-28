@@ -44,3 +44,6 @@ public/data/methods/coral-sclerochronology/*-original.txt binary
 
 public/data/methods/speleothems/* text eol=lf
 public/data/methods/speleothems/*-original.txt binary
+
+# Preserve the PANGAEA pollen export and its checksum on every platform.
+public/data/methods/pollen/pg1351-original.tsv binary
