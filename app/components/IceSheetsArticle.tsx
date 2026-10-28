@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SourceLink } from "./SourceLink";
 
 export function IceSheetsArticle() {
@@ -132,7 +133,9 @@ export function IceSheetsArticle() {
           snížil. Jednotlivé profily se spojí do mapy a chybějící místa se odhadnou podle okolních měření. Radar může
           pronikat do sněhu různě hluboko, zatímco laser častěji ztrácí měření pod mraky. Zpracování proto sleduje
           vlastnosti odrazu i rozdíly mezi družicemi. <SourceLink id="DOI_10_1007_s10712_023_09795_8">Otosaka et al., 2023</SourceLink> a{" "}
-          <SourceLink id="DOI_10_5194_essd_18_1729_2026">Nilsson a Gardner, 2026</SourceLink>
+          <SourceLink id="DOI_10_5194_essd_18_1729_2026">Nilsson a Gardner, 2026</SourceLink>{" "}
+          Vznik jednotlivých výškových údajů podrobně rozebírá
+          <Link href="/metody/radarova-a-laserova-altimetrie"> radarová a laserová altimetrie</Link>.
         </p>
 
         <p>

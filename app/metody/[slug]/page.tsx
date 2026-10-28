@@ -1,3 +1,4 @@
+import { AltimetryArticle } from "../../components/AltimetryArticle";
 import { RadarArticle } from "../../components/RadarArticle";
 import { LidarArticle } from "../../components/LidarArticle";
 import { MicrowaveRadiometryArticle } from "../../components/MicrowaveRadiometryArticle";
@@ -91,6 +92,18 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "radarova-a-laserova-altimetrie") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Radarová a laserová altimetrie" meta="28. října 2026">
+          <p>Jak družice měří výšku oceánu a ledových příkrovů a jak z těchto měření vzniká údaj o změně hladiny nebo povrchu ledu.</p>
+        </PageLead>
+        <AltimetryArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "lidar-a-laserove-mereni-vzdalenosti") {

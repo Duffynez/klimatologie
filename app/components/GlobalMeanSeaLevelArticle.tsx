@@ -171,7 +171,9 @@ export function GlobalMeanSeaLevelArticle() {
           vznikne vzdálenost mezi anténou a mořskou hladinou. Současně musí být velmi přesně určena poloha družice vůči
           Zemi. Výška moře se vypočte jako výška družice nad referenčním povrchem Země minus změřená vzdálenost k oceánu.
           Jeden výsledek má přesnost řádově centimetrů. Globální průměr je přesnější díky velkému počtu opakovaných měření.{" "}
-          <SourceLink id="WEB_NASA_How_do_satellites_measure_sea_level_change_NASA_702bb114">NASA Sea Level: družicová altimetrie</SourceLink>
+          <SourceLink id="WEB_NASA_How_do_satellites_measure_sea_level_change_NASA_702bb114">NASA Sea Level: družicová altimetrie</SourceLink>{" "}
+          Podrobný postup včetně skutečného výpočtu z dat Jasonu-3 vysvětluje
+          <Link href="/metody/radarova-a-laserova-altimetrie"> radarová a laserová altimetrie</Link>.
         </p>
 
         <p>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="670" viewBox="0 0 760 670" role="img" aria-labelledby="title desc">
+  <title id="title">Dva údaje pro jednu výšku</title>
+  <desc id="desc">Výška hladiny h je rozdílem výšky družice H nad referenčním elipsoidem a opravené vzdálenosti r k hladině.</desc>
+  <defs>
+    <marker id="blue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#26629b"/></marker>
+    <marker id="orange" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#bd641f"/></marker>
+    <marker id="green" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#208074"/></marker>
+  </defs>
+  <rect width="760" height="670" rx="16" fill="#f3f7fa"/>
+  <g font-family="Arial, sans-serif" fill="#20364b">
+    <text x="40" y="52" font-size="32" font-weight="700">Dva údaje pro jednu výšku</text>
+    <g stroke="#385d7a" stroke-width="3">
+      <rect x="250" y="102" width="100" height="30" fill="#81accb"/>
+      <rect x="410" y="102" width="100" height="30" fill="#81accb"/>
+      <rect x="350" y="87" width="60" height="60" rx="6" fill="#d8e2e9"/>
+      <path d="M363 148Q380 166 397 148" fill="none"/>
+    </g>
+    <text x="526" y="125" font-size="27">Družice</text>
+    <path d="M60 160H640" stroke="#c5d2dc" stroke-width="2"/>
+    <path d="M380 175V412" stroke="#b8c8d4" stroke-dasharray="7 8" stroke-width="3"/>
+    <path d="M40 426Q80 412 120 426T200 426T280 426T360 426T440 426T520 426T600 426T680 426L720 426V540H40z" fill="#d8ecef"/>
+    <path d="M40 426Q80 412 120 426T200 426T280 426T360 426T440 426T520 426T600 426T680 426L720 426" fill="none" stroke="#268897" stroke-width="4"/>
+    <text x="505" y="397" font-size="28">Hladina</text>
+    <path d="M40 540H720" stroke="#617080" stroke-width="3" stroke-dasharray="10 8"/>
+    <text x="43" y="581" font-size="27">Referenční elipsoid</text>
+    <path d="M160 173V527" fill="none" stroke="#26629b" stroke-width="4" marker-start="url(#blue)" marker-end="url(#blue)"/>
+    <rect x="61" y="293" width="74" height="58" rx="8" fill="#f3f7fa"/>
+    <text x="84" y="334" font-size="40" font-style="italic" fill="#26629b">H</text>
+    <path d="M380 178V410" fill="none" stroke="#bd641f" stroke-width="4" marker-start="url(#orange)" marker-end="url(#orange)"/>
+    <text x="406" y="299" font-size="40" font-style="italic" fill="#a95316">r</text>
+    <path d="M594 442V525" fill="none" stroke="#208074" stroke-width="4" marker-start="url(#green)" marker-end="url(#green)"/>
+    <text x="620" y="496" font-size="40" font-style="italic" fill="#176e64">h</text>
+    <rect x="40" y="606" width="680" height="46" rx="8" fill="#e3ebf2"/>
+    <text x="380" y="639" text-anchor="middle" font-size="30">Výška hladiny: h = H − r</text>
+  </g>
+</svg>

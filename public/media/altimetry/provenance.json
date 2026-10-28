@@ -1,0 +1,18 @@
+{
+  "photo": {
+    "file": "atlas-cleanroom.jpg",
+    "original_url": "https://svs.gsfc.nasa.gov/vis/a010000/a011700/a011709/ATLAS_dolly_selects_youtube_hq.00500_print.jpg",
+    "source_page": "https://svs.gsfc.nasa.gov/11709/",
+    "credit": "NASA's Goddard Space Flight Center",
+    "reuse": "NASA media guidelines, educational/editorial use with credit. Source specifies NASA/GSFC credit, no third-party copyright restriction on this item.",
+    "reuse_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "sha256": "2438475404156eb67bd728c1eee879a3883546829c1fedbe3f545058ba37c90d",
+    "description": "Still provided by NASA from cleanroom dolly footage. Original bytes, no crop or edit. Source page first released in 2014 and subsequently expanded. No acquisition date asserted."
+  },
+  "diagram": {
+    "file": "principle.svg",
+    "creator": "Klimatologie.eu",
+    "basis": "Jason-3 Products Handbook issue 1.5, sections 1.4 and 4.2",
+    "description": "Original explanatory diagram, not measured data. Vertical distances are not to scale."
+  }
+}

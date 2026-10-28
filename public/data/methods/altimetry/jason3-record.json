@@ -1,0 +1,305 @@
+{
+  "source_url": "https://www.ncei.noaa.gov/data/oceans/jason3/gdr_d/gdr/cycle066/JA3_GPN_2PdP066_082_20171126_024626_20171126_034239.nc",
+  "source_sha256": "81d8caa581daafc24db725e2862538a2f9149c052fb7feb82c4414e7e31c29ad",
+  "accessed": "2026-10-28",
+  "product": "Jason-3 GDR-D, cycle 066, pass 082",
+  "record_index_zero_based": 1500,
+  "time_utc": "2017-11-26T03:11:51.757132",
+  "ellipsoid_axis_m": "6378136.3",
+  "ellipsoid_flattening": "0.0033528131778969",
+  "fields": {
+    "alt": {
+      "raw": 398171504,
+      "scale_factor": "0.0001",
+      "add_offset": "1300000.0",
+      "value": "1339817.1504",
+      "units": "m",
+      "description": "1 Hz altitude of satellite",
+      "comment": "Altitude of satellite above the reference ellipsoid. Associated quality flag is orb_state_flag_diode for the OGDR products, orb_state_flag_rest for the IGDR and GDR products"
+    },
+    "range_ku": {
+      "raw": 398126931,
+      "scale_factor": "0.0001",
+      "add_offset": "1300000.0",
+      "value": "1339812.6931",
+      "units": "m",
+      "description": "1 Hz Ku band corrected altimeter range",
+      "comment": "All instrumental corrections included, i.e. distance antenna-COG (cog_corr), USO drift correction (uso_corr), internal path correction (internal_path_delay_corr_ku), Doppler correction (doppler_corr_ku), modeled instrumental errors correction (modeled_instr_corr_range_ku) and system bias"
+    },
+    "model_dry_tropo_corr": {
+      "raw": -22990,
+      "scale_factor": "0.0001",
+      "add_offset": "0",
+      "value": "-2.2990",
+      "units": "m",
+      "description": "model dry tropospheric correction",
+      "source": "European Center for Medium Range Weather Forecasting",
+      "comment": "Computed at the altimeter time-tag from the interpolation of 2 meteorological fields that surround the altimeter time-tag. A dry tropospheric correction must be added (negative value) to the instrument range to correct this range measurement for dry tropospheric range delays of the radar pulse. See Jason-3 User Handbook"
+    },
+    "rad_wet_tropo_corr": {
+      "raw": -2927,
+      "scale_factor": "0.0001",
+      "add_offset": "0",
+      "value": "-0.2927",
+      "units": "m",
+      "description": "radiometer wet tropospheric correction",
+      "source": "AMR",
+      "comment": "A wet tropospheric correction must be added (negative value) to the instrument range to correct this range measurement for wet tropospheric range delays of the radar pulse"
+    },
+    "iono_corr_alt_ku": {
+      "raw": -646,
+      "scale_factor": "0.0001",
+      "add_offset": "0",
+      "value": "-0.0646",
+      "units": "m",
+      "description": "altimeter ionospheric correction on Ku band",
+      "source": "Poseidon-3B",
+      "comment": "An ionospheric correction must be added (negative value) to the instrument range to correct this range measurement for ionospheric range delays of the radar pulse. See Jason-3 User Handbook"
+    },
+    "sea_state_bias_ku": {
+      "raw": -1125,
+      "scale_factor": "0.0001",
+      "add_offset": "0",
+      "value": "-0.1125",
+      "units": "m",
+      "description": "sea state bias correction in Ku band",
+      "source": "Empirical solution fitted on Jason-2 GDR_C data",
+      "comment": "A sea state bias correction must be added (negative value) to the instrument range to correct this range measurement for sea state delays of the radar pulse. This element should not be used over land. See Jason-3 User Handbook"
+    },
+    "mean_sea_surface": {
+      "raw": 72749,
+      "scale_factor": "0.0001",
+      "add_offset": "0",
+      "value": "7.2749",
+      "units": "m",
+      "description": "mean sea surface height above reference ellipsoid",
+      "source": "MSS_CNES_CLS-2011",
+      "comment": "See Jason-3 User Handbook"
+    },
+    "ocean_tide_sol1": {
+      "raw": -1937,
+      "scale_factor": "0.0001",
+      "add_offset": "0",
+      "value": "-0.1937",
+      "units": "m",
+      "description": "geocentric ocean tide height (solution 1)",
+      "source": "GOT4.8",
+      "comment": "Solution 1 corresponds to GOT4.8 model. Includes the corresponding loading tide (load_tide_sol1) and equilibrium long-period ocean tide height (ocean_tide_equil). The permanent tide (zero frequency) is not included in this parameter because it is included in the geoid and mean sea surface (geoid, mean_sea_surface). See Jason-3 User Handbook"
+    },
+    "solid_earth_tide": {
+      "raw": 516,
+      "scale_factor": "0.0001",
+      "add_offset": "0",
+      "value": "0.0516",
+      "units": "m",
+      "description": "solid earth tide height",
+      "source": "Cartwright and Edden [1973] Corrected tables of tidal harmonics - J. Geophys. J. R. Astr. Soc., 33, 253-264.",
+      "comment": "Calculated using Cartwright and Tayler tables and consisting of the second and third degree constituents. The permanent tide (zero frequency) is not included. See Jason-3 User Handbook"
+    },
+    "pole_tide": {
+      "raw": 20,
+      "scale_factor": "0.0001",
+      "add_offset": "0",
+      "value": "0.0020",
+      "units": "m",
+      "description": "geocentric pole tide height",
+      "source": "Wahr [1985] Deformation of the Earth induced by polar motion - J. Geophys. Res. (Solid Earth), 90, 9363-9368.",
+      "comment": "See Jason-3 User Handbook"
+    },
+    "inv_bar_corr": {
+      "raw": 245,
+      "scale_factor": "0.0001",
+      "add_offset": "0",
+      "value": "0.0245",
+      "units": "m",
+      "description": "inverted barometer height correction",
+      "source": "European Center for Medium Range Weather Forecasting",
+      "comment": "Computed at the altimeter time-tag from the interpolation of 2 meteorological fields that surround the altimeter time-tag. See Jason-3 User Handbook"
+    },
+    "hf_fluctuations_corr": {
+      "raw": -4,
+      "scale_factor": "0.0001",
+      "add_offset": "0",
+      "value": "-0.0004",
+      "units": "m",
+      "description": "high frequency fluctuations of the sea surface topography",
+      "comment": "Provided as a correction to the inverted barometer correction (inv_bar_corr)"
+    },
+    "ssha": {
+      "raw": 67,
+      "scale_factor": "0.001",
+      "add_offset": "0",
+      "value": "0.067",
+      "units": "m",
+      "description": "sea surface height anomaly",
+      "source": "Poseidon-3B",
+      "comment": "= altitude of satellite (alt) - Ku band corrected altimeter range (range_ku) - altimeter ionospheric correction on Ku band (iono_corr_alt_ku) - model dry tropospheric correction (model_dry_tropo_corr) - radiometer wet tropospheric correction (rad_wet_tropo_corr) - sea state bias correction in Ku band (sea_state_bias_ku) - solid earth tide height (solid_earth_tide) - geocentric ocean tide height solution 1 (ocean_tide_sol1) - geocentric pole tide height (pole_tide) - inverted barometer height correction (inv_bar_corr) - high frequency fluctuations of the sea surface topography (hf_fluctuations_corr for I/GDR off line products only) - mean sea surface (mean_sea_surface). Set to default if the altimeter echo type (alt_echo_type) is set to 1 = non ocean like, the radiometer surface type (rad_surf_type) set to 2 = land"
+    },
+    "lat": {
+      "raw": 7869252,
+      "scale_factor": "1e-06",
+      "add_offset": "0",
+      "value": "7.869252",
+      "units": "degrees_north",
+      "description": "latitude",
+      "comment": "Positive latitude is North latitude, negative latitude is South latitude. See Jason-3 User Handbook. Associated quality flag is orb_state_flag_diode for the OGDR products, orb_state_flag_rest for the IGDR and GDR products"
+    },
+    "lon": {
+      "raw": 209062380,
+      "scale_factor": "1e-06",
+      "add_offset": "0",
+      "value": "209.062380",
+      "units": "degrees_east",
+      "description": "longitude",
+      "comment": "East longitude relative to Greenwich meridian. See Jason-3 User Handbook. Associated quality flag is orb_state_flag_diode for the OGDR products, orb_state_flag_rest for the IGDR and GDR products"
+    },
+    "surface_type": {
+      "raw": 0,
+      "scale_factor": "1",
+      "add_offset": "0",
+      "value": "0",
+      "units": "1",
+      "description": "surface type",
+      "comment": "Computed using a DTM2000 file: 0 = open oceans or semi-enclosed seas; 1 = enclosed seas or lakes; 2 = continental ice; 3 = land. See Jason-3 User Handbook",
+      "flag_meanings": "ocean lake_enclosed_sea ice land"
+    },
+    "alt_echo_type": {
+      "raw": 0,
+      "scale_factor": "1",
+      "add_offset": "0",
+      "value": "0",
+      "units": "1",
+      "description": "altimeter echo type",
+      "comment": "The altimeter echo type is determined by testing the rms of the high rate range measurements against a threshold as well as the number of valid high rate range measurements against a minimum value",
+      "flag_meanings": "ocean_like non_ocean_like"
+    },
+    "rad_surf_type": {
+      "raw": 0,
+      "scale_factor": "1",
+      "add_offset": "0",
+      "value": "0",
+      "units": "1",
+      "description": "radiometer surface type",
+      "comment": "The radiometer surface type flag is applicable to the radiometer wet troposphere path delays provided by rad_wet_tropo_corr. A value of 0 indicates that open ocean processing is used to compute the path delay, 1 indicates coastal processing is used, and 2 indicates the path delay is invalid due to land",
+      "flag_meanings": "open_ocean near_coast land"
+    },
+    "rain_flag": {
+      "raw": 0,
+      "scale_factor": "1",
+      "add_offset": "0",
+      "value": "0",
+      "units": "1",
+      "description": "rain flag",
+      "comment": "See Jason-3 User Handbook. A bias of -0.231 dB (Ku Band) / -0.012 dB (C Band) has been added to the Ku-band backscatter coefficient (sig0_ku_mle3) before computing the rain flag",
+      "flag_meanings": "no_rain rain"
+    },
+    "ice_flag": {
+      "raw": 0,
+      "scale_factor": "1",
+      "add_offset": "0",
+      "value": "0",
+      "units": "1",
+      "description": "ice flag",
+      "comment": "See Jason-3 User Handbook",
+      "flag_meanings": "no_ice ice"
+    },
+    "qual_alt_1hz_range_ku": {
+      "raw": 0,
+      "scale_factor": "1",
+      "add_offset": "0",
+      "value": "0",
+      "units": "1",
+      "description": "quality flag for 1 Hz altimeter data: Ku band range",
+      "flag_meanings": "good bad"
+    },
+    "qual_inst_corr_1hz_range_ku": {
+      "raw": 0,
+      "scale_factor": "1",
+      "add_offset": "0",
+      "value": "0",
+      "units": "1",
+      "description": "quality flag for 1 Hz instrumental correction: Ku band range",
+      "flag_meanings": "good bad"
+    },
+    "range_numval_ku": {
+      "raw": 19,
+      "scale_factor": "1",
+      "add_offset": "0",
+      "value": "19",
+      "units": "count",
+      "description": "number of valid points for Ku band range"
+    },
+    "range_rms_ku": {
+      "raw": 669,
+      "scale_factor": "0.0001",
+      "add_offset": "0",
+      "value": "0.0669",
+      "units": "m",
+      "description": "RMS of the Ku band range",
+      "comment": "Compression of Ku-band high rate elements is preceded by a detection of outliers. Only valid high-rate values are used to compute this element"
+    },
+    "rad_distance_to_land": {
+      "raw": 968153,
+      "scale_factor": "1",
+      "add_offset": "0",
+      "value": "968153",
+      "units": "m",
+      "description": "radiometer radial distance to land",
+      "comment": "Shortest distance between nadir sub-satellite point and land"
+    },
+    "swh_ku": {
+      "raw": 3165,
+      "scale_factor": "0.001",
+      "add_offset": "0",
+      "value": "3.165",
+      "units": "m",
+      "description": "Ku band corrected significant waveheight",
+      "comment": "All instrumental corrections included, i.e. modeled instrumental errors correction (modeled_instr_corr_swh_ku) and system bias"
+    },
+    "sig0_ku": {
+      "raw": 1300,
+      "scale_factor": "0.01",
+      "add_offset": "0",
+      "value": "13.00",
+      "units": "dB",
+      "description": "Ku band corrected backscatter coefficient",
+      "comment": "All instrumental corrections included, excepted the system bias, i.e. AGC instrumental errors correction, internal calibration correction (internal_corr_sig0_ku), modeled instrumental errors correction (modeled_instr_corr_sig0_ku) and atmospheric attenuation (atmos_corr_sig0_ku)"
+    },
+    "wind_speed_alt": {
+      "raw": 913,
+      "scale_factor": "0.01",
+      "add_offset": "0",
+      "value": "9.13",
+      "units": "m/s",
+      "description": "altimeter wind speed",
+      "comment": "Should not be used over land. See Jason-3 User Handbook. A calibration bias of +0.14 dB has been added to the Ku-band backscatter coefficient (sig0_ku) before computing the wind speed"
+    },
+    "off_nadir_angle_wf_ku": {
+      "raw": -188,
+      "scale_factor": "0.0001",
+      "add_offset": "0",
+      "value": "-0.0188",
+      "units": "degrees^2",
+      "description": "square of the off nadir angle computed from Ku waveforms"
+    },
+    "orb_state_flag_rest": {
+      "raw": 3,
+      "scale_factor": "1",
+      "add_offset": "0",
+      "value": "3",
+      "units": "1",
+      "description": "orbit state flag: restituted orbit",
+      "comment": "0 characterizes a mission operations orbit that is computed during a maneuver period, 1 stands for an adjusted mission operations orbit, 2 stands for an extrapolated mission operations orbit, 3 stands for an adjusted (preliminary/precise) orbit, 4 indicates that the (preliminary/precise) orbit is estimated during a maneuver period, 5 indicates that the (preliminary/precise) orbit is interpolated over a tracking data gap, 6 means that the (preliminary/precise) orbit is extrapolated for a duration less than 1 day, 7 means that the (preliminary/precise) orbit is extrapolated for a duration that ranges from 1 day to 2 days, 8 means that the (preliminary/precise) orbit is extrapolated for a duration larger than 2 days, or that the orbit is extrapolated just after a maneuver, 9 stands for the DORIS DIODE navigator orbit. The nominal value is 3",
+      "flag_meanings": "op_maneuver op_adjusted op_extrapolated pre_adjusted pre_maneuver pre_interpolated_gap pre_extrapolated_L1 pre_extrapolated_L1S2 pre_extrapolated_S2 DIODE"
+    },
+    "interp_flag_mean_sea_surface": {
+      "raw": 0,
+      "scale_factor": "1",
+      "add_offset": "0",
+      "value": "0",
+      "units": "1",
+      "description": "mean_sea_surface interpolation flag",
+      "flag_meanings": "good bad"
+    }
+  }
+}

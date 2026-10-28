@@ -5,6 +5,75 @@ import test from "node:test";
 
 const root = new URL("../", import.meta.url);
 
+test("publishes altimetry with real data, open sources and reciprocal ocean and ice links", async () => {
+  const slug = "radarova-a-laserova-altimetrie";
+  const [html, source, catalogue, ocean, ice] = await Promise.all([
+    readFile(new URL(`dist/client/metody/${slug}/index.html`, root), "utf8"),
+    readFile(new URL("app/components/AltimetryArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/gmsl/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/nestabilita-prikrovu/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
+    "Jak altimetrie určuje výšku hladiny a ledu", "Nejistoty a ověření",
+    "Příklad: jeden záznam hladiny v Tichém oceánu", "Shrnutí",
+  ]);
+  assert.match(html, /<p class="page-lead__meta">28\. října 2026<\/p>/);
+  assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
+  assert.match(body, /6,7 centimetru nad místním referenčním průměrem/);
+  assert.match(body, /historický produkt GDR-D/);
+  assert.doesNotMatch(body, /_vinext\/image|katex-error|Potřebné informace/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  for (const [observationSlug, observation] of [["gmsl", ocean], ["nestabilita-prikrovu", ice]]) {
+    assert.ok(body.includes(`href="/pozorovani/${observationSlug}"`));
+    assert.ok(observation.includes(`href="/metody/${slug}"`));
+  }
+  const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
+  assert.ok(ids.length >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
+    assert.ok(card, "Missing altimetry source " + id);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const m of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const file = /\.[a-z0-9]+$/i.test(m[1]) ? m[1] : m[1].replace(/\/$/, "") + "/index.html";
+    await readFile(new URL("dist/client" + file, root));
+  }
+});
+
+test("Jason-3 correction signs reproduce the separately stored archive anomaly", async () => {
+  const base = new URL("public/data/methods/altimetry/", root);
+  const bytes = await readFile(new URL("jason3-record.json", base));
+  const record = JSON.parse(bytes);
+  assert.equal(record.source_sha256, "81d8caa581daafc24db725e2862538a2f9149c052fb7feb82c4414e7e31c29ad");
+  assert.equal(record.record_index_zero_based, 1500);
+  assert.equal(record.time_utc, "2017-11-26T03:11:51.757132");
+  const v = Object.fromEntries(Object.entries(record.fields).map(([k, f]) => [k, Number(f.value)]));
+  const range = v.range_ku + v.model_dry_tropo_corr + v.rad_wet_tropo_corr + v.iono_corr_alt_ku + v.sea_state_bias_ku;
+  const ssh = v.alt - range;
+  const anomaly = ssh - v.mean_sea_surface - v.ocean_tide_sol1 - v.solid_earth_tide - v.pole_tide - v.inv_bar_corr - v.hf_fluctuations_corr;
+  assert.ok(Math.abs(anomaly - v.ssha) < 0.001, "Compare with CNES ssha stored separately in the original NetCDF");
+  assert.equal(ssh.toFixed(4), "7.2261");
+  assert.equal(anomaly.toFixed(4), "0.0672");
+  assert.equal(v.ssha, 0.067);
+  assert.equal(v.range_numval_ku, 19);
+  for (const field of Object.values(record.fields)) {
+    assert.ok(Math.abs(field.raw * Number(field.scale_factor) + Number(field.add_offset) - Number(field.value)) < 1e-8);
+  }
+  const readme = await readFile(new URL("README.txt", base), "utf8");
+  for (const name of ["jason3-record.json", "reproduce.py", "extract_record.py"]) {
+    const data = await readFile(new URL(name, base));
+    assert.ok(readme.includes(name + "  " + createHash("sha256").update(data).digest("hex")));
+    assert.deepEqual(await readFile(new URL("dist/client/data/methods/altimetry/" + name, root)), data);
+  }
+});
+
 test("publishes lidar with accessible sources, local illustrations and a reciprocal humidity link", async () => {
   const slug = "lidar-a-laserove-mereni-vzdalenosti";
   const [html, source, catalogue, observation] = await Promise.all([
@@ -1317,7 +1386,7 @@ test("renders open ice-sheet papers and distinguishes revised estimates and data
   assert.match(articleHtml, /23 ± 5 Gt za rok/);
   assert.match(articleHtml, /dočasnou nedostupnost/);
   assert.match(articleHtml, /1,85 GB/);
-  assert.match(articleHtml, /<p class="page-lead__meta">26\. října 2026<\/p>/);
+  assert.match(articleHtml, /<p class="page-lead__meta">28\. října 2026<\/p>/);
   assert.doesNotMatch(articleHtml, /5 120 ± 544|intervaly zasahují na obě strany nuly/);
 });
 

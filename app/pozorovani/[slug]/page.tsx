@@ -149,7 +149,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Oceány"
           title="Globální střední hladina moře"
-          meta="26. října 2026"
+          meta="28. října 2026"
         >
           <p>
             Jak se výška moře měří na pobřeží a z družic, jak z jednotlivých měření vzniká globální průměr a co ukazují
@@ -225,7 +225,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Kryosféra"
           title="Změna hmotnosti ledových příkrovů"
-          meta="26. října 2026"
+          meta="28. října 2026"
         >
           <p>
             Jak se změna hmotnosti Grónska a Antarktidy odvozuje z výšky povrchu, gravitačního pole a toku ledu, jak
