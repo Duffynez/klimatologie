@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="660" viewBox="0 0 640 660" role="img" aria-labelledby="title desc">
+  <title id="title">Proč fáze měří posun povrchu</title>
+  <desc id="desc">Posun odrážejícího místa o d prodlouží cestu mikrovlny tam i zpět o 2d. Posun o polovinu vlnové délky proto odpovídá jednomu celému cyklu fáze.</desc>
+  <defs>
+    <marker id="blue" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9Z" fill="#146b88"/></marker>
+    <marker id="orange" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9Z" fill="#b95a20"/></marker>
+  </defs>
+  <rect width="640" height="660" rx="18" fill="#f3f8fa"/>
+  <g font-family="Arial, sans-serif" fill="#183849">
+    <text x="32" y="47" font-size="28" font-weight="bold">Delší cesta tam i zpět</text>
+    <text x="32" y="83" font-size="22">Stejný směr pohledu, dvě polohy povrchu</text>
+    <rect x="30" y="157" width="90" height="142" rx="10" fill="#dbe8ed" stroke="#183849" stroke-width="2"/>
+    <text x="75" y="220" text-anchor="middle" font-size="23">radar</text>
+    <path d="M120 177L400 177M400 277L120 277" stroke="#146b88" stroke-width="4" fill="none" marker-end="url(#blue)"/>
+    <path d="M120 198L400 198M400 256L120 256" stroke="#92b7c5" stroke-width="3" fill="none"/>
+    <path d="M400 198L555 198M555 256L400 256" stroke="#b95a20" stroke-width="4" fill="none" marker-end="url(#orange)"/>
+    <path d="M407 140L407 298" stroke="#146b88" stroke-width="6"/>
+    <path d="M562 140L562 298" stroke="#b95a20" stroke-width="6"/>
+    <text x="407" y="124" text-anchor="middle" font-size="23" fill="#146b88">dříve</text>
+    <text x="562" y="124" text-anchor="middle" font-size="23" fill="#b95a20">později</text>
+    <text x="480" y="185" text-anchor="middle" font-size="22" fill="#b95a20">navíc d</text>
+    <text x="480" y="243" text-anchor="middle" font-size="22" fill="#b95a20">navíc d</text>
+    <path d="M410 330L558 330" stroke="#b95a20" stroke-width="3" marker-end="url(#orange)"/>
+    <text x="484" y="367" text-anchor="middle" font-size="24">posun d</text>
+    <text x="32" y="415" font-size="24">Vlna urazí navíc celkem 2d.</text>
+    <path d="M32 440H608" stroke="#c7dce4" stroke-width="2"/>
+    <text x="32" y="484" font-size="26" font-weight="bold">Jeden celý cyklus fáze</text>
+    <text x="32" y="524" font-size="24">Cesta záření navíc: jedna vlnová délka λ</text>
+    <text x="32" y="565" font-size="24">Posun povrchu: polovina vlnové délky</text>
+    <text x="320" y="612" text-anchor="middle" font-size="29" fill="#b95a20">d = λ / 2</text>
+    <text x="32" y="643" font-size="18" fill="#526b78">Ilustrační schéma, vzdálenosti nejsou v měřítku.</text>
+  </g>
+</svg>

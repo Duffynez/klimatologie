@@ -1,0 +1,2 @@
+x_index,y_index,x_m,y_m,longitude,latitude,vx,vy,v,v_error,chip_size_width,chip_size_height,interp_mask,acquisition_img1,acquisition_img2,map_scale
+1632,1634,-179227.5,-2278732.5,-49.49718530786291,69.12413245938086,-4233,5469,6916,142,500,443,0,20170404T20:46:18.02485,20170410T20:47:00.212642,1.0027572935155036

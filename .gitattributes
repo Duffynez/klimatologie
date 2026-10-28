@@ -26,3 +26,4 @@ public/data/radar/* text eol=lf
 public/data/methods/lidar/* text eol=lf
 
 public/data/methods/altimetry/* text eol=lf
+public/data/methods/interferometry/* text eol=lf

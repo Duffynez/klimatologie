@@ -199,7 +199,8 @@ export function IceSheetsArticle() {
         <h3>Vstup a výstup ledu</h3>
         <p>
           Třetí postup sestavuje účet přírůstků a úbytků. Množství ledu překračujícího linii ukotvení se vypočítá z
-          jeho rychlosti a tloušťky na profilech napříč proudem. Rychlost poskytují opakované radarové a optické snímky.
+          jeho rychlosti a tloušťky na profilech napříč proudem. Rychlost poskytují opakované radarové a optické snímky. Její měření vysvětluje článek o{" "}
+          <Link href="/metody/radarova-interferometrie-a-sledovani-pohybu-povrchu">radarové interferometrii a sledování pohybu povrchu</Link>.
           Tloušťku poskytuje radar z letadel. Kde měření chybí, používají se mapy podloží odvozené kombinací měření
           a výpočtu toku ledu. Součet všech profilů udává výstup ledu z pevninské
           části. Základ metody popsali <SourceLink id="DOI_10_1126_science_1073888">Rignot a Thomas, 2002</SourceLink>.

@@ -1,0 +1,48 @@
+{
+  "dataset_doi": "10.5281/zenodo.5606118",
+  "dataset_version": "2.0",
+  "publication_date": "2021-10-22",
+  "access_date": "2026-10-28",
+  "authors": [
+    "Yang Lei",
+    "Alex Gardner",
+    "Piyush Agram"
+  ],
+  "license": "CC BY 4.0",
+  "archive_url": "https://zenodo.org/api/records/5606118/files/v2_ITS_LIVE_Sentinel_1_image_pair_product_samples.zip/content",
+  "archive_checksum": "md5:0bf406f341e6474c5c9e5b358af13661",
+  "archive_member": "v2_ITS_LIVE_Sentinel_1_image_pair_product_samples/Region_1/S1B_IW_SLC__1SSH_20170404T204604_20170404T204631_005016_008C58_5527_X_S1A_IW_SLC__1SSH_20170410T204646_20170410T204713_016087_01A8F8_2577_G0120V02_P098.nc",
+  "netcdf_sha256": "a3ae9b3b06e385e47f83630158bd58ea7340bfc9335d56809b257423bbeb8921",
+  "sample_csv_sha256": "157181adcf48727dda9e31406e4124516b1238633d8d557d8e1d6e21dcb651ae",
+  "target_lon_lat": [
+    -49.496,
+    69.124
+  ],
+  "target_selection": "Nearest grid center to the validation site in Lei et al. (2022), Fig. 11–13. No spatial averaging.",
+  "variables": "Stored integer velocity fields. Units m/y, map-projected EPSG:3413. Calibration already applied by provider.",
+  "calibration": {
+    "vx": {
+      "vx_error": 206.2,
+      "stable_shift": 4.4,
+      "flag_stable_shift": 1.0
+    },
+    "vy": {
+      "vy_error": 83.1,
+      "stable_shift": 27.2,
+      "flag_stable_shift": 1.0
+    }
+  },
+  "map_scale_method": "pyproj.Proj(EPSG:3413).get_factors at selected cell center. Local ellipsoidal horizontal scale, constant over this short displacement.",
+  "days_per_year": 365.25,
+  "source_processing": {
+    "ISCE": "2.4.1",
+    "Geogrid": "1.4.0",
+    "autoRIFT": "1.4.0"
+  },
+  "reproduction_environment": {
+    "Python": "3.14.0",
+    "netCDF4": "1.7.5.1.post1",
+    "numpy": "2.5.4",
+    "pyproj": "3.8.0"
+  }
+}

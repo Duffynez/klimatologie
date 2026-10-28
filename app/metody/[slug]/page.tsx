@@ -1,3 +1,4 @@
+import { InterferometryArticle } from "../../components/InterferometryArticle";
 import { AltimetryArticle } from "../../components/AltimetryArticle";
 import { RadarArticle } from "../../components/RadarArticle";
 import { LidarArticle } from "../../components/LidarArticle";
@@ -92,6 +93,18 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "radarova-interferometrie-a-sledovani-pohybu-povrchu") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Radarová interferometrie a sledování pohybu povrchu" meta="28. října 2026">
+          <p>Jak se z opakovaných radarových snímků měří pohyb povrchu a jak mapy rychlosti ledu pomáhají určit odtok z ledových příkrovů.</p>
+        </PageLead>
+        <InterferometryArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "radarova-a-laserova-altimetrie") {
