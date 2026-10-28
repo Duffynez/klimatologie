@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1120" viewBox="0 0 720 1120" role="img" aria-labelledby="title desc">
+<title id="title">Měření vodní páry pozemní stanicí GNSS</title>
+<desc id="desc">Signály družic přicházejí ke stanici z různých směrů. Jejich zpracování určí celkové zpoždění pro svislý směr. Tlak umožní odečíst hydrostatickou část. Vážená teplota určí převod zbývajícího mokrého zpoždění na množství vody.</desc>
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0L8 4.5L0 9" fill="none" stroke="#27758a" stroke-width="1.5"/></marker></defs>
+<rect width="720" height="1120" rx="22" fill="#f3f8fa"/>
+<g font-family="Arial, sans-serif" text-anchor="middle" fill="#173b4b">
+<text x="360" y="52" font-size="32" font-weight="700">Navigační signály a vodní pára</text>
+<text x="360" y="97" font-size="27">Družice v různých směrech</text>
+<g fill="#fff" stroke="#27758a" stroke-width="3"><rect x="79" y="128" width="48" height="40" rx="5"/><path d="M62 137h-27v22h27zm82 0h27v22h-27z"/><rect x="337" y="128" width="48" height="40" rx="5"/><path d="M320 137h-27v22h27zm82 0h27v22h-27z"/><rect x="594" y="128" width="48" height="40" rx="5"/><path d="M577 137h-27v22h27zm82 0h27v22h-27z"/></g>
+<path d="M40 218h640v173H40z" fill="#d9eaf0"/>
+<text x="360" y="257" font-size="28">Atmosféra</text>
+<path d="M102 174L350 415 M618 174L370 415" fill="none" stroke="#27758a" stroke-width="4"/>
+<path d="M360 178V404" stroke="#27758a" stroke-width="3" stroke-dasharray="9 8"/>
+<rect x="263" y="181" width="194" height="33" fill="#f3f8fa"/>
+<text x="360" y="206" font-size="26">Svislý směr</text>
+<path d="M337 430Q360 385 383 430z" fill="#27758a"/>
+<path d="M360 430v36m0-25l-25 26m25-26l25 26" stroke="#173b4b" stroke-width="4"/>
+<text x="360" y="505" font-size="29">Pevná pozemní anténa</text>
+<path d="M360 527v35" stroke="#27758a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="65" y="579" width="590" height="104" rx="15" fill="#fff" stroke="#27758a" stroke-width="2"/>
+<text x="360" y="619" font-size="30" font-weight="700">Celkové zenitové zpoždění</text>
+<text x="360" y="657" font-size="26">Společné zpracování signálů</text>
+<path d="M360 688v34" stroke="#27758a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="65" y="739" width="590" height="120" rx="15" fill="#fff" stroke="#27758a" stroke-width="2"/>
+<text x="360" y="779" font-size="30" font-weight="700">Mokré zpoždění</text>
+<text x="360" y="816" font-size="26">Odečtení hydrostatické části</text>
+<text x="360" y="846" font-size="25" fill="#576a74">Potřebný vstup: tlak u stanice</text>
+<path d="M360 864v34" stroke="#27758a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="65" y="915" width="590" height="146" rx="15" fill="#dfefe9" stroke="#387b65" stroke-width="2"/>
+<text x="360" y="954" font-size="30" font-weight="700">Srážitelná voda</text>
+<text x="360" y="992" font-size="26">Mokré zpoždění × koeficient</text>
+<text x="360" y="1024" font-size="25" fill="#576a74">Koeficient určí vážená teplota</text>
+<text x="360" y="1094" font-size="24">Schéma principu • Klimatologie.eu</text>
+</g></svg>

@@ -996,7 +996,7 @@ test("publishes a sourced atmospheric humidity article instead of the generic pl
 
   assert.match(evidencePage, /AtmosphericHumidityArticle/);
   assert.match(evidencePage, /title="Vlhkost atmosféry"/);
-  assert.match(evidencePage, /title="Vlhkost atmosféry"\s+meta="27\. října 2026"/);
+  assert.match(evidencePage, /title="Vlhkost atmosféry"\s+meta="28\. října 2026"/);
   assert.match(article, /Vlhkost atmosféry popisuje množství vodní páry ve vzduchu/);
   assert.doesNotMatch(article, /Potřebné informace|article-glossary/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
@@ -1029,7 +1029,7 @@ test("publishes a sourced atmospheric humidity article instead of the generic pl
   const humiditySourceIds = [
     ...article.matchAll(/<SourceLink id="([^"]+)"/g),
   ].map((match) => match[1]);
-  assert.equal(new Set(humiditySourceIds).size, 31);
+  assert.equal(new Set(humiditySourceIds).size, 32);
   for (const id of new Set(humiditySourceIds)) {
     const catalogueOccurrences = sourceCatalogueText.split(id).length - 1;
     assert.ok(catalogueOccurrences >= 2, `${id} must exist and be marked as open access`);

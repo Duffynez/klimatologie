@@ -225,11 +225,13 @@ export function AtmosphericHumidityArticle() {
 
         <h3>Pozemní přijímač navigačních družic</h3>
         <p>
-          Rádiový signál navigační družice se ve vlhké atmosféře zpozdí. Přesně zaměřený přijímač GNSS změří celkové
-          zpoždění, z tlaku u stanice se vypočte jeho suchá část a zbývající část se převede na množství vodní páry nad
-          přijímačem. Potřebná je také teplota, která tento převod zpřesňuje. Metodu formulovali Bevis a kol. Dnešní
-          sítě poskytují téměř souvislá měření za každého počasí.{" "}
-          <SourceLink id="DOI_10_1029_92jd01517">Bevis et al., 1992</SourceLink>
+          Rádiový signál navigační družice se při průchodu atmosférou zpozdí. Zpracováním signálů více družic
+          se určí společné zpoždění pro svislý směr nad stanicí. Tlak umožňuje vypočítat a odečíst jeho
+          hydrostatickou část, spojenou s hmotností celého sloupce vzduchu. Zbývající mokrá část se pomocí
+          vážené teploty sloupce převede na množství vodní páry. Celý postup vysvětluje článek
+          <Link href="/metody/pozemni-mereni-vodni-pary-pomoci-gnss"> o pozemním měření vodní páry pomocí GNSS</Link>.{" "}
+          <SourceLink id="DOI_10_1029_92jd01517">(Bevis a kol. 1992)</SourceLink>{" "}
+          <SourceLink id="DOI_10_1029_2006JD007529">(Wang a kol. 2007)</SourceLink>
         </p>
 
         <h2>Jak vzniká zveřejněný záznam</h2>

@@ -1,3 +1,4 @@
+import { GnssWaterVaporArticle } from "../../components/GnssWaterVaporArticle";
 import { RadioOccultationArticle } from "../../components/RadioOccultationArticle";
 import { GravimetryArticle } from "../../components/GravimetryArticle";
 import { InterferometryArticle } from "../../components/InterferometryArticle";
@@ -95,6 +96,18 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "pozemni-mereni-vodni-pary-pomoci-gnss") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Pozemní měření vodní páry pomocí GNSS" meta="28. října 2026">
+          <p>Jak zpoždění navigačních signálů umožňuje určit množství vody nad stanicí a jak tento převod zopakovat na českých datech.</p>
+        </PageLead>
+        <GnssWaterVaporArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "radiove-zakryty-gnss") {

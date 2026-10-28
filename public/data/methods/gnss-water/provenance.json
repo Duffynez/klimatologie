@@ -1,0 +1,31 @@
+{
+  "dataset": "NCAR Global, 2-hourly Ground-Based GPS Precipitable Water",
+  "doi": "10.5065/047C-HV45",
+  "dataset_id": "d721001",
+  "provider": "NCAR Earth Observing Laboratory / UCAR",
+  "license": "CC BY 4.0",
+  "accessed": "2026-10-28",
+  "archive_url": "https://osdf-director.osg-htc.org/ncar/gdex/d721001/igs_suomienet/igs+suo.2012.tar.gz",
+  "archive_member": "2012/GOPE.2012",
+  "archive_sha256": "bdfe51bae6d7364da7e0c8ee8c41bf3aba2c3210161bccea3d7d62bd3a40d9e5",
+  "station_file_sha256": "53af9559f4f1f1b0f75ae9a8cb3b021022c5074489a6628530d61c0574e789f7",
+  "station": "GOPE",
+  "station_list_url": "https://osdf-director.osg-htc.org/ncar/gdex/d721001/igs_suomienet/IGS+Suo.stationInfo.txt",
+  "latitude_deg": 49.913703,
+  "longitude_deg": 14.78562,
+  "altitude_m_as_in_station_list": 546.853,
+  "selected_day": 183,
+  "selected_hour_utc": 9,
+  "selected_timestamp": "2012-07-01T09:00:00Z",
+  "original_row": "     183         9    954.19   2315.01    2172.9    142.09    283.54  22.98727",
+  "method_doi": "10.1029/2006JD007529",
+  "calculation_reference_doi": "10.5194/amt-9-79-2016",
+  "calculation": "Subtract the two published rounded delays, then multiply by the conversion factor computed from Tm using explicitly stated constants. This reproduces the final conversion approximately, not the GNSS processing or original numerical implementation.",
+  "constants": {
+    "rho_water_kg_m3": 1000,
+    "R_water_J_kg_K": 461.5,
+    "k2prime_K_Pa": 0.221,
+    "k3_K2_Pa": 3739
+  },
+  "rounding_note": "The original ZWD has more precision than the tabulated ZHD. The recomputed water value is about 0.021 mm below the archived PW. The README does not specify the complete original numerical implementation. Both values round to 23.0 mm."
+}
