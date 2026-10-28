@@ -1176,7 +1176,7 @@ video.article-figure__media {
   margin-bottom: 10px;
 }
 
-.method-conclusion p:last-child {
+.method-conclusion p {
   color: var(--ink);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.12rem;
