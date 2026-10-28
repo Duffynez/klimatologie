@@ -103,9 +103,13 @@ V souvislém příkladu ponecháme údaje potřebné k pochopení kroků, techni
 
 ### 4. Shrnutí
 
-Krátký souvislý odstavec řekne, jaké poznání metoda zpřístupňuje a jaká tvrzení její výsledky podpírají. Naváže na vysvětlení a použití metody. Neopakuje celý postup ani rozbor nejistot a nepřináší nové pojmy nebo další výpočet.
+Shrnutí tvoří dva krátké souvislé odstavce. První uzavře vysvětlení: spojí princip metody s poznáním, které zpřístupňuje, a s tvrzeními, která její výsledky podpírají.
 
-Odstavec shrnutí vždy vložíme do samostatného obdélníkového rámečku pomocí existující třídy `method-conclusion`, jako v článku o odporové termometrii. Nadpis zůstane před rámečkem. Zachováme jednotný vzhled se světlým pozadím, barevnou horní hranou a dostatečným vnitřním odsazením.
+Druhý odstavec samostatně odpoví, k čemu metoda jako celek slouží. Pojmenuje hlavní veličiny nebo jevy, které umožňuje měřit, určovat či rekonstruovat, a její hlavní použití. Je-li to pro danou metodu podstatné a doložitelné, uvede také časový, prostorový nebo měřicí rozsah. Popíše možnosti celé metody, nikoli jen použitého záznamu, přístroje nebo konkrétního příkladu. Rozliší přímé měření od odvozené rekonstrukce. Musí být srozumitelný i čtenáři, který si přečte pouze shrnutí, nemá však být úplným katalogem všech aplikací.
+
+Oba odstavce navážou na vysvětlení a použití metody v hlavním textu. Neopakují celý postup ani rozbor nejistot a nepřinášejí nové pojmy nebo další výpočet. Podstatná tvrzení o využití a rozsahu musí mít oporu ve výkladu a jeho zdrojích.
+
+Oba odstavce shrnutí vždy vložíme společně do samostatného obdélníkového rámečku pomocí existující třídy `method-conclusion`, jako v článku o odporové termometrii. Nadpis zůstane před rámečkem. Zachováme jednotný vzhled se světlým pozadím, barevnou horní hranou a dostatečným vnitřním odsazením.
 
 ### Doprovodné části
 

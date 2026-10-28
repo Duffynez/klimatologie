@@ -117,8 +117,10 @@ export function SpeleothemArticle() {
           Zahrnuje vznik i další radioaktivní přeměnu thoria.
           Thorium přinesené s drobnými částicemi horniny se odhaduje
           podle izotopu thorium 232 a ve výpočtu se opravuje.
-          Výsledkem je stáří konkrétní odebrané části kalcitu.{" "}
-          <SourceLink id="DOI_10_3285_eg_57_1_2_3">(Scholz a Hoffmann 2008, výpočet a počáteční thorium)</SourceLink>
+          Výsledkem je stáří konkrétní odebrané části kalcitu.
+          U vhodných vzorků tento postup umožňuje datovat i vrstvy
+          staré několik set tisíc let.{" "}
+          <SourceLink id="DOI_10_3285_eg_57_1_2_3">(Scholz a Hoffmann 2008, výpočet, časový dosah a počáteční thorium)</SourceLink>
         </p>
         <p>
           Datované části tvoří opěrné body podél řezu.
@@ -473,12 +475,16 @@ export function SpeleothemArticle() {
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>
-            Krápník spojuje postupný růst minerálu s chemickým záznamem
-            vody přicházející z povrchu. Datování přiřadí vrstvám čas
-            a rozbor jejich složení umožní sledovat změny prostředí.
-            Ve spojení s poznáním dnešního jeskynního systému tak
-            získáváme záznam minulých srážkových a zimních podmínek,
-            který sahá tisíce let před přístrojová pozorování.
+            Rostoucí krápník ukládá do svých vrstev chemický záznam vody
+            přicházející z povrchu. Datování určí, kdy vrstvy vznikly.
+            Rozbor jejich složení a znalost dnešních poměrů v jeskyni
+            pak umožňují spojit změny tohoto záznamu s proměnami prostředí.
+          </p>
+          <p>
+            Z krápníků rekonstruujeme změny srážek, teploty a průsaku vody.
+            Jejich složení vypovídá také o půdě a vegetaci nad jeskyní.
+            Jeskynní sedimenty umožňují zjišťovat, kdy docházelo k povodním.
+            Vhodné záznamy sahají tisíce až stovky tisíc let do minulosti.
           </p>
         </div>
       </div>
