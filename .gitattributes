@@ -28,3 +28,4 @@ public/data/methods/lidar/* text eol=lf
 public/data/methods/altimetry/* text eol=lf
 public/data/methods/interferometry/* text eol=lf
 public/data/methods/gravimetry/* text eol=lf
+public/data/methods/occultation/* text eol=lf

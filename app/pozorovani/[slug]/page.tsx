@@ -54,7 +54,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Atmosféra"
           title="Teplota stratosféry"
-          meta="26. října 2026"
+          meta="28. října 2026"
         >
           <p>
             Jak se teplota stratosféry měří balóny, družicemi a rádiovými zákryty, jak se měření vyvíjela a co

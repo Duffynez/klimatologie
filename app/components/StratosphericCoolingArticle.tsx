@@ -256,7 +256,10 @@ export function StratosphericCoolingArticle() {
           Navigační družice vysílá rádiový signál a druhá družice na nízké oběžné dráze jej sleduje při západu za
           zemský okraj. Atmosféra signál zpomalí a ohne. Z přesného času a fáze se nejprve vypočte úhel ohybu a
           index lomu, z nich tlak a nakonec svislý profil takzvané suché teploty. Ve stratosféře, kde je málo
-          vodní páry, se tento výpočet používá přímo.
+          vodní páry, se tento výpočet používá přímo. Podrobný postup vysvětluje článek o{" "}
+          <Link href="/metody/radiove-zakryty-gnss">rádiových zákrytech GNSS</Link>,
+          včetně přepočtu skutečného družicového profilu.{" "}
+          <SourceLink id="DOI_10_1029_97JD01569">(Kursinski a kol. 1997)</SourceLink>
         </p>
 
         <p>

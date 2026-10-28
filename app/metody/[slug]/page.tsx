@@ -1,3 +1,4 @@
+import { RadioOccultationArticle } from "../../components/RadioOccultationArticle";
 import { GravimetryArticle } from "../../components/GravimetryArticle";
 import { InterferometryArticle } from "../../components/InterferometryArticle";
 import { AltimetryArticle } from "../../components/AltimetryArticle";
@@ -94,6 +95,18 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "radiove-zakryty-gnss") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Rádiové zákryty GNSS" meta="28. října 2026">
+          <p>Jak ohyb navigačního signálu odhaluje výškové uspořádání atmosféry a jak se ze skutečného družicového profilu vypočítá teplota.</p>
+        </PageLead>
+        <RadioOccultationArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "druzicova-gravimetrie") {
