@@ -447,14 +447,23 @@ export function PhotogrammetryArticle() {
         </details>
 
         <h2>Shrnutí</h2>
-        <div className="method-conclusion"><p>
-          Různé pohledy na stejný bod umožňují určit jeho polohu v prostoru.
-          Z husté sítě takových bodů vznikne výškový model povrchu.
-          Dva modely připojené ke stejné referenci a prostorově zarovnané
-          ukazují změnu výšky. Vynásobením plochami buněk a sečtením získáme
-          změnu objemu. Tato cesta propojuje fotografický záznam ledovce
-          s měřitelnou změnou jeho tvaru a velikosti.
-        </p></div>
+        <div className="method-conclusion">
+          <p>
+            Různé pohledy na stejný bod umožňují určit jeho polohu v prostoru. Z husté
+            sítě takových bodů vznikne výškový model povrchu. Porovnáním prostorově
+            zarovnaných modelů získáme změnu výšky a po započtení plochy také změnu
+            objemu.
+          </p>
+          <p>
+            Fotogrammetrie umožňuje měřit tvar a výšku terénu, ledovců i sněhové
+            pokrývky. Opakované snímkování ukazuje jejich pohyb a změny objemu, staré
+            fotografie prodlužují sledování do minulosti. Družicové stereosnímky ASTER
+            poskytují výškové modely v síti po 30 m, letecké snímky a drony umožňují
+            podrobnější místní měření.{" "}
+            <SourceLink id="DOI_10_5194_tc_5_271_2011">(Nuth a Kääb, 2011)</SourceLink>,{" "}
+            <SourceLink id="DOI_10_3390_rs9020186">(Gindraux a kol., 2017)</SourceLink>
+          </p>
+        </div>
       </div>
     </article>
   );

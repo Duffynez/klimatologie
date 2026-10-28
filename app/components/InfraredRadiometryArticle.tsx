@@ -470,11 +470,18 @@ export function InfraredRadiometryArticle() {
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>
-            Pasivní infračervená radiometrie zpřístupňuje teplotu rozsáhlých oblastí
-            z jejich přirozeného vyzařování. Kalibrované měření spojí s popisem
-            atmosféry a povrchu a vytvoří teplotní mapu. Opakovaná měření umožňují
-            sledovat ohřívání krajiny a oceánské hladiny a při odpovídajícím výběru
-            pásem také teplotní stav atmosféry.
+            Teplota povrchu ovlivňuje jeho tepelné vyzařování. Infračervený radiometr
+            toto záření změří a propojí je s popisem povrchu a atmosféry. Z jednotlivých
+            měření tak vzniká teplotní mapa, kterou lze porovnávat mezi místy i
+            obdobími.
+          </p>
+          <p>
+            Infračervená radiometrie umožňuje mapovat teplotu pevniny, oceánské hladiny
+            a oblaků. Vhodná pásma zpřístupňují také teplotní profily atmosféry.
+            Družicový přístroj TIRS na Landsatu 8 rozlišuje na povrchu podrobnosti o
+            velikosti přibližně 100 m, což umožňuje sledovat rozdíly mezi částmi krajiny
+            i města.{" "}
+            <SourceLink id="WEB_NASA_TIRS">(NASA: TIRS)</SourceLink>
           </p>
         </div>
       </div>

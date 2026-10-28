@@ -379,12 +379,18 @@ export function IceCoreArticle() {
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>
-            Ledové jádro uchovává vzduch, jehož složení lze změřit v laboratoři.
-            Spojení analýzy plynu s datováním ukazuje vývoj atmosféry i před
-            začátkem pravidelného přístrojového měření. K porovnání se záznamem
-            v samotném ledu potřebujeme rozlišit obě stáří. Díky tomu lze
-            sledovat souvislosti mezi změnami atmosféry a prostředí, v němž
-            sníh vznikal.
+            Ledové jádro uchovává vrstvy sněhu, jejich příměsi i uzavřený vzduch.
+            Laboratorní analýza změří jejich složení a datování výsledky přiřadí k
+            minulým obdobím. Spojení záznamu v ledu se záznamem v bublinkách umožňuje
+            sledovat souvislosti mezi změnami klimatu a atmosféry.
+          </p>
+          <p>
+            Ledová jádra umožňují měřit minulé koncentrace CO₂, metanu a oxidu dusného a
+            rekonstruovat teplotu, sněžení, prašnost i sopečné události. Souvislé
+            antarktické řady koncentrace CO₂ sahají 800 000 let nazpět. Mladší, rychleji
+            přibývající led zachycuje také podrobnější změny během jednotlivých let.{" "}
+            <SourceLink id="WEB_AAD_Ice_Cores">(Australian Antarctic Program: ledová jádra)</SourceLink>,{" "}
+            <SourceLink id="WEB_NOAA_NOAA_WDS_Paleoclimatology_Antarctic_Ice_Cores_Re_1183d28b">(NOAA: řada CO₂ za 800 000 let)</SourceLink>
           </p>
         </div>
       </div>

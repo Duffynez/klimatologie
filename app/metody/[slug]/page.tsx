@@ -226,7 +226,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "lidar-a-laserove-mereni-vzdalenosti") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Lidarové měření atmosféry a vegetace" meta="27. října 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Lidarové měření atmosféry a vegetace" meta="28. října 2026">
           <p>Jak návrat laserového světla odhaluje vrstvy oblaků a aerosolu i výšku porostu a jak se z jednoho skutečného pulzu GEDI vypočítá výškový ukazatel.</p>
         </PageLead>
         <LidarArticle />
@@ -238,7 +238,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "aktivni-radarove-mereni") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Radarové měření srážek a struktury sněhu a ledu" meta="27. října 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Radarové měření srážek a struktury sněhu a ledu" meta="28. října 2026">
           <p>Jak čas a síla radarového echa ukážou rozložení deště, jak se počítá jeho intenzita a jak radar odhaluje vrstvy uvnitř ledovce.</p>
         </PageLead>
         <RadarArticle />
@@ -250,7 +250,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "pasivni-mikrovlnna-radiometrie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Pasivní mikrovlnná radiometrie" meta="27. října 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Pasivní mikrovlnná radiometrie" meta="28. října 2026">
           <p>Jak družice zachytí přirozené mikrovlnné záření a jak z několika měřených kanálů vypočítáme podíl mořské hladiny pokrytý ledem.</p>
         </PageLead>
         <MicrowaveRadiometryArticle />
@@ -262,7 +262,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "pasivni-infracervena-radiometrie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Pasivní infračervená radiometrie" meta="27. října 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Pasivní infračervená radiometrie" meta="28. října 2026">
           <p>Jak družice zachytí tepelné záření a jak z něj po oddělení vlivu atmosféry a vlastností povrchu získáme teplotní mapu.</p>
         </PageLead>
         <InfraredRadiometryArticle />
@@ -274,7 +274,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "mereni-radiacnich-toku") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Měření radiačních toků" meta="27. října 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Měření radiačních toků" meta="28. října 2026">
           <p>Jak přístroje měří sluneční a tepelné záření a jak ze čtyř měřených složek zjistíme, kolik energie povrch zářením získává.</p>
         </PageLead>
         <RadiativeFluxArticle />
@@ -286,7 +286,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "fotogrammetrie-a-porovnavani-vyskovych-modelu") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Fotogrammetrie a porovnávání výškových modelů" meta="26. října 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Fotogrammetrie a porovnávání výškových modelů" meta="28. října 2026">
           <p>Jak různé pohledy na stejný povrch umožňují určit jeho výšku a jak porovnáním dvou výškových map zjistíme změnu objemu ledovce.</p>
         </PageLead>
         <PhotogrammetryArticle />
@@ -298,7 +298,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "opticke-a-multispektralni-snimkovani") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Optické a multispektrální snímkování" meta="26. října 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Optické a multispektrální snímkování" meta="28. října 2026">
           <p>Jak družice měří odražené světlo v několika pásmech a jak z těchto měření rozpoznáváme vegetaci, sníh a led.</p>
         </PageLead>
         <OpticalImagingArticle />
@@ -310,7 +310,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "coulometrie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Laboratorní analýza" title="Coulometrie" meta="26. října 2026">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Coulometrie" meta="28. října 2026">
           <p>Jak elektrický proud vytváří měřicí činidlo a prošlý náboj umožňuje určit množství rozpuštěného anorganického uhlíku v mořské vodě.</p>
         </PageLead>
         <CoulometryArticle />
@@ -322,7 +322,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "titrace") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Laboratorní analýza" title="Titrace" meta="26. října 2026">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Titrace" meta="28. října 2026">
           <p>Titrace určuje množství reagujících látek podle spotřeby známého činidla. Při rozboru mořské vody tak získáváme celkovou alkalinitu, jeden z podkladů pro sledování acidifikace oceánu.</p>
         </PageLead>
         <TitrationArticle />
@@ -334,7 +334,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "potenciometrie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Laboratorní analýza" title="Potenciometrie" meta="26. října 2026">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Potenciometrie" meta="28. října 2026">
           <p>Jak elektrody vytvářejí měřitelné napětí a kalibrace umožňuje určit pH mořské vody.</p>
         </PageLead>
         <PotentiometryArticle />
@@ -346,7 +346,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "spektrofotometrie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Laboratorní analýza" title="Spektrofotometrie roztoků" meta="26. října 2026">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Spektrofotometrie roztoků" meta="28. října 2026">
           <p>Jak přidané barvivo a měření pohlcovaného světla umožňují určit pH mořské vody a sledovat acidifikaci oceánu.</p>
         </PageLead>
         <SpectrophotometryArticle />
@@ -358,7 +358,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "hmotnostni-a-izotopova-spektrometrie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Laboratorní analýza" title="Hmotnostní a izotopová spektrometrie" meta="26. října 2026">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Hmotnostní a izotopová spektrometrie" meta="28. října 2026">
           <p>Jak z vody připravíme plyn, rozlišíme jeho ionty podle hmotnosti a získáme izotopový záznam koloběhu vody.</p>
         </PageLead>
         <IsotopeMassSpectrometryArticle />
@@ -370,7 +370,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "absorpcni-spektroskopie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Laboratorní analýza" title="Absorpční spektroskopie plynů" meta="26. října 2026">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Absorpční spektroskopie plynů" meta="28. října 2026">
           <p>Jak slábnutí laserového světla mezi zrcadly umožňuje měřit CO₂ a jak referenční směsi propojí optický signál se složením vzduchu.</p>
         </PageLead>
         <AbsorptionSpectroscopyArticle />
@@ -382,7 +382,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "plynova-chromatografie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Laboratorní analýza" title="Plynová chromatografie" meta="26. října 2026">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Plynová chromatografie" meta="28. října 2026">
           <p>Jak oddělení plynů ve vzorku a porovnání s referenčními směsmi umožňují měřit zastoupení metanu ve vzduchu.</p>
         </PageLead>
         <GasChromatographyArticle />
@@ -394,7 +394,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "standardizovane-fenologicke-pozorovani") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Přímá měření" title="Standardizované fenologické pozorování" meta="26. října 2026">
+        <PageLead eyebrow="Metody / Přímá měření" title="Standardizované fenologické pozorování" meta="28. října 2026">
           <p>Jak opakované návštěvy rostlin a společné definice vývojových fází vytvářejí záznam přírodního kalendáře.</p>
         </PageLead>
         <PhenologyMonitoringArticle />
@@ -409,7 +409,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Měření hloubky sezónního rozmrzání"
-          meta="26. října 2026"
+          meta="28. října 2026"
         >
           <p>
             Jak kovová sonda najde zmrzlou půdu a jak měření v síti ukáže tloušťku aktivní vrstvy.
@@ -428,7 +428,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Terénní měření bilance ledovců"
-          meta="26. října 2026"
+          meta="28. října 2026"
         >
           <p>
             Jak měřicí tyče a odběry sněhu zachycují přírůstky a ztráty na povrchu ledovce.
@@ -447,7 +447,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Měření výšky, hustoty a vodní hodnoty sněhu"
-          meta="26. října 2026"
+          meta="28. října 2026"
         >
           <p>
             Jak ze změřené výšky a zvážených vzorků určíme zásobu vody ve sněhu.
@@ -466,7 +466,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Pobřežní měření hladiny a výšková reference"
-          meta="26. října 2026"
+          meta="28. října 2026"
         >
           <p>
             Jak z radarového odrazu získáme výšku mořské hladiny a jak oddělíme
@@ -486,7 +486,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Srážkoměry a disdrometry"
-          meta="26. října 2026"
+          meta="28. října 2026"
         >
           <p>
             Srážkoměr zachycuje vodu, disdrometr sleduje jednotlivé padající částice.
@@ -505,7 +505,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Konduktometrie"
-          meta="26. října 2026"
+          meta="28. října 2026"
         >
           <p>
             Jak elektrický proud ve vodě umožňuje určit její slanost. Princip čidla,
@@ -524,7 +524,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Měření tlaku a hydrostatické výšky"
-          meta="26. října 2026"
+          meta="28. října 2026"
         >
           <p>
             Jak tlakoměr měří působení vodního sloupce a jak z jeho údaje vypočítáme hloubku.
@@ -545,7 +545,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Odporová termometrie a termistory"
-          meta="26. října 2026"
+          meta="28. října 2026"
         >
           <p>
             Elektrický odpor čidla se mění s teplotou. Této závislosti využívají teploměry
@@ -567,7 +567,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Hygrometrie"
-          meta="26. října 2026"
+          meta="28. října 2026"
         >
           <p>
             Vodní pára mění elektrické vlastnosti některých materiálů a při ochlazení se sráží
@@ -589,7 +589,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Radiosondáž"
-          meta="26. října 2026"
+          meta="28. října 2026"
         >
           <p>
             Jak sonda pod meteorologickým balonem měří teplotu, vlhkost a vítr v různých výškách.

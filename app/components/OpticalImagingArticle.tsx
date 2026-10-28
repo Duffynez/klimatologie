@@ -516,15 +516,21 @@ export function OpticalImagingArticle() {
         </details>
 
         <h2>Shrnutí</h2>
-        <div className="method-conclusion"><p>
-          Multispektrální snímkování využívá toho, že různé povrchy odrážejí
-          světlo v jednotlivých pásmech odlišně. Z kalibrovaných měření
-          a atmosférické korekce získáváme odrazivosti, jejich porovnáním
-          rozlišujeme vlastnosti povrchu. Opakované snímky pak poskytují
-          mapy rozsahu sněhu, hranic ledovců a sezónní aktivity vegetace.
-          Zveřejněná pásma a popsané výpočty dovolují sledovat cestu
-          od měřeného světla až k těmto výsledkům.
-        </p></div>
+        <div className="method-conclusion">
+          <p>
+            Různé povrchy odrážejí světlo v jednotlivých pásmech odlišně.
+            Multispektrální snímkování využívá těchto rozdílů k rozpoznání sněhu, ledu,
+            vody či vegetace. Kalibrace a atmosférická korekce převádějí zaznamenané
+            záření na odrazivost, kterou lze mezi snímky porovnávat.
+          </p>
+          <p>
+            Optické snímkování umožňuje mapovat rozsah sněhu a ledovců, změny krajinného
+            pokryvu i sezónní aktivitu vegetace. Multispektrální snímky Landsatu 8 mají
+            buňky 30 × 30 m. Opakované snímkování tak ukazuje ústup ledu, tání sněhu a
+            změny zeleně na úrovni jednotlivých částí krajiny.{" "}
+            <SourceLink id="2019_USGS_Landsat8_Handbook">(USGS, 2019: Landsat 8)</SourceLink>
+          </p>
+        </div>
       </div>
     </article>
   );

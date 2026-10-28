@@ -426,12 +426,21 @@ export function TitrationArticle() {
           </p>
         </details>
         <h2>Shrnutí</h2>
-        <div className="method-conclusion"><p>
-          Titrace převádí známé dávky kyseliny a odezvu vzorku na celkovou alkalinitu
-          mořské vody. Spolu s měřením rozpuštěného anorganického uhlíku umožňuje
-          určit stav uhličitanového systému a sledovat jeho dlouhodobé změny.
-          Vazbu mezi laboratořemi zajišťují kalibrované dávky a společné referenční materiály.
-        </p></div>
+        <div className="method-conclusion">
+          <p>
+            Titrace určuje množství látky podle toho, kolik známého činidla s ní
+            zreaguje. U mořské vody dávkujeme kyselinu a sledujeme odezvu pH. Z množství
+            přidané kyseliny a průběhu reakce získáme celkovou alkalinitu, která pomáhá
+            popsat chemický stav oceánu.
+          </p>
+          <p>
+            Titrace umožňuje stanovovat koncentrace látek v roztocích a jejich schopnost
+            vázat kyselinu. V oceánografii měří celkovou alkalinitu. Standardní postup
+            je určen pro 2 000–2 500 µmol/kg a lze jej upravit i pro 3 200–4 600
+            µmol/kg. Výsledky slouží ke zkoumání ukládání uhlíku a acidifikace oceánu.{" "}
+            <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(Dickson a kol.: postup SOP 3a)</SourceLink>
+          </p>
+        </div>
       </div>
     </article>
   );

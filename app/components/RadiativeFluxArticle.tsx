@@ -479,12 +479,17 @@ export function RadiativeFluxArticle() {
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>
-            Měření radiačních toků ukazuje, jak rychle povrch získává a vydává
-            energii zářením. Samostatné měření slunečního a tepelného záření
-            v obou směrech umožňuje určit jejich bilanci i sledovat, která
-            složka se mění. Pozemní stanice poskytují soustavný místní záznam
-            a oporu pro kontrolu družicových výpočtů. Družice rozšiřují pohled
-            na radiační výměnu celé Země s vesmírem.
+            Měření radiačních toků ukazuje, jak rychle povrch získává a vydává energii
+            zářením. Samostatné měření slunečního a tepelného záření v obou směrech
+            umožňuje určit jejich bilanci. Pozemní stanice poskytují místní záznam,
+            družice rozšiřují pohled na výměnu energie celé Země s vesmírem.
+          </p>
+          <p>
+            Tato měření umožňují určit příkon i výdej energie zářením ve W/m² a sledovat
+            vliv oblaků, sněhu či vegetace na energetickou bilanci. Běžné širokopásmové
+            pozemní přístroje zachycují sluneční záření v pásmu 0,3–3 µm a tepelné
+            záření v pásmu 3,5–50 µm.{" "}
+            <SourceLink id="DOI_10_2172_1432706">(Andreas, 2018: příručka radiometrů)</SourceLink>
           </p>
         </div>
       </div>

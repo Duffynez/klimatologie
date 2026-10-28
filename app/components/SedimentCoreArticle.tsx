@@ -236,6 +236,14 @@ export function SedimentCoreArticle() {
           <SourceLink id="DOI_10_5194_cp_19_607_2023">(Hodell a kol. 2023)</SourceLink>
         </p>
 
+        <p>
+          Propojení vrtů z různých částí oceánu prodlužuje záznam do ještě vzdálenější
+          minulosti. Soubor CENOGRID spojuje izotopové rozbory schránek dírkovců do
+          časové řady za posledních 66 000 000 let. Umožňuje sledovat přechody mezi
+          teplými obdobími a světem s rozsáhlými ledovými příkrovy.{" "}
+          <SourceLink id="DOI_10_1594_PANGAEA_917503">(Westerhold, 2020: CENOGRID)</SourceLink>
+        </p>
+
         <h3>Vývoj odběru a jezerní varianty</h3>
         <p>
           Kullenbergův popis z roku 1947 ukázal, jak pístový odběrač
@@ -384,11 +392,19 @@ export function SedimentCoreArticle() {
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>
-            Sedimentární jádra zpřístupňují materiál, který se ukládal během
-            minulých změn prostředí. Stratigrafie umožňuje spojit jeho úseky
-            a určit jejich pořadí, datování k nim přidá časovou osu.
-            Na tomto základu lze z rozborů vzorků rekonstruovat průběh změn
-            v oceánech a jezerech a porovnávat je s dalšími klimatickými archivy.
+            Sedimentární jádra zpřístupňují materiál, který se ukládal během minulých
+            změn prostředí. Stratigrafie umožňuje spojit jeho úseky a určit jejich
+            pořadí, datování k nim přidá časovou osu. Rozbory vzorků pak ukazují, jak se
+            prostředí postupně proměňovalo.
+          </p>
+          <p>
+            Z jezerních a mořských usazenin rekonstruujeme teplotu, vegetaci, přísun
+            materiálu z pevniny i změny oceánu a zalednění. Propojením více mořských
+            vrtů lze sledovat vývoj klimatu za posledních 66 000 000 let. Takový dosah
+            má soubor CENOGRID, sestavený z izotopových rozborů schránek mořských
+            organismů.{" "}
+            <SourceLink id="WEB_NCAR_Lake_Sediment_Guide">(NCAR: jezerní sedimenty)</SourceLink>,{" "}
+            <SourceLink id="DOI_10_1594_PANGAEA_917503">(Westerhold, 2020: CENOGRID)</SourceLink>
           </p>
         </div>
       </div>

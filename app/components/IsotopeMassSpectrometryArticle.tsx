@@ -384,11 +384,18 @@ export function IsotopeMassSpectrometryArticle() {
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>
-            Izotopová hmotnostní spektrometrie zpřístupňuje malé rozdíly ve složení vody
-            a dalších klimatických vzorků. Referenční materiály dávají výsledkům společnou
-            stupnici, takže lze porovnávat místa, období i laboratoře. U vody tato měření
-            pomáhají sledovat její cestu atmosférou a číst záznam minulých srážek v ledu.
-            Poskytují tím měřitelný podklad pro výzkum koloběhu vody a rekonstrukce minulého klimatu.
+            Izotopová hmotnostní spektrometrie odhaluje malé rozdíly v zastoupení
+            těžších a lehčích atomů téhož prvku. Referenční materiály dávají výsledkům společnou
+            stupnici. Díky tomu lze porovnávat vzorky z různých míst a období a zkoumat
+            procesy, které jejich izotopové složení utvářely.
+          </p>
+          <p>
+            Metoda umožňuje určovat izotopové složení vody, plynů i pevných vzorků a z
+            něj zkoumat koloběh vody, původ uhlíku či minulé klima. Postup USGS pro
+            kyslík ve vodě je ověřen pro odchylky izotopového poměru přibližně od −55 do
+            +5 ‰ vůči referenční vodě VSMOW. Tento rozsah zahrnuje vodu od polárního sněhu po vodu obohacenou výparem.{" "}
+            <SourceLink id="2025_FIRMS_IRMS_Guide">(FIRMS, 2025)</SourceLink>,{" "}
+            <SourceLink id="DOI_10_3133_tm10C2">(Révész a Coplen: metoda USGS)</SourceLink>
           </p>
         </div>
       </div>

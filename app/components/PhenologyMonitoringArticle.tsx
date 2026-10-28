@@ -380,12 +380,22 @@ export function PhenologyMonitoringArticle() {
         </details>
 
         <h2>Shrnutí</h2>
-        <p>
-          Společné definice a opakované návštěvy promění pozorování rostlin a živočichů
-          v dohledatelný záznam jejich sezónního vývoje. Z něj získáme načasování jednotlivých
-          fází i rozmezí, ve kterém jejich nástup nastal. Dlouhodobá srovnání těchto biologických
-          údajů s měřením podmínek prostředí ukazují, jak živá příroda reaguje na změny klimatu.
-        </p>
+        <div className="method-conclusion">
+          <p>
+            Společné definice a opakované návštěvy promění pozorování rostlin a
+            živočichů v dohledatelný záznam jejich sezónního vývoje. Zápisy přítomnosti
+            a intenzity jednotlivých fází umožňují mezi místy i roky porovnávat stejné
+            biologické děje.
+          </p>
+          <p>
+            Fenologické pozorování umožňuje určovat začátek, konec a trvání rašení,
+            kvetení, dozrávání, opadu listů i sezónních projevů živočichů. Při
+            každodenní návštěvě lze nástup zachycené fáze vymezit intervalem 1 dne, při
+            týdenní intervalem 7 dní. Dlouhé řady ukazují posuny biologického kalendáře
+            a délky vegetační sezóny.{" "}
+            <SourceLink id="DOI_10_1007_s00484_014_0789_5">(Denny a kol., 2014)</SourceLink>
+          </p>
+        </div>
       </div>
     </article>
   );

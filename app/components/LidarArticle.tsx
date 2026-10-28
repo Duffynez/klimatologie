@@ -464,12 +464,18 @@ export function LidarArticle() {
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>
-            Lidar přiřazuje vrácené světlo ke vzdálenosti a tím rozlišuje
-            vrstvy, které při pohledu shora splývají. V atmosféře ukazuje
-            výšku a rozložení oblaků a aerosolu, nad lesem strukturu porostu
-            a jeho výšku vůči půdě. Kalibrace, rozbor průběhu návratu
-            a návazné vztahy pak umožňují využít tato měření při výzkumu
-            přenosu záření i zásob uhlíku v ekosystémech.
+            Lidar přiřazuje vrácené světlo ke vzdálenosti, a tím rozlišuje vrstvy, které
+            při pohledu shora splývají. Průběh návratu ukazuje, kde se světlo rozptýlilo
+            a jak silně. Nad lesem dovoluje odlišit odrazy od korun a od půdy.
+          </p>
+          <p>
+            Lidar umožňuje měřit výšku a rozložení oblaků a aerosolu, výšku lesa i
+            uspořádání jeho korun. Tato měření slouží také odhadům biomasy a zásob
+            uhlíku. Atmosférický lidar CALIOP zaznamenával rozptyl světla až přibližně
+            do výšky 40 km, lesní lidar GEDI měří porost v kruzích o průměru přibližně
+            25 m.{" "}
+            <SourceLink id="WEB_CALIPSO_Final_Report_2026">(CALIPSO: závěrečná zpráva, 2026)</SourceLink>,{" "}
+            <SourceLink id="DOI_10_1016_j_srs_2020_100002">(Dubayah a kol., 2020)</SourceLink>
           </p>
         </div>
       </div>

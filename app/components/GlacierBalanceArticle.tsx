@@ -460,15 +460,23 @@ export function GlacierBalanceArticle() {
           </p>
         </details>
 
-        <section className="method-conclusion">
-          <h2>Co metoda umožňuje zjistit</h2>
+        <h2>Shrnutí</h2>
+        <div className="method-conclusion">
           <p>
-            Terénní měření ukazuje, kdy a kde ledovec získává nebo ztrácí hmotnost na svém povrchu.
-            Síť místních odečtů a prostorový výpočet umožňují sestavit bilanci celé plochy a rozlišit
-            zimní přírůstek od letního úbytku. Dlouhé řady těchto výsledků jsou podkladem pro sledování
-            změn ledovců i pro jejich vysvětlení ve vztahu k počasí a klimatu.
+            Tyče ukazují úbytek nebo přírůstek povrchu, rozbory sněhu doplní jeho
+            hustotu. Převod na vodní hodnotu umožňuje sčítat přírůstky sněhu s úbytky
+            ledu. Síť těchto místních měření a znalost plochy ledovce pak umožňují
+            sestavit jeho povrchovou hmotnostní bilanci.
           </p>
-        </section>
+          <p>
+            Terénní metoda umožňuje určit zimní hromadění sněhu, letní tání i roční zisk
+            nebo ztrátu hmotnosti na povrchu ledovce. Zachytí také silné tání. Pro
+            sezónní úbytky 8–12 m ledu se používají ocelové dráty ukotvené v hlubších
+            vrtech. Měření na celé síti míst ukazuje bilanci ledovce a její změny mezi
+            roky.{" "}
+            <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, 2024: měření kryosféry)</SourceLink>
+          </p>
+        </div>
       </div>
     </article>
   );

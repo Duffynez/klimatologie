@@ -444,13 +444,23 @@ export function CoulometryArticle() {
           </p>
         </details>
         <h2>Shrnutí</h2>
-        <div className="method-conclusion"><p>
-          Coulometrie spojuje množství rozpuštěného anorganického uhlíku
-          s elektrickým nábojem potřebným k jeho stanovení. Kalibrované rozbory
-          poskytují porovnatelné údaje o složení mořské vody. Jejich spojení
-          s místem odběru, hloubkou a dalšími veličinami umožňuje sledovat
-          rozložení uhlíku v oceánu i jeho dlouhodobé změny.
-        </p></div>
+        <div className="method-conclusion">
+          <p>
+            Coulometrie spojuje množství stanovované látky s elektrickým nábojem
+            spotřebovaným při reakci. U mořské vody se rozpuštěný anorganický uhlík
+            převede na CO₂ a jeho množství se určí v měřicí cele. Kalibrované rozbory
+            tak poskytují porovnatelné údaje o zásobách uhlíku v oceánu.
+          </p>
+          <p>
+            Coulometrie slouží ke stanovení množství látek, které lze zapojit do známé
+            elektrochemické reakce. V oceánografii měří celkový rozpuštěný anorganický
+            uhlík. Standardní postup pokrývá běžné oceánské koncentrace 1 800–2 300
+            µmol/kg i vyšší koncentrace 3 800–4 300 µmol/kg, jaké se vyskytují v Černém
+            moři.{" "}
+            <SourceLink id="2016_Harvey_Analytical_Chemistry">(Harvey: coulometrie)</SourceLink>,{" "}
+            <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(Dickson a kol.: postup SOP 2)</SourceLink>
+          </p>
+        </div>
       </div>
     </article>
   );

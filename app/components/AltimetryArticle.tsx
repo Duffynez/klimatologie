@@ -271,6 +271,14 @@ export function AltimetryArticle() {
           <SourceLink id="DOI_10_1126_science_aaz5845">(Smith a kol. 2020)</SourceLink>
         </p>
 
+        <p>
+          Výšku lze měřit také nad jezery, řekami a mořským ledem. U plovoucího ledu
+          porovnáváme jeho povrch s hladinou v okolních trhlinách. Zjistíme tak, jak
+          vysoko led vystupuje nad vodu. Spolu s údaji o sněhu a hustotě to umožňuje
+          odhadnout celkovou tloušťku ledu.{" "}
+          <SourceLink id="DOI_10_1016_j_rse_2019_111325">(Neumann a kol., 2019)</SourceLink>
+        </p>
+
         <h3>Jak se možnosti měření rozšiřovaly</h3>
         <p>
           Brooks a kolegové v roce 1978 ukázali, že radar družice GEOS-3
@@ -482,12 +490,19 @@ export function AltimetryArticle() {
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>
-            Altimetrie spojuje měření vzdálenosti s určením polohy družice.
-            Tím vytváří srovnatelné výškové záznamy oceánu a ledu.
-            Opakované radarové přelety umožňují sledovat změnu hladiny,
-            laserové profily ukazují, kde se ledový povrch zvyšuje
-            nebo snižuje. Po zapojení údajů o sněhu, hustotě a podloží
-            mohou výšková měření přispět také k bilanci hmotnosti příkrovů.
+            Altimetrie spojuje dobu návratu radarového nebo laserového pulzu s přesně
+            určenou polohou družice. Získává tak výšku povrchu vůči společné referenci.
+            Opakovaná měření ukazují, jak se hladina nebo ledový povrch mezi přelety
+            změnily.
+          </p>
+          <p>
+            Altimetrie umožňuje měřit výšku mořské hladiny, ledovců, ledových příkrovů i
+            hladin jezer a řek. Výška mořského ledu nad vodou pomáhá určit jeho
+            tloušťku. Sledujeme tak vzestup oceánu, zásoby vody i úbytek ledu. Oceánské
+            družice typu Jason opakují měření na stejných drahách přibližně každých 10
+            dní.{" "}
+            <SourceLink id="WEB_Jason3_Handbook_2018">(Příručka Jasonu-3, 2018)</SourceLink>,{" "}
+            <SourceLink id="DOI_10_1016_j_rse_2019_111325">(Neumann a kol., 2019)</SourceLink>
           </p>
         </div>
       </div>

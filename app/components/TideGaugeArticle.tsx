@@ -564,15 +564,21 @@ export function TideGaugeArticle() {
           </p>
         </details>
 
+        <h2>Shrnutí</h2>
         <div className="method-conclusion">
-          <h2>Co nám pobřežní měření ukazuje</h2>
           <p>
-            Pobřežní vodočty zachycují změny hladiny vůči konkrétnímu pobřeží,
-            od přílivu a odlivu po vývoj trvající desetiletí. Doložená výšková
-            reference propojuje měření přes výměny přístrojů. Geodetické údaje
-            pak umožňují oddělit podíl pohybu souše. Spojením místních záznamů
-            s údaji o dalších oblastech získáváme obraz dlouhodobých změn
-            mořské hladiny.
+            Pobřežní vodočet měří polohu hladiny vůči výškové referenci na souši.
+            Opakované odečty zachycují její pohyb, stálá reference propojuje měření v
+            čase. Doplnění geodetických údajů umožňuje určit, jak se na dlouhodobé změně
+            podílí pohyb pobřeží.
+          </p>
+          <p>
+            Pobřežní měření umožňuje sledovat příliv a odliv, bouřkové vzdutí i
+            dlouhodobý vývoj hladiny vůči souši. Radarová čidla typu používaného sítí
+            NOAA měří vzdálenost k hladině až 40 m. Časté odečty zachytí rychlé výkyvy a
+            dlouhé řady ukazují dlouhodobý vzestup nebo pokles hladiny u konkrétního
+            pobřeží.{" "}
+            <SourceLink id="2013_NOAA_Radar_Installation">(NOAA, 2013: instalace radarového vodočtu)</SourceLink>
           </p>
         </div>
       </div>

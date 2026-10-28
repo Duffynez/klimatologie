@@ -561,14 +561,21 @@ export function ConductometryArticle() {
             Před použitím původní funkce by se vodivost v S/m násobila deseti.
           </p>
         </details>
+        <h2>Shrnutí</h2>
         <div className="method-conclusion">
-          <h2>Co metoda umožňuje zjistit</h2>
           <p>
-            Konduktometrie zpřístupňuje slanost jednotlivých vzorků i oceánských
-            vrstev prostřednictvím jejich elektrické vodivosti. Společná stupnice
-            umožňuje porovnávat profily z různých míst a sledovat jejich změny
-            v čase. Salinita spolu s teplotou a tlakem poskytuje podklad pro výpočty
-            hustoty, obsahu tepla a chemických vlastností mořské vody.
+            Rozpuštěné ionty umožňují vodě vést elektrický proud. Změření vodivosti
+            společně s teplotou a tlakem dovoluje určit salinitu na společné stupnici.
+            Takto získané hodnoty lze porovnávat mezi vzorky, oceánskými vrstvami i
+            jednotlivými roky.
+          </p>
+          <p>
+            Konduktometrie umožňuje měřit elektrickou vodivost roztoků a u mořské vody z
+            ní určovat slanost. Základní oceánografický převod PSS-78 pokrývá praktickou
+            salinitu mezi 2 a 42, rozšířený převod také hodnoty pod 2. Salinita spolu s
+            teplotou pomáhá sledovat mísení vod, oceánské proudění a koloběh sladké
+            vody.{" "}
+            <SourceLink id="2015_TEOS10_SP_From_C">(TEOS-10: převod vodivosti na salinitu)</SourceLink>
           </p>
         </div>
       </div>

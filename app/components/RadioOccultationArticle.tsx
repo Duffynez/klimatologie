@@ -392,12 +392,18 @@ export function RadioOccultationArticle() {
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>
-            Rádiové zákryty umožňují sledovat výškové uspořádání atmosféry
-            podle toho, jak mění průchod navigačních signálů. V suchých
-            vrstvách poskytují teplotní profily, ve vlhčím vzduchu se
-            spojují s dalšími informacemi o atmosféře. Opakovaná měření
-            zachycují změny teploty troposféry a stratosféry a umožňují
-            je porovnat s výsledky radiosond i jiných družicových metod.
+            Rádiový zákryt využívá ohyb a zpoždění navigačního signálu při průchodu
+            atmosférou. Postupně sleduje různé výšky, a tím odhaluje svislé uspořádání
+            vzduchu. Převod naměřených změn na vlastnosti atmosféry poskytuje další
+            nezávislý pohled na její vývoj.
+          </p>
+          <p>
+            Rádiové zákryty umožňují určovat výškové profily hustoty, tlaku a teploty
+            vzduchu a ve spojení s dalšími údaji také vlhkosti. Účinek atmosféry na
+            signál lze sledovat přibližně od povrchu do výšky 60 km. Opakované profily
+            slouží předpovědi počasí i sledování oteplování a ochlazování jednotlivých
+            vrstev.{" "}
+            <SourceLink id="DOI_10_1029_97JD01569">(Kursinski a kol., 1997)</SourceLink>
           </p>
         </div>
       </div>

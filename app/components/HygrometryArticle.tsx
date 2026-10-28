@@ -495,13 +495,22 @@ export function HygrometryArticle() {
           vodní páry tedy potřebujeme vedle RH znát i teplotu.
         </p>
 
+        <h2>Shrnutí</h2>
         <div className="method-conclusion">
-          <h2>Co hygrometrie umožňuje zjistit</h2>
           <p>
-            Hygrometrie poskytuje údaje o vlhkosti vzduchu v místě a čase měření. Společně s teplotou
-            a tlakem umožňuje určit množství vodní páry a sledovat jeho změny. Dlouhodobě srovnatelná
-            měření z pozemních stanic a radiosond dokládají, jak se vlhkost liší mezi oblastmi,
-            výškami a obdobími. Tvoří tak měřicí základ pro poznávání změn vlhkosti atmosféry.
+            Vlhkoměr využívá fyzikální změnu vyvolanou vodní párou, například změnu
+            kapacity čidla nebo vznik kondenzace na ochlazovaném povrchu. Kalibrace ji
+            propojí s vlhkostí vzduchu. Spolu s teplotou a tlakem lze určit také
+            množství páry v místě měření.
+          </p>
+          <p>
+            Hygrometrie umožňuje měřit relativní vlhkost a rosný bod a od nich odvozovat
+            obsah vodní páry. Běžná kapacitní čidla, například řada HMT330, pokrývají
+            relativní vlhkost 0–100 %. Měření na stanicích a radiosondách zachycují
+            rozdíly mezi oblastmi i výškami a denní, sezónní i dlouhodobé změny
+            vlhkosti.{" "}
+            <SourceLink id="2013_NPL_Humidity">(NPL, 2013: měření vlhkosti)</SourceLink>,{" "}
+            <SourceLink id="2013_Vaisala_HMT330">(Vaisala, 2013: HMT330)</SourceLink>
           </p>
         </div>
       </div>

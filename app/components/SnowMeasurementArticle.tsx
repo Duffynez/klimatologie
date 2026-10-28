@@ -327,6 +327,12 @@ export function SnowMeasurementArticle() {
           <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíl 2.3.2)</SourceLink>
         </p>
         <p>
+          Ultrazvukové čidlo Pessl Instruments má měřicí rozsah vzdálenosti 0–10 m.
+          Výška jeho umístění nad holým podkladem určuje, jak vysokou sněhovou pokrývku
+          může na stanici sledovat.{" "}
+          <SourceLink id="WEB_Pessl_Snow_Depth_Sensor">(Pessl Instruments: technická specifikace)</SourceLink>
+        </p>
+        <p>
           Automaticky lze sledovat také hmotnost sněhu. Sněhový polštář je nádoba
           s kapalinou zapuštěná do úrovně terénu. Sníh nádobu zatěžuje a zvyšuje
           tlak kapaliny. Z tohoto tlaku se určuje hmotnost nad měřenou plochou
@@ -542,17 +548,24 @@ export function SnowMeasurementArticle() {
           </p>
         </details>
 
-        <section className="method-conclusion">
-          <h2>Co nám měření sněhu ukazuje</h2>
+        <h2>Shrnutí</h2>
+        <div className="method-conclusion">
           <p>
-            Měření výšky a hustoty zpřístupňuje zásobu vody uloženou ve sněhu
-            i její rozložení ve svislém profilu. Umožňuje sledovat úbytek
-            hmotnosti společně se změnami výšky a zhutňováním pokrývky.
-            Opakované odběry na více místech poskytují podklad pro
-            sledování sněhové zásoby, hmotnostní bilance ledovců a kontrolu
-            družicových odhadů.
+            Výška sněhu určuje objem pokrývky a hustota říká, kolik hmotnosti v něm je.
+            Jejich spojením získáme vodní hodnotu, tedy zásobu vody uloženou ve sněhu.
+            Odběry po vrstvách ukazují její rozložení a opakovaná měření její přírůstky
+            i úbytky.
           </p>
-        </section>
+          <p>
+            Měření sněhu umožňuje určovat výšku, hustotu a zásobu vody v pokrývce,
+            sledovat její hromadění a tání a odhadovat vodu dostupnou pro odtok. Ruční
+            odběry doplňují automatické stanice. Ultrazvuková čidla Pessl Instruments
+            mají rozsah měřené vzdálenosti 0–10 m, podle výšky instalace tak sledují i
+            mocnou sněhovou pokrývku.{" "}
+            <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, 2024)</SourceLink>,{" "}
+            <SourceLink id="WEB_Pessl_Snow_Depth_Sensor">(Pessl Instruments: sněhové čidlo)</SourceLink>
+          </p>
+        </div>
       </div>
     </article>
   );

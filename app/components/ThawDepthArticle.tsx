@@ -402,15 +402,22 @@ export function ThawDepthArticle() {
           kterou by samotný odečet od sesedající půdy nezachytil.
         </p>
 
-        <section className="method-conclusion">
-          <h2>Co měření ukazuje</h2>
+        <h2>Shrnutí</h2>
+        <div className="method-conclusion">
           <p>
-            Hloubka sezónního rozmrzání ukazuje, jak hluboko půda na sledovaných místech rozmrzla.
-            Opakovaná měření u sezónního maxima umožňují porovnávat tloušťku aktivní vrstvy mezi roky.
-            Doplnění výšky povrchu oddělí její změnu od sesedání terénu. Spolu s teplotou půdy
-            a stavem sněhu tato měření poskytují podklady pro zkoumání změn permafrostu.
+            Sonda, mrazová trubice nebo teplotní profil určují polohu rozhraní mezi
+            rozmrzlou a zmrzlou půdou. Vztáhneme-li ji k povrchu, získáme hloubku
+            rozmrzání. Opakované měření zachytí její postup během léta a největší
+            dosaženou hloubku.
           </p>
-        </section>
+          <p>
+            Metoda umožňuje měřit sezónní rozmrzání a tloušťku aktivní vrstvy nad
+            permafrostem. Běžné ruční sondy dosáhnou přibližně 1–1,3 m, hlubší rozmrzání
+            lze sledovat teplotními čidly ve vrtech. Opakováním měření zjišťujeme, zda
+            během let rozmrzá stále silnější vrstva půdy.{" "}
+            <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, 2024: měření kryosféry)</SourceLink>
+          </p>
+        </div>
 
       </div>
     </article>

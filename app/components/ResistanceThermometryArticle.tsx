@@ -815,15 +815,20 @@ export function ResistanceThermometryArticle() {
           </p>
         </details>
 
-        <h2>Co díky odporové termometrii zjišťujeme</h2>
+        <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>
-            Odporová termometrie umožňuje soustavně sledovat teplotu vzduchu, vody a půdy.
-            Jednotlivá měření zachycují průběh teploty na daném místě.
-            Jejich propojením v čase a prostoru získáváme podklady pro sledování oteplování
-            atmosféry, změn oceánu i permafrostu.
-            Kalibrace je váže na společné teplotní reference a zveřejněné údaje umožňují
-            kontrolovat návazné výpočty.
+            Elektrický odpor čidla se mění s teplotou. Kalibrace určí vztah mezi odporem
+            a teplotou a umožní převádět elektrický signál na stupně Celsia. Platinová
+            čidla a termistory tak poskytují opakovatelná měření, která lze spojovat do
+            dlouhodobých záznamů.
+          </p>
+          <p>
+            Odporová termometrie umožňuje měřit teplotu vzduchu, vody, půdy, sněhu i
+            ledu a průběžně sledovat její změny. Různá provedení průmyslových
+            platinových čidel pokrývají teploty od −200 do +850 °C. V klimatologii tak
+            slouží pozemním stanicím, oceánským sondám i měření promrzající půdy.{" "}
+            <SourceLink id="2021_BIPM_IPRT">(BIPM, 2021: platinové odporové teploměry)</SourceLink>
           </p>
         </div>
 

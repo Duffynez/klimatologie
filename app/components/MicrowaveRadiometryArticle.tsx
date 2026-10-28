@@ -451,12 +451,17 @@ export function MicrowaveRadiometryArticle() {
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>
-            Pasivní mikrovlnná radiometrie umožňuje sledovat ledový pokryv
-            i během polární noci a při oblačnosti. Spojením několika kanálů
-            a referencí převádí přirozené záření na odhad podílu zamrzlé hladiny.
-            Opakované mapy pak poskytují základ pro měření sezónních i dlouhodobých
-            změn mořského ledu. Jiný výběr pásem a převodního modelu zpřístupňuje
-            také teplotu atmosféry, množství sněhu a vlhkost půdy.
+            Pasivní mikrovlnná radiometrie zachycuje přirozené záření povrchu a
+            atmosféry. Kombinace několika pásem umožňuje rozlišit jejich vlastnosti. U
+            mořského ledu převádí rozdílné vyzařování vody a ledu na podíl zamrzlé
+            hladiny, který lze sledovat i během polární noci.
+          </p>
+          <p>
+            Metoda umožňuje určovat podíl mořského ledu, teplotní profily atmosféry,
+            zásobu vody ve sněhu a vlhkost půdy. Ledové pokrytí vyjadřuje od 0 do 100 %.
+            Družicový radiometr SSM/I v pásmu 19 GHz zahrnuje do jednoho měření plochu
+            přibližně 70 × 45 km, takže zachycuje proměny rozsáhlých oblastí.{" "}
+            <SourceLink id="WEB_NASA_SSMI_Validation_1992">(Cavalieri, ed., 1992)</SourceLink>
           </p>
         </div>
       </div>

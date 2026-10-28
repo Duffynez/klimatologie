@@ -414,11 +414,18 @@ export function AbsorptionSpectroscopyArticle() {
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>
-            Absorpční spektroskopie umožňuje sledovat složení vzduchu pomocí světla.
-            Vybrané absorpční čáry rozlišují plyny a porovnání se známými směsmi dává
-            měřením společnou stupnici. Souvislé záznamy CO₂ a dalších plynů zachycují
-            jejich proměny v čase i rozdíly mezi místy. Jsou tak přímým podkladem
-            pro poznání změn atmosféry a pro další výzkum koloběhu uhlíku.
+            Plyny pohlcují světlo na charakteristických vlnových délkách. Absorpční
+            spektroskopie je podle nich rozliší a ze síly pohlcování určí jejich
+            množství. Porovnání se známými směsmi propojí měření různých přístrojů a
+            vytvoří společnou stupnici pro sledování složení atmosféry.
+          </p>
+          <p>
+            Absorpční spektroskopie umožňuje soustavně měřit CO₂, metan, vodní páru a
+            další plyny ve vzduchu. Slouží ke sledování pozadí atmosféry, místních
+            zdrojů i výměny plynů s povrchem. Laboratorní laserový postup NOAA pro CO₂
+            pracuje s kalibrovaným rozsahem přibližně 250–800 ppm.{" "}
+            <SourceLink id="WEB_NIST_Greenhouse_Gas_Measurement">(NIST: měření skleníkových plynů)</SourceLink>,{" "}
+            <SourceLink id="2021_NOAA_CO2_Analysis">(NOAA, 2021: analýza CO₂)</SourceLink>
           </p>
         </div>
       </div>

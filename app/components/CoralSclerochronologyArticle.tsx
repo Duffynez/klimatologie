@@ -284,6 +284,15 @@ export function CoralSclerochronologyArticle() {
         </p>
 
         <p>
+          U fosilních korálů určí stáří také radioaktivní přeměna uranu na thorium.
+          Korál při růstu přijímá uran z mořské vody. Z poměru uranu a vzniklého thoria
+          lze vypočítat dobu, která od vzniku kostry uplynula. Metoda umožňuje datovat
+          zachované korály až přibližně 600 000 let staré. Jejich růstové vrstvy pak
+          zpřístupňují jednotlivé úseky mořské minulosti.{" "}
+          <SourceLink id="DOI_10_3285_eg_57_1_2_3">(Scholz a Hoffmann, 2008)</SourceLink>
+        </p>
+
+        <p>
           Jak se izotopové složení vody promítá do minerálu rostoucího
           v jeskyni, vysvětluje navazující článek o{" "}
           <Link href="/metody/krapniky-a-jeskynni-sedimenty">krápnících a jeskynních sedimentech</Link>.
@@ -435,11 +444,18 @@ export function CoralSclerochronologyArticle() {
         <div className="method-conclusion">
           <p>
             Korálová kostra spojuje kalendář růstu s chemickým záznamem mořského
-            prostředí. Datování určí, kdy jednotlivé části vznikly,
-            a porovnání jejich Sr/Ca s přístrojovými teplotami umožní
-            rekonstruovat teplotní vývoj. Dlouhověké korály tak prodlužují
-            poznání tropického oceánu do staletí před soustavným měřením
-            a umožňují porovnávat proměny jeho různých oblastí.
+            prostředí. Datování určí, kdy jednotlivé části vznikly. Vztah mezi složením
+            kostry a podmínkami růstu pak umožňuje proměnit laboratorní rozbory v záznam
+            minulého oceánu.
+          </p>
+          <p>
+            Z korálů rekonstruujeme teplotu mořské vody a změny jejího složení
+            související se srážkami, výparem a prouděním. Růstové vrstvy mohou zachytit
+            i průběh jednotlivých ročních období. U fosilních korálů umožňuje datování
+            pomocí uranu a thoria zkoumat vybraná období až přibližně 600 000 let
+            nazpět.{" "}
+            <SourceLink id="WEB_NCAR_Coral_Geochemistry_2023">(Lawmanová, 2023)</SourceLink>,{" "}
+            <SourceLink id="DOI_10_3285_eg_57_1_2_3">(Scholz a Hoffmann, 2008)</SourceLink>
           </p>
         </div>
       </div>

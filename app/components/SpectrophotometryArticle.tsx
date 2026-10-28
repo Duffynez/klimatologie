@@ -357,11 +357,18 @@ export function SpectrophotometryArticle() {
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>
-            Spektrofotometrie zpřístupňuje chemické vlastnosti roztoku prostřednictvím jeho
-            pohlcování světla. Při měření pH mořské vody využívá změnu zastoupení dvou podob
-            indikátoru a kalibraci, která optický poměr propojí se stupnicí pH.
-            Opakované odběry pak umožňují sledovat acidifikaci a porovnávat ji s dalšími
-            měřeními oceánského uhlíkového systému.
+            Spektrofotometrie určuje vlastnosti roztoku podle toho, kolik světla pohltí.
+            Při měření pH mořské vody sleduje dvě barevné podoby indikátoru. Jejich
+            poměr se mění s kyselostí a známý chemický vztah umožňuje převést optické
+            měření na pH.
+          </p>
+          <p>
+            Spektrofotometrie umožňuje stanovovat koncentrace rozpuštěných látek,
+            například živin, a pomocí indikátorů také pH. V oceánografii slouží ke
+            sledování chemického složení vody a acidifikace. Indikátor m-kresolová
+            purpurová je použitelný přibližně v rozsahu pH 7,4–9,0, který zahrnuje i
+            běžné mořské prostředí.{" "}
+            <SourceLink id="DOI_10_5194_os_7_597_2011">(Aßmann a kol., 2011)</SourceLink>
           </p>
         </div>
       </div>

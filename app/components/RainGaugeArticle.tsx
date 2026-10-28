@@ -548,17 +548,22 @@ export function RainGaugeArticle() {
           </p>
         </details>
 
-        <section className="method-conclusion">
-          <h2>Co těmito metodami zjistíme</h2>
+        <h2>Shrnutí</h2>
+        <div className="method-conclusion">
           <p>
-            Srážkoměry určují množství vody spadlé na měřicím místě za vymezenou dobu.
-            Časté odečty ukazují průběh deště a umožňují vypočítat jeho intenzitu.
-            Disdrometry přidávají velikosti, rychlosti a odvozený druh padajících
-            částic. Společně tato měření podpírají kontrolu radarových odhadů
-            a při spojení do dlouhých srovnatelných řad také poznání změn srážkových
-            úhrnů, četnosti a síly krátkých dešťů.
+            Srážkoměr shromažďuje vodu známým sběrným otvorem a převádí její množství na
+            srážkový úhrn. Disdrometr místo toho zaznamenává jednotlivé padající
+            částice. Oba přístupy propojují dění v atmosféře s množstvím a podobou
+            srážek dopadajících na povrch.
           </p>
-        </section>
+          <p>
+            Srážkoměry umožňují měřit úhrn a intenzitu deště i vodní hodnotu pevných
+            srážek. Disdrometry určují také velikost, rychlost a druh částic. Optický
+            Parsivel² rozlišuje dešťové kapky o průměru 0,2–8 mm a pevné částice do 25
+            mm, s rychlostmi pádu 0,2–20 m/s.{" "}
+            <SourceLink id="2024_OTT_Parsivel2_Manual">(OTT, 2024: příručka Parsivel²)</SourceLink>
+          </p>
+        </div>
       </div>
     </article>
   );

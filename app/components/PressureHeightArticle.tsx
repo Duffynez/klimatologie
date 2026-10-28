@@ -514,14 +514,20 @@ export function PressureHeightArticle() {
             Datum kalibrace přebíráme z dokumentu. Jeho název souboru uvádí následující den.
           </p>
         </details>
+        <h2>Shrnutí</h2>
         <div className="method-conclusion">
-          <h2>Co metoda umožňuje zjistit</h2>
           <p>
-            Měření tlaku a hydrostatický převod umožňují určit hloubku ve vodě, sledovat
-            výšku hladiny nad pevným čidlem i přiřadit výšku tlakovým hladinám v atmosféře.
-            Tlak tak propojuje měření teploty, vlhkosti nebo chemického složení s jejich
-            svislou polohou. Opakovaná srovnatelná měření pak ukazují, jak se jednotlivé
-            vrstvy oceánu a atmosféry mění v čase.
+            Tlak ve vodě nebo vzduchu souvisí s tíhou sloupce nad místem měření. Jeho
+            změnu lze při znalosti hustoty převést na rozdíl výšek. Tlakové čidlo tak
+            propojí naměřené vlastnosti vody či vzduchu s jejich polohou ve svislém
+            profilu.
+          </p>
+          <p>
+            Metoda umožňuje měřit hloubku pod vodou, výšku hladiny nad čidlem i výšku
+            tlakových hladin v atmosféře. Slouží oceánským profilům, sledování vodních
+            stavů a atmosférickým sondážím. Hlubokomořské provedení sondy SBE 9plus
+            umožňuje měření do hloubky 10 500 m.{" "}
+            <SourceLink id="2010_SeaBird_9plus_Manual">(Sea-Bird, 2010: SBE 9plus)</SourceLink>
           </p>
         </div>
       </div>

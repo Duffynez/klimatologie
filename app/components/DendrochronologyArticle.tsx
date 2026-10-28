@@ -105,6 +105,13 @@ export function DendrochronologyArticle() {
           prodloužíme za délku života jednotlivého stromu.{" "}
           <SourceLink id="WEB_NPS_Dendrochronology_2019">(Eakin a Hortonová 2019)</SourceLink>
         </p>
+        <p>
+          Takto vznikla i Hohenheimská dubová a borová chronologie. Navazující vzorky
+          pokrývají 12 460 let a zachovávají přiřazení letokruhů k jednotlivým
+          kalendářním rokům. Jejich řada slouží datování dalšího dřeva, kalibraci
+          radiouhlíkové metody i zkoumání minulých podmínek.{" "}
+          <SourceLink id="DOI_10_1017_S003382220003304X">(Friedrich a kol., 2004)</SourceLink>
+        </p>
         <figure className="article-figure">
           <Image className="article-figure__media" src="/media/dendrochronology/crossdating.svg"
             alt="Staré dřevo a živý strom mají překrývající se úsek se stejným pořadím užších a širších letokruhů. Jejich přiřazení prodlouží kalendářní záznam do minulosti."
@@ -406,11 +413,17 @@ export function DendrochronologyArticle() {
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>
-            Letokruhy spojují zachované dřevo s konkrétními roky.
-            Porovnání více stromů umožňuje sestavit společný průběh růstu
-            a prodloužit jej do doby před přístrojovými měřeními.
-            Teprve doložený vztah tohoto růstu k místním klimatickým
-            podmínkám umožňuje rekonstruovat minulou teplotu nebo vláhu.
+            Letokruhy spojují zachované dřevo s konkrétními roky. Porovnání více stromů
+            umožňuje sestavit společný průběh růstu a prodloužit jej do doby před
+            přístrojovými měřeními. Doložený vztah tohoto růstu k místním podmínkám
+            potom umožňuje rekonstruovat minulé klima.
+          </p>
+          <p>
+            Dendrochronologie umožňuje datovat dřevo na jednotlivé roky a rekonstruovat
+            teplotu nebo dostupnost vláhy během růstového období. Propojením živých
+            stromů se starším zachovaným dřevem vznikají dlouhé řady. Hohenheimská
+            dubová a borová chronologie tak pokrývá 12 460 let s rozlišením 1 roku.{" "}
+            <SourceLink id="DOI_10_1017_S003382220003304X">(Friedrich a kol., 2004)</SourceLink>
           </p>
         </div>
       </div>

@@ -421,13 +421,24 @@ export function GasChromatographyArticle() {
         </details>
 
         <h2>Shrnutí</h2>
-        <p>
-          Plynová chromatografie zpřístupňuje složení vzduchu tím, že nejprve oddělí jeho
-          složky a potom změří jejich odezvu vůči známým směsím. Pro klimatologii tak poskytuje
-          údaje o metanu a dalších stopových plynech, které lze srovnávat mezi místy i obdobími.
-          Společné reference propojují jednotlivé rozbory a umožňují ověřovat návaznost měření
-          různými přístroji. Analýza vzduchu uchovaného v ledu rozšiřuje tento záznam do minulosti.
-        </p>
+        <div className="method-conclusion">
+          <p>
+            Plynová chromatografie nejprve rozdělí směs na jednotlivé složky a potom
+            změří jejich odezvu v detektoru. Porovnání se známými směsmi umožní určit
+            jejich množství. Stejný princip tak zpřístupňuje složení dnešního vzduchu i
+            vzduchu uchovaného v ledu.
+          </p>
+          <p>
+            Plynová chromatografie umožňuje měřit metan, oxid dusný a další stopové
+            plyny včetně halogenovaných sloučenin. Pomáhá sledovat změny atmosféry i
+            zdroje těchto látek. Pro metan ve vzduchu se používá referenční stupnice WMO
+            X2004A v rozsahu 300–5 000 ppb, na kterou navazuje chromatografický postup
+            NOAA.{" "}
+            <SourceLink id="WEB_NOAA_Gas_Analyzers">(NOAA: analyzátory plynů)</SourceLink>,{" "}
+            <SourceLink id="2015_NOAA_CH4_Analysis">(NOAA: analýza metanu)</SourceLink>,{" "}
+            <SourceLink id="2015_NOAA_CH4_Scale">(NOAA: stupnice metanu)</SourceLink>
+          </p>
+        </div>
       </div>
     </article>
   );

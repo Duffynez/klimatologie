@@ -87,7 +87,7 @@ test("publishes lidar with accessible sources, local illustrations and a recipro
   assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak lidar rozpoznává vrstvy atmosféry a porostu", "Nejistoty a ověření", "Příklad: výška porostu z jednoho pulzu GEDI", "Shrnutí",
   ]);
-  assert.match(html, /<p class="page-lead__meta">27\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">28\. října 2026<\/p>/);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
   assert.match(body, /10,90 metru/);
   assert.match(body, /historické produkty V001/);
@@ -150,7 +150,7 @@ test("publishes radar with a complete explanation, real echo and reciprocal prec
   assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak radar měří déšť a rozpoznává vrstvy ledu", "Nejistoty a ověření", "Příklad: radarové měření u Houstonu", "Shrnutí",
   ]);
-  assert.match(html, /<p class="page-lead__meta">27\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">28\. října 2026<\/p>/);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
   assert.match(body, /41 dBZ/);
   assert.match(body, /26,2 mm\/h/);
@@ -214,7 +214,7 @@ test("publishes microwave radiometry with the full signal-to-ice explanation and
   assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak mikrovlny rozliší led a vodu", "Nejistoty a ověření", "Příklad: zimní měření severně od Aljašky", "Shrnutí",
   ]);
-  assert.match(html, /<p class="page-lead__meta">27\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">28\. října 2026<\/p>/);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
   assert.match(body, /matematické jádro metody, nikoli oficiální/);
   assert.doesNotMatch(body, /_vinext\/image|katex-error|Potřebné informace/);
@@ -280,7 +280,7 @@ test("publishes thermal infrared radiometry with its source trail and temperatur
     "Jak ze záření zjistíme teplotu", "Nejistoty a ověření",
     "Příklad: teplota jednoho místa u Aletschského ledovce", "Shrnutí",
   ]);
-  assert.match(html, /<p class="page-lead__meta">27\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">28\. října 2026<\/p>/);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
   assert.doesNotMatch(body, /_vinext\/image|katex-error|Potřebné informace/);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
@@ -344,7 +344,7 @@ test("publishes radiative fluxes with a complete example and reciprocal ocean co
     "Jak měříme přenos energie zářením", "Nejistoty a ověření",
     "Příklad: jedna hodina na stanici Table Mountain", "Shrnutí",
   ]);
-  assert.match(html, /<p class="page-lead__meta">27\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">28\. října 2026<\/p>/);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
   assert.doesNotMatch(body, /_vinext\/image|katex-error|Potřebné informace|RTV/);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
@@ -484,7 +484,7 @@ test("publishes optical imaging with open evidence, a reproducible scene and rec
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.match(html, /<p class="page-lead__meta">26\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">28\. října 2026<\/p>/);
   assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak z odraženého světla poznáváme povrch", "Nejistoty a ověření",
     "Příklad: tři povrchy u Aletschského ledovce", "Shrnutí",
@@ -1702,7 +1702,7 @@ test("publishes reproducible thermometry examples with open sources and working 
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
   const displayedDate = html.match(/<p class="page-lead__meta">([^<]*)<\/p>/)?.[1];
-  assert.equal(displayedDate, "26. října 2026", "Show only the last edit date, without a label");
+  assert.equal(displayedDate, "28. října 2026", "Show only the last edit date, without a label");
   assert.doesNotMatch(article, /<Citation\b/);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
   assert.match(body, /29,8627 °C/);
@@ -2335,7 +2335,7 @@ test("publishes the full phenology method with traceable observations and bounde
   assert.ok(body, "The complete method must replace the catalogue placeholder");
   assert.equal((body.match(/<h2>/g) ?? []).length, 4);
   assert.equal((body.match(/<details\b/g) ?? []).length, 2);
-  assert.match(html, /<p class="page-lead__meta">26\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">28\. října 2026<\/p>/);
   assert.match(body, /class="method-flow"/);
   assert.match(body, /nps-field-observations\.jpg/);
   assert.match(body, /leaf-onset\.png/);
@@ -2404,7 +2404,7 @@ test("publishes the complete chromatography method with accessible sources and r
   assert.ok(body, "A full article must replace the catalogue placeholder");
   assert.equal((body.match(/<h2>/g) ?? []).length, 4);
   assert.equal((body.match(/<details\b/g) ?? []).length, 2);
-  assert.match(html, /<p class="page-lead__meta">26\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">28\. října 2026<\/p>/);
   assert.match(body, /noaa-analysis-system\.jpg/);
   assert.match(body, /class="method-flow__track"/);
   assert.match(body, /repeated-analyses\.png/);
@@ -2473,7 +2473,7 @@ test("publishes absorption spectroscopy with a boxed conclusion and complete sou
   assert.equal((body.match(/<details\b/g) ?? []).length, 2);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
   assert.match(body, /Příklad výpočtu z osmi měření/);
-  assert.match(html, /<p class="page-lead__meta">26\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">28\. října 2026<\/p>/);
   assert.match(body, /noaa-aircraft-crds\.jpg/);
   assert.match(body, /crds-principle\.svg/);
   assert.match(body, /repeat-measurements\.png/);
@@ -2573,7 +2573,7 @@ test("publishes isotope mass spectrometry with an honest example and open source
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.match(html, /<p class="page-lead__meta">26\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">28\. října 2026<\/p>/);
   const headings = [...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]);
   assert.deepEqual(headings, ["Jak změříme izotopové složení vody", "Nejistoty a ověření", "Příklad: stejná voda ve třech laboratořích", "Shrnutí"]);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
@@ -2637,7 +2637,7 @@ test("publishes solution spectrophotometry with the correct data level and conne
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.match(html, /<p class="page-lead__meta">26\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">28\. října 2026<\/p>/);
   assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak změříme pH pomocí světla", "Nejistoty a ověření", "Příklad: výpočet ze skutečných absorbancí", "Shrnutí",
   ]);
@@ -2712,7 +2712,7 @@ test("publishes potentiometry with connected sources and distinct actual and ill
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.match(html, /<p class="page-lead__meta">26\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">28\. října 2026<\/p>/);
   assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak měříme pH pomocí elektrod", "Nejistoty a ověření", "Příklad kalibrace a kontroly výsledku", "Shrnutí",
   ]);
@@ -2775,7 +2775,7 @@ test("publishes titration with open sources, full data and a clearly scoped calc
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.match(html, /<p class="page-lead__meta">26\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">28\. října 2026<\/p>/);
   assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak ze spotřeby kyseliny zjistíme alkalinitu", "Nejistoty a ověření", "Příklad: přepočet zveřejněné titrace", "Shrnutí",
   ]);
@@ -2844,7 +2844,7 @@ test("publishes coulometry with a complete charge-to-carbon explanation and open
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.match(html, /<p class="page-lead__meta">26\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">28\. října 2026<\/p>/);
   assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak elektrický náboj určí množství uhlíku", "Nejistoty a ověření",
     "Příklad: dva rozbory z původního výpisu přístroje", "Shrnutí",

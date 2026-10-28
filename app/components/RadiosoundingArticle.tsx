@@ -496,13 +496,19 @@ export function RadiosoundingArticle() {
             Graf lze stáhnout také jako <a href="/media/radiosounding/prague-temperature-profile.svg" download>vektorový obrázek</a>.
           </p>
         </details>
+        <h2>Shrnutí</h2>
         <div className="method-conclusion">
-          <h2>Co radiosondáž umožňuje zjistit</h2>
           <p>
-            Radiosondáž zpřístupňuje svislou stavbu atmosféry. Ukazuje, jak se teplota,
-            vlhkost a vítr mění mezi vrstvami, které přízemní přístroj neměří. Opakované
-            srovnatelné výstupy umožňují sledovat proměny těchto vrstev v čase a po spojení
-            měření z více stanic také dlouhodobý vývoj atmosféry nad širšími oblastmi.
+            Radiosonda měří okolní vzduch během výstupu balónu a odesílá údaje na zem.
+            Spojení hodnot s polohou a výškou vytváří svislý profil atmosféry. Sledování
+            pohybu sondy k němu přidává rychlost a směr větru v jednotlivých vrstvách.
+          </p>
+          <p>
+            Radiosondáž umožňuje měřit teplotu, vlhkost, tlak a vítr od země až do
+            stratosféry. Běžné výstupy dosahují výšek kolem 35 km a mohou vystoupat i
+            výše. Poskytují podklady pro předpověď počasí a při dlouhodobém opakování
+            ukazují změny teploty a vlhkosti jednotlivých vrstev atmosféry.{" "}
+            <SourceLink id="WEB_NOAA_Radiosonde_Observation_27e1f005">(NOAA: radiosondová pozorování)</SourceLink>
           </p>
         </div>
       </div>

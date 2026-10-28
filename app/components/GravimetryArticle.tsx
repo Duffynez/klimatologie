@@ -399,11 +399,18 @@ export function GravimetryArticle() {
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>
-            Přesné sledování pohybu dvojice družic umožňuje určit změny
-            gravitačního pole a z nich změny rozložení hmoty. Gravimetrie
-            tím zpřístupňuje bilanci ledových příkrovů, zásob vody na pevnině
-            i hmotnosti oceánu. Ve spojení s měřením výšky povrchu a pohybu
-            ledu umožňuje porovnávat různé cesty ke zjištění úbytku příkrovů.
+            Změna rozložení hmoty mění gravitační pole Země a s ním i pohyb družic.
+            Přesné sledování jejich vzájemné vzdálenosti umožňuje tuto změnu změřit.
+            Opakované přelety tak ukazují, kde hmota přibývá a kde ubývá.
+          </p>
+          <p>
+            Družicová gravimetrie umožňuje určovat změny hmotnosti ledových příkrovů,
+            celkových zásob vody na pevnině a vody v oceánu. Dvojice GRACE a GRACE-FO
+            poskytují zpravidla měsíční výsledky pro oblasti o rozměru přibližně 300 km
+            a více. Lze tak sledovat sezónní přesuny vody, sucha i dlouhodobý úbytek
+            ledu.{" "}
+            <SourceLink id="DOI_10_1038_s41558_019_0456_2">(Tapley a kol., 2019)</SourceLink>,{" "}
+            <SourceLink id="DOI_10_1038_s43247_020_0010_1">(Sasgen a kol., 2020)</SourceLink>
           </p>
         </div>
       </div>

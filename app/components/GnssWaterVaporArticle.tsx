@@ -426,12 +426,17 @@ export function GnssWaterVaporArticle() {
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>
-            Stálé přijímače navigačních družic umožňují soustavně sledovat,
-            kolik vodní páry obsahuje atmosféra nad jednotlivými místy.
-            Zpoždění signálů získává tento význam ve spojení s tlakem
-            a teplotou vzduchu. Dlouhé řady zachycují denní, sezonní
-            i mnohaleté změny množství vody a doplňují výškové profily
-            radiosond i plošná družicová pozorování.
+            Vodní pára ovlivňuje dobu průchodu navigačního signálu atmosférou. Přesné
+            měření tohoto zpoždění spolu s tlakem a teplotou umožňuje určit její
+            množství nad stanicí. Stálé přijímače tak vytvářejí soustavný záznam proměn
+            atmosférické vody.
+          </p>
+          <p>
+            Pozemní GNSS umožňuje měřit celkovou zásobu vodní páry ve sloupci vzduchu
+            nad místem měření. Zachycuje přísun vlhkosti před srážkami, denní a sezónní
+            chod i dlouhodobé změny. Podle způsobu zpracování lze získávat hodnoty v
+            časovém kroku 5 minut až 2 hodiny, a to i za oblačnosti.{" "}
+            <SourceLink id="DOI_10_1029_2006JD007529">(Wang a kol., 2007)</SourceLink>
           </p>
         </div>
       </div>

@@ -334,10 +334,18 @@ export function PotentiometryArticle() {
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>
-            Potenciometrie využívá vztah mezi chemickým prostředím a elektrickým potenciálem
-            citlivého povrchu. Kalibrace známými roztoky umožňuje převést napětí mezi elektrodami
-            na pH vody. Laboratorní rozbory i samostatná čidla v oceánu tak zpřístupňují
-            změny kyselosti a jejich časový průběh, které potřebujeme znát při výzkumu acidifikace.
+            Potenciometrie využívá vztah mezi chemickým prostředím a elektrickým
+            potenciálem citlivého povrchu. Kalibrace známými roztoky umožňuje převést
+            napětí mezi elektrodami na vlastnost vzorku. U skleněné elektrody tak
+            získáme pH, podle něhož sledujeme kyselost vody.
+          </p>
+          <p>
+            Potenciometrie umožňuje měřit pH vody. Jiná provedení elektrod určují aktivitu vybraných
+            iontů, tedy jejich účinné zastoupení v roztoku. Terénní pH metry mohou
+            pokrývat rozsah pH 0–14. Metoda slouží laboratorním rozborům i sledování
+            chemických změn v řekách, jezerech a oceánu.{" "}
+            <SourceLink id="2016_Harvey_Analytical_Chemistry">(Harvey: potenciometrie)</SourceLink>,{" "}
+            <SourceLink id="2008_USGS_pH_Field_Manual">(USGS, 2008: měření pH)</SourceLink>
           </p>
         </div>
       </div>

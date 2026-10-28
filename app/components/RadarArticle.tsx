@@ -467,14 +467,18 @@ export function RadarArticle() {
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>
-            Radar umožňuje zkoumat prostor, do kterého bychom jinak museli
-            rozmístit velké množství přístrojů. U deště spojuje polohu a sílu
-            echa s odhadem intenzity, takže dlouhodobé archivy zachycují
-            rozložení srážek i malá jádra přívalových dešťů.
-            U ledovců zpřístupňuje průběh pohřbených vrstev a po propojení
-            s vrty také jejich stáří. Poznávací síla obou použití vychází
-            ze spojení prostorového radarového měření s konkrétním fyzikálním
-            převodem a pozemními referencemi.
+            Radar z doby návratu vyslané vlny určí vzdálenost a ze síly i dalších
+            vlastností echa získá informace o cíli. Zpřístupňuje tak prostorové
+            uspořádání srážek i vrstev uvnitř ledovce. Fyzikální převod a porovnání s
+            pozemními měřeními dávají radarovému obrazu měřitelný význam.
+          </p>
+          <p>
+            Radar umožňuje mapovat polohu, intenzitu a druh srážek, sledovat jejich
+            pohyb a zkoumat tloušťku i vnitřní vrstvy ledu. Srážkové produkty radaru
+            WSR-88D pokrývají okolí stanice do vzdálenosti 230 km. Jiná provedení radaru
+            pronikají ledovci a zaznamenávají jejich podloží i pohřbené vrstvy.{" "}
+            <SourceLink id="DOI_10_1175_1998_TWRA">(Fulton a kol., 1998)</SourceLink>,{" "}
+            <SourceLink id="DOI_10_1002_2014JF003215">(MacGregor a kol., 2015)</SourceLink>
           </p>
         </div>
       </div>

@@ -434,12 +434,18 @@ export function InterferometryArticle() {
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>
-            Opakované radarové snímky umožňují měřit pohyb i v oblačnosti
-            a polární noci. Interferometrie využívá změnu fáze vlny,
-            sledování útvarů jejich posun v obrazu. Mapy rychlosti ukazují
-            proudění ledovců a jeho proměny. Ve spojení s tloušťkou ledu
-            poskytují podklad pro výpočet odtoku z ledových příkrovů,
-            a tím i pro posouzení jejich hmotnostní bilance.
+            Opakované radarové snímky zachycují změnu polohy povrchu i v oblačnosti a
+            polární noci. Interferometrie využívá změnu fáze vlny, sledování útvarů
+            jejich posun v obrazu. Známý čas mezi snímky umožňuje převést naměřený posun
+            na rychlost pohybu.
+          </p>
+          <p>
+            Tyto postupy umožňují mapovat rychlost a směr proudění ledovců i poklesy a
+            zdvihy souše. Spolu s tloušťkou ledu lze určit jeho odtok z příkrovů. Snímky
+            dvojice Sentinel-1A a 1B umožňovaly měřit posuny v odstupech 6 nebo 12 dní a
+            sledovat tak i změny rychlosti během sezóny.{" "}
+            <SourceLink id="WEB_ESA_InSAR_TM19_2007">(ESA, 2007)</SourceLink>,{" "}
+            <SourceLink id="DOI_10_5194_essd_14_5111_2022">(Lei a kol., 2022)</SourceLink>
           </p>
         </div>
       </div>
