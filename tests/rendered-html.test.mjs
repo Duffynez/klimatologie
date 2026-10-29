@@ -3342,3 +3342,78 @@ test("alkenone example preserves all 75 original concentration pairs and publish
   assert.equal(rows.at(-1)[1], "121.24", "Preserve the unusual upstream value");
   assert.equal(rows.at(-1)[2], "21.01", "Plot the published corrected depth");
 });
+
+test("radiometric dating connects a complete article, calibration data and open sources", async () => {
+  const [html, source, catalogue, linked] = await Promise.all([
+    readFile(new URL("dist/client/metody/radiometricke-a-expozicni-datovani/index.html", root), "utf8"),
+    readFile(new URL("app/components/RadiometricDatingArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/metody/chemicke-a-biologicke-paleoteplomery/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
+    "Jak určujeme stáří přírodních záznamů", "Nejistoty a ověření", "Příklad: stáří dřeva u ledovce Forno", "Shrnutí",
+  ]);
+  assert.match(body, /8 252 ± 31 let BP/);
+  assert.match(body, /9 050 do 9 400 cal BP/);
+  assert.match(body, /0–55 000/);
+  assert.match(body, /600 000 let/);
+  const conclusion = body.match(/<div class="method-conclusion">([\s\S]*?)<\/div>/)?.[1];
+  assert.ok(conclusion);
+  assert.equal([...conclusion.matchAll(/<p>/g)].length, 2);
+  assert.match(linked, /href="\/metody\/radiometricke-a-expozicni-datovani"/);
+  assert.match(body, /href="\/metody\/chemicke-a-biologicke-paleoteplomery"/);
+  assert.doesNotMatch(body, /katex-error|Potřebné informace/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  for (const id of new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
+    assert.ok(card, "Missing dating source " + id);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const file = /\.[a-z0-9]+$/i.test(match[1]) ? match[1] : match[1].replace(/\/$/, "") + "/index.html";
+    await readFile(new URL("dist/client" + file, root));
+  }
+});
+
+test("Forno calibration preserves original IntCal20 bytes and a normalized complete age distribution", async () => {
+  const base = new URL("public/data/methods/radiometric-dating/", root);
+  const meta = JSON.parse(await readFile(new URL("provenance.json", base), "utf8"));
+  for (const [name, hash] of Object.entries(meta.sha256)) {
+    const raw = await readFile(new URL(name, base));
+    assert.equal(createHash("sha256").update(raw).digest("hex"), hash);
+    assert.deepEqual(await readFile(new URL("dist/client/data/methods/radiometric-dating/" + name, root)), raw);
+  }
+  const sample = (await readFile(new URL("sample.csv", base), "utf8")).trim().split(/\r?\n/)[1].split(",");
+  assert.deepEqual(sample.slice(0, 6), ["Fo-101", "B-8518", "wood", "Forno", "8252", "31"]);
+  const rawCurve = (await readFile(new URL("intcal20-original.14c", base), "utf8")).trim().split(/\r?\n/).filter(l => !l.startsWith("#")).map(l => l.split(",").map(Number));
+  assert.equal(rawCurve.length, 9501);
+  const result = JSON.parse(await readFile(new URL("results.json", base), "utf8"));
+  const rows = (await readFile(new URL("posterior.csv", base), "utf8")).trim().split(/\r?\n/).slice(1).map(l => l.split(",").map(Number));
+  assert.equal(rows.length, 55001);
+  let sum = 0;
+  const quantiles = new Map();
+  for (let i = 0; i < rows.length; i++) {
+    const row = rows[i];
+    assert.equal(row[0], i);
+    assert.ok(Number.isFinite(row[3]) && row[3] >= 0);
+    sum += row[3];
+    for (const q of [0.023, 0.5, 0.977]) if (!quantiles.has(q) && sum >= q) quantiles.set(q, i);
+  }
+  assert.ok(Math.abs(sum - 1) < 1e-12);
+  assert.equal(quantiles.get(0.5), result.median_cal_bp);
+  assert.deepEqual([quantiles.get(0.023), quantiles.get(0.977)], result.equal_tailed_95_4_cal_bp);
+  assert.equal(result.median_cal_bp, 9221);
+  assert.deepEqual(result.equal_tailed_95_4_cal_bp, [9050, 9396]);
+  // Published curve nodes must survive interpolation without changes.
+  for (const [year, age, sigma] of rawCurve) {
+    assert.ok(Math.abs(rows[year][1] - age) < 1e-10);
+    assert.ok(Math.abs(rows[year][2] - sigma) < 1e-10);
+  }
+  assert.ok(Math.abs(result.equivalent_fraction_modern - Math.exp(-8252 / 8033)) < 1e-14);
+});

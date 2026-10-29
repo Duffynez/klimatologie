@@ -1,0 +1,21 @@
+{
+  "sample": "Fo-101",
+  "lab_code": "B-8518",
+  "radiocarbon_age_bp": 8252.0,
+  "sigma_14c_years": 31.0,
+  "equivalent_fraction_modern": 0.35798559099305294,
+  "calibration": "IntCal20",
+  "curve_rows": 9501,
+  "grid_step_years": 1,
+  "median_cal_bp": 9221,
+  "equal_tailed_95_4_cal_bp": [
+    9050,
+    9396
+  ],
+  "probability_sum": 1.0,
+  "original_IntCal04_median_cal_bp": 9230,
+  "original_IntCal04_reported_limits_cal_bp": [
+    9120,
+    9400
+  ]
+}

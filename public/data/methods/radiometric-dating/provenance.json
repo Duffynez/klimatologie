@@ -1,0 +1,21 @@
+{
+  "accessed": "2026-10-29",
+  "sample_source": {
+    "doi": "10.1191/0959683606hl964rp",
+    "url": "https://climatehomes.unibe.ch/~stocker/papers/joerin06hol.pdf",
+    "location": "Table 3, page 700, first row Fo-101 / B-8518",
+    "transcription": "One row manually transcribed and checked against the PDF. Authors report conventional radiocarbon dating of outermost 10–20 surviving tree rings. No raw laboratory counts are supplied.",
+    "original_calibration": "CALIB Rev 5.0 / IntCal04. Reported minimum and maximum two-sigma limits and median, rounded to 10 years."
+  },
+  "curve_source": {
+    "url": "https://intcal.org/curves/intcal20.14c",
+    "doi": "10.1017/RDC.2020.41",
+    "bytes": "Original downloaded bytes preserved. Header and all columns retained."
+  },
+  "sha256": {
+    "sample.csv": "940a9cd35a34bb491324de1a2c87d08f7936611f554cc4d23e38ae5c26310267",
+    "intcal20-original.14c": "974a66649f2ac8a53e6c99e256b019ac6982f999b12dcf7193162d4c1c09168e"
+  },
+  "method": "Gaussian likelihood on an annual calendar grid, linear interpolation of mean and standard deviation, independent measurement and curve errors, uniform prior 0..55000 cal BP. Equal-tailed 95.4% interval. No reservoir correction, no stratigraphic prior, no tree-ring block averaging. Treats the published sample as one dated carbon aggregate. Year steps are numerical resolution, not dating precision.",
+  "scope": "New illustrative calibration of a real published measurement, not reproduction of the 2006 IntCal04 calibration and not a revision of the complete glacier chronology."
+}

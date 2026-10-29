@@ -1,3 +1,4 @@
+import { RadiometricDatingArticle } from "../../components/RadiometricDatingArticle";
 import { ChemicalPaleothermometersArticle } from "../../components/ChemicalPaleothermometersArticle";
 import { IsotopePaleothermometryArticle } from "../../components/IsotopePaleothermometryArticle";
 import { PollenAnalysisArticle } from "../../components/PollenAnalysisArticle";
@@ -104,6 +105,19 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "radiometricke-a-expozicni-datovani") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Přírodní archivy" title="Radiometrické a expoziční datování" meta="29. října 2026">
+          <p>Jak určujeme stáří dřeva a dobu odkrytí hornin. Radiouhlíkové měření,
+            kalendářní kalibrace, datování ledovcových morén a výpočet na skutečném vzorku ze švýcarských Alp.</p>
+        </PageLead>
+        <RadiometricDatingArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "chemicke-a-biologicke-paleoteplomery") {

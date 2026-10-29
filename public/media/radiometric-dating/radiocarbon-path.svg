@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="880" viewBox="0 0 760 880" role="img" aria-labelledby="title desc">
+<title id="title">Jak vzniká radiouhlíkové datum</title><desc id="desc">Pět kroků od uhlíku ve dřevě přes přípravu a měření vzorku ke kalendářní kalibraci.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#b55339" stroke-width="1.5"/></marker></defs>
+<rect width="760" height="880" fill="#f7f7f2"/>
+<g font-family="Arial, sans-serif" fill="#15393b">
+<rect x="35" y="25" width="690" height="135" rx="4" fill="#ffffff" stroke="#b9cdc7" stroke-width="2"/>
+<text x="60" y="63" font-size="28" font-weight="bold">1. Uhlík v rostlině</text>
+<text x="60" y="102" font-size="26">Strom zabuduje ¹⁴C do dřeva.</text>
+<text x="60" y="134" font-size="26">Po uzavření uhlíku jeho množství klesá.</text>
+<path d="M380 165 L380 186" stroke="#b55339" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="35" y="196" width="690" height="135" rx="4" fill="#ffffff" stroke="#b9cdc7" stroke-width="2"/>
+<text x="60" y="234" font-size="28" font-weight="bold">2. Příprava vzorku</text>
+<text x="60" y="273" font-size="26">Vybereme letokruhy a vyčistíme je.</text>
+<text x="60" y="305" font-size="26">Uhlík převedeme na grafit.</text>
+<path d="M380 336 L380 357" stroke="#b55339" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="35" y="367" width="690" height="135" rx="4" fill="#ffffff" stroke="#b9cdc7" stroke-width="2"/>
+<text x="60" y="405" font-size="28" font-weight="bold">3. Laboratorní měření</text>
+<text x="60" y="444" font-size="26">AMS rozliší izotopy uhlíku.</text>
+<text x="60" y="476" font-size="26">Reference a slepý vzorek určí stupnici.</text>
+<path d="M380 507 L380 528" stroke="#b55339" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="35" y="538" width="690" height="135" rx="4" fill="#ffffff" stroke="#b9cdc7" stroke-width="2"/>
+<text x="60" y="576" font-size="28" font-weight="bold">4. Radiouhlíkové stáří</text>
+<text x="60" y="615" font-size="26">Z upraveného podílu ¹⁴C vypočteme</text>
+<text x="60" y="647" font-size="26">konvenční stáří a jeho nejistotu.</text>
+<path d="M380 678 L380 699" stroke="#b55339" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="35" y="709" width="690" height="135" rx="4" fill="#ffffff" stroke="#b9cdc7" stroke-width="2"/>
+<text x="60" y="747" font-size="28" font-weight="bold">5. Kalendářní období</text>
+<text x="60" y="786" font-size="26">IntCal20 propojí výsledek s datovanými</text>
+<text x="60" y="818" font-size="26">archivy a určí rozdělení stáří v čase.</text>
+</g></svg>

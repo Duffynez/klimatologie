@@ -76,7 +76,7 @@ export function ChemicalPaleothermometersArticle() {
         </p>
         <p>
           Hloubku vzorku potřebujeme spojit také s jeho stářím. K tomu slouží
-          samostatné datování: například radiouhlíkové stáří schránek
+          samostatné <Link href="/metody/radiometricke-a-expozicni-datovani">radiometrické datování</Link>: například radiouhlíkové stáří schránek
           v mladších usazeninách nebo rozpoznání vrstev se známým stářím.
           Tato datovaná místa umožní sestavit vztah mezi hloubkou a časem
           a přiřadit stáří i mezilehlým vzorkům. Chemický rozbor určí teplotu,
