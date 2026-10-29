@@ -1,0 +1,10 @@
+{
+  "source": "https://www-odp.tamu.edu/publications/186_SR/111/111_t2.htm",
+  "doi": "10.2973/odp.proc.sr.186.111.2003",
+  "accessed": "2026-10-29",
+  "sha256": {
+    "fujine2003-table-original.txt": "cba4695f5374b23501c0f5ba182b3a891c0d7d7ea9de4b1e30a0df333a1a6a1d"
+  },
+  "selection": "All 75 data rows, corrected depth, C37:2MK and C37:3MK. No age assignment.",
+  "equation": "T_C = (C37_2/(C37_2+C37_3) - 0.039)/0.034"
+}

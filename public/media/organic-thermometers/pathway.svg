@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="940" viewBox="0 0 700 940" role="img" aria-labelledby="title desc">
+<title id="title">Alkenonový paleoteploměr</title>
+<desc id="desc">Řasa, sediment, laboratorní rozbor, index a teplota. Datování vrstvy přidává stáří výsledku.</desc>
+<rect width="700" height="940" fill="#f6f6f2"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#497078"/></marker></defs>
+<g font-family="Arial, sans-serif" fill="#15373c">
+<text x="350" y="48" text-anchor="middle" font-size="30" font-weight="bold">Alkenonový paleoteploměr</text>
+<rect x="35" y="80" width="630" height="115" rx="8" fill="white" stroke="#b7c8c8"/>
+<text x="60" y="122" font-size="31" font-weight="bold">1  Růst řasy</text>
+<text x="60" y="164" font-size="28">Teplota vody ovlivňuje poměr alkenonů.</text>
+<path d="M350 199 V226" stroke="#497078" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="35" y="235" width="630" height="115" rx="8" fill="white" stroke="#b7c8c8"/>
+<text x="60" y="277" font-size="31" font-weight="bold">2  Uložení do sedimentu</text>
+<text x="60" y="319" font-size="28">Molekuly se uchovají v postupných vrstvách.</text>
+<path d="M350 354 V381" stroke="#497078" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="35" y="390" width="630" height="115" rx="8" fill="white" stroke="#b7c8c8"/>
+<text x="60" y="432" font-size="31" font-weight="bold">3  Laboratorní rozbor</text>
+<text x="60" y="474" font-size="28">Oddělíme a změříme C₃₇:₂ a C₃₇:₃.</text>
+<path d="M350 509 V536" stroke="#497078" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="35" y="545" width="630" height="115" rx="8" fill="white" stroke="#b7c8c8"/>
+<text x="60" y="587" font-size="31" font-weight="bold">4  Výpočet indexu</text>
+<text x="60" y="629" font-size="28">U = C₃₇:₂ / (C₃₇:₂ + C₃₇:₃)</text>
+<path d="M350 664 V691" stroke="#497078" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="35" y="700" width="630" height="115" rx="8" fill="white" stroke="#b7c8c8"/>
+<text x="60" y="742" font-size="31" font-weight="bold">5  Rekonstrukce teploty</text>
+<text x="60" y="784" font-size="28">Index převedeme teplotní kalibrací.</text>
+<path d="M70 847 H630" stroke="#bd5b43" stroke-width="3"/>
+<text x="350" y="885" text-anchor="middle" font-size="28">Datování vrstvy dodá stáří výsledku.</text>
+</g></svg>

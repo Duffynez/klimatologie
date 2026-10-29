@@ -1,0 +1,4418 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="TEMPLATEBASE" content="SR_3.0">
+<meta name="LASTUPDATED" content="02/09/03 07:19:45">
+<title>Table T2. Alkenone and alkenoate concentrations, Site 1151. (See table notes.)  </title>
+</head>
+
+<body link="#0066CC" vlink="#669999" text="#000000" alink="#000066" bgcolor="#FFFFFF">
+<script language="javascript">
+
+function closeWindow () {
+window.close();
+}
+
+</script>
+
+
+
+
+<p>
+
+
+
+
+<a name="655860"> </a><a href="javascript:closeWindow()"><img border="0" src="../images/close1.gif" width="640"
+height="31"></a></p>
+
+
+
+
+<font face="Verdana, Arial, Helvetica, sans-serif"
+><strong>Table T2.</strong> Alkenone and alkenoate concentrations, Site 1151.
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000"
+       cellpadding="2" cellspacing="0">
+  <caption><b><i><font face="Verdana, Arial, Helvetica, sans-serif"></font></i></b></caption>
+  <tr> 
+    <th colspan="1" rowspan="2">
+<div align="center">
+<font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2">Core, section, interval (cm) </font>
+</div>
+</th>
+    <th colspan="1" rowspan="2">
+<div align="center">
+<font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2">Depth (mbsf)</font>
+</div>
+</th>
+    <th colspan="1" rowspan="2">
+<div align="center">
+<font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2">Corrected depth (mbsf*)</font>
+</div>
+</th>
+    <th colspan="13" rowspan="1">
+<div align="center">
+<font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2">Concentration (µg/g TOC)</font>
+</div>
+</th>
+    <th colspan="1" rowspan="2">
+<div align="center">
+<font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2">UK<font face="Verdana, Arial, Helvetica, sans-serif"
+><sup>´</sup></font><sub>37</sub></font>
+</div>
+</th>
+    <th colspan="1" rowspan="2">
+<div align="center">
+<font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2">UK<font face="Verdana, Arial, Helvetica, sans-serif"
+><sup>´</sup></font><sub>37</sub> SST (°C)</font>
+</div>
+</th>
+</tr>
+  <tr> 
+    <th>
+<div align="center">
+<font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2">37:4MK</font>
+</div>
+</th>
+    <th>
+<div align="center">
+<font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2">37:3MK</font>
+</div>
+</th>
+    <th>
+<div align="center">
+<font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2">36:3ME</font>
+</div>
+</th>
+    <th>
+<div align="center">
+<font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2">37:2MK</font>
+</div>
+</th>
+    <th>
+<div align="center">
+<font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2">36:2ME</font>
+</div>
+</th>
+    <th>
+<div align="center">
+<font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2">36:2EE</font>
+</div>
+</th>
+    <th>
+<div align="center">
+<font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2">38:3EK</font>
+</div>
+</th>
+    <th>
+<div align="center">
+<font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2">38:3MK</font>
+</div>
+</th>
+    <th>
+<div align="center">
+<font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2">38:2EK</font>
+</div>
+</th>
+    <th>
+<div align="center">
+<font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2">38:2MK</font>
+</div>
+</th>
+    <th>
+<div align="center">
+<font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2">39:3EK</font>
+</div>
+</th>
+    <th>
+<div align="center">
+<font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2">39:2EK</font>
+</div>
+</th>
+    <th>
+<div align="center">
+<font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2">Total</font>
+</div>
+</th>
+</tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>186-1151C-</font></td>
+    <td>
+&nbsp;</td>
+    <td>
+&nbsp;</td>
+    <td>
+&nbsp;</td>
+    <td>
+&nbsp;</td>
+    <td>
+&nbsp;</td>
+    <td>
+&nbsp;</td>
+    <td>
+&nbsp;</td>
+    <td>
+&nbsp;</td>
+    <td>
+&nbsp;</td>
+    <td>
+&nbsp;</td>
+    <td>
+&nbsp;</td>
+    <td>
+&nbsp;</td>
+    <td>
+&nbsp;</td>
+    <td>
+&nbsp;</td>
+    <td>
+&nbsp;</td>
+    <td>
+&nbsp;</td>
+    <td>
+&nbsp;</td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1H-1, 5-7</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.06</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.06</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>24.64</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>30.39</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>5.06</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>13.97</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.93</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>26.20</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.10</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>4.04</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>4.08</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>127.41</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.55</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.09</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1H-1, 35-37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.36</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1.40</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>8.91</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2.81</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.23</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3.91</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1.62</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>4.16</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>5.28</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.55</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1.71</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.65</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1.53</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>56.78</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.61</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.94</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1H-1, 65-67</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.66</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.68</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.83</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>28.51</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>20.26</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3.60</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.41</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>11.89</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>8.87</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1.74</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>4.30</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1.74</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>96.15</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.42</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>11.07</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1H-1, 95-97</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.96</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.98</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.17</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>11.77</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>12.97</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2.48</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.88</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>11.14</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>12.28</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2.54</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>4.42</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.57</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>68.21</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.52</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.27</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1H-1, 125-127</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1.26</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1.29</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>7.66</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>34.43</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3.15</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>36.01</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>6.63</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>4.70</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.14</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>17.87</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>23.70</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>7.17</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2.51</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>4.38</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>157.35</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.51</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>13.89</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1H-2, 5-7</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1.56</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1.60</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1.26</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>151.54</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.00</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>186.74</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.00</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>21.32</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>72.50</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>60.79</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>139.66</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>44.22</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>22.49</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>17.92</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>718.45</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.55</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.09</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1H-2, 35-37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1.92</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1.90</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>30.21</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>201.78</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>11.84</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>285.51</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>38.92</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>35.13</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>74.92</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>90.50</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>204.70</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>69.29</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.15</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>40.12</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1102.07</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.59</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.09</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1H-CC, 5-7</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2.03</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2.08</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>98.83</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>207.84</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.39</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.17</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>87.36</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>74.02</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>45.57</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>7.60</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>13.84</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>568.63</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.68</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>18.79</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-1, 5-7</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2.26</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2.26</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>58.82</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>78.84</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.48</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.64</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.30</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>65.96</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>23.18</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>12.46</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>12.78</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>290.46</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.57</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.70</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-1, 35-37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2.56</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2.54</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>76.52</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>72.17</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.46</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>36.84</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>23.61</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>82.55</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>23.98</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>22.59</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.35</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>364.08</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.49</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>13.13</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-1, 65-67</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2.86</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2.83</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>4.48</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>98.54</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>195.79</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>23.61</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>17.32</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>33.29</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>43.42</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>140.03</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>52.26</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>8.76</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>26.15</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>643.65</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.67</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>18.42</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-1, 95-97</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3.16</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3.13</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1.74</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>90.58</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>95.69</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>12.64</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>49.72</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.21</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>88.67</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>29.51</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.56</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>414.69</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.51</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>13.96</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-1, 125-127</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3.46</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3.40</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.60</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>144.95</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>6.19</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>192.41</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>24.42</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>13.87</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>48.88</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>57.94</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>137.08</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>43.17</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.93</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>23.48</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>718.92</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.57</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.63</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-2, 5-7</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3.76</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3.69</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2.84</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>79.91</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>244.31</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>20.00</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>52.72</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>52.44</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>202.08</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>63.41</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>17.64</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>34.63</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>769.97</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.75</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>21.02</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-2, 35-37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>4.06</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3.98</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.35</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>83.44</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>194.59</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.36</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>63.96</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>52.68</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>169.86</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>49.32</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>20.54</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>29.78</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>692.88</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.70</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.44</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-2, 65-67</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>4.36</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>4.26</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>13.57</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>132.13</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>199.16</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>18.42</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>13.06</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>42.27</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>52.54</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>147.58</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>49.58</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.40</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>24.65</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>702.36</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.60</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.53</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-2, 95-97</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>4.66</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>4.55</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.04</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>117.71</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>192.83</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>13.57</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>27.76</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>42.61</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>148.35</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>26.99</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>11.95</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>13.03</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>603.84</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.62</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>17.12</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-2, 125-127</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>4.96</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>4.84</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.13</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>124.87</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>303.56</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.74</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.04</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>34.87</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>47.17</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>199.54</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>80.00</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>6.27</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>32.40</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>864.57</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.71</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.69</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-3, 5-7</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>5.26</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>5.12</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.68</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>191.43</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>303.64</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>29.42</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>83.50</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>63.17</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>261.55</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>73.78</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>17.30</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>36.26</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1074.73</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.61</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.89</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-3, 35-37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>5.53</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>5.38</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.02</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>151.66</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>274.17</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.19</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.49</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>41.89</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>51.31</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>193.92</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>59.44</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>8.88</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>29.58</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>861.53</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.64</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>17.79</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-3, 65-67</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>5.86</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>5.70</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.05</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>84.13</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>305.35</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>24.50</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>82.59</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>54.17</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>301.32</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>75.54</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>18.99</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>45.74</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1002.36</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.78</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>21.91</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-3, 95-97</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>6.16</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>5.98</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>6.51</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>242.03</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>570.75</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>24.98</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>82.47</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>84.48</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>383.41</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>154.86</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>20.05</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>38.73</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1608.27</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.70</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.51</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-3, 125-127</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>6.46</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>6.27</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.64</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>148.89</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>216.93</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>21.55</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>18.21</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>46.44</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>56.53</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>163.10</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>54.55</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.36</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>26.31</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>777.53</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.59</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.29</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-4, 5-7</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>6.76</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>6.56</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1.92</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>107.13</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>168.80</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.13</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>54.64</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>38.34</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>145.62</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>46.87</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>13.76</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>25.33</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>616.53</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.61</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.85</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-4, 35-37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>7.07</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>6.85</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>39.44</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>122.44</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>5.38</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>22.19</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.43</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>119.65</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>31.06</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>5.41</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>20.41</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>380.41</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.76</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>21.10</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-4, 65-67</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>7.36</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>7.13</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>83.27</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>196.62</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>7.25</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>33.63</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>27.88</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>173.05</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>50.49</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>13.24</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>31.15</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>616.58</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.70</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.50</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-4, 95-97</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>7.66</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>7.41</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>42.01</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>116.91</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>5.09</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>21.50</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.44</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>104.09</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>32.42</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.00</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.50</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>354.96</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.74</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>20.50</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-4, 125-127</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>7.96</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>7.70</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>43.29</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>107.09</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>6.23</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>24.70</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>106.95</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>29.72</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>6.44</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.89</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>360.68</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.71</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.80</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-5, 5-7</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>8.26</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>7.99</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.57</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>238.18</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>363.24</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>44.02</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>22.45</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>74.05</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>89.88</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>271.88</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>89.20</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>18.12</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>47.60</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1269.18</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.60</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.60</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-5, 35-37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>8.56</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>8.27</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>146.40</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>257.98</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.35</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>56.21</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>56.84</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>206.96</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>72.13</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>12.65</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>31.73</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>856.25</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.64</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>17.60</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-5, 65-67</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>8.86</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>8.56</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>135.04</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>291.72</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.73</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>57.54</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>48.37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>225.79</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>74.82</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>11.79</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>32.53</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>894.32</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.68</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.00</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-5, 95-97</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.16</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>8.85</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1.00</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>82.56</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>135.31</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.63</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>52.18</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>30.99</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>150.89</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>38.13</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3.42</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>24.94</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>534.05</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.62</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>17.10</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-5, 125-127</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.46</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.13</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1.71</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>46.18</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>45.07</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>8.45</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>32.90</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.32</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>41.61</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>13.92</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>8.55</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>7.58</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>225.30</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.49</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>13.40</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-6, 5-7</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.76</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.42</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3.08</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>98.47</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>85.61</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.90</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>40.78</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>41.44</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>81.86</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>26.51</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>7.18</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.65</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>410.48</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.47</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>12.50</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-6, 35-37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.06</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.71</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3.44</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>57.52</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>66.19</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>8.16</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>31.34</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>22.07</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>64.45</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>8.27</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>7.19</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>11.64</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>280.28</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.54</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.60</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-6, 65-67</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.36</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.99</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>8.17</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>139.89</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>180.35</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>18.70</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>70.69</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>48.82</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>159.37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>21.69</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.04</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>26.55</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>689.27</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.56</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.40</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-6, 95-97</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.66</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.28</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>26.38</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>277.26</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>338.25</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>44.59</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>41.29</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>99.51</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>129.28</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>288.73</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>100.55</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>22.61</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>55.23</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1423.68</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.55</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.00</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-6, 125-127</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.96</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.57</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>223.11</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>323.96</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>28.93</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>120.85</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>89.51</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>291.80</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>91.77</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>35.72</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>63.94</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1269.59</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.59</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.30</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-7, 5-7</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>11.26</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.85</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>7.29</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>121.07</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>181.60</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>22.36</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>12.23</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>42.99</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>53.89</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>129.34</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>55.61</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.58</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>25.69</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>661.66</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.60</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.50</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-7, 35-37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>11.56</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>11.14</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>147.44</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>223.84</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.26</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>81.49</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>55.23</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>197.68</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>63.07</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.82</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>38.05</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>845.87</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.60</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.60</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-7, 65-67</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>11.85</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>11.42</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>169.61</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>316.30</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>17.79</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>38.83</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>62.73</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>224.27</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>91.13</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.06</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>37.41</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>974.13</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.65</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>18.00</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2H-CC, 5-7</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>12.03</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>11.49</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3.63</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>96.35</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>190.72</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>12.23</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.16</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>35.35</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>40.04</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>139.60</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>55.01</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>6.59</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>25.31</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>614.99</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.66</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>18.40</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-1, 5-7</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>11.76</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>11.76</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1.10</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>86.50</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>135.57</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.11</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>40.31</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>32.53</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>102.33</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>39.24</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.03</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>17.16</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>473.87</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.61</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.80</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-1, 35-37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>12.06</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>12.05</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>143.91</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>240.37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.25</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>75.00</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>55.75</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>186.61</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>68.06</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.29</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>31.20</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>829.44</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.63</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>17.30</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-1, 65-67</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>12.36</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>12.34</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>107.07</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>250.26</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.55</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>46.21</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>41.87</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>176.46</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>72.67</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.66</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>30.27</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>745.02</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.70</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.50</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-1, 95-97</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>12.66</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>12.63</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.94</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>77.88</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>138.50</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>7.37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>44.23</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>52.62</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>105.43</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>46.48</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3.13</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>29.55</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>506.14</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.64</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>17.70</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-1, 125-127</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>12.96</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>12.92</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>5.29</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>37.81</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>46.21</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>6.52</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>6.08</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.20</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>21.32</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>38.35</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.50</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2.11</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>8.76</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>201.15</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.55</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.00</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-2, 5-7</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>13.26</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>13.21</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3.25</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>62.02</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>69.50</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.61</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.09</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>25.48</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>50.83</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.24</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.13</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.65</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>278.78</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.53</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.40</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-2, 35-37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>13.56</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>13.50</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>8.57</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>38.31</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>44.13</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>7.12</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>8.45</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.40</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>23.89</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>36.20</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.72</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3.26</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.47</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>209.51</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.54</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.60</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-2, 65-67</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>13.86</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>13.80</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>41.19</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>59.52</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2.84</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>30.75</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>29.58</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>51.59</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.65</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3.38</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.77</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>250.28</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.59</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.20</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-2, 95-97</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.16</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.09</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>40.24</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>59.85</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3.89</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>29.03</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>20.35</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>48.47</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.88</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>4.33</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.82</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>233.87</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.60</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.40</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-2, 125-127</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.46</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.38</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>70.90</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>190.38</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.58</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>97.14</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>55.62</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>238.33</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>66.96</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>22.19</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>46.29</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>807.40</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.73</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>20.30</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-3, 5-7</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.76</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.67</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>157.64</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>197.64</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>22.25</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>119.98</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>63.74</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>256.49</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>63.80</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>29.14</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>49.26</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>959.93</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.56</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.20</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-3, 35-37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.06</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.96</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>218.71</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>260.03</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>24.91</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>111.50</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>91.66</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>293.72</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>89.21</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>32.97</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>52.60</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1175.31</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.54</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.80</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-3, 65-67</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.36</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.25</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2.38</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>172.37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>218.28</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.97</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>66.52</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>70.12</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>167.53</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>63.59</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.00</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>32.66</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>824.42</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.56</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.30</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-3, 95-97</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.66</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.54</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>8.72</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>261.49</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>319.32</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>33.28</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>20.03</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>88.85</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>106.54</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>259.74</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>97.50</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.36</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>50.06</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1264.87</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.55</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.00</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-3, 125-127</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.96</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.83</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2.11</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>233.98</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>264.92</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>20.66</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>92.36</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>92.67</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>217.06</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>78.52</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>23.08</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>32.75</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1058.10</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.53</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.50</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-4, 5-7</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.36</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.12</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3.06</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>220.44</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>263.43</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>33.25</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>81.13</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>89.78</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>223.85</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>79.33</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.89</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>37.41</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1051.59</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.54</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.90</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-4, 35-37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.66</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.41</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.51</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>230.01</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>321.46</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>34.42</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>29.28</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>61.94</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>91.04</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>243.88</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>85.22</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>12.45</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>41.45</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1161.65</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.58</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.00</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-4, 65-67</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.96</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.71</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>6.32</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>157.64</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>199.04</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>18.14</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>30.27</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>58.55</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>143.46</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>45.83</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>12.60</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>23.33</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>695.18</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.56</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.30</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-4, 95-97</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>17.26</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>17.00</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>5.61</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>127.28</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>165.41</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.24</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>43.11</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>45.48</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>110.31</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>42.03</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.58</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.17</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>575.23</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.57</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.50</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-4, 125-127</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>17.56</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>17.29</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>5.86</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>139.33</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>210.26</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>18.12</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>51.38</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>52.49</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>131.85</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>57.37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>11.38</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>21.56</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>699.59</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.60</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.50</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-5, 5-7</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>17.76</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>17.58</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>4.23</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>116.63</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>201.62</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>7.69</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>51.59</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>43.29</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>139.75</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>53.29</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>11.10</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>8.27</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>637.46</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.63</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>17.50</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-5, 35-37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>18.06</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>17.87</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2.19</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>88.59</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>139.05</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>13.62</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>42.67</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>32.43</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>110.73</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>40.74</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>8.78</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>17.23</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>496.05</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.61</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.80</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-5, 65-67</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>18.36</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>18.16</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>4.85</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>104.60</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>156.92</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.27</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>43.85</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>37.20</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>66.60</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>41.60</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.63</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.51</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>495.04</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.60</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.50</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-5, 95-97</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>18.66</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>18.45</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2.53</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>76.44</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>108.56</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>13.27</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>24.82</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>28.20</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>101.47</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>30.09</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.22</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.53</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>410.14</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.59</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.10</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-5, 125-127</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>18.96</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>18.74</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1.63</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>69.34</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>97.90</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>8.73</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>28.77</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>26.21</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>65.92</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>26.69</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>7.60</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.80</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>343.59</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.59</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.10</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-6, 5-7</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.26</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.03</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1.13</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>76.19</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>131.31</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>12.10</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>38.37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>28.87</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>100.68</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>36.22</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>8.44</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.85</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>449.16</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.63</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>17.50</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-6, 35-37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.56</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.32</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>6.47</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>108.09</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>162.51</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>13.90</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>11.78</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>36.47</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>40.68</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>110.43</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>41.45</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>7.06</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>18.85</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>557.70</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.60</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.50</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-6, 65-67</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.86</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.61</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>4.37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>84.23</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>102.06</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.79</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>35.12</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>28.51</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>68.15</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>24.64</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>4.20</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.39</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>370.47</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.55</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.00</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-6, 95-97</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>20.16</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.91</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.67</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>11.57</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.49</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.56</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1.85</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1.61</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>4.28</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>5.01</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>11.20</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>4.33</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.97</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2.06</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>59.60</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.57</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.70</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-6, 125-127</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>20.46</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>20.20</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>98.64</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>121.79</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>16.96</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>35.29</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>22.32</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>89.26</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>29.36</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.28</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>13.62</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>436.51</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.55</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.10</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-7, 5-7</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>20.76</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>20.49</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>80.21</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>92.93</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>12.76</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>37.07</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>36.94</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>66.46</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>22.10</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>4.77</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>9.62</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>362.87</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.54</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.60</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-7, 35-37</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>21.06</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>20.78</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>12.26</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.55</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2.00</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>7.34</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>5.18</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>12.92</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>4.53</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1.43</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2.41</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>63.63</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.56</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>15.30</font></td>
+  </tr>
+  <tr>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>3H-CC, 5-7</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>121.24</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>21.01</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.80</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.68</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>21.80</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>ND</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2.98</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>11.61</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>10.98</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>19.46</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>7.42</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>1.52</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>2.73</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>98.98</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>0.53</font></td>
+    <td>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>14.30</font></td>
+  </tr>
+</table>
+
+
+
+</font>
+<p>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+>Notes: TOC = total organic carbon. ND = not detected.</font>
+</p>
+
+
+
+<a href="javascript:closeWindow()">
+
+<p><img border="0" src="../images/close1.gif" width="640" height="31"></p></a> 
+
+
+</body>
+</html>

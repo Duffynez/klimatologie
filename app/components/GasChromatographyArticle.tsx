@@ -256,6 +256,13 @@ export function GasChromatographyArticle() {
           datování a uvolnění vzduchu z ledu jsou další kroky výzkumu.
         </p>
 
+        <p>
+          Chromatografie slouží také k rozboru organických látek zachovaných
+          v mořském sedimentu. Oddělení dvou alkenonů a převod jejich zastoupení
+          na minulou teplotu vody popisuje článek o{" "}
+          <Link href="/metody/chemicke-a-biologicke-paleoteplomery">chemických a biologických paleoteploměrech</Link>.
+        </p>
+
         <h3>Vývoj a další provedení</h3>
         <p>
           Důležitým krokem ve vývoji byla práce <SourceLink id="DOI_10_1042_bj0500679">Jamese a Martina z roku 1952</SourceLink>.

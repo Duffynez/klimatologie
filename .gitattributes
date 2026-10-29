@@ -51,3 +51,6 @@ public/data/methods/pollen/pg1351-original.tsv binary
 # Preserve NOAA source bytes and reproducible isotope example outputs.
 public/data/methods/isotope-temperature/* text eol=lf
 public/data/methods/isotope-temperature/bemis1998-*.txt binary
+
+public/data/methods/organic-thermometers/* text eol=lf
+public/data/methods/organic-thermometers/fujine2003-table-original.txt binary

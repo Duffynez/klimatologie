@@ -2404,7 +2404,7 @@ test("publishes the complete chromatography method with accessible sources and r
   assert.ok(body, "A full article must replace the catalogue placeholder");
   assert.equal((body.match(/<h2>/g) ?? []).length, 4);
   assert.equal((body.match(/<details\b/g) ?? []).length, 2);
-  assert.match(html, /<p class="page-lead__meta">28\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">29\. října 2026<\/p>/);
   assert.match(body, /noaa-analysis-system\.jpg/);
   assert.match(body, /class="method-flow__track"/);
   assert.match(body, /repeated-analyses\.png/);
@@ -3279,4 +3279,66 @@ test("isotope example preserves NOAA bytes, selects all 39 low-light samples and
   const nineteen = groups.find(r => r[0] === 19);
   assert.equal(nineteen[2], -0.542);
   assert.equal(nineteen[3], 19.1016);
+});
+
+test("chemical paleothermometers publish a complete explanation, linked sources and repeatable data", async () => {
+  const [html, source, catalogue, chromatography] = await Promise.all([
+    readFile(new URL("dist/client/metody/chemicke-a-biologicke-paleoteplomery/index.html", root), "utf8"),
+    readFile(new URL("app/components/ChemicalPaleothermometersArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/metody/plynova-chromatografie/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.equal([...body.matchAll(/<h2>/g)].length, 4);
+  assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
+  assert.match(body, /15,1 °C/);
+  assert.match(body, /0 až 29 °C/);
+  assert.match(body, /75 vzorků/);
+  assert.doesNotMatch(body, /katex-error|Potřebné informace/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  assert.match(chromatography, /href="\/metody\/chemicke-a-biologicke-paleoteplomery"/);
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  for (const id of new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
+    assert.ok(card, "Missing source " + id);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const file = /\.[a-z0-9]+$/i.test(match[1]) ? match[1] : match[1].replace(/\/$/, "") + "/index.html";
+    await readFile(new URL("dist/client" + file, root));
+  }
+});
+
+test("alkenone example preserves all 75 original concentration pairs and published corrected depths", async () => {
+  const base = new URL("public/data/methods/organic-thermometers/", root);
+  const raw = await readFile(new URL("fujine2003-table-original.txt", base));
+  const metadata = JSON.parse(await readFile(new URL("provenance.json", base), "utf8"));
+  assert.equal(createHash("sha256").update(raw).digest("hex"), metadata.sha256["fujine2003-table-original.txt"]);
+  assert.deepEqual(await readFile(new URL("dist/client/data/methods/organic-thermometers/fujine2003-table-original.txt", root)), raw);
+  const input = [...raw.toString("latin1").matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)].map(m =>
+    [...m[1].matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/gi)].map(c => c[1].replace(/<[^>]*>/g, "").trim())
+  ).slice(3);
+  const rows = (await readFile(new URL("results.tsv", base), "utf8")).trim().split(/\r?\n/).slice(1).map(line => line.split("\t"));
+  assert.equal(input.length, 75);
+  assert.equal(rows.length, input.length);
+  for (let i = 0; i < rows.length; i++) {
+    const r = rows[i], p = input[i];
+    assert.equal(r[0], "186-1151C-" + p[0]);
+    assert.equal(Number(r[1]), Number(p[1]));
+    assert.equal(Number(r[2]), Number(p[2]));
+    assert.equal(Number(r[3]), Number(p[6]));
+    assert.equal(Number(r[4]), Number(p[4]));
+    assert.equal(Number(r[7]), Number(p[17]));
+    assert.ok(Math.abs(Number(r[6]) - Number(p[17])) < 0.06, "Recalculation must agree with the independently published SST column");
+    assert.ok(Math.abs(Number(r[5]) - Number(r[3]) / (Number(r[3]) + Number(r[4]))) < 1e-12);
+  }
+  assert.equal(rows[0][3], "30.39");
+  assert.equal(rows[0][4], "24.64");
+  assert.ok(Math.abs(Number(rows[0][6]) - 15.095418541757969) < 1e-12);
+  assert.equal(rows.at(-1)[1], "121.24", "Preserve the unusual upstream value");
+  assert.equal(rows.at(-1)[2], "21.01", "Plot the published corrected depth");
 });

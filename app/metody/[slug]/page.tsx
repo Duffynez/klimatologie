@@ -1,3 +1,4 @@
+import { ChemicalPaleothermometersArticle } from "../../components/ChemicalPaleothermometersArticle";
 import { IsotopePaleothermometryArticle } from "../../components/IsotopePaleothermometryArticle";
 import { PollenAnalysisArticle } from "../../components/PollenAnalysisArticle";
 import { SpeleothemArticle } from "../../components/SpeleothemArticle";
@@ -103,6 +104,22 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "chemicke-a-biologicke-paleoteplomery") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Přírodní archivy" title="Chemické a biologické paleoteploměry" meta="29. října 2026">
+          <p>
+            Jak z organických látek a mořských schránek určujeme minulé teploty vody.
+            Alkenonový teploměr krok za krokem, další varianty a přepočet
+            skutečných vzorků z oceánského vrtu u Japonska.
+          </p>
+        </PageLead>
+        <ChemicalPaleothermometersArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "izotopova-paleotermometrie") {
@@ -415,7 +432,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "plynova-chromatografie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Laboratorní analýza" title="Plynová chromatografie" meta="28. října 2026">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Plynová chromatografie" meta="29. října 2026">
           <p>Jak oddělení plynů ve vzorku a porovnání s referenčními směsmi umožňují měřit zastoupení metanu ve vzduchu.</p>
         </PageLead>
         <GasChromatographyArticle />
