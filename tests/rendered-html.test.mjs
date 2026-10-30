@@ -3769,3 +3769,101 @@ test("Blue Hill example preserves NOAA bytes, complete daily inputs and independ
     assert.ok(pair.txx.normal_95_interval_c_per_decade[0] < 0 && pair.txx.normal_95_interval_c_per_decade[1] > 0);
   }
 });
+
+
+test("uncertainty method explains propagation, links GMST and publishes six open references", async () => {
+  const [html, source, catalogue, observation] = await Promise.all([
+    readFile(new URL("dist/client/metody/vycisleni-a-prenos-nejistoty/index.html", root), "utf8"),
+    readFile(new URL("app/components/UncertaintyArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/gmst/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
+    "Jak určujeme nejistotu výsledku", "Spolehlivost odhadu a jeho ověření", "Příklad na globální teplotě roku 2024", "Shrnutí",
+  ]);
+  assert.match(html, /<p class="page-lead__meta">30\. října 2026<\/p>/);
+  for (const text of ["1,187449", "0,021262", "0,003618", "1,187 ± 0,042", "0,02093", "0,02875", "1961–1990", "standardní nejistota", "Monte Carlo"]) assert.ok(body.includes(text), text);
+  assert.match(body, /href="\/pozorovani\/gmst"/);
+  assert.match(observation, /href="\/metody\/vycisleni-a-prenos-nejistoty"/);
+  assert.doesNotMatch(body, /katex-error|Potřebné informace|citation--missing/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  const conclusion = body.match(/<div class="method-conclusion">([\s\S]*?)<\/div>/)?.[1];
+  assert.equal([...conclusion.matchAll(/<p>/g)].length, 2);
+  assert.match(conclusion, /5° × 5°/);
+  assert.match(conclusion, /1850–2025/);
+  const limits = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(limits.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  const ids = new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]));
+  assert.equal(ids.size, 6);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
+    assert.ok(card, "Missing uncertainty reference " + id);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const file = /\.[a-z0-9]+$/i.test(match[1]) ? match[1] : match[1].replace(/\/$/, "") + "/index.html";
+    await readFile(new URL("dist/client" + file, root));
+  }
+});
+
+test("HadCRUT uncertainty reproduces official values and preserves covariance between years", async () => {
+  const base = new URL("public/data/methods/uncertainty/", root);
+  const meta = JSON.parse(await readFile(new URL("provenance.json", base), "utf8"));
+  for (const [name, info] of Object.entries(meta.files)) {
+    const bytes = await readFile(new URL(name, base));
+    assert.equal(createHash("sha256").update(bytes).digest("hex"), info.sha256);
+    assert.deepEqual(await readFile(new URL("dist/client/data/methods/uncertainty/" + name, root)), bytes);
+  }
+  const readCsv = async name => {
+    const lines = (await readFile(new URL(name, base), "utf8")).trim().split(/\r?\n/);
+    const keys = lines.shift().split(",");
+    return lines.map(line => Object.fromEntries(line.split(",").map((v, i) => [keys[i], v])));
+  };
+  const original = await readCsv("ensemble-original.csv"), selected = await readCsv("realizations.csv");
+  const previous = original.find(r => r.Time === "2023"), current = original.find(r => r.Time === "2024");
+  assert.equal(original[0].Time, "1850");
+  assert.ok(original.some(r => r.Time === "2025"));
+  assert.equal(selected.length, 200);
+  for (let i = 0; i < 200; i++) {
+    const r = selected[i];
+    assert.equal(Number(r.realization), i + 1);
+    assert.equal(Number(r.anomaly_2023_c), Number(previous["Realization " + (i + 1)]));
+    assert.equal(Number(r.anomaly_2024_c), Number(current["Realization " + (i + 1)]));
+    assert.equal(Number(r.difference_c), Number(r.anomaly_2024_c) - Number(r.anomaly_2023_c));
+  }
+  const a = selected.map(r => Number(r.anomaly_2023_c)), b = selected.map(r => Number(r.anomaly_2024_c));
+  const average = values => values.reduce((sum, v) => sum + v, 0) / values.length;
+  const variance = values => values.reduce((sum, v) => sum + (v - average(values)) ** 2, 0) / (values.length - 1);
+  const cov = a.reduce((sum, v, i) => sum + (v - average(a)) * (b[i] - average(b)), 0) / 199;
+  const coverage = Number(current["Coverage uncertainty (1 sigma)"]);
+  const u = Math.sqrt(variance(b) + coverage ** 2), mean = average(b);
+  const result = JSON.parse(await readFile(new URL("results.json", base), "utf8"));
+  const close = (x, y, tolerance = 1e-12) => assert.ok(Math.abs(x - y) < tolerance, `${x} != ${y}`);
+  close(result.mean_c, mean);
+  close(result.ensemble_standard_uncertainty_c, Math.sqrt(variance(b)));
+  close(result.combined_standard_uncertainty_c, u);
+  close(result.normal_95_interval_c[0], mean - 1.96 * u);
+  close(result.normal_95_interval_c[1], mean + 1.96 * u);
+  const component = (await readCsv("component-original.csv")).find(r => r.Time === "2024");
+  const summary = (await readCsv("summary-original.csv")).find(r => r.Time === "2024");
+  for (const [calculated, published] of [
+    [mean, summary["Anomaly (deg C)"]],
+    [Math.sqrt(variance(b)), component["Ensemble standard deviation (1 sigma)"]],
+    [coverage, component["Coverage uncertainty (1 sigma)"]],
+    [u, component["Total uncertainty (1 sigma)"]],
+    [mean - 1.96 * u, summary["Lower confidence limit (2.5%)"]],
+    [mean + 1.96 * u, summary["Upper confidence limit (97.5%)"]],
+  ]) close(calculated, Number(published), 1e-7);
+  const pair = result.pairing_2023_2024;
+  close(pair.covariance_c2, cov);
+  close(pair.correlation, cov / Math.sqrt(variance(a) * variance(b)));
+  close(pair.paired_difference_standard_uncertainty_c, Math.sqrt(variance(b.map((v, i) => v - a[i]))));
+  close(pair.paired_difference_standard_uncertainty_c, Math.sqrt(variance(a) + variance(b) - 2 * cov));
+  close(pair.independent_assumption_standard_uncertainty_c, Math.sqrt(variance(a) + variance(b)));
+  assert.ok(pair.paired_difference_standard_uncertainty_c < pair.independent_assumption_standard_uncertainty_c);
+  assert.match(pair.scope, /only the uncertainty represented by the ensemble/);
+});

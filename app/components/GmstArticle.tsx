@@ -275,6 +275,13 @@ export function GmstArticle() {
           přenést do dalšího výpočtu místo toho, aby uživatel pracoval pouze s jednou střední křivkou.{" "}
           <SourceLink id="DOI_10_1029_2023jd040179">Lenssen et al., 2024</SourceLink>
         </p>
+        <p>
+          Jak se jednotlivé příspěvky skládají a jak z rozptýlení realizací
+          vzniká výsledný interval, vysvětluje metoda{" "}
+          <Link href="/metody/vycisleni-a-prenos-nejistoty">vyčíslení a přenos nejistoty</Link>.
+          Na veřejných datech HadCRUT5 pro rok 2024 umožňuje zopakovat
+          výpočet globální nejistoty krok za krokem.
+        </p>
 
         <h2>Zveřejňovaná data</h2>
         <p>

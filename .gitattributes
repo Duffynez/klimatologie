@@ -69,3 +69,6 @@ public/data/methods/spatial-averages/*-original.nc binary
 
 public/data/methods/time-extremes/* text eol=lf
 public/data/methods/time-extremes/*-original.* binary
+
+public/data/methods/uncertainty/* text eol=lf
+public/data/methods/uncertainty/*-original.csv binary

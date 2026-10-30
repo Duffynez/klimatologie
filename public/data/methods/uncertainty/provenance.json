@@ -1,0 +1,36 @@
+{
+  "version": "HadCRUT.5.2.0.0",
+  "variant": "analysis",
+  "download_date": "2026-10-30",
+  "region": "Global, equal-weighted mean of northern and southern hemisphere anomaly series",
+  "reference_period": "1961-1990",
+  "example_year": 2024,
+  "pairing_years": [
+    2023,
+    2024
+  ],
+  "ensemble_members": 200,
+  "files": {
+    "ensemble-original.csv": {
+      "source_url": "https://www.metoffice.gov.uk/hadobs/hadcrut5/data/HadCRUT.5.2.0.0/analysis/diagnostics/HadCRUT.5.2.0.0.analysis.ensemble_series.global.annual.csv",
+      "sha256": "4f6621606034ad5cd881fc8fdc758830673e284d79e5b6c22f1810b1ecd22ecb"
+    },
+    "component-original.csv": {
+      "source_url": "https://www.metoffice.gov.uk/hadobs/hadcrut5/data/HadCRUT.5.2.0.0/analysis/diagnostics/HadCRUT.5.2.0.0.analysis.component_series.global.annual.csv",
+      "sha256": "7ac43b13107ddb1ec4b4e0d78cc93384e0474022032644d697491b2ada0f9be7"
+    },
+    "summary-original.csv": {
+      "source_url": "https://www.metoffice.gov.uk/hadobs/hadcrut5/data/HadCRUT.5.2.0.0/analysis/diagnostics/HadCRUT.5.2.0.0.analysis.summary_series.global.annual.csv",
+      "sha256": "ef11ff5df760d5b80a80704379c055e0870e3a4d65aa1b840417ad514ead597c"
+    }
+  },
+  "standard_deviation_divisor": "M-1, M=200",
+  "coverage_correlation_assumption": "Analysis ensemble uncertainty and additional coverage uncertainty combined in quadrature as in Morice et al. 2021 supporting information, Text S4 equation 28.",
+  "interval": "Normal approximation with multiplier 1.96",
+  "pairing_scope": "The comparison of 2023 and 2024 includes only the uncertainty represented by the ensemble. No total interval for the difference is claimed.",
+  "rounding_tolerance_c": 1e-07,
+  "license": "Open Government Licence v3.0",
+  "license_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+  "attribution": "HadCRUT.5.2.0.0 data were obtained from https://www.metoffice.gov.uk/hadobs/hadcrut5 on 30 October 2026 and are © British Crown Copyright, Met Office 2026, provided under an Open Government Licence v3.0.",
+  "citation": "Morice, C. P. et al. (2021), An updated assessment of near-surface temperature change from 1850: the HadCRUT5 data set, JGR Atmospheres 126, e2019JD032361, DOI 10.1029/2019JD032361."
+}

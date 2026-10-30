@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="1100" viewBox="0 0 760 1100" role="img" aria-labelledby="title desc">
+<title id="title">Čtyři kroky vyhodnocení nejistoty</title>
+<desc id="desc">Vymezení výsledku, vyhodnocení vstupů a jejich vazeb, přenos výpočtem a vyjádření výsledné nejistoty.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#b65338"/></marker></defs>
+<rect width="760" height="1100" fill="#f7f7f2"/>
+<g font-family="Arial, sans-serif" fill="#183c40">
+<text x="40" y="62" font-size="38" font-weight="bold">Jak vzniká nejistota výsledku</text>
+<rect x="40" y="125" width="680" height="185" rx="12" fill="#fff" stroke="#b5ccca" stroke-width="2"/>
+<text x="65" y="168" font-size="31" font-weight="bold">1. Vymezíme výsledek</text>
+<text x="65" y="210" font-size="29">Určíme veličinu, místo a období.</text>
+<text x="65" y="246" font-size="29">Sestavíme vztah mezi vstupy</text>
+<text x="65" y="282" font-size="29">a hledaným výsledkem.</text>
+<path d="M380 322 V343" fill="none" stroke="#b65338" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="40" y="355" width="680" height="185" rx="12" fill="#fff" stroke="#b5ccca" stroke-width="2"/>
+<text x="65" y="398" font-size="31" font-weight="bold">2. Popíšeme nejistoty vstupů</text>
+<text x="65" y="440" font-size="29">Využijeme měření a další podklady.</text>
+<text x="65" y="476" font-size="29">Každému vstupu přiřadíme nejistotu</text>
+<text x="65" y="512" font-size="29">a zachytíme společné vlivy.</text>
+<path d="M380 552 V573" fill="none" stroke="#b65338" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="40" y="585" width="680" height="185" rx="12" fill="#fff" stroke="#b5ccca" stroke-width="2"/>
+<text x="65" y="628" font-size="31" font-weight="bold">3. Přeneseme nejistoty výpočtem</text>
+<text x="65" y="670" font-size="29">Použijeme vztah pro přenos</text>
+<text x="65" y="706" font-size="29">nebo opakujeme celý výpočet</text>
+<text x="65" y="742" font-size="29">s různými přípustnými vstupy.</text>
+<path d="M380 782 V803" fill="none" stroke="#b65338" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="40" y="815" width="680" height="185" rx="12" fill="#fff" stroke="#b5ccca" stroke-width="2"/>
+<text x="65" y="858" font-size="31" font-weight="bold">4. Vyjádříme nejistotu výsledku</text>
+<text x="65" y="900" font-size="29">Určíme standardní nejistotu.</text>
+<text x="65" y="936" font-size="29">Z rozdělení výsledků stanovíme</text>
+<text x="65" y="972" font-size="29">interval se zvoleným pokrytím.</text>
+<text x="40" y="1060" font-size="26">Společné vlivy zachováváme v celém postupu.</text>
+</g></svg>

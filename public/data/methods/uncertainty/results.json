@@ -1,0 +1,60 @@
+{
+  "version": "HadCRUT.5.2.0.0",
+  "year": 2024,
+  "members": 200,
+  "reference": "1961-1990",
+  "mean_c": 1.1874490225,
+  "ensemble_standard_uncertainty_c": 0.021262086331375343,
+  "coverage_standard_uncertainty_c": 0.0036176676,
+  "combined_standard_uncertainty_c": 0.02156765712883409,
+  "coverage_fraction": 0.99610347,
+  "expansion_factor": 1.96,
+  "expanded_uncertainty_c": 0.042272607972514815,
+  "normal_95_interval_c": [
+    1.1451764145274852,
+    1.229721630472515
+  ],
+  "published_comparison": {
+    "mean": {
+      "calculated": 1.1874490225,
+      "published": 1.187449,
+      "difference": 2.2500000085301508e-08
+    },
+    "ensemble_standard_deviation": {
+      "calculated": 0.021262086331375343,
+      "published": 0.021262083,
+      "difference": 3.331375342252585e-09
+    },
+    "coverage": {
+      "calculated": 0.0036176676,
+      "published": 0.0036176676,
+      "difference": 0.0
+    },
+    "total_standard_uncertainty": {
+      "calculated": 0.02156765712883409,
+      "published": 0.021567654,
+      "difference": 3.128834091120636e-09
+    },
+    "lower_95": {
+      "calculated": 1.1451764145274852,
+      "published": 1.1451764,
+      "difference": 1.4527485214799185e-08
+    },
+    "upper_95": {
+      "calculated": 1.229721630472515,
+      "published": 1.2297217,
+      "difference": -6.952748510258289e-08
+    }
+  },
+  "pairing_2023_2024": {
+    "scope": "The comparison of 2023 and 2024 includes only the uncertainty represented by the ensemble. No total interval for the difference is claimed.",
+    "mean_difference_c": 0.06797389399999999,
+    "standard_uncertainty_2023_c": 0.019357443627901254,
+    "standard_uncertainty_2024_c": 0.021262086331375343,
+    "correlation": 0.47227937146098153,
+    "covariance_c2": 0.00019438057253824977,
+    "paired_difference_standard_uncertainty_c": 0.02092906576734216,
+    "covariance_formula_standard_uncertainty_c": 0.020929065767342162,
+    "independent_assumption_standard_uncertainty_c": 0.028753903021507064
+  }
+}

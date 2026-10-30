@@ -1,3 +1,4 @@
+import { UncertaintyArticle } from "../../components/UncertaintyArticle";
 import { TimeExtremesArticle } from "../../components/TimeExtremesArticle";
 import { SpatialAveragesArticle } from "../../components/SpatialAveragesArticle";
 import { QualityHomogenizationArticle } from "../../components/QualityHomogenizationArticle";
@@ -109,6 +110,19 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "vycisleni-a-prenos-nejistoty") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Zpracování dat a vyhodnocování výsledků" title="Vyčíslení a přenos nejistoty" meta="30. října 2026">
+          <p>Jak se nejistoty měření a společné vlivy přenášejí do výsledku.
+            Standardní nejistota, intervaly a výpočet z 200 veřejných realizací globální teploty.</p>
+        </PageLead>
+        <UncertaintyArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "analyza-casovych-zmen-a-extremu") {
