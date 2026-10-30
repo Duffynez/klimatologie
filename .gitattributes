@@ -57,3 +57,6 @@ public/data/methods/organic-thermometers/fujine2003-table-original.txt binary
 
 public/data/methods/radiometric-dating/* text eol=lf
 public/data/methods/radiometric-dating/intcal20-original.14c binary
+
+public/data/methods/borehole-temperature/* text eol=lf
+public/data/methods/borehole-temperature/*-original.txt binary

@@ -244,7 +244,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Kryosféra"
           title="Sněhová pokrývka a permafrost"
-          meta="26. října 2026"
+          meta="30. října 2026"
         >
           <p>
             Jak se měří plocha, trvání a vodní hodnota sněhu, jak se ve vrtech sleduje teplota permafrostu a hloubka

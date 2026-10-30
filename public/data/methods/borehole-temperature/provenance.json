@@ -1,0 +1,25 @@
+{
+  "accessed": "2026-10-30",
+  "site": "CZ-hv-105n",
+  "coordinates": {
+    "latitude": 48.95,
+    "longitude": 16.51
+  },
+  "logging_year": 1976.58,
+  "source_url": "https://www.ncei.noaa.gov/pub/data/paleo/borehole/huang2000/huang2016-CZ-hv-105n.txt",
+  "dataset_version": "Updated version submitted by Huang in October 2016",
+  "investigators": "Shaopeng Huang, Henry N. Pollack, Po-Yu Shen. Data contact V. Cermak (CZ).",
+  "method_url": "https://doi.org/10.5194/cp-17-451-2021",
+  "scope": "Own ordinary least-squares background subtraction using the published 15–300 m selection and 200–300 m fitting interval. Does not reproduce the archived five-century inversion.",
+  "sha256": {
+    "huang2016-CZ-hv-105n-original.txt": "8670342e24a7c2c69b63f84ded12733ebb65c3f50ed6d6bfa009d3f0371491f4"
+  },
+  "photo": {
+    "source": "https://essd.copernicus.org/articles/6/201/2014/essd-6-201-2014.pdf",
+    "figure": 3,
+    "page": 203,
+    "credit": "G. D. Clow / USGS, 2014",
+    "license": "CC BY 3.0",
+    "processing": "Original embedded JPEG extracted without cropping, recoloring or recompression. Original photograph has no separate credit in the paper."
+  }
+}

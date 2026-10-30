@@ -1,3 +1,4 @@
+import { BoreholeTemperatureArticle } from "../../components/BoreholeTemperatureArticle";
 import { RadiometricDatingArticle } from "../../components/RadiometricDatingArticle";
 import { ChemicalPaleothermometersArticle } from "../../components/ChemicalPaleothermometersArticle";
 import { IsotopePaleothermometryArticle } from "../../components/IsotopePaleothermometryArticle";
@@ -105,6 +106,20 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "rekonstrukce-teploty-z-vrtu") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Přírodní archivy" title="Rekonstrukce teploty z vrtů" meta="30. října 2026">
+          <p>Jak změny teploty povrchu zanechávají stopu v horninách a ledu.
+            Měření ve vrtu, oddělení hlubinného tepla a rekonstrukce minulosti
+            s výpočtem na skutečném českém teplotním profilu.</p>
+        </PageLead>
+        <BoreholeTemperatureArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "radiometricke-a-expozicni-datovani") {

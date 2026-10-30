@@ -223,6 +223,14 @@ export function SnowPermafrostArticle() {
         </p>
 
         <p>
+          Rozložení teplot po hloubce uchovává také stopu starších změn povrchu.
+          Její měření a vyhodnocení vysvětluje metoda{" "}
+          <Link href="/metody/rekonstrukce-teploty-z-vrtu">rekonstrukce teploty z vrtů</Link>.
+          Taková rekonstrukce může doplnit historii před začátkem pravidelných měření.{" "}
+          <SourceLink id="DOI_10_5194_essd_6_201_2014">(Clow 2014, klimatické využití vrtů)</SourceLink>
+        </p>
+
+        <p>
           Pro dlouhodobé porovnání se používá roční průměr v hloubce, kde je sezónní kolísání malé. Jednotlivé vrty
           mají odlišnou hloubku, a proto Biskaborn et al. vybírali čidlo nejblíže hloubce s ročním kolísáním nejvýše
           0,1 °C. Prostřední hodnota těchto hloubek byla 12 metrů. V každém vrtu pak porovnávali stále stejnou hloubku. Pro trend

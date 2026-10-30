@@ -1,0 +1,18 @@
+{
+  "original_points": 38,
+  "selected_points": 29,
+  "background_fit_points": 11,
+  "fit_depth_m": [
+    200,
+    300
+  ],
+  "intercept_degC": 7.989090909090907,
+  "gradient_K_per_m": 0.03858181818181818,
+  "gradient_K_per_km": 38.581818181818186,
+  "at_50m": {
+    "measured_degC": 11.17,
+    "background_degC": 9.918181818181816,
+    "anomaly_K": 1.2518181818181842
+  },
+  "scope": "OLS background and subsurface residuals only. No inversion of past surface temperatures."
+}

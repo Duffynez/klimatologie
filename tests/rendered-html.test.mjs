@@ -1399,7 +1399,7 @@ test("publishes a sourced snow-cover and permafrost article with distinct observ
 
   assert.match(evidencePage, /SnowPermafrostArticle/);
   assert.match(evidencePage, /title="Sněhová pokrývka a permafrost"/);
-  assert.match(evidencePage, /meta="26\. října 2026"/);
+  assert.match(evidencePage, /meta="30\. října 2026"/);
   assert.match(article, /Sníh na souši pozorujeme jako plochu, dobu trvání, výšku a množství vody/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
   assert.match(article, /Mapa rozsahu sněhu/);
@@ -1459,7 +1459,7 @@ test("renders open snow and permafrost sources with qualified trends and data co
   assert.match(articleHtml, /3 500 řádků pro 140 kódů lokalit/);
   assert.match(articleHtml, /Z 316 registrovaných míst vybrala 156/);
   assert.match(articleHtml, /Jediný panel porovnává dubnovou hmotnost/);
-  assert.match(articleHtml, /<p class="page-lead__meta">26\. října 2026<\/p>/);
+  assert.match(articleHtml, /<p class="page-lead__meta">30\. října 2026<\/p>/);
   assert.doesNotMatch(articleHtml, /Čtyři nezávislé podklady|s úplným desetiletým výsledkem|severoamerické \(a\) a euroasijské \(b\)/);
 });
 
@@ -3416,4 +3416,76 @@ test("Forno calibration preserves original IntCal20 bytes and a normalized compl
     assert.ok(Math.abs(rows[year][2] - sigma) < 1e-10);
   }
   assert.ok(Math.abs(result.equivalent_fraction_modern - Math.exp(-8252 / 8033)) < 1e-14);
+});
+
+
+test("borehole reconstruction publishes a complete article linked to permafrost observations", async () => {
+  const [html, source, catalogue, observation] = await Promise.all([
+    readFile(new URL("dist/client/metody/rekonstrukce-teploty-z-vrtu/index.html", root), "utf8"),
+    readFile(new URL("app/components/BoreholeTemperatureArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/snehova-pokryvka-a-permafrost/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
+    "Jak teplota v podzemí uchovává minulost", "Nejistoty a ověření", "Příklad: teplotní profil českého vrtu", "Shrnutí",
+  ]);
+  assert.match(html, /30\. října 2026/);
+  assert.match(body, /CZ-hv-105n/);
+  assert.match(body, /1,252 °C/);
+  assert.match(body, /0,3–0,4 °C/);
+  assert.match(body, /500 let/);
+  assert.match(body, /4 000 let/);
+  assert.match(body, /úplnou inverzi povrchové historie neprovádí/);
+  assert.match(body, /href="\/pozorovani\/snehova-pokryvka-a-permafrost"/);
+  assert.match(observation, /href="\/metody\/rekonstrukce-teploty-z-vrtu"/);
+  assert.doesNotMatch(body, /katex-error|Potřebné informace/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  const conclusion = body.match(/<div class="method-conclusion">([\s\S]*?)<\/div>/)?.[1];
+  assert.equal([...conclusion.matchAll(/<p>/g)].length, 2);
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  for (const id of new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
+    assert.ok(card, "Missing borehole source " + id);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const file = /\.[a-z0-9]+$/i.test(match[1]) ? match[1] : match[1].replace(/\/$/, "") + "/index.html";
+    await readFile(new URL("dist/client" + file, root));
+  }
+});
+
+test("borehole example preserves original temperatures and subtracts the fitted geothermal background", async () => {
+  const base = new URL("public/data/methods/borehole-temperature/", root);
+  const meta = JSON.parse(await readFile(new URL("provenance.json", base), "utf8"));
+  const name = "huang2016-CZ-hv-105n-original.txt";
+  const raw = await readFile(new URL(name, base));
+  assert.equal(createHash("sha256").update(raw).digest("hex"), meta.sha256[name]);
+  assert.deepEqual(await readFile(new URL("dist/client/data/methods/borehole-temperature/" + name, root)), raw);
+  const original = raw.toString("utf8").split(/\r?\n/).filter(l => /^\s*\d+\.\d+\s+\d+\.\d+\s*$/.test(l)).map(l => l.trim().split(/\s+/).map(Number));
+  assert.equal(original.length, 38);
+  assert.deepEqual(original[0], [20, 10.410]);
+  assert.deepEqual(original.at(-1), [390, 22.920]);
+  const rows = (await readFile(new URL("profile.csv", base), "utf8")).trim().split(/\r?\n/).slice(1).map(l => l.split(",").map(Number));
+  const results = JSON.parse(await readFile(new URL("results.json", base), "utf8"));
+  assert.equal(rows.length, 29);
+  assert.equal(rows.filter(r => r[4]).length, 11);
+  assert.ok(Math.abs(results.intercept_degC - 7.989090909090907) < 1e-12);
+  assert.ok(Math.abs(results.gradient_K_per_m - 0.03858181818181818) < 1e-14);
+  let residualSum = 0, depthResidualSum = 0;
+  for (const [z, temp, background, anomaly, fitted] of rows) {
+    assert.equal(temp, original.find(r => r[0] === z)[1]);
+    assert.ok(Math.abs(background - (results.intercept_degC + results.gradient_K_per_m*z)) < 1e-11);
+    assert.ok(Math.abs(temp-background-anomaly) < 1e-11);
+    assert.equal(fitted, Number(z >= 200 && z <= 300));
+    if (fitted) { residualSum += anomaly; depthResidualSum += z*anomaly; }
+  }
+  // Independent defining conditions of an OLS fit with an intercept.
+  assert.ok(Math.abs(residualSum) < 1e-10);
+  assert.ok(Math.abs(depthResidualSum) < 1e-8);
+  assert.ok(Math.abs(rows.find(r => r[0] === 50)[3] - 1.251818181818) < 1e-11);
 });
