@@ -3,6 +3,11 @@ import type { Source } from "./sources";
 // Sources cited by published article components.
 // Stable IDs are referenced from SourceLink components; do not rename them after publication.
 const rawArticleSources: Source[] = [
+  { id: "BOOK_Hyndman_Athanasopoulos_2021", title: "Forecasting: Principles and Practice", author: "Rob J. Hyndman a George Athanasopoulos", year: 2021, publication: "OTexts, Melbourne, 3. vydání. Otevřená učebnice. Kapitoly 2 a 7: sezónní kolísání, nejmenší čtverce, časový trend a interpretace modelu. Průběžně aktualizovaná elektronická verze, přístup 30. října 2026.", type: "Otevřená odborná učebnice", category: "book", externalUrl: "https://otexts.com/fpp3/least-squares.html", topics: ["metody", "analýza časových změn a extrémů", "zpracování dat", "extrémy"] },
+  { id: "DOI_10_3386_t0055", title: "A Simple, Positive Semi-Definite, Heteroskedasticity and Autocorrelation Consistent Covariance Matrix", author: "Whitney K. Newey a Kenneth D. West", year: 1986, publication: "NBER Technical Working Paper 55, duben 1986. Původní veřejná verze odhadu kovarianční matice, klesající časové váhy a předpoklady statistických testů.", type: "Původní statistická metodická práce", category: "science", externalUrl: "https://doi.org/10.3386/t0055", topics: ["metody", "analýza časových změn a extrémů", "zpracování dat", "extrémy"] },
+  { id: "DOI_10_3389_fclim_2022_989505", title: "Comparing extremes indices in recent observational and reanalysis products", author: "Robert J. H. Dunn, Markus G. Donat a Lisa V. Alexander", year: 2022, publication: "Frontiers in Climate 4, 989505. Porovnání staničních produktů a reanalýz, teplotních a srážkových ukazatelů, absolutních hodnot, anomálií a trendů. CC BY.", type: "Původní ověřovací studie", category: "science", externalUrl: "https://doi.org/10.3389/fclim.2022.989505", topics: ["metody", "analýza časových změn a extrémů", "zpracování dat", "extrémy"] },
+  { id: "WEB_NOAA_GHCND_Format", title: "GHCN-Daily: readme a formát denních dat", author: "NOAA National Centers for Environmental Information", year: 2026, publication: "Veřejná dokumentace GHCN-Daily verze 3.35. Pevné pozice polí, teploty v desetinách °C, příznaky měření, kvality a původu. Rok označuje přístup 30. října 2026.", type: "Datová dokumentace", category: "organization", externalUrl: "https://www.ncei.noaa.gov/pub/data/ghcn/daily/readme.txt", topics: ["metody", "analýza časových změn a extrémů", "zpracování dat", "extrémy"] },
+
   { id: "DOI_10_1029_2019jd032352", title: "Land Surface Air Temperature Variations Across the Globe Updated to 2019: The CRUTEM5 Data Set", author: "T. J. Osborn, P. D. Jones, D. H. Lister, C. P. Morice, I. R. Simpson, J. P. Winn, E. Hogan a I. C. Harris", year: 2021, publication: "Journal of Geophysical Research: Atmospheres 126, e2019JD032352. Původní popis CRUTEM5, staničních anomálií, standardní a alternativní mřížky a plošných průměrů. Veřejný přijatý rukopis na serveru Met Office.", type: "Původní metodická a klimatologická studie", category: "science", externalUrl: "https://doi.org/10.1029/2019JD032352", topics: ["metody", "prostorové zpracování", "plošné průměry", "teplota"] },
   { id: "WEB_NCAR_Area_Weighted_Average", title: "NCL: wgt_areaave", author: "NCAR / UCAR", year: 2026, publication: "Veřejná dokumentace výpočtu plošně vážených průměrů. Plochy buněk, kosinové váhy a zacházení s chybějícími hodnotami. Rok označuje přístup 30. října 2026, datum vydání dokumentace není uvedeno.", type: "Veřejná metodická dokumentace", category: "organization", externalUrl: "https://www.ncl.ucar.edu/Document/Functions/Built-in/wgt_areaave.shtml", topics: ["metody", "prostorové zpracování", "plošné průměry"] },
   { id: "DATA_CRUTEM_5_2_0_0_Grids", title: "CRUTEM.5.2.0.0: gridded land air temperature anomalies", author: "Climatic Research Unit, University of East Anglia a Met Office Hadley Centre", year: 2026, publication: "Měsíční teplotní anomálie na síti 5° × 5°, reference 1961–1990. Soubor CRUTEM.5.2.0.0.anomalies.nc sestavený 22. října 2026, leden 1850 až září 2026. Přístup 30. října 2026. Příklad používá leden 2024, 45–65° s. š. a 5–25° v. d. Open Government Licence v3.0. DOI této konkrétní aktualizace není uveden.", type: "Datový soubor", category: "science", externalUrl: "https://www.metoffice.gov.uk/hadobs/crutem5/data/CRUTEM.5.2.0.0/download.html", topics: ["metody", "prostorové zpracování", "plošné průměry", "teplota"] },
@@ -814,6 +819,11 @@ const rawArticleSources: Source[] = [
 ];
 
 const articleOpenAccessSources: Record<string, true | string> = {
+  "BOOK_Hyndman_Athanasopoulos_2021": true,
+  "DOI_10_3386_t0055": "https://www.nber.org/system/files/working_papers/t0055/t0055.pdf",
+  "DOI_10_3389_fclim_2022_989505": "https://www.frontiersin.org/journals/climate/articles/10.3389/fclim.2022.989505/full",
+  "WEB_NOAA_GHCND_Format": true,
+
   DOI_10_1029_2019jd032352: "https://www.metoffice.gov.uk/hadobs/crutem5/CRUTEM5_accepted.pdf",
   WEB_NCAR_Area_Weighted_Average: true,
   DATA_CRUTEM_5_2_0_0_Grids: "https://www.metoffice.gov.uk/hadobs/crutem5/data/CRUTEM.5.2.0.0/grids/CRUTEM.5.2.0.0.anomalies.nc",
@@ -1180,7 +1190,7 @@ const articleOpenAccessSources: Record<string, true | string> = {
   DOI_10_1175_jtech_d_11_00103_1: "https://www.ncei.noaa.gov/pub/data/ghcn/daily/papers/menne-etal2012.pdf",
   DOI_10_1175_jcli3366_1: "https://journals.ametsoc.org/view/journals/clim/18/11/jcli3366.1.xml",
   WEB_NOAA_Index_of_pub_data_ghcn_daily_96798b50: true,
-  DOI_10_7289_v5d21vhz: "https://www.ncei.noaa.gov/data/global-historical-climatology-network-daily/doc/readme.txt",
+  DOI_10_7289_v5d21vhz: "https://www.ncei.noaa.gov/pub/data/ghcn/daily/",
   WEB_Copernicus_E_OBS_data_access_94a6a7b1: true,
   DOI_10_1029_2017jd028200: "https://ueaeprints.uea.ac.uk/id/eprint/68099/1/Accepted_manuscript.pdf",
   DOI_10_24381_cds_151d3ec6: "https://cds.climate.copernicus.eu/datasets/insitu-gridded-observations-europe",

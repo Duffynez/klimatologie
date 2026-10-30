@@ -1,0 +1,161 @@
+{
+  "station": "USW00014753",
+  "start": "1961-01-01",
+  "end": "2024-12-31",
+  "daily_records": 23376,
+  "annual_records": 64,
+  "monthly_records": 768,
+  "annual_reference_1961_1990_c": 14.05348391845697,
+  "annual_mean_trend": {
+    "n": 64,
+    "center_year": 1992.5,
+    "mean_c": 14.502537977674226,
+    "sxx_year2": 21840.0,
+    "sxy_c_year": 606.0298873418669,
+    "slope_c_per_year": 0.027748621215286946,
+    "slope_c_per_decade": 0.27748621215286945,
+    "maximum_lag_years": 3,
+    "standard_error_c_per_decade": 0.03465339477852556,
+    "normal_95_interval_c_per_decade": [
+      0.20956680644491102,
+      0.3454056178608279
+    ],
+    "residual_lag1_autocorrelation": 0.017375180198291505,
+    "residual_sum": 5.3235194030776256e-14,
+    "time_residual_sum": 2.856048730848215e-14
+  },
+  "txx_trend": {
+    "n": 64,
+    "center_year": 1992.5,
+    "mean_c": 34.725,
+    "sxx_year2": 21840.0,
+    "sxy_c_year": 176.80000000000064,
+    "slope_c_per_year": 0.008095238095238124,
+    "slope_c_per_decade": 0.08095238095238125,
+    "maximum_lag_years": 3,
+    "standard_error_c_per_decade": 0.08495915921011295,
+    "normal_95_interval_c_per_decade": [
+      -0.08556451125624451,
+      0.247469273161007
+    ],
+    "residual_lag1_autocorrelation": -0.0840327620333321,
+    "residual_sum": -1.2165268792330153e-13,
+    "time_residual_sum": 5.329070518200751e-15
+  },
+  "lag_sensitivity": {
+    "1": {
+      "mean": {
+        "n": 64,
+        "center_year": 1992.5,
+        "mean_c": 14.502537977674226,
+        "sxx_year2": 21840.0,
+        "sxy_c_year": 606.0298873418669,
+        "slope_c_per_year": 0.027748621215286946,
+        "slope_c_per_decade": 0.27748621215286945,
+        "maximum_lag_years": 1,
+        "standard_error_c_per_decade": 0.0351733949003435,
+        "normal_95_interval_c_per_decade": [
+          0.2085476249341914,
+          0.34642479937154746
+        ],
+        "residual_lag1_autocorrelation": 0.017375180198291505,
+        "residual_sum": 5.3235194030776256e-14,
+        "time_residual_sum": 2.856048730848215e-14
+      },
+      "txx": {
+        "n": 64,
+        "center_year": 1992.5,
+        "mean_c": 34.725,
+        "sxx_year2": 21840.0,
+        "sxy_c_year": 176.80000000000064,
+        "slope_c_per_year": 0.008095238095238124,
+        "slope_c_per_decade": 0.08095238095238125,
+        "maximum_lag_years": 1,
+        "standard_error_c_per_decade": 0.09310538875148372,
+        "normal_95_interval_c_per_decade": [
+          -0.10153082776712746,
+          0.26343558967188996
+        ],
+        "residual_lag1_autocorrelation": -0.0840327620333321,
+        "residual_sum": -1.2165268792330153e-13,
+        "time_residual_sum": 5.329070518200751e-15
+      }
+    },
+    "5": {
+      "mean": {
+        "n": 64,
+        "center_year": 1992.5,
+        "mean_c": 14.502537977674226,
+        "sxx_year2": 21840.0,
+        "sxy_c_year": 606.0298873418669,
+        "slope_c_per_year": 0.027748621215286946,
+        "slope_c_per_decade": 0.27748621215286945,
+        "maximum_lag_years": 5,
+        "standard_error_c_per_decade": 0.033720904994113086,
+        "normal_95_interval_c_per_decade": [
+          0.211394452838311,
+          0.34357797146742797
+        ],
+        "residual_lag1_autocorrelation": 0.017375180198291505,
+        "residual_sum": 5.3235194030776256e-14,
+        "time_residual_sum": 2.856048730848215e-14
+      },
+      "txx": {
+        "n": 64,
+        "center_year": 1992.5,
+        "mean_c": 34.725,
+        "sxx_year2": 21840.0,
+        "sxy_c_year": 176.80000000000064,
+        "slope_c_per_year": 0.008095238095238124,
+        "slope_c_per_decade": 0.08095238095238125,
+        "maximum_lag_years": 5,
+        "standard_error_c_per_decade": 0.07619457804836217,
+        "normal_95_interval_c_per_decade": [
+          -0.06838624783963479,
+          0.23029100974439726
+        ],
+        "residual_lag1_autocorrelation": -0.0840327620333321,
+        "residual_sum": -1.2165268792330153e-13,
+        "time_residual_sum": 5.329070518200751e-15
+      }
+    },
+    "8": {
+      "mean": {
+        "n": 64,
+        "center_year": 1992.5,
+        "mean_c": 14.502537977674226,
+        "sxx_year2": 21840.0,
+        "sxy_c_year": 606.0298873418669,
+        "slope_c_per_year": 0.027748621215286946,
+        "slope_c_per_decade": 0.27748621215286945,
+        "maximum_lag_years": 8,
+        "standard_error_c_per_decade": 0.031060270337522813,
+        "normal_95_interval_c_per_decade": [
+          0.21660920094124703,
+          0.33836322336449187
+        ],
+        "residual_lag1_autocorrelation": 0.017375180198291505,
+        "residual_sum": 5.3235194030776256e-14,
+        "time_residual_sum": 2.856048730848215e-14
+      },
+      "txx": {
+        "n": 64,
+        "center_year": 1992.5,
+        "mean_c": 34.725,
+        "sxx_year2": 21840.0,
+        "sxy_c_year": 176.80000000000064,
+        "slope_c_per_year": 0.008095238095238124,
+        "slope_c_per_decade": 0.08095238095238125,
+        "maximum_lag_years": 8,
+        "standard_error_c_per_decade": 0.06527231788413192,
+        "normal_95_interval_c_per_decade": [
+          -0.04697901128796694,
+          0.2088837731927294
+        ],
+        "residual_lag1_autocorrelation": -0.0840327620333321,
+        "residual_sum": -1.2165268792330153e-13,
+        "time_residual_sum": 5.329070518200751e-15
+      }
+    }
+  }
+}

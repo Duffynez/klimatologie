@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import { SourceLink } from "./SourceLink";
 
@@ -212,6 +213,13 @@ export function HeatWavesArticle() {
           mezi všemi dvojicemi ročních hodnot. Tečky v mapě označují buňky, kde 95% interval odhadu nezahrnuje nulu.
           Tato pravidla i mapy pokrytí zveřejnili{" "}
           <SourceLink id="DOI_10_1029_2019jd032263">Dunn et al., 2020</SourceLink>.
+        </p>
+
+        <p>
+          Výběr ukazatele z denních měření a vztah mezi sklonem trendu a jeho intervalem
+          vysvětluje metoda <Link href="/metody/analyza-casovych-zmen-a-extremu">analýza časových změn a extrémů</Link>.
+          Podrobně ukazuje proložení přímky metodou nejmenších čtverců,
+          zatímco zde popsané mapy HadEX3 používají medián sklonů mezi dvojicemi let.
         </p>
 
         <h3>Co vytváří nejistotu</h3>

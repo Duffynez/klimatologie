@@ -1,0 +1,44 @@
+{
+  "download_date": "2026-10-30",
+  "dataset_doi": "10.7289/V5D21VHZ",
+  "version": "3.35-upd-2026102817",
+  "station": "USW00014753",
+  "name": "BLUE HILL LCD",
+  "latitude": 42.2122,
+  "longitude": -71.1136,
+  "elevation_m": 190.5,
+  "selection": {
+    "start": "1961-01-01",
+    "end": "2024-12-31",
+    "element": "TMAX",
+    "quality_flag": "blank only",
+    "completeness": "All calendar days required for every selected year"
+  },
+  "reference_period": "1961-1990",
+  "trend_period": "1961-2024",
+  "sources": {
+    "USW00014753-original.dly": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00014753.dly",
+    "ghcnd-version-original.txt": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/ghcnd-version.txt",
+    "station.txt": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/ghcnd-stations.txt"
+  },
+  "station_metadata_note": "One unchanged line extracted from ghcnd-stations.txt. This is an excerpt, not the complete station catalogue.",
+  "original_station_catalogue_sha256": "437ee87f0343bcad408a492cf7a02163fb69255364c541b4006d5d76055d0dc3",
+  "statistical_settings": {
+    "estimator": "OLS with intercept",
+    "covariance": "Newey-West with Bartlett weights, no finite-sample multiplier, no prewhitening",
+    "maximum_lag_years": 3,
+    "normal_confidence_level": 0.95,
+    "sensitivity_lags_years": [
+      1,
+      5,
+      8
+    ]
+  },
+  "scope": "GHCN-Daily quality-controlled daily station data, not homogenized. HAC interval covers residual time variability under the specified model, not possible station changes.",
+  "rights": "Public NOAA NCEI data. Credit the GHCN-Daily contributors and Menne et al. (2012).",
+  "sha256": {
+    "ghcnd-version-original.txt": "26a62af228afdec14fff7faacfe6ef5438353ffef1001d688876b7e966c7f55a",
+    "station.txt": "43d570821f259294ac434bb03de82609f43bebfbf06ed01e600ac85cf7926ae5",
+    "USW00014753-original.dly": "f895ff3da35b7c3aa3dce70b0ae2b3e89dc92453bfa1099d34a268caf6489cd7"
+  }
+}

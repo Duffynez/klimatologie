@@ -111,7 +111,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Atmosféra"
           title="Srážky a přívalové srážky"
-          meta="27. října 2026"
+          meta="30. října 2026"
         >
           <p>
             Jak se měří celkové úhrny, nejvyšší denní a hodinové srážky, jak se z bodových měření vytvářejí mapy a co
@@ -282,7 +282,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Extrémy"
           title="Vlny veder"
-          meta="26. října 2026"
+          meta="30. října 2026"
         >
           <p>
             Jak se z denních maxim a minim určují vlny veder, proč různé definice dávají různá čísla a co ukazují

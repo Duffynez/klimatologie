@@ -1598,7 +1598,7 @@ test("gives every heat-wave source public access and preserves corrected measure
   assert.match(articleHtml, /WSDI tedy neudává počet událostí/);
   assert.match(articleHtml, /nemusely připadat na stejné datum/);
   assert.match(articleHtml, /neuvádí úplný seznam použitých stanic/);
-  assert.match(articleHtml, /<p class="page-lead__meta">26\. října 2026<\/p>/);
+  assert.match(articleHtml, /<p class="page-lead__meta">30\. října 2026<\/p>/);
   assert.doesNotMatch(articleHtml, /Sadegh et al\., 2018|133 homogenizovaných českých stanic|souvislá zasažená plocha/);
   assert.equal((articleHtml.match(/class="article-figure__scroll"/g) ?? []).length, 2);
 });
@@ -3663,4 +3663,109 @@ test("CRUTEM example preserves source bytes and uses spherical cell areas for al
   assert.ok(Math.abs(result.difference_c - 0.18731426219019132) < 1e-12);
   assert.equal(Number(rows.find(r => r[1] === "47.5" && r[2] === "7.5")[7]), 2.1769032258064516);
   assert.equal(Number(rows.find(r => r[1] === "62.5" && r[2] === "22.5")[7]), -1.705);
+});
+
+
+test("time changes and extremes publish the full method, reproducible example and reciprocal links", async () => {
+  const [html, source, catalogue, heat, rain] = await Promise.all([
+    readFile(new URL("dist/client/metody/analyza-casovych-zmen-a-extremu/index.html", root), "utf8"),
+    readFile(new URL("app/components/TimeExtremesArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/vlny-veder/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/srazky-a-privalove-srazky/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
+    "Jak rozpoznáváme změny v čase", "Nejistoty a ověření", "Příklad na denních teplotách z Blue Hill", "Shrnutí",
+  ]);
+  for (const page of [html, heat, rain]) assert.match(page, /<p class="page-lead__meta">30\. října 2026<\/p>/);
+  for (const observation of [heat, rain]) assert.match(observation, /href="\/metody\/analyza-casovych-zmen-a-extremu"/);
+  for (const slug of ["vlny-veder", "srazky-a-privalove-srazky"]) assert.ok(body.includes('href="/pozorovani/' + slug + '"'));
+  for (const text of ["23 376", "3.35-upd-2026102817", "15,8773", "84 dnů", "−0,09 až +0,25", "nejmenších čtverců", "oboustranný test", "není homogenizován"]) assert.ok(body.includes(text), text);
+  assert.doesNotMatch(body, /katex-error|Potřebné informace|citation--missing/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  const conclusion = body.match(/<div class="method-conclusion">([\s\S]*?)<\/div>/)?.[1];
+  assert.equal([...conclusion.matchAll(/<p>/g)].length, 2);
+  assert.match(conclusion, /1901–2018/);
+  assert.match(conclusion, /za 10 let/);
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  const ids = new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]));
+  assert.ok(ids.size >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
+    assert.ok(card, "Missing time-extremes source " + id);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const file = /\.[a-z0-9]+$/i.test(match[1]) ? match[1] : match[1].replace(/\/$/, "") + "/index.html";
+    await readFile(new URL("dist/client" + file, root));
+  }
+});
+
+test("Blue Hill example preserves NOAA bytes, complete daily inputs and independently checked trends", async () => {
+  const base = new URL("public/data/methods/time-extremes/", root);
+  const meta = JSON.parse(await readFile(new URL("provenance.json", base), "utf8"));
+  for (const [name, hash] of Object.entries(meta.sha256)) {
+    const bytes = await readFile(new URL(name, base));
+    assert.equal(createHash("sha256").update(bytes).digest("hex"), hash);
+    assert.deepEqual(await readFile(new URL("dist/client/data/methods/time-extremes/" + name, root)), bytes);
+  }
+  const readCsv = async name => {
+    const lines = (await readFile(new URL(name, base), "utf8")).trim().split(/\r?\n/);
+    const keys = lines.shift().split(",");
+    return lines.map(line => Object.fromEntries(line.split(",").map((v, i) => [keys[i], v])));
+  };
+  const daily = await readCsv("daily.csv"), annual = await readCsv("annual.csv"), monthly = await readCsv("monthly.csv");
+  assert.equal(daily.length, 23376);
+  assert.equal(annual.length, 64);
+  assert.equal(monthly.length, 768);
+  const original = new Map();
+  for (const line of (await readFile(new URL("USW00014753-original.dly", base), "utf8")).split(/\r?\n/).filter(Boolean)) {
+    assert.equal(line.length, 269);
+    if (line.slice(17, 21) === "TMAX") original.set(line.slice(11, 15) + "-" + line.slice(15, 17), line);
+  }
+  let date = Date.UTC(1961, 0, 1);
+  for (const row of daily) {
+    assert.equal(row.date, new Date(date).toISOString().slice(0, 10));
+    date += 86400000;
+    const line = original.get(row.date.slice(0, 7)), day = Number(row.date.slice(8));
+    const cell = line.slice(21 + (day - 1) * 8, 29 + (day - 1) * 8);
+    assert.notEqual(Number(cell.slice(0, 5)), -9999);
+    assert.equal(Number(row.tmax_c), Number(cell.slice(0, 5)) / 10);
+    assert.equal(row.qflag, "");
+    assert.deepEqual([row.mflag, row.qflag, row.sflag], [...cell.slice(5)].map(v => v.trim()));
+  }
+  assert.equal(new Date(date).toISOString().slice(0, 10), "2025-01-01");
+  const average = values => values.reduce((a, b) => a + b, 0) / values.length;
+  for (const row of annual) {
+    const days = daily.filter(d => d.date.startsWith(row.year)), values = days.map(d => Number(d.tmax_c));
+    assert.equal(Number(row.days), values.length);
+    assert.ok(Math.abs(Number(row.mean_tmax_c) - average(values)) < 1e-12);
+    assert.equal(Number(row.txx_c), Math.max(...values));
+    assert.equal(Number(row.su_days), values.filter(v => v > 25).length);
+    assert.equal(row.txx_dates, days.filter(d => Number(d.tmax_c) === Number(row.txx_c)).map(d => d.date).join("|"));
+  }
+  const last = annual.at(-1);
+  assert.equal(last.txx_dates, "2024-06-20|2024-08-02");
+  assert.equal(Number(last.su_days), 84);
+  assert.ok(Math.abs(Number(last.anomaly_c) - 1.823838485914614) < 1e-12);
+  const result = JSON.parse(await readFile(new URL("results.json", base), "utf8"));
+  // OLS normal equations: residuals are orthogonal to the intercept and centered time.
+  for (const [key, column, slope, se] of [["annual_mean_trend", "mean_tmax_c", 0.27748621215286945, 0.03465339477852557], ["txx_trend", "txx_c", 0.08095238095238124, 0.08495915921011295]]) {
+    const r = result[key], values = annual.map(a => Number(a[column]));
+    const residuals = annual.map((a, i) => values[i] - r.mean_c - r.slope_c_per_year * (Number(a.year) - r.center_year));
+    assert.ok(Math.abs(residuals.reduce((a, b) => a + b, 0)) < 1e-9);
+    assert.ok(Math.abs(residuals.reduce((sum, e, i) => sum + e * (Number(annual[i].year) - r.center_year), 0)) < 1e-9);
+    assert.ok(Math.abs(r.slope_c_per_decade - slope) < 1e-12);
+    assert.ok(Math.abs(r.standard_error_c_per_decade - se) < 1e-12);
+    assert.ok(Math.abs(r.mean_c - average(values)) < 1e-12);
+  }
+  for (const pair of Object.values(result.lag_sensitivity)) {
+    assert.ok(pair.mean.normal_95_interval_c_per_decade[0] > 0);
+    assert.ok(pair.txx.normal_95_interval_c_per_decade[0] < 0 && pair.txx.normal_95_interval_c_per_decade[1] > 0);
+  }
 });

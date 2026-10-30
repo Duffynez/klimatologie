@@ -186,6 +186,12 @@ export function PrecipitationArticle() {
           <SourceLink id="DOI_10_1038_s41597_023_02238_4">Pritchard et al., 2023</SourceLink>
         </p>
 
+        <p>
+          Jak se z denních hodnot sestavují roční ukazatele, jak se počítá jejich trend
+          a co znamená jeho statistická průkaznost, vysvětluje metoda{" "}
+          <Link href="/metody/analyza-casovych-zmen-a-extremu">analýza časových změn a extrémů</Link>.
+        </p>
+
         <h3>4. Stanice se převedou do mapy</h3>
         <p>
           Srážkoměr měří bod, zatímco mapa potřebuje hodnotu pro plochu. GPCC nejprve počítá odchylku stanice od jejího

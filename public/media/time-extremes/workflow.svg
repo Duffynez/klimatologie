@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="1160" viewBox="0 0 760 1160" role="img" aria-labelledby="title desc">
+<title id="title">Od denních měření k trendu a extrémům</title>
+<desc id="desc">Z úplných denních teplot připravíme buď roční průměry a anomálie, nebo roční nejvyšší hodnoty a počty dnů nad hranicí. Časový vývoj každého ukazatele hodnotíme samostatně.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#597577"/></marker></defs>
+<rect width="760" height="1160" fill="#f7f7f2"/>
+<g font-family="Arial, sans-serif" text-anchor="middle" fill="#183c40">
+<text x="380" y="54" font-size="34" font-weight="bold">Jeden vstup, různé otázky</text>
+<rect x="62" y="90" width="636" height="182" rx="12" fill="#fff" stroke="#bed0cd" stroke-width="2"/>
+<text x="380" y="137" font-size="32" font-weight="bold">Denní maximální teploty</text>
+<text x="380" y="184" font-size="29">Datum · místo · hodnota v °C</text>
+<text x="380" y="230" font-size="29">Stejné vymezení a úplný kalendář</text>
+<g fill="none" stroke="#597577" stroke-width="3" marker-end="url(#arrow)">
+<path d="M380 272 V310 H202 V349"/><path d="M380 310 H558 V349"/>
+</g>
+<rect x="32" y="360" width="336" height="300" rx="12" fill="#e8f0ed"/>
+<rect x="392" y="360" width="336" height="300" rx="12" fill="#f4e9df"/>
+<text x="200" y="408" font-size="31" font-weight="bold">Průměrná úroveň</text>
+<text x="200" y="462" font-size="29">Průměr denních</text><text x="200" y="500" font-size="29">maxim za celý rok</text>
+<text x="200" y="557" font-size="29">Po odečtení reference:</text><text x="200" y="595" font-size="29">roční anomálie v °C</text>
+<text x="560" y="408" font-size="31" font-weight="bold">Extrémy</text>
+<text x="560" y="462" font-size="29">TXx: nejvyšší denní</text><text x="560" y="500" font-size="29">maximum roku v °C</text>
+<text x="560" y="557" font-size="29">SU: počet dnů</text><text x="560" y="595" font-size="29">s maximem nad 25 °C</text>
+<g fill="none" stroke="#597577" stroke-width="3" marker-end="url(#arrow)"><path d="M200 660 V708 H380 V748"/><path d="M560 660 V708 H380" marker-end="none"/></g>
+<rect x="62" y="760" width="636" height="158" rx="12" fill="#fff" stroke="#bed0cd" stroke-width="2"/>
+<text x="380" y="808" font-size="32" font-weight="bold">Časový vývoj každého ukazatele</text>
+<text x="380" y="856" font-size="29">Vlastní trend z posloupnosti ročních hodnot</text>
+<text x="380" y="894" font-size="29">Například změna v °C za 10 let</text>
+<path d="M380 918 V968" fill="none" stroke="#597577" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="62" y="980" width="636" height="140" rx="12" fill="#183c40"/>
+<text x="380" y="1027" font-size="32" font-weight="bold" fill="#fff">Sklon a jeho statistický interval</text>
+<text x="380" y="1074" font-size="29" fill="#fff">Rychlost změny a přesnost jejího odhadu</text>
+</g></svg>

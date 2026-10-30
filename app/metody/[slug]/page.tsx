@@ -1,3 +1,4 @@
+import { TimeExtremesArticle } from "../../components/TimeExtremesArticle";
 import { SpatialAveragesArticle } from "../../components/SpatialAveragesArticle";
 import { QualityHomogenizationArticle } from "../../components/QualityHomogenizationArticle";
 import { BoreholeTemperatureArticle } from "../../components/BoreholeTemperatureArticle";
@@ -108,6 +109,19 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "analyza-casovych-zmen-a-extremu") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Zpracování dat a vyhodnocování výsledků" title="Analýza časových změn a extrémů" meta="30. října 2026">
+          <p>Jak odlišíme roční kolísání od dlouhodobého vývoje a jak ze stejných měření
+            vybereme extrémy. Výpočet trendu, jeho statistické průkaznosti a teplotních ukazatelů z veřejných denních dat.</p>
+        </PageLead>
+        <TimeExtremesArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "prostorove-zpracovani-a-plosne-prumery") {
