@@ -3584,3 +3584,83 @@ test("Ruzyně comparison preserves both NOAA versions, quality exclusions and si
   assert.equal(results.min_adjustment_degC, -0.34);
   assert.equal(results.max_adjustment_degC, 0.01);
 });
+
+
+test("spatial processing publishes a complete method with reciprocal GMST links and open sources", async () => {
+  const [html, source, catalogue, observation] = await Promise.all([
+    readFile(new URL("dist/client/metody/prostorove-zpracovani-a-plosne-prumery/index.html", root), "utf8"),
+    readFile(new URL("app/components/SpatialAveragesArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/gmst/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
+    "Jak z měření sestavíme mapu a průměr území", "Nejistoty a ověření výsledku", "Příklad na šestnácti buňkách nad Evropou", "Shrnutí",
+  ]);
+  assert.match(html, /<p class="page-lead__meta">30\. října 2026<\/p>/);
+  assert.match(body, /5\.2\.0\.0/);
+  assert.match(body, /1,35 °C/);
+  assert.match(body, /1,16 °C/);
+  assert.match(body, /opakujeme krok plošného/);
+  assert.match(body, /href="\/pozorovani\/gmst"/);
+  assert.match(observation, /href="\/metody\/prostorove-zpracovani-a-plosne-prumery"/);
+  assert.doesNotMatch(body, /katex-error|Potřebné informace|citation--missing/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  const conclusion = body.match(/<div class="method-conclusion">([\s\S]*?)<\/div>/)?.[1];
+  assert.equal([...conclusion.matchAll(/<p>/g)].length, 2);
+  assert.match(conclusion, /5° × 5°/);
+  assert.match(conclusion, /1850/);
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  const ids = new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]));
+  assert.ok(ids.size >= 5);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
+    assert.ok(card, "Missing spatial processing source " + id);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const file = /\.[a-z0-9]+$/i.test(match[1]) ? match[1] : match[1].replace(/\/$/, "") + "/index.html";
+    await readFile(new URL("dist/client" + file, root));
+  }
+});
+
+test("CRUTEM example preserves source bytes and uses spherical cell areas for all sixteen cells", async () => {
+  const base = new URL("public/data/methods/spatial-averages/", root);
+  const meta = JSON.parse(await readFile(new URL("provenance.json", base), "utf8"));
+  for (const [name, hash] of [[meta.saved_as, meta.source_sha256], ["cells.csv", meta.cells_sha256]]) {
+    const raw = await readFile(new URL(name, base));
+    assert.equal(createHash("sha256").update(raw).digest("hex"), hash);
+    assert.deepEqual(await readFile(new URL("dist/client/data/methods/spatial-averages/" + name, root)), raw);
+  }
+  assert.equal(meta.version, "CRUTEM.5.2.0.0");
+  assert.equal(meta.source_variable, "tas");
+  const rows = (await readFile(new URL("cells.csv", base), "utf8")).trim().split(/\r?\n/).slice(1).map(l => l.split(","));
+  assert.equal(rows.length, 16);
+  assert.deepEqual([...new Set(rows.map(r => Number(r[1])))], [47.5, 52.5, 57.5, 62.5]);
+  assert.deepEqual([...new Set(rows.map(r => Number(r[2])))], [7.5, 12.5, 17.5, 22.5]);
+  assert.equal(new Set(rows.map(r => r.slice(1, 3).join(","))).size, 16);
+  const rad = d => d * Math.PI / 180;
+  let area = 0, weighted = 0, sum = 0;
+  for (const row of rows) {
+    assert.equal(row[0], "2024-01");
+    const [lat, lon, south, north, west, east, anomaly] = row.slice(1).map(Number);
+    assert.ok(Number.isFinite(anomaly));
+    assert.deepEqual([south, north, west, east], [lat-2.5, lat+2.5, lon-2.5, lon+2.5]);
+    // Exact spherical cell area, with the common squared radius cancelled.
+    const a = rad(east-west) * (Math.sin(rad(north))-Math.sin(rad(south)));
+    area += a;
+    weighted += a * anomaly;
+    sum += anomaly;
+  }
+  const result = JSON.parse(await readFile(new URL("results.json", base), "utf8"));
+  assert.ok(Math.abs(weighted/area - result.area_mean_c) < 1e-12);
+  assert.ok(Math.abs(sum/16 - result.equal_cell_mean_c) < 1e-12);
+  assert.ok(Math.abs(result.area_mean_c - 1.3516312044766368) < 1e-12);
+  assert.ok(Math.abs(result.difference_c - 0.18731426219019132) < 1e-12);
+  assert.equal(Number(rows.find(r => r[1] === "47.5" && r[2] === "7.5")[7]), 2.1769032258064516);
+  assert.equal(Number(rows.find(r => r[1] === "62.5" && r[2] === "22.5")[7]), -1.705);
+});

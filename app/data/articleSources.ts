@@ -3,6 +3,10 @@ import type { Source } from "./sources";
 // Sources cited by published article components.
 // Stable IDs are referenced from SourceLink components; do not rename them after publication.
 const rawArticleSources: Source[] = [
+  { id: "DOI_10_1029_2019jd032352", title: "Land Surface Air Temperature Variations Across the Globe Updated to 2019: The CRUTEM5 Data Set", author: "T. J. Osborn, P. D. Jones, D. H. Lister, C. P. Morice, I. R. Simpson, J. P. Winn, E. Hogan a I. C. Harris", year: 2021, publication: "Journal of Geophysical Research: Atmospheres 126, e2019JD032352. Původní popis CRUTEM5, staničních anomálií, standardní a alternativní mřížky a plošných průměrů. Veřejný přijatý rukopis na serveru Met Office.", type: "Původní metodická a klimatologická studie", category: "science", externalUrl: "https://doi.org/10.1029/2019JD032352", topics: ["metody", "prostorové zpracování", "plošné průměry", "teplota"] },
+  { id: "WEB_NCAR_Area_Weighted_Average", title: "NCL: wgt_areaave", author: "NCAR / UCAR", year: 2026, publication: "Veřejná dokumentace výpočtu plošně vážených průměrů. Plochy buněk, kosinové váhy a zacházení s chybějícími hodnotami. Rok označuje přístup 30. října 2026, datum vydání dokumentace není uvedeno.", type: "Veřejná metodická dokumentace", category: "organization", externalUrl: "https://www.ncl.ucar.edu/Document/Functions/Built-in/wgt_areaave.shtml", topics: ["metody", "prostorové zpracování", "plošné průměry"] },
+  { id: "DATA_CRUTEM_5_2_0_0_Grids", title: "CRUTEM.5.2.0.0: gridded land air temperature anomalies", author: "Climatic Research Unit, University of East Anglia a Met Office Hadley Centre", year: 2026, publication: "Měsíční teplotní anomálie na síti 5° × 5°, reference 1961–1990. Soubor CRUTEM.5.2.0.0.anomalies.nc sestavený 22. října 2026, leden 1850 až září 2026. Přístup 30. října 2026. Příklad používá leden 2024, 45–65° s. š. a 5–25° v. d. Open Government Licence v3.0. DOI této konkrétní aktualizace není uveden.", type: "Datový soubor", category: "science", externalUrl: "https://www.metoffice.gov.uk/hadobs/crutem5/data/CRUTEM.5.2.0.0/download.html", topics: ["metody", "prostorové zpracování", "plošné průměry", "teplota"] },
+
   {id: "DOI_10_5194_cp_8_89_2012", title: "Benchmarking homogenization algorithms for monthly data", author: "Victor K. C. Venema a kol.", year: 2012, publication: "Climate of the Past 8, s. 89–115. Slepé porovnání 25 odevzdaných řešení a dalších 22 řešení po zveřejnění vložených změn. Teplota a srážky, známé referenční průběhy. CC BY 3.0.", type: "Původní ověřovací studie", category: "science", externalUrl: "https://doi.org/10.5194/cp-8-89-2012", topics: ["metody", "kontrola kvality a homogenizace", "zpracování dat"]},
   {id: "WEB_NOAA_GHCNMv4_ATBD_2018", title: "Global Historical Climatology Network-Monthly Mean Temperature, Version 4: Algorithm Theoretical Basis Document", author: "Jay Lawrimore / NOAA NCEI", year: 2018, publication: "NOAA Climate Data Record Program, CDRP-ATBD-0859, revize 1 ze dne 23. října 2018. Veřejná dokumentace kontrol kvality, párové homogenizace a provozního zpracování.", type: "Metodická dokumentace", category: "science", externalUrl: "https://www.ncei.noaa.gov/pub/data/ghcn/v4/documentation/CDRP-ATBD-0859%20Rev%201%20GHCN-M%20Mean%20Temperature-v4.pdf", topics: ["metody", "kontrola kvality a homogenizace", "zpracování dat"]},
   {id: "WEB_NOAA_GHCNMv4_Format", title: "GHCN-Monthly version 4: readme a popis datových příznaků", author: "NOAA NCEI", year: 2026, publication: "Formát měsíčních teplot, jednotky, chybějící hodnoty a význam verzí QCU a QCF. Přístup 30. října 2026.", type: "Datová dokumentace", category: "science", externalUrl: "https://www.ncei.noaa.gov/pub/data/ghcn/v4/readme.txt", topics: ["metody", "kontrola kvality a homogenizace", "zpracování dat"]},
@@ -810,6 +814,9 @@ const rawArticleSources: Source[] = [
 ];
 
 const articleOpenAccessSources: Record<string, true | string> = {
+  DOI_10_1029_2019jd032352: "https://www.metoffice.gov.uk/hadobs/crutem5/CRUTEM5_accepted.pdf",
+  WEB_NCAR_Area_Weighted_Average: true,
+  DATA_CRUTEM_5_2_0_0_Grids: "https://www.metoffice.gov.uk/hadobs/crutem5/data/CRUTEM.5.2.0.0/grids/CRUTEM.5.2.0.0.anomalies.nc",
   DOI_10_5194_cp_8_89_2012: "https://cp.copernicus.org/articles/8/89/2012/",
   WEB_NOAA_GHCNMv4_ATBD_2018: true,
   WEB_NOAA_GHCNMv4_Format: true,
@@ -1394,7 +1401,7 @@ const articleOpenAccessSources: Record<string, true | string> = {
   WEB_hahana_soest_hawaii_edu_HOT_the_Hawaii_Ocean_Time_series_d7da8037: true,
   WEB_nist_gov_How_Do_You_Measure_the_Acidity_pH_of_the_Ocean_N_3a09e72c: true,
   WEB_oceanco2_github_io_Ocean_CO2_Products_5426de62: true,
-  DOI_10_1029_2019jd032361: "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019JD032361",
+  DOI_10_1029_2019jd032361: "https://www.metoffice.gov.uk/hadobs/hadcrut5/HadCRUT5_accepted.pdf",
   DOI_10_1029_jd092id11p13345: "https://www.giss.nasa.gov/pubs/abs/ha00700d.html",
   DOI_10_1029_2005jd006548: "https://www.metoffice.gov.uk/hadobs/hadcrut3/HadCRUT3_accepted.pdf",
   DOI_10_1175_2008jcli2263_1: "https://www.ncei.noaa.gov/pub/data/ushcn/papers/menne-williams2009.pdf",

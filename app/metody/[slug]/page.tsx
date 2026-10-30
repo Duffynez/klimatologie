@@ -1,3 +1,4 @@
+import { SpatialAveragesArticle } from "../../components/SpatialAveragesArticle";
 import { QualityHomogenizationArticle } from "../../components/QualityHomogenizationArticle";
 import { BoreholeTemperatureArticle } from "../../components/BoreholeTemperatureArticle";
 import { RadiometricDatingArticle } from "../../components/RadiometricDatingArticle";
@@ -107,6 +108,19 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "prostorove-zpracovani-a-plosne-prumery") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Zpracování dat a vyhodnocování výsledků" title="Prostorové zpracování a plošné průměry" meta="30. října 2026">
+          <p>Jak z nerovnoměrně rozmístěných měření vzniká mapa a průměr území.
+            Teplotní odchylky, plošné váhy, odhadování mezer a výpočet ze skutečných dat CRUTEM5.</p>
+        </PageLead>
+        <SpatialAveragesArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "kontrola-kvality-a-homogenizace") {

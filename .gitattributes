@@ -63,3 +63,6 @@ public/data/methods/borehole-temperature/*-original.txt binary
 
 public/data/methods/homogenization/* text eol=lf
 public/data/methods/homogenization/*-original.* binary
+
+public/data/methods/spatial-averages/* text eol=lf
+public/data/methods/spatial-averages/*-original.nc binary

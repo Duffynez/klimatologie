@@ -1,0 +1,36 @@
+{
+  "month": "2024-01",
+  "baseline": "1961-1990",
+  "cells": 16,
+  "bands": [
+    {
+      "latitude_deg": 47.5,
+      "mean_anomaly_c": 2.823856109481916,
+      "weight": 0.6755902076156602,
+      "weighted_anomaly_c": 1.9077695352816384
+    },
+    {
+      "latitude_deg": 52.5,
+      "mean_anomaly_c": 2.1088789215686274,
+      "weight": 0.6087614290087207,
+      "weighted_anomaly_c": 1.2838041459004874
+    },
+    {
+      "latitude_deg": 57.5,
+      "mean_anomaly_c": 0.29036607142857146,
+      "weight": 0.5372996083468239,
+      "weighted_anomaly_c": 0.15601357645577735
+    },
+    {
+      "latitude_deg": 62.5,
+      "mean_anomaly_c": -0.5658333333333334,
+      "weight": 0.46174861323503386,
+      "weighted_anomaly_c": -0.26127275698882335
+    }
+  ],
+  "weight_sum": 2.2833998582062387,
+  "weighted_sum_c": 3.0863145006490798,
+  "area_mean_c": 1.3516312044766368,
+  "equal_cell_mean_c": 1.1643169422864454,
+  "difference_c": 0.18731426219019132
+}

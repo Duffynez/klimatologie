@@ -254,6 +254,8 @@ export function GmstArticle() {
           jejich skutečnou plochu. Některé postupy nejprve počítají šířkové pásy nebo polokoule, jiné pracují
           přímo s plošnými vahami jednotlivých buněk. Hustota stanic ovlivní, jak dobře je oblast popsána, ale
           konečný příspěvek oblasti určuje její plocha, nikoli počet teploměrů.
+          Výběr buněk, jejich váhy a výpočet ze skutečné mapy podrobně rozebírá metoda{" "}
+          <Link href="/metody/prostorove-zpracovani-a-plosne-prumery">prostorové zpracování a plošné průměry</Link>.
         </p>
 
         <h3>7. K výsledku se připojí nejistota</h3>

@@ -1,0 +1,24 @@
+{
+  "source_url": "https://www.metoffice.gov.uk/hadobs/crutem5/data/CRUTEM.5.2.0.0/grids/CRUTEM.5.2.0.0.anomalies.nc",
+  "source_filename": "CRUTEM.5.2.0.0.anomalies.nc",
+  "saved_as": "crutem5-anomalies-original.nc",
+  "download_date": "2026-10-30",
+  "version": "CRUTEM.5.2.0.0",
+  "source_history": "Data set built at: 2026-10-22T18:23:15+00:00",
+  "source_sha256": "2540836b4a22ba5d8dfecf7877173357ac37bce3cfddd8b37b6b5569d1e231da",
+  "cells_sha256": "c1f20748e2599a3b3c4f3b8a2c09126b8dbb1ded17e72b3c7a8b49f58aacc4c1",
+  "source_variable": "tas",
+  "source_units": "K (temperature anomaly, numerically equal to degrees Celsius)",
+  "time_index": 2088,
+  "selection": {
+    "month": "2024-01",
+    "south": 45,
+    "north": 65,
+    "west": 5,
+    "east": 25
+  },
+  "weighting": "Full spherical 5-degree cells. No land-fraction weighting. No interpolation. All 16 selected cells available.",
+  "license": "Open Government Licence v3.0",
+  "license_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+  "attribution": "Contains public sector information licensed under the Open Government Licence v3.0. CRUTEM5: Climatic Research Unit, University of East Anglia, and Met Office Hadley Centre."
+}

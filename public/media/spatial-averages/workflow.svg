@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="1160" viewBox="0 0 760 1160" role="img" aria-labelledby="title desc">
+<title id="title">Jak vzniká plošný průměr</title><desc id="desc">Měsíční teploty stanic převedeme na odchylky, zprůměrujeme je uvnitř buněk a buňky spojíme podle plochy.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#bf583f" stroke-width="2"/></marker></defs>
+<rect width="760" height="1160" fill="#f6f6f0"/>
+<g font-family="Arial, sans-serif" fill="#17383b">
+<rect x="22" y="30" width="716" height="240" rx="12" fill="#fff" stroke="#c9d8d3" stroke-width="2"/>
+<circle cx="65" cy="73" r="24" fill="#17383b"/>
+<text x="65" y="83" text-anchor="middle" fill="white" font-size="30">1</text>
+<text x="105" y="84" font-size="31" font-weight="bold">Měsíční teploty stanic</text>
+<text x="48" y="140" font-size="31">Každý údaj má své místo a měsíc.</text>
+<text x="48" y="182" font-size="31">Vstupem jsou průměry ze stanic.</text>
+<text x="48" y="240" font-size="30" fill="#a44832">Výstup: místní teploty</text>
+<path d="M380,277 L380,299" stroke="#bf583f" stroke-width="4" marker-end="url(#arrow)"/>
+<rect x="22" y="310" width="716" height="240" rx="12" fill="#fff" stroke="#c9d8d3" stroke-width="2"/>
+<circle cx="65" cy="353" r="24" fill="#17383b"/>
+<text x="65" y="363" text-anchor="middle" fill="white" font-size="30">2</text>
+<text x="105" y="364" font-size="31" font-weight="bold">Odchylky od místních průměrů</text>
+<text x="48" y="420" font-size="31">Odečteme průměr stejného měsíce</text>
+<text x="48" y="462" font-size="31">za referenční období 1961–1990.</text>
+<text x="48" y="520" font-size="30" fill="#a44832">Výstup: teplotní anomálie</text>
+<path d="M380,557 L380,579" stroke="#bf583f" stroke-width="4" marker-end="url(#arrow)"/>
+<rect x="22" y="590" width="716" height="240" rx="12" fill="#fff" stroke="#c9d8d3" stroke-width="2"/>
+<circle cx="65" cy="633" r="24" fill="#17383b"/>
+<text x="65" y="643" text-anchor="middle" fill="white" font-size="30">3</text>
+<text x="105" y="644" font-size="31" font-weight="bold">Jedna hodnota pro každou buňku</text>
+<text x="48" y="700" font-size="31">Spojíme anomálie stanic uvnitř</text>
+<text x="48" y="742" font-size="31">jednotlivých buněk mapy.</text>
+<text x="48" y="800" font-size="30" fill="#a44832">Výstup: mapa na síti 5° × 5°</text>
+<path d="M380,837 L380,859" stroke="#bf583f" stroke-width="4" marker-end="url(#arrow)"/>
+<rect x="22" y="870" width="716" height="240" rx="12" fill="#fff" stroke="#c9d8d3" stroke-width="2"/>
+<circle cx="65" cy="913" r="24" fill="#17383b"/>
+<text x="65" y="923" text-anchor="middle" fill="white" font-size="30">4</text>
+<text x="105" y="924" font-size="31" font-weight="bold">Průměr podle zastoupené plochy</text>
+<text x="48" y="980" font-size="31">Hodnoty buněk násobíme plochou.</text>
+<text x="48" y="1022" font-size="31">Součet vydělíme součtem ploch.</text>
+<text x="48" y="1080" font-size="30" fill="#a44832">Výstup: územní průměr v °C</text>
+</g></svg>
