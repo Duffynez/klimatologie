@@ -1,0 +1,36 @@
+{
+  "version": "v4.0.1.20261029",
+  "accessed": "2026-10-30",
+  "station_id": "EZM00011518",
+  "station_name": "RUZYNE",
+  "latitude": 50.101,
+  "longitude": 14.26,
+  "elevation_m": 380.1,
+  "period": [
+    "1961-01",
+    "2020-12"
+  ],
+  "scope": "Comparison of published NOAA QCU and QCF monthly temperatures and QC flags. The NOAA pairwise homogenization algorithm is not rerun.",
+  "selection": "Both values present, both quality flags blank. No gap filling. Temperatures are integer hundredths of a degree Celsius.",
+  "archives": [
+    {
+      "mode": "qcu",
+      "url": "https://www.ncei.noaa.gov/pub/data/ghcn/v4/ghcnm.tavg.latest.qcu.tar.gz",
+      "sha256": "5f69df7ce99d5266fa074554c574cca8eb803f7a70fa831599396a08ff9093dc",
+      "member": "./ghcnm.v4.0.1.20261029/ghcnm.tavg.v4.0.1.20261029.qcu.dat",
+      "extraction": "All lines whose first 11 bytes equal EZM00011518, unchanged and in original order."
+    },
+    {
+      "mode": "qcf",
+      "url": "https://www.ncei.noaa.gov/pub/data/ghcn/v4/ghcnm.tavg.latest.qcf.tar.gz",
+      "sha256": "a889d970dc7678bacb52d660e7f9ee82c087cffad4229f6a852b46659a3349fa",
+      "member": "./ghcnm.v4.0.1.20261029/ghcnm.tavg.v4.0.1.20261029.qcf.dat",
+      "extraction": "All lines whose first 11 bytes equal EZM00011518, unchanged and in original order."
+    }
+  ],
+  "sha256": {
+    "EZM00011518.qcu-original.dat": "789f6b708cbcc33ed1c7ea51a4142463dba44b94395282d32360bf6d29d6cab8",
+    "EZM00011518.qcf-original.dat": "67e6cf6ce00d14c8958a940de2daa7d120a4bc2708c9c1ec7cce617ceb721a53",
+    "station-original.inv": "884497a810e4a650876d88248b417ef55230ba23d9776283b2dd18393e0c72ab"
+  }
+}

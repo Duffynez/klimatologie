@@ -1,0 +1,48 @@
+{
+  "station": "EZM00011518",
+  "version": "v4.0.1.20261029",
+  "months": 720,
+  "paired_valid_months": 719,
+  "excluded_months": [
+    "2020-03"
+  ],
+  "min_adjustment_degC": -0.34,
+  "max_adjustment_degC": 0.01,
+  "selected_months": {
+    "1965-01": {
+      "qcu_degC": "0.30",
+      "qcf_degC": "-0.04",
+      "adjustment_degC": "-0.34",
+      "qcu_quality_flag": "",
+      "qcf_quality_flag": ""
+    },
+    "1990-01": {
+      "qcu_degC": "0.05",
+      "qcf_degC": "0.06",
+      "adjustment_degC": "0.01",
+      "qcu_quality_flag": "",
+      "qcf_quality_flag": ""
+    },
+    "2005-01": {
+      "qcu_degC": "1.17",
+      "qcf_degC": "0.86",
+      "adjustment_degC": "-0.31",
+      "qcu_quality_flag": "",
+      "qcf_quality_flag": ""
+    },
+    "2015-01": {
+      "qcu_degC": "1.75",
+      "qcf_degC": "1.75",
+      "adjustment_degC": "0.00",
+      "qcu_quality_flag": "",
+      "qcf_quality_flag": ""
+    },
+    "2020-03": {
+      "qcu_degC": "4.80",
+      "qcf_degC": "",
+      "adjustment_degC": "",
+      "qcu_quality_flag": "W",
+      "qcf_quality_flag": "Q"
+    }
+  }
+}

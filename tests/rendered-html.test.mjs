@@ -3489,3 +3489,98 @@ test("borehole example preserves original temperatures and subtracts the fitted 
   assert.ok(Math.abs(depthResidualSum) < 1e-8);
   assert.ok(Math.abs(rows.find(r => r[0] === 50)[3] - 1.251818181818) < 1e-11);
 });
+
+
+test("quality control and homogenization connects a complete method to global temperature observations", async () => {
+  const [html, source, catalogue, observation] = await Promise.all([
+    readFile(new URL("dist/client/metody/kontrola-kvality-a-homogenizace/index.html", root), "utf8"),
+    readFile(new URL("app/components/QualityHomogenizationArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/gmst/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
+    "Jak získáme srovnatelný klimatický záznam", "Nejistoty a ověření", "Příklad: kontrola a úpravy teplot v Ruzyni", "Shrnutí",
+  ]);
+  assert.match(html, /<p class="page-lead__meta">30\. října 2026<\/p>/);
+  assert.match(observation, /<p class="page-lead__meta">30\. října 2026<\/p>/);
+  assert.match(body, /EZM00011518/);
+  assert.match(body, /v4\.0\.1\.20261029/);
+  assert.match(body, /719/);
+  assert.match(body, /0,34 °C/);
+  assert.match(body, /1 hodina nebo 1 den/);
+  assert.match(body, /1 měsíc/);
+  assert.match(body, /původní\s+hledání zlomů v celé síti zde znovu neprovádí/);
+  assert.match(body, /href="\/pozorovani\/gmst"/);
+  assert.match(observation, /href="\/metody\/kontrola-kvality-a-homogenizace"/);
+  assert.doesNotMatch(body, /katex-error|Potřebné informace|citation--missing/);
+  assert.doesNotMatch(source, /T_\{mathrm/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  const conclusion = body.match(/<div class="method-conclusion">([\s\S]*?)<\/div>/)?.[1];
+  assert.equal([...conclusion.matchAll(/<p>/g)].length, 2);
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  for (const id of new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
+    assert.ok(card, "Missing homogenization source " + id);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const file = /\.[a-z0-9]+$/i.test(match[1]) ? match[1] : match[1].replace(/\/$/, "") + "/index.html";
+    await readFile(new URL("dist/client" + file, root));
+  }
+});
+
+test("Ruzyně comparison preserves both NOAA versions, quality exclusions and signed adjustments", async () => {
+  const base = new URL("public/data/methods/homogenization/", root);
+  const meta = JSON.parse(await readFile(new URL("provenance.json", base), "utf8"));
+  const data = {};
+  for (const [name, hash] of Object.entries(meta.sha256)) {
+    const raw = await readFile(new URL(name, base));
+    assert.equal(createHash("sha256").update(raw).digest("hex"), hash);
+    assert.deepEqual(await readFile(new URL("dist/client/data/methods/homogenization/" + name, root)), raw);
+    if (!name.endsWith(".dat")) continue;
+    const mode = name.includes(".qcu-") ? "qcu" : "qcf";
+    data[mode] = new Map();
+    const lines = raw.toString("ascii").split(/\r?\n/).filter(line => line.length > 0);
+    assert.equal(lines.length, 82);
+    for (const line of lines) {
+      assert.equal(line.length, 115);
+      assert.equal(line.slice(0, 11), "EZM00011518");
+      assert.equal(line.slice(15, 19), "TAVG");
+      for (let m = 1; m <= 12; m++) {
+        const cell = line.slice(19 + (m - 1) * 8, 27 + (m - 1) * 8);
+        data[mode].set(`${line.slice(11, 15)}-${String(m).padStart(2, "0")}`, {value: Number(cell.slice(0, 5)), flags: cell.slice(5)});
+      }
+    }
+  }
+  const rows = (await readFile(new URL("comparison.csv", base), "utf8")).trimEnd().split(/\r?\n/).slice(1).map(l => l.split(","));
+  assert.equal(rows.length, 720);
+  assert.equal(rows[0][0], "1961-01");
+  assert.equal(rows.at(-1)[0], "2020-12");
+  assert.equal(new Set(rows.map(r => r[0])).size, 720);
+  const included = rows.filter(r => r[9] === "1");
+  assert.equal(included.length, 719);
+  for (const row of rows) {
+    const u = data.qcu.get(row[0]), h = data.qcf.get(row[0]);
+    assert.equal(row[1], u.value === -9999 ? "" : (u.value / 100).toFixed(2));
+    assert.equal(row[2], h.value === -9999 ? "" : (h.value / 100).toFixed(2));
+    assert.deepEqual(row.slice(3, 6), [...u.flags].map(x => x.trim()));
+    assert.deepEqual(row.slice(6, 9), [...h.flags].map(x => x.trim()));
+    const valid = u.value !== -9999 && h.value !== -9999 && u.flags[1] === " " && h.flags[1] === " ";
+    assert.equal(row[9], valid ? "1" : "0");
+    assert.equal(row[10], valid ? ((h.value-u.value)/100).toFixed(2) : "");
+  }
+  assert.deepEqual(rows.filter(r => r[9] === "0").map(r => r[0]), ["2020-03"]);
+  const rejected = rows.find(r => r[0] === "2020-03");
+  assert.deepEqual([rejected[1], rejected[2], rejected[4], rejected[7]], ["4.80", "", "W", "Q"]);
+  const known = new Map([["1965-01", "-0.34"], ["1990-01", "0.01"], ["2005-01", "-0.31"], ["2015-01", "0.00"]]);
+  for (const [month, correction] of known) assert.equal(rows.find(r => r[0] === month)[10], correction);
+  const results = JSON.parse(await readFile(new URL("results.json", base), "utf8"));
+  assert.equal(results.paired_valid_months, 719);
+  assert.equal(results.min_adjustment_degC, -0.34);
+  assert.equal(results.max_adjustment_degC, 0.01);
+});

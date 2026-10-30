@@ -60,3 +60,6 @@ public/data/methods/radiometric-dating/intcal20-original.14c binary
 
 public/data/methods/borehole-temperature/* text eol=lf
 public/data/methods/borehole-temperature/*-original.txt binary
+
+public/data/methods/homogenization/* text eol=lf
+public/data/methods/homogenization/*-original.* binary

@@ -202,7 +202,10 @@ export function GmstArticle() {
           pozemních dat NOAA.{" "}
           <SourceLink id="DOI_10_1175_2008jcli2263_1">
             Menne &amp; Williams, 2009
-          </SourceLink>
+          </SourceLink>{" "}
+          Porovnávání dvojic stanic, určení místního posunu a zachování původních údajů
+          podrobně vysvětluje metoda{" "}
+          <Link href="/metody/kontrola-kvality-a-homogenizace">kontrola kvality a homogenizace</Link>.
         </p>
 
         <p>

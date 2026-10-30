@@ -1,3 +1,4 @@
+import { QualityHomogenizationArticle } from "../../components/QualityHomogenizationArticle";
 import { BoreholeTemperatureArticle } from "../../components/BoreholeTemperatureArticle";
 import { RadiometricDatingArticle } from "../../components/RadiometricDatingArticle";
 import { ChemicalPaleothermometersArticle } from "../../components/ChemicalPaleothermometersArticle";
@@ -106,6 +107,19 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "kontrola-kvality-a-homogenizace") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Zpracování dat a vyhodnocování výsledků" title="Kontrola kvality a homogenizace" meta="30. října 2026">
+          <p>Jak se prověřují jednotlivé údaje a upravují dlouhodobé posuny po změně měření.
+            Porovnávání meteorologických stanic a opakovatelný příklad na teplotách z Ruzyně.</p>
+        </PageLead>
+        <QualityHomogenizationArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "rekonstrukce-teploty-z-vrtu") {
