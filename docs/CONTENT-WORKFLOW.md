@@ -93,6 +93,10 @@ Položka v `app/data/mechanisms.ts` dnes automaticky vytváří dlaždici a obec
 - stručné vymezení mechanismu.
 - rozlišující důkazy, které musí vysvětlení objasnit.
 
+Vymezení vážeme na konkrétní vlastnosti našich pozorování. Rozlišující důkazy mají ukázat, jak se ověří příčinné kroky a podíl jednotlivých procesů. Samotná shoda měřicích metod tuto úlohu nenahrazuje. Podrobný standard stanovuje [MECHANISMS.md](../MECHANISMS.md).
+
+Každou novou adresu přidáme do sitemap a ověříme ve statickém exportu. Při přejmenování zachováme slug. Při rozdělení tématu ponecháme původní adresu jako rozcestník na nástupnická témata. Samotná úprava katalogu nezakládá plné články.
+
 Plný mechanismový článek zatím nemá samostatný registr. Při jeho prvním zavedení je potřeba vytvořit článkovou komponentu a rozšířit `app/mechanismy/[slug]/page.tsx` obdobně jako u metod. Tento krok nesmí zrušit automatické adresy ostatních katalogových položek.
 
 ## 6. Historický milník

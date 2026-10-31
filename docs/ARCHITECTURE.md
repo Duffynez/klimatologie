@@ -88,7 +88,9 @@ Titrace a coulometrie mají samostatné položky `/metody/titrace/` a `/metody/c
 
 ### Mechanismy
 
-`app/data/mechanisms.ts` vytváří dlaždice i obecnou detailní stránku. Detail zatím ukazuje shrnutí a rozlišující důkazy z katalogu. Až vzniknou plné mechanismové články, bude potřeba zavést článek a jeho směrovací vazbu, podobně jako u metod.
+`app/data/mechanisms.ts` obsahuje 23 témat v pěti skupinách a vytváří dlaždice i obecné detailní stránky. Detail zatím ukazuje vymezení a rozlišující důkazy z katalogu. Nejde o plné mechanismové články. Při jejich vzniku bude potřeba zavést článkovou komponentu a její směrovací vazbu, podobně jako u metod.
+
+Sníh na souši a mořský led mají samostatná témata. Původní adresa `/mechanismy/energeticka-bilance-snehu-a-morskeho-ledu/` zůstává jako rozcestník na obě nástupnické stránky a do počtu 23 témat se nezapočítává. Zpětné vazby oblaků a odrazivosti sněhu a ledu mají vlastní položky. Rozsah ostatních témat a jejich rozlišujících důkazů určuje katalog. Přejmenované položky o vlhkosti, aerosolech z lidské činnosti a hustotě mořské vody si zachovávají původní slugs. Sitemap obsahuje všech 23 témat i zachovaný rozcestník.
 
 ### Projekce a důsledky
 

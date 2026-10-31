@@ -117,6 +117,6 @@ Ověření 31. října 2026: `pnpm lint`, `pnpm audit:sources` a všech 111 test
 
 ## Navazující práce
 
-Všechny tři části jsou dokončeny. Při přidávání dalších článků zachováme propojení v obou směrech a ověříme, že cílový oddíl skutečně vysvětluje použité provedení. Mechanismy budou potřebovat samostatné obsahové posouzení.
+Všechny tři části jsou dokončeny. Při přidávání dalších článků zachováme propojení v obou směrech a ověříme, že cílový oddíl skutečně vysvětluje použité provedení. Samostatné obsahové posouzení mechanismů proběhlo 31. října 2026 a jejich katalog má nyní 23 témat podle [ARCHITECTURE.md](ARCHITECTURE.md#mechanismy). Navazující práce spočívá v sepsání plných článků a jejich propojení s pozorováními.
 
 Paleoklimatické metody zatím nemají odpovídající samostatná pozorování minulého klimatu. Tato obsahová mezera se vyřeší plánem dalších pozorování, nikoli vytvářením zdánlivých vazeb na současné měření.

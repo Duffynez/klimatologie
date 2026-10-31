@@ -705,32 +705,37 @@ test("preserves the former titration and coulometry address as a two-method guid
   assert.match(sitemap, /https:\/\/klimatologie\.eu\/metody\/titrace-a-coulometrie\//);
 });
 
-test("publishes twenty mechanisms with evidence that distinguishes explanations", async () => {
-  const [page, detailPage, mechanisms, styles] = await Promise.all([
-    readFile(new URL("app/mechanismy/page.tsx", root), "utf8"),
-    readFile(new URL("app/mechanismy/[slug]/page.tsx", root), "utf8"),
+test("publishes 23 mechanism topics and preserves the split snow-and-sea-ice address", async () => {
+  const [catalogue, mechanisms, sitemap, legacy] = await Promise.all([
+    readFile(new URL("dist/client/mechanismy/index.html", root), "utf8"),
     readFile(new URL("app/data/mechanisms.ts", root), "utf8"),
-    readFile(new URL("app/globals.css", root), "utf8"),
+    readFile(new URL("dist/client/sitemap.xml", root), "utf8"),
+    readFile(new URL("dist/client/mechanismy/energeticka-bilance-snehu-a-morskeho-ledu/index.html", root), "utf8"),
   ]);
-
-  const mechanismRecords = [...mechanisms.matchAll(/slug: "([^"]+)"/g)];
-  const evidenceRecords = [...mechanisms.matchAll(/distinguishingEvidence: "([^"]+)"/g)];
-  assert.equal(mechanismRecords.length, 20);
-  assert.equal(evidenceRecords.length, 20);
-  assert.match(mechanisms, /title: "Energetická bilance Země"/);
-  assert.match(mechanisms, /title: "Původ růstu atmosférického CO₂"/);
-  assert.match(mechanisms, /title: "Vnitřní proměnlivost atmosféry a oceánu"/);
-  assert.match(mechanisms, /title: "Mechanismy vln veder"/);
-  assert.match(page, /Jak rozhodujeme mezi vysvětleními/);
-  assert.match(page, /Rozlišující důkazy:/);
-  assert.match(page, /className="mechanism-tile"/);
-  assert.match(page, /href=\{`\/mechanismy\/\$\{mechanism\.slug\}`\}/);
-  assert.match(detailPage, /generateStaticParams/);
-  assert.match(detailPage, /mechanismBySlug/);
-  assert.match(detailPage, /Co musí toto vysvětlení objasnit/);
-  assert.match(detailPage, /Zpět na všechny mechanismy/);
-  assert.match(styles, /\.mechanism-catalog__grid/);
-  assert.match(styles, /\.mechanism-tile:hover/);
+  const records = [...mechanisms.matchAll(/slug: "([^"]+)",\s+title: "([^"]+)"/g)];
+  assert.equal(records.length, 23);
+  assert.equal(new Set(records.map(([, slug]) => slug)).size, 23);
+  assert.equal((catalogue.match(/class="mechanism-tile"/g) ?? []).length, 23);
+  assert.match(catalogue, /Jak rozhodujeme mezi vysvětleními/);
+  for (const [, slug, title] of records) {
+    assert.ok(hasArticleLink(catalogue, `/mechanismy/${slug}`), "Missing catalogue link " + slug);
+    assert.ok(sitemap.includes(`<loc>https://klimatologie.eu/mechanismy/${slug}/</loc>`), "Missing sitemap route " + slug);
+    const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
+    assert.ok(html.includes(`<h1>${title}</h1>`), "Wrong detail title " + slug);
+    assert.match(html, /Co musí toto vysvětlení objasnit/);
+    assert.match(html, /<section class="mechanism-detail-evidence"[^>]*>[\s\S]*<p>[^<]+<\/p><\/section>/);
+    assert.ok(hasArticleLink(html, "/mechanismy"), "Missing catalogue return " + slug);
+  }
+  for (const slug of ["vznik-tani-a-pohyb-morskeho-ledu", "vznik-a-zanik-snehove-pokryvky-na-sousi"]) {
+    assert.ok(hasArticleLink(legacy, `/mechanismy/${slug}`), "Missing split destination " + slug);
+  }
+  assert.match(catalogue, /Oblaka a jejich klimatické zpětné vazby/);
+  assert.match(catalogue, /Odrazivost sněhu a ledu jako zpětná vazba/);
+  assert.match(catalogue, /Vlhkost atmosféry a vodní pára jako zpětná vazba/);
+  assert.match(catalogue, /Změny hustoty a objemu mořské vody/);
+  assert.match(catalogue, /Aerosoly z lidské činnosti a oblaka/);
+  assert.ok(!hasArticleLink(catalogue, "/mechanismy/energeticka-bilance-snehu-a-morskeho-ledu"));
+  assert.match(sitemap, /https:\/\/klimatologie\.eu\/mechanismy\/energeticka-bilance-snehu-a-morskeho-ledu\//);
 });
 
 test("adds projections and consequences as substantive top-level sections", async () => {
