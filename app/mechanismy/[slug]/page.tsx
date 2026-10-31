@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageLead } from "../../components/PageLead";
+import { EarthEnergyBalanceArticle } from "../../components/EarthEnergyBalanceArticle";
 import { climateMechanisms, mechanismBySlug } from "../../data/mechanisms";
 
 const combinedCryosphereSlug = "energeticka-bilance-snehu-a-morskeho-ledu";
@@ -64,6 +65,18 @@ export default async function MechanismDetail({ params }: { params: Promise<{ sl
 
   if (!mechanism) {
     notFound();
+  }
+
+  if (slug === "energeticka-bilance-zeme") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow={`Mechanismy / ${mechanism.category}`} title={mechanism.title} meta="31. října 2026">
+          <p>Jak rozdíl mezi přijatým a odevzdaným zářením mění zásobu energie Země, proč oteplení zvyšuje vyzařování a co z toho potvrzují družicová a oceánská měření.</p>
+        </PageLead>
+        <EarthEnergyBalanceArticle />
+        <Link className="text-link catalog-back-link" href="/mechanismy">&larr; Zpět na všechny mechanismy</Link>
+      </div>
+    );
   }
 
   return (

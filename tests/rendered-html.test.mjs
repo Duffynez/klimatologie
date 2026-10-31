@@ -722,8 +722,10 @@ test("publishes 23 mechanism topics and preserves the split snow-and-sea-ice add
     assert.ok(sitemap.includes(`<loc>https://klimatologie.eu/mechanismy/${slug}/</loc>`), "Missing sitemap route " + slug);
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     assert.ok(html.includes(`<h1>${title}</h1>`), "Wrong detail title " + slug);
-    assert.match(html, /Co musí toto vysvětlení objasnit/);
-    assert.match(html, /<section class="mechanism-detail-evidence"[^>]*>[\s\S]*<p>[^<]+<\/p><\/section>/);
+    if (slug !== "energeticka-bilance-zeme") {
+      assert.match(html, /Co musí toto vysvětlení objasnit/);
+      assert.match(html, /<section class="mechanism-detail-evidence"[^>]*>[\s\S]*<p>[^<]+<\/p><\/section>/);
+    }
     assert.ok(hasArticleLink(html, "/mechanismy"), "Missing catalogue return " + slug);
   }
   for (const slug of ["vznik-tani-a-pohyb-morskeho-ledu", "vznik-a-zanik-snehove-pokryvky-na-sousi"]) {
@@ -4015,4 +4017,57 @@ test("all observation-method links resolve to sections and explainable return pa
     }
   }
   assert.deepEqual(seenContext, contextOnly, "Keep the documented context exceptions current");
+});
+
+
+test("publishes the full energy-balance mechanism with evidence, sources and return links", async () => {
+  const html = await readFile(new URL("dist/client/mechanismy/energeticka-bilance-zeme/index.html", root), "utf8");
+  assert.match(html, /<article class="article-layout">/);
+  assert.doesNotMatch(html, /class="mechanism-detail-evidence"/);
+  for (const anchor of ["co-vysvetlujeme", "toky-energie", "nerovnovaha-a-teplota", "vypocet-bilance", "predpovedi", "historie", "porovnani", "priciny", "nejistoty", "shrnuti", "prameny"]) {
+    assert.ok(html.includes(`id="${anchor}"`), "Missing mechanism section " + anchor);
+  }
+  assert.match(html, /Stefanův–Boltzmannův zákon/);
+  assert.match(html, /Planckova/);
+  assert.match(html, /Shoda průměru tedy vzniká/);
+  assert.match(html, /Časové kolísání a trend/);
+  assert.match(html, /90% interval/);
+  assert.match(html, /<details class="method-details">/);
+  assert.match(html, /<div class="method-conclusion">/);
+  assert.doesNotMatch(html, /Potřebné informace/);
+  for (const path of ["/pozorovani/gmst/#pozorovani", "/pozorovani/tepelny-obsah-oceanu/#pozorovani", "/metody/mereni-radiacnich-toku/#druzicova-bilance"]) {
+    assert.ok(html.includes(`href="${path}"`), "Missing evidence or method connection " + path);
+  }
+  for (const path of ["pozorovani/gmst", "pozorovani/tepelny-obsah-oceanu", "metody/mereni-radiacnich-toku"]) {
+    const related = await readFile(new URL(`dist/client/${path}/index.html`, root), "utf8");
+    assert.match(related, /href="\/mechanismy\/energeticka-bilance-zeme\/#/);
+  }
+  const sourcePage = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
+  for (const id of ["1827_Fourier_Temperatures", "DOI_10_1086_140874", "1967_Manabe_Wetherald", "DOI_10_1175_2007JCLI2110_1", "DOI_10_1029_2021GL093047", "DOI_10_5194_essd_15_1675_2023", "DOI_10_1038_s41467_021_24544_4"]) {
+    assert.ok(html.includes(`href="/zdroje#${id}"`), "Missing source citation " + id);
+    const card = sourcePage.match(new RegExp(String.raw`<article[^>]+id="${id}"[\s\S]*?</article>`));
+    assert.ok(card, "Missing public source card " + id);
+    assert.doesNotMatch(card[0], /drive\.google\.com/);
+  }
+  for (const file of ["toky-energie.svg", "porovnani-trendu.svg", "porovnani-trendu.csv", "README.txt", "generate_figures.py"]) {
+    const asset = await readFile(new URL(`dist/client/media/energeticka-bilance-zeme/${file}`, root));
+    assert.ok(asset.length > 100, "Missing reproducibility asset " + file);
+  }
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)[1];
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)[1];
+  assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  for (const [, path, anchor] of body.matchAll(/href="(\/[^"#]*)(?:#([^"]*))?"/g)) {
+    if (/\.[a-z0-9]+$/i.test(path)) continue;
+    const target = await readFile(new URL("dist/client" + path.replace(/\/$/, "") + "/index.html", root), "utf8");
+    if (anchor) assert.ok(target.includes(`id="${anchor}"`), "Missing target anchor " + path + "#" + anchor);
+  }
+  const csv = await readFile(new URL("dist/client/media/energeticka-bilance-zeme/porovnani-trendu.csv", root), "utf8");
+  for (const row of csv.trim().split(/\r?\n/).slice(1)) {
+    const [, estimate, uncertainty, lower, upper, start, end] = row.split(",");
+    assert.ok(Math.abs(Number(estimate) - Number(uncertainty) - Number(lower)) < 1e-9);
+    assert.ok(Math.abs(Number(estimate) + Number(uncertainty) - Number(upper)) < 1e-9);
+    assert.equal(start, "mid-2005");
+    assert.equal(end, "mid-2019");
+  }
 });

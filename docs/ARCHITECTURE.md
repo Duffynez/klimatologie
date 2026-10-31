@@ -48,7 +48,7 @@ Hlavní navigace není odvozena automaticky ze složek. Je to ručně udržovan�
 | `/metody/` | `app/metody/page.tsx` | `app/data/methods.ts`. |
 | `/metody/[slug]/` | `app/metody/[slug]/page.tsx` | Katalog metod; hotové články se připojují ručně. |
 | `/mechanismy/` | `app/mechanismy/page.tsx` | `app/data/mechanisms.ts`. |
-| `/mechanismy/[slug]/` | `app/mechanismy/[slug]/page.tsx` | Obecná detailní stránka z dat katalogu. |
+| `/mechanismy/[slug]/` | `app/mechanismy/[slug]/page.tsx` | Plný článek energetické bilance Země a obecné detailní stránky ostatních témat. |
 | `/projekce/` | `app/projekce/page.tsx` | Lokální pole témat přímo v souboru stránky. |
 | `/dusledky/` | `app/dusledky/page.tsx` | Lokální pole témat přímo v souboru stránky. |
 | `/historie/` | `app/historie/page.tsx` | `app/data/history.ts` a zdroje podle ID. |
@@ -88,7 +88,7 @@ Titrace a coulometrie mají samostatné položky `/metody/titrace/` a `/metody/c
 
 ### Mechanismy
 
-`app/data/mechanisms.ts` obsahuje 23 témat v pěti skupinách a vytváří dlaždice i obecné detailní stránky. Detail zatím ukazuje vymezení a rozlišující důkazy z katalogu. Nejde o plné mechanismové články. Při jejich vzniku bude potřeba zavést článkovou komponentu a její směrovací vazbu, podobně jako u metod.
+`app/data/mechanisms.ts` obsahuje 23 témat v pěti skupinách. Plný článek má Energetická bilance Země: komponenta `EarthEnergyBalanceArticle.tsx` je připojená v `app/mechanismy/[slug]/page.tsx`. Ostatních 22 témat zatím ukazuje vymezení a rozlišující důkazy z katalogu. Další plné články vyžadují stejnou ruční vazbu komponenty a routy jako u metod. Energetická bilance je obousměrně propojená s pozorováním globální teploty, obsahu tepla v oceánu a metodou měření radiačních toků. Zpětné odkazy v pozorováních jsou oddělené jako navazující vysvětlení.
 
 Sníh na souši a mořský led mají samostatná témata. Původní adresa `/mechanismy/energeticka-bilance-snehu-a-morskeho-ledu/` zůstává jako rozcestník na obě nástupnické stránky a do počtu 23 témat se nezapočítává. Zpětné vazby oblaků a odrazivosti sněhu a ledu mají vlastní položky. Rozsah ostatních témat a jejich rozlišujících důkazů určuje katalog. Přejmenované položky o vlhkosti, aerosolech z lidské činnosti a hustotě mořské vody si zachovávají původní slugs. Sitemap obsahuje všech 23 témat i zachovaný rozcestník.
 

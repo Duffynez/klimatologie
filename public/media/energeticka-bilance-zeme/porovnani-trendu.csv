@@ -1,0 +1,3 @@
+method,estimate_w_m2_decade,uncertainty_90_w_m2_decade,lower_90,upper_90,period_start,period_end,reference
+Ocean_0_2000_m,0.43,0.40,0.03,0.83,mid-2005,mid-2019,doi:10.1029/2021GL093047_section_3.1
+CERES_EBAF_Ed4.1,0.50,0.47,0.03,0.97,mid-2005,mid-2019,doi:10.1029/2021GL093047_section_3.1

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="620" viewBox="0 0 760 620" role="img" aria-labelledby="title desc">
+<title id="title">Radiační bilance celé Země</title>
+<desc id="desc">Sluneční záření se zčásti odráží a zčásti pohltí. Země vysílá tepelné záření do vesmíru. Rozdíl pohlcené a vyzářené energie mění zásobu energie v systému.</desc>
+<defs><marker id="solar" markerWidth="28" markerHeight="28" refX="23" refY="14" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L26 14 L0 28 Z" fill="#aa7518"/></marker><marker id="heat" markerWidth="28" markerHeight="28" refX="23" refY="14" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L26 14 L0 28 Z" fill="#b44930"/></marker></defs>
+<rect width="760" height="620" rx="4" fill="#f7f7f2"/>
+<g font-family="Arial, sans-serif" fill="#17363a" text-anchor="middle">
+<text x="380" y="48" font-size="28" font-weight="bold">Výměna energie s vesmírem</text>
+<text x="137" y="108" font-size="26">Sluneční</text><text x="137" y="139" font-size="26">záření</text>
+<text x="365" y="108" font-size="26">Odražené</text><text x="365" y="139" font-size="26">sluneční záření</text>
+<text x="617" y="108" font-size="26">Tepelné</text><text x="617" y="139" font-size="26">záření Země</text>
+<rect x="42" y="285" width="676" height="284" rx="12" fill="#e6eff0" stroke="#17677a" stroke-width="2"/>
+<path d="M137 160 V357" fill="none" stroke="#aa7518" stroke-width="8" marker-end="url(#solar)"/>
+<path d="M140 300 C240 300 365 300 365 170" fill="none" stroke="#aa7518" stroke-width="6" marker-end="url(#solar)"/>
+<path d="M617 357 V170" fill="none" stroke="#b44930" stroke-width="8" marker-end="url(#heat)"/>
+<text x="380" y="329" font-size="27" font-weight="bold">Země včetně atmosféry</text>
+<text x="146" y="402" font-size="25">Pohlcení</text><text x="611" y="402" font-size="25">Vyzařování</text>
+<line x1="86" y1="435" x2="674" y2="435" stroke="#b6c8cb"/>
+<text x="380" y="481" font-size="27">Přebytek energie zůstává</text>
+<text x="380" y="518" font-size="26">v oceánu, pevnině, vzduchu a ledu.</text>
+<text x="380" y="600" font-size="22" fill="#546769">Schéma směrů přenosu, bez měřítka velikosti toků</text>
+</g></svg>

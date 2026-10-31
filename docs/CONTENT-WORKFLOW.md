@@ -97,7 +97,7 @@ Vymezení vážeme na konkrétní vlastnosti našich pozorování. Rozlišujíc�
 
 Každou novou adresu přidáme do sitemap a ověříme ve statickém exportu. Při přejmenování zachováme slug. Při rozdělení tématu ponecháme původní adresu jako rozcestník na nástupnická témata. Samotná úprava katalogu nezakládá plné články.
 
-Plný mechanismový článek zatím nemá samostatný registr. Při jeho prvním zavedení je potřeba vytvořit článkovou komponentu a rozšířit `app/mechanismy/[slug]/page.tsx` obdobně jako u metod. Tento krok nesmí zrušit automatické adresy ostatních katalogových položek.
+Plný mechanismový článek tvoří samostatná komponenta připojená větví podle slugu v `app/mechanismy/[slug]/page.tsx`. Prvním článkem je `EarthEnergyBalanceArticle.tsx`. Při přidání dalšího článku založte zdroje, ověřte média, připojte komponentu, nastavte datum v `PageLead` a doplňte test plného obsahu. Zachovejte automatické adresy ostatních katalogových položek. Článek propojte s konkrétními pozorováními a metodami. Zpětný odkaz v pozorovacím článku ponechte oddělený od popisu měřených výsledků, například jako navazující vysvětlení po shrnutí. Nevkládejte do samotného pozorování kauzální argument.
 
 ## 6. Historický milník
 

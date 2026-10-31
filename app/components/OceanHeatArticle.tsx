@@ -488,6 +488,11 @@ export function OceanHeatArticle() {
           </p>
         </div>
 
+        <aside className="article-related-mechanism" aria-label="Navazující vysvětlení">
+          <p className="eyebrow">Navazující vysvětlení</p>
+          <p>Jak přibývání tepla v oceánu souvisí s rozdílem mezi přijatým a odevzdaným zářením Země, vysvětluje <Link href="/mechanismy/energeticka-bilance-zeme/#porovnani">energetická bilance Země a její ověření měřením</Link>.</p>
+        </aside>
+
         <h2>Prameny, data a licence</h2>
         <p>
           Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez

@@ -476,6 +476,8 @@ export function RadiativeFluxArticle() {
           </p>
         </details>
 
+        <p>Souvislost měřených toků s ohříváním planety a s rostoucím výdejem tepelného záření rozvíjí <Link href="/mechanismy/energeticka-bilance-zeme/#toky-energie">energetická bilance Země</Link>.</p>
+
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>
