@@ -1,0 +1,35 @@
+{
+  "dataset": "20CRv3si",
+  "members": 80,
+  "latitude_north": 41,
+  "longitude_east": -74,
+  "count": 48,
+  "start_utc": "1888-03-10T00:00:00Z",
+  "end_utc": "1888-03-15T21:00:00Z",
+  "step_hours": 3,
+  "march_13_mean_hpa": 1003.0873625,
+  "march_13_noon": {
+    "time_utc": "1888-03-13T12:00:00Z",
+    "mean_hpa": 1001.8442,
+    "ensemble_sd_hpa": 3.5707092
+  },
+  "minimum": {
+    "time_utc": "1888-03-13T21:00:00Z",
+    "mean_hpa": 999.5978,
+    "ensemble_sd_hpa": 1.8248232
+  },
+  "maximum": {
+    "time_utc": "1888-03-10T15:00:00Z",
+    "mean_hpa": 1034.7952,
+    "ensemble_sd_hpa": 1.4576843
+  },
+  "scope": "Derived from the published ensemble mean and spread. No station measurement, new assimilation, daily uncertainty interval or central storm minimum is computed.",
+  "illustrative_update": {
+    "background_hpa": 1000,
+    "observation_hpa": 1004,
+    "background_sd_hpa": 2,
+    "observation_sd_hpa": 1,
+    "gain": 0.8,
+    "analysis_hpa": 1003.2
+  }
+}

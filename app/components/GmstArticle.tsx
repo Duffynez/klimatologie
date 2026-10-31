@@ -410,7 +410,10 @@ export function GmstArticle() {
           Graf Copernicus převádí šest produktů na společný základ 1850–1900. Barevné sloupce zobrazují
           atmosférickou rekonstrukci ERA5 od roku 1940. Bílé body přidávají JRA-3Q, GISTEMP v4,
           NOAAGlobalTemp v6, Berkeley Earth a HadCRUT5 v letech, pro něž jsou dostupné. Graf tak odpovídá na
-          jedinou otázku: jak podobně vycházejí roční globální hodnoty po sjednocení referenčního období.
+          jedinou otázku: jak podobně vycházejí roční globální hodnoty po sjednocení referenčního období. Jak
+          měření a fyzikální model vytvářejí souvislou rekonstrukci atmosféry,
+          vysvětluje článek o{" "}
+          <Link href="/metody/asimilace-dat-a-reanalyzy">asimilaci dat a reanalýzách</Link>.
         </p>
 
         <figure className="article-figure article-figure--scroll-mobile article-figure--scroll-wide">

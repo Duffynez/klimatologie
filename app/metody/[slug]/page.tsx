@@ -1,3 +1,4 @@
+import { ReanalysisArticle } from "../../components/ReanalysisArticle";
 import { UncertaintyArticle } from "../../components/UncertaintyArticle";
 import { TimeExtremesArticle } from "../../components/TimeExtremesArticle";
 import { SpatialAveragesArticle } from "../../components/SpatialAveragesArticle";
@@ -110,6 +111,19 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
 
   if (!method) {
     notFound();
+  }
+
+  if (slug === "asimilace-dat-a-reanalyzy") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow="Metody / Zpracování dat a vyhodnocování výsledků" title="Asimilace dat a reanalýzy" meta="31. října 2026">
+          <p>Jak se měření propojují s fyzikálním modelem a vytvářejí souvislý obraz minulého počasí.
+            Souborový Kalmanův filtr, reanalýza 20CR a výpočet z veřejných údajů o tlaku.</p>
+        </PageLead>
+        <ReanalysisArticle />
+        <Link className="text-link" href="/metody">&larr; Zpět na všechny metody</Link>
+      </div>
+    );
   }
 
   if (slug === "vycisleni-a-prenos-nejistoty") {

@@ -3504,7 +3504,7 @@ test("quality control and homogenization connects a complete method to global te
     "Jak získáme srovnatelný klimatický záznam", "Nejistoty a ověření", "Příklad: kontrola a úpravy teplot v Ruzyni", "Shrnutí",
   ]);
   assert.match(html, /<p class="page-lead__meta">30\. října 2026<\/p>/);
-  assert.match(observation, /<p class="page-lead__meta">30\. října 2026<\/p>/);
+  assert.match(observation, /<p class="page-lead__meta">31\. října 2026<\/p>/);
   assert.match(body, /EZM00011518/);
   assert.match(body, /v4\.0\.1\.20261029/);
   assert.match(body, /719/);
@@ -3866,4 +3866,81 @@ test("HadCRUT uncertainty reproduces official values and preserves covariance be
   close(pair.independent_assumption_standard_uncertainty_c, Math.sqrt(variance(a) + variance(b)));
   assert.ok(pair.paired_difference_standard_uncertainty_c < pair.independent_assumption_standard_uncertainty_c);
   assert.match(pair.scope, /only the uncertainty represented by the ensemble/);
+});
+
+
+test("reanalysis explains assimilation and links nine open references and the temperature observation", async () => {
+  const [html, source, catalogue, observation] = await Promise.all([
+    readFile(new URL("dist/client/metody/asimilace-dat-a-reanalyzy/index.html", root), "utf8"),
+    readFile(new URL("app/components/ReanalysisArticle.tsx", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/pozorovani/gmst/index.html", root), "utf8"),
+  ]);
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
+    "Jak měření a model společně rekonstruují atmosféru", "Nejistoty a ověření reanalýzy", "Příklad tlaku u New Yorku v březnu 1888", "Shrnutí",
+  ]);
+  assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  for (const text of ["pozorovací operátor", "kovariance", "Kalman", "1 001,84 hPa", "999,60 hPa", "1 003,09 hPa", "80 realizací", "41° s. š., 74° z. d."]) assert.ok(body.includes(text), text);
+  assert.match(body, /href="\/pozorovani\/gmst"/);
+  assert.match(observation, /href="\/metody\/asimilace-dat-a-reanalyzy"/);
+  assert.doesNotMatch(body, /katex-error|Potřebné informace|citation--missing/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  const conclusion = body.match(/<div class="method-conclusion">([\s\S]*?)<\/div>/)?.[1];
+  assert.equal([...conclusion.matchAll(/<p>/g)].length, 2);
+  for (const text of ["1836–2015", "1806–1835", "1. ledna 1940", "0,25° × 0,25°", "půdní"]) assert.ok(conclusion.includes(text), text);
+  const limits = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(limits.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  const ids = new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]));
+  assert.equal(ids.size, 9);
+  for (const id of ids) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
+    assert.ok(card, "Missing reanalysis reference " + id);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+  }
+  for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
+    const file = /\.[a-z0-9]+$/i.test(match[1]) ? match[1] : match[1].replace(/\/$/, "") + "/index.html";
+    await readFile(new URL("dist/client" + file, root));
+  }
+});
+
+test("20CR example preserves the northern coordinate, units, time axis and published ensemble spread", async () => {
+  const base = new URL("public/data/methods/reanalysis/", root);
+  const meta = JSON.parse(await readFile(new URL("provenance.json", base), "utf8"));
+  const originals = {};
+  for (const [name, info] of Object.entries(meta.files)) {
+    const bytes = await readFile(new URL(name, base));
+    assert.equal(createHash("sha256").update(bytes).digest("hex"), info.sha256);
+    assert.deepEqual(await readFile(new URL("dist/client/data/methods/reanalysis/" + name, root)), bytes);
+    const text = bytes.toString("utf8");
+    assert.match(text, /prmsl.lat\[1\]\s+41\.0/);
+    assert.match(text, /prmsl.lon\[1\]\s+286\.0/);
+    originals[name] = [...text.matchAll(/^\[\d+\]\[0\], (.+)$/gm)].map(m => Number(m[1]));
+    assert.equal(originals[name].length, 48);
+    const hours = text.match(/prmsl.time\[48\]\s*([^\n]+)/)[1].split(",").map(Number);
+    assert.deepEqual(hours, Array.from({ length: 48 }, (_, i) => 773040 + 3 * i));
+  }
+  const lines = (await readFile(new URL("pressure.csv", base), "utf8")).trim().split(/\r?\n/);
+  const header = lines.shift().split(","), rows = lines.map(line => Object.fromEntries(line.split(",").map((v, i) => [header[i], v])));
+  assert.equal(rows.length, 48);
+  rows.forEach((row, i) => {
+    assert.equal(row.time_utc, new Date(Date.UTC(1888, 2, 10) + i * 3 * 3600000).toISOString().replace(".000Z", "Z"));
+    assert.equal(Number(row.mean_hpa), originals["mean-original.txt"][i] / 100);
+    // Spread is a member standard deviation, so it must not be divided by sqrt(80).
+    assert.equal(Number(row.ensemble_sd_hpa), originals["spread-original.txt"][i] / 100);
+  });
+  const r = JSON.parse(await readFile(new URL("results.json", base), "utf8"));
+  const mean = rows.slice(24, 32).reduce((sum, row) => sum + Number(row.mean_hpa), 0) / 8;
+  assert.ok(Math.abs(mean - 1003.0873625) < 1e-10);
+  assert.ok(Math.abs(r.march_13_mean_hpa - mean) < 1e-10);
+  assert.equal(r.march_13_noon.mean_hpa, 1001.8442);
+  assert.equal(r.march_13_noon.ensemble_sd_hpa, 3.5707092);
+  assert.equal(r.minimum.mean_hpa, Math.min(...rows.map(row => Number(row.mean_hpa))));
+  assert.equal(r.minimum.time_utc, "1888-03-13T21:00:00Z");
+  assert.equal(r.minimum.mean_hpa, 999.5978);
+  assert.equal(r.illustrative_update.analysis_hpa, 1003.2);
+  assert.match(r.scope, /No station measurement, new assimilation, daily uncertainty interval or central storm minimum/);
 });

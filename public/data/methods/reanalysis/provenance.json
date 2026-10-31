@@ -1,0 +1,41 @@
+{
+  "dataset": "NOAA-CIRES-DOE Twentieth Century Reanalysis version 3, subdaily instantaneous 20CRv3si",
+  "accessed": "2026-10-31",
+  "variable": "prmsl",
+  "units_original": "Pa",
+  "time_units": "hours since 1800-01-01 00:00:00",
+  "ensemble_members": 80,
+  "public_grid_degrees": 1,
+  "selection": {
+    "latitude": 41,
+    "longitude_0_360": 286,
+    "longitude_east": -74,
+    "time_indices_inclusive": [
+      552,
+      599
+    ],
+    "latitude_index": 131,
+    "longitude_index": 286
+  },
+  "processing": "Unchanged NOAA OPeNDAP ASCII subset responses. Divide pressure and ensemble standard deviation by 100 for hPa. Arithmetic mean of eight three-hourly values on 13 March 1888. No assimilation is rerun. No uncertainty of the daily mean is calculated.",
+  "metadata_urls": [
+    "https://psl.noaa.gov/thredds/dodsC/Datasets/20thC_ReanV3/miscSI/prmsl.1888.nc.html",
+    "https://psl.noaa.gov/thredds/dodsC/Datasets/20thC_ReanV3/spreads/miscSI/prmsl.1888.nc.html"
+  ],
+  "method_dois": [
+    "10.1002/qj.3598",
+    "10.1175/JCLI-D-20-0505.1"
+  ],
+  "rights": "NOAA PSL public-domain data, https://www.psl.noaa.gov/disclaimer/",
+  "attribution": "Data provided by the NOAA Physical Sciences Laboratory, Boulder, Colorado, USA, from their website at https://psl.noaa.gov/.",
+  "files": {
+    "mean-original.txt": {
+      "url": "https://psl.noaa.gov/thredds/dodsC/Datasets/20thC_ReanV3/miscSI/prmsl.1888.nc.ascii?prmsl[552:1:599][131:1:131][286:1:286]",
+      "sha256": "8349d029ea03e93d4e67268ea2d940de89511f4fd2072bee0fe76138181c81a7"
+    },
+    "spread-original.txt": {
+      "url": "https://psl.noaa.gov/thredds/dodsC/Datasets/20thC_ReanV3/spreads/miscSI/prmsl.1888.nc.ascii?prmsl[552:1:599][131:1:131][286:1:286]",
+      "sha256": "4c82920ddc1196acb23fbe383de1caf11b35ca9a2b5db455031c260d1c7c62a5"
+    }
+  }
+}
