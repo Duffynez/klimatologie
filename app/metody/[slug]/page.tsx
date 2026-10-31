@@ -181,7 +181,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "rekonstrukce-teploty-z-vrtu") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Přírodní archivy" title="Rekonstrukce teploty z vrtů" meta="30. října 2026">
+        <PageLead eyebrow="Metody / Přírodní archivy" title="Rekonstrukce teploty z vrtů" meta="31. října 2026">
           <p>Jak změny teploty povrchu zanechávají stopu v horninách a ledu.
             Měření ve vrtu, oddělení hlubinného tepla a rekonstrukce minulosti
             s výpočtem na skutečném českém teplotním profilu.</p>
@@ -195,7 +195,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "radiometricke-a-expozicni-datovani") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Přírodní archivy" title="Radiometrické a expoziční datování" meta="29. října 2026">
+        <PageLead eyebrow="Metody / Přírodní archivy" title="Radiometrické a expoziční datování" meta="31. října 2026">
           <p>Jak určujeme stáří dřeva a dobu odkrytí hornin. Radiouhlíkové měření,
             kalendářní kalibrace, datování ledovcových morén a výpočet na skutečném vzorku ze švýcarských Alp.</p>
         </PageLead>
@@ -255,7 +255,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "krapniky-a-jeskynni-sedimenty") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Přírodní archivy" title="Krápníky a jeskynní sedimenty" meta="28. října 2026">
+        <PageLead eyebrow="Metody / Přírodní archivy" title="Krápníky a jeskynní sedimenty" meta="31. října 2026">
           <p>Jak vznikají vrstvy krápníku, jak určujeme jejich stáří a co jejich složení vypovídá o minulém prostředí. Postup a ověřitelný výpočet se skutečnými daty z Bunkerhöhle.</p>
         </PageLead>
         <SpeleothemArticle />
@@ -267,7 +267,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "koralova-sclerochronologie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Přírodní archivy" title="Korálová sclerochronologie" meta="28. října 2026">
+        <PageLead eyebrow="Metody / Přírodní archivy" title="Korálová sclerochronologie" meta="31. října 2026">
           <p>Jak růstové vrstvy a chemické složení korálové kostry uchovávají záznam teploty moře. Odběr, datování, laboratorní měření a výpočet se skutečnými daty z Fidži.</p>
         </PageLead>
         <CoralSclerochronologyArticle />
@@ -279,7 +279,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "dendrochronologie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Přírodní archivy" title="Dendrochronologie" meta="28. října 2026">
+        <PageLead eyebrow="Metody / Přírodní archivy" title="Dendrochronologie" meta="31. října 2026">
           <p>Jak přiřazujeme letokruhům konkrétní roky, měříme růst stromů a využíváme jej k poznání minulého klimatu.</p>
         </PageLead>
         <DendrochronologyArticle />
@@ -351,7 +351,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "radarova-interferometrie-a-sledovani-pohybu-povrchu") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Radarová interferometrie a sledování pohybu povrchu" meta="28. října 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Radarová interferometrie a sledování pohybu povrchu" meta="31. října 2026">
           <p>Jak se z opakovaných radarových snímků měří pohyb povrchu a jak mapy rychlosti ledu pomáhají určit odtok z ledových příkrovů.</p>
         </PageLead>
         <InterferometryArticle />
@@ -435,7 +435,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "fotogrammetrie-a-porovnavani-vyskovych-modelu") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Fotogrammetrie a porovnávání výškových modelů" meta="28. října 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Fotogrammetrie a porovnávání výškových modelů" meta="31. října 2026">
           <p>Jak různé pohledy na stejný povrch umožňují určit jeho výšku a jak porovnáním dvou výškových map zjistíme změnu objemu ledovce.</p>
         </PageLead>
         <PhotogrammetryArticle />
@@ -447,7 +447,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "opticke-a-multispektralni-snimkovani") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Optické a multispektrální snímkování" meta="28. října 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Optické a multispektrální snímkování" meta="31. října 2026">
           <p>Jak družice měří odražené světlo v několika pásmech a jak z těchto měření rozpoznáváme vegetaci, sníh a led.</p>
         </PageLead>
         <OpticalImagingArticle />
@@ -543,7 +543,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "standardizovane-fenologicke-pozorovani") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Přímá měření" title="Standardizované fenologické pozorování" meta="28. října 2026">
+        <PageLead eyebrow="Metody / Přímá měření" title="Standardizované fenologické pozorování" meta="31. října 2026">
           <p>Jak opakované návštěvy rostlin a společné definice vývojových fází vytvářejí záznam přírodního kalendáře.</p>
         </PageLead>
         <PhenologyMonitoringArticle />
@@ -558,7 +558,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Měření hloubky sezónního rozmrzání"
-          meta="28. října 2026"
+          meta="31. října 2026"
         >
           <p>
             Jak kovová sonda najde zmrzlou půdu a jak měření v síti ukáže tloušťku aktivní vrstvy.
@@ -577,7 +577,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Terénní měření bilance ledovců"
-          meta="28. října 2026"
+          meta="31. října 2026"
         >
           <p>
             Jak měřicí tyče a odběry sněhu zachycují přírůstky a ztráty na povrchu ledovce.
@@ -596,7 +596,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Měření výšky, hustoty a vodní hodnoty sněhu"
-          meta="28. října 2026"
+          meta="31. října 2026"
         >
           <p>
             Jak ze změřené výšky a zvážených vzorků určíme zásobu vody ve sněhu.

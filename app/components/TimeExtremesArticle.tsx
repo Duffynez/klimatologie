@@ -70,7 +70,7 @@ export function TimeExtremesArticle() {
           NOAA popisuje staniční záznam součtem pomalého vývoje a opakujících
           se ročních vln. Tak lze odhadnout sezónní složku a sledovat změnu
           po jejím odečtení.{" "}
-          <SourceLink id="WEB_NOAA_Global_Means_Method">(NOAA: proložení časové křivky)</SourceLink>
+          <SourceLink id="WEB_NOAA_Global_Means_Method">(NOAA: proložení časové křivky)</SourceLink>{" "}
           Sezónnost se promítá i do chemických záznamů oceánu. Její oddělení
           od dlouhodobé změny ukazuje pozorování
           <Link href="/pozorovani/acidifikace-oceanu/#casovy-zaznam"> acidifikace u Bermud</Link>.{" "}
@@ -109,6 +109,16 @@ export function TimeExtremesArticle() {
           <SourceLink id="BOOK_Hyndman_Athanasopoulos_2021">(výpočet a význam koeficientů)</SourceLink>
         </p>
 
+
+        <p>
+          U mořského ledu se stejným principem vyhodnocuje změna rozsahu.
+          Pokud vybíráme zářijové měsíční průměry, dostaneme jednu hodnotu
+          za rok a sklon přímky v km² za rok. Sea Ice Index vyjadřuje
+          tento sklon také v procentech referenčního průměru za desetiletí.
+          Rozdíl mezi měsíčním průměrem a denním minimem vysvětluje
+          pozorování <Link href="/pozorovani/ubytek-arktickeho-ledu/#rozsah-a-cas">arktického mořského ledu</Link>.{" "}
+          <SourceLink id="WEB_National_Snow_and_Ice_Data_C_uzivatelske_prirucce_Sea_Ice_Index_v4_48d7d043">(Sea Ice Index v4, měsíční trendy)</SourceLink>
+        </p>
 
         <h3>Jak posuzujeme statistickou průkaznost trendu</h3>
         <p>

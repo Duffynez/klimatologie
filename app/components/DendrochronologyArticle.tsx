@@ -239,7 +239,7 @@ export function DendrochronologyArticle() {
           rekonstruovat letní teploty Jamalu za více než dva tisíce let.
           Jde o regionální sezónní záznam. Navazuje na přístrojová měření,
           jejichž vznik a prostorové skládání vysvětluje článek o{" "}
-          <Link href="/pozorovani/gmst">globální teplotě u povrchu</Link>.
+          <Link href="/pozorovani/gmst/#mereni-vzduchu">globální teplotě u povrchu</Link>.
           Jiný přírodní archiv představují{" "}
           <Link href="/metody/sedimentarni-jadra-a-stratigrafie">sedimentární jádra</Link>,
           u nichž se časová osa obvykle sestavuje z datovacích opěrných bodů.

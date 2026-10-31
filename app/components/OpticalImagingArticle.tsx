@@ -183,7 +183,7 @@ export function OpticalImagingArticle() {
           <SourceLink id="2024_USGS_Landsat_C2_L2_Guide">(USGS, tab. 6-1)</SourceLink>
         </p>
 
-        <h3>Jak porovnání pásem ukáže vegetaci a sníh</h3>
+        <h3 id="spektralni-indexy">Jak porovnání pásem ukáže vegetaci a sníh</h3>
         <p>
           Nyní máme pro každý pixel několik odrazivostí. Rozdíl mezi blízkým
           infračerveným a červeným pásmem zvýrazní vlastnost zelených listů,
@@ -232,12 +232,33 @@ export function OpticalImagingArticle() {
           srovnáním.{" "}
           <SourceLink id="DOI_10_1016_0034_4257_95_00137_P">(Hall a kol., pravidla sněhové klasifikace)</SourceLink>
         </p>
-        <p>
+        <p id="ledovce">
           U mapování ledovců vybíráme snímky z konce období tání,
           kdy v okolí zbývá málo sezónního sněhu. Rozlišený sníh a čistý led
           se pak spojí s vymezením jednotlivých ledovců. Části pokryté sutí
           se doplňují podle podrobnějších snímků a znalosti terénu.{" "}
           <SourceLink id="DOI_10_5194_essd_12_1805_2020">(Paul a kol. 2020, oddíl 4)</SourceLink>
+        </p>
+
+        <h3 id="fenologie">Jak ze snímků určíme začátek zelenání</h3>
+        <p>
+          Pro určení začátku sezóny potřebujeme celou řadu snímků stejného místa.
+          Produkt MCD12Q2 z přístrojů MODIS používá dvoupásmový vylepšený
+          vegetační index, označovaný EVI2.
+          Ten stejně jako NDVI vychází z červeného a blízkého infračerveného
+          pásma, ale kombinuje jejich odrazivosti jiným vztahem.
+          Zpracování potlačí vliv nekvalitních měření a proloží časovou řadu
+          hladkou křivkou. Na ní vyhledá vzestupnou a sestupnou část sezónního cyklu.{" "}
+          <SourceLink id="WEB_U_S_Geological_Survey_Prirucka_MCD12Q2_v6_1_dbceb14f">(příručka MCD12Q2 v6.1, oddíl 2)</SourceLink>
+        </p>
+        <p>
+          Ve vzestupné části spočítá rozdíl mezi počátečním minimem a vrcholem.
+          Začátek zelenání stanoví na den, kdy index překročí 15 % tohoto
+          rozdílu nad minimem. Pro další fáze používá 50 a 90 %.
+          Procento tedy vyjadřuje polohu na křivce indexu. Takto získané datum
+          patří porostu v obrazové buňce. Jeho vztah k rašení jednotlivých
+          rostlin rozebírá pozorování <Link href="/pozorovani/fenologicke-posuny/#druzice">fenologických posunů</Link>.{" "}
+          <SourceLink id="WEB_U_S_Geological_Survey_Prirucka_MCD12Q2_v6_1_dbceb14f">(příručka MCD12Q2 v6.1, oddíl 2.3)</SourceLink>
         </p>
 
         <h3>Co z těchto měření získává klimatologie</h3>
@@ -248,8 +269,8 @@ export function OpticalImagingArticle() {
           definované výsledky. Mapy sněhu poskytují jeho rozsah v daných dnech.
           Průběh vegetačního indexu v čase pomáhá určit začátek a konec sezónní
           aktivity porostu. Navazující výsledky rozebírají články o{" "}
-          <Link href="/pozorovani/snehova-pokryvka-a-permafrost">sněhové pokrývce</Link>{" "}
-          a <Link href="/pozorovani/fenologicke-posuny">sezónních jevech v přírodě</Link>.{" "}
+          <Link href="/pozorovani/snehova-pokryvka-a-permafrost/#rozsah-snehu">sněhové pokrývce</Link>{" "}
+          a <Link href="/pozorovani/fenologicke-posuny/#druzice">sezónních jevech v přírodě</Link>.{" "}
           <SourceLink id="DOI_10_1016_0034_4257_95_00137_P">(Hall a kol. 1995)</SourceLink>{" "}
           <SourceLink id="1974_Rouse_ERTS_Vegetation">(Rouse a kol. 1974)</SourceLink>
         </p>
@@ -270,7 +291,7 @@ export function OpticalImagingArticle() {
           Umožňují určit rozlohu jednotlivých ledovců a srovnávat jejich hranice
           se staršími soupisy. Jak se plocha vztahuje k dalším sledovaným
           vlastnostem, vysvětluje pozorování{" "}
-          <Link href="/pozorovani/ustup-ledovcu">horských ledovců</Link>.
+          <Link href="/pozorovani/ustup-ledovcu/#plocha">horských ledovců</Link>.
           Změnu hmotnosti přímo na ledovci popisuje samostatná metoda{" "}
           <Link href="/metody/terenni-mereni-bilance-ledovcu">terénního měření bilance</Link>.
         </p>

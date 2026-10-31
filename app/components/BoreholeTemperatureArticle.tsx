@@ -154,7 +154,7 @@ export function BoreholeTemperatureArticle() {
           <SourceLink id="DOI_10_5194_cp_17_451_2021">(oddělení proměnlivé části profilu)</SourceLink>
         </p>
 
-        <h3>Jak z profilu hledáme průběh minulých teplot</h3>
+        <h3 id="rekonstrukce">Jak z profilu hledáme průběh minulých teplot</h3>
         <p>
           Pro časový výpočet potřebujeme hodnotu teplotní vodivosti horniny,
           která určuje rychlost šíření změn. Standardní postup ve studii
@@ -244,7 +244,7 @@ export function BoreholeTemperatureArticle() {
         <p>
           Opakovaným měřením stejného vrtu navíc sledujeme současné
           oteplování podzemí přímo. Takové záznamy jsou součástí
-          pozorování <Link href="/pozorovani/snehova-pokryvka-a-permafrost">sněhu a permafrostu</Link>.
+          pozorování <Link href="/pozorovani/snehova-pokryvka-a-permafrost/#rekonstrukce">sněhu a permafrostu</Link>.
           Rekonstrukce využívá prostorový tvar teplotního profilu,
           a může proto doplnit i historii před zahájením těchto pravidelných měření.{" "}
           <SourceLink id="DOI_10_5194_essd_6_201_2014">(Clow 2014, pozorovací síť a klimatické využití)</SourceLink>
@@ -279,7 +279,7 @@ export function BoreholeTemperatureArticle() {
           vrt rekonstruovat posledních 4 000 let povrchových teplot.
           Autoři porovnávali mnoho možných historií a sledovali, které
           dokážou vysvětlit měřený profil. Ve stejném vrtu lze získat
-          i <Link href="/metody/ledova-jadra-a-analyza-uzavreneho-vzduchu">ledové jádro</Link>
+          i <Link href="/metody/ledova-jadra-a-analyza-uzavreneho-vzduchu">ledové jádro</Link>{" "}
           s izotopovým záznamem. Teplota ve vrtu a složení odebraného ledu
           poskytují dva odlišné podklady k poznání minulého klimatu.{" "}
           <SourceLink id="DOI_10_3189_172756499781821102">(časový dosah a porovnání s izotopy)</SourceLink>

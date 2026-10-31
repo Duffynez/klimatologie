@@ -126,7 +126,7 @@ export function IceSheetsArticle() {
         </p>
 
         <h2>Jak vzniká zveřejněný záznam</h2>
-        <h3>Výška povrchu</h3>
+        <h3 id="vyska">Výška povrchu</h3>
         <p>
           Družicový výškoměr vysílá k povrchu radarový nebo laserový impuls a měří dobu jeho návratu. Z polohy družice
           a této doby se určí výška bodu na ledu. Opakované průlety ukážou, kde se povrch mezi dvěma daty zvýšil nebo
@@ -135,14 +135,18 @@ export function IceSheetsArticle() {
           vlastnosti odrazu i rozdíly mezi družicemi. <SourceLink id="DOI_10_1007_s10712_023_09795_8">Otosaka et al., 2023</SourceLink> a{" "}
           <SourceLink id="DOI_10_5194_essd_18_1729_2026">Nilsson a Gardner, 2026</SourceLink>{" "}
           Vznik jednotlivých výškových údajů podrobně rozebírá
-          <Link href="/metody/radarova-a-laserova-altimetrie"> radarová a laserová altimetrie</Link>.
+          <Link href="/metody/radarova-a-laserova-altimetrie/#pevninsky-led"> radarová a laserová altimetrie</Link>.
         </p>
 
         <p>
           Změna výšky se potom převádí na změnu hmotnosti. Nejprve se odečte pohyb skalního podloží a změna objemu
           firnu, která vznikla stlačením nebo rozpínáním vzduchových mezer. Zbývající objem ledu se násobí jeho
           hustotou. Právě model firnu rozhoduje, zda pozorované snížení povrchu znamená úbytek ledu, nebo zhutnění sněhu
-          bez stejného úbytku hmotnosti. Grónský soubor Nilssona a Gardnera používá dva různé modely firnu
+          bez stejného úbytku hmotnosti. Místní údaje o horních vrstvách poskytuje
+          <Link href="/metody/mereni-vysky-hustoty-a-vodni-hodnoty-snehu/#pouziti"> měření výšky a hustoty sněhu</Link>.
+          Model doplňuje vývoj hlubšího firnu v prostoru a čase.
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125"> (WMO, 2024, kapitoly 2 a 3)</SourceLink>{" "}
+          Grónský soubor Nilssona a Gardnera používá dva různé modely firnu
           a jejich rozdíl započítává do nejistoty. <SourceLink id="DOI_10_5194_essd_18_1729_2026">Nilsson a Gardner, 2026</SourceLink>
         </p>
 
@@ -153,12 +157,12 @@ export function IceSheetsArticle() {
           zvlášť. <SourceLink id="DOI_10_5194_essd_18_1729_2026">Nilsson a Gardner, 2026, oddíl 4 a obr. 3</SourceLink>
         </p>
 
-        <h3>Změna gravitačního pole</h3>
+        <h3 id="gravitace">Změna gravitačního pole</h3>
         <p>
           GRACE a GRACE-FO tvoří vždy dvě družice letící po téměř stejné dráze přibližně 220 kilometrů za sebou. Když
           první přeletí nad oblastí s větší hmotností, nepatrně zrychlí a vzdálenost mezi družicemi se změní. Přístroje
           opakovaně měří tuto vzdálenost s mikrometrovou přesností. Z měsíce přeletů pak vznikne globální mapa změny
-          gravitačního pole a z ní mapa přesunu hmoty. Podrobný postup od měření vzdálenosti k hmotnostní bilanci vysvětluje článek o <Link href="/metody/druzicova-gravimetrie/">družicové gravimetrii</Link>. <SourceLink id="WEB_NASA_How_GRACE_FO_Measures_Gravity_GRACE_FO_3fe022bf">NASA/JPL: jak GRACE-FO měří gravitaci</SourceLink>
+          gravitačního pole a z ní mapa přesunu hmoty. Podrobný postup od měření vzdálenosti k hmotnostní bilanci vysvětluje článek o <Link href="/metody/druzicova-gravimetrie/#mapa-hmotnosti">družicové gravimetrii</Link>. <SourceLink id="WEB_NASA_How_GRACE_FO_Measures_Gravity_GRACE_FO_3fe022bf">NASA/JPL: jak GRACE-FO měří gravitaci</SourceLink>
         </p>
 
         <figure className="article-figure">
@@ -196,12 +200,12 @@ export function IceSheetsArticle() {
           gravitačními řešeními vyhodnotili <SourceLink id="DOI_10_5194_essd_15_1597_2023">Otosaka et al., 2023</SourceLink>.
         </p>
 
-        <h3>Vstup a výstup ledu</h3>
+        <h3 id="tok-ledu">Vstup a výstup ledu</h3>
         <p>
           Třetí postup sestavuje účet přírůstků a úbytků. Množství ledu překračujícího linii ukotvení se vypočítá z
           jeho rychlosti a tloušťky na profilech napříč proudem. Rychlost poskytují opakované radarové a optické snímky. Její měření vysvětluje článek o{" "}
-          <Link href="/metody/radarova-interferometrie-a-sledovani-pohybu-povrchu">radarové interferometrii a sledování pohybu povrchu</Link>.
-          Tloušťku poskytuje radar z letadel. Kde měření chybí, používají se mapy podloží odvozené kombinací měření
+          <Link href="/metody/radarova-interferometrie-a-sledovani-pohybu-povrchu/#tok-ledu">radarové interferometrii a sledování pohybu povrchu</Link>.
+          Tloušťku poskytuje <Link href="/metody/aktivni-radarove-mereni/#tloustka-ledu">radar z letadel</Link>. Kde měření chybí, používají se mapy podloží odvozené kombinací měření
           a výpočtu toku ledu. Součet všech profilů udává výstup ledu z pevninské
           části. Základ metody popsali <SourceLink id="DOI_10_1126_science_1073888">Rignot a Thomas, 2002</SourceLink>.
           Novější antarktický výpočet zveřejnili <SourceLink id="DOI_10_1073_pnas_1812883116">Rignot et al., 2019</SourceLink>.
@@ -216,7 +220,17 @@ export function IceSheetsArticle() {
           rychlosti v celé tloušťce ledu. Měření toku není úplné všude. Pro část ledovců se musí doplnit odhad.
         </p>
 
-        <h3>Jak IMBIE spojuje výsledky</h3>
+        <p id="povrchova-bilance">
+          Místní přírůstky sněhu a úbytky ledu lze sledovat také přímo na příkrovu.
+          Odběr a vážení sněhu poskytne hmotnost nové vrstvy, změna odečtu
+          u tyče zachytí úbytek povrchu. Tento princip rozvádí
+          <Link href="/metody/terenni-mereni-bilance-ledovcu/#terenni-odecty"> terénní měření bilance ledovců</Link>.
+          Jde o údaje z jednotlivých míst. Celkový povrchový účet příkrovu
+          ve výše popsaném vstupně-výstupním postupu sestavuje regionální model.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, 2024, oddíl 1.4.6 a kapitola 3)</SourceLink>
+        </p>
+
+        <h3 id="spojeni-vysledku">Jak IMBIE spojuje výsledky</h3>
         <p>
           Vydání IMBIE 1992–2020 nejprve převede příspěvky na společně vymezené oblasti, měsíční časové body a jednotky.
           Z dodaných záznamů kumulované hmotnosti vypočítá rychlost změny v posuvných tříletých úsecích,
@@ -229,7 +243,8 @@ export function IceSheetsArticle() {
         </p>
 
         <p>
-          Nejistota spojeného výsledku se počítá z nejistot dodaných odhadů. U
+          Nejistota spojeného výsledku se počítá z nejistot dodaných odhadů.
+          Navazující kroky vysvětluje metoda <Link href="/metody/vycisleni-a-prenos-nejistoty/#prikrovy">přenosu nejistoty při spojování bilancí příkrovů</Link>. U
           výškoměrů do ní vstupuje zejména pokrytí, převod výšky na hmotnost a model firnu. U gravitační metody zahrnuje
           korekci pohybu zemského pláště a únik signálu přes hranice. U vstupně-výstupního postupu pochází z měření toku
           ledu a modelovaného povrchového účtu. Výsledný interval tedy nevyjadřuje přesnost jednoho čidla, ale celý

@@ -109,7 +109,7 @@ export function GravimetryArticle() {
           <SourceLink id="DOI_10_1007_s00190_005_0480_z">(Tapley a kol. 2005, oddíl 2)</SourceLink>
         </p>
 
-        <h3>Jak z pohybu vznikne mapa hmotnosti</h3>
+        <h3 id="mapa-hmotnosti">Jak z pohybu vznikne mapa hmotnosti</h3>
         <p>
           Výpočet vychází z fyzikálního modelu pohybu družic. Pro zadané rozložení
           hmoty lze spočítat, jaké gravitační působení vyvolá a jak se budou
@@ -229,7 +229,7 @@ export function GravimetryArticle() {
           spojili s výpočty sněžení a tání a s měřením odtoku ledu do moře.
           Tím mohli celkový úbytek vysvětlit příspěvky jednotlivých procesů.
           Širší porovnání metod a dlouhodobé výsledky rozebírá článek o{" "}
-          <Link href="/pozorovani/nestabilita-prikrovu/">ledových příkrovech</Link>.{" "}
+          <Link href="/pozorovani/nestabilita-prikrovu/#gravitace">ledových příkrovech</Link>.{" "}
           <SourceLink id="DOI_10_1038_s43247_020_0010_1">(Sasgen a kol. 2020)</SourceLink>
         </p>
         <p>
@@ -259,6 +259,18 @@ export function GravimetryArticle() {
           Sasgen a spoluautoři. Mascony naproti tomu vyjadřují výsledek rovnou
           pomocí oblastí. Obě varianty vycházejí ze stejného družicového měření.{" "}
           <SourceLink id="DOI_10_1038_s43247_020_0010_1">(Sasgen a kol. 2020, metodika)</SourceLink>
+        </p>
+
+        <h3 id="horske-ledovce">Hmotnost ledovců v celém pohoří</h3>
+        <p>
+          Stejné gravitační měření se používá i pro rozsáhlé ledovcové oblasti
+          mimo Grónský a Antarktický příkrov. V takové oblasti se současně mění
+          zásoba vody v půdě, sněhu a řekách. Její příspěvek se odhaduje
+          z dalších podkladů a odděluje od změny ledovců.
+          Výsledkem je regionální hmotnostní bilance, kterou lze porovnat
+          s výškovými a terénními měřeními. Toto porovnání zachycuje
+          pozorování <Link href="/pozorovani/ustup-ledovcu/#srovnani">horských ledovců</Link>.{" "}
+          <SourceLink id="DOI_10_1038_s41586_024_08545_z">(GlaMBIE Team 2025, oddíl Gravimetry)</SourceLink>
         </p>
 
         <h3 id="hmotnost-oceanu">Hmotnost oceánu jako příspěvek ke změně hladiny</h3>
@@ -293,7 +305,7 @@ export function GravimetryArticle() {
             úhlovým stupňům na rovníku. Jemnější půlstupňová mřížka
             zveřejněné mapy obsahuje hodnoty těchto větších prvků. Samostatné
             políčko proto nepředstavuje nezávislé měření malého ledovce.{" "}
-            <SourceLink id="DOI_10_1002_2014JB011547">(Watkins a kol. 2015)</SourceLink>
+            <SourceLink id="DOI_10_1002_2014JB011547">(Watkins a kol. 2015)</SourceLink>{" "}
             Část signálu může být připsána sousední oblasti. Wiese a kolegové
             testovali pobřežní filtr na syntetických datech z modelů vody, oceánu
             a ledu, u nichž znali vstupní hmotnost. Takto ověřili chování

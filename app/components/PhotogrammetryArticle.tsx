@@ -19,7 +19,7 @@ export function PhotogrammetryArticle() {
           <SourceLink id="DOI_10_3133_tm11C11">(USGS 2026, „Aerial Imagery and Photogrammetry Concepts“)</SourceLink>
         </p>
 
-        <h3>Proč potřebujeme různé pohledy</h3>
+        <h3 id="princip">Proč potřebujeme různé pohledy</h3>
         <p>
           Fotoaparát soustředí světlo objektivem na obrazový snímač. Jeho
           světlocitlivé prvky zaznamenají dopadající světlo a elektronika z jejich
@@ -252,7 +252,7 @@ export function PhotogrammetryArticle() {
           tedy snímkování stejného území z různých směrů, rozšířila tento
           postup na ledovce celého světa. Hugonnet a kolegové využili
           opakovaná družicová měření k výpočtu jejich změn v letech 2000–2019.
-          Návazné výsledky vysvětluje článek o <Link href="/pozorovani/ustup-ledovcu">ústupu ledovců</Link>.{" "}
+          Návazné výsledky vysvětluje článek o <Link href="/pozorovani/ustup-ledovcu/#vyskove-mapy">ústupu ledovců</Link>.{" "}
           <SourceLink id="DOI_10_1038_s41586_021_03436_z">(Hugonnet a kol. 2021)</SourceLink>
         </p>
 

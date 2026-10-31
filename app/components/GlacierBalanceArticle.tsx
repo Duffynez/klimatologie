@@ -28,7 +28,7 @@ export function GlacierBalanceArticle() {
           <SourceLink id="WEB_World_Glacier_Monitoring_Ser_glosar_UNESCO_a_WGMS_06fc9a79"> Cogley et al., 2011</SourceLink>
         </p>
 
-        <h3>Měřicí tyč zachytí úbytek ledu</h3>
+        <h3 id="terenni-odecty">Měřicí tyč zachytí úbytek ledu</h3>
         <p>
           Mechanickou nebo parní vrtačkou se do ledovce vyhloubí otvor a zasune se do něj měřicí tyč.
           Spodní část tyče drží v ledu, horní vyčnívá nad povrch. Když okolní led odtaje, odkrytá část
@@ -212,7 +212,7 @@ export function GlacierBalanceArticle() {
           </figcaption>
         </figure>
 
-        <h3>Co se z dlouhého záznamu dozvíme</h3>
+        <h3 id="pouziti">Co se z dlouhého záznamu dozvíme</h3>
         <p>
           Opakováním měření vzniká řada, která ukazuje, ve kterých letech ledovec získával nebo ztrácel
           hmotnost. Zimní a letní složka umožňují rozlišit, kdy tato změna vznikla. Huss a spoluautoři
@@ -231,9 +231,9 @@ export function GlacierBalanceArticle() {
           <SourceLink id="DOI_10_5194_tc_7_1227_2013"> Zemp et al., 2013</SourceLink>
         </p>
         <p>
-          Tyto záznamy jsou jedním z podkladů pozorování <Link href="/pozorovani/ustup-ledovcu">horských ledovců</Link>.
+          Tyto záznamy jsou jedním z podkladů pozorování <Link href="/pozorovani/ustup-ledovcu/#terenni-bilance">horských ledovců</Link>.
           Stejný princip terénních odečtů se uplatňuje také při sledování povrchu
-          <Link href="/pozorovani/nestabilita-prikrovu"> ledových příkrovů</Link>.{" "}
+          <Link href="/pozorovani/nestabilita-prikrovu/#povrchova-bilance"> ledových příkrovů</Link>.{" "}
           <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, kapitola 3)</SourceLink>
         </p>
 

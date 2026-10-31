@@ -29,7 +29,7 @@ export function SnowMeasurementArticle() {
           klasifikace sněhu Fierze a kolegů</SourceLink>.
         </p>
 
-        <h3>Proč potřebujeme výšku i hustotu</h3>
+        <h3 id="vyska-a-hustota">Proč potřebujeme výšku i hustotu</h3>
         <p>
           Sníh tvoří ledová zrna a póry, tedy mezery mezi nimi vyplněné vzduchem.
           Při tání se v něm nachází také kapalná voda. Hustota popisuje hmotnost
@@ -232,14 +232,14 @@ export function SnowMeasurementArticle() {
           <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíly 2.2 a 2.3)</SourceLink>
         </p>
 
-        <h3>Použití v klimatologii</h3>
+        <h3 id="pouziti">Použití v klimatologii</h3>
         <p>
           Společné záznamy výšky a vodní hodnoty ukazují, jak se mění sněhová
           zásoba a jak se pokrývka zhutňuje. Změna zásoby mezi návštěvami je
           výsledkem sněžení, tání a odtoku vody, výparu i přenosu sněhu větrem.
           Měření proto navazuje na <Link href="/metody/srazkomery-a-disdrometry">srážkoměry
           a disdrometry</Link>. Dlouhodobé výsledky shrnuje článek
-          o <Link href="/pozorovani/snehova-pokryvka-a-permafrost">sněhové pokrývce a permafrostu</Link>.{" "}
+          o <Link href="/pozorovani/snehova-pokryvka-a-permafrost/#vodni-hodnota">sněhové pokrývce a permafrostu</Link>.{" "}
           <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, kapitola 2)</SourceLink>
         </p>
         <p>
@@ -254,16 +254,16 @@ export function SnowMeasurementArticle() {
           mikrovlnná radiometrie</Link>.
         </p>
         <p>
-          Na <Link href="/pozorovani/ubytek-arktickeho-ledu">arktickém mořském ledu</Link>{" "}
+          Na <Link href="/pozorovani/ubytek-arktickeho-ledu/#tloustka">arktickém mořském ledu</Link>{" "}
           sněhový profil určuje, jaká hmotnost led zatěžuje. Tento údaj pomáhá
-          vykládat družicová měření jeho výšky. Na <Link href="/pozorovani/ustup-ledovcu">horských
+          vykládat družicová měření jeho výšky. Na <Link href="/pozorovani/ustup-ledovcu/#terenni-bilance">horských
           ledovcích</Link> se výška zimního sněhu pomocí hustoty převádí na
           přírůstek hmotnosti. Na něj navazuje <Link href="/metody/terenni-mereni-bilance-ledovcu">terénní
           měření bilance ledovců</Link>, které zahrnuje i úbytek sněhu a ledu během roku.{" "}
           <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, kapitoly 2 a 3)</SourceLink>
         </p>
         <p>
-          Na <Link href="/pozorovani/nestabilita-prikrovu">ledovcových příkrovech</Link>{" "}
+          Na <Link href="/pozorovani/nestabilita-prikrovu/#vyska">ledovcových příkrovech</Link>{" "}
           se sníh postupně zhutňuje do firnu. Firn je starší zrnitý materiál,
           mezistupeň mezi sněhem a kompaktním ledem. Převod změny výšky povrchu
           na změnu hmotnosti zde potřebuje také údaje o zhutňování této hlubší

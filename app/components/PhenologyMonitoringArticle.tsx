@@ -41,7 +41,7 @@ export function PhenologyMonitoringArticle() {
           Pozorování se ukládají do veřejné databáze, která přijímá i údaje spolupracujících výzkumných sítí.
         </p>
 
-        <h3>Jak vymezíme, co budeme pozorovat</h3>
+        <h3 id="definice-faze">Jak vymezíme, co budeme pozorovat</h3>
         <p>
           Nejprve vybereme místo a rostliny, ke kterým se budeme vracet. Určíme jejich druh
           a každému sledovanému jedinci přidělíme trvalé označení. Díky němu spojujeme jednotlivé
@@ -170,7 +170,7 @@ export function PhenologyMonitoringArticle() {
           U stejného druhu a stejné fáze porovnáváme, zda nástup přichází dříve, nebo později.
           Záznamy z více míst pak ukážou, jak se načasování liší mezi oblastmi. Pro srovnání
           spojíme údaje se stejným významem fáze a zachováme informaci o zastoupených rostlinách,
-          místech a letech. Právě tuto cestu sleduje článek o <Link href="/pozorovani/fenologicke-posuny">fenologických posunech</Link>.{" "}
+          místech a letech. Právě tuto cestu sleduje článek o <Link href="/pozorovani/fenologicke-posuny/#terenni-pozorovani">fenologických posunech</Link>.{" "}
           <SourceLink id="DOI_10_1111_gcb_15000">(Menzel a kol., metody)</SourceLink>
         </p>
         <p>

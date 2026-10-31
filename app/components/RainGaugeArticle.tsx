@@ -289,7 +289,7 @@ export function RainGaugeArticle() {
           <SourceLink id="2024_OTT_Parsivel2_Manual">(Parsivel², měření kapalných a pevných částic)</SourceLink>
         </p>
 
-        <h3>Využití měření v klimatologii</h3>
+        <h3 id="pouziti">Využití měření v klimatologii</h3>
         <p>
           Srážkoměr poskytuje místní úhrn a při častém odečítání i časový průběh deště.
           Disdrometr k němu přidává rozdělení velikostí a rychlostí částic.
@@ -325,7 +325,7 @@ export function RainGaugeArticle() {
         <p>
           Měření padajícího sněhu určuje, kolik vody do krajiny přibývá sněžením.
           Na zemi potom sníh taje, přesouvá se větrem a slehává.
-          Výsledná <Link href="/pozorovani/snehova-pokryvka-a-permafrost">sněhová
+          Výsledná <Link href="/pozorovani/snehova-pokryvka-a-permafrost/#vlastnosti-snehu">sněhová
           pokrývka</Link> proto vyžaduje další měření, která sledují její vývoj po dopadu.{" "}
           <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, kapitola 2)</SourceLink>
         </p>

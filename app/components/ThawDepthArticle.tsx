@@ -27,7 +27,7 @@ export function ThawDepthArticle() {
           <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">příručka Světové meteorologické organizace (WMO, 2024), kapitola 4</SourceLink>.
         </p>
 
-        <h3>Co sonda nahmatá a jak získáme hloubku</h3>
+        <h3 id="sonda">Co sonda nahmatá a jak získáme hloubku</h3>
         <p>
           Ve zmrzlé vlhké půdě spojuje led jednotlivá zrna a vytváří pevnou hmotu.
           Když led roztaje, lze půdou snáze protlačit kovovou tyč. Při zasouvání sondy proto
@@ -224,7 +224,7 @@ export function ThawDepthArticle() {
           jejich trendy a porovnali je s klimatickými podmínkami. Spolu s teplotou půdy
           a <Link href="/metody/mereni-vysky-hustoty-a-vodni-hodnoty-snehu">měřením sněhu</Link>{" "}
           pomáhají tyto údaje zkoumat příčiny změn. Výsledky a širší souvislosti shrnuje pozorování{" "}
-          <Link href="/pozorovani/snehova-pokryvka-a-permafrost">Sněhová pokrývka a permafrost</Link>.
+          <Link href="/pozorovani/snehova-pokryvka-a-permafrost/#aktivni-vrstva">Sněhová pokrývka a permafrost</Link>.
         </p>
 
         <h2>Co ovlivňuje přesnost měření</h2>

@@ -187,7 +187,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Kryosféra"
           title="Arktický mořský led"
-          meta="27. října 2026"
+          meta="31. října 2026"
         >
           <p>
             Co přesně znamenají rozsah, plocha, stáří, tloušťka a objem mořského ledu, jak vznikají družicová data a
@@ -206,7 +206,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Kryosféra"
           title="Horské ledovce"
-          meta="26. října 2026"
+          meta="31. října 2026"
         >
           <p>
             Jak se měří poloha čela, plocha, výška povrchu a změna hmotnosti ledovců, jak se spojují terénní a
@@ -225,7 +225,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Kryosféra"
           title="Změna hmotnosti ledových příkrovů"
-          meta="28. října 2026"
+          meta="31. října 2026"
         >
           <p>
             Jak se změna hmotnosti Grónska a Antarktidy odvozuje z výšky povrchu, gravitačního pole a toku ledu, jak
@@ -244,7 +244,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Kryosféra"
           title="Sněhová pokrývka a permafrost"
-          meta="30. října 2026"
+          meta="31. října 2026"
         >
           <p>
             Jak se měří plocha, trvání a vodní hodnota sněhu, jak se ve vrtech sleduje teplota permafrostu a hloubka
@@ -263,7 +263,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Živá příroda"
           title="Sezónní jevy v živé přírodě"
-          meta="26. října 2026"
+          meta="31. října 2026"
         >
           <p>
             Jak se sleduje rašení, kvetení, tah ptáků a sezóna vegetace v terénu, kamerami a z družic, jak se odlišují

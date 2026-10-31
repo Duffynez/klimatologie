@@ -241,6 +241,44 @@ export function SpatialAveragesArticle() {
           <SourceLink id="WEB_NOAA_Global_Means_Method">(NOAA: výpočet globálních průměrů)</SourceLink>
         </p>
 
+        <h3 id="rozsah-ledu">Rozsah a plocha mořského ledu</h3>
+        <p>
+          Plošné zpracování může místo průměru počítat součet.
+          U mořského ledu začínáme mapou koncentrace, tedy podílu ledu
+          v každé buňce. Sea Ice Index pro rozsah započítá celou plochu
+          buňky, pokud koncentrace dosahuje alespoň 15 %.
+          Při výpočtu plochy ledu násobí plochu takto vybrané buňky
+          ještě její koncentrací. Ta se do součinu zadává jako podíl od 0 do 1.
+          Stejná mapa tak poskytne dvě různé veličiny.
+          Zacházení s oblastí kolem pólu a časové průměrování vysvětluje
+          pozorování <Link href="/pozorovani/ubytek-arktickeho-ledu/#rozsah-a-cas">arktického mořského ledu</Link>.{" "}
+          <SourceLink id="WEB_National_Snow_and_Ice_Data_C_uzivatelske_prirucce_Sea_Ice_Index_v4_48d7d043">(Sea Ice Index v4, popis zpracování)</SourceLink>
+        </p>
+        <h3 id="hmotnost-ledovcu">Součet změn hmotnosti ledovců</h3>
+        <p>
+          U ledovců potřebujeme před součtem doplnit místa bez každoročních
+          měření. Dussaillant a kolegové odhadují roční kolísání podle okolních
+          měřených ledovců. Váhy odvozují ze vzdálenosti a z toho, jak spolu
+          změny na různě vzdálených ledovcích souvisejí. Takto vzniklý průběh
+          upraví podle dlouhodobé změny z výškových map.
+          Místní bilanci na jednotku plochy pak násobí plochou příslušného
+          ledovce. Součet dává změnu hmotnosti oblasti a následně celého světa.
+          Použití tohoto postupu sleduje pozorování
+          <Link href="/pozorovani/ustup-ledovcu/#globalni-soucet"> horských ledovců</Link>.{" "}
+          <SourceLink id="DOI_10_5194_essd_17_1977_2025">(Dussaillant a kol. 2025, oddíl 2.2)</SourceLink>
+        </p>
+        <h3 id="permafrost">Průměr změn teploty permafrostu</h3>
+        <p>
+          Vrty jsou rozmístěny nerovnoměrně, a proto samotný průměr všech
+          naměřených změn dává velkou váhu hustě sledovaným místům.
+          Biskaborn a kolegové nejprve omezili tento vliv seskupením blízkých
+          vrtů. Při sestavení společného výsledku pak regionálním průměrům
+          přidělili váhy podle plochy permafrostu v příslušných oblastech.
+          Postup měření i výběr hloubek popisuje
+          <Link href="/pozorovani/snehova-pokryvka-a-permafrost/#teplota-vrtu"> sledování teploty permafrostu</Link>.{" "}
+          <SourceLink id="DOI_10_1038_s41467_018_08240_4">(Biskaborn a kol. 2019, metody)</SourceLink>
+        </p>
+
         <h3>Vývoj globálních výpočtů</h3>
         <p>
           Hansen a Lebedeff v roce 1987 doložili podobnost změn teploty mezi

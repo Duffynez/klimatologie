@@ -8,7 +8,7 @@ Pracovní přehled k 31. říjnu 2026. Zachycuje rozdělení práce a hotové va
 | --- | --- | --- |
 | 1 | Globální povrchová teplota, stratosférické ochlazování, vlhkost atmosféry, srážky, vlny veder | Propojení a doplnění vysvětlení dokončeno. |
 | 2 | Obsah tepla v oceánu, hladina moře, acidifikace oceánů, koncentrace CO₂ | Propojení a doplnění vysvětlení dokončeno. |
-| 3 | Arktický mořský led, horské ledovce, ledové příkrovy, sníh a permafrost, fenologie | Čeká na samostatné zadání. Součástí bude závěrečná kontrola celého propojení. |
+| 3 | Arktický mořský led, horské ledovce, ledové příkrovy, sníh a permafrost, fenologie | Propojení, doplnění vysvětlení a závěrečná kontrola všech článků dokončeny. |
 
 Mechanismy ani vysvětlivky při najetí myší nejsou součástí těchto tří částí.
 
@@ -55,9 +55,47 @@ Doplněná vysvětlení:
 
 Odkaz ze sedimentárních jader na CO₂ zůstává doplňujícím srovnáním přírodních archivů. Nově míří přímo na vzduch uzavřený v ledu. Do 35 obousměrných dvojic se nezapočítává a nevytváří dojem, že se atmosférický CO₂ měří v sedimentu.
 
+## Dokončená třetí část
+
+Pět pozorování mělo původně 13 jedinečných vazeb na metody. Nyní jich má 33, tedy o 20 dvojic více. Všech 33 dvojic má odkazy oběma směry a cílové oddíly odpovídají konkrétnímu měření či zpracování.
+
+| Pozorování | Původně / nyní | Měření a pomocné vstupy | Zpracování a srovnání |
+| --- | --- | --- | --- |
+| [Arktický mořský led](https://klimatologie.eu/pozorovani/ubytek-arktickeho-ledu/) | 1 / 7 | Mikrovlnná radiometrie, altimetrie, výška a hustota sněhu | Rozsah a plocha ledu, měsíční trendy, přenos nejistoty, modelový objem PIOMAS |
+| [Horské ledovce](https://klimatologie.eu/pozorovani/ustup-ledovcu/) | 3 / 8 | Optické snímky, terénní bilance, fotogrammetrie, sněhové odběry, altimetrie, gravimetrie | Prostorové doplnění ročních změn a součet hmotnosti, přenos nejistoty |
+| [Ledové příkrovy](https://klimatologie.eu/pozorovani/nestabilita-prikrovu/) | 3 / 7 | Altimetrie, gravimetrie, radarová interferometrie, radarová tloušťka. Sněhové odběry a terénní bilance jako místní měření povrchových vrstev. | Přenos nejistoty při spojení výsledků IMBIE |
+| [Sníh a permafrost](https://klimatologie.eu/pozorovani/snehova-pokryvka-a-permafrost/) | 4 / 8 | Sněhové odběry, optické snímky, mikrovlnná radiometrie, termistory, hloubka rozmrzání. Srážkoměr jako doplňující měření sněžení. | Rekonstrukce teploty z vrtů, prostorové vážení změn teploty permafrostu |
+| [Fenologie](https://klimatologie.eu/pozorovani/fenologicke-posuny/) | 2 / 3 | Standardizované pozorování, optické snímky, meteorologický radar pro migraci | Definice fází, převod průběhu vegetačního indexu na datum a oddělení biologického radarového echa |
+
+Doplněná vysvětlení:
+
+- Altimetrie rozlišuje výšku ledu či sněhu nad vodou od celkové tloušťky plovoucí kry. Vysvětluje místní referenci hladiny, rozdílné odrazné plochy laseru a radaru a rovnováhu hmotnosti ledu, sněhu a vytlačené vody. Samostatný odstavec popisuje výškové profily horských ledovců.
+- Gravimetrie vysvětluje regionální použití v horských oblastech a oddělení ostatních změn vodních zásob. Odkaz vede k porovnání postupů GlaMBIE.
+- Radar má vysvětlení biologického echa a jeho oddělení od deště pomocí MistNet. U ledovců propojuje měření tloušťky s výpočtem odtoku ledu.
+- Optické snímkování popisuje konkrétní index EVI2 produktu MCD12Q2, průběh sezóny a práh pro určení data zelenání. Toto datum je přiřazeno porostu v obrazové buňce.
+- Prostorové zpracování odlišuje rozsah a plochu mořského ledu, doplnění ročních ledovcových bilancí a vážení oblastí permafrostu. Nejistota má odpovídající vysvětlení pro mořský led, ledovce a IMBIE.
+- PIOMAS je popsaný jako model oceánu a ledu s asimilací pozorování. V pozorování příkrovů je místní terénní bilance odlišena od regionálního výpočtu. U sněhu je doplněn rozdíl mezi srážkovým přísunem a zbývající zásobou na zemi.
+- Doplnění využívají primární studie a příručky již zařazené v katalogu. Citace jsou připojené přímo k novým vysvětlením, nové katalogové záznamy nebyly potřeba.
+
+## Výsledek kontroly celého propojení
+
+Celkem je propojeno všech **14 pozorování s 37 metodami prostřednictvím 105 jedinečných obousměrných dvojic**. Součet tří částí je 37 + 35 + 33 dvojic. Celkově přibylo 61 dvojic oproti stavu před první částí. Všechny odkazy z pozorování na metody vedou na existující oddíly a mají vysvětlenou cestu zpět.
+
+Pět dalších odkazů z metod má srovnávací význam. Nevstupují do počtu 105 dvojic a neznamenají, že přírodní archiv poskytuje měření pro příslušnou současnou řadu:
+
+| Metoda | Cíl odkazu | Význam |
+| --- | --- | --- |
+| Radiometrické a expoziční datování | Historie pozorování horských ledovců | Souvislost datování starších poloh s přímými historickými záznamy |
+| Krápníky a jeskynní sedimenty | Srážkoměry v pozorování srážek | Srovnání jeskynního archivu s přímým měřením |
+| Korálová sclerochronologie | Měření teploty oceánu v pozorování GMST | Srovnání korálového záznamu s přístrojovým měřením |
+| Dendrochronologie | Měření teploty vzduchu v pozorování GMST | Srovnání letokruhového záznamu s přístrojovým měřením |
+| Sedimentární jádra a stratigrafie | Vzduch v ledu v pozorování CO₂ | Srovnání různých přírodních archivů |
+
+Chemické a biologické paleoteploměry, izotopová paleotermometrie a pylová analýza zatím nemají odkaz na samostatné pozorování. Potřebují odpovídající články o minulém klimatu. Tyto mezery jsou redakčním podkladem pro další rozvoj webu.
+
 ## Význam jednotlivých vazeb
 
-Každý odkaz má čtenáři vysvětlit určitý krok. Při dalších částech zachováme následující rozlišení, ověřená při první úpravě:
+Každý odkaz má čtenáři vysvětlit určitý krok. Při dalších úpravách zachováme následující rozlišení:
 
 - Termometrie dodává teplotu. U vlhkosti slouží teplota také jako vstup do převodu mezi veličinami.
 - Kontrola denních či hodinových odečtů a homogenizace dlouhodobého záznamu jsou různé operace. Popis měsíčního párového algoritmu sám o sobě nedokládá jeho použití na všechna data.
@@ -71,14 +109,14 @@ Každý odkaz má čtenáři vysvětlit určitý krok. Při dalších částech 
 
 Odkazy v hlavním textu jsou podtržené, barevně rozlišené a mají viditelné zaměření při ovládání klávesnicí. Cílové oddíly mají odstup od pevné hlavičky.
 
-Test v `tests/rendered-html.test.mjs` kontroluje u první a druhé skupiny obousměrnost a existenci cílových oddílů. U všech publikovaných článků kontroluje také platnost odkazů s kotvou mezi pozorováními a metodami. Doplňuje jej věcná kontrola skutečného obsahu cílového oddílu a zkouška přechodů v prohlížeči.
+Test v `tests/rendered-html.test.mjs` kontroluje u všech 14 pozorování obousměrnost a existenci cílových oddílů. U všech publikovaných článků obou typů vyžaduje konkrétní cílový oddíl i zpětný odkaz. Výše uvedených pět srovnávacích vazeb má výslovnou výjimku, jejíž aktuálnost se také kontroluje. Doplňuje jej věcná kontrola skutečného obsahu cílového oddílu a zkouška přechodů v prohlížeči.
 
 Při redakční kontrole byly navigační věty umístěny k vysvětlovaným krokům. Výklad mikrovlnného měření odděluje fyzikální signál, převod na veličinu a vznik mapy. Původní výsledky pozorování a výpočetní příklady zůstávají zachované.
 
-Ověření 31. října 2026: `pnpm lint`, `pnpm audit:sources` a všech 111 testů v `pnpm test` prošly. U obou dokončených skupin proběhla také kontrola cílových oddílů, zpětných přechodů, zdrojových karet a zobrazení na počítači a v mobilní šířce 390 px. Ve druhé části byly při vizuální kontrole opraveny mezery na hranicích vložených odkazů. Odkaz na oceánskou reanalýzu je umístěn přímo u jejího použití, odkaz na sjednocování plaveb u porovnávání GLODAP.
+Ověření 31. října 2026: `pnpm lint`, `pnpm audit:sources` a všech 111 testů v `pnpm test` prošly. U všech tří skupin proběhla také kontrola cílových oddílů, zpětných přechodů, zdrojových karet a zobrazení na počítači a v mobilní šířce 390 px. Ve druhé a třetí části byly při vizuální kontrole opraveny mezery na hranicích vložených odkazů. Odkaz na oceánskou reanalýzu je umístěn přímo u jejího použití, odkaz na sjednocování plaveb u porovnávání GLODAP.
 
 ## Navazující práce
 
-Třetí část projde zbývajících pět pozorování stejným způsobem. Před přidáním zpětného odkazu bude nutné ověřit, zda cílová metoda skutečně vysvětluje použité provedení. Závěrečná kontrola má zachytit i jednostranné odkazy ze všech metod.
+Všechny tři části jsou dokončeny. Při přidávání dalších článků zachováme propojení v obou směrech a ověříme, že cílový oddíl skutečně vysvětluje použité provedení. Mechanismy budou potřebovat samostatné obsahové posouzení.
 
 Paleoklimatické metody zatím nemají odpovídající samostatná pozorování minulého klimatu. Tato obsahová mezera se vyřeší plánem dalších pozorování, nikoli vytvářením zdánlivých vazeb na současné měření.

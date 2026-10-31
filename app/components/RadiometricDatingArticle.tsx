@@ -413,7 +413,7 @@ export function RadiometricDatingArticle() {
           prostřednictvím svého stáří a místa původu.{" "}
           <SourceLink id="DOI_10_1191_0959683606hl964rp">(Joerin a kol. 2006, interpretace souboru)</SourceLink>{" "}
           Takto získaná historie doplňuje novodobá pozorování{" "}
-          <Link href="/pozorovani/ustup-ledovcu">ústupu horských ledovců</Link>.
+          <Link href="/pozorovani/ustup-ledovcu/#historie">ústupu horských ledovců</Link>.
         </p>
         <details className="article-details">
           <summary>Data a přesný postup pro zopakování</summary>

@@ -288,7 +288,28 @@ export function RadarArticle() {
           <SourceLink id="WEB_Ice_Radar_Solar_Calibration_2014">(Ice a kol. 2014, oddíly I a III)</SourceLink>
         </p>
 
-        <h3>Vrstvy uvnitř sněhu a ledovce</h3>
+        <h3 id="migrace-ptaku">Sledování migrace ptáků</h3>
+        <p>
+          Meteorologické radary zachycují také ptáky a další létající živočichy.
+          Jejich echo umožňuje sledovat pohyb i v noci. Pro toto použití
+          nejprve oddělíme biologický signál od deště. Postup MistNet rozpoznává
+          prostorové vzory v několika radarových veličinách. Naučil se je
+          z údajů radaru s dvojí polarizací, které pomáhají rozlišit typ objektů.
+          Autoři jeho výsledky ověřili také proti ručně označeným snímkům.{" "}
+          <SourceLink id="DOI_10_1111_2041_210x_13280">(Lin a kol. 2019, metody a ověření)</SourceLink>
+        </p>
+        <p>
+          Síla zbývajícího echa závisí na množství živočichů i na tom,
+          jak silně jejich těla vracejí záření. Dopplerovský údaj přidává
+          rychlost ve směru paprsku. Opakovaná měření během sezóny tak zachytí
+          průběh migrace. Výsledný ukazatel popisuje společný pohyb zachycených
+          živočichů, druhové složení doplňují terénní pozorování.
+          Jejich propojení vysvětluje článek o
+          <Link href="/pozorovani/fenologicke-posuny/#radarova-migrace"> fenologických posunech</Link>.{" "}
+          <SourceLink id="DOI_10_1111_2041_210x_13280">(Lin a kol. 2019)</SourceLink>
+        </p>
+
+        <h3 id="tloustka-ledu">Vrstvy uvnitř sněhu a ledovce</h3>
         <p>
           Radar může vysílat také do sněhu a ledu. Část vlny se odrazí
           na rozhraních, kde se mění elektrické vlastnosti prostředí.
@@ -299,7 +320,10 @@ export function RadarArticle() {
         </p>
         <p>
           Hloubka se opět počítá z doby letu tam a zpět. U leteckého měření nejprve odečteme čas potřebný k cestě vzduchem. Zbývající čas násobíme rychlostí vlny v ledu a dělíme dvěma. Tato rychlost je nižší než ve vzduchu. Stanovuje se z elektrických vlastností ledu a její vhodnost lze ověřovat porovnáním radarové tloušťky ledovce s hloubkou vrtu, který dosáhl podloží. Z jednotlivých ech vznikne svislý záznam a ze záznamů
-          podél letu řez ledovcem. Na něm lze sledovat, jak se vrstvy prohýbají
+          podél letu řez ledovcem. Odraz od skalního podloží umožní určit
+          celou tloušťku ledu. Ta spolu s rychlostí vstupuje do výpočtu
+          <Link href="/pozorovani/nestabilita-prikrovu/#tok-ledu"> množství ledu odtékajícího z příkrovu</Link>.
+          Na řezu lze také sledovat, jak se vrstvy prohýbají
           a jak pokračují mezi vzdálenými místy.{" "}
           <SourceLink id="DOI_10_1002_2014JF003215">(MacGregor a kol. 2015, oddíl 2)</SourceLink>
         </p>

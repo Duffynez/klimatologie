@@ -131,7 +131,7 @@ export function MicrowaveRadiometryArticle() {
           <SourceLink id="WEB_NOAA_RSS_Microwave_ATBD_2018">(RSS/NOAA 2018, oddíly 3.4 a 3.4.7)</SourceLink>
         </p>
 
-        <h3>Jak z několika jasových teplot získáme podíl ledu</h3>
+        <h3 id="koncentrace-ledu">Jak z několika jasových teplot získáme podíl ledu</h3>
         <p>
           Pro denní mapu se měření nejprve přiřadí do společné polární mřížky.
           Hodnoty z více přeletů, které připadnou na stejnou buňku, se zprůměrují.
@@ -247,7 +247,7 @@ export function MicrowaveRadiometryArticle() {
           Z denních map vypočítali rozsahy a porovnali jejich měsíční a sezónní
           průběhy. Ukázali tak celkový úbytek i rozdíly mezi oblastmi a ročními
           obdobími. Na současné soubory a jejich výsledky navazuje článek o{" "}
-          <Link href="/pozorovani/ubytek-arktickeho-ledu">arktickém mořském ledu</Link>.{" "}
+          <Link href="/pozorovani/ubytek-arktickeho-ledu/#koncentrace">arktickém mořském ledu</Link>.{" "}
           <SourceLink id="DOI_10_3189_172756402781817725">(Parkinson a Cavalieri 2002)</SourceLink>
         </p>
 
@@ -346,13 +346,14 @@ export function MicrowaveRadiometryArticle() {
           <SourceLink id="WEB_NASA_Algorithm_Theoretical_Basis_Document_79780237">(IMERG V07, oddíl 3.2)</SourceLink>
         </p>
 
-        <h3>Voda ve sněhu a v půdě</h3>
+        <h3 id="snih">Voda ve sněhu a v půdě</h3>
         <p>
           Nad souší lze mikrovlnami zkoumat také sníh. Suchý sníh rozptyluje
           záření kolem 37 GHz silněji než kolem 19 GHz. Rozdíl kanálů proto pomáhá
           odhadnout množství sněhu. Datový soubor GlobSnow tuto informaci spojuje
           s pozemními měřeními jeho výšky a modelem vyzařování. Výsledkem je odhad
-          množství vody obsažené ve sněhové pokrývce.{" "}
+          množství vody obsažené ve sněhové pokrývce. Vznik map a jejich ověření
+          popisuje pozorování <Link href="/pozorovani/snehova-pokryvka-a-permafrost/#vodni-hodnota">vodní hodnoty sněhu</Link>.{" "}
           <SourceLink id="DOI_10_1038_s41597_021_00939_2">(Luojus a kol. 2021: GlobSnow v3)</SourceLink>
         </p>
         <p>

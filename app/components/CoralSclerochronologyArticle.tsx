@@ -250,7 +250,7 @@ export function CoralSclerochronologyArticle() {
           <Link href="/metody/dendrochronologie">letokruhy stromů</Link>{" "}
           o záznam z tropického oceánu. Přístrojové sledování novějšího
           období popisuje článek o{" "}
-          <Link href="/pozorovani/gmst">globální povrchové teplotě</Link>.
+          <Link href="/pozorovani/gmst/#mereni-oceanu">globální povrchové teplotě</Link>.
           Korálová rekonstrukce přispívá především poznáním konkrétní mořské oblasti.{" "}
           <SourceLink id="DOI_10_1126_sciadv_ado5107">(D’Olivo a kol. 2024, regionální použití)</SourceLink>{" "}
           <SourceLink id="WEB_NCAR_Coral_Geochemistry_2023">(geografické doplnění přírodních archivů)</SourceLink>

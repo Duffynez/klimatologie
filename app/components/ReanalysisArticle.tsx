@@ -265,6 +265,26 @@ export function ReanalysisArticle() {
           <SourceLink id="DOI_10_3389_feart_2021_698876">(vstupy a vyhodnocení GLORYS12)</SourceLink>
         </p>
 
+        <h3 id="piomas">Modelový záznam objemu mořského ledu</h3>
+        <p>
+          Systém PIOMAS spojuje model oceánu s modelem mořského ledu.
+          Počítá růst, tání a pohyb ledu i změny rozdělení jeho tloušťky.
+          Působení počasí dodává atmosférická reanalýza, například prostřednictvím
+          větru, teploty vzduchu a záření. Družicová koncentrace ledu umožňuje
+          průběžně upravovat jeho modelované pokrytí. Varianta popsaná
+          Schweigerem a kolegy zapojuje také teplotu mořského povrchu.{" "}
+          <SourceLink id="DOI_10_1029_2011jc007084">(Schweiger a kol. 2011, oddíl 2.1)</SourceLink>
+        </p>
+        <p>
+          Objem vzniká součtem ledu v jednotlivých buňkách modelu.
+          Jeho tloušťka vychází z vypočteného vývoje, zatímco dostupná
+          pozorování omezují možné stavy systému. Vzniká tak souvislá řada
+          i pro období bez celoplošného měření tloušťky.
+          Porovnání s družicovými výškoměry a místními měřeními rozebírá
+          pozorování <Link href="/pozorovani/ubytek-arktickeho-ledu/#objem">objemu arktického mořského ledu</Link>.{" "}
+          <SourceLink id="DOI_10_1029_2011jc007084">(Schweiger a kol. 2011, vyhodnocení PIOMAS)</SourceLink>
+        </p>
+
         <h2>Nejistoty a ověření reanalýzy</h2>
         <p>
           Výsledek závisí na dostupnosti měření, jejich chybách i schopnosti

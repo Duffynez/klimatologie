@@ -253,7 +253,7 @@ export function SpeleothemArticle() {
           zimní podmínky, vyšší jako chladnější a sušší.
           Výsledkem je především rekonstrukce směru a načasování změn
           zimního klimatu. Takový záznam doplňuje přímá pozorování{" "}
-          <Link href="/pozorovani/srazky-a-privalove-srazky">srážek</Link>{" "}
+          <Link href="/pozorovani/srazky-a-privalove-srazky/#srazkomery">srážek</Link>{" "}
           o období před soustavným přístrojovým měřením.{" "}
           <SourceLink id="DOI_10_5194_cp_8_1751_2012">(Fohlmeister a kol. 2012, interpretace záznamu)</SourceLink>
         </p>

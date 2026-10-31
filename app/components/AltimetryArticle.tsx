@@ -177,7 +177,7 @@ export function AltimetryArticle() {
           <SourceLink id="DOI_10_5194_os_19_431_2023">(Guérou a kol. 2023, oddíl 2)</SourceLink>
         </p>
 
-        <h3>Jak laser určuje výšku ledového povrchu</h3>
+        <h3 id="pevninsky-led">Jak laser určuje výšku ledového povrchu</h3>
         <p>
           Na ledu potřebujeme rozlišit i menší prostorové útvary.
           Laserový výškoměr ATLAS na družici ICESat-2 vysílá úzké svazky
@@ -267,16 +267,41 @@ export function AltimetryArticle() {
           a 118 miliard tun ročně v Antarktidě. Jde o výsledek kombinace
           výškových měření a navazujícího výpočtu hmotnosti.
           Další metody a jejich porovnání rozebírá článek o{" "}
-          <Link href="/pozorovani/nestabilita-prikrovu">změně hmotnosti ledových příkrovů</Link>.{" "}
+          <Link href="/pozorovani/nestabilita-prikrovu/#vyska">změně hmotnosti ledových příkrovů</Link>.{" "}
           <SourceLink id="DOI_10_1126_science_aaz5845">(Smith a kol. 2020)</SourceLink>
         </p>
 
+        <h3 id="morsky-led">Tloušťka plovoucího mořského ledu</h3>
         <p>
-          Výšku lze měřit také nad jezery, řekami a mořským ledem. U plovoucího ledu
-          porovnáváme jeho povrch s hladinou v okolních trhlinách. Zjistíme tak, jak
-          vysoko led vystupuje nad vodu. Spolu s údaji o sněhu a hustotě to umožňuje
-          odhadnout celkovou tloušťku ledu.{" "}
-          <SourceLink id="DOI_10_1016_j_rse_2019_111325">(Neumann a kol., 2019)</SourceLink>
+          Nad mořským ledem nejprve rozlišíme návraty od ker a od vody
+          v mezerách mezi nimi. Hladina poskytne místní výškovou referenci.
+          Rozdíl mezi výškou kry a okolní hladinou se nazývá volný bok.
+          U laseru jde obvykle o výšku horního povrchu sněhu nad vodou.
+          Radar CryoSat-2 se v zimě vyhodnocuje s předpokladem odrazu
+          na rozhraní sněhu a ledu a s opravou zpomalení vlny ve sněhu.{" "}
+          <SourceLink id="DOI_10_1016_j_rse_2019_111325">(Neumann a kol. 2019)</SourceLink>{" "}
+          <SourceLink id="DOI_10_1002_grl_50193">(Laxon a kol. 2013, oddíl 2)</SourceLink>
+        </p>
+        <p>
+          Plovoucí kra vytlačuje vodu, jejíž hmotnost vyrovnává hmotnost ledu
+          i sněhu na něm. Z této rovnováhy vypočteme celkovou tloušťku ledu.
+          K naměřenému volnému boku proto přidáváme výšku a hustotu sněhu
+          a hustoty ledu a vody. Sníh totiž kru zatěžuje a zároveň zvyšuje
+          povrch, který zachytí laser. Jak se tento převod používá
+          a kontroluje, ukazuje pozorování
+          <Link href="/pozorovani/ubytek-arktickeho-ledu/#tloustka"> tloušťky arktického mořského ledu</Link>.{" "}
+          <SourceLink id="DOI_10_1002_grl_50193">(Laxon a kol. 2013)</SourceLink>
+        </p>
+
+        <h3 id="horske-ledovce">Výškové profily horských ledovců</h3>
+        <p>
+          Altimetrie zachycuje také výšku horských ledovců podél družicových drah.
+          Opakované průlety určí její změnu. Aby vznikl odhad pro celé pohoří,
+          doplní se změny mezi stopami podle polohy nebo nadmořské výšky.
+          Následuje součet objemu a převod hustotou na hmotnost.
+          Tyto výsledky patří mezi čtyři postupy, které porovnává projekt
+          GlaMBIE při vyhodnocení <Link href="/pozorovani/ustup-ledovcu/#srovnani">změn horských ledovců</Link>.{" "}
+          <SourceLink id="DOI_10_1038_s41586_024_08545_z">(GlaMBIE Team 2025, oddíl Altimetry)</SourceLink>
         </p>
 
         <h3>Jak se možnosti měření rozšiřovaly</h3>

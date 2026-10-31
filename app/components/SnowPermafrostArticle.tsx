@@ -29,7 +29,7 @@ export function SnowPermafrostArticle() {
           <SourceLink id="DOI_10_1080_1088937x_2021_1988001">Nelson, Shiklomanov a Nyland, 2021</SourceLink>
         </p>
 
-        <h3>Sníh: plocha, trvání a množství vody</h3>
+        <h3 id="vlastnosti-snehu">Sníh: plocha, trvání a množství vody</h3>
         <p>
           Rozsah sněhu udává, kolik území splnilo v daném dni, týdnu nebo měsíci podmínku „pokryto sněhem“. Družicová
           mapa je rozdělena na buňky a každá buňka dostane označení sníh, bez sněhu, případně podíl pokrytý sněhem.
@@ -68,8 +68,18 @@ export function SnowPermafrostArticle() {
 
         <p>
           Odběr vzorku, výpočet množství vody a kontrolu výsledku podrobně vysvětluje metoda
-          <Link href="/metody/mereni-vysky-hustoty-a-vodni-hodnoty-snehu"> měření výšky, hustoty a vodní hodnoty sněhu</Link>.
+          <Link href="/metody/mereni-vysky-hustoty-a-vodni-hodnoty-snehu/#vyska-a-hustota"> měření výšky, hustoty a vodní hodnoty sněhu</Link>.
           Obsahuje také výpočet ze čtyř skutečných odběrů v arktickém sněhovém profilu.
+        </p>
+
+        <p>
+          Padající sníh lze zachytit také do
+          <Link href="/metody/srazkomery-a-disdrometry/#pouziti"> srážkoměru</Link>.
+          Ten určí vodu přinesenou srážkami za daný interval.
+          Sněhová pokrývka naproti tomu představuje zásobu, která v krajině
+          zůstala po sněžení, tání, odtoku a přenosu větrem.
+          Oba údaje proto při sledování sněhu odpovídají na odlišné otázky.{" "}
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, 2024, kapitola 2)</SourceLink>
         </p>
 
         <h3>Permafrost: teplota a sezónní rozmrzání</h3>
@@ -153,11 +163,11 @@ export function SnowPermafrostArticle() {
         </p>
 
         <h2>Jak vzniká zveřejněný záznam</h2>
-        <h3>Mapa rozsahu sněhu</h3>
+        <h3 id="rozsah-snehu">Mapa rozsahu sněhu</h3>
         <p>
           Viditelné a blízké infračervené snímky rozeznávají sníh podle toho, jak odráží různé vlnové délky světla.
           Princip měření a porovnání pásem podrobněji vysvětluje metoda{" "}
-          <Link href="/metody/opticke-a-multispektralni-snimkovani">optického a multispektrálního snímkování</Link>.
+          <Link href="/metody/opticke-a-multispektralni-snimkovani/#spektralni-indexy">optického a multispektrálního snímkování</Link>.
           Novější systém IMS dává analytikovi vedle několika družic také mikrovlnná data, hlášení stanic a předchozí
           mapu. Analytik označí buňky se sněhem a ledem a výslednou mapu zkontroluje vůči sousedním dnům. Denní produkt
           je od roku 1997 dostupný v rozlišení přibližně 24 km, od roku 2004 také 4 km a od roku 2014 také 1 km.{" "}
@@ -182,9 +192,10 @@ export function SnowPermafrostArticle() {
           družicového pozorování. <SourceLink id="DOI_10_5194_essd_7_137_2015">Estilow et al., 2015, oddíl 3</SourceLink>
         </p>
 
-        <h3>Vodní hodnota a hmotnost sněhu</h3>
+        <h3 id="vodni-hodnota">Vodní hodnota a hmotnost sněhu</h3>
         <p>
-          Pasivní mikrovlnný radiometr měří přirozené záření povrchu na několika frekvencích. Sněhová zrna záření
+          <Link href="/metody/pasivni-mikrovlnna-radiometrie/#snih">Pasivní mikrovlnný radiometr</Link>{" "}
+          měří přirozené záření povrchu na několika frekvencích. Sněhová zrna záření
           rozptylují a rozdíl mezi kanály souvisí s množstvím sněhu. GlobSnow v3 kombinuje kanály kolem 19 a 37 GHz
           se staniční výškou sněhu. Gigahertz vyjadřuje miliardu kmitů za sekundu. Model nejprve přizpůsobí velikost
           zrn tak, aby co nejlépe vysvětlil záření a naměřenou výšku. Nejde o přímé měření jednotlivých zrn.
@@ -210,22 +221,24 @@ export function SnowPermafrostArticle() {
           <SourceLink id="DOI_10_1038_s41597_021_00939_2">Luojus et al., 2021, oddíly Technical Validation a Usage Notes</SourceLink>.
         </p>
 
-        <h3>Teplota ve vrtu</h3>
+        <h3 id="teplota-vrtu">Teplota ve vrtu</h3>
         <p>
           Do vrtu se spustí kabel s elektrickými teploměry v přesně změřených hloubkách. V některých vrtech zůstává
           kabel trvale a zapisovač ukládá hodnoty několikrát denně. Jinde se přenosná sonda spouští při pravidelné
           návštěvě. Po vrtání je třeba počkat, než se teplota okolní horniny vrátí k původnímu stavu. Zveřejněný údaj
           musí uvádět hloubku čidla, datum, kalibraci a odhad nejistoty. Čidlo obvykle měří elektrický odpor,
-          který se převádí na teplotu pomocí kalibrace. Clow popisuje porovnání každého přístroje s referenčním
+          který se převádí na teplotu pomocí kalibrace. Princip tohoto převodu
+          vysvětluje <Link href="/metody/odporova-termometrie-a-termistory/#termistory">měření termistory</Link>.
+          Clow popisuje porovnání každého přístroje s referenčním
           platinovým teploměrem v řízené lázni i změnu převodního výpočtu po modernizaci laboratoře v 90. letech.
           U starších aljašských vrtů také upozorňuje, že zveřejněná teplota ještě obsahuje zbytkový vliv vrtání.{" "}
           <SourceLink id="DOI_10_5194_essd_6_201_2014">Clow, 2014, oddíly 1 a 2.2.2</SourceLink>
         </p>
 
-        <p>
+        <p id="rekonstrukce">
           Rozložení teplot po hloubce uchovává také stopu starších změn povrchu.
           Její měření a vyhodnocení vysvětluje metoda{" "}
-          <Link href="/metody/rekonstrukce-teploty-z-vrtu">rekonstrukce teploty z vrtů</Link>.
+          <Link href="/metody/rekonstrukce-teploty-z-vrtu/#rekonstrukce">rekonstrukce teploty z vrtů</Link>.
           Taková rekonstrukce může doplnit historii před začátkem pravidelných měření.{" "}
           <SourceLink id="DOI_10_5194_essd_6_201_2014">(Clow 2014, klimatické využití vrtů)</SourceLink>
         </p>
@@ -236,7 +249,8 @@ export function SnowPermafrostArticle() {
           0,1 °C. Prostřední hodnota těchto hloubek byla 12 metrů. V každém vrtu pak porovnávali stále stejnou hloubku. Pro trend
           požadovali nejméně pět ročních průměrů, alespoň jeden z let 2007–2009 a jeden z let 2015–2016.
           Kratší záznamy někdy prodloužili vypočteným trendem o jeden až tři roky. Blízké vrty seskupili,
-          zohlednili kvalitu záznamu a deset geografických oblastí vážili podle jejich plochy permafrostu.{" "}
+          zohlednili kvalitu záznamu a deset geografických oblastí vážili podle jejich plochy permafrostu.
+          Tento krok rozebírá metoda <Link href="/metody/prostorove-zpracovani-a-plosne-prumery/#permafrost">prostorového zpracování teplot permafrostu</Link>.{" "}
           <SourceLink id="DOI_10_1038_s41467_018_08240_4">Biskaborn et al., 2019, metody</SourceLink>
         </p>
 
@@ -248,10 +262,10 @@ export function SnowPermafrostArticle() {
           <SourceLink id="DOI_10_1038_s41467_018_08240_4">Biskaborn et al., 2019, kontrola kvality</SourceLink>
         </p>
 
-        <h3>Hloubka aktivní vrstvy</h3>
+        <h3 id="aktivni-vrstva">Hloubka aktivní vrstvy</h3>
         <p>
           Postup terénního měření, porovnání přístrojů a opakovatelný výpočet z jednotlivých bodů
-          rozvádí metoda <Link href="/metody/mereni-hloubky-sezonniho-rozmrzani">Měření hloubky sezónního rozmrzání</Link>.
+          rozvádí metoda <Link href="/metody/mereni-hloubky-sezonniho-rozmrzani/#sonda">Měření hloubky sezónního rozmrzání</Link>.
         </p>
         <p>
           Mechanická sonda se na konci období tání zatlačí svisle do půdy, dokud nenarazí na zmrzlé rozhraní. Odečtená

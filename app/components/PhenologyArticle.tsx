@@ -8,7 +8,7 @@ export function PhenologyArticle() {
       <div className="article-prose">
         <h2>Co pozorujeme</h2>
         <p className="article-prose__intro">
-          <Link href="/metody/standardizovane-fenologicke-pozorovani">Fenologické pozorování</Link>{" "}
+          <Link href="/metody/standardizovane-fenologicke-pozorovani/#definice-faze">Fenologické pozorování</Link>{" "}
           je datum nebo sled opakovaných záznamů o přesně vymezené, sezónně se opakující fázi
           organismu či porostu. U rostlin může jít o rašení listů, otevření květů, dozrávání plodů, zbarvení listů nebo
           jejich opad. U živočichů se zaznamenává například začátek a průběh tahu, snášení vajec, líhnutí nebo doba, kdy
@@ -107,7 +107,7 @@ export function PhenologyArticle() {
         </p>
 
         <h2>Jak vzniká zveřejněný záznam</h2>
-        <h3>Jednotlivá rostlina</h3>
+        <h3 id="terenni-pozorovani">Jednotlivá rostlina</h3>
         <p>
           Pozorovatel nejprve určí druh, místo a konkrétní rostlinu. Pro každou návštěvu zapíše datum a stav přesně
           formulované fáze, například „jsou vidět otevřené květy?“. Odpověď „ne“ je stejně důležitá jako „ano“:
@@ -129,7 +129,7 @@ export function PhenologyArticle() {
           <SourceLink id="DOI_10_1111_nph_70869">Templ et al., 2026</SourceLink>
         </p>
 
-        <h3>Populace a pohybliví živočichové</h3>
+        <h3 id="populace">Populace a pohybliví živočichové</h3>
         <p>
           U skupiny rostlin lze uvést den, kdy danou fázi dosáhlo 10, 50 nebo 90 % sledovaných jedinců. U ptáků,
           motýlů a dalších pohyblivých živočichů se během sezóny opakují sčítání na stejném místě a stejným postupem.
@@ -149,8 +149,9 @@ export function PhenologyArticle() {
           <SourceLink id="DOI_10_1111_j_2041_210x_2010_00020_x">Moussus et al., 2010</SourceLink>
         </p>
 
-        <p>
-          Meteorologický radar zachycuje záření rozptýlené objekty ve vzduchu. Z intenzity a změny frekvence
+        <p id="radarova-migrace">
+          <Link href="/metody/aktivni-radarove-mereni/#migrace-ptaku">Meteorologický radar</Link>{" "}
+          zachycuje záření rozptýlené objekty ve vzduchu. Z intenzity a změny frekvence
           vráceného signálu se odvozuje množství a pohyb rozptylujících objektů. Nejdříve se musí oddělit srážky:
           postup MistNet například využívá algoritmus naučený na radarových obrazech a ověřený proti ručnímu
           označení deště. Zbylý signál ještě není seznam ptačích druhů. Může obsahovat i hmyz a další objekty.
@@ -158,7 +159,7 @@ export function PhenologyArticle() {
           <SourceLink id="DOI_10_1111_2041_210x_13280">Lin et al., 2019</SourceLink>
         </p>
 
-        <h3>Kamery</h3>
+        <h3 id="kamery">Kamery</h3>
         <p>
           Fenologická kamera pořizuje stále ze stejného směru fotografie porostu. Správce na obrazu vyznačí oblast,
           která obsahuje sledovaný typ vegetace a vynechá oblohu, budovy nebo části, jež se nemají započítat. Pro
@@ -211,10 +212,10 @@ export function PhenologyArticle() {
           </figcaption>
         </figure>
 
-        <h3>Družice</h3>
+        <h3 id="druzice">Družice</h3>
         <p>
           Jak z odraženého světla vzniká odrazivost a vegetační index, vysvětluje metoda{" "}
-          <Link href="/metody/opticke-a-multispektralni-snimkovani">optického a multispektrálního snímkování</Link>.
+          <Link href="/metody/opticke-a-multispektralni-snimkovani/#fenologie">optického a multispektrálního snímkování</Link>.
         </p>
         <p>
           Družicový přístroj měří záření, které k němu přichází v několika pásmech vlnových délek. Po korekcích

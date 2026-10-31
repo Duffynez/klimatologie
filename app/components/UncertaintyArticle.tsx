@@ -290,6 +290,40 @@ export function UncertaintyArticle() {
           <SourceLink id="WEB_NOAA_MBL_Reference_Method">(NOAA: metodika MBL, oddíl 8)</SourceLink>
         </p>
 
+        <h3 id="morsky-led">Nejistota celkového rozsahu ledu</h3>
+        <p>
+          Místní nejistota koncentrace ledu se musí přenést přes pravidlo,
+          které z mapy počítá rozsah. Wernecke a kolegové vytvořili mnoho
+          variant map s odchylkami odpovídajícími nejistotě vstupů.
+          Zachovali při tom souvislost chyb sousedních buněk a blízkých dnů.
+          Z každé varianty znovu vypočítali rozsah i plochu ledu.
+          Rozptýlení výsledků pak vyjadřuje přenesenou nejistotu.
+          Co tento interval znamená vedle rozdílů mezi produkty, vysvětluje
+          pozorování <Link href="/pozorovani/ubytek-arktickeho-ledu/#nejistota">arktického mořského ledu</Link>.{" "}
+          <SourceLink id="DOI_10_5194_tc_18_2473_2024">(Wernecke a kol. 2024, oddíl 2)</SourceLink>
+        </p>
+        <h3 id="ledovce">Nejistota hmotnostní bilance ledovců</h3>
+        <p>
+          Při součtu změn hmotnosti se přenášejí chyby výškových map,
+          převodu hustotou i doplněného ročního průběhu.
+          Dussaillant a kolegové zohledňují také prostorovou souvislost chyb.
+          Blízké ledovce mohou sdílet chybu výšky nebo podobnou odchylku
+          použité hustoty. Takový příspěvek se při součtu neruší stejně
+          jako nezávislý šum. Význam zveřejněných intervalů rozebírá
+          pozorování <Link href="/pozorovani/ustup-ledovcu/#nejistota">horských ledovců</Link>.{" "}
+          <SourceLink id="DOI_10_5194_essd_17_1977_2025">(Dussaillant a kol. 2025, oddíl 2.2.4)</SourceLink>
+        </p>
+        <p id="prikrovy">
+          U ledových příkrovů se navíc spojují různé měřicí postupy.
+          IMBIE 1992–2020 nejprve sestaví výsledek uvnitř každé skupiny metod
+          a potom spojí výšková, gravitační a vstupně-výstupní řešení.
+          Nejistoty dodaných odhadů procházejí oběma kroky.
+          Tím vzniká interval společného výsledku. Porovnání mezi metodami
+          slouží jako další kontrola, jejíž význam popisuje pozorování
+          <Link href="/pozorovani/nestabilita-prikrovu/#spojeni-vysledku"> ledových příkrovů</Link>.{" "}
+          <SourceLink id="DOI_10_5194_essd_15_1597_2023">(Otosaka a kol. 2023, oddíl 3)</SourceLink>
+        </p>
+
         <h2>Spolehlivost odhadu a jeho ověření</h2>
         <p>
           Výsledek závisí na tom, zda model zahrnul podstatné vlivy,

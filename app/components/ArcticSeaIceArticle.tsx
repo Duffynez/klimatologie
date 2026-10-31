@@ -131,7 +131,7 @@ export function ArcticSeaIceArticle() {
         </p>
 
         <h2>Jak vzniká zveřejněný záznam</h2>
-        <h3>Výpočet koncentrace ledu z mikrovlnného záření</h3>
+        <h3 id="koncentrace">Výpočet koncentrace ledu z mikrovlnného záření</h3>
         <p>
           Pasivní mikrovlnný radiometr zaznamenává přirozené mikrovlnné záření povrchu. Jeho intenzitu vyjadřuje
           jako jasovou teplotu: teplotu ideálního zářiče, který by vysílal stejně silný signál. To je měřítko záření,
@@ -146,7 +146,7 @@ export function ArcticSeaIceArticle() {
         <p>
           Jednotlivé kroky tohoto převodu, od přijímací antény přes kalibraci
           a referenční povrchy až po výpočet koncentrace, vysvětluje článek o{" "}
-          <Link href="/metody/pasivni-mikrovlnna-radiometrie">pasivní mikrovlnné radiometrii</Link>.
+          <Link href="/metody/pasivni-mikrovlnna-radiometrie/#koncentrace-ledu">pasivní mikrovlnné radiometrii</Link>.
           Obsahuje také skutečné měření a stažitelný výpočet.
         </p>
 
@@ -173,13 +173,15 @@ export function ArcticSeaIceArticle() {
           <SourceLink id="DOI_10_5194_tc_9_1797_2015">Ivanova et al., 2015</SourceLink>.
         </p>
 
-        <h3>Výpočet měsíčních hodnot, minima a trendu</h3>
+        <h3 id="rozsah-a-cas">Výpočet měsíčních hodnot, minima a trendu</h3>
         <p>
-          Denní rozsah vznikne součtem ploch všech buněk s koncentrací alespoň 15 %. Měsíční rozsah se počítá jako průměr denních
+          Denní rozsah vznikne <Link href="/metody/prostorove-zpracovani-a-plosne-prumery/#rozsah-ledu">součtem ploch všech buněk s koncentrací alespoň 15 %</Link>. Měsíční rozsah se počítá jako průměr denních
           součtů. Naproti tomu měsíční mapa koncentrace nejprve průměruje jednotlivé dny v každé buňce. Buňka s
           průměrnou koncentrací 50 % tak mohla mít polovinu měsíce plný led a polovinu otevřenou vodu, nebo mohla být
           po celý měsíc pokryta z poloviny. Mapa sama tyto dvě situace nerozliší. Pro dlouhodobé srovnání doporučuje
           NSIDC měsíční hodnoty, protože část denních chyb a krátkých přesunů ledu se v nich zprůměruje.
+          Jak se z řady měsíčních hodnot určí dlouhodobý trend,
+          vysvětluje <Link href="/metody/analyza-casovych-zmen-a-extremu/#trend">analýza časových změn</Link>.
         </p>
 
         <p>
@@ -220,7 +222,7 @@ export function ArcticSeaIceArticle() {
           </figcaption>
         </figure>
 
-        <h3>Jak se určuje stáří</h3>
+        <h3 id="stari">Jak se určuje stáří</h3>
         <p>
           Výpočet stáří rozdělí led na pomyslné částice a každý týden
           je posune podle map pohybu ledu, které vznikají z družicových obrazů a poloh unášených bójí. Částice, která se
@@ -238,11 +240,11 @@ export function ArcticSeaIceArticle() {
           <SourceLink id="DOI_10_3390_rs8060457">Tschudi et al., 2016</SourceLink>
         </p>
 
-        <h3>Jak se měří tloušťka a odhaduje objem</h3>
+        <h3 id="tloustka">Jak se měří tloušťka a odhaduje objem</h3>
         <p>
-          Sonar pod ledem měří ponor, tedy vzdálenost od hladiny ke spodní straně ledu. Družicový výškoměr měří opačnou
+          Sonar pod ledem měří ponor, tedy vzdálenost od hladiny ke spodní straně ledu. <Link href="/metody/radarova-a-laserova-altimetrie/#morsky-led">Družicový výškoměr</Link> měří opačnou
           část: volný bok, tedy malou výšku sněhu nebo ledu nad okolní hladinou. Tloušťka se z ní vypočte z rovnováhy
-          plovoucí kry. K výpočtu je nutné znát nebo odhadnout hloubku a hustotu sněhu a hustotu ledu i mořské vody.
+          plovoucí kry. K výpočtu je nutné znát nebo odhadnout <Link href="/metody/mereni-vysky-hustoty-a-vodni-hodnoty-snehu/#vyska-a-hustota">hloubku a hustotu sněhu</Link> a hustotu ledu i mořské vody.
           Laser ICESat-2 zachycuje povrch sněhu. U radaru CryoSat-2 se v zimních podmínkách předpokládá hlavní
           odraz na rozhraní sněhu a ledu. Počítá se i se zpomalením signálu ve sněhu. Odchylka od tohoto předpokladu
           mění vypočtenou tloušťku. Zveřejněná tloušťka je proto odhad
@@ -261,11 +263,12 @@ export function ArcticSeaIceArticle() {
           hlavním zdrojům rozdílů v tloušťce.
         </p>
 
-        <p>
+        <p id="objem">
           Objem vznikne vynásobením plochy každé buňky její koncentrací a tloušťkou a následným součtem. Přímé
           celoroční mapy tloušťky pro celou Arktidu nejsou k dispozici, a proto souvislé denní údaje o objemu často
-          pocházejí z modelu, který přijímá pozorovanou koncentraci a dopočítává pohyb, růst a tání ledu. Příkladem je
-          PIOMAS od roku 1979, systém modelování arktického oceánu a ledu, do něhož se průběžně vkládají měření.
+          pocházejí z modelu, který přijímá pozorovanou koncentraci a dopočítává pohyb, růst a tání ledu. Příkladem je{" "}
+          <Link href="/metody/asimilace-dat-a-reanalyzy/#piomas">PIOMAS</Link>{" "}
+          od roku 1979, systém modelování arktického oceánu a ledu, do něhož se průběžně vkládají měření.
           Jeho výsledek je modelový odhad omezený pozorováními, nikoli samostatné družicové měření
           objemu. Model a jeho nejistotu popisují{" "}
           <SourceLink id="DOI_10_1175_1520_0493_2003_131_0845_mgsiwa_2_0_co_2">
@@ -275,7 +278,7 @@ export function ArcticSeaIceArticle() {
           <SourceLink id="DOI_10_1029_2011jc007084">Schweiger et al., 2011</SourceLink>.
         </p>
 
-        <h3>Co znamená nejistota</h3>
+        <h3 id="nejistota">Co znamená nejistota</h3>
         <p>
           Jedno číslo nejistoty nemůže popsat všechny způsoby použití dat. Meier a Stewart měnili vstupní přístroje a
           parametry stále stejného zpracování Sea Ice Index. Pro takto porovnávané hodnoty odhadli relativní nejistotu
@@ -290,7 +293,8 @@ export function ArcticSeaIceArticle() {
 
         <p>
           Wernecke a kol. přenesli do celkového rozsahu také místní nejistoty koncentrace a jejich prostorovou a
-          časovou souvislost: chyby sousedních buněk a po sobě jdoucích dnů nejsou zcela nezávislé. Pro soubor
+          časovou souvislost: chyby sousedních buněk a po sobě jdoucích dnů nejsou zcela nezávislé.
+          Tento postup vysvětluje metoda <Link href="/metody/vycisleni-a-prenos-nejistoty/#morsky-led">přenosu nejistoty z map do celkového rozsahu</Link>. Pro soubor
           koncentrace z klimatické iniciativy Evropské kosmické agentury (ESA CCI v2.1) a rok 2015 dostali
           průměrnou nejistotu denního arktického rozsahu 296 000 km² a
           měsíčního 156 000 km². Tato čísla jsou větší, protože zahrnují jinou část měřicí nejistoty než předchozí

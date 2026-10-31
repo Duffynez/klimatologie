@@ -438,7 +438,7 @@ export function ResistanceThermometryArticle() {
           <SourceLink id="DOI_10_5194_essd_6_201_2014">Clowův popis měření v aljašských vrtech</SourceLink>{" "}
           dokládá jejich kalibraci pro sledování permafrostu.
           Využití těchto teplotních profilů vysvětlujeme u{" "}
-          <Link href="/pozorovani/snehova-pokryvka-a-permafrost">sněhové pokrývky a permafrostu</Link>.
+          <Link href="/pozorovani/snehova-pokryvka-a-permafrost/#teplota-vrtu">sněhové pokrývky a permafrostu</Link>.
         </p>
         <h3>Další zapojení pro měření odporu</h3>
         <p>

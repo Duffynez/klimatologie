@@ -236,7 +236,7 @@ export function InterferometryArticle() {
           <SourceLink id="DOI_10_5194_tc_19_3517_2025">(Gardner a kol. 2025)</SourceLink>
         </p>
 
-        <h3>Co mapy pohybu přinášejí klimatologii</h3>
+        <h3 id="tok-ledu">Co mapy pohybu přinášejí klimatologii</h3>
         <p>
           Mapa rychlosti ukazuje, kudy led proudí a jak se jeho rychlost mění
           v prostoru. Opakovaná měření umožňují sledovat sezonní změny i vývoj
@@ -257,7 +257,7 @@ export function InterferometryArticle() {
           <SourceLink id="DOI_10_1073_pnas_1904242116">Mouginot a kol. (2019)</SourceLink>{" "}
           sestavili bilanci Grónska pro roky 1972–2018. Souvislost s dalšími
           měřeními vysvětluje článek o{" "}
-          <Link href="/pozorovani/nestabilita-prikrovu">ledových příkrovech</Link>.
+          <Link href="/pozorovani/nestabilita-prikrovu/#tok-ledu">ledových příkrovech</Link>.
         </p>
         <p>
           Družicová interferometrie se v glaciologii rozvíjela v 90. letech.

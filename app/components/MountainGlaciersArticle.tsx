@@ -53,7 +53,7 @@ export function MountainGlaciersArticle() {
           </figcaption>
         </figure>
 
-        <h2>Historie pozorování</h2>
+        <h2 id="historie">Historie pozorování</h2>
         <p>
           Nejstarší dlouhé záznamy sledují čelo ledovce. Jeho polohu bylo možné určit podle značek v terénu, měřických
           bodů, map, obrazů a později fotografií. Mezinárodně koordinované sledování začalo roku 1894 založením
@@ -99,27 +99,27 @@ export function MountainGlaciersArticle() {
         </p>
 
         <h2>Jak vzniká zveřejněný záznam</h2>
-        <h3>Poloha čela a plocha</h3>
+        <h3 id="plocha">Poloha čela a plocha</h3>
         <p>
           Poloha čela se určuje vůči pevnému bodu nebo podél předem stanovené osy. Starší záznamy vznikaly pásmem,
           teodolitem a opakovanou fotografií. Dnes se používá také přesná družicová poloha a snímky z letadel či družic.
           Z obrysu ledovce lze vypočítat plochu. Rozlišení ledu podle odraženého světla vysvětluje metoda{" "}
-          <Link href="/metody/opticke-a-multispektralni-snimkovani">optického a multispektrálního snímkování</Link>.
+          <Link href="/metody/opticke-a-multispektralni-snimkovani/#ledovce">optického a multispektrálního snímkování</Link>.
           U suti na povrchu, trvalých sněhových polí a navazujících ledovců však
           nemusí být hranice na snímku jednoznačná, proto k obrysu patří datum, zdroj obrazu a popis kvality mapování. Na
           tato omezení upozorňují <SourceLink id="DOI_10_3189_2015jog15j017">Zemp et al., 2015</SourceLink> a dokumentace{" "}
           <SourceLink id="DOI_10_5067_f6jmovy5navz">Randolph Glacier Inventory v7</SourceLink>.
         </p>
 
-        <h3>Tyče, sondy a sněhové jámy</h3>
+        <h3 id="terenni-bilance">Tyče, sondy a sněhové jámy</h3>
         <p>
           Podrobný postup od odečtu tyče k bilanci celé plochy, včetně skutečných dat a výpočtu,
-          vysvětluje metoda <Link href="/metody/terenni-mereni-bilance-ledovcu">Terénní měření bilance ledovců</Link>.
+          vysvětluje metoda <Link href="/metody/terenni-mereni-bilance-ledovcu/#terenni-odecty">Terénní měření bilance ledovců</Link>.
         </p>
         <p>
           Při přímém glaciologickém měření jsou body rozmístěny od spodní části ledovce po jeho nejvyšší část. Na jaře
           se sondou zjišťuje hloubka zimního sněhu a ve sněhové jámě nebo jádru také jeho hustota. Na podzim se u tyčí
-          zavrtaných do ledu odečte, o kolik klesl povrch. Hloubka a hustota sněhu se v každém bodě převedou na hmotnost vody
+          zavrtaných do ledu odečte, o kolik klesl povrch. <Link href="/metody/mereni-vysky-hustoty-a-vodni-hodnoty-snehu/#vyska-a-hustota">Hloubka a hustota sněhu</Link> se v každém bodě převedou na hmotnost vody
           na metr čtvereční. U ledu se obdobně násobí změna výšky jeho hustotou. Jarní a podzimní návštěvy odpovídají
           běžnému režimu severní polokoule, termíny se však přizpůsobují místním sezonám. Standardní postup popisují{" "}
           <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">WMO, 2024, kapitola 3</SourceLink> a{" "}
@@ -164,10 +164,10 @@ export function MountainGlaciersArticle() {
           </figcaption>
         </figure>
 
-        <h3>Rozdíl dvou výškových map</h3>
+        <h3 id="vyskove-mapy">Rozdíl dvou výškových map</h3>
         <p>
           Jak se ze snímků určí výška povrchu a jak se změna výšky převádí
-          na změnu objemu, vysvětluje <Link href="/metody/fotogrammetrie-a-porovnavani-vyskovych-modelu">fotogrammetrie a porovnávání výškových modelů</Link>.
+          na změnu objemu, vysvětluje <Link href="/metody/fotogrammetrie-a-porovnavani-vyskovych-modelu/#princip">fotogrammetrie a porovnávání výškových modelů</Link>.
           Článek obsahuje také opakovatelný výpočet pro část ledovce na Špicberkách.
         </p>
         <p>
@@ -191,7 +191,7 @@ export function MountainGlaciersArticle() {
           <SourceLink id="DOI_10_5194_essd_17_1977_2025">Dussaillant et al., 2025</SourceLink>
         </p>
 
-        <h3>Výpočet globální změny hmotnosti ledovců</h3>
+        <h3 id="globalni-soucet">Výpočet globální změny hmotnosti ledovců</h3>
         <p>
           Současný každoroční produkt WGMS využívá terénní měření k odhadu, jak se hmotnost měnila rok po roce i u
           okolních ledovců bez pravidelných návštěv. Tento roční průběh pak upraví tak, aby jeho součet odpovídal
@@ -204,7 +204,9 @@ export function MountainGlaciersArticle() {
         <p>
           Přibližně 207 000 ledovců s geodetickým měřením představuje 96 % světové zaledněné plochy v tomto produktu.
           Ledovcům bez přímého geodetického záznamu se přiřadí průměr příslušné oblasti. Jednotlivé výsledky se násobí
-          plochou, sečtou do 19 světových oblastí a nakonec do globální hodnoty v gigatunách. Nejistota zahrnuje chybu
+          plochou, sečtou do 19 světových oblastí a nakonec do globální hodnoty v gigatunách.
+          Princip doplnění neměřených míst a součtu popisuje
+          <Link href="/metody/prostorove-zpracovani-a-plosne-prumery/#hmotnost-ledovcu"> prostorové zpracování ledovcových bilancí</Link>. Nejistota zahrnuje chybu
           výšky, převod objemu na hmotnost, řídkost terénních měření a změnu plochy. Roste tam, kde jsou pozorované
           ledovce vzdálenější. <SourceLink id="DOI_10_5194_essd_17_1977_2025">Dussaillant et al., 2025, metodika a ověření</SourceLink>
         </p>
@@ -237,11 +239,13 @@ export function MountainGlaciersArticle() {
           </figcaption>
         </figure>
 
-        <h3>Co znamená uvedená nejistota</h3>
+        <h3 id="nejistota">Co znamená uvedená nejistota</h3>
         <p>
           Interval nejistoty není připojen až k hotovému globálnímu číslu. Vzniká už u výškových map, hustotního
           převodu a odhadu ročního průběhu v místech bez terénního měření. Při součtu se zohledňuje, že chyby blízkých
-          ledovců mohou být podobné. Dussaillant a kol. ověřovali prostorové doplňování tak, že část pozorování
+          ledovců mohou být podobné. Význam této vazby vysvětluje
+          <Link href="/metody/vycisleni-a-prenos-nejistoty/#ledovce"> přenos nejistoty hmotnostních bilancí</Link>.
+          Dussaillant a kol. ověřovali prostorové doplňování tak, že část pozorování
           opakovaně vynechali a porovnali odhad se skrytou hodnotou. Taková zkouška kontroluje doplňování mezi
           měřenými ledovci, ale nemůže plně nahradit chybějící měření v odlehlých oblastech.{" "}
           <SourceLink id="DOI_10_5194_essd_17_1977_2025">Dussaillant et al., 2025</SourceLink>
@@ -361,12 +365,12 @@ export function MountainGlaciersArticle() {
           </figcaption>
         </figure>
 
-        <h2>Srovnání měřicích postupů</h2>
+        <h2 id="srovnani">Srovnání měřicích postupů</h2>
         <p>
           Terénní metoda poskytuje každoroční a často i zimní a letní bilanci konkrétního ledovce, ale globální síť je
           řídká. Rozdíl výškových modelů pokrývá téměř celý svět a spolehlivě určuje dlouhodobou změnu, avšak mezi dvěma
-          mapami sám nerozliší jednotlivé roky a potřebuje převod objemu na hmotnost. Družicový výškoměr sleduje změny
-          podél drah družice. Gravitační mise odvozují změnu hmotnosti z proměn gravitačního pole, ale až pro oblasti o
+          mapami sám nerozliší jednotlivé roky a potřebuje převod objemu na hmotnost. <Link href="/metody/radarova-a-laserova-altimetrie/#horske-ledovce">Družicový výškoměr</Link> sleduje změny
+          podél drah družice. <Link href="/metody/druzicova-gravimetrie/#horske-ledovce">Gravitační mise</Link> odvozují změnu hmotnosti z proměn gravitačního pole, ale až pro oblasti o
           rozměru stovek kilometrů. Každý postup tak poskytuje jinou kombinaci podrobnosti v čase a prostoru.{" "}
           <SourceLink id="DOI_10_1038_s41586_024_08545_z">GlaMBIE Team, 2025</SourceLink>
         </p>
