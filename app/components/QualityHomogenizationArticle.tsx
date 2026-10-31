@@ -61,7 +61,7 @@ export function QualityHomogenizationArticle() {
           <SourceLink id="DOI_10_1175_jcli_d_18_0094_1">(vznik GHCN-M v4)</SourceLink>
         </p>
 
-        <h3>Kontrola jednotlivých údajů</h3>
+        <h3 id="kontrola-udaju">Kontrola jednotlivých údajů</h3>
         <p>
           Kontrola začíná vlastnostmi, které lze posoudit v samotném souboru.
           Hledá nesprávně zopakované záznamy, dlouhé úseky se stále stejným číslem
@@ -101,7 +101,7 @@ export function QualityHomogenizationArticle() {
           </figcaption>
         </figure>
 
-        <h3>Proč odečítáme průběhy dvou stanic</h3>
+        <h3 id="porovnani-stanic">Proč odečítáme průběhy dvou stanic</h3>
         <p>
           I jednotlivě věrohodné teploty mohou tvořit záznam s místním posunem.
           Proto po kontrole údajů přichází porovnávání delších úseků. Pro každou
@@ -224,13 +224,13 @@ export function QualityHomogenizationArticle() {
           nebo globální průměry. Údaje GHCN-M tvoří pozemní podklad některých
           globálních teplotních souborů. Navazující výběr oblastí a jejich
           plošné vážení vysvětluje pozorování{" "}
-          <Link href="/pozorovani/gmst">globální povrchové teploty</Link>.
+          <Link href="/pozorovani/gmst/#plosne-vazeni">globální povrchové teploty</Link>.
           Homogenizace zde řeší srovnatelnost měření v čase, na kterou další
           výpočty navazují.{" "}
           <SourceLink id="DOI_10_1175_jcli_d_18_0094_1">(klimatologické použití)</SourceLink>
         </p>
 
-        <h3>Další provedení a vývoj postupu</h3>
+        <h3 id="denni-a-hodinova-data">Další provedení a vývoj postupu</h3>
         <p>
           Kontrola kvality pracuje také s kratšími časovými kroky. HadISD
           prověřuje meteorologická hlášení uspořádaná do hodinového záznamu,
@@ -242,6 +242,30 @@ export function QualityHomogenizationArticle() {
           provedení zpracování s různými cíli.{" "}
           <SourceLink id="DOI_10_5194_cp_8_1649_2012">(hodinový HadISD)</SourceLink>{" "}
           <SourceLink id="DOI_10_1175_jtech_d_11_00103_1">(denní GHCN-Daily)</SourceLink>
+        </p>
+        <p>
+          Kontrolované hodinové údaje HadISD tvoří základ souboru HadISDH.
+          Ten převádí teplotu a vlhkostní údaje na měsíční hodnoty a hledá
+          místní zlomy párovým porovnáváním stanic. Návaznost jednotlivých
+          kroků ukazuje pozorování <Link href="/pozorovani/narust-vlhkosti/#kontrola-dat">vlhkosti atmosféry</Link>.{" "}
+          <SourceLink id="DOI_10_5194_cp_10_1983_2014">(Willettová a kol. 2014, oddíly 2 a 3)</SourceLink>
+        </p>
+        <p>
+          Denní měření se dále používají ke sledování
+          <Link href="/pozorovani/vlny-veder/#mereni-teploty"> vln veder</Link> a
+          <Link href="/pozorovani/srazky-a-privalove-srazky/#kontrola-dat"> srážkových extrémů</Link>.
+          U těchto pozorování vysvětlujeme, které kontroly proběhly před
+          výpočtem ukazatele a jak navazující soubory zacházejí se změnami
+          měřicích podmínek.{" "}
+          <SourceLink id="DOI_10_1175_jtech_d_11_00103_1">(Menne a kol. 2012, denní archiv)</SourceLink>
+        </p>
+        <p>
+          Stejnou otázku srovnatelnosti řeší i výšková měření atmosféry.
+          Postupy RAOBCORE a RICH hledají změny radiosondových teplot pomocí
+          porovnání s meteorologickými analýzami a okolními sondážemi.
+          Konkrétní zpracování a navazující záznamy popisuje pozorování
+          <Link href="/pozorovani/stratosfericke-ochlazovani/#homogenizace"> teploty stratosféry</Link>.{" "}
+          <SourceLink id="DOI_10_1175_jcli_d_11_00668_1">(Haimberger a kol. 2012)</SourceLink>
         </p>
         <p>
           U srážek se při homogenizaci často porovnávají poměry úhrnů namísto

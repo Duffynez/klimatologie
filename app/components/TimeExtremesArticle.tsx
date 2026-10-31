@@ -64,7 +64,7 @@ export function TimeExtremesArticle() {
           <SourceLink id="BOOK_Hyndman_Athanasopoulos_2021">(lineární vztah a jeho sklon)</SourceLink>
         </p>
 
-        <h3>Trend shrnuje změnu za celé zvolené období</h3>
+        <h3 id="trend">Trend shrnuje změnu za celé zvolené období</h3>
         <p>
           <strong>Trend</strong> vyjadřuje dlouhodobý směr vývoje v určitém
           období. Jednoduchým popisem je přímka proložená všemi ročními hodnotami.
@@ -152,7 +152,7 @@ export function TimeExtremesArticle() {
           <SourceLink id="DOI_10_3386_t0055">(testování koeficientů)</SourceLink>
         </p>
 
-        <h3>Extrém potřebuje vlastní definici</h3>
+        <h3 id="extremy">Extrém potřebuje vlastní definici</h3>
         <p>
           Pro popis extrémů se vrátíme k denním údajům. Roční ukazatel
           <strong> TXx</strong> vybereme jako nejvyšší denní maximální teplotu
@@ -171,7 +171,7 @@ export function TimeExtremesArticle() {
           Výsledkem je procento dnů, které příslušnou hranici překročily.
           Pro hodnocení trvání se navíc sledují po sobě jdoucí dny,
           jak podrobně vysvětluje pozorování{" "}
-          <Link href="/pozorovani/vlny-veder">vln veder</Link>.{" "}
+          <Link href="/pozorovani/vlny-veder/#hranice-a-trvani">vln veder</Link>.{" "}
           <SourceLink id="WEB_Met_Office_uzivatelska_prirucka_HadEX3_6eb86927">(percentilové ukazatele)</SourceLink>
         </p>
         <p>
@@ -183,7 +183,7 @@ export function TimeExtremesArticle() {
           dny za desetiletí nebo milimetry za desetiletí.{" "}
           <SourceLink id="DOI_10_1029_2005jd006290">(Alexander a kol. 2006, klimatologické použití)</SourceLink>{" "}
           Výsledky pro srážky rozebírá článek o{" "}
-          <Link href="/pozorovani/srazky-a-privalove-srazky">srážkách a přívalových srážkách</Link>.
+          <Link href="/pozorovani/srazky-a-privalove-srazky/#ukazatele">srážkách a přívalových srážkách</Link>.
         </p>
 
         <figure className="article-figure">

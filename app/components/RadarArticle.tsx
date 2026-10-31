@@ -171,7 +171,7 @@ export function RadarArticle() {
           <SourceLink id="WEB_Hunter_Radar_Rainfall_1996">(Hunter 1996, odrazivost a srážkový odhad)</SourceLink>
         </p>
 
-        <h3>Jak vzniká odhad intenzity deště</h3>
+        <h3 id="intenzita-deste">Jak vzniká odhad intenzity deště</h3>
         <p>
           Intenzita deště říká, jak rychle voda dopadá na povrch.
           Vyjadřuje se v milimetrech za hodinu, mm/h. Představujeme si výšku
@@ -254,7 +254,7 @@ export function RadarArticle() {
           i výskyt silných hodinových srážek. Radar tím umožňuje studovat,
           jak rozsáhlé jsou přívalové deště a kde se jejich jádra vyskytují
           mezi měřicími stanicemi. Na toto použití navazuje článek o{" "}
-          <Link href="/pozorovani/srazky-a-privalove-srazky">srážkách a přívalových srážkách</Link>.{" "}
+          <Link href="/pozorovani/srazky-a-privalove-srazky/#radar">srážkách a přívalových srážkách</Link>.{" "}
           <SourceLink id="DOI_10_3390_atmos11020217">(Kreklow a kol. 2020)</SourceLink>
         </p>
 

@@ -208,6 +208,7 @@ export function ReanalysisArticle() {
           <SourceLink id="DOI_10_1175_Whitaker_2004_RWRUED">(původní experiment)</SourceLink>{" "}
           <SourceLink id="DOI_10_1002_qj_3598">(vývoj verze 3)</SourceLink>
         </p>
+        <h3 id="era5">Jak pracuje reanalýza ERA5</h3>
         <p>
           Jinou významnou variantou je <strong>čtyřrozměrná variační asimilace</strong>,
           zkráceně 4D-Var. Hledá takovou úpravu výchozího stavu, aby následný
@@ -222,13 +223,25 @@ export function ReanalysisArticle() {
           ERA5 poskytuje od ledna 1940 hodinový popis atmosféry. Běžně dostupná
           atmosférická data jsou na síti 0,25° × 0,25°. Její plošně průměrovaná
           teplota vzduchu je jedním z podkladů článku o{" "}
-          <Link href="/pozorovani/gmst">globální povrchové teplotě</Link>.
+          <Link href="/pozorovani/gmst/#srovnani-dat">globální povrchové teplotě</Link>.
           Asimilace se používá také v modelech oceánu a pevniny, kde pomáhá
           určovat například teplotu a slanost vody nebo půdní vlhkost.
           Společný je princip průběžné opravy modelového stavu dostupnými
           pozorováními.{" "}
           <SourceLink id="WEB_Copernicus_ERA5_hourly_data_on_single_levels_from_1940_to_p_7e4f50d4">(rozsah dat ERA5)</SourceLink>{" "}
           <SourceLink id="WEB_ECMWF_Data_Assimilation">(oceán a pevninský povrch)</SourceLink>
+        </p>
+        <p>
+          Souvislé pokrytí ERA5 pomáhá také při
+          <Link href="/pozorovani/narust-vlhkosti/#srovnani-s-reanalyzou"> porovnání záznamů vlhkosti</Link>.
+          Výpočet lze omezit na stejná místa, která pokrývají stanice,
+          a porovnat jej s výsledkem za celou oblast.
+          Hodinové teploty se využívají i při zkoumání
+          <Link href="/pozorovani/vlny-veder/#era5"> vln veder</Link>.
+          V obou případech je podkladem rekonstrukce spojující model
+          s pozorováními.{" "}
+          <SourceLink id="DOI_10_1029_2022jd036728">(Allan a kol. 2022, vlhkost a pokrytí)</SourceLink>{" "}
+          <SourceLink id="DOI_10_1002_qj_3803">(Hersbach a kol. 2020, údaje ERA5)</SourceLink>
         </p>
 
         <h2>Nejistoty a ověření reanalýzy</h2>

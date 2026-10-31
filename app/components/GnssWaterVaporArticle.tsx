@@ -7,7 +7,7 @@ export function GnssWaterVaporArticle() {
   return (
     <article className="article-layout">
       <div className="article-prose">
-        <h2>Jak navigační signál měří vodní páru</h2>
+        <h2 id="princip">Jak navigační signál měří vodní páru</h2>
         <p className="article-prose__intro">
           Pozemní měření vodní páry pomocí GNSS určuje množství páry v celém sloupci
           vzduchu nad stanicí podle zpoždění rádiových signálů navigačních družic.
@@ -222,7 +222,7 @@ export function GnssWaterVaporArticle() {
           <SourceLink id="DOI_10_5194_amt_10_3117_2017">(Alshawaf a kol. 2017, oddíly 3–4)</SourceLink>
         </p>
         <p>
-          Širší souvislosti shrnuje článek o <Link href="/pozorovani/narust-vlhkosti">vlhkosti atmosféry</Link>.
+          Širší souvislosti shrnuje článek o <Link href="/pozorovani/narust-vlhkosti/#pozemni-gnss">vlhkosti atmosféry</Link>.
           GNSS poskytuje součet přes výšku, zatímco <Link href="/metody/radiosondaz">radiosondáž</Link>{" "}
           sleduje teplotu a vlhkost při stoupání balónu a rozlišuje jednotlivé
           vrstvy. Tyto dva pohledy se doplňují. Další uspořádání,

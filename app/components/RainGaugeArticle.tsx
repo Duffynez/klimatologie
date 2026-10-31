@@ -11,7 +11,7 @@ export function RainGaugeArticle() {
   return (
     <article className="article-layout">
       <div className="article-prose">
-        <h2>Jak se měří srážky</h2>
+        <h2 id="princip">Jak se měří srážky</h2>
         <p className="article-prose__intro">
           Srážkoměr je přístroj, který zachycuje déšť nebo sníh a měří množství vody spadlé
           na určitou plochu. Disdrometr měří vlastnosti jednotlivých padajících kapek či
@@ -318,7 +318,7 @@ export function RainGaugeArticle() {
           Výsledky GSDR-I jsou dostupné také v prostorové mřížce, tedy v soustavě
           buněk pokrývajících území. Hodnoty mezi stanicemi vznikají odhadem
           z okolních měření. Dlouhodobé změny srážek, včetně pokrytí území daty,
-          rozebírá článek <Link href="/pozorovani/srazky-a-privalove-srazky">Srážky
+          rozebírá článek <Link href="/pozorovani/srazky-a-privalove-srazky/#prostorove-zpracovani">Srážky
           a přívalové srážky</Link>.{" "}
           <SourceLink id="DOI_10_1038_s41597_023_02238_4">(Pritchard a kol., metody)</SourceLink>
         </p>

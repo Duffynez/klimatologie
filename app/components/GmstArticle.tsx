@@ -88,7 +88,7 @@ export function GmstArticle() {
         </p>
 
         <h2>Co se skutečně měří</h2>
-        <h3>Nad pevninou</h3>
+        <h3 id="mereni-vzduchu">Nad pevninou</h3>
         <p>
           Meteorologická stanice měří teplotu okolního vzduchu v ochranném krytu, který omezuje přímé sluneční
           záření a vliv srážek. Světová meteorologická organizace uvádí pro běžné povrchové pozorování výšku
@@ -98,6 +98,9 @@ export function GmstArticle() {
           <SourceLink id="WEB_World_Meteorological_Organiz_Guide_to_Instruments_and_Methods_of_Observation_93c4c4a4">
             WMO: Guide to Instruments and Methods of Observation
           </SourceLink>
+        </p>
+        <p>
+          Jak změna odporu čidla poskytne teplotu a jak z opakovaných odečtů vznikne staniční údaj, vysvětluje <Link href="/metody/odporova-termometrie-a-termistory/#princip">odporová termometrie</Link>.
         </p>
 
         <p>
@@ -133,7 +136,7 @@ export function GmstArticle() {
           teprve ty se váží podle plochy.
         </p>
 
-        <h3>Nad oceánem</h3>
+        <h3 id="mereni-oceanu">Nad oceánem</h3>
         <p>
           Lodě měřily teplotu vody vytažené v dřevěných, plátěných nebo izolovaných vědrech a později také vodu
           proudící k sání lodního motoru. Vědro může během vytažení ztrácet teplo odpařováním. Měření v útrobách
@@ -170,7 +173,7 @@ export function GmstArticle() {
         </figure>
 
         <p>
-          <Link href="/metody/pasivni-infracervena-radiometrie">Pasivní infračervená radiometrie</Link>{" "}
+          <Link href="/metody/pasivni-infracervena-radiometrie/#teplota-oceanu">Pasivní infračervená radiometrie</Link>{" "}
           umožňuje družicím mapovat teplotu velmi tenké vrstvy na samotném povrchu oceánu. Její princip,
           převod záření na teplotu a návaznost na družicové klimatické záznamy vysvětluje samostatný článek.{" "}
           <SourceLink id="DOI_10_1038_s41597_019_0236_x">Merchant a kol., 2019</SourceLink>
@@ -183,7 +186,7 @@ export function GmstArticle() {
           řeší mezery a změny měřicích metod vlastním postupem.
         </p>
 
-        <h2>Jak vzniká globální výpočet</h2>
+        <h2 id="globalni-vypocet">Jak vzniká globální výpočet</h2>
         <h3>1. Pozorování dostane místo, čas a původ</h3>
         <p>
           Každý měsíční údaj stanice nese její zeměpisnou polohu a identifikátor. Oceánské měření nese polohu
@@ -193,7 +196,7 @@ export function GmstArticle() {
           odděleně.
         </p>
 
-        <h3>2. Posoudí se změny stanice a měřicího postupu</h3>
+        <h3 id="homogenizace">2. Posoudí se změny stanice a měřicího postupu</h3>
         <p>
           Přestěhování stanice, nový kryt, změna teploměru nebo jiná denní doba odečtu mohou v místním záznamu
           vytvořit skok. Doprovodné údaje někdy změnu přímo popisují. Statistické postupy ji zároveň hledají
@@ -205,7 +208,7 @@ export function GmstArticle() {
           </SourceLink>{" "}
           Porovnávání dvojic stanic, určení místního posunu a zachování původních údajů
           podrobně vysvětluje metoda{" "}
-          <Link href="/metody/kontrola-kvality-a-homogenizace">kontrola kvality a homogenizace</Link>.
+          <Link href="/metody/kontrola-kvality-a-homogenizace/#porovnani-stanic">kontrola kvality a homogenizace</Link>.
         </p>
 
         <p>
@@ -248,17 +251,17 @@ export function GmstArticle() {
           <SourceLink id="DOI_10_1175_bams_d_24_0012_1">Yin et al., 2024</SourceLink>
         </p>
 
-        <h3>6. Buňky se váží podle plochy</h3>
+        <h3 id="plosne-vazeni">6. Buňky se váží podle plochy</h3>
         <p>
           Buňky stejné úhlové velikosti mají u rovníku větší plochu než u pólů. Globální průměr proto zohledňuje
           jejich skutečnou plochu. Některé postupy nejprve počítají šířkové pásy nebo polokoule, jiné pracují
           přímo s plošnými vahami jednotlivých buněk. Hustota stanic ovlivní, jak dobře je oblast popsána, ale
           konečný příspěvek oblasti určuje její plocha, nikoli počet teploměrů.
           Výběr buněk, jejich váhy a výpočet ze skutečné mapy podrobně rozebírá metoda{" "}
-          <Link href="/metody/prostorove-zpracovani-a-plosne-prumery">prostorové zpracování a plošné průměry</Link>.
+          <Link href="/metody/prostorove-zpracovani-a-plosne-prumery/#plosne-vazeni">prostorové zpracování a plošné průměry</Link>.
         </p>
 
-        <h3>7. K výsledku se připojí nejistota</h3>
+        <h3 id="nejistota">7. K výsledku se připojí nejistota</h3>
         <p>
           Nejistota zahrnuje přesnost jednotlivých měření, omezený počet pozorování uvnitř buňky, možné chyby
           oprav, chybějící oblasti i volbu prostorového postupu. Je největší v 19. století, kdy bylo měření málo,
@@ -278,7 +281,7 @@ export function GmstArticle() {
         <p>
           Jak se jednotlivé příspěvky skládají a jak z rozptýlení realizací
           vzniká výsledný interval, vysvětluje metoda{" "}
-          <Link href="/metody/vycisleni-a-prenos-nejistoty">vyčíslení a přenos nejistoty</Link>.
+          <Link href="/metody/vycisleni-a-prenos-nejistoty/#klimaticke-zaznamy">vyčíslení a přenos nejistoty</Link>.
           Na veřejných datech HadCRUT5 pro rok 2024 umožňuje zopakovat
           výpočet globální nejistoty krok za krokem.
         </p>
@@ -391,7 +394,7 @@ export function GmstArticle() {
           </figcaption>
         </figure>
 
-        <h2>Srovnání dat</h2>
+        <h2 id="srovnani-dat">Srovnání dat</h2>
         <p>
           Jednotlivé produkty čerpají z velké části ze stejných mezinárodních archivů. GISTEMP a NOAAGlobalTemp
           používají pozemní GHCN-M v4. HadCRUT5 a Berkeley Earth sdílejí část oceánských podkladů HadSST4. Shoda
@@ -413,7 +416,7 @@ export function GmstArticle() {
           jedinou otázku: jak podobně vycházejí roční globální hodnoty po sjednocení referenčního období. Jak
           měření a fyzikální model vytvářejí souvislou rekonstrukci atmosféry,
           vysvětluje článek o{" "}
-          <Link href="/metody/asimilace-dat-a-reanalyzy">asimilaci dat a reanalýzách</Link>.
+          <Link href="/metody/asimilace-dat-a-reanalyzy/#era5">asimilaci dat a reanalýzách</Link>.
         </p>
 
         <figure className="article-figure article-figure--scroll-mobile article-figure--scroll-wide">

@@ -267,16 +267,86 @@ export function MicrowaveRadiometryArticle() {
           <SourceLink id="WEB_NASA_Cavalieri_1997_Sea_Ice_User_Guide">(Cavalieri a kol. 1997)</SourceLink>{" "}
           a <SourceLink id="WEB_NSIDC_Sea_Ice_Index_v4_Analysis_2025">(Windnagel a kol. 2025)</SourceLink>
         </p>
+        <h3 id="teplota-atmosfery">Teplota vrstev atmosféry</h3>
         <p>
           U atmosféry vybíráme pásma, ve kterých významně vyzařují a pohlcují plyny.
           Mikrovlnné teplotní sondy používají například kyslíková pásma kolem
           50–60 GHz. Různé kanály přijímají různé podíly záření z jednotlivých
           výškových vrstev, a proto jejich společné vyhodnocení poskytuje informaci
           o teplotě atmosféry. Na toto použití navazuje pozorování{" "}
-          <Link href="/pozorovani/stratosfericke-ochlazovani">teploty stratosféry</Link>.{" "}
+          <Link href="/pozorovani/stratosfericke-ochlazovani/#druzicove-vrstvy">teploty stratosféry</Link>.{" "}
           <SourceLink id="WEB_NOAA_SSMT_Temperature">(NOAA: přístroj SSM/T)</SourceLink>{" "}
           a <SourceLink id="WEB_NASA_CLIMCAPS_Temperature">(NASA/JPL: teplotní sondování)</SourceLink>
         </p>
+        <p>
+          Každá vrstva přispívá podle své teploty a podle toho, kolik jejího záření
+          doletí k přístroji. Blíže ke středu absorpčního pásma se záření cestou
+          silněji pohlcuje, takže přístroj vidí především výše položené vrstvy.
+          V průhlednějších částech pásma dostává více záření také zespodu.
+          Rozložení těchto příspěvků s výškou se nazývá váhová funkce.
+          Jednomu kanálu tak odpovídá široká vrstva, jejíž teplotní změny můžeme
+          sledovat v čase.{" "}
+          <SourceLink id="DOI_10_1175_jtech_d_16_0018_1">(Zou a Qian 2016, oddíl 3 a obrázek 1)</SourceLink>
+        </p>
+
+        <h3 id="vodni-para">Vodní pára nad oceánem</h3>
+        <p>
+          Vodní pára také pohlcuje a vydává mikrovlnné záření, výrazně například
+          v okolí frekvence 22,235 GHz. Změna jejího množství proto mění kombinaci
+          jasových teplot v jednotlivých kanálech. Jeden údaj by však nestačil.
+          Do přijatého záření přispívá také kapalná voda v oblacích a mořská
+          hladina, jejíž vyzařování závisí na teplotě a rozvlnění větrem.
+          Porovnání několika pásem pomáhá tyto příspěvky odlišit.{" "}
+          <SourceLink id="WEB_RSS_AMSR_Ocean_ATBD_2000">(Wentz a Meissner, oddíly 1.3 a 2.3)</SourceLink>
+        </p>
+        <p>
+          Převod využívá model, který pro zadaný stav hladiny a atmosféry
+          vypočítá záření očekávané v každém kanálu. Například postup pro
+          přístroj AMSR (Advanced Microwave Scanning Radiometer, pokročilý
+          mikrovlnný skenující radiometr) opakovaně upravuje odhad teploty hladiny, rychlosti
+          větru a množství vodní páry i oblačné vody, až se vypočtené jasové
+          teploty dostatečně přiblíží naměřeným. Vodní páru vyjádří jako množství
+          vody v celém sloupci atmosféry nad jednotkovou plochou.
+          Milimetr takové vodní vrstvy odpovídá jednomu kilogramu vody na metr
+          čtvereční. Výpočet je zde určen pro nezamrzlý oceán bez deště.{" "}
+          <SourceLink id="WEB_RSS_AMSR_Ocean_ATBD_2000">(oceánský algoritmus, oddíly 3.1–3.4)</SourceLink>
+        </p>
+        <p>
+          Z opakovaných měření vznikají mapy celkového množství vodní páry.
+          RSS spojuje několik radiometrů do měsíčního záznamu od ledna 1988
+          na mřížce 1° × 1°. Jeho použití a porovnání s pozemními měřeními
+          rozebírá článek o <Link href="/pozorovani/narust-vlhkosti/#mikrovlnna-mereni">vlhkosti atmosféry</Link>.{" "}
+          <SourceLink id="WEB_Remote_Sensing_Systems_Remote_Sensing_Systems_e8e6fee6">(RSS TPW, konstrukce společného souboru)</SourceLink>
+        </p>
+
+        <h3 id="srazky">Srážky z mikrovlnných měření</h3>
+        <p>
+          Déšť a sněžení mění záření jiným způsobem než samotná vodní pára.
+          Kapky záření pohlcují a vydávají, ledové částice jej také rozptylují.
+          Pro odhad srážek proto potřebujeme vztah mezi signálem radiometru
+          a rozložením kapalné vody a ledu v oblaku.{" "}
+          <SourceLink id="WEB_NASA_GPROF2021_ATBD_2022">(GPROF2021, princip a databáze profilů)</SourceLink>
+        </p>
+        <p>
+          Postup GPROF (Goddard Profiling Algorithm, algoritmus pro odhad
+          srážkového profilu) porovnává naměřenou kombinaci jasových teplot s databází možných
+          srážkových profilů. Každý profil popisuje rozložení vody a ledu
+          s výškou a má přiřazený odpovídající mikrovlnný signál.
+          Výpočet spojí odpovídající profily a větší váhu dá těm, jejichž
+          signál lépe souhlasí s měřením vzhledem k jeho nejistotě.
+          Výsledkem je mimo jiné odhad intenzity srážek u povrchu v mm/h.
+          Databáze se opírá také o společná pozorování družicového radaru
+          a radiometru.{" "}
+          <SourceLink id="WEB_NASA_GPROF2021_ATBD_2022">(GPROF2021, oddíly 1.3 a 3.3)</SourceLink>
+        </p>
+        <p>
+          Tyto odhady lze spojovat v čase a prostoru s dalšími družicovými údaji.
+          Vznik půlhodinových map z takového společného zpracování
+          popisuje pozorování <Link href="/pozorovani/srazky-a-privalove-srazky/#druzice">srážek a přívalových srážek</Link>.{" "}
+          <SourceLink id="WEB_NASA_Algorithm_Theoretical_Basis_Document_79780237">(IMERG V07, oddíl 3.2)</SourceLink>
+        </p>
+
+        <h3>Voda ve sněhu a v půdě</h3>
         <p>
           Nad souší lze mikrovlnami zkoumat také sníh. Suchý sníh rozptyluje
           záření kolem 37 GHz silněji než kolem 19 GHz. Rozdíl kanálů proto pomáhá
@@ -458,7 +528,8 @@ export function MicrowaveRadiometryArticle() {
           </p>
           <p>
             Metoda umožňuje určovat podíl mořského ledu, teplotní profily atmosféry,
-            zásobu vody ve sněhu a vlhkost půdy. Ledové pokrytí vyjadřuje od 0 do 100 %.
+            množství vodní páry ve sloupci atmosféry, intenzitu srážek, zásobu vody ve sněhu
+            a vlhkost půdy. Ledové pokrytí vyjadřuje od 0 do 100 %.
             Družicový radiometr SSM/I v pásmu 19 GHz zahrnuje do jednoho měření plochu
             přibližně 70 × 45 km, takže zachycuje proměny rozsáhlých oblastí.{" "}
             <SourceLink id="WEB_NASA_SSMI_Validation_1992">(Cavalieri, ed., 1992)</SourceLink>

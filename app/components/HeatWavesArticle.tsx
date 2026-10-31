@@ -132,7 +132,7 @@ export function HeatWavesArticle() {
         </p>
 
         <h2>Jak vzniká zveřejněný záznam</h2>
-        <h3>Měření denní maximální a minimální teploty</h3>
+        <h3 id="mereni-teploty">Měření denní maximální a minimální teploty</h3>
         <p>
           Meteorologická stanice měří teplotu vzduchu čidlem, které se s okolním vzduchem tepelně vyrovnává.
           Dříve se běžně odečítala poloha kapaliny v teploměru, dnes se často měří elektrický odpor platinového
@@ -142,6 +142,9 @@ export function HeatWavesArticle() {
           <SourceLink id="WEB_World_Meteorological_Organiz_prirucka_WMO_c_8_f7933a04">
             příručka Světové meteorologické organizace (WMO), svazek I, kapitola 2
           </SourceLink>.
+        </p>
+        <p>
+          Převod odporu čidla na teplotu a vznik staničního záznamu podrobně vysvětluje <Link href="/metody/odporova-termometrie-a-termistory/#princip">odporová termometrie</Link>.
         </p>
 
         <p>
@@ -159,13 +162,13 @@ export function HeatWavesArticle() {
           denních měření GHCN-Daily vybírá při překryvu zdrojů jednu
           preferovanou hodnotu a používá automatické kontroly rozsahu, vnitřní shody, opakovaných hodnot i neobvyklých
           rozdílů vůči okolním stanicím. Podezřelé údaje dostanou příznak kvality a původní hodnota zůstává dohledatelná.
-          Automatická kontrola jednotlivých chyb se liší od homogenizace, tedy opravy dlouhodobých změn
+          <Link href="/metody/kontrola-kvality-a-homogenizace/#denni-a-hodinova-data">Automatická kontrola jednotlivých chyb</Link> se liší od homogenizace, tedy opravy dlouhodobých změn
           způsobených například přesunem stanice. GHCN-Daily takovou jednotnou globální opravu neprovádí.
           Pro analýzu trendu je nutné ověřit, jak s těmito změnami naložil navazující výzkum.{" "}
           <SourceLink id="DOI_10_1175_jtech_d_11_00103_1">Menne et al., 2012</SourceLink>
         </p>
 
-        <h3>Místní hranice a souvislé události</h3>
+        <h3 id="hranice-a-trvani">Místní hranice a souvislé události</h3>
         <p>
           U percentilové definice se nejprve pro každou stanici a kalendářní den vytvoří místní hranice. Okolní dny
           se spojují do pohyblivého okna, aby výpočet nestál jen na třiceti hodnotách stejného data. Pro 15. červenec
@@ -187,7 +190,7 @@ export function HeatWavesArticle() {
           <SourceLink id="DOI_10_1175_jcli3366_1">Zhang et al., 2005</SourceLink>.
         </p>
 
-        <h3>Výpočet map teplotních ukazatelů</h3>
+        <h3 id="mapy-ukazatelu">Výpočet map teplotních ukazatelů</h3>
         <p>
           HadEX3 neinterpoluje každou denní teplotu. Nejprve se na stanicích vypočítají roční ukazatele, například
           počet dnů WSDI, a teprve ty se převádějí do mřížky o velikosti 1,875° zeměpisné délky krát 1,25° šířky.
@@ -197,6 +200,9 @@ export function HeatWavesArticle() {
           dodaných stanic prošlo požadavky na kvalitu a délku pro jednotlivé teplotní ukazatele nejvýše asi 7 000.{" "}
           <SourceLink id="DOI_10_1029_2019jd032263">Dunn et al., 2020</SourceLink>,{" "}
           <SourceLink id="WEB_Met_Office_uzivatelska_prirucka_HadEX3_6eb86927">HadEX3 Product User Guide</SourceLink>
+        </p>
+        <p>
+          Jak se liší odhad hodnoty v buňce od průměrování celého území, vysvětluje <Link href="/metody/prostorove-zpracovani-a-plosne-prumery/#interpolace">prostorové zpracování</Link>. Zde vstupují do mapy hotové roční ukazatele z jednotlivých stanic.
         </p>
 
         <p>
@@ -217,7 +223,7 @@ export function HeatWavesArticle() {
 
         <p>
           Výběr ukazatele z denních měření a vztah mezi sklonem trendu a jeho intervalem
-          vysvětluje metoda <Link href="/metody/analyza-casovych-zmen-a-extremu">analýza časových změn a extrémů</Link>.
+          vysvětluje metoda <Link href="/metody/analyza-casovych-zmen-a-extremu/#trend">analýza časových změn a extrémů</Link>.
           Podrobně ukazuje proložení přímky metodou nejmenších čtverců,
           zatímco zde popsané mapy HadEX3 používají medián sklonů mezi dvojicemi let.
         </p>
@@ -235,7 +241,7 @@ export function HeatWavesArticle() {
         <h2>Zveřejňovaná data</h2>
         <p>
           Následující soubory nejsou zaměnitelné. První dva zveřejňují denní teplotu, z níž lze události vypočítat.
-          HadEX3 už obsahuje hotové roční ukazatele. ERA5 doplňuje měření fyzikálně souvislou rekonstrukcí atmosféry a
+          HadEX3 už obsahuje hotové roční ukazatele. <Link href="/metody/asimilace-dat-a-reanalyzy/#era5">ERA5 doplňuje měření fyzikálně souvislou rekonstrukcí atmosféry</Link> a
           GHWR nabízí mnoho hotových definic vedle sebe.
         </p>
 
@@ -288,7 +294,7 @@ export function HeatWavesArticle() {
           </section>
 
           <section className="article-data-item">
-            <h3>ERA5</h3>
+            <h3 id="era5">ERA5</h3>
             <p>
               <strong>Obsah:</strong> hodinový stav atmosféry, včetně teploty ve dvou metrech, vytvořený propojením
               předpovědního systému a mnoha druhů pozorování. <strong>Období:</strong> od roku 1940, průběžně doplňované.

@@ -54,7 +54,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Atmosféra"
           title="Teplota stratosféry"
-          meta="28. října 2026"
+          meta="31. října 2026"
         >
           <p>
             Jak se teplota stratosféry měří balóny, družicemi a rádiovými zákryty, jak se měření vyvíjela a co
@@ -92,7 +92,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Atmosféra"
           title="Vlhkost atmosféry"
-          meta="28. října 2026"
+          meta="31. října 2026"
         >
           <p>
             Co přesně vyjadřuje měrná a relativní vlhkost, jak se vodní pára měří u povrchu, ve výšce a v celém
@@ -111,7 +111,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Atmosféra"
           title="Srážky a přívalové srážky"
-          meta="30. října 2026"
+          meta="31. října 2026"
         >
           <p>
             Jak se měří celkové úhrny, nejvyšší denní a hodinové srážky, jak se z bodových měření vytvářejí mapy a co
@@ -282,7 +282,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Extrémy"
           title="Vlny veder"
-          meta="30. října 2026"
+          meta="31. října 2026"
         >
           <p>
             Jak se z denních maxim a minim určují vlny veder, proč různé definice dávají různá čísla a co ukazují

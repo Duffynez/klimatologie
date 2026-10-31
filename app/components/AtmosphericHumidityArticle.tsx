@@ -128,10 +128,10 @@ export function AtmosphericHumidityArticle() {
         </p>
 
         <h2>Jak se vlhkost měří</h2>
-        <h3>Stanice, lodě a bóje</h3>
+        <h3 id="prizemni-mereni">Stanice, lodě a bóje</h3>
         <p>
           Princip čidel, jejich kalibraci a skutečný výpočet ze staničních dat podrobně vysvětluje
-          článek <Link href="/metody/hygrometrie">Hygrometrie</Link>.
+          článek <Link href="/metody/hygrometrie/#princip">Hygrometrie</Link>.
         </p>
         <p>
           Meteorologická stanice obvykle zaznamenává teplotu vzduchu a jeden přímý vlhkostní údaj: relativní vlhkost,
@@ -143,6 +143,9 @@ export function AtmosphericHumidityArticle() {
             WMO Guide No. 8
           </SourceLink>
         </p>
+        <p>
+          Teplotu potřebnou pro převody poskytuje například <Link href="/metody/odporova-termometrie-a-termistory/#princip">odporový teploměr</Link>. V tomto měření je teplota pomocným vstupem pro výpočet vlhkosti.
+        </p>
 
         <p>
           Čidlo potřebuje proudící okolní vzduch, ochranu před srážkami a slunečním zářením a známou výšku nad
@@ -152,7 +155,7 @@ export function AtmosphericHumidityArticle() {
           <SourceLink id="DOI_10_5194_essd_12_2853_2020">Willett et al., 2020</SourceLink>
         </p>
 
-        <h3>Radiosonda</h3>
+        <h3 id="radiosondy">Radiosonda</h3>
         <p>
           Malou sondu vynese balón obvykle do výšky přes 25 kilometrů. Přístroj během letu opakovaně vysílá tlak,
           teplotu, relativní vlhkost a polohu. Z každé sekundy letu tak vzniká bod s časem a výškou. Spojením bodů
@@ -161,8 +164,11 @@ export function AtmosphericHumidityArticle() {
           <SourceLink id="DOI_10_1029_2008jd010989">Durre et al., 2009</SourceLink>
         </p>
         <p>
+          Pro srovnání profilů potřebujeme také <Link href="/metody/mereni-tlaku-a-hydrostaticke-vysky/#tlak-v-atmosfere">vztah tlaku a výšky</Link>. Vysvětluje, co znamená společná tlaková hladina, na které pozorování porovnáváme.
+        </p>
+        <p>
           Přípravu sondy, určení její výšky a zpracování jednotlivých odečtů popisuje článek{" "}
-          <Link href="/metody/radiosondaz">Radiosondáž</Link>. Obsahuje také skutečný výstup z Prahy-Libuše,
+          <Link href="/metody/radiosondaz/#princip">Radiosondáž</Link>. Obsahuje také skutečný výstup z Prahy-Libuše,
           na kterém lze sledovat cestu od zveřejněného souboru k výškovému profilu.
         </p>
 
@@ -195,22 +201,25 @@ export function AtmosphericHumidityArticle() {
           <SourceLink id="DOI_10_5194_amt_7_4463_2014">Dirksen et al., 2014</SourceLink>
         </p>
 
-        <h3>Ramanův lidar</h3>
+        <h3 id="ramanuv-lidar">Ramanův lidar</h3>
         <p>
           Výškové rozložení vodní páry lze sledovat také ze země Ramanovým lidarem.
           Ten rozlišuje světlo rozptýlené vodní párou a dusíkem. Princip a úlohu
           kalibrace této varianty vysvětluje článek o{" "}
-          <Link href="/metody/lidar-a-laserove-mereni-vzdalenosti">lidarovém měření</Link>.{" "}
+          <Link href="/metody/lidar-a-laserove-mereni-vzdalenosti/#ramanuv-lidar">lidarovém měření</Link>.{" "}
           <SourceLink id="DOI_10_5194_amt_10_2745_2017">Davidová a kol., 2017</SourceLink>
         </p>
 
-        <h3>Mikrovlnný radiometr na družici</h3>
+        <h3 id="mikrovlnna-mereni">Mikrovlnný radiometr na družici</h3>
         <p>
           Povrch oceánu a atmosféra vyzařují mikrovlnné záření. Radiometr měří jeho intenzitu v několika přesně
           zvolených frekvenčních pásmech, z nichž některá jsou citlivá na vodní páru. Výpočet hledá takové množství
           vodní páry, při kterém modelované záření nejlépe odpovídá měření. Nad nezamrzlým oceánem lze zároveň odhadnout
           vliv kapalné vody v oblacích, větru a teploty mořské hladiny.{" "}
           <SourceLink id="DOI_10_1002_2018ea000363">Mears et al., 2018</SourceLink>
+        </p>
+        <p>
+          Proč lze vodní páru rozlišit od ostatních příspěvků k záření a co výsledný údaj znamená, vysvětluje oddíl <Link href="/metody/pasivni-mikrovlnna-radiometrie/#vodni-para">mikrovlnné měření vodní páry nad oceánem</Link>.
         </p>
 
         <p>
@@ -223,13 +232,13 @@ export function AtmosphericHumidityArticle() {
           </SourceLink>
         </p>
 
-        <h3>Pozemní přijímač navigačních družic</h3>
+        <h3 id="pozemni-gnss">Pozemní přijímač navigačních družic</h3>
         <p>
           Rádiový signál navigační družice se při průchodu atmosférou zpozdí. Zpracováním signálů více družic
           se určí společné zpoždění pro svislý směr nad stanicí. Tlak umožňuje vypočítat a odečíst jeho
           hydrostatickou část, spojenou s hmotností celého sloupce vzduchu. Zbývající mokrá část se pomocí
           vážené teploty sloupce převede na množství vodní páry. Celý postup vysvětluje článek
-          <Link href="/metody/pozemni-mereni-vodni-pary-pomoci-gnss"> o pozemním měření vodní páry pomocí GNSS</Link>.{" "}
+          <Link href="/metody/pozemni-mereni-vodni-pary-pomoci-gnss/#princip"> o pozemním měření vodní páry pomocí GNSS</Link>.{" "}
           <SourceLink id="DOI_10_1029_92jd01517">(Bevis a kol. 1992)</SourceLink>{" "}
           <SourceLink id="DOI_10_1029_2006JD007529">(Wang a kol. 2007)</SourceLink>
         </p>
@@ -244,7 +253,7 @@ export function AtmosphericHumidityArticle() {
           <SourceLink id="DOI_10_5194_cp_10_1983_2014">Willett et al., 2014</SourceLink>
         </p>
 
-        <h3>2. Automatické kontroly označí nepravděpodobná měření</h3>
+        <h3 id="kontrola-dat">2. Automatické kontroly označí nepravděpodobná měření</h3>
         <p>
           Kontroluje se platnost polohy a času, fyzikálně možné meze, náhlé opakování stejné hodnoty, neobvyklý skok i
           soulad se sousedními stanicemi. Podezřelý údaj dostane příznak kvality a do klimatického výpočtu nevstoupí.
@@ -252,8 +261,11 @@ export function AtmosphericHumidityArticle() {
           vyřadila.{" "}
           <SourceLink id="DOI_10_5194_cp_8_1649_2012">Dunn et al., 2012</SourceLink>
         </p>
+        <p>
+          Úlohu těchto testů a rozdíl proti následným úpravám dlouhodobého záznamu rozebírá <Link href="/metody/kontrola-kvality-a-homogenizace/#denni-a-hodinova-data">kontrola hodinových a denních dat</Link>.
+        </p>
 
-        <h3>3. Změny přístroje a stanice se hledají v sousedních záznamech</h3>
+        <h3 id="homogenizace">3. Změny přístroje a stanice se hledají v sousedních záznamech</h3>
         <p>
           Přestěhování stanice, změna denní doby odečtu nebo výměna psychrometru za elektronické čidlo mohou vytvořit
           skok, který nepatří skutečné změně okolního vzduchu. HadISDH hledá takové zlomy porovnáním stanice s okolními
@@ -262,8 +274,11 @@ export function AtmosphericHumidityArticle() {
           <SourceLink id="DOI_10_5194_cp_10_1983_2014">Pevnina</SourceLink> a{" "}
           <SourceLink id="DOI_10_5194_essd_12_2853_2020">oceán</SourceLink>
         </p>
+        <p>
+          Jak rozdíl mezi dvěma stanicemi pomáhá najít místní skok, vysvětluje <Link href="/metody/kontrola-kvality-a-homogenizace/#porovnani-stanic">párové porovnávání záznamů</Link>.
+        </p>
 
-        <h3>4. Měsíční hodnoty se ukládají do zeměpisné mřížky</h3>
+        <h3 id="prostorove-zpracovani">4. Měsíční hodnoty se ukládají do zeměpisné mřížky</h3>
         <p>
           HadISDH zprůměruje platná měření stanice nebo lodi za měsíc a poté je spojí v buňkách širokých pět stupňů
           zeměpisné délky i šířky. Zveřejňuje skutečné hodnoty i odchylky od průměru let 1991–2020. Prázdná buňka zůstane
@@ -271,6 +286,9 @@ export function AtmosphericHumidityArticle() {
           70° jižní a 70° severní šířky, nikoli rovnoměrně pozorovaný celý povrch.{" "}
           <SourceLink id="DOI_10_5194_cp_10_1983_2014">Pevninská část</SourceLink> a{" "}
           <SourceLink id="DOI_10_5194_essd_12_2853_2020">oceánská část</SourceLink>
+        </p>
+        <p>
+          Rozdíl mezi spojením stanic do buněk a vážením buněk podle plochy vysvětluje <Link href="/metody/prostorove-zpracovani-a-plosne-prumery/#plosne-vazeni">výpočet plošného průměru</Link>. V metodě je rozveden na teplotě, zde se průměruje příslušná vlhkostní veličina.
         </p>
 
         <h3>5. Družicová měření se nejprve sjednotí mezi přístroji</h3>
@@ -282,7 +300,7 @@ export function AtmosphericHumidityArticle() {
           <SourceLink id="DOI_10_1002_2018ea000363">Mears et al., 2018</SourceLink>
         </p>
 
-        <h3>6. Nejistota se počítá pro měření i pro nepozorovaná místa</h3>
+        <h3 id="nejistota">6. Nejistota se počítá pro měření i pro nepozorovaná místa</h3>
         <p>
           U HadISDH se odděleně vyčísluje nejistota přístroje, zaokrouhlení starých hlášení, výpočtu referenčního
           průměru, úprav známých zkreslení, zastoupení jednotlivých dnů v měsíci a zeměpisného pokrytí. U družicového
@@ -291,6 +309,9 @@ export function AtmosphericHumidityArticle() {
           <SourceLink id="DOI_10_5194_cp_10_1983_2014">Willett et al., 2014</SourceLink>,{" "}
           <SourceLink id="DOI_10_5194_essd_12_2853_2020">Willett et al., 2020</SourceLink> a{" "}
           <SourceLink id="DOI_10_1002_2018ea000363">Mears et al., 2018</SourceLink>
+        </p>
+        <p>
+          Jak se dílčí nejistoty vyjadřují na společné stupnici a přenášejí do výsledku, vysvětluje <Link href="/metody/vycisleni-a-prenos-nejistoty/#slozky-nejistoty">metoda vyčíslení a přenosu nejistoty</Link>.
         </p>
 
         <h2>Zveřejňovaná data</h2>
@@ -403,8 +424,8 @@ export function AtmosphericHumidityArticle() {
           <SourceLink id="DOI_10_1029_2022jd036728">Allan et al., 2022</SourceLink>
         </p>
 
-        <p>
-          Pozorovací soubor ponechává nepozorovaná místa prázdná. Reanalýza naproti tomu kombinuje rozmanitá měření s
+        <p id="srovnani-s-reanalyzou">
+          Pozorovací soubor ponechává nepozorovaná místa prázdná. <Link href="/metody/asimilace-dat-a-reanalyzy/#era5">Reanalýza</Link> kombinuje rozmanitá měření s
           výpočtovým modelem a vytváří souvislou mapu. Allan a kol. ukázali, že změna zeměpisného pokrytí může ovlivnit
           globální průměr HadISDH. Proto vedle čistě pozorovaných buněk porovnávali i variantu doplněnou reanalýzou.
           Zpráva za rok 2024 z téhož důvodu ukazuje ERA5 jak na celé ploše, tak pouze v místech pokrytých HadISDH.{" "}

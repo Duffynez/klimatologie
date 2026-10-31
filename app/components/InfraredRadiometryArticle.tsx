@@ -7,7 +7,7 @@ export function InfraredRadiometryArticle() {
   return (
     <article className="article-layout">
       <div className="article-prose">
-        <h2>Jak ze záření zjistíme teplotu</h2>
+        <h2 id="princip">Jak ze záření zjistíme teplotu</h2>
         <p className="article-prose__intro">
           Pasivní infračervená radiometrie je měření přirozeného infračerveného záření,
           ze kterého odvozujeme teplotu povrchu, oblaků nebo atmosféry. Přístroj přijímá
@@ -228,7 +228,7 @@ export function InfraredRadiometryArticle() {
           nad holou půdou jejího povrchu a nad vodou tenké povrchové vrstvy,
           ze které infračervené záření uniká. Teplota vzduchu několik metrů nad zemí
           je jiná veličina a získává se jiným měřením. Pro rozlišení těchto údajů
-          je užitečný článek o <Link href="/pozorovani/gmst">globální teplotě u povrchu</Link>.{" "}
+          je užitečný článek o <Link href="/pozorovani/gmst/#mereni-oceanu">globální teplotě u povrchu</Link>.{" "}
           <SourceLink id="WEB_USGS_C2_Surface_Temperature">(USGS: význam produktu)</SourceLink>{" "}
           a <SourceLink id="DOI_10_1038_s41597_019_0236_x">(Merchant a kol. 2019: teplota povrchové vrstvy oceánu)</SourceLink>
         </p>
@@ -257,6 +257,7 @@ export function InfraredRadiometryArticle() {
           <SourceLink id="DOI_10_3390_rs6098803">(Montanaro a kol. 2014)</SourceLink>{" "}
           a <SourceLink id="2024_USGS_Landsat_C2_L2_Guide">(USGS: Collection 2)</SourceLink>
         </p>
+        <h3 id="teplota-oceanu">Teplota povrchu oceánu</h3>
         <p>
           Nad oceánem dovoluje porovnání více tepelných pásem lépe rozlišit
           vyzařování hladiny od vlivu atmosféry. Merchant a kolegové tak z měření
@@ -268,6 +269,7 @@ export function InfraredRadiometryArticle() {
           vlny veder.{" "}
           <SourceLink id="DOI_10_1038_s41597_019_0236_x">(Merchant a kol. 2019)</SourceLink>
         </p>
+        <h3 id="teplota-atmosfery">Teplota vrstev atmosféry</h3>
         <p>
           Pro měření atmosféry se naopak vybírají také pásma, ve kterých plyny
           záření výrazně pohlcují a vydávají. Různá pásma mají odlišnou citlivost
@@ -278,6 +280,31 @@ export function InfraredRadiometryArticle() {
           horní části. Výběrem pásma a způsobu zpracování tedy určujeme,
           kterou část systému povrch–atmosféra chceme poznat.{" "}
           <SourceLink id="WEB_NASA_CLIMCAPS_Temperature">(NASA/JPL: teplotní sondování)</SourceLink>
+        </p>
+        <p>
+          Historický přístroj SSU (Stratospheric Sounding Unit, jednotka
+          pro sondování stratosféry) využíval záření oxidu uhličitého v pásmu
+          kolem 15 mikrometrů. Jeho tři kanály přijímaly různou směs záření
+          z jednotlivých výšek, a sledovaly tak teplotu tří širokých vrstev
+          stratosféry. Při navázání novějšími mikrovlnnými přístroji bylo
+          potřeba sjednotit také jejich citlivost k výšce, aby pokračoval
+          záznam téže vrstvy. Tuto návaznost a výsledné záznamy představuje
+          pozorování <Link href="/pozorovani/stratosfericke-ochlazovani/#druzicove-vrstvy">teploty stratosféry</Link>.{" "}
+          <SourceLink id="DOI_10_1175_jtech_d_16_0018_1">(Zou a Qian 2016, oddíly 1 a 3)</SourceLink>
+        </p>
+
+        <h3 id="oblacnost-a-srazky">Teplota oblaků při odhadu srážek</h3>
+        <p>
+          Infračervená měření slouží také jako jeden ze vstupů odhadu srážek.
+          Zachycují záření z horní části neprůhledného oblaku. Pro spojení
+          s deštěm u země je potřeba další vztah, který popíše, jaké srážky
+          takovému signálu obvykle odpovídají. Při tvorbě společných srážkových map
+          se tento převod nastavuje podle mikrovlnných odhadů.
+          Časté infračervené snímky potom pomáhají
+          doplnit čas mezi přelety mikrovlnných radiometrů. Hotové mapy a jejich
+          spojení se srážkoměry popisuje pozorování
+          <Link href="/pozorovani/srazky-a-privalove-srazky/#druzice"> srážek a přívalových srážek</Link>.{" "}
+          <SourceLink id="WEB_NASA_Algorithm_Theoretical_Basis_Document_79780237">(IMERG V07, oddíly 3.2 a 3.3)</SourceLink>
         </p>
 
         <h2>Nejistoty a ověření</h2>

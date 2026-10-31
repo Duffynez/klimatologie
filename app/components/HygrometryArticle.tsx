@@ -10,7 +10,7 @@ export function HygrometryArticle() {
   return (
     <article className="article-layout">
       <div className="article-prose">
-        <h2>Jak se měří vlhkost vzduchu</h2>
+        <h2 id="princip">Jak se měří vlhkost vzduchu</h2>
         <p className="article-prose__intro">
           Hygrometrie je měření vlhkosti plynů, tedy obsahu vodní páry v nich. V meteorologii se
           používá k měření vlhkosti vzduchu u země i ve vyšších vrstvách atmosféry. Vlhkoměr může
@@ -200,7 +200,7 @@ export function HygrometryArticle() {
           a teplotou ve stejném okamžiku. Protože převod není lineární, převést průměrné vstupy
           by obecně dalo jiný výsledek než zprůměrovat jednotlivě převedená měření.
           Na jejich klimatické využití navazuje článek
-          <Link href="/pozorovani/narust-vlhkosti"> Vlhkost atmosféry</Link>.
+          <Link href="/pozorovani/narust-vlhkosti/#prizemni-mereni"> Vlhkost atmosféry</Link>.
         </p>
         <p>
           <Link href="/metody/radiosondaz">Radiosondy</Link> nesou vlhkoměry do výšky a doplňují

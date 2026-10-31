@@ -155,7 +155,7 @@ export function StratosphericCoolingArticle() {
         </p>
 
         <h2>Co se skutečně měří</h2>
-        <h3>Radiosonda: teplota během jednoho výstupu</h3>
+        <h3 id="radiosondy">Radiosonda: teplota během jednoho výstupu</h3>
         <p>
           Současná radiosonda je malá jednorázová měřicí souprava zavěšená pod balónem naplněným heliem nebo
           vodíkem. Teplotní čidlo je vystavené proudícímu vzduchu a poloha se sleduje pomocí družicové navigace.
@@ -164,9 +164,12 @@ export function StratosphericCoolingArticle() {
           <SourceLink id="WEB_NOAA_Radiosonde_Observation_27e1f005">NOAA/NWS: radiosondové pozorování</SourceLink>
         </p>
         <p>
+          Fungování samotného teplotního čidla vysvětluje <Link href="/metody/odporova-termometrie-a-termistory/#princip">odporová termometrie</Link>. Význam tlaku a jeho vztah k výšce rozebírá oddíl o <Link href="/metody/mereni-tlaku-a-hydrostaticke-vysky/#tlak-v-atmosfere">tlaku v atmosféře</Link>.
+        </p>
+        <p>
           Tlak se podle provedení sondy měří samostatným čidlem nebo odvozuje z výšky, teploty a vlhkosti.
           Obě varianty rozlišuje <SourceLink id="2023_GRUAN_RS41_TD8">dokumentace GRUAN pro RS41</SourceLink>.
-          Cestu od odečtů čidel k hotovému profilu vysvětluje článek <Link href="/metody/radiosondaz">Radiosondáž</Link>.
+          Cestu od odečtů čidel k hotovému profilu vysvětluje článek <Link href="/metody/radiosondaz/#princip">Radiosondáž</Link>.
         </p>
 
         <p>
@@ -190,7 +193,7 @@ export function StratosphericCoolingArticle() {
           </SourceLink>
         </p>
 
-        <h3>Družice: teplota široké vrstvy</h3>
+        <h3 id="druzicove-vrstvy">Družice: teplota široké vrstvy</h3>
         <p>
           Mikrovlnné sondéry MSU, AMSU-A a ATMS měří záření molekulárního kyslíku v pásmu kolem 60 gigahertzů.
           Kyslík je v atmosféře dobře promíchaný a intenzita záření nese informaci o teplotě vzduchu. Přístroj
@@ -208,6 +211,9 @@ export function StratosphericCoolingArticle() {
             Mears &amp; Wentz, 2009
           </SourceLink>{" "}
           a <SourceLink id="DOI_10_1175_jtech_d_16_0018_1">Zou &amp; Qian, 2016</SourceLink>
+        </p>
+        <p>
+          Proč různé kanály zachycují různé vrstvy, vysvětlují oddíly o <Link href="/metody/pasivni-mikrovlnna-radiometrie/#teplota-atmosfery">mikrovlnném měření teploty atmosféry</Link> a <Link href="/metody/pasivni-infracervena-radiometrie/#teplota-atmosfery">infračerveném sondování</Link>.
         </p>
 
         <figure className="article-figure article-figure--portrait">
@@ -251,13 +257,13 @@ export function StratosphericCoolingArticle() {
           produkty se stejnou nebo přepočtenou váhovou funkcí.
         </p>
 
-        <h3>Rádiový zákryt: teplotní profil z ohybu signálu</h3>
+        <h3 id="radiove-zakryty">Rádiový zákryt: teplotní profil z ohybu signálu</h3>
         <p>
           Navigační družice vysílá rádiový signál a druhá družice na nízké oběžné dráze jej sleduje při západu za
           zemský okraj. Atmosféra signál zpomalí a ohne. Z přesného času a fáze se nejprve vypočte úhel ohybu a
           index lomu, z nich tlak a nakonec svislý profil takzvané suché teploty. Ve stratosféře, kde je málo
           vodní páry, se tento výpočet používá přímo. Podrobný postup vysvětluje článek o{" "}
-          <Link href="/metody/radiove-zakryty-gnss">rádiových zákrytech GNSS</Link>,
+          <Link href="/metody/radiove-zakryty-gnss/#teplotni-profil">rádiových zákrytech GNSS</Link>,
           včetně přepočtu skutečného družicového profilu.{" "}
           <SourceLink id="DOI_10_1029_97JD01569">(Kursinski a kol. 1997)</SourceLink>
         </p>
@@ -284,7 +290,7 @@ export function StratosphericCoolingArticle() {
           <SourceLink id="DOI_10_1175_jtech_d_17_0223_1">Durre et al., 2018</SourceLink>
         </p>
 
-        <h3>2. Radiosondy se porovnají v čase</h3>
+        <h3 id="homogenizace">2. Radiosondy se porovnají v čase</h3>
         <p>
           Stanice může během desítek let vystřídat několik typů radiosond, výpočetních postupů i časů vypouštění.
           Změna se hledá v doprovodných záznamech a porovnáním s okolními stanicemi. Lanzante, Klein a Seidel
@@ -296,6 +302,9 @@ export function StratosphericCoolingArticle() {
           </SourceLink>
           , <SourceLink id="DOI_10_1175_jcli4050_1">Haimberger, 2007</SourceLink> a{" "}
           <SourceLink id="DOI_10_1175_jcli_d_11_00668_1">Haimberger et al., 2012</SourceLink>
+        </p>
+        <p>
+          Smysl porovnávání sousedních záznamů vysvětluje <Link href="/metody/kontrola-kvality-a-homogenizace/#porovnani-stanic">metoda homogenizace</Link>. Její podrobný příklad pracuje s měsíčními přízemními teplotami. Zde se obdobná otázka srovnatelnosti řeší pro jednotlivé výškové hladiny vlastními postupy uvedenými výše.
         </p>
 
         <h3>3. Z vybraných stanic se vytvoří velkoplošný průměr</h3>

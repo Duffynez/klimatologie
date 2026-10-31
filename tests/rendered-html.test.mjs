@@ -5,6 +5,11 @@ import test from "node:test";
 
 const root = new URL("../", import.meta.url);
 
+function hasArticleLink(html, path) {
+  return [...html.matchAll(/href="([^"]+)"/g)].some(([, href]) =>
+    href.split("#")[0].replace(/\/$/, "") === path.replace(/\/$/, ""));
+}
+
 test("publishes altimetry with real data, open sources and reciprocal ocean and ice links", async () => {
   const slug = "radarova-a-laserova-altimetrie";
   const [html, source, catalogue, ocean, ice] = await Promise.all([
@@ -84,10 +89,10 @@ test("publishes lidar with accessible sources, local illustrations and a recipro
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
+  assert.deepEqual([...body.matchAll(/<h2\b[^>]*>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak lidar rozpoznává vrstvy atmosféry a porostu", "Nejistoty a ověření", "Příklad: výška porostu z jednoho pulzu GEDI", "Shrnutí",
   ]);
-  assert.match(html, /<p class="page-lead__meta">28\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
   assert.match(body, /10,90 metru/);
   assert.match(body, /historické produkty V001/);
@@ -95,8 +100,8 @@ test("publishes lidar with accessible sources, local illustrations and a recipro
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
   const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
   assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
-  assert.match(body, /href="\/pozorovani\/narust-vlhkosti"/);
-  assert.ok(observation.includes(`href="/metody/${slug}"`));
+  assert.match(body, /href="\/pozorovani\/narust-vlhkosti\/?(?:#[^"]+)?"/);
+  assert.ok(hasArticleLink(observation, `/metody/${slug}`));
   const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
   assert.ok(ids.length >= 5);
   for (const id of ids) {
@@ -147,10 +152,10 @@ test("publishes radar with a complete explanation, real echo and reciprocal prec
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body, "Radar must render the full article instead of its catalogue placeholder");
-  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
+  assert.deepEqual([...body.matchAll(/<h2\b[^>]*>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak radar měří déšť a rozpoznává vrstvy ledu", "Nejistoty a ověření", "Příklad: radarové měření u Houstonu", "Shrnutí",
   ]);
-  assert.match(html, /<p class="page-lead__meta">28\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
   assert.match(body, /41 dBZ/);
   assert.match(body, /26,2 mm\/h/);
@@ -159,8 +164,8 @@ test("publishes radar with a complete explanation, real echo and reciprocal prec
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
   const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
   assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
-  assert.match(body, /href="\/pozorovani\/srazky-a-privalove-srazky"/);
-  assert.ok(observation.includes(`href="/metody/${slug}"`));
+  assert.match(body, /href="\/pozorovani\/srazky-a-privalove-srazky\/?(?:#[^"]+)?"/);
+  assert.ok(hasArticleLink(observation, `/metody/${slug}`));
   const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
   assert.ok(ids.length >= 5);
   for (const id of ids) {
@@ -211,18 +216,18 @@ test("publishes microwave radiometry with the full signal-to-ice explanation and
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
+  assert.deepEqual([...body.matchAll(/<h2\b[^>]*>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak mikrovlny rozliší led a vodu", "Nejistoty a ověření", "Příklad: zimní měření severně od Aljašky", "Shrnutí",
   ]);
-  assert.match(html, /<p class="page-lead__meta">28\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
   assert.match(body, /matematické jádro metody, nikoli oficiální/);
   assert.doesNotMatch(body, /_vinext\/image|katex-error|Potřebné informace/);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
   const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
   assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
-  assert.match(body, /href="\/pozorovani\/ubytek-arktickeho-ledu"/);
-  assert.ok(observation.includes(`href="/metody/${slug}"`));
+  assert.match(body, /href="\/pozorovani\/ubytek-arktickeho-ledu\/?(?:#[^"]+)?"/);
+  assert.ok(hasArticleLink(observation, `/metody/${slug}`));
   const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
   assert.ok(ids.length >= 5);
   for (const id of ids) {
@@ -276,18 +281,18 @@ test("publishes thermal infrared radiometry with its source trail and temperatur
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
+  assert.deepEqual([...body.matchAll(/<h2\b[^>]*>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak ze záření zjistíme teplotu", "Nejistoty a ověření",
     "Příklad: teplota jednoho místa u Aletschského ledovce", "Shrnutí",
   ]);
-  assert.match(html, /<p class="page-lead__meta">28\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
   assert.doesNotMatch(body, /_vinext\/image|katex-error|Potřebné informace/);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
   const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
   assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
-  assert.match(body, /href="\/pozorovani\/gmst"/);
-  assert.ok(observation.includes(`href="/metody/${slug}"`));
+  assert.match(body, /href="\/pozorovani\/gmst\/?(?:#[^"]+)?"/);
+  assert.ok(hasArticleLink(observation, `/metody/${slug}`));
   const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
   assert.ok(ids.length >= 5);
   for (const id of ids) {
@@ -996,7 +1001,7 @@ test("publishes a sourced atmospheric humidity article instead of the generic pl
 
   assert.match(evidencePage, /AtmosphericHumidityArticle/);
   assert.match(evidencePage, /title="Vlhkost atmosféry"/);
-  assert.match(evidencePage, /title="Vlhkost atmosféry"\s+meta="28\. října 2026"/);
+  assert.match(evidencePage, /title="Vlhkost atmosféry"\s+meta="31\. října 2026"/);
   assert.match(article, /Vlhkost atmosféry popisuje množství vodní páry ve vzduchu/);
   assert.doesNotMatch(article, /Potřebné informace|article-glossary/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
@@ -1020,7 +1025,7 @@ test("publishes a sourced atmospheric humidity article instead of the generic pl
   assert.match(sourceCatalogueText, /centaur\.reading\.ac\.uk\/105632/);
   assert.match(sourceCatalogueText, /metoffice\.gov\.uk\/hadobs\/hadcruh\/data\/Willettetal2008\.pdf/);
   assert.match(sourceCatalogueText, /repository\.library\.noaa\.gov\/view\/noaa\/59958/);
-  assert.match(sourceCatalogueText, /repository\.library\.noaa\.gov\/view\/noaa\/25912\/noaa_25912_DS1\.pdf/);
+  assert.match(sourceCatalogueText, /agupubs\.onlinelibrary\.wiley\.com\/doi\/full\/10\.1002\/2018EA000363/);
   assert.match(article, /Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez/);
   assert.match(article, /předběžné verze za rok[\s\S]*2025/);
   assert.match(article, /Stith et al\., 2018/);
@@ -1598,7 +1603,7 @@ test("gives every heat-wave source public access and preserves corrected measure
   assert.match(articleHtml, /WSDI tedy neudává počet událostí/);
   assert.match(articleHtml, /nemusely připadat na stejné datum/);
   assert.match(articleHtml, /neuvádí úplný seznam použitých stanic/);
-  assert.match(articleHtml, /<p class="page-lead__meta">30\. října 2026<\/p>/);
+  assert.match(articleHtml, /<p class="page-lead__meta">31\. října 2026<\/p>/);
   assert.doesNotMatch(articleHtml, /Sadegh et al\., 2018|133 homogenizovaných českých stanic|souvislá zasažená plocha/);
   assert.equal((articleHtml.match(/class="article-figure__scroll"/g) ?? []).length, 2);
 });
@@ -1702,7 +1707,7 @@ test("publishes reproducible thermometry examples with open sources and working 
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
   const displayedDate = html.match(/<p class="page-lead__meta">([^<]*)<\/p>/)?.[1];
-  assert.equal(displayedDate, "28. října 2026", "Show only the last edit date, without a label");
+  assert.equal(displayedDate, "31. října 2026", "Show only the last edit date, without a label");
   assert.doesNotMatch(article, /<Citation\b/);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
   assert.match(body, /29,8627 °C/);
@@ -1771,7 +1776,7 @@ test("publishes hygrometry with a reproducible hour, source cards and observatio
   assert.match(body, /85 %/);
   assert.equal((body.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) ?? []).length, 12);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
-  assert.match(observation, /href="\/metody\/hygrometrie\/?"/);
+  assert.match(observation, /href="\/metody\/hygrometrie\/?(?:#[^"]+)?"/);
   const ids = [...new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
   assert.ok(ids.length >= 5);
   for (const id of ids) {
@@ -1834,7 +1839,7 @@ test("publishes radiosounding with its original profile, open sources and connec
   assert.match(body, /prague-temperature-profile\.png/);
   assert.equal((body.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) ?? []).length, 8);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
-  for (const page of related) assert.match(page, /href="\/metody\/radiosondaz\/?"/);
+  for (const page of related) assert.match(page, /href="\/metody\/radiosondaz\/?(?:#[^"]+)?"/);
   const ids = [...new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
   for (const id of ids) {
     const card = catalogue.match(new RegExp(`<article[^>]*id="${id}"[\\s\\S]*?<\\/article>`))?.[0];
@@ -1897,7 +1902,7 @@ test("publishes pressure and hydrostatic height with traceable calibration data 
   assert.match(body, /calibration-residuals\.png/);
   assert.equal((body.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) ?? []).length, 11);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
-  for (const page of related) assert.match(page, /href="\/metody\/mereni-tlaku-a-hydrostaticke-vysky\/?"/);
+  for (const page of related) assert.match(page, /href="\/metody\/mereni-tlaku-a-hydrostaticke-vysky\/?(?:#[^"]+)?"/);
   const ids = [...new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
   assert.equal(ids.length, 13, "Eleven method sources plus the photograph and NOAA reuse policy");
   for (const id of ids) {
@@ -2024,7 +2029,7 @@ test("publishes rain gauges and disdrometers with open sources, data and an obse
   assert.match(body, /nepřiřazuje samostatný příznak kvality/);
   assert.equal((body.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) ?? []).length, 12);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/, "No semicolons in Czech prose");
-  assert.match(observation, /href="\/metody\/srazkomery-a-disdrometry\/?"/);
+  assert.match(observation, /href="\/metody\/srazkomery-a-disdrometry\/?(?:#[^"]+)?"/);
   const ids = [...new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((m) => m[1]))];
   for (const id of ids) {
     const card = catalogue.match(new RegExp(`<article[^>]*id="${id}"[\\s\\S]*?<\\/article>`))?.[0];
@@ -2573,8 +2578,8 @@ test("publishes isotope mass spectrometry with an honest example and open source
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.match(html, /<p class="page-lead__meta">28\. října 2026<\/p>/);
-  const headings = [...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]);
+  assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  const headings = [...body.matchAll(/<h2\b[^>]*>(.*?)<\/h2>/g)].map(m => m[1]);
   assert.deepEqual(headings, ["Jak změříme izotopové složení vody", "Nejistoty a ověření", "Příklad: stejná voda ve třech laboratořích", "Shrnutí"]);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
   assert.match(body, /Začínáme zveřejněnými průměry δ¹⁸O po kalibraci/);
@@ -2585,7 +2590,7 @@ test("publishes isotope mass spectrometry with an honest example and open source
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
   const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
   assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
-  assert.match(observation, /href="\/metody\/hmotnostni-a-izotopova-spektrometrie"/);
+  assert.match(observation, /href="\/metody\/hmotnostni-a-izotopova-spektrometrie\/?(?:#[^"]+)?"/);
   const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
   assert.ok(ids.length >= 5);
   for (const id of ids) {
@@ -3500,10 +3505,10 @@ test("quality control and homogenization connects a complete method to global te
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
+  assert.deepEqual([...body.matchAll(/<h2\b[^>]*>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak získáme srovnatelný klimatický záznam", "Nejistoty a ověření", "Příklad: kontrola a úpravy teplot v Ruzyni", "Shrnutí",
   ]);
-  assert.match(html, /<p class="page-lead__meta">30\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
   assert.match(observation, /<p class="page-lead__meta">31\. října 2026<\/p>/);
   assert.match(body, /EZM00011518/);
   assert.match(body, /v4\.0\.1\.20261029/);
@@ -3512,8 +3517,8 @@ test("quality control and homogenization connects a complete method to global te
   assert.match(body, /1 hodina nebo 1 den/);
   assert.match(body, /1 měsíc/);
   assert.match(body, /původní\s+hledání zlomů v celé síti zde znovu neprovádí/);
-  assert.match(body, /href="\/pozorovani\/gmst"/);
-  assert.match(observation, /href="\/metody\/kontrola-kvality-a-homogenizace"/);
+  assert.match(body, /href="\/pozorovani\/gmst\/?(?:#[^"]+)?"/);
+  assert.match(observation, /href="\/metody\/kontrola-kvality-a-homogenizace\/?(?:#[^"]+)?"/);
   assert.doesNotMatch(body, /katex-error|Potřebné informace|citation--missing/);
   assert.doesNotMatch(source, /T_\{mathrm/);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
@@ -3595,16 +3600,16 @@ test("spatial processing publishes a complete method with reciprocal GMST links 
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
+  assert.deepEqual([...body.matchAll(/<h2\b[^>]*>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak z měření sestavíme mapu a průměr území", "Nejistoty a ověření výsledku", "Příklad na šestnácti buňkách nad Evropou", "Shrnutí",
   ]);
-  assert.match(html, /<p class="page-lead__meta">30\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
   assert.match(body, /5\.2\.0\.0/);
   assert.match(body, /1,35 °C/);
   assert.match(body, /1,16 °C/);
   assert.match(body, /opakujeme krok plošného/);
-  assert.match(body, /href="\/pozorovani\/gmst"/);
-  assert.match(observation, /href="\/metody\/prostorove-zpracovani-a-plosne-prumery"/);
+  assert.match(body, /href="\/pozorovani\/gmst\/?(?:#[^"]+)?"/);
+  assert.match(observation, /href="\/metody\/prostorove-zpracovani-a-plosne-prumery\/?(?:#[^"]+)?"/);
   assert.doesNotMatch(body, /katex-error|Potřebné informace|citation--missing/);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
   const conclusion = body.match(/<div class="method-conclusion">([\s\S]*?)<\/div>/)?.[1];
@@ -3676,12 +3681,12 @@ test("time changes and extremes publish the full method, reproducible example an
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
+  assert.deepEqual([...body.matchAll(/<h2\b[^>]*>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak rozpoznáváme změny v čase", "Nejistoty a ověření", "Příklad na denních teplotách z Blue Hill", "Shrnutí",
   ]);
-  for (const page of [html, heat, rain]) assert.match(page, /<p class="page-lead__meta">30\. října 2026<\/p>/);
-  for (const observation of [heat, rain]) assert.match(observation, /href="\/metody\/analyza-casovych-zmen-a-extremu"/);
-  for (const slug of ["vlny-veder", "srazky-a-privalove-srazky"]) assert.ok(body.includes('href="/pozorovani/' + slug + '"'));
+  for (const page of [html, heat, rain]) assert.match(page, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  for (const observation of [heat, rain]) assert.match(observation, /href="\/metody\/analyza-casovych-zmen-a-extremu\/?(?:#[^"]+)?"/);
+  for (const slug of ["vlny-veder", "srazky-a-privalove-srazky"]) assert.ok(hasArticleLink(body, "/pozorovani/" + slug));
   for (const text of ["23 376", "3.35-upd-2026102817", "15,8773", "84 dnů", "−0,09 až +0,25", "nejmenších čtverců", "oboustranný test", "není homogenizován"]) assert.ok(body.includes(text), text);
   assert.doesNotMatch(body, /katex-error|Potřebné informace|citation--missing/);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
@@ -3771,7 +3776,7 @@ test("Blue Hill example preserves NOAA bytes, complete daily inputs and independ
 });
 
 
-test("uncertainty method explains propagation, links GMST and publishes six open references", async () => {
+test("uncertainty method explains propagation, links observations and publishes open references", async () => {
   const [html, source, catalogue, observation] = await Promise.all([
     readFile(new URL("dist/client/metody/vycisleni-a-prenos-nejistoty/index.html", root), "utf8"),
     readFile(new URL("app/components/UncertaintyArticle.tsx", root), "utf8"),
@@ -3780,13 +3785,13 @@ test("uncertainty method explains propagation, links GMST and publishes six open
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
+  assert.deepEqual([...body.matchAll(/<h2\b[^>]*>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak určujeme nejistotu výsledku", "Spolehlivost odhadu a jeho ověření", "Příklad na globální teplotě roku 2024", "Shrnutí",
   ]);
-  assert.match(html, /<p class="page-lead__meta">30\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
   for (const text of ["1,187449", "0,021262", "0,003618", "1,187 ± 0,042", "0,02093", "0,02875", "1961–1990", "standardní nejistota", "Monte Carlo"]) assert.ok(body.includes(text), text);
-  assert.match(body, /href="\/pozorovani\/gmst"/);
-  assert.match(observation, /href="\/metody\/vycisleni-a-prenos-nejistoty"/);
+  assert.match(body, /href="\/pozorovani\/gmst\/?(?:#[^"]+)?"/);
+  assert.match(observation, /href="\/metody\/vycisleni-a-prenos-nejistoty\/?(?:#[^"]+)?"/);
   assert.doesNotMatch(body, /katex-error|Potřebné informace|citation--missing/);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
   const conclusion = body.match(/<div class="method-conclusion">([\s\S]*?)<\/div>/)?.[1];
@@ -3796,7 +3801,7 @@ test("uncertainty method explains propagation, links GMST and publishes six open
   const limits = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
   assert.ok(limits.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
   const ids = new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]));
-  assert.equal(ids.size, 6);
+  assert.equal(ids.size, 7);
   for (const id of ids) {
     const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
     assert.ok(card, "Missing uncertainty reference " + id);
@@ -3869,7 +3874,7 @@ test("HadCRUT uncertainty reproduces official values and preserves covariance be
 });
 
 
-test("reanalysis explains assimilation and links nine open references and the temperature observation", async () => {
+test("reanalysis explains assimilation and links open references and observations", async () => {
   const [html, source, catalogue, observation] = await Promise.all([
     readFile(new URL("dist/client/metody/asimilace-dat-a-reanalyzy/index.html", root), "utf8"),
     readFile(new URL("app/components/ReanalysisArticle.tsx", root), "utf8"),
@@ -3878,13 +3883,13 @@ test("reanalysis explains assimilation and links nine open references and the te
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
+  assert.deepEqual([...body.matchAll(/<h2\b[^>]*>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak měření a model společně rekonstruují atmosféru", "Nejistoty a ověření reanalýzy", "Příklad tlaku u New Yorku v březnu 1888", "Shrnutí",
   ]);
   assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
   for (const text of ["pozorovací operátor", "kovariance", "Kalman", "1 001,84 hPa", "999,60 hPa", "1 003,09 hPa", "80 realizací", "41° s. š., 74° z. d."]) assert.ok(body.includes(text), text);
-  assert.match(body, /href="\/pozorovani\/gmst"/);
-  assert.match(observation, /href="\/metody\/asimilace-dat-a-reanalyzy"/);
+  assert.match(body, /href="\/pozorovani\/gmst\/?(?:#[^"]+)?"/);
+  assert.match(observation, /href="\/metody\/asimilace-dat-a-reanalyzy\/?(?:#[^"]+)?"/);
   assert.doesNotMatch(body, /katex-error|Potřebné informace|citation--missing/);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
   const conclusion = body.match(/<div class="method-conclusion">([\s\S]*?)<\/div>/)?.[1];
@@ -3893,7 +3898,7 @@ test("reanalysis explains assimilation and links nine open references and the te
   const limits = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
   assert.ok(limits.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
   const ids = new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]));
-  assert.equal(ids.size, 9);
+  assert.equal(ids.size, 11);
   for (const id of ids) {
     const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
     assert.ok(card, "Missing reanalysis reference " + id);
@@ -3943,4 +3948,47 @@ test("20CR example preserves the northern coordinate, units, time axis and publi
   assert.equal(r.minimum.mean_hpa, 999.5978);
   assert.equal(r.illustrative_update.analysis_hpa, 1003.2);
   assert.match(r.scope, /No station measurement, new assimilation, daily uncertainty interval or central storm minimum/);
+});
+
+
+test("observation-method section links resolve and the first topic group has return paths", async () => {
+  const cache = new Map();
+  async function article(path) {
+    path = path.replace(/\/$/, "");
+    if (!cache.has(path)) {
+      const html = await readFile(new URL("dist/client" + path + "/index.html", root), "utf8");
+      const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+      assert.ok(body, "Expected a full article at " + path);
+      const ids = [...body.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
+      assert.equal(new Set(ids).size, ids.length, "Duplicate section ID at " + path);
+      cache.set(path, { body, ids: new Set(ids) });
+    }
+    return cache.get(path);
+  }
+  const firstGroup = ["gmst", "stratosfericke-ochlazovani", "narust-vlhkosti", "srazky-a-privalove-srazky", "vlny-veder"];
+  for (const slug of firstGroup) {
+    const path = "/pozorovani/" + slug;
+    const { body } = await article(path);
+    const links = [...body.matchAll(/href="(\/metody\/[^"#]+)(#[^"]+)?"/g)];
+    assert.ok(links.length > 0, "No method connections for " + slug);
+    for (const [, target, hash] of links) {
+      const method = await article(target);
+      assert.ok(hash, "Expected a specific method section for " + target);
+      assert.ok(method.ids.has(decodeURIComponent(hash.slice(1))), "Missing destination: " + target + hash);
+      assert.ok(hasArticleLink(method.body, path), "Missing return path: " + target + " -> " + path);
+    }
+  }
+  // Check every published cross-category section link, including return links.
+  for (const section of ["pozorovani", "metody"]) {
+    for (const dir of await readdir(new URL("dist/client/" + section + "/", root), { withFileTypes: true })) {
+      if (!dir.isDirectory()) continue;
+      const html = await readFile(new URL(`dist/client/${section}/${dir.name}/index.html`, root), "utf8");
+      const opposite = section === "pozorovani" ? "metody" : "pozorovani";
+      for (const [, target, hash] of html.matchAll(/href="(\/(?:pozorovani|metody)\/[^"#]+)#([^"]+)"/g)) {
+        if (!target.startsWith("/" + opposite + "/")) continue;
+        const destination = await article(target);
+        assert.ok(destination.ids.has(decodeURIComponent(hash)), `${section}/${dir.name}: missing ${target}#${hash}`);
+      }
+    }
+  }
 });

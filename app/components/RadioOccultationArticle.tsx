@@ -129,7 +129,7 @@ export function RadioOccultationArticle() {
           <SourceLink id="DOI_10_3390_atmos13091409">(Weiss a kol. 2022, oddíl 2.4)</SourceLink>
         </p>
 
-        <h3>Jak se vypočítá teplota jednotlivých vrstev</h3>
+        <h3 id="teplotni-profil">Jak se vypočítá teplota jednotlivých vrstev</h3>
         <p>
           Jeden paprsek prochází mnoha vrstvami. K určení jejich vlastností
           se proto využije celý sled paprsků s různou nejnižší výškou.
@@ -224,7 +224,7 @@ export function RadioOccultationArticle() {
           oteplování troposféry a ochlazování dolní stratosféry. Změny
           byly patrné také v samotném ohybu signálu, tedy už před převodem
           na teplotu. Na tyto výsledky navazuje článek o{" "}
-          <Link href="/pozorovani/stratosfericke-ochlazovani">teplotě stratosféry</Link>.{" "}
+          <Link href="/pozorovani/stratosfericke-ochlazovani/#radiove-zakryty">teplotě stratosféry</Link>.{" "}
           <SourceLink id="DOI_10_1038_s41612_022_00229_7">(Gleisner a kol. 2022, obrázek 2)</SourceLink>
         </p>
         <p>

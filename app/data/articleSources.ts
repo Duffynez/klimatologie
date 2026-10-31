@@ -12,6 +12,8 @@ const rawArticleSources: Source[] = [
   {id: "WEB_ECMWF_ERA5_Data_Documentation", title: "ERA5: data documentation", author: "ECMWF / Copernicus Climate Change Service", year: 2026, publication: "Průběžná veřejná dokumentace ERA5. 4D-Var, časová okna, vstupy, modelové a výstupní hladiny a časový rozsah. Rok označuje přístup 31. října 2026.", type: "Veřejná metodická dokumentace", category: "science", externalUrl: "https://confluence.ecmwf.int/display/CKB/ERA5%3A+data+documentation", topics: ["metody", "asimilace dat a reanalýzy", "zpracování dat"]},
   {id: "WEB_ECMWF_Data_Assimilation", title: "Data assimilation", author: "European Centre for Medium-Range Weather Forecasts", year: 2026, publication: "Veřejný popis cyklu analýzy a předpovědi a asimilace pro atmosféru, pevninský povrch a oceán. Rok označuje přístup 31. října 2026.", type: "Institucionální metodický přehled", category: "organization", externalUrl: "https://www.ecmwf.int/en/research/data-assimilation", topics: ["metody", "asimilace dat a reanalýzy", "zpracování dat"]},
 
+  { id: "WEB_RSS_AMSR_Ocean_ATBD_2000", title: "Algorithm Theoretical Basis Document, Version 2: AMSR Ocean Algorithm", author: "Frank J. Wentz a Thomas Meissner", year: 2000, publication: "Remote Sensing Systems pro NASA EOS, revize 2. listopadu 2000", type: "Metodická dokumentace", category: "science", externalUrl: "https://images.remss.com/papers/amsr/AMSR_Ocean_Algorithm_Version_2.pdf", citationLabel: "Wentz a Meissner 2000", topics: ["metody", "mikrovlnná radiometrie", "vlhkost", "oceán"] },
+  { id: "WEB_NASA_GPROF2021_ATBD_2022", title: "GPROF2021 Version 1: Algorithm Theoretical Basis Document", author: "Passive Microwave Algorithm Team Facility", year: 2022, publication: "NASA Global Precipitation Measurement, 15. května 2022, zpracování GPM V7", type: "Metodická dokumentace", category: "science", externalUrl: "https://gpm.nasa.gov/sites/default/files/2022-06/ATBD_GPM_V7_GPROF.pdf", citationLabel: "GPROF2021, metodika 2022", topics: ["metody", "mikrovlnná radiometrie", "srážky", "družice"] },
   { id: "DOI_10_59161_JCGM100_2008E", title: "Evaluation of measurement data — Guide to the expression of uncertainty in measurement", author: "Joint Committee for Guides in Metrology", year: 2008, publication: "JCGM 100:2008(E), GUM 1995 s drobnými opravami. Definice, vyhodnocení typu A a B, zákon přenosu nejistoty a korelované vstupy.", type: "Mezinárodní metrologická příručka", category: "science", externalUrl: "https://doi.org/10.59161/JCGM100-2008E", topics: ["metody", "vyčíslení a přenos nejistoty", "nejistota", "zpracování dat"] },
   { id: "DOI_10_59161_JCGM101_2008", title: "Evaluation of measurement data — Supplement 1 to the Guide to the expression of uncertainty in measurement — Propagation of distributions using a Monte Carlo method", author: "Joint Committee for Guides in Metrology", year: 2008, publication: "JCGM 101:2008. Přenos rozdělení, zachování závislostí mezi vstupy, intervaly pokrytí a numerická kontrola výpočtů.", type: "Mezinárodní metodická příručka", category: "science", externalUrl: "https://doi.org/10.59161/JCGM101-2008", topics: ["metody", "vyčíslení a přenos nejistoty", "nejistota", "zpracování dat"] },
   { id: "DOI_10_6028_NIST_tn_1297", title: "Guidelines for Evaluating and Expressing the Uncertainty of NIST Measurement Results", author: "Barry N. Taylor a Chris E. Kuyatt", year: 1994, publication: "NIST Technical Note 1297, vydání ze září 1994. Původ společného postupu, standardní a rozšířená nejistota, citlivostní koeficienty a vykazování výsledků.", type: "Metrologická metodická příručka", category: "science", externalUrl: "https://doi.org/10.6028/NIST.tn.1297", topics: ["metody", "vyčíslení a přenos nejistoty", "nejistota", "zpracování dat"] },
@@ -834,6 +836,8 @@ const rawArticleSources: Source[] = [
 ];
 
 const articleOpenAccessSources: Record<string, true | string> = {
+  WEB_RSS_AMSR_Ocean_ATBD_2000: true,
+  WEB_NASA_GPROF2021_ATBD_2022: true,
   DOI_10_1115_1_3662552: "https://people.duke.edu/~hpgavin/SystemID/References/Kalman-ASME-JBE-1960.pdf",
   "WEB_ECMWF_Bouttier_Courtier_Assimilation": true,
   "DOI_10_1175_Whitaker_2004_RWRUED": "https://psl.noaa.gov/people/gilbert.p.compo/Whitakeretal2004.pdf",
@@ -1484,7 +1488,7 @@ const articleOpenAccessSources: Record<string, true | string> = {
   DOI_10_1175_1520_0442_2003_016_0224_thomrt_2_0_co_2: "https://journals.ametsoc.org/view/journals/clim/16/2/1520-0442_2003_016_0224_thomrt_2.0.co_2.xml",
   DOI_10_1175_2008jtecha1176_1: "https://images.remss.com/papers/rsspubs/Mears_JTECH_2009_MSU_AMSU_construction.pdf",
   DOI_10_1175_amsmonographs_d_19_0003_1: "https://journals.ametsoc.org/view/journals/amsm/59/1/amsmonographs-d-19-0003.1.xml",
-  DOI_10_1175_jcli_d_11_00668_1: "https://journals.ametsoc.org/view/journals/clim/25/23/jcli-d-11-00668.1.xml",
+  DOI_10_1175_jcli_d_11_00668_1: "https://webdata.wolke.img.univie.ac.at/haimberger/haim12Al.pdf",
   DOI_10_1175_jcli_d_15_0629_1: "https://repository.library.noaa.gov/view/noaa/41066",
   DOI_10_1175_jcli_d_19_0998_1: "https://repository.library.noaa.gov/view/noaa/43222",
   DOI_10_1175_jcli3198_1: "https://journals.ametsoc.org/view/journals/clim/17/21/jcli3198.1.xml",
@@ -1559,7 +1563,7 @@ const articleOpenAccessSources: Record<string, true | string> = {
   DOI_10_5194_amt_7_4463_2014: "https://amt.copernicus.org/articles/7/4463/2014/",
   DOI_10_7289_v5x63k0q: "https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ncdc%3AC00975",
   DOI_10_1175_amsmonographs_d_18_0006_1: "https://repository.library.noaa.gov/view/noaa/59958",
-  DOI_10_1002_2018ea000363: "https://repository.library.noaa.gov/view/noaa/25912/noaa_25912_DS1.pdf",
+  DOI_10_1002_2018ea000363: "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2018EA000363",
   DOI_10_5194_essd_12_2853_2020: "https://essd.copernicus.org/articles/12/2853/2020/",
   DOI_10_1029_2022jd036728: "https://centaur.reading.ac.uk/105632/",
   WEB_Google_Books_Essais_sur_l_hygrometrie_1er_Essai_Description_d_bb9f5517: true,

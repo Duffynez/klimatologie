@@ -195,7 +195,7 @@ export function IsotopeMassSpectrometryArticle() {
           <SourceLink id="2025_FIRMS_IRMS_Guide">(FIRMS, oddíl 4.2.4)</SourceLink>
         </p>
 
-        <h3>Co se z izotopů dozvíme o klimatu</h3>
+        <h3 id="vyuziti-izotopu">Co se z izotopů dozvíme o klimatu</h3>
         <p>
           Když vzduch chladne a vodní pára z něj postupně kondenzuje, molekuly s těžším
           kyslíkem se přednostně odstraňují do srážek. Ve zbývající páře jejich podíl klesá.
@@ -209,7 +209,7 @@ export function IsotopeMassSpectrometryArticle() {
           zpracovala měření světové sítě Mezinárodní agentury pro atomovou energii
           a Světové meteorologické organizace z let 1961–1962. Ukázala souvislosti
           izotopového složení s teplotou, množstvím srážek a polohou stanice.
-          K <Link href="/pozorovani/srazky-a-privalove-srazky">záznamům srážkových úhrnů</Link>{" "}
+          K <Link href="/pozorovani/srazky-a-privalove-srazky/#srazkomery">záznamům srážkových úhrnů</Link>{" "}
           tak přibývá informace o cestě vody atmosférou. Izotopové měření a měření množství
           srážek se navzájem doplňují.
         </p>

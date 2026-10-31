@@ -90,7 +90,7 @@ export function SpatialAveragesArticle() {
           </figcaption>
         </figure>
 
-        <h3>Váhu buňky určuje plocha</h3>
+        <h3 id="plosne-vazeni">Váhu buňky určuje plocha</h3>
         <p>
           Buňky vymezené stejným počtem stupňů nemají všude stejnou plochu.
           Poledníky se směrem k pólům sbíhají, takže se buňky v tomto směru zužují.
@@ -129,7 +129,7 @@ export function SpatialAveragesArticle() {
           změny teploty oblasti. U CRUTEM5 jde o teplotu vzduchu nad pevninou.
           Výpočet společného ukazatele pro pevninu a oceán potřebuje také měření
           vody u hladiny, jak vysvětluje článek o{" "}
-          <Link href="/pozorovani/gmst">globální teplotě u povrchu</Link>.{" "}
+          <Link href="/pozorovani/gmst/#plosne-vazeni">globální teplotě u povrchu</Link>.{" "}
           <SourceLink id="DOI_10_1029_2019jd032361">(Morice a kol. 2021, spojení pevniny a oceánu)</SourceLink>
         </p>
         <p>
@@ -142,7 +142,7 @@ export function SpatialAveragesArticle() {
           <SourceLink id="WEB_NCAR_Area_Weighted_Average">(obecný výpočet pro prostorová pole)</SourceLink>
         </p>
 
-        <h3>Jak odhadujeme hodnoty mezi měřenými místy</h3>
+        <h3 id="interpolace">Jak odhadujeme hodnoty mezi měřenými místy</h3>
         <p>
           Dosud jsme pracovali s mapou, v níž jsou vyplněné pouze buňky obsahující
           stanice. Další možností je využít vztahy mezi místy a odhadnout teplotu
@@ -182,6 +182,24 @@ export function SpatialAveragesArticle() {
           <SourceLink id="DOI_10_1029_2019jd032361">(výsledná pole a výběr pokrytých oblastí)</SourceLink>
         </p>
 
+        <h3 id="dalsi-veliciny">Mapy vlhkosti, srážek a teplotních extrémů</h3>
+        <p>
+          Spojování místních údajů do buněk a plošné vážení využívá také
+          pozorování <Link href="/pozorovani/narust-vlhkosti/#prostorove-zpracovani">vlhkosti atmosféry</Link>.
+          HadISDH vytváří měsíční buňky, mezery ponechává prázdné a při
+          oblastním průměrování zohledňuje rozdílnou plochu buněk.{" "}
+          <SourceLink id="DOI_10_5194_cp_10_1983_2014">(Willettová a kol. 2014, oddíl 4)</SourceLink>
+        </p>
+        <p>
+          U extrémů záleží také na pořadí operací. HadEX3 nejprve z denních
+          měření na každé stanici vypočítá roční ukazatel. Teprve potom jej
+          odhaduje v mřížce pomocí okolních stanic, jejich vzdálenosti
+          a rozmístění. Do mapy tak vstupují již určené počty horkých dnů
+          nebo srážková maxima. Konkrétní postup rozebírají pozorování
+          <Link href="/pozorovani/vlny-veder/#mapy-ukazatelu"> vln veder</Link> a
+          <Link href="/pozorovani/srazky-a-privalove-srazky/#prostorove-zpracovani"> srážek</Link>.{" "}
+          <SourceLink id="DOI_10_1029_2019jd032263">(Dunn a kol. 2020, sestavení map HadEX3)</SourceLink>
+        </p>
         <h3>Vývoj globálních výpočtů</h3>
         <p>
           Hansen a Lebedeff v roce 1987 doložili podobnost změn teploty mezi

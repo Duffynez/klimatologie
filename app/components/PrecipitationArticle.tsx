@@ -77,7 +77,7 @@ export function PrecipitationArticle() {
         </p>
 
         <h2>Jak se srážky měří</h2>
-        <h3>Sběrný a váhový srážkoměr</h3>
+        <h3 id="srazkomery">Sběrný a váhový srážkoměr</h3>
         <p>
           Sběrný srážkoměr zachytí vodu nálevkou se známou plochou a pozorovatel změří její objem. Denní úhrn vznikne
           rozdílem mezi dvěma pravidelnými odečty. Váhový přístroj místo přelévání průběžně váží nádobu a změnu hmotnosti
@@ -86,7 +86,7 @@ export function PrecipitationArticle() {
         </p>
         <p>
           Převod signálu váhového přístroje na úhrn, měření jednotlivých kapek a skutečný výpočet
-          pětiminutové intenzity vysvětluje metoda <Link href="/metody/srazkomery-a-disdrometry">Srážkoměry a disdrometry</Link>.
+          pětiminutové intenzity vysvětluje metoda <Link href="/metody/srazkomery-a-disdrometry/#princip">Srážkoměry a disdrometry</Link>.
         </p>
 
         <figure className="article-figure article-figure--portrait">
@@ -128,13 +128,13 @@ export function PrecipitationArticle() {
           <SourceLink id="WEB_NOAA_Tipping_Bucket_46c6ad8b">NOAA ASOS</SourceLink>
         </p>
 
-        <h3>Meteorologický radar</h3>
+        <h3 id="radar">Meteorologický radar</h3>
         <p>
           Radar vysílá krátké mikrovlnné pulzy a měří energii rozptýlenou kapkami a ledovými částicemi zpět k anténě.
           Získá mnoho měření v prostoru během několika minut, takže zachytí pohyb a vnitřní členění srážkové oblasti mezi
           stanicemi. Odrazivost se následně převádí na odhad intenzity a jednotlivé snímky se sčítají na časový úhrn.
           Jednotlivé kroky a skutečný výpočet vysvětluje článek o{" "}
-          <Link href="/metody/aktivni-radarove-mereni">radarovém měření srážek</Link>.
+          <Link href="/metody/aktivni-radarove-mereni/#intenzita-deste">radarovém měření srážek</Link>.
         </p>
 
         <p>
@@ -144,11 +144,14 @@ export function PrecipitationArticle() {
           však kratší a změny zařízení mohou vytvářet skoky. <SourceLink id="WEB_World_Meteorological_Organiz_Guide_to_Instruments_and_Methods_of_Observation_93c4c4a4">WMO Guide No. 8, svazek III, kapitola 7</SourceLink>
         </p>
 
-        <h3>Družice</h3>
+        <h3 id="druzice">Družice</h3>
         <p>
           Družicové přístroje srážkovou vodu v nádobě nesbírají. Mikrovlnné radiometry měří záření ovlivněné kapkami a
           ledem v oblaku, radary na družicích měří svislý profil odrazivosti a infračervené snímky sledují teplotu vrcholků
           oblaků. Výpočet z těchto signálů odhaduje intenzitu na zemském povrchu.
+        </p>
+        <p>
+          Vznik těchto odhadů vysvětlují oddíly o <Link href="/metody/pasivni-mikrovlnna-radiometrie/#srazky">srážkách z mikrovlnných měření</Link> a o <Link href="/metody/pasivni-infracervena-radiometrie/#oblacnost-a-srazky">využití teploty oblaků</Link>.
         </p>
 
         <p>
@@ -168,7 +171,7 @@ export function PrecipitationArticle() {
           {" "}<SourceLink id="DOI_10_1175_jtech_d_11_00103_1">Menne et al., 2012</SourceLink>.
         </p>
 
-        <h3>2. Kontroly označí chybné a podezřelé hodnoty</h3>
+        <h3 id="kontrola-dat">2. Kontroly označí chybné a podezřelé hodnoty</h3>
         <p>
           Automatické testy hledají nemožná čísla, dlouhé opakování stejné nenulové hodnoty, kopie jiného období,
           osamocené extrémy a nesoulad se sousedními stanicemi. GHCN-Daily hodnotu s vadnou kontrolou označí příznakem a
@@ -176,8 +179,11 @@ export function PrecipitationArticle() {
           záznamů, po nichž následuje ruční kontrola nejvyšších hodnot. <SourceLink id="DOI_10_1175_2010jamc2375_1">Durre et al., 2010</SourceLink> a{" "}
           <SourceLink id="DOI_10_1038_s41597_023_02238_4">Pritchard et al., 2023</SourceLink>
         </p>
+        <p>
+          Rozdíl mezi označením chybného denního údaje a homogenizací dlouhodobého záznamu vysvětluje <Link href="/metody/kontrola-kvality-a-homogenizace/#denni-a-hodinova-data">kontrola denních dat</Link>.
+        </p>
 
-        <h3>3. Z časových údajů vzniknou přesně definované ukazatele</h3>
+        <h3 id="ukazatele">3. Z časových údajů vzniknou přesně definované ukazatele</h3>
         <p>
           Z denních dat lze pro každý rok sečíst úhrn mokrých dnů, vybrat nejvyšší jednodenní nebo pětidenní hodnotu a
           spočítat množství vody připadající na nejvlhčí dny. Z hodinových dat lze posuvným oknem najít nejvyšší úhrn za
@@ -189,10 +195,10 @@ export function PrecipitationArticle() {
         <p>
           Jak se z denních hodnot sestavují roční ukazatele, jak se počítá jejich trend
           a co znamená jeho statistická průkaznost, vysvětluje metoda{" "}
-          <Link href="/metody/analyza-casovych-zmen-a-extremu">analýza časových změn a extrémů</Link>.
+          <Link href="/metody/analyza-casovych-zmen-a-extremu/#extremy">analýza časových změn a extrémů</Link>.
         </p>
 
-        <h3>4. Stanice se převedou do mapy</h3>
+        <h3 id="prostorove-zpracovani">4. Stanice se převedou do mapy</h3>
         <p>
           Srážkoměr měří bod, zatímco mapa potřebuje hodnotu pro plochu. GPCC nejprve počítá odchylku stanice od jejího
           dlouhodobého průměru a tu prostorově rozkládá do mřížky. HadEX3 vkládá již vypočtené extrémní ukazatele do buněk
@@ -201,6 +207,9 @@ export function PrecipitationArticle() {
           <SourceLink id="DOI_10_5194_essd_5_71_2013">Becker et al., 2013</SourceLink>,{" "}
           <SourceLink id="DOI_10_1029_2019jd032263">Dunn et al., 2020</SourceLink> a{" "}
           <SourceLink id="DOI_10_1029_2017jd028200">Cornes et al., 2018</SourceLink>
+        </p>
+        <p>
+          Princip odhadu hodnot mezi stanicemi rozebírá <Link href="/metody/prostorove-zpracovani-a-plosne-prumery/#interpolace">prostorová interpolace</Link>. U srážek se její konkrétní provedení přizpůsobuje tomu, zda mapujeme denní úhrny, měsíční odchylky, nebo již vypočtené extrémy.
         </p>
 
         <h3>5. Pokrytí a nejistota zůstávají součástí výsledku</h3>
@@ -546,8 +555,8 @@ export function PrecipitationArticle() {
           <section>
             <h3>Metody a nejistoty</h3>
             <ul>
-              <li>
-                <Link href="/metody/hmotnostni-a-izotopova-spektrometrie">Hmotnostní a izotopová spektrometrie</Link>:
+              <li id="izotopove-slozeni">
+                <Link href="/metody/hmotnostni-a-izotopova-spektrometrie/#vyuziti-izotopu">Hmotnostní a izotopová spektrometrie</Link>:
                 jak rozbor odebrané vody doplňuje měření srážkových úhrnů o informace z izotopového složení.
               </li>
               <li>

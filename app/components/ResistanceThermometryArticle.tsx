@@ -38,7 +38,7 @@ export function ResistanceThermometryArticle() {
           </figcaption>
         </figure>
 
-        <h3>Proč odpor platiny prozrazuje její teplotu</h3>
+        <h3 id="princip">Proč odpor platiny prozrazuje její teplotu</h3>
         <p>
           Čidlem platinového teploměru je tenký platinový drátek nebo vrstva platiny na podkladu.
           Elektrický proud v tomto kovu přenášejí elektrony, částice nesoucí elektrický náboj.
@@ -57,7 +57,7 @@ export function ResistanceThermometryArticle() {
           <SourceLink id="2021_BIPM_IPRT">příručka Mezinárodního úřadu pro váhy a míry (BIPM)</SourceLink>.
         </p>
 
-        <h3>Jak sonda převezme teplotu vzduchu</h3>
+        <h3 id="mereni-vzduchu">Jak sonda převezme teplotu vzduchu</h3>
         <p>
           Platinový prvek je uložený v pouzdře a připojený ke kabelu. Tato sestava tvoří
           teplotní sondu. Vzduch a sonda si vyměňují teplo, takže se teplota čidla přibližuje
@@ -263,7 +263,7 @@ export function ResistanceThermometryArticle() {
           </figcaption>
         </figure>
 
-        <h3>Jak vznikne teplota zveřejněná stanicí</h3>
+        <h3 id="stanicni-teplota">Jak vznikne teplota zveřejněná stanicí</h3>
         <p>
           Teploměr poskytl teplotu čidla a záznamník k ní přiřadí čas měření.
           Meteorologická stanice zajišťuje umístění a napájení přístroje, ukládání údajů
@@ -309,12 +309,12 @@ export function ResistanceThermometryArticle() {
           Jestliže se teplota během hodiny mění, budou se zpravidla lišit.
         </p>
 
-        <h3>K čemu teplotní záznam slouží</h3>
+        <h3 id="pouziti">K čemu teplotní záznam slouží</h3>
         <p>
           Opakovaná měření zachycují výkyvy teploty i její dlouhodobé změny.
           Přízemní stanice poskytují vstupy pro výpočet{" "}
-          <Link href="/pozorovani/gmst">globální teploty u povrchu</Link> a denní teplotní
-          charakteristiky pro sledování <Link href="/pozorovani/vlny-veder">vln veder</Link>.
+          <Link href="/pozorovani/gmst/#globalni-vypocet">globální teploty u povrchu</Link> a denní teplotní
+          charakteristiky pro sledování <Link href="/pozorovani/vlny-veder/#mereni-teploty">vln veder</Link>.
           K oblastnímu výsledku se dostaneme spojením více stanic. Každé měření při něm přispívá
           podle toho, jakou část území zastupuje.{" "}
           <SourceLink id="DOI_10_1029_2019jd032361">(Morice a kol., metody)</SourceLink>
@@ -324,7 +324,7 @@ export function ResistanceThermometryArticle() {
         <p>
           Teplotu potřebujeme i při určování dalších veličin.
           Pomáhá například převést relativní vlhkost na množství vodní páry, jak vysvětluje
-          článek o <Link href="/pozorovani/narust-vlhkosti">vlhkosti atmosféry</Link>.
+          článek o <Link href="/pozorovani/narust-vlhkosti/#prizemni-mereni">vlhkosti atmosféry</Link>.
           Teplotu vzorku používáme také při stanovení a přepočtu pH v měřeních{" "}
           <Link href="/pozorovani/acidifikace-oceanu">acidifikace oceánu</Link>.{" "}
           <SourceLink id="2021_NIST_Humidity_Calibration">(NIST, oddíl 3)</SourceLink>
@@ -335,7 +335,7 @@ export function ResistanceThermometryArticle() {
           <Link href="/metody/radiosondaz">radiosondu</Link>.
           Ta během výstupu zaznamenává teplotu v různých výškách a vytváří teplotní profil
           atmosféry. Tato měření slouží také ke sledování{" "}
-          <Link href="/pozorovani/stratosfericke-ochlazovani">teploty stratosféry</Link>.
+          <Link href="/pozorovani/stratosfericke-ochlazovani/#radiosondy">teploty stratosféry</Link>.
           Platinové odporové čidlo používá například{" "}
           <SourceLink id="2017_Vaisala_RS41">radiosonda Vaisala RS41, popsaná v kapitole 2
           technické dokumentace</SourceLink>.
@@ -592,7 +592,7 @@ export function ResistanceThermometryArticle() {
           </p>
           <p>
             Oblastní teplotu získáváme{" "}
-            <Link href="/pozorovani/gmst">propojením více stanic podle zastoupené plochy</Link>.
+            <Link href="/pozorovani/gmst/#plosne-vazeni">propojením více stanic podle zastoupené plochy</Link>.
             Změny přístrojů či okolí mohou vytvořit skok v dlouhodobém záznamu.
             Jeho rozpoznání a úpravě se věnuje{" "}
             <Link href="/metody/kontrola-kvality-a-homogenizace">kontrola kvality a homogenizace</Link>.{" "}

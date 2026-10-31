@@ -40,7 +40,7 @@ export function UncertaintyArticle() {
           <SourceLink id="DOI_10_6028_NIST_tn_1297">(vztah vstupů a výsledku)</SourceLink>
         </p>
 
-        <h3>Jednotlivé příspěvky převedeme na stejnou míru</h3>
+        <h3 id="slozky-nejistoty">Jednotlivé příspěvky převedeme na stejnou míru</h3>
         <p>
           Základní mírou je <strong>standardní nejistota</strong>, označovaná
           písmenem <InlineMath tex="u" />. Vyjadřuje nejistotu jako směrodatnou
@@ -146,7 +146,7 @@ export function UncertaintyArticle() {
           <SourceLink id="DOI_10_6028_NIST_tn_1297">(význam koeficientu a zápisu výsledku)</SourceLink>
         </p>
 
-        <h3>Složitější výpočty lze opakovat s různými vstupy</h3>
+        <h3 id="soubor-realizaci">Složitější výpočty lze opakovat s různými vstupy</h3>
         <p>
           U jiných výpočtů než prostého součtu záleží také na citlivosti
           výsledku vůči každému vstupu. Pokud malá změna vstupu způsobí
@@ -187,7 +187,7 @@ export function UncertaintyArticle() {
           <SourceLink id="DOI_10_59161_JCGM101_2008">(intervaly pokrytí z realizací)</SourceLink>
         </p>
 
-        <h3>V klimatologii nejistota prochází celým zpracováním</h3>
+        <h3 id="klimaticke-zaznamy">V klimatologii nejistota prochází celým zpracováním</h3>
         <p>
           Teplotní soubor HadCRUT5 spojuje údaje o teplotě vzduchu nad pevninou
           a vody u hladiny oceánu. Jeho 200 realizací zachycuje různé přípustné
@@ -213,7 +213,15 @@ export function UncertaintyArticle() {
           část světa může projevit v globálním průměru.{" "}
           <SourceLink id="WEB_HadCRUT5_Supporting_Information">(odhad nejistoty pokrytí, oddíly S3 a S4)</SourceLink>{" "}
           Význam výsledného ukazatele vysvětluje pozorování{" "}
-          <Link href="/pozorovani/gmst">globální teploty u povrchu</Link>.
+          <Link href="/pozorovani/gmst/#nejistota">globální teploty u povrchu</Link>.
+        </p>
+        <p>
+          Podobný rozbor potřebují i jiné veličiny. U HadISDH autoři oddělují
+          nejistoty měření a zpracování od nejistoty omezeného zastoupení
+          prostoru a času. Které z těchto složek se vztahují k přízemním
+          a družicovým údajům, rozebírá pozorování
+          <Link href="/pozorovani/narust-vlhkosti/#nejistota"> vlhkosti atmosféry</Link>.{" "}
+          <SourceLink id="DOI_10_5194_cp_10_1983_2014">(Willettová a kol. 2014, oddíly 4 a 6)</SourceLink>
         </p>
         <figure className="article-figure">
           <Image src="/media/uncertainty/workflow.svg" width={760} height={1100}

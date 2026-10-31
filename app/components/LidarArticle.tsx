@@ -276,7 +276,7 @@ export function LidarArticle() {
           <SourceLink id="DOI_10_1016_j_rse_2021_112845">(Duncansonová a kol. 2022)</SourceLink>
         </p>
 
-        <h3>Vývoj a další provedení</h3>
+        <h3 id="dalsi-provedeni">Vývoj a další provedení</h3>
         <p>
           Laserové sledování atmosféry se rozvíjelo už v šedesátých letech.
           Fiocco a Grams popsali měření z Aljašky a Švédska v létě 1964,
@@ -287,13 +287,13 @@ export function LidarArticle() {
           <SourceLink id="DOI_10_3402_tellusa_v18i1_9185">(Fiocco a Grams 1966)</SourceLink>{" "}
           a <SourceLink id="DOI_10_1016_j_srs_2020_100002">(Dubayah a kol. 2020)</SourceLink>
         </p>
-        <p>
+        <p id="ramanuv-lidar">
           Jinou variantou je Ramanův lidar. Sleduje slabou část rozptýleného
           světla, která si při setkání s molekulou vyměnila energii a změnila
           vlnovou délku. Přijímač může oddělit návraty charakteristické pro
           vodní páru a pro dusík. Jejich poměr po kalibraci a započtení průchodu
           atmosférou poskytne výškový profil vodní páry. Tím lidar doplňuje
-          postupy popsané v článku o <Link href="/pozorovani/narust-vlhkosti">vlhkosti atmosféry</Link>.
+          postupy popsané v článku o <Link href="/pozorovani/narust-vlhkosti/#ramanuv-lidar">vlhkosti atmosféry</Link>.
           Davidová a kolegové například zkoumali kalibraci a stabilitu
           pozemního přístroje Rameau.{" "}
           <SourceLink id="DOI_10_5194_amt_10_2745_2017">(Davidová a kol. 2017)</SourceLink>

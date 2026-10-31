@@ -257,7 +257,7 @@ export function PressureHeightArticle() {
           <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(Dickson a kol., kapitola 2 a SOP 1)</SourceLink>
         </p>
 
-        <h3>Vývoj přístrojů a další použití</h3>
+        <h3 id="dalsi-pouziti">Vývoj přístrojů a další použití</h3>
         <p>
           Souvislost tlaku s výškou umožnily sledovat už kapalinové barometry.
           <SourceLink id="1648_Perier_PuyDeDome"> Florin Périer v dopise Blaisi Pascalovi
@@ -297,7 +297,7 @@ export function PressureHeightArticle() {
           Globální průměr pak vyžaduje spojení měření z více míst a další prostorové zpracování.{" "}
           <SourceLink id="DOI_10_3133_twri08a3">(USGS, instalace a výšková reference)</SourceLink>
         </p>
-        <p>
+        <p id="tlak-v-atmosfere">
           Hydrostatický vztah platí také v atmosféře. Směrem vzhůru tlak klesá, protože
           nad daným místem ubývá vzduchu. Jeho hustota se výrazně mění s tlakem, teplotou
           a vlhkostí, proto při určování výšky postupujeme po vrstvách.
@@ -307,8 +307,8 @@ export function PressureHeightArticle() {
           GRUAN, oddíl 4.4.2</SourceLink>, uvádí potřebné vstupy: počáteční tlak na stanici,
           teplotu, vlhkost a tíhové zrychlení. Místa se stejnou hodnotou tlaku tvoří
           tlakovou hladinu. Na těchto hladinách pak můžeme porovnávat
-          výšková měření <Link href="/pozorovani/stratosfericke-ochlazovani">teploty</Link>
-          {" "}a <Link href="/pozorovani/narust-vlhkosti">vlhkosti atmosféry</Link>.
+          výšková měření <Link href="/pozorovani/stratosfericke-ochlazovani/#radiosondy">teploty</Link>
+          {" "}a <Link href="/pozorovani/narust-vlhkosti/#radiosondy">vlhkosti atmosféry</Link>.
         </p>
 
         <h2>Nejistoty a ověření měření</h2>

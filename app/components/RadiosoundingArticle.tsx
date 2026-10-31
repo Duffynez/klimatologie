@@ -13,7 +13,7 @@ export function RadiosoundingArticle() {
   return (
     <article className="article-layout">
       <div className="article-prose">
-        <h2>Jak radiosondáž měří atmosféru</h2>
+        <h2 id="princip">Jak radiosondáž měří atmosféru</h2>
         <p className="article-prose__intro">
           Radiosondáž je měření vlastností atmosféry pomocí radiosondy, přístroje zavěšeného
           pod balonem. Radiosonda během výstupu opakovaně měří teplotu a vlhkost vzduchu,
@@ -191,7 +191,7 @@ export function RadiosoundingArticle() {
           podrobný postup zpracování s vyčíslenými nejistotami.
         </p>
 
-        <h3>Jak vznikne hotový profil</h3>
+        <h3 id="hotovy-profil">Jak vznikne hotový profil</h3>
         <p>
           Pozemní software spojuje přijaté odečty čidel s časem a polohou. Součástí převodu na
           teplotu vzduchu je i oprava ohřevu čidla slunečním zářením, nazývaná radiační korekce.
@@ -239,8 +239,8 @@ export function RadiosoundingArticle() {
           Jednotlivý profil zachycuje stav atmosféry během letu. Pro klimatologii spojujeme
           opakované výstupy z mnoha stanic a porovnáváme stejné tlakové hladiny či výšky
           ve srovnatelných termínech. Tak lze sledovat dlouhodobé změny popsané v článcích
-          <Link href="/pozorovani/stratosfericke-ochlazovani"> Teplota stratosféry</Link> a
-          <Link href="/pozorovani/narust-vlhkosti"> Vlhkost atmosféry</Link>.{" "}
+          <Link href="/pozorovani/stratosfericke-ochlazovani/#radiosondy"> Teplota stratosféry</Link> a
+          <Link href="/pozorovani/narust-vlhkosti/#radiosondy"> Vlhkost atmosféry</Link>.{" "}
           <SourceLink id="DOI_10_1029_2005jd006169">(Free a kol., metody)</SourceLink>
         </p>
         <p>
