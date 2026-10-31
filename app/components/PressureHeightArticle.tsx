@@ -153,7 +153,7 @@ export function PressureHeightArticle() {
           {" "}popisuje oba postupy i úpravu posunu a sklonu převodu podle porovnání.
         </p>
 
-        <h3>Výpočet hloubky ve vodě</h3>
+        <h3 id="hloubka">Výpočet hloubky ve vodě</h3>
         <p>
           Nyní máme tlak u ponořeného čidla. Pro určení hloubky nejprve odečteme současný
           tlak vzduchu nad hladinou. Zbývající rozdíl odpovídá tíze vodního sloupce.
@@ -228,7 +228,7 @@ export function PressureHeightArticle() {
           <SourceLink id="2010_SeaBird_9plus_Manual">(Sea-Bird, technické parametry)</SourceLink>
         </p>
         <p>
-          Takové profily tvoří podklad pro <Link href="/pozorovani/tepelny-obsah-oceanu">měření
+          Takové profily tvoří podklad pro <Link href="/pozorovani/tepelny-obsah-oceanu/#mereni-profilu">měření
           obsahu tepla v oceánu</Link>. Potřebujeme při něm vědět, jaká teplota patří ke které
           vrstvě a kolik vody tato vrstva obsahuje. Teplotní údaje dodává
           <Link href="/metody/odporova-termometrie-a-termistory"> termometrie</Link>.
@@ -250,7 +250,7 @@ export function PressureHeightArticle() {
           změn potřebujeme také správné přiřazení hloubky.
         </p>
         <p>
-          Při výzkumu <Link href="/pozorovani/acidifikace-oceanu">acidifikace oceánu</Link>
+          Při výzkumu <Link href="/pozorovani/acidifikace-oceanu/#odber-a-podminky">acidifikace oceánu</Link>
           {" "}tlak pomáhá určit, ze které vrstvy pochází odebraný vzorek. Zároveň patří
           k podmínkám potřebným pro přepočty chemických veličin. Údaje o chemickém složení
           dodávají další metody, tlak je spojuje s místem odběru a podmínkami ve vodě.{" "}
@@ -287,13 +287,13 @@ export function PressureHeightArticle() {
           <SourceLink id="DOI_10_3133_twri08a3"> Příručka USGS</SourceLink> vysvětluje
           obě uspořádání i jejich instalaci.
         </p>
-        <p>
+        <p id="hladina">
           U pevně upevněného snímače změna hloubky ponoření ukazuje, o kolik se nad ním
           zvedla nebo klesla hladina. Pro výšku vody vůči pobřeží ještě potřebujeme znát
           polohu čidla vůči pevnému výškovému bodu. Tuto návaznost rozvíjí
           <Link href="/metody/pobrezni-mereni-hladiny-a-vyskova-reference"> pobřežní měření
           hladiny a výšková reference</Link>. Tak vzniká místní záznam využitelný při
-          sledování <Link href="/pozorovani/gmsl">změn výšky mořské hladiny</Link>.
+          sledování <Link href="/pozorovani/gmsl/#pobrezni-mereni">změn výšky mořské hladiny</Link>.
           Globální průměr pak vyžaduje spojení měření z více míst a další prostorové zpracování.{" "}
           <SourceLink id="DOI_10_3133_twri08a3">(USGS, instalace a výšková reference)</SourceLink>
         </p>

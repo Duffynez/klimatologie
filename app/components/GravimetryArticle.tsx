@@ -261,6 +261,18 @@ export function GravimetryArticle() {
           <SourceLink id="DOI_10_1038_s43247_020_0010_1">(Sasgen a kol. 2020, metodika)</SourceLink>
         </p>
 
+        <h3 id="hmotnost-oceanu">Hmotnost oceánu jako příspěvek ke změně hladiny</h3>
+        <p>
+          Změnu hmotnosti vody nad oceánskou plochou lze vyjádřit jako výšku
+          odpovídající vrstvy vody. Tím dostaneme příspěvek v milimetrech,
+          který lze sečíst s objemovou změnou odvozenou z teplotních profilů.
+          Součet se porovnává s vývojem
+          <Link href="/pozorovani/gmsl/#bilance-hladiny"> globální hladiny moře</Link>.
+          Frederikse a kolegové pro období 2003–2018 použili k určení
+          hmotnostního příspěvku měření GRACE.{" "}
+          <SourceLink id="DOI_10_1038_s41586_020_2591_3">(Frederikse a kol. 2020, bilance hladiny)</SourceLink>
+        </p>
+
         <h2>Nejistoty a ověření</h2>
         <p>
           Gravimetrie rozlišuje změny v rozsáhlých oblastech, typicky stovkách

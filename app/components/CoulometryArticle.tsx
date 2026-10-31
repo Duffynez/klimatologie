@@ -7,7 +7,7 @@ export function CoulometryArticle() {
   return (
     <article className="article-layout">
       <div className="article-prose">
-        <h2>Jak elektrický náboj určí množství uhlíku</h2>
+        <h2 id="princip">Jak elektrický náboj určí množství uhlíku</h2>
         <p className="article-prose__intro">
           Coulometrie je analytická metoda, která určuje množství látky z elektrického
           náboje spotřebovaného při chemické reakci. V oceánografii se používá zejména
@@ -254,7 +254,7 @@ export function CoulometryArticle() {
           <SourceLink id="DOI_10_1073_pnas_0906044106">Dore a kolegové (2009)</SourceLink>{" "}
           z opakovaných měření na stanici ALOHA u Havaje vyhodnotili acidifikaci
           v letech 1988–2007. Návaznost těchto měření vysvětluje{" "}
-          <Link href="/pozorovani/acidifikace-oceanu">článek o acidifikaci oceánu</Link>.
+          <Link href="/pozorovani/acidifikace-oceanu/#vypocet-chemie">článek o acidifikaci oceánu</Link>.
         </p>
         <h3>Historie a další provedení</h3>
         <p>

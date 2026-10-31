@@ -244,6 +244,27 @@ export function ReanalysisArticle() {
           <SourceLink id="DOI_10_1002_qj_3803">(Hersbach a kol. 2020, údaje ERA5)</SourceLink>
         </p>
 
+        <h3 id="ocean">Reanalýza oceánu</h3>
+        <p>
+          V oceánu propojuje fyzikální model teplotu a salinitu vody s jejím
+          prouděním. Reanalýza GLORYS12 do tohoto modelu společně zapojuje
+          měřené teplotní a salinitní profily, družicovou teplotu povrchu,
+          odchylky výšky hladiny a podíl mořského ledu.
+          Každých sedm dní upraví modelový stav podle nových měření.
+          Využívá přitom variantu Kalmanova filtru, který rozděluje opravu
+          mezi související veličiny a místa v oceánu.{" "}
+          <SourceLink id="DOI_10_3389_feart_2021_698876">(Lellouche a kol. 2021, popis systému)</SourceLink>
+        </p>
+        <p>
+          Výsledkem jsou navazující trojrozměrná pole, z nichž lze vypočítat
+          také obsah tepla v určené vrstvě. GLORYS12 zde ukazuje konkrétní
+          provedení oceánské reanalýzy. Porovnání různých rekonstrukcí
+          rozebírá pozorování <Link href="/pozorovani/tepelny-obsah-oceanu/#srovnani">obsahu tepla v oceánu</Link>.
+          Reanalýzy a rekonstrukce založené přímo na profilech mohou sdílet
+          část vstupních měření, i když je prostorově propojují odlišným způsobem.{" "}
+          <SourceLink id="DOI_10_3389_feart_2021_698876">(vstupy a vyhodnocení GLORYS12)</SourceLink>
+        </p>
+
         <h2>Nejistoty a ověření reanalýzy</h2>
         <p>
           Výsledek závisí na dostupnosti měření, jejich chybách i schopnosti

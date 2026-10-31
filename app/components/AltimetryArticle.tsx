@@ -19,7 +19,7 @@ export function AltimetryArticle() {
           a <SourceLink id="DOI_10_1016_j_rse_2019_111325">(Neumann a kol. 2019)</SourceLink>
         </p>
 
-        <h3>Výška potřebuje dva údaje</h3>
+        <h3 id="vyska-hladiny">Výška potřebuje dva údaje</h3>
         <p>
           Výškoměr vyšle krátký pulz a zaznamená, za jak dlouho se jeho část
           vrátí od povrchu. Delší cesta znamená delší čekání.
@@ -173,7 +173,7 @@ export function AltimetryArticle() {
           oblastí a váží podle zastoupené plochy oceánu. Navazující družice
           se určitou dobu překrývají, aby bylo možné vyčíslit vzájemný posun
           a spojit jejich záznamy. Tak vzniká dlouhodobá řada popsaná
-          v článku o <Link href="/pozorovani/gmsl">růstu hladiny oceánu</Link>.{" "}
+          v článku o <Link href="/pozorovani/gmsl/#druzicova-mereni">růstu hladiny oceánu</Link>.{" "}
           <SourceLink id="DOI_10_5194_os_19_431_2023">(Guérou a kol. 2023, oddíl 2)</SourceLink>
         </p>
 

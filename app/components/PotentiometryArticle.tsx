@@ -9,7 +9,7 @@ export function PotentiometryArticle() {
   return (
     <article className="article-layout">
       <div className="article-prose">
-        <h2>Jak měříme pH pomocí elektrod</h2>
+        <h2 id="princip">Jak měříme pH pomocí elektrod</h2>
         <p className="article-prose__intro">
           Potenciometrie je metoda, která určuje vlastnosti roztoku z elektrického napětí mezi
           dvěma elektrodami při téměř nulovém odběru proudu. Používá se například k měření pH,
@@ -165,10 +165,10 @@ export function PotentiometryArticle() {
           stupnic a laboratorní postup vysvětluje{" "}
           <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">příručka pro měření oceánského CO₂</SourceLink>.
         </p>
-        <h3>Použití v oceánu a vývoj čidel</h3>
+        <h3 id="oceanska-cidla">Použití v oceánu a vývoj čidel</h3>
         <p>
           Opakovaná měření pH ukazují, jak se mění kyselost vody v čase nebo s hloubkou.
-          Pro výzkum <Link href="/pozorovani/acidifikace-oceanu">acidifikace oceánu</Link> potřebujeme
+          Pro výzkum <Link href="/pozorovani/acidifikace-oceanu/#mereni-ph">acidifikace oceánu</Link> potřebujeme
           dlouhodobý vývoj zasadit do denních a sezonních změn. Přístroj ponechaný ve vodě
           může zachytit i kolísání mezi jednotlivými odběry. Taková měření pomáhají popsat
           prostředí, kterému jsou vystaveny mořské organismy, a volit podmínky laboratorních

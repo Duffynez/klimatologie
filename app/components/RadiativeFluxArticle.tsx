@@ -255,7 +255,7 @@ export function RadiativeFluxArticle() {
           <SourceLink id="WEB_NOAA_SURFRAD_Overview">(NOAA: použití radiační bilance)</SourceLink>
         </p>
 
-        <h3>Historie a měření z družic</h3>
+        <h3 id="druzicova-bilance">Historie a měření z družic</h3>
         <p>
           Srovnávání ohřevu zářením s elektrickým ohřevem má dlouhou historii.
           Knut Ångström v práci z roku 1899 popsal kompenzační pyrheliometr
@@ -291,7 +291,7 @@ export function RadiativeFluxArticle() {
         <p>
           Tato bilance zahrnuje Zemi jako celek. Její dlouhodobý přebytek souvisí
           s ukládáním energie v klimatickém systému, zejména s růstem{" "}
-          <Link href="/pozorovani/tepelny-obsah-oceanu">obsahu tepla v oceánu</Link>.
+          <Link href="/pozorovani/tepelny-obsah-oceanu/#srovnani">obsahu tepla v oceánu</Link>.
           Absolutní průměr bilance produktu EBAF autoři nastavují pomocí
           nezávislého odhadu ukládání tepla, zatímco družice poskytují její
           prostorové a časové změny. Získání toků přímo u povrchu navíc vyžaduje

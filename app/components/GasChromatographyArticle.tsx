@@ -9,7 +9,7 @@ export function GasChromatographyArticle() {
   return (
     <article className="article-layout">
       <div className="article-prose">
-        <h2>Jak plynová chromatografie měří složení vzduchu</h2>
+        <h2 id="princip">Jak plynová chromatografie měří složení vzduchu</h2>
         <p className="article-prose__intro">
           Plynová chromatografie je metoda, která odděluje látky přítomné v plynném vzorku,
           aby bylo možné určit jejich zastoupení. V klimatologii se používá k měření metanu,
@@ -244,7 +244,7 @@ export function GasChromatographyArticle() {
           zveřejnili měření sítě NOAA za roky 1989–1992 včetně měsíčních hodnot, popisu odběrů
           a chromatografické analýzy. Tyto údaje dokládají, jak se zastoupení metanu mění
           během roku i mezi roky. Z odběrových sítí získáváme také údaje o jiných plynech,
-          například <Link href="/pozorovani/atmosfericka-koncentrace-co2">pozorování atmosférického CO₂</Link>,
+          například <Link href="/pozorovani/atmosfericka-koncentrace-co2/#odber-do-banek">pozorování atmosférického CO₂</Link>,
           pro který se běžně využívají optické analyzátory.
         </p>
         <p>

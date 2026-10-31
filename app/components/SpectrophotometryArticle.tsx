@@ -9,7 +9,7 @@ export function SpectrophotometryArticle() {
   return (
     <article className="article-layout">
       <div className="article-prose">
-        <h2>Jak změříme pH pomocí světla</h2>
+        <h2 id="princip">Jak změříme pH pomocí světla</h2>
         <p className="article-prose__intro">
           Spektrofotometrie roztoků je metoda, která měří, jak silně roztok pohlcuje světlo při
           zvolených vlnových délkách. Umožňuje určit koncentraci rozpuštěné látky nebo jinou
@@ -24,7 +24,7 @@ export function SpectrophotometryArticle() {
           koncentrace vodíkových iontů. Mořská voda přitom může mít stále pH vyšší než sedm
           a zároveň postupně okyselovat. Pro sledování této změny potřebujeme zachytit i malé
           rozdíly mezi jednotlivými odběry. Souvislosti vysvětluje článek o{" "}
-          <Link href="/pozorovani/acidifikace-oceanu">acidifikaci oceánu</Link>.{" "}
+          <Link href="/pozorovani/acidifikace-oceanu/#mereni-ph">acidifikaci oceánu</Link>.{" "}
           <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(Dickson a kol., kap. 2)</SourceLink>
         </p>
 
@@ -202,7 +202,7 @@ export function SpectrophotometryArticle() {
           Porovnání více chemických veličin pomáhá rozlišit dlouhodobou acidifikaci od
           změn spojených s teplotou, promícháváním a činností organismů. Podrobnosti
           a veřejné podklady uvádí <SourceLink id="DOI_10_1073_pnas_0906044106">původní studie</SourceLink> a{" "}
-          <Link href="/pozorovani/acidifikace-oceanu">navazující pozorování</Link>.
+          <Link href="/pozorovani/acidifikace-oceanu/#mereni-ph">navazující pozorování</Link>.
         </p>
 
         <h3>Jak se metoda rozvíjela</h3>

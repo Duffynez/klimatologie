@@ -147,10 +147,10 @@ export function AtmosphericCo2Article() {
         </p>
 
         <h2>Co se skutečně měří</h2>
-        <h3>Vzduch nasávaný na stanici</h3>
+        <h3 id="stanicni-mereni">Vzduch nasávaný na stanici</h3>
         <p>
           Stanice vede okolní vzduch potrubím do analyzátoru. Současný systém NOAA na Mauna Loa používá{" "}
-          <Link href="/metody/absorpcni-spektroskopie">absorpční spektroskopii v optické dutině</Link>: laser prochází měřicí komorou a přístroj sleduje, jak rychle po vypnutí
+          <Link href="/metody/absorpcni-spektroskopie/#opticka-dutina">absorpční spektroskopii v optické dutině</Link>: laser prochází měřicí komorou a přístroj sleduje, jak rychle po vypnutí
           zdroje světlo zaniká na vlnové délce pohlcované CO₂. Od dubna 2019 tím nahradil starší infračervený
           analyzátor. Vzduch se před měřením vysuší a přístroj pravidelně dostává referenční plyn z tlakové lahve.{" "}
           <SourceLink id="WEB_NOAA_Carbon_Cycle_Greenhouse_Gases_NOAA_Global_Monito_66691a03">
@@ -158,13 +158,13 @@ export function AtmosphericCo2Article() {
           </SourceLink>
         </p>
 
-        <h3>Vzorek odebraný do baňky</h3>
+        <h3 id="odber-do-banek">Vzorek odebraný do baňky</h3>
         <p>
           Na odběrném místě se venkovním vzduchem naplní dvojice skleněných baněk. Zaznamená se čas, poloha a
           okolnosti odběru a uzavřené baňky putují do centrální laboratoře. Tatáž porce vzduchu se tam může
           analyzovat na CO₂ i na desítky dalších plynů a izotopů. Dvojice vzorků slouží také jako kontrola, zda se
           při odběru nebo přepravě nestala chyba.
-          Při rozboru metanu a dalších plynů se uplatňuje také <Link href="/metody/plynova-chromatografie">plynová chromatografie</Link>,
+          Při rozboru metanu a dalších plynů se uplatňuje také <Link href="/metody/plynova-chromatografie/#princip">plynová chromatografie</Link>,
           která složky vzduchu před měřením odděluje. Její místo mezi analyzátory ukazuje{" "}
           <SourceLink id="WEB_NOAA_Aircraft_Analysis">popis laboratorní sestavy NOAA</SourceLink>.
         </p>
@@ -186,7 +186,7 @@ export function AtmosphericCo2Article() {
           </figcaption>
         </figure>
 
-        <h3>Vzduch uzavřený v ledu</h3>
+        <h3 id="vzduch-v-ledu">Vzduch uzavřený v ledu</h3>
         <p>
           Z ledového jádra se oddělí přesně zvážený kus ledu, jeho bubliny se otevřou drcením nebo tavením ve
           vakuové aparatuře a uvolněný vzduch se analyzuje proti standardům. Stáří vzduchu je mladší než okolní
@@ -210,14 +210,14 @@ export function AtmosphericCo2Article() {
 
         <p>
           Celý postup odběru, uvolnění plynu a datování vysvětluje metoda{" "}
-          <Link href="/metody/ledova-jadra-a-analyza-uzavreneho-vzduchu">ledových jader a analýzy uzavřeného vzduchu</Link>.
+          <Link href="/metody/ledova-jadra-a-analyza-uzavreneho-vzduchu/#rozbor-vzduchu">ledových jader a analýzy uzavřeného vzduchu</Link>.
           Obsahuje také dvě skutečná měření z Law Dome, na kterých lze rozlišit
           datum ledu od data analyzovaného vzduchu.
         </p>
 
-        <h3>Světlo prošlé atmosférou</h3>
+        <h3 id="druzicova-mereni">Světlo prošlé atmosférou</h3>
         <p>
-          OCO-2 měří sluneční světlo ve třech úzkých částech spektra: v jednom pásmu kyslíku a ve dvou pásmech
+          <Link href="/metody/absorpcni-spektroskopie/#druzicove-spektrum">OCO-2 měří sluneční světlo ve třech úzkých částech spektra</Link>: v jednom pásmu kyslíku a ve dvou pásmech
           CO₂. Z hloubky absorpčních čar, tlaku, vodní páry, oblačnosti, aerosolů a odrazivosti povrchu výpočet
           odvodí množství CO₂ ve sloupci vzduchu. Kyslíkové pásmo pomáhá určit celkové množství suchého vzduchu,
           vůči němuž se CO₂ vyjádří. Výstupem jednoho úspěšného výpočtu je XCO₂ pro úzkou stopu družice.{" "}
@@ -241,7 +241,7 @@ export function AtmosphericCo2Article() {
           dokumentaci dat.
         </p>
 
-        <h3>3. Signál přístroje se porovná s referenčními plyny</h3>
+        <h3 id="kalibrace">3. Signál přístroje se porovná s referenčními plyny</h3>
         <p>
           Analyzátor nečte ppm přímo z jedné fyzikální vlastnosti. Měří elektrický nebo optický signál a jeho vztah
           k množství CO₂ určuje pomocí několika tlakových lahví. Ty tvoří kalibrační řetězec od pracovních lahví na
@@ -253,23 +253,23 @@ export function AtmosphericCo2Article() {
           <SourceLink id="DOI_10_5194_amt_14_3015_2021">Hall et al., 2021</SourceLink>
         </p>
 
-        <h3>4. Provozní vlivy se označí příznakem kvality</h3>
+        <h3 id="kontrola-dat">4. Provozní vlivy se označí příznakem kvality</h3>
         <p>
           Záznam obsahuje i chvíle, kdy stanici ovlivní vzduch z bezprostředního okolí, porucha průtoku nebo práce
           na přístroji. NOAA původní hodnoty uchovává a přidává jim příznaky. Pro svůj záznam okolního vzduchu na
-          Mauna Loa vybírá stabilní období a kontroluje směr větru i proměnlivost během hodiny. Výzkumník si může
+          Mauna Loa <Link href="/metody/kontrola-kvality-a-homogenizace/#atmosfericky-co2">vybírá stabilní období a zohledňuje denní proudění po svahu i proměnlivost během hodiny</Link>. Výzkumník si může
           pro jinou otázku zvolit jiný výběr. Příznak není skryté smazání naměřené hodnoty.
         </p>
 
-        <h3>5. Z jednotlivých stanic vzniknou denní a měsíční hodnoty</h3>
+        <h3 id="casovy-zaznam">5. Z jednotlivých stanic vzniknou denní a měsíční hodnoty</h3>
         <p>
           Průběžný přístroj dodává mnoho výsledků za hodinu, baňky obvykle několik vzorků za měsíc. Program proto
           zveřejňuje vedle jednotlivých měření také hodinové, denní nebo měsíční průměry. U Mauna Loa je červená
-          křivka v převzatém grafu měsíční průměr a černá křivka tentýž záznam po odhadu a odečtení pravidelně se
-          opakujícího sezónního průběhu.
+          křivka v převzatém grafu měsíční průměr a černá křivka tentýž záznam po <Link href="/metody/analyza-casovych-zmen-a-extremu/#sezonni-prubeh">odhadu a odečtení pravidelně se
+          opakujícího sezónního průběhu</Link>.
         </p>
 
-        <h3>6. Globální hodnota se vypočte z více zeměpisných šířek</h3>
+        <h3 id="prostorove-zpracovani">6. Globální hodnota se vypočte z více zeměpisných šířek</h3>
         <p>
           Globální produkt NOAA používá stanice, které sledují vzduch nad mořským povrchem nebo jeho blízké
           pozadí. Pro každou stanici se nejprve proloží hladký průběh v čase. Ve 48 okamžicích každého roku se
@@ -277,16 +277,18 @@ export function AtmosphericCo2Article() {
           zprůměruje. Globální číslo proto není prostým aritmetickým průměrem všech dostupných vzorků. NOAA na
           stejné stránce zveřejňuje výsledné tabulky, poznámky ke změnám i datovou citaci s verzí.{" "}
           <SourceLink id="WEB_NOAA_Trends_in_CO2_NOAA_Global_Monitoring_Laboratory_ff9ec92f">
-            NOAA: metoda globálního průměru
-          </SourceLink>
+            NOAA: data globálního průměru
+          </SourceLink>{" "}
+          Podrobnější princip rozebírá <Link href="/metody/prostorove-zpracovani-a-plosne-prumery/#atmosfericky-co2">prostorový výpočet CO₂</Link>. <SourceLink id="WEB_NOAA_Global_Means_Method">(NOAA: metodika výpočtu)</SourceLink>
         </p>
 
-        <h3>7. Nejistota a verze zůstávají součástí výsledku</h3>
+        <h3 id="nejistota">7. Nejistota a verze zůstávají součástí výsledku</h3>
         <p>
           Nejistota zahrnuje opakovatelnost analýzy, návaznost referenčních plynů, spojení různých přístrojů i
           prostorový výpočet. NOAA u ročního globálního průměru zveřejňuje nejistotu a poslední rok označuje jako
           předběžný, dokud neskončí nové kalibrace a kontroly. Změna kalibrační stupnice může upravit starší
-          hodnoty o desetiny ppm. Proto má citace obsahovat také verzi nebo datum stažení.
+          hodnoty o desetiny ppm. Proto má citace obsahovat také verzi nebo datum stažení.{" "}
+          Vliv rozmístění stanic a opakování výpočtu s pozměněnými vstupy vysvětluje <Link href="/metody/vycisleni-a-prenos-nejistoty/#atmosfericky-co2">metoda přenosu nejistoty</Link>. <SourceLink id="WEB_NOAA_MBL_Reference_Method">(NOAA: nejistota referenčního záznamu)</SourceLink>
         </p>
 
         <h2>Zveřejňovaná data</h2>

@@ -11,7 +11,7 @@ export function TideGaugeArticle() {
   return (
     <article className="article-layout">
       <div className="article-prose">
-        <h2>Jak pobřežní vodočet měří hladinu</h2>
+        <h2 id="princip">Jak pobřežní vodočet měří hladinu</h2>
         <p className="article-prose__intro">
           Pobřežní vodočet je přístroj, který opakovaně měří výšku mořské hladiny vůči
           zvolené místní nule. Tato nula se nazývá výšková reference. Její polohu
@@ -302,7 +302,7 @@ export function TideGaugeArticle() {
           altimetrií</Link>, která měří výšku hladiny z oběžné dráhy.
           Při porovnání se sladí výškový systém, období a oblast, ke které se údaje vztahují.
           Výsledky dlouhodobých měření a jejich prostorové pokrytí rozebírá článek
-          o <Link href="/pozorovani/gmsl">globální střední hladině moře</Link>.{" "}
+          o <Link href="/pozorovani/gmsl/#pobrezni-mereni">globální střední hladině moře</Link>.{" "}
           <SourceLink id="DOI_10_1002_2015rg000502">(Wöppelmann a Marcos, porovnání s altimetrií)</SourceLink>
         </p>
 

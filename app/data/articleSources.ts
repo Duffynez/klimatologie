@@ -3,6 +3,10 @@ import type { Source } from "./sources";
 // Sources cited by published article components.
 // Stable IDs are referenced from SourceLink components; do not rename them after publication.
 const rawArticleSources: Source[] = [
+  {id: "DOI_10_3389_feart_2021_698876", title: "The Copernicus Global 1/12° Oceanic and Sea Ice GLORYS12 Reanalysis", author: "Jean-Michel Lellouche a kol.", year: 2021, publication: "Frontiers in Earth Science 9, 698876. Oceánský model, vstupní pozorování, sedmidenní asimilace a ověření reanalýzy.", type: "Původní metodická a ověřovací studie", category: "science", externalUrl: "https://doi.org/10.3389/feart.2021.698876", topics: ["metody", "oceán", "asimilace dat a reanalýzy"]},
+  {id: "WEB_NOAA_Global_Means_Method", title: "NOAA/GML calculation of global means", author: "NOAA Global Monitoring Laboratory", year: 2026, publication: "Veřejná metodická dokumentace. Výběr stanic, proložení časových křivek a průměrování podle zeměpisné šířky. Ověřeno 31. října 2026, rok označuje přístup k průběžně spravované stránce.", type: "Institucionální metodika", category: "organization", externalUrl: "https://gml.noaa.gov/ccgg/about/global_means.html", topics: ["metody", "oxid uhličitý", "zpracování dat"]},
+  {id: "WEB_NOAA_MBL_Reference_Method", title: "Marine Boundary Layer Reference: methodology and uncertainty", author: "NOAA Global Monitoring Laboratory", year: 2026, publication: "Veřejná metodická dokumentace referenčního záznamu CO₂. Oddíl 8 vysvětluje nejistoty rozmístění stanic, vzorkování a měření. Ověřeno 31. října 2026, rok označuje přístup k průběžně spravované stránce.", type: "Institucionální metodika", category: "organization", externalUrl: "https://gml.noaa.gov/ccgg/mbl/mbl.html", topics: ["metody", "oxid uhličitý", "nejistota"]},
+
   {id: "DOI_10_1115_1_3662552", title: "A New Approach to Linear Filtering and Prediction Problems", author: "Rudolf E. Kalman", year: 1960, publication: "Journal of Basic Engineering 82(1), s. 35–45. Původní práce o průběžném odhadu stavu a kovariancí chyb. Veřejná kopie v univerzitních výukových materiálech Duke University.", type: "Původní matematická metodická práce", category: "science", externalUrl: "https://doi.org/10.1115/1.3662552", topics: ["metody", "asimilace dat a reanalýzy", "zpracování dat"]},
   {id: "WEB_ECMWF_Bouttier_Courtier_Assimilation", title: "Data assimilation concepts and methods", author: "François Bouttier a Philippe Courtier", year: 1999, publication: "ECMWF Meteorological Training Course Lecture Series, březen 1999, veřejná kopie © ECMWF 2002. Oddíly 10 a 11: optimální kombinace odhadů, váhy a nejistoty.", type: "Veřejná metodická příručka", category: "science", externalUrl: "https://www.ecmwf.int/sites/default/files/elibrary/2002/16928-data-assimilation-concepts-and-methods.pdf", topics: ["metody", "asimilace dat a reanalýzy", "zpracování dat"]},
   {id: "DOI_10_1175_Whitaker_2004_RWRUED", title: "Reanalysis without Radiosondes Using Ensemble Data Assimilation", author: "Jeffrey S. Whitaker, Gilbert P. Compo, Xue Wei a Thomas M. Hamill", year: 2004, publication: "Monthly Weather Review 132, s. 1190–1200. Původní experiment se sítí povrchového tlaku a souborovým Kalmanovým filtrem. Veřejný plný text na stránce spoluautora u NOAA PSL.", type: "Původní metodická a ověřovací studie", category: "science", externalUrl: "https://doi.org/10.1175/1520-0493(2004)132%3C1190:RWRUED%3E2.0.CO;2", topics: ["metody", "asimilace dat a reanalýzy", "zpracování dat"]},
@@ -836,6 +840,9 @@ const rawArticleSources: Source[] = [
 ];
 
 const articleOpenAccessSources: Record<string, true | string> = {
+  DOI_10_3389_feart_2021_698876: "https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2021.698876/full",
+  WEB_NOAA_Global_Means_Method: true,
+  WEB_NOAA_MBL_Reference_Method: true,
   WEB_RSS_AMSR_Ocean_ATBD_2000: true,
   WEB_NASA_GPROF2021_ATBD_2022: true,
   DOI_10_1115_1_3662552: "https://people.duke.edu/~hpgavin/SystemID/References/Kalman-ASME-JBE-1960.pdf",

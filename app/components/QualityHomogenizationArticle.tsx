@@ -289,6 +289,42 @@ export function QualityHomogenizationArticle() {
           <SourceLink id="DOI_10_1175_jcli_d_18_0094_1">(rozšíření ve verzi 4)</SourceLink>
         </p>
 
+        <h3 id="oceanske-profily">Kontrola oceánských profilů</h3>
+        <p>
+          Při zpracování <Link href="/pozorovani/tepelny-obsah-oceanu/#kontrola-dat">teplot oceánu</Link>{" "}
+          se kontroluje také průběh hodnot s hloubkou. IAPv4 porovnává údaje
+          s rozsahem obvyklým pro dané místo a s běžnými svislými změnami teploty.
+          Kontroly přizpůsobuje typu přístroje. Samostatný krok opravuje známé
+          systematické odchylky, například chybu teploty a odvozené hloubky
+          jednorázových sond XBT. Zkontrolované a opravené profily pak vstupují
+          do prostorové rekonstrukce.{" "}
+          <SourceLink id="DOI_10_5194_essd_16_3517_2024">(Cheng a kol. 2024, oddíly 2.2 a 2.3)</SourceLink>
+        </p>
+        <h3 id="chemie-oceanu">Sjednocení chemických rozborů z různých plaveb</h3>
+        <p>
+          U <Link href="/pozorovani/acidifikace-oceanu/#kontrola-dat">oceánské chemie</Link>{" "}
+          poskytují společnou kontrolu místa, kde se trasy výprav kříží nebo
+          přibližují. GLODAPv2 porovnával zejména hlubokou vodu, která se mění
+          pomaleji než povrchová. Z rozdílů mezi plavbami odhadl soustavné posuny
+          rozborů. Navržené opravy pak autoři posuzovali také podle skutečného
+          vývoje vody v čase. Tento postup umožňuje spojovat například měření
+          DIC a alkalinity z různých laboratoří. Rozsah kontrol jednotlivých
+          veličin v aktuální verzi databáze uvádí navazující pozorování.{" "}
+          <SourceLink id="DOI_10_5194_essd_8_297_2016">(Olsen a kol. 2016, oddíl 3)</SourceLink>
+        </p>
+        <h3 id="atmosfericky-co2">Výběr vzduchu pro záznam CO₂</h3>
+        <p>
+          U <Link href="/pozorovani/atmosfericka-koncentrace-co2/#kontrola-dat">atmosférického CO₂</Link>{" "}
+          záleží vedle správného chodu analyzátoru také na tom, jaký vzduch
+          chceme sledovat. NOAA na Mauna Loa vybírá stabilní období, kdy je vzduch
+          málo ovlivněn blízkými zdroji a pohlcováním CO₂. Zohledňuje denní
+          proudění po svahu a proměnlivost koncentrace.
+          Příznaky kvality uchovávají informaci o důvodu výběru.
+          Srovnatelnou číselnou stupnici zajišťují referenční plyny a návaznost
+          kalibrací. Výběr vzorků a kalibrace zde řeší dvě různé části přípravy záznamu.{" "}
+          <SourceLink id="WEB_NOAA_Carbon_Cycle_Greenhouse_Gases_NOAA_Global_Monito_66691a03">(NOAA: měření a zpracování Mauna Loa)</SourceLink>
+        </p>
+
         <h2>Nejistoty a ověření</h2>
         <p>
           Výsledek závisí hlavně na dostupnosti vhodných sousedů, délce společných

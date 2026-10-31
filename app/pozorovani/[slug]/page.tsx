@@ -73,7 +73,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Atmosféra"
           title="Oxid uhličitý v atmosféře"
-          meta="28. října 2026"
+          meta="31. října 2026"
         >
           <p>
             Co přesně znamená údaj v ppm, jak se CO₂ měří na stanicích, v odebraném vzduchu, v ledu a z družic a
@@ -130,7 +130,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Oceány"
           title="Obsah tepla v oceánu"
-          meta="27. října 2026"
+          meta="31. října 2026"
         >
           <p>
             Jak se z teplot naměřených v různých hloubkách počítá změna obsahu tepla, jak se měření vyvíjela a co
@@ -149,7 +149,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Oceány"
           title="Globální střední hladina moře"
-          meta="28. října 2026"
+          meta="31. října 2026"
         >
           <p>
             Jak se výška moře měří na pobřeží a z družic, jak z jednotlivých měření vzniká globální průměr a co ukazují
@@ -168,7 +168,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Oceány"
           title="Acidifikace oceánu"
-          meta="26. října 2026"
+          meta="31. října 2026"
         >
           <p>
             Co přesně znamená změna pH mořské vody, jak se měří celý uhličitanový systém, jak vznikají globální

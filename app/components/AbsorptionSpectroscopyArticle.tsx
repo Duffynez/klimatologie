@@ -82,7 +82,7 @@ export function AbsorptionSpectroscopyArticle() {
           </figcaption>
         </figure>
 
-        <h3>Proč měříme dobu slábnutí světla</h3>
+        <h3 id="opticka-dutina">Proč měříme dobu slábnutí světla</h3>
         <p>
           Uvnitř analyzátoru jsou zrcadla, která odrážejí téměř všechno dopadající světlo.
           Prostor mezi nimi tvoří <strong>optickou dutinu</strong>. Laser do ní vpustí úzký
@@ -251,7 +251,7 @@ export function AbsorptionSpectroscopyArticle() {
           a sezónní proměnlivost i dlouhodobý růst CO₂. <SourceLink id="WEB_NOAA_Carbon_Cycle_Greenhouse_Gases_NOAA_Global_Monito_66691a03">NOAA
           popisuje měření na Mauna Loa</SourceLink> včetně přechodu na CRDS v dubnu 2019,
           výběru vzduchu málo ovlivněného místními zdroji a veřejných hodinových až měsíčních dat.
-          Na samotné <Link href="/pozorovani/atmosfericka-koncentrace-co2">pozorování změn
+          Na samotné <Link href="/pozorovani/atmosfericka-koncentrace-co2/#stanicni-mereni">pozorování změn
           atmosférického CO₂</Link> navazuje samostatný článek.
         </p>
         <p>
@@ -283,6 +283,39 @@ export function AbsorptionSpectroscopyArticle() {
           tato optická měření s dalšími způsoby sledování plynů. U{" "}
           <Link href="/metody/plynova-chromatografie">plynové chromatografie</Link> se
           složky směsi nejprve fyzicky oddělí. Spektroskopie je rozlišuje podle absorpčního spektra.
+        </p>
+
+        <h3 id="co2-v-morske-vode">CO₂ v rovnováze s mořskou vodou</h3>
+        <p>
+          Infračervený analyzátor se používá také při
+          <Link href="/pozorovani/acidifikace-oceanu/#mereni-co2"> měření CO₂ v povrchovém oceánu</Link>.
+          Loď čerpá vodu do vyrovnávací nádoby, kde si voda a obíhající vzduch
+          vyměňují CO₂, až se přiblíží rovnováze. Analyzátor typu NDIR změří
+          podíl CO₂ v tomto vzduchu podle zeslabení infračerveného záření.
+          Z podílu plynu a tlaku se po zohlednění vodní páry vypočte pCO₂.
+          Teplota vody slouží k převodu z podmínek v nádobě na podmínky
+          v oceánu. Výsledek popisuje dílčí tlak CO₂ v plynu v rovnováze s vodou.
+          Celkové množství rozpuštěného anorganického uhlíku určuje samostatný rozbor.{" "}
+          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(Dickson a kol. 2007, SOP 5)</SourceLink>
+        </p>
+        <h3 id="druzicove-spektrum">CO₂ podél dráhy slunečního světla</h3>
+        <p>
+          Družice OCO-2 využívá sluneční světlo, které prošlo atmosférou,
+          odrazilo se od povrchu a dorazilo k přístroji.
+          Spektrometr změří jeho rozložení ve dvou absorpčních pásmech CO₂
+          a jednom pásmu kyslíku. Výpočet porovnává naměřené spektrum
+          s průchodem záření modelovanou atmosférou a hledá odpovídající
+          množství CO₂. Kyslíkové pásmo pomáhá určit množství suchého vzduchu,
+          k němuž se CO₂ vztáhne.{" "}
+          <SourceLink id="DOI_10_5194_amt_10_549_2017">(Eldering a kol. 2017, oddíly 2 a 4)</SourceLink>
+        </p>
+        <p>
+          Výsledná veličina XCO₂ vyjadřuje podíl CO₂ průměrovaný přes sloupec
+          suchého vzduchu. Její vztah ke staničním měřením vysvětluje
+          <Link href="/pozorovani/atmosfericka-koncentrace-co2/#druzicova-mereni"> pozorování atmosférického CO₂</Link>.
+          Staniční přístroj zachycuje vzduch nasátý v místě odběru,
+          zatímco družicový údaj zahrnuje celou sledovanou dráhu atmosférou.{" "}
+          <SourceLink id="DOI_10_5194_amt_10_549_2017">(význam družicového XCO₂)</SourceLink>
         </p>
 
         <h2>Nejistoty a ověření výsledků</h2>

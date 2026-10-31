@@ -114,11 +114,11 @@ export function OceanAcidificationArticle() {
         </p>
 
         <h2>Jak se chemie oceánu měří</h2>
-        <h3>Odběr vody a doprovodné údaje</h3>
+        <h3 id="odber-a-podminky">Odběr vody a doprovodné údaje</h3>
         <p>
-          Výzkumná loď spustí do oceánu rám s čidly teploty, vodivosti a tlaku.
-          <Link href="/metody/konduktometrie"> Vodivost se spolu s teplotou a tlakem převádí na praktickou salinitu</Link>, tedy údaj o slanosti vody, a
-          <Link href="/metody/mereni-tlaku-a-hydrostaticke-vysky"> z tlaku se odvozuje hloubka</Link>. Kolem rámu jsou Niskinovy lahve, které se na povel uzavřou ve vybraných hloubkách. Po vytažení
+          Výzkumná loď spustí do oceánu rám s <Link href="/metody/odporova-termometrie-a-termistory/#termistory">čidly teploty</Link>, vodivosti a tlaku.
+          <Link href="/metody/konduktometrie/#salinita"> Vodivost se spolu s teplotou a tlakem převádí na praktickou salinitu</Link>, tedy údaj o slanosti vody, a
+          <Link href="/metody/mereni-tlaku-a-hydrostaticke-vysky/#hloubka"> z tlaku se odvozuje hloubka</Link>. Kolem rámu jsou Niskinovy lahve, které se na povel uzavřou ve vybraných hloubkách. Po vytažení
           se voda rozdělí do samostatných lahví pro DIC, alkalinitu, pH, živiny a další rozbory. U každého vzorku se
           zachová čas, poloha, tlak, teplota, salinita, číslo lahve a způsob analýzy. Bez těchto údajů nelze hodnotu pH
           správně převést na podmínky v oceánu ani porovnat s jinou výpravou. Potřebná metadata vymezují{" "}
@@ -152,7 +152,7 @@ export function OceanAcidificationArticle() {
           <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">příručce Dicksona, Sabina a Christiana (2007)</SourceLink>.
         </p>
 
-        <h3>pH: světlo, barvivo a přesná teplota</h3>
+        <h3 id="mereni-ph">pH: světlo, barvivo a přesná teplota</h3>
         <p>
           Při spektrofotometrickém měření se do vzorku přidá malé známé množství barviva, obvykle m-kresolového
           purpuru. Jeho dvě formy pohlcují různě silně světlo při dvou zvolených vlnových délkách. Přístroj
@@ -161,7 +161,7 @@ export function OceanAcidificationArticle() {
           <SourceLink id="DOI_10_5194_os_7_597_2011">Aßmannem a kol. (2011)</SourceLink> lze sledovat cestu
           od čerpané vody přes dávkování barviva a optický detektor až k výsledku. Autoři zároveň upozorňují,
           že nečistoty v barvivu mohou posunout pH přibližně o 0,01. Dobrá opakovatelnost sama takovou chybu neodhalí. Celý postup vysvětluje článek o{" "}
-          <Link href="/metody/spektrofotometrie">spektrofotometrii roztoků</Link>.
+          <Link href="/metody/spektrofotometrie/#princip">spektrofotometrii roztoků</Link>.
         </p>
 
         <p>
@@ -173,10 +173,10 @@ export function OceanAcidificationArticle() {
           <SourceLink id="DOI_10_4319_lom_2010_8_172">Martz a kol., 2010</SourceLink> a{" "}
           <SourceLink id="DOI_10_13155_97828">BGC-Argo: postup kontroly pH</SourceLink>.{" "}
           Princip elektrod a převod napětí na pH vysvětluje článek o{" "}
-          <Link href="/metody/potenciometrie">potenciometrii</Link>.
+          <Link href="/metody/potenciometrie/#princip">potenciometrii</Link>.
         </p>
 
-        <h3>DIC: uvolnění a spočítání oxidu uhličitého</h3>
+        <h3 id="mereni-dic">DIC: uvolnění a spočítání oxidu uhličitého</h3>
         <p>
           Při měření DIC se do odměřeného vzorku přidá kyselina, která převede rozpuštěné formy anorganického
           uhlíku na CO₂. Nosný plyn jej odvede do coulometru. Tam se množství CO₂ stanoví pomocí elektrického
@@ -185,10 +185,10 @@ export function OceanAcidificationArticle() {
           rozpuštěnou formu zvlášť. Svůj postup a laboratorní přesnost i správnost přibližně ±0,05 % uvádí{" "}
           <SourceLink id="WEB_NOAA_Laboratory_Analysis_1a101421">laboratoř NOAA PMEL</SourceLink>.{" "}
           Vznik měřicího signálu a převod náboje na množství uhlíku vysvětluje{" "}
-          <Link href="/metody/coulometrie">článek o coulometrii</Link>.
+          <Link href="/metody/coulometrie/#princip">článek o coulometrii</Link>.
         </p>
 
-        <h3>Celková alkalinita: titrace známou kyselinou</h3>
+        <h3 id="mereni-alkalinity">Celková alkalinita: titrace známou kyselinou</h3>
         <p>
           Při titraci se do vzorku postupně přidává kyselina o známé koncentraci. Přístroj zaznamenává její
           dávky a elektrický potenciál elektrody, z něhož se sleduje změna kyselosti. Výpočet z průběhu titrace
@@ -199,13 +199,13 @@ export function OceanAcidificationArticle() {
           stanoveny cíle opakovatelnosti pod 1 a systematické odchylky pod 2 mikromoly na kilogram. Alkalinita
           vyjadřuje jinou vlastnost vzorku než pH, a obě veličiny se proto mohou měnit odlišně.
           Princip reakce, práci přístroje a přepočet titrační křivky vysvětluje{" "}
-          <Link href="/metody/titrace">článek o titraci</Link>.
+          <Link href="/metody/titrace/#princip">článek o titraci</Link>.
         </p>
 
-        <h3>Množství rozpuštěného CO₂</h3>
+        <h3 id="mereni-co2">Množství rozpuštěného CO₂</h3>
         <p>
           Na lodích se povrchová voda často vede nepřetržitě do vyrovnávací nádoby. Nad vodou proudí plyn, který se s ní
-          přiblíží rovnováze, a infračervený analyzátor změří podíl CO₂ v tomto plynu. Z tlaku, teploty a složení plynu se
+          přiblíží rovnováze, a <Link href="/metody/absorpcni-spektroskopie/#co2-v-morske-vode">infračervený analyzátor změří podíl CO₂ v tomto plynu</Link>. Z tlaku, teploty a složení plynu se
           určí pCO₂, tedy dílčí tlak CO₂ v plynu v rovnováze s vodou. Fugacita fCO₂ tento údaj ještě opravuje
           o malé odchylky chování skutečného plynu od ideálního. Přístroj se
           během plavby kontroluje několika lahvemi plynu se známým obsahem CO₂. Výsledkem jsou tisíce bodů podél dráhy
@@ -216,7 +216,7 @@ export function OceanAcidificationArticle() {
           <SourceLink id="DOI_10_5194_essd_8_383_2016">Bakker a kol., 2016</SourceLink>
         </p>
 
-        <h3>Ze dvou měření k výpočtu uhličitanového systému</h3>
+        <h3 id="vypocet-chemie">Ze dvou měření k výpočtu uhličitanového systému</h3>
         <p>
           Čtyři hlavní veličiny uhličitanového systému jsou pH, DIC, celková alkalinita a pCO₂ nebo fCO₂. Když laboratoř
           změří vhodnou dvojici, například DIC a alkalinitu, a přidá teplotu, salinitu, tlak a podle potřeby živiny, rovnovážné rovnice dovolí
@@ -230,7 +230,7 @@ export function OceanAcidificationArticle() {
         </p>
 
         <h2>Jak vzniká zveřejněný výsledek</h2>
-        <h3>Stupnice pH a teplota</h3>
+        <h3 id="stupnice-a-teplota">Stupnice pH a teplota</h3>
         <p>
           U mořské vody existuje několik stupnic pH podle toho, které vodíkové ionty definice zahrnuje.
           Volná stupnice počítá volné ionty, celková stupnice zahrnuje navíc ionty vázané v hydrogensíranu
@@ -250,7 +250,7 @@ export function OceanAcidificationArticle() {
           při změně podmínek popisují <SourceLink id="DOI_10_5194_gmd_15_15_2022">Humphreys a kol. (2022)</SourceLink>.
         </p>
 
-        <h3>Kontrola jedné výpravy a návaznost mezi výpravami</h3>
+        <h3 id="kontrola-dat">Kontrola jedné výpravy a návaznost mezi výpravami</h3>
         <p>
           První kontrola probíhá uvnitř jedné plavby. Laboratoř opakuje část vzorků, měří referenční mořskou vodu a
           sleduje rozdíl mezi známou a získanou hodnotou. Podezřelé vzorky dostanou značku kvality a původní hodnota se
@@ -271,14 +271,15 @@ export function OceanAcidificationArticle() {
           neprošla stejnou druhotnou kontrolou. Databáze je obsahuje, ale uživatel je nesmí považovat za stejně
           vzájemně sjednocené jako hlavní proměnné DIC a alkalinitu.{" "}
           <SourceLink id="DOI_10_5194_essd_8_297_2016">Olsen a kol., 2016</SourceLink> a{" "}
-          <SourceLink id="DOI_10_25921_m6tp_mj50">GLODAPv3: metadata verze 2026</SourceLink>
+          <SourceLink id="DOI_10_25921_m6tp_mj50">GLODAPv3: metadata verze 2026</SourceLink>{" "}
+          Sjednocení výsledků různých plaveb vysvětluje <Link href="/metody/kontrola-kvality-a-homogenizace/#chemie-oceanu">oddíl o kontrole oceánské chemie</Link>.
         </p>
 
-        <h3>Dlouhé pozorování na jednom místě</h3>
+        <h3 id="casovy-zaznam">Dlouhé pozorování na jednom místě</h3>
         <p>
           Stanice BATS a HOT se vracejí přibližně na stejné souřadnice a odebírají vodu v několika hloubkách. Každý měsíc
           se však neměří přesně ve stejný den a některé plavby chybějí. Pro odhad dlouhodobé změny se hodnoty nejprve
-          rozdělí podle měsíců, pro každý měsíc se určí jeho obvyklá hodnota a ta se odečte. Tím se porovnává leden s
+          rozdělí podle měsíců, <Link href="/metody/analyza-casovych-zmen-a-extremu/#sezonni-prubeh">pro každý měsíc se určí jeho obvyklá hodnota a ta se odečte</Link>. Tím se porovnává leden s
           lednem a červenec s červencem místo směšování sezón. Původní měsíční data zůstávají dostupná a publikovaný sklon
           uvádí počet bodů, zvolené období a statistickou nejistotu. Takto postupovali při vyhodnocení Bermud{" "}
           <SourceLink id="DOI_10_3389_fmars_2023_1289931">Bates a Johnson (2023)</SourceLink>.
@@ -321,14 +322,15 @@ export function OceanAcidificationArticle() {
           </figcaption>
         </figure>
 
-        <h3>Z lodních bodů ke globální povrchové mapě</h3>
+        <h3 id="prostorove-zpracovani">Z lodních bodů ke globální povrchové mapě</h3>
         <p>
           Nejhustší globální základ tvoří SOCAT, atlas povrchového fCO₂. Výzkumné a obchodní lodě měří podél svých tras,
           takže některé severoatlantické tratě obsahují mnoho opakování a jižní oceány zůstávají řidší. Statistický model
           se učí vztah mezi dostupným fCO₂ a současně známou teplotou, salinitou, obsahem chlorofylu (zeleného barviva), hloubkou promíchané vrstvy,
           polohou a měsícem. Potom odhadne fCO₂ i v buňkách bez lodě. Jde o rekonstrukci založenou na pozorováních, nikoli
           o přímé změření každé buňky. Konkrétní řetězec vstupů a výpočtů zveřejňují{" "}
-          <SourceLink id="DOI_10_5194_essd_16_121_2024">Chau a kol. (2024)</SourceLink>.
+          <SourceLink id="DOI_10_5194_essd_16_121_2024">Chau a kol. (2024)</SourceLink>.{" "}
+          Jak se taková rekonstrukce liší od samotného plošného vážení, vysvětluje <Link href="/metody/prostorove-zpracovani-a-plosne-prumery/#chemie-oceanu">metoda prostorového zpracování</Link>.
         </p>
 
         <p>
@@ -342,10 +344,10 @@ export function OceanAcidificationArticle() {
           <SourceLink id="DOI_10_5194_essd_16_121_2024">Chau a kol., 2024</SourceLink>
         </p>
 
-        <h2>Nejistota a hranice měření</h2>
+        <h2 id="nejistota">Nejistota a hranice měření</h2>
         <p>
           U jednoho laboratorního vzorku lze nejistotu odvodit z opakovaných rozborů, referenční vody, teploty a
-          kalibrace. U vypočteného pH nebo stavu nasycení přibývá nejistota druhého vstupu a chemických konstant. Orr a
+          kalibrace. U vypočteného pH nebo stavu nasycení přibývá <Link href="/metody/vycisleni-a-prenos-nejistoty/#chemicke-vypocty">nejistota druhého vstupu a chemických konstant</Link>. Orr a
           kol. ukázali, že nejistota rovnovážných konstant může u některých kombinací vstupů převážit nad samotnou
           laboratorní chybou. Proto se k výsledku ukládá použitá sada konstant i verze programu, ne pouze dvě vstupní
           hodnoty.{" "}

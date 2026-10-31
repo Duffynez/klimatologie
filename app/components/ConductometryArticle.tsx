@@ -169,7 +169,7 @@ export function ConductometryArticle() {
           vodivost samotné vody.
         </p>
 
-        <h3>Jak z vodivosti získáme praktickou salinitu</h3>
+        <h3 id="salinita">Jak z vodivosti získáme praktickou salinitu</h3>
         <p>
           <strong>Praktická salinita</strong>, značená <InlineMath tex={String.raw`S_P`} />,
           je číslo na společné stupnici PSS-78, anglicky <em>Practical Salinity
@@ -267,10 +267,10 @@ export function ConductometryArticle() {
         </p>
         <p>
           Salinita pak doplňuje teplotu a tlak při určování
-          <Link href="/pozorovani/tepelny-obsah-oceanu"> obsahu tepla v oceánu</Link>.
-          Při sledování <Link href="/pozorovani/gmsl">výšky mořské hladiny</Link>
+          <Link href="/pozorovani/tepelny-obsah-oceanu/#mereni-profilu"> obsahu tepla v oceánu</Link>.
+          Při sledování <Link href="/pozorovani/gmsl/#bilance-hladiny">výšky mořské hladiny</Link>
           {" "}pomáhá určit změny objemu související s hustotou vody.
-          U <Link href="/pozorovani/acidifikace-oceanu">acidifikace oceánu</Link>
+          U <Link href="/pozorovani/acidifikace-oceanu/#vypocet-chemie">acidifikace oceánu</Link>
           {" "}patří k podmínkám chemických přepočtů. Měření pH a množství uhlíku
           dodávají další metody, které se s údaji o salinitě propojují.{" "}
           <SourceLink id="DOI_10_1175_2011jtecho831_1">(Barker a kol., výpočty tepla a objemu)</SourceLink>

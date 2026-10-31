@@ -41,7 +41,7 @@ export function TimeExtremesArticle() {
           <SourceLink id="DOI_10_1175_jtech_d_11_00103_1">(vstupy a jejich příprava)</SourceLink>
         </p>
 
-        <h3>Sezónní kolísání a referenční období</h3>
+        <h3 id="sezonni-prubeh">Sezónní kolísání a referenční období</h3>
         <p>
           Teplota v průběhu roku pravidelně stoupá a klesá.
           Tato opakující se změna se nazývá <strong>sezónní kolísání</strong>.
@@ -62,6 +62,19 @@ export function TimeExtremesArticle() {
           jeho sklon.{" "}
           <SourceLink id="DOI_10_3389_fclim_2022_989505">(Dunn a kol. 2022, porovnávání anomálií)</SourceLink>{" "}
           <SourceLink id="BOOK_Hyndman_Athanasopoulos_2021">(lineární vztah a jeho sklon)</SourceLink>
+        </p>
+
+        <p>
+          Sezónní průběh je potřeba oddělit také při sledování
+          <Link href="/pozorovani/atmosfericka-koncentrace-co2/#casovy-zaznam"> atmosférického CO₂</Link>.
+          NOAA popisuje staniční záznam součtem pomalého vývoje a opakujících
+          se ročních vln. Tak lze odhadnout sezónní složku a sledovat změnu
+          po jejím odečtení.{" "}
+          <SourceLink id="WEB_NOAA_Global_Means_Method">(NOAA: proložení časové křivky)</SourceLink>
+          Sezónnost se promítá i do chemických záznamů oceánu. Její oddělení
+          od dlouhodobé změny ukazuje pozorování
+          <Link href="/pozorovani/acidifikace-oceanu/#casovy-zaznam"> acidifikace u Bermud</Link>.{" "}
+          <SourceLink id="DOI_10_3389_fmars_2023_1289931">(Bates a Johnson 2023)</SourceLink>
         </p>
 
         <h3 id="trend">Trend shrnuje změnu za celé zvolené období</h3>

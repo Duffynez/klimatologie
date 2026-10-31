@@ -200,6 +200,47 @@ export function SpatialAveragesArticle() {
           <Link href="/pozorovani/srazky-a-privalove-srazky/#prostorove-zpracovani"> srážek</Link>.{" "}
           <SourceLink id="DOI_10_1029_2019jd032263">(Dunn a kol. 2020, sestavení map HadEX3)</SourceLink>
         </p>
+        <h3 id="ocean">Povrch oceánu a jeho objem</h3>
+        <p>
+          Při výpočtu <Link href="/pozorovani/gmsl/#plosne-vazeni">průměrné hladiny moře</Link>{" "}
+          zastupuje každá buňka část oceánské plochy. Její váha odpovídá velikosti
+          této plochy. Součet vážených odchylek se vydělí celkovou zastoupenou
+          plochou a výsledkem je průměrná změna výšky hladiny.{" "}
+          <SourceLink id="DOI_10_5067_nsind_gmsv1">(NASA SSH: výpočet globální hladiny)</SourceLink>
+        </p>
+        <p>
+          U <Link href="/pozorovani/tepelny-obsah-oceanu/#soucet-tepla">obsahu tepla</Link>{" "}
+          potřebujeme zahrnout také hloubku. Oceán proto rozdělíme do prostorových
+          buněk a z profilů odhadneme teplotní odchylku v každé z nich.
+          Objem buňky, hustota vody a její měrná tepelná kapacita převedou tuto
+          odchylku na změnu energie. Příspěvky v joulech potom sečteme za vymezenou
+          vrstvu oceánu. Výsledkem je celková změna obsahu tepla této vrstvy.{" "}
+          <SourceLink id="DOI_10_1029_2012gl051106">(Levitus a kol. 2012)</SourceLink>
+        </p>
+        <h3 id="chemie-oceanu">Jak vznikne mapa chemických vlastností vody</h3>
+        <p>
+          Globální sledování <Link href="/pozorovani/acidifikace-oceanu/#prostorove-zpracovani">acidifikace oceánu</Link>{" "}
+          vyžaduje i odhad mezi lodními trasami. CMEMS-LSCE odvozuje povrchové
+          pCO₂ z měření SOCAT a dalších známých vlastností oceánu, například teploty
+          a salinity. Z odhadnutého pCO₂ a samostatně odhadnuté alkalinity pak
+          chemický výpočet určí pH pro každou buňku. Teprve z hotové mapy lze
+          počítat průměr vybrané oblasti s vahami podle plochy.
+          Odhad hodnot v mapě a její plošné zprůměrování jsou tedy dva navazující kroky.{" "}
+          <SourceLink id="DOI_10_5194_essd_16_121_2024">(Chau a kol. 2024, oddíly 3 a 5)</SourceLink>
+        </p>
+        <h3 id="atmosfericky-co2">Globální CO₂ ze zeměpisných šířek</h3>
+        <p>
+          NOAA při výpočtu <Link href="/pozorovani/atmosfericka-koncentrace-co2/#prostorove-zpracovani">globálního CO₂</Link>{" "}
+          vybírá stanice sledující dobře promíchaný vzduch při mořském povrchu.
+          Jejich časové záznamy převede na společné okamžiky.
+          Pro každý okamžik proloží hodnotami stanic křivku závislosti na zeměpisné
+          šířce. Z této křivky pak vypočte průměr s vahami odpovídajícími ploše
+          jednotlivých šířkových pásem. Hustší skupina stanic tak pomáhá určit
+          místní část křivky, ale nedostává kvůli svému počtu větší podíl
+          na ploše Země.{" "}
+          <SourceLink id="WEB_NOAA_Global_Means_Method">(NOAA: výpočet globálních průměrů)</SourceLink>
+        </p>
+
         <h3>Vývoj globálních výpočtů</h3>
         <p>
           Hansen a Lebedeff v roce 1987 doložili podobnost změn teploty mezi

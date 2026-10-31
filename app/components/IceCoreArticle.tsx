@@ -101,7 +101,7 @@ export function IceCoreArticle() {
           <SourceLink id="DOI_10_5194_essd_11_473_2019">(Rubino a kol. 2019, oddíl 2.2)</SourceLink>
         </p>
 
-        <h3>Jak se změří vzduch z bublinek</h3>
+        <h3 id="rozbor-vzduchu">Jak se změří vzduch z bublinek</h3>
         <p>
           Led se vloží do uzavřené nádoby s děrovaným vnitřním válcem,
           který funguje jako struhadlo. Z nádoby se nejprve odčerpá okolní vzduch.
@@ -207,7 +207,7 @@ export function IceCoreArticle() {
           Tím prodlužuje přístrojová pozorování do doby před jejich začátkem.{" "}
           <SourceLink id="DOI_10_5194_essd_11_473_2019">(Rubino a kol. 2019)</SourceLink>{" "}
           Celkový průběh rozebírá článek{" "}
-          <Link href="/pozorovani/atmosfericka-koncentrace-co2">Oxid uhličitý v atmosféře</Link>.
+          <Link href="/pozorovani/atmosfericka-koncentrace-co2/#vzduch-v-ledu">Oxid uhličitý v atmosféře</Link>.
         </p>
         <p>
           Z jiných částí jádra lze měřit například prach nebo izotopové složení

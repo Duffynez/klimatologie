@@ -126,7 +126,7 @@ export function GlobalMeanSeaLevelArticle() {
         </figure>
 
         <h2>Jak se hladina měří</h2>
-        <h3>Pobřežní stanice</h3>
+        <h3 id="pobrezni-mereni">Pobřežní stanice</h3>
         <p>
           Klasický přístroj vedl vodu úzkým otvorem do šachty, kde vlny zeslábly a plovák sledoval pomalejší pohyb hladiny.
           Dnešní stanice obvykle měří dobu návratu zvukového nebo mikrovlnného impulzu. Z jednotlivých odečtů se po
@@ -137,7 +137,7 @@ export function GlobalMeanSeaLevelArticle() {
 
         <p>
           Jinou možností je odvodit místní hladinu z tlaku vody nad ponořeným čidlem. Převod a potřebné opravy
-          vysvětluje <Link href="/metody/mereni-tlaku-a-hydrostaticke-vysky">měření tlaku a hydrostatické výšky</Link>.
+          vysvětluje <Link href="/metody/mereni-tlaku-a-hydrostaticke-vysky/#hladina">měření tlaku a hydrostatické výšky</Link>.
         </p>
 
         <p>
@@ -161,11 +161,11 @@ export function GlobalMeanSeaLevelArticle() {
 
         <p>
           Cestu od radarového signálu přes kalibraci a výškové body až k porovnání údajů podrobně vysvětluje
-          <Link href="/metody/pobrezni-mereni-hladiny-a-vyskova-reference"> pobřežní měření hladiny a výšková reference</Link>.
+          <Link href="/metody/pobrezni-mereni-hladiny-a-vyskova-reference/#princip"> pobřežní měření hladiny a výšková reference</Link>.
           Součástí je výpočet se skutečnými daty ze San Franciska a rozlišení pohybu vody od pohybu pevniny.
         </p>
 
-        <h3>Družice</h3>
+        <h3 id="druzicova-mereni">Družice</h3>
         <p>
           Radarový výškoměr vyšle k oceánu krátký mikrovlnný impulz a změří dobu, za kterou se odraz vrátí. Z této doby
           vznikne vzdálenost mezi anténou a mořskou hladinou. Současně musí být velmi přesně určena poloha družice vůči
@@ -173,7 +173,7 @@ export function GlobalMeanSeaLevelArticle() {
           Jeden výsledek má přesnost řádově centimetrů. Globální průměr je přesnější díky velkému počtu opakovaných měření.{" "}
           <SourceLink id="WEB_NASA_How_do_satellites_measure_sea_level_change_NASA_702bb114">NASA Sea Level: družicová altimetrie</SourceLink>{" "}
           Podrobný postup včetně skutečného výpočtu z dat Jasonu-3 vysvětluje
-          <Link href="/metody/radarova-a-laserova-altimetrie"> radarová a laserová altimetrie</Link>.
+          <Link href="/metody/radarova-a-laserova-altimetrie/#vyska-hladiny"> radarová a laserová altimetrie</Link>.
         </p>
 
         <p>
@@ -196,7 +196,7 @@ export function GlobalMeanSeaLevelArticle() {
         </p>
 
         <h2>Jak vzniká globální výsledek</h2>
-        <h3>Z pobřežních stanic</h3>
+        <h3 id="rekonstrukce">Z pobřežních stanic</h3>
         <p>
           Archiv nejprve převede jednotlivé odečty na měsíční průměry a zachová značky chybějících nebo podezřelých dat.
           Výzkumný tým vybere stanice s dostatečně dlouhým a navázaným záznamem, opraví doložený svislý pohyb pevniny a
@@ -222,11 +222,11 @@ export function GlobalMeanSeaLevelArticle() {
           <SourceLink id="DOI_10_1038_s41586_020_2591_3">Frederikse et al., 2020</SourceLink>
         </p>
 
-        <h3>Z družicových měření</h3>
+        <h3 id="plosne-vazeni">Z družicových měření</h3>
         <p>
           Družice během přibližně desetidenního cyklu opakovaně protne oceán po předem určených drahách. Z opravených
-          výšek se vytvoří mapa odchylek hladiny. Hodnota každé buňky se při průměrování násobí plochou oceánu, kterou
-          zastupuje. NASA ve svém ukazateli používá měření zhruba mezi 66° jižní a 66° severní šířky. Polární oblasti mimo
+          výšek se vytvoří mapa odchylek hladiny. <Link href="/metody/prostorove-zpracovani-a-plosne-prumery/#ocean">Hodnota každé buňky se při průměrování násobí plochou oceánu, kterou
+          zastupuje</Link>. NASA ve svém ukazateli používá měření zhruba mezi 66° jižní a 66° severní šířky. Polární oblasti mimo
           dráhu družic nejsou přímo pokryty.{" "}
           <SourceLink id="DOI_10_5067_nsind_gmsv1">NASA SSH: popis globálního výpočtu</SourceLink>
         </p>
@@ -249,12 +249,13 @@ export function GlobalMeanSeaLevelArticle() {
           soubor, nikoli jen slovo „družice“.
         </p>
 
-        <h2>Nejistota měření</h2>
+        <h2 id="nejistota">Nejistota měření</h2>
         <p>
           Nejistota globálního výsledku má několik podob. Jednotlivý bod ovlivňuje šum radarového odrazu a krátkodobý stav
           oceánu. Celý záznam může ovlivnit pomalý posun dráhy, radiometru nebo propojení dvou misí. Výpočet dlouhodobého
           sklonu navíc závisí na délce zvoleného období. Proto nestačí připojit ke každému měsíci stejnou chybovou úsečku.
-          Je nutné popsat také chyby, které spolu v čase souvisejí.
+          Je nutné popsat také chyby, které spolu v čase souvisejí.{" "}
+          Přenos společných vlivů do výsledku vysvětluje <Link href="/metody/vycisleni-a-prenos-nejistoty/#spolecne-vlivy">metoda vyčíslování nejistoty</Link>.
         </p>
 
         <p>
@@ -371,6 +372,25 @@ export function GlobalMeanSeaLevelArticle() {
             nenesou odpovědnost za další použití.
           </figcaption>
         </figure>
+
+        <h3 id="bilance-hladiny">Kontrola pomocí hmotnosti a objemu vody</h3>
+        <p>
+          Změnu hladiny lze porovnat také se součtem jejích příspěvků.
+          <Link href="/metody/druzicova-gravimetrie/#hmotnost-oceanu"> Družicová gravimetrie</Link>{" "}
+          určuje změnu hmotnosti oceánu. Další část vzestupu vzniká rozpínáním vody při oteplování.
+          K jejímu výpočtu slouží profily
+          <Link href="/metody/odporova-termometrie-a-termistory/#termistory"> teploty</Link>{" "}
+          a <Link href="/metody/konduktometrie/#salinita">salinity</Link>, z nichž se odvodí hustota vody.
+          V globálním součtu této objemové změně dominuje teplota,
+          zatímco změny salinity jsou důležité také pro rozdíly mezi oblastmi.{" "}
+          <SourceLink id="DOI_10_1038_s41586_020_2591_3">(Frederikse a kol. 2020)</SourceLink>
+        </p>
+        <p>
+          Příspěvky vyjádřené v milimetrech se sečtou a porovnají s pozorovanou
+          změnou hladiny za stejné období a oblast. Shoda v mezích vyčíslené nejistoty
+          ukazuje, zda měřené změny hmotnosti a objemu vysvětlují pozorovaný vzestup.{" "}
+          <SourceLink id="DOI_10_1038_s41586_020_2591_3">(porovnání bilance hladiny)</SourceLink>
+        </p>
 
         <h2 id="pozorovani">Pozorování</h2>
         <p>

@@ -291,7 +291,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "sedimentarni-jadra-a-stratigrafie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Přírodní archivy" title="Sedimentární jádra a stratigrafie" meta="28. října 2026">
+        <PageLead eyebrow="Metody / Přírodní archivy" title="Sedimentární jádra a stratigrafie" meta="31. října 2026">
           <p>Jak odebíráme usazeniny ze dna, spojujeme jejich vrstvy a určujeme časovou osu záznamu minulého prostředí.</p>
         </PageLead>
         <SedimentCoreArticle />
@@ -303,7 +303,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "ledova-jadra-a-analyza-uzavreneho-vzduchu") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Přírodní archivy" title="Ledová jádra a analýza uzavřeného vzduchu" meta="28. října 2026">
+        <PageLead eyebrow="Metody / Přírodní archivy" title="Ledová jádra a analýza uzavřeného vzduchu" meta="31. října 2026">
           <p>Jak led uchovává vzorky minulé atmosféry, jak změříme jejich složení a proč potřebujeme rozlišit stáří ledu a vzduchu.</p>
         </PageLead>
         <IceCoreArticle />
@@ -339,7 +339,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "druzicova-gravimetrie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Družicová gravimetrie" meta="28. října 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Družicová gravimetrie" meta="31. října 2026">
           <p>Jak změny vzdálenosti mezi družicemi umožňují měřit přesuny vody a úbytek hmotnosti ledových příkrovů.</p>
         </PageLead>
         <GravimetryArticle />
@@ -363,7 +363,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "radarova-a-laserova-altimetrie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Radarová a laserová altimetrie" meta="28. října 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Radarová a laserová altimetrie" meta="31. října 2026">
           <p>Jak družice měří výšku oceánu a ledových příkrovů a jak z těchto měření vzniká údaj o změně hladiny nebo povrchu ledu.</p>
         </PageLead>
         <AltimetryArticle />
@@ -423,7 +423,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "mereni-radiacnich-toku") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Měření radiačních toků" meta="28. října 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Měření radiačních toků" meta="31. října 2026">
           <p>Jak přístroje měří sluneční a tepelné záření a jak ze čtyř měřených složek zjistíme, kolik energie povrch zářením získává.</p>
         </PageLead>
         <RadiativeFluxArticle />
@@ -459,7 +459,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "coulometrie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Laboratorní analýza" title="Coulometrie" meta="28. října 2026">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Coulometrie" meta="31. října 2026">
           <p>Jak elektrický proud vytváří měřicí činidlo a prošlý náboj umožňuje určit množství rozpuštěného anorganického uhlíku v mořské vodě.</p>
         </PageLead>
         <CoulometryArticle />
@@ -471,7 +471,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "titrace") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Laboratorní analýza" title="Titrace" meta="28. října 2026">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Titrace" meta="31. října 2026">
           <p>Titrace určuje množství reagujících látek podle spotřeby známého činidla. Při rozboru mořské vody tak získáváme celkovou alkalinitu, jeden z podkladů pro sledování acidifikace oceánu.</p>
         </PageLead>
         <TitrationArticle />
@@ -483,7 +483,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "potenciometrie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Laboratorní analýza" title="Potenciometrie" meta="28. října 2026">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Potenciometrie" meta="31. října 2026">
           <p>Jak elektrody vytvářejí měřitelné napětí a kalibrace umožňuje určit pH mořské vody.</p>
         </PageLead>
         <PotentiometryArticle />
@@ -495,7 +495,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "spektrofotometrie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Laboratorní analýza" title="Spektrofotometrie roztoků" meta="28. října 2026">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Spektrofotometrie roztoků" meta="31. října 2026">
           <p>Jak přidané barvivo a měření pohlcovaného světla umožňují určit pH mořské vody a sledovat acidifikaci oceánu.</p>
         </PageLead>
         <SpectrophotometryArticle />
@@ -519,7 +519,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "absorpcni-spektroskopie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Laboratorní analýza" title="Absorpční spektroskopie plynů" meta="28. října 2026">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Absorpční spektroskopie plynů" meta="31. října 2026">
           <p>Jak slábnutí laserového světla mezi zrcadly umožňuje měřit CO₂ a jak referenční směsi propojí optický signál se složením vzduchu.</p>
         </PageLead>
         <AbsorptionSpectroscopyArticle />
@@ -531,7 +531,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "plynova-chromatografie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Laboratorní analýza" title="Plynová chromatografie" meta="29. října 2026">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Plynová chromatografie" meta="31. října 2026">
           <p>Jak oddělení plynů ve vzorku a porovnání s referenčními směsmi umožňují měřit zastoupení metanu ve vzduchu.</p>
         </PageLead>
         <GasChromatographyArticle />
@@ -615,7 +615,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Pobřežní měření hladiny a výšková reference"
-          meta="28. října 2026"
+          meta="31. října 2026"
         >
           <p>
             Jak z radarového odrazu získáme výšku mořské hladiny a jak oddělíme
@@ -654,7 +654,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Konduktometrie"
-          meta="28. října 2026"
+          meta="31. října 2026"
         >
           <p>
             Jak elektrický proud ve vodě umožňuje určit její slanost. Princip čidla,

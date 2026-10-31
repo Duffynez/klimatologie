@@ -74,7 +74,7 @@ export function UncertaintyArticle() {
           <SourceLink id="DOI_10_6028_NIST_tn_1297">(typ B a rovnoměrné rozdělení, oddíl 4)</SourceLink>
         </p>
 
-        <h3>Společné vlivy propojují nejistoty vstupů</h3>
+        <h3 id="spolecne-vlivy">Společné vlivy propojují nejistoty vstupů</h3>
         <p>
           U dvou vstupů potřebujeme zjistit, zda se jejich možné odchylky
           mění společně. Dvě měření například mohou používat stejnou kalibrační
@@ -246,6 +246,48 @@ export function UncertaintyArticle() {
           a výpočty v jednotném významu.{" "}
           <SourceLink id="DOI_10_6028_NIST_tn_1297">(původ společného postupu)</SourceLink>{" "}
           <SourceLink id="DOI_10_59161_JCGM101_2008">(rozšíření o simulace)</SourceLink>
+        </p>
+
+        <h3 id="ocean">Nejistota oceánských záznamů</h3>
+        <p>
+          U <Link href="/pozorovani/tepelny-obsah-oceanu/#nejistota">obsahu tepla v oceánu</Link>{" "}
+          prochází nejistota od jednotlivých profilů přes prostorový odhad
+          až k součtu energie. IAPv4 vyčísluje příspěvky měření, omezeného
+          pokrytí a mapování. Jeho interval tedy vyjadřuje tyto zahrnuté složky.
+          Další volby, například referenční teplotní pole nebo některé opravy
+          vstupních dat, autoři uvádějí zvlášť mezi nezahrnutými vlivy.{" "}
+          <SourceLink id="DOI_10_5194_essd_16_3517_2024">(Cheng a kol. 2024, odhad nejistoty)</SourceLink>
+        </p>
+        <p>
+          Rekonstrukce <Link href="/pozorovani/gmsl/#rekonstrukce">hladiny moře</Link>{" "}
+          od Frederikseho a kolegů vytvořila 5 000 realizací.
+          V každé přenesla nejistoty měření i společných oprav do výsledné
+          křivky. Rozptýlení křivek pak vyjadřuje nejistotu rekonstrukce.{" "}
+          <SourceLink id="DOI_10_1038_s41586_020_2591_3">(Frederikse a kol. 2020)</SourceLink>
+        </p>
+        <h3 id="chemicke-vypocty">Nejistota vypočteného pH</h3>
+        <p>
+          Při sledování <Link href="/pozorovani/acidifikace-oceanu/#nejistota">acidifikace oceánu</Link>{" "}
+          se pH často počítá ze dvou jiných chemických veličin.
+          Program PyCO2SYS umí nepatrně změnit každý vstup a znovu provést
+          výpočet. Z odezvy zjistí, jak citlivé je výsledné pH na danou veličinu.
+          Tuto citlivost spojí s její nejistotou. Stejně postupuje u chemických
+          konstant. Pro nezávislé vstupy pak příspěvky sloučí součtem jejich
+          čtverců a odmocněním. Tak se nejistoty různých vstupů převedou
+          na společnou stupnici výsledného pH.{" "}
+          <SourceLink id="DOI_10_5194_gmd_15_15_2022">(Humphreys a kol. 2022, oddíl 3.6)</SourceLink>
+        </p>
+        <h3 id="atmosfericky-co2">Nejistota prostorového záznamu CO₂</h3>
+        <p>
+          NOAA zkoumá vliv rozmístění stanic na
+          <Link href="/pozorovani/atmosfericka-koncentrace-co2/#nejistota"> globální CO₂</Link>{" "}
+          opakovaným výběrem stanic z dostupné sítě. Při každém výběru se
+          některá stanice může opakovat a jiná chybět. Pro každý takový soubor
+          se znovu vypočte prostorový záznam. Rozdíly výsledků ukazují citlivost
+          na zastoupení míst. Další opakování mění hodnoty podle nejistoty
+          měření a variability, kterou odběry nezachytí. Výsledný interval
+          tak zahrnuje i způsob sestavení globálního záznamu.{" "}
+          <SourceLink id="WEB_NOAA_MBL_Reference_Method">(NOAA: metodika MBL, oddíl 8)</SourceLink>
         </p>
 
         <h2>Spolehlivost odhadu a jeho ověření</h2>

@@ -230,7 +230,7 @@ export function SedimentCoreArticle() {
           systému. Například{" "}
           <Link href="/metody/ledova-jadra-a-analyza-uzavreneho-vzduchu">ledová jádra</Link>{" "}
           uchovávají vzduch, z něhož vychází starší část{" "}
-          <Link href="/pozorovani/atmosfericka-koncentrace-co2">pozorování atmosférického CO₂</Link>.
+          <Link href="/pozorovani/atmosfericka-koncentrace-co2/#vzduch-v-ledu">pozorování atmosférického CO₂</Link>.
           Sedimentární vzorky k tomu přidávají záznam prostředí oceánu.{" "}
           <SourceLink id="WEB_NCAR_Lake_Sediment_Guide">(Climate Data Guide: převod nepřímých ukazatelů)</SourceLink>{" "}
           <SourceLink id="DOI_10_5194_cp_19_607_2023">(Hodell a kol. 2023)</SourceLink>

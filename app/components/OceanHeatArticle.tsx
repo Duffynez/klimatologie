@@ -96,11 +96,11 @@ export function OceanHeatArticle() {
           <SourceLink id="DOI_10_5194_essd_16_3517_2024">Cheng et al., 2024</SourceLink>
         </p>
 
-        <h2>Co se skutečně měří</h2>
+        <h2 id="mereni-profilu">Co se skutečně měří</h2>
         <p>
-          Základním pozorováním je teplotní profil: teplota vody zaznamenaná na jednom místě v jednotlivých hloubkách.
-          Moderní přístroje současně měří <Link href="/metody/mereni-tlaku-a-hydrostaticke-vysky">tlak, z něhož se odvozuje hloubka</Link>, a často také
-          <Link href="/metody/konduktometrie"> elektrickou vodivost, z níž se spolu s teplotou a tlakem počítá salinita</Link>.
+          Základním pozorováním je teplotní profil: <Link href="/metody/odporova-termometrie-a-termistory/#termistory">teplota vody</Link> zaznamenaná na jednom místě v jednotlivých hloubkách.
+          Moderní přístroje současně měří <Link href="/metody/mereni-tlaku-a-hydrostaticke-vysky/#hloubka">tlak, z něhož se odvozuje hloubka</Link>, a často také
+          <Link href="/metody/konduktometrie/#salinita"> elektrickou vodivost, z níž se spolu s teplotou a tlakem počítá salinita</Link>.
           Jeden profil popisuje jediný čas a místo. Globální
           součet vzniká až následným spojením mnoha profilů.
         </p>
@@ -149,7 +149,7 @@ export function OceanHeatArticle() {
 
         <h2>Jak vzniká globální výpočet</h2>
 
-        <h3>1. Profil dostane místo, čas a původ</h3>
+        <h3 id="kontrola-dat">1. Profil dostane místo, čas a původ</h3>
         <p>
           U každého měření se uchovává poloha, datum, použitý přístroj, naměřené hodnoty a značky z kontroly
           kvality. Světová oceánská databáze WOD převádí data z tisíců výprav a programů do společného formátu,
@@ -163,7 +163,7 @@ export function OceanHeatArticle() {
           </SourceLink>
         </p>
 
-        <h3>2. Zohlední se vlastnosti jednotlivých přístrojů</h3>
+        <h3 id="opravy-pristroju">2. Zohlední se vlastnosti jednotlivých přístrojů</h3>
         <p>
           Historické přístroje se nechovaly stejně. U sond XBT se hloubka neurčovala tlakem, ale rovnicí popisující
           pád sondy. Porovnání XBT s lodními profily odhalilo odchylky teploty i vypočtené hloubky, které se navíc
@@ -178,7 +178,8 @@ export function OceanHeatArticle() {
           <SourceLink id="DOI_10_1175_bams_d_15_00031_1">Cheng et al., 2016</SourceLink> a{" "}
           <SourceLink id="WEB_NOAA_XBT_Corrections_in_the_World_Ocean_Database_6adbe6ee">
             přehled oprav NOAA/NCEI
-          </SourceLink>
+          </SourceLink>{" "}
+          Kontrolu profilů a opravy přístrojových odchylek rozlišuje <Link href="/metody/kontrola-kvality-a-homogenizace/#oceanske-profily">metoda kontroly a sjednocování dat</Link>.
         </p>
 
         <h3>3. Teplota se porovná se stejným místem a částí roku</h3>
@@ -191,7 +192,7 @@ export function OceanHeatArticle() {
           <SourceLink id="DOI_10_1029_2012gl051106">Levitus et al., 2012</SourceLink>
         </p>
 
-        <h3>4. Pozorování se rozmístí do trojrozměrné mapy</h3>
+        <h3 id="prostorove-zpracovani">4. Pozorování se rozmístí do trojrozměrné mapy</h3>
         <p>
           Profily jsou v prostoru i čase nerovnoměrné. Autoři proto rozdělí oceán na buňky a odhadnou teplotní
           odchylku také v buňkách bez přímého měření. Odhad využívá okolní profily a předem popsanou prostorovou
@@ -201,7 +202,7 @@ export function OceanHeatArticle() {
           <SourceLink id="DOI_10_1175_jcli_d_15_0801_1">Boyer et al., 2016</SourceLink>
         </p>
 
-        <h3>5. Buňky se převedou na jouly a sečtou</h3>
+        <h3 id="soucet-tepla">5. Buňky se převedou na jouly a sečtou</h3>
         <p>
           V každé buňce se teplotní odchylka spojí s objemem vody, hustotou a měrnou tepelnou kapacitou mořské
           vody. Tím vznikne změna obsahu tepla v joulech. Součet všech buněk v určené vrstvě dává hodnotu pro
@@ -209,17 +210,19 @@ export function OceanHeatArticle() {
           nikoli prostý průměr teplot.{" "}
           <SourceLink id="WEB_NOAA_World_Ocean_Database_3d4b1d70">
             NOAA/NCEI: popis výpočtu
-          </SourceLink>
+          </SourceLink>{" "}
+          Rozdíl mezi plošným průměrem a součtem energie vysvětluje <Link href="/metody/prostorove-zpracovani-a-plosne-prumery/#ocean">prostorové zpracování oceánu</Link>.
         </p>
 
-        <h3>6. K výsledku se připojí nejistota</h3>
+        <h3 id="nejistota">6. K výsledku se připojí nejistota</h3>
         <p>
           Nejistotu vytváří přesnost přístrojů, opravy historických měření, řídké pokrytí, prostorový dopočet,
           volba referenčního stavu a další kroky zpracování. Různé datové soubory nezahrnují vždy stejné položky.
           IAPv4 například započítává chybu přístrojů, pokrytí a prostorového výpočtu, ale jeho zveřejněný interval
           zatím nezahrnuje volbu referenčního pole, svislé spojování hodnot ani všechny opravy přístrojů a kontrolu
           kvality. Autoři tuto hranici své nejistoty uvádějí přímo v metodice.{" "}
-          <SourceLink id="DOI_10_5194_essd_16_3517_2024">Cheng et al., 2024</SourceLink>
+          <SourceLink id="DOI_10_5194_essd_16_3517_2024">Cheng et al., 2024</SourceLink>{" "}
+          Jak se tyto příspěvky vztahují k výslednému intervalu, vysvětluje <Link href="/metody/vycisleni-a-prenos-nejistoty/#ocean">vyčíslení nejistoty oceánských záznamů</Link>.
         </p>
 
         <p>
@@ -301,7 +304,7 @@ export function OceanHeatArticle() {
           </section>
         </div>
 
-        <h2>Srovnání výpočtů</h2>
+        <h2 id="srovnani">Srovnání výpočtů</h2>
         <p>
           Křivky různých výzkumných skupin často vycházejí ze stejných archivů profilů, ale jinak vybírají data,
           opravují přístroje a doplňují prázdná místa. Boyer a kol. v roce 2016 drželi vstupní měření stejná a
@@ -318,7 +321,8 @@ export function OceanHeatArticle() {
           Institut mořských věd a služba Copernicus Marine používají oceánskou reanalýzu, tedy spojení měření s
           numerickým modelem. Všechny tři výsledky ukazují pokračující přírůstek mezi roky 2024 a 2025, jejich
           absolutní hodnoty však nelze položit přes sebe bez sjednocení referenčního stavu a metodiky.{" "}
-          <SourceLink id="DOI_10_1007_s00376_026_5876_0">Pan et al., 2026</SourceLink>
+          <SourceLink id="DOI_10_1007_s00376_026_5876_0">Pan et al., 2026</SourceLink>{" "}
+          Spojení oceánského modelu s měřenými profily vysvětluje <Link href="/metody/asimilace-dat-a-reanalyzy/#ocean">oddíl o oceánských reanalýzách</Link>.
         </p>
 
         <p>
@@ -326,7 +330,7 @@ export function OceanHeatArticle() {
           tedy rozdíl mezi přijatou sluneční energií a zářením odcházejícím
           do vesmíru. Jak vzniká její družicový záznam a jakou úlohu v něm
           mají oceánská měření, vysvětluje článek o{' '}
-          <Link href="/metody/mereni-radiacnich-toku">měření radiačních toků</Link>.
+          <Link href="/metody/mereni-radiacnich-toku/#druzicova-bilance">měření radiačních toků</Link>.
           U produktu CERES EBAF slouží odhad ukládání tepla k nastavení
           dlouhodobého průměru bilance, takže tento průměr není nezávislou
           kontrolou oceánských dat.{" "}

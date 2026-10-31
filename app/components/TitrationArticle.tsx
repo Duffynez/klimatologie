@@ -9,7 +9,7 @@ export function TitrationArticle() {
   return (
     <article className="article-layout">
       <div className="article-prose">
-        <h2>Jak ze spotřeby kyseliny zjistíme alkalinitu</h2>
+        <h2 id="princip">Jak ze spotřeby kyseliny zjistíme alkalinitu</h2>
         <p className="article-prose__intro">
           Titrace je analytická metoda, při níž určujeme množství látky nebo skupiny látek
           podle jejich reakce s postupně přidávaným činidlem známé koncentrace. V oceánografii
@@ -242,7 +242,7 @@ export function TitrationArticle() {
           výpočtem. Program zveřejňuje{" "}
           <SourceLink id="2026_HOT_Alkalinity_Method">popis měření, kontroly i odkazy na data</SourceLink>.
           Širší souvislosti rozebírá{" "}
-          <Link href="/pozorovani/acidifikace-oceanu">pozorování acidifikace oceánu</Link>.
+          <Link href="/pozorovani/acidifikace-oceanu/#vypocet-chemie">pozorování acidifikace oceánu</Link>.
         </p>
         <h3>Jak se postup vyvíjel a jaké má varianty</h3>
         <p>

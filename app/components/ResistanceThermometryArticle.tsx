@@ -326,7 +326,7 @@ export function ResistanceThermometryArticle() {
           Pomáhá například převést relativní vlhkost na množství vodní páry, jak vysvětluje
           článek o <Link href="/pozorovani/narust-vlhkosti/#prizemni-mereni">vlhkosti atmosféry</Link>.
           Teplotu vzorku používáme také při stanovení a přepočtu pH v měřeních{" "}
-          <Link href="/pozorovani/acidifikace-oceanu">acidifikace oceánu</Link>.{" "}
+          <Link href="/pozorovani/acidifikace-oceanu/#stupnice-a-teplota">acidifikace oceánu</Link>.{" "}
           <SourceLink id="2021_NIST_Humidity_Calibration">(NIST, oddíl 3)</SourceLink>
           <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(Dickson a kol., kapitola 2 a SOP 6)</SourceLink>
         </p>
@@ -341,7 +341,7 @@ export function ResistanceThermometryArticle() {
           technické dokumentace</SourceLink>.
         </p>
 
-        <h3>Termistory a další provedení</h3>
+        <h3 id="termistory">Termistory a další provedení</h3>
         <p>
           Termistor určuje teplotu stejným postupem: převezme ji z prostředí, elektronika změří
           jeho odpor a z kalibračního vztahu vypočítá teplotu.
@@ -426,8 +426,8 @@ export function ResistanceThermometryArticle() {
         <p>
           V oceánu měří termistory například v sondách autonomních plováků Argo.
           Teplotní profily spolu s tlakem a slaností vstupují do výpočtu{" "}
-          <Link href="/pozorovani/tepelny-obsah-oceanu">obsahu tepla v oceánu</Link> a do odhadu
-          části <Link href="/pozorovani/gmsl">změny hladiny moře</Link> způsobené oteplováním vody.
+          <Link href="/pozorovani/tepelny-obsah-oceanu/#mereni-profilu">obsahu tepla v oceánu</Link> a do odhadu
+          části <Link href="/pozorovani/gmsl/#bilance-hladiny">změny hladiny moře</Link> způsobené oteplováním vody.
           Teploměr v těchto výpočtech poskytuje teplotu. Energie nebo změna objemu vody se z ní
           a z dalších údajů teprve odvozují.{" "}
           Naměřené profily zpřístupňují <SourceLink id="2026_Argo_Data">veřejná data Argo</SourceLink>.{" "}
