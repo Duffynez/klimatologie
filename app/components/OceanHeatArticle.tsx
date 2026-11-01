@@ -516,12 +516,26 @@ export function OceanHeatArticle() {
         <p>
           Družice umožňují odlišit také dopadající a pohlcené sluneční
           záření. V delším období od září 2002 do března 2020 dopadající
-          sluneční záření mírně ubývalo, zatímco pohlcená sluneční energie
-          rostla. V součtu tedy ubývalo záření odraženého zpět do vesmíru.
+          sluneční záření mírně ubývalo, s trendem −0,053 W/m²
+          za deset let. Pohlcený sluneční tok naopak rostl
+          o 0,65 ± 0,17 W/m² za deset let, s 90% intervalem spolehlivosti.
+          V součtu tedy ubývalo záření odraženého zpět do vesmíru.
           Současně rostlo odcházející tepelné záření, ale pomaleji než
           pohlcená sluneční energie. Čistý příjem energie proto rostl.{' '}
           <SourceLink id="DOI_10_1029_2021GL093047">(Loeb a kol. 2021, oddíl 3.2)</SourceLink>{' '}
           <SourceLink id="DATA_CERES_PRP_2021">Data k rozboru radiačních změn</SourceLink>.
+        </p>
+
+        <p>
+          Pro celé roky 2001–2020 vyhodnotili družicový záznam také
+          Raghuraman a kolegové. Trend čistého příjmu činil
+          +0,38 ± 0,24 W/m² za deset let. Uvedený 95% interval
+          spolehlivosti zahrnuje nejistotu měření i odhadu trendu
+          z kolísavého průběhu. Hodnota popisuje zrychlování přísunu
+          energie, nikoli jeho průměrnou velikost. Jde o jiné období
+          a vymezení nejistoty než v porovnání s oceánem za roky
+          2005–2019 výše.{' '}
+          <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, obr. 1 a 4)</SourceLink>
         </p>
 
         <div className="article-observation-summary">
@@ -540,7 +554,7 @@ export function OceanHeatArticle() {
 
         <aside className="article-related-mechanism" aria-label="Navazující vysvětlení">
           <p className="eyebrow">Navazující vysvětlení</p>
-          <p>Jak přibývání tepla v oceánu souvisí s rozdílem mezi přijatým a odevzdaným zářením Země, vysvětluje <Link href="/mechanismy/energeticka-bilance-zeme/#porovnani">energetická bilance Země a její ověření měřením</Link>.</p>
+          <p>Jak přibývání tepla v oceánu souvisí s rozdílem mezi přijatým a odevzdaným zářením Země, vysvětluje článek <Link href="/mechanismy/energeticka-bilance-zeme/#porovnani">Proč v klimatickém systému přibývá energie</Link>.</p>
         </aside>
 
         <h2>Prameny, data a licence</h2>
@@ -616,6 +630,7 @@ export function OceanHeatArticle() {
                 .
               </li>
               <li><SourceLink id="DOI_10_5194_essd_15_1675_2023">Von Schuckmannová a kol. 2023</SourceLink>: inventura energie Země a <SourceLink id="DATA_GCOS_EHI_1960_2020">její veřejná data</SourceLink>.</li>
+              <li><SourceLink id="DOI_10_1038_s41467_021_24544_4">Raghuraman a kol. 2021</SourceLink>: družicové trendy v letech 2001–2020. Oddíly Data availability a Code availability odkazují na veřejné podklady a výpočetní kód.</li>
               <li><SourceLink id="DOI_10_1029_2021GL093047">Loeb a kol. 2021</SourceLink>: porovnání oceánu a družic, <SourceLink id="DATA_CERES_PRP_2021">data k rozboru radiačních změn</SourceLink>.</li>
               <li><SourceLink id="DOI_10_1175_JCLI_D_17_0208_1">Loeb a kol. 2018</SourceLink>: dokumentace a kalibrace produktu CERES EBAF.</li>
             </ul>

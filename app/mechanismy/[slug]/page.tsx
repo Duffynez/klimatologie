@@ -71,7 +71,7 @@ export default async function MechanismDetail({ params }: { params: Promise<{ sl
     return (
       <div className="page-shell">
         <PageLead eyebrow={`Mechanismy / ${mechanism.category}`} title={mechanism.title} meta="1. listopadu 2026">
-          <p>Energetická bilance porovnává energii, kterou Země přijímá a odevzdává. Proč jí dnes přibývá a jak mezi možnými příčinami rozlišujeme podle měření?</p>
+          <p>Co způsobuje přibývání energie v oceánu, atmosféře, pevnině a ledu? Porovnání hlavních vysvětlení podle jejich předpovědí a měření.</p>
         </PageLead>
         <EarthEnergyBalanceArticle />
         <Link className="text-link catalog-back-link" href="/mechanismy">&larr; Zpět na všechny mechanismy</Link>

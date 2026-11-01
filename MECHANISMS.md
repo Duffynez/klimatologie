@@ -8,6 +8,8 @@ Hlavní cíle projektu stanovuje [AGENTS.md](AGENTS.md). Jazyk a srozumitelné v
 
 Článek má následujících pět částí v uvedeném pořadí. Nadpisy přizpůsobíme konkrétnímu tématu při zachování jejich úlohy. Pododdíly rozvíjejí otázku příslušné části. Obsahová kontrola autora uvedená níže slouží ke kontrole úplnosti a není další osnovou článku.
 
+Název článku pojmenuje pozorovanou změnu a otázku po její příčině, případně konkrétní vysvětlení této změny. Název, úvod, porovnání hypotéz a závěr musí odpovídat na stejnou otázku. Při změně zaměření upravíme také název, perex, katalogový popis a pojmenování navazujících odkazů.
+
 ### 1. Jak si nyní vysvětlujeme toto pozorování
 
 Úvod má nejvýše dva odstavce. Připomene konkrétní pozorování, odkáže na příslušný pozorovací článek a vymezí otázku, kterou budeme řešit. Uvede vlastnosti podstatné pro vysvětlení, například směr a velikost změny, období, časový průběh nebo prostorové rozložení. Další rozlišující vlastnosti představíme u jejich použití v porovnání hypotéz.
@@ -38,6 +40,8 @@ Výsledek testu formulujeme přesně:
 - **Podpořené vysvětlení:** předpovědi odpovídají výsledkům. Uvedeme, co bylo konkrétně ověřeno a jakou váhu má shoda vůči ostatním možnostem.
 
 Výklad ukáže také, v čem každá hypotéza datům odpovídá. Její odmítnutí musí mít konkrétní důvod v pozorováních a oporu ve zdrojích. Srovnávací tabulku použijeme, pokud zpřehlední již vysvětlené vztahy.
+
+Vyhodnocení každé rozhodující hypotézy rozvineme tak, aby čtenář mohl sledovat důvod závěru. Uvedeme konkrétní výsledek měření nebo výpočtu, jeho období a rozhodující velikost či charakter změny. Vysvětlíme, jak se výsledek liší od předpovědi nebo v čem se s ní shoduje, jak velký rozdíl připouští nejistota a proč z porovnání plyne uvedené hodnocení. Obecný verdikt o vyvrácení nebo potvrzení nestačí. Rozsah přizpůsobíme náročnosti testu, obvykle potřebuje několik navazujících odstavců.
 
 O metodách měření píšeme stručně. Objasníme, co měření zjišťuje a proč umožňuje daný test, a uvedeme rozhodující podmínky či intervaly nejistoty. Postupy měření a zpracování zpřístupníme odkazy na konkrétní části pozorovacích a metodických článků. Popis přístrojů a datových produktů ponecháme v těchto navazujících textech.
 

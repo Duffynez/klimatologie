@@ -16,10 +16,10 @@ export type ClimateMechanism = {
 export const climateMechanisms: ClimateMechanism[] = [
   {
     slug: "energeticka-bilance-zeme",
-    title: "Energetická bilance Země",
+    title: "Proč v klimatickém systému přibývá energie",
     category: "Záření a složení atmosféry",
-    summary: "Rozdíl mezi přijatou a odevzdanou energií mění zásobu tepla v klimatickém systému. Oteplení současně zvyšuje vyzařování energie do vesmíru a pomáhá bilanci vyrovnávat.",
-    distinguishingEvidence: "Porovnání nerovnováhy záření s přírůstkem energie oceánu, pevniny, ledu a atmosféry. Vztah mezi změnou teploty a vyzařováním při oddělení vlivu vodní páry, oblaků a povrchu.",
+    summary: "Oceán, pevnina a atmosféra získávají energii a led taje. Porovnáváme vliv Slunce, přirozeného kolísání a změn složení atmosféry a vysvětlujeme, jak rozdíl příjmu a výdeje vede k ohřevu.",
+    distinguishingEvidence: "Celkový přírůstek energie a oddělená měření dopadajícího, odraženého a tepelného záření. Porovnání družicových trendů s přirozeným kolísáním a s výpočty při stálém a měnícím se vnějším působení.",
   },
   {
     slug: "radiacni-pusobeni-sklenikovych-plynu",

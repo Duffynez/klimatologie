@@ -349,7 +349,7 @@ test("publishes radiative fluxes with a complete example and reciprocal ocean co
     "Jak měříme přenos energie zářením", "Nejistoty a ověření",
     "Příklad: jedna hodina na stanici Table Mountain", "Shrnutí",
   ]);
-  assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">1\. listopadu 2026<\/p>/);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
   assert.doesNotMatch(body, /_vinext\/image|katex-error|Potřebné informace|RTV/);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
@@ -934,7 +934,7 @@ test("publishes a sourced ocean heat content article instead of the generic plac
   const oceanHeatSourceIds = [
     ...article.matchAll(/<SourceLink id="([^"]+)"/g),
   ].map((match) => match[1]);
-  assert.equal(new Set(oceanHeatSourceIds).size, 33);
+  assert.equal(new Set(oceanHeatSourceIds).size, 34);
   for (const id of new Set(oceanHeatSourceIds)) {
     const catalogueOccurrences = sourceCatalogueText.split(id).length - 1;
     assert.ok(catalogueOccurrences >= 2, `${id} must exist and be marked as open access`);
@@ -3516,7 +3516,7 @@ test("quality control and homogenization connects a complete method to global te
     "Jak získáme srovnatelný klimatický záznam", "Nejistoty a ověření", "Příklad: kontrola a úpravy teplot v Ruzyni", "Shrnutí",
   ]);
   assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
-  assert.match(observation, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  assert.match(observation, /<p class="page-lead__meta">1\. listopadu 2026<\/p>/);
   assert.match(body, /EZM00011518/);
   assert.match(body, /v4\.0\.1\.20261029/);
   assert.match(body, /719/);
@@ -4022,6 +4022,11 @@ test("all observation-method links resolve to sections and explainable return pa
 
 test("publishes the full energy-balance mechanism with evidence, sources and return links", async () => {
   const html = await readFile(new URL("dist/client/mechanismy/energeticka-bilance-zeme/index.html", root), "utf8");
+  const catalogue = await readFile(new URL("dist/client/mechanismy/index.html", root), "utf8");
+  const title = html.match(/<h1[^>]*>([^<]+)<\/h1>/)?.[1];
+  assert.ok(title);
+  const tile = catalogue.match(/<a[^>]+href="\/mechanismy\/energeticka-bilance-zeme\/?"[\s\S]*?<\/a>/)?.[0];
+  assert.ok(tile?.includes(`<h3>${title}</h3>`), "Keep the catalogue and article title consistent");
   assert.match(html, /<article class="article-layout">/);
   assert.doesNotMatch(html, /class="mechanism-detail-evidence"/);
   for (const anchor of ["co-vysvetlujeme", "toky-energie", "nerovnovaha-a-teplota", "vypocet-bilance", "predpovedi", "historie", "porovnani", "priciny", "nejistoty", "shrnuti", "prameny"]) {

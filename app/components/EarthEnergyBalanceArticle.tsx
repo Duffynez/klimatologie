@@ -7,23 +7,26 @@ export function EarthEnergyBalanceArticle() {
   return (
     <article className="article-layout">
       <div className="article-prose">
-        <h2 id="co-vysvetlujeme">Jak si vysvětlujeme přibývání tepla v oceánu</h2>
+        <h2 id="co-vysvetlujeme">Co ukazuje součet energie Země</h2>
         <p className="article-prose__intro">
-          V oceánu dlouhodobě přibývá teplo. Podle výpočtu Chenga a kolegů
-          rostl jeho obsah v horních 2 000 metrech v letech 1955–2023 průměrně
-          o 6,4 ± 0,3 zettajoulu ročně. Zettajoule je jednotka energie,
-          která odpovídá 10²¹ joulům, uvedené rozmezí je 90% interval spolehlivosti.
-          Měření i vývoj jednotlivých vrstev rozebírá pozorování{' '}
-          <Link href="/pozorovani/tepelny-obsah-oceanu/#pozorovani">obsahu tepla v oceánu</Link>.{' '}
-          <SourceLink id="DOI_10_5194_essd_16_3517_2024">(Cheng a kol. 2024)</SourceLink>
+          V klimatickém systému přibývá energie. Součet změn v oceánu,
+          atmosféře, pevnině a ledu pro roky 1971–2020 činí
+          381 ± 61 zettajoulů, s přibližně 95% intervalem spolehlivosti.
+          Zettajoule je jednotka energie odpovídající 10²¹ joulům.
+          Asi 89 % přírůstku připadlo na oceán. Podklady k tomuto součtu
+          uvádí pozorování{' '}
+          <Link href="/pozorovani/tepelny-obsah-oceanu/#souvislost-s-bilanci">obsahu tepla v oceánu a celkového přírůstku energie</Link>.{' '}
+          <SourceLink id="DOI_10_5194_essd_15_1675_2023">(von Schuckmannová a kol. 2023)</SourceLink>
         </p>
         <p>
-          Odkud se tato energie bere? Mohlo by jí více přicházet ze Slunce,
-          mohla by se přesouvat z jiné části Země nebo by planeta mohla změnit,
-          kolik energie odevzdává do vesmíru. Potřebujeme vysvětlení, které
-          odpovídá ohřevu oceánu i současnému{' '}
-          <Link href="/pozorovani/gmst/#pozorovani">růstu teploty u povrchu</Link>.
-          Rozlišení těchto možností vyžaduje sledovat celou Zemi včetně atmosféry.
+          Potřebujeme vysvětlit, proč energie přibývá v celém systému
+          a co určuje rychlost tohoto přírůstku. Součástí výsledného obrazu
+          je dlouhodobý{' '}
+          <Link href="/pozorovani/tepelny-obsah-oceanu/#pozorovani">ohřev oceánu</Link> i{' '}
+          <Link href="/pozorovani/gmst/#pozorovani">růst teploty u povrchu</Link>.
+          Porovnáme vliv silnějšího Slunce, přirozeného kolísání a změn
+          složení atmosféry. U družicových testů se zaměříme na konkrétní
+          období, pro která máme porovnání příčin se zářením.
         </p>
 
         <h2 id="priciny">Jaká vysvětlení přicházejí v úvahu</h2>
@@ -84,55 +87,102 @@ export function EarthEnergyBalanceArticle() {
         <h2 id="predpovedi">Co z vysvětlení vyplývá a jak obstála</h2>
         <h3>Přesouvá se teplo, nebo ho celkově přibývá?</h3>
         <p>
-          Samotný přesun tepla má jasný důsledek. Když jej jedna část Země
-          získá, jiná musí stejné množství odevzdat. V součtu by energie
-          nepřibyla. Tento důsledek můžeme ověřit tím, že k oceánu připočteme
-          změny energie v atmosféře, pevnině a ledu. Takový součet zahrnuje
-          i energii spotřebovanou na tání.{' '}
+          Samotný přesun tepla má jasný důsledek. Když jej jedna část
+          Země získá, jiná musí stejné množství odevzdat. Ohřev horního
+          oceánu by tak mohl být vyrovnán ochlazením hlubší vody nebo
+          jiného prostředí. Vysvětlení pouhým přesunem proto předpovídá,
+          že po sečtení všech těchto změn žádná energie nepřibude.
+          Z tohoto důvodu nestačí sledovat samotnou teplotu vzduchu
+          nebo jednu oceánskou vrstvu.{' '}
           <SourceLink id="2016_OpenStax_University_Physics_2">(University Physics, oddíly 1.5 a 3.3)</SourceLink>
         </p>
         <p>
-          Globální inventura pro roky 1971–2020 zjistila přírůstek
-          381 ± 61 zettajoulů v celém klimatickém systému, s přibližně
-          95% intervalem spolehlivosti. Asi 89 % připadlo na oceán,
-          6 % na pevninu, 4 % na tání ledu a 1 % na atmosféru.
-          Tento výsledek, uvedený i v{' '}
-          <Link href="/pozorovani/tepelny-obsah-oceanu/#souvislost-s-bilanci">pozorování celkového přírůstku energie</Link>,
-          vylučuje pouhý přesun jako úplné vysvětlení ohřevu.
-          Přirozené změny oblaků a výměny energie s vesmírem musíme posoudit zvlášť.{' '}
+          Globální inventura z úvodu takový vyrovnávající úbytek
+          nezjistila. Pro období 1971–2020 vyšel kladný celkový přírůstek
+          381 ± 61 zettajoulů. Oceán získal asi 89 % této energie,
+          pevnina 6 %, na tání ledu připadla 4 % a na atmosféru 1 %.
+          Zbylá prostředí tedy oceánský ohřev nevyrovnávají ochlazováním.
+          Také v nich energie v součtu přibyla. Podrobnosti jsou v{' '}
+          <Link href="/pozorovani/tepelny-obsah-oceanu/#souvislost-s-bilanci">pozorování celkového přírůstku energie</Link>.{' '}
           <SourceLink id="DOI_10_5194_essd_15_1675_2023">(von Schuckmannová a kol. 2023, oddíl 6)</SourceLink>
+        </p>
+        <p>
+          Ani dolní okraj uvedeného přibližně 95% intervalu,
+          320 zettajoulů, se neblíží nulové změně, kterou by vyžadoval
+          pouhý přesun. Tento výsledek proto vylučuje přesouvání tepla
+          jako úplné vysvětlení. Proudění nadále určuje, kde se energie
+          ukládá, ale samo její celkový přírůstek nevytvoří.
+          Pokud přirozené kolísání současně změní oblaka a výměnu energie
+          s vesmírem, vzniká jiná možnost, kterou otestujeme níže.{' '}
+          <SourceLink id="DOI_10_5194_essd_15_1675_2023">(von Schuckmannová a kol. 2023)</SourceLink>{' '}
+          <SourceLink id="DOI_10_1029_2021GL093047">(Loeb a kol. 2021)</SourceLink>
         </p>
         <h3>Přibylo slunečního záření?</h3>
         <p>
-          Vysvětlení silnějším Sluncem předpovídá růst dopadajícího
-          slunečního záření. Ten můžeme odlišit od změny odrazivosti:
-          měříme zvlášť záření přicházející ke Zemi a záření odražené zpět.
-          V období od září 2002 do března 2020 Země pohlcovala stále více
-          sluneční energie, dopadající záření však mírně ubývalo.
-          Přírůstek pohlcené energie tedy vznikal menším odrazem.
-          Růst slunečního příkonu je s výsledkem tohoto testu v rozporu.{' '}
+          Silnější Slunce by zvýšilo záření dopadající na Zemi.
+          Při nezměněné odrazivosti by se část tohoto přírůstku pohltila
+          a dodala energii navíc. Tuto předpověď odlišíme od změny
+          odrazivosti tak, že porovnáme dopadající a odražené záření.
+          Samotný růst pohlcené energie ještě o zesílení Slunce nerozhoduje:
+          může vzniknout také tím, že se menší část záření vrací do vesmíru.{' '}
+          <SourceLink id="WEB_NASA_Earth_Energy_Budget">(NASA: energetická bilance Země)</SourceLink>
+        </p>
+        <p>
+          Pro srovnání potřebujeme vyjádřit rychlost přenosu energie.
+          Použijeme watty na metr čtvereční, W/m², zprůměrované přes
+          plochu celé Země. Jeden watt znamená jeden joule za sekundu.
+          Loeb a kolegové zjistili, že od září 2002 do března 2020
+          pohlcený sluneční tok rostl o 0,65 ± 0,17 W/m² za deset let,
+          s 90% intervalem spolehlivosti. Dopadající sluneční tok měl
+          naopak mírně záporný trend, −0,053 W/m² za deset let.{' '}
           <SourceLink id="DOI_10_1029_2021GL093047">(Loeb a kol. 2021, oddíl 3.2)</SourceLink>
+        </p>
+        <p>
+          Rozdíl má opačný směr, než potřebuje hypotéza silnějšího
+          Slunce: ke Zemi přicházelo nepatrně méně sluneční energie,
+          přesto jí planeta pohlcovala více. Výsledek vyžaduje pokles
+          odražené části. Rozlišující{' '}
+          <Link href="/pozorovani/tepelny-obsah-oceanu/#porovnani-se-zarenim">pozorování jednotlivých toků</Link>
+          {' '}tedy odmítá růst slunečního příkonu jako příčinu
+          tohoto zvýšení pohlcené energie. Zbývá objasnit změny oblaků,
+          částic a povrchu, které odrazivost ovlivňují.{' '}
+          <SourceLink id="DOI_10_1029_2021GL093047">(Loeb a kol. 2021, obr. 2)</SourceLink>
         </p>
         <h3>Stačí přirozené kolísání?</h3>
         <p>
           Přirozené kolísání může měnit i oblačnost, a proto jeho vliv
-          nevyřeší samotný součet zásob. Potřebujeme zjistit, jak velkou
-          a dlouhotrvající změnu může takto vytvořit. Raghuraman a kolegové
-          použili dlouhé výpočty 47 modelů propojeného oceánu a atmosféry.
-          Vnější podmínky, například množství skleníkových plynů,
-          v nich zůstávaly stálé. Oceán, atmosféra, oblaka a led se mohly
-          vzájemně ovlivňovat a přirozeně kolísat.{' '}
+          nevyřeší samotný součet zásob. Rozhoduje, zda dokáže vytvořit
+          změnu tak velkou a dlouhotrvající jako v pozorování.
+          Raghuraman a kolegové použili 47 modelů propojeného oceánu
+          a atmosféry. Vnější působení v nich drželi na úrovni roku 1850,
+          zatímco proudění, oblaka a led se mohly vzájemně ovlivňovat.
+          Dlouhé výpočty rozdělili na 1 293 nepřekrývajících se
+          dvacetiletých úseků. Získali tak mnoho možných průběhů
+          dvaceti let klimatu bez rostoucího vnějšího působení.{' '}
           <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, metody)</SourceLink>
         </p>
         <p>
-          Autoři rozdělili výpočty na dvacetileté úseky a porovnali je
-          s družicovým záznamem z let 2001–2020. V něm rostl rozdíl mezi
-          příjmem a výdejem energie výrazněji, než bývalo běžné v kontrolních
-          výpočtech. Samotné přirozené kolísání tak vyšlo jako velmi
-          nepravděpodobné vysvětlení tohoto trendu. Jeho příspěvek tím
-          nezmizel. Test ukazuje, že podle proměnlivosti zachycené těmito
-          modely potřebujeme také měnící se vnější působení.{' '}
-          <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, obr. 2)</SourceLink>
+          V každém úseku spočítali trend energetické nerovnováhy,
+          tedy rozdílu mezi příjmem a výdejem energie. Přirozené
+          kolísání dávalo trendy v obou směrech. Jejich šíři autoři
+          vyjádřili statistickým pásmem −0,19 až +0,19 W/m² za deset let.
+          Toto pásmo popisuje běžný rozptyl modelových výsledků,
+          větší výkyvy mohou nastat vzácněji. Družice pro roky 2001–2020 ukázaly trend
+          +0,38 ± 0,24 W/m² za deset let, s 95% intervalem spolehlivosti.{' '}
+          <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, obr. 2 a 4)</SourceLink>
+        </p>
+        <p>
+          Autoři při vyhodnocení započítali také možnou dlouhodobou
+          chybu družicového měření. K pozorovanému výsledku by se
+          samotné kolísání mohlo přiblížit výjimečně velkým přirozeným
+          trendem nebo souběhem silného přirozeného růstu a měřicí
+          chyby, která skutečný trend výrazně nadhodnotila. Při použitých odhadech proměnlivosti
+          a měřicí chyby vyšla pravděpodobnost takového výsledku
+          bez měnícího se vnějšího působení pod 1 %.
+          Rozhoduje tedy velikost trendu společně s jeho nejistotou.
+          Výsledek silně oslabuje samotné přirozené kolísání jako
+          vysvětlení těchto dvaceti let. Jeho dílčí příspěvek k průběhu změny zůstává.{' '}
+          <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, obr. 2 a statistické testy)</SourceLink>
         </p>
         <h3>Odpovídají měření změnám složení atmosféry?</h3>
         <p>
@@ -141,26 +191,64 @@ export function EarthEnergyBalanceArticle() {
           složením atmosféry. Oteplování samo naopak vyzařování zvyšuje.
           V pozorovaném vývoji proto mohou nastávat oba účinky současně:
           Země vyzařuje více než dříve, ale méně, než by při stejném
-          oteplení vyzařovala bez přidaných skleníkových plynů.{' '}
+          oteplení vyzařovala bez přidaných skleníkových plynů.
+          Test musí oba účinky oddělit a započítat i změny odraženého
+          slunečního záření.{' '}
           <SourceLink id="1967_Manabe_Wetherald">(Manabe a Wetherald 1967)</SourceLink>{' '}
           <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021)</SourceLink>
         </p>
         <p>
-          Takové porovnání provedli Raghuraman a kolegové dvěma sadami
-          výpočtů atmosféry. Oběma zadali pozorované teploty hladiny
-          a rozsah mořského ledu. V jedné nechali působení složení
-          atmosféry stálé, ve druhé je měnili podle historického vývoje.
-          Ověřovaným výsledkem bylo záření, teplota hladiny byla vstupem.{' '}
+          Raghuraman a kolegové proto porovnali dvě sady výpočtů
+          atmosféry. Oběma zadali stejné pozorované teploty hladiny
+          a rozsah mořského ledu pro roky 2001–2020.
+          V první drželi skleníkové plyny a další vnější působení
+          na úrovni roku 2014. Ve druhé zadali jejich proměny
+          do roku 2014 z historických podkladů a pro další roky
+          podle scénáře vývoje emisí. Každou variantu počítali
+          dvacetkrát s mírně odlišným počátečním stavem atmosféry,
+          aby se v průměru omezil vliv náhodných výkyvů počasí.
+          Ověřovali vypočtené záření, teplota hladiny byla společným vstupem.{' '}
           <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, metody)</SourceLink>
         </p>
         <p>
-          Se změnami skleníkových plynů a aerosolů výpočet zachytil růst
-          energetické nerovnováhy z let 2001–2020 v mezích nejistoty měření.
-          Pět dalších propojených klimatických modelů se změnami vnějšího
-          působení poskytlo rovněž slučitelné trendy, většinou nižší než
-          prostřední odhad z družic. Tyto testy podporují lidský příspěvek
-          k růstu nerovnováhy v daném období.{' '}
+          Rozdíl mezi variantami se projevil už ve směru změny.
+          Při stálém vnějším působení energetický přebytek v modelu
+          v průměru klesal přibližně o 0,30 W/m² za deset let.
+          Vyšší výdej tepelného záření při zadaném oteplování převážil
+          nad poklesem odrazu slunečního záření. Družice přitom
+          zachytily rostoucí přebytek.{' '}
+          <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, obr. 3)</SourceLink>
+        </p>
+        <p>
+          Po zahrnutí změn vnějšího působení model přešel k růstu
+          o 0,19 ± 0,04 W/m² za deset let.
+          Tento výsledek se překrývá s pozorovanými
+          0,38 ± 0,24 W/m² za deset let. Obě poslední rozmezí
+          jsou 95% intervaly spolehlivosti, modelové rozmezí se vztahuje
+          k průměru jeho opakovaných výpočtů.{' '}
           <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, obr. 3 a 4)</SourceLink>
+        </p>
+        <p>
+          Další rozklad výpočtu ukázal, odkud změna pochází.
+          Kladný příspěvek k růstu přebytku dodávaly zejména
+          skleníkové plyny a změny aerosolů z lidské činnosti.
+          Sluneční a sopečné vlivy měly v součtu malý záporný příspěvek.
+          Výsledek tak podporuje konkrétně lidské působení společně
+          s odezvou klimatu. Samotné zadané oteplení hladiny při stálém
+          působení opačný směr družicového trendu nevysvětlilo.{' '}
+          <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, tabulka 1)</SourceLink>
+        </p>
+        <p>
+          Autoři výsledek porovnali také s pěti dalšími klimatickými
+          modely, v nichž se vyvíjel oceán i atmosféra a měnilo se
+          vnější působení. Jejich průměrné trendy rovněž ležely
+          v 95% intervalu družicového odhadu. Výpočty se většinou
+          nacházely při jeho dolním okraji a pozorovaný růst
+          nezachytily přesně. Shoda ve směru a slučitelnost velikosti
+          napříč těmito modely přesto podporují stejné vysvětlení.
+          Přesné podíly jednotlivých procesů zůstávají méně jisté
+          než potřeba zahrnout lidské působení v tomto období.{' '}
+          <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, obr. 4 a diskuse)</SourceLink>
         </p>
 
         <h2 id="vysvetleni">Jak Země získává a ukládá energii</h2>
@@ -198,9 +286,7 @@ export function EarthEnergyBalanceArticle() {
         <p>
           V globálním a dlouhodobém průměru dopadá na každý metr čtvereční
           Země přibližně 340 wattů slunečního záření. Asi 100 wattů
-          se odráží a 240 wattů se pohltí. Watt vyjadřuje rychlost přenosu
-          energie, jeden joule za sekundu. Hodnota 240 W/m² tedy znamená
-          240 joulů za sekundu na metr čtvereční. Jde o průměr přes celý
+          se odráží a 240 wattů se pohltí. Jde o průměr přes celý
           povrch koule, včetně noční strany. Oproti těmto tokům je současný
           přebytek malý, řádově jeden watt na metr čtvereční.{' '}
           <SourceLink id="WEB_NASA_Earth_Energy_Budget">(NASA: energetická bilance Země)</SourceLink>{' '}
@@ -416,6 +502,25 @@ export function EarthEnergyBalanceArticle() {
             <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021)</SourceLink>
           </p>
           <p>
+            Pásmo přirozeného kolísání ±0,19 W/m² za deset let
+            odpovídá dvojnásobku směrodatné odchylky modelových trendů.
+            Směrodatná odchylka měří, jak daleko bývají jednotlivé
+            výsledky od průměru. Při předpokládaném normálním,
+            zvonovitém rozdělení zahrnuje dvojnásobek přibližně 95 %
+            výkyvů. Jde o rozptyl jednotlivých dvacetiletých trendů.
+            Interval ±0,04 u průměru opakovaných atmosférických výpočtů
+            naproti tomu vyjadřuje přesnost odhadu jejich společné
+            odezvy.{' '}
+            <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, metody)</SourceLink>
+          </p>
+          <p>
+            Podklady proměnného vnějšího působení vycházejí
+            do roku 2014 z historických údajů a pro roky 2015–2020
+            ze scénáře SSP2-4.5. Ten zadává předpokládaný vývoj emisí
+            a dalších vlivů pro pokračování modelových výpočtů.{' '}
+            <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, metody)</SourceLink>
+          </p>
+          <p>
             Rozklad družicových změn na účinky teploty, vody,
             oblaků a plynů používá výpočet přenosu záření upravený
             tak, aby odpovídal měřeným tokům. Jde o modelovou
@@ -439,7 +544,8 @@ export function EarthEnergyBalanceArticle() {
           </p>
           <p>
             Tímto mechanismem vysvětlujeme{' '}
-            <Link href="/pozorovani/tepelny-obsah-oceanu/#pozorovani">dlouhodobé přibývání tepla v oceánu</Link>.
+            <Link href="/pozorovani/tepelny-obsah-oceanu/#souvislost-s-bilanci">přírůstek energie v klimatickém systému</Link>,
+            jehož největší část připadá na oceán.
             Jeho vazbu na záření potvrzuje porovnání oceánských
             a družicových změn. Testy příčin pro roky 2001–2020
             podporují lidský příspěvek k růstu energetické nerovnováhy.

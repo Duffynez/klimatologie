@@ -504,7 +504,7 @@ export function GmstArticle() {
 
         <aside className="article-related-mechanism" aria-label="Navazující vysvětlení">
           <p className="eyebrow">Navazující vysvětlení</p>
-          <p>Proč přebytek energie vede k ohřívání Země a jak oteplení ovlivňuje její další vyzařování, vysvětluje <Link href="/mechanismy/energeticka-bilance-zeme/#nerovnovaha-a-teplota">mechanismus energetické bilance Země</Link>.</p>
+          <p>Proč přebytek energie vede k ohřívání Země a jak oteplení ovlivňuje její další vyzařování, vysvětluje článek <Link href="/mechanismy/energeticka-bilance-zeme/#nerovnovaha-a-teplota">Proč v klimatickém systému přibývá energie</Link>.</p>
         </aside>
 
         <h2>Prameny, data a licence</h2>
