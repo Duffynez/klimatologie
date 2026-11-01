@@ -70,8 +70,8 @@ export default async function MechanismDetail({ params }: { params: Promise<{ sl
   if (slug === "energeticka-bilance-zeme") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow={`Mechanismy / ${mechanism.category}`} title={mechanism.title} meta="31. října 2026">
-          <p>Jak rozdíl mezi přijatým a odevzdaným zářením mění zásobu energie Země, proč oteplení zvyšuje vyzařování a co z toho potvrzují družicová a oceánská měření.</p>
+        <PageLead eyebrow={`Mechanismy / ${mechanism.category}`} title={mechanism.title} meta="1. listopadu 2026">
+          <p>Energetická bilance porovnává energii, kterou Země přijímá a odevzdává. Proč jí dnes přibývá a jak mezi možnými příčinami rozlišujeme podle měření?</p>
         </PageLead>
         <EarthEnergyBalanceArticle />
         <Link className="text-link catalog-back-link" href="/mechanismy">&larr; Zpět na všechny mechanismy</Link>

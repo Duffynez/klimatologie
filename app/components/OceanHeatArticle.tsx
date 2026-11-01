@@ -474,6 +474,56 @@ export function OceanHeatArticle() {
           </SourceLink>
         </p>
 
+        <h3 id="souvislost-s-bilanci">Kolik energie přibylo v celé Zemi</h3>
+        <p>
+          Oceánský přírůstek lze porovnat se součtem energie ve všech hlavních
+          částech klimatického systému. Von Schuckmannová a kolegové spojili
+          výpočty pro oceán, pevninu, atmosféru a energii spotřebovanou na tání
+          ledu. Pro roky 1971–2020 získali přírůstek 381 ± 61 zettajoulů,
+          s přibližně 95% intervalem spolehlivosti. Asi 89 % připadlo na oceán,
+          6 % na pevninu, 4 % na tání ledu a 1 % na atmosféru.
+          V přepočtu na plochu celé Země a dobu sledování činí průměrný
+          přírůstek 0,48 ± 0,10 W/m². Watt vyjadřuje jeden joule za sekundu,
+          tato hodnota tedy říká, jak rychle energie přibývala na metr
+          čtvereční celé planety.{' '}
+          <SourceLink id="DOI_10_5194_essd_15_1675_2023">(von Schuckmannová a kol. 2023, oddíl 6)</SourceLink>{' '}
+          <SourceLink id="DATA_GCOS_EHI_1960_2020">Veřejná data inventury</SourceLink>.
+        </p>
+
+        <h3 id="porovnani-se-zarenim">Porovnání oceánského ohřevu a záření</h3>
+        <p>
+          Družicové přístroje CERES sledují záření, které Země odráží
+          a vyzařuje do vesmíru. Po odečtení od dopadajícího slunečního
+          záření získáme čistý příjem energie. Loeb a kolegové porovnali
+          jeho časové změny s rychlostí ukládání tepla v horních
+          2 000 metrech oceánu. Od poloviny roku 2005 do poloviny roku 2019
+          rostl družicový čistý příjem o 0,50 ± 0,47 W/m² za deset let
+          a oceánský tok o 0,43 ± 0,40 W/m² za deset let.
+          Oba toky jsou vztažené k ploše celé Země a obě rozmezí představují
+          90% intervaly spolehlivosti. Zachycují slučitelné zrychlování
+          přírůstku energie.{' '}
+          <SourceLink id="DOI_10_1029_2021GL093047">(Loeb a kol. 2021, oddíl 3.1)</SourceLink>
+        </p>
+        <p>
+          Nezávisle se zde porovnávají časové změny. Průměrná úroveň
+          družicového produktu CERES EBAF je nastavena podle inventury
+          energie, a není proto dalším nezávislým odhadem jejího přírůstku.
+          Kolísání a trend družicového záznamu se však oceánskému průběhu
+          nepřizpůsobují.{' '}
+          <SourceLink id="DOI_10_1175_JCLI_D_17_0208_1">(Loeb a kol. 2018)</SourceLink>{' '}
+          <SourceLink id="DOI_10_1029_2021GL093047">(Loeb a kol. 2021)</SourceLink>
+        </p>
+        <p>
+          Družice umožňují odlišit také dopadající a pohlcené sluneční
+          záření. V delším období od září 2002 do března 2020 dopadající
+          sluneční záření mírně ubývalo, zatímco pohlcená sluneční energie
+          rostla. V součtu tedy ubývalo záření odraženého zpět do vesmíru.
+          Současně rostlo odcházející tepelné záření, ale pomaleji než
+          pohlcená sluneční energie. Čistý příjem energie proto rostl.{' '}
+          <SourceLink id="DOI_10_1029_2021GL093047">(Loeb a kol. 2021, oddíl 3.2)</SourceLink>{' '}
+          <SourceLink id="DATA_CERES_PRP_2021">Data k rozboru radiačních změn</SourceLink>.
+        </p>
+
         <div className="article-observation-summary">
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
@@ -565,6 +615,9 @@ export function OceanHeatArticle() {
                 </SourceLink>
                 .
               </li>
+              <li><SourceLink id="DOI_10_5194_essd_15_1675_2023">Von Schuckmannová a kol. 2023</SourceLink>: inventura energie Země a <SourceLink id="DATA_GCOS_EHI_1960_2020">její veřejná data</SourceLink>.</li>
+              <li><SourceLink id="DOI_10_1029_2021GL093047">Loeb a kol. 2021</SourceLink>: porovnání oceánu a družic, <SourceLink id="DATA_CERES_PRP_2021">data k rozboru radiačních změn</SourceLink>.</li>
+              <li><SourceLink id="DOI_10_1175_JCLI_D_17_0208_1">Loeb a kol. 2018</SourceLink>: dokumentace a kalibrace produktu CERES EBAF.</li>
             </ul>
           </section>
 

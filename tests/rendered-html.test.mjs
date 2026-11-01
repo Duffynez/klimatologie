@@ -907,7 +907,7 @@ test("publishes a sourced ocean heat content article instead of the generic plac
   ]);
 
   assert.match(evidencePage, /OceanHeatArticle/);
-  assert.match(evidencePage, /meta="31\. října 2026"/);
+  assert.match(evidencePage, /if \(slug === "tepelny-obsah-oceanu"\)[\s\S]*?meta="1\. listopadu 2026"/);
   assert.match(article, /Obsah tepla v oceánu vyjadřuje/);
   assert.match(article, /Jak vzniká globální výpočet/);
   assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
@@ -934,12 +934,12 @@ test("publishes a sourced ocean heat content article instead of the generic plac
   const oceanHeatSourceIds = [
     ...article.matchAll(/<SourceLink id="([^"]+)"/g),
   ].map((match) => match[1]);
-  assert.equal(new Set(oceanHeatSourceIds).size, 29);
+  assert.equal(new Set(oceanHeatSourceIds).size, 33);
   for (const id of new Set(oceanHeatSourceIds)) {
     const catalogueOccurrences = sourceCatalogueText.split(id).length - 1;
     assert.ok(catalogueOccurrences >= 2, `${id} must exist and be marked as open access`);
     if (id.startsWith("DOI_")) {
-      assert.match(sourceCatalogueText, new RegExp(`${id}:\\s*"https://`));
+      assert.match(sourceCatalogueText, new RegExp(`"?${id}"?:\\s*"https://`));
     }
   }
   assert.match(sourceCatalogueText, /repository\.library\.noaa\.gov\/view\/noaa\/73259\/noaa_73259_DS1\.pdf/);
@@ -4027,15 +4027,20 @@ test("publishes the full energy-balance mechanism with evidence, sources and ret
   for (const anchor of ["co-vysvetlujeme", "toky-energie", "nerovnovaha-a-teplota", "vypocet-bilance", "predpovedi", "historie", "porovnani", "priciny", "nejistoty", "shrnuti", "prameny"]) {
     assert.ok(html.includes(`id="${anchor}"`), "Missing mechanism section " + anchor);
   }
+  const mechanismBody = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)[1];
+  const mainSections = [...mechanismBody.matchAll(/<h2 id="([^"]+)"/g)].map(match => match[1]);
+  assert.deepEqual(mainSections, ["co-vysvetlujeme", "priciny", "predpovedi", "vysvetleni", "shrnuti", "prameny"],
+    "Keep observation, hypotheses, tests, explanation and summary in reading order");
+  const introduction = mechanismBody.slice(0, mechanismBody.indexOf('<h2 id="priciny"'));
+  assert.ok([...introduction.matchAll(/<p\b/g)].length <= 2, "Keep the observation introduction focused");
   assert.match(html, /Stefanův–Boltzmannův zákon/);
   assert.match(html, /Planckova/);
-  assert.match(html, /Shoda průměru tedy vzniká/);
-  assert.match(html, /Časové kolísání a trend/);
-  assert.match(html, /90% interval/);
+  assert.ok(mechanismBody.indexOf('<details') > mechanismBody.indexOf('id="porovnani"'),
+    "Place detailed uncertainties after the explanation and quantitative comparison");
   assert.match(html, /<details class="method-details">/);
   assert.match(html, /<div class="method-conclusion">/);
   assert.doesNotMatch(html, /Potřebné informace/);
-  for (const path of ["/pozorovani/gmst/#pozorovani", "/pozorovani/tepelny-obsah-oceanu/#pozorovani", "/metody/mereni-radiacnich-toku/#druzicova-bilance"]) {
+  for (const path of ["/pozorovani/gmst/#pozorovani", "/pozorovani/tepelny-obsah-oceanu/#pozorovani", "/pozorovani/tepelny-obsah-oceanu/#souvislost-s-bilanci", "/pozorovani/tepelny-obsah-oceanu/#porovnani-se-zarenim", "/metody/mereni-radiacnich-toku/#druzicova-bilance"]) {
     assert.ok(html.includes(`href="${path}"`), "Missing evidence or method connection " + path);
   }
   for (const path of ["pozorovani/gmst", "pozorovani/tepelny-obsah-oceanu", "metody/mereni-radiacnich-toku"]) {
@@ -4043,7 +4048,7 @@ test("publishes the full energy-balance mechanism with evidence, sources and ret
     assert.match(related, /href="\/mechanismy\/energeticka-bilance-zeme\/#/);
   }
   const sourcePage = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
-  for (const id of ["1827_Fourier_Temperatures", "DOI_10_1086_140874", "1967_Manabe_Wetherald", "DOI_10_1175_2007JCLI2110_1", "DOI_10_1029_2021GL093047", "DOI_10_5194_essd_15_1675_2023", "DOI_10_1038_s41467_021_24544_4"]) {
+  for (const id of ["1827_Fourier_Temperatures", "1896_Arrhenius", "DOI_10_1086_140874", "1967_Manabe_Wetherald", "DOI_10_1175_2007JCLI2110_1", "DOI_10_1029_2021GL093047", "DOI_10_5194_essd_15_1675_2023", "DOI_10_1038_s41467_021_24544_4"]) {
     assert.ok(html.includes(`href="/zdroje#${id}"`), "Missing source citation " + id);
     const card = sourcePage.match(new RegExp(String.raw`<article[^>]+id="${id}"[\s\S]*?</article>`));
     assert.ok(card, "Missing public source card " + id);
