@@ -1,166 +1,80 @@
 # Standard článku o mechanismu
 
-Tento dokument je závazný pro všechny články o klimatických mechanismech na Klimatologie.eu. Článek musí ukázat nejen to, jak určitý proces funguje, ale především proč dané vysvětlení odpovídá pozorované změně lépe než jiné možnosti.
+Tento dokument je závazný pro články o klimatických mechanismech na Klimatologie.eu. Článek vychází z konkrétního pozorování a vede čtenáře přes navržená vysvětlení a jejich ověřování k tomu, jak pozorování vysvětlujeme dnes. Celý výklad se vztahuje k této otázce.
 
-Jazyk a srozumitelné vysvětlování upravuje společný standard [STYLE.md](STYLE.md). Výběr podkladů pro konkrétní úkol řídí [AGENTS.md](AGENTS.md).
+Hlavní cíle projektu stanovuje [AGENTS.md](AGENTS.md). Jazyk a srozumitelné vysvětlování upravuje [STYLE.md](STYLE.md), společná obsahová a citační pravidla [CONTENT.md](CONTENT.md). Datum pod nadpisem uvádíme podle [STYLE.md, oddílu 7](STYLE.md#7-členění-příklady-obrazy-a-podrobnosti).
 
-## 1. Datum článku
+## Závazná stavba článku
 
-Datum pod nadpisem uvedeme podle [STYLE.md, oddílu 7](STYLE.md#7-členění-příklady-obrazy-a-podrobnosti). Potřebné pojmy a zkratky vysvětlujeme přímo v textu podle [STYLE.md, oddílu 4](STYLE.md#4-pojmy-veličiny-a-označení).
+Článek má následujících pět částí v uvedeném pořadí. Nadpisy přizpůsobíme konkrétnímu tématu při zachování jejich úlohy. Pododdíly rozvíjejí otázku příslušné části. Obsahová kontrola autora uvedená níže slouží ke kontrole úplnosti a není další osnovou článku.
 
-## 2. Co potřebujeme vysvětlit
+### 1. Jak si nyní vysvětlujeme toto pozorování
 
-Nejprve přesně vymezíme pozorování, na které mechanismus odpovídá. Odkážeme na příslušné články a uvedeme jeho velikost, časový průběh, prostorové rozložení a další podstatné vlastnosti.
+Úvod má nejvýše dva odstavce. Připomene konkrétní pozorování, odkáže na příslušný pozorovací článek a vymezí otázku, kterou budeme řešit. Uvede vlastnosti podstatné pro vysvětlení, například směr a velikost změny, období, časový průběh nebo prostorové rozložení. Další rozlišující vlastnosti představíme u jejich použití v porovnání hypotéz.
 
-Obsah a stavbu těchto pozorovacích článků stanovuje [OBSERVATIONS.md](OBSERVATIONS.md).
+Pozorování tvoří základ celého článku. Pokud některé potřebné pozorování na webu chybí, doplníme je podle [OBSERVATIONS.md](OBSERVATIONS.md). To platí i pro další pozorování potřebná k testování hypotéz. Nový článek založíme a obousměrné odkazy připojíme podle [docs/CONTENT-WORKFLOW.md](docs/CONTENT-WORKFLOW.md). Pozorovací článek popisuje zjištění, mechanismový článek rozvíjí jejich příčinné vysvětlení.
 
-Tato část nebude pozorování znovu dokazovat. Stanoví otázku, kterou musí vysvětlení zodpovědět.
+### 2. Jaká vysvětlení byla navržena
 
-## 3. Přesná definice mechanismu
+Vybereme prominentní hypotézy, které byly pro vysvětlení daného pozorování historicky významné nebo jsou relevantní v současném odborném zkoumání. U každé stručně vysvětlíme navrženou příčinu, základní princip a důvod, proč mohla pozorování vysvětlovat. Potřebné pojmy objasníme přímo ve výkladu, aby čtenář mohl následně porozumět předpovědím.
 
-První výkladový odstavec kladně a srozumitelně řekne, jaký proces mechanismus popisuje. Rozlišíme:
+Každou hypotézu představíme v její nejsilnější odborné podobě a s ohledem na tehdy dostupné poznatky. Její význam a důkazní oporu popíšeme přiměřeně skutečnému stavu. Rozdílnou sílu důkazů vyjádříme i v hodnocení jednotlivých vysvětlení. Rozlišíme vysvětlení, která si odporují, od procesů, které mohou působit společně.
 
-- příčinu, která proces spouští,
-- samotný mechanismus,
-- jeho předpokládaný následek,
-- zpětné vazby, které původní změnu zesilují nebo zeslabují.
+Historii zapojíme při představení hypotéz a jejich testů. Zachytíme vznik vysvětlení, jeho první kvantitativní formulaci a důležité změny vyvolané měřením. Historická odbočka nesmí oddělit rozvinutou předpověď od jejího ověření.
 
-## 4. Kauzální řetězec
+### 3. Co z hypotéz vyplývá a jak obstály
 
-Mechanismus rozložíme na jednotlivé kroky od příčiny až k pozorovanému výsledku. Každý krok musí mít fyzikální, chemické nebo biologické zdůvodnění.
+Každé rozhodující porovnání zachová tuto návaznost:
 
-Například:
+**Co hypotéza předpovídá → proč to z ní vyplývá → co skutečně pozorujeme → jaký závěr z porovnání plyne.**
 
-**více CO₂ → změna pohlcování záření → změna energetických toků → změna teploty → další odezvy systému**
+Předpověď vysvětlíme před uvedením výsledku. Vybíráme ověřitelné důsledky, které pomáhají rozlišit navržená vysvětlení: směr a velikost změny, časový průběh, prostorové rozložení, výškový či hloubkový profil nebo souběžné změny dalších veličin. Jejich význam a vazbu na hypotézu musí čtenář pochopit. Historickou předpověď označíme jako zveřejněnou před měřením pouze tehdy, pokud to dokládají prameny.
 
-U každé šipky vysvětlíme, proč má právě tento směr a zda byla samostatně měřena nebo experimentálně ověřena.
+Výsledek testu formulujeme přesně:
 
-## 5. Kvantitativní základ
+- **Vyvrácená hypotéza:** konkrétní předpověď je v rozporu s pozorováním. Vysvětlíme, která předpověď selhala a za jakých podmínek test platí.
+- **Nedostatečné vysvětlení:** proces může skutečně působit, ale svou velikostí, průběhem nebo jinou vlastností nestačí vysvětlit celé pozorování.
+- **Dosud nerozhodnuté porovnání:** dostupná měření mezi možnostmi dostatečně nerozlišují.
+- **Podpořené vysvětlení:** předpovědi odpovídají výsledkům. Uvedeme, co bylo konkrétně ověřeno a jakou váhu má shoda vůči ostatním možnostem.
 
-Nestačí ukázat, že proces existuje. Musíme zjistit, zda může vytvořit změnu pozorovaného směru a velikosti.
+Výklad ukáže také, v čem každá hypotéza datům odpovídá. Její odmítnutí musí mít konkrétní důvod v pozorováních a oporu ve zdrojích. Srovnávací tabulku použijeme, pokud zpřehlední již vysvětlené vztahy.
 
-Uvedeme příslušné fyzikální zákony, výpočty a jednotky. Každý symbol ve vzorci bude vysvětlen. Oddělíme jednoduchý teoretický odhad od výsledku úplnějšího modelu.
+O metodách měření píšeme stručně. Objasníme, co měření zjišťuje a proč umožňuje daný test, a uvedeme rozhodující podmínky či intervaly nejistoty. Postupy měření a zpracování zpřístupníme odkazy na konkrétní části pozorovacích a metodických článků. Popis přístrojů a datových produktů ponecháme v těchto navazujících textech.
 
-## 6. Předpovědi a rozlišující znaky
+### 4. Jaké vysvětlení dnes nejlépe obstojí a proč
 
-Ještě před uvedením výsledků sepíšeme, co bychom měli pozorovat, pokud je mechanismus významný:
+Na základě předchozích porovnání jasně pojmenujeme současné vysvětlení a rozvineme jeho podrobný výklad. Výsledkem může být jeden mechanismus nebo souběžné působení několika mechanismů. U kombinace objasníme úlohu jednotlivých procesů a důvod, proč je potřebujeme. Pokud poznání dosud neumožňuje mezi vysvětleními rozhodnout, uvedeme tuto otevřenou otázku.
 
-- směr změny,
-- očekávanou velikost,
-- časový průběh,
-- prostorové rozložení,
-- výškový nebo hloubkový profil,
-- současné změny jiných veličin.
+Nejprve srozumitelně definujeme vysvětlovaný proces. Potom souvisle projdeme kroky od příčiny přes změny v systému až k pozorovanému následku. U každého kroku vysvětlíme jeho fyzikální, chemický nebo biologický důvod a navážeme na jeho ověření. Zpětné vazby zařadíme v návaznosti na změnu, na kterou reagují.
 
-Nejcennější jsou předpovědi, které se liší od předpovědí konkurenčních vysvětlení.
+Ukážeme, jak celek vysvětluje rozhodující vlastnosti pozorování včetně velikosti účinku. Potřebné zákony a výpočty zařadíme k vysvětlovaným vztahům. Objasníme veličiny, symboly, jednotky a podmínky použití. Oddělíme jednoduchý teoretický odhad od výsledku úplnějšího modelu. Předchozí porovnání využijeme při vysvětlování souvislostí, aby čtenář mohl sledovat celý děj.
 
-## 7. Historie vysvětlení
+Na konci této části pojmenujeme stav poznání. Rozlišíme přímo ověřený proces, dobře doložené vysvětlení pozorované změny, nejistou velikost příspěvku a otevřené hypotézy. Hlavní nejistoty a rozsah platnosti shrneme krátkým odstavcem. Podrobnosti umístíme do rozbalovacího oddílu podle [STYLE.md, oddílu 6](STYLE.md#6-přesnost-předpoklady-a-zdroje), včetně jeho délkového limitu. Uvedeme také konkrétní nové měření nebo výsledek, který by současné vysvětlení oslabil, vyvrátil nebo významně upravil.
 
-Popíšeme vznik hypotézy, její první kvantitativní formulaci a důležité testy. Zvlášť cenné jsou případy, kdy byla konkrétní předpověď zveřejněna dříve, než bylo možné ji pozorovat.
+### 5. Shrnutí fungování mechanismu
 
-Historie nebude seznam jmen. Ukáže, jak se vysvětlení měnilo pod tlakem nových měření.
+Závěrečné shrnutí umístíme do rámečku s jednotnou sazbou. Stručně spojí příčinu, navazující děj a výsledný účinek s pozorováním, kterým článek začal. Připomene hlavní důvod, proč toto vysvětlení přijímáme, v míře odpovídající jeho důkazní opoře. Shrnutí musí být srozumitelné i při samostatném přečtení.
 
-## 8. Důkazy, že mechanismus skutečně působí
+Za shrnutím následují prameny a odkazy na veřejná data. Citace jsou současně průběžně zapojené u tvrzení a porovnání, která podporují.
 
-Důkazy rozdělíme podle jejich povahy:
+## Obsahová kontrola autora
 
-1. **Základní důkaz:** Je fyzikální, chemický nebo biologický proces měřitelný v laboratoři či kontrolovaném experimentu?
-2. **Přímý důkaz:** Lze jeho působení zaznamenat v atmosféře, oceánu, ledu nebo živé přírodě?
-3. **Rozlišující důkaz:** Odpovídá pozorovaný obraz právě tomuto mechanismu lépe než alternativám?
-4. **Kvantitativní důkaz:** Dokáže mechanismus vysvětlit pozorovanou velikost změny?
-5. **Nezávislá kontrola:** Vedou různé metody, datové soubory a výzkumné týmy ke slučitelnému výsledku?
+Při přípravě a kontrole článku prověříme následující vrstvy důkazů. Jejich místo ve výkladu určují části 2 až 4 výše. Pokud některá opora chybí, výslovně to uvedeme a přizpůsobíme tomu závěr.
 
-Jedna studie ani jediný graf nebudou vydávány za úplný důkaz.
+| Vrstva důkazů | Co musí být objasněno |
+| --- | --- |
+| Základní proces | Jak byl fyzikální, chemický nebo biologický vztah ověřen v laboratoři nebo kontrolovaném experimentu. |
+| Působení v klimatu | Jaká měření zachycují jeho působení v atmosféře, oceánu, ledu nebo živé přírodě. |
+| Rozlišení vysvětlení | Které pozorované vlastnosti odpovídají danému vysvětlení lépe než relevantním alternativám. |
+| Kvantitativní ověření | Zda proces vysvětluje směr i velikost změny a jakou část pozorovaného výsledku mu lze přisoudit. |
+| Nezávislá kontrola | Zda různé metody, datové soubory a výzkumné týmy docházejí ke slučitelným výsledkům a co jejich postupy případně sdílejí. |
 
-## 9. Alternativní vysvětlení
+U použitého modelu nebo experimentu vysvětlíme jeho otázku, podstatné procesy a předpoklady. Rozlišíme vstupní pozorování od výsledků, které se skutečně předpovídají nebo ověřují. Modelový výsledek porovnáme s měřením a uvedeme, zda obstojí také v nezávislých modelech. Model nesmí sloužit jako důkaz sám sobě.
 
-Uvedeme všechny odborně relevantní alternativy, nikoliv pouze nejslabší námitku. Každou popíšeme ve stejné podobě:
+Samotnou korelaci nezaměňujeme za mechanismus. Existenci procesu odlišujeme od důkazu, že způsobil celou pozorovanou změnu. Jedna studie ani jediný graf nepředstavují úplný důkaz. Pozorování, metody, mechanismy a politické důsledky rozlišujeme podle [AGENTS.md](AGENTS.md).
 
-- co navrhuje jako příčinu,
-- co by měla podle ní pozorování ukazovat,
-- v čem odpovídá datům,
-- kde se její předpovědi rozcházejí s měřením.
+## Prameny a redakční kontrola
 
-Alternativy nebudeme představovat jako rovnocenné, pokud nemají stejnou oporu v důkazech.
+Každý článek zapojí původní formulace hypotéz nebo teorie, základní experimentální práce, klíčové pozorovací testy, práce hodnotící alternativní vysvětlení a současné kvantitativní studie. U grafů zpřístupníme použitá veřejná data. Zdroje vložíme přímo k argumentu, který podporují. Jejich dostupnost a způsob citování se řídí [CONTENT.md](CONTENT.md), technické připojení [docs/SOURCES-AND-ARCHIVE.md](docs/SOURCES-AND-ARCHIVE.md).
 
-## 10. Rozhodující porovnání
-
-Toto bude hlavní část článku. Přehledně porovnáme předpovědi jednotlivých vysvětlení se skutečnými pozorováními.
-
-Ideální bude tabulka:
-
-| Vlastnost pozorování | Mechanismus A | Mechanismus B | Naměřený výsledek |
-| --- | --- | --- | --- |
-| Směr, velikost nebo charakteristický obraz změny | Předpověď A | Předpověď B | Pozorování |
-
-Čtenář tak uvidí nejen závěr, ale také důvod, proč některá vysvětlení obstála a jiná ne.
-
-## 11. Modely a experimenty
-
-Vysvětlíme, k čemu byl model nebo experiment použit a jakou otázku testoval. Model nesmí sloužit jako důkaz sám sobě.
-
-Uvedeme:
-
-- jaké fyzikální procesy obsahuje,
-- jaká pozorování do něj vstoupila,
-- které výsledky byly skutečnou předpovědí,
-- jak byl porovnán s daty,
-- zda výsledek vzniká také v nezávislých modelech.
-
-## 12. Rozsah platnosti a nejistoty
-
-Hlavní omezení shrneme v krátkém odstavci. Rozbor zpřístupníme v rozbalovacím oddílu podle [STYLE.md, oddílu 6](STYLE.md#6-přesnost-předpoklady-a-zdroje), včetně limitu jeho délky. Rozhodující podmínky a doložené intervaly nejistoty zůstávají u příslušných závěrů.
-
-Oddělíme čtyři různé otázky:
-
-1. Je mechanismus fyzikálně skutečný?
-2. Působí v klimatickém systému?
-3. Jakým směrem systém ovlivňuje?
-4. Jak velkou část konkrétní pozorované změny vysvětluje?
-
-Mechanismus může být velmi dobře doložený, zatímco přesná velikost jeho příspěvku může zůstávat nejistá.
-
-## 13. Co by mohlo závěr změnit
-
-Uvedeme, jaké nové měření nebo výsledek by současné vysvětlení oslabil, vyvrátil nebo významně upravil. Vysvětlení, které nemůže být v rozporu s žádným představitelným pozorováním, nelze vědecky testovat.
-
-## 14. Stav poznání
-
-Na konci jasně uvedeme, zda jde o:
-
-- přímo ověřený proces,
-- dobře doložené vysvětlení pozorované změny,
-- známý proces s nejistou velikostí příspěvku,
-- otevřenou hypotézu,
-- nebo vysvětlení, jehož předpovědi dostupná data nepodporují.
-
-## 15. Shrnutí mechanismu
-
-Poslední odstavec stručně odpoví na tři otázky:
-
-- Jak mechanismus funguje?
-- Která pozorování vysvětluje?
-- Které rozlišující důkazy mu dávají největší váhu?
-
-Nebude znovu popisovat metody měření ani obecně tvrdit, že „vědci se shodují“.
-
-## 16. Zdroje
-
-Každý článek musí zapojit:
-
-- původní formulaci hypotézy nebo teorie,
-- základní experimentální práce,
-- klíčové pozorovací testy,
-- práce hodnotící alternativní vysvětlení,
-- současné kvantitativní studie,
-- veřejná data použitá v grafech.
-
-Zdroje budou vloženy přímo do argumentu, který podporují.
-
-## Společná pravidla
-
-- Nezaměňujeme korelaci za mechanismus.
-- Nezaměňujeme existenci procesu za důkaz, že způsobil celou pozorovanou změnu.
-- Pozorování, metody, mechanismy a politické důsledky držíme oddělené.
-- Konkurenční vysvětlení formulujeme v jejich nejsilnější odborné podobě.
-- Modelový výsledek vždy porovnáváme s měřením.
+Před odevzdáním provedeme odděleně obsahovou kontrolu podle tohoto dokumentu a kontrolu čtivosti podle [STYLE.md, oddílu 9](STYLE.md#9-dvě-samostatné-redakční-kontroly). Ověříme zejména souvislou vazbu každé hypotézy na její předpovědi, pozorování a závěr a návaznost podrobného výkladu na tato porovnání.
