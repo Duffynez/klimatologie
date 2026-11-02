@@ -34,7 +34,8 @@ Volitelná pole:
 | `yearLabel` | Viditelné označení data, pokud `year` slouží jen k řazení podle roku přístupu. U nedatovaného webu například `přístup 2026`, nikoli domnělý rok vydání. |
 | `externalUrl` | DOI nebo původní autoritativní stránka. |
 | `externalLinkLabel` | Upřesnění tlačítka původního odkazu, například upozornění na dočasnou údržbu jeho webu. |
-| `openAccessUrl` | Přímý veřejný plný text nebo veřejná data, pokud se liší od původního odkazu. |
+| `openAccessUrl` | Přímý veřejný plný text nebo veřejná data, pokud se liší od původního odkazu; u výslovně označeného katalogu může vést na metadata. |
+| `openAccessLinkLabel` | Přesné označení veřejného odkazu, pokud výchozí popisek neodpovídá jeho obsahu. |
 | `availability` | `open-access` nebo `archived`. |
 | `driveFileId` | ID legálně sdílené archivní kopie na Google Drivu. |
 | `archiveRelation` | Zda jde o kopii zdroje, nebo pouze související materiál. |
@@ -86,6 +87,8 @@ DOI_...: "https://institucionalni-repozitar.example/plny-text.pdf"
 ```
 
 zachová DOI v `externalUrl` a přidá samostatný `openAccessUrl`. Karta potom ukáže dvě tlačítka: DOI a plný text. U datového souboru druhé tlačítko říká „Otevřít veřejná data“.
+
+Pokud fungují jen metadata datového archivu, použijte výslovný popisek „Otevřít metadata dat“ přes `openAccessLinkLabel` a dostupnost stažení popište v kartě i článku. Metadata nejsou dokladem stažených dat ani náhradou veřejných podkladů vědeckého tvrzení podle [CONTENT.md](../CONTENT.md).
 
 Při přidání zdroje nestačí přidat klíč do mapy. Je nutné odkaz skutečně otevřít a ověřit, že nevede pouze na abstrakt, přihlášení, dočasný token nebo nelegální kopii.
 

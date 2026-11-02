@@ -1226,7 +1226,7 @@ test("publishes a sourced Arctic sea ice article with extent, age, and thickness
 
   assert.match(evidencePage, /ArcticSeaIceArticle/);
   assert.match(evidencePage, /title="Arktický mořský led"/);
-  assert.match(evidencePage, /meta="31\. října 2026"/);
+  assert.match(evidencePage, /title="Arktický mořský led"\s+meta="2\. listopadu 2026"/);
   assert.match(article, /Arktický mořský led je zmrzlá mořská voda/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
   assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
@@ -1283,7 +1283,7 @@ test("publishes a sourced mountain glaciers article with field and satellite evi
 
   assert.match(evidencePage, /MountainGlaciersArticle/);
   assert.match(evidencePage, /title="Horské ledovce"/);
-  assert.match(evidencePage, /meta="31\. října 2026"/);
+  assert.match(evidencePage, /title="Horské ledovce"\s+meta="2\. listopadu 2026"/);
   assert.match(article, /Horský ledovec je dlouhodobě přetrvávající masa ledu/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
   assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
@@ -1319,20 +1319,26 @@ test("renders public mountain-glacier sources with separate DOI and full-text li
     const card = cards.get(id);
     assert.ok(card, `Missing rendered glacier source card: ${id}`);
     assert.doesNotMatch(card, /drive\.google\.com/, `Public source has a Drive archive: ${id}`);
-    assert.match(card, /Otevřít (?:veřejný zdroj|plný text|veřejná data)/, `Missing public access: ${id}`);
+    const publicAccess = id === "DOI_10_6096_13"
+      ? /Otevřít metadata dat/
+      : /Otevřít (?:veřejný zdroj|plný text|veřejná data)/;
+    assert.match(card, publicAccess, `Missing public access: ${id}`);
     if (id.startsWith("DOI_") || id === "WEB_World_Glacier_Monitoring_Ser_glosar_UNESCO_a_WGMS_06fc9a79" || id === "WEB_glims_org_GLIMS_Glacier_Database_2d3c95bb") {
       assert.match(card, /Otevřít DOI/, `Missing DOI: ${id}`);
-      assert.match(card, /Otevřít (?:plný text|veřejná data)/, `Missing separate text or data: ${id}`);
+      assert.match(card, id === "DOI_10_6096_13" ? /Otevřít metadata dat/ : /Otevřít (?:plný text|veřejná data)/, `Missing separate text, data or explicitly labelled metadata: ${id}`);
     }
   }
   assert.match(cards.get("DOI_10_1038_s43017_026_00777_z"), /livrepository\.liverpool\.ac\.uk\/3197897/);
   assert.match(cards.get("DOI_10_1038_s41586_021_03436_z"), /dora\.lib4ri\.ch/);
   assert.match(cards.get("DOI_10_7265_4m1f_gd79"), /nsidc-0770\/versions\/6/);
   assert.match(cards.get("DOI_10_5067_f6jmovy5navz"), /nsidc-0770\/versions\/7/);
+  assert.match(cards.get("DOI_10_6096_13"), /api\.sedoo\.fr\/theia-catalogue-prod\/metadata\/c428c5b9-df8f-4f86-9b75-e04c778e29b9/);
+  assert.doesNotMatch(cards.get("DOI_10_6096_13"), /Otevřít veřejná data/);
+  assert.match(cards.get("DATA_Hugonnet_2021_Figure1"), /41586_2021_3436_MOESM4_ESM\.xlsx/);
   assert.match(articleHtml, /68% pokrytí/);
   assert.match(articleHtml, /95% intervaly/);
   assert.match(articleHtml, /1975\/76–2023\/24/);
-  assert.match(articleHtml, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  assert.match(articleHtml, /<p class="page-lead__meta">2\. listopadu 2026<\/p>/);
 });
 
 test("publishes a sourced ice-sheet mass article with three measurement methods", async () => {

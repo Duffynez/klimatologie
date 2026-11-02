@@ -17,9 +17,9 @@ export function SourceCard({ source }: { source: Source }) {
   const externalLabel = source.externalLinkLabel ?? (isDoi
     ? "Otevřít DOI"
     : source.availability === "open-access" ? "Otevřít veřejný zdroj" : "Otevřít původní zdroj");
-  const openAccessLabel = isDataSource
+  const openAccessLabel = source.openAccessLinkLabel ?? (isDataSource
     ? "Otevřít veřejná data"
-    : isImageSource ? "Otevřít obrázek" : "Otevřít plný text";
+    : isImageSource ? "Otevřít obrázek" : "Otevřít plný text");
 
   return (
     <article className={`source-card source-card--${source.category}`} id={source.id}>

@@ -301,6 +301,7 @@ export function MountainGlaciersArticle() {
               vhodná pro vyhledání opakovaných mapování, jejich časové pokrytí však není všude stejné. Výpočty
               Hugonneta, Dussaillant a WGMS 2026 vycházejí ze starší verze RGI 6.0, případně z jejích regionálních
               úprav. Novější inventář v7 sám o sobě neznamená přepočet výsledků těchto studií.
+              Stažení souborů RGI z archivu NSIDC vyžaduje bezplatný účet NASA Earthdata.
             </p>
             <p className="article-data-item__links">
               <SourceLink id="DOI_10_5067_f6jmovy5navz">RGI v7: data a příručka</SourceLink>{" "}
@@ -336,9 +337,19 @@ export function MountainGlaciersArticle() {
               výsledku. Nejsou však zcela nezávislými kontrolami: Hugonnetova družicová data vstupují jak do GlaMBIE,
               tak do dlouhodobé kalibrace ročního produktu WGMS.
             </p>
+            <p>
+              Pro přímou kontrolu regionálních a globálních výsledků Hugonneta a kol. je k dispozici také{" "}
+              <SourceLink id="DATA_Hugonnet_2021_Figure1">původní tabulka k obrázku 1</SourceLink>.
+              Globální řádek pro roky 2000–2019 uvádí −266,58 Gt za rok, tedy po zaokrouhlení úbytek 267 Gt za rok.
+            </p>
+            <p>
+              Katalog Theia navíc popisuje mapy a výsledky jednotlivých ledovců. Odkaz vede na jeho veřejná metadata,
+              tedy popis souborů, jednotek a podmínek použití. Interaktivní stažení souborů se při této kontrole
+              nepodařilo ověřit.
+            </p>
             <p className="article-data-item__links">
               <SourceLink id="DOI_10_5904_wgms_glambie_2024_07">Data GlaMBIE</SourceLink>{" "}
-              <SourceLink id="DOI_10_6096_13">Data Hugonnet et al.</SourceLink>{" "}
+              <SourceLink id="DOI_10_6096_13">Popis archivu Hugonnet et al.</SourceLink>{" "}
               <SourceLink id="WEB_GitHub_GitHub_rhugonnet_ww_tvol_study_Process_global_sc_300ee76a">Kód Hugonnet et al.</SourceLink>
             </p>
           </section>
@@ -561,8 +572,12 @@ export function MountainGlaciersArticle() {
                 vstupní i kombinované odhady podle metod a oblastí.
               </li>
               <li>
-                <SourceLink id="DOI_10_6096_13">Hugonnet et al., data</SourceLink>:
+                <SourceLink id="DOI_10_6096_13">Hugonnet et al., datový katalog</SourceLink>:
                 výškové a hmotnostní změny pro jednotlivé ledovce i mapové dlaždice.
+              </li>
+              <li>
+                <SourceLink id="DATA_Hugonnet_2021_Figure1">Hugonnet a kol., podklady k obrázku 1</SourceLink>:
+                přímo dostupná tabulka regionálních a globálních výsledků ve formátu XLSX.
               </li>
               <li>
                 <SourceLink id="DOI_10_5067_f6jmovy5navz">RGI v7</SourceLink> a{" "}

@@ -25,6 +25,7 @@ export type Source = {
   externalUrl?: string;
   externalLinkLabel?: string;
   openAccessUrl?: string;
+  openAccessLinkLabel?: string;
   citationLabel?: string;
   topics: string[];
 };

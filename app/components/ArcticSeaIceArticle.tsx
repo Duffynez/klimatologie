@@ -349,7 +349,7 @@ export function ArcticSeaIceArticle() {
             <h3>EASE-Grid Sea Ice Age, verze 4</h3>
             <p>
               Týdenní stáří ledu od 1. ledna 1984 do 31. prosince 2025 na mřížce 12,5 km. Produkt spojuje mapy rozsahu
-              s vypočteným pohybem ledu. Pro novější týdny slouží předběžná verze Quicklook. Číselné mapy ve vědeckém
+              s vypočteným pohybem ledu. Pro týdny od ledna 2026 slouží předběžná verze Quicklook. Číselné mapy ve vědeckém
               formátu NetCDF i obrázky PNG lze stáhnout z NSIDC.
             </p>
             <p className="article-data-item__links">
@@ -366,7 +366,7 @@ export function ArcticSeaIceArticle() {
               listopadu 2018 do dubna 2026. CryoSat-2 L4 v1 zveřejňuje třicetidenní odhady od září 2010 do května
               2025 pro období září až květen. Označení L4 znamená zpracovaný výsledek v pravidelné mapové mřížce.
               Stažení dat vyžaduje bezplatný účet NASA Earthdata. Soubory obsahují také nejistoty nebo jejich
-              vstupní složky. Uvedené časové rozsahy odpovídají katalogům při kontrole 3. října 2026.
+              vstupní složky. Uvedené časové rozsahy odpovídají katalogům při kontrole 2. listopadu 2026.
             </p>
             <p className="article-data-item__links">
               <SourceLink id="DOI_10_5067_txdhdj1jt0cg">ICESat-2 v4</SourceLink>{" "}·{" "}
@@ -379,7 +379,7 @@ export function ArcticSeaIceArticle() {
             <h3>Historické mapy a rekonstruované pokrytí</h3>
             <p>
               DMI zpřístupňuje letní mapy z let 1893–1956 včetně hlášených a odhadnutých okrajů. Databáze Walsh a kol.
-              skládá měsíční mapy od roku 1850 z historických zdrojů a od konce roku 1978 z družic. Součástí dat
+              skládá ve verzi 2 měsíční mapy pro roky 1850–2017 z historických zdrojů a od konce roku 1978 z družic. Součástí dat
               je kód původu každé hodnoty. Rozlišuje také doplnění chybějících míst podle jiných let s podobným
               rozložením ledu. Mapy tak umožňují sledovat historii i míru, v níž konkrétní výsledek závisí na rekonstrukci.
             </p>
@@ -607,7 +607,7 @@ export function ArcticSeaIceArticle() {
           Všechny zde použité odborné práce a metodické dokumenty mají veřejně dostupný plný text. U studií vede
           DOI na bibliografický záznam a samostatný odkaz v katalogu na celý text. Datové portály uvádějí verzi,
           pokrytí a podmínky stažení. Některá data NASA vyžadují bezplatné přihlášení Earthdata. Kontrola proběhla
-          3. října 2026. Zdroje tohoto článku nepoužívají archivní kopie na Google Drive.
+          2. listopadu 2026. Zdroje tohoto článku nepoužívají archivní kopie na Google Drive.
         </p>
         <div className="article-source-groups">
           <section>

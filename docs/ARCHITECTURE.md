@@ -162,7 +162,7 @@ sourceArchiveFiles případně doplní Drive ID neotevřeným archivovaným zdro
 `SourceCard` odvozuje tlačítka z polí záznamu:
 
 - `externalUrl` vede na DOI nebo původní zdroj;
-- `openAccessUrl` vede na veřejný plný text nebo veřejná data;
+- `openAccessUrl` vede na veřejný plný text nebo veřejná data; odkaz pouze na metadata musí mít přesný popisek přes `openAccessLinkLabel` podle `docs/SOURCES-AND-ARCHIVE.md`;
 - `driveFileId` přidá otevření a stažení archivní kopie;
 - `archiveRelation` rozliší kopii samotného zdroje od souvisejícího materiálu;
 - `category` určuje barevnou kategorii, nikoliv odbornou důležitost.
