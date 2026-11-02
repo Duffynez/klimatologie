@@ -1,15 +1,16 @@
 import Link from "next/link";
 import { HypothesisDiagram, type MechanismHypothesis } from "./HypothesisDiagram";
 import { SourceLink } from "./SourceLink";
+import { MechanismFigure } from "./MechanismFigure";
 import styles from "./GreenhouseRadiationArticle.module.css";
 
 const hypotheses: readonly MechanismHypothesis[] = [
   {
     id: "nasyceni",
     name: "Účinek CO₂ je už téměř nasycený",
-    prediction: "Po oddělení změn teploty a vlhkosti má další CO₂ měnit tepelné záření jen nepatrně. Plyn už podle této představy pohlcuje téměř vše, co pohltit může.",
-    test: "Na dvou stanicích sledujeme záření při růstu CO₂. Pro každé měření vypočítáme vliv teploty, vodní páry a dalších plynů. Zjistíme, zda zbývá rostoucí příspěvek CO₂.",
-    observation: "V letech 2000–2010 rostl příspěvek CO₂ k záření na povrch na obou stanicích asi o 0,20 W/m² za deset let. Odhadované nejistoty byly ±0,06 a ±0,07.",
+    prediction: "Po oddělení vlivu teploty a vlhkosti má další CO₂ měnit záření jen nepatrně.",
+    test: "Na dvou stanicích změříme spektrum a výpočtem oddělíme příspěvek rostoucího CO₂.",
+    observation: "Roky 2000–2010: příspěvek rostl o 0,20 W/m² za deset let, s nejistotami ±0,06 a ±0,07.",
     verdict: "Pro celou atmosféru nestačí",
     explanation: "Nasycení části spektra nevysvětlí naměřený přírůstek účinku CO₂.",
     state: "insufficient",
@@ -17,9 +18,9 @@ const hypotheses: readonly MechanismHypothesis[] = [
   {
     id: "promena-prenosu",
     name: "Další CO₂ mění přenos záření",
-    prediction: "Další CO₂ má zesilovat záření k povrchu a omezovat odchod záření v částech svého pásma. Tvar a velikost změny mají odpovídat výpočtu pro daný stav atmosféry.",
-    test: "Vypočtené spektrum, tedy rozdělení záření podle vlnové délky, porovnáme s pozemním měřením v Oklahomě a na Aljašce. V dalším testu porovnáme výpočet změn odcházejícího spektra s družicí.",
-    observation: "Výpočty odpovídaly pozemnímu spektru i jeho změnám. Družicový test za roky 2003–2021 navíc podpořil očekávané změny záření odcházejícího do vesmíru.",
+    prediction: "Další CO₂ zesiluje záření k povrchu a omezuje jeho odchod v částech svého pásma. Změna má vypočitatelný tvar i velikost.",
+    test: "Vypočtené rozdělení záření podle vlnové délky porovnáme s pozemními a družicovými měřeními.",
+    observation: "Výpočet odpovídal pozemním změnám v letech 2000–2010 i odcházejícímu spektru za roky 2003–2021.",
     verdict: "Obstála, dnes přijímaná",
     explanation: "Spojuje laboratorní fyziku, výpočty vrstev atmosféry a měření v přírodě.",
     state: "supported",
@@ -78,6 +79,12 @@ export function GreenhouseRadiationArticle() {
           sestavě způsobila jen malou změnu celkového pohlcování.{' '}
           <SourceLink id="DOI_10_1002_andp_19003081208">(Ångström 1900, s. 724)</SourceLink>
         </p>
+        <MechanismFigure name="pokus-nasyceni" height={235} sketch alt="Zahřátý zdroj vysílá záření skrz nádobu s plynem k detektoru. Za plynem je šipka slabší než před ním.">
+          V pokusu se mění množství plynu a sleduje se, kolik záření projde.
+          Tak lze zjistit, zda přidaný plyn ještě zesiluje pohlcování.
+          Vlastní schéma principu, nikoli rekonstrukce historického přístroje.{' '}
+          <SourceLink id="DOI_10_1002_andp_19003081208">(Ångström 1900, s. 724)</SourceLink>
+        </MechanismFigure>
         <p>
           Závěr rozšířil na atmosféru: při množstvích CO₂ blízkých tehdejšímu
           stavu se podle něj celková absorpce měnila jen málo. Další námitkou
@@ -206,10 +213,39 @@ export function GreenhouseRadiationArticle() {
           množství. Prosté oteplení vzduchu by mělo jiný spektrální průběh.{' '}
           <SourceLink id="DOI_10_1038_nature14240">(Feldman a kol. 2015, obr. 1–2)</SourceLink>
         </p>
+        <MechanismFigure name="aeri-test" sketch alt="Pozemní spektrometr přijímá infračervené záření oblohy. Balonová sonda zjišťuje průběh teploty a vlhkosti s výškou.">
+          Spektrometr měří záření oblohy. Údaje o teplotě a vlhkosti,
+          získané také balonovými sondami, umožňují vypočítat jejich vliv.
+          Tým doplnil koncentrace plynů a porovnal výpočet s měřením
+          za jasné oblohy. Vlastní schéma podle{' '}
+          <SourceLink id="DOI_10_1038_nature14240">Feldmana a kol. 2015, metod a rozšířeného obr. 1</SourceLink>.
+        </MechanismFigure>
         <p>
-          Zastoupení CO₂ vyjadřujeme v ppm, tedy počtem jeho molekul
-          na milion molekul suchého vzduchu. Při růstu o 22 ppm
-          v letech 2000–2010 vyšel přírůstek jeho
+          Následující graf ukazuje test pro Oklahomu. Od měřeného záření
+          autoři odečetli výpočet, v němž se teplota a vlhkost měnily podle
+          skutečnosti, ale CO₂ zůstával na 370 ppm. Jednotka ppm znamená
+          počet molekul CO₂ na milion molekul suchého vzduchu.
+          Zbývající změnu porovnali s výpočtem, který navíc zahrnul růst CO₂.
+          Obě křivky se téměř překrývají: odpovídá velikost změny i její
+          rozložení mezi jednotlivými částmi spektra.{' '}
+          <SourceLink id="DOI_10_1038_nature14240">(Feldman a kol. 2015, obr. 2b–c)</SourceLink>
+        </p>
+        <MechanismFigure name="feldman-spektrum" width={760} height={450} mobileHeight={480}
+          alt="Spektrální trendy pro Oklahomu v letech 2000–2010. Měření po odečtení výpočtu se stálým CO₂ a vypočtený příspěvek jeho růstu mají podobné vrcholy, zejména kolem 600 a 730 až 770 cm⁻¹.">
+          Roční trendy pro jasnou oblohu, Oklahoma 2000–2010.
+          Vlnočet je převrácená vlnová délka, vyšší číslo znamená kratší vlny.
+          Svislá osa vyjadřuje změnu záření v úzké části spektra a v daném směru
+          za deset let. Jednotkou je mW m⁻² sr⁻¹ (cm⁻¹)⁻¹ za deset let,
+          sr označuje steradián, jednotku prostorového úhlu.
+          Rezavé značky ukazují kanály, kde je měřený trend odlišný od nuly
+          na úrovni tří směrodatných odchylek.
+          Překresleno bez vyhlazení z{' '}
+          <SourceLink id="DATA_FELDMAN_2015_FIGURE2">veřejných dat k obr. 2</SourceLink>.
+        </MechanismFigure>
+        <p>
+          Autoři pak změnu sečetli přes sledované pásmo a pomocí výpočtu
+          přenosu záření ji převedli na tok k povrchu. Při růstu koncentrace CO₂ o 22 ppm
+          v letech 2000–2010 vyšel přírůstek
           příspěvku k záření na povrch přibližně 0,20 W/m² za deset let.
           Publikované nejistoty trendu byly ±0,06 v Oklahomě a ±0,07
           na Aljašce. Shoda v teplém i studeném prostředí podpořila
@@ -316,6 +352,13 @@ export function GreenhouseRadiationArticle() {
           V neprůhlednějších částech spektra více přispívá atmosféra.{' '}
           <SourceLink id="DOI_10_1063_1_3653855">(Pierrehumbert 2011, obr. 1 a 3)</SourceLink>
         </p>
+        <MechanismFigure name="vrstvy-atmosfery" height={355} sketch alt="Čtyři šipky začínají u povrchu a ve třech různých vrstvách atmosféry. Při průchodu vyššími vrstvami se zeslabují. Do vesmíru tak přispívá záření z více výšek.">
+          Každá šipka začíná tam, kde záření vzniklo, a slábne při průchodu
+          dalšími vrstvami. Jejich součet tvoří záření mířící do vesmíru.
+          Vrstvy vyzařují také dolů, obrázek sleduje jen směr vzhůru.
+          Šířky šipek jsou ilustrační. Vlastní schéma inspirované{' '}
+          <SourceLink id="DOI_10_1063_1_3653855">Pierrehumbertem 2011, obr. 1</SourceLink>.
+        </MechanismFigure>
         <p>
           Přidání CO₂ zvyšuje neprůhlednost jeho pásma. V jeho částech,
           kde záření do vesmíru přichází hlavně z troposféry, se příspěvek
@@ -445,6 +488,14 @@ export function GreenhouseRadiationArticle() {
               <li><SourceLink id="DOI_10_1017_9781009157896_009">IPCC AR6, kapitola 7</SourceLink>: současné hodnocení radiačního působení a zpětných vazeb.</li>
               <li><SourceLink id="2016_Harvey_Analytical_Chemistry">Harvey, Analytical Chemistry 2.1</SourceLink>: vztah pro vlastní číselnou ilustraci, oddíl 10.2. Pro dvě vrstvy je celkový pohlcený podíl jedna minus součin jejich propustností.</li>
               <li><SourceLink id="2016_OpenStax_University_Physics_2">University Physics 2</SourceLink>, oddíl 1.6, a <SourceLink id="WEB_NASA_Earth_Energy_Budget">NASA: energetická bilance</SourceLink>: tepelné vyzařování a energetická bilance Země.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Podklady obrázků a spektrálního grafu</h3>
+            <ul>
+              <li><SourceLink id="DATA_FELDMAN_2015_FIGURE2">Feldman a kol. 2015, data k obrázku 2</SourceLink>: původní číselný soubor vydavatele. Graf používá roční trendy stanice v Oklahomě, panely 2b a 2c.</li>
+              <li><a href="/media/mechanismy-vizualni/feldman-sgp-spektrum.csv" download>Hodnoty křivek v CSV</a>, <a href="/media/mechanismy-vizualni/feldman-provenance.json">přesný výběr vstupních dat</a> a <a href="/media/mechanismy-vizualni/generate_figures.py" download>reprodukční skript</a>. Graf zobrazuje rozsah 520–800 cm⁻¹, CSV uchovává všech 2 592 kanálů.</li>
+              <li><a href="/media/mechanismy-vizualni/README.txt">Podklady a licence schémat</a>: vlastní grafika Klimatologie.eu, CC BY 4.0. Podmínky původních pramenů zůstávají samostatné.</li>
             </ul>
           </section>
           <section>

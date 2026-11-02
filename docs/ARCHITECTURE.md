@@ -90,6 +90,8 @@ Titrace a coulometrie mají samostatné položky `/metody/titrace/` a `/metody/c
 
 Úvodní diagram hotových mechanismů sjednocuje `HypothesisDiagram.tsx` a jeho CSS modul. Společná komponenta obsahuje návod, sémantický seznam hypotéz a čtyři kroky každé větve. Článková komponenta `EnergyHypothesisDiagram.tsx` dodává konkrétní obsah, podmínky a kotvy pro energetickou bilanci. Diagram funguje bez klientského JavaScriptu, rozložení přizpůsobuje CSS.
 
+Fyzikální schémata a grafy v obou článcích zobrazuje `MechanismFigure.tsx` s vlastním CSS modulem. Krátká schémata mají na široké obrazovce popisek vedle obrázku. Datové grafy používají přes `<picture>` samostatnou mobilní variantu. Podklady, licence, převod zdrojových dat a reprodukční skript jsou v `public/media/mechanismy-vizualni/README.txt`. Spektrální graf čerpá přímo z vydavatelského XLSX k Feldmanovi 2015. Graf přirozeného kolísání přepisuje publikované souhrnné odhady Raghuramana 2021.
+
 `app/data/mechanisms.ts` obsahuje 23 témat v pěti skupinách. Dva plné články mají komponenty `EarthEnergyBalanceArticle.tsx` a `GreenhouseRadiationArticle.tsx`, připojené v `app/mechanismy/[slug]/page.tsx`. Ostatních 21 témat zatím ukazuje vymezení a rozlišující důkazy z katalogu. Další plné články vyžadují stejnou ruční vazbu komponenty a routy jako u metod.
 
 Rozcestník `/mechanismy/` používá stejnou podobu tematických skupin a dlaždic jako metody. Každá dlaždice obsahuje číslo, otázku a stručný popis `cardSummary`. Všechna témata mají stejnou podobu bez rozlišení stavu zpracování. Delší `summary` a rozlišující důkazy zůstávají v datovém katalogu pro detailní stránky.
@@ -195,7 +197,7 @@ Filtrování nemění databázi ani URL a nic neodesílá na server.
 
 ## 10. Vzhled a média
 
-Projekt používá jeden globální soubor `app/globals.css`. Neexistuje samostatná komponentová knihovna ani CSS moduly. Název třídy proto může ovlivnit více stránek a po změně stylu je potřeba zkontrolovat všechny dotčené typy obrazovek.
+Společné styly jsou v `app/globals.css`, některé článkové komponenty a diagramy mají vlastní CSS moduly. Globální třída může ovlivnit více stránek a po její změně je potřeba zkontrolovat všechny dotčené typy obrazovek.
 
 Veřejná média jsou v `public`. Cesta `/media/sea-level/graf.png` odpovídá souboru `public/media/sea-level/graf.png`. Média jsou verzována spolu s webem a musí mít v článku popis, zdroj a oprávnění k použití podle redakčního standardu.
 

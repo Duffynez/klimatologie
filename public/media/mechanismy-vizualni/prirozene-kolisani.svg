@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="260" viewBox="0 0 400 260" role="img" aria-labelledby="title">
+<title id="title">Oceán a atmosféra si vyměňují teplo a mění oblačnost</title>
+<defs>
+ <marker id="red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="3" markerHeight="3" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#b85c43"/></marker>
+ <marker id="gold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="3" markerHeight="3" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#b98c26"/></marker>
+ <marker id="sea" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="3" markerHeight="3" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#1d716b"/></marker>
+</defs>
+<rect width="400" height="260" fill="#f6f6f1"/>
+<g font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#153235">
+<path d="M15 143Q45 135 75 143T135 143T195 143T255 143T315 143T385 143V240H15Z" fill="#c9e2e4"/>
+<text x="25" y="38">Atmosféra</text><text x="25" y="222">Oceán</text>
+<path d="M110 179C60 106 110 65 170 88" fill="none" stroke="#b85c43" stroke-width="7" marker-end="url(#red)"/>
+<path d="M210 84C270 107 246 176 180 185" fill="none" stroke="#1d716b" stroke-width="7" marker-end="url(#sea)"/>
+<g fill="#fff" stroke="#a8bdbb" stroke-width="2"><path d="M267 94C249 93 248 72 263 68C260 47 283 39 296 53C310 32 338 43 337 61C359 60 368 84 349 94Z"/></g>
+<path d="M344 23l-34 36 48 -8" fill="none" stroke="#b98c26" stroke-width="4" marker-end="url(#gold)"/></g>
+</svg>

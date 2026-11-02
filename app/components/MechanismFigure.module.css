@@ -1,0 +1,11 @@
+.figure { padding: 20px; background: #fff; border: 1px solid var(--line); }
+.figure picture { display: block; min-width: 0; }
+.image { display: block; width: 100%; height: auto; }
+.figure figcaption { margin-top: 18px; }
+.sketch { display: grid; grid-template-columns: minmax(0, 400px) minmax(0, 1fr); align-items: center; gap: 28px; }
+.sketch figcaption { margin: 0; }
+@media (max-width: 700px) {
+  .figure { padding: 12px; }
+  .sketch { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .sketch picture { width: 100%; max-width: 400px; margin: 0 auto; }
+}

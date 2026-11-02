@@ -4024,6 +4024,12 @@ test("publishes the greenhouse mechanism with two linked stories and open eviden
   const html = await readFile(new URL(`dist/client${path}/index.html`, root), "utf8");
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body, "Publish a full article rather than the catalogue placeholder");
+  for (const name of ["pokus-nasyceni", "aeri-test", "feldman-spektrum", "vrstvy-atmosfery"]) {
+    assert.ok(body.includes(`id="obrazek-${name}"`), "Missing explanatory visual " + name);
+    assert.match(await readFile(new URL(`dist/client/media/mechanismy-vizualni/${name}.svg`, root), "utf8"), /<svg\b/);
+  }
+  assert.match(body, /feldman-spektrum-mobil\.svg/);
+  assert.match(body, /DATA_FELDMAN_2015_FIGURE2/);
   assert.doesNotMatch(html, /class="mechanism-detail-evidence"/);
   const sections = [...body.matchAll(/<h2 id="([^"]+)"/g)].map(m => m[1]);
   assert.deepEqual(sections, ["co-vysvetlujeme", "hypotezy", "pribehy", "mechanismus", "shrnuti", "prameny"]);
@@ -4055,6 +4061,10 @@ test("publishes the greenhouse mechanism with two linked stories and open eviden
   const ids = [...body.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
   assert.equal(ids.length, new Set(ids).size);
   for (const [, target, anchor] of body.matchAll(/href="(\/[^"#]*)(?:#([^"]*))?"/g)) {
+    if (/\.[a-z0-9]+$/i.test(target)) {
+      assert.ok((await readFile(new URL("dist/client" + target, root))).length, "Missing downloadable evidence " + target);
+      continue;
+    }
     const targetHtml = await readFile(new URL("dist/client" + target.replace(/\/$/, "") + "/index.html", root), "utf8");
     if (anchor) assert.ok(targetHtml.includes(`id="${anchor}"`), "Missing target " + target + "#" + anchor);
   }
@@ -4072,6 +4082,11 @@ test("publishes the full energy-balance mechanism with evidence, sources and ret
   const tile = catalogue.match(/<a[^>]+href="\/mechanismy\/energeticka-bilance-zeme\/?"[\s\S]*?<\/a>/)?.[0];
   assert.ok(tile?.includes(`<h3>${title}</h3>`), "Keep the catalogue and article title consistent");
   assert.match(html, /<article class="article-layout">/);
+  for (const name of ["slunecni-hypoteza", "prirozene-kolisani", "sklenikove-plyny", "prirozene-kolisani-test"]) {
+    assert.ok(html.includes(`id="obrazek-${name}"`), "Missing explanatory visual " + name);
+    assert.match(await readFile(new URL(`dist/client/media/mechanismy-vizualni/${name}.svg`, root), "utf8"), /<svg\b/);
+  }
+  assert.match(html, /prirozene-kolisani-test-mobil\.svg/);
   assert.doesNotMatch(html, /class="mechanism-detail-evidence"/);
   for (const anchor of ["co-vysvetlujeme", "toky-energie", "nerovnovaha-a-teplota", "vypocet-bilance", "predpovedi", "historie", "porovnani", "priciny", "nejistoty", "shrnuti", "prameny"]) {
     assert.ok(html.includes(`id="${anchor}"`), "Missing mechanism section " + anchor);
