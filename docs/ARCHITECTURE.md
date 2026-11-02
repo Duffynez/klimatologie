@@ -88,7 +88,7 @@ Titrace a coulometrie mají samostatné položky `/metody/titrace/` a `/metody/c
 
 ### Mechanismy
 
-Úvodní diagram hotových mechanismů sjednocuje `HypothesisDiagram.tsx` a jeho CSS modul. Společná komponenta obsahuje návod, sémantický seznam hypotéz a tři kroky každé větve. Článková komponenta `EnergyHypothesisDiagram.tsx` dodává konkrétní obsah, podmínky a kotvy pro energetickou bilanci. Diagram funguje bez klientského JavaScriptu, rozložení přizpůsobuje CSS.
+Úvodní diagram hotových mechanismů sjednocuje `HypothesisDiagram.tsx` a jeho CSS modul. Společná komponenta obsahuje návod, sémantický seznam hypotéz a čtyři kroky každé větve. Článková komponenta `EnergyHypothesisDiagram.tsx` dodává konkrétní obsah, podmínky a kotvy pro energetickou bilanci. Diagram funguje bez klientského JavaScriptu, rozložení přizpůsobuje CSS.
 
 `app/data/mechanisms.ts` obsahuje 23 témat v pěti skupinách. Plný článek má téma „Proč v klimatickém systému přibývá energie“: komponenta `EarthEnergyBalanceArticle.tsx` je připojená v `app/mechanismy/[slug]/page.tsx`. Ostatních 22 témat zatím ukazuje vymezení a rozlišující důkazy z katalogu. Další plné články vyžadují stejnou ruční vazbu komponenty a routy jako u metod. Tento článek je obousměrně propojený s pozorováním globální teploty, teploty stratosféry, koncentrace CO₂, obsahu tepla v oceánu a metodou měření radiačních toků. Zpětné odkazy v pozorováních jsou oddělené jako navazující vysvětlení. Článek si po změně názvu zachovává adresu `/mechanismy/energeticka-bilance-zeme/`.
 

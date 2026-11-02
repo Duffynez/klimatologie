@@ -24,13 +24,15 @@ Oddíl má jednotný nadpis „Tři hypotézy a jejich předpovědi“, při men
 
 Každá větev diagramu obsahuje:
 
-**Hypotéza → jedinečná předpověď → výsledek testů → dnešní hodnocení.**
+**Hypotéza → jedinečná předpověď → jak hypotézu testujeme → výsledek testů → dnešní hodnocení.**
 
 Do pole „Jedinečná předpověď“ píšeme konkrétní očekávání, které při uvedených podmínkách odlišuje tuto hypotézu od ostatních porovnávaných hypotéz. Obecný následek společný všem možnostem, například samotný ohřev, sem nepatří. Nestačí ani požadavek „musí vysvětlit pozorování“. Uvedeme, co konkrétně bychom měli naměřit, například jiné znaménko změny, časovou návaznost, rozložení nebo číselný rozsah.
 
 Jedinečnost posuzujeme vůči uvedeným alternativám, nikoli vůči každé myslitelné příčině. Pokud rozlišuje až kombinace znaků, ukážeme ji společně a řekneme, že rozhoduje jejich souběh. Kde rozhoduje velikost účinku, uvedeme očekávanou hodnotu či rozsah a podmínky. U statistické předpovědi uvedeme očekávané rozdělení či rozsah a podmínky, za kterých byl odvozen. Podmíněnou předpověď jedné varianty hypotézy nevydáváme za předpověď všech jejích variant. Předpověď a predikce označují totéž, proto je nedělíme do dvou opakujících se polí.
 
 Diagram předem ukáže, která hypotéza byla v daném testu falsifikována a která obstála. Rozliší také nedostatečné vysvětlení od vyvráceného a případný nerozhodný dílčí test podle hodnocení v části 3. Uvede rozhodující období či podmínku, aby se místní nebo časově omezený výsledek netvářil jako obecný verdikt. Jednotlivé větve odkážou na příslušné příběhy a jejich důkazy v článku. Výsledek vyjádříme textem, nejen barvou nebo symbolem.
+
+Pole „Jak hypotézu testujeme“ stručně popíše konkrétní zkoušku: co měříme nebo počítáme a s čím to porovnáváme, abychom ověřili uvedenou předpověď. Samotné jméno studie ani sdělení, že proběhl test, nestačí. Způsob zkoušky oddělíme od jejího zjištěného výsledku. Pokud diagram shrnuje více různých testů, stručně rozlišíme jejich postupy a zachováme stejnou návaznost v poli výsledků. Podrobnosti a zdroje patří do navazujícího příběhu.
 
 Diagram slouží jako stručná orientace před četbou. Používá srozumitelná pojmenování, která následný výklad rozvine, a nenahrazuje vysvětlení důvodů závěru. Pořadí hypotéz a jejich pojmenování zachováme i v navazujícím textu.
 

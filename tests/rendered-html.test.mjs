@@ -4043,7 +4043,7 @@ test("publishes the full energy-balance mechanism with evidence, sources and ret
   const diagramIntroduction = mechanismBody.slice(mechanismBody.indexOf('<h2 id="priciny"'), mechanismBody.indexOf(diagram));
   assert.match(diagramIntroduction, /<p[^>]*>Diagram ukazuje/,
     "Explain how to read the diagram immediately below its heading");
-  for (const label of ["Jedinečná předpověď", "Výsledek testů", "Dnešní hodnocení"]) {
+  for (const label of ["Jedinečná předpověď", "Jak hypotézu testujeme", "Výsledek testů", "Dnešní hodnocení"]) {
     assert.equal([...diagram.matchAll(new RegExp(`<dt>${label}</dt>`, "g"))].length, 3,
       "Keep the shared diagram fields consistent for every hypothesis");
   }

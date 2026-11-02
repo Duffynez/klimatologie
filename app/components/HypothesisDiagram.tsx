@@ -5,6 +5,7 @@ export type MechanismHypothesis = {
   id: string;
   name: string;
   prediction: string;
+  test: string;
   observation: string;
   verdict: string;
   explanation: string;
@@ -27,7 +28,8 @@ export function HypothesisDiagram({ hypotheses, captionId, caption, context }: P
     <>
       <p className={styles.guide}>
         Diagram ukazuje, co bychom měli naměřit, kdyby jednotlivé hypotézy byly správné.
-        Čteme jej od jedinečné předpovědi přes výsledek testů k dnešnímu hodnocení.
+        Čteme jej od jedinečné předpovědi přes způsob jejího testování a výsledek
+        k dnešnímu hodnocení. U testu uvádíme, co měříme nebo s čím výsledek porovnáváme.
         Jedinečná předpověď odlišuje hypotézu od ostatních zde porovnávaných možností.
         Někdy rozhoduje až souběh několika znaků. Název hypotézy odkazuje na příběh
         jejího zkoumání a důkazy.
@@ -46,6 +48,10 @@ export function HypothesisDiagram({ hypotheses, captionId, caption, context }: P
                 <div className={styles.step}>
                   <dt>Jedinečná předpověď</dt>
                   <dd>{hypothesis.prediction}</dd>
+                </div>
+                <div className={styles.step}>
+                  <dt>Jak hypotézu testujeme</dt>
+                  <dd>{hypothesis.test}</dd>
                 </div>
                 <div className={styles.step}>
                   <dt>Výsledek testů</dt>
