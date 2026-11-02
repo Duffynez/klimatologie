@@ -832,7 +832,7 @@ test("publishes the global surface temperature article instead of the generic pl
   assert.match(sourceCatalogueText, /10\.1175\/BAMS-D-24-0012\.1/);
   assert.match(sourceCatalogueText, /10\.1029\/2023JD040179/);
   assert.match(sourceCatalogueText, /10\.5194\/essd-12-3469-2020/);
-  assert.match(sourceCatalogueText, /giss\.nasa\.gov\/pubs\/abs\/ha00700d\.html/);
+  assert.match(sourceCatalogueText, /giss\.nasa\.gov\/pubs\/docs\/1987\/1987_Hansen_ha00700d\.pdf/);
   assert.match(sourceCatalogueText, /metoffice\.gov\.uk\/hadobs\/hadcrut3\/HadCRUT3_accepted\.pdf/);
   assert.match(sourceCatalogueText, /repository\.library\.noaa\.gov\/view\/noaa\/66587/);
   assert.doesNotMatch(article, /DOI_10_1002_qj_49708737102|DOI_10_1038_322430a0|DOI_10_1029_94jd00548/);

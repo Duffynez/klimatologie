@@ -15,6 +15,7 @@ export type Source = {
   title: string;
   author: string;
   year: number;
+  yearLabel?: string;
   publication: string;
   category: SourceCategory;
   type: string;
@@ -22,6 +23,7 @@ export type Source = {
   archiveRelation?: "source-copy" | "related-material";
   availability?: "open-access" | "archived";
   externalUrl?: string;
+  externalLinkLabel?: string;
   openAccessUrl?: string;
   citationLabel?: string;
   topics: string[];

@@ -13,7 +13,7 @@ export function SourceLink({ id, children }: { id: string; children: ReactNode }
     <Link
       className={`article-reference article-reference--${source.category}`}
       href={`/zdroje#${source.id}`}
-      title={`${source.author} (${source.year}): ${source.title}`}
+      title={`${source.author} (${source.yearLabel ?? source.year}): ${source.title}`}
     >
       {children}
     </Link>

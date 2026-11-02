@@ -31,7 +31,9 @@ Volitelná pole:
 
 | Pole | Význam |
 | --- | --- |
+| `yearLabel` | Viditelné označení data, pokud `year` slouží jen k řazení podle roku přístupu. U nedatovaného webu například `přístup 2026`, nikoli domnělý rok vydání. |
 | `externalUrl` | DOI nebo původní autoritativní stránka. |
+| `externalLinkLabel` | Upřesnění tlačítka původního odkazu, například upozornění na dočasnou údržbu jeho webu. |
 | `openAccessUrl` | Přímý veřejný plný text nebo veřejná data, pokud se liší od původního odkazu. |
 | `availability` | `open-access` nebo `archived`. |
 | `driveFileId` | ID legálně sdílené archivní kopie na Google Drivu. |
@@ -95,7 +97,7 @@ Při přidání zdroje nestačí přidat klíč do mapy. Je nutné odkaz skuteč
 | --- | --- |
 | DOI v `externalUrl` | Otevřít DOI |
 | Jiný veřejný `externalUrl` | Otevřít veřejný nebo původní zdroj |
-| Rozdílný `openAccessUrl` | Otevřít plný text nebo veřejná data |
+| Rozdílný `openAccessUrl` | Otevřít plný text, veřejná data nebo fotografii či obrázek podle typu zdroje |
 | `driveFileId` | Otevřít kopii na Google Drive |
 | `driveFileId` | Stáhnout kopii |
 | `archiveRelation: related-material` | Text tlačítka výslovně říká, že jde o související soubor |

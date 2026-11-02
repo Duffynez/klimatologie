@@ -134,6 +134,8 @@ Produkce nemůže spoléhat na běžící Node server. Proto:
 
 ## 7. Nasazení na GitHub Pages
 
+Pokyn uživatele k opravě v tomto projektu zahrnuje také commit souvisejících změn, push do `main`, nasazení a ověření na veřejném webu. Není třeba znovu žádat o svolení k nasazení. Pokud uživatel v zadání výslovně omezí práci na místní změny nebo kontrolu bez úprav, respektujte toto omezení.
+
 Workflow `.github/workflows/deploy-pages.yml` se spouští:
 
 - automaticky po pushi do `main`;

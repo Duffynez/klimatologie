@@ -270,13 +270,15 @@ export function StratosphericCoolingArticle() {
 
         <p>
           Měření nepotřebuje klasickou teplotní kalibraci a funguje za oblačnosti. Jeden zákryt poskytne jemně
-          rozlišený profil, zatímco měsíční klimatický produkt spojuje tisíce profilů z několika družic. Současný
-          soubor COSMIC Data Analysis and Archive Center (CDAAC) začíná v březnu 2002, nabízí teplotu mezi 10 a
+          rozlišený profil, zatímco měsíční klimatický produkt spojuje tisíce profilů z několika družic.{" "}
+          <SourceLink id="DOI_10_5194_amt_13_3081_2020">Gleisner et al., 2020</SourceLink>
+        </p>
+        <p>
+          Současný soubor COSMIC Data Analysis and Archive Center (CDAAC) začíná v březnu 2002, nabízí teplotu mezi 10 a
           40 kilometry na výškovém kroku 200 metrů a ukládá ji v zeměpisné mřížce 5° × 10°.{" "}
           <SourceLink id="WEB_University_Corporation_for_A_RO_Climate_Data_Record_Constellation_Observing_S_03516764">
             klimatický soubor CDAAC
-          </SourceLink>{" "}
-          a <SourceLink id="DOI_10_5194_amt_13_3081_2020">Gleisner et al., 2020</SourceLink>
+          </SourceLink>
         </p>
 
         <h2>Jak vzniká zveřejněný záznam</h2>
@@ -310,8 +312,9 @@ export function StratosphericCoolingArticle() {
         <h3>3. Z vybraných stanic se vytvoří velkoplošný průměr</h3>
         <p>
           RATPAC-A používá 85 dlouhých pevninských záznamů. Pro období 1958–1995 vychází z dříve opravených
-          měsíčních hodnot. Od roku 1996 nejprve počítá rozdíl mezi sousedními měsíci u jednotlivých stanic,
-          teprve potom tyto rozdíly spojuje do velkých zeměpisných oblastí a z nich obnoví dlouhodobý průběh.
+          měsíčních hodnot. Od roku 1996 nejprve u jednotlivých stanic počítá změnu mezi stejným kalendářním
+          měsícem ve dvou sousedních letech, například mezi lednem 1996 a lednem 1997. Teprve potom tyto změny
+          spojuje do velkých zeměpisných oblastí a jejich postupným sčítáním obnoví dlouhodobý průběh.
           Postup omezuje vliv skoků a mezer, zároveň však přidává nejistotu tam, kde je stanic málo.{" "}
           <SourceLink id="DOI_10_1175_jcli3198_1">Free et al., 2004</SourceLink> a{" "}
           <SourceLink id="WEB_NOAA_Radiosonde_Atmospheric_Temperature_Products_for_d1952dde">
@@ -439,14 +442,15 @@ export function StratosphericCoolingArticle() {
             <p>
               Třetí pravidelně aktualizované zpracování společných mikrovlnných pozorování dolní stratosféry.
               University of Alabama in Huntsville, v grafech UAH, zveřejňuje globální a regionální měsíční
-              hodnoty i mřížková data od prosince 1978.
+              hodnoty i mřížková data od prosince 1978. Odkaz na současná data vede přímo k TLS v6.1.
+              Samostatný katalog NASA označuje verzi 6 a připojená metodika z roku 2017 popisuje v6.0.
             </p>
             <p className="article-data-item__links">
-              <SourceLink id="WEB_nsstc_uah_edu_Index_of_data_msu_9b9f4900">Data UAH</SourceLink>
+              <SourceLink id="WEB_nsstc_uah_edu_Index_of_data_msu_9b9f4900">Data TLS v6.1</SourceLink>
               {" · "}
-              <SourceLink id="DOI_10_5067_ghrc_amsu_a_data401">DOI dat</SourceLink>
+              <SourceLink id="DOI_10_5067_ghrc_amsu_a_data401">Záznam NASA pro verzi 6</SourceLink>
               {" · "}
-              <SourceLink id="WEB_NASA_UAH_Mean_Layer_Temperature_ATBD_2017">Metodická dokumentace</SourceLink>
+              <SourceLink id="WEB_NASA_UAH_Mean_Layer_Temperature_ATBD_2017">Metodika v6.0 (2017)</SourceLink>
             </p>
           </section>
 
@@ -454,9 +458,10 @@ export function StratosphericCoolingArticle() {
             <h3>NOAA SSU+AMSU v3.0 a NCAR SSU+MLS</h3>
             <p>
               Dva způsoby pokračování měření střední a horní stratosféry po skončení SSU. NOAA napodobuje tři
-              původní kanály kombinací měření AMSU-A. NCAR váží podrobné profily MLS stejnými funkcemi SSU.
-              Produkty pokrývají přibližně 20–55 kilometrů a dovolují porovnat dvě nezávislé návaznosti po roce
-              2004.
+              původní kanály kombinací měření AMSU-A a současná distribuce zahrnuje také měření ATMS.
+              NCAR váží podrobné profily MLS stejnými funkcemi SSU. Produkty pokrývají přibližně 20–55 kilometrů
+              a dovolují porovnat dvě nezávislé návaznosti po roce 2004. Ve veřejném adresáři NOAA jsou při
+              kontrole 2. listopadu 2026 dostupná měsíční data od listopadu 1978 do května 2025.
             </p>
             <p className="article-data-item__links">
               <SourceLink id="WEB_NOAA_Center_for_Satellite_Applications_and_Research_N_aabcb47e">
@@ -481,8 +486,6 @@ export function StratosphericCoolingArticle() {
               <SourceLink id="WEB_University_Corporation_for_A_RO_Climate_Data_Record_Constellation_Observing_S_03516764">
                 Popis a stažení dat
               </SourceLink>
-              {" · "}
-              <SourceLink id="DOI_10_5194_amt_13_3081_2020">Vyhodnocení dat</SourceLink>
             </p>
           </section>
         </div>
@@ -688,7 +691,7 @@ export function StratosphericCoolingArticle() {
               <li>
                 Durre, I. et al. (2018):{" "}
                 <SourceLink id="DOI_10_1175_jtech_d_17_0223_1">
-                  Overview of the Integrated Global Radiosonde Archive Version 2
+                  Enhancing the Data Coverage in the Integrated Global Radiosonde Archive
                 </SourceLink>
                 .
               </li>
@@ -870,7 +873,7 @@ export function StratosphericCoolingArticle() {
               <li>
                 <SourceLink id="WEB_nsstc_uah_edu_Index_of_data_msu_9b9f4900">UAH TLS v6.1</SourceLink>: textové a
                 mřížkové soubory dolní stratosféry. Samostatně je uveden také{" "}
-                <SourceLink id="DOI_10_5067_ghrc_amsu_a_data401">záznam dat v NASA GHRC DAAC</SourceLink>.
+                <SourceLink id="DOI_10_5067_ghrc_amsu_a_data401">záznam verze 6 v NASA GHRC DAAC</SourceLink>.
               </li>
               <li>
                 <SourceLink id="WEB_NOAA_Center_for_Satellite_Applications_and_Research_N_aabcb47e">

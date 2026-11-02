@@ -167,7 +167,7 @@ export function GmstArticle() {
             Vypouštění driftující bóje z lodi Bark Europa u Jižní Afriky. Bóje měří teplotu vody několik
             centimetrů pod hladinou a data odesílá družicí. Foto: NOAA/AOML, nezměněný materiál NOAA.{" "}
             <SourceLink id="WEB_NOAA_raquo_NOAA_s_Array_of_Drifting_Ocean_Buoys_90005d3e">
-              Původní fotografie a popis přístroje
+              Fotografie a údaje o původu
             </SourceLink>
           </figcaption>
         </figure>
@@ -678,7 +678,7 @@ export function GmstArticle() {
               <li>
                 Fotografie bóje: NOAA/AOML.{" "}
                 <SourceLink id="WEB_NOAA_raquo_NOAA_s_Array_of_Drifting_Ocean_Buoys_90005d3e">
-                  Původní stránka
+                  Fotografie a kredit
                 </SourceLink>
                 . Neoznačené fotografie NOAA jsou materiálem veřejné domény. Kredit NOAA/AOML je zachován.{" "}
                 <SourceLink id="WEB_NOAA_NOAA_s_National_Ocean_Service_About_Us_4ba21b52">podmínky NOAA</SourceLink>.
