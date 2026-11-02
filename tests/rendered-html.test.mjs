@@ -924,7 +924,7 @@ test("publishes a sourced ocean heat content article instead of the generic plac
   assert.match(article, /21,6 ± 6,5 terawattu/);
   assert.match(article, /12,9 ± 1,8 terawattu/);
   assert.match(article, /18,6 milionu profilů vodního sloupce/);
-  assert.match(article, /Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez/);
+  assert.match(article, /K odborným pracím uvádíme veřejný plný text bez předplatného/);
   assert.match(article, /zdrojů tohoto článku nepoužívají/);
   assert.doesNotMatch(
     `${article}\n${sourceCatalogueText}`,
@@ -933,7 +933,7 @@ test("publishes a sourced ocean heat content article instead of the generic plac
   const oceanHeatSourceIds = [
     ...article.matchAll(/<SourceLink id="([^"]+)"/g),
   ].map((match) => match[1]);
-  assert.equal(new Set(oceanHeatSourceIds).size, 35);
+  assert.equal(new Set(oceanHeatSourceIds).size, 36);
   for (const id of new Set(oceanHeatSourceIds)) {
     const catalogueOccurrences = sourceCatalogueText.split(id).length - 1;
     assert.ok(catalogueOccurrences >= 2, `${id} must exist and be marked as open access`);
@@ -1062,7 +1062,7 @@ test("publishes a sourced precipitation article with separate daily and sub-dail
 
   assert.match(evidencePage, /PrecipitationArticle/);
   assert.match(evidencePage, /title="Srážky a přívalové srážky"/);
-  assert.match(evidencePage, /meta="31\. října 2026"/);
+  assert.match(evidencePage, /title="Srážky a přívalové srážky"\s+meta="2\. listopadu 2026"/);
   assert.match(article, /Srážkový úhrn udává, jak vysoká vrstva vody dopadla/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
   assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
@@ -1081,12 +1081,12 @@ test("publishes a sourced precipitation article with separate daily and sub-dail
   assert.match(sourceCatalogueText, /10\.1007\/s00382-022-06567-9/);
   assert.match(sourceCatalogueText, /10\.3390\/atmos9040138/);
   assert.match(article, /Hellmann, 1897/);
-  assert.match(article, /Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez/);
+  assert.match(article, /K odborným pracím uvádíme veřejný plný text bez předplatného/);
   assert.match(article, /zdrojů tohoto článku nepoužívají/);
   assert.match(sourceCatalogueText, /assets-eu\.researchsquare\.com\/files\/rs-2023755/);
-  assert.match(sourceCatalogueText, /agupubs\.onlinelibrary\.wiley\.com\/doi\/10\.1029\/2019JD032263/);
+  assert.match(sourceCatalogueText, /repository\.library\.noaa\.gov\/view\/noaa\/46579\/noaa_46579_DS1\.pdf/);
   assert.match(sourceCatalogueText, /eprints\.ncl\.ac\.uk\/fulltext\.aspx/);
-  assert.match(sourceCatalogueText, /nature\.com\/articles\/s41597-023-02238-4\.pdf/);
+  assert.match(sourceCatalogueText, /292135%2f9E05C0D2-04D4-409C-B715-4516DC06E634\.pdf/);
   assert.match(sourceCatalogueText, /dspace\.library\.uvic\.ca\/bitstreams/);
   assert.match(sourceCatalogueText, /ueaeprints\.uea\.ac\.uk\/id\/eprint\/68099\/1\/Accepted_manuscript\.pdf/);
   assert.match(sourceCatalogueText, /repository\.library\.noaa\.gov\/view\/noaa\/25396\/noaa_25396_DS1\.pdf/);
@@ -3690,7 +3690,8 @@ test("time changes and extremes publish the full method, reproducible example an
   assert.deepEqual([...body.matchAll(/<h2\b[^>]*>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak rozpoznáváme změny v čase", "Nejistoty a ověření", "Příklad na denních teplotách z Blue Hill", "Shrnutí",
   ]);
-  for (const page of [html, heat, rain]) assert.match(page, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  for (const page of [html, heat]) assert.match(page, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  assert.match(rain, /<p class="page-lead__meta">2\. listopadu 2026<\/p>/);
   for (const observation of [heat, rain]) assert.match(observation, /href="\/metody\/analyza-casovych-zmen-a-extremu\/?(?:#[^"]+)?"/);
   for (const slug of ["vlny-veder", "srazky-a-privalove-srazky"]) assert.ok(hasArticleLink(body, "/pozorovani/" + slug));
   for (const text of ["23 376", "3.35-upd-2026102817", "15,8773", "84 dnů", "−0,09 až +0,25", "nejmenších čtverců", "oboustranný test", "není homogenizován"]) assert.ok(body.includes(text), text);

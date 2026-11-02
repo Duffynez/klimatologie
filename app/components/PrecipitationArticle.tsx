@@ -33,7 +33,7 @@ export function PrecipitationArticle() {
 
         <p>
           Globální denní přehledy běžně používají ukazatel Rx1day, tedy nejvyšší jednodenní úhrn každého roku. Hodinový
-          archiv GSDR-I obdobně zveřejňuje nejvyšší úhrn za 1, 3, 6, 12 a 24 hodin. Takto přesně vymezené údaje lze
+          soubor ukazatelů GSDR-I obdobně zveřejňuje nejvyšší úhrn za 1, 3, 6, 12 a 24 hodin. Takto přesně vymezené údaje lze
           porovnat mezi stanicemi a mezi roky. Samotné slovo „příval“ k tomu nestačí. <SourceLink id="DOI_10_1038_s41597_023_02238_4">Pritchard et al., 2023</SourceLink>
         </p>
 
@@ -79,8 +79,9 @@ export function PrecipitationArticle() {
         <h2>Jak se srážky měří</h2>
         <h3 id="srazkomery">Sběrný a váhový srážkoměr</h3>
         <p>
-          Sběrný srážkoměr zachytí vodu nálevkou se známou plochou a pozorovatel změří její objem. Denní úhrn vznikne
-          rozdílem mezi dvěma pravidelnými odečty. Váhový přístroj místo přelévání průběžně váží nádobu a změnu hmotnosti
+          Sběrný srážkoměr zachytí vodu nálevkou se známou plochou a pozorovatel změří její objem. Denní úhrn odpovídá
+          množství vody zachycené mezi dvěma pravidelnými odečty. Po změření se nádoba vyprázdní. Váhový přístroj
+          průběžně váží nádobu a změnu hmotnosti
           převádí na milimetry vody. Dokáže proto zaznamenat i průběh srážky a po vhodné úpravě také vodní hodnotu sněhu.
           Základní konstrukce, požadavky na umístění i zdroje chyb shrnuje <SourceLink id="WEB_World_Meteorological_Organiz_Guide_to_Instruments_and_Methods_of_Observation_93c4c4a4">WMO Guide No. 8, svazek I, kapitola 6</SourceLink>.
         </p>
@@ -275,8 +276,10 @@ export function PrecipitationArticle() {
             <h3>E-OBS 33.0e</h3>
             <p>
               Denní evropské mapy srážek od roku 1950 do konce roku 2025. Verze 33.0e byla vydána v květnu 2026.
-              Samostatně jsou dostupné i odvozené ukazatele extrémů. Nejlepší odhad doprovází ansámbl možných polí,
-              který zachycuje nejistotu vznikající při interpolaci mezi stanicemi. <SourceLink id="DOI_10_1029_2017jd028200">Cornes et al., 2018</SourceLink>
+              Samostatně jsou dostupné i odvozené ukazatele extrémů. Veřejně lze stáhnout střední odhad a šířku
+              90% rozmezí možných hodnot, které zachycuje nejistotu doplnění údajů mezi stanicemi. Jednotlivé
+              realizace souboru možných polí poskytují autoři na vyžádání. <SourceLink id="DOI_10_1029_2017jd028200">Cornes et al., 2018</SourceLink>{" "}
+              a <SourceLink id="WEB_Copernicus_E_OBS_data_access_94a6a7b1">podmínky přístupu k E-OBS</SourceLink>
             </p>
             <p className="article-data-item__links">
               <SourceLink id="WEB_Copernicus_E_OBS_data_access_94a6a7b1">Denní E-OBS</SourceLink>{" "}
@@ -288,7 +291,9 @@ export function PrecipitationArticle() {
             <h3>GSDR-I</h3>
             <p>
               Ukazatele vypočtené z hodinových měření 18 591 srážkoměrů. Po přísnější podmínce alespoň jednoho účinného
-              roku a méně než 20 % mezer zůstává 12 104 stanic. Dostupnost se v čase i prostoru výrazně mění.
+              roku a méně než 20 % mezer zůstává 12 104 stanic. Veřejný balík obsahuje ukazatele pro mřížku a pro
+              stanice, jejichž licence dovoluje sdílení. Původní hodinová měření nejsou všechna veřejná. Dostupnost
+              se v čase i prostoru výrazně mění.
             </p>
             <p className="article-data-item__links">
               <SourceLink id="DOI_10_5281_zenodo_7492812">Data na Zenodu</SourceLink>{" "}
@@ -306,7 +311,11 @@ export function PrecipitationArticle() {
             </p>
             <p className="article-data-item__links">
               <SourceLink id="WEB_NOAA_Precipitation_GPCP_Monthly_CDR_9894ca66">GPCP Monthly</SourceLink>{" "}
-              <SourceLink id="WEB_NASA_Precipitation_Data_Directory_NASA_Global_Precipi_b0971da5">Adresář dat IMERG</SourceLink>
+              <SourceLink id="WEB_NASA_Precipitation_Data_Directory_NASA_Global_Precipi_b0971da5">Adresář dat IMERG</SourceLink>{" "}
+              · <SourceLink id="DOI_10_5067_gpm_imerg_3b_hh_07">Katalog IMERG Final V07</SourceLink>
+            </p>
+            <p>
+              Katalog a dokumentace jsou veřejné. Stažení dat z NASA GES DISC vyžaduje bezplatný účet Earthdata.
             </p>
           </section>
         </div>
@@ -418,7 +427,7 @@ export function PrecipitationArticle() {
 
         <h2>Hodinové a několikahodinové srážky</h2>
         <p>
-          Krátké přívalové srážky vyžadují automatický záznam. GSDR-I shromáždil hodinová měření 18 591 stanic, ale jejich
+          Krátké přívalové srážky vyžadují automatický záznam. GSDR-I vychází z hodinových měření 18 591 stanic, ale jejich
           délka a úplnost jsou velmi nerovnoměrné. Dlouhé záznamy se soustřeďují do Evropy, Severní Ameriky, východní Asie
           a Austrálie. Velká část Afriky, Jižní Ameriky a Blízkého východu zůstává řídká. <SourceLink id="DOI_10_1038_s41597_023_02238_4">Pritchard et al., 2023</SourceLink>
         </p>
@@ -500,7 +509,7 @@ export function PrecipitationArticle() {
         <p>
           Dlouhé hodinové záznamy z Nizozemska, Hongkongu a rozsáhlejší australské sítě dokládají zesílení nejvyšších
           hodinových srážek v uvedených oblastech a obdobích. Globální hodinový archiv je podstatně kratší a prostorově
-          řidší než denní data. K 31. červenci 2026 proto umožňuje přesně popsat dostupnost a regionální změny, ale
+          řidší než denní data. Citované vydání GSDR-I z roku 2022 proto umožňuje popsat dostupnost a regionální změny, ale
           neposkytuje rovnocenně dlouhý globální trend přívalových srážek pro celý svět.
         </p>
 
@@ -519,9 +528,10 @@ export function PrecipitationArticle() {
 
         <h2>Prameny, data a licence</h2>
         <p>
-          Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez
-          předplatného. U odborné práce vede její záznam v databázi na DOI a samostatně na veřejný plný text a u dat a institucionálních dokumentů přímo na stránku vydavatele nebo do jeho repozitáře. Odkazy na Google Drive se u
-          zdrojů tohoto článku nepoužívají.
+          K odborným pracím uvádíme veřejný plný text bez předplatného. Pokud má práce DOI, odkazujeme i na něj. U studie Gu a Adlera je veřejnou
+          kopií autorský preprint z roku 2022. Data a metodické dokumenty odkazují přímo k poskytovatelům.
+          Jednotlivé realizace E-OBS jsou dostupné na žádost, stažení IMERG vyžaduje účet Earthdata a plné svazky
+          příručky WMO mohou vyžadovat ruční ověření návštěvníka. Odkazy na Google Drive se u zdrojů tohoto článku nepoužívají.
         </p>
         <div className="article-source-groups">
           <section>

@@ -55,7 +55,7 @@ export function OceanHeatArticle() {
 
         <h2>Historie měření</h2>
         <p>
-          Jedním z prvních systematických souborů s velkým geografickým rozsahem vznikl během expedice lodi HMS
+          Jeden z prvních systematických souborů s velkým geografickým rozsahem vznikl během expedice lodi HMS
           <em> Challenger</em>. Její posádka v letech 1873–1876 zapisovala teplotu hlubokého oceánu na jednotlivých
           stanicích a v různých hloubkách. Původní zpráva zachovává tabulky i popis těchto pozorování. Šlo o
           jednotlivé průřezy oceánem, nikoli o pravidelné globální sledování.{" "}
@@ -259,7 +259,7 @@ export function OceanHeatArticle() {
           <section className="article-data-item">
             <h3>Argo</h3>
             <p>
-              Profily teploty, tlaku a slanosti z autonomních plováků. Globální provoz začal v roce 1999,
+              Profily teploty, tlaku a slanosti z autonomních plováků. První regionální sítě vznikly v roce 1999,
               pravidelné pokrytí otevřeného oceánu je nejúplnější přibližně od roku 2005 a běžná měřicí hloubka
               dosahuje 2 000 metrů. K dispozici jsou rychlá provozní data i později zkontrolované verze.
             </p>
@@ -300,6 +300,12 @@ export function OceanHeatArticle() {
               <SourceLink id="DOI_10_5194_essd_16_3517_2024">
                 Metoda a vyhodnocení IAPv4
               </SourceLink>
+            </p>
+            <p>
+              Pro kontrolu globálních hodnot je dostupná také <SourceLink id="DATA_IAP_v42_Monthly_OHC_2026">textová
+              měsíční tabulka IAPv4.2</SourceLink>, aktualizovaná v lednu 2026. Používá jednotku 10²² J a referenční
+              období 2006–2015. Graf níže přebírá výpočet ze studie Pan a kol., 2026, s referencí 1981–2010.
+              Tabulka je samostatně aktualizovaný soubor a její hodnoty se od grafu liší i po sjednocení reference.
             </p>
           </section>
         </div>
@@ -405,7 +411,7 @@ export function OceanHeatArticle() {
 
         <p>
           Na začátku grafu, v roce 1958, leží roční hodnota přibližně 130 ZJ pod průměrem let 1981–2010. V roce
-          2025 přesahuje 300 ZJ nad tímto průměrem. Rozdíl mezi prvním a posledním rokem je tedy zhruba 460 ZJ.
+          2025 přesahuje 300 ZJ nad tímto průměrem. Rozdíl odečtený z publikovaného grafu je tedy zhruba 460 ZJ.
           Při stejném orientačním převodu to odpovídá zvýšení průměrné teploty vrstvy 0–2 000 metrů asi o 0,16 °C.
           Změna referenčního období by posunula všechny sloupce nahoru nebo dolů, tento rozdíl mezi roky by však
           zůstal stejný.
@@ -463,8 +469,9 @@ export function OceanHeatArticle() {
 
         <p>
           Voda pod 2 000 metry se sleduje jinou a řidší sítí. Hlavním zdrojem jsou opakované lodní profily až ke
-          dnu a novější plováky Deep Argo. Johnson a Purkey spojili obě měření a pro období přibližně mezi lety
-          1985 a 2015 vypočetli globální přírůstek 21,6 ± 6,5 terawattu ve vrstvě
+          dnu a novější plováky Deep Argo. Johnson a Purkey spojili obě měření a počítali trendy z místních záznamů,
+          jejichž délka se liší. Průměrné počáteční roky se podle hloubky pohybují mezi 1986 a 1989, koncové mezi
+          2015 a 2017. Z těchto trendů vypočetli globální přírůstek 21,6 ± 6,5 terawattu ve vrstvě
           2 000–4 000 metrů a 12,9 ± 1,8 terawattu mezi 4 000 a 6 000 metry. Terawatt zde vyjadřuje průměrnou
           rychlost přibývání tepla, nikoli jeho celkové množství. Mapy současně obsahují oblasti s ochlazením.
           Kladný je součet přes celý oceán. Tento výsledek je veden odděleně, protože má jiné období, pokrytí i
@@ -563,8 +570,8 @@ export function OceanHeatArticle() {
             v průměru 4,4 zettajoulu ročně na horní a 2,0 zettajoulu ročně na hlubší z těchto vrstev. Rok 2025 dosáhl
             nejvyšší hodnoty celého záznamu a proti roku 2024 přibylo přibližně 23 zettajoulů. Jednotlivé části oceánu
             se mění různými směry a rychlostmi, ale jejich globální součet roste. Kladná celková změna pokračuje také
-            pod hloubkou 2 000 metrů: přibližně mezi lety 1985 a 2015 činil součet
-            pro vrstvy 2–6 kilometrů přibližně 34,5 terawattu.
+            pod hloubkou 2 000 metrů. V rozboru místních záznamů s průměrnými počátky v letech 1986–1989 a konci
+            v letech 2015–2017 činil součet pro vrstvy 2–6 kilometrů přibližně 34,5 terawattu.
           </p>
         </div>
 
@@ -575,9 +582,10 @@ export function OceanHeatArticle() {
 
         <h2>Prameny, data a licence</h2>
         <p>
-          Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez
-          předplatného. U odborných prací vede databáze zvlášť na DOI a na veřejný plný text. Datové portály vedou
-          k původnímu poskytovateli. Záznamy zdrojů tohoto článku nepoužívají kopie na Google Drivu.
+          K odborným pracím uvádíme veřejný plný text bez předplatného. Pokud má práce DOI, odkazujeme i na něj. Datové portály vedou
+          k původnímu poskytovateli. U IAP lze pro kontrolu globálních hodnot použít přímo textovou tabulku,
+          zatímco úplné mřížkové soubory mají objem několika gigabajtů. Záznamy zdrojů tohoto článku nepoužívají
+          kopie na Google Drivu.
         </p>
         <div className="article-source-groups">
           <section>
