@@ -16,7 +16,7 @@ export function AtmosphericCo2Article() {
         <p>
           Charles David Keeling v roce 1957 popsal odběr venkovního vzduchu do skleněných baněk, oddělení CO₂ od
           ostatních plynů a jeho přesné manometrické stanovení. Ukázal přitom, že vzorky ovlivněné okolní vegetací
-          nebo městem mají jinou hodnotu než vzduch přicházející z volné atmosféry. O tři roky později zveřejnil
+          mají jinou hodnotu než vzduch přicházející z volné atmosféry. O tři roky později zveřejnil
           první souvislá pozorování z observatoře Mauna Loa a z jižního pólu. Právě spojení dobře zvoleného místa,
           opakovaného měření a referenčních plynů umožnilo oddělit místní výkyvy, pravidelné střídání během roku a
           změnu mezi jednotlivými roky.{" "}
@@ -35,7 +35,7 @@ export function AtmosphericCo2Article() {
           zveřejňuje místo, čas, použitou stupnici a příznaky kvality. Andrews a kol. podrobně popsali jednu část
           této sítě, měření na vysokých věžích, včetně přístrojů, kalibrace a rozpočtu nejistoty. Způsob výběru a
           zpracování globálního produktu NOAA je veřejný spolu s výslednými tabulkami.{" "}
-          <SourceLink id="WEB_NOAA_Carbon_Cycle_Greenhouse_Gases_NOAA_Global_Monito_611ed2c8">
+          <SourceLink id="WEB_NOAA_CCGG_Reference_Network">
             NOAA Global Greenhouse Gas Reference Network
           </SourceLink>,{" "}
           <SourceLink id="DOI_10_5194_amt_7_647_2014">Andrews et al., 2014</SourceLink> a{" "}
@@ -89,8 +89,8 @@ export function AtmosphericCo2Article() {
           Zásadní změnu přineslo spojení nedisperzního infračerveného analyzátoru s referenčními plyny, jejichž
           obsah CO₂ Keeling určoval manometricky. Přístroj mohl vzduch měřit opakovaně během dne a referenční plyn
           odhaloval posun jeho odezvy. Pravidelná měření začala na jižním pólu v roce 1957 a na Mauna Loa v březnu
-          1958. Keeling a kol. později popsali celý postup výběru stabilního okolního vzduchu, kalibraci i první
-          dvě desetiletí havajského záznamu.{" "}
+          1958. Keeling a kol. později popsali výběr stabilního okolního vzduchu, kalibraci a výsledky z Mauna Loa
+          za roky 1964–1971.{" "}
           <SourceLink id="DOI_10_1111_j_2153_3490_1976_tb00701_x">
             Keeling et al., 1976
           </SourceLink>
@@ -120,8 +120,9 @@ export function AtmosphericCo2Article() {
           letadla a vnitrozemské stanice. Vzorky z různých míst se analyzují vůči stejné kalibrační stupnici, takže
           se vedle změny v čase dá sledovat i prostorové rozložení.{" "}
           <SourceLink id="WEB_NOAA_Carbon_Cycle_Greenhouse_Gases_NOAA_Global_Monito_611ed2c8">
-            NOAA Global Greenhouse Gas Reference Network
-          </SourceLink>
+            NOAA: síť odběrů vzduchu do baněk
+          </SourceLink>{" "}
+          a <SourceLink id="WEB_NOAA_CCGG_InSitu_Observations">průběžná měření NOAA</SourceLink>
         </p>
 
         <p>
@@ -472,7 +473,7 @@ export function AtmosphericCo2Article() {
 
         <p>
           Také dva globální produkty mohou dát pro stejný rok odlišné číslo. NOAA uvádí pro rok 2024 hodnotu
-          422,79 ± 0,10 ppm, zatímco WMO z širší sítě stanic 423,9 ± 0,2 ppm. Rozdíl vzniká výběrem stanic,
+          422,79 ± 0,09 ppm ve verzi z října 2026, zatímco WMO z širší sítě stanic 423,9 ± 0,2 ppm. Rozdíl vzniká výběrem stanic,
           prostorovým výpočtem a přesným vymezením produktu. Pro změnu mezi roky je proto správné používat stále
           stejný produkt a uvést jeho verzi, místo aby se hodnoty z NOAA a WMO spojily do jednoho pokračování.{" "}
           <SourceLink id="WEB_NOAA_Trends_in_CO2_NOAA_Global_Monitoring_Laboratory_ff9ec92f">NOAA, globální data</SourceLink> a{" "}
@@ -483,17 +484,27 @@ export function AtmosphericCo2Article() {
 
         <h2 id="pozorovani">Pozorování</h2>
         <p>
+          Číselné údaje z přímých měření v tomto oddílu vycházejí z tabulek NOAA vytvořených 9. října 2026,
+          které jsme ověřili 2. listopadu 2026.
+        </p>
+        <p>
           Souvislé měření na Mauna Loa i globální výpočet z více povrchových stanic zaznamenávají v celém svém
           rozsahu růst atmosférického CO₂. Na Mauna Loa vzrostl roční průměr NOAA z 315,98 ± 0,12 ppm v roce 1959
           na 427,35 ± 0,12 ppm v roce 2025. Rozdíl činí 111,37 ppm, tedy přibližně 35 % výchozí hodnoty. Rok 1958
-          zde není vhodný pro stejný rozdíl, protože neobsahuje všech dvanáct měsíců.
+          zde není vhodný pro stejný rozdíl, protože neobsahuje všech dvanáct měsíců.{" "}
+          <SourceLink id="WEB_NOAA_Trends_in_CO2_NOAA_Global_Monitoring_Laboratory_8f52d95b">
+            NOAA: roční průměry na Mauna Loa
+          </SourceLink>
         </p>
 
         <p>
           Globální roční záznam NOAA začíná hodnotou 336,85 ± 0,10 ppm v roce 1979. Pro rok 2025 uvádí
-          425,64 ± 0,09 ppm, zatím jako předběžnou hodnotu. Rozdíl mezi těmito dvěma roky je 88,79 ppm. Nejnovější
-          zveřejněný měsíční globální průměr v době napsání článku je 428,55 ppm pro duben 2026. Měsíční číslo se
-          nesrovnává přímo s ročním průměrem.
+          425,62 ± 0,05 ppm, zatím jako předběžnou hodnotu. Rozdíl mezi těmito dvěma roky je 88,77 ppm.
+          Měsíční tabulka v této verzi končí červencem 2026 s globálním průměrem 426,10 ppm. Měsíční číslo se
+          nesrovnává přímo s ročním průměrem.{" "}
+          <SourceLink id="WEB_NOAA_Trends_in_CO2_NOAA_Global_Monitoring_Laboratory_ff9ec92f">
+            NOAA: globální roční a měsíční hodnoty
+          </SourceLink>
         </p>
 
         <p>
@@ -601,7 +612,7 @@ export function AtmosphericCo2Article() {
           <p>
             Koncentrace oxidu uhličitého na Mauna Loa vzrostla z 315,98 ppm v roce 1959 na 427,35 ppm v roce 2025.
             Přírůstek 111,37 ppm odpovídá přibližně 35 % hodnoty na začátku tohoto období. Globální povrchový průměr
-            se mezi roky 1979 a 2025 zvýšil z 336,85 na 425,64 ppm. Dlouhodobý růst je doprovázen pravidelným sezónním
+            se mezi roky 1979 a 2025 zvýšil z 336,85 na 425,62 ppm. Dlouhodobý růst je doprovázen pravidelným sezónním
             kolísáním a rozdíly mezi zeměpisnými šířkami. Během předchozích 800 000 let se koncentrace zachycená v
             antarktickém ledu pohybovala přibližně mezi 170 a 300 ppm. Globální průměr roku 2024 dosáhl 422,8 ppm a
             ležel nad celým tímto historickým rozsahem.
@@ -753,7 +764,7 @@ export function AtmosphericCo2Article() {
             <ul>
               <li><SourceLink id="DATA_AIRS_SPECTRAL_OLR">NASA: spektrální toky AIRS</SourceLink>. Veřejný produkt odvozený z družicových měření, stažení může vyžadovat bezplatný účet Earthdata.</li>
               <li>
-                NOAA GML: globální měsíční a roční CO₂, verze 6. července 2026.{" "}
+                NOAA GML: globální měsíční a roční CO₂, verze 2026-10, soubory vytvořené 9. října 2026.{" "}
                 <SourceLink id="WEB_NOAA_Trends_in_CO2_NOAA_Global_Monitoring_Laboratory_ff9ec92f">
                   Tabulky a metodika
                 </SourceLink>
@@ -767,6 +778,10 @@ export function AtmosphericCo2Article() {
                 <SourceLink id="WEB_scrippsco2_ucsd_edu_Mauna_Loa_Observatory_Hawaii_Scripps_CO2_4d2260fe">
                   Scripps
                 </SourceLink>
+              </li>
+              <li>
+                NOAA GML: <SourceLink id="WEB_NOAA_CCGG_Reference_Network">rozsah referenční sítě</SourceLink>
+                {" a "}<SourceLink id="WEB_NOAA_CCGG_InSitu_Observations">historie průběžných měření</SourceLink>.
               </li>
               <li>
                 NOAA GML: jednotlivá měření a sjednocené soubory ObsPack.{" "}

@@ -969,7 +969,7 @@ test("publishes a sourced atmospheric carbon dioxide article instead of the gene
   assert.match(article, /Jak vzniká zveřejněný záznam/);
   assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
   assert.match(article, /315,98 ± 0,12 ppm/);
-  assert.match(article, /425,64 ± 0,09 ppm/);
+  assert.match(article, /425,62 ± 0,05 ppm/);
   assert.match(article, /noaa-mauna-loa-co2-monthly\.png/);
   assert.match(article, /noaa-global-co2-monthly\.png/);
   assert.match(article, /noaa-co2-800000-years\.png/);
@@ -1007,7 +1007,7 @@ test("publishes a sourced atmospheric humidity article instead of the generic pl
 
   assert.match(evidencePage, /AtmosphericHumidityArticle/);
   assert.match(evidencePage, /title="Vlhkost atmosféry"/);
-  assert.match(evidencePage, /title="Vlhkost atmosféry"\s+meta="31\. října 2026"/);
+  assert.match(evidencePage, /title="Vlhkost atmosféry"\s+meta="2\. listopadu 2026"/);
   assert.match(article, /Vlhkost atmosféry popisuje množství vodní páry ve vzduchu/);
   assert.doesNotMatch(article, /Potřebné informace|article-glossary/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
@@ -1040,7 +1040,7 @@ test("publishes a sourced atmospheric humidity article instead of the generic pl
   const humiditySourceIds = [
     ...article.matchAll(/<SourceLink id="([^"]+)"/g),
   ].map((match) => match[1]);
-  assert.equal(new Set(humiditySourceIds).size, 32);
+  assert.equal(new Set(humiditySourceIds).size, 33);
   for (const id of new Set(humiditySourceIds)) {
     const catalogueOccurrences = sourceCatalogueText.split(id).length - 1;
     assert.ok(catalogueOccurrences >= 2, `${id} must exist and be marked as open access`);

@@ -27,8 +27,8 @@ export function AtmosphericHumidityArticle() {
         </p>
 
         <p>
-          Dai v roce 2006 sestavil globální přehled měrné a relativní vlhkosti z více než 15 000 pozemních a lodních
-          záznamů. Willett a kol. v roce 2008 vytvořili společný soubor HadCRUH pro pevninu i oceán. Následné práce
+          Dai v roce 2006 sestavil globální přehled měrné a relativní vlhkosti z více než 15 000 meteorologických
+          stanic a z lodních měření. Willett a kol. v roce 2008 vytvořili společný soubor HadCRUH pro pevninu i oceán. Následné práce
           oddělily podrobně zpracovaná měření nad pevninou a mořem do dnešního souboru HadISDH. Všechny tyto práce
           používají stejné základní rozlišení: množství vodní páry a míra nasycení vzduchu jsou dvě samostatně
           zveřejňované veličiny.{" "}
@@ -115,7 +115,8 @@ export function AtmosphericHumidityArticle() {
           Väisälä. Pravidelné výstupy se během dalších desetiletí staly součástí meteorologických sítí. Historii
           jednotlivých konstrukcí shrnuje přehled vývoje atmosférických pozorovacích systémů a vlastní měření dnes
           uchovává archiv IGRA.{" "}
-          <SourceLink id="DOI_10_1175_amsmonographs_d_18_0006_1">Stith et al., 2018</SourceLink>
+          <SourceLink id="DOI_10_1175_amsmonographs_d_18_0006_1">Stith et al., 2018</SourceLink>{" "}
+          a <SourceLink id="WEB_Vaisala_First_Finnish_Radiosonde_2017">Vaisala: první finská radiosonda</SourceLink>
         </p>
 
         <p>
@@ -285,7 +286,8 @@ export function AtmosphericHumidityArticle() {
           prázdná. HadISDH do ní nedopočítává chybějící pozorování. Globální průměr proto popisuje dostupné buňky mezi
           70° jižní a 70° severní šířky, nikoli rovnoměrně pozorovaný celý povrch.{" "}
           <SourceLink id="DOI_10_5194_cp_10_1983_2014">Pevninská část</SourceLink> a{" "}
-          <SourceLink id="DOI_10_5194_essd_12_2853_2020">oceánská část</SourceLink>
+          <SourceLink id="DOI_10_5194_essd_12_2853_2020">oceánská část</SourceLink>. Současné referenční období a
+          verze uvádí <SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_c9cc26f3">dokumentace HadISDH</SourceLink>.
         </p>
         <p>
           Rozdíl mezi spojením stanic do buněk a vážením buněk podle plochy vysvětluje <Link href="/metody/prostorove-zpracovani-a-plosne-prumery/#plosne-vazeni">výpočet plošného průměru</Link>. V metodě je rozveden na teplotě, zde se průměruje příslušná vlhkostní veličina.
@@ -569,8 +571,8 @@ export function AtmosphericHumidityArticle() {
           Rok 2024 měl v HadISDH průměrnou měrnou vlhkost nad pevninou o <strong>0,49 g/kg</strong> a nad oceánem o{" "}
           <strong>0,56 g/kg</strong> vyšší než průměr let 1991–2020. Obě hodnoty byly v daných souborech nejvyšší od
           začátku záznamu v roce 1973. Ostatní produkty uvedené ve <em>State of the Climate in 2024</em> rovněž
-          označily rok 2024 za nejvyšší: odchylky měrné vlhkosti se pohybovaly od 0,32 do 0,58 g/kg nad pevninou a od
-          0,35 do 0,56 g/kg nad oceánem.{" "}
+          označily rok 2024 za nejvyšší. Při zahrnutí variant reanalýz omezených na místa pokrytá HadISDH se
+          odchylky měrné vlhkosti pohybovaly od 0,32 do 0,58 g/kg nad pevninou a od 0,35 do 0,73 g/kg nad oceánem.{" "}
           <SourceLink id="WEB_NOAA_State_of_the_Climate_in_2024_tabulka_2_8_4784f00d">
             Willett et al., 2025, tabulka 2.6
           </SourceLink>
@@ -599,8 +601,10 @@ export function AtmosphericHumidityArticle() {
 
         <p>
           Zpráva za rok 2024 porovnala také tři reanalýzy, rádiové zákryty GNSS a 166 pozemních přijímačů GNSS.
-          Všechny soubory označily rok 2024 za rok s nejvyšším množstvím vodní páry ve sloupci ve svém období.
-          Globální odchylka mezi 60° jižní a 60° severní šířky dosáhla přibližně pěti procent nad průměr let 1991–2020.
+          Všechny soubory označily rok 2024 za rok s nejvyšším množstvím vodní páry ve sloupci ve svém období
+          a prostorovém pokrytí. Globální odchylka mezi 60° jižní a 60° severní šířky podle reanalýz a rádiových
+          zákrytů dosáhla přibližně pěti procent nad průměr let 1991–2020. Pozemní přijímače sledují sloupce nad
+          jednotlivými stanicemi.
           Pro období 1991–2024 leží trendy tří reanalýz mezi 0,37 a 0,42 kg/m² za desetiletí. Družicový mikrovlnný
           výsledek nad oceány je uveden výše.{" "}
           <SourceLink id="WEB_NOAA_State_of_the_Climate_in_2024_tabulka_2_8_4784f00d">
@@ -697,6 +701,10 @@ export function AtmosphericHumidityArticle() {
                 <SourceLink id="DOI_10_1175_amsmonographs_d_18_0006_1">
                   DOI 10.1175/AMSMONOGRAPHS-D-18-0006.1
                 </SourceLink>
+              </li>
+              <li>
+                Vaisala (2017): <SourceLink id="WEB_Vaisala_First_Finnish_Radiosonde_2017">Radiosonde – The Invention That Made Vaisala</SourceLink>,
+                historie prvního finského výstupu v prosinci 1931.
               </li>
               <li>
                 Mears, C. A. et al. (2018): spojení družicových mikrovlnných radiometrů a vyčíslení nejistoty.{" "}
