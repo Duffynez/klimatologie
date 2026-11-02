@@ -8,7 +8,7 @@ Hlavní cíle projektu stanovuje [AGENTS.md](AGENTS.md). Jazyk a srozumitelné v
 
 Článek má následujících pět částí v uvedeném pořadí. Nadpisy přizpůsobíme konkrétnímu tématu při zachování jejich úlohy. Pododdíly rozvíjejí otázku příslušné části. Obsahová kontrola autora uvedená níže slouží ke kontrole úplnosti a není další osnovou článku.
 
-Název článku pojmenuje pozorovanou změnu a otázku po její příčině, případně konkrétní vysvětlení této změny. Název, úvod, porovnání hypotéz a závěr musí odpovídat na stejnou otázku. Při změně zaměření upravíme také název, perex, katalogový popis a pojmenování navazujících odkazů.
+Název článku má podobu konkrétní otázky zakončené otazníkem. Ptá se po příčině pozorované změny nebo po fungování procesu, který ji může vysvětlit. Otázka zachová rozsah článku a nepodsouvá příčinu, kterou má článek teprve ověřit. Název, úvod, porovnání hypotéz a závěr musí odpovídat na stejnou otázku. Při změně zaměření upravíme také název, perex, katalogový popis a pojmenování navazujících odkazů.
 
 ### 1. Jak si nyní vysvětlujeme toto pozorování
 

@@ -20,7 +20,7 @@ const comparisonCriteria = [
 export default function MechanismsPage() {
   return (
     <div className="page-shell">
-      <PageLead eyebrow="Mechanismy" title="Proč se pozorované změny dějí." />
+      <PageLead eyebrow="Mechanismy" title="Proč se pozorované změny dějí?" />
 
       <section className="mechanism-guide">
         <div>

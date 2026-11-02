@@ -94,7 +94,7 @@ export default async function MechanismDetail({ params }: { params: Promise<{ sl
 
   return (
     <div className="page-shell">
-      <PageLead eyebrow={`Mechanismy / ${mechanism.category}`} title={mechanism.title} meta="31. října 2026">
+      <PageLead eyebrow={`Mechanismy / ${mechanism.category}`} title={mechanism.title} meta="2. listopadu 2026">
         <p>{mechanism.summary}</p>
       </PageLead>
 

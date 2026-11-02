@@ -731,11 +731,11 @@ test("publishes 23 mechanism topics and preserves the split snow-and-sea-ice add
   for (const slug of ["vznik-tani-a-pohyb-morskeho-ledu", "vznik-a-zanik-snehove-pokryvky-na-sousi"]) {
     assert.ok(hasArticleLink(legacy, `/mechanismy/${slug}`), "Missing split destination " + slug);
   }
-  assert.match(catalogue, /Oblaka a jejich klimatické zpětné vazby/);
-  assert.match(catalogue, /Odrazivost sněhu a ledu jako zpětná vazba/);
-  assert.match(catalogue, /Vlhkost atmosféry a vodní pára jako zpětná vazba/);
-  assert.match(catalogue, /Změny hustoty a objemu mořské vody/);
-  assert.match(catalogue, /Aerosoly z lidské činnosti a oblaka/);
+  assert.match(catalogue, /Jak oblaka zesilují nebo tlumí oteplování\?/);
+  assert.match(catalogue, /Jak úbytek sněhu a ledu zesiluje oteplování\?/);
+  assert.match(catalogue, /Jak souvisejí změny vlhkosti s oteplováním\?/);
+  assert.match(catalogue, /Proč se objem mořské vody mění s teplotou a slaností\?/);
+  assert.match(catalogue, /Jak částice z lidské činnosti ovlivňují záření a oblaka\?/);
   assert.ok(!hasArticleLink(catalogue, "/mechanismy/energeticka-bilance-snehu-a-morskeho-ledu"));
   assert.match(sitemap, /https:\/\/klimatologie\.eu\/mechanismy\/energeticka-bilance-snehu-a-morskeho-ledu\//);
 });
