@@ -476,7 +476,7 @@ export function RadiativeFluxArticle() {
           </p>
         </details>
 
-        <p>Souvislost měřených toků s ohříváním planety a s rostoucím výdejem tepelného záření rozvíjí článek <Link href="/mechanismy/energeticka-bilance-zeme/#toky-energie">Proč v klimatickém systému přibývá energie</Link>.</p>
+        <p>Souvislost měřených toků s ohříváním planety a s rostoucím výdejem tepelného záření rozvíjí článek <Link href="/mechanismy/energeticka-bilance-zeme/#toky-energie">Proč v klimatickém systému přibývá energie</Link>. Pohlcování a vyzařování jednotlivých vrstev atmosféry vysvětluje článek <Link href="/mechanismy/radiacni-pusobeni-sklenikovych-plynu/#vyska-vyzarovani">Proč další CO₂ mění tepelné záření Země</Link>.</p>
 
         <h2>Shrnutí</h2>
         <div className="method-conclusion">

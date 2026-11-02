@@ -23,10 +23,10 @@ export const climateMechanisms: ClimateMechanism[] = [
   },
   {
     slug: "radiacni-pusobeni-sklenikovych-plynu",
-    title: "Radiační působení skleníkových plynů",
+    title: "Proč další CO₂ mění tepelné záření Země",
     category: "Záření a složení atmosféry",
-    summary: "Molekuly některých plynů pohlcují a vyzařují infračervené záření a mění tak přenos energie atmosférou.",
-    distinguishingEvidence: "Shoda změn infračerveného záření v jednotlivých spektrálních pásmech s vlastnostmi plynů změřenými v laboratoři. Porovnání očekávané teplotní odezvy v troposféře a stratosféře s pozorováním.",
+    summary: "Proč další CO₂ působí, i když už část záření téměř úplně pohlcuje? Historický spor o nasycení, laboratorní pokusy a pozemní i družicové testy vysvětlují přenos energie atmosférou.",
+    distinguishingEvidence: "Změna záření v pásmu CO₂ při známé změně jeho koncentrace a po zohlednění teploty i vlhkosti. Shoda pozemních a družicových spekter s výpočty založenými na laboratorních vlastnostech plynů.",
   },
   {
     slug: "puvod-rustu-atmosferickeho-co2",

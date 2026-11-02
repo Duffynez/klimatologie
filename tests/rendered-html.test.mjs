@@ -722,7 +722,7 @@ test("publishes 23 mechanism topics and preserves the split snow-and-sea-ice add
     assert.ok(sitemap.includes(`<loc>https://klimatologie.eu/mechanismy/${slug}/</loc>`), "Missing sitemap route " + slug);
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     assert.ok(html.includes(`<h1>${title}</h1>`), "Wrong detail title " + slug);
-    if (slug !== "energeticka-bilance-zeme") {
+    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu"].includes(slug)) {
       assert.match(html, /Co musí toto vysvětlení objasnit/);
       assert.match(html, /<section class="mechanism-detail-evidence"[^>]*>[\s\S]*<p>[^<]+<\/p><\/section>/);
     }
@@ -2485,7 +2485,7 @@ test("publishes absorption spectroscopy with a boxed conclusion and complete sou
   assert.equal((body.match(/<details\b/g) ?? []).length, 2);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
   assert.match(body, /Příklad výpočtu z osmi měření/);
-  assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">2\. listopadu 2026<\/p>/);
   assert.match(body, /noaa-aircraft-crds\.jpg/);
   assert.match(body, /crds-principle\.svg/);
   assert.match(body, /repeat-measurements\.png/);
@@ -4019,6 +4019,51 @@ test("all observation-method links resolve to sections and explainable return pa
   assert.deepEqual(seenContext, contextOnly, "Keep the documented context exceptions current");
 });
 
+
+test("publishes the greenhouse mechanism with two linked stories and open evidence", async () => {
+  const path = "/mechanismy/radiacni-pusobeni-sklenikovych-plynu";
+  const html = await readFile(new URL(`dist/client${path}/index.html`, root), "utf8");
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "Publish a full article rather than the catalogue placeholder");
+  assert.doesNotMatch(html, /class="mechanism-detail-evidence"/);
+  const sections = [...body.matchAll(/<h2 id="([^"]+)"/g)].map(m => m[1]);
+  assert.deepEqual(sections, ["co-vysvetlujeme", "hypotezy", "pribehy", "mechanismus", "shrnuti", "prameny"]);
+  const intro = body.slice(0, body.indexOf('<h2 id="hypotezy"'));
+  assert.equal((intro.match(/<p\b/g) ?? []).length, 2);
+  const diagram = body.match(/<figure[^>]+aria-labelledby="greenhouse-hypotheses-caption"[\s\S]*?<\/figure>/)?.[0];
+  assert.ok(diagram);
+  const stories = [...diagram.matchAll(/href="#([^"]+)"/g)].map(m => m[1]);
+  assert.equal(stories.length, 2);
+  assert.ok(body.indexOf(`id="${stories[0]}"`) < body.indexOf(`id="${stories[1]}"`));
+  for (const label of ["Jedinečná předpověď", "Jak hypotézu testujeme", "Výsledek testů", "Dnešní hodnocení"]) {
+    assert.equal((diagram.match(new RegExp(`<dt>${label}</dt>`, "g")) ?? []).length, 2);
+  }
+  const bibliography = body.slice(body.indexOf('<h2 id="prameny"'));
+  const sourcePage = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
+  const citations = new Set([...body.matchAll(/href="\/zdroje#([^"]+)"/g)].map(m => m[1]));
+  for (const id of citations) {
+    assert.ok(bibliography.includes(`href="/zdroje#${id}"`), "Missing bibliography entry " + id);
+    const card = sourcePage.match(new RegExp(`<article[^>]+id="${id}"[\\s\\S]*?</article>`))?.[0];
+    assert.ok(card, "Missing source card " + id);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    assert.match(card, /Otevřít (plný text|veřejn)/);
+  }
+  for (const relatedPath of ["/pozorovani/atmosfericka-koncentrace-co2", "/metody/absorpcni-spektroskopie", "/metody/mereni-radiacnich-toku", "/mechanismy/energeticka-bilance-zeme"]) {
+    const related = await readFile(new URL(`dist/client${relatedPath}/index.html`, root), "utf8");
+    assert.ok(hasArticleLink(body, relatedPath));
+    assert.ok(hasArticleLink(related, path), "Missing reciprocal link " + relatedPath);
+  }
+  const ids = [...body.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
+  assert.equal(ids.length, new Set(ids).size);
+  for (const [, target, anchor] of body.matchAll(/href="(\/[^"#]*)(?:#([^"]*))?"/g)) {
+    const targetHtml = await readFile(new URL("dist/client" + target.replace(/\/$/, "") + "/index.html", root), "utf8");
+    if (anchor) assert.ok(targetHtml.includes(`id="${anchor}"`), "Missing target " + target + "#" + anchor);
+  }
+  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty && uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
+  assert.match(body, /<div class="method-conclusion">/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+});
 
 test("publishes the full energy-balance mechanism with evidence, sources and return links", async () => {
   const html = await readFile(new URL("dist/client/mechanismy/energeticka-bilance-zeme/index.html", root), "utf8");

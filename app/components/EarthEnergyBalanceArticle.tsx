@@ -454,6 +454,11 @@ export function EarthEnergyBalanceArticle() {
           přenos tepla vzhůru i změnu množství vodní páry.{' '}
           <SourceLink id="1967_Manabe_Wetherald">(Manabe a Wetherald 1967)</SourceLink>
         </p>
+        <p>
+          Samotný přenos záření a historický spor o jeho nasycení podrobně
+          rozebírá článek{' '}
+          <Link href="/mechanismy/radiacni-pusobeni-sklenikovych-plynu/">Proč další CO₂ mění tepelné záření Země</Link>.
+        </p>
         <h3 id="nerovnovaha-a-teplota">Proč přebytek energie ohřívá oceán</h3>
         <p>
           Jestliže Země přijímá více energie, než vydává, energie se v ní

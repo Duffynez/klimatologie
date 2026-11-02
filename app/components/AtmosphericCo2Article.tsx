@@ -577,8 +577,23 @@ export function AtmosphericCo2Article() {
         </p>
         <p>
           Výsledek popisuje místní tok záření k povrchu za jasné oblohy.
-          Jeho význam pro ověřování radiačního účinku plynu vysvětluje{' '}
-          <Link href="/mechanismy/energeticka-bilance-zeme/#lidske-pusobeni">příběh hypotézy lidského působení na klima</Link>.
+        </p>
+        <h3 id="odchazejici-spektrum">Záření odcházející do vesmíru</h3>
+        <p>
+          Spektra přístroje AIRS na družici Aqua za roky 2003–2021 ukazují
+          pokles odcházejícího záření například mezi 13,89 a 14,08 mikrometru,
+          v části pásma CO₂. V jiných částech spektra záření rostlo.
+          Spektrum rozděluje záření podle vlnové délky, mikrometr je
+          miliontina metru.{' '}
+          <SourceLink id="DOI_10_1029_2023GL103947">(Raghuraman a kol. 2023, obr. 1)</SourceLink>
+        </p>
+        <p>
+          Použitý produkt převádí družicová měření na toky energie.
+          Zohledňuje směr vyzařování a statisticky doplňuje rozsahy,
+          které přístroj nepokrývá. Uvedený úsek pásma CO₂ spadá
+          do měřeného rozsahu.{' '}
+          <SourceLink id="DATA_AIRS_SPECTRAL_OLR">(NASA: spektrální toky AIRS)</SourceLink>{' '}
+          <SourceLink id="DOI_10_1029_2023GL103947">(Raghuraman a kol. 2023, oddíl 2)</SourceLink>
         </p>
 
         <div className="article-observation-summary">
@@ -593,6 +608,15 @@ export function AtmosphericCo2Article() {
           </p>
         </div>
 
+        <aside className="article-related-mechanism" aria-label="Navazující vysvětlení">
+          <p><strong>Navazující vysvětlení:</strong>{' '}
+            <Link href="/mechanismy/radiacni-pusobeni-sklenikovych-plynu/">Proč další CO₂ mění tepelné záření Země</Link>
+            {' '}rozebírá historické hypotézy a jejich testy.
+            Význam pro celkové oteplování vysvětluje{' '}
+            <Link href="/mechanismy/energeticka-bilance-zeme/#lidske-pusobeni">příběh lidského působení na energetickou bilanci</Link>.
+          </p>
+        </aside>
+
         <h2>Prameny, data a licence</h2>
         <p>
           Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez
@@ -604,6 +628,7 @@ export function AtmosphericCo2Article() {
             <h3>Historické a primární práce</h3>
             <ul>
               <li><SourceLink id="DOI_10_1038_nature14240">Feldman a kol. 2015</SourceLink>: měření a výpočet příspěvku CO₂ k záření na povrch. Plný text obsahuje popis přístrojů, použitých dat programu ARM a zpracování.</li>
+              <li><SourceLink id="DOI_10_1029_2023GL103947">Raghuraman a kol. 2023</SourceLink>: změny odcházejícího spektra za roky 2003–2021.</li>
               <li>
                 Reiset, J. (1880): <em>Recherches sur la proportion de l&apos;acide carbonique dans l&apos;air</em>,
                 Comptes rendus, 90, 1144–1148.{" "}
@@ -726,6 +751,7 @@ export function AtmosphericCo2Article() {
           <section>
             <h3>Data ke stažení</h3>
             <ul>
+              <li><SourceLink id="DATA_AIRS_SPECTRAL_OLR">NASA: spektrální toky AIRS</SourceLink>. Veřejný produkt odvozený z družicových měření, stažení může vyžadovat bezplatný účet Earthdata.</li>
               <li>
                 NOAA GML: globální měsíční a roční CO₂, verze 6. července 2026.{" "}
                 <SourceLink id="WEB_NOAA_Trends_in_CO2_NOAA_Global_Monitoring_Laboratory_ff9ec92f">

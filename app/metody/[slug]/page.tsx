@@ -519,7 +519,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "absorpcni-spektroskopie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Laboratorní analýza" title="Absorpční spektroskopie plynů" meta="31. října 2026">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Absorpční spektroskopie plynů" meta="2. listopadu 2026">
           <p>Jak slábnutí laserového světla mezi zrcadly umožňuje měřit CO₂ a jak referenční směsi propojí optický signál se složením vzduchu.</p>
         </PageLead>
         <AbsorptionSpectroscopyArticle />

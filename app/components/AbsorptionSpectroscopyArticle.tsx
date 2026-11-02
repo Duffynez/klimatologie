@@ -461,6 +461,14 @@ export function AbsorptionSpectroscopyArticle() {
             <SourceLink id="2021_NOAA_CO2_Analysis">(NOAA, 2021: analýza CO₂)</SourceLink>
           </p>
         </div>
+        <aside className="article-related-mechanism" aria-label="Navazující vysvětlení">
+          <p>
+            <strong>Navazující vysvětlení:</strong>{" "}
+            <Link href="/mechanismy/radiacni-pusobeni-sklenikovych-plynu/#jadra-a-okraje">Proč další CO₂ mění tepelné záření Země</Link>
+            {" "}ukazuje, jak naměřené absorpční vlastnosti souvisejí s přenosem
+            energie v atmosféře a proč silné pohlcování části spektra účinek nezastaví.
+          </p>
+        </aside>
       </div>
     </article>
   );
