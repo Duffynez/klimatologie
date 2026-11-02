@@ -715,7 +715,7 @@ test("publishes 23 mechanism topics and preserves the split snow-and-sea-ice add
   const records = [...mechanisms.matchAll(/slug: "([^"]+)",\s+title: "([^"]+)"/g)];
   assert.equal(records.length, 23);
   assert.equal(new Set(records.map(([, slug]) => slug)).size, 23);
-  assert.equal((catalogue.match(/class="mechanism-link"/g) ?? []).length, 23);
+  assert.equal((catalogue.match(/class="mechanism-tile"/g) ?? []).length, 23);
   for (const [, slug, title] of records) {
     assert.ok(hasArticleLink(catalogue, `/mechanismy/${slug}`), "Missing catalogue link " + slug);
     assert.ok(sitemap.includes(`<loc>https://klimatologie.eu/mechanismy/${slug}/</loc>`), "Missing sitemap route " + slug);
@@ -4070,7 +4070,7 @@ test("publishes the full energy-balance mechanism with evidence, sources and ret
   const title = html.match(/<h1[^>]*>([^<]+)<\/h1>/)?.[1];
   assert.ok(title);
   const tile = catalogue.match(/<a[^>]+href="\/mechanismy\/energeticka-bilance-zeme\/?"[\s\S]*?<\/a>/)?.[0];
-  assert.ok(tile?.includes(`>${title}</a>`), "Keep the catalogue and article title consistent");
+  assert.ok(tile?.includes(`<h3>${title}</h3>`), "Keep the catalogue and article title consistent");
   assert.match(html, /<article class="article-layout">/);
   assert.doesNotMatch(html, /class="mechanism-detail-evidence"/);
   for (const anchor of ["co-vysvetlujeme", "toky-energie", "nerovnovaha-a-teplota", "vypocet-bilance", "predpovedi", "historie", "porovnani", "priciny", "nejistoty", "shrnuti", "prameny"]) {

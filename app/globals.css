@@ -537,13 +537,15 @@ h3 {
   padding-left: 24px;
 }
 
-.method-catalog {
+.method-catalog,
+.mechanism-catalog {
   display: grid;
   gap: 58px;
   margin-top: 58px;
 }
 
-.method-catalog__heading {
+.method-catalog__heading,
+.mechanism-catalog__heading {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -552,25 +554,29 @@ h3 {
   border-bottom: 2px solid var(--sea);
 }
 
-.method-catalog__heading h2 {
+.method-catalog__heading h2,
+.mechanism-catalog__heading h2 {
   margin: 0;
   font-size: 1.85rem;
 }
 
-.method-catalog__heading span {
+.method-catalog__heading span,
+.mechanism-catalog__heading span {
   color: var(--muted);
   font-size: 0.8rem;
   font-weight: 800;
 }
 
-.method-catalog__grid {
+.method-catalog__grid,
+.mechanism-catalog__grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
   margin-top: 16px;
 }
 
-.method-tile {
+.method-tile,
+.mechanism-tile {
   display: grid;
   grid-template-columns: 34px minmax(0, 1fr);
   gap: 14px;
@@ -584,20 +590,23 @@ h3 {
   transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
 }
 
-.method-tile > span {
+.method-tile > span,
+.mechanism-tile > span {
   color: var(--coral);
   font-size: 0.76rem;
   font-weight: 800;
 }
 
-.method-tile h3 {
+.method-tile h3,
+.mechanism-tile h3 {
   margin: 0 0 8px;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.25rem;
   line-height: 1.25;
 }
 
-.method-tile p {
+.method-tile p,
+.mechanism-tile p {
   margin: 0;
   color: var(--muted);
   font-size: 0.92rem;
@@ -610,113 +619,6 @@ h3 {
   border-color: var(--sea);
   box-shadow: 0 10px 20px rgba(21, 50, 53, 0.08);
   transform: translateY(-2px);
-}
-
-.mechanism-index {
-  padding-top: 40px;
-}
-
-.mechanism-index > h1 {
-  margin: 0;
-  font-size: clamp(2rem, 4vw, 3rem);
-}
-
-.mechanism-catalog {
-  display: grid;
-  gap: 32px;
-  margin-top: 32px;
-}
-
-.mechanism-index .mechanism-catalog__group h2 {
-  margin: 0 0 8px;
-  font-size: 1.4rem;
-}
-
-.mechanism-catalog__list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0 36px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.mechanism-catalog__list li {
-  border-bottom: 1px solid var(--line);
-}
-
-.mechanism-link {
-  display: block;
-  padding: 11px 0;
-  color: var(--sea-dark);
-  font-size: 1rem;
-  line-height: 1.45;
-  text-decoration: none;
-}
-
-.mechanism-link:hover,
-.mechanism-link:focus-visible {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.mechanism-link:focus-visible {
-  outline: 2px solid var(--sea);
-  outline-offset: 3px;
-}
-
-.mechanism-catalog__heading {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 24px;
-  padding-bottom: 14px;
-  border-bottom: 2px solid var(--sea);
-}
-
-.mechanism-catalog__heading h2 {
-  margin: 0;
-  font-size: 1.85rem;
-}
-
-.mechanism-catalog__grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 16px;
-}
-
-.mechanism-tile {
-  display: grid;
-  grid-template-columns: 34px minmax(0, 1fr);
-  gap: 14px;
-  min-height: 252px;
-  padding: 22px;
-  border: 1px solid var(--line);
-  border-radius: 7px;
-  background: var(--white);
-  color: var(--ink);
-  text-decoration: none;
-  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
-}
-
-.mechanism-tile > span {
-  color: var(--coral);
-  font-size: 0.76rem;
-  font-weight: 800;
-}
-
-.mechanism-tile h3 {
-  margin: 0 0 8px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.25rem;
-  line-height: 1.25;
-}
-
-.mechanism-tile p {
-  margin: 0 0 13px;
-  color: var(--muted);
-  font-size: 0.92rem;
 }
 
 .mechanism-detail-evidence {
@@ -1754,6 +1656,7 @@ video.article-figure__media {
   .topic-grid,
   .topic-grid--full,
   .method-catalog__grid,
+  .mechanism-catalog__grid,
   .section-outline {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1873,7 +1776,6 @@ video.article-figure__media {
   .method-grid,
   .method-catalog__grid,
   .mechanism-catalog__grid,
-  .mechanism-catalog__list,
   .section-outline,
   .person-feature,
   .profile-layout {

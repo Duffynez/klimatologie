@@ -92,7 +92,7 @@ Titrace a coulometrie mají samostatné položky `/metody/titrace/` a `/metody/c
 
 `app/data/mechanisms.ts` obsahuje 23 témat v pěti skupinách. Dva plné články mají komponenty `EarthEnergyBalanceArticle.tsx` a `GreenhouseRadiationArticle.tsx`, připojené v `app/mechanismy/[slug]/page.tsx`. Ostatních 21 témat zatím ukazuje vymezení a rozlišující důkazy z katalogu. Další plné články vyžadují stejnou ruční vazbu komponenty a routy jako u metod.
 
-Rozcestník `/mechanismy/` zobrazuje pouze nadpis, názvy tematických skupin a otázky jako odkazy. Všechna témata mají stejnou podobu bez rozlišení stavu zpracování. Popisy a rozlišující důkazy zůstávají v datovém katalogu pro detailní stránky.
+Rozcestník `/mechanismy/` používá stejnou podobu tematických skupin a dlaždic jako metody. Každá dlaždice obsahuje číslo, otázku a stručný popis `cardSummary`. Všechna témata mají stejnou podobu bez rozlišení stavu zpracování. Delší `summary` a rozlišující důkazy zůstávají v datovém katalogu pro detailní stránky.
 
 Článek „Proč v klimatickém systému přibývá energie“ je obousměrně propojený s pozorováním globální teploty, teploty stratosféry, koncentrace CO₂, obsahu tepla v oceánu a metodou měření radiačních toků. Zachovává adresu `/mechanismy/energeticka-bilance-zeme/`. Článek „Proč další CO₂ mění tepelné záření Země“ zachovává adresu `/mechanismy/radiacni-pusobeni-sklenikovych-plynu/`. Je obousměrně propojený s prvním mechanismem, pozorováním CO₂ a metodami absorpční spektroskopie a měření radiačních toků. Jeho dvě hypotézy používají společný `HypothesisDiagram`. Vlastní CSS modul upravuje jen ilustrační tabulku pohlcování. Zpětné odkazy v pozorováních jsou oddělené jako navazující vysvětlení.
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PageLead } from "../components/PageLead";
 import { climateMechanisms, mechanismCategories } from "../data/mechanisms";
 
 export const metadata: Metadata = {
@@ -9,8 +10,8 @@ export const metadata: Metadata = {
 
 export default function MechanismsPage() {
   return (
-    <div className="page-shell mechanism-index">
-      <h1>Mechanismy</h1>
+    <div className="page-shell">
+      <PageLead eyebrow="Mechanismy" title="Proč se pozorované změny dějí?" />
 
       <div className="mechanism-catalog">
         {mechanismCategories.map((category) => {
@@ -18,16 +19,25 @@ export default function MechanismsPage() {
 
           return (
             <section className="mechanism-catalog__group" key={category}>
-              <h2>{category}</h2>
-              <ul className="mechanism-catalog__list">
-                {mechanisms.map((mechanism) => (
-                  <li key={mechanism.slug}>
-                    <Link className="mechanism-link" href={`/mechanismy/${mechanism.slug}`}>
-                      {mechanism.title}
+              <div className="mechanism-catalog__heading">
+                <h2>{category}</h2>
+                <span>{mechanisms.length}</span>
+              </div>
+              <div className="mechanism-catalog__grid">
+                {mechanisms.map((mechanism) => {
+                  const number = climateMechanisms.indexOf(mechanism) + 1;
+
+                  return (
+                    <Link className="mechanism-tile" href={`/mechanismy/${mechanism.slug}`} key={mechanism.slug}>
+                      <span>{String(number).padStart(2, "0")}</span>
+                      <div>
+                        <h3>{mechanism.title}</h3>
+                        <p>{mechanism.cardSummary}</p>
+                      </div>
                     </Link>
-                  </li>
-                ))}
-              </ul>
+                  );
+                })}
+              </div>
             </section>
           );
         })}
