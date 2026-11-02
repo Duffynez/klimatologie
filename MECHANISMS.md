@@ -16,17 +16,37 @@ Název článku pojmenuje pozorovanou změnu a otázku po její příčině, př
 
 Pozorování tvoří základ celého článku. Pokud některé potřebné pozorování na webu chybí, doplníme je podle [OBSERVATIONS.md](OBSERVATIONS.md). To platí i pro další pozorování potřebná k testování hypotéz. Nový článek založíme a obousměrné odkazy připojíme podle [docs/CONTENT-WORKFLOW.md](docs/CONTENT-WORKFLOW.md). Pozorovací článek popisuje zjištění, mechanismový článek rozvíjí jejich příčinné vysvětlení.
 
-### 2. Jaká vysvětlení byla navržena
+### 2. Úvodní diagram hypotéz a jejich předpovědí
 
-Vybereme prominentní hypotézy, které byly pro vysvětlení daného pozorování historicky významné nebo jsou relevantní v současném odborném zkoumání. U každé stručně vysvětlíme navrženou příčinu, základní princip a důvod, proč mohla pozorování vysvětlovat. Potřebné pojmy objasníme přímo ve výkladu, aby čtenář mohl následně porozumět předpovědím.
+Po krátkém úvodu zařadíme přehledový diagram. Porovnáme nejvýše tři konkurující hypotézy celkem, včetně jednoho dnes přijímaného vysvětlení. Vybíráme historicky významné nebo odborně relevantní možnosti, které odpovídají na tutéž otázku a vztahují se ke stejnému pozorování. Tři hypotézy jsou horní limit, počet nenaplňujeme umělými alternativami.
 
-Každou hypotézu představíme v její nejsilnější odborné podobě a s ohledem na tehdy dostupné poznatky. Její význam a důkazní oporu popíšeme přiměřeně skutečnému stavu. Rozdílnou sílu důkazů vyjádříme i v hodnocení jednotlivých vysvětlení. Rozlišíme vysvětlení, která si odporují, od procesů, které mohou působit společně.
+Každá větev diagramu obsahuje:
 
-Historii zapojíme při představení hypotéz a jejich testů. Zachytíme vznik vysvětlení, jeho první kvantitativní formulaci a důležité změny vyvolané měřením. Historická odbočka nesmí oddělit rozvinutou předpověď od jejího ověření.
+**Hypotéza → rozlišující předpověď → skutečný výsledek testu → dnešní hodnocení.**
 
-### 3. Co z hypotéz vyplývá a jak obstály
+Předpověď pojmenuje konkrétní znak, podle kterého lze hypotézu odlišit od konkurujících vysvětlení. Kde rozhoduje velikost účinku, uvedeme také očekávanou hodnotu či rozsah a podmínky. Jedinečnost nepřisuzujeme znaku, který předpovídají všechny porovnávané hypotézy. Pokud rozlišuje až kombinace znaků, ukážeme ji společně. Předpověď a predikce označují totéž, proto je nedělíme do dvou opakujících se polí.
 
-Každé rozhodující porovnání zachová tuto návaznost:
+Diagram předem ukáže, která hypotéza byla v daném testu falsifikována a která obstála. Rozliší také nedostatečné vysvětlení od vyvráceného a případný nerozhodný dílčí test podle hodnocení v části 3. Uvede rozhodující období či podmínku, aby se místní nebo časově omezený výsledek netvářil jako obecný verdikt. Jednotlivé větve odkážou na příslušné příběhy a jejich důkazy v článku. Výsledek vyjádříme textem, nejen barvou nebo symbolem.
+
+Diagram slouží jako stručná orientace před četbou. Používá srozumitelná pojmenování, která následný výklad rozvine, a nenahrazuje vysvětlení důvodů závěru. Pořadí hypotéz a jejich pojmenování zachováme i v navazujícím textu.
+
+### 3. Příběhy hypotéz od vzniku po dnešní hodnocení
+
+Každá hypotéza dostane vlastní souvislý oddíl. Její vznik, princip, předpovědi a ověřování vyložíme pohromadě, než přejdeme k další hypotéze. Příběh dnes přijímaného vysvětlení zařadíme jako poslední, aby na něj navázal podrobný výklad mechanismu v části 4. Historicky souběžné zkoumání popíšeme jako souběžné, pořadí oddílů nesmí vytvářet smyšlenou časovou posloupnost objevů.
+
+Příběh čtenáři postupně objasní:
+
+1. **Kdy a proč vysvětlení vzniklo.** Uvedeme doložené období, významné autory a pozorování či problém, na který reagovali. Vysvětlíme, proč byla hypotéza podle tehdejších poznatků rozumná.
+2. **Jak mělo vysvětlení fungovat.** Objasníme navrženou příčinu, základní princip a první významnou kvantitativní formulaci. Potřebné pojmy vysvětlíme před použitím v předpovědi.
+3. **Co z něj vyplývalo.** Odvodíme rozlišující předpověď a ukážeme, proč se očekávání liší od konkurujících vysvětlení.
+4. **Jak se hypotéza zkoumala.** Projdeme rozhodující experimenty, pozorování a výpočty, jejich výsledky a změny vysvětlení, které vyvolaly. Ukážeme také nezávislá ověření a případné rozpory. Vybíráme události, které posunuly poznání, ne pouhý seznam publikací.
+5. **Proč dnes hypotézu přijímáme nebo odmítáme.** Spojíme závěr s konkrétními testy a současným odborným hodnocením. U přijatého vysvětlení ukážeme vlastní úspěšné předpovědi a jejich ověření, samotné vyřazení alternativ nestačí.
+
+Tyto kroky určují návaznost příběhu, nemusí se stát pěti dalšími podnadpisy. Každou hypotézu představíme v její nejsilnější odborné podobě a s ohledem na tehdy dostupné poznatky. Její význam a důkazní oporu popíšeme přiměřeně skutečnému stavu. Rozlišíme vysvětlení, která si odporují, od procesů, které mohou působit společně.
+
+Historické údaje a vývoj argumentu dokládáme prameny. Nejstarší nalezenou zmínku automaticky neoznačujeme za první formulaci. Pokud rozhodnutí vznikalo postupným hromaděním důkazů, popíšeme tento vývoj. Nevytváříme jediný rozhodující experiment tam, kde jej historie nezná.
+
+Uvnitř příběhu každé rozhodující porovnání zachová tuto návaznost:
 
 **Co hypotéza předpovídá → proč to z ní vyplývá → co skutečně pozorujeme → jaký závěr z porovnání plyne.**
 
@@ -39,7 +59,7 @@ Výsledek testu formulujeme přesně:
 - **Dosud nerozhodnuté porovnání:** dostupná měření mezi možnostmi dostatečně nerozlišují.
 - **Podpořené vysvětlení:** předpovědi odpovídají výsledkům. Uvedeme, co bylo konkrétně ověřeno a jakou váhu má shoda vůči ostatním možnostem.
 
-Výklad ukáže také, v čem každá hypotéza datům odpovídá. Její odmítnutí musí mít konkrétní důvod v pozorováních a oporu ve zdrojích. Srovnávací tabulku použijeme, pokud zpřehlední již vysvětlené vztahy.
+Výklad ukáže také, v čem každá hypotéza datům odpovídá. Její odmítnutí musí mít konkrétní důvod v pozorováních a oporu ve zdrojích. Závěr každého příběhu vysvětlí hodnocení z úvodního diagramu. Další srovnávací tabulku použijeme jen tehdy, pokud zpřehlední vztah, který diagram nepokrývá.
 
 Vyhodnocení každé rozhodující hypotézy rozvineme tak, aby čtenář mohl sledovat důvod závěru. Uvedeme konkrétní výsledek měření nebo výpočtu, jeho období a rozhodující velikost či charakter změny. Vysvětlíme, jak se výsledek liší od předpovědi nebo v čem se s ní shoduje, jak velký rozdíl připouští nejistota a proč z porovnání plyne uvedené hodnocení. Obecný verdikt o vyvrácení nebo potvrzení nestačí. Rozsah přizpůsobíme náročnosti testu, obvykle potřebuje několik navazujících odstavců.
 
@@ -47,7 +67,7 @@ O metodách měření píšeme stručně. Objasníme, co měření zjišťuje a 
 
 ### 4. Jaké vysvětlení dnes nejlépe obstojí a proč
 
-Na základě předchozích porovnání jasně pojmenujeme současné vysvětlení a rozvineme jeho podrobný výklad. Výsledkem může být jeden mechanismus nebo souběžné působení několika mechanismů. U kombinace objasníme úlohu jednotlivých procesů a důvod, proč je potřebujeme. Pokud poznání dosud neumožňuje mezi vysvětleními rozhodnout, uvedeme tuto otevřenou otázku.
+Na základě předchozích příběhů jasně pojmenujeme jedno vysvětlení, které dnes podle souhrnu důkazů a současných odborných hodnocení nejlépe obstojí, a rozvineme jeho podrobný výklad. Současné hodnocení opřeme o odborné syntézy a jejich závěry doložíme původními pracemi rozebranými v příbězích. Přijaté vysvětlení může spojovat několik současně působících mechanismů. U kombinace objasníme úlohu jednotlivých procesů a důvod, proč je potřebujeme. Pokud poznání neumožňuje jedno vysvětlení upřednostnit, uvedeme tuto otevřenou otázku a nepředstíráme rozhodnutí jen kvůli stavbě článku.
 
 Nejprve srozumitelně definujeme vysvětlovaný proces. Potom souvisle projdeme kroky od příčiny přes změny v systému až k pozorovanému následku. U každého kroku vysvětlíme jeho fyzikální, chemický nebo biologický důvod a navážeme na jeho ověření. Zpětné vazby zařadíme v návaznosti na změnu, na kterou reagují.
 
@@ -81,4 +101,4 @@ Samotnou korelaci nezaměňujeme za mechanismus. Existenci procesu odlišujeme o
 
 Každý článek zapojí původní formulace hypotéz nebo teorie, základní experimentální práce, klíčové pozorovací testy, práce hodnotící alternativní vysvětlení a současné kvantitativní studie. U grafů zpřístupníme použitá veřejná data. Zdroje vložíme přímo k argumentu, který podporují. Jejich dostupnost a způsob citování se řídí [CONTENT.md](CONTENT.md), technické připojení [docs/SOURCES-AND-ARCHIVE.md](docs/SOURCES-AND-ARCHIVE.md).
 
-Před odevzdáním provedeme odděleně obsahovou kontrolu podle tohoto dokumentu a kontrolu čtivosti podle [STYLE.md, oddílu 9](STYLE.md#9-dvě-samostatné-redakční-kontroly). Ověříme zejména souvislou vazbu každé hypotézy na její předpovědi, pozorování a závěr a návaznost podrobného výkladu na tato porovnání.
+Před odevzdáním provedeme odděleně obsahovou kontrolu podle tohoto dokumentu a kontrolu čtivosti podle [STYLE.md, oddílu 9](STYLE.md#9-dvě-samostatné-redakční-kontroly). Ověříme zejména souvislost každého příběhu od vzniku hypotézy přes předpovědi a testy k dnešnímu hodnocení, shodu diagramu s výkladem a návaznost podrobného mechanismu na tato porovnání. Hlavní závěr musí mít oporu v souboru důkazů, ne pouze v podrobně převyprávěné jedné studii.
