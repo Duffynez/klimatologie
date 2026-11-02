@@ -3,6 +3,9 @@ import type { Source } from "./sources";
 // Sources cited by published article components.
 // Stable IDs are referenced from SourceLink components; do not rename them after publication.
 const rawArticleSources: Source[] = [
+  {id: "DOI_10_1029_2008GL034864", title: "How natural and anthropogenic influences alter global and regional surface temperatures: 1889 to 2006", author: "Judith L. Lean a David H. Rind", year: 2008, publication: "Geophysical Research Letters 35, L18701", type: "Původní studie rozlišující příčiny změny", category: "science", externalUrl: "https://doi.org/10.1029/2008GL034864", citationLabel: "Leanová a Rind 2008", topics: ["mechanismy", "Slunce", "příčiny oteplování"]},
+  {id: "DOI_10_1038_nature12534", title: "Recent global-warming hiatus tied to equatorial Pacific surface cooling", author: "Yu Kosaka a Shang-Ping Xie", year: 2013, publication: "Nature 501, s. 403–407", type: "Původní modelová studie", category: "science", externalUrl: "https://doi.org/10.1038/nature12534", citationLabel: "Kosaka a Xie 2013", topics: ["mechanismy", "přirozená proměnlivost", "oceán", "globální teplota"]},
+  {id: "DOI_10_1073_pnas_1305332110", title: "Human and natural influences on the changing thermal structure of the atmosphere", author: "Benjamin D. Santer a kol.", year: 2013, publication: "Proceedings of the National Academy of Sciences 110(43), s. 17235–17240", type: "Původní studie rozlišující příčiny změny", category: "science", externalUrl: "https://doi.org/10.1073/pnas.1305332110", citationLabel: "Santer a kol. 2013", topics: ["mechanismy", "stratosféra", "příčiny oteplování"]},
   {id: "HERSCHEL_1801_SOLAR_VARIATION", title: "Observations tending to investigate the nature of the sun", author: "William Herschel", year: 1801, publication: "Royal Society Archives, L&P/11/159. Původní rukopis předložený 16. dubna 1801, 53 stran a obrazová příloha.", type: "Historický rukopis", category: "science", externalUrl: "https://makingscience.royalsociety.org/items/l-and-p_11_159/paper-observations-tending-to-investigate-the-nature-of-the-sun-by-william-herschel", citationLabel: "Herschel 1801", topics: ["mechanismy", "Slunce", "historie"]},
   {id: "DOI_10_1029_2010GL045777", title: "A new, lower value of total solar irradiance: Evidence and climate significance", author: "Greg Kopp a Judith L. Lean", year: 2011, publication: "Geophysical Research Letters 38, L01706", type: "Studie", category: "science", externalUrl: "https://doi.org/10.1029/2010GL045777", citationLabel: "Kopp a Leanová 2011", topics: ["mechanismy", "Slunce", "měření záření"]},
   {id: "DOI_10_1175_BJERKNES_1969", title: "Atmospheric Teleconnections from the Equatorial Pacific", author: "Jacob Bjerknes", year: 1969, publication: "Monthly Weather Review 97(3), s. 163–172", type: "Původní studie", category: "science", externalUrl: "https://doi.org/10.1175/1520-0493(1969)097%3C0163:ATFTEP%3E2.3.CO;2", citationLabel: "Bjerknes 1969", topics: ["mechanismy", "oceán", "přirozená proměnlivost", "historie"]},
@@ -857,6 +860,9 @@ const rawArticleSources: Source[] = [
 
 const articleOpenAccessSources: Record<string, true | string> = {
   HERSCHEL_1801_SOLAR_VARIATION: "https://makingscience.royalsociety.org/pdf?arcId=l-and-p_11_159",
+  DOI_10_1029_2008GL034864: "https://www.giss.nasa.gov/pubs/docs/2008/2008_Lean_le08200o.pdf",
+  DOI_10_1038_nature12534: "https://www.appstate.edu/~perrylb/Courses/5015/Readings/Kosaka%26Xie_2013.pdf",
+  DOI_10_1073_pnas_1305332110: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3808612/",
   DOI_10_1029_2010GL045777: "https://www.atmosp.physics.utoronto.ca/people/strong/phy392/Kopp_Lean_solar_irradiance_GRL_38_L01706_2011.pdf",
   DOI_10_1175_BJERKNES_1969: "https://courses.seas.harvard.edu/climate/eli/Courses/EPS281r/Sources/ENSO/Bjerknes-1969.pdf",
   DOI_10_1126_science_1112418: "https://pangea.stanford.edu/research/Oceans/GES205/Barnett_Science_Penetration%20of%20human%20warming%20into%20ocean.pdf",

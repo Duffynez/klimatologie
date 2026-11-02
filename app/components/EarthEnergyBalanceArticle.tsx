@@ -62,7 +62,37 @@ export function EarthEnergyBalanceArticle() {
           <SourceLink id="DOI_10_1029_2010GL045777">(Kopp a Leanová 2011, obr. 1)</SourceLink>
         </p>
         <p>
-          Hypotéza silnějšího Slunce má jednoduchou rozlišující předpověď:
+          Jak velkou část oteplování lze Slunci přisoudit, zkoumali Leanová
+          a Rind v roce 2008. Porovnali měsíční teploty z let 1889–2006
+          s průběhem slunečního záření, sopečné činnosti, kolísání Pacifiku
+          a lidských vlivů. Každý z těchto vlivů se měnil jinak a v jinou
+          dobu. Autoři hledali takové velikosti jejich příspěvků a zpoždění
+          teplotní odezvy, aby jejich součet co nejlépe odpovídal měřeným
+          teplotám. Předpokládali přitom, že se jednotlivé odezvy dají
+          přibližně sčítat.{' '}
+          <SourceLink id="DOI_10_1029_2008GL034864">(Leanová a Rind 2008, oddíl 2)</SourceLink>
+        </p>
+        <p>
+          Ve výsledku se sluneční cyklus projevil: mezi jeho minimem
+          a maximem vycházela ve třináctiměsíčních průměrech změna globální
+          teploty asi o 0,11 °C. Dlouhodobý příspěvek byl jiný.
+          Pro roky 1979–2005 autoři odhadli sluneční trend
+          −0,004 ± 0,004 °C za deset let. Uvedená statistická nejistota
+          výpočtu nezahrnuje všechny chyby vstupních záznamů.
+          Slunce v tomto rozboru vysvětlovalo malé opakované výkyvy,
+          ale tehdejší růst teploty mu připsat nešlo.{' '}
+          <SourceLink id="DOI_10_1029_2008GL034864">(Leanová a Rind 2008, oddíl 3 a tab. 1)</SourceLink>
+        </p>
+        <p>
+          Rozlišení cyklu a trendu je podstatné. Měřitelná odezva
+          na sluneční cyklus sama neurčuje, čím je způsoben dlouhodobý
+          růst teploty. Statistické rozdělení teplot
+          mezi vlivy navíc můžeme prověřit jiným způsobem: sledovat přímo
+          přicházející energii.{' '}
+          <SourceLink id="DOI_10_1029_2008GL034864">(Leanová a Rind 2008, oddíl 4)</SourceLink>
+        </p>
+        <p>
+          Hypotéza silnějšího Slunce má pro energii jednoduchou předpověď:
           více pohlcené energie má následovat po růstu slunečního příkonu.
           Musíme proto odděleně sledovat záření, které přichází, a část,
           kterou Země odráží. Při stejném Slunci může planeta získávat více
@@ -160,7 +190,39 @@ export function EarthEnergyBalanceArticle() {
           <SourceLink id="DOI_10_1126_science_1112418">(Barnett a kol. 2005, obr. 2 a 3)</SourceLink>
         </p>
         <p>
-          Později přibyla užší otázka: proč se přísun energie ještě zrychloval?
+          Jinou otázku přineslo dočasné zpomalení oteplování u povrchu
+          na začátku 21. století.
+          Kosaka a Xie se v roce 2013 ptali, zda je dokáže vysvětlit
+          chladnější rovníkový Pacifik. Pozorovaný průběh shrnuje{' '}
+          <Link href="/pozorovani/gmst/#zpomaleni-2002-2012">porovnání sezónních teplot v letech 2002–2012</Link>.
+          Pokud zpomalení vzniklo v této oblasti, mělo by zadání její
+          skutečné teploty do modelu vyvolat odpovídající odezvu i jinde.{' '}
+          <SourceLink id="DOI_10_1038_nature12534">(Kosaka a Xie 2013)</SourceLink>
+        </p>
+        <p>
+          Autoři připravili dva pokusy se stejnými změnami složení
+          atmosféry a slunečního záření. V jednom nechali oceán vyvíjet
+          volně. Ve druhém předepsali naměřený průběh teploty hladiny
+          ve středním a východním rovníkovém Pacifiku, na 8,2 % povrchu Země.
+          Zbytek oceánu a atmosféra se dál vyvíjely podle modelových
+          fyzikálních vztahů. Testovali tedy, co změna této jedné oblasti
+          udělá s širším klimatem. Teplota zadané oblasti byla vstupem,
+          ověřovaným výsledkem byla odezva mimo ni.{' '}
+          <SourceLink id="DOI_10_1038_nature12534">(Kosaka a Xie 2013, uspořádání pokusů)</SourceLink>
+        </p>
+        <p>
+          Pokus se zadaným Pacifikem zachytil zpomalení růstu globální
+          povrchové teploty i jeho silnější projev v chladné části roku
+          severní polokoule.
+          Obsah tepla v modelovém oceánu přitom dál rostl.
+          Studie tak ukázala konkrétní úlohu přirozeného kolísání:
+          dokáže na čas přibrzdit oteplování vzduchu u povrchu,
+          zatímco klimatický systém dál získává energii. Oba děje
+          se mohou odehrávat současně.{' '}
+          <SourceLink id="DOI_10_1038_nature12534">(Kosaka a Xie 2013, obr. 1 a rozšířený obr. 3)</SourceLink>
+        </p>
+        <p>
+          Zbývala proto otázka celkové bilance: proč se přísun energie ještě zrychloval?
           Raghuraman a kolegové v roce 2021 porovnali družicový trend
           z let 2001–2020 s přirozeným kolísáním ve 47 klimatických modelech.
           Z dlouhých výpočtů získali 1 293 dvacetiletých úseků bez změn
@@ -169,8 +231,20 @@ export function EarthEnergyBalanceArticle() {
           <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021)</SourceLink>
         </p>
         <p>
+          Bez změny vnějších vlivů modely vytvářely růsty i poklesy
+          bilance soustředěné kolem nuly. Přibližně 95 % přirozeného
+          kolísání dvacetiletých trendů pokrývalo pásmo
+          ±0,19 W/m² za deset let. To je číselná předpověď této varianty
+          hypotézy. Velký růst může vzniknout i náhodou, ale čím dál leží
+          od obvyklého rozsahu, tím méně pravděpodobně. Chybu družicového
+          měření autoři zahrnuli do testu zvlášť.{' '}
+          <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, obr. 2a)</SourceLink>
+        </p>
+        <p>
           Družicový růst energetického přebytku činil
-          0,38 ± 0,24 W/m² za deset let, s 95% intervalem spolehlivosti.
+          0,38 W/m² za deset let. Autoři mu v tomto porovnání přisoudili
+          nejistotu měření ±0,20 W/m² za deset let, odpovídající přibližně
+          95% rozsahu předpokládaných chyb přístrojů.
           Při použitých odhadech přirozeného kolísání a chyby měření vyšla
           pravděpodobnost takového výsledku bez měnícího se vnějšího působení
           pod 1 %. Tento test doplňuje starší oceánská porovnání o další
@@ -230,8 +304,42 @@ export function EarthEnergyBalanceArticle() {
           <SourceLink id="1967_Manabe_Wetherald">(Manabe a Wetherald 1967)</SourceLink>
         </p>
         <p>
-          Základní předpověď lze testovat i bez čekání na oteplení celého
-          oceánu. Plyny pohlcují záření v určitých pásmech vlnových délek.
+          Výpočet teploty atmosféry otevřel také test podle výšky.
+          Změny složení vzduchu ve druhé polovině 20. století měly
+          ohřívat troposféru, spodní vrstvu atmosféry, a ochlazovat
+          stratosféru nad ní.
+          V dolní stratosféře se přitom výrazně uplatňuje lidské poškozování
+          ozonu, který tam jinak pohlcováním slunečního záření dodává teplo.
+          Santer a kolegové v roce 2013 porovnali očekávaný společný obraz
+          s družicovými teplotami z let 1979–2012.{' '}
+          <SourceLink id="DOI_10_1073_pnas_1305332110">(Santer a kol. 2013, obr. 1 a 2)</SourceLink>
+        </p>
+        <p>
+          Nestačilo najít dvě opačná znaménka. Sopečné erupce a následné
+          zotavení atmosféry také mění teploty obou vrstev různými směry.
+          Autoři proto porovnali souběh změn ve třech širokých výškových
+          vrstvách a v různých zeměpisných šířkách. Z modelů odvodili
+          rozložení očekávané při lidském působení a zjišťovali, zda se
+          v měření postupně prosazuje nad přirozeným kolísáním.
+          To odhadovali z výpočtů se stálými podmínkami i s proměnlivým
+          Sluncem a sopečnou činností.{' '}
+          <SourceLink id="DOI_10_1073_pnas_1305332110">(Santer a kol. 2013, porovnání signálu a kolísání)</SourceLink>
+        </p>
+        <p>
+          <Link href="/pozorovani/stratosfericke-ochlazovani/#vyskovy-obraz">Naměřený výškový obraz změn</Link>
+          {' '}odpovídal lidskému působení. Výsledek obstál i při porovnání
+          s větší přirozenou proměnlivostí v modelových výpočtech minulých
+          staletí. Přesná velikost změn se mezi modely a měřením lišila.
+          Rozlišující prostorový obraz byl přesto zjistitelný v obou
+          použitých zpracováních družicových dat. K oceánským profilům
+          tak přibyl test teplot v atmosféře.{' '}
+          <SourceLink id="DOI_10_1073_pnas_1305332110">(Santer a kol. 2013, obr. 3 a 4)</SourceLink>
+        </p>
+        <p>
+          Samotný účinek přibývajícího CO₂ lze hledat přímo v záření.
+          Tento test sleduje jiný článek vysvětlovaného děje než teplotní
+          porovnání.
+          Plyny pohlcují záření v určitých pásmech vlnových délek.
           Vlnová délka rozlišuje jednotlivé druhy záření podobně, jako ve
           viditelném světle rozlišuje barvy. Účinek rostoucího CO₂ proto
           musí zanechat konkrétní změnu v infračerveném záření, které je
@@ -522,6 +630,17 @@ export function EarthEnergyBalanceArticle() {
             <SourceLink id="DOI_10_1175_JCLI_D_17_0208_1">(Loeb a kol. 2018)</SourceLink>
           </p>
           <p>
+            Rozbor Leanové a Rinda přiděluje jednotlivým vlivům teplotní
+            příspěvky statistickým přizpůsobením společnému záznamu.
+            Záleží proto na úplnosti vstupů a předpokladu přibližně
+            sčitatelných odezev. U výškového testu Santera a kolegů modely
+            v průměru nadhodnocovaly troposférický ohřev a podhodnocovaly
+            ochlazování dolní stratosféry. Zachycení rozlišujícího obrazu
+            tedy neznamená shodu každé vypočtené teploty.{' '}
+            <SourceLink id="DOI_10_1029_2008GL034864">(Leanová a Rind 2008)</SourceLink>{' '}
+            <SourceLink id="DOI_10_1073_pnas_1305332110">(Santer a kol. 2013, diskuse)</SourceLink>
+          </p>
+          <p>
             Rozlišení příčin závisí také na tom, jak dobře modely
             zachycují přirozené kolísání. Studie z let 2001–2020 využívá
             mnoho modelů, regionální změny oblaků a aerosolů však
@@ -531,6 +650,15 @@ export function EarthEnergyBalanceArticle() {
             vysvětlit tento trend samotným přirozeným kolísáním,
             oslabilo by to uvedený závěr o příčinách.{' '}
             <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021)</SourceLink>
+          </p>
+          <p>
+            Celkový 95% interval družicového trendu v této studii je
+            0,38 ± 0,24 W/m² za deset let. Zahrnuje chybu měření
+            i nejistotu odhadu trendu v kolísajícím záznamu. Při porovnání
+            s modelovým rozpětím přirozeného kolísání proto autoři
+            používají užší nejistotu ±0,20 uvedenou výše. Jinak by vliv
+            kolísání započetli dvakrát.{' '}
+            <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, dvě porovnání nejistot)</SourceLink>
           </p>
           <p>
             Pozemní test CO₂ zachycuje bezoblačné podmínky na dvou místech.
@@ -601,7 +729,10 @@ export function EarthEnergyBalanceArticle() {
             <h3>Měření a porovnání vysvětlení</h3>
             <ul>
               <li><SourceLink id="DOI_10_1029_2010GL045777">Kopp a Leanová 2011</SourceLink>: družicový záznam slunečního příkonu a jeho proměnlivost.</li>
+              <li><SourceLink id="DOI_10_1029_2008GL034864">Leanová a Rind 2008</SourceLink>: oddělení slunečního cyklu a dlouhodobého trendu při současném porovnání dalších vlivů.</li>
               <li><SourceLink id="DOI_10_1126_science_1112418">Barnett a kol. 2005</SourceLink>: rozložení ohřevu v oceánu a porovnání přirozených a lidských vlivů.</li>
+              <li><SourceLink id="DOI_10_1038_nature12534">Kosaka a Xie 2013</SourceLink>: modelový pokus s předepsaným vývojem rovníkového Pacifiku a zpomalením povrchového oteplování.</li>
+              <li><SourceLink id="DOI_10_1073_pnas_1305332110">Santer a kol. 2013</SourceLink>: test výškového a zeměpisného rozložení změn teploty atmosféry.</li>
               <li><SourceLink id="DOI_10_1038_nature14240">Feldman a kol. 2015</SourceLink>: test příspěvku rostoucího CO₂ k záření na povrch, dvě stanice v letech 2000–2010.</li>
               <li><SourceLink id="DOI_10_5194_essd_16_3517_2024">Cheng a kol. 2024</SourceLink>: vývoj obsahu tepla v oceánu v letech 1955–2023.</li>
               <li><SourceLink id="DOI_10_1175_JCLI_D_17_0208_1">Loeb a kol. 2018</SourceLink>: dokumentace produktu CERES EBAF a jeho kalibrace.</li>

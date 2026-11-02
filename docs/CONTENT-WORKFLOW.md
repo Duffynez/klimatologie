@@ -99,6 +99,8 @@ Každou novou adresu přidáme do sitemap a ověříme ve statickém exportu. P�
 
 Plný mechanismový článek tvoří samostatná komponenta připojená větví podle slugu v `app/mechanismy/[slug]/page.tsx`. Prvním článkem je `EarthEnergyBalanceArticle.tsx`. Při přidání dalšího článku založte zdroje, ověřte média, připojte komponentu, nastavte datum v `PageLead` a doplňte test plného obsahu. Zachovejte automatické adresy ostatních katalogových položek. Článek propojte s konkrétními pozorováními a metodami. Zpětný odkaz v pozorovacím článku ponechte oddělený od popisu měřených výsledků, například jako navazující vysvětlení po shrnutí. Nevkládejte do samotného pozorování kauzální argument.
 
+Pod nadpis oddílu hypotéz vložte společnou komponentu `app/components/HypothesisDiagram.tsx`. Ta vykreslí stručný návod a jednotný diagram. Předejte jí nejvýše tři položky typu `MechanismHypothesis`, jedinečné `captionId`, obsahový popisek a případné vysvětlení jednotek v `context`. Položka obsahuje kotvu příběhu, název, jedinečnou předpověď, výsledek testů, slovní hodnocení, jeho vysvětlení a stav `rejected`, `insufficient`, `unresolved` nebo `supported`. Kotvy a pořadí musí odpovídat oddílům článku. Příklad připojení je v `EnergyHypothesisDiagram.tsx`. Obsahové požadavky patří do [MECHANISMS.md](../MECHANISMS.md#2-úvodní-diagram-hypotéz-a-jejich-předpovědí).
+
 ## 6. Historický milník
 
 1. Nejdřív založte úplný bibliografický záznam zdroje.

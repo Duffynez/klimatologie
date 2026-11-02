@@ -618,6 +618,18 @@ export function StratosphericCoolingArticle() {
           </SourceLink>
         </p>
 
+        <h3 id="vyskovy-obraz">Současná změna ve spodní atmosféře</h3>
+        <p>
+          Santer a kolegové porovnali pro roky 1979–2012 družicová zpracování
+          RSS a UAH ve třech širokých výškových vrstvách, od spodní
+          troposféry po dolní stratosféru. V obou zpracováních se nad
+          oteplující se troposférou ochlazovala dolní stratosféra.
+          Velikost změn se lišila také podle zeměpisné šířky.
+          Jejich obrázek 2 proto ukazuje společně výšku i polohu od jihu
+          k severu, místo jediného průměru za atmosféru.{' '}
+          <SourceLink id="DOI_10_1073_pnas_1305332110">(Santer a kol. 2013, obr. 2h a 2i)</SourceLink>
+        </p>
+
         <div className="article-observation-summary">
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
@@ -630,6 +642,11 @@ export function StratosphericCoolingArticle() {
             ve všech sledovaných vrstvách klesající.
           </p>
         </div>
+
+        <aside className="article-related-mechanism" aria-label="Navazující vysvětlení">
+          <p className="eyebrow">Navazující vysvětlení</p>
+          <p>Jak souběh oteplování troposféry a ochlazování stratosféry pomáhá rozlišit příčiny změn, vysvětluje <Link href="/mechanismy/energeticka-bilance-zeme/#lidske-pusobeni">příběh testování lidského vlivu na klima</Link>.</p>
+        </aside>
 
         <h2>Prameny, data a licence</h2>
         <p>
@@ -778,6 +795,7 @@ export function StratosphericCoolingArticle() {
           <section>
             <h3>Práce vyhodnocující pozorování</h3>
             <ul>
+              <li><SourceLink id="DOI_10_1073_pnas_1305332110">Santer a kol. 2013</SourceLink>: společný výškový a zeměpisný obraz změn teploty za roky 1979–2012 a porovnání jeho příčin.</li>
               <li>
                 Randel, W. J. et al. (2009):{" "}
                 <SourceLink id="DOI_10_1029_2008jd010421">

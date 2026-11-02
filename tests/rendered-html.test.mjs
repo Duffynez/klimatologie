@@ -3516,7 +3516,7 @@ test("quality control and homogenization connects a complete method to global te
     "Jak získáme srovnatelný klimatický záznam", "Nejistoty a ověření", "Příklad: kontrola a úpravy teplot v Ruzyni", "Shrnutí",
   ]);
   assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
-  assert.match(observation, /<p class="page-lead__meta">1\. listopadu 2026<\/p>/);
+  assert.match(observation, /<p class="page-lead__meta">2\. listopadu 2026<\/p>/);
   assert.match(body, /EZM00011518/);
   assert.match(body, /v4\.0\.1\.20261029/);
   assert.match(body, /719/);
@@ -4040,6 +4040,13 @@ test("publishes the full energy-balance mechanism with evidence, sources and ret
   assert.ok([...introduction.matchAll(/<p\b/g)].length <= 2, "Keep the observation introduction focused");
   const diagram = mechanismBody.match(/<figure[^>]+aria-labelledby="hypothesis-map-caption"[\s\S]*?<\/figure>/)?.[0];
   assert.ok(diagram, "Introduce the hypotheses with an accessible diagram");
+  const diagramIntroduction = mechanismBody.slice(mechanismBody.indexOf('<h2 id="priciny"'), mechanismBody.indexOf(diagram));
+  assert.match(diagramIntroduction, /<p[^>]*>Diagram ukazuje/,
+    "Explain how to read the diagram immediately below its heading");
+  for (const label of ["Jedinečná předpověď", "Výsledek testů", "Dnešní hodnocení"]) {
+    assert.equal([...diagram.matchAll(new RegExp(`<dt>${label}</dt>`, "g"))].length, 3,
+      "Keep the shared diagram fields consistent for every hypothesis");
+  }
   const storyLinks = [...diagram.matchAll(/href="#([^"]+)"/g)].map(match => match[1]);
   assert.equal(storyLinks.length, 3, "Compare three hypotheses including the accepted explanation");
   const stories = mechanismBody.slice(mechanismBody.indexOf('<h2 id="predpovedi"'), mechanismBody.indexOf('<h2 id="vysvetleni"'));
@@ -4059,7 +4066,20 @@ test("publishes the full energy-balance mechanism with evidence, sources and ret
     const related = await readFile(new URL(`dist/client/${path}/index.html`, root), "utf8");
     assert.match(related, /href="\/mechanismy\/energeticka-bilance-zeme\/#/);
   }
+  const stratosphere = await readFile(new URL("dist/client/pozorovani/stratosfericke-ochlazovani/index.html", root), "utf8");
+  assert.ok(stratosphere.includes('href="/mechanismy/energeticka-bilance-zeme/#lidske-pusobeni"'));
+  for (const id of ["DOI_10_1029_2008GL034864", "DOI_10_1038_nature12534", "DOI_10_1073_pnas_1305332110"]) {
+    assert.ok(stories.includes(`href="/zdroje#${id}"`), "Cite each new investigation within its story");
+    assert.ok(mechanismBody.slice(mechanismBody.indexOf('<h2 id="prameny"')).includes(`href="/zdroje#${id}"`),
+      "Include each investigation in the bibliography");
+  }
   const sourcePage = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
+  for (const id of ["DOI_10_1029_2008GL034864", "DOI_10_1038_nature12534", "DOI_10_1073_pnas_1305332110"]) {
+    const card = sourcePage.match(new RegExp(String.raw`<article[^>]+id="${id}"[\s\S]*?</article>`));
+    assert.ok(card, "Publish a source card for " + id);
+    assert.match(card[0], /Otevřít plný text/);
+    assert.doesNotMatch(card[0], /drive\.google\.com/);
+  }
   for (const id of ["1827_Fourier_Temperatures", "1896_Arrhenius", "DOI_10_1086_140874", "1967_Manabe_Wetherald", "DOI_10_1175_2007JCLI2110_1", "DOI_10_1029_2021GL093047", "DOI_10_5194_essd_15_1675_2023", "DOI_10_1038_s41467_021_24544_4", "HERSCHEL_1801_SOLAR_VARIATION", "DOI_10_1029_2010GL045777", "DOI_10_1175_BJERKNES_1969", "DOI_10_1126_science_1112418", "DOI_10_1038_nature14240", "DOI_10_1017_9781009157896_005", "1862_Tyndall"]) {
     assert.ok(html.includes(`href="/zdroje#${id}"`), "Missing source citation " + id);
     const card = sourcePage.match(new RegExp(String.raw`<article[^>]+id="${id}"[\s\S]*?</article>`));

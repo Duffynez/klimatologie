@@ -1,3 +1,4 @@
+.guide { margin-bottom: 16px; }
 .diagram { margin: 28px 0 40px; }
 .branches { list-style: none; padding: 0; margin: 0; display: grid; gap: 22px; }
 .branch { border: 1px solid var(--line); background: #fff; }
@@ -14,6 +15,7 @@
 .step dd span { display: block; margin-top: 8px; }
 .rejected { border-top: 3px solid #bd6048; }
 .insufficient { border-top: 3px solid #aa8438; }
+.unresolved { border-top: 3px solid #687981; }
 .supported { border-top: 3px solid #3b786d; }
 .diagram figcaption { margin-top: 14px; color: var(--muted); font-size: .8rem; line-height: 1.6; }
 @media (max-width: 620px) {

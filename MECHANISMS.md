@@ -20,15 +20,21 @@ Pozorování tvoří základ celého článku. Pokud některé potřebné pozoro
 
 Po krátkém úvodu zařadíme přehledový diagram. Porovnáme nejvýše tři konkurující hypotézy celkem, včetně jednoho dnes přijímaného vysvětlení. Vybíráme historicky významné nebo odborně relevantní možnosti, které odpovídají na tutéž otázku a vztahují se ke stejnému pozorování. Tři hypotézy jsou horní limit, počet nenaplňujeme umělými alternativami.
 
+Oddíl má jednotný nadpis „Tři hypotézy a jejich předpovědi“, při menším počtu upravíme číslovku. Bezprostředně pod nadpis patří krátký návod ke čtení diagramu. Vysvětlí, že porovnává očekávané výsledky jednotlivých hypotéz se skutečnými testy a dnešním hodnocením. Uvede, že název hypotézy odkazuje na její souvislý příběh. Případné jednotky nebo zvláštní podmínky potřebné už pro přečtení diagramu vysvětlíme před ním.
+
 Každá větev diagramu obsahuje:
 
-**Hypotéza → rozlišující předpověď → skutečný výsledek testu → dnešní hodnocení.**
+**Hypotéza → jedinečná předpověď → výsledek testů → dnešní hodnocení.**
 
-Předpověď pojmenuje konkrétní znak, podle kterého lze hypotézu odlišit od konkurujících vysvětlení. Kde rozhoduje velikost účinku, uvedeme také očekávanou hodnotu či rozsah a podmínky. Jedinečnost nepřisuzujeme znaku, který předpovídají všechny porovnávané hypotézy. Pokud rozlišuje až kombinace znaků, ukážeme ji společně. Předpověď a predikce označují totéž, proto je nedělíme do dvou opakujících se polí.
+Do pole „Jedinečná předpověď“ píšeme konkrétní očekávání, které při uvedených podmínkách odlišuje tuto hypotézu od ostatních porovnávaných hypotéz. Obecný následek společný všem možnostem, například samotný ohřev, sem nepatří. Nestačí ani požadavek „musí vysvětlit pozorování“. Uvedeme, co konkrétně bychom měli naměřit, například jiné znaménko změny, časovou návaznost, rozložení nebo číselný rozsah.
+
+Jedinečnost posuzujeme vůči uvedeným alternativám, nikoli vůči každé myslitelné příčině. Pokud rozlišuje až kombinace znaků, ukážeme ji společně a řekneme, že rozhoduje jejich souběh. Kde rozhoduje velikost účinku, uvedeme očekávanou hodnotu či rozsah a podmínky. U statistické předpovědi uvedeme očekávané rozdělení či rozsah a podmínky, za kterých byl odvozen. Podmíněnou předpověď jedné varianty hypotézy nevydáváme za předpověď všech jejích variant. Předpověď a predikce označují totéž, proto je nedělíme do dvou opakujících se polí.
 
 Diagram předem ukáže, která hypotéza byla v daném testu falsifikována a která obstála. Rozliší také nedostatečné vysvětlení od vyvráceného a případný nerozhodný dílčí test podle hodnocení v části 3. Uvede rozhodující období či podmínku, aby se místní nebo časově omezený výsledek netvářil jako obecný verdikt. Jednotlivé větve odkážou na příslušné příběhy a jejich důkazy v článku. Výsledek vyjádříme textem, nejen barvou nebo symbolem.
 
 Diagram slouží jako stručná orientace před četbou. Používá srozumitelná pojmenování, která následný výklad rozvine, a nenahrazuje vysvětlení důvodů závěru. Pořadí hypotéz a jejich pojmenování zachováme i v navazujícím textu.
+
+Na webu používáme společnou komponentu `HypothesisDiagram`. Zachovává stejné pořadí polí, popisky, odkaz z názvu a barevné i slovní vyjádření výsledku. Na široké obrazovce se kroky čtou zleva doprava, na mobilu shora dolů. Konkrétní hypotézy, předpovědi, výsledky a podmínky jsou obsahem jednotlivého článku. Podrobnosti připojení uvádí [docs/CONTENT-WORKFLOW.md](docs/CONTENT-WORKFLOW.md#5-nový-mechanismus).
 
 ### 3. Příběhy hypotéz od vzniku po dnešní hodnocení
 
@@ -45,6 +51,8 @@ Příběh čtenáři postupně objasní:
 Tyto kroky určují návaznost příběhu, nemusí se stát pěti dalšími podnadpisy. Každou hypotézu představíme v její nejsilnější odborné podobě a s ohledem na tehdy dostupné poznatky. Její význam a důkazní oporu popíšeme přiměřeně skutečnému stavu. Rozlišíme vysvětlení, která si odporují, od procesů, které mohou působit společně.
 
 Historické údaje a vývoj argumentu dokládáme prameny. Nejstarší nalezenou zmínku automaticky neoznačujeme za první formulaci. Pokud rozhodnutí vznikalo postupným hromaděním důkazů, popíšeme tento vývoj. Nevytváříme jediný rozhodující experiment tam, kde jej historie nezná.
+
+Příběhy rozvíjíme přes více konkrétních studií, pokud přinášejí další krok poznání: první formulaci, nový druh měření, náročnější test, nezávislé zopakování nebo vysvětlení dřívějšího rozporu. U každého takového kroku vysvětlíme otázku autorů, uspořádání zkoumání, výsledek a jeho přínos k rozhodnutí. Ukážeme i to, co dnes nedostatečná hypotéza vysvětlila správně. Délku ani počet citací nenaplňujeme opakováním stejného důkazu. Prostor přidáváme především samotnému vyšetřování a návaznosti jeho kroků.
 
 Uvnitř příběhu každé rozhodující porovnání zachová tuto návaznost:
 

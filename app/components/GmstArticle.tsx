@@ -491,6 +491,19 @@ export function GmstArticle() {
           </SourceLink>
         </p>
 
+        <h3 id="zpomaleni-2002-2012">Dočasné zpomalení a rozdíly mezi sezónami</h3>
+        <p>
+          Příkladem nerovnoměrného průběhu je období 2002–2012, rozebrané
+          Kosakou a Xiem v roce 2013. V použitém souboru HadCRUT4,
+          verzi 4.1.1.0, se
+          zpomalení růstu globální povrchové teploty soustředilo do měsíců
+          listopad až duben, jejichž průměr klesal. V létě severní polokoule
+          globální průměr dál rostl. Stejné jedenáctiletí tak mělo podle
+          vybrané části roku rozdílný průběh. Jde o historické porovnání
+          v daném datovém zpracování, nikoli o popis celého dnešního záznamu.{' '}
+          <SourceLink id="DOI_10_1038_nature12534">(Kosaka a Xie 2013, obr. 1c)</SourceLink>
+        </p>
+
         <div className="article-observation-summary">
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
@@ -505,6 +518,7 @@ export function GmstArticle() {
         <aside className="article-related-mechanism" aria-label="Navazující vysvětlení">
           <p className="eyebrow">Navazující vysvětlení</p>
           <p>Proč přebytek energie vede k ohřívání Země a jak oteplení ovlivňuje její další vyzařování, vysvětluje článek <Link href="/mechanismy/energeticka-bilance-zeme/#nerovnovaha-a-teplota">Proč v klimatickém systému přibývá energie</Link>.</p>
+          <p>Proč se rychlost oteplování u povrchu mění, rozebírá <Link href="/mechanismy/energeticka-bilance-zeme/#prirozena-hypoteza">příběh přirozeného kolísání</Link>, včetně pokusu s teplotou rovníkového Pacifiku.</p>
         </aside>
 
         <h2>Prameny, data a licence</h2>
@@ -512,6 +526,7 @@ export function GmstArticle() {
           <section>
             <h3>Historické a primární práce</h3>
             <ul>
+              <li><SourceLink id="DOI_10_1038_nature12534">Kosaka a Xie 2013</SourceLink>: sezónní porovnání teplot v letech 2002–2012 a modelový test vlivu rovníkového Pacifiku.</li>
               <li>
                 Callendar, G. S. (1938):{" "}
                 <SourceLink id="1938_Callendar">
