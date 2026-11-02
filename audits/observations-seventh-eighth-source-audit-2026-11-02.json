@@ -9,7 +9,7 @@
   "excludedScope": "Samostatný audit úplnosti výkladu nejistot nebyl zadán.",
   "initialCommit": "38656512a8dc708b2d2233285d77ec140c70d373",
   "integrationBase": "38656512a8dc708b2d2233285d77ec140c70d373",
-  "status": "prepared-awaiting-browser-visual-check",
+  "status": "verified-ready-for-deployment",
   "scope": [
     {
       "title": "Globální střední hladina moře",
@@ -836,16 +836,37 @@
       ]
     },
     "browserVisualQa": {
-      "desktop": false,
-      "mobile": false,
-      "changedSourceCards": false,
-      "status": "blocked-this-turn",
-      "reason": "Computer Use byl bezpečnostním mechanismem ukončen, protože na Windows nedokázal dostatečně spolehlivě určit aktuální adresu prohlížeče. Další ovládání prohlížeče v tomto tahu nebylo prováděno. Statická kontrola HTML a integrity obrázků nenahrazuje požadovanou vizuální kontrolu."
+      "desktop": true,
+      "mobile": true,
+      "changedSourceCards": true,
+      "status": "passed",
+      "checkedAt": "2026-11-02T20:40:12.560Z",
+      "viewports": [
+        {
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "width": 390,
+          "height": 844
+        }
+      ],
+      "articles": [
+        "gmsl",
+        "acidifikace-oceanu"
+      ],
+      "sourceCardsChecked": 76,
+      "sourceCardErrors": 0,
+      "imagesLoaded": 8,
+      "articleHorizontalOverflow": false,
+      "mobileNavigation": "Ověřeno skutečným kliknutím na Zdroje v mobilní navigaci.",
+      "citationNavigation": "Ověřeny skutečné přechody z článků na karty SMHI a BGC-Argo.",
+      "notes": "V novém tahu běžný prohlížeč fungoval. Vizuálně zkontrolovány oba články, obrázky a popisky, nadpisy, mobilní navigace a zdrojové karty. Grafy acidifikace mají vlastní vodorovné posouvání uvnitř obrázkového kontejneru, bez přetékání celé stránky. Všech 76 karet navíc ověřeno v běžícím DOM při obou šířkách, bez chybějících údajů, odkazů nebo nevhodného tlačítka Google Drive."
     },
     "deployment": {
-      "status": "not-started",
-      "authorization": "Pokyn k opravám zahrnuje commit, push do main a nasazení bez opakované žádosti.",
-      "remainingRequirement": "Vizuální kontrola podle docs/DEVELOPMENT.md, poté push a ověření příslušného nasazení."
+      "status": "ready-for-automatic-deployment",
+      "authorization": "Uživatel výslovně zopakoval, aby všechny dosud dokončené opravy byly nahrány. Nasazení je autorizováno bez dalšího potvrzení.",
+      "process": "Push do main, ověření SHA workflow Deploy GitHub Pages a konkrétního opraveného obsahu na veřejném webu."
     }
   },
   "browserEvidence": [
@@ -890,8 +911,7 @@
     "Automatický HTTP 200 s Client Challenge nebo přihlašovací stránkou není hodnocen jako dostupný plný text či stažená data.",
     "Aktuální stažení z portálu IOCAS nebylo v prohlížeči znovu ověřeno. Podmínka přihlášení byla zachována podle doloženého dřívějšího auditu a je uvedena v článku.",
     "NetCDF regionálních trendů a velký BATS CSV byly načteny jen částečně do limitu 8 MB. Uvedená verifikace se vztahuje pouze na hlavičku, metadata a načtené řádky.",
-    "Rozsáhlé datové archivy Ford/SOCAT a Frederikse nebyly všechny staženy ani znovu vědecky přepočteny.",
-    "Běžný prohlížeč byl bezpečnostně zastaven před závěrečnou vizuální kontrolou místního webu. Kontrola pro počítač, mobil a změněné karty i nasazení zůstávají nedokončené."
+    "Rozsáhlé datové archivy Ford/SOCAT a Frederikse nebyly všechny staženy ani znovu vědecky přepočteny."
   ],
   "sources": [
     {

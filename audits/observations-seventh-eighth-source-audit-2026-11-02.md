@@ -43,7 +43,7 @@ Celkem bylo provedeno 140 automatických požadavků včetně následných kontr
 - Samostatně byla provedena obsahová a jazyková revize změněných pasáží.
 - Statický export: všech 76 karet existuje, odpovídá kategorie i cílové odkazy, otevřené zdroje nemají tlačítko Google Drive. Oba články mají správné citace a datum revize. Všech osm obrázků má platný soubor a správné rozměry.
 
-**Stav: připraveno, čeká na vizuální kontrolu. Nasazení neproběhlo.** Bezpečnostní mechanismus nástroje Computer Use ukončil ovládání prohlížeče, protože na Windows nedokázal spolehlivě určit jeho aktuální adresu. Další ovládání prohlížeče nebylo v tomto tahu prováděno. Statická kontrola nenahrazuje kontrolu pro počítač, mobil a změněné zdrojové karty požadovanou [DEVELOPMENT.md](../docs/DEVELOPMENT.md). Po jejím dokončení následuje již autorizovaný push do main a ověření nasazení, bez nové žádosti o souhlas.
+**Stav: dokončena také vizuální kontrola, připraveno k nasazení.** V navazujícím tahu prohlížeč opět fungoval. Oba články byly zkontrolovány při šířkách 1280 a 390 pixelů, včetně nadpisů, všech osmi obrázků a jejich popisků. V mobilní navigaci byl skutečným kliknutím otevřen katalog zdrojů. Byly ověřeny přechody z citací na karty a všech 76 zdrojových karet v běžícím DOM při obou šířkách. Chybějící údaje, tlačítka Google Drive u otevřených prací ani vodorovné přetékání celé stránky nebyly nalezeny. Grafy acidifikace zůstávají posuvné uvnitř vlastních kontejnerů. Kontrola podle [DEVELOPMENT.md](../docs/DEVELOPMENT.md) je dokončena. Následuje uživatelem výslovně autorizovaný push do main a ověření konkrétního nasazení na veřejném webu.
 
 ## Jednotlivá hodnocení
 
