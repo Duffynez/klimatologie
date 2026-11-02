@@ -1,0 +1,24 @@
+.diagram { margin: 28px 0 40px; }
+.branches { list-style: none; padding: 0; margin: 0; display: grid; gap: 22px; }
+.branch { border: 1px solid var(--line); background: #fff; }
+.title { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 16px; color: var(--ink); font-weight: 750; text-decoration: none; border-bottom: 1px solid var(--line); }
+.title:hover { text-decoration: underline; text-underline-offset: .2em; }
+.title:focus-visible { outline: 3px solid var(--sea); outline-offset: 3px; }
+.number { display: inline-grid; place-items: center; width: 27px; height: 27px; border: 1px solid var(--sea); color: var(--sea); flex-shrink: 0; font-size: .85rem; }
+.read { margin-left: auto; color: var(--muted); font-size: .75rem; font-weight: 500; }
+.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding: 16px; margin: 0; }
+.step { position: relative; min-width: 0; padding: 12px; background: #f4f5f1; }
+.step + .step::before { content: "→"; position: absolute; left: -18px; top: 44%; color: var(--muted); }
+.step dt { color: var(--muted); font-size: .69rem; letter-spacing: .03em; text-transform: uppercase; font-weight: 750; margin: 0 0 9px; }
+.step dd { margin: 0; font-size: .88rem; line-height: 1.55; color: var(--ink); overflow-wrap: anywhere; }
+.step dd span { display: block; margin-top: 8px; }
+.rejected { border-top: 3px solid #bd6048; }
+.insufficient { border-top: 3px solid #aa8438; }
+.supported { border-top: 3px solid #3b786d; }
+.diagram figcaption { margin-top: 14px; color: var(--muted); font-size: .8rem; line-height: 1.6; }
+@media (max-width: 620px) {
+  .steps { grid-template-columns: 1fr; gap: 25px; padding: 14px; }
+  .step + .step::before { content: "↓"; left: calc(50% - 5px); top: -26px; }
+  .step dd { font-size: .94rem; }
+  .read { width: 100%; margin-left: 37px; }
+}

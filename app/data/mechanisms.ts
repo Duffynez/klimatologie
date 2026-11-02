@@ -18,8 +18,8 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "energeticka-bilance-zeme",
     title: "Proč v klimatickém systému přibývá energie",
     category: "Záření a složení atmosféry",
-    summary: "Oceán, pevnina a atmosféra získávají energii a led taje. Porovnáváme vliv Slunce, přirozeného kolísání a změn složení atmosféry a vysvětlujeme, jak rozdíl příjmu a výdeje vede k ohřevu.",
-    distinguishingEvidence: "Celkový přírůstek energie a oddělená měření dopadajícího, odraženého a tepelného záření. Porovnání družicových trendů s přirozeným kolísáním a s výpočty při stálém a měnícím se vnějším působení.",
+    summary: "Oceán, pevnina a atmosféra získávají energii a led taje. Sledujeme příběhy tří vysvětlení: silnějšího Slunce, přirozeného kolísání a lidského působení. Jejich testy vedou k vysvětlení, jak rozdíl příjmu a výdeje energie ohřívá Zemi.",
+    distinguishingEvidence: "Změny slunečního příkonu, celkový přírůstek energie a rozložení ohřevu v hloubkách oceánu. Laboratorní vlastnosti plynů, pozemní měření jejich radiačního účinku a porovnání pozorování s výpočty přirozených a lidských vlivů.",
   },
   {
     slug: "radiacni-pusobeni-sklenikovych-plynu",

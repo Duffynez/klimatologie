@@ -563,6 +563,24 @@ export function AtmosphericCo2Article() {
           </SourceLink>
         </p>
 
+        <h3 id="zmena-infracerveneho-zareni">CO₂ a změna infračerveného záření</h3>
+        <p>
+          S růstem koncentrace lze porovnat také záření přicházející z atmosféry
+          k povrchu. Feldman a kolegové zpracovali měření jednotlivých
+          infračervených pásem v Oklahomě a na severu Aljašky za roky 2000–2010.
+          Vybrali bezoblačné podmínky. Pomocí měřených teplotních a vlhkostních
+          profilů a výpočtu přenosu záření oddělili příspěvek CO₂.
+          Ten při růstu koncentrace o 22 ppm vzrostl na obou místech přibližně
+          o 0,20 W/m² za deset let. Autoři uvádějí nejistotu odhadu trendu
+          ±0,06 v Oklahomě a ±0,07 na Aljašce ve stejných jednotkách.{' '}
+          <SourceLink id="DOI_10_1038_nature14240">(Feldman a kol. 2015, obr. 2 a 4 a metody)</SourceLink>
+        </p>
+        <p>
+          Výsledek popisuje místní tok záření k povrchu za jasné oblohy.
+          Jeho význam pro ověřování radiačního účinku plynu vysvětluje{' '}
+          <Link href="/mechanismy/energeticka-bilance-zeme/#lidske-pusobeni">příběh hypotézy lidského působení na klima</Link>.
+        </p>
+
         <div className="article-observation-summary">
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
@@ -585,6 +603,7 @@ export function AtmosphericCo2Article() {
           <section>
             <h3>Historické a primární práce</h3>
             <ul>
+              <li><SourceLink id="DOI_10_1038_nature14240">Feldman a kol. 2015</SourceLink>: měření a výpočet příspěvku CO₂ k záření na povrch. Plný text obsahuje popis přístrojů, použitých dat programu ARM a zpracování.</li>
               <li>
                 Reiset, J. (1880): <em>Recherches sur la proportion de l&apos;acide carbonique dans l&apos;air</em>,
                 Comptes rendus, 90, 1144–1148.{" "}

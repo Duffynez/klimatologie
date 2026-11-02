@@ -474,6 +474,22 @@ export function OceanHeatArticle() {
           </SourceLink>
         </p>
 
+        <h3 id="hloubkovy-obraz">Jak se liší rozložení ohřevu</h3>
+        <p>
+          Rozdíly mezi oceány zachycoval už rozbor Barnetta a kolegů z roku 2005.
+          Z měření teplotních profilů zpracovali změny od roku 1960 pro jednotlivé
+          hloubky a oceánské oblasti. Jejich rozložení porovnali s prostorovým
+          vzorem z klimatického modelu a určili sílu jeho projevu v měřeních.
+          V Atlantiku zasahoval takto zjištěný ohřev do 700 metrů
+          a hlouběji. V severním Pacifiku se soustředil převážně do horních
+          100 metrů, pod nimi se objevovala také ochlazující se vrstva.
+          Obrázek 1 původní práce ukazuje sílu tohoto projevu podle hloubky,
+          zprůměrovanou za čtyři desetiletí.
+          Jejich použití při rozlišování příčin popisuje{' '}
+          <Link href="/mechanismy/energeticka-bilance-zeme/#prirozena-hypoteza">test přirozeného kolísání a lidských vlivů</Link>.{' '}
+          <SourceLink id="DOI_10_1126_science_1112418">(Barnett a kol. 2005)</SourceLink>
+        </p>
+
         <h3 id="souvislost-s-bilanci">Kolik energie přibylo v celé Zemi</h3>
         <p>
           Oceánský přírůstek lze porovnat se součtem energie ve všech hlavních
@@ -567,6 +583,7 @@ export function OceanHeatArticle() {
           <section>
             <h3>Historické a primární práce</h3>
             <ul>
+              <li><SourceLink id="DOI_10_1126_science_1112418">Barnett a kol. 2005</SourceLink>: rozložení změn teploty podle hloubky a oceánské oblasti od roku 1960, obr. 1.</li>
               <li>
                 <SourceLink id="WEB_escholarship_org_Report_on_the_Deep_Sea_Temperature_Observations_8c66444c">
                   Report on the Deep-Sea Temperature Observations of Ocean-Water

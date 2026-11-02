@@ -2,265 +2,296 @@ import Image from "next/image";
 import Link from "next/link";
 import { Equation, InlineMath } from "./Equation";
 import { SourceLink } from "./SourceLink";
+import { EnergyHypothesisDiagram } from "./EnergyHypothesisDiagram";
 
 export function EarthEnergyBalanceArticle() {
   return (
     <article className="article-layout">
       <div className="article-prose">
-        <h2 id="co-vysvetlujeme">Co ukazuje součet energie Země</h2>
+        <h2 id="co-vysvetlujeme">Jak si vysvětlujeme přibývání energie v Zemi</h2>
         <p className="article-prose__intro">
-          V klimatickém systému přibývá energie. Součet změn v oceánu,
-          atmosféře, pevnině a ledu pro roky 1971–2020 činí
+          V oceánu, pevnině, atmosféře a tajícím ledu přibývá energie.
+          Za roky 1971–2020 činil její celkový přírůstek podle globální inventury
           381 ± 61 zettajoulů, s přibližně 95% intervalem spolehlivosti.
-          Zettajoule je jednotka energie odpovídající 10²¹ joulům.
-          Asi 89 % přírůstku připadlo na oceán. Podklady k tomuto součtu
-          uvádí pozorování{' '}
-          <Link href="/pozorovani/tepelny-obsah-oceanu/#souvislost-s-bilanci">obsahu tepla v oceánu a celkového přírůstku energie</Link>.{' '}
+          Zettajoule odpovídá 10²¹ joulům. Asi 89 % tohoto přírůstku připadlo
+          na oceán. Měření a výpočty rozebírá{' '}
+          <Link href="/pozorovani/tepelny-obsah-oceanu/#souvislost-s-bilanci">pozorování celkového přírůstku energie</Link>.{' '}
           <SourceLink id="DOI_10_5194_essd_15_1675_2023">(von Schuckmannová a kol. 2023)</SourceLink>
         </p>
         <p>
-          Potřebujeme vysvětlit, proč energie přibývá v celém systému
-          a co určuje rychlost tohoto přírůstku. Součástí výsledného obrazu
-          je dlouhodobý{' '}
-          <Link href="/pozorovani/tepelny-obsah-oceanu/#pozorovani">ohřev oceánu</Link> i{' '}
-          <Link href="/pozorovani/gmst/#pozorovani">růst teploty u povrchu</Link>.
-          Porovnáme vliv silnějšího Slunce, přirozeného kolísání a změn
-          složení atmosféry. U družicových testů se zaměříme na konkrétní
-          období, pro která máme porovnání příčin se zářením.
+          Proč energie přibývá? Projdeme tři vysvětlení: silnější Slunce,
+          přirozené kolísání oceánu a atmosféry a změny vyvolané lidskou činností.
+          Jejich příběhy začínají v různých dobách a postupně se setkávají
+          při vysvětlování dnešního ohřevu. Rozhodovat budou předpovědi,
+          které lze porovnat s měřením. Dnes přijímané vysvětlení musí objasnit
+          dlouhodobý <Link href="/pozorovani/tepelny-obsah-oceanu/#pozorovani">ohřev oceánu</Link>
+          {' '}i související <Link href="/pozorovani/gmst/#pozorovani">růst teploty u povrchu</Link>.
         </p>
 
-        <h2 id="priciny">Jaká vysvětlení přicházejí v úvahu</h2>
-        <h3>Silnější záření Slunce</h3>
+        <h2 id="priciny">Tři hypotézy a jejich předpovědi</h2>
+        <EnergyHypothesisDiagram />
+
+        <h2 id="predpovedi">Jak se vysvětlení zkoumala</h2>
+        <h3 id="slunecni-hypoteza">Silnější záření Slunce</h3>
         <p>
-          Hlavním zdrojem energie pro klima je sluneční záření. Kdyby Slunce
-          začalo dodávat více energie, mohla by se Země ohřívat i při stejném
-          složení atmosféry. Část dopadajícího záření planeta odráží zpět
-          do vesmíru, především oblaky a světlými povrchy. Zbytek pohltí,
-          a tím získá energii. Pro tuto hypotézu je tedy rozhodující,
-          zda zesílilo záření, které ke Zemi skutečně přichází.{' '}
+          Slunce dodává Zemi převážnou většinu energie, která udržuje její
+          klima. Možnost, že se tento přísun mění, proto patřila k přirozeným
+          otázkám při hledání příčin klimatických změn. William Herschel
+          předložil Královské společnosti v roce 1801 práci, v níž zkoumal
+          příčiny a známky proměnlivého vyzařování světla a tepla ze Slunce.
+          Šlo o otázku proměnlivého zdroje energie, položenou dlouho před
+          vznikem dnešního globálního záznamu oteplování.{' '}
+          <SourceLink id="HERSCHEL_1801_SOLAR_VARIATION">(Herschel 1801, původní rukopis)</SourceLink>{' '}
+          <SourceLink id="DOI_10_1029_2010GL045777">(Kopp a Leanová 2011)</SourceLink>
+        </p>
+        <p>
+          Pro tuto hypotézu je podstatné, kolik energie ze Slunce opravdu
+          přichází. Pozorování jeho povrchu poskytuje jen nepřímé vodítko.
+          Tmavé sluneční skvrny místně vyzařování snižují, zatímco jasnější
+          oblasti je zvyšují. Jejich účinky se skládají. Samotný počet skvrn
+          proto ještě neříká, o kolik se změnil příkon pro Zemi.{' '}
+          <SourceLink id="DOI_10_1029_2010GL045777">(Kopp a Leanová 2011, oddíl 1)</SourceLink>
+        </p>
+        <p>
+          Souvislá družicová měření slunečního příkonu začala v roce 1978.
+          Zachytila skutečné změny, včetně přibližně jedenáctiletého cyklu.
+          Kopp a Leanová v rozboru z roku 2011 uvádějí mezi minimy a maximy
+          tehdejších cyklů rozdíl přibližně 0,12 % v měsíčních průměrech.
+          Proměnlivost Slunce se tím stala měřeným vstupem do výpočtů klimatu.
+          Zbývalo zjistit, zda její dlouhodobý průběh odpovídá pozemskému ohřevu.{' '}
+          <SourceLink id="DOI_10_1029_2010GL045777">(Kopp a Leanová 2011, obr. 1)</SourceLink>
+        </p>
+        <p>
+          Hypotéza silnějšího Slunce má jednoduchou rozlišující předpověď:
+          více pohlcené energie má následovat po růstu slunečního příkonu.
+          Musíme proto odděleně sledovat záření, které přichází, a část,
+          kterou Země odráží. Při stejném Slunci může planeta získávat více
+          energie také tím, že méně odráží. To už by vyžadovalo změnu vlastností
+          Země, například oblaků nebo povrchu.{' '}
           <SourceLink id="WEB_NASA_Earth_Energy_Budget">(NASA: energetická bilance Země)</SourceLink>
         </p>
-        <h3>Přirozené kolísání oceánu a atmosféry</h3>
         <p>
-          Oceánské proudy přenášejí teplo mezi oblastmi i hloubkami.
-          Voda si je také vyměňuje se vzduchem. Takové přesuny mohou
-          oteplit jednu část klimatického systému a ochladit jinou.
-          Mají i další účinek: změněná teplota hladiny ovlivňuje tvorbu
-          oblaků. Když se změní oblačnost, změní se také odraz slunečního
-          záření a výdej energie do vesmíru. Přirozené kolísání proto může
-          ovlivnit i množství energie v Zemi jako celku.{' '}
+          Takové porovnání provedli Loeb a kolegové pro září 2002 až březen 2020.
+          Přenos energie vyjádřili ve wattech na metr čtvereční, W/m²,
+          zprůměrovaných přes plochu celé Země. Jeden watt znamená jeden joule
+          za sekundu. Dopadající sluneční tok měl mírně záporný trend,
+          −0,053 W/m² za deset let. Pohlcený sluneční tok přitom rostl
+          o 0,65 ± 0,17 W/m² za deset let, s 90% intervalem spolehlivosti.{' '}
           <SourceLink id="DOI_10_1029_2021GL093047">(Loeb a kol. 2021, oddíl 3.2)</SourceLink>
         </p>
-        <h3>Změny složení atmosféry</h3>
         <p>
-          Země sama vysílá tepelné záření, kterým odevzdává energii do vesmíru.
-          Při pozemských teplotách jde převážně o infračervené záření,
-          pro oko neviditelné. Skleníkové plyny, například oxid uhličitý označovaný CO₂,
-          část tohoto záření pohlcují a také samy vyzařují. Změna jejich
-          množství proto mění průchod energie atmosférou. Přidání CO₂
-          při jinak stejném stavu povrchu a spodní atmosféry omezuje únik
-          tepelného záření. Země pak může energii získávat i při nezměněném Slunci.{' '}
-          <SourceLink id="1967_Manabe_Wetherald">(Manabe a Wetherald 1967)</SourceLink>
-        </p>
-        <p id="historie">
-          Toto vysvětlení má základ v otázce, jak atmosféra udržuje teplotu
-          povrchu. Fourier v roce 1827 rozebíral rozdíl mezi průchodem
-          slunečního a zemského tepelného záření. Arrhenius v roce 1896
-          vypočítal, jak by změna množství CO₂ mohla změnit teplotu.
-          Manabe a Wetherald v roce 1967 spojili přenos záření s vertikálním
-          přenosem tepla v atmosféře a s vlhkostí. Postupně tak vznikalo
-          číselné vysvětlení, které lze porovnávat s měřením.{' '}
-          <SourceLink id="1827_Fourier_Temperatures">(Fourier 1827)</SourceLink>{' '}
-          <SourceLink id="1896_Arrhenius">(Arrhenius 1896)</SourceLink>{' '}
-          <SourceLink id="1967_Manabe_Wetherald">(Manabe a Wetherald 1967)</SourceLink>
-        </p>
-        <p>
-          Složení atmosféry mění také aerosoly, drobné pevné částice
-          a kapalné kapičky rozptýlené ve vzduchu. Některé sluneční záření
-          rozptylují, jiné je pohlcují a další ovlivňují vlastnosti oblaků.
-          Jejich změny mohou účinek skleníkových plynů zeslabovat nebo zesilovat.
-          Při zkoumání příčin proto porovnáváme součet těchto vlivů
-          s přirozeným kolísáním. Jednotlivé procesy mohou působit současně.{' '}
-          <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021)</SourceLink>
-        </p>
-
-        <h2 id="predpovedi">Co z vysvětlení vyplývá a jak obstála</h2>
-        <h3>Přesouvá se teplo, nebo ho celkově přibývá?</h3>
-        <p>
-          Samotný přesun tepla má jasný důsledek. Když jej jedna část
-          Země získá, jiná musí stejné množství odevzdat. Ohřev horního
-          oceánu by tak mohl být vyrovnán ochlazením hlubší vody nebo
-          jiného prostředí. Vysvětlení pouhým přesunem proto předpovídá,
-          že po sečtení všech těchto změn žádná energie nepřibude.
-          Z tohoto důvodu nestačí sledovat samotnou teplotu vzduchu
-          nebo jednu oceánskou vrstvu.{' '}
-          <SourceLink id="2016_OpenStax_University_Physics_2">(University Physics, oddíly 1.5 a 3.3)</SourceLink>
-        </p>
-        <p>
-          Globální inventura z úvodu takový vyrovnávající úbytek
-          nezjistila. Pro období 1971–2020 vyšel kladný celkový přírůstek
-          381 ± 61 zettajoulů. Oceán získal asi 89 % této energie,
-          pevnina 6 %, na tání ledu připadla 4 % a na atmosféru 1 %.
-          Zbylá prostředí tedy oceánský ohřev nevyrovnávají ochlazováním.
-          Také v nich energie v součtu přibyla. Podrobnosti jsou v{' '}
-          <Link href="/pozorovani/tepelny-obsah-oceanu/#souvislost-s-bilanci">pozorování celkového přírůstku energie</Link>.{' '}
-          <SourceLink id="DOI_10_5194_essd_15_1675_2023">(von Schuckmannová a kol. 2023, oddíl 6)</SourceLink>
-        </p>
-        <p>
-          Ani dolní okraj uvedeného přibližně 95% intervalu,
-          320 zettajoulů, se neblíží nulové změně, kterou by vyžadoval
-          pouhý přesun. Tento výsledek proto vylučuje přesouvání tepla
-          jako úplné vysvětlení. Proudění nadále určuje, kde se energie
-          ukládá, ale samo její celkový přírůstek nevytvoří.
-          Pokud přirozené kolísání současně změní oblaka a výměnu energie
-          s vesmírem, vzniká jiná možnost, kterou otestujeme níže.{' '}
-          <SourceLink id="DOI_10_5194_essd_15_1675_2023">(von Schuckmannová a kol. 2023)</SourceLink>{' '}
+          Směr změny se tedy obrátil proti předpovědi: sluneční energie
+          přicházelo nepatrně méně, ale Země jí pohlcovala více.
+          Růst příkonu ze Slunce je jako vysvětlení tohoto výsledku vyvrácen.
+          Více energie zůstávalo díky poklesu odražené části. Tím se otázka
+          přesunula k oblakům, částicím v atmosféře a vlastnostem povrchu.
+          Jednotlivé naměřené toky uvádí{' '}
+          <Link href="/pozorovani/tepelny-obsah-oceanu/#porovnani-se-zarenim">pozorování záření a oceánského ohřevu</Link>.{' '}
           <SourceLink id="DOI_10_1029_2021GL093047">(Loeb a kol. 2021)</SourceLink>
         </p>
-        <h3>Přibylo slunečního záření?</h3>
+
+        <h3 id="prirozena-hypoteza">Samotné přirozené kolísání</h3>
         <p>
-          Silnější Slunce by zvýšilo záření dopadající na Zemi.
-          Při nezměněné odrazivosti by se část tohoto přírůstku pohltila
-          a dodala energii navíc. Tuto předpověď odlišíme od změny
-          odrazivosti tak, že porovnáme dopadající a odražené záření.
-          Samotný růst pohlcené energie ještě o zesílení Slunce nerozhoduje:
-          může vzniknout také tím, že se menší část záření vrací do vesmíru.{' '}
-          <SourceLink id="WEB_NASA_Earth_Energy_Budget">(NASA: energetická bilance Země)</SourceLink>
+          Oceán a atmosféra mohou měnit své chování i bez změny Slunce nebo
+          složení vzduchu. Významný krok k pochopení této možnosti udělal
+          Jacob Bjerknes. V roce 1969 porovnal teplé epizody v rovníkovém
+          Tichém oceánu z let 1957–1958, 1963–1964 a 1965–1966.
+          Navázal přitom na své vysvětlení první epizody z roku 1966.
+          Opakované souvislosti mezi teplotou vody a prouděním vzduchu mu
+          umožnily prověřit, zda dříve navržený děj funguje také v dalších letech.{' '}
+          <SourceLink id="DOI_10_1175_BJERKNES_1969">(Bjerknes 1969)</SourceLink>
         </p>
         <p>
-          Pro srovnání potřebujeme vyjádřit rychlost přenosu energie.
-          Použijeme watty na metr čtvereční, W/m², zprůměrované přes
-          plochu celé Země. Jeden watt znamená jeden joule za sekundu.
-          Loeb a kolegové zjistili, že od září 2002 do března 2020
-          pohlcený sluneční tok rostl o 0,65 ± 0,17 W/m² za deset let,
-          s 90% intervalem spolehlivosti. Dopadající sluneční tok měl
-          naopak mírně záporný trend, −0,053 W/m² za deset let.{' '}
-          <SourceLink id="DOI_10_1029_2021GL093047">(Loeb a kol. 2021, oddíl 3.2)</SourceLink>
+          Při zeslábnutí pasátů, převládajících východních větrů v tropech,
+          slábne výstup chladnější vody k hladině. Střední a východní
+          rovníkový Pacifik se může oteplit. Teplejší hladina pak mění
+          předávání tepla a vlhkosti vzduchu, tvorbu dešťových oblaků
+          i proudění v atmosféře. Voda a vzduch se tak vzájemně ovlivňují.
+          Bjerknes vysvětloval pozorované epizody, které dnes spojujeme s El Niño,
+          teplou fází tohoto kolísání.{' '}
+          <SourceLink id="DOI_10_1175_BJERKNES_1969">(Bjerknes 1969, oddíly 2 až 4)</SourceLink>
         </p>
         <p>
-          Rozdíl má opačný směr, než potřebuje hypotéza silnějšího
-          Slunce: ke Zemi přicházelo nepatrně méně sluneční energie,
-          přesto jí planeta pohlcovala více. Výsledek vyžaduje pokles
-          odražené části. Rozlišující{' '}
-          <Link href="/pozorovani/tepelny-obsah-oceanu/#porovnani-se-zarenim">pozorování jednotlivých toků</Link>
-          {' '}tedy odmítá růst slunečního příkonu jako příčinu
-          tohoto zvýšení pohlcené energie. Zbývá objasnit změny oblaků,
-          částic a povrchu, které odrazivost ovlivňují.{' '}
-          <SourceLink id="DOI_10_1029_2021GL093047">(Loeb a kol. 2021, obr. 2)</SourceLink>
-        </p>
-        <h3>Stačí přirozené kolísání?</h3>
-        <p>
-          Přirozené kolísání může měnit i oblačnost, a proto jeho vliv
-          nevyřeší samotný součet zásob. Rozhoduje, zda dokáže vytvořit
-          změnu tak velkou a dlouhotrvající jako v pozorování.
-          Raghuraman a kolegové použili 47 modelů propojeného oceánu
-          a atmosféry. Vnější působení v nich drželi na úrovni roku 1850,
-          zatímco proudění, oblaka a led se mohly vzájemně ovlivňovat.
-          Dlouhé výpočty rozdělili na 1 293 nepřekrývajících se
-          dvacetiletých úseků. Získali tak mnoho možných průběhů
-          dvaceti let klimatu bez rostoucího vnějšího působení.{' '}
-          <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, metody)</SourceLink>
+          Tato zkušenost dala otázce příčin oteplování důležitý rozměr:
+          jak velkou změnu může vytvořit samotné kolísání systému?
+          Přesuny tepla mění teplotu vzduchu i rozmístění tepla v oceánu.
+          Změněné oblaky navíc mohou ovlivnit odraz slunečního záření.
+          Potřebujeme proto prověřit dvě věci: zda jde pouze o přesun
+          existujícího tepla a zda přirozené změny výměny energie s vesmírem
+          stačí na dlouhodobý přírůstek.{' '}
+          <SourceLink id="DOI_10_1017_9781009157896_005">(IPCC AR6, rámeček 3.1 a oddíl 3.7)</SourceLink>
         </p>
         <p>
-          V každém úseku spočítali trend energetické nerovnováhy,
-          tedy rozdílu mezi příjmem a výdejem energie. Přirozené
-          kolísání dávalo trendy v obou směrech. Jejich šíři autoři
-          vyjádřili statistickým pásmem −0,19 až +0,19 W/m² za deset let.
-          Toto pásmo popisuje běžný rozptyl modelových výsledků,
-          větší výkyvy mohou nastat vzácněji. Družice pro roky 2001–2020 ukázaly trend
-          +0,38 ± 0,24 W/m² za deset let, s 95% intervalem spolehlivosti.{' '}
-          <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, obr. 2 a 4)</SourceLink>
+          Pouhý přesun by vyžadoval, aby ohřev jedné části Země vyvažovalo
+          ochlazení jiné. Globální inventura z úvodu však takový výsledek
+          nedává. Za roky 1971–2020 vychází kladný součet 381 ± 61 zettajoulů.
+          Vedle oceánu získaly energii také pevnina, atmosféra a tající led.
+          Samotné přemisťování tepla tedy celkový přírůstek nevysvětluje.{' '}
+          <SourceLink id="DOI_10_5194_essd_15_1675_2023">(von Schuckmannová a kol. 2023)</SourceLink>
         </p>
         <p>
-          Autoři při vyhodnocení započítali také možnou dlouhodobou
-          chybu družicového měření. K pozorovanému výsledku by se
-          samotné kolísání mohlo přiblížit výjimečně velkým přirozeným
-          trendem nebo souběhem silného přirozeného růstu a měřicí
-          chyby, která skutečný trend výrazně nadhodnotila. Při použitých odhadech proměnlivosti
-          a měřicí chyby vyšla pravděpodobnost takového výsledku
-          bez měnícího se vnějšího působení pod 1 %.
-          Rozhoduje tedy velikost trendu společně s jeho nejistotou.
-          Výsledek silně oslabuje samotné přirozené kolísání jako
-          vysvětlení těchto dvaceti let. Jeho dílčí příspěvek k průběhu změny zůstává.{' '}
-          <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, obr. 2 a statistické testy)</SourceLink>
+          Přísnější test sleduje, kde a v jakých hloubkách se oceán ohřívá.
+          Barnett a kolegové jej zveřejnili v roce 2005 pro změny od roku 1960.
+          Oceány se lišily. V Atlantiku zasahoval zjištěný ohřev do hloubek
+          700 metrů a více, zatímco v severním Pacifiku se soustředil hlavně
+          do horních 100 metrů. Takové rozdíly poskytují více informací
+          než jediný průměr za celý oceán. Tyto{' '}
+          <Link href="/pozorovani/tepelny-obsah-oceanu/#hloubkovy-obraz">rozdíly v rozložení ohřevu</Link>
+          {' '}doplňují celkovou bilanci.{' '}
+          <SourceLink id="DOI_10_1126_science_1112418">(Barnett a kol. 2005, obr. 1)</SourceLink>
         </p>
-        <h3>Odpovídají měření změnám složení atmosféry?</h3>
         <p>
-          Vyšší koncentrace skleníkových plynů mají omezit odchod
-          tepelného záření oproti stavu se stejnou teplotou a původním
-          složením atmosféry. Oteplování samo naopak vyzařování zvyšuje.
-          V pozorovaném vývoji proto mohou nastávat oba účinky současně:
-          Země vyzařuje více než dříve, ale méně, než by při stejném
-          oteplení vyzařovala bez přidaných skleníkových plynů.
-          Test musí oba účinky oddělit a započítat i změny odraženého
-          slunečního záření.{' '}
-          <SourceLink id="1967_Manabe_Wetherald">(Manabe a Wetherald 1967)</SourceLink>{' '}
+          Pro oddělení příčin použili autoři klimatické modely.
+          Ty počítají vývoj oceánu a atmosféry podle fyzikálních vztahů
+          pro proudění a přenos energie. Ve výpočtu lze ponechat Slunce
+          a složení atmosféry beze změny, nebo zadat jejich historický vývoj.
+          Porovnáním těchto pokusů zjistíme, co přidání určitého vlivu změní.{' '}
+          <SourceLink id="DOI_10_1126_science_1112418">(Barnett a kol. 2005)</SourceLink>
+        </p>
+        <p>
+          Autoři hledali stejný prostorový a hloubkový obraz v dlouhém
+          modelovém výpočtu bez měnících se vnějších vlivů. Vznikající
+          kolísání bylo proti pozorování příliš slabé. Nepomohly ani výpočty
+          zahrnující tehdejší změny Slunce a sopečné činnosti.
+          Při zahrnutí lidských vlivů naopak dva různé modely zachytily
+          podstatné rysy ohřevu. Rozhodoval soulad jeho velikosti a rozložení.
+          Výsledek je testem příčin měřeného ohřevu, nikoli popřením existence
+          oceánského kolísání.{' '}
+          <SourceLink id="DOI_10_1126_science_1112418">(Barnett a kol. 2005, obr. 2 a 3)</SourceLink>
+        </p>
+        <p>
+          Později přibyla užší otázka: proč se přísun energie ještě zrychloval?
+          Raghuraman a kolegové v roce 2021 porovnali družicový trend
+          z let 2001–2020 s přirozeným kolísáním ve 47 klimatických modelech.
+          Z dlouhých výpočtů získali 1 293 dvacetiletých úseků bez změn
+          vnějšího působení. Mohli tak zkoumat, jak velký trend vytvoří
+          samotný oceán, atmosféra a jejich vzájemné reakce.{' '}
           <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021)</SourceLink>
         </p>
         <p>
-          Raghuraman a kolegové proto porovnali dvě sady výpočtů
-          atmosféry. Oběma zadali stejné pozorované teploty hladiny
-          a rozsah mořského ledu pro roky 2001–2020.
-          V první drželi skleníkové plyny a další vnější působení
-          na úrovni roku 2014. Ve druhé zadali jejich proměny
-          do roku 2014 z historických podkladů a pro další roky
-          podle scénáře vývoje emisí. Každou variantu počítali
-          dvacetkrát s mírně odlišným počátečním stavem atmosféry,
-          aby se v průměru omezil vliv náhodných výkyvů počasí.
-          Ověřovali vypočtené záření, teplota hladiny byla společným vstupem.{' '}
-          <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, metody)</SourceLink>
+          Družicový růst energetického přebytku činil
+          0,38 ± 0,24 W/m² za deset let, s 95% intervalem spolehlivosti.
+          Při použitých odhadech přirozeného kolísání a chyby měření vyšla
+          pravděpodobnost takového výsledku bez měnícího se vnějšího působení
+          pod 1 %. Tento test doplňuje starší oceánská porovnání o další
+          období a veličinu. Samotné přirozené kolísání jako úplné vysvětlení
+          neobstálo, jeho vliv na jednotlivá desetiletí a rozmístění tepla zůstává.{' '}
+          <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, obr. 2)</SourceLink>
+        </p>
+
+        <h3 id="lidske-pusobeni">Změny způsobené lidskou činností</h3>
+        <p id="historie">
+          Příběh tohoto vysvětlení začal otázkou, jak atmosféra ovlivňuje
+          teplotu Země. Fourier v práci vydané roku 1827 rozebíral rozdíl
+          mezi příchodem slunečního záření a odchodem tepla ze Země.
+          Vzdušný obal podle něj měnil podmínky, za kterých povrch energii
+          odevzdává. K vysvětlení změn klimatu bylo potřeba zjistit,
+          které složky vzduchu mají tento účinek a jak jej jejich množství mění.{' '}
+          <SourceLink id="1827_Fourier_Temperatures">(Fourier 1827)</SourceLink>
         </p>
         <p>
-          Rozdíl mezi variantami se projevil už ve směru změny.
-          Při stálém vnějším působení energetický přebytek v modelu
-          v průměru klesal přibližně o 0,30 W/m² za deset let.
-          Vyšší výdej tepelného záření při zadaném oteplování převážil
-          nad poklesem odrazu slunečního záření. Družice přitom
-          zachytily rostoucí přebytek.{' '}
-          <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, obr. 3)</SourceLink>
+          John Tyndall v práci z roku 1861 popsal pokusy, při kterých
+          nechával tepelné záření procházet trubicí naplněnou různými plyny.
+          Porovnával, kolik záření projde prázdnou trubicí a kolik po vpuštění
+          plynu. Dusík a kyslík je propouštěly mnohem lépe než vodní pára
+          nebo oxid uhličitý. Tím ukázal, že i vedlejší složka vzduchu může
+          výrazně ovlivnit přenos tepelného záření. Z výsledků také odvodil,
+          že proměny těchto složek mohou měnit klima.{' '}
+          <SourceLink id="1862_Tyndall">(Tyndall 1861, popis pokusu a závěr)</SourceLink>
         </p>
         <p>
-          Po zahrnutí změn vnějšího působení model přešel k růstu
-          o 0,19 ± 0,04 W/m² za deset let.
-          Tento výsledek se překrývá s pozorovanými
-          0,38 ± 0,24 W/m² za deset let. Obě poslední rozmezí
-          jsou 95% intervaly spolehlivosti, modelové rozmezí se vztahuje
-          k průměru jeho opakovaných výpočtů.{' '}
-          <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, obr. 3 a 4)</SourceLink>
+          Svante Arrhenius v roce 1896 převedl tuto možnost na výpočet.
+          Zkoumal, jak by při různém množství CO₂ vycházela teplota povrchu,
+          a zapojil také vodní páru a rozdíly mezi zeměpisnými šířkami.
+          Původní otázka se týkala vysvětlení velkých změn klimatu v minulosti.
+          Významným posunem bylo, že z vlastností plynů odvozoval číselný
+          účinek na teplotu. Vysvětlení tak začalo určovat také velikost změny,
+          kterou je třeba hledat v přírodě.{' '}
+          <SourceLink id="1896_Arrhenius">(Arrhenius 1896)</SourceLink>
         </p>
         <p>
-          Další rozklad výpočtu ukázal, odkud změna pochází.
-          Kladný příspěvek k růstu přebytku dodávaly zejména
-          skleníkové plyny a změny aerosolů z lidské činnosti.
-          Sluneční a sopečné vlivy měly v součtu malý záporný příspěvek.
-          Výsledek tak podporuje konkrétně lidské působení společně
-          s odezvou klimatu. Samotné zadané oteplení hladiny při stálém
-          působení opačný směr družicového trendu nevysvětlilo.{' '}
-          <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, tabulka 1)</SourceLink>
+          Guy Stewart Callendar v roce 1938 obrátil pozornost ke spalování
+          paliv. Spojil odhady přidaného CO₂, údaje o jeho množství ve vzduchu
+          a teplotní záznamy přibližně 200 stanic. Vypočítal tehdejší příspěvek
+          CO₂ k oteplování asi 0,003 °C ročně a porovnal jej s odhadovaným
+          růstem teploty asi 0,005 °C ročně za předchozí půlstoletí.
+          Předložil tak konkrétní hypotézu, že člověk už mění teplotu planety.
+          Tato čísla patří k jeho historickému výpočtu a tehdejším podkladům.{' '}
+          <SourceLink id="1938_Callendar">(Callendar 1938)</SourceLink>
         </p>
         <p>
-          Autoři výsledek porovnali také s pěti dalšími klimatickými
-          modely, v nichž se vyvíjel oceán i atmosféra a měnilo se
-          vnější působení. Jejich průměrné trendy rovněž ležely
-          v 95% intervalu družicového odhadu. Výpočty se většinou
-          nacházely při jeho dolním okraji a pozorovaný růst
-          nezachytily přesně. Shoda ve směru a slučitelnost velikosti
-          napříč těmito modely přesto podporují stejné vysvětlení.
-          Přesné podíly jednotlivých procesů zůstávají méně jisté
-          než potřeba zahrnout lidské působení v tomto období.{' '}
-          <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, obr. 4 a diskuse)</SourceLink>
+          Výpočet se postupně rozšiřoval o děje, které určují teplotu celé
+          atmosféry. Manabe a Wetherald v roce 1967 spojili přenos záření
+          s vertikálním přenosem tepla a s vlhkostí. Pro zdvojnásobení CO₂
+          při zachované relativní vlhkosti dostali oteplení povrchu
+          přibližně o 2 °C. Relativní vlhkost vyjadřuje, jak blízko je
+          vzduch nasycení vodní párou. Tento předpoklad dovoloval množství
+          páry s oteplením růst, a tím zesilovat počáteční účinek CO₂.{' '}
+          <SourceLink id="1967_Manabe_Wetherald">(Manabe a Wetherald 1967)</SourceLink>
+        </p>
+        <p>
+          Základní předpověď lze testovat i bez čekání na oteplení celého
+          oceánu. Plyny pohlcují záření v určitých pásmech vlnových délek.
+          Vlnová délka rozlišuje jednotlivé druhy záření podobně, jako ve
+          viditelném světle rozlišuje barvy. Účinek rostoucího CO₂ proto
+          musí zanechat konkrétní změnu v infračerveném záření, které je
+          pro oko neviditelné. K jejímu nalezení změříme jednotlivá pásma
+          a oddělíme vliv měnící se teploty, vlhkosti a dalších plynů.{' '}
+          <SourceLink id="DOI_10_1038_nature14240">(Feldman a kol. 2015)</SourceLink>
+        </p>
+        <p>
+          Feldman a kolegové tento test zveřejnili v roce 2015.
+          Použili pozemní měření záření přicházejícího z atmosféry
+          na dvou místech, v Oklahomě a na severu Aljašky.
+          Ve záznamu bezoblačných podmínek z let 2000–2010 oddělili pomocí
+          měřených profilů atmosféry a výpočtu přenosu záření účinek CO₂.
+          Nárůstu jeho koncentrace o 22 miliontin odpovídal na obou místech
+          přírůstek tohoto příspěvku k toku k povrchu 0,20 W/m² za deset let.
+          Publikovaná nejistota trendu činila ±0,06 v Oklahomě a ±0,07 na Aljašce
+          ve stejných jednotkách.
+          Výsledek se shodoval s očekávanou změnou v pásmu CO₂.
+          Záznam a postup jeho zpracování doplňuje{' '}
+          <Link href="/pozorovani/atmosfericka-koncentrace-co2/#zmena-infracerveneho-zareni">pozorování CO₂ a infračerveného záření</Link>.{' '}
+          <SourceLink id="DOI_10_1038_nature14240">(Feldman a kol. 2015, obr. 2 a 4)</SourceLink>
+        </p>
+        <p>
+          Zde se ověřuje účinek konkrétního plynu. K vysvětlení oceánského
+          ohřevu se přidává prostorové porovnání Barnetta a kolegů popsané
+          výše. Laboratorní pokus, záření měřené na povrchu a teplotní profily
+          oceánu zachycují různé části stejného děje. Jejich společný význam
+          spočívá v tom, že fyzikální příčina má měřitelný účinek v atmosféře
+          a její zahrnutí pomáhá vysvětlit také rozložení následného ohřevu.{' '}
+          <SourceLink id="1862_Tyndall">(Tyndall 1861)</SourceLink>{' '}
+          <SourceLink id="DOI_10_1038_nature14240">(Feldman a kol. 2015)</SourceLink>{' '}
+          <SourceLink id="DOI_10_1126_science_1112418">(Barnett a kol. 2005)</SourceLink>
+        </p>
+        <p>
+          Dnešní vysvětlení zahrnuje celý součet lidských vlivů.
+          Vedle skleníkových plynů se mění aerosoly, drobné částice
+          a kapičky rozptýlené ve vzduchu. Ovlivňují sluneční záření
+          i vlastnosti oblaků a část oteplujícího účinku plynů kompenzují.
+          Odborné hodnocení IPCC z roku 2021 dospělo ze souboru studií
+          k závěru, že lidský vliv byl s pravděpodobností 95–100 % hlavní
+          příčinou růstu obsahu tepla v oceánu od 70. let 20. století.
+          V této kapitole „hlavní“ znamená více než polovinu změny.{' '}
+          <SourceLink id="DOI_10_1017_9781009157896_005">(IPCC AR6, shrnutí a oddíl 3.5.1)</SourceLink>
+        </p>
+        <p>
+          Přijímaným vysvětlením je proto lidské působení spolu s reakcemi
+          oceánu, atmosféry a povrchu. Přirozené kolísání určuje část průběhu
+          a regionálních rozdílů. Nyní můžeme projít, jak tyto procesy spojí
+          změnu složení vzduchu s přibýváním energie v celé Zemi.{' '}
+          <SourceLink id="DOI_10_1017_9781009157896_005">(IPCC AR6, oddíly 3.5.1 a 3.8)</SourceLink>
         </p>
 
         <h2 id="vysvetleni">Jak Země získává a ukládá energii</h2>
         <p>
-          Porovnání ukazují souběh změn složení atmosféry a odezvy oceánu,
-          oblaků a povrchu. Silnější Slunce nevysvětluje růst pohlcené energie
-          ve zkoumaném družicovém období a samotné přirozené kolísání
-          nevysvětluje dobře trend nerovnováhy v letech 2001–2020.
-          Vliv těchto příčin na ohřev spojuje energetická bilance:
-          porovnání energie přijaté a odevzdané celou Zemí.{' '}
-          <SourceLink id="DOI_10_1029_2021GL093047">(Loeb a kol. 2021)</SourceLink>{' '}
-          <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021)</SourceLink>
+          Změny složení atmosféry ovlivňují přenos záření. Abychom pochopili,
+          jak se jejich účinek projeví i daleko pod hladinou oceánu,
+          potřebujeme sledovat energii celé planety. Energetická bilance
+          porovnává, kolik energie Země přijme a kolik jí odevzdá.
+          Rozdíl spojuje děje v atmosféře s ohřevem vody, půdy a vzduchu.{' '}
+          <SourceLink id="WEB_NASA_Earth_Energy_Budget">(NASA: energetická bilance Země)</SourceLink>
         </p>
         <h3 id="toky-energie">Příjem a výdej na hranici Země</h3>
         <p>
@@ -469,12 +500,12 @@ export function EarthEnergyBalanceArticle() {
         </p>
         <h3 id="nejistoty">Co je doložené a co se dále zpřesňuje</h3>
         <p>
-          Přibývání energie a jeho vazbu na výměnu záření podporují
-          měření i ověřené fyzikální zákony. Testy z let 2001–2020
-          podporují lidský příspěvek k růstu nerovnováhy.
-          Méně přesně známe podíly jednotlivých změn oblaků,
-          aerosolů a přirozeného kolísání. Přesnější měření jejich
-          účinků mohou změnit rozdělení příčin a odhad rychlosti dalšího ohřevu.{' '}
+          Účinek skleníkových plynů a hlavní lidský podíl na dlouhodobém
+          ohřevu oceánu podpírá soubor fyzikálních, pozorovacích a modelových
+          výsledků. Přesné rozdělení změn mezi plyny, aerosoly, oblaka
+          a přirozené kolísání se dále zpřesňuje. To ovlivňuje zejména
+          vysvětlení jednotlivých desetiletí a odhad rychlosti dalšího ohřevu.{' '}
+          <SourceLink id="DOI_10_1017_9781009157896_005">(IPCC AR6, oddíly 3.5.1 a 3.8)</SourceLink>{' '}
           <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, diskuse)</SourceLink>
         </p>
         <details className="method-details">
@@ -502,23 +533,11 @@ export function EarthEnergyBalanceArticle() {
             <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021)</SourceLink>
           </p>
           <p>
-            Pásmo přirozeného kolísání ±0,19 W/m² za deset let
-            odpovídá dvojnásobku směrodatné odchylky modelových trendů.
-            Směrodatná odchylka měří, jak daleko bývají jednotlivé
-            výsledky od průměru. Při předpokládaném normálním,
-            zvonovitém rozdělení zahrnuje dvojnásobek přibližně 95 %
-            výkyvů. Jde o rozptyl jednotlivých dvacetiletých trendů.
-            Interval ±0,04 u průměru opakovaných atmosférických výpočtů
-            naproti tomu vyjadřuje přesnost odhadu jejich společné
-            odezvy.{' '}
-            <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, metody)</SourceLink>
-          </p>
-          <p>
-            Podklady proměnného vnějšího působení vycházejí
-            do roku 2014 z historických údajů a pro roky 2015–2020
-            ze scénáře SSP2-4.5. Ten zadává předpokládaný vývoj emisí
-            a dalších vlivů pro pokračování modelových výpočtů.{' '}
-            <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, metody)</SourceLink>
+            Pozemní test CO₂ zachycuje bezoblačné podmínky na dvou místech.
+            Jeho výsledek nelze ztotožnit s globální bilancí nad atmosférou.
+            Oddělení příspěvku CO₂ využívá výpočet přenosu záření,
+            takže pozorování a výpočet sdílejí část fyzikálních podkladů.{' '}
+            <SourceLink id="DOI_10_1038_nature14240">(Feldman a kol. 2015, metody)</SourceLink>
           </p>
           <p>
             Rozklad družicových změn na účinky teploty, vody,
@@ -546,10 +565,11 @@ export function EarthEnergyBalanceArticle() {
             Tímto mechanismem vysvětlujeme{' '}
             <Link href="/pozorovani/tepelny-obsah-oceanu/#souvislost-s-bilanci">přírůstek energie v klimatickém systému</Link>,
             jehož největší část připadá na oceán.
-            Jeho vazbu na záření potvrzuje porovnání oceánských
-            a družicových změn. Testy příčin pro roky 2001–2020
-            podporují lidský příspěvek k růstu energetické nerovnováhy.
-            Přirozené kolísání ovlivňuje průběh této změny.
+            Dnes jej vysvětlujeme především lidským působením na složení
+            atmosféry a následnými reakcemi klimatu. Toto vysvětlení
+            propojuje vlastnosti plynů ověřené v laboratoři, změny
+            měřeného záření a rozložení ohřevu v oceánu.
+            Přirozené kolísání ovlivňuje průběh a rozmístění změny.
           </p>
         </div>
 
@@ -564,10 +584,14 @@ export function EarthEnergyBalanceArticle() {
           <section>
             <h3>Fyzikální základ a historie</h3>
             <ul>
+              <li><SourceLink id="HERSCHEL_1801_SOLAR_VARIATION">Herschel 1801</SourceLink>: otázka proměnlivého vyzařování Slunce, původní rukopis v archivu Královské společnosti.</li>
               <li><SourceLink id="1827_Fourier_Temperatures">Fourier 1827</SourceLink>: původní práce o teplotách Země, sken Francouzské akademie věd.</li>
+              <li><SourceLink id="1862_Tyndall">Tyndall 1861</SourceLink>: laboratorní porovnání pohlcování tepelného záření různými plyny.</li>
               <li><SourceLink id="DOI_10_1086_140874">Rubens a Kurlbaum 1901</SourceLink> a <SourceLink id="DOI_10_1002_andp_19013090310">Planck 1901</SourceLink>: laboratorní měření a zákon tepelného záření.</li>
               <li><SourceLink id="1896_Arrhenius">Arrhenius 1896</SourceLink>: raný výpočet vlivu množství CO₂ na teplotu.</li>
+              <li><SourceLink id="1938_Callendar">Callendar 1938</SourceLink>: propojení spalování paliv, růstu CO₂ a teplotních měření.</li>
               <li><SourceLink id="1967_Manabe_Wetherald">Manabe a Wetherald 1967</SourceLink>: výpočet teplotní odezvy atmosféry.</li>
+              <li><SourceLink id="DOI_10_1175_BJERKNES_1969">Bjerknes 1969</SourceLink>: vzájemné působení rovníkového Pacifiku a atmosféry při teplých epizodách.</li>
               <li><SourceLink id="2016_OpenStax_University_Physics_2">University Physics, svazek 2</SourceLink>: otevřená učebnice, oddíly 1.5, 1.6 a 3.3.</li>
               <li><SourceLink id="DOI_10_1175_2007JCLI2110_1">Soden a kol. 2008</SourceLink>: oddělení teplotní odezvy a zpětných vazeb.</li>
               <li><SourceLink id="WEB_NASA_Earth_Energy_Budget">NASA: Climate and Earth’s Energy Budget</SourceLink>: vymezení globálních toků a jejich velikosti.</li>
@@ -576,11 +600,15 @@ export function EarthEnergyBalanceArticle() {
           <section>
             <h3>Měření a porovnání vysvětlení</h3>
             <ul>
+              <li><SourceLink id="DOI_10_1029_2010GL045777">Kopp a Leanová 2011</SourceLink>: družicový záznam slunečního příkonu a jeho proměnlivost.</li>
+              <li><SourceLink id="DOI_10_1126_science_1112418">Barnett a kol. 2005</SourceLink>: rozložení ohřevu v oceánu a porovnání přirozených a lidských vlivů.</li>
+              <li><SourceLink id="DOI_10_1038_nature14240">Feldman a kol. 2015</SourceLink>: test příspěvku rostoucího CO₂ k záření na povrch, dvě stanice v letech 2000–2010.</li>
               <li><SourceLink id="DOI_10_5194_essd_16_3517_2024">Cheng a kol. 2024</SourceLink>: vývoj obsahu tepla v oceánu v letech 1955–2023.</li>
               <li><SourceLink id="DOI_10_1175_JCLI_D_17_0208_1">Loeb a kol. 2018</SourceLink>: dokumentace produktu CERES EBAF a jeho kalibrace.</li>
               <li><SourceLink id="DOI_10_1029_2021GL093047">Loeb a kol. 2021</SourceLink>: porovnání družic a oceánských měření, oddíl 3.1 a obr. 1.</li>
               <li><SourceLink id="DOI_10_5194_essd_15_1675_2023">Von Schuckmannová a kol. 2023</SourceLink>: inventura energie, oddíl 6 a obr. 8.</li>
               <li><SourceLink id="DOI_10_1038_s41467_021_24544_4">Raghuraman a kol. 2021</SourceLink>: test vnitřní proměnlivosti a vnějšího působení. Oddíly Data availability a Code availability odkazují na veřejná data a výpočetní kód.</li>
+              <li><SourceLink id="DOI_10_1017_9781009157896_005">IPCC AR6, kapitola 3</SourceLink>: souhrnné odborné posouzení lidského vlivu, zejména oddíl 3.5.1 o oceánu.</li>
             </ul>
           </section>
           <section>

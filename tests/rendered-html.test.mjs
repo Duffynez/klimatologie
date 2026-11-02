@@ -907,7 +907,7 @@ test("publishes a sourced ocean heat content article instead of the generic plac
   ]);
 
   assert.match(evidencePage, /OceanHeatArticle/);
-  assert.match(evidencePage, /if \(slug === "tepelny-obsah-oceanu"\)[\s\S]*?meta="1\. listopadu 2026"/);
+  assert.match(evidencePage, /if \(slug === "tepelny-obsah-oceanu"\)[\s\S]*?meta="2\. listopadu 2026"/);
   assert.match(article, /Obsah tepla v oceánu vyjadřuje/);
   assert.match(article, /Jak vzniká globální výpočet/);
   assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
@@ -934,7 +934,7 @@ test("publishes a sourced ocean heat content article instead of the generic plac
   const oceanHeatSourceIds = [
     ...article.matchAll(/<SourceLink id="([^"]+)"/g),
   ].map((match) => match[1]);
-  assert.equal(new Set(oceanHeatSourceIds).size, 34);
+  assert.equal(new Set(oceanHeatSourceIds).size, 35);
   for (const id of new Set(oceanHeatSourceIds)) {
     const catalogueOccurrences = sourceCatalogueText.split(id).length - 1;
     assert.ok(catalogueOccurrences >= 2, `${id} must exist and be marked as open access`);
@@ -963,7 +963,7 @@ test("publishes a sourced atmospheric carbon dioxide article instead of the gene
 
   assert.match(evidencePage, /AtmosphericCo2Article/);
   assert.match(evidencePage, /title="Oxid uhličitý v atmosféře"/);
-  assert.match(evidencePage, /title="Oxid uhličitý v atmosféře"\s+meta="31\. října 2026"/);
+  assert.match(evidencePage, /title="Oxid uhličitý v atmosféře"\s+meta="2\. listopadu 2026"/);
   assert.match(article, /href="\/metody\/plynova-chromatografie\/?(?:#[^"]+)?"/);
   assert.match(article, /Atmosférický oxid uhličitý popisujeme podílem molekul CO₂ v suchém vzduchu/);
   assert.doesNotMatch(article, /Potřebné informace|article-glossary/);
@@ -4038,6 +4038,13 @@ test("publishes the full energy-balance mechanism with evidence, sources and ret
     "Keep observation, hypotheses, tests, explanation and summary in reading order");
   const introduction = mechanismBody.slice(0, mechanismBody.indexOf('<h2 id="priciny"'));
   assert.ok([...introduction.matchAll(/<p\b/g)].length <= 2, "Keep the observation introduction focused");
+  const diagram = mechanismBody.match(/<figure[^>]+aria-labelledby="hypothesis-map-caption"[\s\S]*?<\/figure>/)?.[0];
+  assert.ok(diagram, "Introduce the hypotheses with an accessible diagram");
+  const storyLinks = [...diagram.matchAll(/href="#([^"]+)"/g)].map(match => match[1]);
+  assert.equal(storyLinks.length, 3, "Compare three hypotheses including the accepted explanation");
+  const stories = mechanismBody.slice(mechanismBody.indexOf('<h2 id="predpovedi"'), mechanismBody.indexOf('<h2 id="vysvetleni"'));
+  assert.deepEqual([...stories.matchAll(/<h3 id="([^"]+)"/g)].map(match => match[1]), storyLinks,
+    "Every diagram branch must lead to its full story in the same order");
   assert.match(html, /Stefanův–Boltzmannův zákon/);
   assert.match(html, /Planckova/);
   assert.ok(mechanismBody.indexOf('<details') > mechanismBody.indexOf('id="porovnani"'),
@@ -4053,7 +4060,7 @@ test("publishes the full energy-balance mechanism with evidence, sources and ret
     assert.match(related, /href="\/mechanismy\/energeticka-bilance-zeme\/#/);
   }
   const sourcePage = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
-  for (const id of ["1827_Fourier_Temperatures", "1896_Arrhenius", "DOI_10_1086_140874", "1967_Manabe_Wetherald", "DOI_10_1175_2007JCLI2110_1", "DOI_10_1029_2021GL093047", "DOI_10_5194_essd_15_1675_2023", "DOI_10_1038_s41467_021_24544_4"]) {
+  for (const id of ["1827_Fourier_Temperatures", "1896_Arrhenius", "DOI_10_1086_140874", "1967_Manabe_Wetherald", "DOI_10_1175_2007JCLI2110_1", "DOI_10_1029_2021GL093047", "DOI_10_5194_essd_15_1675_2023", "DOI_10_1038_s41467_021_24544_4", "HERSCHEL_1801_SOLAR_VARIATION", "DOI_10_1029_2010GL045777", "DOI_10_1175_BJERKNES_1969", "DOI_10_1126_science_1112418", "DOI_10_1038_nature14240", "DOI_10_1017_9781009157896_005", "1862_Tyndall"]) {
     assert.ok(html.includes(`href="/zdroje#${id}"`), "Missing source citation " + id);
     const card = sourcePage.match(new RegExp(String.raw`<article[^>]+id="${id}"[\s\S]*?</article>`));
     assert.ok(card, "Missing public source card " + id);
