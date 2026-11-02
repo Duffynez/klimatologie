@@ -1120,7 +1120,7 @@ test("publishes a sourced global mean sea-level article with tide-gauge and sate
 
   assert.match(evidencePage, /GlobalMeanSeaLevelArticle/);
   assert.match(evidencePage, /title="Globální střední hladina moře"/);
-  assert.match(evidencePage, /meta="31\. října 2026"/);
+  assert.match(evidencePage, /title="Globální střední hladina moře"\s+meta="2\. listopadu 2026"/);
   assert.match(article, /Globální střední hladina moře vyjadřuje průměrnou změnu výšky světového oceánu/);
   assert.match(article, /Jak vzniká globální výsledek/);
   assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
@@ -1136,7 +1136,7 @@ test("publishes a sourced global mean sea-level article with tide-gauge and sate
   assert.match(sourceCatalogueText, /10\.5067\/NSIND-GMSV1/);
   assert.match(sourceCatalogueText, /psmsl\.org\/data\/obtaining\/complete\.php/);
   assert.match(article, /Po uzavření roku 2025/);
-  assert.match(article, /Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez/);
+  assert.match(article, /K odborným pracím uvádíme DOI a veřejný plný text bez předplatného/);
   assert.match(article, /zdrojů tohoto článku nepoužívají/);
   assert.doesNotMatch(
     `${article}\n${sourceCatalogueText}`,
@@ -1145,7 +1145,7 @@ test("publishes a sourced global mean sea-level article with tide-gauge and sate
   const seaLevelSourceIds = [
     ...article.matchAll(/<SourceLink id="([^"]+)"/g),
   ].map((match) => match[1]);
-  assert.equal(new Set(seaLevelSourceIds).size, 35);
+  assert.equal(new Set(seaLevelSourceIds).size, 36);
   for (const id of new Set(seaLevelSourceIds)) {
     const catalogueOccurrences = sourceCatalogueText.split(id).length - 1;
     assert.ok(catalogueOccurrences >= 2, `${id} must exist and be marked as open access`);
@@ -1156,7 +1156,7 @@ test("publishes a sourced global mean sea-level article with tide-gauge and sate
   assert.match(sourceCatalogueText, /zanna-researchteam\.github\.io\/files\/Frederikse-et-al-2020\.pdf/);
   assert.match(sourceCatalogueText, /nora\.nerc\.ac\.uk\/id\/eprint\/525251\/1\/s41558-019-0531-8\.pdf/);
   assert.match(sourceCatalogueText, /scholarwolf\.unr\.edu\/server\/api\/core\/bitstreams/);
-  assert.match(sourceCatalogueText, /podaac\.jpl\.nasa\.gov\/dataset\/NASA_SSH_GMSL_INDICATOR/);
+  assert.match(sourceCatalogueText, /www\.earthdata\.nasa\.gov\/data\/catalog\/pocloud-nasa-ssh-gmsl-indicator-1/);
   assert.match(article, /CC BY 4\.0/);
   assert.doesNotMatch(article, /datové řady|časové řady|pozorovací řady/);
   assert.match(evidence, /slug: "gmsl"[\s\S]*status: "hotovo"/);
@@ -1171,7 +1171,7 @@ test("publishes a sourced ocean acidification article with measured and reconstr
 
   assert.match(evidencePage, /OceanAcidificationArticle/);
   assert.match(evidencePage, /title="Acidifikace oceánu"/);
-  assert.match(evidencePage, /meta="31\. října 2026"/);
+  assert.match(evidencePage, /title="Acidifikace oceánu"\s+meta="2\. listopadu 2026"/);
   assert.match(article, /Acidifikace oceánu je dlouhodobý posun chemického stavu mořské vody/);
   assert.match(article, /Jak se chemie oceánu měří/);
   assert.match(article, /Jak vzniká zveřejněný výsledek/);

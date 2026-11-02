@@ -63,11 +63,12 @@ export function GlobalMeanSeaLevelArticle() {
         <h2>Historie měření</h2>
         <p>
           Nejstarší dlouhé záznamy vznikaly kvůli plavbě, stavbě přístavů a předpovědi přílivu. V Amsterdamu se dochovaly
-          pravidelné odečty od roku 1682 a ve Stockholmu od roku 1774. Pozorovatelé zapisovali výšku vody na stupnici v
+          pravidelné odečty od roku 1682. Ve Stockholmu začala měření v roce 1774 u Slussenu, od roku 1889 na ně
+          navazují měření na Skeppsholmenu. Pozorovatelé zapisovali výšku vody na stupnici v
           určených hodinách nebo při vysoké a nízké vodě. Tyto záznamy jsou cenné svou délkou, ale jejich četnost, poloha
           stupnice a návaznost na dnešní přístroje se musí ověřovat jednotlivě.{" "}
           <SourceLink id="WEB_Permanent_Service_for_Mean_S_PSMSL_amsterdamska_mereni_od_roku_1682_a5054f03">PSMSL: dlouhý amsterdamský záznam</SourceLink> a{" "}
-          <SourceLink id="WEB_Permanent_Service_for_Mean_S_Data_and_Station_Information_for_STOCKHOLM_52369772">PSMSL: Stockholm</SourceLink>
+          <SourceLink id="WEB_SMHI_Stockholm_1774_1889">SMHI: historie stockholmských měření</SourceLink>
         </p>
 
         <p>
@@ -94,7 +95,7 @@ export function GlobalMeanSeaLevelArticle() {
           záznam začal až misí TOPEX/Poseidon, vypuštěnou 10. srpna 1992. Pravidelná měření použitá v dnešních globálních
           souborech začínají na počátku roku 1993.{" "}
           <SourceLink id="WEB_NASA_NASA_JPL_Seasat_b80d8dde">NASA/JPL: Seasat</SourceLink> a{" "}
-          <SourceLink id="WEB_NASA_TOPEX_POSEIDON_PO_DAAC_JPL_NASA_b5a07e8b">PO.DAAC: TOPEX/Poseidon</SourceLink>
+          <SourceLink id="WEB_NASA_TOPEX_POSEIDON_PO_DAAC_JPL_NASA_b5a07e8b">NASA: TOPEX/Poseidon</SourceLink>
         </p>
 
         <p>
@@ -297,6 +298,11 @@ export function GlobalMeanSeaLevelArticle() {
           hotový globální průměr.{" "}
           <SourceLink id="WEB_Permanent_Service_for_Mean_S_Complete_PSMSL_Data_Set_05055002">Stáhnout kompletní archiv PSMSL</SourceLink>
         </p>
+        <p>
+          Začátek souboru RLR se může lišit od nejstaršího měření v daném městě.
+          <SourceLink id="WEB_Permanent_Service_for_Mean_S_Data_and_Station_Information_for_STOCKHOLM_52369772"> Stockholm v archivu RLR</SourceLink>{" "}
+          začíná v roce 1889, zatímco historické odečty výšky hladiny u Slussenu sahají do roku 1774.
+        </p>
 
         <h3>Frederikse et al.: globální rekonstrukce 1900–2018</h3>
         <p>
@@ -315,7 +321,8 @@ export function GlobalMeanSeaLevelArticle() {
           zpracování. Datový portál uvádí verzi, datum aktualizace i trvalý identifikátor 10.5067/NSIND-GMSV1. Tento produkt
           zachovává sezónní kolísání a neobsahuje opravu GIA. Přesná čísla se proto mohou lišit od grafu v primární studii,
           která tuto opravu přidala.{" "}
-          <SourceLink id="DOI_10_5067_nsind_gmsv1">Otevřít data NASA SSH</SourceLink>
+          <SourceLink id="DOI_10_5067_nsind_gmsv1">Otevřít data NASA SSH</SourceLink>{" "}
+          Katalog a dokumentace jsou veřejné, stažení souborů z archivu vyžaduje bezplatný účet Earthdata.
         </p>
 
         <h3>Copernicus: globální i regionální družicové mapy</h3>
@@ -327,7 +334,13 @@ export function GlobalMeanSeaLevelArticle() {
           běžná textová tabulka, kterou otevře i tabulkový procesor.{" "}
           <SourceLink id="WEB_Copernicus_Sea_level_gridded_data_from_satellite_observatio_0b1348c4">Copernicus Climate Data Store</SourceLink>,{" "}
           <SourceLink id="WEB_Copernicus_globalni_data_CSV_e4635f0c">globální data CSV</SourceLink> a{" "}
-          <SourceLink id="WEB_Copernicus_regionalni_data_NetCDF_a6fb7ddf">regionální data NetCDF</SourceLink>
+          <SourceLink id="WEB_Copernicus_regionalni_data_NetCDF_a6fb7ddf">regionální data NetCDF, aktualizace do srpna 2025</SourceLink>
+        </p>
+
+        <p>
+          Odkazovaný regionální soubor nyní pokrývá 21. únor 1999 až 2. srpen 2025. Převzatá mapa níže zachycuje
+          starší vydání do května 2025. Při opakování výpočtu je proto potřeba zachovat také vydání dat, nejen
+          začátek období.
         </p>
 
         <h2>Srovnání výsledků</h2>
@@ -396,8 +409,9 @@ export function GlobalMeanSeaLevelArticle() {
         <p>
           Pobřežní stanice dokládají, že globální střední hladina stoupala už před začátkem družicového měření. Frederikse
           a kol. pro roky 1900–2018 odhadli průměrný sklon 1,56 ± 0,33 mm za rok. Nejistota představuje 90% rozpětí. Vývoj
-          nebyl rok od roku rovnoměrný a starší část má širší interval kvůli menšímu počtu stanic. Nezávislé rekonstrukce
-          Churcha a Whitea, Dangendorfa a kol. a Frederikse a kol. se liší v jednotlivých desetiletích, ale všechny ukazují
+          nebyl rok od roku rovnoměrný a starší část má širší interval kvůli menšímu počtu stanic. Rekonstrukce
+          Churcha a Whitea, Dangendorfa a kol. a Frederikse a kol. částečně využívají stejné pobřežní záznamy. Liší se
+          v jednotlivých desetiletích, ale všechny ukazují
           vyšší globální střední hladinu na konci 20. století než na jeho začátku.{" "}
           <SourceLink id="DOI_10_1007_s10712_011_9119_1">Church &amp; White, 2011</SourceLink>,{" "}
           <SourceLink id="DOI_10_1038_s41586_020_2591_3">Frederikse et al., 2020</SourceLink>,{" "}
@@ -439,7 +453,8 @@ export function GlobalMeanSeaLevelArticle() {
         <div className="article-observation-summary">
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
-            Globální střední hladina moře během 20. století stoupala v průměru přibližně o 1,56 milimetru za rok.
+            V rekonstrukci pro roky 1900–2018 stoupala globální střední hladina moře v průměru přibližně o
+            1,56 milimetru za rok.
             Od začátku roku 1993 do konce roku 2025 se zvýšila přibližně o deset centimetrů.
             Průměrné tempo za roky 1993–2023 činilo 3,3 milimetru za rok a během tohoto období vzrostlo přibližně z
             2,1 na 4,5 milimetru za rok. Jednotlivé roky kolem dlouhodobého růstu výrazně kolísají: v roce 2024 hladina
@@ -450,9 +465,11 @@ export function GlobalMeanSeaLevelArticle() {
 
         <h2>Prameny, data a licence</h2>
         <p>
-          Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez
-          předplatného. U odborných prací vede databáze zvlášť na DOI a na veřejný plný text. Datové portály vedou
-          k původnímu poskytovateli. Záznamy zdrojů tohoto článku nepoužívají kopie na Google Drivu.
+          K odborným pracím uvádíme DOI a veřejný plný text bez předplatného. Článek Ablaina a kol. z roku 2017
+          je v univerzitním repozitáři součástí disertace, na stranách PDF 153–177. Datové portály vedou
+          k původnímu poskytovateli. Stažení mřížkových dat z Climate Data Store i souborů z archivu NASA vyžaduje bezplatný účet
+          u příslušného poskytovatele.
+          Záznamy zdrojů tohoto článku nepoužívají kopie na Google Drivu.
         </p>
         <div className="article-sources">
           <section>
@@ -472,7 +489,7 @@ export function GlobalMeanSeaLevelArticle() {
               <li><SourceLink id="WEB_Permanent_Service_for_Mean_S_PSMSL_amsterdamska_mereni_od_roku_1682_a5054f03">PSMSL: amsterdamská měření od roku 1682</SourceLink> – tabulky, popis oprav a odkazy na původní práce.</li>
               <li><SourceLink id="DOI_10_1038_s41597_022_01223_7">Inayatillah et al. (2022): digitalizace historických měření v ústí Temže</SourceLink> – otevřený článek, PDF a data.</li>
               <li><SourceLink id="WEB_Permanent_Service_for_Mean_S_About_PSMSL_7904d751">PSMSL: mezinárodní služba založená v roce 1933</SourceLink>.</li>
-              <li><SourceLink id="WEB_NASA_TOPEX_POSEIDON_PO_DAAC_JPL_NASA_b5a07e8b">NASA PO.DAAC: mise TOPEX/Poseidon</SourceLink> – popis mise a dat.</li>
+              <li><SourceLink id="WEB_NASA_TOPEX_POSEIDON_PO_DAAC_JPL_NASA_b5a07e8b">NASA: mise TOPEX/Poseidon</SourceLink> – popis mise a její historie.</li>
             </ul>
           </section>
 

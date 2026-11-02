@@ -149,7 +149,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Oceány"
           title="Globální střední hladina moře"
-          meta="31. října 2026"
+          meta="2. listopadu 2026"
         >
           <p>
             Jak se výška moře měří na pobřeží a z družic, jak z jednotlivých měření vzniká globální průměr a co ukazují
@@ -168,7 +168,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Oceány"
           title="Acidifikace oceánu"
-          meta="31. října 2026"
+          meta="2. listopadu 2026"
         >
           <p>
             Co přesně znamená změna pH mořské vody, jak se měří celý uhličitanový systém, jak vznikají globální

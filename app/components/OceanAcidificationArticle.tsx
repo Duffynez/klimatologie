@@ -304,8 +304,8 @@ export function OceanAcidificationArticle() {
               className="article-figure__media"
               src="/media/ocean-acidification/bats-ph-aragonite-1983-2023.webp"
               alt="Změny povrchového pH a nasycení aragonitem u Bermud od roku 1983 do roku 2023"
-              width={1300}
-              height={997}
+              width={1299}
+              height={1005}
               sizes="(max-width: 900px) 100vw, 900px"
               unoptimized
             />
@@ -400,7 +400,8 @@ export function OceanAcidificationArticle() {
           Surface Ocean CO₂ Atlas verze 2026 sdružuje desítky milionů povrchových měření CO₂ z let 1957–2025.
           Základem je měření plynu uvedeného do rovnováhy s mořskou vodou. Obsahuje fCO₂, teplotu, polohu, čas, hloubku přívodu vody a značku kvality, takže může být
           vstupem pro výpočet a mapování uhličitanového systému. Původní data jsou dostupná pod trvalým identifikátorem
-          NOAA. Přepočtená varianta Forda a kol. navíc převádí hodnoty na společnou hloubku a teplotu těsně pod hladinou.
+          NOAA. Přepočtená varianta Forda a kol., předběžné vydání v0-1 z června 2026, převádí hodnoty od roku 1980 na
+          společnou hloubku a teplotu těsně pod hladinou.
           Nabízí jednotlivé body v tabulce i měsíční buňky 1° × 1° ve formátu NetCDF. Oba balíky jsou velké, úplná
           tabulka má několik gigabajtů.{" "}
           <SourceLink id="DOI_10_25921_8dba_fr90">SOCAT v2026</SourceLink> a{" "}
@@ -546,7 +547,8 @@ export function OceanAcidificationArticle() {
         <p>
           Lauvset a kol. rozdělili oceán do 17 velkých oblastí podle teploty, hloubky promíchané vrstvy a obsahu chlorofylu.
           Pro období 1991–2011 mělo dostatek dat 15 oblastí. Statisticky významný pokles pH našli přibližně v 70 %
-          všech 17 oblastí. Průměrná rychlost poklesu za toto období byla −0,018 ± 0,004 za desetiletí. Novější
+          všech 17 oblastí. Plošně vážený průměr sklonů ve 13 oblastech se statisticky významnou změnou byl
+          −0,018 ± 0,004 za desetiletí. Novější
           OceanSODA-ETHZ pokryl 96 % povrchu oceánu bez trvalého ledu a pro roky 1982–2021 odhadl globální sklon
           −0,0166 ± 0,0010 pH za desetiletí. Za celé období klesl jeho globální průměr přibližně o 0,06 pH a stav nasycení
           aragonitem přibližně o 10 %. Jde o výsledky statistických rekonstrukcí založených na měřeních, nikoli o prostý
@@ -606,10 +608,10 @@ export function OceanAcidificationArticle() {
           <section>
             <h3>Staniční pozorování a změny v hloubce</h3>
             <ul>
-              <li><SourceLink id="DOI_10_1073_pnas_0906044106">Dore a kol. (2009): stanice ALOHA</SourceLink> – plný text v PubMed Central, přímé a vypočtené pH.</li>
+              <li><SourceLink id="DOI_10_1073_pnas_0906044106">Dore a kol. (2009): stanice ALOHA</SourceLink> – veřejné PDF u programu HOT, přímé a vypočtené pH.</li>
               <li><SourceLink id="DOI_10_5670_oceanog_2014_16">Bates a kol. (2014): sedm dlouhodobých pozorování</SourceLink> – veřejné PDF vydavatele.</li>
               <li><SourceLink id="DOI_10_3389_fmars_2023_1289931">Bates a Johnson (2023): Bermudy 1983–2023</SourceLink> – otevřený článek, tabulka trendů a grafy.</li>
-              <li><SourceLink id="DOI_10_1073_pnas_1504613112">Ríos a kol. (2015): vodní hmoty Atlantiku</SourceLink> – plný text a doplňky v PubMed Central.</li>
+              <li><SourceLink id="DOI_10_1073_pnas_1504613112">Ríos a kol. (2015): vodní hmoty Atlantiku</SourceLink> – veřejný plný text v repozitáři University of East Anglia.</li>
             </ul>
           </section>
           <section>
@@ -629,7 +631,7 @@ export function OceanAcidificationArticle() {
               <li><SourceLink id="DOI_10_5670_oceanog_2010_22">Dickson (2010): referenční materiály</SourceLink> – historie a ověření popsané jejich tvůrcem.</li>
               <li><SourceLink id="DOI_10_5194_os_7_597_2011">Aßmann a kol. (2011): spektrofotometrie</SourceLink> – otevřený popis přístroje a kontrol.</li>
               <li><SourceLink id="DOI_10_4319_lom_2010_8_172">Martz a kol. (2010): čidlo Durafet</SourceLink> – veřejná původní studie.</li>
-              <li><SourceLink id="DOI_10_13155_97828">Johnson a kol. (2023): kontrola pH v BGC-Argo</SourceLink> – veřejná metodická příručka.</li>
+              <li><SourceLink id="DOI_10_13155_97828">Johnson a kol. (2026): kontrola pH v BGC-Argo</SourceLink> – veřejná metodická příručka, verze 1.1.</li>
               <li><SourceLink id="DOI_10_5194_essd_7_117_2015">Jiang a kol. (2015): metadata měření</SourceLink> – otevřený popis údajů potřebných pro další použití.</li>
               <li><SourceLink id="WEB_cdiac_ess_dive_lbl_gov_Lewis_Wallace_1998_CO2SYS_e42bd642">Lewis a Wallace (1998): CO2SYS</SourceLink> – úplná dokumentace výpočtu.</li>
               <li><SourceLink id="DOI_10_1016_j_marchem_2018_10_006">Orr a kol. (2018): šíření nejistot</SourceLink> – veřejné PDF v repozitáři americké Národní vědecké nadace.</li>
