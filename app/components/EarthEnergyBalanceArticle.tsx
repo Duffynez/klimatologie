@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Equation, InlineMath } from "./Equation";
 import { SourceLink } from "./SourceLink";
 import { EnergyHypothesisDiagram } from "./EnergyHypothesisDiagram";
-import { MechanismFigure } from "./MechanismFigure";
 
 export function EarthEnergyBalanceArticle() {
   return (
@@ -45,11 +44,6 @@ export function EarthEnergyBalanceArticle() {
           <SourceLink id="HERSCHEL_1801_SOLAR_VARIATION">(Herschel 1801, původní rukopis)</SourceLink>{' '}
           <SourceLink id="DOI_10_1029_2010GL045777">(Kopp a Leanová 2011)</SourceLink>
         </p>
-        <MechanismFigure name="slunecni-hypoteza" sketch alt="Silnější Slunce dodává Zemi více energie, znázorněné žlutou šipkou.">
-          Sluneční hypotéza začíná změnou zdroje: k Zemi by přicházelo více záření.
-          Obrázek ukazuje pouze tento vstup. Jeho skutečnou proměnlivost měří družice.{' '}
-          <SourceLink id="DOI_10_1029_2010GL045777">(Kopp a Leanová 2011)</SourceLink>
-        </MechanismFigure>
         <p>
           Pro tuto hypotézu je podstatné, kolik energie ze Slunce opravdu
           přichází. Pozorování jeho povrchu poskytuje jen nepřímé vodítko.
@@ -147,17 +141,14 @@ export function EarthEnergyBalanceArticle() {
           teplou fází tohoto kolísání.{' '}
           <SourceLink id="DOI_10_1175_BJERKNES_1969">(Bjerknes 1969, oddíly 2 až 4)</SourceLink>
         </p>
-        <MechanismFigure name="prirozene-kolisani" sketch alt="Šipky mezi oceánem a atmosférou ukazují výměnu tepla. Žlutá šipka nad oblakem označuje odraz slunečního záření.">
-          Přirozené kolísání mění přesuny tepla mezi vodou a vzduchem.
-          Změnou oblačnosti může ovlivnit také výměnu energie s vesmírem.
-          Vlastní schéma těchto dvou cest.{' '}
-          <SourceLink id="DOI_10_1017_9781009157896_005">(IPCC AR6, rámeček 3.1)</SourceLink>
-        </MechanismFigure>
         <p>
-          Jak velkou změnu mohou vytvořit dvě cesty znázorněné na obrázku?
-          Nejdříve prověříme, zda ohřev znamená pouze přesun existujícího tepla.
-          Potom se podíváme, zda přirozené změny výměny energie s vesmírem
-          stačí na jeho dlouhodobý přírůstek.{' '}
+          Tato zkušenost dala otázce příčin oteplování důležitý rozměr:
+          jak velkou změnu může vytvořit samotné kolísání systému?
+          Přesuny tepla mění teplotu vzduchu i rozmístění tepla v oceánu.
+          Změněné oblaky navíc mohou ovlivnit odraz slunečního záření.
+          Potřebujeme proto prověřit dvě věci: zda jde pouze o přesun
+          existujícího tepla a zda přirozené změny výměny energie s vesmírem
+          stačí na dlouhodobý přírůstek.{' '}
           <SourceLink id="DOI_10_1017_9781009157896_005">(IPCC AR6, rámeček 3.1 a oddíl 3.7)</SourceLink>
         </p>
         <p>
@@ -240,26 +231,21 @@ export function EarthEnergyBalanceArticle() {
           <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021)</SourceLink>
         </p>
         <p>
-          Na grafu porovnáváme rozmezí těchto modelových trendů s měřením.
-          Zelený úsek se soustředí kolem nuly: bez změny vnějších vlivů
-          vznikají růsty i poklesy. Družice zachytily růst, který leží
-          výrazně vpravo od tohoto středu. Rezavý úsek ukazuje, nakolik
-          by jeho velikost mohla změnit chyba přístrojů.{' '}
+          Bez změny vnějších vlivů modely vytvářely růsty i poklesy
+          bilance soustředěné kolem nuly. Přibližně 95 % přirozeného
+          kolísání dvacetiletých trendů pokrývalo pásmo
+          ±0,19 W/m² za deset let. To je číselná předpověď této varianty
+          hypotézy. Velký růst může vzniknout i náhodou, ale čím dál leží
+          od obvyklého rozsahu, tím méně pravděpodobně. Chybu družicového
+          měření autoři zahrnuli do testu zvlášť.{' '}
           <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, obr. 2a)</SourceLink>
         </p>
-        <MechanismFigure name="prirozene-kolisani-test" width={760} height={350} mobileHeight={400}
-          alt="Přibližně 95procentní modelový rozsah dvacetiletých trendů je −0,19 až +0,19 W/m² za deset let. Družicový trend 0,38 má přístrojovou nejistotu ±0,20. Úseky se nepatrně překrývají.">
-          Zeleně: přibližně 95 % modelového kolísání, ±0,19 W/m² za deset let.
-          Rezavě: družicový trend 0,38 ± 0,20 W/m² za deset let, kde rozpětí
-          zahrnuje přístrojovou nejistotu. Oba úseky vyjadřují dvě směrodatné
-          odchylky, každý však jiného rozdělení. Překrývají se mezi 0,18 a 0,19.
-          Překreslené souhrnné odhady z{' '}
-          <SourceLink id="DOI_10_1038_s41467_021_24544_4">Raghuramana a kol. 2021, obr. 2</SourceLink>.
-        </MechanismFigure>
         <p>
-          K rozhodnutí nestačí porovnat konce barevných úseků.
-          Autoři spojili celé odhadované rozdělení přirozeného kolísání
-          s rozdělením chyby měření. V tomto testu vyšla
+          Družicový růst energetického přebytku činil
+          0,38 W/m² za deset let. Autoři mu v tomto porovnání přisoudili
+          nejistotu měření ±0,20 W/m² za deset let, odpovídající přibližně
+          95% rozsahu předpokládaných chyb přístrojů.
+          Při použitých odhadech přirozeného kolísání a chyby měření vyšla
           pravděpodobnost takového výsledku bez měnícího se vnějšího působení
           pod 1 %. Tento test doplňuje starší oceánská porovnání o další
           období a veličinu. Samotné přirozené kolísání jako úplné vysvětlení
@@ -287,13 +273,6 @@ export function EarthEnergyBalanceArticle() {
           že proměny těchto složek mohou měnit klima.{' '}
           <SourceLink id="1862_Tyndall">(Tyndall 1861, popis pokusu a závěr)</SourceLink>
         </p>
-        <MechanismFigure name="sklenikove-plyny" sketch alt="Tepelné záření povrchu vstupuje do vrstvy skleníkových plynů. Samostatné šipky ukazují vyzařování této vrstvy vzhůru i dolů.">
-          Skleníkové plyny přijímají záření povrchu a samy vyzařují vzhůru i dolů.
-          Šipky ukazují oddělené děje pohlcování a vyzařování.
-          Jde o jednu z cest lidského působení, kterou dále rozebírá{' '}
-          <Link href="/mechanismy/radiacni-pusobeni-sklenikovych-plynu/#molekuly">mechanismus skleníkových plynů</Link>.{' '}
-          <SourceLink id="WEB_NASA_Earth_Energy_Budget">(NASA: energetická bilance)</SourceLink>
-        </MechanismFigure>
         <p>
           Svante Arrhenius v roce 1896 převedl tuto možnost na výpočet.
           Zkoumal, jak by při různém množství CO₂ vycházela teplota povrchu,
@@ -775,7 +754,6 @@ export function EarthEnergyBalanceArticle() {
               <li><SourceLink id="DATA_CERES_PRP_2021">Data CERES k rozkladu radiačních změn</SourceLink>: příspěvky z analýzy Loeba a kolegů za září 2002 až březen 2020.</li>
               <li><a href="/media/energeticka-bilance-zeme/porovnani-trendu.csv" download>Hodnoty porovnávacího grafu</a> a <a href="/media/energeticka-bilance-zeme/README.txt">popis podkladů</a>. Přepis publikovaných souhrnných odhadů, nikoli nové zpracování jednotlivých měření.</li>
               <li><a href="/media/energeticka-bilance-zeme/generate_figures.py" download>Skript pro vytvoření grafu a schématu</a>. Vlastní grafika Klimatologie.eu, CC BY 4.0. Číselný podklad: Loeb a kol. 2021, CC BY 4.0.</li>
-              <li><a href="/media/mechanismy-vizualni/prirozene-kolisani.csv" download>Hodnoty grafu přirozeného kolísání</a>, <a href="/media/mechanismy-vizualni/README.txt">podklady a licence nových schémat</a> a <a href="/media/mechanismy-vizualni/generate_figures.py" download>reprodukční skript</a>. Graf přepisuje souhrnné odhady Raghuramana a kol. 2021, nezpracovává znovu původní modelové běhy.</li>
             </ul>
           </section>
         </div>

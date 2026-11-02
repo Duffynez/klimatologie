@@ -27,9 +27,12 @@ export function HypothesisDiagram({ hypotheses, captionId, caption, context }: P
   return (
     <>
       <p className={styles.guide}>
-        Diagram ukazuje cestu od předpovědi přes test a jeho výsledek k dnešnímu hodnocení.
-        Předpovědi odlišují zde porovnávané možnosti, někdy až souběhem několika znaků.
-        Kliknutím na název přejdete k příběhu hypotézy a důkazům.
+        Diagram ukazuje, co bychom měli naměřit, kdyby jednotlivé hypotézy byly správné.
+        Čteme jej od jedinečné předpovědi přes způsob jejího testování a výsledek
+        k dnešnímu hodnocení. U testu uvádíme, co měříme nebo s čím výsledek porovnáváme.
+        Jedinečná předpověď odlišuje hypotézu od ostatních zde porovnávaných možností.
+        Někdy rozhoduje až souběh několika znaků. Název hypotézy odkazuje na příběh
+        jejího zkoumání a důkazy.
       </p>
       {context}
       <figure className={styles.diagram} aria-labelledby={captionId}>

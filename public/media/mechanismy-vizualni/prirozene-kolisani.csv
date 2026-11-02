@@ -1,3 +1,0 @@
-series,estimate,lower,upper,interval,unit,period
-CMIP6 Control,0,-0.19,0.19,2 standard deviations of 20-year trends,W m^-2 decade^-1,1293 segments from 47 models
-CERES,0.38,0.18,0.58,2 standard deviations of observational trend error,W m^-2 decade^-1,2001-2020
