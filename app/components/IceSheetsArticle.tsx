@@ -269,9 +269,10 @@ export function IceSheetsArticle() {
             <p>
               Dvanáct tabulek CSV, textových souborů s oddělenými sloupci, obsahuje roční změnu hmotnosti, její
               nejistotu, kumulovaný součet a jeho nejistotu v
-              gigatunách i milimetrech. Samostatné soubory jsou pro oba příkrovy dohromady, Grónsko, celou Antarktidu,
+              gigatunách i milimetrech. Hodnoty jsou zapsány v měsíčních časových bodech. Samostatné soubory jsou pro oba příkrovy dohromady, Grónsko, celou Antarktidu,
               západní a východní Antarktidu a Antarktický poloostrov. Vydání spojuje 50 odhadů ze 14 družicových misí a
-              končí 31. prosince 2020.
+              končí 31. prosince 2020. Tabulka pro oba příkrovy dohromady na konci tohoto období uvádí po zaokrouhlení
+              změnu −7 563 Gt, shodnou s výsledkem metodické studie.
             </p>
             <p className="article-data-item__links">
               <SourceLink id="DOI_10_5285_77b64c55_7166_4a06_9def_2e400398e452">Záznam datového vydání 1992–2020</SourceLink>{" "}
@@ -291,9 +292,9 @@ export function IceSheetsArticle() {
               Antarktida začíná lednem 1979, oba záznamy končí prosincem 2023.
             </p>
             <p>
-              Při kontrole 3. října 2026 hlásil datový katalog British Antarctic Survey dočasnou nedostupnost
-              a stažení obou vydání IMBIE se nepodařilo ověřit. Plné metodické články včetně tabulek a grafů jsou
-              přístupné. Dostupnost dat lze znovu zkontrolovat přes přehled vydání IMBIE.
+              Obě vydání jsou v archivu British Antarctic Survey dostupná bez přihlášení. Při kontrole 3. listopadu 2026
+              bylo možné stáhnout všech dvanáct tabulek staršího a deset tabulek novějšího vydání.
+              Přehled publikací a dat IMBIE zpřístupňuje také starší vyhodnocení.
             </p>
             <p className="article-data-item__links">
               <SourceLink id="DOI_10_5285_128c5e33_5224_4197_82f0_19dcc95b80a0">Záznam datového vydání do roku 2023</SourceLink>{" "}
@@ -329,7 +330,7 @@ export function IceSheetsArticle() {
               obou příkrovů i jednotlivých oblastí odtoku. Verze 5 vychází ze zpracování gravitačních měření
               CSR RL06.02, tedy vydání Centra pro výzkum vesmíru Texaské univerzity. Katalog byl aktualizován
               27. října 2025, uvádí licenci CC BY 4.0 a další aktualizace neočekává. Jde o jiné zpracování týchž
-              misí GRACE a GRACE-FO, nikoli o další nezávislý přístroj.
+              misí GRACE a GRACE-FO, nikoli o další nezávislý přístroj. Stažení přes CDS vyžaduje bezplatný účet.
             </p>
             <p className="article-data-item__links">
               <SourceLink id="DOI_10_24381_cds_38b9366c">Copernicus CDS: data a dokumentace</SourceLink>{" "}
@@ -604,10 +605,10 @@ export function IceSheetsArticle() {
               </li>
               <li>
                 <SourceLink id="DOI_10_5285_128c5e33_5224_4197_82f0_19dcc95b80a0">IMBIE do roku 2023</SourceLink>:
-                záznam nového vydání. Dočasné omezení přístupu k oběma souborům popisuje oddíl Zveřejňovaná data.
+                veřejný archiv deseti tabulek nového vydání, včetně povrchové a dynamické složky bilance.
               </li>
               <li>
-                <SourceLink id="WEB_imbie_org_imbie_org_e2c3f887">IMBIE Data Downloads</SourceLink> a{" "}
+                <SourceLink id="WEB_imbie_org_imbie_org_e2c3f887">IMBIE: publikace a data</SourceLink> a{" "}
                 <SourceLink id="WEB_GitHub_IMBIE_b7c56ec3">IMBIE GitHub</SourceLink>:
                 přehled vydání, dat a veřejného kódu pro jejich spojení.
               </li>

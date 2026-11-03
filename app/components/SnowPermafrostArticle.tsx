@@ -84,7 +84,8 @@ export function SnowPermafrostArticle() {
 
         <h3>Permafrost: teplota a sezónní rozmrzání</h3>
         <p>
-          Permafrost je vymezen teplotou, nikoli druhem povrchu. Může být ve zmrzlé rašelině, štěrku i pevné skále a
+          Permafrost je půda nebo hornina, jejíž teplota zůstává nejméně dva roky po sobě na 0 °C nebo níže.
+          Může být ve zmrzlé rašelině, štěrku i pevné skále a
           může obsahovat mnoho ledu, málo ledu nebo žádný viditelný led. Ve vrtu se proto uvádí teplota v přesné
           hloubce. Pro porovnání více let se často volí hloubka, kde už je roční kolísání menší než přibližně 0,1 °C.
           Tato hloubka se nazývá hloubka nulového ročního kolísání. V mělkém vrtu se naopak sleduje celý průběh
@@ -626,7 +627,7 @@ export function SnowPermafrostArticle() {
           <p>
             Na arktické pevnině severně od 60° bez Grónska odpovídá trend za roky 1967–2025 zmenšení květnového
             rozsahu sněhu přibližně o 15 % a červnového o 50 %. Jarní tání v letech 2010–2024 začínalo přibližně o jeden až dva týdny dříve než
-            v letech 1967–1981. Mezi roky 1981 a 2025 klesla květnová hmotnost sněhu o 13 % a červnová o 33 %.
+            v letech 1967–1981. Trend za roky 1981–2025 odpovídá poklesu květnové hmotnosti sněhu o 13 % a červnové o 33 %.
             Teplota permafrostu ve sledované globální síti rostla v období 2007–2016 průměrným tempem 0,29 °C
             za desetiletí. V roce 2024 dosáhlo 9 z 20 dlouhodobě sledovaných míst na Aljašce nejvyšší teploty svého
             záznamu. Vyhodnocení aktivní vrstvy za roky 2000–2024 zjistilo její průkazné zvětšení u 55 %

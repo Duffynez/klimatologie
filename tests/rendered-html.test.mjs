@@ -1350,7 +1350,7 @@ test("publishes a sourced ice-sheet mass article with three measurement methods"
 
   assert.match(evidencePage, /IceSheetsArticle/);
   assert.match(evidencePage, /title="Změna hmotnosti ledových příkrovů"/);
-  assert.match(evidencePage, /meta="31\. října 2026"/);
+  assert.match(evidencePage, /title="Změna hmotnosti ledových příkrovů"\s+meta="3\. listopadu 2026"/);
   assert.match(article, /Změna hmotnosti ledového příkrovu vyjadřuje, o kolik se mezi dvěma určenými okamžiky změnila/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
   assert.match(article, /Výška povrchu/);
@@ -1397,13 +1397,17 @@ test("renders open ice-sheet papers and distinguishes revised estimates and data
   }
   assert.match(cards.get("DOI_10_1038_274539a0"), /19810013163\.pdf#page=18/);
   assert.match(cards.get("DOI_10_1038_s41597_026_08088_0"), /nature\.com\/articles\/s41597-026-08088-0/);
-  assert.match(cards.get("DOI_10_5067_temsc_3jc634"), /RL06\.3_V4/);
+  assert.match(cards.get("DOI_10_5067_temsc_3jc634"), /earthdata\.nasa\.gov\/data\/catalog\/pocloud-tellus-grac-grfo-mascon-cri-grid-rl06\.3-v4-rl06\.3mv04/);
   assert.match(articleHtml, /11 309 ± 565 Gt/);
   assert.match(articleHtml, /160 ± 17 Gt za rok/);
   assert.match(articleHtml, /23 ± 5 Gt za rok/);
-  assert.match(articleHtml, /dočasnou nedostupnost/);
+  assert.doesNotMatch(articleHtml, /dočasnou nedostupnost/);
+  assert.match(articleHtml, /Obě vydání jsou v archivu British Antarctic Survey dostupná bez přihlášení/);
+  assert.match(cards.get("WEB_imbie_org_imbie_org_e2c3f887"), /https:\/\/imbie\.org\/science\//);
+  assert.match(cards.get("DOI_10_5285_77b64c55_7166_4a06_9def_2e400398e452"), /ramadda\.data\.bas\.ac\.uk/);
+  assert.match(cards.get("DOI_10_5285_128c5e33_5224_4197_82f0_19dcc95b80a0"), /ramadda\.data\.bas\.ac\.uk/);
   assert.match(articleHtml, /1,85 GB/);
-  assert.match(articleHtml, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  assert.match(articleHtml, /<p class="page-lead__meta">3\. listopadu 2026<\/p>/);
   assert.doesNotMatch(articleHtml, /5 120 ± 544|intervaly zasahují na obě strany nuly/);
 });
 
@@ -1416,7 +1420,7 @@ test("publishes a sourced snow-cover and permafrost article with distinct observ
 
   assert.match(evidencePage, /SnowPermafrostArticle/);
   assert.match(evidencePage, /title="Sněhová pokrývka a permafrost"/);
-  assert.match(evidencePage, /meta="31\. října 2026"/);
+  assert.match(evidencePage, /title="Sněhová pokrývka a permafrost"\s+meta="3\. listopadu 2026"/);
   assert.match(article, /Sníh na souši pozorujeme jako plochu, dobu trvání, výšku a množství vody/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
   assert.match(article, /Mapa rozsahu sněhu/);
@@ -1471,12 +1475,15 @@ test("renders open snow and permafrost sources with qualified trends and data co
   assert.match(cards.get("DOI_10_6084_m9_figshare_32885756"), /ndownloader\.figshare\.com\/files\/66270764/);
   assert.match(cards.get("DOI_10_7265_n52r3pmc"), /Datový soubor/);
   assert.match(cards.get("DOI_10_1594_pangaea_842821"), /Datový soubor/);
+  assert.match(cards.get("DOI_10_5194_essd_7_137_2015"), /essd-7-137-2015\.pdf/);
+  assert.match(cards.get("DOI_10_5194_essd_7_245_2015"), /essd-7-245-2015\.pdf/);
+  assert.match(cards.get("DOI_10_5194_essd_6_201_2014"), /essd-6-201-2014\.pdf/);
   assert.match(articleHtml, /0,29 ± 0,12 °C za desetiletí/);
   assert.match(articleHtml, /průměr pouze 37 lokalit se statisticky průkazným/);
   assert.match(articleHtml, /3 500 řádků pro 140 kódů lokalit/);
   assert.match(articleHtml, /Z 316 registrovaných míst vybrala 156/);
   assert.match(articleHtml, /Jediný panel porovnává dubnovou hmotnost/);
-  assert.match(articleHtml, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  assert.match(articleHtml, /<p class="page-lead__meta">3\. listopadu 2026<\/p>/);
   assert.doesNotMatch(articleHtml, /Čtyři nezávislé podklady|s úplným desetiletým výsledkem|severoamerické \(a\) a euroasijské \(b\)/);
 });
 
