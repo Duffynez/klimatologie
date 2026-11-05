@@ -337,14 +337,85 @@ export function GreenhouseRadiationArticle() {
             <SourceLink id="DOI_10_1063_1_3653855">(Pierrehumbert 2011, obr. 3)</SourceLink>
           </p>
 
-          <h4 id="prenos-pozemni-test" className={styles.testHeading}>První test porovnává vypočtené a změřené záření k povrchu</h4>
+          <h4 className={styles.subheading}>Co má další CO₂ změnit</h4>
           <p>
-            Vraťme se ke dvěma stanicím z předchozího příběhu.
-            Výpočet se stálým CO₂ nevystihl pozorovanou změnu.
-            Když Feldmanův tým zahrnul jeho skutečný růst, vypočtená
-            změna spektra měření odpovídala. Uspěla tak konkrétní
-            předpověď velikosti a rozložení změny podle vlnové délky.{' '}
+            Přidání CO₂ zeslabuje záření přicházející z nižších vrstev.
+            V částech pásma, kde záření do vesmíru pochází hlavně
+            z troposféry, proto více přispívají vyšší vrstvy.
+            Troposféra je spodní část atmosféry a její teplota obvykle
+            s výškou klesá. Vyšší, chladnější vrstvy vyzařují slaběji.
+            Při stejném teplotním uspořádání tak v těchto částech
+            spektra odchází méně energie.{' '}
+            <SourceLink id="DOI_10_1063_1_3653855">(Pierrehumbert 2011, výklad emisní výšky)</SourceLink>
+          </p>
+          <p>
+            Zároveň se mění záření směřující dolů. Vrstva, která při
+            určité vlnové délce účinněji pohlcuje, při stejné teplotě
+            také účinněji vyzařuje. Teplé spodní vrstvy tak mohou
+            s přibývajícím CO₂ posílat k povrchu více záření.
+            Výrazně se uplatní slabší části pásma, kde pohlcování
+            a vyzařování ještě mohou znatelně růst.{' '}
+            <SourceLink id="DOI_10_1063_1_3653855">(Pierrehumbert 2011, s. 234–237)</SourceLink>
+          </p>
+          <p>
+            Obrázek spojuje tyto děje s oběma zkouškami. Nahoře
+            porovnáváme různá množství CO₂ při stejných teplotách
+            vrstev. Dole ověřujeme předpovědi v měnící se skutečné
+            atmosféře, nejprve ze země a potom z družice.
+          </p>
+          <figure id="prenos-zareni-schema" className={`article-figure ${styles.explanatoryFigure}`}>
+            <div className={styles.figureScroll} tabIndex={0} role="region"
+              aria-label="Přenos záření při růstu CO₂ a oba testy, na úzké obrazovce posuvné do stran">
+              <a href="/media/radiacni-pusobeni-sklenikovych-plynu/prenos-zareni-co2.png"
+                aria-label="Otevřít grafiku přenosu záření při růstu CO₂ v plné velikosti">
+                <Image className="article-figure__media"
+                  src="/media/radiacni-pusobeni-sklenikovych-plynu/prenos-zareni-co2.png"
+                  alt="Při stejných teplotách vrstev další CO₂ zeslabuje záření zespodu. V částech pásma s vyzařováním z troposféry proto více přispívají vyšší, chladnější vrstvy a do vesmíru odchází méně energie. Slabší části pásma dál reagují na přidání plynu. Teplé spodní vrstvy mohou vysílat více záření k povrchu. Pozemní test za roky 2000–2010 a družicový test za roky 2003–2021 porovnávají předpověď s měřenou změnou spektra."
+                  width={1122} height={1402} unoptimized />
+              </a>
+            </div>
+            <figcaption>
+              Barvy pozadí ukazují stejný průběh teploty v obou
+              sloupcích, růžová zvýrazňuje vyzařující oblasti.
+              Červené vlnité šipky znázorňují směr tepelného záření.
+              Horní křivky ilustrují pohlcování při různých vlnových
+              délkách. Dolní panely shrnují{' '}
+              <a href="#prenos-pozemni-test">pozemní test</a>
+              {' '}a <a href="#prenos-druzicovy-test">družicový test</a>.
+              Šipky v družicové tabulce znamenají úbytek nebo přírůstek
+              záření odcházejícího do vesmíru. Kresby přístrojů jsou
+              ilustrace. Vlastní grafika Klimatologie.eu vytvořená
+              pomocí AI, CC BY 4.0, podle{' '}
+              <SourceLink id="DOI_10_1063_1_3653855">Pierrehumberta (2011)</SourceLink>,{' '}
+              <SourceLink id="DOI_10_1038_nature14240">Feldmana a kol. (2015)</SourceLink>
+              {' '}a <SourceLink id="DOI_10_1029_2023GL103947">Raghuramana a kol. (2023)</SourceLink>.{' '}
+              Na menší obrazovce lze obrázek posouvat do stran.{' '}
+              <a href="/media/radiacni-pusobeni-sklenikovych-plynu/prenos-zareni-co2.png">Otevřít v plné velikosti</a>.{' '}
+              <a href="/media/radiacni-pusobeni-sklenikovych-plynu/prenos-zareni-co2.csv" download>Číselné podklady</a>.{' '}
+              <a href="/media/radiacni-pusobeni-sklenikovych-plynu/prenos-zareni-co2.txt">Podklady a licence</a>.
+            </figcaption>
+          </figure>
+
+          <h4 id="prenos-pozemni-test" className={styles.testHeading}>První test: záření k povrchu</h4>
+          <p>
+            První test využívá stejná měření z Oklahomy a severu Aljašky
+            jako předchozí příběh. Tentokrát zkoušíme, zda výpočet
+            s rostoucím CO₂ pozorovanou změnu správně předpoví.
+            Feldmanův tým do něj zahrnul skutečný růst koncentrace
+            i pozorované teploty a vlhkost. Vypočtenou změnu potom
+            porovnal s měřením za jasné oblohy, zvlášť pro jednotlivé
+            části spektra.{' '}
             <SourceLink id="DOI_10_1038_nature14240">(Feldman a kol. 2015, obr. 2–3)</SourceLink>
+          </p>
+          <p>
+            Výpočet naměřenou změnu vystihl. V letech 2000–2010
+            rostl příspěvek CO₂ k záření přicházejícímu na povrch
+            o 0,20 ± 0,06 W/m² za deset let v Oklahomě a o
+            0,20 ± 0,07 W/m² za deset let na severu Aljašky.
+            Uvedené nejistoty se vztahují k těmto trendům.
+            Shoda podpořila předpověď dalšího účinku CO₂ na záření
+            k povrchu v obou sledovaných prostředích.{' '}
+            <SourceLink id="DOI_10_1038_nature14240">(Feldman a kol. 2015, obr. 2–4 a metody)</SourceLink>
           </p>
           <p>
             Pro vysvětlení je důležitá právě shoda podle vlnové délky.
@@ -357,13 +428,14 @@ export function GreenhouseRadiationArticle() {
             <SourceLink id="DOI_10_1063_1_3653855">(Pierrehumbert 2011, obr. 2–3)</SourceLink>
           </p>
 
-          <h4 id="prenos-druzicovy-test" className={styles.testHeading}>Druhý test sleduje záření odcházející do vesmíru</h4>
+          <h4 id="prenos-druzicovy-test" className={styles.testHeading}>Druhý test: záření do vesmíru</h4>
           <p>
-            Z vesmíru sledujeme opačný směr přenosu. Při nezměněných
-            teplotách má další CO₂ omezovat výdej v částech svého pásma.
-            Země se však současně otepluje a teplejší povrch i vzduch
-            vyzařují více. Družice zachytí souběh změny složení
-            a teplotní reakce. Předpověď proto musí popsat obojí.{' '}
+            Z vesmíru sledujeme opačný směr přenosu. Horní část obrázku
+            izoluje účinek přidání CO₂ při stejných teplotách.
+            Ve skutečném záznamu se Země současně otepluje a teplejší
+            povrch i vzduch vyzařují více. Družice proto zachytí
+            souběh změny složení a teplotní reakce. Výpočet musí
+            vystihnout jejich společný projev v celém sledovaném spektru.{' '}
             <SourceLink id="DOI_10_1063_1_3653855">(Pierrehumbert 2011)</SourceLink>
           </p>
           <p>
@@ -376,13 +448,23 @@ export function GreenhouseRadiationArticle() {
             <SourceLink id="DOI_10_1029_2023GL103947">(Raghuraman a kol. 2023, oddíly 2–3)</SourceLink>
           </p>
           <p>
-            V části pásma CO₂ záření ubývalo, zatímco v průhlednějších
-            částech spektra přibývalo. Výpočty tento rozdíl vystihly:
-            růst skleníkových plynů a ochlazování stratosféry snižovaly
-            výdej, oteplování povrchu a spodní atmosféry jej zvyšovalo.
+            Výsledek shrnuje pravý dolní panel obrázku: v části pásma
+            CO₂ záření ubývalo, zatímco v průhlednějších částech
+            spektra přibývalo. Výpočty tento rozdíl vystihly.
+            Růst skleníkových plynů a ochlazování stratosféry přispívaly
+            k menšímu výdeji. Oteplování povrchu a spodní atmosféry
+            naopak zvyšovalo vyzařování, výrazně právě tam, kde
+            záření snáze prochází do vesmíru.
+            {' '}
+            <SourceLink id="DOI_10_1029_2023GL103947">(Raghuraman a kol. 2023, obr. 1–2)</SourceLink>
+          </p>
+          <p>
             Studie využila dva postupy výpočtu přenosu záření
-            a ověřila také soulad celkových toků AIRS s přístrojem CERES.{' '}
-            <SourceLink id="DOI_10_1029_2023GL103947">(Raghuraman a kol. 2023, obr. 1–2 a doplňkový obr. S3)</SourceLink>
+            a ověřila také soulad celkových toků AIRS s přístrojem CERES,
+            který měří záření v širokých pásmech. Porovnání tak
+            kontrolovalo, zda se podrobný spektrální záznam shoduje
+            s jiným měřením celkového výdeje.{' '}
+            <SourceLink id="DOI_10_1029_2023GL103947">(Raghuraman a kol. 2023, oddíly 2–3 a doplňkový obr. S3)</SourceLink>
           </p>
           <p>
             Podporu hypotéze dává shoda tohoto rozložení změn.
@@ -661,6 +743,7 @@ export function GreenhouseRadiationArticle() {
             <h3>Podklady vysvětlující grafiky</h3>
             <ul>
               <li><a href="/media/radiacni-pusobeni-sklenikovych-plynu/nasyceni-co2.png">Nasycení pohlcování a oba testy</a>, <a href="/media/radiacni-pusobeni-sklenikovych-plynu/nasyceni-co2.csv" download>číselné podklady</a> a <a href="/media/radiacni-pusobeni-sklenikovych-plynu/nasyceni-co2.txt">popis a licence</a>. Vlastní grafika vytvořená pomocí AI, CC BY 4.0. Křivka ilustruje princip. Čísla přebírají publikované výsledky Ångströma (1900) a Feldmana a kol. (2015).</li>
+              <li><a href="/media/radiacni-pusobeni-sklenikovych-plynu/prenos-zareni-co2.png">Přenos záření při růstu CO₂ a oba testy</a>, <a href="/media/radiacni-pusobeni-sklenikovych-plynu/prenos-zareni-co2.csv" download>číselné podklady</a> a <a href="/media/radiacni-pusobeni-sklenikovych-plynu/prenos-zareni-co2.txt">popis a licence</a>. Vlastní grafika vytvořená pomocí AI, CC BY 4.0. Horní část ilustruje princip. Pozemní hodnoty přebírá z Feldmana a kol. (2015), směry družicových změn z Raghuramana a kol. (2023).</li>
             </ul>
           </section>
         </div>

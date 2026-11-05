@@ -1,0 +1,66 @@
+Proč další CO₂ mění záření Země
+Klimatologie.eu, 5. listopadu 2026
+
+Soubor: prenos-zareni-co2.png
+Číselný podklad: prenos-zareni-co2.csv
+
+Původ
+Vlastní vysvětlující grafika vytvořená vestavěným nástrojem imagegen.
+Licence vlastního zpracování: CC BY 4.0.
+https://creativecommons.org/licenses/by/4.0/
+Přístroje, družice a krajina jsou ilustrace, nikoli dokumentární fotografie.
+
+Význam horní části
+Porovnání ponechává stejnou teplotu v každé výšce a mění množství CO₂.
+Ukazuje části pásma s hlavním příspěvkem záření z troposféry.
+Zesílené pohlcování záření z nižších vrstev posouvá hlavní příspěvek výš.
+Při klesající teplotě s výškou odtud přichází méně záření.
+Růžová označuje vyzařující oblasti, nikoli jejich oteplení.
+Vyzařují všechny vrstvy. Zvýraznění znázorňuje příspěvek, ne pevnou hranici.
+Spodní vrstvy vyzařují vzhůru i dolů a další CO₂ může zesílit tok k povrchu.
+Křivky ukazují pohlcený podíl v závislosti na vlnové délce.
+Nejsou datovým spektrem, změnou vnitřní šířky molekulární čáry ani číselným modelem.
+Horní schéma neposuzuje znaménko změny na všech vlnových délkách.
+V částech spektra s vyzařováním ze stratosféry se uplatní jiný teplotní profil.
+
+Pozemní test
+Feldman a kol. (2015), 2000–2010, jasná obloha:
+Oklahoma: 0,20 ± 0,06 W/m² za deset let.
+Sever Aljašky: 0,20 ± 0,07 W/m² za deset let.
+Jde o růst příspěvku CO₂ k tepelnému záření směřujícímu k povrchu.
+Nejistoty jsou převzaté z publikace, nejsou přeznačeny na 95% interval.
+Stejná pozorování používá grafika první hypotézy.
+Zde se zdůrazňuje shoda s výpočtem, který zahrnuje růst CO₂.
+Nejde o další nezávislý soubor pozemních měření.
+CSV přepisuje souhrnné výsledky, nereprodukuje zpracování jednotlivých spekter.
+
+Družicový test
+Raghuraman a kol. (2023), AIRS na Aqua, 2003–2021.
+Tabulka popisuje směr změn odcházejícího záření, nikoli jejich velikost.
+Šipka dolů v tabulce znamená pokles množství záření do vesmíru.
+Neznamená záření směřující k povrchu.
+Pokles se týká částí pásma CO₂, růst průhlednějších částí spektra.
+Skutečný vývoj zahrnuje změny plynů i reakci teploty, vlhkosti a oblaků.
+Práce používá dva postupy radiačního výpočtu a porovnání s CERES.
+Doplněný spektrální produkt AIRS zahrnuje odhad v neměřených intervalech.
+Tento obrázek proto neoznačuje všechny vlnové délky za přímo měřené.
+Jde o kvalitativní přehled rozdílů, nikoli úplný rozklad všech vlivů.
+
+Prameny
+Pierrehumbert, R. T. (2011): Infrared Radiation and Planetary Temperature.
+AIP Conference Proceedings 1401, 232–244. Princip: obr. 1–3 a související výklad.
+https://doi.org/10.1063/1.3653855
+https://courses.seas.harvard.edu/climate/eli/Courses/global-change-debates/Sources/CO2-saturation/more/Pierrehumbert-2011.pdf
+
+Feldman, D. R. a kol. (2015): Observational determination of surface
+radiative forcing by CO₂ from 2000 to 2010. Nature 519, 339–343.
+Podklad: obr. 2–4 a metody.
+https://doi.org/10.1038/nature14240
+https://courses.seas.harvard.edu/climate/eli/Courses/global-change-debates/Sources/CO2-saturation/more/Feldman_2015.pdf
+
+Raghuraman, S. P. a kol. (2023): Greenhouse Gas Forcing and Climate
+Feedback Signatures Identified in Hyperspectral Infrared Satellite Observations.
+Geophysical Research Letters 50, e2023GL103947.
+Podklad: oddíly 2–4, obr. 1–2, doplňkový obr. S3.
+https://doi.org/10.1029/2023GL103947
+https://repository.library.noaa.gov/view/noaa/63977/noaa_63977_DS1.pdf
