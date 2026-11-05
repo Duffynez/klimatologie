@@ -1,3 +1,4 @@
+import { HypothesisStory } from "./HypothesisStory";
 import Link from "next/link";
 import { HypothesisDiagram, type MechanismHypothesis } from "./HypothesisDiagram";
 import { SourceLink } from "./SourceLink";
@@ -56,196 +57,198 @@ export function GreenhouseRadiationArticle() {
         />
 
         <h2 id="pribehy">Jak se vysvětlení zkoumala</h2>
-        <h3 id="nasyceni">Účinek CO₂ je už téměř nasycený</h3>
-        <p>
-          Na konci 19. století už fyzikové věděli, že plyny nepohlcují všechny
-          druhy tepelného záření stejně. Rozlišujeme je podle vlnové délky,
-          podobně jako barvy viditelného světla. V určitých rozsazích,
-          nazývaných absorpční pásma, může plyn pohltit téměř všechno dopadající
-          záření. Pak se nabízí námitka: jestli už záření pohltila první část
-          plynu, další část jej podruhé pohltit nemůže.
-          Právě na slabé závislosti celkového pohlcování na množství CO₂ stavěl
-          Knut Ångström svou práci z roku 1900.{' '}
-          <SourceLink id="DOI_10_1002_andp_19003081208">(Ångström 1900, s. 720–725)</SourceLink>
-        </p>
-        <p>
-          Ångström popsal pokus, který v jeho ústavu prováděl J. Koch.
-          Záření zdroje zahřátého na 100 °C procházelo 30 centimetry CO₂.
-          Při tlaku 780 milimetrů rtuťového sloupce, tedy přibližně
-          atmosférickém tlaku, plyn pohltil asi 10 % veškerého dopadajícího
-          záření. Snížení tlaku na dvě třetiny změnilo pohlcený podíl nejvýše
-          o 0,4 procentního bodu. Velká změna množství plynu tedy v této
-          sestavě způsobila jen malou změnu celkového pohlcování.{' '}
-          <SourceLink id="DOI_10_1002_andp_19003081208">(Ångström 1900, s. 724)</SourceLink>
-        </p>
-        <p>
-          Závěr rozšířil na atmosféru: při množstvích CO₂ blízkých tehdejšímu
-          stavu se podle něj celková absorpce měnila jen málo. Další námitkou
-          byl překryv s vodní párou, která pohlcuje část stejných vlnových
-          délek. Tento argument zůstal ve vědecké diskusi přítomný i v polovině
-          20. století, kdy jej podrobně rozebíral Gilbert Plass.{' '}
-          <SourceLink id="DOI_10_1002_andp_19003081208">(Ångström 1900)</SourceLink>{' '}
-          <SourceLink id="1956_Plass">(Plass 1956, s. 141–142)</SourceLink>
-        </p>
-        <p>
-          Rozhodující otázkou bylo, zda se laboratorní výsledek dá přenést
-          na celý sloupec vzduchu. Atmosféra má vrstvy s různou teplotou,
-          tlakem a vlhkostí. Každá také sama vyzařuje. Výpočet proto musí
-          sledovat záření procházející jednotlivými vrstvami i záření,
-          které v nich vzniká. Pohlcení svazku v jedné trubici zachycuje
-          pouze část tohoto děje.{' '}
-          <SourceLink id="DOI_10_1063_1_3653855">(Pierrehumbert 2011, obr. 1)</SourceLink>
-        </p>
-        <p>
-          Dnešní pozemní test ukazuje konkrétní mez historického zobecnění.
-          Po zohlednění teploty a vlhkosti zbývá v měření rostoucí příspěvek
-          CO₂, který odpovídá výpočtu přenosu záření. V obou sledovaných
-          prostředích je odlišitelný od nulového trendu. Představa, že další
-          CO₂ v atmosféře už prakticky nepůsobí, tomuto výsledku neodpovídá.
-          Silné pohlcování v nejneprůhlednějších částech pásma je přitom součástí
-          úspěšného výpočtu. Jak se tyto dvě skutečnosti slučují, ukáže
-          příběh druhého vysvětlení.{' '}
-          <SourceLink id="DOI_10_1038_nature14240">(Feldman a kol. 2015)</SourceLink>
-        </p>
+        <HypothesisStory id="nasyceni" number={1} title="Účinek CO₂ je už téměř nasycený">
+          <p>
+            Na konci 19. století už fyzikové věděli, že plyny nepohlcují všechny
+            druhy tepelného záření stejně. Rozlišujeme je podle vlnové délky,
+            podobně jako barvy viditelného světla. V určitých rozsazích,
+            nazývaných absorpční pásma, může plyn pohltit téměř všechno dopadající
+            záření. Pak se nabízí námitka: jestli už záření pohltila první část
+            plynu, další část jej podruhé pohltit nemůže.
+            Právě na slabé závislosti celkového pohlcování na množství CO₂ stavěl
+            Knut Ångström svou práci z roku 1900.{' '}
+            <SourceLink id="DOI_10_1002_andp_19003081208">(Ångström 1900, s. 720–725)</SourceLink>
+          </p>
+          <p>
+            Ångström popsal pokus, který v jeho ústavu prováděl J. Koch.
+            Záření zdroje zahřátého na 100 °C procházelo 30 centimetry CO₂.
+            Při tlaku 780 milimetrů rtuťového sloupce, tedy přibližně
+            atmosférickém tlaku, plyn pohltil asi 10 % veškerého dopadajícího
+            záření. Snížení tlaku na dvě třetiny změnilo pohlcený podíl nejvýše
+            o 0,4 procentního bodu. Velká změna množství plynu tedy v této
+            sestavě způsobila jen malou změnu celkového pohlcování.{' '}
+            <SourceLink id="DOI_10_1002_andp_19003081208">(Ångström 1900, s. 724)</SourceLink>
+          </p>
+          <p>
+            Závěr rozšířil na atmosféru: při množstvích CO₂ blízkých tehdejšímu
+            stavu se podle něj celková absorpce měnila jen málo. Další námitkou
+            byl překryv s vodní párou, která pohlcuje část stejných vlnových
+            délek. Tento argument zůstal ve vědecké diskusi přítomný i v polovině
+            20. století, kdy jej podrobně rozebíral Gilbert Plass.{' '}
+            <SourceLink id="DOI_10_1002_andp_19003081208">(Ångström 1900)</SourceLink>{' '}
+            <SourceLink id="1956_Plass">(Plass 1956, s. 141–142)</SourceLink>
+          </p>
+          <p>
+            Rozhodující otázkou bylo, zda se laboratorní výsledek dá přenést
+            na celý sloupec vzduchu. Atmosféra má vrstvy s různou teplotou,
+            tlakem a vlhkostí. Každá také sama vyzařuje. Výpočet proto musí
+            sledovat záření procházející jednotlivými vrstvami i záření,
+            které v nich vzniká. Pohlcení svazku v jedné trubici zachycuje
+            pouze část tohoto děje.{' '}
+            <SourceLink id="DOI_10_1063_1_3653855">(Pierrehumbert 2011, obr. 1)</SourceLink>
+          </p>
+          <p>
+            Dnešní pozemní test ukazuje konkrétní mez historického zobecnění.
+            Po zohlednění teploty a vlhkosti zbývá v měření rostoucí příspěvek
+            CO₂, který odpovídá výpočtu přenosu záření. V obou sledovaných
+            prostředích je odlišitelný od nulového trendu. Představa, že další
+            CO₂ v atmosféře už prakticky nepůsobí, tomuto výsledku neodpovídá.
+            Silné pohlcování v nejneprůhlednějších částech pásma je přitom součástí
+            úspěšného výpočtu. Jak se tyto dvě skutečnosti slučují, ukáže
+            příběh druhého vysvětlení.{' '}
+            <SourceLink id="DOI_10_1038_nature14240">(Feldman a kol. 2015)</SourceLink>
+          </p>
+        </HypothesisStory>
 
-        <h3 id="promena-prenosu">Další CO₂ mění přenos záření</h3>
-        <h4>Co ukázaly pokusy s jednotlivými plyny</h4>
-        <p>
-          Základy této odpovědi vznikaly ještě před Ångströmovou námitkou.
-          John Tyndall ve své práci z roku 1861 porovnával, jak různé plyny
-          propouštějí tepelné záření. Do trubice vpouštěl zkoumaný plyn
-          a citlivým tepelným detektorem sledoval změnu záření, které prošlo.
-          Okénka z kamenné soli umožňovala průchod záření, které by obyčejné
-          sklo silně pohlcovalo. Kontrolované střídání náplně dovolilo
-          oddělit vlastnost plynu od samotného zdroje tepla.{' '}
-          <SourceLink id="1862_Tyndall">(Tyndall 1861, uspořádání pokusů)</SourceLink>
-        </p>
-        <p>
-          Výsledky ukázaly velké rozdíly. Dusík a kyslík propouštěly
-          zkoumané tepelné záření mnohem lépe než oxid uhličitý a vodní pára.
-          O přenosu záření tedy nerozhodovalo jen celkové množství vzduchu.
-          Důležité bylo také jeho složení, včetně plynů zastoupených
-          v malém podílu. Tyndall zkoumal rovněž vyzařování plynů a spojoval
-          obě vlastnosti: plyny schopné záření pohlcovat je mohou také
-          vydávat. Tím vznikl experimentální základ pro výpočet celé
-          atmosféry.{' '}
-          <SourceLink id="1862_Tyndall">(Tyndall 1861, pokusy s absorpcí a vyzařováním)</SourceLink>
-        </p>
+        <HypothesisStory id="promena-prenosu" number={2} title="Další CO₂ mění přenos záření">
+          <h4>Co ukázaly pokusy s jednotlivými plyny</h4>
+          <p>
+            Základy této odpovědi vznikaly ještě před Ångströmovou námitkou.
+            John Tyndall ve své práci z roku 1861 porovnával, jak různé plyny
+            propouštějí tepelné záření. Do trubice vpouštěl zkoumaný plyn
+            a citlivým tepelným detektorem sledoval změnu záření, které prošlo.
+            Okénka z kamenné soli umožňovala průchod záření, které by obyčejné
+            sklo silně pohlcovalo. Kontrolované střídání náplně dovolilo
+            oddělit vlastnost plynu od samotného zdroje tepla.{' '}
+            <SourceLink id="1862_Tyndall">(Tyndall 1861, uspořádání pokusů)</SourceLink>
+          </p>
+          <p>
+            Výsledky ukázaly velké rozdíly. Dusík a kyslík propouštěly
+            zkoumané tepelné záření mnohem lépe než oxid uhličitý a vodní pára.
+            O přenosu záření tedy nerozhodovalo jen celkové množství vzduchu.
+            Důležité bylo také jeho složení, včetně plynů zastoupených
+            v malém podílu. Tyndall zkoumal rovněž vyzařování plynů a spojoval
+            obě vlastnosti: plyny schopné záření pohlcovat je mohou také
+            vydávat. Tím vznikl experimentální základ pro výpočet celé
+            atmosféry.{' '}
+            <SourceLink id="1862_Tyndall">(Tyndall 1861, pokusy s absorpcí a vyzařováním)</SourceLink>
+          </p>
 
-        <h4>Jak se počítal účinek na celou atmosféru</h4>
-        <p>
-          Svante Arrhenius se v roce 1896 ptal, jak by se při změně CO₂
-          změnila teplota povrchu. Použil tehdejší údaje o pohlcování
-          záření CO₂ a vodní párou a sestavil energetickou bilanci.
-          Bilance porovnává příjem a výdej energie. Když při stejné
-          teplotě odejde méně energie, původní teplota už rovnováze
-          neodpovídá. Arrhenius hledal teplotu, při které se příjem
-          s výdejem opět vyrovná.{' '}
-          <SourceLink id="1896_Arrhenius">(Arrhenius 1896)</SourceLink>
-        </p>
-        <p>
-          Výpočty provedl pro různá množství CO₂, zeměpisné šířky
-          a roční období. Získal oteplení při přidání plynu a ochlazení
-          při jeho úbytku. Takový výsledek byl podmíněný tehdejšími
-          absorpčními údaji a zjednodušením atmosféry. Vědecká otázka
-          se ale zpřesnila: bylo třeba zjistit, zda předpokládaná změna
-          výdeje energie obstojí s přesnějším měřením jednotlivých
-          vlnových délek.{' '}
-          <SourceLink id="1896_Arrhenius">(Arrhenius 1896, výpočty a tabulky)</SourceLink>
-        </p>
-        <p>
-          Plassův rozbor z roku 1956 využil novější laboratorní údaje
-          a elektronický počítač. V pásmu CO₂ kolem vlnové délky
-          15 mikrometrů počítal záření po vrstvách od povrchu do výšky
-          75 kilometrů. Mikrometr je miliontina metru. Zahrnul rozdílnou
-          sílu jednotlivých absorpčních čar, jejich překrývání i změny
-          s tlakem a teplotou. Čára označuje úzký rozsah vlnových délek,
-          v němž molekula zvlášť dobře přijímá energii záření.{' '}
-          <SourceLink id="1956_Plass">(Plass 1956, oddíly 2–3)</SourceLink>
-        </p>
-        <p>
-          Výsledek ukázal význam slabších čar a okrajů pásma. Tam ještě
-          zůstávalo záření, jehož průchod se s množstvím CO₂ měnil.
-          Plass vysvětlil také problém vodní páry. Směrem vzhůru její
-          zastoupení prudce ubývá, zatímco podíl CO₂ je mnohem rovnoměrnější.
-          Překryv silný u povrchu proto nemusí zakrýt účinek CO₂ výše.
-          Jeho výpočty dávaly měřitelnou změnu toků i při množství plynu
-          odpovídajícím tehdejší atmosféře.{' '}
-          <SourceLink id="1956_Plass">(Plass 1956, s. 141–142)</SourceLink>
-        </p>
-        <p>
-          K převodu radiační změny na teplotu bylo třeba popsat i pohyb
-          vzduchu. Syukuro Manabe a Richard Wetherald v roce 1967 spojili
-          výpočet záření s konvekcí, tedy přenosem tepla stoupajícím
-          a klesajícím vzduchem. V jejich jednorozměrném sloupci se
-          teploty vrstev měnily, dokud se přenosy energie nevyrovnaly.
-          Atmosféra tak mohla na změněné složení fyzikálně reagovat.{' '}
-          <SourceLink id="1967_Manabe_Wetherald">(Manabe a Wetherald 1967)</SourceLink>
-        </p>
-        <p>
-          Porovnali také dvě možnosti pro vodní páru. Při pevném množství
-          páry chybělo zesílení účinku, které nastalo při zachování
-          relativní vlhkosti. Relativní vlhkost říká, jak blízko je
-          vzduch nasycení vodní párou při své teplotě. Teplejší vzduch
-          se stejnou relativní vlhkostí obsahuje páry více. Ta dále
-          mění záření a zesiluje oteplování. Při této podmínce vyšlo
-          po zdvojnásobení CO₂ oteplení povrchu přibližně o 2 °C
-          a současně ochlazení stratosféry, vrstvy nad spodní atmosférou.
-          Šlo o výsledek daného modelu a jeho předpokladů.{' '}
-          <SourceLink id="1967_Manabe_Wetherald">(Manabe a Wetherald 1967, abstrakt a oddíl 5)</SourceLink>
-        </p>
+          <h4>Jak se počítal účinek na celou atmosféru</h4>
+          <p>
+            Svante Arrhenius se v roce 1896 ptal, jak by se při změně CO₂
+            změnila teplota povrchu. Použil tehdejší údaje o pohlcování
+            záření CO₂ a vodní párou a sestavil energetickou bilanci.
+            Bilance porovnává příjem a výdej energie. Když při stejné
+            teplotě odejde méně energie, původní teplota už rovnováze
+            neodpovídá. Arrhenius hledal teplotu, při které se příjem
+            s výdejem opět vyrovná.{' '}
+            <SourceLink id="1896_Arrhenius">(Arrhenius 1896)</SourceLink>
+          </p>
+          <p>
+            Výpočty provedl pro různá množství CO₂, zeměpisné šířky
+            a roční období. Získal oteplení při přidání plynu a ochlazení
+            při jeho úbytku. Takový výsledek byl podmíněný tehdejšími
+            absorpčními údaji a zjednodušením atmosféry. Vědecká otázka
+            se ale zpřesnila: bylo třeba zjistit, zda předpokládaná změna
+            výdeje energie obstojí s přesnějším měřením jednotlivých
+            vlnových délek.{' '}
+            <SourceLink id="1896_Arrhenius">(Arrhenius 1896, výpočty a tabulky)</SourceLink>
+          </p>
+          <p>
+            Plassův rozbor z roku 1956 využil novější laboratorní údaje
+            a elektronický počítač. V pásmu CO₂ kolem vlnové délky
+            15 mikrometrů počítal záření po vrstvách od povrchu do výšky
+            75 kilometrů. Mikrometr je miliontina metru. Zahrnul rozdílnou
+            sílu jednotlivých absorpčních čar, jejich překrývání i změny
+            s tlakem a teplotou. Čára označuje úzký rozsah vlnových délek,
+            v němž molekula zvlášť dobře přijímá energii záření.{' '}
+            <SourceLink id="1956_Plass">(Plass 1956, oddíly 2–3)</SourceLink>
+          </p>
+          <p>
+            Výsledek ukázal význam slabších čar a okrajů pásma. Tam ještě
+            zůstávalo záření, jehož průchod se s množstvím CO₂ měnil.
+            Plass vysvětlil také problém vodní páry. Směrem vzhůru její
+            zastoupení prudce ubývá, zatímco podíl CO₂ je mnohem rovnoměrnější.
+            Překryv silný u povrchu proto nemusí zakrýt účinek CO₂ výše.
+            Jeho výpočty dávaly měřitelnou změnu toků i při množství plynu
+            odpovídajícím tehdejší atmosféře.{' '}
+            <SourceLink id="1956_Plass">(Plass 1956, s. 141–142)</SourceLink>
+          </p>
+          <p>
+            K převodu radiační změny na teplotu bylo třeba popsat i pohyb
+            vzduchu. Syukuro Manabe a Richard Wetherald v roce 1967 spojili
+            výpočet záření s konvekcí, tedy přenosem tepla stoupajícím
+            a klesajícím vzduchem. V jejich jednorozměrném sloupci se
+            teploty vrstev měnily, dokud se přenosy energie nevyrovnaly.
+            Atmosféra tak mohla na změněné složení fyzikálně reagovat.{' '}
+            <SourceLink id="1967_Manabe_Wetherald">(Manabe a Wetherald 1967)</SourceLink>
+          </p>
+          <p>
+            Porovnali také dvě možnosti pro vodní páru. Při pevném množství
+            páry chybělo zesílení účinku, které nastalo při zachování
+            relativní vlhkosti. Relativní vlhkost říká, jak blízko je
+            vzduch nasycení vodní párou při své teplotě. Teplejší vzduch
+            se stejnou relativní vlhkostí obsahuje páry více. Ta dále
+            mění záření a zesiluje oteplování. Při této podmínce vyšlo
+            po zdvojnásobení CO₂ oteplení povrchu přibližně o 2 °C
+            a současně ochlazení stratosféry, vrstvy nad spodní atmosférou.
+            Šlo o výsledek daného modelu a jeho předpokladů.{' '}
+            <SourceLink id="1967_Manabe_Wetherald">(Manabe a Wetherald 1967, abstrakt a oddíl 5)</SourceLink>
+          </p>
 
-        <h4>Jak se výpočty porovnaly s přírodou</h4>
-        <p>
-          Ověřit samotný radiační krok znamená měřit záření rozdělené
-          podle vlnové délky. Takové rozdělení se nazývá spektrum.
-          Feldmanův tým porovnal pozemní spektra s výpočtem pro skutečné
-          teploty, vlhkost a složení atmosféry. Zkoumal jasnou oblohu
-          v Oklahomě a na severu Aljašky. Předpověď byla konkrétní:
-          změna má odpovídat absorpčnímu pásmu CO₂ a jeho rostoucímu
-          množství. Prosté oteplení vzduchu by mělo jiný spektrální průběh.{' '}
-          <SourceLink id="DOI_10_1038_nature14240">(Feldman a kol. 2015, obr. 1–2)</SourceLink>
-        </p>
-        <p>
-          Zastoupení CO₂ vyjadřujeme v ppm, tedy počtem jeho molekul
-          na milion molekul suchého vzduchu. Při růstu o 22 ppm
-          v letech 2000–2010 vyšel přírůstek jeho
-          příspěvku k záření na povrch přibližně 0,20 W/m² za deset let.
-          Publikované nejistoty trendu byly ±0,06 v Oklahomě a ±0,07
-          na Aljašce. Shoda v teplém i studeném prostředí podpořila
-          přenositelnost výpočtu. Obě stanice však používaly stejný
-          fyzikální postup zpracování.{' '}
-          <SourceLink id="DOI_10_1038_nature14240">(Feldman a kol. 2015, obr. 2 a 4)</SourceLink>
-        </p>
-        <p>
-          Další pohled poskytl přístroj AIRS na družici Aqua. Raghuraman
-          a kolegové v roce 2023 porovnali změny odcházejícího spektra
-          za roky 2003–2021 s výpočty přenosu záření. Samostatně počítali
-          účinek růstu plynů při jinak stálém stavu atmosféry. Potom
-          zahrnuli i změny teploty, vlhkosti a oblaků. Společný výsledek odpovídal
-          poklesu záření v částech pásma CO₂ i růstu v jiných částech
-          spektra. Vyhodnocení zahrnovalo dva výpočetní postupy pro
-          přenos záření.{' '}
-          <SourceLink id="DOI_10_1029_2023GL103947">(Raghuraman a kol. 2023, oddíly 3–4 a obr. 1)</SourceLink>
-        </p>
-        <p>
-          Smyslem tohoto testu bylo vysvětlit tvar celého spektrálního
-          obrazu. Rostoucí skleníkové plyny omezovaly výdej energie,
-          zatímco oteplující se povrch a atmosféra jej zvyšovaly.
-          Pozorovaný součet obsahuje oba příspěvky. Zpracování družicového
-          měření popisuje{' '}
-          <Link href="/pozorovani/atmosfericka-koncentrace-co2/#odchazejici-spektrum">pozorování odcházejícího spektra</Link>.{' '}
-          <SourceLink id="DOI_10_1029_2023GL103947">(Raghuraman a kol. 2023)</SourceLink>
-        </p>
-        <p>
-          Dnes přijímané vysvětlení tak spojuje několik různých zkoušek.
-          Laboratoř určuje vlastnosti plynu, výpočty z nich odvozují
-          přenos atmosférou a měření kontrolují vznikající spektrum.
-          Současné odborné hodnocení IPCC považuje oteplující radiační
-          účinek dalšího CO₂ za dobře doložený. Zpřesňuje jeho velikost
-          i reakce atmosféry, které po změně složení následují.{' '}
-          <SourceLink id="DOI_10_1017_9781009157896_009">(IPCC AR6, oddíl 7.3.2.1)</SourceLink>
-        </p>
+          <h4>Jak se výpočty porovnaly s přírodou</h4>
+          <p>
+            Ověřit samotný radiační krok znamená měřit záření rozdělené
+            podle vlnové délky. Takové rozdělení se nazývá spektrum.
+            Feldmanův tým porovnal pozemní spektra s výpočtem pro skutečné
+            teploty, vlhkost a složení atmosféry. Zkoumal jasnou oblohu
+            v Oklahomě a na severu Aljašky. Předpověď byla konkrétní:
+            změna má odpovídat absorpčnímu pásmu CO₂ a jeho rostoucímu
+            množství. Prosté oteplení vzduchu by mělo jiný spektrální průběh.{' '}
+            <SourceLink id="DOI_10_1038_nature14240">(Feldman a kol. 2015, obr. 1–2)</SourceLink>
+          </p>
+          <p>
+            Zastoupení CO₂ vyjadřujeme v ppm, tedy počtem jeho molekul
+            na milion molekul suchého vzduchu. Při růstu o 22 ppm
+            v letech 2000–2010 vyšel přírůstek jeho
+            příspěvku k záření na povrch přibližně 0,20 W/m² za deset let.
+            Publikované nejistoty trendu byly ±0,06 v Oklahomě a ±0,07
+            na Aljašce. Shoda v teplém i studeném prostředí podpořila
+            přenositelnost výpočtu. Obě stanice však používaly stejný
+            fyzikální postup zpracování.{' '}
+            <SourceLink id="DOI_10_1038_nature14240">(Feldman a kol. 2015, obr. 2 a 4)</SourceLink>
+          </p>
+          <p>
+            Další pohled poskytl přístroj AIRS na družici Aqua. Raghuraman
+            a kolegové v roce 2023 porovnali změny odcházejícího spektra
+            za roky 2003–2021 s výpočty přenosu záření. Samostatně počítali
+            účinek růstu plynů při jinak stálém stavu atmosféry. Potom
+            zahrnuli i změny teploty, vlhkosti a oblaků. Společný výsledek odpovídal
+            poklesu záření v částech pásma CO₂ i růstu v jiných částech
+            spektra. Vyhodnocení zahrnovalo dva výpočetní postupy pro
+            přenos záření.{' '}
+            <SourceLink id="DOI_10_1029_2023GL103947">(Raghuraman a kol. 2023, oddíly 3–4 a obr. 1)</SourceLink>
+          </p>
+          <p>
+            Smyslem tohoto testu bylo vysvětlit tvar celého spektrálního
+            obrazu. Rostoucí skleníkové plyny omezovaly výdej energie,
+            zatímco oteplující se povrch a atmosféra jej zvyšovaly.
+            Pozorovaný součet obsahuje oba příspěvky. Zpracování družicového
+            měření popisuje{' '}
+            <Link href="/pozorovani/atmosfericka-koncentrace-co2/#odchazejici-spektrum">pozorování odcházejícího spektra</Link>.{' '}
+            <SourceLink id="DOI_10_1029_2023GL103947">(Raghuraman a kol. 2023)</SourceLink>
+          </p>
+          <p>
+            Dnes přijímané vysvětlení tak spojuje několik různých zkoušek.
+            Laboratoř určuje vlastnosti plynu, výpočty z nich odvozují
+            přenos atmosférou a měření kontrolují vznikající spektrum.
+            Současné odborné hodnocení IPCC považuje oteplující radiační
+            účinek dalšího CO₂ za dobře doložený. Zpřesňuje jeho velikost
+            i reakce atmosféry, které po změně složení následují.{' '}
+            <SourceLink id="DOI_10_1017_9781009157896_009">(IPCC AR6, oddíl 7.3.2.1)</SourceLink>
+          </p>
+        </HypothesisStory>
 
         <h2 id="mechanismus">Jak skleníkové plyny mění cestu energie</h2>
         <h3 id="molekuly">Pohlcování a vyzařování</h3>

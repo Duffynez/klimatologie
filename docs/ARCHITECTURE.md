@@ -88,7 +88,7 @@ Titrace a coulometrie mají samostatné položky `/metody/titrace/` a `/metody/c
 
 ### Mechanismy
 
-Úvodní diagram hotových mechanismů sjednocuje `HypothesisDiagram.tsx` a jeho CSS modul. Společná komponenta obsahuje návod, sémantický seznam hypotéz a čtyři kroky každé větve. Článková komponenta `EnergyHypothesisDiagram.tsx` dodává konkrétní obsah, podmínky a kotvy pro energetickou bilanci. Diagram funguje bez klientského JavaScriptu, rozložení přizpůsobuje CSS.
+Úvodní diagram hotových mechanismů sjednocuje `HypothesisDiagram.tsx` a jeho CSS modul. Společná komponenta obsahuje návod, sémantický seznam hypotéz a čtyři kroky každé větve. Článková komponenta `EnergyHypothesisDiagram.tsx` dodává konkrétní obsah, podmínky a kotvy pro energetickou bilanci. Diagram funguje bez klientského JavaScriptu, rozložení přizpůsobuje CSS. Samotné příběhy obaluje klientská komponenta `HypothesisStory.tsx` s vlastním CSS modulem. Používá nativní `details` se zachovanými kotvami nadpisů, výchozí HTML obsahuje celé otevřené příběhy. JavaScript doplňuje sbalení z konce příběhu s návratem k nadpisu a otevření cílového příběhu při navigaci na jeho nadpis nebo vnitřní kotvu.
 
 `app/data/mechanisms.ts` obsahuje 23 témat v pěti skupinách. Dva plné články mají komponenty `EarthEnergyBalanceArticle.tsx` a `GreenhouseRadiationArticle.tsx`, připojené v `app/mechanismy/[slug]/page.tsx`. Ostatních 21 témat zatím ukazuje vymezení a rozlišující důkazy z katalogu. Další plné články vyžadují stejnou ruční vazbu komponenty a routy jako u metod.
 

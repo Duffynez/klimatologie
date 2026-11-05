@@ -44,6 +44,8 @@ Na webu používáme společnou komponentu `HypothesisDiagram`. Zachovává stej
 
 Každá hypotéza dostane vlastní souvislý oddíl. Její vznik, princip, předpovědi a ověřování vyložíme pohromadě, než přejdeme k další hypotéze. Příběh dnes přijímaného vysvětlení zařadíme jako poslední, aby na něj navázal podrobný výklad mechanismu v části 4. Historicky souběžné zkoumání popíšeme jako souběžné, pořadí oddílů nesmí vytvářet smyšlenou časovou posloupnost objevů.
 
+Každý příběh lze samostatně sbalit na jeho nadpis. Při prvním otevření článku jsou příběhy rozbalené, aby šly číst souvisle. Sbalení nabídneme u nadpisu i na konci příběhu. Tlačítko na konci zároveň vrátí čtenáře k nadpisu právě sbalené hypotézy. Odkaz z diagramu nebo přímý odkaz na test uvnitř příběhu potřebný oddíl otevře a přejde na cílové místo. Ovládání musí fungovat i klávesnicí. Podrobnosti společné komponenty uvádí [docs/CONTENT-WORKFLOW.md](docs/CONTENT-WORKFLOW.md#5-nový-mechanismus).
+
 Příběh čtenáři postupně objasní:
 
 1. **Kdy a proč vysvětlení vzniklo.** Uvedeme doložené období, významné autory a pozorování či problém, na který reagovali. Vysvětlíme, proč byla hypotéza podle tehdejších poznatků rozumná.

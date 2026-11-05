@@ -4145,7 +4145,7 @@ test("publishes the greenhouse mechanism with two linked stories and open eviden
     const targetHtml = await readFile(new URL("dist/client" + target.replace(/\/$/, "") + "/index.html", root), "utf8");
     if (anchor) assert.ok(targetHtml.includes(`id="${anchor}"`), "Missing target " + target + "#" + anchor);
   }
-  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)?.[1];
+  const uncertainty = body.match(/<details class="method-details">([\s\S]*?)<\/details>/)?.[1];
   assert.ok(uncertainty && uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
   assert.match(body, /<div class="method-conclusion">/);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
@@ -4197,7 +4197,7 @@ test("publishes the full energy-balance mechanism with evidence, sources and ret
   }
   assert.match(html, /Stefanův–Boltzmannův zákon/);
   assert.match(html, /Planckova/);
-  assert.ok(mechanismBody.indexOf('<details') > mechanismBody.indexOf('id="porovnani"'),
+  assert.ok(mechanismBody.indexOf('<details class="method-details"') > mechanismBody.indexOf('id="porovnani"'),
     "Place detailed uncertainties after the explanation and quantitative comparison");
   assert.match(html, /<details class="method-details">/);
   assert.match(html, /<div class="method-conclusion">/);
@@ -4235,7 +4235,7 @@ test("publishes the full energy-balance mechanism with evidence, sources and ret
   }
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)[1];
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
-  const uncertainty = body.match(/<details\b[^>]*>([\s\S]*?)<\/details>/)[1];
+  const uncertainty = body.match(/<details class="method-details">([\s\S]*?)<\/details>/)[1];
   assert.ok(uncertainty.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length <= 600);
   for (const [, path, anchor] of body.matchAll(/href="(\/[^"#]*)(?:#([^"]*))?"/g)) {
     if (/\.[a-z0-9]+$/i.test(path)) continue;
@@ -4249,5 +4249,27 @@ test("publishes the full energy-balance mechanism with evidence, sources and ret
     assert.ok(Math.abs(Number(estimate) + Number(uncertainty) - Number(upper)) < 1e-9);
     assert.equal(start, "mid-2005");
     assert.equal(end, "mid-2019");
+  }
+});
+
+
+test("keeps each hypothesis independently collapsible with complete content and stable anchors", async () => {
+  for (const [slug, ids] of [
+    ["energeticka-bilance-zeme", ["slunecni-hypoteza", "prirozena-hypoteza", "lidske-pusobeni"]],
+    ["radiacni-pusobeni-sklenikovych-plynu", ["nasyceni", "promena-prenosu"]],
+  ]) {
+    const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
+    const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)[1];
+    const stories = [...body.matchAll(/<details\b([^>]*data-hypothesis-story="([^"]+)"[^>]*)>([\s\S]*?)<\/details>/g)];
+    assert.deepEqual(stories.map(story => story[2]), ids);
+    for (const [, attributes, id, story] of stories) {
+      assert.match(attributes, /\bopen(?:="")?(?:\s|$)/, "Keep the initial article readable without JavaScript");
+      const summary = story.match(/<summary\b[^>]*>([\s\S]*?)<\/summary>/)?.[1];
+      assert.ok(summary?.includes(`<h3 id="${id}"`), "Keep the original anchor in the visible heading");
+      assert.ok(body.includes(`href="#${id}"`), "Connect the diagram to the collapsible story");
+      assert.match(story, /href="\/zdroje#/);
+      assert.match(story, /Sbalit hypotézu a vrátit se k nadpisu/);
+      assert.doesNotMatch(story, /<h2\b|data-hypothesis-story=/, "Do not hide another story or the following explanation");
+    }
   }
 });

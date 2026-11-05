@@ -101,6 +101,8 @@ Plný mechanismový článek tvoří samostatná komponenta připojená větví 
 
 Pod nadpis oddílu hypotéz vložte společnou komponentu `app/components/HypothesisDiagram.tsx`. Ta vykreslí stručný návod a jednotný diagram. Předejte jí nejvýše tři položky typu `MechanismHypothesis`, jedinečné `captionId`, obsahový popisek a případné vysvětlení jednotek v `context`. Položka obsahuje kotvu příběhu, název, jedinečnou předpověď, popis testu v povinném poli `test`, výsledek testů, slovní hodnocení, jeho vysvětlení a stav `rejected`, `insufficient`, `unresolved` nebo `supported`. Kotvy a pořadí musí odpovídat oddílům článku. Příklad připojení je v `EnergyHypothesisDiagram.tsx`. Obsahové požadavky patří do [MECHANISMS.md](../MECHANISMS.md#2-úvodní-diagram-hypotéz-a-jejich-předpovědí).
 
+Každý celý příběh hypotézy obalte komponentou `HypothesisStory` z `app/components/HypothesisStory.tsx`. Předejte `id` shodné s kotvou diagramu, pořadí `number` a název `title`. Nadpis `h3` vytváří komponenta, do `children` patří vlastní příběh včetně obrázků a testů. Původní kotvy pododdílů zachovejte. Chování sbalování stanovuje [MECHANISMS.md](../MECHANISMS.md#3-příběhy-hypotéz-od-vzniku-po-dnešní-hodnocení).
+
 ## 6. Historický milník
 
 1. Ověřte výběr, význam, datum, obsah a oporu tvrzení podle [HISTORY.md](../HISTORY.md).
