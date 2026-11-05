@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Equation, InlineMath } from "./Equation";
 import { SourceLink } from "./SourceLink";
 import { EnergyHypothesisDiagram } from "./EnergyHypothesisDiagram";
+import styles from "./EarthEnergyBalanceArticle.module.css";
 
 export function EarthEnergyBalanceArticle() {
   return (
@@ -45,12 +46,62 @@ export function EarthEnergyBalanceArticle() {
           <SourceLink id="DOI_10_1029_2010GL045777">(Kopp a Leanová 2011)</SourceLink>
         </p>
         <p>
+          Silnější sluneční záření by při stejné odrazivosti dodávalo více
+          energie povrchu i atmosféře. Pohlcené záření ohřívá pevninu a vodu.
+          Povrch pak předává energii spodní vrstvě atmosféry, troposféře,
+          tepelným zářením a stoupáním teplého vzduchu. Další část energie
+          odnáší vypařující se voda. Když vodní pára výše kondenzuje na
+          kapičky, tato energie se uvolní a ohřívá okolní vzduch.{' '}
+          <SourceLink id="WEB_NASA_Earth_Energy_Budget">(NASA: energetická bilance Země)</SourceLink>
+        </p>
+        <p>
+          Sluneční záření ohřívá také vrstvu nad troposférou, stratosféru.
+          Zde ozon pohlcuje ultrafialové záření, neviditelnou část slunečního
+          světla. Při jeho zesílení se v této vrstvě ukládá více energie.
+          Sluneční změna tak může ohřívat spodní atmosféru prostřednictvím
+          povrchu a současně horní stratosféru prostřednictvím ozonu.{' '}
+          <SourceLink id="DOI_10_1029_2008JD010114">(Rind a kol. 2008, úvod a oddíl 4.1.1)</SourceLink>
+        </p>
+        <figure id="slunecni-schema" className={`article-figure ${styles.solarFigure}`}>
+          <div className={styles.solarScroll} tabIndex={0} role="region"
+            aria-label="Schéma slunečního ohřevu, na úzké obrazovce posuvné do stran">
+            <a href="/media/energeticka-bilance-zeme/silnejsi-slunce.png"
+              aria-label="Otevřít schéma slunečního ohřevu v plné velikosti">
+              <Image className="article-figure__media"
+                src="/media/energeticka-bilance-zeme/silnejsi-slunce.png"
+                alt="Silnější Slunce dodává více energie už nad atmosférou. Ozon pohlcuje ultrafialové záření ve stratosféře, další záření ohřívá povrch a přes něj troposféru. Vpravo je očekávané oteplování povrchu, troposféry a horní stratosféry. Testujeme sluneční příkon a rozložení teplotních změn podle výšky."
+                width={1536} height={1024} unoptimized />
+            </a>
+          </div>
+          <figcaption>
+            Fialová ukazuje ultrafialové záření, žlutá další sluneční záření
+            a červená přenos tepla. Modrá šipka představuje přenos energie
+            vypařováním a kondenzací vody. Pravý panel ukazuje směr očekávané
+            změny teploty, délky šipek nevyjadřují její velikost.
+            Jde o vysvětlující schéma, nikoli naměřené hodnoty. Vlastní
+            ilustrace Klimatologie.eu vytvořená pomocí AI, CC BY 4.0, podle{' '}
+            <SourceLink id="DOI_10_1029_2008JD010114">Rinda a kol. (2008)</SourceLink>
+            {' '}a <SourceLink id="DOI_10_1029_2010GL045777">Koppa a Leanové (2011)</SourceLink>.{' '}
+            Na menší obrazovce lze schéma posouvat do stran.{' '}
+            <a href="/media/energeticka-bilance-zeme/silnejsi-slunce.png">Otevřít v plné velikosti</a>.{' '}
+            <a href="/media/energeticka-bilance-zeme/silnejsi-slunce.txt">Podklady a licence</a>.
+          </figcaption>
+        </figure>
+
+        <h4 id="slunecni-prikon" className={styles.testHeading}>První test měří příkon ze Slunce</h4>
+        <p>
           Pro tuto hypotézu je podstatné, kolik energie ze Slunce opravdu
           přichází. Pozorování jeho povrchu poskytuje jen nepřímé vodítko.
           Tmavé sluneční skvrny místně vyzařování snižují, zatímco jasnější
           oblasti je zvyšují. Jejich účinky se skládají. Samotný počet skvrn
           proto ještě neříká, o kolik se změnil příkon pro Zemi.{' '}
           <SourceLink id="DOI_10_1029_2010GL045777">(Kopp a Leanová 2011, oddíl 1)</SourceLink>
+        </p>
+        <p>
+          Družicový přístroj míří na Slunce a měří záření před jeho
+          průchodem atmosférou. Změny mraků nebo CO₂ pod družicí proto
+          jeho měření slunečního příkonu nezvyšují.{' '}
+          <SourceLink id="DOI_10_1029_2010GL045777">(Kopp a Leanová 2011, oddíl 2)</SourceLink>
         </p>
         <p>
           Souvislá družicová měření slunečního příkonu začala v roce 1978.
@@ -118,6 +169,67 @@ export function EarthEnergyBalanceArticle() {
           Jednotlivé naměřené toky uvádí{' '}
           <Link href="/pozorovani/tepelny-obsah-oceanu/#porovnani-se-zarenim">pozorování záření a oceánského ohřevu</Link>.{' '}
           <SourceLink id="DOI_10_1029_2021GL093047">(Loeb a kol. 2021)</SourceLink>
+        </p>
+
+        <h4 id="slunecni-vyskovy-test" className={styles.testHeading}>Druhý test porovnává oteplování v různých výškách</h4>
+        <p>
+          Další předpověď vychází z míst, kde se sluneční energie pohlcuje.
+          Samotné zesílení Slunce s obvyklou změnou jeho spektra, tedy
+          zastoupení různých druhů záření, má ohřívat povrch a troposféru
+          i horní stratosféru. Neznamená to rovnoměrný ohřev celé atmosféry.
+          Velikost odezvy se mění s výškou, polohou a roční dobou.{' '}
+          <SourceLink id="DOI_10_1029_2008JD010114">(Rind a kol. 2008)</SourceLink>
+        </p>
+        <p>
+          Tuto odezvu zkoumali Rind a kolegové v roce 2008. Porovnávali
+          výpočty pro období silnějšího a slabšího Slunce a měnili, zda
+          dovolí reagovat teplotě oceánského povrchu a množství ozonu.
+          Tak oddělovali působení přes povrch od působení přes stratosféru.
+          Výpočty zachycovaly oteplování troposféry i výrazný ohřev horní
+          stratosféry. Vznikla tím konkrétní předpověď rozložení změny,
+          kterou lze porovnat s měřením.{' '}
+          <SourceLink id="DOI_10_1029_2008JD010114">(Rind a kol. 2008, oddíly 2 a 4)</SourceLink>
+        </p>
+        <p>
+          Měřený dlouhodobý vývoj má jiný tvar. Steinerová a kolegové
+          porovnali družice s dalšími měřeními atmosféry. Za roky
+          1979–2018 zjistili v globálním průměru oteplení troposféry
+          přibližně o 0,6–0,8 °C, zatímco stratosféra se ochladila
+          přibližně o 1–3 °C. Horní stratosféra se tedy měnila opačným
+          směrem, než očekáváme od samotného zesílení Slunce.
+          Průběh, rozdíly mezi vrstvami a podklady ukazuje{' '}
+          <Link href="/pozorovani/stratosfericke-ochlazovani/#pozorovani">pozorování stratosférického ochlazování</Link>.{' '}
+          <SourceLink id="DOI_10_1175_jcli_d_19_0998_1">(Steinerová a kol. 2020)</SourceLink>
+        </p>
+        <p>
+          Přísnější test porovnává celý obraz změny s více možnými příčinami.
+          Santer a kolegové v roce 2013 použili dvě zpracování družicových
+          teplot za roky 1979–2012. Sledovali tři široké vrstvy od spodní
+          troposféry po dolní stratosféru a jejich změny od jihu k severu.
+          S měřením porovnali modelové výpočty s lidskými vlivy i výpočty
+          s přirozeným kolísáním, změnami Slunce a sopečnou činností.
+          Tím prověřovali také jiné procesy, které mohou dočasně změnit
+          teplotu horních a dolních vrstev opačnými směry.{' '}
+          <SourceLink id="DOI_10_1073_pnas_1305332110">(Santer a kol. 2013, obr. 1 až 4)</SourceLink>
+        </p>
+        <p>
+          Pozorovaný souběh dlouhodobého oteplování troposféry a ochlazování
+          dolní stratosféry, včetně jeho zeměpisného rozložení, se v obou
+          družicových zpracováních shodoval s obrazem lidského působení.
+          Samotné přirozené vlivy jej v testovaných modelech nevysvětlily,
+          ani když autoři připustili větší kolísání Slunce a sopečné činnosti,
+          než jaké nastalo za dobu družicových měření. Rozhodoval tedy
+          společný průběh a rozložení změn, nejen dvě opačná znaménka.{' '}
+          <SourceLink id="DOI_10_1073_pnas_1305332110">(Santer a kol. 2013, výsledky a závěr)</SourceLink>
+        </p>
+        <p>
+          Obě kontroly se doplňují. První zjišťuje, zda přibylo energie
+          přicházející ze Slunce. Druhá zjišťuje, zda se atmosféra mění tak,
+          jak by takový zdroj ohřevu vyžadoval. Sluneční cyklus skutečně
+          ovlivňuje klima, ale silnější Slunce v uvedených obdobích
+          nevysvětluje pozorovaný dlouhodobý ohřev a rozložení teplotních změn.{' '}
+          <SourceLink id="DOI_10_1029_2021GL093047">(Loeb a kol. 2021)</SourceLink>{' '}
+          <SourceLink id="DOI_10_1073_pnas_1305332110">(Santer a kol. 2013)</SourceLink>
         </p>
 
         <h3 id="prirozena-hypoteza">Samotné přirozené kolísání</h3>
@@ -304,32 +416,20 @@ export function EarthEnergyBalanceArticle() {
           <SourceLink id="1967_Manabe_Wetherald">(Manabe a Wetherald 1967)</SourceLink>
         </p>
         <p>
-          Výpočet teploty atmosféry otevřel také test podle výšky.
+          Výpočet teploty atmosféry otevřel také{' '}
+          <a href="#slunecni-vyskovy-test">test podle výšky popsaný u sluneční hypotézy</a>.
           Změny složení vzduchu ve druhé polovině 20. století měly
           ohřívat troposféru, spodní vrstvu atmosféry, a ochlazovat
           stratosféru nad ní.
           V dolní stratosféře se přitom výrazně uplatňuje lidské poškozování
           ozonu, který tam jinak pohlcováním slunečního záření dodává teplo.
-          Santer a kolegové v roce 2013 porovnali očekávaný společný obraz
-          s družicovými teplotami z let 1979–2012.{' '}
+          Tím vzniká jiný společný obraz než při zesílení Slunce.{' '}
           <SourceLink id="DOI_10_1073_pnas_1305332110">(Santer a kol. 2013, obr. 1 a 2)</SourceLink>
         </p>
         <p>
-          Nestačilo najít dvě opačná znaménka. Sopečné erupce a následné
-          zotavení atmosféry také mění teploty obou vrstev různými směry.
-          Autoři proto porovnali souběh změn ve třech širokých výškových
-          vrstvách a v různých zeměpisných šířkách. Z modelů odvodili
-          rozložení očekávané při lidském působení a zjišťovali, zda se
-          v měření postupně prosazuje nad přirozeným kolísáním.
-          To odhadovali z výpočtů se stálými podmínkami i s proměnlivým
-          Sluncem a sopečnou činností.{' '}
-          <SourceLink id="DOI_10_1073_pnas_1305332110">(Santer a kol. 2013, porovnání signálu a kolísání)</SourceLink>
-        </p>
-        <p>
           <Link href="/pozorovani/stratosfericke-ochlazovani/#vyskovy-obraz">Naměřený výškový obraz změn</Link>
-          {' '}odpovídal lidskému působení. Výsledek obstál i při porovnání
-          s větší přirozenou proměnlivostí v modelových výpočtech minulých
-          staletí. Přesná velikost změn se mezi modely a měřením lišila.
+          {' '}za roky 1979–2012 odpovídal v testu Santera a kolegů lidskému
+          působení. Přesná velikost změn se mezi modely a měřením lišila.
           Rozlišující prostorový obraz byl přesto zjistitelný v obou
           použitých zpracováních družicových dat. K oceánským profilům
           tak přibyl test teplot v atmosféře.{' '}
@@ -735,6 +835,8 @@ export function EarthEnergyBalanceArticle() {
             <ul>
               <li><SourceLink id="DOI_10_1029_2010GL045777">Kopp a Leanová 2011</SourceLink>: družicový záznam slunečního příkonu a jeho proměnlivost.</li>
               <li><SourceLink id="DOI_10_1029_2008GL034864">Leanová a Rind 2008</SourceLink>: oddělení slunečního cyklu a dlouhodobého trendu při současném porovnání dalších vlivů.</li>
+              <li><SourceLink id="DOI_10_1029_2008JD010114">Rind a kol. 2008</SourceLink>: modelové oddělení slunečního ohřevu přes povrch a přes stratosféru, podklad vysvětlujícího obrázku.</li>
+              <li><SourceLink id="DOI_10_1175_jcli_d_19_0998_1">Steinerová a kol. 2020</SourceLink>: porovnání pozorovaných teplotních změn od troposféry po horní stratosféru za roky 1979–2018.</li>
               <li><SourceLink id="DOI_10_1126_science_1112418">Barnett a kol. 2005</SourceLink>: rozložení ohřevu v oceánu a porovnání přirozených a lidských vlivů.</li>
               <li><SourceLink id="DOI_10_1038_nature12534">Kosaka a Xie 2013</SourceLink>: modelový pokus s předepsaným vývojem rovníkového Pacifiku a zpomalením povrchového oteplování.</li>
               <li><SourceLink id="DOI_10_1073_pnas_1305332110">Santer a kol. 2013</SourceLink>: test výškového a zeměpisného rozložení změn teploty atmosféry.</li>
@@ -754,6 +856,7 @@ export function EarthEnergyBalanceArticle() {
               <li><SourceLink id="DATA_CERES_PRP_2021">Data CERES k rozkladu radiačních změn</SourceLink>: příspěvky z analýzy Loeba a kolegů za září 2002 až březen 2020.</li>
               <li><a href="/media/energeticka-bilance-zeme/porovnani-trendu.csv" download>Hodnoty porovnávacího grafu</a> a <a href="/media/energeticka-bilance-zeme/README.txt">popis podkladů</a>. Přepis publikovaných souhrnných odhadů, nikoli nové zpracování jednotlivých měření.</li>
               <li><a href="/media/energeticka-bilance-zeme/generate_figures.py" download>Skript pro vytvoření grafu a schématu</a>. Vlastní grafika Klimatologie.eu, CC BY 4.0. Číselný podklad: Loeb a kol. 2021, CC BY 4.0.</li>
+              <li><a href="/media/energeticka-bilance-zeme/silnejsi-slunce.png">Schéma slunečního ohřevu</a> a <a href="/media/energeticka-bilance-zeme/silnejsi-slunce.txt">jeho podklady a licence</a>. Vlastní ilustrace vytvořená pomocí AI, CC BY 4.0. Teplotní šipky vyjadřují očekávaný směr změny.</li>
             </ul>
           </section>
         </div>

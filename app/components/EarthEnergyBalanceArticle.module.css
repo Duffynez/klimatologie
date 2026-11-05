@@ -1,0 +1,20 @@
+.solarFigure {
+  width: min(calc(100vw - 40px), var(--max-width));
+}
+
+.solarScroll {
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.solarScroll img {
+  min-width: 980px;
+  height: auto;
+}
+
+.testHeading {
+  margin: 32px 0 12px;
+  color: var(--ink);
+  font-size: 1.08rem;
+  line-height: 1.4;
+}

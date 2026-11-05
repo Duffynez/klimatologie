@@ -1,0 +1,46 @@
+Kdyby zesílilo Slunce
+Klimatologie.eu, 5. listopadu 2026
+
+Soubor: silnejsi-slunce.png, 1536 × 1024 pixelů.
+Vlastní vysvětlující ilustrace vytvořená pomocí nástroje imagegen.
+Licence ilustrace: CC BY 4.0, https://creativecommons.org/licenses/by/4.0/
+Doporučené uvedení původu: Klimatologie.eu, Kdyby zesílilo Slunce, 2026.
+Ilustrace je původní zpracování, nikoli převzatý obrázek z citovaných studií.
+
+Co obrázek vyjadřuje
+Průřez spojuje pohlcování slunečního záření s ohřevem povrchu,
+troposféry a horní stratosféry. Ultrafialová složka působí přes ozon.
+Povrch předává energii spodní atmosféře tepelným zářením, prouděním
+a přenosem energie prostřednictvím vypařování a kondenzace vody.
+
+Pravý panel je kvalitativní předpověď účinku samotného zesílení Slunce
+při obvyklé změně jeho spektra. Nejde o naměřená data ani číselný profil
+z modelu. Délky šipek nevyjadřují velikost oteplení. Vrstvy, barvy,
+dráhy a šířky šipek jsou schematické, nemají prostorové ani výkonové měřítko.
+Obrázek netvrdí, že se každý bod atmosféry oteplí stejně nebo že Slunce
+vysvětluje současné dlouhodobé oteplování.
+
+Rozlišující předpovědí vůči ostatním hypotézám článku je doložitelné
+zvýšení příkonu ze Slunce, které velikostí a časovým průběhem vysvětlí
+pozorovaný ohřev. Samotné oteplení stratosféry není jedinečným důkazem
+slunečního působení. Rozložení teplotních změn poskytuje další test.
+
+Odborné podklady
+Rind, D., Lean, J., Lerner, J., Lonergan, P. a Leboissitier, A. (2008).
+Exploring the stratospheric/tropospheric response to solar forcing.
+Journal of Geophysical Research 113, D24103.
+DOI: https://doi.org/10.1029/2008JD010114
+Plný text: https://www.giss.nasa.gov/pubs/docs/2008/2008_Rind_ri07700f.pdf
+Úvod a oddíly 2 a 4 vysvětlují sluneční působení přes povrch a stratosféru.
+
+Kopp, G. a Lean, J. L. (2011).
+A new, lower value of total solar irradiance: Evidence and climate significance.
+Geophysical Research Letters 38, L01706.
+DOI: https://doi.org/10.1029/2010GL045777
+Plný text: https://www.atmosp.physics.utoronto.ca/people/strong/phy392/Kopp_Lean_solar_irradiance_GRL_38_L01706_2011.pdf
+Podklad k měření celkového slunečního příkonu nad atmosférou.
+
+V článku je obrázek doplněn výsledky měření a rozlišujícími testy:
+Loeb a kol. (2021), https://doi.org/10.1029/2021GL093047
+Steiner a kol. (2020), https://doi.org/10.1175/JCLI-D-19-0998.1
+Santer a kol. (2013), https://doi.org/10.1073/pnas.1305332110

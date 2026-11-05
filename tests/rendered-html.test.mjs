@@ -4113,6 +4113,18 @@ test("publishes the full energy-balance mechanism with evidence, sources and ret
   const stories = mechanismBody.slice(mechanismBody.indexOf('<h2 id="predpovedi"'), mechanismBody.indexOf('<h2 id="vysvetleni"'));
   assert.deepEqual([...stories.matchAll(/<h3 id="([^"]+)"/g)].map(match => match[1]), storyLinks,
     "Every diagram branch must lead to its full story in the same order");
+  const solarStory = stories.slice(stories.indexOf('id="slunecni-hypoteza"'), stories.indexOf('id="prirozena-hypoteza"'));
+  for (const anchor of ["slunecni-schema", "slunecni-prikon", "slunecni-vyskovy-test"]) {
+    assert.ok(solarStory.includes(`id="${anchor}"`), "Keep the solar mechanism and both tests together");
+  }
+  assert.match(solarStory, /src="\/media\/energeticka-bilance-zeme\/silnejsi-slunce\.png"/);
+  assert.match(solarStory, /href="\/media\/energeticka-bilance-zeme\/silnejsi-slunce\.png"/);
+  assert.match(solarStory, /délky šipek nevyjadřují její velikost/);
+  assert.match(solarStory, /nikoli naměřené hodnoty/);
+  assert.match(solarStory, /href="\/pozorovani\/stratosfericke-ochlazovani\/#pozorovani"/);
+  for (const id of ["DOI_10_1029_2008JD010114", "DOI_10_1175_jcli_d_19_0998_1", "DOI_10_1073_pnas_1305332110"]) {
+    assert.ok(solarStory.includes(`href="/zdroje#${id}"`), "Connect each solar temperature test to its source");
+  }
   assert.match(html, /Stefanův–Boltzmannův zákon/);
   assert.match(html, /Planckova/);
   assert.ok(mechanismBody.indexOf('<details') > mechanismBody.indexOf('id="porovnani"'),
@@ -4129,13 +4141,13 @@ test("publishes the full energy-balance mechanism with evidence, sources and ret
   }
   const stratosphere = await readFile(new URL("dist/client/pozorovani/stratosfericke-ochlazovani/index.html", root), "utf8");
   assert.ok(stratosphere.includes('href="/mechanismy/energeticka-bilance-zeme/#lidske-pusobeni"'));
-  for (const id of ["DOI_10_1029_2008GL034864", "DOI_10_1038_nature12534", "DOI_10_1073_pnas_1305332110"]) {
+  for (const id of ["DOI_10_1029_2008GL034864", "DOI_10_1038_nature12534", "DOI_10_1073_pnas_1305332110", "DOI_10_1029_2008JD010114", "DOI_10_1175_jcli_d_19_0998_1"]) {
     assert.ok(stories.includes(`href="/zdroje#${id}"`), "Cite each new investigation within its story");
     assert.ok(mechanismBody.slice(mechanismBody.indexOf('<h2 id="prameny"')).includes(`href="/zdroje#${id}"`),
       "Include each investigation in the bibliography");
   }
   const sourcePage = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
-  for (const id of ["DOI_10_1029_2008GL034864", "DOI_10_1038_nature12534", "DOI_10_1073_pnas_1305332110"]) {
+  for (const id of ["DOI_10_1029_2008GL034864", "DOI_10_1038_nature12534", "DOI_10_1073_pnas_1305332110", "DOI_10_1029_2008JD010114"]) {
     const card = sourcePage.match(new RegExp(String.raw`<article[^>]+id="${id}"[\s\S]*?</article>`));
     assert.ok(card, "Publish a source card for " + id);
     assert.match(card[0], /Otevřít plný text/);
@@ -4147,7 +4159,7 @@ test("publishes the full energy-balance mechanism with evidence, sources and ret
     assert.ok(card, "Missing public source card " + id);
     assert.doesNotMatch(card[0], /drive\.google\.com/);
   }
-  for (const file of ["toky-energie.svg", "porovnani-trendu.svg", "porovnani-trendu.csv", "README.txt", "generate_figures.py"]) {
+  for (const file of ["toky-energie.svg", "porovnani-trendu.svg", "porovnani-trendu.csv", "README.txt", "generate_figures.py", "silnejsi-slunce.png", "silnejsi-slunce.txt"]) {
     const asset = await readFile(new URL(`dist/client/media/energeticka-bilance-zeme/${file}`, root));
     assert.ok(asset.length > 100, "Missing reproducibility asset " + file);
   }

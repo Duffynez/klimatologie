@@ -4,11 +4,11 @@ const hypotheses: readonly MechanismHypothesis[] = [
   {
     id: "slunecni-hypoteza",
     name: "Silnější záření Slunce",
-    prediction: "Přírůstek energie má pocházet z většího slunečního příkonu. Jeho růst musí předcházet ohřevu a velikostí na něj stačit.",
-    test: "Porovnáme družicová měření dopadajícího a odraženého slunečního záření. Jejich rozdíl určí pohlcenou část. Zjistíme, zda její růst doprovází růst příkonu ze Slunce, nebo pokles odrazu Země.",
-    observation: "V období září 2002 až březen 2020 sluneční příkon mírně klesal, přesto Země pohlcovala více.",
-    verdict: "V tomto testu vyvrácena",
-    explanation: "Růst pohlcené energie vyžaduje změnu odrazivosti Země.",
+    prediction: "Vyšší příkon ze Slunce musí velikostí a časovým průběhem vysvětlit ohřev. Při obvyklé změně slunečního spektra očekáváme také oteplování povrchu, troposféry a horní stratosféry.",
+    test: "Z družic porovnáme přicházející a odražené sluneční záření. Samostatně porovnáme teplotní změny v různých výškách s vypočtenými odezvami na sluneční a další vlivy.",
+    observation: "Od září 2002 do března 2020 příkon mírně klesal, přesto Země pohlcovala více. V letech 1979–2018 se troposféra oteplovala, zatímco stratosféra chladla.",
+    verdict: "V uvedených testech neobstála",
+    explanation: "Silnější Slunce nevysvětluje růst pohlcování ani pozorované rozložení teplotních změn.",
     state: "rejected",
   },
   {

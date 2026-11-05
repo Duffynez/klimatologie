@@ -195,7 +195,7 @@ Filtrování nemění databázi ani URL a nic neodesílá na server.
 
 ## 10. Vzhled a média
 
-Projekt používá jeden globální soubor `app/globals.css`. Neexistuje samostatná komponentová knihovna ani CSS moduly. Název třídy proto může ovlivnit více stránek a po změně stylu je potřeba zkontrolovat všechny dotčené typy obrazovek.
+Společný vzhled určuje `app/globals.css`, místní úpravy používají také CSS moduly u komponent, například diagramů hypotéz a obrázku slunečního ohřevu. Globální třída může ovlivnit více stránek, proto po její změně kontrolujeme všechny dotčené typy obrazovek. Článkový CSS modul omezuje změnu na příslušný článek.
 
 Veřejná média jsou v `public`. Cesta `/media/sea-level/graf.png` odpovídá souboru `public/media/sea-level/graf.png`. Média jsou verzována spolu s webem a musí mít v článku popis, zdroj a oprávnění k použití podle redakčního standardu.
 
