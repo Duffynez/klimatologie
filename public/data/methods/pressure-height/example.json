@@ -1,16 +1,16 @@
 {
-  "title": "Vlastní přepis číselné tabulky kalibrace SBE 9plus 1207",
-  "sourceId": "2022_SeaBird_P1207_Calibration",
-  "sourceUrl": "https://www.aoml.noaa.gov/ftp/phod/instrument_calibration/Sea-Bird/Calibrations%20by%20Serial/SBE9Plus/1207/2022-06-SBE%209plus%20P1207%2007Jun22.pdf",
-  "sourceAuthor": "Sea-Bird Scientific",
-  "certificateDate": "2022-06-06",
-  "accessed": "2026-10-04",
+  "title": "Vlastní přepis číselné tabulky kalibrace SBE 9plus 0954",
+  "sourceId": "2024_SeaBird_P0954_Calibration",
+  "sourceUrl": "https://misclab.umeoce.maine.edu/ftp/experiments/Tara/TaraEuropa/cals/Calibration%20Documents/SBE%209plus%20P0954%2009Feb24.pdf",
+  "sourceAuthor": "Sea-Bird GmbH",
+  "certificateDate": "2024-02-09",
+  "accessed": "2026-11-05",
   "instrument": "SBE 9plus",
-  "instrumentSerialNumber": "1207",
-  "pressureSensorSerialNumber": "131013",
+  "instrumentSerialNumber": "0954",
+  "pressureSensorSerialNumber": "114729",
   "pressureSensorRangePsia": 10000,
-  "sourcePdfSha256": "67fbac6d4286390c4cc26209e10997242a40dcbef70c844ff8a9275a6e94d43e",
-  "csvSha256": "fc0f22955290667b8a7fab82b8a613649e83e710790a42aa7216853d98c7e722",
+  "sourcePdfSha256": "d11c92925af341d63cb62d557d73888043d16252c567f168ffab01178b826119",
+  "csvSha256": "ba0bd30db4f7c9e1862cffd12d8592b71d96eadb43bb44c64cdd5f1094d54811",
   "transcription": "Všech 11 řádků v původním pořadí. Zachovány vytištěné hodnoty. Přidáno pořadové číslo step. CSV není původní soubor výrobce.",
   "units": {
     "reference_psia": "psi absolute",
@@ -31,69 +31,71 @@
   "rows": [
     {
       "step": 1,
-      "referenceDbar": 10.04566532,
-      "beforeDbar": 0.36542228,
-      "afterDbar": -0.0517107
+      "referenceDbar": 9.158999184,
+      "beforeDbar": 0.778418404,
+      "afterDbar": 0.148926816
     },
     {
       "step": 2,
-      "referenceDbar": 1380.054472124,
-      "beforeDbar": 0.367490708,
-      "afterDbar": -0.060673888
+      "referenceDbar": 1379.298806428,
+      "beforeDbar": 0.33784324,
+      "afterDbar": -0.153753148
     },
     {
       "step": 3,
-      "referenceDbar": 2750.210826792,
-      "beforeDbar": 0.473670012,
-      "afterDbar": 0.033784324
+      "referenceDbar": 2749.717851452,
+      "beforeDbar": 0.128932012,
+      "afterDbar": -0.225458652
     },
     {
       "step": 4,
-      "referenceDbar": 4120.400276308,
-      "beforeDbar": 0.361285424,
-      "afterDbar": -0.090321356
+      "referenceDbar": 4119.728726684,
+      "beforeDbar": 0.29647468,
+      "afterDbar": 0.07928974
     },
     {
       "step": 5,
-      "referenceDbar": 5490.564215212,
-      "beforeDbar": 0.261311404,
-      "afterDbar": -0.201326992
+      "referenceDbar": 5489.860260216,
+      "beforeDbar": 0.213048084,
+      "afterDbar": 0.133068868
     },
     {
       "step": 6,
-      "referenceDbar": 6861.023249844,
-      "beforeDbar": 0.304058916,
-      "afterDbar": -0.169611096
+      "referenceDbar": 6860.556474592,
+      "beforeDbar": -0.221321796,
+      "afterDbar": -0.163405812
     },
     {
       "step": 7,
-      "referenceDbar": 5490.59731006,
-      "beforeDbar": 0.601223072,
-      "afterDbar": 0.138584676
+      "referenceDbar": 5489.974713232,
+      "beforeDbar": 0.259242976,
+      "afterDbar": 0.179953236
     },
     {
       "step": 8,
-      "referenceDbar": 4120.403723688,
-      "beforeDbar": 0.724639276,
-      "afterDbar": 0.273032496
+      "referenceDbar": 4121.217994844,
+      "beforeDbar": 0.34818538,
+      "afterDbar": 0.13100044
     },
     {
       "step": 9,
-      "referenceDbar": 2750.197726748,
-      "beforeDbar": 0.671549624,
-      "afterDbar": 0.231663936
+      "referenceDbar": 2749.873673028,
+      "beforeDbar": 0.243385028,
+      "afterDbar": -0.111005636
     },
     {
       "step": 10,
-      "referenceDbar": 1380.10342492,
-      "beforeDbar": 0.508143812,
-      "afterDbar": 0.079979216
+      "referenceDbar": 1379.639407572,
+      "beforeDbar": 0.254416644,
+      "afterDbar": -0.237179744
     },
     {
       "step": 11,
-      "referenceDbar": 10.047733748,
-      "beforeDbar": 0.233732364,
-      "afterDbar": -0.183400616
+      "referenceDbar": 9.154862328,
+      "beforeDbar": 0.847366004,
+      "afterDbar": 0.218563892
     }
-  ]
+  ],
+  "sourceRepository": "University of Maine, Marine In Situ Sound & Color Lab, Tara Europa",
+  "selectedStep": 10
 }

@@ -939,7 +939,7 @@ test("publishes a full stratospheric temperature article instead of the generic 
   assert.match(sourceCatalogueText, /AlgorithmDescription_01B-10\.pdf/);
   assert.match(sourceCatalogueText, /repository\.library\.noaa\.gov\/view\/noaa\/41066/);
   assert.match(sourceCatalogueText, /wegc_steiner-etal_rs-2011_roforclimate\.pdf/);
-  assert.match(sourceCatalogueText, /arl\.noaa\.gov\/wp_arl\/wp-content\/uploads\/documents\/JournalPDFs\/FreeEtal\.JGR2005\.pdf/);
+  assert.match(sourceCatalogueText, /arl\.noaa\.gov\/wp-content\/uploads\/documents\/JournalPDFs\/FreeEtal\.JGR2005\.pdf/);
   assert.match(sourceCatalogueText, /Zou_Wang_JGR_2011_AMSU-A-1\.pdf/);
   assert.doesNotMatch(
     `${article}\n${sourceCatalogueText}`,
@@ -2014,11 +2014,17 @@ test("reproduces all pressure calibration residuals and detects incomplete or co
   const rows = parseCalibration(text);
   const result = summarizeCalibration(text);
   assert.equal(result.rowCount, 11);
-  assert.equal(result.selected.frequencyHz, 35196);
-  assert.equal(result.selected.internalTemperatureC, 23.5);
-  assert.ok(Math.abs(result.maxAbsBeforeDbar - 0.724639276) < 1e-9);
-  assert.ok(Math.abs(result.maxAbsAfterDbar - 0.273032496) < 1e-9);
-  assert.ok(Math.abs(result.illustrativeResidualHeightM - 0.27841566284) < 1e-9);
+  assert.equal(metadata.sourceId, "2024_SeaBird_P0954_Calibration");
+  assert.equal(metadata.certificateDate, "2024-02-09");
+  assert.equal(metadata.instrumentSerialNumber, "0954");
+  assert.ok(metadata.sourceUrl.startsWith("https://misclab.umeoce.maine.edu/"));
+  assert.equal(result.selected.step, 10);
+  assert.ok(result.selected.afterDbar < 0, "The selected example must preserve the negative residual");
+  assert.equal(result.selected.frequencyHz, 34149.8);
+  assert.equal(result.selected.internalTemperatureC, 23.7);
+  assert.ok(Math.abs(result.maxAbsBeforeDbar - 0.847366004) < 1e-9);
+  assert.ok(Math.abs(result.maxAbsAfterDbar - 0.237179744) < 1e-9);
+  assert.ok(Math.abs(result.illustrativeResidualHeightM - 0.241856030347) < 1e-9);
   for (let index = 0; index < rows.length; index++) {
     for (const key of ["referenceDbar", "beforeDbar", "afterDbar"]) {
       assert.ok(Math.abs(rows[index][key] - metadata.rows[index][key]) < 1e-8, "Rendered table must match recalculation");
@@ -2027,10 +2033,10 @@ test("reproduces all pressure calibration residuals and detects incomplete or co
   const lines = text.trim().split(/\r?\n/);
   assert.throws(() => parseCalibration(lines.slice(0, -1).join("\n")), /row count/);
   assert.throws(() => parseCalibration(text.replace("reference_psia", "reference_dbar")), /columns/);
-  assert.throws(() => parseCalibration(text.replace("11,14.573", "10,14.573")), /sequence/);
-  assert.throws(() => parseCalibration(text.replace("35", "NaN")), /numerical/);
-  assert.throws(() => parseCalibration(text.replace("-0.075", "0.075")), /Residual/);
-  assert.throws(() => parseCalibration(text.replace("32844.70", "")), /numerical/);
+  assert.throws(() => parseCalibration(text.replace("11,13.278", "10,13.278")), /sequence/);
+  assert.throws(() => parseCalibration(text.replace("33326.90", "NaN")), /numerical/);
+  assert.throws(() => parseCalibration(text.replace("0.216", "-0.216")), /Residual/);
+  assert.throws(() => parseCalibration(text.replace("33326.90", "")), /numerical/);
 });
 
 test("publishes conductometry with a reproducible signal conversion and open source cards", async () => {

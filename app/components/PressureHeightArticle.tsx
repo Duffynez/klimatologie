@@ -96,7 +96,7 @@ export function PressureHeightArticle() {
           oba údaje společně. Vnitřní teploměr popisuje stav snímače, zatímco samostatné
           čidlo na soupravě měří teplotu mořské vody. Každý z těchto teploměrů tak poskytuje
           jiný vstup pro další zpracování.{" "}
-          <SourceLink id="2010_SeaBird_9plus_Manual">(Sea-Bird, s. 44–46)</SourceLink>
+          <SourceLink id="2010_SeaBird_9plus_Manual">(Sea-Bird, s. 37 a 44)</SourceLink>
         </p>
         <figure className="method-flow">
           <div className="method-flow__track" aria-label="Cesta od tlaku vody k vypočtené hloubce">
@@ -133,7 +133,7 @@ export function PressureHeightArticle() {
           a vnitřní teplotu. Výsledný tlak už zahrnuje opravu teplotního vlivu na snímač.
           Tento postup dokládají <SourceLink id="2026_Paroscientific_Quartz_Principle">výrobce
           tlakoměru</SourceLink> a <SourceLink id="2010_SeaBird_9plus_Manual">manuál soupravy,
-          strany 44–46</SourceLink>.
+          strany 31–32 a 44</SourceLink>.
         </p>
         <p>
           Aby byla reference dohledatelná, potřebujeme znát hmotnost závaží, účinnou plochu
@@ -201,7 +201,7 @@ export function PressureHeightArticle() {
           TEOS-10 používá absolutní tlak zmenšený o 10,1325 dbar, tedy 101 325 Pa.
           Tato dohoda dává datům společný tlakový počátek. Aktuální tlak vzduchu nad místem
           měření se může od referenční hodnoty lišit.
-          <SourceLink id="2010_SeaBird_9plus_Manual"> Manuál SBE 9plus na straně 46</SourceLink>
+          <SourceLink id="2010_SeaBird_9plus_Manual"> Manuál SBE 9plus na straně 32</SourceLink>
           {" "}používá obdobně zaokrouhlenou hodnotu 14,7 psi. Jednotka psi vyjadřuje libru
           síly na čtvereční palec, značka psia výslovně označuje absolutní tlak v těchto jednotkách.{" "}
           <SourceLink id="2021_TEOS10_Height_From_Pressure">(TEOS-10: tlaková konvence)</SourceLink>
@@ -366,9 +366,10 @@ export function PressureHeightArticle() {
             podle verze zpracování, aby se atmosférický tlak neodečetl dvakrát.
           </p>
           <p>
-            <SourceLink id="2022_SeaBird_P1207_Calibration">Kalibrační protokol použitý níže</SourceLink>
+            <SourceLink id="2024_SeaBird_P0954_Calibration">Kalibrační protokol použitý níže</SourceLink>
             {" "}neuvádí úplný rozpočet nejistoty ani nedokládá vyhrazení bodů pro nezávislé
-            ověření. Menší rozdíly po opravě znamenají lepší shodu v této zkoušce.
+            ověření. Po opravě se zmenšila největší absolutní odchylka v této zkoušce,
+            v některých jednotlivých bodech se však shoda zhoršila.
             Počet desetinných míst v tabulce zachycuje přepočet, nikoli jeho nejistotu.
             Rozdíly mezi zvyšováním a snižováním tlaku nelze celé připsat mechanické paměti
             snímače, protože se měnila i teplota. Z protokolu neodvodíme celkovou nejistotu
@@ -385,12 +386,12 @@ export function PressureHeightArticle() {
 
         <h2>Skutečný příklad z kalibračního protokolu</h2>
         <p>
-          Na <SourceLink id="2022_SeaBird_P1207_Calibration">protokolu Sea-Bird Scientific
-          z 6. června 2022</SourceLink> si ukážeme, jak vyhodnotit rozdíly mezi tlakoměrem
-          a laboratorní referencí. Dokument patří soupravě <strong>SBE 9plus číslo 1207</strong>
-          {" "}s tlakovým snímačem 131013 a rozsahem 10 000 psia.
-          Zveřejnila jej Atlantická oceánografická a meteorologická laboratoř amerického
-          Národního úřadu pro oceán a atmosféru, zkráceně NOAA AOML.
+          Na <SourceLink id="2024_SeaBird_P0954_Calibration">protokolu Sea-Bird GmbH
+          z 9. února 2024</SourceLink> si ukážeme, jak vyhodnotit rozdíly mezi tlakoměrem
+          a laboratorní referencí. Dokument patří soupravě <strong>SBE 9plus číslo 0954</strong>
+          {" "}s tlakovým snímačem 114729 a rozsahem 10 000 psia.
+          Veřejné PDF uchovává univerzita v Maine v archivu laboratoře Marine In Situ Sound &amp; Color Lab
+          mezi kalibračními podklady expedice Tara Europa.
         </p>
         <p>
           Laboratoř tlak nejprve zvyšovala a potom snižovala. Protokol obsahuje jedenáct
@@ -398,14 +399,14 @@ export function PressureHeightArticle() {
           vnitřní teplotu a tlak přístroje před opravou i po ní. Přepočet začneme
           u těchto zveřejněných tlaků. Od údaje přístroje odečteme referenci, takže
           kladný rozdíl znamená, že přístroj ukazoval více.{" "}
-          <SourceLink id="2022_SeaBird_P1207_Calibration">(Sea-Bird: původní protokol)</SourceLink>
+          <SourceLink id="2024_SeaBird_P0954_Calibration">(Sea-Bird: původní protokol)</SourceLink>
         </p>
         <p>
           Tabulka vyjadřuje všechny tlaky a rozdíly v decibarech. Původní hodnoty v psi
           jsme vynásobili převodním faktorem 0,689476 podle manuálu Sea-Bird.
           První sloupec určuje tlak nastavený při zkoušce, další dva ukazují,
           jak se po opravě změnila shoda s referencí.{" "}
-          <SourceLink id="2010_SeaBird_9plus_Manual">(Sea-Bird, s. 46)</SourceLink>
+          <SourceLink id="2010_SeaBird_9plus_Manual">(Sea-Bird, s. 32)</SourceLink>
         </p>
         <figure className="method-data-output method-data-output--compact">
           <div className="method-data-output__table-wrap" role="region" aria-label="Všech jedenáct kalibračních bodů" tabIndex={0}>
@@ -419,7 +420,7 @@ export function PressureHeightArticle() {
             </table>
           </div>
           <figcaption>
-            Vlastní výpočet ze všech řádků <SourceLink id="2022_SeaBird_P1207_Calibration">protokolu</SourceLink>{" "}
+            Vlastní výpočet ze všech řádků <SourceLink id="2024_SeaBird_P0954_Calibration">protokolu</SourceLink>{" "}
             v původním pořadí. Rozdíl je údaj přístroje minus reference. Kladné číslo znamená,
             že přístroj ukazuje více. Původní jednotky psi jsme převedli na dbar násobením 0,689476
             podle manuálu Sea-Bird.
@@ -427,7 +428,7 @@ export function PressureHeightArticle() {
         </figure>
         <figure className="article-figure">
           <Image className="article-figure__media" src="/media/pressure-height/calibration-residuals.png"
-            alt="Rozdíly mezi tlakoměrem a referencí v jedenácti kalibračních bodech. Oprava snižuje největší absolutní rozdíl přibližně z 0,725 na 0,273 dbar. Výsledky při rostoucím a klesajícím tlaku se zcela nepřekrývají."
+            alt="Rozdíly mezi tlakoměrem a referencí v jedenácti kalibračních bodech. Oprava snižuje největší absolutní rozdíl přibližně z 0,847 na 0,237 dbar. Výsledky při rostoucím a klesajícím tlaku se zcela nepřekrývají."
             width={1600} height={1216} sizes="(max-width: 700px) 100vw, 770px" unoptimized />
           <figcaption>
             Vlastní graf stejných jedenácti bodů. Vodorovná osa je absolutní referenční tlak,
@@ -438,26 +439,26 @@ export function PressureHeightArticle() {
         </figure>
         <h3>Rozdíl mezi přístrojem a referencí</h3>
         <p>
-          Podívejme se na osmý řádek, zaznamenaný při snižování tlaku.
-          Frekvence byla 35 196,00 Hz a vnitřní teplota 23,5 °C.
-          Referenční tlak měl hodnotu 5 976,138 psia, údaj přístroje před opravou
-          5 977,189 psia a po opravě 5 976,534 psia.
+          Podívejme se na desátý řádek, zaznamenaný při snižování tlaku.
+          Frekvence byla 34 149,80 Hz a vnitřní teplota 23,7 °C.
+          Referenční tlak měl hodnotu 2 000,997 psia, údaj přístroje před opravou
+          2 001,366 psia a po opravě 2 000,653 psia.
           Od opraveného údaje odečteme referenci a výsledek převedeme na dbar:
         </p>
         <Equation tex={[
-          String.raw`(5\,976{,}534 - 5\,976{,}138)`,
-          String.raw`\times 0{,}689476 \approx 0{,}273\,\mathrm{dbar}`,
+          String.raw`(2\,000{,}653 - 2\,000{,}997)`,
+          String.raw`\times 0{,}689476 \approx -0{,}237\,\mathrm{dbar}`,
         ]} />
         <p>
-          Přístroj po opravě ukázal o 0,396 psi, tedy přibližně <strong>0,273 dbar</strong>,
-          více než reference. Je to největší velikost rozdílu po opravě v celé tabulce.
-          Před opravou dosahovala největší odchylka přibližně 0,725 dbar.
+          Přístroj po opravě ukázal o 0,344 psi, tedy přibližně <strong>0,237 dbar</strong>,
+          méně než reference. Je to největší velikost rozdílu po opravě v celé tabulce.
+          Před opravou dosahovala největší odchylka přibližně 0,847 dbar.
           Stejný postup lze zopakovat pro všech jedenáct řádků a získat obě křivky v grafu.
         </p>
 
         <h3>Co by tlakový rozdíl znamenal pro výšku vody</h3>
         <p>
-          Pro představu převedeme rozdíl 0,273 dbar na výšku vodního sloupce.
+          Pro představu převedeme velikost rozdílu 0,237 dbar na výšku vodního sloupce.
           Jde o <strong>ilustrační výpočet</strong> pro zvolenou hustotu 1 000 kg/m³
           a standardní tíhové zrychlení 9,80665 m/s². Laboratorní protokol neposkytuje
           měření hloubky v oceánu. Ukazujeme, jak velká změna hloubky by za těchto podmínek
@@ -465,16 +466,16 @@ export function PressureHeightArticle() {
         </p>
         <p>
           Nejprve převedeme decibary na pascaly násobením 10 000.
-          Potom tlakový rozdíl Δp vydělíme součinem hustoty a tíhového zrychlení,
-          stejně jako v hlavním výkladu. Výsledné Δh je odpovídající rozdíl hloubek
+          Potom velikost tlakového rozdílu |Δp| vydělíme součinem hustoty a tíhového zrychlení,
+          stejně jako v hlavním výkladu. Výsledné |Δh| je velikost odpovídajícího rozdílu hloubek
           v metrech:
         </p>
         <Equation tex={[
-          String.raw`\Delta h = \frac{\Delta p}{\rho g} = \frac{0{,}273\times10\,000}{1\,000\times9{,}80665}`,
-          String.raw`\approx 0{,}278\,\mathrm{m}`,
+          String.raw`|\Delta h| = \frac{|\Delta p|}{\rho g} = \frac{0{,}237\times10\,000}{1\,000\times9{,}80665}`,
+          String.raw`\approx 0{,}242\,\mathrm{m}`,
         ]} />
         <p>
-          V takové vodě by tedy tlakový rozdíl odpovídal přibližně 27,8 cm výšky
+          V takové vodě by tedy tlakový rozdíl odpovídal přibližně 24,2 cm výšky
           vodního sloupce. Řecké písmeno <InlineMath tex={String.raw`\rho`} /> opět
           označuje hustotu v kg/m³ a <em>g</em> tíhové zrychlení v m/s².
           Skript ke stažení počítá s nezaokrouhleným tlakovým rozdílem z tabulky.
@@ -492,7 +493,7 @@ export function PressureHeightArticle() {
             Ukládáme vlastní přepis číselné tabulky ve formátu CSV, tedy s hodnotami oddělenými čárkami.
             Stáhněte první tři soubory do jedné složky a spusťte <code>node reproduce.mjs</code>{" "}
             v Node.js 22 nebo novějším. Skript ověří kontrolní součet CSV a vstupní hodnoty,
-            vypočítá rozdíly a vypíše použitý osmý řádek i oba ilustrační převody na výšku.
+            vypočítá rozdíly a vypíše použitý desátý řádek i oba ilustrační převody na výšku.
             Žádný řádek nevyřazuje, neprokládá křivku ani znovu neodhaduje kalibrační koeficienty.
           </p>
           <p>
@@ -507,11 +508,11 @@ export function PressureHeightArticle() {
             <li><a href={`${dataPath}/plot.py`} download>Samostatný skript grafu pro Python s knihovnou Matplotlib</a></li>
           </ul>
           <p>
-            Metadata obsahují datum přístupu 4. října 2026 a kontrolní součty SHA-256 přepisu
+            Metadata obsahují datum přístupu 5. listopadu 2026 a kontrolní součty SHA-256 přepisu
             i původního PDF. Ty pomáhají rozpoznat změnu souboru, samy však nepotvrzují správnost
             přepisu. Číselné hodnoty lze porovnat s
-            <SourceLink id="2022_SeaBird_P1207_Calibration"> veřejným originálem v archivu NOAA</SourceLink>.
-            Datum kalibrace přebíráme z dokumentu. Jeho název souboru uvádí následující den.
+            <SourceLink id="2024_SeaBird_P0954_Calibration"> veřejným originálem v univerzitním archivu</SourceLink>.
+            Datum kalibrace i čísla přístroje a tlakového snímače přebíráme z dokumentu.
           </p>
         </details>
         <h2>Shrnutí</h2>

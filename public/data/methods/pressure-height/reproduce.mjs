@@ -37,10 +37,10 @@ export function summarizeCalibration(text) {
     rowCount: rows.length,
     maxAbsBeforeDbar: Math.max(...rows.map((row) => Math.abs(row.beforeDbar))),
     maxAbsAfterDbar: Math.max(...rows.map((row) => Math.abs(row.afterDbar))),
-    selected: rows[7],
+    selected: rows[9],
     illustrativeHeightPerHpaM: 100 / (1000 * 9.80665),
     // Constant-density fresh water, illustrative equivalent only, not a measured depth.
-    illustrativeResidualHeightM: Math.abs(rows[7].afterDbar) * 10000 / (1000 * 9.80665),
+    illustrativeResidualHeightM: Math.abs(rows[9].afterDbar) * 10000 / (1000 * 9.80665),
   };
 }
 

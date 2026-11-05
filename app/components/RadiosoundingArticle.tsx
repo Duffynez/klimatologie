@@ -124,7 +124,7 @@ export function RadiosoundingArticle() {
           Elektronika změnu kapacity odečte a kalibrační vztah ji převede na relativní vlhkost
           u povrchu čidla. Podrobnější vysvětlení nabízí
           <Link href="/metody/hygrometrie"> hygrometrie</Link>.{" "}
-          <SourceLink id="2023_GRUAN_RS41_TD8">(GRUAN, oddíl 2.1.2)</SourceLink>
+          <SourceLink id="2023_GRUAN_RS41_TD8">(GRUAN, oddíl 2.1.3.2)</SourceLink>
         </p>
         <p>
           Vlhkostní prvek RS41 se za letu vyhřívá, aby na něm voda nekondenzovala a nenamrzala.
@@ -141,7 +141,7 @@ export function RadiosoundingArticle() {
           a tedy i jejich elektrická kapacita. Převod určený při známých tlacích a teplotách
           poskytne tlak vzduchu. V meteorologii jej běžně udáváme v hektopascalech, značka hPa,
           přičemž jeden hektopascal je sto pascalů.
-          <SourceLink id="2023_GRUAN_RS41_TD8"> Oddíl 2.1.3</SourceLink> popisuje konstrukci tohoto čidla.
+          <SourceLink id="2023_GRUAN_RS41_TD8"> Oddíl 2.1.3.3</SourceLink> popisuje konstrukci tohoto čidla.
         </p>
         <p>
           Před vypuštěním projde sonda pozemní přípravou. Obsluha ověří její funkci, ohřev odstraní
@@ -355,7 +355,7 @@ export function RadiosoundingArticle() {
             a řídkém vzduchu ověřují laboratorní zkoušky a skutečné lety.
           </p>
           <p>
-            <SourceLink id="DOI_10_5194_amt_9_3115_2016">Jensen a spoluautoři</SourceLink> porovnávali
+            <SourceLink id="DOI_10_5194_amt_9_3115_2016">Jensen a spoluautoři, oddíl 4.1 a obrázek 8</SourceLink>, porovnávali
             sondy v Oklahomě 3.–8. června 2014. Vedle teploty zjistili, že přes 90 % vlhkostních
             údajů pod 28 km se lišilo nejvýše o dva procentní body RH. Větší rozdíly po průletu
             oblaky s kapalnými kapkami spojili s ochlazováním navlhlého čidla odpařováním.
@@ -369,7 +369,7 @@ export function RadiosoundingArticle() {
             teplot a výšek i jejich společné chyby. Pražský soubor použitý níže tyto podklady
             neobsahuje, proto nejistotu výsledku nevyčíslujeme. Počet desetinných míst
             vyjadřuje způsob zápisu, nikoli přesnost měření.{" "}
-            <SourceLink id="2023_GRUAN_RS41_TD8">(GRUAN, příloha D.3)</SourceLink>
+            <SourceLink id="2023_GRUAN_RS41_TD8">(GRUAN, kapitola 6 a příloha D.3)</SourceLink>
           </p>
           <p>
             Při sestupu se mění větrání a orientace sondy i procházená část atmosféry.
