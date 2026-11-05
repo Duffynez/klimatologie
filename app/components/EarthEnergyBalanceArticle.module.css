@@ -1,13 +1,13 @@
-.solarFigure {
+.explanatoryFigure {
   width: min(calc(100vw - 40px), var(--max-width));
 }
 
-.solarScroll {
+.figureScroll {
   overflow-x: auto;
   overscroll-behavior-inline: contain;
 }
 
-.solarScroll img {
+.figureScroll img {
   min-width: 980px;
   height: auto;
 }

@@ -1,0 +1,76 @@
+Co může způsobit přirozené kolísání?
+Klimatologie.eu, 5. listopadu 2026
+
+Soubor: prirozene-kolisani.png, 1672 × 1960 pixelů.
+Přenositelná verze s vektorovým textem a grafem: prirozene-kolisani.svg.
+Číselné podklady: prirozene-kolisani.csv.
+
+Vlastní vysvětlující grafika Klimatologie.eu. Horní ilustrace byla vytvořena
+pomocí nástroje imagegen. Dolní část a číselný graf jsou sázené v SVG podle
+publikovaných výsledků. Licence grafiky: CC BY 4.0,
+https://creativecommons.org/licenses/by/4.0/
+Doporučené uvedení původu: Klimatologie.eu, Co může způsobit přirozené kolísání?, 2026.
+Jde o původní zpracování, nikoli převzatý obrázek z citovaných prací.
+
+Význam ilustrace
+Vlevo je izolován přenos tepla z oceánu do atmosféry. Tento přenos má
+ochlazující příspěvek pro odevzdávající vodu a oteplující příspěvek pro vzduch.
+Odpar odebírá energii z vody, kondenzace ji uvolňuje v atmosféře.
+Skutečný vývoj teploty každé části závisí na součtu všech toků energie.
+Obrázek netvrdí, že při předávání tepla musí naměřená teplota celého oceánu klesat.
+
+Vpravo se mění výměna energie s vesmírem. Při stejném slunečním příkonu
+menší odraz znamená více pohlcené sluneční energie. Menší únik tepelného záření
+má rovněž oteplující účinek. Opačné změny mají ochlazující účinek.
+Výsledek určuje součet obou účinků. Přirozené kolísání proto není omezeno
+na pouhé přerozdělování energie uvnitř Země.
+
+Červené popisky označují oteplující účinek, modré ochlazující.
+Šipky a barvy jsou kvalitativní. Nemají teplotní, prostorové ani výkonové
+měřítko. Horní ilustrace nepředstavuje měření konkrétní epizody El Niño.
+
+První test
+Při pouhém přesunu by se přírůstky a úbytky energie v celkové inventuře vyrušily.
+Inventura však dává přírůstek 381 ± 61 ZJ za roky 1971–2020.
+ZJ znamená zettajoule, 10²¹ joulů. Interval je přibližně 95%.
+Příspěvek ledu zahrnuje energii tání, nejen změnu teploty.
+Kladný součet vyvrací vysvětlení pouhým přerozdělením existující energie.
+
+Druhý test
+Energetický přebytek je rozdíl příchozího slunečního záření a součtu odraženého
+slunečního a odcházejícího tepelného záření, zprůměrovaný přes celou Zemi.
+Graf zobrazuje změnu tohoto toku, nikoli přírůstek teploty ani celkovou uloženou energii.
+Jednotka W/m² za deset let říká, o kolik se přebytek za deset let změní.
+Modely se stálými vnějšími vlivy poskytly 1 293 dvacetiletých úseků ze 47 modelů.
+Přibližně 95% rozsah jejich trendů je −0,19 až +0,19 W/m² za deset let (±2σ).
+Nejde o interval spolehlivosti průměru modelů.
+Družicový trend za 2001–2020 činí +0,38 W/m² za deset let. Úsečka ±0,20
+vyjadřuje v tomto testu přibližně 95% rozsah předpokládané chyby měření.
+Nejde o úplný interval nejistoty odhadu trendu ±0,24, který zahrnuje i kolísání.
+Oba zobrazené intervaly se nepatrně překrývají mezi +0,18 a +0,19.
+Výsledek pod 1 % je převzatý test za modelového odhadu proměnlivosti a chyby
+měření použitých autory. Není to pravděpodobnost, že je celá hypotéza pravdivá.
+
+Odborné podklady
+NASA Earth Observatory, Rebecca Lindsey (2009): Climate and Earth’s Energy Budget.
+Přenos energie odparem, kondenzací, prouděním a zářením, příjem a výdej celé Země.
+https://science.nasa.gov/earth/earth-observatory/climate-and-earths-energy-budget/
+
+von Schuckmann, K. a kol. (2023): Heat stored in the Earth system 1960–2020:
+where does the energy go? Earth System Science Data 15, 1675–1709.
+https://doi.org/10.5194/essd-15-1675-2023
+Plný text: https://essd.copernicus.org/articles/15/1675/2023/
+Podklad: abstrakt, oddíl 6, obr. 8 a závěr. Licence článku a dat: CC BY 4.0.
+Použit součet 381 ± 61 ZJ uvedený v abstraktu, závěru a souhrnu inventury.
+
+Raghuraman, S. P., Paynter, D. a Ramaswamy, V. (2021): Anthropogenic forcing
+and response yield observed positive trend in Earth’s energy imbalance.
+Nature Communications 12, 4577.
+https://doi.org/10.1038/s41467-021-24544-4
+Plný text: https://www.nature.com/articles/s41467-021-24544-4
+Podklad: obr. 2 a oddíl The observed trend in EEI is unexplained by internal variability.
+Licence článku: CC BY 4.0. Oddíly Data availability a Code availability
+zpřístupňují veřejná data a postup původního testu.
+
+Číselné hodnoty jsou přepisem zveřejněných souhrnných odhadů.
+Graf má lineární osu a původní intervaly zachovává. Nový statistický test zde nepočítáme.

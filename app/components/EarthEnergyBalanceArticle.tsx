@@ -62,8 +62,8 @@ export function EarthEnergyBalanceArticle() {
           povrchu a současně horní stratosféru prostřednictvím ozonu.{' '}
           <SourceLink id="DOI_10_1029_2008JD010114">(Rind a kol. 2008, úvod a oddíl 4.1.1)</SourceLink>
         </p>
-        <figure id="slunecni-schema" className={`article-figure ${styles.solarFigure}`}>
-          <div className={styles.solarScroll} tabIndex={0} role="region"
+        <figure id="slunecni-schema" className={`article-figure ${styles.explanatoryFigure}`}>
+          <div className={styles.figureScroll} tabIndex={0} role="region"
             aria-label="Schéma slunečního ohřevu, na úzké obrazovce posuvné do stran">
             <a href="/media/energeticka-bilance-zeme/silnejsi-slunce.png"
               aria-label="Otevřít schéma slunečního ohřevu v plné velikosti">
@@ -256,24 +256,86 @@ export function EarthEnergyBalanceArticle() {
         <p>
           Tato zkušenost dala otázce příčin oteplování důležitý rozměr:
           jak velkou změnu může vytvořit samotné kolísání systému?
-          Přesuny tepla mění teplotu vzduchu i rozmístění tepla v oceánu.
-          Změněné oblaky navíc mohou ovlivnit odraz slunečního záření.
-          Potřebujeme proto prověřit dvě věci: zda jde pouze o přesun
-          existujícího tepla a zda přirozené změny výměny energie s vesmírem
-          stačí na dlouhodobý přírůstek.{' '}
+          Oceán a atmosféra si mohou přerozdělovat už přítomnou energii.
+          Změny teploty a oblačnosti však ovlivňují také výměnu energie
+          s vesmírem. Tyto dvě cesty je potřeba vysvětlit a ověřit zvlášť.{' '}
           <SourceLink id="DOI_10_1017_9781009157896_005">(IPCC AR6, rámeček 3.1 a oddíl 3.7)</SourceLink>
         </p>
         <p>
-          Pouhý přesun by vyžadoval, aby ohřev jedné části Země vyvažovalo
-          ochlazení jiné. Globální inventura z úvodu však takový výsledek
-          nedává. Za roky 1971–2020 vychází kladný součet 381 ± 61 zettajoulů.
-          Vedle oceánu získaly energii také pevnina, atmosféra a tající led.
-          Samotné přemisťování tepla tedy celkový přírůstek nevysvětluje.{' '}
+          Při první cestě oceán předává teplo vzduchu. Vzduch tím získává
+          energii a otepluje se, zatímco voda, která ji odevzdává, se tímto
+          přenosem ochlazuje. Část energie z vody odnáší odpar a uvolní ji
+          v atmosféře, když vodní pára zkondenzuje na kapičky. Skutečná
+          změna teploty vody závisí na součtu všech přísunů a ztrát.
+          Pokud současně pohltí dostatek slunečního záření, může se
+          oteplovat i při předávání tepla vzduchu.{' '}
+          <SourceLink id="WEB_NASA_Earth_Energy_Budget">(NASA: přenos energie mezi povrchem a atmosférou)</SourceLink>
+        </p>
+        <p>
+          Při druhé cestě se mění, kolik energie zůstává v celé Zemi.
+          Jestliže při stejném slunečním příkonu méně světla odrazí,
+          více ho pohltí. To má oteplující účinek. Stejný směr účinku má
+          menší odchod tepelného záření do vesmíru. Větší odraz nebo
+          větší únik tepelného záření naopak působí ochlazujícím směrem.
+          Oblaky ovlivňují oba odcházející toky, a proto musíme sledovat
+          jejich společný účinek.{' '}
+          <SourceLink id="WEB_NASA_Earth_Energy_Budget">(NASA: příjem a výdej záření)</SourceLink>
+        </p>
+        <figure id="prirozene-kolisani-schema" className={`article-figure ${styles.explanatoryFigure}`}>
+          <div className={styles.figureScroll} tabIndex={0} role="region"
+            aria-label="Schéma přirozeného kolísání a obou testů, na úzké obrazovce posuvné do stran">
+            <a href="/media/energeticka-bilance-zeme/prirozene-kolisani.png"
+              aria-label="Otevřít schéma přirozeného kolísání a obou testů v plné velikosti">
+              <Image className="article-figure__media"
+                src="/media/energeticka-bilance-zeme/prirozene-kolisani.png"
+                alt="Vlevo předání tepla z oceánu otepluje přijímající vzduch a ochlazuje odevzdávající vodu. Vpravo menší odraz světla a menší únik tepelného záření působí oteplujícím směrem, opačné změny ochlazujícím. Pod každým dějem následují předpověď, postup testu a výsledek. První test sčítá změny energie celé Země, druhý porovnává družicový trend energetického přebytku s modelovým rozsahem přirozeného kolísání."
+                width={1672} height={1960} unoptimized />
+            </a>
+          </div>
+          <figcaption>
+            Horní část vysvětluje dva děje, spodní jejich testy. Červené
+            popisky označují oteplující účinek, modré ochlazující.
+            Šipky jsou schematické. Graf vpravo dole porovnává změnu
+            energetického přebytku ve W/m² za deset let. Jeho úsečky
+            vyjadřují přibližně 95% rozsah modelového kolísání a přibližně
+            95% rozsah chyby družicového měření.
+            Vlastní grafika Klimatologie.eu, horní ilustrace vytvořená
+            pomocí AI, CC BY 4.0. Podklady:{' '}
+            <SourceLink id="WEB_NASA_Earth_Energy_Budget">NASA</SourceLink>,{' '}
+            <SourceLink id="DOI_10_5194_essd_15_1675_2023">von Schuckmannová a kol. (2023)</SourceLink>
+            {' '}a <SourceLink id="DOI_10_1038_s41467_021_24544_4">Raghuraman a kol. (2021)</SourceLink>.{' '}
+            Na menší obrazovce lze obrázek posouvat do stran.{' '}
+            <a href="/media/energeticka-bilance-zeme/prirozene-kolisani.png">Otevřít v plné velikosti</a>.{' '}
+            <a href="/media/energeticka-bilance-zeme/prirozene-kolisani.csv" download>Číselné podklady</a>.{' '}
+            <a href="/media/energeticka-bilance-zeme/prirozene-kolisani.txt">Podklady a licence</a>.
+          </figcaption>
+        </figure>
+
+        <h4 id="prirozene-kolisani-inventura" className={styles.testHeading}>První test sčítá změny energie celé Země</h4>
+        <p>
+          Pokud by pozorovaný ohřev vznikal pouze přesunem tepla,
+          přírůstek energie jedné části by musel vyvažovat úbytek jiné.
+          Test proto sčítá změny energie oceánu, atmosféry, pevniny a ledu.
+          Změřené změny teploty vody, vzduchu a půdy převedeme na změny
+          jejich obsahu energie. U ledu započteme také energii potřebnou
+          k tání. Při pouhém přesunu by se přírůstky a úbytky v celkovém
+          součtu vyrušily.{' '}
+          <SourceLink id="DOI_10_5194_essd_15_1675_2023">(von Schuckmannová a kol. 2023, oddíly 2 až 6)</SourceLink>
+        </p>
+        <p>
+          Globální inventura však za roky 1971–2020 dává kladný součet
+          381 ± 61 zettajoulů, s přibližně 95% intervalem nejistoty.
+          Vedle oceánu získaly energii také pevnina, atmosféra a tající
+          led. V celé Zemi tedy energie přibyla a samotné přemisťování
+          tepla tento přírůstek nevysvětluje. Měření jednotlivých složek
+          shrnuje{' '}
+          <Link href="/pozorovani/tepelny-obsah-oceanu/#souvislost-s-bilanci">pozorování přírůstku energie v klimatickém systému</Link>.{' '}
           <SourceLink id="DOI_10_5194_essd_15_1675_2023">(von Schuckmannová a kol. 2023)</SourceLink>
         </p>
         <p>
-          Přísnější test sleduje, kde a v jakých hloubkách se oceán ohřívá.
-          Barnett a kolegové jej zveřejnili v roce 2005 pro změny od roku 1960.
+          Další kontrola sleduje, kde a v jakých hloubkách se oceán ohřívá.
+          Takové porovnání zveřejnili Barnett a kolegové v roce 2005
+          pro změny od roku 1960.
           Oceány se lišily. V Atlantiku zasahoval zjištěný ohřev do hloubek
           700 metrů a více, zatímco v severním Pacifiku se soustředil hlavně
           do horních 100 metrů. Takové rozdíly poskytují více informací
@@ -333,13 +395,26 @@ export function EarthEnergyBalanceArticle() {
           se mohou odehrávat současně.{' '}
           <SourceLink id="DOI_10_1038_nature12534">(Kosaka a Xie 2013, obr. 1 a rozšířený obr. 3)</SourceLink>
         </p>
+        <h4 id="prirozene-kolisani-radiacni-test" className={styles.testHeading}>Druhý test porovnává změny příjmu a výdeje energie</h4>
         <p>
-          Zbývala proto otázka celkové bilance: proč se přísun energie ještě zrychloval?
+          Přirozené změny oblačnosti a teploty mohou měnit také výměnu
+          energie s vesmírem. Druhý test proto zjišťuje, zda tento děj
+          stačí na naměřený vývoj energetického přebytku. Přebytek je
+          rozdíl mezi příchozím slunečním zářením a součtem odraženého
+          světla a odcházejícího tepelného záření. Z družic sledujeme
+          jednotlivé toky a počítáme, jak se jejich rozdíl mění v čase.{' '}
+          <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, úvod a obr. 1)</SourceLink>
+        </p>
+        <p>
+          Má-li celý pozorovaný růst vysvětlit samotné přirozené kolísání,
+          musí být slučitelný s velikostí a trváním změn, které tento
+          proces dokáže vytvořit.
           Raghuraman a kolegové v roce 2021 porovnali družicový trend
           z let 2001–2020 s přirozeným kolísáním ve 47 klimatických modelech.
-          Z dlouhých výpočtů získali 1 293 dvacetiletých úseků bez změn
-          vnějšího působení. Mohli tak zkoumat, jak velký trend vytvoří
-          samotný oceán, atmosféra a jejich vzájemné reakce.{' '}
+          V dlouhých výpočtech se oceán a atmosféra vyvíjely volně,
+          zatímco sluneční, sopečné a lidské vlivy zůstávaly stálé.
+          Získali tak 1 293 dvacetiletých úseků, na kterých zkoumali,
+          jak velký trend vytvoří samotné kolísání a jeho vliv na záření.{' '}
           <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021)</SourceLink>
         </p>
         <p>
@@ -810,8 +885,8 @@ export function EarthEnergyBalanceArticle() {
         <p>
           Plné texty jsou dostupné bez předplatného přes karty zdrojů.
           Historické prameny dokládají vývoj vysvětlení, moderní studie
-          poskytují jeho číselné testy. Graf používá zveřejněné souhrnné
-          odhady, jejichž původní intervaly zachovává.
+          poskytují jeho číselné testy. Grafy používají zveřejněné souhrnné
+          odhady, jejichž původní intervaly zachovávají.
         </p>
         <div className="article-source-groups">
           <section>
@@ -850,13 +925,14 @@ export function EarthEnergyBalanceArticle() {
             </ul>
           </section>
           <section>
-            <h3>Veřejná data a reprodukce grafu</h3>
+            <h3>Veřejná data a podklady grafů</h3>
             <ul>
               <li><SourceLink id="DATA_GCOS_EHI_1960_2020">Inventura energie GCOS 1960–2020</SourceLink>: data k součtům jednotlivých prostředí, licence CC BY 4.0.</li>
               <li><SourceLink id="DATA_CERES_PRP_2021">Data CERES k rozkladu radiačních změn</SourceLink>: příspěvky z analýzy Loeba a kolegů za září 2002 až březen 2020.</li>
               <li><a href="/media/energeticka-bilance-zeme/porovnani-trendu.csv" download>Hodnoty porovnávacího grafu</a> a <a href="/media/energeticka-bilance-zeme/README.txt">popis podkladů</a>. Přepis publikovaných souhrnných odhadů, nikoli nové zpracování jednotlivých měření.</li>
               <li><a href="/media/energeticka-bilance-zeme/generate_figures.py" download>Skript pro vytvoření grafu a schématu</a>. Vlastní grafika Klimatologie.eu, CC BY 4.0. Číselný podklad: Loeb a kol. 2021, CC BY 4.0.</li>
               <li><a href="/media/energeticka-bilance-zeme/silnejsi-slunce.png">Schéma slunečního ohřevu</a> a <a href="/media/energeticka-bilance-zeme/silnejsi-slunce.txt">jeho podklady a licence</a>. Vlastní ilustrace vytvořená pomocí AI, CC BY 4.0. Teplotní šipky vyjadřují očekávaný směr změny.</li>
+              <li><a href="/media/energeticka-bilance-zeme/prirozene-kolisani.svg">Schéma přirozeného kolísání s oběma testy</a>, <a href="/media/energeticka-bilance-zeme/prirozene-kolisani.csv" download>jeho číselné podklady</a> a <a href="/media/energeticka-bilance-zeme/prirozene-kolisani.txt">popis a licence</a>. Vlastní grafika, CC BY 4.0. Ilustrační část vytvořená pomocí AI, číselná část podle von Schuckmannové a kol. (2023) a Raghuramana a kol. (2021).</li>
             </ul>
           </section>
         </div>

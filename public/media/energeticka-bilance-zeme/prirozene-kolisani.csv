@@ -1,0 +1,4 @@
+series,period,central_value,lower,upper,unit,interval_meaning,source
+Internal variability,20-year segments,0,-0.19,0.19,W/m2/decade,approximately 95 percent range of trends (plus/minus 2 sigma),10.1038/s41467-021-24544-4
+CERES,2001-2020,0.38,0.18,0.58,W/m2/decade,approximately 95 percent observational error range only,10.1038/s41467-021-24544-4
+Earth heat gain,1971-2020,381,320,442,ZJ,approximately 95 percent uncertainty,10.5194/essd-15-1675-2023
