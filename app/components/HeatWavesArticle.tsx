@@ -269,11 +269,13 @@ export function HeatWavesArticle() {
               průměru poskytuje rozpětí odhadů prostorové interpolace mezi jejich 5. a 95. percentilem.
               Aktuální vydání vychází z 20 variant výpočtu.
               Metodický článek z roku 2018 popisoval 100 variant. <strong>Období:</strong>{" "}
-              1. ledna 1950 až 31. prosince 2025. <strong>Pokrytí:</strong> evropská souš v mřížce 0,1° nebo 0,25°.
-              <strong> Verze:</strong> 33.0e, vydaná v květnu 2026. <strong>Stažení:</strong>{" "}
+              1. ledna 1950 až 30. června 2026. <strong>Pokrytí:</strong> evropská souš v mřížce 0,1° nebo 0,25°.
+              <strong> Verze:</strong> 34.0e, vydaná v říjnu 2026. <strong>Stažení:</strong>{" "}
               <SourceLink id="WEB_Copernicus_E_OBS_data_access_94a6a7b1">portál E-OBS</SourceLink>.{" "}
               <strong>Metoda:</strong> <SourceLink id="DOI_10_1029_2017jd028200">Cornes et al., 2018</SourceLink>,{" "}
-              <SourceLink id="DOI_10_24381_cds_151d3ec6">datový záznam</SourceLink>. Rozdíly mezi variantami
+              <SourceLink id="DOI_10_24381_cds_151d3ec6">datový záznam a přímá cesta k E-OBS</SourceLink>.
+              Soubory lze z přímého portálu stáhnout bez přihlášení. DOI vede do katalogu CDS, který při kontrole
+              5. listopadu 2026 nebyl z použitého připojení dostupný. Rozdíly mezi variantami
               vyjadřují nejistotu doplnění prostoru mezi stanicemi, nikoli veškeré chyby měření a změn staniční sítě.
             </p>
           </section>
@@ -302,10 +304,11 @@ export function HeatWavesArticle() {
               převedený do mřížky 0,25°. <strong>Verze:</strong> pátá generace reanalýzy Evropského střediska pro
               střednědobé předpovědi počasí (ECMWF). Reanalýza je zpětná rekonstrukce počasí kombinující měření
               a fyzikální model, nikoli síť teploměrů v každé buňce. <strong>Stažení:</strong>{" "}
-              <SourceLink id="WEB_Copernicus_ERA5_hourly_data_on_single_levels_from_1940_to_p_7e4f50d4">Copernicus Climate Data Store</SourceLink>.{" "}
+              <SourceLink id="WEB_Copernicus_ERA5_hourly_data_on_single_levels_from_1940_to_p_7e4f50d4">popis produktu u ECMWF s odkazem do Climate Data Store</SourceLink>.{" "}
               <strong>Metoda:</strong> <SourceLink id="DOI_10_1002_qj_3803">Hersbach et al., 2020</SourceLink>,{" "}
               <SourceLink id="DOI_10_24381_cds_adbb2d47">datový záznam</SourceLink>. Stažení v datovém úložišti
-              Copernicus vyžaduje bezplatný účet a přijetí podmínek produktu.
+              Copernicus vyžaduje bezplatný účet a přijetí podmínek produktu. Při kontrole 5. listopadu 2026 nebyl
+              katalog CDS z použitého připojení dostupný, samotné stažení ERA5 proto nebylo ověřeno.
             </p>
           </section>
 
@@ -584,7 +587,7 @@ export function HeatWavesArticle() {
             <h3>Datové portály</h3>
             <ul>
               <li><SourceLink id="WEB_NOAA_Global_Historical_Climatology_Network_daily_GHCN_14491e06">GHCN-Daily: popis</SourceLink> a <SourceLink id="WEB_NOAA_Index_of_pub_data_ghcn_daily_96798b50">soubory ke stažení</SourceLink></li>
-              <li><SourceLink id="WEB_Copernicus_E_OBS_data_access_94a6a7b1">E-OBS v33.0e: evropské denní mapy</SourceLink></li>
+              <li><SourceLink id="WEB_Copernicus_E_OBS_data_access_94a6a7b1">E-OBS v34.0e: evropské denní mapy</SourceLink></li>
               <li><SourceLink id="WEB_Met_Office_Met_Office_Hadley_Centre_observations_datasets_dd07bd35">HadEX3 v3.0.4: mřížkované ukazatele a pomocná data</SourceLink></li>
               <li><SourceLink id="WEB_Copernicus_ERA5_hourly_data_on_single_levels_from_1940_to_p_7e4f50d4">ERA5: hodinová reanalýza</SourceLink></li>
               <li><SourceLink id="DOI_10_6084_m9_figshare_c_4004668">GHWR: více metod určení vln veder</SourceLink></li>

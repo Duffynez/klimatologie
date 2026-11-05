@@ -808,7 +808,7 @@ test("publishes the global surface temperature article instead of the generic pl
 
   assert.match(evidencePage, /GmstArticle/);
   assert.match(evidencePage, /title="Globální teplota u povrchu"/);
-  assert.match(evidencePage, /meta="31\. října 2026"/);
+  assert.match(evidencePage, /title="Globální teplota u povrchu"\s+meta="2\. listopadu 2026"/);
   assert.match(article, /Globální teplota u povrchu vyjadřuje, jak se průměrná teplota/);
   assert.match(article, /Historie globálního výpočtu/);
   assert.match(article, /Jak vzniká globální výpočet/);
@@ -856,7 +856,7 @@ test("publishes a full stratospheric temperature article instead of the generic 
 
   assert.match(evidencePage, /StratosphericCoolingArticle/);
   assert.match(evidencePage, /title="Teplota stratosféry"/);
-  assert.match(evidencePage, /meta="31\. října 2026"/);
+  assert.match(evidencePage, /title="Teplota stratosféry"\s+meta="2\. listopadu 2026"/);
   assert.match(article, /Teplotou stratosféry označujeme teplotu vzduchu mezi tropopauzou a stratopauzou/);
   assert.doesNotMatch(article, /Potřebné informace|article-glossary/);
   assert.match(article, /váhová funkce/);
@@ -1496,7 +1496,7 @@ test("publishes a sourced phenology article with organism, camera, and satellite
 
   assert.match(evidencePage, /PhenologyArticle/);
   assert.match(evidencePage, /title="Sezónní jevy v živé přírodě"/);
-  assert.match(evidencePage, /meta="31\. října 2026"/);
+  assert.match(evidencePage, /meta="5\. listopadu 2026"/);
   assert.match(article, /Fenologické pozorování/);
   assert.match(article, /je datum nebo sled opakovaných záznamů/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
@@ -1542,21 +1542,24 @@ test("renders public phenology sources and preserves the meaning of dates and sa
     const card = cards.get(id);
     assert.ok(card, `Missing rendered phenology source: ${id}`);
     assert.doesNotMatch(card, /drive\.google\.com/, `Open source has a Drive archive: ${id}`);
-    assert.match(card, /Otevřít (?:veřejný zdroj|plný text|veřejná data)/, `Missing public access: ${id}`);
+    assert.match(card, /href="https:\/\/(?!doi\.org\/|drive\.google\.com\/)[^"]+"/, `Missing public access: ${id}`);
     if (id.startsWith("DOI_")) {
       assert.match(card, /Otevřít DOI/, `Missing DOI: ${id}`);
-      assert.match(card, /Otevřít (?:plný text|veřejná data)/, `Missing separate text or data: ${id}`);
     }
   }
   assert.match(cards.get("DOI_10_1007_s00484_021_02185_y"), /Susanne S\. Renner a Frank-M\. Chmielewski/);
   assert.match(cards.get("DOI_10_3334_ornldaac_2389"), /Datový soubor/);
   assert.match(cards.get("DOI_10_6084_m9_figshare_c_5800155"), /Doplňkový materiál/);
+  assert.ok(ids.has("DOI_10_25921_1xy4_ht08"));
+  assert.ok(ids.has("DOI_10_6084_m9_figshare_21803880_v1"));
+  assert.ok(ids.has("DOI_10_13130_rd_unimi_jnnscx"));
+  assert.ok(!ids.has("DOI_10_1002_joc_1594"), "Unavailable paper must not support the article argument");
   assert.match(articleHtml, /Číslo neoznačuje jednotlivé návštěvy/);
   assert.match(articleHtml, /přechodová data z něj nepočítá/);
   assert.match(articleHtml, /15 % tedy neznamená, že 15 % stromů má listy/);
   assert.match(articleHtml, /VNP22Q2\.002 poskytuje výsledky od roku 2013/);
   assert.match(articleHtml, /Není to soubor všech 419 354 původních pozorování/);
-  assert.match(articleHtml, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  assert.match(articleHtml, /<p class="page-lead__meta">5\. listopadu 2026<\/p>/);
   assert.match(articleHtml, /href="\/metody\/standardizovane-fenologicke-pozorovani\/?(?:#[^"]+)?"/);
   assert.doesNotMatch(articleHtml, /Brügger a Vassella|Reed et al\., 1994|125 000 měření v čase/);
   assert.equal((articleHtml.match(/class="article-figure__scroll"/g) ?? []).length, 3);
@@ -1571,7 +1574,7 @@ test("publishes a sourced heat-wave article that keeps definitions and observati
 
   assert.match(evidencePage, /HeatWavesArticle/);
   assert.match(evidencePage, /title="Vlny veder"/);
-  assert.match(evidencePage, /meta="31\. října 2026"/);
+  assert.match(evidencePage, /meta="5\. listopadu 2026"/);
   assert.match(article, /Vlna veder je souvislé období několika dnů/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
   assert.match(article, /Standardní ukazatel WSDI/);
@@ -1608,10 +1611,9 @@ test("gives every heat-wave source public access and preserves corrected measure
     const card = cards.get(id);
     assert.ok(card, `Missing rendered heat-wave source: ${id}`);
     assert.doesNotMatch(card, /drive\.google\.com/, `Open source has a Drive archive: ${id}`);
-    assert.match(card, /Otevřít (?:veřejný zdroj|plný text|veřejná data)/, `Missing public access: ${id}`);
+    assert.match(card, /href="https:\/\/(?!doi\.org\/|drive\.google\.com\/)[^"]+"/, `Missing public access: ${id}`);
     if (id.startsWith("DOI_")) {
       assert.match(card, /Otevřít DOI/, `Missing DOI: ${id}`);
-      assert.match(card, /Otevřít (?:plný text|veřejná data)/, `Missing separate text or data: ${id}`);
     }
   }
   assert.ok(!cards.has("DOI_10_1002_joc_7505"));
@@ -1622,7 +1624,7 @@ test("gives every heat-wave source public access and preserves corrected measure
   assert.match(articleHtml, /WSDI tedy neudává počet událostí/);
   assert.match(articleHtml, /nemusely připadat na stejné datum/);
   assert.match(articleHtml, /neuvádí úplný seznam použitých stanic/);
-  assert.match(articleHtml, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  assert.match(articleHtml, /<p class="page-lead__meta">5\. listopadu 2026<\/p>/);
   assert.doesNotMatch(articleHtml, /Sadegh et al\., 2018|133 homogenizovaných českých stanic|souvislá zasažená plocha/);
   assert.equal((articleHtml.match(/class="article-figure__scroll"/g) ?? []).length, 2);
 });
@@ -2376,7 +2378,7 @@ test("publishes the full phenology method with traceable observations and bounde
     const card = catalogue.match(new RegExp(`<article[^>]*id="${id}"[\\s\\S]*?<\\/article>`))?.[0];
     assert.ok(card, `Missing phenology source: ${id}`);
     assert.doesNotMatch(card, /drive\.google\.com/);
-    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    assert.match(card, /href="https:\/\/(?!doi\.org\/|drive\.google\.com\/)[^"]+"/);
   }
   for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
     const href = match[1];
@@ -3703,7 +3705,8 @@ test("time changes and extremes publish the full method, reproducible example an
   assert.deepEqual([...body.matchAll(/<h2\b[^>]*>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak rozpoznáváme změny v čase", "Nejistoty a ověření", "Příklad na denních teplotách z Blue Hill", "Shrnutí",
   ]);
-  for (const page of [html, heat]) assert.match(page, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  assert.match(heat, /<p class="page-lead__meta">5\. listopadu 2026<\/p>/);
   assert.match(rain, /<p class="page-lead__meta">2\. listopadu 2026<\/p>/);
   for (const observation of [heat, rain]) assert.match(observation, /href="\/metody\/analyza-casovych-zmen-a-extremu\/?(?:#[^"]+)?"/);
   for (const slug of ["vlny-veder", "srazky-a-privalove-srazky"]) assert.ok(hasArticleLink(body, "/pozorovani/" + slug));
@@ -3922,7 +3925,7 @@ test("reanalysis explains assimilation and links open references and observation
   for (const id of ids) {
     const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
     assert.ok(card, "Missing reanalysis reference " + id);
-    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    assert.match(card, /href="https:\/\/(?!doi\.org\/|drive\.google\.com\/)[^"]+"/);
     assert.doesNotMatch(card, /drive\.google\.com/);
     if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
   }

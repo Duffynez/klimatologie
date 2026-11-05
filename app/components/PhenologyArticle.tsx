@@ -74,8 +74,8 @@ export function PhenologyArticle() {
           okrasných třešní odvozovat z datovaných dvorských deníků, kronik a záznamů o slavnostech. Nejstarší použitý
           záznam pochází z roku 812, mezi jednotlivými staletími však zůstávají mezery a měnil se význam i přesnost
           zápisu. Od devatenáctého století se uplatňují přímá pozorování a od dvacátého století také údaje
-          meteorologické služby. Původ a výběr těchto historických zpráv popsali{" "}
-          <SourceLink id="DOI_10_1002_joc_1594">Aono a Kazui, 2008</SourceLink>.
+          meteorologické služby. Datované údaje a popis použitých pramenů zpřístupňuje{" "}
+          <SourceLink id="DOI_10_25921_1xy4_ht08">autorský datový archiv v NOAA/WDS</SourceLink>.
         </p>
 
         <p>
@@ -261,10 +261,21 @@ export function PhenologyArticle() {
 
         <div className="article-data-list">
           <section className="article-data-item">
+            <h3>Kvetení třešní v Kjótu</h3>
+            <p>
+              Veřejná tabulka autorů v NOAA/WDS obsahuje roky 801–2010, datum plného kvetení vyjádřené dnem roku
+              a dokumentaci pramenů. Roky bez údaje zůstávají označené, první zaznamenané kvetení je z roku 812.
+              Starší část vychází z historických zpráv, novější z přímých pozorování. Jde o archivní vydání
+              zveřejněné v roce 2019, nikoli průběžně aktualizovaný současný záznam.
+            </p>
+            <p><SourceLink id="DOI_10_25921_1xy4_ht08">Úplná tabulka a dokumentace NOAA/WDS</SourceLink></p>
+          </section>
+
+          <section className="article-data-item">
             <h3>PEP725</h3>
             <p>
               Přibližně 16 milionů evropských pozorování rostlin. Nejstarší jednotlivé údaje sahají do konce
-              osmnáctého století, soustavné sítě převážně k roku 1950. Podle portálu při revizi v říjnu 2026
+              osmnáctého století, soustavné sítě převážně k roku 1950. Podle portálu při kontrole 5. listopadu 2026
               pochází asi 14 milionů záznamů z německé meteorologické služby DWD. Ukázkový soubor je dostupný
               přímo. Úplný výběr vyžaduje registraci, souhlas s podmínkami a uvedení účelu použití. Licence se
               liší podle poskytovatele, celý archiv proto nelze označit jedinou licencí CC BY.
@@ -300,8 +311,9 @@ export function PhenologyArticle() {
             <p>
               Opakovaná pozorování označených rostlin na stanovištích americké sítě NEON. Tabulky obsahují stav a
               intenzitu jednotlivých fází, údaje o rostlině, návštěvě i kontrole kvality. NEON je americká
-              Národní síť ekologických observatoří. Soubory lze stáhnout po lokalitách a měsících nebo získat
-              přes programové rozhraní, označované API.
+              Národní síť ekologických observatoří. Soubory lze vybírat po lokalitách a měsících. Jejich stažení přes portál vyžaduje přihlášení
+              nebo vytvoření a ověření účtu, metadata a dokumentace jsou veřejné. Dostupné je také programové
+              rozhraní, označované API.
             </p>
             <p>
               <SourceLink id="WEB_data_neonscience_org_NEON_Data_Product_94759182">Popis, dokumentace a stažení</SourceLink>
@@ -331,6 +343,21 @@ export function PhenologyArticle() {
             </p>
             <p>
               <SourceLink id="DOI_10_6084_m9_figshare_10062239_v1">Popis a stažení obou tabulek</SourceLink>
+            </p>
+          </section>
+
+          <section className="article-data-item">
+            <h3>Ptačí tah z kroužkování a podklady metaanalýzy</h3>
+            <p>
+              Ke studii lesňáčků z roku 2023 jsou veřejné tři tabulky: zpracované termíny jarního a podzimního
+              tahu a související teploty. Obsahují i roky mimo období 1961–2018 vyhodnocené ve studii, takže zopakování výsledků vyžaduje
+              stejný výběr záznamů. Neobsahují všechny původní individuální kroužkovací záznamy.
+              Samostatný archiv Romanovy metaanalýzy poskytuje tabulku 5 589 výsledků s údaji o druzích,
+              studiích a fenofázích. Oba archivy lze stáhnout bez přihlášení.
+            </p>
+            <p>
+              <SourceLink id="DOI_10_6084_m9_figshare_21803880_v1">Horton: tři zpracované CSV, verze 1</SourceLink>{" · "}
+              <SourceLink id="DOI_10_13130_rd_unimi_jnnscx">Romano: úplná tabulka metaanalýzy, verze 1.1</SourceLink>
             </p>
           </section>
 
@@ -490,13 +517,13 @@ export function PhenologyArticle() {
         </p>
 
         <p>
-          Celosvětová metaanalýza, tedy společné statistické vyhodnocení mnoha prací, spojila 5 589 výsledků
+          Celosvětová metaanalýza, tedy společné statistické vyhodnocení mnoha prací a doplněných nezveřejněných dat, spojila 5 589 výsledků
           pro 684 druhů. Podklady sahají do období 1811–2018, jednotlivé záznamy však trvaly průměrně asi 39 let.
           Autoři odděleně vyhodnotili počáteční a prostřední část sezóny a zohlednili příbuznost druhů i výsledky
           pocházející ze stejných studií. Předhnízdní tah a
           hnízdění se v průměru posunuly o přibližně 2–3 dny za desetiletí k dřívějším termínům. U tahu po hnízdění
           nebyla společná změna statisticky průkazná. Výsledek má výrazně nerovnoměrné zeměpisné pokrytí a zahrnuje
-          různé ukazatele počátku i středu sezóny. Popisuje proto průměr přes zveřejněné podklady, ne jednotný posun
+          různé ukazatele počátku i středu sezóny. Popisuje proto průměr přes shromážděné podklady, ne jednotný posun
           každého ptačího druhu na Zemi.{" "}
           <SourceLink id="DOI_10_1002_ecm_1552">Romano et al., 2023</SourceLink>
         </p>
@@ -531,7 +558,7 @@ export function PhenologyArticle() {
             <h3>Historické prameny</h3>
             <ul>
               <li><SourceLink id="WEB_db_huntbot_org_Original_Linnaean_Dissertations_Hunt_Institute_f_b8827d4c">Berger a Linnaeus, 1756: Calendarium Florae, původní tisk a PDF</SourceLink></li>
-              <li><SourceLink id="DOI_10_1002_joc_1594">Aono a Kazui, 2008: rekonstrukce kvetení třešní v Kjótu</SourceLink></li>
+              <li><SourceLink id="DOI_10_25921_1xy4_ht08">Aono, Saito a Kazui, 2019: veřejná tabulka kvetení třešní v Kjótu a dokumentace pramenů</SourceLink></li>
               <li><SourceLink id="DOI_10_1007_s00484_021_02185_y">Renner a Chmielewski, 2021: historie Mezinárodních fenologických zahrad</SourceLink></li>
             </ul>
           </section>

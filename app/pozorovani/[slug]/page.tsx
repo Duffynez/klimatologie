@@ -263,7 +263,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Živá příroda"
           title="Sezónní jevy v živé přírodě"
-          meta="31. října 2026"
+          meta="5. listopadu 2026"
         >
           <p>
             Jak se sleduje rašení, kvetení, tah ptáků a sezóna vegetace v terénu, kamerami a z družic, jak se odlišují
@@ -282,7 +282,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Extrémy"
           title="Vlny veder"
-          meta="31. října 2026"
+          meta="5. listopadu 2026"
         >
           <p>
             Jak se z denních maxim a minim určují vlny veder, proč různé definice dávají různá čísla a co ukazují
