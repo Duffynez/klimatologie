@@ -96,6 +96,72 @@ export const historyEvents: HistoryEvent[] = [
     ]
   },
   {
+    id: "1735_Hadley",
+    year: 1735,
+    dateMeaning: "Zveřejnění vysvětlení pasátů",
+    title: "Ohřev a rotace Země vysvětlují pasáty",
+    category: "mechanisms",
+    paragraphs: [
+      {
+        text: "George Hadley hledal vysvětlení pasátů, stálých větrů vanoucích v tropech od východu. Uvažoval, že silný sluneční ohřev u rovníku vede ke stoupání vzduchu. Na jeho místo přitéká při povrchu vzduch z vyšších zeměpisných šířek. Směr tohoto proudění spojil s rotací Země.",
+        references: [
+          {
+            sourceId: "1735_Hadley",
+            locator: "s. 58–61"
+          }
+        ]
+      },
+      {
+        text: "Povrch u rovníku urazí při jedné otočce Země větší vzdálenost než povrch blíže k pólům. Hadley tím vysvětloval, proč se vzduch proudící k rovníku vůči povrchu odchyluje směrem na západ. Pravidelný vzorec větrů tak dostal fyzikální vysvětlení spojující nerovnoměrný ohřev a pohyb na rotující planetě.",
+        references: [
+          {
+            sourceId: "1735_Hadley",
+            locator: "s. 60–62"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/mechanismy/vnitrni-promenlivost-atmosfery-a-oceanu/",
+        label: "Jak proudění přerozděluje teplo"
+      }
+    ]
+  },
+  {
+    id: "1742_Celsius",
+    year: 1742,
+    dateMeaning: "Zveřejnění práce o teplotní stupnici",
+    title: "Teplotní stupnice dostává reprodukovatelné pevné body",
+    category: "methods",
+    paragraphs: [
+      {
+        text: "Anders Celsius zkoumal, jak vytvořit teplotní stupnici, kterou lze zopakovat na různých teploměrech. Vycházel z teploty tajícího sněhu a vroucí vody. Pokusy ověřoval stálost prvního bodu a závislost druhého na tlaku vzduchu, měřeném barometrem.",
+        references: [
+          {
+            sourceId: "1894_Celsius_Thermometrie",
+            locator: "s. 117–122, překlad práce z roku 1742"
+          }
+        ]
+      },
+      {
+        text: "Mezi oba body vložil sto dílků. Jeho původní stupnice měla u varu nulu a u tání sněhu sto, tedy opačné číslování než dnes. Podstatným přínosem byl popsaný postup, podle kterého bylo možné teploměry nastavit a jejich údaje porovnávat. Takové společné měřítko je základem srovnatelných teplotních záznamů.",
+        references: [
+          {
+            sourceId: "1894_Celsius_Thermometrie",
+            locator: "s. 122–123"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/metody/odporova-termometrie-a-termistory/",
+        label: "Jak dnes měříme teplotu"
+      }
+    ]
+  },
+  {
     id: "1767_Saussure",
     year: 1774,
     dateMeaning: "Pokusy na Cramontu a v Courmayeur",
@@ -227,6 +293,43 @@ export const historyEvents: HistoryEvent[] = [
     ]
   },
   {
+    id: "1838_Pouillet",
+    year: 1838,
+    dateMeaning: "Zveřejnění měření slunečního tepla",
+    title: "Přístroj měří energii přicházející ze Slunce",
+    category: "methods",
+    paragraphs: [
+      {
+        text: "Claude Pouillet měřil sluneční záření přístrojem zvaným pyrheliometr. Jeho začerněná nádobka s vodou se na slunci zahřívala. Z růstu teploty, množství vody, vlastností nádobky a doby osvitu vypočítal energii dopadající na jednotku plochy za daný čas. Zahřívání porovnával s měřením ve stínu.",
+        references: [
+          {
+            sourceId: "1838_Pouillet",
+            locator: "s. 2–4, popis přístroje a výpočtu"
+          }
+        ]
+      },
+      {
+        text: "Při různých výškách Slunce procházejí paprsky různě dlouhou cestou atmosférou. Pouillet využil tuto změnu k odhadu zeslabení záření vzduchem a množství energie přicházející nad atmosféru. Sluneční ohřev Země tak začal vyjadřovat měřitelným přísunem energie, který lze použít v tepelné bilanci planety.",
+        references: [
+          {
+            sourceId: "1838_Pouillet",
+            locator: "s. 5–9, odhad propustnosti atmosféry a příjmu Země"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/metody/mereni-radiacnich-toku/",
+        label: "Jak měříme energii přenášenou zářením"
+      },
+      {
+        href: "/mechanismy/energeticka-bilance-zeme/",
+        label: "Jak vzniká energetická bilance Země"
+      }
+    ]
+  },
+  {
     id: "1840_Agassiz",
     year: 1840,
     dateMeaning: "Vydání knihy",
@@ -292,6 +395,43 @@ export const historyEvents: HistoryEvent[] = [
     ]
   },
   {
+    id: "1860_Kirchhoff",
+    year: 1860,
+    dateMeaning: "Zveřejnění obecného zákona záření",
+    title: "Pohlcování a vyzařování spojuje jeden zákon",
+    category: "mechanisms",
+    paragraphs: [
+      {
+        text: "Gustav Kirchhoff odvodil vztah mezi pohlcováním a vyzařováním tepelného záření. Při tepelné rovnováze platí pro stejnou vlnovou délku a směr: čím účinněji těleso záření pohlcuje, tím účinněji je při dané teplotě také vyzařuje. Odvození vycházelo z výměny záření mezi tělesem a okolím o stejné teplotě.",
+        references: [
+          {
+            sourceId: "1901_Kirchhoff_Radiation_Translation",
+            locator: "s. 75–78 a 89–93"
+          }
+        ]
+      },
+      {
+        text: "Jako společné měřítko zavedl ideální černé těleso, které pohltí veškeré dopadající záření. Jeho tepelné záření závisí na teplotě a vlnové délce, nikoli na použitém materiálu. Vznikl tak základ pro výpočet záření skutečných látek z jejich teploty a schopnosti pohlcovat záření.",
+        references: [
+          {
+            sourceId: "1901_Kirchhoff_Radiation_Translation",
+            locator: "s. 76–78 a 92–96"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/mechanismy/radiacni-pusobeni-sklenikovych-plynu/",
+        label: "Pohlcování a vyzařování v atmosféře"
+      },
+      {
+        href: "/metody/absorpcni-spektroskopie/",
+        label: "Jak měříme absorpci jednotlivých látek"
+      }
+    ]
+  },
+  {
     id: "1862_Tyndall",
     year: 1861,
     dateMeaning: "Zveřejnění práce",
@@ -353,6 +493,47 @@ export const historyEvents: HistoryEvent[] = [
       {
         href: "/mechanismy/odrazivost-snehu-a-ledu-jako-zpetna-vazba/",
         label: "Jak sníh a led zesilují změnu"
+      }
+    ]
+  },
+  {
+    id: "1879_Stefan_Boltzmann",
+    year: 1879,
+    dateMeaning: "Zveřejnění vztahu v roce 1879, teoretické odvození v roce 1884",
+    title: "Teplota určuje celkový výkon tepelného záření",
+    category: "mechanisms",
+    paragraphs: [
+      {
+        text: "Josef Stefan porovnal dostupná měření tepelného záření a v roce 1879 navrhl vztah ke čtvrté mocnině absolutní teploty. Ta se měří od absolutní nuly a dnes ji vyjadřujeme v kelvinech. Ludwig Boltzmann v roce 1884 odvodil tento vztah z termodynamiky a tlaku, kterým záření působí.",
+        references: [
+          {
+            sourceId: "1879_Stefan",
+            locator: "s. 421–422"
+          },
+          {
+            sourceId: "1884_Boltzmann",
+            locator: "s. 291–294"
+          }
+        ]
+      },
+      {
+        text: "Zákon určuje celkovou energii vyzářenou jednotkou plochy ideálního černého tělesa za sekundu. Při zdvojnásobení teploty v kelvinech se tento výkon zvětší šestnáctkrát. Výpočet tak dává číselný vztah mezi teplotou a odvodem energie zářením, potřebný při zkoumání teploty Slunce i energetické bilance Země.",
+        references: [
+          {
+            sourceId: "1884_Boltzmann",
+            locator: "s. 291–294"
+          },
+          {
+            sourceId: "1879_Stefan",
+            locator: "s. 426–427, odhad teploty Slunce"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/mechanismy/energeticka-bilance-zeme/",
+        label: "Jak teplota ovlivňuje výdej energie Země"
       }
     ]
   },
@@ -453,6 +634,153 @@ export const historyEvents: HistoryEvent[] = [
     ]
   },
   {
+    id: "1900_Planck",
+    year: 1900,
+    dateMeaning: "Představení zákona v roce 1900, podrobná práce vyšla roku 1901",
+    title: "Zákon popisuje tepelné záření po vlnových délkách",
+    category: "mechanisms",
+    paragraphs: [
+      {
+        text: "Max Planck sestavil zákon popisující, jak je tepelné záření ideálního černého tělesa rozděleno mezi vlnové délky. Navázal na laboratorní měření, kterým dřívější vztah nevyhovoval zejména u dlouhých vln. Nový vztah představil v roce 1900 a podrobně jej odvodil v práci vydané roku 1901.",
+        references: [
+          {
+            sourceId: "DOI_10_1002_andp_19013090310",
+            locator: "s. 553–554 a 560–561"
+          }
+        ]
+      },
+      {
+        text: "Z teploty lze podle tohoto zákona vypočítat celý průběh spektra. Teplejší těleso vyzařuje více energie a maximum jeho záření leží na kratší vlnové délce. To pomáhá rozlišovat krátkovlnné sluneční záření a dlouhovlnné tepelné záření Země a tvoří základ určování teploty ze zachyceného záření.",
+        references: [
+          {
+            sourceId: "DOI_10_1002_andp_19013090310",
+            locator: "s. 560–563, výsledný zákon a poloha maxima"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/metody/pasivni-infracervena-radiometrie/",
+        label: "Jak ze spektra určujeme teplotu"
+      }
+    ]
+  },
+  {
+    id: "1902_Stratosfera",
+    year: 1902,
+    dateMeaning: "Zveřejnění výsledků balónových měření",
+    title: "Balónová měření odhalují stratosféru",
+    category: "observations",
+    paragraphs: [
+      {
+        text: "Léon Teisserenc de Bort a Richard Assmann zveřejnili výsledky měření teploty vysoko nad zemí. Přístroje vynášené balóny ukázaly, že dosavadní pokles teploty s výškou se přibližně mezi 8 a 13 kilometry zastavuje. Nad touto hranicí naměřili vrstvu se stálou, nebo dokonce rostoucí teplotou.",
+        references: [
+          {
+            sourceId: "1902_Teisserenc_de_Bort",
+            locator: "s. 987–989"
+          },
+          {
+            sourceId: "1902_Assmann",
+            locator: "s. 495–504"
+          }
+        ]
+      },
+      {
+        text: "Výsledky dvou měřicích programů odkryly odlišné uspořádání vyšší atmosféry. Teplotní profil, tedy průběh teploty podle výšky, se stal podkladem pro rozlišení spodní troposféry a nad ní ležící stratosféry. Poznání atmosféry se tak rozšířilo od přízemních údajů k její svislé stavbě.",
+        references: [
+          {
+            sourceId: "1902_Teisserenc_de_Bort",
+            locator: "s. 988–989"
+          },
+          {
+            sourceId: "1902_Assmann",
+            locator: "s. 502–504"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/pozorovani/stratosfericke-ochlazovani/",
+        label: "Jak dnes sledujeme teplotu stratosféry"
+      },
+      {
+        href: "/metody/radiosondaz/",
+        label: "Jak měříme svislý profil atmosféry"
+      }
+    ]
+  },
+  {
+    id: "1919_Douglass",
+    year: 1919,
+    dateMeaning: "Vydání souhrnné práce o letokruzích a klimatu",
+    title: "Letokruhy poskytují datovaný záznam minulého klimatu",
+    category: "methods",
+    paragraphs: [
+      {
+        text: "Andrew Ellicott Douglass shrnul výzkum letokruhů a jejich vztahu ke klimatu. Porovnával sled širokých a úzkých letokruhů u různých stromů a hledal společné vzorce. Tím mohl přiřadit letokruhy ke stejným kalendářním rokům a rozpoznat chybějící nebo zdánlivě zdvojený přírůstek.",
+        references: [
+          {
+            sourceId: "1919_Douglass",
+            locator: "kap. II, Yearly Identity and the Dating of Rings a Cross-identification"
+          }
+        ]
+      },
+      {
+        text: "Datované šířky letokruhů potom srovnával s měřenými srážkami, zejména u borovic v Arizoně. Shoda ukazovala, jak se dostupnost vody promítá do růstu stromu. Spojení přesného datování a porovnání s počasím umožnilo číst ve dřevě záznam suchých a vlhkých období starších než místní přístrojová měření.",
+        references: [
+          {
+            sourceId: "1919_Douglass",
+            locator: "kap. II, porovnání letokruhů se srážkami a historickými záznamy"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/metody/dendrochronologie/",
+        label: "Jak datujeme letokruhy a rekonstruujeme klima"
+      }
+    ]
+  },
+  {
+    id: "1929_Radiosondy",
+    year: 1929,
+    dateMeaning: "Rané úspěšné lety v letech 1929–1930",
+    title: "Balón vysílá měření atmosféry rádiem",
+    category: "methods",
+    paragraphs: [
+      {
+        text: "Robert Bureau ve Francii v roce 1929 a Pavel Molčanov v Sovětském svazu v roce 1930 patřili k průkopníkům radiosond. Balón vynášel měřicí přístroje s rádiovým vysílačem a údaje přijímala stanice na zemi už během letu. Pro získání výsledků tak nebylo nutné nejprve nalézt dopadlý přístroj.",
+        references: [
+          {
+            sourceId: "WEB_nist_gov_Tuning_into_Weather_Forecasting_NIST_be922613",
+            locator: "Where did the radiosonde get its name?"
+          },
+          {
+            sourceId: "2015_Roshydromet_Radiosonde"
+          }
+        ]
+      },
+      {
+        text: "Pohyb měřidla nebo změnu elektrické vlastnosti čidla bylo možné převést na rozlišitelný rádiový signál. Postup dovolil zaznamenávat tlak, teplotu a vlhkost v průběhu výstupu. Podrobný popis přístrojů, kalibrace a naměřených profilů zveřejnili například Diamond, Hinman a Dunmore v roce 1938.",
+        references: [
+          {
+            sourceId: "1938_Diamond_Radiometeorography",
+            locator: "s. 369–372 a 384–389"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/metody/radiosondaz/",
+        label: "Jak funguje radiosondáž"
+      }
+    ]
+  },
+  {
     id: "1938_Callendar",
     year: 1938,
     dateMeaning: "Zveřejnění práce",
@@ -520,26 +848,26 @@ export const historyEvents: HistoryEvent[] = [
   },
   {
     id: "1952_Libby",
-    year: 1952,
-    dateMeaning: "Vydání souhrnné knihy",
-    title: "Radiouhlíkové datování propojuje přírodní archivy",
+    year: 1949,
+    dateMeaning: "Zveřejnění zkoušky na vzorcích známého stáří",
+    title: "Radiouhlíkové datování prochází zkouškou známého stáří",
     category: "methods",
     paragraphs: [
       {
-        text: "Willard Libby v knize shrnul radiouhlíkové datování. Živý organismus přijímá uhlík z okolí. Po ukončení této výměny radioaktivní uhlík-14 ubývá rozpadem. Z naměřeného počtu rozpadů za daný čas tak lze odhadnout stáří vzorku. Metodu bylo možné ověřovat na vzorcích známého stáří a použít pro organické pozůstatky v klimatických archivech.",
+        text: "James Arnold a Willard Libby změřili radioaktivitu uhlíku ve dřevě, jehož stáří znali z archeologických souvislostí nebo letokruhů. Srovnání ukázalo očekávaný úbytek uhlíku-14 se stářím vzorku. Výsledky zveřejněné v roce 1949 tak ověřily, že radioaktivní rozpad může sloužit jako hodiny pro datování organických pozůstatků.",
         references: [
           {
-            sourceId: "1952_Libby",
-            locator: "kap. I a VI"
+            sourceId: "1949_Arnold_Libby",
+            locator: "s. 678–680, tabulka 1 a obrázek 1"
           }
         ]
       },
       {
-        text: "Výpočet vyžaduje znát také výchozí obsah uhlíku-14. Ten nebyl v atmosféře vždy stejný, proto se radiouhlíkové stáří převádí na kalendářní pomocí kalibrace. Současná křivka IntCal20 využívá mimo jiné datované letokruhy. Zpřesnění časové stupnice tak stojí na porovnání nezávislých záznamů.",
+        text: "Živý organismus přijímá uhlík z okolí. Po ukončení této výměny uhlík-14 postupně ubývá a z jeho zbývající aktivity lze určit radiouhlíkové stáří. Metoda dala výzkumu minulého klimatu nástroj k datování dřeva, rašeliny a dalších organických záznamů. Libby její postupy souhrnně popsal v knize z roku 1952.",
         references: [
           {
-            sourceId: "DOI_10_1017_RDC_2020_41",
-            locator: "oddíly o podkladech kalibrační křivky"
+            sourceId: "1952_Libby",
+            locator: "kap. I a VI"
           }
         ]
       }
@@ -547,7 +875,40 @@ export const historyEvents: HistoryEvent[] = [
     relatedLinks: [
       {
         href: "/metody/radiometricke-a-expozicni-datovani/",
-        label: "Jak funguje datování a jeho kalibrace"
+        label: "Jak funguje radiouhlíkové datování a jeho kalibrace"
+      }
+    ]
+  },
+  {
+    id: "1950_Numericka_Predpoved",
+    year: 1950,
+    dateMeaning: "Zveřejnění výpočtů na počítači ENIAC",
+    title: "Počítač počítá vývoj počasí z fyzikálních rovnic",
+    category: "methods",
+    paragraphs: [
+      {
+        text: "Jule Charney, Ragnar Fjørtoft a John von Neumann použili elektronický počítač ENIAC k výpočtu vývoje atmosférického proudění. Z počátečního stavu odvozeného z měření počítali změny v síti bodů a postupovali po časových krocích. Zveřejnili čtyři předpovědi proudění na 24 hodin.",
+        references: [
+          {
+            sourceId: "1950_Charney_Fjortoft_von_Neumann",
+            locator: "abstrakt a popis výpočetního postupu"
+          }
+        ]
+      },
+      {
+        text: "Vypočtené mapy porovnali se skutečným vývojem. Práce ukázala, že fyzikální rovnice lze převést na proveditelný počítačový postup a jeho výsledky ověřovat pozorováním. Šlo o model počasí se zjednodušeným popisem proudění. Tento způsob výpočtu připravil cestu i pozdějším modelům dlouhodobého vývoje klimatu.",
+        references: [
+          {
+            sourceId: "1950_Charney_Fjortoft_von_Neumann",
+            locator: "obr. 2–5 a porovnání předpovědí s pozorováním"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/metody/asimilace-dat-a-reanalyzy/",
+        label: "Jak propojujeme pozorování s výpočetním modelem"
       }
     ]
   },

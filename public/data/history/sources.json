@@ -1,0 +1,33 @@
+{
+  "description": "Veřejné skeny původních prací k historické ose. Původ a kontrolní součty umožňují ověřit kopie.",
+  "sources": [
+    {
+      "sourceId": "1879_Stefan",
+      "file": "1879-stefan.pdf",
+      "downloadedFrom": "http://www.ing-buero-ebel.de/strahlung/Original/Stefan1879.pdf",
+      "checkedOn": "2026-11-05",
+      "sha256": "5025e5c7d442fe3e636d55aa8826a98a75d352fbf5c731c3024afae546ed2607",
+      "bytes": 2090359,
+      "rights": {
+        "status": "public-domain",
+        "basis": "Původní text z 19. století. Autor zemřel v roce 1893. Jde o reprodukci historické sazby, nikoli novodobý překlad.",
+        "authorDeathYear": 1893
+      },
+      "verification": "Sken zkontrolován podle názvu, autora, časopisu a citovaných tištěných stran. Soubor uložen beze změny."
+    },
+    {
+      "sourceId": "1884_Boltzmann",
+      "file": "1884-boltzmann.pdf",
+      "downloadedFrom": "http://www.ing-buero-ebel.de/strahlung/Original/Boltzmann1884.pdf",
+      "checkedOn": "2026-11-05",
+      "sha256": "d50fba3080aab03a79a0ee2b7c4a3adfff0446d8f3582f5b2fc90611d0a52978",
+      "bytes": 182416,
+      "rights": {
+        "status": "public-domain",
+        "basis": "Původní text z 19. století. Autor zemřel v roce 1906. Jde o reprodukci historické sazby, nikoli novodobý překlad.",
+        "authorDeathYear": 1906
+      },
+      "verification": "Sken zkontrolován podle názvu, autora, časopisu a citovaných tištěných stran. Soubor uložen beze změny."
+    }
+  ]
+}

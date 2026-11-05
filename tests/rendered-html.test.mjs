@@ -820,6 +820,7 @@ test("publishes a complete, chronological history with traceable sources and sta
   assert.equal(historyEvents.find(event => event.id === "1767_Saussure").year, 1774);
   assert.equal(historyEvents.find(event => event.id === "1801_Herschel").year, 1800);
   assert.equal(historyEvents.find(event => event.id === "1862_Tyndall").year, 1861);
+  assert.equal(historyEvents.find(event => event.id === "1952_Libby").year, 1949);
   assert.doesNotMatch(html, /citation--missing|Předchozí milník|Další milník/);
 });
 
