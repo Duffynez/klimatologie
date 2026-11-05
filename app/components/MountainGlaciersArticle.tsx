@@ -343,13 +343,15 @@ export function MountainGlaciersArticle() {
               Globální řádek pro roky 2000–2019 uvádí −266,58 Gt za rok, tedy po zaokrouhlení úbytek 267 Gt za rok.
             </p>
             <p>
-              Katalog Theia navíc popisuje mapy a výsledky jednotlivých ledovců. Odkaz vede na jeho veřejná metadata,
-              tedy popis souborů, jednotek a podmínek použití. Interaktivní stažení souborů se při této kontrole
-              nepodařilo ověřit.
+              Theia/SEDOO nabízí i podrobnější výsledky. Přímý odkaz na kartě stáhne balíček regionálních tabulek
+              CSV s časově proměnnou plochou ledovců. Je zabalený ve formátu TAR a má přibližně 14,8 MB.
+              V portálu otevřeném přes DOI lze po volbě <em>Download</em> a <em>Times series</em> vybrat také
+              tabulky jednotlivých ledovců. Samostatná záložka <em>Elevation change maps</em> nabízí výškové mapy
+              podle oblasti a období. Data jsou dostupná bez přihlášení pod licencí CC BY 4.0.
             </p>
             <p className="article-data-item__links">
               <SourceLink id="DOI_10_5904_wgms_glambie_2024_07">Data GlaMBIE</SourceLink>{" "}
-              <SourceLink id="DOI_10_6096_13">Popis archivu Hugonnet et al.</SourceLink>{" "}
+              <SourceLink id="DOI_10_6096_13">Tabulky a portál Hugonnet et al.</SourceLink>{" "}
               <SourceLink id="WEB_GitHub_GitHub_rhugonnet_ww_tvol_study_Process_global_sc_300ee76a">Kód Hugonnet et al.</SourceLink>
             </p>
           </section>

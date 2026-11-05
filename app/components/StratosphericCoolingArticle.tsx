@@ -189,7 +189,7 @@ export function StratosphericCoolingArticle() {
           přístroje, výšce a osvětlení. Přesný postup se mezi generacemi radiosond měnil. Klimatické zpracování
           musí znát datum těchto změn, protože výměna čidla může v místním záznamu vytvořit skok.{" "}
           <SourceLink id="WEB_World_Meteorological_Organiz_Guide_to_Instruments_and_Methods_of_Observation_93c4c4a4">
-            WMO Guide to Instruments and Methods of Observation
+            WMO 2024, svazek I, kapitola 12
           </SourceLink>
         </p>
 

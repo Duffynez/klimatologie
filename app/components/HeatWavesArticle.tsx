@@ -274,8 +274,7 @@ export function HeatWavesArticle() {
               <SourceLink id="WEB_Copernicus_E_OBS_data_access_94a6a7b1">portál E-OBS</SourceLink>.{" "}
               <strong>Metoda:</strong> <SourceLink id="DOI_10_1029_2017jd028200">Cornes et al., 2018</SourceLink>,{" "}
               <SourceLink id="DOI_10_24381_cds_151d3ec6">datový záznam a přímá cesta k E-OBS</SourceLink>.
-              Soubory lze z přímého portálu stáhnout bez přihlášení. DOI vede do katalogu CDS, který při kontrole
-              5. listopadu 2026 nebyl z použitého připojení dostupný. Rozdíly mezi variantami
+              Soubory lze z přímého portálu stáhnout bez přihlášení. DOI vede na záznam v katalogu CDS. Rozdíly mezi variantami
               vyjadřují nejistotu doplnění prostoru mezi stanicemi, nikoli veškeré chyby měření a změn staniční sítě.
             </p>
           </section>
@@ -303,12 +302,12 @@ export function HeatWavesArticle() {
               <strong> Pokrytí:</strong> celý svět, původní prostorové rozlišení přibližně 31 km, běžný výstup
               převedený do mřížky 0,25°. <strong>Verze:</strong> pátá generace reanalýzy Evropského střediska pro
               střednědobé předpovědi počasí (ECMWF). Reanalýza je zpětná rekonstrukce počasí kombinující měření
-              a fyzikální model, nikoli síť teploměrů v každé buňce. <strong>Stažení:</strong>{" "}
-              <SourceLink id="WEB_Copernicus_ERA5_hourly_data_on_single_levels_from_1940_to_p_7e4f50d4">popis produktu u ECMWF s odkazem do Climate Data Store</SourceLink>.{" "}
+              a fyzikální model, nikoli síť teploměrů v každé buňce. <strong>Dokumentace:</strong>{" "}
+              <SourceLink id="WEB_Copernicus_ERA5_hourly_data_on_single_levels_from_1940_to_p_7e4f50d4">popis produktu u ECMWF</SourceLink>.{" "}
               <strong>Metoda:</strong> <SourceLink id="DOI_10_1002_qj_3803">Hersbach et al., 2020</SourceLink>,{" "}
-              <SourceLink id="DOI_10_24381_cds_adbb2d47">datový záznam</SourceLink>. Stažení v datovém úložišti
-              Copernicus vyžaduje bezplatný účet a přijetí podmínek produktu. Při kontrole 5. listopadu 2026 nebyl
-              katalog CDS z použitého připojení dostupný, samotné stažení ERA5 proto nebylo ověřeno.
+              <SourceLink id="DOI_10_24381_cds_adbb2d47">výběr dat v Climate Data Store</SourceLink>. Ve formuláři se
+              volí veličina, rok, měsíc, den, hodina, oblast a formát souboru. Odeslání požadavku vyžaduje bezplatný
+              účet a přijetí licence produktu.
             </p>
           </section>
 

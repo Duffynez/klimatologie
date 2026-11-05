@@ -292,6 +292,15 @@ export function IceSheetsArticle() {
               Antarktida začíná lednem 1979, oba záznamy končí prosincem 2023.
             </p>
             <p>
+              Společný úbytek za roky 1979–2023 lze zkontrolovat ve sloupci kumulované bilance souborů pro
+              Grónsko a Antarktidu. U každého odečteme první hodnotu roku 1979 od poslední hodnoty roku 2023
+              a oba rozdíly sečteme. Vyjde změna −11 308,974 Gt, po zaokrouhlení úbytek 11 309 Gt, který uvádí
+              studie. Kumulovaná hodnota už obsahuje změnu od počátku záznamu. Prostý součet všech měsíčních
+              rychlostí dělených dvanácti by navíc zahrnul první měsíční příspěvek, který je již obsažený
+              v odečítané počáteční hodnotě.{" "}
+              <SourceLink id="DOI_10_5285_128c5e33_5224_4197_82f0_19dcc95b80a0">Původní tabulky IMBIE</SourceLink>
+            </p>
+            <p>
               Obě vydání jsou v archivu British Antarctic Survey dostupná bez přihlášení. Při kontrole 3. listopadu 2026
               bylo možné stáhnout všech dvanáct tabulek staršího a deset tabulek novějšího vydání.
               Přehled publikací a dat IMBIE zpřístupňuje také starší vyhodnocení.
@@ -299,6 +308,7 @@ export function IceSheetsArticle() {
             <p className="article-data-item__links">
               <SourceLink id="DOI_10_5285_128c5e33_5224_4197_82f0_19dcc95b80a0">Záznam datového vydání do roku 2023</SourceLink>{" "}
               <SourceLink id="DOI_10_1038_s41597_026_08088_0">Metody a výsledkové tabulky</SourceLink>{" "}
+              <SourceLink id="DOI_10_5281_zenodo_14217193">Archivovaný výpočetní kód, verze 3.1</SourceLink>{" "}
               <SourceLink id="WEB_imbie_org_imbie_org_e2c3f887">Přehled vydání IMBIE</SourceLink>
             </p>
           </section>

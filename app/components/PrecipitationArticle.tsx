@@ -142,7 +142,7 @@ export function PrecipitationArticle() {
           Převod závisí na velikosti a skupenství částic. Terén může paprsek zakrýt, s rostoucí vzdáleností radar sleduje
           vyšší vrstvu atmosféry a při silné srážce se signál zeslabuje. Pro klimatický záznam se proto radarové odhady
           obvykle upravují podle srážkoměrů. Radar výborně popisuje prostor konkrétní události, jeho dlouhodobý záznam je
-          však kratší a změny zařízení mohou vytvářet skoky. <SourceLink id="WEB_World_Meteorological_Organiz_Guide_to_Instruments_and_Methods_of_Observation_93c4c4a4">WMO Guide No. 8, svazek III, kapitola 7</SourceLink>
+          však kratší a změny zařízení mohou vytvářet skoky. <SourceLink id="WMO_2024_Guide_Volume_III">WMO Guide No. 8, svazek III, kapitola 7</SourceLink>
         </p>
 
         <h3 id="druzice">Družice</h3>
@@ -530,8 +530,8 @@ export function PrecipitationArticle() {
         <p>
           K odborným pracím uvádíme veřejný plný text bez předplatného. Pokud má práce DOI, odkazujeme i na něj. U studie Gu a Adlera je veřejnou
           kopií autorský preprint z roku 2022. Data a metodické dokumenty odkazují přímo k poskytovatelům.
-          Jednotlivé realizace E-OBS jsou dostupné na žádost, stažení IMERG vyžaduje účet Earthdata a plné svazky
-          příručky WMO mohou vyžadovat ruční ověření návštěvníka. Odkazy na Google Drive se u zdrojů tohoto článku nepoužívají.
+          Jednotlivé realizace E-OBS jsou dostupné na žádost a stažení IMERG vyžaduje účet Earthdata. Svazky I a III
+          příručky WMO ve vydání 2024 mají na kartách přímé odkazy na úplná veřejná PDF. Odkazy na Google Drive se u zdrojů tohoto článku nepoužívají.
         </p>
         <div className="article-source-groups">
           <section>
@@ -570,9 +570,9 @@ export function PrecipitationArticle() {
                 jak rozbor odebrané vody doplňuje měření srážkových úhrnů o informace z izotopového složení.
               </li>
               <li>
-                WMO: <em>Guide to Instruments and Methods of Observation</em>, svazek I, kapitola 6 o měření srážek a
-                svazek III, kapitola 7 o radaru.{" "}
-                <SourceLink id="WEB_World_Meteorological_Organiz_Guide_to_Instruments_and_Methods_of_Observation_93c4c4a4">Příručka WMO No. 8</SourceLink>
+                WMO (2024): <em>Guide to Instruments and Methods of Observation</em>.{" "}
+                <SourceLink id="WEB_World_Meteorological_Organiz_Guide_to_Instruments_and_Methods_of_Observation_93c4c4a4">Svazek I, kapitola 6 o měření srážek</SourceLink> a{" "}
+                <SourceLink id="WMO_2024_Guide_Volume_III">svazek III, kapitola 7 o radaru</SourceLink>.
               </li>
               <li>
                 Menne, M. J. et al. (2012): vznik a struktura GHCN-Daily. <SourceLink id="DOI_10_1175_jtech_d_11_00103_1">DOI 10.1175/JTECH-D-11-00103.1</SourceLink>

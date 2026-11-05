@@ -1,0 +1,5442 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-05",
+  "initialCommit": "1db0d46",
+  "integrationBase": "48f41f6b57e2b083193a24e995c3b40fdb3c2801",
+  "scope": "Follow-up of unresolved source-audit findings in all fourteen observations",
+  "changedArticleSlugs": [
+    "gmst",
+    "stratosfericke-ochlazovani",
+    "narust-vlhkosti",
+    "srazky-a-privalove-srazky",
+    "tepelny-obsah-oceanu",
+    "acidifikace-oceanu",
+    "ustup-ledovcu",
+    "nestabilita-prikrovu",
+    "vlny-veder"
+  ],
+  "changedExistingSourceIds": [
+    "WEB_Copernicus_ERA5_hourly_data_on_single_levels_from_1940_to_p_7e4f50d4",
+    "DOI_10_12157_iocas_20230720_001",
+    "DOI_10_24381_cds_adbb2d47",
+    "DOI_10_24381_cds_151d3ec6",
+    "DOI_10_6096_13",
+    "WEB_World_Meteorological_Organiz_Guide_to_Instruments_and_Methods_of_Observation_93c4c4a4",
+    "DOI_10_1038_s41597_026_08088_0"
+  ],
+  "newSourceIds": [
+    "WMO_2024_Guide_Volume_III",
+    "DOI_10_5281_zenodo_14217193"
+  ],
+  "findings": [
+    {
+      "id": "IMBIE",
+      "status": "partial",
+      "resolved": "Published combined loss reproduced from differences between cumulative monthly endpoints, article now explains the operation.",
+      "unresolved": "Greenland 2020–2023 arithmetic mean -198.00111928125 Gt/yr versus published -199 ± 29 Gt/yr."
+    },
+    {
+      "id": "IAP",
+      "status": "claim-corrected",
+      "resolved": "1958–2025 statement and summary now use the directly reproducible 443.725 ZJ from the cited monthly table, rounded to 444 ZJ.",
+      "unresolved": "Exact origin of differences between separately published table and original figure was not established."
+    },
+    {
+      "id": "Aono2008",
+      "status": "external-blocker",
+      "reason": "Original repository returns 503 maintenance. Legacy author hostname fails DNS. Article continues to use the available original NOAA/WDS data rather than the inaccessible paper."
+    },
+    {
+      "id": "Hugonnet",
+      "status": "resolved-access-route",
+      "evidence": "Official portal works and two complete original TAR archives were downloaded and read.",
+      "notClaimed": "All per-glacier tables and all map rasters were not downloaded."
+    },
+    {
+      "id": "CDS",
+      "status": "resolved-access-route",
+      "evidence": "ERA5 catalogue and Download form verified in a normal browser. E-OBS DOI resolves to correct CDS product.",
+      "condition": "Full ERA5 request requires login and licence acceptance. No authenticated request was submitted."
+    },
+    {
+      "id": "WMO",
+      "status": "resolved",
+      "evidence": "Full 2024 Volumes I and III verified. Public complete PDFs are linked, with the correct chapters used."
+    },
+    {
+      "id": "IOCAS",
+      "status": "verified-with-account-condition",
+      "evidence": "Normal browser displays correct product, Check file list, annual files 1992–2020 and the login condition. Card links to the verified English catalogue and explicitly labels the condition.",
+      "notClaimed": "Authenticated download was not performed."
+    }
+  ],
+  "completeDownloadCount": 18,
+  "completeDownloadBytes": 6013741845,
+  "completeFiles": [
+    {
+      "id": "wmo-2024",
+      "url": "https://amc.namem.gov.mn/wp-content/uploads/WMO1/1.%208-I-2024_en.pdf?_t=1638837866",
+      "status": 200,
+      "bytes": 25251560,
+      "sha256": "b2b1bb995824bbc879849965c96d09f64b8a99cf08bc318754c928fcfcef1031",
+      "complete": true
+    },
+    {
+      "id": "iap-table",
+      "url": "http://www.ocean.iap.ac.cn/ftp/images_files/IAPv4.2_OHC_estimate_update.txt",
+      "status": 200,
+      "bytes": 79946,
+      "sha256": "a9ac01b9d802666eca7f7b15814abd06888273eb7d36de43fa503c6f1a772d33",
+      "complete": true
+    },
+    {
+      "id": "wgms-fog",
+      "url": "https://wgms.ch/downloads/DOI-WGMS-FoG-2026-02-10.zip",
+      "status": 200,
+      "bytes": 39137587,
+      "sha256": "60e925b5ad7e319df6742790f02fa14b6012bea49a75b4c6a04b8f50ac30d612",
+      "complete": true
+    },
+    {
+      "id": "wgms-amce",
+      "url": "https://wgms.ch/downloads/wgms-amce-2026-02-10.zip",
+      "status": 200,
+      "bytes": 53589520,
+      "sha256": "b88c2355650142160594c96dcb800e3fb58d82abbebd0ab2d976a458153e2ecc",
+      "complete": true
+    },
+    {
+      "id": "imbie-code",
+      "url": "https://zenodo.org/api/records/14217193/files/imbie-v3.1.zip/content",
+      "status": 200,
+      "bytes": 515680,
+      "sha256": "0da056831227091e0ae4f9fb630dac9827df21114e3617c6122c50d3d77bc28e",
+      "complete": true
+    },
+    {
+      "id": "imbie-escholarship",
+      "url": "https://escholarship.org/content/qt37q7g6zh/qt37q7g6zh.pdf",
+      "status": 200,
+      "bytes": 2368069,
+      "sha256": "a8d51daf5d48d813804e91762c8f87a114ccf35fdf9c5ba8904b5472fa1ef246",
+      "complete": true
+    },
+    {
+      "id": "wmo-iii-2024",
+      "url": "https://amc.namem.gov.mn/wp-content/uploads/WMO1/1.%208-III-2024_en.pdf?_t=1638837866",
+      "status": 200,
+      "bytes": 47787533,
+      "sha256": "cdd0f85e87d4571badf42dfcf53e84c947dc1fda5b3e01f0f33b621d24698a5a",
+      "complete": true
+    },
+    {
+      "id": "sedoo-regional-varying",
+      "url": "https://api.sedoo.fr/sedoo-glaciers-rest/data/v1_0/downloadTimeSeries?filter=regionvarying",
+      "status": 200,
+      "bytes": 14813696,
+      "sha256": "3b20aeb6404f481b0cc8adfb237fafad092a475c939f15507e143c779502c0f6",
+      "complete": true
+    },
+    {
+      "id": "sedoo-regional-fixed",
+      "url": "https://api.sedoo.fr/sedoo-glaciers-rest/data/v1_0/downloadTimeSeries?filter=regionfixed",
+      "status": 200,
+      "bytes": 29192704,
+      "sha256": "e27e3c14d53ee64c1a463773d1462a8675fa0ebd6601f7f9253324f6f987d18f",
+      "complete": true
+    },
+    {
+      "id": "copernicus-sea-level",
+      "url": "https://climate.copernicus.eu/sites/default/files/custom-uploads/indicators-2025/sea-level/fig2_data.nc",
+      "status": 200,
+      "bytes": 20763537,
+      "sha256": "7d83ab8853c356216e8591765dc7e0290f153a2e452b3917d0b6ef3e7dd58366",
+      "complete": true
+    },
+    {
+      "id": "bats-complete",
+      "url": "https://datadocs.bco-dmo.org/dataset/3782/file/QAD9QkVh9ORw3x/3782_v10_bats_bottle.csv",
+      "status": 200,
+      "bytes": 17679647,
+      "sha256": "7c38d3c147b98c146f7dfb39b5b8b54ee10c8032e4a60b79014dd7fdcb509472",
+      "complete": true
+    },
+    {
+      "id": "nasa-sp489",
+      "url": "https://ntrs.nasa.gov/api/citations/19870015437/downloads/19870015437.pdf",
+      "status": 200,
+      "bytes": 414518263,
+      "sha256": "bfc3b35ace915d98bd91039b02539c43668abe8d1bbdf6f912d88e548d12754d",
+      "complete": true
+    },
+    {
+      "id": "its-live-complete",
+      "url": "https://its-live-data.s3.amazonaws.com/height_change/Greenland/Greenland_G1920V01_IceSheetGlacierIceHeight.nc",
+      "status": 200,
+      "bytes": 1853161765,
+      "sha256": "04c8259891a0a94dfa5f9e4996dfaad57ca13763a988dbbee5cda795a9f4a4b2",
+      "complete": true
+    },
+    {
+      "id": "eobs-complete",
+      "url": "https://knmi-ecad-assets-prd.s3.amazonaws.com/ensembles/data/Grid_0.25deg_reg_ensemble/tx_ens_mean_0.25deg_reg_v34.0e.nc",
+      "status": 200,
+      "bytes": 903941781,
+      "sha256": "3da30ca3b1298d7f3a09efc9baca728754d6f3be97ad3f2728001b28e73fb702",
+      "complete": true
+    },
+    {
+      "id": "fresh-imbie3_antarctica_Gt_partitioned",
+      "url": "https://ramadda.data.bas.ac.uk/repository/entry/get/imbie3_antarctica_Gt_partitioned.csv?entryid=synth%3A128c5e33-5224-4197-82f0-19dcc95b80a0%3AL2ltYmllM19hbnRhcmN0aWNhX0d0X3BhcnRpdGlvbmVkLmNzdg%3D%3D",
+      "status": 200,
+      "bytes": 83257,
+      "sha256": "cdb5f37c703af3fb36ccbf89f6ca0ba8b444817cb48ff34cc77ca7a9d9a525b2",
+      "complete": true
+    },
+    {
+      "id": "fresh-imbie3_greenland_Gt_partitioned",
+      "url": "https://ramadda.data.bas.ac.uk/repository/entry/get/imbie3_greenland_Gt_partitioned.csv?entryid=synth%3A128c5e33-5224-4197-82f0-19dcc95b80a0%3AL2ltYmllM19ncmVlbmxhbmRfR3RfcGFydGl0aW9uZWQuY3N2",
+      "status": 200,
+      "bytes": 101046,
+      "sha256": "1d4df7c73845ab9194fd07999ce7a7716d01ef5c9fbc2d4a464be5afc6b52a26",
+      "complete": true
+    },
+    {
+      "id": "gsdr-grids",
+      "url": "https://zenodo.org/api/records/7492812/files/Grids.zip/content",
+      "bytes": 1349760604,
+      "md5": "ee125dcb5562da6355ef4b37e6787792",
+      "sha256": "c13584d26c7bfbbd9f70f65b797b233683b25e9fba7e53d4149c46ce696b9a18",
+      "checksumMatchesPublisher": true,
+      "members": 204,
+      "badMember": null,
+      "complete": true,
+      "firstMembers": [
+        "Supplementary/Annual/",
+        "Supplementary/Annual/Annual_DiCyc1mm.nc",
+        "Supplementary/Annual/Annual_R95pa12hr.nc",
+        "Supplementary/Annual/Annual_R95pa1hr.nc",
+        "Supplementary/Annual/Annual_R95pa24hr.nc",
+        "Supplementary/Annual/Annual_R95pa3hr.nc",
+        "Supplementary/Annual/Annual_R95pa6hr.nc",
+        "Supplementary/Annual/Annual_R95pw12hr.nc",
+        "Supplementary/Annual/Annual_R95pw1hr.nc",
+        "Supplementary/Annual/Annual_R95pw24hr.nc",
+        "Supplementary/Annual/Annual_R95pw3hr.nc",
+        "Supplementary/Annual/Annual_R95pw6hr.nc",
+        "Supplementary/Annual/Annual_R99pa12hr.nc",
+        "Supplementary/Annual/Annual_R99pa1hr.nc",
+        "Supplementary/Annual/Annual_R99pa24hr.nc",
+        "Supplementary/Annual/Annual_R99pa3hr.nc",
+        "Supplementary/Annual/Annual_R99pa6hr.nc",
+        "Supplementary/Annual/Annual_R99pw12hr.nc",
+        "Supplementary/Annual/Annual_R99pw1hr.nc",
+        "Supplementary/Annual/Annual_R99pw24hr.nc",
+        "Supplementary/Annual/Annual_R99pw3hr.nc",
+        "Supplementary/Annual/Annual_R99pw6hr.nc",
+        "Supplementary/Monthly/",
+        "Supplementary/Monthly/Monthly_DiCyc1mm.nc",
+        "Supplementary/Monthly/Monthly_R95pa12hr.nc"
+      ],
+      "status": 200,
+      "transport": "Verified HTTP 206 ranges assembled in order"
+    },
+    {
+      "id": "gsdr-gauge",
+      "url": "https://zenodo.org/api/records/7492812/files/Gauge.zip/content",
+      "bytes": 1240995650,
+      "md5": "dc6bfcf501110a1ce65cd8d38277d5c8",
+      "sha256": "c5c9954d0d5620d3e53725c8f5b1b286daad1261edb2823f48cd19f7cd18bf54",
+      "checksumMatchesPublisher": true,
+      "members": 205,
+      "badMember": null,
+      "complete": true,
+      "firstMembers": [
+        "Metadata.csv",
+        "Supplementary/Annual/",
+        "Supplementary/Annual/Supplementary_Annual_DiCyc1mm.zip",
+        "Supplementary/Annual/Supplementary_Annual_R95pa12hr.zip",
+        "Supplementary/Annual/Supplementary_Annual_R95pa1hr.zip",
+        "Supplementary/Annual/Supplementary_Annual_R95pa24hr.zip",
+        "Supplementary/Annual/Supplementary_Annual_R95pa3hr.zip",
+        "Supplementary/Annual/Supplementary_Annual_R95pa6hr.zip",
+        "Supplementary/Annual/Supplementary_Annual_R95pw12hr.zip",
+        "Supplementary/Annual/Supplementary_Annual_R95pw1hr.zip",
+        "Supplementary/Annual/Supplementary_Annual_R95pw24hr.zip",
+        "Supplementary/Annual/Supplementary_Annual_R95pw3hr.zip",
+        "Supplementary/Annual/Supplementary_Annual_R95pw6hr.zip",
+        "Supplementary/Annual/Supplementary_Annual_R99pa12hr.zip",
+        "Supplementary/Annual/Supplementary_Annual_R99pa1hr.zip",
+        "Supplementary/Annual/Supplementary_Annual_R99pa24hr.zip",
+        "Supplementary/Annual/Supplementary_Annual_R99pa3hr.zip",
+        "Supplementary/Annual/Supplementary_Annual_R99pa6hr.zip",
+        "Supplementary/Annual/Supplementary_Annual_R99pw12hr.zip",
+        "Supplementary/Annual/Supplementary_Annual_R99pw1hr.zip",
+        "Supplementary/Annual/Supplementary_Annual_R99pw24hr.zip",
+        "Supplementary/Annual/Supplementary_Annual_R99pw3hr.zip",
+        "Supplementary/Annual/Supplementary_Annual_R99pw6hr.zip",
+        "Supplementary/Monthly/",
+        "Supplementary/Monthly/Supplementary_Monthly_DiCyc1mm.zip"
+      ],
+      "status": 200,
+      "transport": "Verified HTTP 206 ranges assembled in order"
+    }
+  ],
+  "requests": [
+    {
+      "id": "wmo-2024",
+      "url": "https://amc.namem.gov.mn/wp-content/uploads/WMO1/1.%208-I-2024_en.pdf?_t=1638837866",
+      "status": 200,
+      "finalUrl": "https://amc.namem.gov.mn/wp-content/uploads/WMO1/1.%208-I-2024_en.pdf?_t=1638837866",
+      "contentType": "application/pdf",
+      "contentLength": "25251560",
+      "contentRange": null,
+      "bytes": 25251560,
+      "truncated": false,
+      "file": "wmo-2024.download",
+      "sha256": "b2b1bb995824bbc879849965c96d09f64b8a99cf08bc318754c928fcfcef1031",
+      "signature": "255044462d312e360d25e2e3cfd30d0a",
+      "durationSeconds": 7.735,
+      "method": "GET",
+      "batch": "initial"
+    },
+    {
+      "id": "aono-2008",
+      "url": "https://omu.repo.nii.ac.jp/record/709/files/2010000032.pdf",
+      "status": 503,
+      "finalUrl": "https://omu.repo.nii.ac.jp/record/709/files/2010000032.pdf",
+      "contentType": "text/html",
+      "contentLength": "690",
+      "contentRange": null,
+      "bytes": 690,
+      "truncated": false,
+      "file": "aono-2008.download",
+      "sha256": "48c30ea06c55b5c7dccdd6a0842b8d720ea3902b050a2f222b280e26384c14ea",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 1.005,
+      "method": "GET",
+      "batch": "initial",
+      "challenge": false
+    },
+    {
+      "id": "sedoo-metadata",
+      "url": "https://api.sedoo.fr/theia-catalogue-prod/metadata/c428c5b9-df8f-4f86-9b75-e04c778e29b9",
+      "status": 200,
+      "finalUrl": "https://api.sedoo.fr/theia-catalogue-prod/metadata/c428c5b9-df8f-4f86-9b75-e04c778e29b9",
+      "contentType": "text/plain;charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 12866,
+      "truncated": false,
+      "file": "sedoo-metadata.download",
+      "sha256": "0b8d66c585d1855146d0150dbd805f5eea32bdba8d2268736a7ef83cc9bd8aa9",
+      "signature": "7b227265736f757263655469746c6522",
+      "durationSeconds": 0.402,
+      "method": "GET",
+      "batch": "initial"
+    },
+    {
+      "id": "era5-catalogue",
+      "url": "https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=download",
+      "status": 200,
+      "finalUrl": "https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=download",
+      "contentType": "text/html; charset=utf-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 424545,
+      "truncated": false,
+      "file": "era5-catalogue.download",
+      "sha256": "f5d445735a7d0670c69febf31158b0a3954c0261e24d39947a393bffeba2d3bc",
+      "signature": "3c21444f43545950452068746d6c3e3c",
+      "durationSeconds": 0.816,
+      "method": "GET",
+      "batch": "initial",
+      "htmlTitle": "ERA5 hourly data on single levels from 1940 to present",
+      "challenge": false
+    },
+    {
+      "id": "iocas-doi",
+      "url": "https://doi.org/10.12157/IOCAS.20230720.001",
+      "status": 200,
+      "finalUrl": "https://msdc.qdio.ac.cn/data/metadata-special-detail?id=1681888486912692226&lan=en",
+      "contentType": "text/html",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 1215,
+      "truncated": false,
+      "file": "iocas-doi.download",
+      "sha256": "dbbbf2225fee0c882dbc971fa14cf9849d2b6828b76204e31f4524bd83059433",
+      "signature": "3c21444f43545950452068746d6c3e3c",
+      "durationSeconds": 3.638,
+      "method": "GET",
+      "batch": "initial",
+      "htmlTitle": "海洋科学大数据中心",
+      "challenge": false
+    },
+    {
+      "id": "imbie-pmc",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13582886/",
+      "status": 200,
+      "finalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13582886/",
+      "contentType": "text/html; charset=utf-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 21415,
+      "truncated": false,
+      "file": "imbie-pmc.download",
+      "sha256": "3e9543f82c96f2afe53d6e1562e9fc59baa4d9c5b3343c3304f6980020c0e59a",
+      "signature": "3c21646f63747970652068746d6c3e3c",
+      "durationSeconds": 0.485,
+      "method": "GET",
+      "batch": "second",
+      "htmlTitle": "Checking your browser - reCAPTCHA",
+      "challenge": true
+    },
+    {
+      "id": "imbie-code-zenodo",
+      "url": "https://zenodo.org/api/records/14217192",
+      "status": 200,
+      "finalUrl": "https://zenodo.org/api/records/14217193",
+      "contentType": "application/json",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 4900,
+      "truncated": false,
+      "file": "imbie-code-zenodo.download",
+      "sha256": "70966142328d1e2d0be089c770db26dda894ea1cc40839d0c1a16eba499323bc",
+      "signature": "7b2263726561746564223a2022323032",
+      "durationSeconds": 0.506,
+      "method": "GET",
+      "batch": "second"
+    },
+    {
+      "id": "sedoo-doi",
+      "url": "https://doi.org/10.6096/13",
+      "status": 200,
+      "finalUrl": "https://www.sedoo.fr/theia-publication-products/?uuid=c428c5b9-df8f-4f86-9b75-e04c778e29b9",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": "15610",
+      "contentRange": null,
+      "bytes": 67112,
+      "truncated": false,
+      "file": "sedoo-doi.download",
+      "sha256": "9eb49caa831bd85ec1df65558377f68eaa4043b444bd2b3852952ab03a309920",
+      "signature": "3c21646f63747970652068746d6c3e0a",
+      "durationSeconds": 1.737,
+      "method": "GET",
+      "batch": "second",
+      "htmlTitle": "Theia publication products &#8211; Sedoo",
+      "challenge": false
+    },
+    {
+      "id": "iap-table",
+      "url": "http://www.ocean.iap.ac.cn/ftp/images_files/IAPv4.2_OHC_estimate_update.txt",
+      "status": 200,
+      "finalUrl": "http://www.ocean.iap.ac.cn/ftp/images_files/IAPv4.2_OHC_estimate_update.txt",
+      "contentType": "text/plain",
+      "contentLength": "79946",
+      "contentRange": null,
+      "bytes": 79946,
+      "truncated": false,
+      "file": "iap-table.download",
+      "sha256": "a9ac01b9d802666eca7f7b15814abd06888273eb7d36de43fa503c6f1a772d33",
+      "signature": "25252520476c6f62616c204f6365616e",
+      "durationSeconds": 2.155,
+      "method": "GET",
+      "batch": "second"
+    },
+    {
+      "id": "iocas-js",
+      "url": "https://msdc.qdio.ac.cn/static/js/205.bdbbbc84cf36afa9f899.js",
+      "status": 200,
+      "finalUrl": "https://msdc.qdio.ac.cn/static/js/205.bdbbbc84cf36afa9f899.js",
+      "contentType": "application/javascript",
+      "contentLength": "328095",
+      "contentRange": null,
+      "bytes": 328095,
+      "truncated": false,
+      "file": "iocas-js.download",
+      "sha256": "b71b7064b7901a3478e860bdcb60cfb547bf6ccdb2f34d4e61a38a91ac7f64c4",
+      "signature": "2877696e646f772e7765627061636b4a",
+      "durationSeconds": 2.273,
+      "method": "GET",
+      "batch": "second"
+    },
+    {
+      "id": "wgms-fog",
+      "url": "https://wgms.ch/downloads/DOI-WGMS-FoG-2026-02-10.zip",
+      "status": 200,
+      "finalUrl": "https://wgms.ch/downloads/DOI-WGMS-FoG-2026-02-10.zip",
+      "contentType": "application/zip",
+      "contentLength": "39137587",
+      "contentRange": null,
+      "bytes": 39137587,
+      "truncated": false,
+      "file": "wgms-fog.download",
+      "sha256": "60e925b5ad7e319df6742790f02fa14b6012bea49a75b4c6a04b8f50ac30d612",
+      "signature": "504b03041400000008006971575c332b",
+      "durationSeconds": 4.727,
+      "method": "GET",
+      "batch": "second"
+    },
+    {
+      "id": "wgms-amce",
+      "url": "https://wgms.ch/downloads/wgms-amce-2026-02-10.zip",
+      "status": 200,
+      "finalUrl": "https://wgms.ch/downloads/wgms-amce-2026-02-10.zip",
+      "contentType": "application/zip",
+      "contentLength": "53589520",
+      "contentRange": null,
+      "bytes": 53589520,
+      "truncated": false,
+      "file": "wgms-amce.download",
+      "sha256": "b88c2355650142160594c96dcb800e3fb58d82abbebd0ab2d976a458153e2ecc",
+      "signature": "504b0304140000000800767d585cc768",
+      "durationSeconds": 4.534,
+      "method": "GET",
+      "batch": "second"
+    },
+    {
+      "id": "sedoo-component",
+      "url": "https://api.sedoo.fr/aeris-cdn-rest/jsrepo/v1_0/download/sandbox/release/aeris-catalogue-component/3.0.0",
+      "status": 200,
+      "finalUrl": "https://api.sedoo.fr/aeris-cdn-rest/jsrepo/v1_0/download/sandbox/release/aeris-catalogue-component/3.0.0",
+      "contentType": "application/javascript",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 6007259,
+      "truncated": false,
+      "file": "sedoo-component.download",
+      "sha256": "cef9e379f9b000b0b9eaa7ed6c8e05a70e03e7a71accf5ae68f598645f271670",
+      "signature": "2866756e6374696f6e2874297b766172",
+      "durationSeconds": 7.789,
+      "method": "GET",
+      "batch": "third"
+    },
+    {
+      "id": "imbie-code",
+      "url": "https://zenodo.org/api/records/14217193/files/imbie-v3.1.zip/content",
+      "status": 200,
+      "finalUrl": "https://zenodo.org/api/records/14217193/files/imbie-v3.1.zip/content",
+      "contentType": "application/octet-stream, application/octet-stream",
+      "contentLength": "515680",
+      "contentRange": null,
+      "bytes": 515680,
+      "truncated": false,
+      "file": "imbie-code.download",
+      "sha256": "0da056831227091e0ae4f9fb630dac9827df21114e3617c6122c50d3d77bc28e",
+      "signature": "504b03041400000000007d7b33590000",
+      "durationSeconds": 5.806,
+      "method": "GET",
+      "batch": "third"
+    },
+    {
+      "id": "iocas-runtime",
+      "url": "https://msdc.qdio.ac.cn/static/js/manifest.6a8c4c0181dedf5e4215.js",
+      "status": 200,
+      "finalUrl": "https://msdc.qdio.ac.cn/static/js/manifest.6a8c4c0181dedf5e4215.js",
+      "contentType": "application/javascript",
+      "contentLength": "15026",
+      "contentRange": null,
+      "bytes": 15026,
+      "truncated": false,
+      "file": "iocas-runtime.download",
+      "sha256": "42bfd95ed646ad9531cd7432d10cf23fd8b30910886b5cca5384ff6d63bf185d",
+      "signature": "2166756e6374696f6e2865297b66756e",
+      "durationSeconds": 3.775,
+      "method": "GET",
+      "batch": "third"
+    },
+    {
+      "id": "imbie-tudelft",
+      "url": "https://repository.tudelft.nl/record/uuid%3A02490f09-700c-4145-8b0d-ab9af6a5f19c",
+      "error": "HTTPSConnectionPool(host='repository.tudelft.nl', port=443): Max retries exceeded with url: /record/uuid%3A02490f09-700c-4145-8b0d-ab9af6a5f19c (Caused by ConnectTimeoutError(<HTTPSConnection(host='repository.tudelft.nl', port=443) at 0x1e7aa37fcb0>, 'Connection to repository.tudelft.nl timed out. (connect timeout=20)'))",
+      "durationSeconds": 20.083,
+      "method": "GET",
+      "batch": "third"
+    },
+    {
+      "id": "imbie-escholarship",
+      "url": "https://escholarship.org/content/qt37q7g6zh/qt37q7g6zh.pdf",
+      "status": 200,
+      "finalUrl": "https://escholarship.org/content/qt37q7g6zh/qt37q7g6zh.pdf",
+      "contentType": "application/pdf",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 2368069,
+      "truncated": false,
+      "file": "imbie-escholarship.download",
+      "sha256": "a8d51daf5d48d813804e91762c8f87a114ccf35fdf9c5ba8904b5472fa1ef246",
+      "signature": "255044462d312e330a25bff7a2fe0a33",
+      "durationSeconds": 3.486,
+      "method": "GET",
+      "batch": "third"
+    },
+    {
+      "id": "wmo-iii-2024",
+      "url": "https://amc.namem.gov.mn/wp-content/uploads/WMO1/1.%208-III-2024_en.pdf?_t=1638837866",
+      "status": 200,
+      "finalUrl": "https://amc.namem.gov.mn/wp-content/uploads/WMO1/1.%208-III-2024_en.pdf?_t=1638837866",
+      "contentType": "application/pdf",
+      "contentLength": "47787533",
+      "contentRange": null,
+      "bytes": 47787533,
+      "truncated": false,
+      "file": "wmo-iii-2024.download",
+      "sha256": "cdd0f85e87d4571badf42dfcf53e84c947dc1fda5b3e01f0f33b621d24698a5a",
+      "signature": "255044462d312e340d25e2e3cfd30d0a",
+      "durationSeconds": 5.214,
+      "method": "GET",
+      "batch": "fourth"
+    },
+    {
+      "id": "iocas-detail-js",
+      "url": "https://msdc.qdio.ac.cn/static/js/68.27178d79cba765a5686a.js",
+      "status": 200,
+      "finalUrl": "https://msdc.qdio.ac.cn/static/js/68.27178d79cba765a5686a.js",
+      "contentType": "application/javascript",
+      "contentLength": "70056",
+      "contentRange": null,
+      "bytes": 70056,
+      "truncated": false,
+      "file": "iocas-detail-js.download",
+      "sha256": "37ecedac4d0a831f8a73f5a8a4399c97a8e4236c68d63df0ac29037b965b4249",
+      "signature": "2877696e646f772e7765627061636b4a",
+      "durationSeconds": 1.77,
+      "method": "GET",
+      "batch": "fourth"
+    },
+    {
+      "id": "iocas-files-js",
+      "url": "https://msdc.qdio.ac.cn/static/js/98.7d4c1b1370cfd18d627a.js",
+      "status": 200,
+      "finalUrl": "https://msdc.qdio.ac.cn/static/js/98.7d4c1b1370cfd18d627a.js",
+      "contentType": "application/javascript",
+      "contentLength": "8231",
+      "contentRange": null,
+      "bytes": 8231,
+      "truncated": false,
+      "file": "iocas-files-js.download",
+      "sha256": "94f48ced8bf91b11c16249954db1fa5ae711175719c2adaadf1161fa6c59eca6",
+      "signature": "2877696e646f772e7765627061636b4a",
+      "durationSeconds": 1.237,
+      "method": "GET",
+      "batch": "fourth"
+    },
+    {
+      "id": "sedoo-template",
+      "url": "https://api.sedoo.fr/aeris-metadata-template-rest/template/v2/byname/glaciers",
+      "status": 200,
+      "finalUrl": "https://api.sedoo.fr/aeris-metadata-template-rest/template/v2/byname/glaciers",
+      "contentType": "application/json",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 2943,
+      "truncated": false,
+      "file": "sedoo-template.download",
+      "sha256": "fec68f916938f9908ee611dbc95b850d1401034e0344cb251958f75725def56a",
+      "signature": "7b225f636c617373223a226d65746164",
+      "durationSeconds": 0.347,
+      "method": "GET",
+      "batch": "fifth"
+    },
+    {
+      "id": "aono-author",
+      "url": "http://atmenv.envi.osakafu-u.ac.jp/aono/kyophenotemp4/",
+      "error": "HTTPConnectionPool(host='atmenv.envi.osakafu-u.ac.jp', port=80): Max retries exceeded with url: /aono/kyophenotemp4/ (Caused by NameResolutionError(\"HTTPConnection(host='atmenv.envi.osakafu-u.ac.jp', port=80): Failed to resolve 'atmenv.envi.osakafu-u.ac.jp' ([Errno 11002] getaddrinfo failed)\"))",
+      "durationSeconds": 4.493,
+      "method": "GET",
+      "batch": "fifth"
+    },
+    {
+      "id": "aono-noaa-index",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/historical/phenology/japan/",
+      "status": 200,
+      "finalUrl": "https://www.ncei.noaa.gov/pub/data/paleo/historical/phenology/japan/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 1972,
+      "truncated": false,
+      "file": "aono-noaa-index.download",
+      "sha256": "942de2e57fed2f6ef90ba4f37be32fdec0f4b4afcb02fb2df26a13702358fbc9",
+      "signature": "3c21444f43545950452068746d6c2050",
+      "durationSeconds": 1.029,
+      "method": "GET",
+      "batch": "fifth",
+      "htmlTitle": "Index of /pub/data/paleo/historical/phenology/japan/",
+      "challenge": false
+    },
+    {
+      "id": "sedoo-download-block",
+      "url": "https://api.sedoo.fr/aeris-cdn-rest/blockrepo/v1_0/download/glacier-download-block.vue.esm.js",
+      "status": 200,
+      "finalUrl": "https://api.sedoo.fr/aeris-cdn-rest/blockrepo/v1_0/download/glacier-download-block.vue.esm.js",
+      "contentType": "application/javascript",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 33826,
+      "truncated": false,
+      "file": "sedoo-download-block.download",
+      "sha256": "50fce64731180584ac6034f79de5f8f163f5822b3c73ec1a5c0dbe9478d676d1",
+      "signature": "2f2a2a0a202a2072657475726e206120",
+      "durationSeconds": 0.353,
+      "method": "GET",
+      "batch": "sixth"
+    },
+    {
+      "id": "sciencedb-current",
+      "url": "https://www.scidb.cn/detail?dataSetId=d216bc6517214dfba6646c4117a9b02f",
+      "status": 200,
+      "finalUrl": "https://www.scidb.cn/detail?dataSetId=d216bc6517214dfba6646c4117a9b02f",
+      "contentType": "text/html; charset=utf-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 795528,
+      "truncated": false,
+      "file": "sciencedb-current.download",
+      "sha256": "38f6dd6c465bbfa75310b6515ab4c8edec88f25477d68e37c5a6e740d64eed48",
+      "signature": "3c21646f63747970652068746d6c3e0a",
+      "durationSeconds": 1.29,
+      "method": "GET",
+      "batch": "sixth",
+      "htmlTitle": "IAP ocean temperature and ocean heat content data",
+      "challenge": false
+    },
+    {
+      "id": "sedoo-regional-varying",
+      "url": "https://api.sedoo.fr/sedoo-glaciers-rest/data/v1_0/downloadTimeSeries?filter=regionvarying",
+      "status": 200,
+      "finalUrl": "https://api.sedoo.fr/sedoo-glaciers-rest/data/v1_0/downloadTimeSeries?filter=regionvarying",
+      "contentType": "application/octet-stream",
+      "contentLength": "14813696",
+      "contentRange": null,
+      "bytes": 14813696,
+      "truncated": false,
+      "file": "sedoo-regional-varying.download",
+      "sha256": "3b20aeb6404f481b0cc8adfb237fafad092a475c939f15507e143c779502c0f6",
+      "signature": "64685f31355f72676936305f7265675f",
+      "durationSeconds": 27.217,
+      "method": "GET",
+      "batch": "bulk"
+    },
+    {
+      "id": "sedoo-regional-fixed",
+      "url": "https://api.sedoo.fr/sedoo-glaciers-rest/data/v1_0/downloadTimeSeries?filter=regionfixed",
+      "status": 200,
+      "finalUrl": "https://api.sedoo.fr/sedoo-glaciers-rest/data/v1_0/downloadTimeSeries?filter=regionfixed",
+      "contentType": "application/octet-stream",
+      "contentLength": "29192704",
+      "contentRange": null,
+      "bytes": 29192704,
+      "truncated": false,
+      "file": "sedoo-regional-fixed.download",
+      "sha256": "e27e3c14d53ee64c1a463773d1462a8675fa0ebd6601f7f9253324f6f987d18f",
+      "signature": "64685f72676936305f4f325f63756d75",
+      "durationSeconds": 49.598,
+      "method": "GET",
+      "batch": "bulk"
+    },
+    {
+      "id": "copernicus-sea-level",
+      "url": "https://climate.copernicus.eu/sites/default/files/custom-uploads/indicators-2025/sea-level/fig2_data.nc",
+      "status": 200,
+      "finalUrl": "https://climate.copernicus.eu/sites/default/files/custom-uploads/indicators-2025/sea-level/fig2_data.nc",
+      "contentType": "application/octet-stream",
+      "contentLength": "20763537",
+      "contentRange": null,
+      "bytes": 20763537,
+      "truncated": false,
+      "file": "copernicus-sea-level.download",
+      "sha256": "7d83ab8853c356216e8591765dc7e0290f153a2e452b3917d0b6ef3e7dd58366",
+      "signature": "894844460d0a1a0a0208080000000000",
+      "durationSeconds": 2.037,
+      "method": "GET",
+      "batch": "bulk"
+    },
+    {
+      "id": "bats-complete",
+      "url": "https://datadocs.bco-dmo.org/dataset/3782/file/QAD9QkVh9ORw3x/3782_v10_bats_bottle.csv",
+      "status": 200,
+      "finalUrl": "https://s3.amazonaws.com/bcodmo-files-prod/QAD9QkVh9ORw3x/3782_v10_bats_bottle.csv",
+      "contentType": "binary/octet-stream",
+      "contentLength": "17679647",
+      "contentRange": null,
+      "bytes": 17679647,
+      "truncated": false,
+      "file": "bats-complete.download",
+      "sha256": "7c38d3c147b98c146f7dfb39b5b8b54ee10c8032e4a60b79014dd7fdcb509472",
+      "signature": "49534f5f4461746554696d655f555443",
+      "durationSeconds": 3.567,
+      "method": "GET",
+      "batch": "bulk"
+    },
+    {
+      "id": "nasa-sp489",
+      "url": "https://ntrs.nasa.gov/api/citations/19870015437/downloads/19870015437.pdf",
+      "status": 200,
+      "finalUrl": "https://ntrs.nasa.gov/api/citations/19870015437/downloads/19870015437.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "414518263",
+      "contentRange": null,
+      "bytes": 414518263,
+      "truncated": false,
+      "file": "nasa-sp489.download",
+      "sha256": "bfc3b35ace915d98bd91039b02539c43668abe8d1bbdf6f912d88e548d12754d",
+      "signature": "255044462d312e350d25e2e3cfd30d0a",
+      "durationSeconds": 95.111,
+      "method": "GET",
+      "batch": "bulk"
+    },
+    {
+      "id": "its-live-complete",
+      "url": "https://its-live-data.s3.amazonaws.com/height_change/Greenland/Greenland_G1920V01_IceSheetGlacierIceHeight.nc",
+      "status": 200,
+      "finalUrl": "https://its-live-data.s3.amazonaws.com/height_change/Greenland/Greenland_G1920V01_IceSheetGlacierIceHeight.nc",
+      "contentType": "application/x-netcdf",
+      "contentLength": "1853161765",
+      "contentRange": null,
+      "bytes": 1853161765,
+      "truncated": false,
+      "file": "its-live-complete.download",
+      "sha256": "04c8259891a0a94dfa5f9e4996dfaad57ca13763a988dbbee5cda795a9f4a4b2",
+      "signature": "894844460d0a1a0a0208080000000000",
+      "durationSeconds": 312.473,
+      "method": "GET",
+      "batch": "bulk"
+    },
+    {
+      "id": "gsdr-files",
+      "url": "https://zenodo.org/api/records/7492812",
+      "status": 200,
+      "finalUrl": "https://zenodo.org/api/records/7492812",
+      "contentType": "application/json",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 4173,
+      "truncated": false,
+      "file": "gsdr-files.download",
+      "sha256": "1699d798ca8f7043613702361956abd0e5749703c0a26faabc8253b8d74d436b",
+      "signature": "7b2263726561746564223a2022323032",
+      "durationSeconds": 0.413,
+      "method": "GET",
+      "batch": "bulk"
+    },
+    {
+      "id": "walsh-files",
+      "url": "https://noaadata.apps.nsidc.org/NOAA/G10010_V2/",
+      "error": "HTTPSConnectionPool(host='noaadata.apps.nsidc.org', port=443): Read timed out. (read timeout=20)",
+      "durationSeconds": 20.38,
+      "method": "GET",
+      "batch": "bulk"
+    },
+    {
+      "id": "eobs-complete",
+      "url": "https://knmi-ecad-assets-prd.s3.amazonaws.com/ensembles/data/Grid_0.25deg_reg_ensemble/tx_ens_mean_0.25deg_reg_v34.0e.nc",
+      "status": 200,
+      "finalUrl": "https://knmi-ecad-assets-prd.s3.amazonaws.com/ensembles/data/Grid_0.25deg_reg_ensemble/tx_ens_mean_0.25deg_reg_v34.0e.nc",
+      "contentType": "application/x-netcdf",
+      "contentLength": "903941781",
+      "contentRange": null,
+      "bytes": 903941781,
+      "truncated": false,
+      "file": "eobs-complete.download",
+      "sha256": "3da30ca3b1298d7f3a09efc9baca728754d6f3be97ad3f2728001b28e73fb702",
+      "signature": "894844460d0a1a0a0208080000000000",
+      "durationSeconds": 32.433,
+      "method": "GET",
+      "batch": "seventh"
+    },
+    {
+      "id": "eobs-cds-doi",
+      "url": "https://doi.org/10.24381/cds.151d3ec6",
+      "status": 200,
+      "finalUrl": "https://cds.climate.copernicus.eu/datasets/insitu-gridded-observations-europe?tab=overview",
+      "contentType": "text/html; charset=utf-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 168099,
+      "truncated": false,
+      "file": "eobs-cds-doi.download",
+      "sha256": "2ced91156c89fd8cb9245ed219501a6611105bd7c5d4fa3ddec817bfbd436de0",
+      "signature": "3c21444f43545950452068746d6c3e3c",
+      "durationSeconds": 1.588,
+      "method": "GET",
+      "batch": "seventh",
+      "htmlTitle": "E-OBS daily gridded meteorological data for Europe from 1950 to present derived from in-situ observations",
+      "challenge": false
+    },
+    {
+      "id": "fresh-imbie3_antarctica_Gt_partitioned",
+      "url": "https://ramadda.data.bas.ac.uk/repository/entry/get/imbie3_antarctica_Gt_partitioned.csv?entryid=synth%3A128c5e33-5224-4197-82f0-19dcc95b80a0%3AL2ltYmllM19hbnRhcmN0aWNhX0d0X3BhcnRpdGlvbmVkLmNzdg%3D%3D",
+      "status": 200,
+      "finalUrl": "https://ramadda.data.bas.ac.uk/repository/entry/get/imbie3_antarctica_Gt_partitioned.csv?entryid=synth%3A128c5e33-5224-4197-82f0-19dcc95b80a0%3AL2ltYmllM19hbnRhcmN0aWNhX0d0X3BhcnRpdGlvbmVkLmNzdg%3D%3D",
+      "contentType": "text/csv",
+      "contentLength": "83257",
+      "contentRange": "bytes -1-83257/83257",
+      "bytes": 83257,
+      "truncated": false,
+      "file": "fresh-imbie3_antarctica_Gt_partitioned.download",
+      "sha256": "cdb5f37c703af3fb36ccbf89f6ca0ba8b444817cb48ff34cc77ca7a9d9a525b2",
+      "signature": "232069643a2047422f4e4552432f4241",
+      "durationSeconds": 0.552,
+      "method": "GET",
+      "batch": "eighth"
+    },
+    {
+      "id": "fresh-imbie3_greenland_Gt_partitioned",
+      "url": "https://ramadda.data.bas.ac.uk/repository/entry/get/imbie3_greenland_Gt_partitioned.csv?entryid=synth%3A128c5e33-5224-4197-82f0-19dcc95b80a0%3AL2ltYmllM19ncmVlbmxhbmRfR3RfcGFydGl0aW9uZWQuY3N2",
+      "status": 200,
+      "finalUrl": "https://ramadda.data.bas.ac.uk/repository/entry/get/imbie3_greenland_Gt_partitioned.csv?entryid=synth%3A128c5e33-5224-4197-82f0-19dcc95b80a0%3AL2ltYmllM19ncmVlbmxhbmRfR3RfcGFydGl0aW9uZWQuY3N2",
+      "contentType": "text/csv",
+      "contentLength": "101046",
+      "contentRange": "bytes -1-101046/101046",
+      "bytes": 101046,
+      "truncated": false,
+      "file": "fresh-imbie3_greenland_Gt_partitioned.download",
+      "sha256": "1d4df7c73845ab9194fd07999ce7a7716d01ef5c9fbc2d4a464be5afc6b52a26",
+      "signature": "232069643a2047422f4e4552432f4241",
+      "durationSeconds": 0.655,
+      "method": "GET",
+      "batch": "eighth"
+    },
+    {
+      "id": "gsdr-grids",
+      "url": "https://zenodo.org/api/records/7492812/files/Grids.zip/content",
+      "status": 200,
+      "finalUrl": "https://zenodo.org/api/records/7492812/files/Grids.zip/content",
+      "contentType": "application/octet-stream, application/octet-stream",
+      "contentLength": "1349760604",
+      "contentRange": null,
+      "error": "('Connection broken: IncompleteRead(64733284 bytes read, 1285027320 more expected)', IncompleteRead(64733284 bytes read, 1285027320 more expected))",
+      "partialBytes": 63963136,
+      "durationSeconds": 152.159,
+      "method": "GET",
+      "batch": "eighth"
+    },
+    {
+      "id": "gsdr-gauge",
+      "url": "https://zenodo.org/api/records/7492812/files/Gauge.zip/content",
+      "status": 200,
+      "finalUrl": "https://zenodo.org/api/records/7492812/files/Gauge.zip/content",
+      "contentType": "application/octet-stream, application/octet-stream",
+      "contentLength": "1240995650",
+      "contentRange": null,
+      "error": "('Connection broken: IncompleteRead(52862760 bytes read, 1188132890 more expected)', IncompleteRead(52862760 bytes read, 1188132890 more expected))",
+      "partialBytes": 52428800,
+      "durationSeconds": 158.895,
+      "method": "GET",
+      "batch": "eighth"
+    },
+    {
+      "id": "gsdr-grids-range",
+      "url": "https://zenodo.org/api/records/7492812/files/Grids.zip/content",
+      "status": 206,
+      "finalUrl": "https://zenodo.org/api/records/7492812/files/Grids.zip/content",
+      "contentType": "application/octet-stream, application/octet-stream",
+      "contentLength": "8388608",
+      "contentRange": "bytes 0-8388607/1349760604",
+      "bytes": 8388608,
+      "truncated": false,
+      "file": "gsdr-grids-range.download",
+      "sha256": "dbc1772a675b966becf55cb8f1b4850dd37c44bba04529877b805eb7b7a4ed50",
+      "signature": "504b0304140000000000ea9b9c550000",
+      "durationSeconds": 4.989,
+      "method": "GET",
+      "batch": "range-probe"
+    },
+    {
+      "id": "gsdr-gauge-range",
+      "url": "https://zenodo.org/api/records/7492812/files/Gauge.zip/content",
+      "status": 206,
+      "finalUrl": "https://zenodo.org/api/records/7492812/files/Gauge.zip/content",
+      "contentType": "application/octet-stream, application/octet-stream",
+      "contentLength": "8388608",
+      "contentRange": "bytes 0-8388607/1240995650",
+      "bytes": 8388608,
+      "truncated": false,
+      "file": "gsdr-gauge-range.download",
+      "sha256": "13b9c455723c07a76977cfc8d94d7c2805f9cc0b022ed935ab3200441533a030",
+      "signature": "504b030414000000080065979c55ed76",
+      "durationSeconds": 5.378,
+      "method": "GET",
+      "batch": "range-probe"
+    }
+  ],
+  "numericalChecks": {
+    "imbie": {
+      "antarctica": {
+        "rows": 540,
+        "firstEpoch": "1979-01-01",
+        "lastEpoch": "2023-12-01",
+        "firstCumulativeGt": -4.7012,
+        "lastCumulativeGt": -4779.472,
+        "differenceGt": -4774.770799999999,
+        "sumOfMonthlyRatesDividedBy12Gt": -4779.472391666666,
+        "firstMonthlyRateDividedBy12Gt": -4.701208333333333,
+        "recentRows": 48,
+        "recentMeanGtPerYear": -58.82953125
+      },
+      "greenland": {
+        "rows": 630,
+        "firstEpoch": "1979-01-01",
+        "lastEpoch": "2023-12-01",
+        "firstCumulativeGt": 338.0575833,
+        "lastCumulativeGt": -6196.145791,
+        "differenceGt": -6534.2033743,
+        "sumOfMonthlyRatesDividedBy12Gt": -6536.646741266667,
+        "firstMonthlyRateDividedBy12Gt": -2.4433666666666665,
+        "recentRows": 48,
+        "recentMeanGtPerYear": -198.00111928125
+      },
+      "combinedDifferenceGt": -11308.9741743
+    },
+    "iap": {
+      "1958": {
+        "months": 12,
+        "meanOHC0to2000mZJ": -254.8
+      },
+      "2024": {
+        "months": 12,
+        "meanOHC0to2000mZJ": 166.04166666666669
+      },
+      "2025": {
+        "months": 12,
+        "meanOHC0to2000mZJ": 188.92499999999998
+      },
+      "difference2025minus1958ZJ": 443.725,
+      "difference2025minus2024ZJ": 22.883333333333297
+    },
+    "calendarAlternatives": {
+      "imbie3_antarctic_peninsula_Gt_partitioned.csv": {
+        "equalMonthSum": -816.97435,
+        "calendarDays365_25Sum": -816.9226217659137,
+        "calendarYearFractionSum": -816.9328523736806,
+        "recentEqualMonthMean": 11.11071875,
+        "recentDayWeightedMean": 11.106326625598905,
+        "recentTrapezoidMean": 11.466272340425531,
+        "recentEndpointRate": 11.59327659574469,
+        "endpointMassChange": -815.603,
+        "firstRate": -16.4558
+      },
+      "imbie3_antarctica_Gt_partitioned.csv": {
+        "equalMonthSum": -4779.472391666666,
+        "calendarDays365_25Sum": -4778.380941546886,
+        "calendarYearFractionSum": -4778.763368120368,
+        "recentEqualMonthMean": -58.82953125,
+        "recentDayWeightedMean": -58.711091854893915,
+        "recentTrapezoidMean": -58.26090531914893,
+        "recentEndpointRate": -57.390970212765865,
+        "endpointMassChange": -4774.770799999999,
+        "firstRate": -56.4145
+      },
+      "imbie3_east_antarctica_Gt_partitioned.csv": {
+        "equalMonthSum": 28.295508333333327,
+        "calendarDays365_25Sum": 28.610985900068453,
+        "calendarYearFractionSum": 28.860100179654157,
+        "recentEqualMonthMean": 91.94800000000001,
+        "recentDayWeightedMean": 92.02468699520877,
+        "recentTrapezoidMean": 92.54069255319149,
+        "recentEndpointRate": 93.74908085106382,
+        "endpointMassChange": 30.2603,
+        "firstRate": -23.5753
+      },
+      "imbie3_greenland_Gt_partitioned.csv": {
+        "equalMonthSum": -6536.646741266667,
+        "calendarDays365_25Sum": -6536.241587109377,
+        "calendarYearFractionSum": -6536.536914479178,
+        "recentEqualMonthMean": -198.00111928125,
+        "recentDayWeightedMean": -198.05485982642028,
+        "recentTrapezoidMean": -197.42281669574467,
+        "recentEndpointRate": -196.35642025531922,
+        "endpointMassChange": -6534.2033743,
+        "firstRate": -29.3204
+      },
+      "imbie3_west_antarctica_Gt_partitioned.csv": {
+        "equalMonthSum": -3990.79315,
+        "calendarDays365_25Sum": -3990.0689051334703,
+        "calendarYearFractionSum": -3990.6902152653643,
+        "recentEqualMonthMean": -161.8882625,
+        "recentDayWeightedMean": -161.8421180698152,
+        "recentTrapezoidMean": -162.2678829787234,
+        "recentEndpointRate": -162.73332765957443,
+        "endpointMassChange": -3989.4281,
+        "firstRate": -16.3833
+      }
+    }
+  },
+  "archiveIntegrity": {
+    "wgmsFog": {
+      "members": 14,
+      "badMember": null,
+      "uncompressedBytes": 868547750,
+      "names": [
+        "datapackage.json",
+        "readme.pdf",
+        "data/mass_balance_point.csv",
+        "data/glacier.csv",
+        "data/mass_balance_band.csv",
+        "data/state.csv",
+        "data/mass_balance.csv",
+        "data/change.csv",
+        "data/change_band.csv",
+        "data/front_variation.csv",
+        "data/agency.csv",
+        "data/person.csv",
+        "data/event.csv",
+        "data/state_band.csv"
+      ]
+    },
+    "wgmsAmce": {
+      "members": 143,
+      "badMember": null,
+      "uncompressedBytes": 488951215,
+      "names": [
+        "README.md",
+        "global.csv",
+        "global_grid.nc4",
+        "region/WNA.csv",
+        "region/ISL.csv",
+        "region/ASE.csv",
+        "region/SCA.csv",
+        "region/ASW.csv",
+        "region/ASC.csv",
+        "region/CAU.csv",
+        "region/SJM.csv",
+        "region/ALA.csv",
+        "region/ACN.csv",
+        "region/ANT.csv",
+        "region/ACS.csv",
+        "region/RUA.csv",
+        "region/ASN.csv",
+        "region/GRL.csv",
+        "region/NZL.csv",
+        "region/TRP.csv",
+        "region/CEU.csv",
+        "region/SA2.csv",
+        "region/SA1.csv",
+        "glacier/SCA_mwe_sigma.csv",
+        "glacier/ASE_mwe_sigma_rho.csv",
+        "glacier/ASN_mwe_sigma.csv",
+        "glacier/RUA_metadata.csv",
+        "glacier/WNA_mwe.csv",
+        "glacier/WNA_metadata.csv",
+        "glacier/RUA_mwe.csv",
+        "glacier/WNA_mwe_sigma_anom.csv",
+        "glacier/GRL_mwe_sigma_anom.csv",
+        "glacier/SJM_metadata.csv",
+        "glacier/ACN_mwe.csv",
+        "glacier/ACS_mwe_sigma.csv"
+      ]
+    },
+    "imbieCode": {
+      "members": 300,
+      "badMember": null,
+      "uncompressedBytes": 1143292,
+      "names": [
+        "imbie2/",
+        "imbie2/proc/",
+        "imbie2/proc/pre_processed.py",
+        "imbie2/proc/main.py",
+        "imbie2/proc/process_mass.py",
+        "imbie2/proc/__pycache__/",
+        "imbie2/proc/__pycache__/__init__.cpython-310.pyc",
+        "imbie2/proc/__pycache__/process.cpython-36.pyc",
+        "imbie2/proc/__pycache__/compare_windows.cpython-36.pyc",
+        "imbie2/proc/__pycache__/main.cpython-36.pyc",
+        "imbie2/proc/__pycache__/__init__.cpython-36.pyc",
+        "imbie2/proc/__pycache__/sum_basins.cpython-36.pyc",
+        "imbie2/proc/__pycache__/process.cpython-312.pyc",
+        "imbie2/proc/__pycache__/__init__.cpython-312.pyc",
+        "imbie2/proc/__pycache__/main.cpython-312.pyc",
+        "imbie2/proc/__pycache__/sum_basins.cpython-312.pyc",
+        "imbie2/proc/__pycache__/compare_windows.cpython-312.pyc",
+        "imbie2/proc/__pycache__/main.cpython-310.pyc",
+        "imbie2/proc/__pycache__/process.cpython-310.pyc",
+        "imbie2/proc/dm_processor.py",
+        "imbie2/proc/compare_windows.py",
+        "imbie2/proc/sum_basins.py",
+        "imbie2/proc/__init__.py",
+        "imbie2/proc/process.py",
+        "imbie2/util/",
+        "imbie2/util/dm_to_dmdt.py",
+        "imbie2/util/combine.py",
+        "imbie2/util/sum_series.py",
+        "imbie2/util/functions.py",
+        "imbie2/util/__pycache__/",
+        "imbie2/util/__pycache__/combine.cpython-312.pyc",
+        "imbie2/util/__pycache__/dm_to_dmdt.cpython-312.pyc",
+        "imbie2/util/__pycache__/count_tolerance.cpython-312.pyc",
+        "imbie2/util/__pycache__/offset.cpython-36.pyc",
+        "imbie2/util/__pycache__/discharge.cpython-36.pyc"
+      ]
+    },
+    "sedooRegionalVarying": {
+      "members": [
+        {
+          "name": "dh_15_rgi60_reg_rates.csv",
+          "bytes": 6016,
+          "sha256": "155dd63b24367647e0bee323df07e5f8937b3ae8d608e0ad7b19ab7f8832d2d2",
+          "rows": 42,
+          "columns": [
+            "reg",
+            "period",
+            "area",
+            "tarea",
+            "dhdt",
+            "err_dhdt",
+            "dvoldt",
+            "err_dvoldt",
+            "dmdt",
+            "err_dmdt",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "15",
+              "period": "2000-01-01_2001-01-01",
+              "area": "14734204000.0",
+              "tarea": "14832250000.0",
+              "dhdt": "-0.435",
+              "err_dhdt": "0.384",
+              "dvoldt": "-6450679309.0",
+              "err_dvoldt": "5693525804.0",
+              "dmdt": "-5.4831",
+              "err_dmdt": "4.8549",
+              "perc_area_meas": "0.918",
+              "perc_area_res": "0.925",
+              "valid_obs": "0.82",
+              "valid_obs_py": "0.5",
+              "area_nodata": "26190000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "15",
+              "period": "2000-01-01_2020-01-01",
+              "area": "14734204000.0",
+              "tarea": "14405800000.0",
+              "dhdt": "-0.561",
+              "err_dhdt": "0.042",
+              "dvoldt": "-8088040849.0",
+              "err_dvoldt": "604109915.0",
+              "dmdt": "-6.8748",
+              "err_dmdt": "0.7065",
+              "perc_area_meas": "0.918",
+              "perc_area_res": "0.925",
+              "valid_obs": "28.18",
+              "valid_obs_py": "12.91",
+              "area_nodata": "26190000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_19_rgi60_reg_cumul.csv",
+          "bytes": 24240,
+          "sha256": "68dda6d61288490b5ec83c41670363f726da6ec2a7cc07e285b9e56ace78b4de",
+          "rows": 241,
+          "columns": [
+            "reg",
+            "time",
+            "area",
+            "dh",
+            "err_dh",
+            "dvol",
+            "err_dvol",
+            "dm",
+            "err_dm",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "19.0",
+              "time": "2000-01-01",
+              "area": "132867219000.0",
+              "dh": "0.0",
+              "err_dh": "0.264",
+              "dvol": "0.0",
+              "err_dvol": "35038331412.0",
+              "dm": "0.0",
+              "err_dm": "29.7826",
+              "perc_area_meas": "0.92",
+              "perc_area_res": "0.924",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.09",
+              "area_nodata": "537194000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "19.0",
+              "time": "2020-01-01",
+              "area": "132867219000.0",
+              "dh": "-3.699",
+              "err_dh": "0.228",
+              "dvol": "-491476060969.0",
+              "err_dvol": "30499248126.0",
+              "dm": "-417.7547",
+              "err_dm": "39.2638",
+              "perc_area_meas": "0.92",
+              "perc_area_res": "0.924",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.0",
+              "area_nodata": "537194000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_17_rgi60_reg_cumul.csv",
+          "bytes": 23857,
+          "sha256": "5efdc5916b32866392a64aa94bfba44273f0f0b471f36a31bd0d310a8d9ed252",
+          "rows": 241,
+          "columns": [
+            "reg",
+            "time",
+            "area",
+            "dh",
+            "err_dh",
+            "dvol",
+            "err_dvol",
+            "dm",
+            "err_dm",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "17",
+              "time": "2000-01-01",
+              "area": "29429320000.0",
+              "dh": "0.0",
+              "err_dh": "0.638",
+              "dvol": "0.0",
+              "err_dvol": "18787165246.0",
+              "dm": "0.0",
+              "err_dm": "15.9691",
+              "perc_area_meas": "0.915",
+              "perc_area_res": "0.925",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.18",
+              "area_nodata": "120098000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "17",
+              "time": "2020-01-01",
+              "area": "29429080000.0",
+              "dh": "-16.542",
+              "err_dh": "0.525",
+              "dvol": "-486809364834.0",
+              "err_dvol": "28257471659.0",
+              "dm": "-413.788",
+              "err_dm": "37.8159",
+              "perc_area_meas": "0.915",
+              "perc_area_res": "0.925",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.0",
+              "area_nodata": "120098000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_09_rgi60_reg_cumul.csv",
+          "bytes": 20358,
+          "sha256": "4658c907a26979f53b633c838494e12372b3c52d2dc3f1fe405eea152a4401d2",
+          "rows": 241,
+          "columns": [
+            "reg",
+            "time",
+            "area",
+            "dh",
+            "err_dh",
+            "dvol",
+            "err_dvol",
+            "dm",
+            "err_dm",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "9",
+              "time": "2000-01-01",
+              "area": "51591600000.0",
+              "dh": "0.0",
+              "err_dh": "0.233",
+              "dvol": "0.0",
+              "err_dvol": "12029791321.0",
+              "dm": "0.0",
+              "err_dm": "10.2253",
+              "perc_area_meas": "0.993",
+              "perc_area_res": "1.0",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.19",
+              "area_nodata": "0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "9",
+              "time": "2020-01-01",
+              "area": "51591600000.0",
+              "dh": "-4.748",
+              "err_dh": "0.127",
+              "dvol": "-244939720507.0",
+              "err_dvol": "6879907057.0",
+              "dm": "-208.1988",
+              "err_dm": "15.8171",
+              "perc_area_meas": "0.993",
+              "perc_area_res": "1.0",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.0",
+              "area_nodata": "0"
+            }
+          ]
+        },
+        {
+          "name": "updated_rgi60_O1_metadata/base_rgi.csv",
+          "bytes": 14165934,
+          "sha256": "61cd6da84e9cdbc550bd0495993bacd4b531874bcdfa2ca067ef206620bd0324",
+          "rows": 218131,
+          "columns": [
+            "rgiid",
+            "cl",
+            "nom",
+            "reg",
+            "term",
+            "area",
+            "lon",
+            "lat"
+          ],
+          "first": [
+            {
+              "rgiid": "RGI60-04.00001",
+              "cl": "0",
+              "nom": "0",
+              "reg": "4",
+              "term": "0",
+              "area": "83000",
+              "lon": "-64.7944914370173",
+              "lat": "64.0017663479844"
+            }
+          ],
+          "last": [
+            {
+              "rgiid": "RGI60-19.02752",
+              "cl": "0",
+              "nom": "0",
+              "reg": "19",
+              "term": "0",
+              "area": "528000",
+              "lon": "37.7139892891786",
+              "lat": "-46.8972332697979"
+            }
+          ]
+        },
+        {
+          "name": "updated_rgi60_O1_metadata/tarea_zemp.csv",
+          "bytes": 10750,
+          "sha256": "20d8a8b2002043e6471b67c80c80c69ac4b479967545271a5fcf0f85533f90ab",
+          "rows": 71,
+          "columns": [
+            "YEAR",
+            "RGI1",
+            "RGI2",
+            "RGI3",
+            "RGI4",
+            "RGI5",
+            "RGI6",
+            "RGI7",
+            "RGI8",
+            "RGI9",
+            "RGI10",
+            "RGI11",
+            "RGI12",
+            "RGI13",
+            "RGI14",
+            "RGI15",
+            "RGI16",
+            "RGI17",
+            "RGI18",
+            "RGI19"
+          ],
+          "first": [
+            {
+              "YEAR": "1950",
+              "RGI1": "108632.6",
+              "RGI2": "17551.2",
+              "RGI3": "108142.1",
+              "RGI4": "42067.5",
+              "RGI5": "100752.3",
+              "RGI6": "12134.7",
+              "RGI7": "35376.2",
+              "RGI8": "3211.9",
+              "RGI9": "53744.7",
+              "RGI10": "2969.7",
+              "RGI11": "2578.6",
+              "RGI12": "1591",
+              "RGI13": "54201",
+              "RGI14": "37053",
+              "RGI15": "16097.5",
+              "RGI16": "2832.6",
+              "RGI17": "29958.8",
+              "RGI18": "1161.8",
+              "RGI19": "137889.6"
+            }
+          ],
+          "last": [
+            {
+              "YEAR": "2020",
+              "RGI1": "81877.5",
+              "RGI2": "13537.9",
+              "RGI3": "103550.8",
+              "RGI4": "40281.4",
+              "RGI5": "75739.1",
+              "RGI6": "10263.4",
+              "RGI7": "33227",
+              "RGI8": "2805.8",
+              "RGI9": "50479.8",
+              "RGI10": "2316.8",
+              "RGI11": "1761.4",
+              "RGI12": "1175.4",
+              "RGI13": "46841",
+              "RGI14": "31953.7",
+              "RGI15": "13956.9",
+              "RGI16": "1777.7",
+              "RGI17": "28369.6",
+              "RGI18": "825.1",
+              "RGI19": "121746.2"
+            }
+          ]
+        },
+        {
+          "name": "dh_14_rgi60_reg_rates.csv",
+          "bytes": 6033,
+          "sha256": "749ef8db9e139eddf033482278a09686f7d1d46fc87c8dbc67e1cea68911fb06",
+          "rows": 42,
+          "columns": [
+            "reg",
+            "period",
+            "area",
+            "tarea",
+            "dhdt",
+            "err_dhdt",
+            "dvoldt",
+            "err_dvoldt",
+            "dmdt",
+            "err_dmdt",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "14",
+              "period": "2000-01-01_2001-01-01",
+              "area": "33568298000.0",
+              "tarea": "33756500000.0",
+              "dhdt": "-0.072",
+              "err_dhdt": "0.426",
+              "dvoldt": "-2443203846.0",
+              "err_dvoldt": "14369387396.0",
+              "dmdt": "-2.0767",
+              "err_dmdt": "12.2149",
+              "perc_area_meas": "0.938",
+              "perc_area_res": "0.948",
+              "valid_obs": "0.66",
+              "valid_obs_py": "0.43",
+              "area_nodata": "60698000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "14",
+              "period": "2000-01-01_2020-01-01",
+              "area": "33568298000.0",
+              "tarea": "32878200000.0",
+              "dhdt": "-0.163",
+              "err_dhdt": "0.028",
+              "dvoldt": "-5360179165.0",
+              "err_dvoldt": "909144129.0",
+              "dmdt": "-4.5562",
+              "err_dmdt": "0.837",
+              "perc_area_meas": "0.938",
+              "perc_area_res": "0.948",
+              "valid_obs": "40.51",
+              "valid_obs_py": "15.15",
+              "area_nodata": "60698000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_05_rgi60_reg_rates.csv",
+          "bytes": 6040,
+          "sha256": "f17410c684069b4a4607a5196790c9d6c43aaa768cac04cb65afd2b0e0bbe499",
+          "rows": 42,
+          "columns": [
+            "reg",
+            "period",
+            "area",
+            "tarea",
+            "dhdt",
+            "err_dhdt",
+            "dvoldt",
+            "err_dvoldt",
+            "dmdt",
+            "err_dmdt",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "5",
+              "period": "2000-01-01_2001-01-01",
+              "area": "89717066000.0",
+              "tarea": "90084950000.0",
+              "dhdt": "-0.46",
+              "err_dhdt": "0.149",
+              "dvoldt": "-41414977007.0",
+              "err_dvoldt": "13391685650.0",
+              "dmdt": "-35.2027",
+              "err_dmdt": "11.651",
+              "perc_area_meas": "0.99",
+              "perc_area_res": "0.995",
+              "valid_obs": "0.66",
+              "valid_obs_py": "0.42",
+              "area_nodata": "20313000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "5",
+              "period": "2000-01-01_2020-01-01",
+              "area": "89717066000.0",
+              "tarea": "83095950000.0",
+              "dhdt": "-0.503",
+              "err_dhdt": "0.021",
+              "dvoldt": "-41782646151.0",
+              "err_dvoldt": "1693589220.0",
+              "dmdt": "-35.5152",
+              "err_dmdt": "2.8909",
+              "perc_area_meas": "0.99",
+              "perc_area_res": "0.995",
+              "valid_obs": "66.12",
+              "valid_obs_py": "16.23",
+              "area_nodata": "20313000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_07_rgi60_reg_rates.csv",
+          "bytes": 5822,
+          "sha256": "89086ae914068a09a4d9430fe02128766f92dc52ee5f2dea20f7d66c014e8afb",
+          "rows": 42,
+          "columns": [
+            "reg",
+            "period",
+            "area",
+            "tarea",
+            "dhdt",
+            "err_dhdt",
+            "dvoldt",
+            "err_dvoldt",
+            "dmdt",
+            "err_dmdt",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "7",
+              "period": "2000-01-01_2001-01-01",
+              "area": "34187175000.0",
+              "tarea": "34230000000.0",
+              "dhdt": "-0.174",
+              "err_dhdt": "0.234",
+              "dvoldt": "-5964761421.0",
+              "err_dvoldt": "7994007854.0",
+              "dmdt": "-5.07",
+              "err_dmdt": "6.8043",
+              "perc_area_meas": "0.994",
+              "perc_area_res": "1.0",
+              "valid_obs": "0.7",
+              "valid_obs_py": "0.49",
+              "area_nodata": "34000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "7",
+              "period": "2000-01-01_2020-01-01",
+              "area": "34187175000.0",
+              "tarea": "33741350000.0",
+              "dhdt": "-0.367",
+              "err_dhdt": "0.015",
+              "dvoldt": "-12399004187.0",
+              "err_dvoldt": "476088573.0",
+              "dmdt": "-10.5392",
+              "err_dmdt": "0.8469",
+              "perc_area_meas": "0.994",
+              "perc_area_res": "1.0",
+              "valid_obs": "48.23",
+              "valid_obs_py": "15.68",
+              "area_nodata": "34000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_06_rgi60_reg_cumul.csv",
+          "bytes": 20656,
+          "sha256": "616f5718861f0d05386b247599f12df31c2c45bb33c876242f39818aec2beadd",
+          "rows": 241,
+          "columns": [
+            "reg",
+            "time",
+            "area",
+            "dh",
+            "err_dh",
+            "dvol",
+            "err_dvol",
+            "dm",
+            "err_dm",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "6",
+              "time": "2000-01-01",
+              "area": "11059700000.0",
+              "dh": "0.0",
+              "err_dh": "0.416",
+              "dvol": "0.0",
+              "err_dvol": "4599646743.0",
+              "dm": "0.0",
+              "err_dm": "3.9097",
+              "perc_area_meas": "0.996",
+              "perc_area_res": "1.0",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.67",
+              "area_nodata": "0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "6",
+              "time": "2020-01-01",
+              "area": "11059700000.0",
+              "dh": "-19.915",
+              "err_dh": "0.251",
+              "dvol": "-220256833801.0",
+              "err_dvol": "3414817589.0",
+              "dm": "-187.2183",
+              "err_dm": "13.5304",
+              "perc_area_meas": "0.996",
+              "perc_area_res": "1.0",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.0",
+              "area_nodata": "0"
+            }
+          ]
+        },
+        {
+          "name": "dh_13_rgi60_reg_rates.csv",
+          "bytes": 6078,
+          "sha256": "88cf21db933aff67b98253fc8a3eba076f4f7a99fc3a2578e65af28bd61e9f40",
+          "rows": 42,
+          "columns": [
+            "reg",
+            "period",
+            "area",
+            "tarea",
+            "dhdt",
+            "err_dhdt",
+            "dvoldt",
+            "err_dvoldt",
+            "dmdt",
+            "err_dmdt",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "13",
+              "period": "2000-01-01_2001-01-01",
+              "area": "49303415000.0",
+              "tarea": "49600350000.0",
+              "dhdt": "-0.038",
+              "err_dhdt": "0.225",
+              "dvoldt": "-1893229358.0",
+              "err_dvoldt": "11145357231.0",
+              "dmdt": "-1.6092",
+              "err_dmdt": "9.4742",
+              "perc_area_meas": "0.963",
+              "perc_area_res": "0.971",
+              "valid_obs": "0.75",
+              "valid_obs_py": "0.5",
+              "area_nodata": "36782000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "13",
+              "period": "2000-01-01_2020-01-01",
+              "area": "49303415000.0",
+              "tarea": "48256050000.0",
+              "dhdt": "-0.234",
+              "err_dhdt": "0.02",
+              "dvoldt": "-11299332251.0",
+              "err_dvoldt": "965885574.0",
+              "dmdt": "-9.6044",
+              "err_dmdt": "1.0647",
+              "perc_area_meas": "0.963",
+              "perc_area_res": "0.971",
+              "valid_obs": "35.22",
+              "valid_obs_py": "14.19",
+              "area_nodata": "36782000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_02_rgi60_reg_cumul.csv",
+          "bytes": 22895,
+          "sha256": "065962134e586466185ed2d17ad16d9e882ab6b01deb6a9233bb307b77ca0497",
+          "rows": 241,
+          "columns": [
+            "reg",
+            "time",
+            "area",
+            "dh",
+            "err_dh",
+            "dvol",
+            "err_dvol",
+            "dm",
+            "err_dm",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "2",
+              "time": "2000-01-01",
+              "area": "14524224000.0",
+              "dh": "0.0",
+              "err_dh": "0.22",
+              "dvol": "0.0",
+              "err_dvol": "3195701219.0",
+              "dm": "0.0",
+              "err_dm": "2.7163",
+              "perc_area_meas": "0.977",
+              "perc_area_res": "0.982",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.7",
+              "area_nodata": "40068000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "2",
+              "time": "2020-01-01",
+              "area": "14524224000.0",
+              "dh": "-12.248",
+              "err_dh": "0.225",
+              "dvol": "-177889350355.0",
+              "err_dvol": "15131137843.0",
+              "dm": "-151.2059",
+              "err_dm": "16.7134",
+              "perc_area_meas": "0.977",
+              "perc_area_res": "0.982",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.0",
+              "area_nodata": "40068000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_12_rgi60_reg_rates.csv",
+          "bytes": 5834,
+          "sha256": "1b405eea460b4c6d1f5147fb483f7fd54be8437683461dd81fadb2fe3c02b4b9",
+          "rows": 42,
+          "columns": [
+            "reg",
+            "period",
+            "area",
+            "tarea",
+            "dhdt",
+            "err_dhdt",
+            "dvoldt",
+            "err_dvoldt",
+            "dmdt",
+            "err_dmdt",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "12",
+              "period": "2000-01-01_2001-01-01",
+              "area": "1336462000.0",
+              "tarea": "1310450000.0",
+              "dhdt": "-0.295",
+              "err_dhdt": "0.732",
+              "dvoldt": "-386680178.0",
+              "err_dvoldt": "959636294.0",
+              "dmdt": "-0.3287",
+              "err_dmdt": "0.816",
+              "perc_area_meas": "0.912",
+              "perc_area_res": "0.917",
+              "valid_obs": "0.51",
+              "valid_obs_py": "0.34",
+              "area_nodata": "9772000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "12",
+              "period": "2000-01-01_2020-01-01",
+              "area": "1336462000.0",
+              "tarea": "1244650000.0",
+              "dhdt": "-0.636",
+              "err_dhdt": "0.078",
+              "dvoldt": "-791949363.0",
+              "err_dvoldt": "96729522.0",
+              "dmdt": "-0.6732",
+              "err_dmdt": "0.095",
+              "perc_area_meas": "0.912",
+              "perc_area_res": "0.917",
+              "valid_obs": "29.32",
+              "valid_obs_py": "13.38",
+              "area_nodata": "9772000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_09_rgi60_reg_rates.csv",
+          "bytes": 5576,
+          "sha256": "78fb50bdc5f5cd1582c74203bdd6555452c8d2941946794053e72829a326a78b",
+          "rows": 42,
+          "columns": [
+            "reg",
+            "period",
+            "area",
+            "tarea",
+            "dhdt",
+            "err_dhdt",
+            "dvoldt",
+            "err_dvoldt",
+            "dmdt",
+            "err_dmdt",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "9",
+              "period": "2000-01-01_2001-01-01",
+              "area": "51591600000.0",
+              "tarea": "52003350000.0",
+              "dhdt": "-0.17",
+              "err_dhdt": "0.283",
+              "dvoldt": "-8822198388.0",
+              "err_dvoldt": "14717948773.0",
+              "dmdt": "-7.4989",
+              "err_dmdt": "12.5214",
+              "perc_area_meas": "0.993",
+              "perc_area_res": "1.0",
+              "valid_obs": "0.21",
+              "valid_obs_py": "0.19",
+              "area_nodata": "0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "9",
+              "period": "2000-01-01_2020-01-01",
+              "area": "51591600000.0",
+              "tarea": "51261100000.0",
+              "dhdt": "-0.239",
+              "err_dhdt": "0.014",
+              "dvoldt": "-12246986025.0",
+              "err_dvoldt": "692908725.0",
+              "dmdt": "-10.4099",
+              "err_dmdt": "0.9417",
+              "perc_area_meas": "0.993",
+              "perc_area_res": "1.0",
+              "valid_obs": "51.93",
+              "valid_obs_py": "14.38",
+              "area_nodata": "0"
+            }
+          ]
+        },
+        {
+          "name": "dh_17_rgi60_reg_rates.csv",
+          "bytes": 6192,
+          "sha256": "9d4cf5d089d77561d221b6de8e98462993320ffe4139f44a2e8c9c9142134072",
+          "rows": 42,
+          "columns": [
+            "reg",
+            "period",
+            "area",
+            "tarea",
+            "dhdt",
+            "err_dhdt",
+            "dvoldt",
+            "err_dvoldt",
+            "dmdt",
+            "err_dmdt",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "17",
+              "period": "2000-01-01_2001-01-01",
+              "area": "29429320000.0",
+              "tarea": "29402600000.0",
+              "dhdt": "-0.662",
+              "err_dhdt": "0.842",
+              "dvoldt": "-19470881733.0",
+              "err_dvoldt": "24767582498.0",
+              "dmdt": "-16.5502",
+              "err_dmdt": "21.0848",
+              "perc_area_meas": "0.915",
+              "perc_area_res": "0.925",
+              "valid_obs": "0.25",
+              "valid_obs_py": "0.18",
+              "area_nodata": "120098000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "17",
+              "period": "2000-01-01_2020-01-01",
+              "area": "29429320000.0",
+              "tarea": "28899350000.0",
+              "dhdt": "-0.842",
+              "err_dhdt": "0.059",
+              "dvoldt": "-24340468242.0",
+              "err_dvoldt": "1696680352.0",
+              "dmdt": "-20.6894",
+              "err_dmdt": "2.0525",
+              "perc_area_meas": "0.915",
+              "perc_area_res": "0.925",
+              "valid_obs": "27.41",
+              "valid_obs_py": "11.49",
+              "area_nodata": "120098000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_01_rgi60_reg_rates.csv",
+          "bytes": 6072,
+          "sha256": "2e7c8f7011e68b3bbf377639833652b3c283a02eb62c8d6d1275c5927851dd5b",
+          "rows": 42,
+          "columns": [
+            "reg",
+            "period",
+            "area",
+            "tarea",
+            "dhdt",
+            "err_dhdt",
+            "dvoldt",
+            "err_dvoldt",
+            "dmdt",
+            "err_dmdt",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "1",
+              "period": "2000-01-01_2001-01-01",
+              "area": "86725053000.0",
+              "tarea": "90088400000.0",
+              "dhdt": "-0.573",
+              "err_dhdt": "0.294",
+              "dvoldt": "-51598566157.0",
+              "err_dvoldt": "26491644130.0",
+              "dmdt": "-43.8588",
+              "err_dmdt": "22.7297",
+              "perc_area_meas": "0.983",
+              "perc_area_res": "0.99",
+              "valid_obs": "0.27",
+              "valid_obs_py": "0.22",
+              "area_nodata": "17684000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "1",
+              "period": "2000-01-01_2020-01-01",
+              "area": "86725053000.0",
+              "tarea": "86088200000.0",
+              "dhdt": "-0.911",
+              "err_dhdt": "0.038",
+              "dvoldt": "-78413624315.0",
+              "err_dvoldt": "3199246835.0",
+              "dmdt": "-66.6516",
+              "err_dmdt": "5.4342",
+              "perc_area_meas": "0.983",
+              "perc_area_res": "0.99",
+              "valid_obs": "28.62",
+              "valid_obs_py": "11.5",
+              "area_nodata": "17684000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_13_rgi60_reg_cumul.csv",
+          "bytes": 23126,
+          "sha256": "a52aaf50e9b0707e5845a84cf26a5d11d601449e2beee979367c0f833a24e4df",
+          "rows": 241,
+          "columns": [
+            "reg",
+            "time",
+            "area",
+            "dh",
+            "err_dh",
+            "dvol",
+            "err_dvol",
+            "dm",
+            "err_dm",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "13",
+              "time": "2000-01-01",
+              "area": "49303415000.0",
+              "dh": "0.0",
+              "err_dh": "0.199",
+              "dvol": "0.0",
+              "err_dvol": "9787295780.0",
+              "dm": "0.0",
+              "err_dm": "8.3192",
+              "perc_area_meas": "0.963",
+              "perc_area_res": "0.971",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.5",
+              "area_nodata": "36782000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "13",
+              "time": "2020-01-01",
+              "area": "49303415000.0",
+              "dh": "-4.584",
+              "err_dh": "0.169",
+              "dvol": "-225986645015.0",
+              "err_dvol": "16654813667.0",
+              "dm": "-192.0886",
+              "err_dm": "19.6026",
+              "perc_area_meas": "0.963",
+              "perc_area_res": "0.971",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.0",
+              "area_nodata": "36782000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_04_rgi60_reg_cumul.csv",
+          "bytes": 23081,
+          "sha256": "96af1d77e7a5f0b5bb221b454493e0925f0c21432370a3f839a12e4bac504f5e",
+          "rows": 241,
+          "columns": [
+            "reg",
+            "time",
+            "area",
+            "dh",
+            "err_dh",
+            "dvol",
+            "err_dvol",
+            "dm",
+            "err_dm",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "4",
+              "time": "2000-01-01",
+              "area": "40888228000.0",
+              "dh": "0.0",
+              "err_dh": "0.324",
+              "dvol": "0.0",
+              "err_dvol": "13260814476.0",
+              "dm": "0.0",
+              "err_dm": "11.2717",
+              "perc_area_meas": "0.994",
+              "perc_area_res": "0.999",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.16",
+              "area_nodata": "1423000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "4",
+              "time": "2020-01-01",
+              "area": "40888228000.0",
+              "dh": "-15.251",
+              "err_dh": "0.206",
+              "dvol": "-623571651245.0",
+              "err_dvol": "20067989812.0",
+              "dm": "-530.0359",
+              "err_dm": "41.1193",
+              "perc_area_meas": "0.994",
+              "perc_area_res": "0.999",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.0",
+              "area_nodata": "1423000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_02_rgi60_reg_rates.csv",
+          "bytes": 6021,
+          "sha256": "ff6d90596c6a77921fe872fa12b8f4eedcffa833c4908c44717a30051d37a23a",
+          "rows": 42,
+          "columns": [
+            "reg",
+            "period",
+            "area",
+            "tarea",
+            "dhdt",
+            "err_dhdt",
+            "dvoldt",
+            "err_dvoldt",
+            "dmdt",
+            "err_dmdt",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "2",
+              "period": "2000-01-01_2001-01-01",
+              "area": "14524224000.0",
+              "tarea": "14973750000.0",
+              "dhdt": "-0.151",
+              "err_dhdt": "0.232",
+              "dvoldt": "-2262143308.0",
+              "err_dvoldt": "3480915243.0",
+              "dmdt": "-1.9228",
+              "err_dmdt": "2.9619",
+              "perc_area_meas": "0.977",
+              "perc_area_res": "0.982",
+              "valid_obs": "1.05",
+              "valid_obs_py": "0.7",
+              "area_nodata": "40068000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "2",
+              "period": "2000-01-01_2020-01-01",
+              "area": "14524224000.0",
+              "tarea": "14274250000.0",
+              "dhdt": "-0.623",
+              "err_dhdt": "0.055",
+              "dvoldt": "-8894467518.0",
+              "err_dvoldt": "773246142.0",
+              "dmdt": "-7.5603",
+              "err_dmdt": "0.8466",
+              "perc_area_meas": "0.977",
+              "perc_area_res": "0.982",
+              "valid_obs": "28.28",
+              "valid_obs_py": "13.26",
+              "area_nodata": "40068000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_08_rgi60_reg_rates.csv",
+          "bytes": 5787,
+          "sha256": "f3742a907c7ea40810d1380822388c2d88192fe5f87ae52d64c0ebaf8ae7f040",
+          "rows": 42,
+          "columns": [
+            "reg",
+            "period",
+            "area",
+            "tarea",
+            "dhdt",
+            "err_dhdt",
+            "dvoldt",
+            "err_dvoldt",
+            "dmdt",
+            "err_dmdt",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "8",
+              "period": "2000-01-01_2001-01-01",
+              "area": "2949103000.0",
+              "tarea": "2961050000.0",
+              "dhdt": "-0.747",
+              "err_dhdt": "0.349",
+              "dvoldt": "-2211083929.0",
+              "err_dvoldt": "1034498942.0",
+              "dmdt": "-1.8794",
+              "err_dmdt": "0.8893",
+              "perc_area_meas": "0.995",
+              "perc_area_res": "0.999",
+              "valid_obs": "0.77",
+              "valid_obs_py": "0.52",
+              "area_nodata": "406000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "8",
+              "period": "2000-01-01_2020-01-01",
+              "area": "2949103000.0",
+              "tarea": "2885400000.0",
+              "dhdt": "-0.68",
+              "err_dhdt": "0.056",
+              "dvoldt": "-1961837569.0",
+              "err_dvoldt": "161695116.0",
+              "dmdt": "-1.6676",
+              "err_dmdt": "0.181",
+              "perc_area_meas": "0.995",
+              "perc_area_res": "0.999",
+              "valid_obs": "26.97",
+              "valid_obs_py": "13.71",
+              "area_nodata": "406000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_06_rgi60_reg_rates.csv",
+          "bytes": 5576,
+          "sha256": "55efbc52bb0ba68820528dc929bbfe2089c6df0fe7add04c5bb5ee34d0c3600b",
+          "rows": 42,
+          "columns": [
+            "reg",
+            "period",
+            "area",
+            "tarea",
+            "dhdt",
+            "err_dhdt",
+            "dvoldt",
+            "err_dvoldt",
+            "dmdt",
+            "err_dmdt",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "6",
+              "period": "2000-01-01_2001-01-01",
+              "area": "11059700000.0",
+              "tarea": "11039800000.0",
+              "dhdt": "-1.28",
+              "err_dhdt": "0.459",
+              "dvoldt": "-14133947144.0",
+              "err_dvoldt": "5064943748.0",
+              "dmdt": "-12.0139",
+              "err_dmdt": "4.3879",
+              "perc_area_meas": "0.996",
+              "perc_area_res": "1.0",
+              "valid_obs": "0.78",
+              "valid_obs_py": "0.67",
+              "area_nodata": "0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "6",
+              "period": "2000-01-01_2020-01-01",
+              "area": "11059700000.0",
+              "tarea": "10661550000.0",
+              "dhdt": "-1.033",
+              "err_dhdt": "0.029",
+              "dvoldt": "-11012841690.0",
+              "err_dvoldt": "286433803.0",
+              "dmdt": "-9.3609",
+              "err_dmdt": "0.7042",
+              "perc_area_meas": "0.996",
+              "perc_area_res": "1.0",
+              "valid_obs": "66.38",
+              "valid_obs_py": "17.31",
+              "area_nodata": "0"
+            }
+          ]
+        },
+        {
+          "name": "dh_14_rgi60_reg_cumul.csv",
+          "bytes": 23005,
+          "sha256": "2cf64d8c337ee860c09aec178dc3f13f56fd567690cb5455123713463e44b751",
+          "rows": 241,
+          "columns": [
+            "reg",
+            "time",
+            "area",
+            "dh",
+            "err_dh",
+            "dvol",
+            "err_dvol",
+            "dm",
+            "err_dm",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "14",
+              "time": "2000-01-01",
+              "area": "33568298000.0",
+              "dh": "0.0",
+              "err_dh": "0.382",
+              "dvol": "0.0",
+              "err_dvol": "12828579019.0",
+              "dm": "0.0",
+              "err_dm": "10.9043",
+              "perc_area_meas": "0.938",
+              "perc_area_res": "0.948",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.43",
+              "area_nodata": "60698000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "14",
+              "time": "2020-01-01",
+              "area": "33568298000.0",
+              "dh": "-3.194",
+              "err_dh": "0.299",
+              "dvol": "-107203583300.0",
+              "err_dvol": "12885836382.0",
+              "dm": "-91.123",
+              "err_dm": "12.702",
+              "perc_area_meas": "0.938",
+              "perc_area_res": "0.948",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.0",
+              "area_nodata": "60698000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_03_rgi60_reg_cumul.csv",
+          "bytes": 22984,
+          "sha256": "d76c7301c99286d2e52bd4b756491508006f4e5f23ba920f80f3627d1ad8c4a3",
+          "rows": 241,
+          "columns": [
+            "reg",
+            "time",
+            "area",
+            "dh",
+            "err_dh",
+            "dvol",
+            "err_dvol",
+            "dm",
+            "err_dm",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "3",
+              "time": "2000-01-01",
+              "area": "105110642000.0",
+              "dh": "0.0",
+              "err_dh": "0.185",
+              "dvol": "0.0",
+              "err_dvol": "19442119010.0",
+              "dm": "0.0",
+              "err_dm": "16.5258",
+              "perc_area_meas": "0.995",
+              "perc_area_res": "0.999",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.52",
+              "area_nodata": "589000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "3",
+              "time": "2020-01-01",
+              "area": "105110642000.0",
+              "dh": "-6.841",
+              "err_dh": "0.134",
+              "dvol": "-719066952760.0",
+              "err_dvol": "17327271296.0",
+              "dm": "-611.2069",
+              "err_dm": "45.5887",
+              "perc_area_meas": "0.995",
+              "perc_area_res": "0.999",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.0",
+              "area_nodata": "589000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_16_rgi60_reg_rates.csv",
+          "bytes": 5861,
+          "sha256": "022adfbb646f11296d5cfd32932c4d4bd05ec8ba3b84e4a1fb043c0ef09f3319",
+          "rows": 42,
+          "columns": [
+            "reg",
+            "period",
+            "area",
+            "tarea",
+            "dhdt",
+            "err_dhdt",
+            "dvoldt",
+            "err_dvoldt",
+            "dmdt",
+            "err_dmdt",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "16",
+              "period": "2000-01-01_2001-01-01",
+              "area": "2341036000.0",
+              "tarea": "2319000000.0",
+              "dhdt": "-0.486",
+              "err_dhdt": "0.46",
+              "dvoldt": "-1127553948.0",
+              "err_dvoldt": "1067150525.0",
+              "dmdt": "-0.9584",
+              "err_dmdt": "0.9096",
+              "perc_area_meas": "0.949",
+              "perc_area_res": "0.956",
+              "valid_obs": "0.95",
+              "valid_obs_py": "0.62",
+              "area_nodata": "2816000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "16",
+              "period": "2000-01-01_2020-01-01",
+              "area": "2341036000.0",
+              "tarea": "2055300000.0",
+              "dhdt": "-0.534",
+              "err_dhdt": "0.057",
+              "dvoldt": "-1097299182.0",
+              "err_dvoldt": "117057027.0",
+              "dmdt": "-0.9327",
+              "err_dmdt": "0.1193",
+              "perc_area_meas": "0.949",
+              "perc_area_res": "0.956",
+              "valid_obs": "35.17",
+              "valid_obs_py": "14.53",
+              "area_nodata": "2816000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_13_14_15_rgi60_reg_rates.csv",
+          "bytes": 6197,
+          "sha256": "75f4a7e82916e9f840706447be742ce413b7e851901229fe84a9812ef0fd9e64",
+          "rows": 42,
+          "columns": [
+            "reg",
+            "period",
+            "area",
+            "tarea",
+            "dhdt",
+            "err_dhdt",
+            "dvoldt",
+            "err_dvoldt",
+            "dmdt",
+            "err_dmdt",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "21",
+              "period": "2000-01-01_2001-01-01",
+              "area": "97605917000.0",
+              "tarea": "98189100000.0",
+              "dhdt": "-0.11",
+              "err_dhdt": "0.211",
+              "dvoldt": "-10783479285.0",
+              "err_dvoldt": "20704005696.0",
+              "dmdt": "-9.166",
+              "err_dmdt": "17.6103",
+              "perc_area_meas": "0.948",
+              "perc_area_res": "0.956",
+              "valid_obs": "0.73",
+              "valid_obs_py": "0.48",
+              "area_nodata": "123670000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "21",
+              "period": "2000-01-01_2020-01-01",
+              "area": "97605917000.0",
+              "tarea": "95540050000.0",
+              "dhdt": "-0.259",
+              "err_dhdt": "0.022",
+              "dvoldt": "-24746408411.0",
+              "err_dvoldt": "2050027238.0",
+              "dmdt": "-21.0344",
+              "err_dmdt": "2.2893",
+              "perc_area_meas": "0.948",
+              "perc_area_res": "0.956",
+              "valid_obs": "35.97",
+              "valid_obs_py": "14.33",
+              "area_nodata": "123670000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_16_rgi60_reg_cumul.csv",
+          "bytes": 22412,
+          "sha256": "5a5c459887414566300e8eeb254280cd30cc1e025e74283effa7d516765dffa6",
+          "rows": 241,
+          "columns": [
+            "reg",
+            "time",
+            "area",
+            "dh",
+            "err_dh",
+            "dvol",
+            "err_dvol",
+            "dm",
+            "err_dm",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "16",
+              "time": "2000-01-01",
+              "area": "2341036000.0",
+              "dh": "0.0",
+              "err_dh": "0.387",
+              "dvol": "0.0",
+              "err_dvol": "904877130.0",
+              "dm": "0.0",
+              "err_dm": "0.7691",
+              "perc_area_meas": "0.949",
+              "perc_area_res": "0.956",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.62",
+              "area_nodata": "2816000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "16",
+              "time": "2020-01-01",
+              "area": "2341036000.0",
+              "dh": "-9.374",
+              "err_dh": "0.262",
+              "dvol": "-21945983638.0",
+              "err_dvol": "2159198099.0",
+              "dm": "-18.6541",
+              "err_dm": "2.2588",
+              "perc_area_meas": "0.949",
+              "perc_area_res": "0.956",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.0",
+              "area_nodata": "2816000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_18_rgi60_reg_cumul.csv",
+          "bytes": 22435,
+          "sha256": "f29189c73a3e1767d19757e806659848575e325a1fa9124ee55fad686842a898",
+          "rows": 241,
+          "columns": [
+            "reg",
+            "time",
+            "area",
+            "dh",
+            "err_dh",
+            "dvol",
+            "err_dvol",
+            "dm",
+            "err_dm",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "18",
+              "time": "2000-01-01",
+              "area": "1161801000.0",
+              "dh": "0.0",
+              "err_dh": "0.47",
+              "dvol": "0.0",
+              "err_dvol": "545545516.0",
+              "dm": "0.0",
+              "err_dm": "0.4637",
+              "perc_area_meas": "0.835",
+              "perc_area_res": "0.843",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.69",
+              "area_nodata": "26790000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "18",
+              "time": "2020-01-01",
+              "area": "1161801000.0",
+              "dh": "-13.174",
+              "err_dh": "0.534",
+              "dvol": "-15305714313.0",
+              "err_dvol": "1968894366.0",
+              "dm": "-13.0099",
+              "err_dm": "1.909",
+              "perc_area_meas": "0.835",
+              "perc_area_res": "0.843",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.0",
+              "area_nodata": "26790000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_01_02_rgi60_reg_rates.csv",
+          "bytes": 6250,
+          "sha256": "8a9c459afd8ee55fd2b1e8da49c2f4ecf1e6c8e8dee09346cd41639ac46759d4",
+          "rows": 42,
+          "columns": [
+            "reg",
+            "period",
+            "area",
+            "tarea",
+            "dhdt",
+            "err_dhdt",
+            "dvoldt",
+            "err_dvoldt",
+            "dmdt",
+            "err_dmdt",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "20",
+              "period": "2000-01-01_2001-01-01",
+              "area": "101249277000.0",
+              "tarea": "105062150000.0",
+              "dhdt": "-0.513",
+              "err_dhdt": "0.255",
+              "dvoldt": "-53874677289.0",
+              "err_dvoldt": "26770851533.0",
+              "dmdt": "-45.7935",
+              "err_dmdt": "22.9837",
+              "perc_area_meas": "0.982",
+              "perc_area_res": "0.989",
+              "valid_obs": "0.38",
+              "valid_obs_py": "0.29",
+              "area_nodata": "57752000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "20",
+              "period": "2000-01-01_2020-01-01",
+              "area": "101249277000.0",
+              "tarea": "100362450000.0",
+              "dhdt": "-0.87",
+              "err_dhdt": "0.041",
+              "dvoldt": "-87317370746.0",
+              "err_dvoldt": "4062214937.0",
+              "dmdt": "-74.2198",
+              "err_dmdt": "6.2745",
+              "perc_area_meas": "0.982",
+              "perc_area_res": "0.989",
+              "valid_obs": "28.57",
+              "valid_obs_py": "11.75",
+              "area_nodata": "57752000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_11_rgi60_reg_rates.csv",
+          "bytes": 5851,
+          "sha256": "3e469e2103bcc28f99d5c888b217ec60cfffe9adecc5ab94304a49673f15d310",
+          "rows": 42,
+          "columns": [
+            "reg",
+            "period",
+            "area",
+            "tarea",
+            "dhdt",
+            "err_dhdt",
+            "dvoldt",
+            "err_dvoldt",
+            "dmdt",
+            "err_dmdt",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "11",
+              "period": "2000-01-01_2001-01-01",
+              "area": "2092146000.0",
+              "tarea": "2140800000.0",
+              "dhdt": "-0.948",
+              "err_dhdt": "0.466",
+              "dvoldt": "-2029932115.0",
+              "err_dvoldt": "997090651.0",
+              "dmdt": "-1.7254",
+              "err_dmdt": "0.8562",
+              "perc_area_meas": "0.97",
+              "perc_area_res": "0.977",
+              "valid_obs": "0.54",
+              "valid_obs_py": "0.51",
+              "area_nodata": "10358000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "11",
+              "period": "2000-01-01_2020-01-01",
+              "area": "2092146000.0",
+              "tarea": "1955950000.0",
+              "dhdt": "-1.017",
+              "err_dhdt": "0.104",
+              "dvoldt": "-1988681813.0",
+              "err_dvoldt": "203349320.0",
+              "dmdt": "-1.6904",
+              "err_dmdt": "0.21",
+              "perc_area_meas": "0.97",
+              "perc_area_res": "0.977",
+              "valid_obs": "46.84",
+              "valid_obs_py": "16.35",
+              "area_nodata": "10358000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_03_rgi60_reg_rates.csv",
+          "bytes": 6109,
+          "sha256": "5e1777ec3b8237365de38f9282e2b9fb3979b6eb1245b4b4d08a87fdd691f794",
+          "rows": 42,
+          "columns": [
+            "reg",
+            "period",
+            "area",
+            "tarea",
+            "dhdt",
+            "err_dhdt",
+            "dvoldt",
+            "err_dvoldt",
+            "dmdt",
+            "err_dmdt",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "3",
+              "period": "2000-01-01_2001-01-01",
+              "area": "105110642000.0",
+              "tarea": "105042950000.0",
+              "dhdt": "-0.306",
+              "err_dhdt": "0.202",
+              "dvoldt": "-32105286095.0",
+              "err_dvoldt": "21180871168.0",
+              "dmdt": "-27.2895",
+              "err_dmdt": "18.1065",
+              "perc_area_meas": "0.995",
+              "perc_area_res": "0.999",
+              "valid_obs": "0.9",
+              "valid_obs_py": "0.52",
+              "area_nodata": "589000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "3",
+              "period": "2000-01-01_2020-01-01",
+              "area": "105110642000.0",
+              "tarea": "104316000000.0",
+              "dhdt": "-0.345",
+              "err_dhdt": "0.013",
+              "dvoldt": "-35953347638.0",
+              "err_dvoldt": "1302142775.0",
+              "dmdt": "-30.5603",
+              "err_dmdt": "2.4246",
+              "perc_area_meas": "0.995",
+              "perc_area_res": "0.999",
+              "valid_obs": "55.27",
+              "valid_obs_py": "16.28",
+              "area_nodata": "589000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_05_rgi60_reg_cumul.csv",
+          "bytes": 23041,
+          "sha256": "8c6104bc5a0376651bfbc1e4f80434adc5b54942242905796001b7c731a8427e",
+          "rows": 241,
+          "columns": [
+            "reg",
+            "time",
+            "area",
+            "dh",
+            "err_dh",
+            "dvol",
+            "err_dvol",
+            "dm",
+            "err_dm",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "5",
+              "time": "2000-01-01",
+              "area": "89717066000.0",
+              "dh": "0.0",
+              "err_dh": "0.133",
+              "dvol": "0.0",
+              "err_dvol": "11932709485.0",
+              "dm": "0.0",
+              "err_dm": "10.1428",
+              "perc_area_meas": "0.99",
+              "perc_area_res": "0.995",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.42",
+              "area_nodata": "20313000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "5",
+              "time": "2020-01-01",
+              "area": "89717066000.0",
+              "dh": "-9.314",
+              "err_dh": "0.056",
+              "dvol": "-835652923019.0",
+              "err_dvol": "31700287428.0",
+              "dm": "-710.305",
+              "err_dm": "56.9208",
+              "perc_area_meas": "0.99",
+              "perc_area_res": "0.995",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.0",
+              "area_nodata": "20313000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_10_rgi60_reg_rates.csv",
+          "bytes": 5989,
+          "sha256": "9612b86dce34e84957a8da2fb8e34ad5e6040798d8e67e94a87d7710d4f1d6d2",
+          "rows": 42,
+          "columns": [
+            "reg",
+            "period",
+            "area",
+            "tarea",
+            "dhdt",
+            "err_dhdt",
+            "dvoldt",
+            "err_dvoldt",
+            "dmdt",
+            "err_dmdt",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "10.0",
+              "period": "2000-01-01_2001-01-01",
+              "area": "2410051000.0",
+              "tarea": "2518900000.0",
+              "dhdt": "-0.475",
+              "err_dhdt": "0.417",
+              "dvoldt": "-1195406487.0",
+              "err_dvoldt": "1050504692.0",
+              "dmdt": "-1.0161",
+              "err_dmdt": "0.8958",
+              "perc_area_meas": "0.952",
+              "perc_area_res": "0.956",
+              "valid_obs": "1.05",
+              "valid_obs_py": "0.62",
+              "area_nodata": "88524000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "10.0",
+              "period": "2000-01-01_2020-01-01",
+              "area": "2410051000.0",
+              "tarea": "2420450000.0",
+              "dhdt": "-0.611",
+              "err_dhdt": "0.08",
+              "dvoldt": "-1479667105.0",
+              "err_dvoldt": "193146667.0",
+              "dmdt": "-1.2577",
+              "err_dmdt": "0.1866",
+              "perc_area_meas": "0.952",
+              "perc_area_res": "0.956",
+              "valid_obs": "37.5",
+              "valid_obs_py": "13.13",
+              "area_nodata": "88524000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_11_rgi60_reg_cumul.csv",
+          "bytes": 22564,
+          "sha256": "673995778a4bd971efc2016cd4bb55e962f397517a3bf8fd3d3f6494dede2178",
+          "rows": 241,
+          "columns": [
+            "reg",
+            "time",
+            "area",
+            "dh",
+            "err_dh",
+            "dvol",
+            "err_dvol",
+            "dm",
+            "err_dm",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "11",
+              "time": "2000-01-01",
+              "area": "2092146000.0",
+              "dh": "0.0",
+              "err_dh": "0.425",
+              "dvol": "0.0",
+              "err_dvol": "888909701.0",
+              "dm": "0.0",
+              "err_dm": "0.7556",
+              "perc_area_meas": "0.97",
+              "perc_area_res": "0.977",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.51",
+              "area_nodata": "10358000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "11",
+              "time": "2020-01-01",
+              "area": "2092146000.0",
+              "dh": "-19.011",
+              "err_dh": "0.22",
+              "dvol": "-39773636256.0",
+              "err_dvol": "3968654431.0",
+              "dm": "-33.8076",
+              "err_dm": "4.1321",
+              "perc_area_meas": "0.97",
+              "perc_area_res": "0.977",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.0",
+              "area_nodata": "10358000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_10_rgi60_reg_cumul.csv",
+          "bytes": 23206,
+          "sha256": "23c9695850a65f60baf91840bd4b98c7f0f16a8ab23dc92f90cc71eea25a975d",
+          "rows": 241,
+          "columns": [
+            "reg",
+            "time",
+            "area",
+            "dh",
+            "err_dh",
+            "dvol",
+            "err_dvol",
+            "dm",
+            "err_dm",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "10.0",
+              "time": "2000-01-01",
+              "area": "2410051000.0",
+              "dh": "0.0",
+              "err_dh": "0.366",
+              "dvol": "0.0",
+              "err_dvol": "881024998.0",
+              "dm": "0.0",
+              "err_dm": "0.7489",
+              "perc_area_meas": "0.952",
+              "perc_area_res": "0.956",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.62",
+              "area_nodata": "88524000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "10.0",
+              "time": "2020-01-01",
+              "area": "2410051000.0",
+              "dh": "-12.279",
+              "err_dh": "0.273",
+              "dvol": "-29593342091.0",
+              "err_dvol": "3761123371.0",
+              "dm": "-25.1543",
+              "err_dm": "3.6569",
+              "perc_area_meas": "0.952",
+              "perc_area_res": "0.956",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.0",
+              "area_nodata": "88524000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_19_rgi60_reg_rates.csv",
+          "bytes": 6342,
+          "sha256": "4b5e7e99a8c7b4e6e66702f641ce07334dff161573bbad6705f26edb575458b2",
+          "rows": 42,
+          "columns": [
+            "reg",
+            "period",
+            "area",
+            "tarea",
+            "dhdt",
+            "err_dhdt",
+            "dvoldt",
+            "err_dvoldt",
+            "dmdt",
+            "err_dmdt",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "19.0",
+              "period": "2000-01-01_2001-01-01",
+              "area": "132867219000.0",
+              "tarea": "128741700000.0",
+              "dhdt": "-0.274",
+              "err_dhdt": "0.347",
+              "dvoldt": "-35247222928.0",
+              "err_dvoldt": "44687454517.0",
+              "dmdt": "-29.9601",
+              "err_dmdt": "38.0432",
+              "perc_area_meas": "0.92",
+              "perc_area_res": "0.924",
+              "valid_obs": "0.14",
+              "valid_obs_py": "0.09",
+              "area_nodata": "537194000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "19.0",
+              "period": "2000-01-01_2020-01-01",
+              "area": "132867219000.0",
+              "tarea": "125333650000.0",
+              "dhdt": "-0.196",
+              "err_dhdt": "0.019",
+              "dvoldt": "-24573803048.0",
+              "err_dvoldt": "2322654088.0",
+              "dmdt": "-20.8877",
+              "err_dmdt": "2.4641",
+              "perc_area_meas": "0.92",
+              "perc_area_res": "0.924",
+              "valid_obs": "15.42",
+              "valid_obs_py": "8.19",
+              "area_nodata": "537194000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_04_rgi60_reg_rates.csv",
+          "bytes": 6038,
+          "sha256": "78eab849c5419d36ee7716151ea77576452abcf86bf924b54893169812e2b98e",
+          "rows": 42,
+          "columns": [
+            "reg",
+            "period",
+            "area",
+            "tarea",
+            "dhdt",
+            "err_dhdt",
+            "dvoldt",
+            "err_dvoldt",
+            "dmdt",
+            "err_dmdt",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "4",
+              "period": "2000-01-01_2001-01-01",
+              "area": "40888228000.0",
+              "tarea": "40861900000.0",
+              "dhdt": "-0.585",
+              "err_dhdt": "0.402",
+              "dvoldt": "-23918987218.0",
+              "err_dvoldt": "16423588813.0",
+              "dmdt": "-20.3311",
+              "err_dmdt": "14.0336",
+              "perc_area_meas": "0.994",
+              "perc_area_res": "0.999",
+              "valid_obs": "0.17",
+              "valid_obs_py": "0.16",
+              "area_nodata": "1423000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "4",
+              "period": "2000-01-01_2020-01-01",
+              "area": "40888228000.0",
+              "tarea": "40579100000.0",
+              "dhdt": "-0.768",
+              "err_dhdt": "0.031",
+              "dvoldt": "-31178582562.0",
+              "err_dvoldt": "1202677654.0",
+              "dmdt": "-26.5018",
+              "err_dmdt": "2.1318",
+              "perc_area_meas": "0.994",
+              "perc_area_res": "0.999",
+              "valid_obs": "28.26",
+              "valid_obs_py": "13.41",
+              "area_nodata": "1423000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_07_rgi60_reg_cumul.csv",
+          "bytes": 21756,
+          "sha256": "23d550c7f7d29777eab7d0b8fefe6833f00442a34db541b99770b5b30262293e",
+          "rows": 241,
+          "columns": [
+            "reg",
+            "time",
+            "area",
+            "dh",
+            "err_dh",
+            "dvol",
+            "err_dvol",
+            "dm",
+            "err_dm",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "7",
+              "time": "2000-01-01",
+              "area": "34187175000.0",
+              "dh": "0.0",
+              "err_dh": "0.203",
+              "dvol": "0.0",
+              "err_dvol": "6938370568.0",
+              "dm": "0.0",
+              "err_dm": "5.8976",
+              "perc_area_meas": "0.994",
+              "perc_area_res": "1.0",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.49",
+              "area_nodata": "34000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "7",
+              "time": "2020-01-01",
+              "area": "34187175000.0",
+              "dh": "-7.254",
+              "err_dh": "0.149",
+              "dvol": "-247980083730.0",
+              "err_dvol": "6520977350.0",
+              "dm": "-210.7831",
+              "err_dm": "15.8777",
+              "perc_area_meas": "0.994",
+              "perc_area_res": "1.0",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.0",
+              "area_nodata": "34000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_08_rgi60_reg_cumul.csv",
+          "bytes": 22059,
+          "sha256": "4ccfe1a8e3009bfc60d402dc964491fb2d13a2d4fb86d28f09fb62619e34df2b",
+          "rows": 241,
+          "columns": [
+            "reg",
+            "time",
+            "area",
+            "dh",
+            "err_dh",
+            "dvol",
+            "err_dvol",
+            "dm",
+            "err_dm",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "8",
+              "time": "2000-01-01",
+              "area": "2949103000.0",
+              "dh": "0.0",
+              "err_dh": "0.308",
+              "dvol": "0.0",
+              "err_dvol": "907219817.0",
+              "dm": "0.0",
+              "err_dm": "0.7711",
+              "perc_area_meas": "0.995",
+              "perc_area_res": "0.999",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.52",
+              "area_nodata": "406000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "8",
+              "time": "2020-01-01",
+              "area": "2949103000.0",
+              "dh": "-13.305",
+              "err_dh": "0.33",
+              "dvol": "-39236751389.0",
+              "err_dvol": "3104041950.0",
+              "dm": "-33.3512",
+              "err_dm": "3.536",
+              "perc_area_meas": "0.995",
+              "perc_area_res": "0.999",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.0",
+              "area_nodata": "406000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_12_rgi60_reg_cumul.csv",
+          "bytes": 22200,
+          "sha256": "1bebca6b09779a7ec7dae467e0a5eb3954e2487bede05ea7ad02d4e126a76d7f",
+          "rows": 241,
+          "columns": [
+            "reg",
+            "time",
+            "area",
+            "dh",
+            "err_dh",
+            "dvol",
+            "err_dvol",
+            "dm",
+            "err_dm",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "12",
+              "time": "2000-01-01",
+              "area": "1336462000.0",
+              "dh": "0.0",
+              "err_dh": "0.62",
+              "dvol": "0.0",
+              "err_dvol": "828662193.0",
+              "dm": "0.0",
+              "err_dm": "0.7044",
+              "perc_area_meas": "0.912",
+              "perc_area_res": "0.917",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.34",
+              "area_nodata": "9772000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "12",
+              "time": "2020-01-01",
+              "area": "1336462000.0",
+              "dh": "-11.851",
+              "err_dh": "0.524",
+              "dvol": "-15838987267.0",
+              "err_dvol": "1748130188.0",
+              "dm": "-13.4631",
+              "err_dm": "1.7638",
+              "perc_area_meas": "0.912",
+              "perc_area_res": "0.917",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.0",
+              "area_nodata": "9772000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_18_rgi60_reg_rates.csv",
+          "bytes": 5842,
+          "sha256": "ebe4c546765d5fbcca79c15661bf301a397a80197a64d14cbd648a0ea11e3ec5",
+          "rows": 42,
+          "columns": [
+            "reg",
+            "period",
+            "area",
+            "tarea",
+            "dhdt",
+            "err_dhdt",
+            "dvoldt",
+            "err_dvoldt",
+            "dmdt",
+            "err_dmdt",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "18",
+              "period": "2000-01-01_2001-01-01",
+              "area": "1161801000.0",
+              "tarea": "981400000.0",
+              "dhdt": "-0.225",
+              "err_dhdt": "0.652",
+              "dvoldt": "-220335880.0",
+              "err_dvoldt": "640296515.0",
+              "dmdt": "-0.1873",
+              "err_dmdt": "0.5444",
+              "perc_area_meas": "0.835",
+              "perc_area_res": "0.843",
+              "valid_obs": "1.47",
+              "valid_obs_py": "0.69",
+              "area_nodata": "26790000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "18",
+              "period": "2000-01-01_2020-01-01",
+              "area": "1161801000.0",
+              "tarea": "905250000.0",
+              "dhdt": "-0.845",
+              "err_dhdt": "0.113",
+              "dvoldt": "-765285716.0",
+              "err_dvoldt": "102153866.0",
+              "dmdt": "-0.6505",
+              "err_dmdt": "0.0982",
+              "perc_area_meas": "0.835",
+              "perc_area_res": "0.843",
+              "valid_obs": "64.25",
+              "valid_obs_py": "15.58",
+              "area_nodata": "26790000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_01_02_rgi60_reg_cumul.csv",
+          "bytes": 24062,
+          "sha256": "be636825967ed98437e4645516775fa20ec805cb4f53049d2886c88b24d77bdd",
+          "rows": 241,
+          "columns": [
+            "reg",
+            "time",
+            "area",
+            "dh",
+            "err_dh",
+            "dvol",
+            "err_dvol",
+            "dm",
+            "err_dm",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "20",
+              "time": "2000-01-01",
+              "area": "101249277000.0",
+              "dh": "0.0",
+              "err_dh": "0.213",
+              "dvol": "0.0",
+              "err_dvol": "21524334067.0",
+              "dm": "0.0",
+              "err_dm": "18.2957",
+              "perc_area_meas": "0.982",
+              "perc_area_res": "0.989",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.29",
+              "area_nodata": "57752000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "20",
+              "time": "2020-01-01",
+              "area": "101249277000.0",
+              "dh": "-17.248",
+              "err_dh": "0.073",
+              "dvol": "-1746347414924.0",
+              "err_dvol": "78341171302.0",
+              "dm": "-1484.3953",
+              "err_dm": "124.1501",
+              "perc_area_meas": "0.982",
+              "perc_area_res": "0.989",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.0",
+              "area_nodata": "57752000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_13_14_15_rgi60_reg_cumul.csv",
+          "bytes": 23671,
+          "sha256": "8e19bd29fd7cb4bfed61e3c1a1f2afacff8a208bfceef6114a23048ba78f6b65",
+          "rows": 241,
+          "columns": [
+            "reg",
+            "time",
+            "area",
+            "dh",
+            "err_dh",
+            "dvol",
+            "err_dvol",
+            "dm",
+            "err_dm",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "21",
+              "time": "2000-01-01",
+              "area": "97605917000.0",
+              "dh": "0.0",
+              "err_dh": "0.188",
+              "dvol": "0.0",
+              "err_dvol": "18386316519.0",
+              "dm": "0.0",
+              "err_dm": "15.6284",
+              "perc_area_meas": "0.948",
+              "perc_area_res": "0.956",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.48",
+              "area_nodata": "123670000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "21",
+              "time": "2020-01-01",
+              "area": "97605917000.0",
+              "dh": "-5.071",
+              "err_dh": "0.153",
+              "dvol": "-494928168211.0",
+              "err_dvol": "36646801165.0",
+              "dm": "-420.6889",
+              "err_dm": "43.0365",
+              "perc_area_meas": "0.948",
+              "perc_area_res": "0.956",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.0",
+              "area_nodata": "123670000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_15_rgi60_reg_cumul.csv",
+          "bytes": 23234,
+          "sha256": "e9a3e80dc1038eccf60743ec1083797639fe25d504a97bb9337ff25ae33f41eb",
+          "rows": 241,
+          "columns": [
+            "reg",
+            "time",
+            "area",
+            "dh",
+            "err_dh",
+            "dvol",
+            "err_dvol",
+            "dm",
+            "err_dm",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "15",
+              "time": "2000-01-01",
+              "area": "14734204000.0",
+              "dh": "0.0",
+              "err_dh": "0.318",
+              "dvol": "0.0",
+              "err_dvol": "4690360258.0",
+              "dm": "0.0",
+              "err_dm": "3.9868",
+              "perc_area_meas": "0.918",
+              "perc_area_res": "0.925",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.5",
+              "area_nodata": "26190000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "15",
+              "time": "2020-01-01",
+              "area": "14734204000.0",
+              "dh": "-10.979",
+              "err_dh": "0.305",
+              "dvol": "-161760816990.0",
+              "err_dvol": "11134632304.0",
+              "dm": "-137.4967",
+              "err_dm": "13.5564",
+              "perc_area_meas": "0.918",
+              "perc_area_res": "0.925",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.0",
+              "area_nodata": "26190000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_01_rgi60_reg_cumul.csv",
+          "bytes": 23299,
+          "sha256": "1a8077e3315fbb7ef8cb2bc7753fbf3fba2e7267dc91a72a80984628dbb27dd3",
+          "rows": 241,
+          "columns": [
+            "reg",
+            "time",
+            "area",
+            "dh",
+            "err_dh",
+            "dvol",
+            "err_dvol",
+            "dm",
+            "err_dm",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "reg": "1",
+              "time": "2000-01-01",
+              "area": "86725053000.0",
+              "dh": "0.0",
+              "err_dh": "0.245",
+              "dvol": "0.0",
+              "err_dvol": "21271028335.0",
+              "dm": "0.0",
+              "err_dm": "18.0804",
+              "perc_area_meas": "0.983",
+              "perc_area_res": "0.99",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.22",
+              "area_nodata": "17684000.0"
+            }
+          ],
+          "last": [
+            {
+              "reg": "1",
+              "time": "2020-01-01",
+              "area": "86725053000.0",
+              "dh": "-18.083",
+              "err_dh": "0.076",
+              "dvol": "-1568272486307.0",
+              "err_dvol": "60345799175.0",
+              "dm": "-1333.0316",
+              "err_dm": "107.169",
+              "perc_area_meas": "0.983",
+              "perc_area_res": "0.99",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.0",
+              "area_nodata": "17684000.0"
+            }
+          ]
+        }
+      ],
+      "completeRead": true
+    },
+    "sedooRegionalFixed": {
+      "members": [
+        {
+          "name": "dh_rgi60_O2_cumul.csv",
+          "bytes": 18160447,
+          "sha256": "185952bb38266b300b6fc0b5680e8faf74da1d01a3853b8c0fa4faf34929fd33",
+          "rows": 184365,
+          "columns": [
+            "subreg",
+            "time",
+            "area",
+            "dh",
+            "err_dh",
+            "dvol",
+            "err_dvol",
+            "dm",
+            "err_dm",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "subreg": "03-01",
+              "time": "2000-01-01",
+              "area": "10342532000.0",
+              "dh": "0.0",
+              "err_dh": "0.331",
+              "dvol": "0.0",
+              "err_dvol": "3423327572.0",
+              "dm": "0.0",
+              "err_dm": "2.9098",
+              "perc_area_meas": "0.994",
+              "perc_area_res": "1.0",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.59",
+              "area_nodata": "0.0"
+            }
+          ],
+          "last": [
+            {
+              "subreg": "15-03",
+              "time": "2020-01-01",
+              "area": "4385587000.0",
+              "dh": "-13.93",
+              "err_dh": "1.083",
+              "dvol": "-61092645777.0",
+              "err_dvol": "4747644924.0",
+              "dm": "-51.9287",
+              "err_dm": "5.4517",
+              "perc_area_meas": "0.867",
+              "perc_area_res": "0.874",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.0",
+              "area_nodata": "14764000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_rgi60_O1_rates.csv",
+          "bytes": 1119118,
+          "sha256": "df02af8065667e3bb40d20c9a88b43cd475023e7b1b06fee9d4ef8eea387b493",
+          "rows": 10206,
+          "columns": [
+            "subreg",
+            "period",
+            "area",
+            "dhdt",
+            "err_dhdt",
+            "dvoldt",
+            "err_dvoldt",
+            "dmdt",
+            "err_dmdt",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "subreg": "3",
+              "period": "2000-01-01_2001-01-01",
+              "area": "49110846000.0",
+              "dhdt": "-0.284",
+              "err_dhdt": "0.295",
+              "dvoldt": "-13941031956.0",
+              "err_dvoldt": "14470796037.0",
+              "dmdt": "-11.8499",
+              "err_dmdt": "12.3286",
+              "perc_area_meas": "0.996",
+              "perc_area_res": "1.0",
+              "valid_obs": "0.69",
+              "valid_obs_py": "0.45",
+              "area_nodata": "22000.0"
+            }
+          ],
+          "last": [
+            {
+              "subreg": "15",
+              "period": "2019-01-01_2020-01-01",
+              "area": "14733963000.0",
+              "dhdt": "-0.648",
+              "err_dhdt": "0.375",
+              "dvoldt": "-9541639574.0",
+              "err_dvoldt": "5521142249.0",
+              "dmdt": "-8.1104",
+              "err_dmdt": "4.7278",
+              "perc_area_meas": "0.918",
+              "perc_area_res": "0.925",
+              "valid_obs": "0.82",
+              "valid_obs_py": "0.55",
+              "area_nodata": "29088000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_rgi60_O2_rates.csv",
+          "bytes": 4408780,
+          "sha256": "a9cd0ed397b816bf4a7e5015090ec188043e9b6d334bc29c1e4b2afa1401eaf6",
+          "rows": 41706,
+          "columns": [
+            "subreg",
+            "period",
+            "area",
+            "dhdt",
+            "err_dhdt",
+            "dvoldt",
+            "err_dvoldt",
+            "dmdt",
+            "err_dmdt",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "subreg": "03-01",
+              "period": "2000-01-01_2001-01-01",
+              "area": "10342532000.0",
+              "dhdt": "-0.204",
+              "err_dhdt": "0.383",
+              "dvoldt": "-2114005065.0",
+              "err_dvoldt": "3964844211.0",
+              "dmdt": "-1.7969",
+              "err_dmdt": "3.3725",
+              "perc_area_meas": "0.994",
+              "perc_area_res": "1.0",
+              "valid_obs": "0.75",
+              "valid_obs_py": "0.59",
+              "area_nodata": "0.0"
+            }
+          ],
+          "last": [
+            {
+              "subreg": "15-03",
+              "period": "2019-01-01_2020-01-01",
+              "area": "4385587000.0",
+              "dhdt": "-0.849",
+              "err_dhdt": "0.878",
+              "dvoldt": "-3724103724.0",
+              "err_dvoldt": "3848262731.0",
+              "dmdt": "-3.1655",
+              "err_dmdt": "3.2786",
+              "perc_area_meas": "0.867",
+              "perc_area_res": "0.874",
+              "valid_obs": "0.67",
+              "valid_obs_py": "0.4",
+              "area_nodata": "14764000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_HIMAP_cumul.csv",
+          "bytes": 599427,
+          "sha256": "91764743f4d2a6b443e83236721b6b666164c682e41c41a02781a5f985b89eb0",
+          "rows": 5302,
+          "columns": [
+            "subreg",
+            "time",
+            "area",
+            "dh",
+            "err_dh",
+            "dvol",
+            "err_dvol",
+            "dm",
+            "err_dm",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "subreg": "Eastern Hindu Kush",
+              "time": "2000-01-01",
+              "area": "2934299000.0",
+              "dh": "0.0",
+              "err_dh": "0.565",
+              "dvol": "0.0",
+              "err_dvol": "1658614187.0",
+              "dm": "0.0",
+              "err_dm": "1.4098",
+              "perc_area_meas": "0.937",
+              "perc_area_res": "0.945",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.52",
+              "area_nodata": "13130000.0"
+            }
+          ],
+          "last": [
+            {
+              "subreg": "Eastern Pamir",
+              "time": "2020-01-01",
+              "area": "2117774000.0",
+              "dh": "0.91",
+              "err_dh": "0.532",
+              "dvol": "1926691891.0",
+              "err_dvol": "1127200000.0",
+              "dm": "1.6377",
+              "err_dm": "0.9651",
+              "perc_area_meas": "0.958",
+              "perc_area_res": "0.965",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.0",
+              "area_nodata": "199000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_HIMAP_rates.csv",
+          "bytes": 126213,
+          "sha256": "e4fbcd1e9d231eb5afd3b5be81cce9e9466772422bea6d335ba9795ee30e2f72",
+          "rows": 924,
+          "columns": [
+            "subreg",
+            "period",
+            "area",
+            "dhdt",
+            "err_dhdt",
+            "dvoldt",
+            "err_dvoldt",
+            "dmdt",
+            "err_dmdt",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "subreg": "Eastern Hindu Kush",
+              "period": "2000-01-01_2001-01-01",
+              "area": "2934299000.0",
+              "dhdt": "-0.038",
+              "err_dhdt": "0.62",
+              "dvoldt": "-110367590.0",
+              "err_dvoldt": "1818272486.0",
+              "dmdt": "-0.0938",
+              "err_dmdt": "1.5455",
+              "perc_area_meas": "0.937",
+              "perc_area_res": "0.945",
+              "valid_obs": "0.69",
+              "valid_obs_py": "0.52",
+              "area_nodata": "13130000.0"
+            }
+          ],
+          "last": [
+            {
+              "subreg": "Eastern Pamir",
+              "period": "2019-01-01_2020-01-01",
+              "area": "2117774000.0",
+              "dhdt": "-0.076",
+              "err_dhdt": "0.683",
+              "dvoldt": "-161349623.0",
+              "err_dvoldt": "1447099909.0",
+              "dmdt": "-0.1371",
+              "err_dmdt": "1.2301",
+              "perc_area_meas": "0.958",
+              "perc_area_res": "0.965",
+              "valid_obs": "1.29",
+              "valid_obs_py": "0.73",
+              "area_nodata": "199000.0"
+            }
+          ]
+        },
+        {
+          "name": "dh_rgi60_O1_cumul.csv",
+          "bytes": 4774536,
+          "sha256": "e417b897caba10e1e0ee54639531af8c63a607c9ea23563ed1b098c109915daf",
+          "rows": 47959,
+          "columns": [
+            "subreg",
+            "time",
+            "area",
+            "dh",
+            "err_dh",
+            "dvol",
+            "err_dvol",
+            "dm",
+            "err_dm",
+            "perc_area_meas",
+            "perc_area_res",
+            "valid_obs",
+            "valid_obs_py",
+            "area_nodata"
+          ],
+          "first": [
+            {
+              "subreg": "3",
+              "time": "2000-01-01",
+              "area": "49110846000.0",
+              "dh": "0.0",
+              "err_dh": "0.264",
+              "dvol": "0.0",
+              "err_dvol": "12949685998.0",
+              "dm": "0.0",
+              "err_dm": "11.0072",
+              "perc_area_meas": "0.996",
+              "perc_area_res": "1.0",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.45",
+              "area_nodata": "22000.0"
+            }
+          ],
+          "last": [
+            {
+              "subreg": "15",
+              "time": "2020-01-01",
+              "area": "14733963000.0",
+              "dh": "-10.978",
+              "err_dh": "0.756",
+              "dvol": "-161747841230.0",
+              "err_dvol": "11133830165.0",
+              "dm": "-137.4857",
+              "err_dm": "13.5553",
+              "perc_area_meas": "0.918",
+              "perc_area_res": "0.925",
+              "valid_obs": "0.0",
+              "valid_obs_py": "0.0",
+              "area_nodata": "29088000.0"
+            }
+          ]
+        }
+      ],
+      "completeRead": true
+    },
+    "gsdr": [
+      {
+        "id": "gsdr-grids",
+        "url": "https://zenodo.org/api/records/7492812/files/Grids.zip/content",
+        "bytes": 1349760604,
+        "md5": "ee125dcb5562da6355ef4b37e6787792",
+        "sha256": "c13584d26c7bfbbd9f70f65b797b233683b25e9fba7e53d4149c46ce696b9a18",
+        "checksumMatchesPublisher": true,
+        "members": 204,
+        "badMember": null,
+        "complete": true,
+        "firstMembers": [
+          "Supplementary/Annual/",
+          "Supplementary/Annual/Annual_DiCyc1mm.nc",
+          "Supplementary/Annual/Annual_R95pa12hr.nc",
+          "Supplementary/Annual/Annual_R95pa1hr.nc",
+          "Supplementary/Annual/Annual_R95pa24hr.nc",
+          "Supplementary/Annual/Annual_R95pa3hr.nc",
+          "Supplementary/Annual/Annual_R95pa6hr.nc",
+          "Supplementary/Annual/Annual_R95pw12hr.nc",
+          "Supplementary/Annual/Annual_R95pw1hr.nc",
+          "Supplementary/Annual/Annual_R95pw24hr.nc",
+          "Supplementary/Annual/Annual_R95pw3hr.nc",
+          "Supplementary/Annual/Annual_R95pw6hr.nc",
+          "Supplementary/Annual/Annual_R99pa12hr.nc",
+          "Supplementary/Annual/Annual_R99pa1hr.nc",
+          "Supplementary/Annual/Annual_R99pa24hr.nc",
+          "Supplementary/Annual/Annual_R99pa3hr.nc",
+          "Supplementary/Annual/Annual_R99pa6hr.nc",
+          "Supplementary/Annual/Annual_R99pw12hr.nc",
+          "Supplementary/Annual/Annual_R99pw1hr.nc",
+          "Supplementary/Annual/Annual_R99pw24hr.nc",
+          "Supplementary/Annual/Annual_R99pw3hr.nc",
+          "Supplementary/Annual/Annual_R99pw6hr.nc",
+          "Supplementary/Monthly/",
+          "Supplementary/Monthly/Monthly_DiCyc1mm.nc",
+          "Supplementary/Monthly/Monthly_R95pa12hr.nc"
+        ]
+      },
+      {
+        "id": "gsdr-gauge",
+        "url": "https://zenodo.org/api/records/7492812/files/Gauge.zip/content",
+        "bytes": 1240995650,
+        "md5": "dc6bfcf501110a1ce65cd8d38277d5c8",
+        "sha256": "c5c9954d0d5620d3e53725c8f5b1b286daad1261edb2823f48cd19f7cd18bf54",
+        "checksumMatchesPublisher": true,
+        "members": 205,
+        "badMember": null,
+        "complete": true,
+        "firstMembers": [
+          "Metadata.csv",
+          "Supplementary/Annual/",
+          "Supplementary/Annual/Supplementary_Annual_DiCyc1mm.zip",
+          "Supplementary/Annual/Supplementary_Annual_R95pa12hr.zip",
+          "Supplementary/Annual/Supplementary_Annual_R95pa1hr.zip",
+          "Supplementary/Annual/Supplementary_Annual_R95pa24hr.zip",
+          "Supplementary/Annual/Supplementary_Annual_R95pa3hr.zip",
+          "Supplementary/Annual/Supplementary_Annual_R95pa6hr.zip",
+          "Supplementary/Annual/Supplementary_Annual_R95pw12hr.zip",
+          "Supplementary/Annual/Supplementary_Annual_R95pw1hr.zip",
+          "Supplementary/Annual/Supplementary_Annual_R95pw24hr.zip",
+          "Supplementary/Annual/Supplementary_Annual_R95pw3hr.zip",
+          "Supplementary/Annual/Supplementary_Annual_R95pw6hr.zip",
+          "Supplementary/Annual/Supplementary_Annual_R99pa12hr.zip",
+          "Supplementary/Annual/Supplementary_Annual_R99pa1hr.zip",
+          "Supplementary/Annual/Supplementary_Annual_R99pa24hr.zip",
+          "Supplementary/Annual/Supplementary_Annual_R99pa3hr.zip",
+          "Supplementary/Annual/Supplementary_Annual_R99pa6hr.zip",
+          "Supplementary/Annual/Supplementary_Annual_R99pw12hr.zip",
+          "Supplementary/Annual/Supplementary_Annual_R99pw1hr.zip",
+          "Supplementary/Annual/Supplementary_Annual_R99pw24hr.zip",
+          "Supplementary/Annual/Supplementary_Annual_R99pw3hr.zip",
+          "Supplementary/Annual/Supplementary_Annual_R99pw6hr.zip",
+          "Supplementary/Monthly/",
+          "Supplementary/Monthly/Supplementary_Monthly_DiCyc1mm.zip"
+        ]
+      }
+    ]
+  },
+  "dataMetadata": {
+    "bats": {
+      "rows": 78822,
+      "columns": [
+        "ISO_DateTime_UTC",
+        "Bottle_ID",
+        "Latitude",
+        "Longitude",
+        "Vessel",
+        "Cruise_num",
+        "Cruise_type",
+        "Cast_num",
+        "Bottle_num",
+        "QF_bottle",
+        "Depth",
+        "QF_Depth",
+        "Temperature",
+        "QF_Temp",
+        "CTD_Salinity",
+        "QF_CTD_Sal",
+        "Salinity",
+        "QF_Salinity",
+        "Sigma_theta",
+        "QF_Sigma_theta",
+        "Oxygen_1",
+        "QF_Oxygen",
+        "CO2",
+        "QF_DIC",
+        "Alkalinity",
+        "QF_Alk",
+        "NO3_plus_NO2",
+        "QF_NO3_NO2",
+        "NO2",
+        "QF_NO2",
+        "PO4",
+        "QF_PO4",
+        "Silicate",
+        "QF_Silicate",
+        "POC",
+        "QF_POC",
+        "PON",
+        "QF_PON",
+        "TOC",
+        "QF_TOC",
+        "TN",
+        "QF_TN",
+        "Bact_Enum",
+        "QF_Bact_enum",
+        "POP",
+        "QF_POP",
+        "TDP",
+        "QF_TDP",
+        "SRP",
+        "QF_LLP_SRP",
+        "Bio_Si",
+        "QF_bio_Si",
+        "Litho_Si",
+        "QF_litho_Si",
+        "Prochlorococcus",
+        "QF_Prochloro",
+        "Synechococcus",
+        "QF_Synecho",
+        "Picoeukaryotes",
+        "QF_Picoeuk",
+        "Nanoeukaryotes",
+        "QF_Nanoeuk",
+        "yyyymmdd",
+        "time",
+        "decimal_year"
+      ],
+      "first": {
+        "ISO_DateTime_UTC": "1988-10-20T22:30Z",
+        "Bottle_ID": "1000100112",
+        "Latitude": "31.783",
+        "Longitude": "-64.116",
+        "Vessel": "R/V Weatherbird I",
+        "Cruise_num": "10001",
+        "Cruise_type": "BATS Core",
+        "Cast_num": "1",
+        "Bottle_num": "12",
+        "QF_bottle": "2",
+        "Depth": "2000.5",
+        "QF_Depth": "2",
+        "Temperature": "3.817",
+        "QF_Temp": "2",
+        "CTD_Salinity": "",
+        "QF_CTD_Sal": "9",
+        "Salinity": "34.993",
+        "QF_Salinity": "2",
+        "Sigma_theta": "27.817",
+        "QF_Sigma_theta": "2",
+        "Oxygen_1": "255.5",
+        "QF_Oxygen": "2",
+        "CO2": "",
+        "QF_DIC": "9",
+        "Alkalinity": "",
+        "QF_Alk": "9",
+        "NO3_plus_NO2": "",
+        "QF_NO3_NO2": "9",
+        "NO2": "",
+        "QF_NO2": "9",
+        "PO4": "",
+        "QF_PO4": "9",
+        "Silicate": "",
+        "QF_Silicate": "9",
+        "POC": "",
+        "QF_POC": "9",
+        "PON": "",
+        "QF_PON": "9",
+        "TOC": "",
+        "QF_TOC": "9",
+        "TN": "",
+        "QF_TN": "9",
+        "Bact_Enum": "",
+        "QF_Bact_enum": "9",
+        "POP": "",
+        "QF_POP": "9",
+        "TDP": "",
+        "QF_TDP": "9",
+        "SRP": "",
+        "QF_LLP_SRP": "9",
+        "Bio_Si": "",
+        "QF_bio_Si": "9",
+        "Litho_Si": "",
+        "QF_litho_Si": "9",
+        "Prochlorococcus": "",
+        "QF_Prochloro": "9",
+        "Synechococcus": "",
+        "QF_Synecho": "9",
+        "Picoeukaryotes": "",
+        "QF_Picoeuk": "9",
+        "Nanoeukaryotes": "",
+        "QF_Nanoeuk": "9",
+        "yyyymmdd": "19881020",
+        "time": "2230",
+        "decimal_year": "1988.80311"
+      },
+      "last": {
+        "ISO_DateTime_UTC": "2025-12-14T08:32Z",
+        "Bottle_ID": "1043401624",
+        "Latitude": "31.797",
+        "Longitude": "-64.743",
+        "Vessel": "R/V Atlantic Explorer",
+        "Cruise_num": "10434",
+        "Cruise_type": "BATS Core",
+        "Cast_num": "16",
+        "Bottle_num": "24",
+        "QF_bottle": "2",
+        "Depth": "500.7",
+        "QF_Depth": "2",
+        "Temperature": "17.190",
+        "QF_Temp": "2",
+        "CTD_Salinity": "36.343",
+        "QF_CTD_Sal": "2",
+        "Salinity": "",
+        "QF_Salinity": "9",
+        "Sigma_theta": "26.525",
+        "QF_Sigma_theta": "2",
+        "Oxygen_1": "",
+        "QF_Oxygen": "9",
+        "CO2": "",
+        "QF_DIC": "9",
+        "Alkalinity": "",
+        "QF_Alk": "9",
+        "NO3_plus_NO2": "",
+        "QF_NO3_NO2": "9",
+        "NO2": "",
+        "QF_NO2": "9",
+        "PO4": "",
+        "QF_PO4": "9",
+        "Silicate": "",
+        "QF_Silicate": "9",
+        "POC": "",
+        "QF_POC": "9",
+        "PON": "",
+        "QF_PON": "9",
+        "TOC": "",
+        "QF_TOC": "9",
+        "TN": "",
+        "QF_TN": "9",
+        "Bact_Enum": "",
+        "QF_Bact_enum": "9",
+        "POP": "",
+        "QF_POP": "9",
+        "TDP": "",
+        "QF_TDP": "9",
+        "SRP": "",
+        "QF_LLP_SRP": "9",
+        "Bio_Si": "",
+        "QF_bio_Si": "9",
+        "Litho_Si": "",
+        "QF_litho_Si": "9",
+        "Prochlorococcus": "",
+        "QF_Prochloro": "9",
+        "Synechococcus": "",
+        "QF_Synecho": "9",
+        "Picoeukaryotes": "",
+        "QF_Picoeuk": "9",
+        "Nanoeukaryotes": "",
+        "QF_Nanoeuk": "9",
+        "yyyymmdd": "20251214",
+        "time": "832",
+        "decimal_year": "2025.95166"
+      }
+    },
+    "copernicus": {
+      "bytes": 20763537,
+      "variables": [
+        {
+          "name": "acceleration",
+          "shape": [
+            1440,
+            720
+          ],
+          "dtype": "float32",
+          "attributes": {
+            "_FillValue": [
+              null
+            ],
+            "long_name": "Regional sea level accelerations map",
+            "standard_name": "acceleration_of_sea_surface_height_above_sea_level",
+            "unit": "mm/year2"
+          },
+          "first": [
+            [
+              null,
+              null
+            ],
+            [
+              null,
+              null
+            ]
+          ],
+          "last": [
+            [
+              null,
+              null
+            ],
+            [
+              null,
+              null
+            ]
+          ]
+        },
+        {
+          "name": "acceleration_TPA_corrected",
+          "shape": [
+            1440,
+            720
+          ],
+          "dtype": "float32",
+          "attributes": {
+            "_FillValue": [
+              null
+            ],
+            "long_name": "Regional sea level accelerations map corrected from TPA drift from Ablain et al., 2017",
+            "unit": "mm/year2"
+          },
+          "first": [
+            [
+              null,
+              null
+            ],
+            [
+              null,
+              null
+            ]
+          ],
+          "last": [
+            [
+              null,
+              null
+            ],
+            [
+              null,
+              null
+            ]
+          ]
+        },
+        {
+          "name": "latitude",
+          "shape": [
+            720
+          ],
+          "dtype": "float64",
+          "attributes": {
+            "CLASS": "DIMENSION_SCALE",
+            "NAME": "latitude",
+            "_Netcdf4Dimid": 1,
+            "_FillValue": [
+              null
+            ]
+          },
+          "first": [
+            -89.875,
+            -89.625,
+            -89.375
+          ],
+          "last": [
+            89.375,
+            89.625,
+            89.875
+          ]
+        },
+        {
+          "name": "longitude",
+          "shape": [
+            1440
+          ],
+          "dtype": "float64",
+          "attributes": {
+            "CLASS": "DIMENSION_SCALE",
+            "NAME": "longitude",
+            "_Netcdf4Dimid": 0,
+            "_FillValue": [
+              null
+            ]
+          },
+          "first": [
+            -179.875,
+            -179.625,
+            -179.375
+          ],
+          "last": [
+            179.375,
+            179.625,
+            179.875
+          ]
+        },
+        {
+          "name": "trend",
+          "shape": [
+            1440,
+            720
+          ],
+          "dtype": "float32",
+          "attributes": {
+            "_FillValue": [
+              null
+            ],
+            "long_name": "Regional sea level trends maps",
+            "standard_name": "tendency_of_sea_surface_height_above_sea_level",
+            "unit": "mm/year"
+          },
+          "first": [
+            [
+              null,
+              null
+            ],
+            [
+              null,
+              null
+            ]
+          ],
+          "last": [
+            [
+              null,
+              null
+            ],
+            [
+              null,
+              null
+            ]
+          ]
+        },
+        {
+          "name": "trend_GIA_TPA_corrected",
+          "shape": [
+            1440,
+            720
+          ],
+          "dtype": "float32",
+          "attributes": {
+            "_FillValue": [
+              null
+            ],
+            "long_name": "Regional sea level trends map corrected from TOPEX-A (TPA) and Glacial Isostatic Adjustment (GIA). TPA correction is from Ablain et al., 2017. GIA correction is from a 27 ensemble mean of https://gmd.copernicus.org/articles/12/5055/2019/gmd-12-5055-2019.html",
+            "standard_name": "tendency_of_sea_surface_height_above_sea_level",
+            "unit": "mm/year"
+          },
+          "first": [
+            [
+              null,
+              null
+            ],
+            [
+              null,
+              null
+            ]
+          ],
+          "last": [
+            [
+              null,
+              null
+            ],
+            [
+              null,
+              null
+            ]
+          ]
+        },
+        {
+          "name": "trend_TPA_corrected",
+          "shape": [
+            1440,
+            720
+          ],
+          "dtype": "float32",
+          "attributes": {
+            "_FillValue": [
+              null
+            ],
+            "long_name": "Regional sea level trends map corrected from TPA drift from Ablain et al., 2017",
+            "standard_name": "tendency_of_sea_surface_height_above_sea_level",
+            "unit": "mm/year"
+          },
+          "first": [
+            [
+              null,
+              null
+            ],
+            [
+              null,
+              null
+            ]
+          ],
+          "last": [
+            [
+              null,
+              null
+            ],
+            [
+              null,
+              null
+            ]
+          ]
+        }
+      ],
+      "attributes": {
+        "time_min": "1999-02-21",
+        "time_max": "2025-08-02",
+        "_NCProperties": "version=2,netcdf=4.8.1,hdf5=1.12.2"
+      }
+    },
+    "itsLive": {
+      "bytes": 1853161765,
+      "variables": [
+        {
+          "name": "dfac_gemb",
+          "shape": [
+            384,
+            1421,
+            783
+          ],
+          "dtype": "float32",
+          "attributes": {
+            "_FillValue": [
+              -32767
+            ],
+            "least_significant_digit": [
+              4
+            ],
+            "units": "meters",
+            "standard_name": "firn_air_content_anomaly_gemb",
+            "long_name": "Firn air content anomaly (GEMB)",
+            "comment": "Resampled firn air content anomaly (dfac_gemb) w.r.t. to 2014-01-01: GEMB Version 1.3.0"
+          },
+          "first": [
+            [
+              [
+                -32767,
+                -32767
+              ],
+              [
+                -32767,
+                -32767
+              ]
+            ],
+            [
+              [
+                -32767,
+                -32767
+              ],
+              [
+                -32767,
+                -32767
+              ]
+            ]
+          ],
+          "last": [
+            [
+              [
+                -32767,
+                -32767
+              ],
+              [
+                -32767,
+                -32767
+              ]
+            ],
+            [
+              [
+                -32767,
+                -32767
+              ],
+              [
+                -32767,
+                -32767
+              ]
+            ]
+          ]
+        },
+        {
+          "name": "dfac_gsfc",
+          "shape": [
+            384,
+            1421,
+            783
+          ],
+          "dtype": "float32",
+          "attributes": {
+            "_FillValue": [
+              -32767
+            ],
+            "least_significant_digit": [
+              4
+            ],
+            "units": "meters",
+            "standard_name": "firn_air_content_anomaly_gsfc",
+            "long_name": "Firn air content anomaly (GSFC)",
+            "comment": "Resampled firn air content anomaly (dfac_gsfc) w.r.t. to 2014-01-01: GSFC-FDM Version 1.2.1"
+          },
+          "first": [
+            [
+              [
+                -32767,
+                -32767
+              ],
+              [
+                -32767,
+                -32767
+              ]
+            ],
+            [
+              [
+                -32767,
+                -32767
+              ],
+              [
+                -32767,
+                -32767
+              ]
+            ]
+          ],
+          "last": [
+            [
+              [
+                -32767,
+                -32767
+              ],
+              [
+                -32767,
+                -32767
+              ]
+            ],
+            [
+              [
+                -32767,
+                -32767
+              ],
+              [
+                -32767,
+                -32767
+              ]
+            ]
+          ]
+        },
+        {
+          "name": "dh",
+          "shape": [
+            384,
+            1421,
+            783
+          ],
+          "dtype": "float32",
+          "attributes": {
+            "_FillValue": [
+              -32767
+            ],
+            "least_significant_digit": [
+              4
+            ],
+            "units": "meters",
+            "standard_name": "surface_elevation_change",
+            "long_name": "Surface elevation change",
+            "comment": "Surface elevation change (dh) relative to DEM, w.r.t. 2014-01-01",
+            "grid_mapping": "proj"
+          },
+          "first": [
+            [
+              [
+                -32767,
+                -32767
+              ],
+              [
+                -32767,
+                -32767
+              ]
+            ],
+            [
+              [
+                -32767,
+                -32767
+              ],
+              [
+                -32767,
+                -32767
+              ]
+            ]
+          ],
+          "last": [
+            [
+              [
+                -32767,
+                -32767
+              ],
+              [
+                -32767,
+                -32767
+              ]
+            ],
+            [
+              [
+                -32767,
+                -32767
+              ],
+              [
+                -32767,
+                -32767
+              ]
+            ]
+          ]
+        },
+        {
+          "name": "h",
+          "shape": [
+            384,
+            1421,
+            783
+          ],
+          "dtype": "float32",
+          "attributes": {
+            "_FillValue": [
+              -32767
+            ],
+            "least_significant_digit": [
+              4
+            ],
+            "units": "meters",
+            "standard_name": "surface_elevation",
+            "long_name": "Absolute surface_elevation computed as h = h_dem + dh",
+            "comment": "Surface elevation calculated by adding dh to the reference DEM",
+            "grid_mapping": "proj"
+          },
+          "first": [
+            [
+              [
+                -32767,
+                -32767
+              ],
+              [
+                -32767,
+                -32767
+              ]
+            ],
+            [
+              [
+                -32767,
+                -32767
+              ],
+              [
+                -32767,
+                -32767
+              ]
+            ]
+          ],
+          "last": [
+            [
+              [
+                -32767,
+                -32767
+              ],
+              [
+                -32767,
+                -32767
+              ]
+            ],
+            [
+              [
+                -32767,
+                -32767
+              ],
+              [
+                -32767,
+                -32767
+              ]
+            ]
+          ]
+        },
+        {
+          "name": "h_dem",
+          "shape": [
+            1421,
+            783
+          ],
+          "dtype": "float32",
+          "attributes": {
+            "_FillValue": [
+              -32767
+            ],
+            "least_significant_digit": [
+              4
+            ],
+            "units": "meters",
+            "standard_name": "surface_elevation",
+            "long_name": "Reference digital elevation model",
+            "comment": "DEM reference surface elevation (h_dem), w.r.t. 2014-01-01",
+            "grid_mapping": "proj"
+          },
+          "first": [
+            [
+              -32767,
+              -32767
+            ],
+            [
+              -32767,
+              -32767
+            ]
+          ],
+          "last": [
+            [
+              -32767,
+              -32767
+            ],
+            [
+              -32767,
+              -32767
+            ]
+          ]
+        },
+        {
+          "name": "mask",
+          "shape": [
+            1421,
+            783
+          ],
+          "dtype": "uint8",
+          "attributes": {
+            "long_name": "Ice mask",
+            "standard_name": "ice_mask",
+            "flag_values": "0, 1, 2",
+            "flag_meanings": "non_ice ice_sheet peripheral_glacier",
+            "comment": "Non-ice = 0, Ice sheet = 1 and Peripheral glaciers = 2",
+            "grid_mapping": "proj"
+          },
+          "first": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "last": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "name": "proj",
+          "shape": [],
+          "dtype": "|S1",
+          "attributes": {
+            "long_name": "Grid mapping variable",
+            "standard_name": "grid_mapping",
+            "comment": "Polar stereographic north projection defining spatial reference",
+            "spatial_ref": "PROJCS[\"WGS 84 / NSIDC Sea Ice Polar Stereographic North\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",70],PARAMETER[\"central_meridian\",-45],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1],AXIS[\"Easting\",SOUTH],AXIS[\"Northing\",SOUTH],AUTHORITY[\"EPSG\",\"3413\"]]",
+            "GeoTransform": "-645127.5, 1920.0, 0.0, -641272.5, 0.0, 1920.0"
+          },
+          "sample": ""
+        },
+        {
+          "name": "rms",
+          "shape": [
+            384,
+            1421,
+            783
+          ],
+          "dtype": "float32",
+          "attributes": {
+            "_FillValue": [
+              -32767
+            ],
+            "least_significant_digit": [
+              4
+            ],
+            "units": "meters",
+            "standard_name": "elevation_rms_error",
+            "long_name": "RMS error",
+            "comment": "RMS error is the root-square-sum of the systematic and random error",
+            "grid_mapping": "proj"
+          },
+          "first": [
+            [
+              [
+                -32767,
+                -32767
+              ],
+              [
+                -32767,
+                -32767
+              ]
+            ],
+            [
+              [
+                -32767,
+                -32767
+              ],
+              [
+                -32767,
+                -32767
+              ]
+            ]
+          ],
+          "last": [
+            [
+              [
+                -32767,
+                -32767
+              ],
+              [
+                -32767,
+                -32767
+              ]
+            ],
+            [
+              [
+                -32767,
+                -32767
+              ],
+              [
+                -32767,
+                -32767
+              ]
+            ]
+          ]
+        },
+        {
+          "name": "time",
+          "shape": [
+            384
+          ],
+          "dtype": "float64",
+          "attributes": {
+            "CLASS": "DIMENSION_SCALE",
+            "NAME": "time",
+            "_Netcdf4Dimid": 2,
+            "units": "days since 1992-01-15 00:00:00",
+            "standard_name": "time",
+            "long_name": "Time in days since reference epoch",
+            "comment": "CF-compliant time variable converted from decimal years",
+            "calendar": "gregorian"
+          },
+          "first": [
+            0.0008850097685185185,
+            30.99885559082176,
+            60.000289916990745
+          ],
+          "last": [
+            11595.99974060059,
+            11626.999343872072,
+            11656.999229431158
+          ]
+        },
+        {
+          "name": "x",
+          "shape": [
+            783
+          ],
+          "dtype": "float32",
+          "attributes": {
+            "CLASS": "DIMENSION_SCALE",
+            "NAME": "x",
+            "_Netcdf4Dimid": 0,
+            "units": "meters",
+            "standard_name": "projection_x_coordinate",
+            "long_name": "x coordinate (easting)",
+            "comment": "x coordinates in projected polar stereographic grid"
+          },
+          "first": [
+            -644167.5,
+            -642247.5,
+            -640327.5
+          ],
+          "last": [
+            853432.5,
+            855352.5,
+            857272.5
+          ]
+        },
+        {
+          "name": "y",
+          "shape": [
+            1421
+          ],
+          "dtype": "float32",
+          "attributes": {
+            "CLASS": "DIMENSION_SCALE",
+            "NAME": "y",
+            "_Netcdf4Dimid": 1,
+            "units": "meters",
+            "standard_name": "projection_y_coordinate",
+            "long_name": "y coordinate (northing)",
+            "comment": "y coordinates in projected polar stereographic grid"
+          },
+          "first": [
+            -642232.5,
+            -644152.5,
+            -646072.5
+          ],
+          "last": [
+            -3364792.5,
+            -3366712.5,
+            -3368632.5
+          ]
+        }
+      ],
+      "attributes": {
+        "date_created": "2026-02-10",
+        "title": "ITS_LIVE Greenland Grounded Ice Sheet and Peripheral Glacier Ice Elevation Change",
+        "author": "Johan Nilsson and Alex Gardner",
+        "project": "ITS_LIVE, a NASA MEaSUREs project (its-live.jpl.nasa.gov)",
+        "institution": "Uppsala University and NASA Jet Propulsion Laboratory",
+        "doi": "doi.org/10.5067/ICFVI7DKHZJV",
+        "version": "1.1",
+        "epsg_number": [
+          3413
+        ],
+        "Conventions": "CF-1.10",
+        "_NCProperties": "version=2,netcdf=4.9.3,hdf5=1.14.6"
+      }
+    },
+    "eobs": {
+      "bytes": 903941781,
+      "variables": [
+        {
+          "name": "latitude",
+          "shape": [
+            201
+          ],
+          "dtype": "float64",
+          "attributes": {
+            "CLASS": "DIMENSION_SCALE",
+            "NAME": "latitude",
+            "_Netcdf4Dimid": 1,
+            "units": "degrees_north",
+            "long_name": "Latitude values",
+            "axis": "Y",
+            "standard_name": "latitude"
+          },
+          "first": [
+            25.375,
+            25.625,
+            25.875
+          ],
+          "last": [
+            74.875,
+            75.125,
+            75.375
+          ]
+        },
+        {
+          "name": "longitude",
+          "shape": [
+            464
+          ],
+          "dtype": "float64",
+          "attributes": {
+            "CLASS": "DIMENSION_SCALE",
+            "NAME": "longitude",
+            "_Netcdf4Dimid": 0,
+            "units": "degrees_east",
+            "long_name": "Longitude values",
+            "axis": "X",
+            "standard_name": "longitude"
+          },
+          "first": [
+            -40.375,
+            -40.125,
+            -39.875
+          ],
+          "last": [
+            74.875,
+            75.125,
+            75.375
+          ]
+        },
+        {
+          "name": "time",
+          "shape": [
+            27940
+          ],
+          "dtype": "int32",
+          "attributes": {
+            "CLASS": "DIMENSION_SCALE",
+            "NAME": "time",
+            "_Netcdf4Dimid": 2,
+            "units": "days since 1950-01-01 00:00",
+            "long_name": "Time in days",
+            "calendar": "standard",
+            "standard_name": "time"
+          },
+          "first": [
+            0,
+            1,
+            2
+          ],
+          "last": [
+            27937,
+            27938,
+            27939
+          ]
+        },
+        {
+          "name": "tx",
+          "shape": [
+            27940,
+            201,
+            464
+          ],
+          "dtype": "int16",
+          "attributes": {
+            "units": "Celsius",
+            "_FillValue": [
+              -9999
+            ],
+            "long_name": "maximum temperature",
+            "scale_factor": [
+              0.009999999776482582
+            ],
+            "add_offset": [
+              0
+            ],
+            "standard_name": "air_temperature"
+          },
+          "first": [
+            [
+              [
+                -9999,
+                -9999
+              ],
+              [
+                -9999,
+                -9999
+              ]
+            ],
+            [
+              [
+                -9999,
+                -9999
+              ],
+              [
+                -9999,
+                -9999
+              ]
+            ]
+          ],
+          "last": [
+            [
+              [
+                -9999,
+                -9999
+              ],
+              [
+                -9999,
+                -9999
+              ]
+            ],
+            [
+              [
+                -9999,
+                -9999
+              ],
+              [
+                -9999,
+                -9999
+              ]
+            ]
+          ]
+        }
+      ],
+      "attributes": {
+        "history": "Mon Oct 26 14:58:56 2026: ncks -O --no-abc -d time,0,27939 /nobackup/users/besselaa/Data/Gridding/EOBSv34.0e/Grid_0.25deg/tx//tx_ensmean_master_rectime.nc /nobackup/users/besselaa/Data/Gridding/EOBSv34.0e/Grid_0.25deg/tx//tx_ens_mean_0.25deg_reg_v34.0e.nc",
+        "NCO": "netCDF Operators version 5.3.3 (Homepage = http://nco.sf.net, Code = http://github.com/nco/nco, Citation = 10.1016/j.envsoft.2008.03.004)",
+        "_NCProperties": "version=2,netcdf=4.9.2,hdf5=1.14.6"
+      }
+    }
+  },
+  "pdfs": [
+    {
+      "id": "wmo-2024",
+      "pages": 601,
+      "characters": 1939519,
+      "reviewedChapters": [
+        2,
+        4,
+        6,
+        12
+      ],
+      "visuallyReviewedPages": [
+        1,
+        180,
+        245,
+        431
+      ]
+    },
+    {
+      "id": "wmo-iii-2024",
+      "pages": 529,
+      "characters": 1606843,
+      "reviewedChapters": [
+        7
+      ],
+      "visuallyReviewedPages": [
+        1,
+        315
+      ]
+    },
+    {
+      "id": "imbie-escholarship",
+      "pages": 24,
+      "characters": 62266,
+      "version": "Author manuscript with repository cover"
+    },
+    {
+      "id": "nasa-sp489",
+      "pages": 299,
+      "visuallyReviewedPages": [
+        1,
+        2,
+        299
+      ]
+    }
+  ],
+  "verification": {
+    "lint": {
+      "exitCode": 0
+    },
+    "sourceAudit": {
+      "exitCode": 0,
+      "articleFiles": 61,
+      "missingIds": 0,
+      "duplicateIds": 0,
+      "duplicateExternalUrls": 0
+    },
+    "tests": {
+      "exitCode": 0,
+      "summary": [
+        "  Prerendered 95 routes (0 skipped).",
+        "ℹ tests 113",
+        "ℹ suites 0",
+        "ℹ pass 113",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0",
+        "ℹ duration_ms 2111.576"
+      ]
+    },
+    "browser": {
+      "articleWidths": [
+        1280,
+        390
+      ],
+      "articles": 9,
+      "imagesPerWidth": 36,
+      "missingCitations": 0,
+      "pageOverflow": false,
+      "sourceCards": 10,
+      "sourceCardOverflow": false,
+      "openSourceDriveButtons": 0,
+      "actualCitationNavigation": "MountainGlaciersArticle to /zdroje/#DOI_10_6096_13",
+      "externalChecks": [
+        "ERA5 Download requires login and licence acceptance",
+        "IOCAS Check lists annual files, download requires login",
+        "SEDOO Download provides regional, per-glacier and raster selections"
+      ],
+      "browserDownloadLimit": "Automation download did not yield a saved file path for SEDOO. Complete HTTP transfers and archive reads succeeded independently."
+    },
+    "deployment": "Pending authorized commit, push main and verification of the resulting Pages run."
+  },
+  "limitations": [
+    "No new accounts or licence agreements accepted.",
+    "Full raw archives requiring a request were not obtained.",
+    "Not all large Frederikse, Ford/SOCAT, Walsh, GlobSnow, Snow CCI, Permafrost CCI, IAP/ScienceDB or GHWR files were downloaded.",
+    "No new full independent replication of Horton, Romano, GlaMBIE, CERES or the Arctic 2026 trend.",
+    "Full file retrieval and format inspection do not establish reproduction of every original scientific result."
+  ]
+}

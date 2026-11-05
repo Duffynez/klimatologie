@@ -410,11 +410,13 @@ export function OceanHeatArticle() {
         </figure>
 
         <p>
-          Na začátku grafu, v roce 1958, leží roční hodnota přibližně 130 ZJ pod průměrem let 1981–2010. V roce
-          2025 přesahuje 300 ZJ nad tímto průměrem. Rozdíl odečtený z publikovaného grafu je tedy zhruba 460 ZJ.
-          Při stejném orientačním převodu to odpovídá zvýšení průměrné teploty vrstvy 0–2 000 metrů asi o 0,16 °C.
-          Změna referenčního období by posunula všechny sloupce nahoru nebo dolů, tento rozdíl mezi roky by však
-          zůstal stejný.
+          Pro číselné porovnání let 1958 a 2025 použijeme veřejnou měsíční tabulku IAPv4.2 z ledna 2026. Za každý
+          rok zprůměrujeme dvanáct hodnot sloupce pro 0–2 000 metrů. Tabulka používá jednotku 10²² J, takže pro
+          převod na zettajouly výsledek násobíme deseti. Vůči jejímu průměru let 2006–2015 vychází rok 1958 na
+          −254,8 ZJ a rok 2025 na +188,9 ZJ. Jejich rozdíl je přibližně 443,7 ZJ, zaokrouhleně 444 ZJ. Při stejném
+          orientačním převodu to odpovídá zvýšení průměrné teploty vrstvy 0–2 000 metrů asi o 0,15 °C. Změna
+          referenčního období by obě hodnoty posunula stejně, jejich rozdíl by zůstal zachován.{" "}
+          <SourceLink id="DATA_IAP_v42_Monthly_OHC_2026">IAPv4.2, původní číselná tabulka</SourceLink>
         </p>
 
         <p>
@@ -565,8 +567,8 @@ export function OceanHeatArticle() {
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
             Globální obsah tepla v oceánu dlouhodobě roste od hladiny do hloubky 2 000 metrů. Mezi roky 1958 a 2025
-            se v této vrstvě zvýšil přibližně o 460 zettajoulů, což odpovídá zvýšení její průměrné teploty asi o
-            0,16 °C. Přírůstek probíhal v horních 700 metrech i mezi 700 a 2 000 metry. V letech 1955–2023 připadalo
+            se podle veřejné tabulky IAPv4.2 v této vrstvě zvýšil přibližně o 444 zettajoulů, což odpovídá zvýšení její průměrné teploty asi o
+            0,15 °C. Přírůstek probíhal v horních 700 metrech i mezi 700 a 2 000 metry. V letech 1955–2023 připadalo
             v průměru 4,4 zettajoulu ročně na horní a 2,0 zettajoulu ročně na hlubší z těchto vrstev. Rok 2025 dosáhl
             nejvyšší hodnoty celého záznamu a proti roku 2024 přibylo přibližně 23 zettajoulů. Jednotlivé části oceánu
             se mění různými směry a rychlostmi, ale jejich globální součet roste. Kladná celková změna pokračuje také

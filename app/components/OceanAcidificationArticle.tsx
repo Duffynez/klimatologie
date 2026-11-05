@@ -461,7 +461,8 @@ export function OceanAcidificationArticle() {
           vymezené prostorové otázky, pokud se uvede tato chyba vůči kontrolním vzorkům.{" "}
           <SourceLink id="DOI_10_5194_essd_17_719_2025">Zhong a kol., 2025</SourceLink> a{" "}
           <SourceLink id="DOI_10_12157_iocas_20230720_001">datový záznam a soubory</SourceLink>.
-          Metadata portálu jsou veřejná. Pro stažení souborů portál vyžaduje přihlášení.
+          Katalog portálu je veřejný. Tlačítko <em>Check</em> v části <em>Data Download</em> otevře seznam ročních
+          souborů NetCDF od roku 1992 do roku 2020 a doprovodný balíček. Pro stažení portál vyžaduje přihlášení.
         </p>
 
         <h2>Srovnání výsledků</h2>

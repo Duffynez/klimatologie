@@ -731,8 +731,8 @@ export function AtmosphericHumidityArticle() {
             <h3>Metody a nejistoty</h3>
             <ul>
               <li>
-                WMO: <em>Guide to Meteorological Instruments and Methods of Observation</em>, kapitola 4 o měření
-                vlhkosti.{" "}
+                WMO (2024): <em>Guide to Instruments and Methods of Observation</em>, svazek I, kapitola 4 o měření
+                vlhkosti. Karta nabízí úplné veřejné PDF.{" "}
                 <SourceLink id="WEB_World_Meteorological_Organiz_Guide_to_Instruments_and_Methods_of_Observation_93c4c4a4">
                   Příručka WMO No. 8
                 </SourceLink>

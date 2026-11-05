@@ -96,7 +96,7 @@ export function GmstArticle() {
           teploměr. Starší záznamy vznikaly odečtem kapalinových teploměrů. Poloha stanice, výška přístroje, typ
           krytu a změny vybavení se zapisují jako doprovodné údaje.{" "}
           <SourceLink id="WEB_World_Meteorological_Organiz_Guide_to_Instruments_and_Methods_of_Observation_93c4c4a4">
-            WMO: Guide to Instruments and Methods of Observation
+            WMO 2024, svazek I, kapitola 2
           </SourceLink>
         </p>
         <p>
