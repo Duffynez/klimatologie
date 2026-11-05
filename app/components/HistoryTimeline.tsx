@@ -53,7 +53,7 @@ export function HistoryTimeline({ items, periods, kinds }: {
               ["academic", "Vědecké"],
               ["institutional", "Politické"],
             ] as const).map(([value, label]) => (
-              <button key={value} type="button" aria-pressed={lane === value}
+              <button key={value} type="button" data-history-lane={value} aria-pressed={lane === value}
                 onClick={() => setLane(value)}>{label}</button>
             ))}
           </div>

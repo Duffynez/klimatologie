@@ -1,4 +1,10 @@
 .timeline {
+  --history-science: var(--source-science);
+  --history-science-surface: #eaf5f5;
+  --history-science-border: #9bc4c9;
+  --history-politics: #9b452f;
+  --history-politics-surface: #fff0e8;
+  --history-politics-border: #dfab95;
   max-width: 1020px;
   margin: 36px auto 72px;
 }
@@ -48,14 +54,35 @@
 .reset,
 .empty button { cursor: pointer; }
 
-.laneChoices button[aria-pressed="true"] {
-  border-color: var(--sea);
-  background: var(--sea);
-  color: var(--white);
+.laneChoices button {
+  --lane-accent: var(--sea);
+  --lane-surface: var(--white);
+  --lane-border: var(--line);
+  border-color: var(--lane-border);
+  background: var(--lane-surface);
+  color: var(--lane-accent);
   font-weight: 700;
 }
 
-.laneChoices button:hover,
+.laneChoices button[data-history-lane="academic"] {
+  --lane-accent: var(--history-science);
+  --lane-surface: var(--history-science-surface);
+  --lane-border: var(--history-science-border);
+}
+
+.laneChoices button[data-history-lane="institutional"] {
+  --lane-accent: var(--history-politics);
+  --lane-surface: var(--history-politics-surface);
+  --lane-border: var(--history-politics-border);
+}
+
+.laneChoices button[aria-pressed="true"] {
+  border-color: var(--lane-accent);
+  background: var(--lane-accent);
+  color: var(--white);
+}
+
+.laneChoices button:hover { border-color: var(--lane-accent); }
 .reset:not(:disabled):hover,
 .empty button:hover { border-color: var(--sea); }
 
@@ -98,24 +125,35 @@
 }
 
 .events { list-style: none; margin: 0; padding: 0; }
-.event { margin: 0; padding: 0; scroll-margin-top: 110px; }
+.event { margin: 18px 0; padding: 0; scroll-margin-top: 110px; }
 
 .milestone {
-  --history-accent: var(--source-science);
+  --source-book: #805a10;
+  --source-politics: var(--history-politics);
+  --history-accent: var(--history-science);
+  --history-surface: var(--history-science-surface);
+  --history-border: var(--history-science-border);
   display: grid;
   grid-template-columns: 116px minmax(0, 1fr);
   gap: 24px;
-  padding: 30px 0;
-  border-bottom: 1px solid var(--line);
+  padding: 24px;
+  border: 1px solid var(--history-border);
+  border-left: 6px solid var(--history-accent);
+  border-radius: 5px;
+  background: var(--history-surface);
 }
 
-.political { --history-accent: var(--source-politics); }
+.political {
+  --history-accent: var(--history-politics);
+  --history-surface: var(--history-politics-surface);
+  --history-border: var(--history-politics-border);
+}
 .date { padding-top: 2px; }
 .date time { display: block; color: var(--history-accent); font-family: Georgia, "Times New Roman", serif; font-size: 1.9rem; line-height: 1.15; }
 .date span { display: block; margin-top: 9px; color: var(--muted); font-size: 0.76rem; line-height: 1.45; }
-.body { min-width: 0; max-width: 78ch; padding-left: 24px; border-left: 2px solid var(--history-accent); }
-.meta { display: flex; flex-wrap: wrap; gap: 5px 18px; margin: 0 0 8px; font-size: 0.78rem; color: var(--muted); }
-.meta span:first-child { color: var(--history-accent); font-weight: 700; }
+.body { min-width: 0; max-width: 78ch; }
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; margin: 0 0 12px; font-size: 0.78rem; color: var(--muted); }
+.meta span:first-child { padding: 4px 9px; border-radius: 3px; background: var(--history-accent); color: var(--white); font-weight: 700; }
 .title { margin: 0 0 15px; font-family: Georgia, "Times New Roman", serif; font-size: 1.45rem; font-weight: 400; line-height: 1.25; text-wrap: pretty; }
 .paragraph { margin: 0 0 15px; color: var(--ink); overflow-wrap: break-word; }
 .references { font-size: 0.82rem; line-height: 1.6; }
@@ -135,10 +173,9 @@
   .timeline { margin-top: 24px; }
   .filters { padding: 18px; gap: 18px; }
   .kind { max-width: none; flex-basis: 100%; }
-  .milestone { grid-template-columns: minmax(0, 1fr); gap: 14px; padding: 26px 0; }
+  .milestone { grid-template-columns: minmax(0, 1fr); gap: 14px; padding: 20px 16px; }
   .date { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px 16px; }
   .date span { margin: 0; }
-  .body { padding-left: 16px; }
   .title { font-size: 1.3rem; }
   .period, .event { scroll-margin-top: 145px; }
 }
