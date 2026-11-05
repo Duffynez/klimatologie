@@ -131,7 +131,7 @@ export function ConductometryArticle() {
           Pro vlastní měření použijeme kalibrační koeficienty v převodní rovnici.
           U SBE 4 má podle
           <SourceLink id="2025_SeaBird_SBE4_Datasheet"> technického listu</SourceLink>
-          {" "}a <SourceLink id="DOI_10_7289_v5dr2sgz">zprávy NOAA z plavby EN551, strana 13</SourceLink>
+          {" "}a <SourceLink id="DOI_10_7289_v5dr2sgz">zprávy NOAA z plavby EN551, tištěná strana 13 (strana 23 v PDF)</SourceLink>
           {" "}tento tvar:
         </p>
         <Equation tex={String.raw`C = \frac{g + h f^2 + i f^3 + j f^4}{10(1 + a t + b p)}`} />
@@ -160,7 +160,7 @@ export function ConductometryArticle() {
           příspěvky <em>a t</em> a <em>b p</em> bez jednotky.
           Číslo 10 převádí výsledek na S/m. Koeficienty čitatele jsou stanovené
           pro frekvenci v kHz, a v těchto jednotkách ji proto dosazujeme.{" "}
-          <SourceLink id="DOI_10_7289_v5dr2sgz">(Zpráva EN551, s. 13)</SourceLink>
+          <SourceLink id="DOI_10_7289_v5dr2sgz">(Zpráva EN551, tištěná s. 13, v PDF s. 23)</SourceLink>
         </p>
         <p>
           Po této opravě máme vodivost vody při teplotě a tlaku, za kterých jsme
@@ -379,7 +379,7 @@ export function ConductometryArticle() {
             K nejistotě salinity přispívají vodivost, teplota, tlak i kalibrační
             reference. V klidné lázni odpadají rychlé přechody mezi vrstvami,
             v hluboké vodě roste význam tlakové opravy a při dlouhém nasazení
-            driftu. <SourceLink id="2014_SeaBird_C3860_Calibration">Protokol použitý
+            driftu. <SourceLink id="2024_SeaBird_C3679_Calibration">Protokol použitý
             níže</SourceLink> úplný rozpočet těchto příspěvků neuvádí.
             Jeho body sloužily ke kalibraci, a nejsou proto nezávislou ověřovací
             sadou. Desetinná místa našeho přepočtu nevyjadřují nejistotu.
@@ -399,7 +399,7 @@ export function ConductometryArticle() {
             opravili pomocí lodního profilu. Výsledný rozdíl menší než 0,004
             pod hladinou 500 dbar neurčuje absolutní chybu jednotlivých čidel,
             protože opravy sdílely referenci. Studie zkoušela jiné modely
-            než SBE 4C, a neověřuje tedy náš kus číslo 3860.
+            než SBE 4C, a neověřuje tedy náš kus číslo 3679.
           </p>
           <p>
             <SourceLink id="DOI_10_5194_essd_15_383_2023">Wongová, Gilson a Cabanesová
@@ -423,11 +423,11 @@ export function ConductometryArticle() {
 
         <h2>Skutečný příklad z kalibrace čidla</h2>
         <p>
-          <SourceLink id="2014_SeaBird_C3860_Calibration">Protokol čidla SBE 4C číslo 3860
-          z 15. října 2014</SourceLink> obsahuje šest bodů měření vody v lázni
-          a jeden nulový bod. Zveřejnila jej Atlantická oceánografická
-          a meteorologická laboratoř amerického Národního úřadu pro oceán
-          a atmosféru, zkráceně NOAA AOML. Z protokolu převezmeme frekvenci,
+          <SourceLink id="2024_SeaBird_C3679_Calibration">Protokol čidla SBE 4C číslo 3679
+          z 16. ledna 2024</SourceLink> obsahuje šest bodů měření vody v lázni
+          a jeden nulový bod. Původní protokol výrobce Sea-Bird GmbH je veřejně
+          dostupný v archivu expedice Tara Europa na Univerzitě v Maine.
+          Z protokolu převezmeme frekvenci,
           teplotu a kalibrační koeficienty a zopakujeme převod na vodivost
           a praktickou salinitu.
         </p>
@@ -443,15 +443,15 @@ export function ConductometryArticle() {
         <h3>Výpočet jednoho bodu</h3>
         <p>
           Podrobně projdeme bod při 15,0000 °C na stupnici ITS-90.
-          Čidlo zaznamenalo frekvenci 5,96800 kHz. Tyto hodnoty a tlak
+          Čidlo zaznamenalo frekvenci 5,85359 kHz. Tyto hodnoty a tlak
           dosadíme do kalibrační rovnice vysvětlené výše.
           S koeficienty z protokolu dostaneme vodivost přibližně
-          <strong> 4,252531 S/m</strong>. Úplné koeficienty jsou v rozbalovacím
+          <strong> 4,270363 S/m</strong>. Úplné koeficienty jsou v rozbalovacím
           doplňku a souborech ke stažení.
         </p>
         <p>
-          Protokol uvádí vodivost 4,25254 S/m. Rozdíl našeho přepočtu je
-          přibližně −0,000009 S/m. Vstupní frekvence a koeficienty přebíráme
+          Protokol uvádí vodivost 4,27036 S/m. Rozdíl našeho přepočtu je
+          přibližně +0,000003 S/m. Vstupní frekvence a koeficienty přebíráme
           v jejich vytištěném, zaokrouhleném tvaru, který určuje přesnost
           zpětného přepočtu.
         </p>
@@ -460,20 +460,20 @@ export function ConductometryArticle() {
           Vynásobením 15,0000 hodnotou 1,00024 dostaneme 15,0036 °C.
           Vodivost potom vydělíme referenční hodnotou 4,2914 S/m:
         </p>
-        <Equation tex={String.raw`R = \frac{4{,}252531\,\mathrm{S/m}}{4{,}2914\,\mathrm{S/m}} \approx 0{,}9909426`} />
+        <Equation tex={String.raw`R = \frac{4{,}270363\,\mathrm{S/m}}{4{,}2914\,\mathrm{S/m}} \approx 0{,}9950980`} />
         <p>
           <em>R</em> označuje poměr obou vodivostí. Jednotky se při dělení vykrátí
           a výsledek je o něco menší než jedna, protože vzorek má nižší vodivost
           než reference. Dále jej vydělíme tlakovým a teplotním faktorem.
           Při zvoleném nulovém tlaku je tlakový faktor roven jedné.
-          Po započtení teplotního faktoru dostaneme opravený poměr 0,9908609.
+          Po započtení teplotního faktoru dostaneme opravený poměr 0,9950159.
         </p>
         <p>
           Z jeho odmocniny a mocnin sestavíme polynom PSS-78 a přičteme
           teplotní opravu salinity. Postup i pevné koeficienty udává
           <SourceLink id="2015_TEOS10_SP_From_C"> příloha E dokumentace TEOS-10</SourceLink>.
-          Výsledek je <strong><InlineMath tex={String.raw`S_P \approx 34{,}6424`} /></strong>.
-          Referenční salinita lázně byla 34,6427, takže rozdíl činí asi −0,0003.
+          Výsledek je <strong><InlineMath tex={String.raw`S_P \approx 34{,}8049`} /></strong>.
+          Referenční salinita lázně byla 34,8043, takže rozdíl činí asi +0,0006.
           Tím jsme prošli celý výpočet od frekvence čidla k údaji o slanosti.
         </p>
 
@@ -497,7 +497,7 @@ export function ConductometryArticle() {
             </table>
           </div>
           <figcaption>
-            Vlastní přepočet šesti vodních bodů <SourceLink id="2014_SeaBird_C3860_Calibration">kalibrace SBE 4C 3860</SourceLink>.
+            Vlastní přepočet šesti vodních bodů <SourceLink id="2024_SeaBird_C3679_Calibration">kalibrace SBE 4C 3679</SourceLink>.
             Teplota, frekvence a referenční salinita pocházejí z protokolu. Dva prostřední
             výsledkové sloupce vznikly naším výpočtem z jeho zaokrouhlených vstupů.
           </figcaption>
@@ -510,7 +510,7 @@ export function ConductometryArticle() {
         </p>
         <figure className="article-figure">
           <Image className="article-figure__media" src="/media/conductometry/conductivity-temperature.png"
-            alt="Šest kalibračních bodů. Při zvýšení teploty přibližně z −1 na 32,5 °C roste vodivost z 2,792 na 6,048 S/m, zatímco vypočtená praktická salinita všech bodů zůstává mezi 34,634 a 34,643."
+            alt="Šest kalibračních bodů. Při zvýšení teploty přibližně z −1 na 32,5 °C roste vodivost z 2,804 na 6,071 S/m, zatímco vypočtená praktická salinita všech bodů zůstává mezi 34,786 a 34,805."
             width={1600} height={1040} sizes="(max-width: 700px) 100vw, 770px" unoptimized />
           <figcaption>
             Vodorovná osa ukazuje teplotu lázně, svislá vypočtenou vodivost.
@@ -523,18 +523,16 @@ export function ConductometryArticle() {
         <details className="method-details">
           <summary>Koeficienty, data a zopakování výpočtu</summary>
           <p>
-            Z protokolu přebíráme <InlineMath tex={String.raw`g = -10{,}3209641`} />, <InlineMath tex={String.raw`h = 1{,}48289601`} />,{" "}
-            <InlineMath tex={String.raw`i = -0{,}000612897590`} /> a <InlineMath tex={String.raw`j = 0{,}000127926748`} />.
+            Z protokolu přebíráme <InlineMath tex={String.raw`g = -10{,}2053369`} />, <InlineMath tex={String.raw`h = 1{,}54002316`} />,{" "}
+            <InlineMath tex={String.raw`i = 0{,}0000536505431`} /> a <InlineMath tex={String.raw`j = 0{,}000112553032`} />.
             CTcor je 3,25 × 10⁻⁶ na °C a CPcor −9,57 × 10⁻⁸ na dbar.
             Hodnoty g až j jsou číselné koeficienty pro uvedené jednotky f a C.
             Nelze je použít beze změny s frekvencí zadanou v Hz.{" "}
-            <SourceLink id="2014_SeaBird_C3860_Calibration">(Sea-Bird: původní protokol)</SourceLink>
+            <SourceLink id="2024_SeaBird_C3679_Calibration">(Sea-Bird: původní protokol)</SourceLink>
           </p>
           <p>
-            Vzorec vytištěný v protokolu postrádá faktor 10 ve jmenovateli.
-            Použitý tvar dokládá <SourceLink id="DOI_10_7289_v5dr2sgz">zpráva NOAA,
-            strana 13</SourceLink>, pro stejné sériové číslo, datum a koeficienty.
-            Odpovídá také tabulkovým vodivostem. Frekvence už jsou v kHz,
+            Vzorec vytištěný v protokolu obsahuje faktor 10 ve jmenovateli
+            a odpovídá použitému převodu na S/m. Frekvence už jsou v kHz,
             a znovu je proto nedělíme tisícem. Označení „PSU“ u salinity
             v originálu nepředstavuje fyzikální jednotku.
           </p>
@@ -554,7 +552,7 @@ export function ConductometryArticle() {
             <li><a href={`${dataPath}/plot.py`} download>Skript grafu pro Python s knihovnou Matplotlib</a></li>
           </ul>
           <p>
-            Metadata uvádějí přístup 4. října 2026 a kontrolní součty SHA-256 přepisu i původního
+            Metadata uvádějí přístup 5. listopadu 2026 a kontrolní součty SHA-256 přepisu i původního
             PDF pro rozpoznání změn souboru. Vstupní data, výběr i předpoklad <InlineMath tex={String.raw`p = 0`} /> jsou zachované.
             Program znovu neodhaduje kalibrační koeficienty. Naše funkce přijímá vodivost v S/m,
             zatímco původní gsw_SP_from_C v mS/cm, tedy milisiemensech na centimetr.

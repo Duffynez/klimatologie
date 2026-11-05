@@ -31,8 +31,8 @@ export function conductivityFromFrequency(frequencyKhz, temperature90C, seaPress
   const { g, h, i, j, CTcor, CPcor } = coefficients;
   if (![frequencyKhz, temperature90C, seaPressureDbar, g, h, i, j, CTcor, CPcor].every(Number.isFinite)
     || frequencyKhz <= 0) throw new Error("Invalid signal or calibration coefficients");
-  // NOAA OAR AOML-51, printed p. 13: f is in kHz, output in S/m.
-  // The certificate's printed formula omits factor 10. Its table and NOAA agree with this one.
+  // Sea-Bird C3679 certificate, 16 January 2024, p. 1: f in kHz, output in S/m.
+  // The printed equation explicitly includes factor 10 in the denominator.
   return (g + h * frequencyKhz ** 2 + i * frequencyKhz ** 3 + j * frequencyKhz ** 4)
     / (10 * (1 + CTcor * temperature90C + CPcor * seaPressureDbar));
 }

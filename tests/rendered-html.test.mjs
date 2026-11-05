@@ -2068,7 +2068,7 @@ test("publishes conductometry with a reproducible signal conversion and open sou
   assert.ok(body, "The full method must replace its catalogue fallback");
   assert.match(body, /class="method-flow"/);
   assert.match(body, /conductivity-temperature\.png/);
-  assert.match(body, /34,6424/);
+  assert.match(body, /34,8049/);
   assert.equal((body.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) ?? []).length, 6);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
   for (const page of related) assert.match(page, /href="\/metody\/konduktometrie\/?(?:#[^"]+)?"/);
@@ -2114,12 +2114,12 @@ test("reproduces conductivity calibration and matches independent published PSS-
   assert.equal(result.selectedCount, 6);
   assert.equal(result.excludedStep, 1);
   assert.deepEqual(result.rows, metadata.rows, "The rendered results must agree with recalculation");
-  assert.ok(Math.abs(result.selected.calculatedSm - 4.252531092811017) < 1e-12);
-  assert.ok(Math.abs(result.selected.SP - 34.642394135890406) < 1e-10);
+  assert.ok(Math.abs(result.selected.calculatedSm - 4.270363372469723) < 1e-12);
+  assert.ok(Math.abs(result.selected.SP - 34.80490636171875) < 1e-10);
   assert.throws(() => parseCalibration(text.replace("frequency_khz", "frequency_hz")), /columns/);
   assert.throws(() => parseCalibration(text.trim().split(/\r?\n/).slice(0, -1).join("\n")), /row count/);
-  assert.throws(() => parseCalibration(text.replace("5.07771", "NaN")), /numerical/);
-  assert.throws(() => reproduceCalibration(text.replace("5.96800", "5968.00"), metadata));
+  assert.throws(() => parseCalibration(text.replace("4.97822", "NaN")), /numerical/);
+  assert.throws(() => reproduceCalibration(text.replace("5.85359", "5853.59"), metadata));
 });
 
 test("publishes rain gauges and disdrometers with open sources, data and an observation backlink", async () => {

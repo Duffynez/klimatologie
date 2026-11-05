@@ -151,8 +151,9 @@ export function RainGaugeArticle() {
           který rozpoznává přítomnost padajících srážek.
         </p>
         <p>
-          Příspěvky tří snímačů mají různou váhu. Ta se určuje podle jejich kolísání
-          v předchozích hodinách. Klidnější záznam má na společný výsledek větší vliv.
+          Příspěvky tří snímačů mají různou váhu. Ta závisí na odchylkách přírůstků
+          daného snímače od společného průměru tří snímačů. Zpracování obvykle používá
+          aktuální a dvě předchozí hodiny. Snímač s menšími odchylkami má větší vliv.
           Algoritmus zároveň kontroluje chybné odečty a zohledňuje kladné i záporné
           změny. Při kolísání kolem stálého obsahu se totiž zdánlivé přírůstky a úbytky
           střídají. Zachování obou znamének umožňuje tyto výkyvy vzájemně vyrovnat.{" "}
@@ -269,7 +270,7 @@ export function RainGaugeArticle() {
           Zde používáme <strong>účinnou měřicí plochu</strong>: část světelného pásu,
           ve které lze kapku dané velikosti správně započítat. U okrajů pásu může být
           zastínění neúplné, proto se plocha upravuje podle velikosti kapek.
-          Příspěvky všech velikostních tříd pak sečteme:
+          Následující vztah sami odvodíme součtem objemů kapek přes všechny třídy:
         </p>
         <Equation tex={String.raw`P \approx \sum_i \frac{n_i\,\pi D_i^3}{6 A_i}`} />
         <p>
@@ -279,7 +280,7 @@ export function RainGaugeArticle() {
           účinná plocha pro tuto velikost. Symbol Σ znamená součet přes všechny třídy.
           S průměrem v milimetrech a plochou v mm² vyjde úhrn P v milimetrech.
           Dělením dobou v hodinách získáme intenzitu v mm/h.{" "}
-          <SourceLink id="DOI_10_1175_jtech_d_13_00174_1">(Tokay a kol., oddíl 5, rovnice 6)</SourceLink>
+          <SourceLink id="DOI_10_1175_jtech_d_13_00174_1">(Tokay a kol., oddíl 5: účinná měřicí plocha)</SourceLink>
         </p>
         <p>
           Rovnice ukazuje geometrický základ převodu kapalného deště. Konkrétní
@@ -340,13 +341,20 @@ export function RainGaugeArticle() {
           <SourceLink id="WEB_World_Meteorological_Organiz_prirucka_WMO_c_8_f7933a04"> příručka WMO</SourceLink>.
         </p>
         <p>
-          Potřeba zachytit také časový průběh vedla k registračním srážkoměrům.
-          <SourceLink id="WEB_DWD_Hellmann_1897_Ein_neuer_registrirender_Regenmesser"> Hellmannův
-          popis z roku 1897</SourceLink> ukazuje nádobu s plovákem spojeným s perem.
-          Přibývající voda plovák zvedala a pero zaznamenávalo vzestup na papír
-          posouvaný hodinovým strojem. Po naplnění vodu odváděl sifon, trubice
-          sloužící k vyprázdnění nádoby. Dnešní automatické snímače umožňují časté
-          elektronické odečty a společné zpracování dlouhých záznamů.
+          Časový průběh lze zaznamenávat také plovákovým srážkoměrem.
+          Přibývající voda zvedá plovák a jeho pohyb se přenáší na pero nebo
+          elektronický snímač. Po naplnění může vodu odvést sifon, trubice
+          sloužící k vyprázdnění nádoby. Tento princip popisuje
+          <SourceLink id="WEB_World_Meteorological_Organiz_prirucka_WMO_c_8_f7933a04"> WMO v oddílu 6.2.4</SourceLink>.
+        </p>
+        <p>
+          Rozvoj elektronického záznamu umožnil častější odečty a společné zpracování
+          více snímačů. Původní dokumentace <SourceLink id="2015_USCRN_OAP2">NOAA OAP 2.0
+          z roku 2015, úvod</SourceLink>, uvádí pětiminutová měření USCRN od let
+          2004–2005. Novější algoritmus vznikl po zjištění, že předchozí postup někdy
+          podhodnocoval celkový úhrn nebo vykazoval nereálnou intenzitu na začátku
+          deště. Ukazuje tak, že přesnější výsledek může přinést také nové zpracování
+          záznamů ze stejné konstrukce přístroje.
         </p>
 
         <h2>Nejistoty a omezení</h2>

@@ -13,6 +13,8 @@ from matplotlib.ticker import FuncFormatter
 base = Path(__file__).resolve().parent
 result = json.loads(subprocess.check_output(['node', str(base / 'reproduce.mjs')], text=True, encoding='utf-8'))
 rows = result['rows']
+metadata = json.loads((base / 'example.json').read_text(encoding='utf-8'))
+number = lambda value: f'{value:.3f}'.replace('.', ',')
 background = '#faf9f5'
 green = '#24695b'
 plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 22, 'axes.spines.top': False, 'axes.spines.right': False})
@@ -28,12 +30,12 @@ ax.set_xticks([0, 10, 20, 30])
 ax.set_yticks([0, 2, 4, 6])
 ax.yaxis.set_major_formatter(FuncFormatter(lambda v, _: f'{v:g}'.replace('.', ',')))
 ax.grid(axis='y', alpha=.18)
-ax.annotate('Sₚ = 34,641', (x[0], y[0]), xytext=(12, -36), textcoords='offset points', color=green, fontsize=22)
-ax.annotate('Sₚ = 34,634', (x[-1], y[-1]), xytext=(-8, 17), textcoords='offset points', ha='right', color=green, fontsize=22)
+ax.annotate('Sₚ = ' + number(rows[0]['SP']), (x[0], y[0]), xytext=(12, -36), textcoords='offset points', color=green, fontsize=22)
+ax.annotate('Sₚ = ' + number(rows[-1]['SP']), (x[-1], y[-1]), xytext=(-8, 17), textcoords='offset points', ha='right', color=green, fontsize=22)
 fig.text(.14, .94, 'Vodivost roste s teplotou lázně', fontsize=23, fontweight='bold', color='#243c35')
-fig.text(.14, .875, 'Kalibrace SBE 4C 3860 · 15. 10. 2014', fontsize=18)
-fig.text(.14, .07, 'Salinita všech bodů: 34,634–34,643', fontsize=18)
-fig.text(.14, .026, 'Zdroj: protokol Sea-Bird / NOAA. Vlastní výpočet.', fontsize=14)
+fig.text(.14, .875, metadata['title'], fontsize=18)
+fig.text(.14, .07, 'Salinita všech bodů: ' + '–'.join(map(number, result['salinityRange'])), fontsize=18)
+fig.text(.14, .026, 'Zdroj: protokol Sea-Bird / University of Maine. Vlastní výpočet.', fontsize=14)
 output = Path(sys.argv[1]) if len(sys.argv) > 1 else base / 'conductivity-temperature.png'
 output.parent.mkdir(parents=True, exist_ok=True)
 fig.savefig(output, dpi=160, metadata={'Description': 'Conductivity recalculated from six calibration frequencies. Not an ocean time series or an uncertainty estimate.'})

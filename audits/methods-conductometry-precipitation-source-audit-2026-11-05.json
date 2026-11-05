@@ -1,0 +1,2221 @@
+{
+  "date": "2026-11-05",
+  "verificationStage": "pre-deployment",
+  "articles": [
+    {
+      "title": "Konduktometrie",
+      "slug": "konduktometrie",
+      "sourceCount": 18
+    },
+    {
+      "title": "Srážkoměry a disdrometry",
+      "slug": "srazkomery-a-disdrometry",
+      "sourceCount": 20
+    }
+  ],
+  "activeUniqueSourceCount": 37,
+  "reviewedUniqueSourceCountIncludingWithdrawn": 39,
+  "sourceChecks": [
+    {
+      "id": "2015_TEOS10_SP_From_C",
+      "title": "gsw_SP_from_C: Practical Salinity from conductivity",
+      "author": "Trevor McDougall a Paul Barker",
+      "year": 2015,
+      "publication": "TEOS-10, Gibbs SeaWater Oceanographic Toolbox, dokumentace verze 3.05, 16. února 2015, s metodickou přílohou z roku 2011",
+      "type": "Dokumentace výpočtu salinity",
+      "category": "science",
+      "externalUrl": "https://www.teos-10.org/pubs/gsw/html/gsw_SP_from_C.html",
+      "citationLabel": "TEOS-10: salinita z vodivosti",
+      "topics": [
+        "metody",
+        "vodivost",
+        "praktická salinita",
+        "PSS-78"
+      ],
+      "availability": "open-access",
+      "openAccessUrl": "https://www.teos-10.org/pubs/gsw/pdf/SP_from_C.pdf",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Oficiální úplná dokumentace GSW 3.05, 16. února 2015, 7 stran. Vstupy C v mS/cm, t na ITS-90, sea pressure v dbar. Příloha E obsahuje vztahy PSS-78 a převod t68 = 1.00024 t90. Šest zveřejněných kontrolních výsledků je ověřeno existujícím numerickým testem."
+    },
+    {
+      "id": "2019_OpenStax_Chemistry_2e",
+      "title": "Chemistry 2e",
+      "author": "Paul Flowers, Klaus Theopold, Richard Langley a William R. Robinson",
+      "year": 2019,
+      "publication": "OpenStax, Rice University. Druhé vydání, volně dostupná elektronická učebnice.",
+      "type": "Vysokoškolská učebnice obecné chemie",
+      "category": "book",
+      "externalUrl": "https://openstax.org/details/books/chemistry-2e",
+      "citationLabel": "OpenStax: Chemistry 2e",
+      "topics": [
+        "metody",
+        "učebnice",
+        "izotopy",
+        "vodivost",
+        "ionty"
+      ],
+      "availability": "open-access",
+      "openAccessUrl": "https://openstax.org/books/chemistry-2e/pages/1-introduction",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Otevřená učebnice, kapitola 11.2 Electrolytes. Přítomnost a pohyb iontů dokládá základní výklad elektrické vodivosti. Ověřen i přímý text kapitoly, ne pouze katalog knihy. Učebnice slouží zavedenému základu, nenahrazuje primární zkoušku přístroje."
+    },
+    {
+      "id": "2016_OpenStax_University_Physics_2",
+      "title": "University Physics, Volume 2",
+      "author": "Samuel J. Ling, Jeff Sanny a William Moebs",
+      "year": 2016,
+      "publication": "OpenStax, Rice University. Volně dostupné elektronické vydání.",
+      "type": "Vysokoškolská učebnice termodynamiky, elektřiny a magnetismu",
+      "category": "book",
+      "externalUrl": "https://openstax.org/details/books/university-physics-volume-2",
+      "citationLabel": "OpenStax: University Physics 2",
+      "topics": [
+        "metody",
+        "učebnice",
+        "termometrie",
+        "elektřina",
+        "vodivost",
+        "kapacita"
+      ],
+      "availability": "open-access",
+      "openAccessUrl": "https://openstax.org/books/university-physics-volume-2/pages/1-introduction",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Otevřená učebnice, kapitola 9.3 Resistivity and Resistance. Odpor závisí na délce a průřezu, vodivost látky je převrácenou rezistivitou. Ověřen plný text konkrétní kapitoly."
+    },
+    {
+      "id": "2025_SeaBird_SBE4_Datasheet",
+      "title": "SBE 4 Conductivity Sensor",
+      "author": "Sea-Bird Scientific",
+      "year": 2025,
+      "publication": "Technický list SBE 4.DS.53.May25, květen 2025",
+      "type": "Technická dokumentace přístroje",
+      "category": "organization",
+      "externalUrl": "https://www.seabird.com/hubfs/Product%20Assets/SBE%204/Datasheets/SBE_4DS53May25.pdf",
+      "citationLabel": "Sea-Bird 2025, SBE 4",
+      "topics": [
+        "metody",
+        "vodivost",
+        "salinita",
+        "kalibrace"
+      ],
+      "availability": "open-access",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Původní technický list SBE 4, SBE 4.DS.53, květen 2025, 2 strany. Tříelektrodová platinová cela, frekvenční výstup a kalibrace pomocí vzorků lázně a salinometru Autosal. Parametry výrobce jsou v článku odlišeny od nezávislých porovnání."
+    },
+    {
+      "id": "2010_SeaBird_9plus_Manual",
+      "title": "SBE 9plus CTD User’s Manual",
+      "author": "Sea-Bird Electronics",
+      "year": 2010,
+      "publication": "Manuál verze 013, 19. ledna 2010, kopie v British Oceanographic Data Centre",
+      "type": "Technická dokumentace přístroje",
+      "category": "organization",
+      "externalUrl": "https://www.bodc.ac.uk/data/documents/nodb/pdf/9plus_013.pdf",
+      "citationLabel": "Sea-Bird 2010, SBE 9plus",
+      "topics": [
+        "metody",
+        "tlak",
+        "hloubka",
+        "CTD"
+      ],
+      "availability": "open-access",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Úplný původní manuál, 67 stran. Čerpání vody přes teplotní a vodivostní čidlo, časové sladění, tepelná odezva vodivostní cely a údržba. Výklad neslibuje stejnou stabilitu ve všech podmínkách."
+    },
+    {
+      "id": "2018_NASA_Roger_Revelle_CTD_Photo",
+      "title": "A conductivity, temperature and depth device",
+      "author": "Katy Mersmann / NASA Goddard Space Flight Center",
+      "year": 2018,
+      "publication": "NASA, 8. srpna 2018, fotografie převzatá z Wikimedia Commons pod licencí CC BY 2.0",
+      "type": "Fotografie měřicí soupravy",
+      "category": "organization",
+      "externalUrl": "https://commons.wikimedia.org/wiki/File:A_conductivity,_temperature_and_depth_device.jpg",
+      "citationLabel": "NASA / Katy Mersmann: CTD na lodi Roger Revelle",
+      "topics": [
+        "metody",
+        "konduktometrie",
+        "salinita",
+        "oceán",
+        "fotografie"
+      ],
+      "availability": "open-access",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Stránka konkrétní fotografie na Wikimedia Commons, autor Katy Mersmann / NASA Goddard Space Flight Center, srpen 2018, licence CC BY 2.0. Souprava CTD na Roger Revelle odpovídá popisku. Místní obrázek se vykreslil v prohlížeči."
+    },
+    {
+      "id": "WEB_CC_BY_2_0",
+      "title": "Creative Commons Attribution 2.0 Generic (CC BY 2.0)",
+      "author": "Creative Commons",
+      "year": 2004,
+      "publication": "Creative Commons",
+      "type": "Licenční podmínky",
+      "category": "organization",
+      "externalUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "citationLabel": "Creative Commons: CC BY 2.0",
+      "topics": [
+        "zdroje",
+        "licence",
+        "fotografie"
+      ],
+      "availability": "open-access",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Oficiální znění Creative Commons Attribution 2.0 Generic, otevřený právní a uživatelský text. Použito pro licenci konkrétní fotografie, nikoli jako vědecký zdroj."
+    },
+    {
+      "id": "2012_VIM_Calibration",
+      "title": "International Vocabulary of Metrology (VIM), 2.39 Calibration",
+      "author": "Joint Committee for Guides in Metrology",
+      "year": 2012,
+      "publication": "JCGM 200:2012, třetí vydání, elektronická verze s vysvětlivkami",
+      "type": "Metrologický slovník",
+      "category": "science",
+      "externalUrl": "https://jcgm.bipm.org/vim/en/2.39.html",
+      "availability": "open-access",
+      "topics": [
+        "metody",
+        "teplota",
+        "odporová termometrie"
+      ],
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Úplná definice VIM 2.39 a poznámky. Kalibrace stanovuje vztah s nejistotami, poznámka 2 odlišuje seřízení. Přímý odkaz vede na požadované heslo."
+    },
+    {
+      "id": "DOI_10_7289_v5dr2sgz",
+      "title": "Hydrographic Measurements Collected Aboard the UNOLS Ship R/V Endeavor, 14 February–27 February 2015: Western Boundary Time Series Cruise EN551 (AB1502)",
+      "author": "James A. Hooper V a Molly O. Baringer",
+      "year": 2015,
+      "publication": "NOAA Data Report OAR AOML-51, červenec 2015. Tištěná s. 13 odpovídá straně 23 v PDF. Plný text v repozitáři NOAA.",
+      "type": "Primární zpráva z měřicí plavby",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.7289/V5DR2SGZ",
+      "citationLabel": "Hooper a Baringer 2015, NOAA",
+      "topics": [
+        "metody",
+        "vodivost",
+        "salinita",
+        "CTD"
+      ],
+      "availability": "open-access",
+      "openAccessUrl": "https://repository.library.noaa.gov/view/noaa/9415/noaa_9415_DS1.pdf",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Původní HTTPS kopie přesměrovala na údržbu NOAA. Úplný shodný report byl ověřen v oficiálním repozitáři NOAA, 225 stran PDF. Tištěná s. 13 = PDF s. 23 obsahuje převod s faktorem 10 a f v kHz. Oddíl salinometrie dokládá Autosal a IAPSO P-157. DOI zůstává identifikátorem, plný text má samostatné funkční tlačítko."
+    },
+    {
+      "id": "DOI_10_1109_joe_1980_1145448",
+      "title": "The Practical Salinity Scale 1978 and Its Antecedents",
+      "author": "Edward Lyn Lewis",
+      "year": 1980,
+      "publication": "IEEE Journal of Oceanic Engineering 5(1), 3–8. S povolením přetištěno v UNESCO Technical Papers in Marine Science 37 (1981), s. 13–18, strany 16–21 v PDF. Úplný přetisk v prohlížeči UNESCO.",
+      "type": "Původní metodická práce",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.1109/JOE.1980.1145448",
+      "citationLabel": "Lewis 1980, PSS-78",
+      "topics": [
+        "metody",
+        "salinita",
+        "historie",
+        "PSS-78"
+      ],
+      "openAccessLinkLabel": "Otevřít plný text (přetisk UNESCO)",
+      "availability": "open-access",
+      "openAccessUrl": "https://unesdoc.unesco.org/ark:/48223/pf0000047932",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Úplný přetisk s výslovným povolením IEEE v UNESCO Technical Papers in Marine Science 37 (1981), tištěné s. 13–18 = PDF s. 16–21. Vizuálně ověřen název, autor, copyright a povolení. Tištěná s. 14 dokládá salinometry 1955–1959 a elektronickou kompenzaci do roku 1961, s. 18 definici PSS-78. Prohlížeč UNESCO skutečně zpřístupňuje celý 140stránkový svazek. Původní VLIZ přenos se opakovaně přerušil, částečný soubor nebyl považován za úplný text."
+    },
+    {
+      "id": "2015_TEOS10_SA_From_SP",
+      "title": "gsw_SA_from_SP: Absolute Salinity from Practical Salinity",
+      "author": "Trevor McDougall, Paul Barker a David Jackett",
+      "year": 2015,
+      "publication": "TEOS-10, Gibbs SeaWater Oceanographic Toolbox, dokumentace verze 3.05, 16. února 2015, s metodickou přílohou z roku 2011",
+      "type": "Dokumentace převodu salinity",
+      "category": "science",
+      "externalUrl": "https://www.teos-10.org/pubs/gsw/html/gsw_SA_from_SP.html",
+      "citationLabel": "TEOS-10: absolutní salinita",
+      "topics": [
+        "metody",
+        "salinita",
+        "hustota mořské vody"
+      ],
+      "availability": "open-access",
+      "openAccessUrl": "https://www.teos-10.org/pubs/gsw/pdf/SA_from_SP.pdf",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Úplná dokumentace GSW 3.05, 16. února 2015, 16 stran. Převod praktické na absolutní salinitu využívá tlak, polohu a odchylku složení. Výklad nepokládá praktickou salinitu za hmotnostní koncentraci."
+    },
+    {
+      "id": "WEB_International_Argo_Program_Data_from_GDACs_b2737bdf",
+      "title": "Data from GDACs",
+      "author": "International Argo Program",
+      "year": 2026,
+      "publication": "International Argo Program",
+      "type": "Datový portál nebo soubor",
+      "category": "organization",
+      "externalUrl": "https://argo.ucsd.edu/data/data-from-gdacs/",
+      "citationLabel": "Globální datová centra Argo",
+      "topics": [
+        "pozorování",
+        "obsah tepla v oceánu",
+        "oceán"
+      ],
+      "yearLabel": "přístup 2026",
+      "availability": "open-access",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Funkční provozní datový portál programu Argo. Zpřístupňuje profily a dokumentaci. K popisu PSAL a PSAL_ADJUSTED je navíc připojena původní práce Wongové a spoluautorů."
+    },
+    {
+      "id": "DOI_10_1175_2011jtecho831_1",
+      "title": "Pressure Sensor Drifts in Argo and Their Impacts",
+      "author": "Paul M. Barker, Jeff R. Dunn, Catia M. Domingues a Susan E. Wijffels",
+      "year": 2011,
+      "publication": "Journal of Atmospheric and Oceanic Technology 28, 1036–1049",
+      "type": "Primární klimatologická studie",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.1175/2011JTECHO831.1",
+      "citationLabel": "Barker a kol. 2011",
+      "topics": [
+        "metody",
+        "tlak",
+        "Argo",
+        "obsah tepla v oceánu"
+      ],
+      "availability": "open-access",
+      "openAccessUrl": "https://nora.nerc.ac.uk/id/eprint/526028/1/2011jtecho831.1.pdf",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Plná autorská verze v NERC NORA, 14 stran. Zkoumá drift tlaku v Argo a vlivy na odhady tepla a objemu. Podporuje potřebu spojit salinitu s teplotou a tlakem, nikoli přesnost našeho kalibračního kusu."
+    },
+    {
+      "id": "WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a",
+      "title": "Guide to Best Practices for Ocean CO₂ Measurements",
+      "author": "Andrew G. Dickson, Christopher L. Sabine a James R. Christian (eds.)",
+      "year": 2007,
+      "publication": "PICES Special Publication 3 / IOCCP Report 8",
+      "type": "Metodická příručka",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.25607/OBP-1342",
+      "citationLabel": "Dickson a kol. 2007",
+      "topics": [
+        "pozorování",
+        "acidifikace oceánu",
+        "oceán"
+      ],
+      "availability": "open-access",
+      "openAccessUrl": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/Handbook_2007/Guide_all_in_one.pdf",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Úplná příručka Dickson, Sabine a Christian (eds.) 2007, 196 stran. Kapitola 2 a standardní postupy zahrnují salinitu mezi podmínkami chemických přepočtů mořské vody. Dostupný originální institucionální plný text."
+    },
+    {
+      "id": "DOI_10_5194_essd_15_383_2023",
+      "title": "Argo salinity: bias and uncertainty evaluation",
+      "author": "Annie P. S. Wong, John Gilson a Cécile Cabanes",
+      "year": 2023,
+      "publication": "Earth System Science Data 15, 383–393",
+      "type": "Primární studie nejistot měření",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.5194/essd-15-383-2023",
+      "citationLabel": "Wong, Gilson a Cabanes 2023",
+      "topics": [
+        "metody",
+        "salinita",
+        "Argo",
+        "drift",
+        "nejistoty"
+      ],
+      "availability": "open-access",
+      "openAccessUrl": "https://essd.copernicus.org/articles/15/383/2023/essd-15-383-2023.pdf",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Úplná otevřená původní studie, 11 stran. Vyhodnocuje data Argo dostupná v dubnu 2022, nárůst slaného driftu po roce 2015 a opravy v delayed mode. Článek správně vymezuje historický soubor a závislost na referencích."
+    },
+    {
+      "id": "DOI_10_1175_jcli_d_20_0366_1",
+      "title": "Improved Estimates of Changes in Upper Ocean Salinity and the Hydrological Cycle",
+      "author": "Lijing Cheng a kol.",
+      "year": 2020,
+      "publication": "Journal of Climate 33, 10357–10381",
+      "type": "Primární klimatologická studie",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.1175/JCLI-D-20-0366.1",
+      "citationLabel": "Cheng a kol. 2020, salinita oceánu",
+      "topics": [
+        "metody",
+        "salinita",
+        "oceán",
+        "koloběh vody"
+      ],
+      "availability": "open-access",
+      "openAccessUrl": "https://michaelmann.net/sites/default/files/articles/ChengEtAl_JClimate20.pdf",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Úplná autorská kopie, 25 stran. Metody uvádějí WOD stažený v červenci 2018, rekonstrukci 1960–2017 do 2000 m, převod na absolutní salinitu a modelové kovariance s kontrolou pomocí vynechaných pozorování. Tyto údaje odpovídají výkladu."
+    },
+    {
+      "id": "DOI_10_1175_jtech_d_24_0051_1",
+      "title": "Intercomparison of Extended-Depth SBE41CP, SBE61, and RBRargo|deep6k CTDs for Deep-Argo Application Using Three- and Two-Headed Deep-Arvor Floats",
+      "author": "Virginie Thierry a kol.",
+      "year": 2025,
+      "publication": "Journal of Atmospheric and Oceanic Technology 42, 401–424",
+      "type": "Primární porovnání měřicích přístrojů",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.1175/JTECH-D-24-0051.1",
+      "citationLabel": "Thierry a kol. 2025",
+      "topics": [
+        "metody",
+        "salinita",
+        "Argo",
+        "ověření měření"
+      ],
+      "availability": "open-access",
+      "openAccessUrl": "https://rbr-global.com/wp-content/uploads/2025/10/Thierry_2025.pdf",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Úplná původní studie Thierryové a spoluautorů 2025, 24 stran. Čtyři plováky se dvěma nebo třemi CTD, profily do 4000 dbar. Rozdíly pod 0.004 při tlacích nad 500 dbar platí po opravách se společnou lodní referencí. Výsledek nepředstavuje zkoušku našeho SBE 4C."
+    },
+    {
+      "id": "2014_SeaBird_C3860_Calibration",
+      "title": "SBE 4 Conductivity Calibration Data: Serial Number 3860, 15 October 2014",
+      "author": "Sea-Bird Electronics",
+      "year": 2014,
+      "publication": "Kalibrační protokol SBE 4C 3860, archiv NOAA AOML. Původní webová adresa 5. listopadu 2026 přesměrovala na údržbu. Soubor ověřen přes FTP, které běžné prohlížeče nepodporují. Článek nyní používá veřejný protokol C3679 z roku 2024.",
+      "type": "Kalibrační protokol a data",
+      "category": "organization",
+      "externalUrl": "ftp://ftp.aoml.noaa.gov/phod/phod/instrument_calibration/Sea-Bird/Calibrations%20by%20Serial/SBE4C/3860/2014-10-SBE4-C3860-15Oct14.pdf",
+      "citationLabel": "Sea-Bird 2014, kalibrace C3860",
+      "topics": [
+        "metody",
+        "vodivost",
+        "kalibrace",
+        "veřejná data"
+      ],
+      "externalLinkLabel": "Protokol přes FTP (vyžaduje klienta)",
+      "activeInReviewedArticles": false,
+      "status": "withdrawn-from-reviewed-method",
+      "evidence": "Původní HTTPS adresa přesměrovala na údržbu NOAA. Originální PDF bylo získáno přes FTP a SHA-256 a0dc1895b053c45853470e8d60238680379dc263c996b6aea79777f7ec4752a6 souhlasí s předchozími metadaty. FTP běžné prohlížeče nepodporují. Zdroj byl z aktivního příkladu vyřazen, ID zůstává a katalog výslovně uvádí nutnost FTP klienta. Nový příklad používá vlastní nový záznam C3679."
+    },
+    {
+      "id": "WEB_World_Meteorological_Organiz_prirucka_WMO_c_8_f7933a04",
+      "title": "Guide to Instruments and Methods of Observation (WMO-No. 8), Volume I: Measurement of Meteorological Variables, 2024 edition",
+      "author": "World Meteorological Organization",
+      "year": 2024,
+      "publication": "World Meteorological Organization, svazek I, vydání 2024. Úplné PDF zpřístupňuje mongolská meteorologická služba NAMEM. Katalog WMO může vyžadovat ověření prohlížeče.",
+      "type": "Metodická dokumentace",
+      "category": "organization",
+      "externalUrl": "https://library.wmo.int/records/item/68695-guide-to-instruments-and-methods-of-observation?offset=3",
+      "citationLabel": "příručka WMO č. 8",
+      "topics": [
+        "pozorování",
+        "vlny veder",
+        "extrémy"
+      ],
+      "externalLinkLabel": "Katalog WMO (může vyžádat ověření)",
+      "openAccessLinkLabel": "Otevřít plný text svazku I (PDF)",
+      "availability": "open-access",
+      "openAccessUrl": "https://amc.namem.gov.mn/wp-content/uploads/WMO1/1.%208-I-2024_en.pdf?_t=1638837866",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Úplný svazek I, vydání 2024, 601 stran, zpřístupněný meteorologickou službou NAMEM. Kapitola 6: úhrn, intenzita, váhové, překlápěcí a plovákové srážkoměry. Oddíl 6.2.4 dokládá plovák a sifon. Katalog WMO vrací ověření prohlížeče, které nebylo obcházeno. Samostatné tlačítko vede na funkční úplné PDF a katalog je přesně označen."
+    },
+    {
+      "id": "2026_NOAA_Geonor_Description",
+      "title": "All Weather Precipitation Gauge: Geonor T-200B",
+      "author": "NOAA National Centers for Environmental Information",
+      "year": 2026,
+      "publication": "Dokumentace čidla USCRN bez uvedeného roku. Přístup 5. listopadu 2026.",
+      "type": "Dokumentace měřicího principu",
+      "category": "organization",
+      "externalUrl": "https://www.ncei.noaa.gov/pub/data/uscrn/documentation/site/sensors/precipitation/Descriptions/Precip_GeonorT-200B.pdf",
+      "citationLabel": "NOAA, váhový srážkoměr",
+      "topics": [
+        "metody",
+        "srážkoměry",
+        "USCRN"
+      ],
+      "yearLabel": "přístup 2026",
+      "availability": "open-access",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Původní 2stránkový popis Geonor T-200B v USCRN. Otvor 200 cm², tři snímače, vyhřívání, ochrana větrolamy a detektor srážek odpovídají výkladu. Dokument neuvádí rok publikace, proto byl doplněn štítek přístup 2026."
+    },
+    {
+      "id": "2018_NOAA_USCRN_Precipitation_Photo",
+      "title": "What’s a USCRN Station? Fotografie váhového a překlápěcího srážkoměru",
+      "author": "NOAA National Centers for Environmental Information",
+      "year": 2018,
+      "publication": "NOAA NCEI, 27. srpna 2018, aktualizováno 17. července 2019",
+      "type": "Fotografie měřicí stanice",
+      "category": "organization",
+      "externalUrl": "https://www.ncei.noaa.gov/news/what-is-a-uscrn-station",
+      "citationLabel": "NOAA NCEI: srážkoměry na stanici USCRN",
+      "topics": [
+        "metody",
+        "srážkoměry",
+        "srážky",
+        "fotografie"
+      ],
+      "availability": "open-access",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Funkční stránka NOAA NCEI What Is a USCRN Station, původně zveřejněná v červenci 2018. Zobrazuje použitou fotografii váhového a záložního překlápěcího srážkoměru ve větrolamech. Obrazový soubor se vykreslil při kontrole."
+    },
+    {
+      "id": "WEB_NOAA_Using_Content_FAQ",
+      "title": "NOAA Education and Outreach: Using NOAA content",
+      "author": "NOAA Office of Education",
+      "year": 2026,
+      "publication": "NOAA",
+      "type": "Podmínky použití",
+      "category": "organization",
+      "externalUrl": "https://www.noaa.gov/office-education/outreach-communication/faq",
+      "citationLabel": "NOAA: podmínky použití obsahu",
+      "topics": [
+        "zdroje",
+        "licence"
+      ],
+      "yearLabel": "přístup 2026",
+      "availability": "open-access",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Funkční oficiální stránka NOAA, oddíl Using NOAA content. Ověřeny podmínky použití obsahu a uvedení autora. Zdroj slouží licenci fotografie."
+    },
+    {
+      "id": "2016_Geonor_T200B_Manual",
+      "title": "Geonor T-200B-Series Precipitation Gauges: 600 mm, 1000 mm, and 1500 mm capacity options",
+      "author": "Campbell Scientific (Canada)",
+      "year": 2016,
+      "publication": "Instruction Manual, březen 2016",
+      "type": "Technická dokumentace přístroje",
+      "category": "organization",
+      "externalUrl": "https://s.campbellsci.com/documents/ca/manuals/t-200b_man.pdf",
+      "citationLabel": "Campbell Scientific 2016, Geonor T-200B",
+      "topics": [
+        "metody",
+        "srážkoměry",
+        "srážky",
+        "kalibrace"
+      ],
+      "availability": "open-access",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Úplný původní manuál Geonor, březen 2016, 39 stran. Oddíl 7.2 skutečně uvádí H = a(f-f0)+b(f-f0)^2 v centimetrech a frekvence asi 1000 až 3000 Hz. Oddíl 8.3 potvrzuje kontrolu přidáním 1 kg vody a mez 0.5 %. Technické údaje pro 600mm variantu potvrzují citlivost 0.05 mm a opakovatelnost 0.1 mm."
+    },
+    {
+      "id": "2015_USCRN_OAP2",
+      "title": "U.S. Climate Reference Network Program: Official Algorithm for Precipitation, Version 2.0",
+      "author": "NOAA National Centers for Environmental Information",
+      "year": 2015,
+      "publication": "Popis algoritmu z 9. července 2015 s přílohami včetně původní studie Leepera, Paleckého a Davise",
+      "type": "Metodika zpracování měření",
+      "category": "organization",
+      "externalUrl": "https://www.ncei.noaa.gov/pub/data/uscrn/documentation/maintenance/2015-09/USCRN_OAP2.0.Description_PrecipChanges.pdf",
+      "citationLabel": "NOAA 2015, algoritmus OAP 2.0",
+      "topics": [
+        "metody",
+        "srážkoměry",
+        "srážky",
+        "zpracování dat"
+      ],
+      "availability": "open-access",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Úplná původní dokumentace NOAA z 9. července 2015, 26 stran včetně příloh. Úvod dokládá pětiminutové odečty od 2004–2005 a zjištěné nedostatky předchozího algoritmu. Váhy závisejí na odchylkách přírůstků od třístrunného průměru v tříhodinovém okně včetně aktuální hodiny, nikoli jen na předchozích hodinách. Popis byl upřesněn. Práh 0.2 mm a krok 0.1 mm jsou odlišeny. Pozdější verze dat 2.1.1 je v příkladu výslovně uvedena."
+    },
+    {
+      "id": "2026_USCRN_Measurements",
+      "title": "U.S. Climate Reference Network: Measurements",
+      "author": "NOAA National Centers for Environmental Information",
+      "year": 2026,
+      "publication": "U.S. Climate Reference Network, nedatovaná dokumentace. Přístup 5. listopadu 2026.",
+      "type": "Dokumentace měřicí sítě",
+      "category": "organization",
+      "externalUrl": "https://www.ncei.noaa.gov/access/crn/measurements.html",
+      "availability": "open-access",
+      "citationLabel": "NOAA/NCEI USCRN",
+      "topics": [
+        "metody",
+        "teplota",
+        "měřicí přístroje",
+        "USCRN"
+      ],
+      "yearLabel": "přístup 2026",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Funkční provozní stránka NOAA o vlastní měřicí síti. Dokládá trojité snímače, průběžnou kontrolu a kalibrace. Shoda tří snímačů sdílejících nádobu není vydávána za kontrolu ztrát při zachycení."
+    },
+    {
+      "id": "2024_OTT_Parsivel2_Manual",
+      "title": "Operating Instructions: Present Weather Sensor OTT Parsivel²",
+      "author": "OTT HydroMet",
+      "year": 2024,
+      "publication": "Manuál 70.210.002.B.E, vydání 05-0224, bez vyhřívání skel",
+      "type": "Technická dokumentace přístroje",
+      "category": "organization",
+      "externalUrl": "https://cdn.hach.com/1XMCM0ZF/at/br9qp8bxsk8bn6nzxjxxq3pf/BA_Parsivel2_EN_70210002BE.pdf",
+      "citationLabel": "OTT 2024, Parsivel²",
+      "topics": [
+        "metody",
+        "disdrometry",
+        "srážky",
+        "kalibrace"
+      ],
+      "availability": "open-access",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Úplný původní manuál OTT Parsivel², 05-0224, únor 2024, 52 stran. Popisuje zastínění laserového pásu, čas průchodu, 32×32 tříd, plochu 180×30 mm, kapalné částice 0.2–8 mm, pevné do 25 mm a rychlosti 0.2–20 m/s. Technické údaje skutečně uvádějí referenční částice 0.5, 1, 2 a 4 mm."
+    },
+    {
+      "id": "2022_NASA_IMPACTS_Parsivel_Photo",
+      "title": "IMPACTS 2022: Parsivel Disdrometer",
+      "author": "NASA Wallops Precipitation Science Research Facility",
+      "year": 2022,
+      "publication": "NASA, přehled přístrojů kampaně IMPACTS 2022, fotografie bez data pořízení",
+      "type": "Fotografie optického disdrometru v terénu",
+      "category": "organization",
+      "externalUrl": "https://wallops-prf.gsfc.nasa.gov/Field_Campaigns/IMPACTS_2022/",
+      "citationLabel": "NASA: disdrometr Parsivel, IMPACTS 2022",
+      "topics": [
+        "metody",
+        "disdrometry",
+        "srážky",
+        "fotografie"
+      ],
+      "availability": "open-access",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Funkční původní přehled NASA IMPACTS 2022 se snímkem Parsivelu. Popisek fotografie záměrně neoznačuje starší vyobrazený přístroj jako Parsivel². Místní obraz byl ověřen v prohlížeči."
+    },
+    {
+      "id": "WEB_NASA_Guidelines_for_using_NASA_Images_and_Media_Guide_e6f9e9e4",
+      "title": "Guidelines for Using NASA Images and Media",
+      "author": "NASA",
+      "year": 2026,
+      "yearLabel": "přístup 2026",
+      "publication": "NASA",
+      "type": "Licenční podmínky",
+      "category": "organization",
+      "externalUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "citationLabel": "NASA 2026",
+      "topics": [
+        "pozorování",
+        "arktický mořský led",
+        "kryosféra",
+        "hladina moře",
+        "oceán",
+        "globální teplota",
+        "atmosféra",
+        "ledové příkrovy"
+      ],
+      "availability": "open-access",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Funkční oficiální podmínky NASA Images and Media. Použity pro obrazový materiál, nikoli jako opora fyzikálního tvrzení."
+    },
+    {
+      "id": "DOI_10_1175_jtech_d_13_00174_1",
+      "title": "Evaluation of the New Version of the Laser-Optical Disdrometer, OTT Parsivel²",
+      "author": "Ali Tokay, David B. Wolff a Walter A. Petersen",
+      "year": 2014,
+      "publication": "Journal of Atmospheric and Oceanic Technology 31, 1276–1288",
+      "type": "Primární porovnání měřicích přístrojů",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.1175/JTECH-D-13-00174.1",
+      "citationLabel": "Tokay, Wolff a Petersen 2014",
+      "topics": [
+        "metody",
+        "disdrometry",
+        "srážky",
+        "ověření měření"
+      ],
+      "availability": "open-access",
+      "openAccessUrl": "https://ntrs.nasa.gov/api/citations/20150000156/downloads/20150000156.pdf",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Úplná původní studie Tokay, Wolff a Petersen 2014 v NASA, 13 stran. Oddíl 2 popisuje ekvivalentní průměr a filtry. Rovnice 6 v oddílu 5 počítá koncentraci N(D), nikoli zobrazený přímý součet objemů kapek. Citace byla opravena na účinnou měřicí plochu a náš vztah je označen jako vlastní geometrické odvození. Úhrny událostí, průměrná absolutní odchylka asi 6 % a zkouška z roku 2011 odpovídají zdroji."
+    },
+    {
+      "id": "2013_Diamond_USCRN",
+      "title": "U.S. Climate Reference Network after One Decade of Operations: Status and Assessment",
+      "author": "Howard J. Diamond a kol.",
+      "year": 2013,
+      "publication": "Bulletin of the American Meteorological Society",
+      "type": "Primární klimatologická aplikace",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.1175/BAMS-D-12-00170.1",
+      "openAccessUrl": "https://mural.maynoothuniversity.ie/id/eprint/6481/1/PT_US%20climate.pdf",
+      "availability": "open-access",
+      "citationLabel": "Diamond et al. 2013",
+      "topics": [
+        "metody",
+        "teplota",
+        "meteorologické stanice",
+        "USCRN"
+      ],
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Úplný původní článek o USCRN, 14 stran v univerzitním repozitáři. Referenční síť, stabilní místa, redundance a evidence provozu odpovídají výkladu. Nejde o populární vysvětlení NOAA."
+    },
+    {
+      "id": "DOI_10_1038_s41597_023_02238_4",
+      "title": "An Observation-Based Dataset of Global Sub-Daily Precipitation Indices (GSDR-I)",
+      "author": "David Pritchard a kol.",
+      "year": 2023,
+      "publication": "Scientific Data",
+      "type": "Studie",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.1038/s41597-023-02238-4",
+      "citationLabel": "Pritchard et al. 2023",
+      "topics": [
+        "pozorování",
+        "srážky",
+        "extrémy"
+      ],
+      "availability": "open-access",
+      "openAccessUrl": "https://eprints.ncl.ac.uk/fulltext.aspx?url=292135%2f9E05C0D2-04D4-409C-B715-4516DC06E634.pdf&pub_id=292135",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Úplná původní studie Pritchard a kol. 2023, 13 stran. Soubor GSDR-I vznikl z 18 591 srážkoměrných záznamů, popisuje kontrolu subdenních dat a prostorovou mřížku. Přesměrování univerzitního repozitáře vede na správný úplný článek."
+    },
+    {
+      "id": "WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125",
+      "title": "Guide to Instruments and Methods of Observation, Volume II – Measurement of Cryospheric Variables",
+      "author": "World Meteorological Organization",
+      "year": 2024,
+      "publication": "WMO-No. 8, vydání 2024",
+      "type": "Metodická dokumentace",
+      "category": "organization",
+      "externalUrl": "https://wgms.ch/downloads/WMO-8-vII-2024_en.pdf",
+      "citationLabel": "WMO 2024",
+      "topics": [
+        "pozorování",
+        "horské ledovce",
+        "kryosféra"
+      ],
+      "availability": "open-access",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Úplný svazek II příručky WMO, vydání 2024, 159 stran. Kapitola 2 odlišuje výšku sněhové pokrývky, vodní hodnotu a její změny po dopadu sněhu. PDF odpovídá uvedenému vydání."
+    },
+    {
+      "id": "WEB_DWD_Hellmann_1897_Ein_neuer_registrirender_Regenmesser",
+      "title": "Ein neuer registrirender Regenmesser",
+      "author": "Gustav Hellmann",
+      "year": 1897,
+      "publication": "Meteorologische Zeitschrift, digitální katalog DWD. K 5. listopadu 2026 se nepodařilo ověřit přístup k plnému textu, adresa vyžadovala ověření prohlížeče.",
+      "type": "Historický původní pramen",
+      "category": "science",
+      "externalUrl": "https://dwdbib.dwd.de/retrosammlung/periodical/titleinfo/964760",
+      "citationLabel": "Hellmann 1897",
+      "topics": [
+        "pozorování",
+        "srážky",
+        "extrémy",
+        "metody"
+      ],
+      "externalLinkLabel": "Otevřít katalog DWD (ověření přístupu)",
+      "availability": "open-access",
+      "activeInReviewedArticles": false,
+      "status": "withdrawn-from-reviewed-method",
+      "evidence": "Adresa DWD vrací ověření prohlížeče, normální prohlížeč navíc odmítl certifikát. Ověření ani bezpečnostní varování nebylo obcházeno. Plný text se nepodařilo získat a nebyl označen za přečtený. Konkrétní tvrzení o přístroji z roku 1897 bylo z této metody odstraněno. Katalogový záznam a stabilní ID zůstávají pro jiné články s výslovnou poznámkou o neověřeném plném textu, tlačítko uvádí katalog a ověření přístupu."
+    },
+    {
+      "id": "DOI_10_5194_hess_21_1973_2017",
+      "title": "The quantification and correction of wind-induced precipitation measurement errors",
+      "author": "John Kochendorfer a kol.",
+      "year": 2017,
+      "publication": "Hydrology and Earth System Sciences 21, 1973–1989, s opravou rovnice 4 z 12. května 2017",
+      "type": "Primární studie chyb měření",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.5194/hess-21-1973-2017",
+      "citationLabel": "Kochendorfer a kol. 2017",
+      "topics": [
+        "metody",
+        "srážkoměry",
+        "sníh",
+        "vítr",
+        "nejistoty"
+      ],
+      "availability": "open-access",
+      "openAccessUrl": "https://hess.copernicus.org/articles/21/1973/2017/hess-21-1973-2017.pdf",
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Úplná otevřená původní studie, 17 stran. Dokládá zachycení méně než poloviny pevných srážek u nechráněného váhového přístroje nad 5 m/s, reference v dvojitých větrolamech, desetidílné ověřování 90/10 a výjimku pro SDFIR. Článek správně rozlišuje odvození a nezávislou kontrolu."
+    },
+    {
+      "id": "2025_USCRN_Blue_Hill_Subhourly",
+      "title": "USCRN Subhourly01: MA Blue Hill 0 W, pětiminutová data za rok 2025",
+      "author": "NOAA National Centers for Environmental Information",
+      "year": 2025,
+      "publication": "U.S. Climate Reference Network, přístup 4. října 2026",
+      "type": "Veřejná data",
+      "category": "organization",
+      "externalUrl": "https://www.ncei.noaa.gov/pub/data/uscrn/products/subhourly01/2025/CRNS0101-05-2025-MA_Blue_Hill_0_W.txt",
+      "availability": "open-access",
+      "topics": [
+        "metody",
+        "teplota",
+        "odporová termometrie"
+      ],
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Úplný roční soubor NOAA, 14 191 200 bajtů, SHA-256 shodný s metadaty z října. Vybraných 12 originálních řádků je přesným bajtovým výřezem. Znovu ověřen výběr první vyhovující letní hodiny i součet 9.2 mm a maximum 31.2 mm/h."
+    },
+    {
+      "id": "2025_USCRN_Blue_Hill_Hourly",
+      "title": "USCRN Hourly02: MA Blue Hill 0 W, hodinová data za rok 2025",
+      "author": "NOAA National Centers for Environmental Information",
+      "year": 2025,
+      "publication": "U.S. Climate Reference Network, přístup 4. října 2026",
+      "type": "Veřejná data",
+      "category": "organization",
+      "externalUrl": "https://www.ncei.noaa.gov/pub/data/uscrn/products/hourly02/2025/CRNH0203-2025-MA_Blue_Hill_0_W.txt",
+      "availability": "open-access",
+      "topics": [
+        "metody",
+        "teplota",
+        "odporová termometrie"
+      ],
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Úplný roční soubor NOAA, 2 137 440 bajtů, SHA-256 shodný s metadaty. Originální hodinový řádek je přesným bajtovým výřezem. Pole P_CALC za hodinu končící 15:00 LST obsahuje 9.2 mm. Shoda kontroluje zpracování, nikoli nezávisle přístroj."
+    },
+    {
+      "id": "2017_USCRN_Subhourly_Readme",
+      "title": "USCRN Subhourly01: Description of Data Fields",
+      "author": "NOAA National Centers for Environmental Information",
+      "year": 2017,
+      "publication": "U.S. Climate Reference Network, aktualizace 6. července 2017",
+      "type": "Datová dokumentace",
+      "category": "organization",
+      "externalUrl": "https://www.ncei.noaa.gov/pub/data/uscrn/products/subhourly01/readme.txt",
+      "availability": "open-access",
+      "topics": [
+        "metody",
+        "teplota",
+        "odporová termometrie"
+      ],
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Úplný původní textový popis dat, aktualizace 6. července 2017. Ověřeny sloupce teploty a srážek, konec pětiminutového intervalu, chybějící hodnoty a absence samostatného příznaku kvality srážek. Verze dat 2.1.1 je odlišena od formátu souboru."
+    },
+    {
+      "id": "2026_USCRN_Hourly_Readme",
+      "title": "USCRN Hourly02: Description of Data Fields",
+      "author": "NOAA National Centers for Environmental Information",
+      "year": 2017,
+      "publication": "U.S. Climate Reference Network, aktualizace 6. července 2017. Znovu ověřeno 5. listopadu 2026.",
+      "type": "Datová dokumentace",
+      "category": "organization",
+      "externalUrl": "https://www.ncei.noaa.gov/pub/data/uscrn/products/hourly02/readme.txt",
+      "availability": "open-access",
+      "topics": [
+        "metody",
+        "teplota",
+        "odporová termometrie"
+      ],
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Úplný původní textový popis dat, aktualizace 6. července 2017. Pole P_CALC je úhrn za hodinu končící daným časem. Dokumentace uvádí historii přechodů algoritmů 2.0, 2.1 a 2.1.1. Rok v bibliografii byl již opraven v předchozí dvojici."
+    },
+    {
+      "id": "2024_SeaBird_C3679_Calibration",
+      "title": "SBE 4 Conductivity Calibration Data: Serial Number 3679, 16 January 2024",
+      "author": "Sea-Bird GmbH",
+      "year": 2024,
+      "publication": "Původní jednostránkový kalibrační protokol, veřejný archiv expedice Tara Europa, University of Maine, Misclab. Ověřeno 5. listopadu 2026.",
+      "type": "Kalibrační protokol a data",
+      "category": "organization",
+      "externalUrl": "https://misclab.umeoce.maine.edu/ftp/experiments/Tara/TaraEuropa/cals/Calibration%20Documents/SBE%204%20C3679%2016Jan24.pdf",
+      "externalLinkLabel": "Otevřít plný text protokolu (PDF)",
+      "availability": "open-access",
+      "citationLabel": "Sea-Bird 2024, kalibrace C3679",
+      "topics": [
+        "metody",
+        "vodivost",
+        "kalibrace",
+        "veřejná data"
+      ],
+      "activeInReviewedArticles": true,
+      "status": "verified-or-repaired",
+      "evidence": "Úplný původní jednostránkový protokol Sea-Bird GmbH, 16. ledna 2024, veřejný univerzitní archiv Tara Europa. Nezávisle porovnáno všech 42 čísel ze sedmi řádků a šest koeficientů. Vytištěná rovnice obsahuje faktor 10. Přepočtena tabulka, graf, mezivýsledky a metadata. Kalibrační body nejsou vydávány za nezávislou zkoušku."
+    }
+  ],
+  "urlChecks": [
+    {
+      "id": "src-001",
+      "url": "https://www.teos-10.org/pubs/gsw/html/gsw_SP_from_C.html",
+      "status": 200,
+      "finalUrl": "https://www.teos-10.org/pubs/gsw/html/gsw_SP_from_C.html",
+      "contentType": "text/html",
+      "contentLength": "2221",
+      "contentRange": null,
+      "bytes": 4797,
+      "truncated": false,
+      "file": "src-001.download",
+      "sha256": "63a25a6fc7086463df9ca25f62c87c1a63c12a6847851769ff422f65dd9a3e7e",
+      "signature": "0a3c21444f43545950452068746d6c0a",
+      "durationSeconds": 1.52,
+      "sourceIds": [
+        "2015_TEOS10_SP_From_C"
+      ],
+      "roles": [
+        "external"
+      ]
+    },
+    {
+      "id": "src-002",
+      "url": "https://www.teos-10.org/pubs/gsw/pdf/SP_from_C.pdf",
+      "status": 200,
+      "finalUrl": "https://www.teos-10.org/pubs/gsw/pdf/SP_from_C.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "185016",
+      "contentRange": null,
+      "bytes": 185016,
+      "truncated": false,
+      "file": "src-002.download",
+      "sha256": "b8f7e5102b0fd814d538bcb947d80e10347e8361b11fe0ee0f4e9ef02a19f8d9",
+      "signature": "255044462d312e350d25e2e3cfd30d0a",
+      "durationSeconds": 2.373,
+      "sourceIds": [
+        "2015_TEOS10_SP_From_C"
+      ],
+      "roles": [
+        "open"
+      ],
+      "pdfPages": 7
+    },
+    {
+      "id": "src-003",
+      "url": "https://openstax.org/details/books/chemistry-2e",
+      "status": 200,
+      "finalUrl": "https://openstax.org/details/books/chemistry-2e",
+      "contentType": "text/html",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 12343,
+      "truncated": false,
+      "file": "src-003.download",
+      "sha256": "122a7b58174184305f56c8c5c86c995abd6060bc1920fae9a3cec195c07fcf18",
+      "signature": "3c21646f63747970652068746d6c3e3c",
+      "durationSeconds": 1.404,
+      "sourceIds": [
+        "2019_OpenStax_Chemistry_2e"
+      ],
+      "roles": [
+        "external"
+      ]
+    },
+    {
+      "id": "src-004",
+      "url": "https://openstax.org/books/chemistry-2e/pages/1-introduction",
+      "status": 200,
+      "finalUrl": "https://openstax.org/books/chemistry-2e/pages/1-introduction",
+      "contentType": "text/html",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 288578,
+      "truncated": false,
+      "file": "src-004.download",
+      "sha256": "e1af0459d348f0eb4ef4906c1dbcfe5c69a7702b0a96baefee911c6d9f8ac505",
+      "signature": "3c21646f63747970652068746d6c3e3c",
+      "durationSeconds": 1.049,
+      "sourceIds": [
+        "2019_OpenStax_Chemistry_2e"
+      ],
+      "roles": [
+        "open"
+      ]
+    },
+    {
+      "id": "src-005",
+      "url": "https://openstax.org/details/books/university-physics-volume-2",
+      "status": 200,
+      "finalUrl": "https://openstax.org/details/books/university-physics-volume-2",
+      "contentType": "text/html",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 12343,
+      "truncated": false,
+      "file": "src-005.download",
+      "sha256": "122a7b58174184305f56c8c5c86c995abd6060bc1920fae9a3cec195c07fcf18",
+      "signature": "3c21646f63747970652068746d6c3e3c",
+      "durationSeconds": 1.349,
+      "sourceIds": [
+        "2016_OpenStax_University_Physics_2"
+      ],
+      "roles": [
+        "external"
+      ]
+    },
+    {
+      "id": "src-006",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/1-introduction",
+      "status": 200,
+      "finalUrl": "https://openstax.org/books/university-physics-volume-2/pages/1-introduction",
+      "contentType": "text/html",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 285318,
+      "truncated": false,
+      "file": "src-006.download",
+      "sha256": "816573ca175f988c55aa36eeba3f5426e5b7c5ce6c6fc78dddb0b5a0ee9d823a",
+      "signature": "3c21646f63747970652068746d6c3e3c",
+      "durationSeconds": 0.54,
+      "sourceIds": [
+        "2016_OpenStax_University_Physics_2"
+      ],
+      "roles": [
+        "open"
+      ]
+    },
+    {
+      "id": "src-007",
+      "url": "https://www.seabird.com/hubfs/Product%20Assets/SBE%204/Datasheets/SBE_4DS53May25.pdf",
+      "status": 200,
+      "finalUrl": "https://www.seabird.com/hubfs/Product%20Assets/SBE%204/Datasheets/SBE_4DS53May25.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "499307",
+      "contentRange": null,
+      "bytes": 499307,
+      "truncated": false,
+      "file": "src-007.download",
+      "sha256": "9159cc97f1383f24544ed5291a44f05d0b6a93a5883d89fbd3e6ce485045c726",
+      "signature": "255044462d312e340d25e2e3cfd30d0a",
+      "durationSeconds": 1.454,
+      "sourceIds": [
+        "2025_SeaBird_SBE4_Datasheet"
+      ],
+      "roles": [
+        "external",
+        "open"
+      ],
+      "pdfPages": 2
+    },
+    {
+      "id": "src-008",
+      "url": "https://www.bodc.ac.uk/data/documents/nodb/pdf/9plus_013.pdf",
+      "status": 200,
+      "finalUrl": "https://www.bodc.ac.uk/data/documents/nodb/pdf/9plus_013.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "5886584",
+      "contentRange": null,
+      "bytes": 5886584,
+      "truncated": false,
+      "file": "src-008.download",
+      "sha256": "590bdf6655679e0b20565a9a6895cad2d1b09cc5a9887f76154d235c4ad83005",
+      "signature": "255044462d312e360d25e2e3cfd30d0a",
+      "durationSeconds": 1.47,
+      "sourceIds": [
+        "2010_SeaBird_9plus_Manual"
+      ],
+      "roles": [
+        "external",
+        "open"
+      ],
+      "pdfPages": 67
+    },
+    {
+      "id": "src-009",
+      "url": "https://commons.wikimedia.org/wiki/File:A_conductivity,_temperature_and_depth_device.jpg",
+      "status": 200,
+      "finalUrl": "https://commons.wikimedia.org/wiki/File:A_conductivity,_temperature_and_depth_device.jpg",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 127846,
+      "truncated": false,
+      "file": "src-009.download",
+      "sha256": "da2de31dc396827d53dcd8577fafc4711c38604c87b760a5a97b767be876e458",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 1.384,
+      "sourceIds": [
+        "2018_NASA_Roger_Revelle_CTD_Photo"
+      ],
+      "roles": [
+        "external",
+        "open"
+      ]
+    },
+    {
+      "id": "src-010",
+      "url": "https://creativecommons.org/licenses/by/2.0/",
+      "status": 200,
+      "finalUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "contentType": "text/html",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 31822,
+      "truncated": false,
+      "file": "src-010.download",
+      "sha256": "bbb0dcc37f02552e7270e6d2e06be02672ce29ada816107d6fa91e1e6809714b",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 0.701,
+      "sourceIds": [
+        "WEB_CC_BY_2_0"
+      ],
+      "roles": [
+        "external",
+        "open"
+      ]
+    },
+    {
+      "id": "src-011",
+      "url": "https://jcgm.bipm.org/vim/en/2.39.html",
+      "status": 200,
+      "finalUrl": "https://jcgm.bipm.org/vim/en/2.39.html",
+      "contentType": "text/html",
+      "contentLength": "4144",
+      "contentRange": null,
+      "bytes": 18930,
+      "truncated": false,
+      "file": "src-011.download",
+      "sha256": "88ed6b1c79a97e1e4c527118242b40ef54a2babeeb77125969dcd37144d12e0f",
+      "signature": "3c68746d6c3e0a3c686561643e0a3c6d",
+      "durationSeconds": 0.581,
+      "sourceIds": [
+        "2012_VIM_Calibration"
+      ],
+      "roles": [
+        "external"
+      ]
+    },
+    {
+      "id": "src-012",
+      "url": "https://doi.org/10.7289/V5DR2SGZ",
+      "status": 403,
+      "finalUrl": "https://repository.library.noaa.gov/view/noaa/9415",
+      "contentType": "text/html",
+      "contentLength": "405",
+      "contentRange": null,
+      "bytes": 405,
+      "truncated": false,
+      "file": "src-012.download",
+      "sha256": "b38074d625f06a5c69e2278a9d592e578e030c32225eb77f90b9fd3f522bb7bc",
+      "signature": "3c48544d4c3e3c484541443e0a3c5449",
+      "durationSeconds": 1.809,
+      "sourceIds": [
+        "DOI_10_7289_v5dr2sgz"
+      ],
+      "roles": [
+        "external"
+      ]
+    },
+    {
+      "id": "src-013",
+      "url": "https://www.aoml.noaa.gov/general/lib/TM/DR_OAR_AOML_51.pdf",
+      "status": 200,
+      "finalUrl": "https://temp.aoml.oarcloud.noaa.gov",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": "15890",
+      "contentRange": null,
+      "bytes": 79258,
+      "truncated": false,
+      "file": "src-013.download",
+      "sha256": "694e63484ce076befe35e2cd18729014ffc997c6ec99e1cf369a72fac574059b",
+      "signature": "3c21646f63747970652068746d6c3e0a",
+      "durationSeconds": 3.31,
+      "sourceIds": [
+        "DOI_10_7289_v5dr2sgz"
+      ],
+      "roles": [
+        "open"
+      ]
+    },
+    {
+      "id": "src-014",
+      "url": "https://doi.org/10.1109/JOE.1980.1145448",
+      "status": 202,
+      "finalUrl": "https://ieeexplore.ieee.org/document/1145448/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": "0",
+      "contentRange": null,
+      "bytes": 0,
+      "truncated": false,
+      "file": "src-014.download",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "signature": "",
+      "durationSeconds": 1.487,
+      "sourceIds": [
+        "DOI_10_1109_joe_1980_1145448"
+      ],
+      "roles": [
+        "external"
+      ]
+    },
+    {
+      "id": "src-015",
+      "url": "https://www.vliz.be/imisdocs/publications/29440.pdf",
+      "status": 200,
+      "finalUrl": "https://www.vliz.be/imisdocs/publications/29440.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "4695466",
+      "contentRange": null,
+      "error": "('Connection broken: IncompleteRead(114411 bytes read, 4581055 more expected)', IncompleteRead(114411 bytes read, 4581055 more expected))",
+      "partialBytes": 0,
+      "durationSeconds": 41.234,
+      "sourceIds": [
+        "DOI_10_1109_joe_1980_1145448"
+      ],
+      "roles": [
+        "open"
+      ]
+    },
+    {
+      "id": "src-016",
+      "url": "https://www.teos-10.org/pubs/gsw/html/gsw_SA_from_SP.html",
+      "status": 200,
+      "finalUrl": "https://www.teos-10.org/pubs/gsw/html/gsw_SA_from_SP.html",
+      "contentType": "text/html",
+      "contentLength": "2357",
+      "contentRange": null,
+      "bytes": 5460,
+      "truncated": false,
+      "file": "src-016.download",
+      "sha256": "cc48c824a4889362747f0124ae1b32bcc786ae0a764f7f2e08ee47ae4a6d5168",
+      "signature": "0a3c21444f43545950452068746d6c0a",
+      "durationSeconds": 1.78,
+      "sourceIds": [
+        "2015_TEOS10_SA_From_SP"
+      ],
+      "roles": [
+        "external"
+      ]
+    },
+    {
+      "id": "src-017",
+      "url": "https://www.teos-10.org/pubs/gsw/pdf/SA_from_SP.pdf",
+      "status": 200,
+      "finalUrl": "https://www.teos-10.org/pubs/gsw/pdf/SA_from_SP.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "1103622",
+      "contentRange": null,
+      "bytes": 1103622,
+      "truncated": false,
+      "file": "src-017.download",
+      "sha256": "fdb835ef3525184ecf0f71e783f3fddf1577e23d09d8f7071f1929bd61a191b2",
+      "signature": "255044462d312e350d25e2e3cfd30d0a",
+      "durationSeconds": 3.315,
+      "sourceIds": [
+        "2015_TEOS10_SA_From_SP"
+      ],
+      "roles": [
+        "open"
+      ],
+      "pdfPages": 16
+    },
+    {
+      "id": "src-018",
+      "url": "https://argo.ucsd.edu/data/data-from-gdacs/",
+      "status": 200,
+      "finalUrl": "https://argo.ucsd.edu/data/data-from-gdacs/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": "17334",
+      "contentRange": null,
+      "bytes": 90500,
+      "truncated": false,
+      "file": "src-018.download",
+      "sha256": "50afe94426abd0fdefc00ef4efcf821ba61ca1b860f4e6821ba21e3b6fb7f8d1",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 1.965,
+      "sourceIds": [
+        "WEB_International_Argo_Program_Data_from_GDACs_b2737bdf"
+      ],
+      "roles": [
+        "external",
+        "open"
+      ]
+    },
+    {
+      "id": "src-019",
+      "url": "https://doi.org/10.1175/2011JTECHO831.1",
+      "status": 200,
+      "finalUrl": "https://journals.ametsoc.org:443/view/journals/atot/28/8/2011jtecho831_1.xml",
+      "contentType": "text/html;charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 1084671,
+      "truncated": false,
+      "file": "src-019.download",
+      "sha256": "261273713ff32b27505d7f33f46b5e3599b1d8c0aaf6c49c51522ea54e0d67fc",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 3.171,
+      "sourceIds": [
+        "DOI_10_1175_2011jtecho831_1"
+      ],
+      "roles": [
+        "external"
+      ]
+    },
+    {
+      "id": "src-020",
+      "url": "https://nora.nerc.ac.uk/id/eprint/526028/1/2011jtecho831.1.pdf",
+      "status": 200,
+      "finalUrl": "https://nora.nerc.ac.uk/id/eprint/526028/1/2011jtecho831.1.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "6797280",
+      "contentRange": null,
+      "bytes": 6797280,
+      "truncated": false,
+      "file": "src-020.download",
+      "sha256": "8134267063a902ab1fb6885a21edeb410d3f2f3d04187e36238888b209ee246b",
+      "signature": "255044462d312e340d25e2e3cfd30d0a",
+      "durationSeconds": 7.778,
+      "sourceIds": [
+        "DOI_10_1175_2011jtecho831_1"
+      ],
+      "roles": [
+        "open"
+      ],
+      "pdfPages": 14
+    },
+    {
+      "id": "src-021",
+      "url": "https://doi.org/10.25607/OBP-1342",
+      "status": 200,
+      "finalUrl": "https://repository.oceanbestpractices.org/handle/11329/249",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 5952,
+      "truncated": false,
+      "file": "src-021.download",
+      "sha256": "fb531827be8095a64606c898d6259e8a735a9a22ff1729fb7f0ca71905d46261",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 2.488,
+      "sourceIds": [
+        "WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a"
+      ],
+      "roles": [
+        "external"
+      ]
+    },
+    {
+      "id": "src-022",
+      "url": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/Handbook_2007/Guide_all_in_one.pdf",
+      "status": 200,
+      "finalUrl": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/Handbook_2007/Guide_all_in_one.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "5434312",
+      "contentRange": null,
+      "bytes": 5434312,
+      "truncated": false,
+      "file": "src-022.download",
+      "sha256": "1aaac8e647d9e0b12eaa31e669504e51bbc85fdebed4442464cc8e14cdc7ddfd",
+      "signature": "255044462d312e370d25e2e3cfd30d0a",
+      "durationSeconds": 2.707,
+      "sourceIds": [
+        "WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a"
+      ],
+      "roles": [
+        "open"
+      ],
+      "pdfPages": 196
+    },
+    {
+      "id": "src-023",
+      "url": "https://doi.org/10.5194/essd-15-383-2023",
+      "status": 200,
+      "finalUrl": "https://essd.copernicus.org/articles/15/383/2023/",
+      "contentType": "text/html",
+      "contentLength": "45734",
+      "contentRange": null,
+      "bytes": 227416,
+      "truncated": false,
+      "file": "src-023.download",
+      "sha256": "4f1b49760529ccb1fd1ac38171fc41df9cc4c948e6ed0914a1721c2e829b38d9",
+      "signature": "3c21444f43545950452068746d6c2050",
+      "durationSeconds": 1.086,
+      "sourceIds": [
+        "DOI_10_5194_essd_15_383_2023"
+      ],
+      "roles": [
+        "external"
+      ]
+    },
+    {
+      "id": "src-024",
+      "url": "https://essd.copernicus.org/articles/15/383/2023/essd-15-383-2023.pdf",
+      "status": 200,
+      "finalUrl": "https://essd.copernicus.org/articles/15/383/2023/essd-15-383-2023.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "3920872",
+      "contentRange": null,
+      "bytes": 3920872,
+      "truncated": false,
+      "file": "src-024.download",
+      "sha256": "e45f3353f6a79c4fa1f7ffa50e76fdbcdacf11acd93d93e6ef4cd9bbb04b3cc2",
+      "signature": "255044462d312e350a25d0d4c5d80a38",
+      "durationSeconds": 2.673,
+      "sourceIds": [
+        "DOI_10_5194_essd_15_383_2023"
+      ],
+      "roles": [
+        "open"
+      ],
+      "pdfPages": 11
+    },
+    {
+      "id": "src-025",
+      "url": "https://doi.org/10.1175/JCLI-D-20-0366.1",
+      "status": 200,
+      "finalUrl": "https://journals.ametsoc.org/view/journals/clim/33/23/jcliD200366.xml",
+      "contentType": "text/html;charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 2044626,
+      "truncated": false,
+      "file": "src-025.download",
+      "sha256": "3baf91d45d7fb5023a93ce6f2213417df75b21d458b031ceeaf0a7bf5e4d6d56",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 5.862,
+      "sourceIds": [
+        "DOI_10_1175_jcli_d_20_0366_1"
+      ],
+      "roles": [
+        "external"
+      ]
+    },
+    {
+      "id": "src-026",
+      "url": "https://michaelmann.net/sites/default/files/articles/ChengEtAl_JClimate20.pdf",
+      "status": 200,
+      "finalUrl": "https://michaelmann.net/sites/default/files/articles/ChengEtAl_JClimate20.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "14437995",
+      "contentRange": null,
+      "bytes": 14437995,
+      "truncated": false,
+      "file": "src-026.download",
+      "sha256": "3e5f4ce092ad67f8801fdf37f63efdeb6d4f498f3281f94b2f515be5a3bc7542",
+      "signature": "255044462d312e340a25e2e3cfd30a32",
+      "durationSeconds": 2.165,
+      "sourceIds": [
+        "DOI_10_1175_jcli_d_20_0366_1"
+      ],
+      "roles": [
+        "open"
+      ],
+      "pdfPages": 25
+    },
+    {
+      "id": "src-027",
+      "url": "https://doi.org/10.1175/JTECH-D-24-0051.1",
+      "status": 200,
+      "finalUrl": "https://journals.ametsoc.org/view/journals/atot/42/4/JTECH-D-24-0051.1.xml",
+      "contentType": "text/html;charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 1234666,
+      "truncated": false,
+      "file": "src-027.download",
+      "sha256": "d9441d5e79e05766008796ffda41e3edfa60f7e0bb704fc8e2dc52d0952e2af5",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 2.391,
+      "sourceIds": [
+        "DOI_10_1175_jtech_d_24_0051_1"
+      ],
+      "roles": [
+        "external"
+      ]
+    },
+    {
+      "id": "src-028",
+      "url": "https://rbr-global.com/wp-content/uploads/2025/10/Thierry_2025.pdf",
+      "status": 200,
+      "finalUrl": "https://rbr-global.com/wp-content/uploads/2025/10/Thierry_2025.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "39702824",
+      "contentRange": null,
+      "bytes": 39702824,
+      "truncated": false,
+      "file": "src-028.download",
+      "sha256": "8455f350bd7287952ed33a21b621ad424ddeb6a908116d577bd80632cfd79852",
+      "signature": "255044462d312e340a25f6e4fcdf0a31",
+      "durationSeconds": 3.306,
+      "sourceIds": [
+        "DOI_10_1175_jtech_d_24_0051_1"
+      ],
+      "roles": [
+        "open"
+      ],
+      "pdfPages": 24
+    },
+    {
+      "id": "src-029",
+      "url": "https://www.aoml.noaa.gov/ftp/phod/instrument_calibration/Sea-Bird/Calibrations%20by%20Serial/SBE4C/3860/2014-10-SBE4-C3860-15Oct14.pdf",
+      "status": 200,
+      "finalUrl": "https://temp.aoml.oarcloud.noaa.gov",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": "15890",
+      "contentRange": null,
+      "bytes": 79258,
+      "truncated": false,
+      "file": "src-029.download",
+      "sha256": "694e63484ce076befe35e2cd18729014ffc997c6ec99e1cf369a72fac574059b",
+      "signature": "3c21646f63747970652068746d6c3e0a",
+      "durationSeconds": 2.905,
+      "sourceIds": [
+        "2014_SeaBird_C3860_Calibration"
+      ],
+      "roles": [
+        "external",
+        "open"
+      ]
+    },
+    {
+      "id": "src-030",
+      "url": "https://library.wmo.int/records/item/68695-guide-to-instruments-and-methods-of-observation?offset=3",
+      "status": 200,
+      "finalUrl": "https://library.wmo.int/records/item/68695-guide-to-instruments-and-methods-of-observation?offset=3",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 23024,
+      "truncated": false,
+      "file": "src-030.download",
+      "sha256": "adfeb06921a66fd8e9e2e20cb2249658aa8bf8bf24847ce8baf3a0a95c542c25",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 0.62,
+      "sourceIds": [
+        "WEB_World_Meteorological_Organiz_prirucka_WMO_c_8_f7933a04"
+      ],
+      "roles": [
+        "external"
+      ]
+    },
+    {
+      "id": "src-031",
+      "url": "https://amc.namem.gov.mn/wp-content/uploads/WMO1/1.%208-I-2024_en.pdf?_t=1638837866",
+      "status": 200,
+      "finalUrl": "https://amc.namem.gov.mn/wp-content/uploads/WMO1/1.%208-I-2024_en.pdf?_t=1638837866",
+      "contentType": "application/pdf",
+      "contentLength": "25251560",
+      "contentRange": null,
+      "bytes": 25251560,
+      "truncated": false,
+      "file": "src-031.download",
+      "sha256": "b2b1bb995824bbc879849965c96d09f64b8a99cf08bc318754c928fcfcef1031",
+      "signature": "255044462d312e360d25e2e3cfd30d0a",
+      "durationSeconds": 3.685,
+      "sourceIds": [
+        "WEB_World_Meteorological_Organiz_prirucka_WMO_c_8_f7933a04"
+      ],
+      "roles": [
+        "open"
+      ],
+      "pdfPages": 601
+    },
+    {
+      "id": "src-032",
+      "url": "https://www.ncei.noaa.gov/pub/data/uscrn/documentation/site/sensors/precipitation/Descriptions/Precip_GeonorT-200B.pdf",
+      "status": 200,
+      "finalUrl": "https://www.ncei.noaa.gov/pub/data/uscrn/documentation/site/sensors/precipitation/Descriptions/Precip_GeonorT-200B.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "190204",
+      "contentRange": null,
+      "bytes": 190204,
+      "truncated": false,
+      "file": "src-032.download",
+      "sha256": "a89e0c606c5abd0f5ef81fc5431af4df7fe249f94a67623fcdc1355f4f49bf89",
+      "signature": "255044462d312e350d25e2e3cfd30d0a",
+      "durationSeconds": 1.729,
+      "sourceIds": [
+        "2026_NOAA_Geonor_Description"
+      ],
+      "roles": [
+        "external",
+        "open"
+      ],
+      "pdfPages": 2
+    },
+    {
+      "id": "src-033",
+      "url": "https://www.ncei.noaa.gov/news/what-is-a-uscrn-station",
+      "status": 200,
+      "finalUrl": "https://www.ncei.noaa.gov/news/what-is-a-uscrn-station",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": "11712",
+      "contentRange": null,
+      "bytes": 50137,
+      "truncated": false,
+      "file": "src-033.download",
+      "sha256": "5dbaaf54ee8316f8d5f524d8fc19805d895600248b600481abccc65a6f078148",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 1.349,
+      "sourceIds": [
+        "2018_NOAA_USCRN_Precipitation_Photo"
+      ],
+      "roles": [
+        "external",
+        "open"
+      ]
+    },
+    {
+      "id": "src-034",
+      "url": "https://www.noaa.gov/office-education/outreach-communication/faq",
+      "status": 200,
+      "finalUrl": "https://www.noaa.gov/office-education/outreach-communication/faq",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": "188678",
+      "contentRange": null,
+      "bytes": 188678,
+      "truncated": false,
+      "file": "src-034.download",
+      "sha256": "5a0d4b07fc8374646ec86951514f0a43f30e0f29633967d647d9901aa16c573a",
+      "signature": "0a0a3c21444f43545950452068746d6c",
+      "durationSeconds": 1.104,
+      "sourceIds": [
+        "WEB_NOAA_Using_Content_FAQ"
+      ],
+      "roles": [
+        "external",
+        "open"
+      ]
+    },
+    {
+      "id": "src-035",
+      "url": "https://s.campbellsci.com/documents/ca/manuals/t-200b_man.pdf",
+      "status": 200,
+      "finalUrl": "https://s.campbellsci.com/documents/ca/manuals/t-200b_man.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "1202603",
+      "contentRange": null,
+      "bytes": 1202603,
+      "truncated": false,
+      "file": "src-035.download",
+      "sha256": "8c8ee13ff61485f9631065331e76cee57b4ca71076c640c9e257f57c7d024532",
+      "signature": "255044462d312e350d25e2e3cfd30d0a",
+      "durationSeconds": 2.394,
+      "sourceIds": [
+        "2016_Geonor_T200B_Manual"
+      ],
+      "roles": [
+        "external",
+        "open"
+      ],
+      "pdfPages": 39
+    },
+    {
+      "id": "src-036",
+      "url": "https://www.ncei.noaa.gov/pub/data/uscrn/documentation/maintenance/2015-09/USCRN_OAP2.0.Description_PrecipChanges.pdf",
+      "status": 200,
+      "finalUrl": "https://www.ncei.noaa.gov/pub/data/uscrn/documentation/maintenance/2015-09/USCRN_OAP2.0.Description_PrecipChanges.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "1874610",
+      "contentRange": null,
+      "bytes": 1874610,
+      "truncated": false,
+      "file": "src-036.download",
+      "sha256": "31652cd401b81ee50c1c0df76756285d1ae148896dcf929362645f1567a82714",
+      "signature": "255044462d312e360d25e2e3cfd30d0a",
+      "durationSeconds": 2.042,
+      "sourceIds": [
+        "2015_USCRN_OAP2"
+      ],
+      "roles": [
+        "external",
+        "open"
+      ],
+      "pdfPages": 26
+    },
+    {
+      "id": "src-037",
+      "url": "https://www.ncei.noaa.gov/access/crn/measurements.html",
+      "status": 200,
+      "finalUrl": "https://www.ncei.noaa.gov/access/crn/measurements.html",
+      "contentType": "text/html;charset=UTF-8",
+      "contentLength": "8221",
+      "contentRange": null,
+      "bytes": 38184,
+      "truncated": false,
+      "file": "src-037.download",
+      "sha256": "1de21c21dee576980b5a2af9811b1074a4398e6dc05a4db59c961b845a87b744",
+      "signature": "0a0a0a0a3c21444f4354595045206874",
+      "durationSeconds": 0.974,
+      "sourceIds": [
+        "2026_USCRN_Measurements"
+      ],
+      "roles": [
+        "external"
+      ]
+    },
+    {
+      "id": "src-038",
+      "url": "https://cdn.hach.com/1XMCM0ZF/at/br9qp8bxsk8bn6nzxjxxq3pf/BA_Parsivel2_EN_70210002BE.pdf",
+      "status": 200,
+      "finalUrl": "https://cdn.hach.com/1XMCM0ZF/at/br9qp8bxsk8bn6nzxjxxq3pf/BA_Parsivel2_EN_70210002BE.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "475653",
+      "contentRange": null,
+      "bytes": 475653,
+      "truncated": false,
+      "file": "src-038.download",
+      "sha256": "51bc36d96c54c241da6551e75142520784d2ad948480da7932053971f51ad5cf",
+      "signature": "255044462d312e360d25e2e3cfd30d0a",
+      "durationSeconds": 0.666,
+      "sourceIds": [
+        "2024_OTT_Parsivel2_Manual"
+      ],
+      "roles": [
+        "external",
+        "open"
+      ],
+      "pdfPages": 52
+    },
+    {
+      "id": "src-039",
+      "url": "https://wallops-prf.gsfc.nasa.gov/Field_Campaigns/IMPACTS_2022/",
+      "status": 200,
+      "finalUrl": "https://wallops-prf.gsfc.nasa.gov/Field_Campaigns/IMPACTS_2022/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 30281,
+      "truncated": false,
+      "file": "src-039.download",
+      "sha256": "d3b272f71afa36eea1d6cf0026b070455064508c6abb8a8fea8f3db67272efef",
+      "signature": "3c6272202f3e0a3c623e5761726e696e",
+      "durationSeconds": 1.209,
+      "sourceIds": [
+        "2022_NASA_IMPACTS_Parsivel_Photo"
+      ],
+      "roles": [
+        "external",
+        "open"
+      ]
+    },
+    {
+      "id": "src-040",
+      "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "status": 200,
+      "finalUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 312261,
+      "truncated": false,
+      "file": "src-040.download",
+      "sha256": "598fe962881ca21a97b735ac7076242acc6143c89b0943590f3b5617bd0544cb",
+      "signature": "3c21646f63747970652068746d6c3e0a",
+      "durationSeconds": 1.299,
+      "sourceIds": [
+        "WEB_NASA_Guidelines_for_using_NASA_Images_and_Media_Guide_e6f9e9e4"
+      ],
+      "roles": [
+        "external",
+        "open"
+      ]
+    },
+    {
+      "id": "src-041",
+      "url": "https://doi.org/10.1175/JTECH-D-13-00174.1",
+      "status": 200,
+      "finalUrl": "https://journals.ametsoc.org:443/view/journals/atot/31/6/jtech-d-13-00174_1.xml",
+      "contentType": "text/html;charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 894410,
+      "truncated": false,
+      "file": "src-041.download",
+      "sha256": "4c11843d37c4b104c6295217fca845ee9779c1a399a29be1adaa59d1ff7a2b80",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 4.541,
+      "sourceIds": [
+        "DOI_10_1175_jtech_d_13_00174_1"
+      ],
+      "roles": [
+        "external"
+      ]
+    },
+    {
+      "id": "src-042",
+      "url": "https://ntrs.nasa.gov/api/citations/20150000156/downloads/20150000156.pdf",
+      "status": 200,
+      "finalUrl": "https://ntrs.nasa.gov/api/citations/20150000156/downloads/20150000156.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "1783735",
+      "contentRange": null,
+      "bytes": 1783735,
+      "truncated": false,
+      "file": "src-042.download",
+      "sha256": "3015a3ed02d54ecc0709e64437635ea9c3f459b0f524b457dfd108e3fadb7dbd",
+      "signature": "255044462d312e350d25e2e3cfd30d0a",
+      "durationSeconds": 10.216,
+      "sourceIds": [
+        "DOI_10_1175_jtech_d_13_00174_1"
+      ],
+      "roles": [
+        "open"
+      ],
+      "pdfPages": 13
+    },
+    {
+      "id": "src-043",
+      "url": "https://doi.org/10.1175/BAMS-D-12-00170.1",
+      "status": 200,
+      "finalUrl": "https://journals.ametsoc.org:443/view/journals/bams/94/4/bams-d-12-00170.1.xml",
+      "contentType": "text/html;charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 1321725,
+      "truncated": false,
+      "file": "src-043.download",
+      "sha256": "7e0edb29db84e0dfeec12ab6381dd85544ea57dc39c721a044b54d0f2b27c628",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 2.917,
+      "sourceIds": [
+        "2013_Diamond_USCRN"
+      ],
+      "roles": [
+        "external"
+      ]
+    },
+    {
+      "id": "src-044",
+      "url": "https://mural.maynoothuniversity.ie/id/eprint/6481/1/PT_US%20climate.pdf",
+      "status": 200,
+      "finalUrl": "https://mural.maynoothuniversity.ie/id/eprint/6481/1/PT_US%20climate.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "1333605",
+      "contentRange": null,
+      "bytes": 1333605,
+      "truncated": false,
+      "file": "src-044.download",
+      "sha256": "69238683bd03fc3bab4e881839d8a2e20c4fd7434e39444d3594fb0ffa6ee35a",
+      "signature": "255044462d312e340d25e2e3cfd30d0a",
+      "durationSeconds": 1.183,
+      "sourceIds": [
+        "2013_Diamond_USCRN"
+      ],
+      "roles": [
+        "open"
+      ],
+      "pdfPages": 14
+    },
+    {
+      "id": "src-045",
+      "url": "https://doi.org/10.1038/s41597-023-02238-4",
+      "status": 200,
+      "finalUrl": "https://www.nature.com/articles/s41597-023-02238-4",
+      "contentType": "text/html; charset=utf-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 389082,
+      "truncated": false,
+      "file": "src-045.download",
+      "sha256": "077082bbd1ef548a4d0f10a96316b3939d47c736912e66765c34c435938ac3a8",
+      "signature": "0a0a3c21444f43545950452068746d6c",
+      "durationSeconds": 2.813,
+      "sourceIds": [
+        "DOI_10_1038_s41597_023_02238_4"
+      ],
+      "roles": [
+        "external"
+      ]
+    },
+    {
+      "id": "src-046",
+      "url": "https://eprints.ncl.ac.uk/fulltext.aspx?url=292135%2f9E05C0D2-04D4-409C-B715-4516DC06E634.pdf&pub_id=292135",
+      "status": 200,
+      "finalUrl": "https://eprints.ncl.ac.uk/file_store/production/292135/9E05C0D2-04D4-409C-B715-4516DC06E634.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "4462169",
+      "contentRange": null,
+      "bytes": 4462169,
+      "truncated": false,
+      "file": "src-046.download",
+      "sha256": "e21f6a5d3668050d5b73f496cdc952e8279f31c3d6549da391b70c9152784388",
+      "signature": "255044462d312e340a25e2e3cfd30a31",
+      "durationSeconds": 1.367,
+      "sourceIds": [
+        "DOI_10_1038_s41597_023_02238_4"
+      ],
+      "roles": [
+        "open"
+      ],
+      "pdfPages": 13
+    },
+    {
+      "id": "src-047",
+      "url": "https://wgms.ch/downloads/WMO-8-vII-2024_en.pdf",
+      "status": 200,
+      "finalUrl": "https://wgms.ch/downloads/WMO-8-vII-2024_en.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "51154764",
+      "contentRange": null,
+      "bytes": 51154764,
+      "truncated": false,
+      "file": "src-047.download",
+      "sha256": "e17cab63359c594950e71b24b3a4634080c6a1ac2ecd93ba712faa73d249713c",
+      "signature": "255044462d312e340d25e2e3cfd30d0a",
+      "durationSeconds": 5.982,
+      "sourceIds": [
+        "WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125"
+      ],
+      "roles": [
+        "external",
+        "open"
+      ],
+      "pdfPages": 159
+    },
+    {
+      "id": "src-048",
+      "url": "https://dwdbib.dwd.de/retrosammlung/periodical/titleinfo/964760",
+      "status": 200,
+      "finalUrl": "https://dwdbib.dwd.de/retrosammlung/periodical/titleinfo/964760",
+      "contentType": "text/html; charset=utf-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 12589,
+      "truncated": false,
+      "file": "src-048.download",
+      "sha256": "982664e94f70a0292a908c873bf654edeb886c00b8d6c71fe104d33eda219987",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 0.817,
+      "sourceIds": [
+        "WEB_DWD_Hellmann_1897_Ein_neuer_registrirender_Regenmesser"
+      ],
+      "roles": [
+        "external",
+        "open"
+      ]
+    },
+    {
+      "id": "src-049",
+      "url": "https://doi.org/10.5194/hess-21-1973-2017",
+      "status": 200,
+      "finalUrl": "https://hess.copernicus.org/articles/21/1973/2017/",
+      "contentType": "text/html",
+      "contentLength": "25861",
+      "contentRange": null,
+      "bytes": 145129,
+      "truncated": false,
+      "file": "src-049.download",
+      "sha256": "8da13a86c4ac2a3296a9e4bf9ec25b48e4b59b9769d9d1d3a0da5d146483de78",
+      "signature": "3c21444f43545950452068746d6c2050",
+      "durationSeconds": 1.307,
+      "sourceIds": [
+        "DOI_10_5194_hess_21_1973_2017"
+      ],
+      "roles": [
+        "external"
+      ]
+    },
+    {
+      "id": "src-050",
+      "url": "https://hess.copernicus.org/articles/21/1973/2017/hess-21-1973-2017.pdf",
+      "status": 200,
+      "finalUrl": "https://hess.copernicus.org/articles/21/1973/2017/hess-21-1973-2017.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "925887",
+      "contentRange": null,
+      "bytes": 925887,
+      "truncated": false,
+      "file": "src-050.download",
+      "sha256": "859f08b85e723cb58c931ef9fa278923d9d36a2138dc1134042d3fecf6fb42e3",
+      "signature": "255044462d312e340a25d0d4c5d80a35",
+      "durationSeconds": 1.067,
+      "sourceIds": [
+        "DOI_10_5194_hess_21_1973_2017"
+      ],
+      "roles": [
+        "open"
+      ],
+      "pdfPages": 17
+    },
+    {
+      "id": "src-051",
+      "url": "https://www.ncei.noaa.gov/pub/data/uscrn/products/subhourly01/2025/CRNS0101-05-2025-MA_Blue_Hill_0_W.txt",
+      "status": 200,
+      "finalUrl": "https://www.ncei.noaa.gov/pub/data/uscrn/products/subhourly01/2025/CRNS0101-05-2025-MA_Blue_Hill_0_W.txt",
+      "contentType": "text/plain",
+      "contentLength": "14191200",
+      "contentRange": null,
+      "bytes": 14191200,
+      "truncated": false,
+      "file": "src-051.download",
+      "sha256": "50d299e2233f890781456430354c70849b84ca697f3e874009563485bb0124bb",
+      "signature": "39343738352032303235303130312030",
+      "durationSeconds": 2.673,
+      "sourceIds": [
+        "2025_USCRN_Blue_Hill_Subhourly"
+      ],
+      "roles": [
+        "external"
+      ]
+    },
+    {
+      "id": "src-052",
+      "url": "https://www.ncei.noaa.gov/pub/data/uscrn/products/hourly02/2025/CRNH0203-2025-MA_Blue_Hill_0_W.txt",
+      "status": 200,
+      "finalUrl": "https://www.ncei.noaa.gov/pub/data/uscrn/products/hourly02/2025/CRNH0203-2025-MA_Blue_Hill_0_W.txt",
+      "contentType": "text/plain",
+      "contentLength": "2137440",
+      "contentRange": null,
+      "bytes": 2137440,
+      "truncated": false,
+      "file": "src-052.download",
+      "sha256": "dcaacf902c8810edbc01b3bfcc6eed9189f0d4d6d226be484cc2242cec3ad1a8",
+      "signature": "39343738352032303235303130312030",
+      "durationSeconds": 2.15,
+      "sourceIds": [
+        "2025_USCRN_Blue_Hill_Hourly"
+      ],
+      "roles": [
+        "external"
+      ]
+    },
+    {
+      "id": "src-053",
+      "url": "https://www.ncei.noaa.gov/pub/data/uscrn/products/subhourly01/readme.txt",
+      "status": 200,
+      "finalUrl": "https://www.ncei.noaa.gov/pub/data/uscrn/products/subhourly01/readme.txt",
+      "contentType": "text/plain",
+      "contentLength": "14892",
+      "contentRange": null,
+      "bytes": 14892,
+      "truncated": false,
+      "file": "src-053.download",
+      "sha256": "10d37801c4ba3cca9c0baf0789d24e91f87ada69b91cf14c02715cf1517aa3bd",
+      "signature": "20202020202020202020202020202020",
+      "durationSeconds": 1.183,
+      "sourceIds": [
+        "2017_USCRN_Subhourly_Readme"
+      ],
+      "roles": [
+        "external"
+      ]
+    },
+    {
+      "id": "src-054",
+      "url": "https://www.ncei.noaa.gov/pub/data/uscrn/products/hourly02/readme.txt",
+      "status": 200,
+      "finalUrl": "https://www.ncei.noaa.gov/pub/data/uscrn/products/hourly02/readme.txt",
+      "contentType": "text/plain",
+      "contentLength": "21971",
+      "contentRange": null,
+      "bytes": 21971,
+      "truncated": false,
+      "file": "src-054.download",
+      "sha256": "ec43838cecb299d4987af825a62804b4fe1119e9f3cc280528bbee0c5eb17e9c",
+      "signature": "20202020202020202020202020202020",
+      "durationSeconds": 1.158,
+      "sourceIds": [
+        "2026_USCRN_Hourly_Readme"
+      ],
+      "roles": [
+        "external"
+      ]
+    }
+  ],
+  "recoveryChecks": [
+    {
+      "id": "report-library",
+      "url": "https://repository.library.noaa.gov/view/noaa/9415/noaa_9415_DS1.pdf",
+      "status": 200,
+      "finalUrl": "https://repository.library.noaa.gov/view/noaa/9415/noaa_9415_DS1.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "13238929",
+      "contentRange": null,
+      "bytes": 13238929,
+      "truncated": false,
+      "file": "report-library.download",
+      "sha256": "2d89c730f9c3211e4e5fe79d759eb128822fca026d41a7f0c5a94177d06d15a1",
+      "signature": "255044462d312e360d25e2e3cfd30d0a",
+      "durationSeconds": 2.232
+    },
+    {
+      "id": "c3679-tara",
+      "url": "https://misclab.umeoce.maine.edu/ftp/experiments/Tara/TaraEuropa/cals/Calibration%20Documents/SBE%204%20C3679%2016Jan24.pdf",
+      "status": 200,
+      "finalUrl": "https://misclab.umeoce.maine.edu/ftp/experiments/Tara/TaraEuropa/cals/Calibration%20Documents/SBE%204%20C3679%2016Jan24.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "35695",
+      "contentRange": null,
+      "bytes": 35695,
+      "truncated": false,
+      "file": "c3679-tara.download",
+      "sha256": "6d4e3ae9427d573930fe5747ad4ee204b54303df251c8ef0ba7487f2c1a96cf6",
+      "signature": "255044462d312e340a25e2e3cfd30a37",
+      "durationSeconds": 1.345
+    },
+    {
+      "id": "chemistry-section",
+      "url": "https://openstax.org/books/chemistry-2e/pages/11-2-electrolytes",
+      "status": 200,
+      "finalUrl": "https://openstax.org/books/chemistry-2e/pages/11-2-electrolytes",
+      "contentType": "text/html",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 300056,
+      "truncated": false,
+      "file": "chemistry-section.download",
+      "sha256": "a79aa24a1c8f74f030163388afb616f2f35d9b69c07c0860ca66ae8d41f4806d",
+      "signature": "3c21646f63747970652068746d6c3e3c",
+      "durationSeconds": 1.13
+    },
+    {
+      "id": "physics-section",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/9-3-resistivity-and-resistance",
+      "status": 200,
+      "finalUrl": "https://openstax.org/books/university-physics-volume-2/pages/9-3-resistivity-and-resistance",
+      "contentType": "text/html",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 380708,
+      "truncated": false,
+      "file": "physics-section.download",
+      "sha256": "d280734207c9b1ab2d5e6ff47e6cc3e89abad2530e2f0bc9da0e346d33a4febe",
+      "signature": "3c21646f63747970652068746d6c3e3c",
+      "durationSeconds": 1.252
+    },
+    {
+      "id": "lewis-unesco-full",
+      "url": "https://unesdoc.unesco.org/in/rest/annotationSVC/DownloadWatermarkedAttachment/attach_import_bd005c5d-abe3-44b1-84e9-f392473501e0?_=047932engb.pdf",
+      "status": 200,
+      "finalUrl": "https://unesdoc.unesco.org/in/rest/annotationSVC/DownloadWatermarkedAttachment/attach_import_bd005c5d-abe3-44b1-84e9-f392473501e0?_=047932engb.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "6283180",
+      "contentRange": null,
+      "bytes": 6283180,
+      "truncated": false,
+      "file": "lewis-unesco-full.download",
+      "sha256": "9842c21e4e2a32fa644c86b391ff758eb43d09d9e34eb8ba84dee3ed4c51e3e3",
+      "signature": "255044462d312e340d25e2e3cfd30d0a",
+      "durationSeconds": 1.386
+    },
+    {
+      "id": "illinois1953",
+      "url": "https://www.isws.illinois.edu/pubdoc/ri/iswsri-20.pdf",
+      "status": 404,
+      "finalUrl": "https://isws.illinois.edu/pubdoc/ri/iswsri-20.pdf",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 70787,
+      "truncated": false,
+      "file": "illinois1953.download",
+      "sha256": "8aae16ec4269d3c5d36d52fb6433290e04487c7f9358152f31d10522fe2247c7",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 3.811
+    }
+  ],
+  "numericalVerification": {
+    "certificateRowsCompared": 7,
+    "rawNumericCellsCompared": 42,
+    "coefficientsCompared": 6,
+    "independentDecimalConductivity": [
+      2.8036393701266498,
+      2.975029602346331,
+      4.270363372469723,
+      4.616857322467484,
+      5.699613448752736,
+      6.071307332089944
+    ],
+    "certificateAndCsvChecksumsMatch": true,
+    "firstQualifyingSummerHour": {
+      "dateLST": "20250607",
+      "endTimeLST": "1500",
+      "recordCount": 12,
+      "depthMm": 9.2
+    }
+  },
+  "rainReproduction": {
+    "count": 12,
+    "rows": [
+      {
+        "endTimeLST": "14:05",
+        "depthMm": 0.3,
+        "meanRateMmPerHour": 3.6
+      },
+      {
+        "endTimeLST": "14:10",
+        "depthMm": 0.3,
+        "meanRateMmPerHour": 3.6
+      },
+      {
+        "endTimeLST": "14:15",
+        "depthMm": 0.3,
+        "meanRateMmPerHour": 3.6
+      },
+      {
+        "endTimeLST": "14:20",
+        "depthMm": 0.5,
+        "meanRateMmPerHour": 6
+      },
+      {
+        "endTimeLST": "14:25",
+        "depthMm": 1.5,
+        "meanRateMmPerHour": 18
+      },
+      {
+        "endTimeLST": "14:30",
+        "depthMm": 2.6,
+        "meanRateMmPerHour": 31.2
+      },
+      {
+        "endTimeLST": "14:35",
+        "depthMm": 1.4,
+        "meanRateMmPerHour": 16.8
+      },
+      {
+        "endTimeLST": "14:40",
+        "depthMm": 0.6,
+        "meanRateMmPerHour": 7.2
+      },
+      {
+        "endTimeLST": "14:45",
+        "depthMm": 0.8,
+        "meanRateMmPerHour": 9.6
+      },
+      {
+        "endTimeLST": "14:50",
+        "depthMm": 0.5,
+        "meanRateMmPerHour": 6
+      },
+      {
+        "endTimeLST": "14:55",
+        "depthMm": 0.2,
+        "meanRateMmPerHour": 2.4
+      },
+      {
+        "endTimeLST": "15:00",
+        "depthMm": 0.2,
+        "meanRateMmPerHour": 2.4
+      }
+    ],
+    "hourlyDepthMm": 9.2,
+    "hourlyMeanRateMmPerHour": 9.2,
+    "maxFiveMinuteRateMmPerHour": 31.2,
+    "publishedHourlyDepthMm": 9.2,
+    "agreesWithPublishedHour": true
+  },
+  "validation": {
+    "lint": "passed",
+    "sourceCatalogueAudit": "passed, no missing or duplicate IDs or URLs",
+    "productionBuild": "passed, 95 exported routes",
+    "renderedHtmlTests": "115 passed, 0 failed",
+    "localBrowser": "Oba články zkontrolovány při šířkách 1280 a 390 px. Grafy, fotografie, tabulky a rozbalovací doplňky se zobrazují. Žádný vodorovný přesah celé stránky, široká tabulka konduktometrie má vlastní posuv."
+  },
+  "editorialReviews": {
+    "factual": "Samostatně porovnány citace s původními dokumenty, úplností souborů a konkrétními vztahy. Status 200 u údržby NOAA nebyl zaměněn za dostupný dokument. Původní řádky a koeficienty ověřeny nezávisle.",
+    "readability": "Samostatně přečteny oba úplné články. Opravené odstavce srozumitelně odlišují vlastní odvození, měření, kalibraci a pozdější zpracování. Vynecháno neověřené historické přiřazení. České texty bez středníků."
+  },
+  "limits": [
+    "DWD plný historický text nebyl ověřen. V kontrolované metodě už není oporou tvrzení. Katalogový záznam zůstává pro existující citace jinde s přesným upozorněním.",
+    "Původní protokol C3860 je dostupný přes FTP klienta, jeho původní HTTPS adresa je v údržbě. V aktivním příkladu nahrazen veřejným protokolem C3679.",
+    "Přístup k DOI či katalogu může vyžadovat ověření nebo být odmítnut automatickému klientovi. Rozhodující plné texty mají ověřené samostatné veřejné cesty."
+  ]
+}
