@@ -596,7 +596,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Měření výšky, hustoty a vodní hodnoty sněhu"
-          meta="31. října 2026"
+          meta="5. listopadu 2026"
         >
           <p>
             Jak ze změřené výšky a zvážených vzorků určíme zásobu vody ve sněhu.
@@ -615,7 +615,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Pobřežní měření hladiny a výšková reference"
-          meta="31. října 2026"
+          meta="5. listopadu 2026"
         >
           <p>
             Jak z radarového odrazu získáme výšku mořské hladiny a jak oddělíme

@@ -312,12 +312,13 @@ export function TideGaugeArticle() {
           ve studni stoupá a klesá spolu s mořem, zatímco spojení tlumí krátké vlny.
           Plovák tento pohyb přenáší na záznamový mechanismus. <SourceLink id="DOI_10_1098_rstl_1831_0013">Henry
           R. Palmer v roce 1831</SourceLink> popsal spojení plováku s hodinovým
-          mechanismem a perem, které kreslilo průběh na posouvaný papír.
+          mechanismem a tužkou pro zápis na posouvaný papír.
         </p>
         <p>
-          Palmerův přístroj umožnil soustavně sledovat změny hladiny při úpravách
-          londýnských přístavních staveb. Automatický zápis uchoval i průběh mezi
-          ručními odečty a během noci. Dnešní plovákové přístroje mohou pohyb
+          <SourceLink id="DOI_10_1098_rstl_1831_0013">V původní práci</SourceLink> Palmer uváděl,
+          že první vyrobený přístroj teprve umístí u vjezdu do londýnských doků.
+          Automatický zápis měl uchovat i průběh mezi ručními odečty a během noci.
+          Dnešní plovákové přístroje mohou pohyb
           převádět na digitální údaj snímačem natočení hřídele, jak popisuje
           <SourceLink id="2025_NOAA_Water_Level_Specifications"> specifikace NOAA</SourceLink>.
         </p>
@@ -344,7 +345,7 @@ export function TideGaugeArticle() {
           a návaznost výškové nuly. Pro dlouhodobé změny je podstatný také pohyb
           pevniny. <SourceLink id="2003_Woodworth_Smith_Radar_Bubbler">Porovnání radaru
           a tlakového vodočtu u Liverpoolu</SourceLink> shrnulo po opravě měřítka
-          a vyřazení odlehlých hodnot rozdíly do hodnoty 1,50 cm. Ta je odmocninou
+          a vyřazení odlehlých hodnot rozdíly hodnotou 1,50 cm. Ta je odmocninou
           průměru čtverců rozdílů, takže se kladné a záporné odchylky navzájem
           nevyruší. Výsledek popisuje shodu konkrétních přístrojů za podmínek této zkoušky.
         </p>

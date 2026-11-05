@@ -1,0 +1,1348 @@
+{
+  "date": "2026-11-05",
+  "verificationStage": "pre-deployment",
+  "articles": [
+    {
+      "title": "Pobřežní měření hladiny a výšková reference",
+      "slug": "pobrezni-mereni-hladiny-a-vyskova-reference",
+      "sourceCount": 16
+    },
+    {
+      "title": "Měření výšky, hustoty a vodní hodnoty sněhu",
+      "slug": "mereni-vysky-hustoty-a-vodni-hodnoty-snehu",
+      "sourceCount": 10
+    }
+  ],
+  "activeUniqueSourceCount": 25,
+  "urlRequests": 42,
+  "sourceChecks": [
+    {
+      "id": "2026_NOAA_Tidal_Datums",
+      "title": "Tidal Datums: definitions and relationships to geodetic datums",
+      "author": "NOAA CO-OPS",
+      "year": 2026,
+      "publication": "Tides & Currents, průběžná dokumentace, přístup 4. října 2026. Znovu ověřeno 5. listopadu 2026.",
+      "type": "Metodická dokumentace",
+      "category": "science",
+      "externalUrl": "https://tidesandcurrents.noaa.gov/datum_options.html",
+      "topics": [
+        "metody",
+        "hladina moře",
+        "výšková reference",
+        "kalibrace"
+      ],
+      "yearLabel": "přístup 2026",
+      "availability": "open-access",
+      "status": "verified-or-repaired",
+      "evidence": "Úplné definice NOAA. MSL je průměr hodinových výšek za NTDE, MLLW průměr nižších nízkých vod za přílivový den. Pro geodetické připojení stránka výslovně doporučuje více značek, přednostně tři. Nedatovaná dokumentace má nově štítek přístup 2026."
+    },
+    {
+      "id": "2013_NOAA_Radar_Installation",
+      "title": "Field Installation Procedures for Design Analysis WaterLog H3611i Microwave Radar Water Level Sensor Using the Sutron Data Collection Platform",
+      "author": "NOAA CO-OPS",
+      "year": 2013,
+      "publication": "Field Installation Guide, verze 1.0, leden 2013",
+      "type": "Technická příručka",
+      "category": "science",
+      "externalUrl": "https://tidesandcurrents.noaa.gov/publications/WaterLogField_Installation_Guide_V_1.0_01_30_13.pdf",
+      "topics": [
+        "metody",
+        "hladina moře",
+        "výšková reference",
+        "kalibrace"
+      ],
+      "availability": "open-access",
+      "status": "verified-or-repaired",
+      "evidence": "Původní úplná instalační příručka, 65 stran, verze 1.0, leden 2013. Tabulka 1-1 potvrzuje 26 GHz, úhel 10 stupňů a maximální vzdálenost 40 m. Připojení měřicího počátku přes límec a nivelaci odpovídá výkladu. Fotografie je dolní část obrázku 3-9 na straně 29, vizuálně porovnána s použitým výřezem."
+    },
+    {
+      "id": "2011_NOAA_Radar_Evaluation",
+      "title": "Test and Evaluation Report: Limited Acceptance of the Design Analysis WaterLog H-3611i Microwave Radar Water Level Sensor",
+      "author": "Robert Heitsenrether a Edgar Davis",
+      "year": 2011,
+      "publication": "NOAA Technical Report NOS CO-OPS 061, březen 2011",
+      "type": "Metodická a validační zpráva",
+      "category": "science",
+      "externalUrl": "https://tidesandcurrents.noaa.gov/publications/Technical_Report_NOS_CO-OPS_061.pdf",
+      "topics": [
+        "metody",
+        "hladina moře",
+        "výšková reference",
+        "kalibrace"
+      ],
+      "availability": "open-access",
+      "status": "verified-or-repaired",
+      "evidence": "Úplná původní validační zpráva NOS CO-OPS 061, 97 stran. Titulní list potvrzuje autory Robert Heitsenrether a Edgar Davis a březen 2011. Laboratorní postup skutečně požaduje nominální vzdálenosti 2, 4, 6, 8 a 12 m, alespoň minutu měření a přesné nezávislé určení polohy terče. Radarový princip, statické i dynamické zkoušky a srovnání s akustikou a tlakovými měřeními odpovídají článku."
+    },
+    {
+      "id": "WEB_NOAA_Using_Content_FAQ",
+      "title": "NOAA Education and Outreach: Using NOAA content",
+      "author": "NOAA Office of Education",
+      "year": 2026,
+      "publication": "NOAA",
+      "type": "Podmínky použití",
+      "category": "organization",
+      "externalUrl": "https://www.noaa.gov/office-education/outreach-communication/faq",
+      "citationLabel": "NOAA: podmínky použití obsahu",
+      "topics": [
+        "zdroje",
+        "licence"
+      ],
+      "yearLabel": "přístup 2026",
+      "availability": "open-access",
+      "status": "verified-or-repaired",
+      "evidence": "Funkční původní oficiální stránka NOAA s oddílem Using NOAA content. Použita pro podmínky převzetí fotografie, nikoli jako náhrada původní vědecké studie."
+    },
+    {
+      "id": "WEB_Permanent_Service_for_Mean_S_Revised_Local_Reference_RLR_Definition_25cc4b55",
+      "title": "Revised Local Reference (RLR) Definition",
+      "author": "Permanent Service for Mean Sea Level",
+      "year": 2026,
+      "publication": "Permanent Service for Mean Sea Level",
+      "type": "Datový portál nebo soubor",
+      "category": "organization",
+      "externalUrl": "https://psmsl.org/data/obtaining/rlr.php",
+      "citationLabel": "PSMSL: definice RLR",
+      "topics": [
+        "pozorování",
+        "hladina moře",
+        "oceán"
+      ],
+      "yearLabel": "přístup 2026",
+      "availability": "open-access",
+      "status": "verified-or-repaired",
+      "evidence": "Úplná provozní definice PSMSL. Referenční úroveň se obvykle volí přibližně 7 m pod střední hladinou. Vysvětlení RLR, vazby na pobřežní body a odlišení metrických dat odpovídá dokumentu."
+    },
+    {
+      "id": "2025_NOAA_Water_Level_Specifications",
+      "title": "Environmental Measurement Systems: Sensor Specifications and Measurement Algorithms",
+      "author": "NOAA CO-OPS",
+      "year": 2025,
+      "publication": "Aktualizace 12/2025, oddíl 1, s. 1–5",
+      "type": "Veřejná specifikace měření",
+      "category": "science",
+      "externalUrl": "https://tidesandcurrents.noaa.gov/publications/CO-OPS_Measurement_Spec.pdf",
+      "topics": [
+        "metody",
+        "hladina moře",
+        "výšková reference",
+        "kalibrace"
+      ],
+      "availability": "open-access",
+      "status": "verified-or-repaired",
+      "evidence": "Úplná původní specifikace aktualizovaná 12/2025, 12 stran. Strana 1 požaduje rozlišení nejméně 0.001 m. Tabulka mikrovlnných čidel na straně 2 uvádí 360 jednosekundových vzorků, šestiminutový interval, centrování času, test tří směrodatných odchylek a meze odhadované přesnosti 0.02 m a 0.005 m. Tyto meze nejsou ve specifikaci označeny jako 95procentní intervaly."
+    },
+    {
+      "id": "2026_NOAA_Water_Level_API",
+      "title": "CO-OPS Data Retrieval API and Data API Response Help",
+      "author": "NOAA CO-OPS",
+      "year": 2026,
+      "publication": "Veřejná dokumentace rozhraní a příznaků kvality, přístup 4. října 2026. Znovu ověřeno 5. listopadu 2026.",
+      "type": "Dokumentace dat",
+      "category": "science",
+      "externalUrl": "https://api.tidesandcurrents.noaa.gov/api/prod/",
+      "topics": [
+        "metody",
+        "hladina moře",
+        "výšková reference",
+        "kalibrace"
+      ],
+      "yearLabel": "přístup 2026",
+      "availability": "open-access",
+      "openAccessUrl": "https://api.tidesandcurrents.noaa.gov/api/prod/responseHelp.html",
+      "status": "verified-or-repaired",
+      "evidence": "Úplná veřejná dokumentace Data Retrieval API a významu polí odpovědi. Ověřeny významy q, čtyř příznaků f, polí s a časové volby gmt. Rok je nově označen jako přístup 2026, nikoli jako domnělý rok vydání."
+    },
+    {
+      "id": "DOI_10_1002_2015rg000502",
+      "title": "Vertical land motion as a key to understanding sea level change and variability",
+      "author": "Guy Wöppelmann a Marta Marcos",
+      "year": 2016,
+      "publication": "Reviews of Geophysics",
+      "type": "Studie",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.1002/2015RG000502",
+      "citationLabel": "Wöppelmann & Marcos 2016",
+      "topics": [
+        "pozorování",
+        "hladina moře",
+        "oceán"
+      ],
+      "availability": "open-access",
+      "openAccessUrl": "https://igppweb.ucsd.edu/~fialko/insar/Woppelmann_RevG.pdf",
+      "status": "verified-or-repaired",
+      "evidence": "Úplná otevřená autorská kopie, 29 stran. Přehledová práce přímo dokládá geodetické připojení, pohyb souše a jeho vztah k relativní hladině. Původní DOI odmítl automatický požadavek s 403, samostatný veřejný plný text se stáhl celý. Přehled slouží obecnému geodetickému výkladu, primární aplikaci poskytuje Frederikse 2020."
+    },
+    {
+      "id": "DOI_10_1038_s41586_020_2591_3",
+      "title": "The causes of sea-level rise since 1900",
+      "author": "Thomas Frederikse a kol.",
+      "year": 2020,
+      "publication": "Nature",
+      "type": "Studie",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.1038/s41586-020-2591-3",
+      "citationLabel": "Frederikse et al. 2020",
+      "topics": [
+        "pozorování",
+        "hladina moře",
+        "oceán"
+      ],
+      "availability": "open-access",
+      "openAccessUrl": "https://zanna-researchteam.github.io/files/Frederikse-et-al-2020.pdf",
+      "status": "verified-or-repaired",
+      "evidence": "Úplná původní studie, 17 stran. Metody potvrzují opravy VLM z GNSS a rozdílu altimetrie a vodočtů, odstranění prostorových vlivů, postupné slučování záznamů a plošné vážení oceánských oblastí. Sdílené vstupy při ověřování jsou v metodickém článku výslovně rozlišeny."
+    },
+    {
+      "id": "DOI_10_1098_rstl_1831_0013",
+      "title": "Description of a Graphical Registrer of Tides and Winds",
+      "author": "Henry R. Palmer",
+      "year": 1831,
+      "publication": "Philosophical Transactions of the Royal Society of London 121, 209–213 a obrazové přílohy. Úplná digitalizace v Internet Archive má 13 stran. Text článku začíná na straně 9 PDF, na straně 10 autor popisuje plánované umístění prvního přístroje.",
+      "type": "Původní metodická práce",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.1098/rstl.1831.0013",
+      "topics": [
+        "metody",
+        "hladina moře",
+        "výšková reference",
+        "kalibrace"
+      ],
+      "openAccessLinkLabel": "Otevřít plný text (PDF, od strany 9)",
+      "availability": "open-access",
+      "openAccessUrl": "https://archive.org/download/jstor-107930/107930.pdf#page=9",
+      "status": "verified-or-repaired",
+      "evidence": "Dosavadní přímý Wikimedia PDF požadavek vrátil 429. V Internet Archive byla ověřena úplná původní digitalizace JSTOR Early Journal Content, 13 stran. Text začíná na straně 9 PDF, tištěné s. 209. Strana 10, tištěná 210, říká, že první vyrobený přístroj bude teprve umístěn u londýnských doků. Článek byl opraven, aby nepopisoval již doložený provoz. Opraveno i pisátko na tužku podle originálu. DOI zůstává, nový veřejný odkaz otevírá text od strany 9 a zachovává také všechny obrazové přílohy."
+    },
+    {
+      "id": "2003_Woodworth_Smith_Radar_Bubbler",
+      "title": "A One Year Comparison of Radar and Bubbler Tide Gauges at Liverpool",
+      "author": "Philip L. Woodworth a David E. Smith",
+      "year": 2003,
+      "publication": "International Hydrographic Review 4(3), 42–49",
+      "type": "Studie",
+      "category": "science",
+      "externalUrl": "https://psmsl.org/train_and_info/training/experiences/IHR_12_03_A-Woodworth.pdf",
+      "topics": [
+        "metody",
+        "hladina moře",
+        "výšková reference",
+        "kalibrace"
+      ],
+      "availability": "open-access",
+      "status": "verified-or-repaired",
+      "evidence": "Úplná původní práce, 8 stran, otevřená kopie PSMSL. Hodnota 1.50 cm je RMS rozdílů za celý rok po vyřazení hodnot nad 5 cm a opravě měřítka. Není mezí jednotlivých odchylek. Odstraněno zavádějící české spojení do hodnoty 1.50 cm. Oprava měřítka, chyby hodin a vliv hustoty jsou v článku zachovány. Formální bibliografické strany 42–49 ověřeny také proti vydavatelskému rejstříku časopisu."
+    },
+    {
+      "id": "2012_VIM_Calibration",
+      "title": "International Vocabulary of Metrology (VIM), 2.39 Calibration",
+      "author": "Joint Committee for Guides in Metrology",
+      "year": 2012,
+      "publication": "JCGM 200:2012, třetí vydání, elektronická verze s vysvětlivkami",
+      "type": "Metrologický slovník",
+      "category": "science",
+      "externalUrl": "https://jcgm.bipm.org/vim/en/2.39.html",
+      "availability": "open-access",
+      "topics": [
+        "metody",
+        "teplota",
+        "odporová termometrie"
+      ],
+      "status": "verified-or-repaired",
+      "evidence": "Úplná definice VIM 2.39 a poznámky. Kalibrace stanovuje vztah mezi údaji a referencemi s příslušnými nejistotami, poznámka 2 odlišuje seřízení. Přímý odkaz vede na požadované heslo."
+    },
+    {
+      "id": "2025_NOAA_San_Francisco_Day",
+      "title": "San Francisco 9414290: verified six-minute water levels, 1 January 2025 UTC",
+      "author": "NOAA CO-OPS",
+      "year": 2025,
+      "publication": "Data API, product=water_level, metry, MLLW a MSL. Přístup 4. října 2026",
+      "type": "Datový soubor",
+      "category": "science",
+      "externalUrl": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=water_level&application=Klimatologie.eu&begin_date=20250101&end_date=20250101&datum=MLLW&station=9414290&time_zone=gmt&units=metric&format=json",
+      "topics": [
+        "metody",
+        "hladina moře",
+        "výšková reference",
+        "kalibrace"
+      ],
+      "externalLinkLabel": "Otevřít veřejná data vůči MLLW (JSON)",
+      "openAccessLinkLabel": "Otevřít veřejná data vůči MSL (JSON)",
+      "availability": "open-access",
+      "openAccessUrl": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=water_level&application=Klimatologie.eu&begin_date=20250101&end_date=20250101&datum=MSL&station=9414290&time_zone=gmt&units=metric&format=json",
+      "status": "verified-or-repaired",
+      "evidence": "Obě úplné odpovědi NOAA mají po 240 ověřených šestiminutových hodnotách. Jsou bajt po bajtu shodné s uloženými originály a jejich SHA-256. Tlačítka nově výslovně rozlišují MLLW a MSL a formát JSON. Ověřen denní průměr, rozdíl nul 0.951 m, minimum, maximum, pravidelnost času a příznaky kvality."
+    },
+    {
+      "id": "2026_NOAA_San_Francisco_Sensors",
+      "title": "San Francisco 9414290: station sensors",
+      "author": "NOAA CO-OPS",
+      "year": 2026,
+      "publication": "Metadata API, průběžný seznam čidel, přístup 4. října 2026. Znovu ověřeno 5. listopadu 2026.",
+      "type": "Metadata stanice",
+      "category": "science",
+      "externalUrl": "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/9414290/sensors.json",
+      "topics": [
+        "metody",
+        "hladina moře",
+        "výšková reference",
+        "kalibrace"
+      ],
+      "yearLabel": "přístup 2026",
+      "availability": "open-access",
+      "status": "verified-or-repaired",
+      "evidence": "Funkční veřejná odpověď Metadata API potvrzuje mikrovlnné měření stanice. Nedokládá výrobní číslo čidla 1. ledna 2025, což článek správně uvádí. Přidán štítek přístup 2026 u průběžných metadat."
+    },
+    {
+      "id": "2026_NOAA_San_Francisco_Datums",
+      "title": "San Francisco 9414290: tidal datums relative to Station Datum",
+      "author": "NOAA CO-OPS",
+      "year": 2026,
+      "publication": "Metadata API, metry, epocha 1983–2001, schváleno 17. dubna 2003. Přístup 4. října 2026. Znovu ověřeno 5. listopadu 2026.",
+      "type": "Referenční datový soubor",
+      "category": "science",
+      "externalUrl": "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/9414290/datums.json?units=metric",
+      "topics": [
+        "metody",
+        "hladina moře",
+        "výšková reference",
+        "kalibrace"
+      ],
+      "yearLabel": "přístup 2026",
+      "availability": "open-access",
+      "status": "verified-or-repaired",
+      "evidence": "Úplná původní odpověď API je bajtově shodná s uloženým vstupem. Potvrzuje epochu 1983–2001 a hodnoty MLLW 1.822 m a MSL 2.773 m nad staniční nulou. Jejich rozdíl je 0.951 m. Rok 2026 nově označuje přístup k metadatům."
+    },
+    {
+      "id": "2003_NOAA_San_Francisco_Benchmarks",
+      "title": "San Francisco 9414290: published bench mark sheet",
+      "author": "NOAA CO-OPS",
+      "year": 2003,
+      "publication": "Tidal Bench Marks, zveřejněno 21. dubna 2003, 10 stran",
+      "type": "Geodetická dokumentace",
+      "category": "science",
+      "externalUrl": "https://tidesandcurrents.noaa.gov/benchmarks/9414290.html",
+      "topics": [
+        "metody",
+        "hladina moře",
+        "výšková reference",
+        "kalibrace"
+      ],
+      "availability": "open-access",
+      "status": "verified-or-repaired",
+      "evidence": "Úplný veřejný výškový list, všech deset stran v HTML. Potvrzeno vydání 21. dubna 2003 a výška bodu 180 1936 rovná 3.972 m nad MLLW. Článek tento vztah neprezentuje jako záruku dnešní neměnnosti bodu."
+    },
+    {
+      "id": "WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125",
+      "title": "Guide to Instruments and Methods of Observation, Volume II – Measurement of Cryospheric Variables",
+      "author": "World Meteorological Organization",
+      "year": 2024,
+      "publication": "WMO-No. 8, vydání 2024",
+      "type": "Metodická dokumentace",
+      "category": "organization",
+      "externalUrl": "https://wgms.ch/downloads/WMO-8-vII-2024_en.pdf",
+      "citationLabel": "WMO 2024",
+      "topics": [
+        "pozorování",
+        "horské ledovce",
+        "kryosféra"
+      ],
+      "availability": "open-access",
+      "status": "verified-or-repaired",
+      "evidence": "Úplný svazek II vydání 2024, 159 stran. Ověřeny oddíly 2.3 a 2.4, kalibrační závaží, opakovaný odběr při rozdílu nad 5 procent a automatická čidla. Rovnice 2.5 je hustota m/V, rovnice 2.6 je WE = L krát hustota v kg/m². Následující text říká sečíst příspěvky vrstev. Opraveno tvrzení, že WMO doslova uvádí naši rovnici v metrech vody, a vysvětlen převod dělením hustotou vody. Příslušná strana 42 PDF, tištěná 32, byla zkontrolována vizuálně."
+    },
+    {
+      "id": "2009_Fierz_Snow_Classification",
+      "title": "The International Classification for Seasonal Snow on the Ground",
+      "author": "Charles Fierz, Richard L. Armstrong, Yves Durand, Pierre Etchevers, Ethan Greene, David M. McClung, Kouichi Nishimura, P. K. Satyawali a Sergey A. Sokratov",
+      "year": 2009,
+      "publication": "UNESCO-IHP, IHP-VII Technical Documents in Hydrology No. 83, IACS Contribution No. 1. Úplný 90stránkový svazek je dostupný také v prohlížeči UNESCO.",
+      "type": "Odborná klasifikace a metodika",
+      "category": "science",
+      "externalUrl": "https://cryosphericsciences.org/wp-content/uploads/2019/02/snowclass_2009-11-23-tagged-highres.pdf",
+      "topics": [
+        "metody",
+        "sníh",
+        "vodní hodnota",
+        "hustota",
+        "kryosféra"
+      ],
+      "externalLinkLabel": "Otevřít plný text IACS (PDF)",
+      "openAccessLinkLabel": "Otevřít plný text (UNESCO)",
+      "availability": "open-access",
+      "openAccessUrl": "https://unesdoc.unesco.org/ark:/48223/pf0000186462",
+      "status": "verified-or-repaired",
+      "evidence": "Původní klasifikace, všech devět autorů a rok 2009 ověřeny. Přímý přenos IACS vypršel po 60 sekundách, internetové otevření téhož PDF však zobrazilo všech 90 stran. Navíc ověřena celá oficiální kopie UNESCO, 90 stran, 3 351 097 bajtů, i fungující prohlížeč celého svazku. Přidána tato alternativní cesta. Definice výšky, kolmé tloušťky, hustoty a vodní hodnoty odpovídají článku."
+    },
+    {
+      "id": "DOI_10_1038_s41597_023_02273_1",
+      "title": "A Database of Snow on Sea Ice in the Central Arctic Collected during the MOSAiC expedition",
+      "author": "Amy R. Macfarlane a kol.",
+      "year": 2023,
+      "publication": "Scientific Data 10, 398, opravená verze po 28. červenci 2023",
+      "type": "Studie a popis měřicího programu",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.1038/s41597-023-02273-1",
+      "topics": [
+        "metody",
+        "sníh",
+        "vodní hodnota",
+        "hustota",
+        "kryosféra"
+      ],
+      "availability": "open-access",
+      "openAccessUrl": "https://www.nature.com/articles/s41597-023-02273-1.pdf",
+      "status": "verified-or-repaired",
+      "evidence": "Úplná opravená původní studie MOSAiC, 17 stran. Tabulka 1 a oddíl Density cutter potvrzují Emerald500, objem 100 cm³ a odběry po 3 cm. Obrázek 9 porovnává ETH trubici s hustotními odběry, přitom odhad z odběrů používá výšku ETH. Článek tuto částečnou závislost porovnání správně uvádí."
+    },
+    {
+      "id": "DOI_10_5194_tc_10_371_2016",
+      "title": "Intercomparison of snow density measurements: bias, precision, and vertical resolution",
+      "author": "Martin Proksch, Nick Rutter, Charles Fierz a Martin Schneebeli",
+      "year": 2016,
+      "publication": "The Cryosphere 10, 371–384",
+      "type": "Experimentální porovnání metod",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.5194/tc-10-371-2016",
+      "topics": [
+        "metody",
+        "sníh",
+        "vodní hodnota",
+        "hustota",
+        "kryosféra"
+      ],
+      "availability": "open-access",
+      "openAccessUrl": "https://tc.copernicus.org/articles/10/371/2016/tc-10-371-2016.pdf",
+      "status": "verified-or-repaired",
+      "evidence": "Úplná původní experimentální práce, 14 stran. Tabulka 4 na straně 6 PDF potvrzuje terénní RMSE 7, 9 a 5 procent průměrné tomografické hustoty a posun box cutter −1 procento. Vizuálně ověřena celá tabulka včetně rozlišení laboratorní a terénní zkoušky. Vyloučení ledových vrstev a podmínky Davosu zůstávají u výsledku."
+    },
+    {
+      "id": "DOI_10_1038_s41597_021_00939_2",
+      "title": "GlobSnow v3.0 Northern Hemisphere snow water equivalent dataset",
+      "author": "Kari Luojus a kol.",
+      "year": 2021,
+      "publication": "Scientific Data",
+      "type": "Studie",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.1038/s41597-021-00939-2",
+      "citationLabel": "Luojus et al. 2021",
+      "topics": [
+        "pozorování",
+        "sníh",
+        "permafrost",
+        "kryosféra"
+      ],
+      "availability": "open-access",
+      "openAccessUrl": "https://www.nature.com/articles/s41597-021-00939-2",
+      "status": "verified-or-repaired",
+      "evidence": "Úplný otevřený článek GlobSnow v3.0. Potvrzuje kombinaci pozemních výšek a družicových mikrovlnných měření, opravy ze sněhoměrných tras i překrytí kanadských období pro opravy 1981–2003 a ověření 1980–2016. Text nevydává tato data automaticky za nezávislou kontrolu."
+    },
+    {
+      "id": "WEB_U_S_Geological_Survey_Snow_core_measurement_04ddf039",
+      "title": "Snow core measurement",
+      "author": "U.S. Geological Survey",
+      "year": 2020,
+      "publication": "U.S. Geological Survey",
+      "type": "Obrazový zdroj",
+      "category": "organization",
+      "externalUrl": "https://www.usgs.gov/media/images/snow-core-measurement",
+      "citationLabel": "USGS",
+      "topics": [
+        "pozorování",
+        "sníh",
+        "permafrost",
+        "kryosféra"
+      ],
+      "availability": "open-access",
+      "status": "verified-or-repaired",
+      "evidence": "Funkční původní stránka fotografie USGS, zveřejněná 20. července 2020. Popisek identifikuje Sperry Glacier a měření hmotnostní bilance, podmínky výslovně Public Domain a autor USGS. Jde o obrazový zdroj, jehož úloha je v článku přesná."
+    },
+    {
+      "id": "DOI_10_1038_092520a0",
+      "title": "Societies and Academies",
+      "author": "Redakce Nature",
+      "year": 1914,
+      "publication": "Nature 92, 520–522, 1. ledna 1914. Zpráva o přednášce J. E. Churche na tištěné s. 520, straně 24 úplného PDF čísla.",
+      "type": "Dobová zpráva o vědeckém jednání",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.1038/092520a0",
+      "topics": [
+        "metody",
+        "sníh",
+        "vodní hodnota",
+        "hustota",
+        "kryosféra"
+      ],
+      "openAccessLinkLabel": "Otevřít plný text (PDF, strana 24)",
+      "availability": "open-access",
+      "openAccessUrl": "https://dbc.wroc.pl/Content/29344/PDF/031685.pdf#page=24",
+      "status": "verified-or-repaired",
+      "evidence": "Úplné číslo Nature z 1. ledna 1914 z veřejné digitální knihovny ve Vratislavi, 26 stran. Tištěná s. 520, strana 24 PDF, obsahuje zprávu z jednání Royal Meteorological Society 17. prosince 1913 a Churchův snow sampler and weigher. Vizuálně ověřena celá stránka včetně dat a začátku zprávy. Přidán přímý skok na stranu 24 a upřesněna bibliografie."
+    },
+    {
+      "id": "WEB_Pessl_Snow_Depth_Sensor",
+      "title": "Snow sensors: Ultrasonic Snow Height or Water Depth Sensor",
+      "author": "Pessl Instruments",
+      "year": 2026,
+      "publication": "Veřejná technická specifikace čidla, objednací čísla 600173 / 900209. Rozsah vzdálenosti 0–10 m, rozlišení 10 mm. Stránka bez data vydání, přístup 28. října 2026. Znovu ověřeno 5. listopadu 2026.",
+      "type": "Dokumentace měřicího přístroje",
+      "category": "organization",
+      "externalUrl": "https://metos.global/en/snow-sensors/",
+      "citationLabel": "Pessl Instruments: sněhové čidlo",
+      "topics": [
+        "metody",
+        "sníh",
+        "měření sněhu"
+      ],
+      "yearLabel": "přístup 2026",
+      "availability": "open-access",
+      "status": "verified-or-repaired",
+      "evidence": "Funkční původní technická specifikace výrobce. Tabulka uvádí rozsah 0 až 10 m a rozlišení 10 mm. Článek správně vztahuje tyto údaje ke konkrétnímu čidlu a odlišuje vzdálenost od měřitelné výšky sněhu podle instalace. Nedatovaná stránka má nově štítek přístup 2026."
+    },
+    {
+      "id": "DOI_10_1594_PANGAEA_940214",
+      "title": "Snowpit snow density cutter profiles measured during the MOSAiC expedition",
+      "author": "Amy R. Macfarlane a kol.",
+      "year": 2022,
+      "publication": "PANGAEA, zveřejněno 20. ledna 2022, přístup 4. října 2026",
+      "type": "Datový soubor",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.1594/PANGAEA.940214",
+      "topics": [
+        "metody",
+        "sníh",
+        "vodní hodnota",
+        "hustota",
+        "kryosféra"
+      ],
+      "openAccessLinkLabel": "Otevřít veřejná data (XLSX)",
+      "availability": "open-access",
+      "openAccessUrl": "https://download.pangaea.de/dataset/940214/files/metadata_DensityCutter_removedOvalues.xlsx",
+      "status": "verified-or-repaired",
+      "evidence": "Funkční původní datový záznam uvádí zveřejnění 20. ledna 2022, registraci DOI 15. dubna a licenci CC BY 4.0. Původní XLSX o 69 606 bajtech byl znovu stažen a je bajtově shodný s uveřejněnou kopií. Všechny čtyři vybrané hustoty, hranice, místo i čas souhlasí. Veřejné tlačítko nyní vede přímo na XLSX, DOI zůstává cestou k metadatům."
+    }
+  ],
+  "httpChecks": [
+    {
+      "id": "src-001",
+      "url": "https://tidesandcurrents.noaa.gov/datum_options.html",
+      "status": 200,
+      "finalUrl": "https://tidesandcurrents.noaa.gov/datum_options.html",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": "9184",
+      "contentRange": null,
+      "bytes": 38168,
+      "truncated": false,
+      "file": "src-001.download",
+      "sha256": "b8c630b36f0952d7004546beebb2160b839d60ac6b190f5ad5cdfa61c19ffeab",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 0.876,
+      "sourceIds": [
+        "2026_NOAA_Tidal_Datums"
+      ]
+    },
+    {
+      "id": "src-002",
+      "url": "https://tidesandcurrents.noaa.gov/publications/WaterLogField_Installation_Guide_V_1.0_01_30_13.pdf",
+      "status": 200,
+      "finalUrl": "https://tidesandcurrents.noaa.gov/publications/WaterLogField_Installation_Guide_V_1.0_01_30_13.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "5397815",
+      "contentRange": null,
+      "bytes": 5397815,
+      "truncated": false,
+      "file": "src-002.download",
+      "sha256": "5719ae3304bb9899bcb532c0f0c5253e3c4e83b38141bc746c726aa525c9b3a6",
+      "signature": "255044462d312e350d25e2e3cfd30d0a",
+      "durationSeconds": 1.979,
+      "sourceIds": [
+        "2013_NOAA_Radar_Installation"
+      ],
+      "pdfPages": 65
+    },
+    {
+      "id": "src-003",
+      "url": "https://tidesandcurrents.noaa.gov/publications/Technical_Report_NOS_CO-OPS_061.pdf",
+      "status": 200,
+      "finalUrl": "https://tidesandcurrents.noaa.gov/publications/Technical_Report_NOS_CO-OPS_061.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "6969895",
+      "contentRange": null,
+      "bytes": 6969895,
+      "truncated": false,
+      "file": "src-003.download",
+      "sha256": "666d9b4eca64d62394ff30f64fe50187f9047a94ac75575ecb6066869da4a491",
+      "signature": "255044462d312e360d25e2e3cfd30d0a",
+      "durationSeconds": 2.112,
+      "sourceIds": [
+        "2011_NOAA_Radar_Evaluation"
+      ],
+      "pdfPages": 97
+    },
+    {
+      "id": "src-004",
+      "url": "https://www.noaa.gov/office-education/outreach-communication/faq",
+      "status": 200,
+      "finalUrl": "https://www.noaa.gov/office-education/outreach-communication/faq",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": "188678",
+      "contentRange": null,
+      "bytes": 188678,
+      "truncated": false,
+      "file": "src-004.download",
+      "sha256": "08ddcd0b382c5a0503533c51dd9bd04ff7daab01e45d58ce6a69d6530bcbe31f",
+      "signature": "0a0a3c21444f43545950452068746d6c",
+      "durationSeconds": 0.86,
+      "sourceIds": [
+        "WEB_NOAA_Using_Content_FAQ"
+      ]
+    },
+    {
+      "id": "src-005",
+      "url": "https://psmsl.org/data/obtaining/rlr.php",
+      "status": 200,
+      "finalUrl": "https://psmsl.org/data/obtaining/rlr.php",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": "2913",
+      "contentRange": null,
+      "bytes": 7511,
+      "truncated": false,
+      "file": "src-005.download",
+      "sha256": "e8f19430ca67f5d1539b87278abc9821ce6965bdca948975d596fb657d3d91ee",
+      "signature": "3c21444f43545950452048544d4c2050",
+      "durationSeconds": 0.356,
+      "sourceIds": [
+        "WEB_Permanent_Service_for_Mean_S_Revised_Local_Reference_RLR_Definition_25cc4b55"
+      ]
+    },
+    {
+      "id": "src-006",
+      "url": "https://tidesandcurrents.noaa.gov/publications/CO-OPS_Measurement_Spec.pdf",
+      "status": 200,
+      "finalUrl": "https://tidesandcurrents.noaa.gov/publications/CO-OPS_Measurement_Spec.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "179608",
+      "contentRange": null,
+      "bytes": 179608,
+      "truncated": false,
+      "file": "src-006.download",
+      "sha256": "ea422cb1a7cb4d2167a790864046281e593d2f0b641e41c6c435981d8124f099",
+      "signature": "255044462d312e340a25d3ebe9e10a31",
+      "durationSeconds": 0.996,
+      "sourceIds": [
+        "2025_NOAA_Water_Level_Specifications"
+      ],
+      "pdfPages": 12
+    },
+    {
+      "id": "src-007",
+      "url": "https://api.tidesandcurrents.noaa.gov/api/prod/",
+      "status": 200,
+      "finalUrl": "https://api.tidesandcurrents.noaa.gov/api/prod/",
+      "contentType": "text/html",
+      "contentLength": "8785",
+      "contentRange": null,
+      "bytes": 42037,
+      "truncated": false,
+      "file": "src-007.download",
+      "sha256": "2f35c273fdb3eeca2aa98111d0ed62998500c2ed9f4c507b0543d919dd6b4da5",
+      "signature": "3c21444f43545950452068746d6c3e0d",
+      "durationSeconds": 0.973,
+      "sourceIds": [
+        "2026_NOAA_Water_Level_API"
+      ]
+    },
+    {
+      "id": "src-008",
+      "url": "https://api.tidesandcurrents.noaa.gov/api/prod/responseHelp.html",
+      "status": 200,
+      "finalUrl": "https://api.tidesandcurrents.noaa.gov/api/prod/responseHelp.html",
+      "contentType": "text/html",
+      "contentLength": "2924",
+      "contentRange": null,
+      "bytes": 23254,
+      "truncated": false,
+      "file": "src-008.download",
+      "sha256": "c934a7921f56b80bbd5b05701795357a97cb5cb3c692931c3d96e8194976ba69",
+      "signature": "3c21444f43545950452068746d6c3e0d",
+      "durationSeconds": 0.956,
+      "sourceIds": [
+        "2026_NOAA_Water_Level_API"
+      ]
+    },
+    {
+      "id": "src-009",
+      "url": "https://doi.org/10.1002/2015RG000502",
+      "status": 403,
+      "finalUrl": "https://agupubs.onlinelibrary.wiley.com/doi/10.1002/2015RG000502",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 5696,
+      "truncated": false,
+      "file": "src-009.download",
+      "sha256": "b38aa889222af76a4cd6186c3caa3b4828ef53701e9326a25d215b2c33dc20df",
+      "signature": "3c21444f43545950452068746d6c3e3c",
+      "durationSeconds": 0.744,
+      "sourceIds": [
+        "DOI_10_1002_2015rg000502"
+      ]
+    },
+    {
+      "id": "src-010",
+      "url": "https://igppweb.ucsd.edu/~fialko/insar/Woppelmann_RevG.pdf",
+      "status": 200,
+      "finalUrl": "https://igppweb.ucsd.edu/~fialko/insar/Woppelmann_RevG.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "7840413",
+      "contentRange": null,
+      "bytes": 7840413,
+      "truncated": false,
+      "file": "src-010.download",
+      "sha256": "806b66f06368f2804fdd9e1b7e76eaff2900566cdd5d75afb9df6a59c1a2bfb9",
+      "signature": "255044462d312e340d258084888c9094",
+      "durationSeconds": 4.126,
+      "sourceIds": [
+        "DOI_10_1002_2015rg000502"
+      ],
+      "pdfPages": 29
+    },
+    {
+      "id": "src-011",
+      "url": "https://doi.org/10.1038/s41586-020-2591-3",
+      "status": 200,
+      "finalUrl": "https://www.nature.com/articles/s41586-020-2591-3",
+      "contentType": "text/html; charset=utf-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 426322,
+      "truncated": false,
+      "file": "src-011.download",
+      "sha256": "671a234ec5b290daffb84ef167dc19504af086a06dd7346458971941576cdd08",
+      "signature": "0a0a3c21444f43545950452068746d6c",
+      "durationSeconds": 2.199,
+      "sourceIds": [
+        "DOI_10_1038_s41586_020_2591_3"
+      ]
+    },
+    {
+      "id": "src-012",
+      "url": "https://zanna-researchteam.github.io/files/Frederikse-et-al-2020.pdf",
+      "status": 200,
+      "finalUrl": "https://zanna-researchteam.github.io/files/Frederikse-et-al-2020.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "14040397",
+      "contentRange": null,
+      "bytes": 14040397,
+      "truncated": false,
+      "file": "src-012.download",
+      "sha256": "d42effea9c619383e7afa3c21f2945df410148d11dde734e4f4a986a18ad4ce6",
+      "signature": "255044462d312e340d25e2e3cfd30d0a",
+      "durationSeconds": 14.355,
+      "sourceIds": [
+        "DOI_10_1038_s41586_020_2591_3"
+      ],
+      "pdfPages": 17
+    },
+    {
+      "id": "src-013",
+      "url": "https://doi.org/10.1098/rstl.1831.0013",
+      "status": 403,
+      "finalUrl": "https://royalsocietypublishing.org/rstl/article/doi/10.1098/rstl.1831.0013/117874/XII-Description-of-a-graphical-registrer-of-tides",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 5928,
+      "truncated": false,
+      "file": "src-013.download",
+      "sha256": "88a1e169977d8fd83def960d22a62c9bd2a25d54e5a4dda2db761b7c6d17719b",
+      "signature": "3c21444f43545950452068746d6c3e3c",
+      "durationSeconds": 0.673,
+      "sourceIds": [
+        "DOI_10_1098_rstl_1831_0013"
+      ]
+    },
+    {
+      "id": "src-014",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Description_of_a_Graphical_Registrer_of_Tides_and_Winds_%28IA_jstor-107930%29.pdf",
+      "status": 429,
+      "finalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Description_of_a_Graphical_Registrer_of_Tides_and_Winds_%28IA_jstor-107930%29.pdf",
+      "contentType": "text/html; charset=utf-8",
+      "contentLength": "3224",
+      "contentRange": null,
+      "bytes": 3224,
+      "truncated": false,
+      "file": "src-014.download",
+      "sha256": "9cecb6dcad5d1f2fd3ae15a59827c15ae8fe2c406ab1c132ded7ffe788d2fb0a",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 0.355,
+      "sourceIds": [
+        "DOI_10_1098_rstl_1831_0013"
+      ]
+    },
+    {
+      "id": "src-015",
+      "url": "https://psmsl.org/train_and_info/training/experiences/IHR_12_03_A-Woodworth.pdf",
+      "status": 200,
+      "finalUrl": "https://psmsl.org/train_and_info/training/experiences/IHR_12_03_A-Woodworth.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "4219797",
+      "contentRange": null,
+      "bytes": 4219797,
+      "truncated": false,
+      "file": "src-015.download",
+      "sha256": "35000619410137dc0cf730fdea46b27478208e0341c87f3d4e6cb5a10729964a",
+      "signature": "255044462d312e320d25e2e3cfd30d0a",
+      "durationSeconds": 0.716,
+      "sourceIds": [
+        "2003_Woodworth_Smith_Radar_Bubbler"
+      ],
+      "pdfPages": 8
+    },
+    {
+      "id": "src-016",
+      "url": "https://jcgm.bipm.org/vim/en/2.39.html",
+      "status": 200,
+      "finalUrl": "https://jcgm.bipm.org/vim/en/2.39.html",
+      "contentType": "text/html",
+      "contentLength": "4144",
+      "contentRange": null,
+      "bytes": 18930,
+      "truncated": false,
+      "file": "src-016.download",
+      "sha256": "88ed6b1c79a97e1e4c527118242b40ef54a2babeeb77125969dcd37144d12e0f",
+      "signature": "3c68746d6c3e0a3c686561643e0a3c6d",
+      "durationSeconds": 0.289,
+      "sourceIds": [
+        "2012_VIM_Calibration"
+      ]
+    },
+    {
+      "id": "src-017",
+      "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=water_level&application=Klimatologie.eu&begin_date=20250101&end_date=20250101&datum=MLLW&station=9414290&time_zone=gmt&units=metric&format=json",
+      "status": 200,
+      "finalUrl": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=water_level&application=Klimatologie.eu&begin_date=20250101&end_date=20250101&datum=MLLW&station=9414290&time_zone=gmt&units=metric&format=json",
+      "contentType": "application/json;charset=UTF-8",
+      "contentLength": "1859",
+      "contentRange": null,
+      "bytes": 18093,
+      "truncated": false,
+      "file": "src-017.download",
+      "sha256": "e81d2d2729054ae959c680fa6ab5f6663a61acd899076950290b290d7b483a82",
+      "signature": "7b226d65746164617461223a7b226964",
+      "durationSeconds": 0.584,
+      "sourceIds": [
+        "2025_NOAA_San_Francisco_Day"
+      ]
+    },
+    {
+      "id": "src-018",
+      "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=water_level&application=Klimatologie.eu&begin_date=20250101&end_date=20250101&datum=MSL&station=9414290&time_zone=gmt&units=metric&format=json",
+      "status": 200,
+      "finalUrl": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=water_level&application=Klimatologie.eu&begin_date=20250101&end_date=20250101&datum=MSL&station=9414290&time_zone=gmt&units=metric&format=json",
+      "contentType": "application/json;charset=UTF-8",
+      "contentLength": "1867",
+      "contentRange": null,
+      "bytes": 18123,
+      "truncated": false,
+      "file": "src-018.download",
+      "sha256": "4c2437d77d9f415db44931ed50535d16cf434d1f77966ff2d666e364ea971731",
+      "signature": "7b226d65746164617461223a7b226964",
+      "durationSeconds": 0.575,
+      "sourceIds": [
+        "2025_NOAA_San_Francisco_Day"
+      ]
+    },
+    {
+      "id": "src-019",
+      "url": "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/9414290/sensors.json",
+      "status": 200,
+      "finalUrl": "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/9414290/sensors.json",
+      "contentType": "application/json",
+      "contentLength": "436",
+      "contentRange": null,
+      "bytes": 1466,
+      "truncated": false,
+      "file": "src-019.download",
+      "sha256": "a2e363a68b55544e98e4d9cc75a63e06183ba489c4dfe056370c025936d8331d",
+      "signature": "7b0a202022756e697473223a20226665",
+      "durationSeconds": 0.56,
+      "sourceIds": [
+        "2026_NOAA_San_Francisco_Sensors"
+      ]
+    },
+    {
+      "id": "src-020",
+      "url": "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/9414290/datums.json?units=metric",
+      "status": 200,
+      "finalUrl": "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/9414290/datums.json?units=metric",
+      "contentType": "application/json",
+      "contentLength": "690",
+      "contentRange": null,
+      "bytes": 2224,
+      "truncated": false,
+      "file": "src-020.download",
+      "sha256": "7b5d1b79efb7656499fd91508fec05bce539f1eec177f42456ac6aa4b1b4c79f",
+      "signature": "7b0a2020226163636570746564223a20",
+      "durationSeconds": 0.554,
+      "sourceIds": [
+        "2026_NOAA_San_Francisco_Datums"
+      ]
+    },
+    {
+      "id": "src-021",
+      "url": "https://tidesandcurrents.noaa.gov/benchmarks/9414290.html",
+      "status": 200,
+      "finalUrl": "https://tidesandcurrents.noaa.gov/benchmarks/9414290.html",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": "5138",
+      "contentRange": null,
+      "bytes": 25432,
+      "truncated": false,
+      "file": "src-021.download",
+      "sha256": "c0946579942b969236a8e2564930fa2466502198f4744a47eed34e636dc77c4e",
+      "signature": "3c21444f43545950452048544d4c2050",
+      "durationSeconds": 0.639,
+      "sourceIds": [
+        "2003_NOAA_San_Francisco_Benchmarks"
+      ]
+    },
+    {
+      "id": "src-022",
+      "url": "https://wgms.ch/downloads/WMO-8-vII-2024_en.pdf",
+      "status": 200,
+      "finalUrl": "https://wgms.ch/downloads/WMO-8-vII-2024_en.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "51154764",
+      "contentRange": null,
+      "bytes": 51154764,
+      "truncated": false,
+      "file": "src-022.download",
+      "sha256": "e17cab63359c594950e71b24b3a4634080c6a1ac2ecd93ba712faa73d249713c",
+      "signature": "255044462d312e340d25e2e3cfd30d0a",
+      "durationSeconds": 276.23,
+      "sourceIds": [
+        "WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125"
+      ],
+      "pdfPages": 159
+    },
+    {
+      "id": "src-023",
+      "url": "https://cryosphericsciences.org/wp-content/uploads/2019/02/snowclass_2009-11-23-tagged-highres.pdf",
+      "error": "HTTPSConnectionPool(host='cryosphericsciences.org', port=443): Read timed out. (read timeout=60)",
+      "durationSeconds": 61.737,
+      "sourceIds": [
+        "2009_Fierz_Snow_Classification"
+      ]
+    },
+    {
+      "id": "src-024",
+      "url": "https://doi.org/10.1038/s41597-023-02273-1",
+      "status": 200,
+      "finalUrl": "https://www.nature.com/articles/s41597-023-02273-1",
+      "contentType": "text/html; charset=utf-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 473145,
+      "truncated": false,
+      "file": "src-024.download",
+      "sha256": "0a464eafdd564ed66947af3da46aa7aa2322fbb054ccd64f89939351c5406a28",
+      "signature": "0a0a3c21444f43545950452068746d6c",
+      "durationSeconds": 2.237,
+      "sourceIds": [
+        "DOI_10_1038_s41597_023_02273_1"
+      ]
+    },
+    {
+      "id": "src-025",
+      "url": "https://www.nature.com/articles/s41597-023-02273-1.pdf",
+      "status": 200,
+      "finalUrl": "https://www.nature.com/articles/s41597-023-02273-1.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "7037705",
+      "contentRange": null,
+      "bytes": 7037705,
+      "truncated": false,
+      "file": "src-025.download",
+      "sha256": "6894b61dca53127b96a0db7c1f35bec328f8806ac4cab5d3b13a442269387b11",
+      "signature": "255044462d312e340a25e2e3cfd30a31",
+      "durationSeconds": 1.876,
+      "sourceIds": [
+        "DOI_10_1038_s41597_023_02273_1"
+      ],
+      "pdfPages": 17
+    },
+    {
+      "id": "src-026",
+      "url": "https://doi.org/10.5194/tc-10-371-2016",
+      "status": 200,
+      "finalUrl": "https://tc.copernicus.org/articles/10/371/2016/",
+      "contentType": "text/html",
+      "contentLength": "27526",
+      "contentRange": null,
+      "bytes": 139449,
+      "truncated": false,
+      "file": "src-026.download",
+      "sha256": "52251b024010b620f27910a24d1258a0e1dc8334e9ef979aa4387a3e764e58a3",
+      "signature": "3c21444f43545950452068746d6c2050",
+      "durationSeconds": 0.95,
+      "sourceIds": [
+        "DOI_10_5194_tc_10_371_2016"
+      ]
+    },
+    {
+      "id": "src-027",
+      "url": "https://tc.copernicus.org/articles/10/371/2016/tc-10-371-2016.pdf",
+      "status": 200,
+      "finalUrl": "https://tc.copernicus.org/articles/10/371/2016/tc-10-371-2016.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "2594199",
+      "contentRange": null,
+      "bytes": 2594199,
+      "truncated": false,
+      "file": "src-027.download",
+      "sha256": "3dcff0a415b90afe8808fbec465800de68fdb0936b59abb79b9a5420fb8efd20",
+      "signature": "255044462d312e340a25d0d4c5d80a35",
+      "durationSeconds": 0.863,
+      "sourceIds": [
+        "DOI_10_5194_tc_10_371_2016"
+      ],
+      "pdfPages": 14
+    },
+    {
+      "id": "src-028",
+      "url": "https://doi.org/10.1038/s41597-021-00939-2",
+      "status": 200,
+      "finalUrl": "https://www.nature.com/articles/s41597-021-00939-2",
+      "contentType": "text/html; charset=utf-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 462725,
+      "truncated": false,
+      "file": "src-028.download",
+      "sha256": "1ce307b66d34ae4ecf0b6e6d3ffd6b078e962d2977a18bec3bc87f06d5119501",
+      "signature": "0a0a3c21444f43545950452068746d6c",
+      "durationSeconds": 1.991,
+      "sourceIds": [
+        "DOI_10_1038_s41597_021_00939_2"
+      ]
+    },
+    {
+      "id": "src-029",
+      "url": "https://www.nature.com/articles/s41597-021-00939-2",
+      "status": 200,
+      "finalUrl": "https://www.nature.com/articles/s41597-021-00939-2",
+      "contentType": "text/html; charset=utf-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 462721,
+      "truncated": false,
+      "file": "src-029.download",
+      "sha256": "1c36a051f868a790d27968a3cd6c1fe2e0924329f8c6b25af2f0806ce93a5a5f",
+      "signature": "0a0a3c21444f43545950452068746d6c",
+      "durationSeconds": 1.426,
+      "sourceIds": [
+        "DOI_10_1038_s41597_021_00939_2"
+      ]
+    },
+    {
+      "id": "src-030",
+      "url": "https://www.usgs.gov/media/images/snow-core-measurement",
+      "status": 200,
+      "finalUrl": "https://www.usgs.gov/media/images/snow-core-measurement",
+      "contentType": "text/html; charset=utf-8",
+      "contentLength": "11293",
+      "contentRange": null,
+      "bytes": 85330,
+      "truncated": false,
+      "file": "src-030.download",
+      "sha256": "1809982d552dba9f18e182f336cab9c70f04e0c8e1c8a09437def88783cf42e9",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 1.905,
+      "sourceIds": [
+        "WEB_U_S_Geological_Survey_Snow_core_measurement_04ddf039"
+      ]
+    },
+    {
+      "id": "src-031",
+      "url": "https://doi.org/10.1038/092520a0",
+      "status": 200,
+      "finalUrl": "https://www.nature.com/articles/092520a0",
+      "contentType": "text/html; charset=utf-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 205505,
+      "truncated": false,
+      "file": "src-031.download",
+      "sha256": "5a347e3846b087824d26b25e0e607efd49d9b4387ddec8b8a596c7c8db5e8a40",
+      "signature": "0a0a3c21444f43545950452068746d6c",
+      "durationSeconds": 3.025,
+      "sourceIds": [
+        "DOI_10_1038_092520a0"
+      ]
+    },
+    {
+      "id": "src-032",
+      "url": "https://dbc.wroc.pl/Content/29344/PDF/031685.pdf",
+      "status": 200,
+      "finalUrl": "https://dbc.wroc.pl/Content/29344/PDF/031685.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "16225068",
+      "contentRange": null,
+      "bytes": 16225068,
+      "truncated": false,
+      "file": "src-032.download",
+      "sha256": "aaef15ff8f9b91babf7559a1a6ed0b3a9d5833c095d31cceddbba125f83dc6eb",
+      "signature": "255044462d312e360d25e2e3cfd30d0a",
+      "durationSeconds": 1.6,
+      "sourceIds": [
+        "DOI_10_1038_092520a0"
+      ],
+      "pdfPages": 26
+    },
+    {
+      "id": "src-033",
+      "url": "https://metos.global/en/snow-sensors/",
+      "status": 200,
+      "finalUrl": "https://metos.global/en/snow-sensors/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 164944,
+      "truncated": false,
+      "file": "src-033.download",
+      "sha256": "30c33e59b27eb565df0cec0aab30bbc3b2fcd1312369bb217ddcd651f71b3946",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 0.623,
+      "sourceIds": [
+        "WEB_Pessl_Snow_Depth_Sensor"
+      ]
+    },
+    {
+      "id": "src-034",
+      "url": "https://doi.org/10.1594/PANGAEA.940214",
+      "status": 200,
+      "finalUrl": "https://doi.pangaea.de/10.1594/PANGAEA.940214",
+      "contentType": "text/html;charset=utf-8",
+      "contentLength": "11888",
+      "contentRange": null,
+      "bytes": 89123,
+      "truncated": false,
+      "file": "src-034.download",
+      "sha256": "6ed9708049c926a9d8ed1a385c0c90b1408f5b57bda79a80a114ed889ca43e3e",
+      "signature": "3c21444f43545950452068746d6c3e0d",
+      "durationSeconds": 0.828,
+      "sourceIds": [
+        "DOI_10_1594_PANGAEA_940214"
+      ]
+    },
+    {
+      "id": "src-035",
+      "url": "https://doi.pangaea.de/10.1594/PANGAEA.940214",
+      "status": 200,
+      "finalUrl": "https://doi.pangaea.de/10.1594/PANGAEA.940214",
+      "contentType": "text/html;charset=utf-8",
+      "contentLength": "11888",
+      "contentRange": null,
+      "bytes": 89123,
+      "truncated": false,
+      "file": "src-035.download",
+      "sha256": "6ed9708049c926a9d8ed1a385c0c90b1408f5b57bda79a80a114ed889ca43e3e",
+      "signature": "3c21444f43545950452068746d6c3e0d",
+      "durationSeconds": 0.468,
+      "sourceIds": [
+        "DOI_10_1594_PANGAEA_940214"
+      ]
+    },
+    {
+      "id": "snow-xlsx",
+      "url": "https://download.pangaea.de/dataset/940214/files/metadata_DensityCutter_removedOvalues.xlsx",
+      "status": 200,
+      "finalUrl": "https://download.pangaea.de/dataset/940214/files/metadata_DensityCutter_removedOvalues.xlsx",
+      "contentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "contentLength": "69606",
+      "contentRange": null,
+      "bytes": 69606,
+      "truncated": false,
+      "file": "snow-xlsx.download",
+      "sha256": "7a5176220aadc436c0b11a007a3906dfd0018534223ccfa153e1ad3dabc8f0ba",
+      "signature": "504b0304140006000800000021005b4c",
+      "durationSeconds": 0.437
+    },
+    {
+      "id": "palmer-ia-metadata",
+      "url": "https://archive.org/metadata/jstor-107930",
+      "status": 200,
+      "finalUrl": "https://archive.org/metadata/jstor-107930",
+      "contentType": "application/json",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 6311,
+      "truncated": false,
+      "file": "palmer-ia-metadata.download",
+      "sha256": "639b1c113170b25af0c22fda555e23910eecde125eaeba311beb5dac546fd6f7",
+      "signature": "7b22616c7465726e6174655f6c6f6361",
+      "durationSeconds": 1.486
+    },
+    {
+      "id": "fierz-record",
+      "url": "https://cryosphericsciences.org/publications/snow-classification/",
+      "status": 200,
+      "finalUrl": "https://cryosphericsciences.org/publications/snow-classification/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 43572,
+      "truncated": false,
+      "file": "fierz-record.download",
+      "sha256": "3073e4e98829cce3619b2d37524bd426a282bfb67b1bdc611572c668424414b8",
+      "signature": "3c21646f63747970652068746d6c3e0a",
+      "durationSeconds": 18.371
+    },
+    {
+      "id": "palmer-ia-full",
+      "url": "https://archive.org/download/jstor-107930/107930.pdf",
+      "status": 200,
+      "finalUrl": "https://dn760008.eu.archive.org/0/items/jstor-107930/107930.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "4011669",
+      "contentRange": null,
+      "bytes": 4011669,
+      "truncated": false,
+      "file": "palmer-ia-full.download",
+      "sha256": "008b190f2f56b6f431bbcdc9551b6ac3b14634b2f62c4e66207a7180b048a190",
+      "signature": "255044462d312e340a25f6e4fcdf0a31",
+      "durationSeconds": 45.183,
+      "pdfPages": 13
+    },
+    {
+      "id": "palmer-ia-record",
+      "url": "https://archive.org/details/jstor-107930",
+      "status": 200,
+      "finalUrl": "https://archive.org/details/jstor-107930",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 209975,
+      "truncated": false,
+      "file": "palmer-ia-record.download",
+      "sha256": "761c34c0c56f8c879800e08dc70dbe4969612cffb502ecabebd8acb40199b6a8",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 2.761
+    },
+    {
+      "id": "fierz-unesco-record",
+      "url": "https://unesdoc.unesco.org/ark:/48223/pf0000186462",
+      "status": 200,
+      "finalUrl": "https://unesdoc.unesco.org/ark:/48223/pf0000186462",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 2114,
+      "truncated": false,
+      "file": "fierz-unesco-record.download",
+      "sha256": "e2dbf2ec563a282360f815c66340e14611bf7a23eb8b455bee0b0a1e3cd8dffd",
+      "signature": "3c21646f63747970652068746d6c3e3c",
+      "durationSeconds": 0.466
+    },
+    {
+      "id": "fierz-unesco-full",
+      "url": "https://unesdoc.unesco.org/in/rest/annotationSVC/DownloadWatermarkedAttachment/attach_import_fc4d6890-b1cf-4ace-b000-f50bf236e3c3?_=186462eng.pdf",
+      "status": 200,
+      "finalUrl": "https://unesdoc.unesco.org/in/rest/annotationSVC/DownloadWatermarkedAttachment/attach_import_fc4d6890-b1cf-4ace-b000-f50bf236e3c3?_=186462eng.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "3351097",
+      "contentRange": null,
+      "bytes": 3351097,
+      "truncated": false,
+      "file": "fierz-unesco-full.download",
+      "sha256": "74f26c3fc1ef6ff1b4193c47650e2450ce0f08bb391cab8d7449e9df7d80d349",
+      "signature": "255044462d312e340a25e2e3cfd30a31",
+      "durationSeconds": 0.948,
+      "pdfPages": 90
+    }
+  ],
+  "dataVerification": {
+    "tide": {
+      "count": 240,
+      "datumOffsetM": 0.951,
+      "meanMllwM": 0.9685166666666667,
+      "meanMslM": 0.017516666666666653,
+      "rangeM": 2.331,
+      "allThreeFilesByteExactWithNewApiResponses": true,
+      "sourceInputChecksums": {
+        "water-level-mllw.json": "e81d2d2729054ae959c680fa6ab5f6663a61acd899076950290b290d7b483a82",
+        "water-level-msl.json": "4c2437d77d9f415db44931ed50535d16cf434d1f77966ff2d666e364ea971731",
+        "datums.json": "7b5d1b79efb7656499fd91508fec05bce539f1eec177f42456ac6aa4b1b4c79f"
+      }
+    },
+    "snow": {
+      "count": 4,
+      "depthCm": 12,
+      "sweMm": 28.5,
+      "meanDensityKgM3": 237.5,
+      "layers": [
+        {
+          "excelRow": 2,
+          "topCm": 12,
+          "bottomCm": 9,
+          "densityKgM3": 174,
+          "sweMm": 5.22
+        },
+        {
+          "excelRow": 3,
+          "topCm": 9,
+          "bottomCm": 6,
+          "densityKgM3": 218,
+          "sweMm": 6.54
+        },
+        {
+          "excelRow": 4,
+          "topCm": 6,
+          "bottomCm": 3,
+          "densityKgM3": 288,
+          "sweMm": 8.64
+        },
+        {
+          "excelRow": 5,
+          "topCm": 3,
+          "bottomCm": 0,
+          "densityKgM3": 270,
+          "sweMm": 8.1
+        }
+      ],
+      "sourceBytes": 69606,
+      "originalSha256": "7a5176220aadc436c0b11a007a3906dfd0018534223ccfa153e1ad3dabc8f0ba",
+      "newDownloadByteExact": true
+    }
+  },
+  "fragmentAnchors": [
+    {
+      "sourceId": "DOI_10_1098_rstl_1831_0013",
+      "pdfPage": 9,
+      "printedPage": 209,
+      "evidence": "Vizuálně ověřen začátek celého článku, další strana popisuje teprve plánované umístění přístroje."
+    },
+    {
+      "sourceId": "DOI_10_1038_092520a0",
+      "pdfPage": 24,
+      "printedPage": 520,
+      "evidence": "Vizuálně ověřena Churchova přednáška ve zprávě o jednání 17. prosince 1913."
+    }
+  ],
+  "editorialReviews": {
+    "factual": "Oba úplné články byly souvisle přečteny, citace porovnány s metodickými dokumenty, původními studiemi a daty. Zvlášť opraveny význam RMS, popis ještě neinstalovaného historického přístroje a převod jednotek podle WMO.",
+    "readability": "Samostatně přečteny opravené odstavce i návaznost na okolní text. Historický odstavec rozlišuje vyrobený přístroj a plánovanou instalaci. Pasáž o SWE vysvětluje přechod z kg/m² na metry vody a potom na milimetry. Souvislý výklad zůstává úplný bez technických doplňků. České texty bez středníků."
+  },
+  "validation": {
+    "lint": "passed",
+    "sourceCatalogueAudit": "passed, no missing or duplicate IDs or URLs",
+    "productionBuild": "passed, 95 exported routes",
+    "renderedHtmlTests": "115 passed, 0 failed",
+    "browser": "Oba články zkontrolovány při šířkách 1280 a 390 px. Fotografie a grafy mají nenulové přirozené rozměry a vykreslují se. Dlouhé nadpisy a nové zdrojové akce se vejdou. Celá stránka nepřesahuje vodorovně, dvojpanelový sněhový graf má vlastní označený posuv. Ověřeno rozbalení dat, přechod z citace na kartu a přesné URL i štítky změněných zdrojů."
+  },
+  "limits": [
+    "Přímé DOI některých vydavatelů odmítly automatický přístup, samostatné veřejné úplné kopie byly ověřeny.",
+    "IACS přímý přenos vypršel v klientovi, proto byla doplněna úplná oficiální kopie a prohlížeč UNESCO. Nebyl obcházen žádný ochranný prvek."
+  ]
+}

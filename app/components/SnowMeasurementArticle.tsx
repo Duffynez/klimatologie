@@ -141,7 +141,7 @@ export function SnowMeasurementArticle() {
           vzorku v metrech krychlových včetně pórů. Nádobka o objemu 100 cm³
           představuje 0,0001 m³. Při dosazování tedy převedeme odečtené gramy
           na kilogramy a objem nádobky na metry krychlové.{" "}
-          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíl 2.4.1)</SourceLink>
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, rovnice 2.5)</SourceLink>
         </p>
         <p>
           Výsledná hustota je průměrem přes celý odebraný objem. Přiřadíme ji
@@ -163,7 +163,7 @@ export function SnowMeasurementArticle() {
           Voda má vyšší hustotu než sníh s póry, takže stejné hmotnosti
           odpovídá nižší vrstva. Pro tento převod používáme
           referenční hustotu vody 1 000 kg/m³.{" "}
-          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, rovnice 2.5 a 2.6)</SourceLink>
+          <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíl 2.4: vodní hodnota)</SourceLink>
         </p>
         <p>
           Výpočet můžeme zapsat jako součet vodních hodnot všech intervalů:
@@ -175,8 +175,9 @@ export function SnowMeasurementArticle() {
           obě v kg/m³. Δh<sub>i</sub> je svislá tloušťka intervalu v metrech,
           tedy rozdíl jeho horní a dolní hranice. Poměr hustot nemá jednotku.
           Výsledek SWE proto vychází v metrech vody.
-          Tento vztah uvádí <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">WMO,
-          rovnice 2.5 a 2.6</SourceLink>.
+          Součet vychází z <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">WMO,
+          rovnice 2.6 a navazujícího textu</SourceLink>. WMO vyjadřuje vodní hodnotu
+          v kg/m². Zde ji dělením hustotou vody převádíme na metry.
         </p>
         <p>
           Pro milimetry výsledek vynásobíme tisícem. Při použité hustotě vody
