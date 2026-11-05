@@ -171,7 +171,7 @@ export function HygrometryArticle() {
           U úplné hodiny se stejně dlouhými intervaly sečteme všech dvanáct hodnot a vydělíme
           součet dvanácti. Způsob ukládání a průměrování stanovují
           <SourceLink id="2026_USCRN_Measurements"> popis měření</SourceLink>
-          {" "}a <SourceLink id="2026_USCRN_Hourly_Readme">dokumentace hodinových dat USCRN</SourceLink>.
+          {" "}a <SourceLink id="2026_USCRN_Hourly_Readme">dokumentace hodinových dat USCRN z 6. července 2017</SourceLink>.
         </p>
 
         <h3>Co z měření zjistíme o atmosféře</h3>
@@ -513,6 +513,18 @@ export function HygrometryArticle() {
             <SourceLink id="2013_Vaisala_HMT330">(Vaisala, 2013: HMT330)</SourceLink>
           </p>
         </div>
+        <h2>Zdroje a podklady k ověření</h2>
+        <p>
+          Principy a převody dokládá <SourceLink id="2013_NPL_Humidity">příručka NPL</SourceLink>,
+          kalibrační postup <SourceLink id="2021_NIST_Humidity_Calibration">metodika NIST</SourceLink>{" "}
+          a konstrukci i parametry sondy <SourceLink id="2013_Vaisala_HMT330">příručka Vaisala HMT330, verze K</SourceLink>.
+          Na kartách jsou přímé odkazy na úplná PDF. Čísla stran u příručky Vaisala označují tištěné
+          stránky, například strana 169 je stranou 171 v PDF.
+        </p>
+        <p>
+          Plné texty, odkazy a oba roční soubory NOAA byly znovu ověřeny 5. listopadu 2026.
+          Vstupy příkladu zůstávají v podobě převzaté 4. října 2026.
+        </p>
       </div>
     </article>
   );

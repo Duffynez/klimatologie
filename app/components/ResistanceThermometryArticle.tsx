@@ -430,7 +430,8 @@ export function ResistanceThermometryArticle() {
           části <Link href="/pozorovani/gmsl/#bilance-hladiny">změny hladiny moře</Link> způsobené oteplováním vody.
           Teploměr v těchto výpočtech poskytuje teplotu. Energie nebo změna objemu vody se z ní
           a z dalších údajů teprve odvozují.{" "}
-          Naměřené profily zpřístupňují <SourceLink id="2026_Argo_Data">veřejná data Argo</SourceLink>.{" "}
+          Naměřené profily zpřístupňují <SourceLink id="WEB_International_Argo_Program_Data_from_GDACs_b2737bdf">datová centra Argo</SourceLink>.
+          Jak soubory číst a vybírat kvalitní údaje, vysvětluje <SourceLink id="2026_Argo_Data">dokumentace profilů Argo</SourceLink>.{" "}
           <SourceLink id="2026_SeaBird_SBE41">(Sea-Bird: SBE 41)</SourceLink>
         </p>
         <p>
@@ -729,7 +730,7 @@ export function ResistanceThermometryArticle() {
           To je teplota posledních pěti minut hodiny, shodná s posledním řádkem tabulky.
           Průměr 5,4 °C shrnuje celou hodinu, údaj 5,7 °C její závěr.
           Význam obou sloupců rozlišuje{" "}
-          <SourceLink id="2026_USCRN_Hourly_Readme">dokumentace Hourly02</SourceLink>.
+          <SourceLink id="2026_USCRN_Hourly_Readme">dokumentace Hourly02 z 6. července 2017</SourceLink>.
         </p>
         <p>
           Z veřejných pětiminutových teplot jsme tak získali hodinový průměr a porovnali jej
@@ -840,7 +841,8 @@ export function ResistanceThermometryArticle() {
           Výběr teploty USCRN popisuje příloha práce Diamonda a spoluautorů,
           terénní porovnání tabulka 1 příspěvku Hubbarda a spoluautorů.
           U příkladu Blue Hill jsou ke stažení použité řádky, jejich původ a výpočet.
-          Datové a metodické odkazy byly zkontrolovány 4. října 2026.
+          Plné texty, odkazy a oba roční soubory NOAA byly znovu ověřeny 5. listopadu 2026.
+          Vstupy příkladu zůstávají v podobě převzaté 4. října 2026.
         </p>
       </div>
     </article>

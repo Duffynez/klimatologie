@@ -1,0 +1,2008 @@
+{
+  "date": "2026-11-05",
+  "scope": {
+    "section": "Metody",
+    "articles": [
+      {
+        "slug": "odporova-termometrie-a-termistory",
+        "sources": 29
+      },
+      {
+        "slug": "hygrometrie",
+        "sources": 19
+      }
+    ],
+    "originalUniqueSources": 37,
+    "finalUniqueSources": 38
+  },
+  "findings": [
+    {
+      "id": "hourly-document-date",
+      "status": "fixed",
+      "details": "Hourly02 readme header states UPDATED: 2017-07-06. Corrected bibliographic year from 2026 to 2017, preserving stable source ID."
+    },
+    {
+      "id": "undated-web-documents",
+      "status": "fixed",
+      "details": "Marked access year explicitly for USCRN measurements and instruments, Argo profile guidance and undated Mauna Loa photographs."
+    },
+    {
+      "id": "argo-data-versus-guide",
+      "status": "fixed",
+      "details": "The article now links separately to Data from GDACs and the profile-file guide. A guide is no longer labelled as the data itself."
+    },
+    {
+      "id": "siemens-manuscript-access",
+      "status": "improved",
+      "details": "Kept the original archival record and added a verified complete original PDF with 60 manuscript images and two introductory archive pages."
+    },
+    {
+      "id": "vaisala-page-numbers",
+      "status": "clarified",
+      "details": "Verified edition M210566EN-K, December 2013, 209 PDF pages. Printed p.169 is PDF p.171."
+    }
+  ],
+  "sources": [
+    {
+      "id": "2021_BIPM_IPRT",
+      "title": "Guide to Secondary Thermometry: Industrial Platinum Resistance Thermometers",
+      "author": "Jonathan V. Pearce a kol.",
+      "year": 2021,
+      "publication": "BIPM Consultative Committee for Thermometry",
+      "type": "Metodická příručka",
+      "category": "science",
+      "externalUrl": "https://www.bipm.org/documents/20126/41773843/BIPM_CCT_Guide_to_IPRTs.pdf/b3bd8bba-3b0b-ab46-481f-29ceddf7bb31?download=true&t=1638374241171&version=1.1",
+      "availability": "open-access",
+      "citationLabel": "Pearce et al. 2021",
+      "topics": [
+        "metody",
+        "teplota",
+        "platinový teploměr",
+        "kalibrace"
+      ]
+    },
+    {
+      "id": "WEB_NOAA_MLO_USCRN_Photos",
+      "title": "U.S. Climate Reference Network: fotografie měřidel na Mauna Loa",
+      "author": "NOAA Mauna Loa Observatory",
+      "year": 2026,
+      "yearLabel": "přístup 2026",
+      "publication": "NOAA Global Monitoring Laboratory, fotografie bez data, přístup 18. října 2026",
+      "type": "Fotografie měřicí stanice",
+      "category": "organization",
+      "externalUrl": "https://gml.noaa.gov/obop/mlo/programs/coop/crn/crn.html",
+      "citationLabel": "NOAA: měřidla USCRN na Mauna Loa",
+      "topics": [
+        "metody",
+        "odporová termometrie",
+        "hygrometrie",
+        "fotografie"
+      ],
+      "openAccessUrl": "https://gml.noaa.gov/obop/mlo/programs/coop/crn/crn.html",
+      "availability": "open-access"
+    },
+    {
+      "id": "WEB_NOAA_Using_Content_FAQ",
+      "title": "NOAA Education and Outreach: Using NOAA content",
+      "author": "NOAA Office of Education",
+      "year": 2026,
+      "publication": "NOAA",
+      "type": "Podmínky použití",
+      "category": "organization",
+      "externalUrl": "https://www.noaa.gov/office-education/outreach-communication/faq",
+      "citationLabel": "NOAA: podmínky použití obsahu",
+      "topics": [
+        "zdroje",
+        "licence"
+      ],
+      "yearLabel": "přístup 2026",
+      "openAccessUrl": "https://www.noaa.gov/office-education/outreach-communication/faq",
+      "availability": "open-access"
+    },
+    {
+      "id": "2016_OpenStax_University_Physics_2",
+      "title": "University Physics, Volume 2",
+      "author": "Samuel J. Ling, Jeff Sanny a William Moebs",
+      "year": 2016,
+      "publication": "OpenStax, Rice University. Volně dostupné elektronické vydání.",
+      "type": "Vysokoškolská učebnice termodynamiky, elektřiny a magnetismu",
+      "category": "book",
+      "externalUrl": "https://openstax.org/details/books/university-physics-volume-2",
+      "citationLabel": "OpenStax: University Physics 2",
+      "topics": [
+        "metody",
+        "učebnice",
+        "termometrie",
+        "elektřina",
+        "vodivost",
+        "kapacita"
+      ],
+      "openAccessUrl": "https://openstax.org/books/university-physics-volume-2/pages/1-introduction",
+      "availability": "open-access"
+    },
+    {
+      "id": "2026_USCRN_Measurements",
+      "title": "U.S. Climate Reference Network: Measurements",
+      "author": "NOAA National Centers for Environmental Information",
+      "year": 2026,
+      "yearLabel": "přístup 2026",
+      "publication": "U.S. Climate Reference Network, nedatovaná dokumentace. Přístup 5. listopadu 2026.",
+      "type": "Dokumentace měřicí sítě",
+      "category": "organization",
+      "externalUrl": "https://www.ncei.noaa.gov/access/crn/measurements.html",
+      "availability": "open-access",
+      "citationLabel": "NOAA/NCEI USCRN",
+      "topics": [
+        "metody",
+        "teplota",
+        "měřicí přístroje",
+        "USCRN"
+      ]
+    },
+    {
+      "id": "WEB_NOAA_Podminky_pouziti_NOAA_17f3c88c",
+      "title": "NOAA: podmínky použití fotografií, zvuku a videa",
+      "author": "NOAA Office of Marine and Aviation Operations",
+      "year": 2026,
+      "publication": "Image Licensing & Usage Info. Obecné podmínky použití materiálů NOAA.",
+      "type": "Licenční podmínky",
+      "category": "organization",
+      "externalUrl": "https://www.omao.noaa.gov/image-licensing-usage-info",
+      "citationLabel": "NOAA",
+      "topics": [
+        "pozorování",
+        "oxid uhličitý",
+        "atmosféra",
+        "metody",
+        "odporová termometrie",
+        "teplota"
+      ],
+      "yearLabel": "přístup 2026",
+      "openAccessUrl": "https://www.omao.noaa.gov/image-licensing-usage-info",
+      "availability": "open-access"
+    },
+    {
+      "id": "2025_NIST_Thermometer_Calibrations",
+      "title": "Industrial Thermometer Calibrations",
+      "author": "National Institute of Standards and Technology",
+      "year": 2025,
+      "publication": "NIST Physical Measurement Laboratory",
+      "type": "Kalibrační služba a metodický popis",
+      "category": "organization",
+      "externalUrl": "https://www.nist.gov/pml/sensor-science/thermodynamic-metrology/industrial-thermometer-calibrations",
+      "availability": "open-access",
+      "citationLabel": "NIST 2025",
+      "topics": [
+        "metody",
+        "teplota",
+        "kalibrace",
+        "návaznost"
+      ]
+    },
+    {
+      "id": "2012_VIM_Calibration",
+      "title": "International Vocabulary of Metrology (VIM), 2.39 Calibration",
+      "author": "Joint Committee for Guides in Metrology",
+      "year": 2012,
+      "publication": "JCGM 200:2012, třetí vydání, elektronická verze s vysvětlivkami",
+      "type": "Metrologický slovník",
+      "category": "science",
+      "externalUrl": "https://jcgm.bipm.org/vim/en/2.39.html",
+      "availability": "open-access",
+      "topics": [
+        "metody",
+        "teplota",
+        "odporová termometrie"
+      ]
+    },
+    {
+      "id": "2021_BIPM_SPRT",
+      "title": "Guide to the Realization of the ITS-90: Platinum Resistance Thermometry",
+      "author": "BIPM Consultative Committee for Thermometry",
+      "year": 2021,
+      "publication": "Bureau International des Poids et Mesures",
+      "type": "Metrologická příručka",
+      "category": "science",
+      "externalUrl": "https://www.bipm.org/documents/20126/41773843/Guide_ITS-90_5_SPRT_2021.pdf/c4bbbe56-4118-eef7-47cb-3ea234db40b8?download=true&t=1667829321760&version=1.12",
+      "availability": "open-access",
+      "citationLabel": "BIPM 2021",
+      "topics": [
+        "metody",
+        "teplota",
+        "ITS-90",
+        "metrologie"
+      ]
+    },
+    {
+      "id": "WEB_nist_gov_SPRT_Calibration_Laboratory_NIST_eaa9779d",
+      "title": "SPRT Calibration Laboratory | NIST",
+      "author": "National Institute of Standards and Technology (NIST)",
+      "year": 2025,
+      "publication": "National Institute of Standards and Technology (NIST)",
+      "type": "Obrazový zdroj",
+      "category": "organization",
+      "externalUrl": "https://www.nist.gov/image/sprt-calibration-laboratory",
+      "availability": "open-access",
+      "citationLabel": "NIST 2025",
+      "topics": [
+        "metody",
+        "odporová termometrie",
+        "teplota"
+      ]
+    },
+    {
+      "id": "2003_OIML_R84",
+      "title": "OIML R 84: Platinum, Copper, and Nickel Resistance Thermometers (for Industrial and Commercial Use)",
+      "author": "International Organization of Legal Metrology",
+      "year": 2003,
+      "publication": "OIML R 84, vydání 2003",
+      "type": "Veřejné metrologické doporučení",
+      "category": "science",
+      "externalUrl": "https://www.oiml.org/en/files/pdf_r/r084-e03.pdf",
+      "availability": "open-access",
+      "topics": [
+        "metody",
+        "teplota",
+        "odporová termometrie"
+      ]
+    },
+    {
+      "id": "2013_Diamond_USCRN",
+      "title": "U.S. Climate Reference Network after One Decade of Operations: Status and Assessment",
+      "author": "Howard J. Diamond a kol.",
+      "year": 2013,
+      "publication": "Bulletin of the American Meteorological Society",
+      "type": "Primární klimatologická aplikace",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.1175/BAMS-D-12-00170.1",
+      "openAccessUrl": "https://mural.maynoothuniversity.ie/id/eprint/6481/1/PT_US%20climate.pdf",
+      "availability": "open-access",
+      "citationLabel": "Diamond et al. 2013",
+      "topics": [
+        "metody",
+        "teplota",
+        "meteorologické stanice",
+        "USCRN"
+      ]
+    },
+    {
+      "id": "2017_USCRN_Subhourly_Readme",
+      "title": "USCRN Subhourly01: Description of Data Fields",
+      "author": "NOAA National Centers for Environmental Information",
+      "year": 2017,
+      "publication": "U.S. Climate Reference Network, aktualizace 6. července 2017",
+      "type": "Datová dokumentace",
+      "category": "organization",
+      "externalUrl": "https://www.ncei.noaa.gov/pub/data/uscrn/products/subhourly01/readme.txt",
+      "availability": "open-access",
+      "topics": [
+        "metody",
+        "teplota",
+        "odporová termometrie"
+      ]
+    },
+    {
+      "id": "2026_USCRN_Hourly_Readme",
+      "title": "USCRN Hourly02: Description of Data Fields",
+      "author": "NOAA National Centers for Environmental Information",
+      "year": 2017,
+      "publication": "U.S. Climate Reference Network, aktualizace 6. července 2017. Znovu ověřeno 5. listopadu 2026.",
+      "type": "Datová dokumentace",
+      "category": "organization",
+      "externalUrl": "https://www.ncei.noaa.gov/pub/data/uscrn/products/hourly02/readme.txt",
+      "availability": "open-access",
+      "topics": [
+        "metody",
+        "teplota",
+        "odporová termometrie"
+      ]
+    },
+    {
+      "id": "DOI_10_1029_2019jd032361",
+      "title": "An Updated Assessment of Near‐Surface Temperature Change From 1850: The HadCRUT5 Data Set",
+      "author": "C. P. Morice a kol.",
+      "year": 2021,
+      "publication": "Journal of Geophysical Research: Atmospheres",
+      "type": "Studie",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.1029/2019JD032361",
+      "citationLabel": "Morice et al. 2021",
+      "topics": [
+        "pozorování",
+        "globální teplota",
+        "atmosféra"
+      ],
+      "openAccessUrl": "https://www.metoffice.gov.uk/hadobs/hadcrut5/HadCRUT5_accepted.pdf",
+      "availability": "open-access"
+    },
+    {
+      "id": "DOI_10_1175_jtech_d_11_00103_1",
+      "title": "An Overview of the Global Historical Climatology Network-Daily Database",
+      "author": "Matthew J. Menne a kol.",
+      "year": 2012,
+      "publication": "Journal of Atmospheric and Oceanic Technology",
+      "type": "Studie",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.1175/JTECH-D-11-00103.1",
+      "citationLabel": "Menne et al. 2012",
+      "topics": [
+        "pozorování",
+        "vlny veder",
+        "extrémy",
+        "srážky"
+      ],
+      "openAccessUrl": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/papers/menne-etal2012.pdf",
+      "availability": "open-access"
+    },
+    {
+      "id": "2021_NIST_Humidity_Calibration",
+      "title": "Calibration of Hygrometers with the Hybrid Humidity Generator",
+      "author": "C. W. Meyer, T. Herman a W. W. Miller",
+      "year": 2021,
+      "publication": "NIST Special Publication 250-83, Revision 1",
+      "type": "Kalibrační metodika",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.6028/NIST.SP.250-83r1",
+      "citationLabel": "Meyer a kol. 2021, NIST",
+      "topics": [
+        "metody",
+        "hygrometrie",
+        "vlhkost",
+        "kalibrace"
+      ],
+      "openAccessUrl": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.250-83r1.pdf",
+      "availability": "open-access"
+    },
+    {
+      "id": "WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a",
+      "title": "Guide to Best Practices for Ocean CO₂ Measurements",
+      "author": "Andrew G. Dickson, Christopher L. Sabine a James R. Christian (eds.)",
+      "year": 2007,
+      "publication": "PICES Special Publication 3 / IOCCP Report 8",
+      "type": "Metodická příručka",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.25607/OBP-1342",
+      "citationLabel": "Dickson a kol. 2007",
+      "topics": [
+        "pozorování",
+        "acidifikace oceánu",
+        "oceán"
+      ],
+      "openAccessUrl": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/Handbook_2007/Guide_all_in_one.pdf",
+      "availability": "open-access"
+    },
+    {
+      "id": "2017_Vaisala_RS41",
+      "title": "Vaisala Radiosonde RS41 Measurement Performance",
+      "author": "Vaisala",
+      "year": 2017,
+      "publication": "White paper B211356EN-B",
+      "type": "Technická dokumentace přístroje",
+      "category": "organization",
+      "externalUrl": "https://www.vaisala.com/sites/default/files/documents/WEA-MET-RS41-Performance-White-paper-B211356EN-B-LOW-v3.pdf",
+      "availability": "open-access",
+      "topics": [
+        "metody",
+        "teplota",
+        "radiosondy",
+        "odporová termometrie"
+      ]
+    },
+    {
+      "id": "2014_BIPM_Thermistors",
+      "title": "Guide on Secondary Thermometry: Thermistor Thermometry",
+      "author": "David R. White, Kenneth D. Hill, Dolores del Campo a Carmen Garcia Izquierdo",
+      "year": 2014,
+      "publication": "BIPM Consultative Committee for Thermometry",
+      "type": "Metodická příručka",
+      "category": "science",
+      "externalUrl": "https://www.bipm.org/documents/20126/41773843/Guide-SecTh-Thermistor-Thermometry.pdf/87e2fdc8-14fc-e977-918e-b801752d06a0?download=true&t=1593014016288&version=1.3",
+      "availability": "open-access",
+      "citationLabel": "White et al. 2014",
+      "topics": [
+        "metody",
+        "teplota",
+        "termistory",
+        "kalibrace"
+      ]
+    },
+    {
+      "id": "WEB_International_Argo_Program_Data_from_GDACs_b2737bdf",
+      "title": "Data from GDACs",
+      "author": "International Argo Program",
+      "year": 2026,
+      "publication": "International Argo Program",
+      "type": "Datový portál nebo soubor",
+      "category": "organization",
+      "externalUrl": "https://argo.ucsd.edu/data/data-from-gdacs/",
+      "citationLabel": "Globální datová centra Argo",
+      "topics": [
+        "pozorování",
+        "obsah tepla v oceánu",
+        "oceán"
+      ],
+      "yearLabel": "přístup 2026",
+      "openAccessUrl": "https://argo.ucsd.edu/data/data-from-gdacs/",
+      "availability": "open-access"
+    },
+    {
+      "id": "2026_Argo_Data",
+      "title": "How to Use Argo Profile Files",
+      "author": "Argo Data Management Team",
+      "year": 2026,
+      "yearLabel": "přístup 2026",
+      "publication": "International Argo Program, nedatovaná dokumentace. Přístup 5. listopadu 2026.",
+      "type": "Datová dokumentace",
+      "category": "organization",
+      "externalUrl": "https://argo.ucsd.edu/data/how-to-use-argo-files/",
+      "availability": "open-access",
+      "citationLabel": "Argo 2026",
+      "topics": [
+        "metody",
+        "teplota",
+        "data",
+        "Argo",
+        "oceán"
+      ]
+    },
+    {
+      "id": "2026_SeaBird_SBE41",
+      "title": "SBE 41/41CP Deep Argo CTD: Technical Specifications",
+      "author": "Sea-Bird Scientific",
+      "year": 2026,
+      "publication": "SBE 41/41CP Deep datasheet DS.53",
+      "type": "Technická dokumentace přístroje",
+      "category": "organization",
+      "externalUrl": "https://www.seabird.com/hubfs/Product%20Assets/SBE%2041/Datasheets/SBE%2041_41%20CP%20Deep%20DS.53.March26.pdf?hsLang=en",
+      "availability": "open-access",
+      "citationLabel": "Sea-Bird 2026",
+      "topics": [
+        "metody",
+        "teplota",
+        "termistory",
+        "Argo",
+        "oceán"
+      ]
+    },
+    {
+      "id": "DOI_10_5194_essd_6_201_2014",
+      "title": "Temperature data acquired from the DOI/GTN-P Deep Borehole Array on the Arctic Slope of Alaska, 1973–2013",
+      "author": "G. D. Clow",
+      "year": 2014,
+      "publication": "Earth System Science Data",
+      "type": "Studie",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.5194/essd-6-201-2014",
+      "citationLabel": "Clow 2014",
+      "topics": [
+        "pozorování",
+        "sníh",
+        "permafrost",
+        "kryosféra"
+      ],
+      "openAccessUrl": "https://essd.copernicus.org/articles/6/201/2014/essd-6-201-2014.pdf",
+      "availability": "open-access"
+    },
+    {
+      "id": "1871_Siemens_Thermometry",
+      "title": "The Bakerian Lecture: On the Increase of Electrical Resistance in Conductors with Rise of Temperature",
+      "author": "Charles William Siemens",
+      "year": 1871,
+      "publication": "Royal Society Archives, AP/53/8, původní rukopis o 60 snímcích. Úplné PDF má 62 stran včetně dvou úvodních stran archivu.",
+      "type": "Historický rukopis, úplné digitální snímky",
+      "category": "science",
+      "externalUrl": "https://makingscience.royalsociety.org/items/ap_53_8/unpublished-paper-the-bakerian-lecture-on-the-increase-of-electrical-resistance-in-conductors-with-rise-of-temperature-and-its-application-to-the-measure-of-ordinary-and-furnace-temperatures-also-on-a-simple-method-of-measuring-electrical-resistances-by-c-w-charles-william-siemens",
+      "openAccessUrl": "https://makingscience.royalsociety.org/pdf?arcId=ap_53_8",
+      "openAccessLinkLabel": "Otevřít úplný rukopis (PDF, 60 snímků)",
+      "availability": "open-access",
+      "citationLabel": "Siemens 1871",
+      "topics": [
+        "metody",
+        "teplota",
+        "odporová termometrie"
+      ]
+    },
+    {
+      "id": "1942_Hoge_Brickwedde",
+      "title": "Intercomparison of Platinum Resistance Thermometers between −190° and 445 °C",
+      "author": "Harold J. Hoge a Ferdinand G. Brickwedde",
+      "year": 1942,
+      "publication": "Journal of Research of the National Bureau of Standards 28, 217–240",
+      "type": "Původní metrologická studie",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.6028/jres.028.007",
+      "availability": "open-access",
+      "topics": [
+        "metody",
+        "teplota",
+        "odporová termometrie"
+      ],
+      "openAccessUrl": "https://nvlpubs.nist.gov/nistpubs/jres/28/jresv28n2p217_A1b.pdf"
+    },
+    {
+      "id": "2004_Hubbard_USCRN",
+      "title": "A Study on the USCRN Air Temperature Performance",
+      "author": "Kenneth G. Hubbard, Xiaomao Lin a C. Bruce Baker",
+      "year": 2004,
+      "publication": "84th AMS Annual Meeting, příspěvek 4.1, 13. ledna 2004",
+      "type": "Původní konferenční příspěvek",
+      "category": "science",
+      "externalUrl": "https://ams.confex.com/ams/84Annual/webprogram/Paper69979.html",
+      "availability": "open-access",
+      "topics": [
+        "metody",
+        "teplota",
+        "odporová termometrie"
+      ],
+      "openAccessUrl": "https://ams.confex.com/ams/pdfpapers/69979.pdf"
+    },
+    {
+      "id": "2025_USCRN_Blue_Hill_Subhourly",
+      "title": "USCRN Subhourly01: MA Blue Hill 0 W, pětiminutová data za rok 2025",
+      "author": "NOAA National Centers for Environmental Information",
+      "year": 2025,
+      "publication": "U.S. Climate Reference Network, přístup 4. října 2026",
+      "type": "Veřejná data",
+      "category": "organization",
+      "externalUrl": "https://www.ncei.noaa.gov/pub/data/uscrn/products/subhourly01/2025/CRNS0101-05-2025-MA_Blue_Hill_0_W.txt",
+      "availability": "open-access",
+      "topics": [
+        "metody",
+        "teplota",
+        "odporová termometrie"
+      ]
+    },
+    {
+      "id": "2025_USCRN_Blue_Hill_Hourly",
+      "title": "USCRN Hourly02: MA Blue Hill 0 W, hodinová data za rok 2025",
+      "author": "NOAA National Centers for Environmental Information",
+      "year": 2025,
+      "publication": "U.S. Climate Reference Network, přístup 4. října 2026",
+      "type": "Veřejná data",
+      "category": "organization",
+      "externalUrl": "https://www.ncei.noaa.gov/pub/data/uscrn/products/hourly02/2025/CRNH0203-2025-MA_Blue_Hill_0_W.txt",
+      "availability": "open-access",
+      "topics": [
+        "metody",
+        "teplota",
+        "odporová termometrie"
+      ]
+    },
+    {
+      "id": "2013_NPL_Humidity",
+      "title": "The Beginner’s Guide to Humidity Measurement",
+      "author": "Stephanie Bell",
+      "year": 2013,
+      "publication": "National Physical Laboratory, Measurement Good Practice Guide 124",
+      "type": "Metodická příručka",
+      "category": "science",
+      "externalUrl": "https://eprintspublications.npl.co.uk/7464/",
+      "citationLabel": "Bell 2013, NPL",
+      "topics": [
+        "metody",
+        "hygrometrie",
+        "vlhkost",
+        "kalibrace"
+      ],
+      "openAccessUrl": "https://eprintspublications.npl.co.uk/7464/1/mgpg124.pdf",
+      "availability": "open-access"
+    },
+    {
+      "id": "DOI_10_1175_jtech_d_12_00232_1",
+      "title": "Evolution and Accuracy of Surface Humidity Reports",
+      "author": "Bruce Ingleby, David Moore, Chris Sloan a Robert Dunn",
+      "year": 2013,
+      "publication": "Journal of Atmospheric and Oceanic Technology 30, 2025–2043",
+      "type": "Terénní porovnání přístrojů",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.1175/JTECH-D-12-00232.1",
+      "citationLabel": "Ingleby a kol. 2013",
+      "topics": [
+        "metody",
+        "hygrometrie",
+        "vlhkost",
+        "ověření měření"
+      ],
+      "openAccessUrl": "https://journals.ametsoc.org/view/journals/atot/30/9/jtech-d-12-00232_1.xml",
+      "availability": "open-access"
+    },
+    {
+      "id": "2026_USCRN_Instruments",
+      "title": "U.S. Climate Reference Network: Instruments",
+      "author": "NOAA National Centers for Environmental Information",
+      "year": 2026,
+      "yearLabel": "přístup 2026",
+      "publication": "U.S. Climate Reference Network, nedatovaný seznam přístrojů. Přístup 5. listopadu 2026.",
+      "type": "Dokumentace měřicí sítě",
+      "category": "organization",
+      "externalUrl": "https://www.ncei.noaa.gov/access/crn/instruments.html",
+      "citationLabel": "NOAA/NCEI, přístroje USCRN",
+      "topics": [
+        "metody",
+        "hygrometrie",
+        "vlhkost",
+        "USCRN"
+      ],
+      "openAccessUrl": "https://www.ncei.noaa.gov/access/crn/instruments.html",
+      "availability": "open-access"
+    },
+    {
+      "id": "DOI_10_5194_cp_10_1983_2014",
+      "title": "HadISDH land surface multi-variable humidity and temperature record for climate monitoring",
+      "author": "K. M. Willett a kol.",
+      "year": 2014,
+      "publication": "Climate of the Past",
+      "type": "Studie",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.5194/cp-10-1983-2014",
+      "citationLabel": "Willett et al. 2014",
+      "topics": [
+        "pozorování",
+        "vlhkost",
+        "atmosféra"
+      ],
+      "openAccessUrl": "https://cp.copernicus.org/articles/10/1983/2014/cp-10-1983-2014.pdf",
+      "availability": "open-access"
+    },
+    {
+      "id": "DOI_10_5194_amt_7_4463_2014",
+      "title": "Reference quality upper-air measurements: GRUAN data processing for the Vaisala RS92 radiosonde",
+      "author": "R. J. Dirksen a kol.",
+      "year": 2014,
+      "publication": "Atmospheric Measurement Techniques",
+      "type": "Studie",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.5194/amt-7-4463-2014",
+      "citationLabel": "Dirksen et al. 2014",
+      "topics": [
+        "pozorování",
+        "vlhkost",
+        "atmosféra"
+      ],
+      "openAccessUrl": "https://amt.copernicus.org/articles/7/4463/2014/amt-7-4463-2014.pdf",
+      "availability": "open-access"
+    },
+    {
+      "id": "DOI_10_1002_2018ea000363",
+      "title": "Construction and Uncertainty Estimation of a Satellite‐Derived Total Precipitable Water Data Record Over the World's Oceans",
+      "author": "Carl A. Mears a kol.",
+      "year": 2018,
+      "publication": "Earth and Space Science",
+      "type": "Studie",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.1002/2018EA000363",
+      "citationLabel": "Mears et al. 2018",
+      "topics": [
+        "pozorování",
+        "vlhkost",
+        "atmosféra"
+      ],
+      "openAccessUrl": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2018EA000363",
+      "availability": "open-access"
+    },
+    {
+      "id": "DOI_10_1029_92jd01517",
+      "title": "GPS meteorology: Remote sensing of atmospheric water vapor using the global positioning system",
+      "author": "Michael Bevis a kol.",
+      "year": 1992,
+      "publication": "Journal of Geophysical Research: Atmospheres",
+      "type": "Studie",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.1029/92JD01517",
+      "citationLabel": "Bevis et al. 1992",
+      "topics": [
+        "pozorování",
+        "vlhkost",
+        "atmosféra"
+      ],
+      "openAccessUrl": "https://radiometrics.com/wp-content/uploads/2021/10/bevis_jgr92.pdf",
+      "availability": "open-access"
+    },
+    {
+      "id": "1938_Dunmore_Hygrometer",
+      "title": "An electric hygrometer and its application to radio meteorography",
+      "author": "Francis W. Dunmore",
+      "year": 1938,
+      "publication": "Journal of Research of the National Bureau of Standards 20, 723–744",
+      "type": "Původní metodická studie",
+      "category": "science",
+      "externalUrl": "https://doi.org/10.6028/jres.020.003",
+      "citationLabel": "Dunmore 1938",
+      "topics": [
+        "metody",
+        "hygrometrie",
+        "vlhkost",
+        "historie měření"
+      ],
+      "openAccessUrl": "https://nvlpubs.nist.gov/nistpubs/jres/20/jresv20n6p723_A1b.pdf",
+      "availability": "open-access"
+    },
+    {
+      "id": "2013_Vaisala_HMT330",
+      "title": "Vaisala HUMICAP Humidity and Temperature Transmitter Series HMT330: User’s Guide, M210566EN-K",
+      "author": "Vaisala",
+      "year": 2013,
+      "publication": "Vaisala, M210566EN-K, prosinec 2013, 209 stran PDF. Citovaná čísla označují tištěné strany, například strana 169 je stranou 171 v PDF.",
+      "type": "Technická dokumentace přístroje",
+      "category": "organization",
+      "externalUrl": "https://docs.vaisala.com/v/u/M210566EN-K/en-US",
+      "citationLabel": "Vaisala, HMT330, verze K",
+      "topics": [
+        "metody",
+        "hygrometrie",
+        "vlhkost",
+        "HMT337"
+      ],
+      "openAccessUrl": "https://docs.vaisala.com/api/khub/documents/ESFFxipyzfxm51Q3ptHcyg/content",
+      "availability": "open-access"
+    }
+  ],
+  "networkRequests": [
+    {
+      "id": "src-001",
+      "url": "https://www.bipm.org/documents/20126/41773843/BIPM_CCT_Guide_to_IPRTs.pdf/b3bd8bba-3b0b-ab46-481f-29ceddf7bb31?download=true&t=1638374241171&version=1.1",
+      "status": 200,
+      "finalUrl": "https://www.bipm.org/documents/20126/41773843/BIPM_CCT_Guide_to_IPRTs.pdf/b3bd8bba-3b0b-ab46-481f-29ceddf7bb31?download=true&t=1638374241171&version=1.1",
+      "contentType": "application/pdf",
+      "contentLength": "1176720",
+      "contentRange": null,
+      "bytes": 1176720,
+      "truncated": false,
+      "file": "src-001.download",
+      "sha256": "34c6484db3801fadd6c55a1266ca0987fd1979802caa8a925a24ff20348484d9",
+      "signature": "255044462d312e370d25e2e3cfd30d0a",
+      "durationSeconds": 1.143
+    },
+    {
+      "id": "src-002",
+      "url": "https://gml.noaa.gov/obop/mlo/programs/coop/crn/crn.html",
+      "status": 200,
+      "finalUrl": "https://gml.noaa.gov/obop/mlo/programs/coop/crn/crn.html",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": "7569",
+      "contentRange": null,
+      "bytes": 26128,
+      "truncated": false,
+      "file": "src-002.download",
+      "sha256": "fec6b21a5e6a26c64a2c66f9937f22107889856abae339f0b38e4c6ec80117f7",
+      "signature": "0a090a0a0a3c21444f43545950452068",
+      "durationSeconds": 1.358
+    },
+    {
+      "id": "src-003",
+      "url": "https://www.noaa.gov/office-education/outreach-communication/faq",
+      "status": 200,
+      "finalUrl": "https://www.noaa.gov/office-education/outreach-communication/faq",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": "188678",
+      "contentRange": null,
+      "bytes": 188678,
+      "truncated": false,
+      "file": "src-003.download",
+      "sha256": "6db7ba1ace216722cfaef13694ae924f73a33083e4c89661732711939080afb9",
+      "signature": "0a0a3c21444f43545950452068746d6c",
+      "durationSeconds": 4.693
+    },
+    {
+      "id": "src-004",
+      "url": "https://openstax.org/details/books/university-physics-volume-2",
+      "status": 200,
+      "finalUrl": "https://openstax.org/details/books/university-physics-volume-2",
+      "contentType": "text/html",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 12343,
+      "truncated": false,
+      "file": "src-004.download",
+      "sha256": "122a7b58174184305f56c8c5c86c995abd6060bc1920fae9a3cec195c07fcf18",
+      "signature": "3c21646f63747970652068746d6c3e3c",
+      "durationSeconds": 1.317
+    },
+    {
+      "id": "src-005",
+      "url": "https://www.ncei.noaa.gov/access/crn/measurements.html",
+      "status": 200,
+      "finalUrl": "https://www.ncei.noaa.gov/access/crn/measurements.html",
+      "contentType": "text/html;charset=UTF-8",
+      "contentLength": "8221",
+      "contentRange": null,
+      "bytes": 38184,
+      "truncated": false,
+      "file": "src-005.download",
+      "sha256": "1de21c21dee576980b5a2af9811b1074a4398e6dc05a4db59c961b845a87b744",
+      "signature": "0a0a0a0a3c21444f4354595045206874",
+      "durationSeconds": 1.384
+    },
+    {
+      "id": "src-006",
+      "url": "https://www.omao.noaa.gov/image-licensing-usage-info",
+      "status": 200,
+      "finalUrl": "https://www.omao.noaa.gov/image-licensing-usage-info",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": "6550",
+      "contentRange": null,
+      "bytes": 38596,
+      "truncated": false,
+      "file": "src-006.download",
+      "sha256": "b8e84c5aeee6c54aa4262459d12059bad7925d9a9f0cc140d3c8984b20256443",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 1.427
+    },
+    {
+      "id": "src-007",
+      "url": "https://www.nist.gov/pml/sensor-science/thermodynamic-metrology/industrial-thermometer-calibrations",
+      "status": 200,
+      "finalUrl": "https://www.nist.gov/pml/sensor-science/thermodynamic-metrology/industrial-thermometer-calibrations",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 87065,
+      "truncated": false,
+      "file": "src-007.download",
+      "sha256": "2d31966db8bcc399ec5295749af42a1c05b77d064d4663b7d799c511697c12ad",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 1.626
+    },
+    {
+      "id": "src-008",
+      "url": "https://jcgm.bipm.org/vim/en/2.39.html",
+      "status": 200,
+      "finalUrl": "https://jcgm.bipm.org/vim/en/2.39.html",
+      "contentType": "text/html",
+      "contentLength": "4144",
+      "contentRange": null,
+      "bytes": 18930,
+      "truncated": false,
+      "file": "src-008.download",
+      "sha256": "88ed6b1c79a97e1e4c527118242b40ef54a2babeeb77125969dcd37144d12e0f",
+      "signature": "3c68746d6c3e0a3c686561643e0a3c6d",
+      "durationSeconds": 0.656
+    },
+    {
+      "id": "src-009",
+      "url": "https://www.bipm.org/documents/20126/41773843/Guide_ITS-90_5_SPRT_2021.pdf/c4bbbe56-4118-eef7-47cb-3ea234db40b8?download=true&t=1667829321760&version=1.12",
+      "status": 200,
+      "finalUrl": "https://www.bipm.org/documents/20126/41773843/Guide_ITS-90_5_SPRT_2021.pdf/c4bbbe56-4118-eef7-47cb-3ea234db40b8?download=true&t=1667829321760&version=1.12",
+      "contentType": "application/pdf",
+      "contentLength": "1186535",
+      "contentRange": null,
+      "bytes": 1186535,
+      "truncated": false,
+      "file": "src-009.download",
+      "sha256": "5ea1e71978262a917eb710c01ba8b8b858f90509cb318bf348191497cfb5dfea",
+      "signature": "255044462d312e350d25e2e3cfd30d0a",
+      "durationSeconds": 0.82
+    },
+    {
+      "id": "src-010",
+      "url": "https://www.nist.gov/image/sprt-calibration-laboratory",
+      "status": 200,
+      "finalUrl": "https://www.nist.gov/image/sprt-calibration-laboratory",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 78670,
+      "truncated": false,
+      "file": "src-010.download",
+      "sha256": "0e8bda79aa0fd49d43d980542a18c21e02709395962579fc2f41428adaaeedc9",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 1.323
+    },
+    {
+      "id": "src-011",
+      "url": "https://www.oiml.org/en/files/pdf_r/r084-e03.pdf",
+      "status": 200,
+      "finalUrl": "https://www.oiml.org/en/files/pdf_r/r084-e03.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "183533",
+      "contentRange": null,
+      "bytes": 183533,
+      "truncated": false,
+      "file": "src-011.download",
+      "sha256": "840754c6c846597f1fb1c44a2264d65d49d00950c3625b62aec12f5aa8971c8a",
+      "signature": "255044462d312e340d25e2e3cfd30d0a",
+      "durationSeconds": 0.508
+    },
+    {
+      "id": "src-012",
+      "url": "https://doi.org/10.1175/BAMS-D-12-00170.1",
+      "status": 200,
+      "finalUrl": "https://journals.ametsoc.org:443/view/journals/bams/94/4/bams-d-12-00170.1.xml",
+      "contentType": "text/html;charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 1323316,
+      "truncated": false,
+      "file": "src-012.download",
+      "sha256": "dc76caa0e00e585cba517b411953fd9f8946163973ecbcfe42a542b48951b954",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 3.133
+    },
+    {
+      "id": "src-013",
+      "url": "https://mural.maynoothuniversity.ie/id/eprint/6481/1/PT_US%20climate.pdf",
+      "status": 200,
+      "finalUrl": "https://mural.maynoothuniversity.ie/id/eprint/6481/1/PT_US%20climate.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "1333605",
+      "contentRange": null,
+      "bytes": 1333605,
+      "truncated": false,
+      "file": "src-013.download",
+      "sha256": "69238683bd03fc3bab4e881839d8a2e20c4fd7434e39444d3594fb0ffa6ee35a",
+      "signature": "255044462d312e340d25e2e3cfd30d0a",
+      "durationSeconds": 0.764
+    },
+    {
+      "id": "src-014",
+      "url": "https://www.ncei.noaa.gov/pub/data/uscrn/products/subhourly01/readme.txt",
+      "status": 200,
+      "finalUrl": "https://www.ncei.noaa.gov/pub/data/uscrn/products/subhourly01/readme.txt",
+      "contentType": "text/plain",
+      "contentLength": "14892",
+      "contentRange": null,
+      "bytes": 14892,
+      "truncated": false,
+      "file": "src-014.download",
+      "sha256": "10d37801c4ba3cca9c0baf0789d24e91f87ada69b91cf14c02715cf1517aa3bd",
+      "signature": "20202020202020202020202020202020",
+      "durationSeconds": 0.791
+    },
+    {
+      "id": "src-015",
+      "url": "https://www.ncei.noaa.gov/pub/data/uscrn/products/hourly02/readme.txt",
+      "status": 200,
+      "finalUrl": "https://www.ncei.noaa.gov/pub/data/uscrn/products/hourly02/readme.txt",
+      "contentType": "text/plain",
+      "contentLength": "21971",
+      "contentRange": null,
+      "bytes": 21971,
+      "truncated": false,
+      "file": "src-015.download",
+      "sha256": "ec43838cecb299d4987af825a62804b4fe1119e9f3cc280528bbee0c5eb17e9c",
+      "signature": "20202020202020202020202020202020",
+      "durationSeconds": 0.797
+    },
+    {
+      "id": "src-016",
+      "url": "https://doi.org/10.1029/2019JD032361",
+      "status": 403,
+      "finalUrl": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019JD032361",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 5696,
+      "truncated": false,
+      "file": "src-016.download",
+      "sha256": "da0f611709a53cf3f8b8e1079a49827edcadd812543a88df24da25f427e885e4",
+      "signature": "3c21444f43545950452068746d6c3e3c",
+      "durationSeconds": 0.76
+    },
+    {
+      "id": "src-017",
+      "url": "https://www.metoffice.gov.uk/hadobs/hadcrut5/HadCRUT5_accepted.pdf",
+      "status": 200,
+      "finalUrl": "https://www.metoffice.gov.uk/hadobs/hadcrut5/HadCRUT5_accepted.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "6238514",
+      "contentRange": null,
+      "bytes": 6238514,
+      "truncated": false,
+      "file": "src-017.download",
+      "sha256": "e87455d081038f10a07272447ba363bc5cfe96107bd500b0a529567ec1246aa5",
+      "signature": "255044462d312e340a25e2e3cfd30a35",
+      "durationSeconds": 0.721
+    },
+    {
+      "id": "src-018",
+      "url": "https://doi.org/10.1175/JTECH-D-11-00103.1",
+      "status": 200,
+      "finalUrl": "https://journals.ametsoc.org:443/view/journals/atot/29/7/jtech-d-11-00103_1.xml",
+      "contentType": "text/html;charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 951082,
+      "truncated": false,
+      "file": "src-018.download",
+      "sha256": "48ce3f35d19d66828d74aa495021ac6ac6eae90061128710fc4e5b0d00cd7ebd",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 2.62
+    },
+    {
+      "id": "src-019",
+      "url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/papers/menne-etal2012.pdf",
+      "status": 200,
+      "finalUrl": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/papers/menne-etal2012.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "4571399",
+      "contentRange": null,
+      "bytes": 4571399,
+      "truncated": false,
+      "file": "src-019.download",
+      "sha256": "2a5591025800da93e08a3bd516fda854180b13423065773a1cf7b28fa2dc1861",
+      "signature": "255044462d312e340d25e2e3cfd30d0a",
+      "durationSeconds": 1.894
+    },
+    {
+      "id": "src-020",
+      "url": "https://doi.org/10.6028/NIST.SP.250-83r1",
+      "status": 200,
+      "finalUrl": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.250-83r1.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "5437163",
+      "contentRange": null,
+      "bytes": 5437163,
+      "truncated": false,
+      "file": "src-020.download",
+      "sha256": "aad34c77111a6a350b8ba9c2940a8b706d86f4fca7eb6c0f224fb6b43fc58e32",
+      "signature": "255044462d312e360d25e2e3cfd30d0a",
+      "durationSeconds": 2.665
+    },
+    {
+      "id": "src-021",
+      "url": "https://doi.org/10.25607/OBP-1342",
+      "status": 200,
+      "finalUrl": "https://repository.oceanbestpractices.org/handle/11329/249",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 5952,
+      "truncated": false,
+      "file": "src-021.download",
+      "sha256": "fb531827be8095a64606c898d6259e8a735a9a22ff1729fb7f0ca71905d46261",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 1.923
+    },
+    {
+      "id": "src-022",
+      "url": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/Handbook_2007/Guide_all_in_one.pdf",
+      "status": 200,
+      "finalUrl": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/Handbook_2007/Guide_all_in_one.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "5434312",
+      "contentRange": null,
+      "bytes": 5434312,
+      "truncated": false,
+      "file": "src-022.download",
+      "sha256": "1aaac8e647d9e0b12eaa31e669504e51bbc85fdebed4442464cc8e14cdc7ddfd",
+      "signature": "255044462d312e370d25e2e3cfd30d0a",
+      "durationSeconds": 1.76
+    },
+    {
+      "id": "src-023",
+      "url": "https://www.vaisala.com/sites/default/files/documents/WEA-MET-RS41-Performance-White-paper-B211356EN-B-LOW-v3.pdf",
+      "status": 200,
+      "finalUrl": "https://www.vaisala.com/sites/default/files/documents/WEA-MET-RS41-Performance-White-paper-B211356EN-B-LOW-v3.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "2795032",
+      "contentRange": null,
+      "bytes": 2795032,
+      "truncated": false,
+      "file": "src-023.download",
+      "sha256": "9889775a63456b62091851fe1344f05fd5462b2094d94babb39f4a032cca5a81",
+      "signature": "255044462d312e350d258084888c9094",
+      "durationSeconds": 0.828
+    },
+    {
+      "id": "src-024",
+      "url": "https://www.bipm.org/documents/20126/41773843/Guide-SecTh-Thermistor-Thermometry.pdf/87e2fdc8-14fc-e977-918e-b801752d06a0?download=true&t=1593014016288&version=1.3",
+      "status": 200,
+      "finalUrl": "https://www.bipm.org/documents/20126/41773843/Guide-SecTh-Thermistor-Thermometry.pdf/87e2fdc8-14fc-e977-918e-b801752d06a0?download=true&t=1593014016288&version=1.3",
+      "contentType": "application/pdf",
+      "contentLength": "695076",
+      "contentRange": null,
+      "bytes": 695076,
+      "truncated": false,
+      "file": "src-024.download",
+      "sha256": "cf445a4d21311d2e553001b39bfc4f02171be123e55fa357792d37159be47f37",
+      "signature": "255044462d312e360d25e2e3cfd30d0a",
+      "durationSeconds": 0.57
+    },
+    {
+      "id": "src-025",
+      "url": "https://argo.ucsd.edu/data/how-to-use-argo-files/",
+      "status": 200,
+      "finalUrl": "https://argo.ucsd.edu/data/how-to-use-argo-files/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": "18356",
+      "contentRange": null,
+      "bytes": 94788,
+      "truncated": false,
+      "file": "src-025.download",
+      "sha256": "6c341fb1110ad318dbb8eef98d62ec0b8004ed1699d8a04ebe366df9eef6925a",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 2.082
+    },
+    {
+      "id": "src-026",
+      "url": "https://www.seabird.com/hubfs/Product%20Assets/SBE%2041/Datasheets/SBE%2041_41%20CP%20Deep%20DS.53.March26.pdf?hsLang=en",
+      "status": 200,
+      "finalUrl": "https://www.seabird.com/hubfs/Product%20Assets/SBE%2041/Datasheets/SBE%2041_41%20CP%20Deep%20DS.53.March26.pdf?hsLang=en",
+      "contentType": "application/pdf",
+      "contentLength": "185689",
+      "contentRange": null,
+      "bytes": 185689,
+      "truncated": false,
+      "file": "src-026.download",
+      "sha256": "a308666b4ee07e51335a881f2846967820fb34f8e48d7e34ae98a2cde8b2d849",
+      "signature": "255044462d312e370d25e2e3cfd30d0a",
+      "durationSeconds": 1.554
+    },
+    {
+      "id": "src-027",
+      "url": "https://doi.org/10.5194/essd-6-201-2014",
+      "status": 200,
+      "finalUrl": "https://essd.copernicus.org/articles/6/201/2014/",
+      "contentType": "text/html",
+      "contentLength": "23599",
+      "contentRange": null,
+      "bytes": 121196,
+      "truncated": false,
+      "file": "src-027.download",
+      "sha256": "267fba30a930f7cb5876393306768a326c2f19a5fb317a0bc842c0179528b8a4",
+      "signature": "3c21444f43545950452068746d6c2050",
+      "durationSeconds": 1.278
+    },
+    {
+      "id": "src-028",
+      "url": "https://essd.copernicus.org/articles/6/201/2014/essd-6-201-2014.pdf",
+      "status": 200,
+      "finalUrl": "https://essd.copernicus.org/articles/6/201/2014/essd-6-201-2014.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "4546577",
+      "contentRange": null,
+      "bytes": 4546577,
+      "truncated": false,
+      "file": "src-028.download",
+      "sha256": "074c21091cbb7fbfe266d84524f5acc4dc88a3b2785697508338aa10df5a0bc1",
+      "signature": "255044462d312e340a25d0d4c5d80a35",
+      "durationSeconds": 2.409
+    },
+    {
+      "id": "src-029",
+      "url": "https://makingscience.royalsociety.org/items/ap_53_8/unpublished-paper-the-bakerian-lecture-on-the-increase-of-electrical-resistance-in-conductors-with-rise-of-temperature-and-its-application-to-the-measure-of-ordinary-and-furnace-temperatures-also-on-a-simple-method-of-measuring-electrical-resistances-by-c-w-charles-william-siemens",
+      "error": "HTTPSConnectionPool(host='makingscience.royalsociety.org', port=443): Max retries exceeded with url: /items/ap_53_8/unpublished-paper-the-bakerian-lecture-on-the-increase-of-electrical-resistance-in-conductors-with-rise-of-temperature-and-its-application-to-the-measure-of-ordinary-and-furnace-temperatures-also-on-a-simple-method-of-measuring-electrical-resistances-by-c-w-charles-william-siemens (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1077)')))",
+      "durationSeconds": 0.552
+    },
+    {
+      "id": "src-030",
+      "url": "https://makingscience.royalsociety.org/items/ap_53_8/",
+      "error": "HTTPSConnectionPool(host='makingscience.royalsociety.org', port=443): Max retries exceeded with url: /items/ap_53_8/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1077)')))",
+      "durationSeconds": 0.32
+    },
+    {
+      "id": "src-031",
+      "url": "https://doi.org/10.6028/jres.028.007",
+      "status": 200,
+      "finalUrl": "https://nvlpubs.nist.gov/nistpubs/jres/28/jresv28n2p217_A1b.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "24763382",
+      "contentRange": null,
+      "bytes": 24763382,
+      "truncated": false,
+      "file": "src-031.download",
+      "sha256": "225599a9a441590b52ec6fef61ad0aed69e00a584792631427dd9bcf2e16ac2e",
+      "signature": "255044462d312e340d25e2e3cfd30d0a",
+      "durationSeconds": 6.54
+    },
+    {
+      "id": "src-032",
+      "url": "https://nvlpubs.nist.gov/nistpubs/jres/28/jresv28n2p217_A1b.pdf",
+      "status": 200,
+      "finalUrl": "https://nvlpubs.nist.gov/nistpubs/jres/28/jresv28n2p217_A1b.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "24763382",
+      "contentRange": null,
+      "bytes": 24763382,
+      "truncated": false,
+      "file": "src-032.download",
+      "sha256": "225599a9a441590b52ec6fef61ad0aed69e00a584792631427dd9bcf2e16ac2e",
+      "signature": "255044462d312e340d25e2e3cfd30d0a",
+      "durationSeconds": 2.98
+    },
+    {
+      "id": "src-033",
+      "url": "https://ams.confex.com/ams/84Annual/webprogram/Paper69979.html",
+      "status": 200,
+      "finalUrl": "https://ams.confex.com/ams/84Annual/webprogram/Paper69979.html",
+      "contentType": "text/html",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 4839,
+      "truncated": false,
+      "file": "src-033.download",
+      "sha256": "3621f9c7e3938c495dd9d8af37727023ecaa01e767598c428e88096bdd9e9286",
+      "signature": "3c68746d6c3e0d0a0d0a093c68656164",
+      "durationSeconds": 1.066
+    },
+    {
+      "id": "src-034",
+      "url": "https://ams.confex.com/ams/pdfpapers/69979.pdf",
+      "status": 200,
+      "finalUrl": "https://ams.confex.com/ams/pdfpapers/69979.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "644676",
+      "contentRange": null,
+      "bytes": 644676,
+      "truncated": false,
+      "file": "src-034.download",
+      "sha256": "8aba530624ac82d98ea4cc525ecc71ee676f8da160fcf9ef3ae8b0401bf4ee52",
+      "signature": "255044462d312e330d0a25e2e3cfd30d",
+      "durationSeconds": 2.182
+    },
+    {
+      "id": "src-035",
+      "url": "https://www.ncei.noaa.gov/pub/data/uscrn/products/subhourly01/2025/CRNS0101-05-2025-MA_Blue_Hill_0_W.txt",
+      "status": 200,
+      "finalUrl": "https://www.ncei.noaa.gov/pub/data/uscrn/products/subhourly01/2025/CRNS0101-05-2025-MA_Blue_Hill_0_W.txt",
+      "contentType": "text/plain",
+      "contentLength": "14191200",
+      "contentRange": null,
+      "bytes": 14191200,
+      "truncated": false,
+      "file": "src-035.download",
+      "sha256": "50d299e2233f890781456430354c70849b84ca697f3e874009563485bb0124bb",
+      "signature": "39343738352032303235303130312030",
+      "durationSeconds": 2.442
+    },
+    {
+      "id": "src-036",
+      "url": "https://www.ncei.noaa.gov/pub/data/uscrn/products/hourly02/2025/CRNH0203-2025-MA_Blue_Hill_0_W.txt",
+      "status": 200,
+      "finalUrl": "https://www.ncei.noaa.gov/pub/data/uscrn/products/hourly02/2025/CRNH0203-2025-MA_Blue_Hill_0_W.txt",
+      "contentType": "text/plain",
+      "contentLength": "2137440",
+      "contentRange": null,
+      "bytes": 2137440,
+      "truncated": false,
+      "file": "src-036.download",
+      "sha256": "dcaacf902c8810edbc01b3bfcc6eed9189f0d4d6d226be484cc2242cec3ad1a8",
+      "signature": "39343738352032303235303130312030",
+      "durationSeconds": 1.737
+    },
+    {
+      "id": "src-037",
+      "url": "https://eprintspublications.npl.co.uk/7464/",
+      "status": 200,
+      "finalUrl": "https://eprintspublications.npl.co.uk/7464/",
+      "contentType": "text/html; charset=utf-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 24639,
+      "truncated": false,
+      "file": "src-037.download",
+      "sha256": "356e889f46ff3aa6d801a4baa380bb8cde1d8049f6ed76ed2dd96139e7cff5f6",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 1.087
+    },
+    {
+      "id": "src-038",
+      "url": "https://doi.org/10.1175/JTECH-D-12-00232.1",
+      "status": 200,
+      "finalUrl": "https://journals.ametsoc.org:443/view/journals/atot/30/9/jtech-d-12-00232_1.xml",
+      "contentType": "text/html;charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 1107168,
+      "truncated": false,
+      "file": "src-038.download",
+      "sha256": "c0e80882a4d2ceb46c4558fc7d3cff5707f0d388a52ad8539193d6a092cf55d5",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 3.174
+    },
+    {
+      "id": "src-039",
+      "url": "https://journals.ametsoc.org/view/journals/atot/30/9/jtech-d-12-00232_1.xml",
+      "status": 200,
+      "finalUrl": "https://journals.ametsoc.org/view/journals/atot/30/9/jtech-d-12-00232_1.xml",
+      "contentType": "text/html;charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 1107168,
+      "truncated": false,
+      "file": "src-039.download",
+      "sha256": "411ffaed5af8ae139c10bd238fe5e18cb899064ac857c5ebd9ea0102aaa7d8cd",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 2.318
+    },
+    {
+      "id": "src-040",
+      "url": "https://www.ncei.noaa.gov/access/crn/instruments.html",
+      "status": 200,
+      "finalUrl": "https://www.ncei.noaa.gov/access/crn/instruments.html",
+      "contentType": "text/html;charset=UTF-8",
+      "contentLength": "5863",
+      "contentRange": null,
+      "bytes": 25167,
+      "truncated": false,
+      "file": "src-040.download",
+      "sha256": "62618ef18a3b003f1576723adf4c279ca2782aaf6d20d4ece785a55cf1b51df1",
+      "signature": "0a0a0a0a3c21444f4354595045206874",
+      "durationSeconds": 0.904
+    },
+    {
+      "id": "src-041",
+      "url": "https://doi.org/10.5194/cp-10-1983-2014",
+      "status": 200,
+      "finalUrl": "https://cp.copernicus.org/articles/10/1983/2014/",
+      "contentType": "text/html",
+      "contentLength": "26951",
+      "contentRange": null,
+      "bytes": 141472,
+      "truncated": false,
+      "file": "src-041.download",
+      "sha256": "2e19812dbb7ed9983d1109f7998c5fb1a1b207eb388571fa60f732850645816b",
+      "signature": "3c21444f43545950452068746d6c2050",
+      "durationSeconds": 0.981
+    },
+    {
+      "id": "src-042",
+      "url": "https://cp.copernicus.org/articles/10/1983/2014/cp-10-1983-2014.pdf",
+      "status": 200,
+      "finalUrl": "https://cp.copernicus.org/articles/10/1983/2014/cp-10-1983-2014.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "2694540",
+      "contentRange": null,
+      "bytes": 2694540,
+      "truncated": false,
+      "file": "src-042.download",
+      "sha256": "29dfc3edd712b2906989116214c72693ba8241ef93dc17ad119675cc5fdc9634",
+      "signature": "255044462d312e340a25d0d4c5d80a35",
+      "durationSeconds": 2.264
+    },
+    {
+      "id": "src-043",
+      "url": "https://doi.org/10.5194/amt-7-4463-2014",
+      "status": 200,
+      "finalUrl": "https://amt.copernicus.org/articles/7/4463/2014/",
+      "contentType": "text/html",
+      "contentLength": "26502",
+      "contentRange": null,
+      "bytes": 139388,
+      "truncated": false,
+      "file": "src-043.download",
+      "sha256": "5469685b9f43b057d9266b8e270f2e719c665c597fa21b968a4ba8a03259bae5",
+      "signature": "3c21444f43545950452068746d6c2050",
+      "durationSeconds": 0.828
+    },
+    {
+      "id": "src-044",
+      "url": "https://amt.copernicus.org/articles/7/4463/2014/amt-7-4463-2014.pdf",
+      "status": 200,
+      "finalUrl": "https://amt.copernicus.org/articles/7/4463/2014/amt-7-4463-2014.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "6152464",
+      "contentRange": null,
+      "bytes": 6152464,
+      "truncated": false,
+      "file": "src-044.download",
+      "sha256": "4cc24f23045e232ab4dc226c20c683ec7ab9b894c3b7c04966423ad313550733",
+      "signature": "255044462d312e340a25d0d4c5d80a35",
+      "durationSeconds": 3.949
+    },
+    {
+      "id": "src-045",
+      "url": "https://doi.org/10.1002/2018EA000363",
+      "status": 403,
+      "finalUrl": "https://agupubs.onlinelibrary.wiley.com/doi/10.1002/2018EA000363",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 5696,
+      "truncated": false,
+      "file": "src-045.download",
+      "sha256": "bd2d20727cedb0282d067aee9cb59f748fb72103388a66732e897fe50876fcbb",
+      "signature": "3c21444f43545950452068746d6c3e3c",
+      "durationSeconds": 0.9
+    },
+    {
+      "id": "src-046",
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2018EA000363",
+      "status": 403,
+      "finalUrl": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2018EA000363",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 5711,
+      "truncated": false,
+      "file": "src-046.download",
+      "sha256": "dd725cfb1bdb4ceac4619d9da94046d8957ef87d062acf6ef84bf30d42661e40",
+      "signature": "3c21444f43545950452068746d6c3e3c",
+      "durationSeconds": 0.42
+    },
+    {
+      "id": "src-047",
+      "url": "https://doi.org/10.1029/92JD01517",
+      "status": 403,
+      "finalUrl": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/92JD01517",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 5666,
+      "truncated": false,
+      "file": "src-047.download",
+      "sha256": "2e16ffa70773f0ee8e41d13bcf8963a83ea25c5b4a0d8488f9688f10b4e86862",
+      "signature": "3c21444f43545950452068746d6c3e3c",
+      "durationSeconds": 1.308
+    },
+    {
+      "id": "src-048",
+      "url": "https://radiometrics.com/wp-content/uploads/2021/10/bevis_jgr92.pdf",
+      "status": 200,
+      "finalUrl": "https://radiometrics.com/wp-content/uploads/2021/10/bevis_jgr92.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "1583326",
+      "contentRange": null,
+      "bytes": 1583326,
+      "truncated": false,
+      "file": "src-048.download",
+      "sha256": "593416c8fe7f949b3dd23d4a14357f5b15dfa4004ae87533300b32638974c77f",
+      "signature": "255044462d312e320d25e2e3cfd30d0a",
+      "durationSeconds": 2.222
+    },
+    {
+      "id": "src-049",
+      "url": "https://doi.org/10.6028/jres.020.003",
+      "status": 200,
+      "finalUrl": "https://nvlpubs.nist.gov/nistpubs/jres/20/jresv20n6p723_A1b.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "48724137",
+      "contentRange": null,
+      "bytes": 48724137,
+      "truncated": false,
+      "file": "src-049.download",
+      "sha256": "d0b4591b0810d2d159c45c00b8d6ec06dfe81393768ac14cbc79f931d58b9075",
+      "signature": "255044462d312e340d25e2e3cfd30d0a",
+      "durationSeconds": 6.198
+    },
+    {
+      "id": "src-050",
+      "url": "https://docs.vaisala.com/v/u/M210566EN-K/en-US",
+      "status": 200,
+      "finalUrl": "https://docs.vaisala.com/v/u/M210566EN-K/en-US",
+      "contentType": "text/html;charset=UTF-8",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 2763,
+      "truncated": false,
+      "file": "src-050.download",
+      "sha256": "e7b89fd45433f611a70e171ac1054077e880e3be7320977989b012b82ae829fb",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 0.745
+    },
+    {
+      "id": "npl-pdf",
+      "url": "https://eprintspublications.npl.co.uk/7464/1/mgpg124.pdf",
+      "status": 200,
+      "finalUrl": "https://eprintspublications.npl.co.uk/7464/1/mgpg124.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "1456193",
+      "contentRange": null,
+      "bytes": 1456193,
+      "truncated": false,
+      "file": "npl-pdf.download",
+      "sha256": "b184e0904e9a06f2c56040a9f43edc8ad385dc7402f39e24fd466f4c2920fd93",
+      "signature": "255044462d312e360d25e2e3cfd30d0a",
+      "durationSeconds": 1.161
+    },
+    {
+      "id": "vaisala-hmt330-pdf",
+      "url": "https://docs.vaisala.com/api/khub/documents/ESFFxipyzfxm51Q3ptHcyg/content",
+      "status": 200,
+      "finalUrl": "https://docs.vaisala.com/api/khub/documents/ESFFxipyzfxm51Q3ptHcyg/content",
+      "contentType": "application/pdf",
+      "contentLength": "6494543",
+      "contentRange": null,
+      "bytes": 6494543,
+      "truncated": false,
+      "file": "vaisala-hmt330-pdf.download",
+      "sha256": "a22bdfb26fda689ec03aaf66e9828e8d960f368c011f52349b6690e740deda1b",
+      "signature": "255044462d312e330d25e2e3cfd30d0a",
+      "durationSeconds": 1.614
+    },
+    {
+      "id": "rss-publications",
+      "url": "https://remss.com/support/publications/RSS_JournalPubs_byAuthor/",
+      "status": 200,
+      "finalUrl": "https://remss.com/support/publications/RSS_JournalPubs_byAuthor/",
+      "contentType": "text/html",
+      "contentLength": "72028",
+      "contentRange": null,
+      "bytes": 72028,
+      "truncated": false,
+      "file": "rss-publications.download",
+      "sha256": "872855800e1a3e779841dcd7e2d414f3bd5a1355d3f25e246999becdf0b424ba",
+      "signature": "3c21444f43545950452068746d6c3e0d",
+      "durationSeconds": 2.412
+    },
+    {
+      "id": "openstax-read",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/1-introduction",
+      "status": 200,
+      "finalUrl": "https://openstax.org/books/university-physics-volume-2/pages/1-introduction",
+      "contentType": "text/html",
+      "contentLength": null,
+      "contentRange": null,
+      "bytes": 285318,
+      "truncated": false,
+      "file": "openstax-read.download",
+      "sha256": "816573ca175f988c55aa36eeba3f5426e5b7c5ce6c6fc78dddb0b5a0ee9d823a",
+      "signature": "3c21646f63747970652068746d6c3e3c",
+      "durationSeconds": 1.112
+    },
+    {
+      "id": "nist-humidity-direct",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.250-83r1.pdf",
+      "status": 200,
+      "finalUrl": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.250-83r1.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "5437163",
+      "contentRange": null,
+      "bytes": 5437163,
+      "truncated": false,
+      "file": "nist-humidity-direct.download",
+      "sha256": "aad34c77111a6a350b8ba9c2940a8b706d86f4fca7eb6c0f224fb6b43fc58e32",
+      "signature": "255044462d312e360d25e2e3cfd30d0a",
+      "durationSeconds": 2.625
+    },
+    {
+      "id": "dunmore-direct",
+      "url": "https://nvlpubs.nist.gov/nistpubs/jres/20/jresv20n6p723_A1b.pdf",
+      "status": 200,
+      "finalUrl": "https://nvlpubs.nist.gov/nistpubs/jres/20/jresv20n6p723_A1b.pdf",
+      "contentType": "application/pdf",
+      "contentLength": "48724137",
+      "contentRange": null,
+      "bytes": 48724137,
+      "truncated": false,
+      "file": "dunmore-direct.download",
+      "sha256": "d0b4591b0810d2d159c45c00b8d6ec06dfe81393768ac14cbc79f931d58b9075",
+      "signature": "255044462d312e340d25e2e3cfd30d0a",
+      "durationSeconds": 5.506
+    },
+    {
+      "id": "argo-data",
+      "url": "https://argo.ucsd.edu/data/data-from-gdacs/",
+      "status": 200,
+      "finalUrl": "https://argo.ucsd.edu/data/data-from-gdacs/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentLength": "17334",
+      "contentRange": null,
+      "bytes": 90500,
+      "truncated": false,
+      "file": "argo-data.download",
+      "sha256": "b7b7659e90fe6c4f004dab53ec0251e74f4aa9ed8f051e0e0c0bf983c6d7adf1",
+      "signature": "3c21444f43545950452068746d6c3e0a",
+      "durationSeconds": 1.361
+    }
+  ],
+  "completeUniquePdfs": [
+    {
+      "url": "https://www.bipm.org/documents/20126/41773843/BIPM_CCT_Guide_to_IPRTs.pdf/b3bd8bba-3b0b-ab46-481f-29ceddf7bb31?download=true&t=1638374241171&version=1.1",
+      "bytes": 1176720,
+      "sha256": "34c6484db3801fadd6c55a1266ca0987fd1979802caa8a925a24ff20348484d9",
+      "pages": 70
+    },
+    {
+      "url": "https://www.bipm.org/documents/20126/41773843/Guide_ITS-90_5_SPRT_2021.pdf/c4bbbe56-4118-eef7-47cb-3ea234db40b8?download=true&t=1667829321760&version=1.12",
+      "bytes": 1186535,
+      "sha256": "5ea1e71978262a917eb710c01ba8b8b858f90509cb318bf348191497cfb5dfea",
+      "pages": 56
+    },
+    {
+      "url": "https://www.oiml.org/en/files/pdf_r/r084-e03.pdf",
+      "bytes": 183533,
+      "sha256": "840754c6c846597f1fb1c44a2264d65d49d00950c3625b62aec12f5aa8971c8a",
+      "pages": 16
+    },
+    {
+      "url": "https://mural.maynoothuniversity.ie/id/eprint/6481/1/PT_US%20climate.pdf",
+      "bytes": 1333605,
+      "sha256": "69238683bd03fc3bab4e881839d8a2e20c4fd7434e39444d3594fb0ffa6ee35a",
+      "pages": 14
+    },
+    {
+      "url": "https://www.metoffice.gov.uk/hadobs/hadcrut5/HadCRUT5_accepted.pdf",
+      "bytes": 6238514,
+      "sha256": "e87455d081038f10a07272447ba363bc5cfe96107bd500b0a529567ec1246aa5",
+      "pages": 61
+    },
+    {
+      "url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/papers/menne-etal2012.pdf",
+      "bytes": 4571399,
+      "sha256": "2a5591025800da93e08a3bd516fda854180b13423065773a1cf7b28fa2dc1861",
+      "pages": 14
+    },
+    {
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.250-83r1.pdf",
+      "bytes": 5437163,
+      "sha256": "aad34c77111a6a350b8ba9c2940a8b706d86f4fca7eb6c0f224fb6b43fc58e32"
+    },
+    {
+      "url": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/Handbook_2007/Guide_all_in_one.pdf",
+      "bytes": 5434312,
+      "sha256": "1aaac8e647d9e0b12eaa31e669504e51bbc85fdebed4442464cc8e14cdc7ddfd",
+      "pages": 196
+    },
+    {
+      "url": "https://www.vaisala.com/sites/default/files/documents/WEA-MET-RS41-Performance-White-paper-B211356EN-B-LOW-v3.pdf",
+      "bytes": 2795032,
+      "sha256": "9889775a63456b62091851fe1344f05fd5462b2094d94babb39f4a032cca5a81",
+      "pages": 28
+    },
+    {
+      "url": "https://www.bipm.org/documents/20126/41773843/Guide-SecTh-Thermistor-Thermometry.pdf/87e2fdc8-14fc-e977-918e-b801752d06a0?download=true&t=1593014016288&version=1.3",
+      "bytes": 695076,
+      "sha256": "cf445a4d21311d2e553001b39bfc4f02171be123e55fa357792d37159be47f37",
+      "pages": 19
+    },
+    {
+      "url": "https://www.seabird.com/hubfs/Product%20Assets/SBE%2041/Datasheets/SBE%2041_41%20CP%20Deep%20DS.53.March26.pdf?hsLang=en",
+      "bytes": 185689,
+      "sha256": "a308666b4ee07e51335a881f2846967820fb34f8e48d7e34ae98a2cde8b2d849",
+      "pages": 2
+    },
+    {
+      "url": "https://essd.copernicus.org/articles/6/201/2014/essd-6-201-2014.pdf",
+      "bytes": 4546577,
+      "sha256": "074c21091cbb7fbfe266d84524f5acc4dc88a3b2785697508338aa10df5a0bc1",
+      "pages": 18
+    },
+    {
+      "url": "https://nvlpubs.nist.gov/nistpubs/jres/28/jresv28n2p217_A1b.pdf",
+      "bytes": 24763382,
+      "sha256": "225599a9a441590b52ec6fef61ad0aed69e00a584792631427dd9bcf2e16ac2e",
+      "pages": 27
+    },
+    {
+      "url": "https://ams.confex.com/ams/pdfpapers/69979.pdf",
+      "bytes": 644676,
+      "sha256": "8aba530624ac82d98ea4cc525ecc71ee676f8da160fcf9ef3ae8b0401bf4ee52",
+      "pages": 4
+    },
+    {
+      "url": "https://cp.copernicus.org/articles/10/1983/2014/cp-10-1983-2014.pdf",
+      "bytes": 2694540,
+      "sha256": "29dfc3edd712b2906989116214c72693ba8241ef93dc17ad119675cc5fdc9634",
+      "pages": 24
+    },
+    {
+      "url": "https://amt.copernicus.org/articles/7/4463/2014/amt-7-4463-2014.pdf",
+      "bytes": 6152464,
+      "sha256": "4cc24f23045e232ab4dc226c20c683ec7ab9b894c3b7c04966423ad313550733",
+      "pages": 28
+    },
+    {
+      "url": "https://radiometrics.com/wp-content/uploads/2021/10/bevis_jgr92.pdf",
+      "bytes": 1583326,
+      "sha256": "593416c8fe7f949b3dd23d4a14357f5b15dfa4004ae87533300b32638974c77f",
+      "pages": 15
+    },
+    {
+      "url": "https://nvlpubs.nist.gov/nistpubs/jres/20/jresv20n6p723_A1b.pdf",
+      "bytes": 48724137,
+      "sha256": "d0b4591b0810d2d159c45c00b8d6ec06dfe81393768ac14cbc79f931d58b9075"
+    },
+    {
+      "url": "https://eprintspublications.npl.co.uk/7464/1/mgpg124.pdf",
+      "bytes": 1456193,
+      "sha256": "b184e0904e9a06f2c56040a9f43edc8ad385dc7402f39e24fd466f4c2920fd93",
+      "pages": 29
+    },
+    {
+      "url": "https://docs.vaisala.com/api/khub/documents/ESFFxipyzfxm51Q3ptHcyg/content",
+      "bytes": 6494543,
+      "sha256": "a22bdfb26fda689ec03aaf66e9828e8d960f368c011f52349b6690e740deda1b",
+      "pages": 209
+    },
+    {
+      "url": "https://makingscience.royalsociety.org/pdf?arcId=ap_53_8",
+      "file": "siemens-manuscript.pdf",
+      "bytes": 12699578,
+      "sha256": "c5bb4f703ee9796aebc430426d0530edeaeef221be36a41b6f44bdc379ae825e",
+      "pages": 62,
+      "rendered": [
+        {
+          "page": 1,
+          "file": "siemens-manuscript-page-1.png"
+        },
+        {
+          "page": 60,
+          "file": "siemens-manuscript-page-60.png"
+        }
+      ],
+      "download": "curl using system certificate trust, exit 0"
+    }
+  ],
+  "verification": {
+    "fullText": "Full documents inspected at relevant sections. Full Mears 2018 article verified in normal browser, 53685 rendered characters and all main sections, despite Python HTTP 403.",
+    "siemens": "Normal browser displays all 60 image choices. Full 12699578-byte PDF opened, 62 pages. Python requests issuer verification failed, system-trust curl succeeded without disabling certificate validation.",
+    "noaaAnnualFiles": [
+      {
+        "id": "src-035",
+        "url": "https://www.ncei.noaa.gov/pub/data/uscrn/products/subhourly01/2025/CRNS0101-05-2025-MA_Blue_Hill_0_W.txt",
+        "status": 200,
+        "finalUrl": "https://www.ncei.noaa.gov/pub/data/uscrn/products/subhourly01/2025/CRNS0101-05-2025-MA_Blue_Hill_0_W.txt",
+        "contentType": "text/plain",
+        "contentLength": "14191200",
+        "contentRange": null,
+        "bytes": 14191200,
+        "truncated": false,
+        "file": "src-035.download",
+        "sha256": "50d299e2233f890781456430354c70849b84ca697f3e874009563485bb0124bb",
+        "signature": "39343738352032303235303130312030",
+        "durationSeconds": 2.442
+      },
+      {
+        "id": "src-036",
+        "url": "https://www.ncei.noaa.gov/pub/data/uscrn/products/hourly02/2025/CRNH0203-2025-MA_Blue_Hill_0_W.txt",
+        "status": 200,
+        "finalUrl": "https://www.ncei.noaa.gov/pub/data/uscrn/products/hourly02/2025/CRNH0203-2025-MA_Blue_Hill_0_W.txt",
+        "contentType": "text/plain",
+        "contentLength": "2137440",
+        "contentRange": null,
+        "bytes": 2137440,
+        "truncated": false,
+        "file": "src-036.download",
+        "sha256": "dcaacf902c8810edbc01b3bfcc6eed9189f0d4d6d226be484cc2242cec3ad1a8",
+        "signature": "39343738352032303235303130312030",
+        "durationSeconds": 1.737
+      }
+    ],
+    "numeric": [
+      {
+        "name": "Blue Hill temperature",
+        "values": {
+          "count": 12,
+          "sumC": 64.9,
+          "meanC": 5.408333333333333,
+          "publishedHourlyC": 5.4
+        },
+        "reproducedAgainstNewAnnualDownloads": true,
+        "fullAnnualHashesMatchArchivedMetadata": true
+      },
+      {
+        "name": "Blue Hill humidity",
+        "values": {
+          "count": 12,
+          "sumPercent": 1016,
+          "meanPercent": 84.66666666666667,
+          "publishedHourlyPercent": 85,
+          "allQualityFlags": 0
+        },
+        "reproducedAgainstNewAnnualDownloads": true,
+        "fullAnnualHashesMatchArchivedMetadata": true
+      },
+      {
+        "name": "BIPM Pt100 interpolation",
+        "values": {
+          "resistanceOhm": 111.54535,
+          "referenceC": 29.8655,
+          "resultWithPrintedCoefficientsC": 29.862741854281012,
+          "publishedTableC": 29.8631
+        },
+        "location": "Table 5.3.1, pp.53-54, equation 5.2.1",
+        "interpretation": "Interpolation residual at a point already used in calibration, not independent sensor validation."
+      },
+      {
+        "name": "Hubbard table 1 January 2003",
+        "values": {
+          "hours": 744,
+          "prt1MinusRmyMeanC": 0.07,
+          "prt1MinusRmyStdC": 0.09,
+          "prt1MinusPmtMeanC": -0.02,
+          "prt1MinusPmtStdC": 0.04
+        },
+        "location": "PDF p.4, table visually checked"
+      },
+      {
+        "name": "Dunmore ascent lag",
+        "values": {
+          "lagMinutes": 2,
+          "altitudeFeet": 2200,
+          "convertedAltitudeMetres": 670.56
+        },
+        "location": "Original PDF p.1"
+      },
+      {
+        "name": "Vaisala HMT330",
+        "values": {
+          "rangeRhPercent": [
+            0,
+            100
+          ],
+          "temperatureRangeC": [
+            15,
+            25
+          ],
+          "accuracyBelow90RhPercentagePoints": 1,
+          "accuracyAbove90RhPercentagePoints": 1.7,
+          "response90PercentGridSeconds": 8,
+          "response90PercentSinteredSeconds": 40
+        },
+        "location": "Printed p.169, PDF p.171, HUMICAP 180/180C conditions retained"
+      },
+      {
+        "name": "NPL warming example",
+        "values": {
+          "startC": 20,
+          "endC": 21,
+          "startRhPercent": 50,
+          "endRhApproxPercent": 47
+        },
+        "location": "Section 3.2, printed p.5, PDF p.13"
+      }
+    ],
+    "visualPdfPages": [
+      {
+        "file": "src-001.download",
+        "bytes": 1176720,
+        "sha256": "34c6484db3801fadd6c55a1266ca0987fd1979802caa8a925a24ff20348484d9",
+        "pages": 70,
+        "rendered": [
+          {
+            "page": 54,
+            "file": "src-001-page-54.png"
+          }
+        ]
+      },
+      {
+        "file": "src-034.download",
+        "bytes": 644676,
+        "sha256": "8aba530624ac82d98ea4cc525ecc71ee676f8da160fcf9ef3ae8b0401bf4ee52",
+        "pages": 4,
+        "rendered": [
+          {
+            "page": 4,
+            "file": "src-034-page-4.png"
+          }
+        ]
+      },
+      {
+        "file": "npl-pdf.download",
+        "bytes": 1456193,
+        "sha256": "b184e0904e9a06f2c56040a9f43edc8ad385dc7402f39e24fd466f4c2920fd93",
+        "pages": 29,
+        "rendered": [
+          {
+            "page": 13,
+            "file": "npl-pdf-page-13.png"
+          }
+        ]
+      },
+      {
+        "file": "vaisala-hmt330-pdf.download",
+        "bytes": 6494543,
+        "sha256": "a22bdfb26fda689ec03aaf66e9828e8d960f368c011f52349b6690e740deda1b",
+        "pages": 209,
+        "rendered": [
+          {
+            "page": 171,
+            "file": "vaisala-hmt330-pdf-page-171.png"
+          }
+        ]
+      },
+      {
+        "file": "src-049.download",
+        "bytes": 48724137,
+        "sha256": "d0b4591b0810d2d159c45c00b8d6ec06dfe81393768ac14cbc79f931d58b9075",
+        "pages": 33,
+        "rendered": [
+          {
+            "page": 1,
+            "file": "src-049-page-1.png"
+          }
+        ]
+      },
+      {
+        "file": "siemens-manuscript.pdf",
+        "bytes": 12699578,
+        "sha256": "c5bb4f703ee9796aebc430426d0530edeaeef221be36a41b6f44bdc379ae825e",
+        "pages": 62,
+        "rendered": [
+          {
+            "page": 1,
+            "file": "siemens-manuscript-page-1.png"
+          },
+          {
+            "page": 60,
+            "file": "siemens-manuscript-page-60.png"
+          }
+        ]
+      }
+    ],
+    "readerReview": [
+      {
+        "purpose": "Distinguish where measured Argo profiles are obtained from how they are interpreted.",
+        "change": "Separate data-centre and guide citations."
+      },
+      {
+        "purpose": "Identify the actual age of the hourly processing documentation.",
+        "change": "Explicit 6 July 2017 revision date."
+      },
+      {
+        "purpose": "Help the reader find the cited manual page.",
+        "change": "Distinguish printed numbering and PDF position."
+      },
+      {
+        "purpose": "Keep the new source check distinct from the original fixed data snapshot.",
+        "change": "Verification 5 November, snapshot acquisition 4 October retained."
+      }
+    ]
+  },
+  "validation": {
+    "sourceAudit": {
+      "exitCode": 0,
+      "articleFiles": 61,
+      "missingIds": 0,
+      "duplicateIds": 0,
+      "duplicateExternalUrls": 0
+    },
+    "lint": {
+      "command": "pnpm lint --ignore-pattern work/history-redesign/dist",
+      "exitCode": 0,
+      "note": "Unqualified pnpm lint failed only on generated exports under an unrelated ignored scratch checkout. No production code or lint rule was excluded or changed."
+    },
+    "tests": {
+      "exitCode": 0,
+      "summary": [
+        "  Prerendered 95 routes (0 skipped).",
+        "ℹ tests 113",
+        "ℹ suites 0",
+        "ℹ pass 113",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0",
+        "ℹ duration_ms 2454.7723"
+      ]
+    },
+    "browser": {
+      "widths": [
+        1280,
+        390
+      ],
+      "articles": 2,
+      "articleImagesPerWidth": 4,
+      "allImagesLoaded": true,
+      "pageOverflow": false,
+      "sourceCardsPerWidth": 38,
+      "missingSourceCards": 0,
+      "cardOverflow": false,
+      "openSourceDriveButtons": 0,
+      "actualCitationNavigation": "ResistanceThermometryArticle -> /zdroje#1871_Siemens_Thermometry",
+      "localPreviewNote": "First preview port returned empty responses. A fresh tab and isolated loopback server on port 3029 completed all checks."
+    },
+    "deployment": "Pending authorized commit, push main and successful Pages/live verification.",
+    "integratedMain": {
+      "base": "d76e5a5",
+      "build": {
+        "exitCode": 0,
+        "routes": 95,
+        "command": "node ../../node_modules/vinext/dist/cli.js build"
+      },
+      "tests": {
+        "exitCode": 0,
+        "count": 114,
+        "passed": 114,
+        "failed": 0,
+        "command": "node --test tests/rendered-html.test.mjs"
+      },
+      "lint": {
+        "exitCode": 0,
+        "command": "node ../../node_modules/eslint/bin/eslint.js . --ignore-pattern dist --ignore-pattern .next"
+      },
+      "sourceAudit": {
+        "exitCode": 0,
+        "missingIds": 0,
+        "duplicateIds": 0
+      },
+      "dependencyNote": "pnpm dependency status stopped on ignored postinstall builds. No new install scripts were approved. The already verified installed CLI tools were executed directly."
+    }
+  },
+  "unresolvedSourceErrors": [],
+  "limits": [
+    "Raw electrical sensor signals and individual calibration certificates for the Blue Hill hour are not public inputs. The articles already identify the published-data starting point.",
+    "The complete Argo archive was not downloaded. No new Argo-derived numerical result was claimed."
+  ]
+}

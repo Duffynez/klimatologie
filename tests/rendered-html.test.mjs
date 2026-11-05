@@ -1788,7 +1788,7 @@ test("publishes reproducible thermometry examples with open sources and working 
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
   const displayedDate = html.match(/<p class="page-lead__meta">([^<]*)<\/p>/)?.[1];
-  assert.equal(displayedDate, "31. října 2026", "Show only the last edit date, without a label");
+  assert.equal(displayedDate, "5. listopadu 2026", "Show only the last edit date, without a label");
   assert.doesNotMatch(article, /<Citation\b/);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
   assert.match(body, /29,8627 °C/);
