@@ -77,9 +77,11 @@ O metodách měření píšeme stručně. Objasníme, co měření zjišťuje a 
 
 ### 4. Jaké vysvětlení dnes nejlépe obstojí a proč
 
+Tuto část otevřeme jedním souvislým přechodovým odstavcem bezprostředně pod jejím nadpisem. Stručně v něm shrneme, jak dopadla každá z porovnávaných hypotéz a z jakého hlavního důvodu. Rozlišíme vyvrácenou možnost od skutečného procesu, který sám na vysvětlení nestačí. Pojmenujeme dnes nejlépe podpořené vysvětlení a poslední větou uvedeme, co o jeho fungování nyní podrobněji objasníme. Odstavec navazuje na už rozebrané důkazy a jejich zdroje, nepřidává nový test. Tím uzavře porovnání a připraví čtenáře na další výklad.
+
 Na základě předchozích příběhů jasně pojmenujeme jedno vysvětlení, které dnes podle souhrnu důkazů a současných odborných hodnocení nejlépe obstojí, a rozvineme jeho podrobný výklad. Současné hodnocení opřeme o odborné syntézy a jejich závěry doložíme původními pracemi rozebranými v příbězích. Přijaté vysvětlení může spojovat několik současně působících mechanismů. U kombinace objasníme úlohu jednotlivých procesů a důvod, proč je potřebujeme. Pokud poznání neumožňuje jedno vysvětlení upřednostnit, uvedeme tuto otevřenou otázku a nepředstíráme rozhodnutí jen kvůli stavbě článku.
 
-Nejprve srozumitelně definujeme vysvětlovaný proces. Potom souvisle projdeme kroky od příčiny přes změny v systému až k pozorovanému následku. U každého kroku vysvětlíme jeho fyzikální, chemický nebo biologický důvod a navážeme na jeho ověření. Zpětné vazby zařadíme v návaznosti na změnu, na kterou reagují.
+Po přechodovém odstavci srozumitelně definujeme vysvětlovaný proces. Potom souvisle projdeme kroky od příčiny přes změny v systému až k pozorovanému následku. U každého kroku vysvětlíme jeho fyzikální, chemický nebo biologický důvod a navážeme na jeho ověření. Zpětné vazby zařadíme v návaznosti na změnu, na kterou reagují.
 
 Ukážeme, jak celek vysvětluje rozhodující vlastnosti pozorování včetně velikosti účinku. Potřebné zákony a výpočty zařadíme k vysvětlovaným vztahům. Objasníme veličiny, symboly, jednotky a podmínky použití. Oddělíme jednoduchý teoretický odhad od výsledku úplnějšího modelu. Předchozí porovnání využijeme při vysvětlování souvislostí, aby čtenář mohl sledovat celý děj.
 

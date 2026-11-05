@@ -654,15 +654,23 @@ export function EarthEnergyBalanceArticle() {
           V této kapitole „hlavní“ znamená více než polovinu změny.{' '}
           <SourceLink id="DOI_10_1017_9781009157896_005">(IPCC AR6, shrnutí a oddíl 3.5.1)</SourceLink>
         </p>
-        <p>
-          Přijímaným vysvětlením je proto lidské působení spolu s reakcemi
-          oceánu, atmosféry a povrchu. Přirozené kolísání určuje část průběhu
-          a regionálních rozdílů. Nyní můžeme projít, jak tyto procesy spojí
-          změnu složení vzduchu s přibýváním energie v celé Zemi.{' '}
-          <SourceLink id="DOI_10_1017_9781009157896_005">(IPCC AR6, oddíly 3.5.1 a 3.8)</SourceLink>
-        </p>
 
         <h2 id="vysvetleni">Jak Země získává a ukládá energii</h2>
+        <p>
+          Hypotéza silnějšího Slunce v uvedených testech neobstála:
+          při pozorovaném ohřevu sluneční příkon nerostl.{' '}
+          <SourceLink id="DOI_10_1029_2021GL093047">(Loeb a kol. 2021)</SourceLink>{' '}
+          Samotné přirozené kolísání nestačilo vysvětlit růst energetického
+          přebytku, přesto ovlivňuje průběh a rozmístění změn.{' '}
+          <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021)</SourceLink>{' '}
+          Nejlépe obstálo lidské působení na složení atmosféry spolu
+          s reakcemi klimatu. Podporují je změny měřeného záření
+          i rozložení teplotních změn v atmosféře a oceánu.{' '}
+          <SourceLink id="DOI_10_1017_9781009157896_005">(IPCC AR6, kapitola 3)</SourceLink>{' '}
+          Nyní projdeme, jak změna složení vzduchu ovlivní příjem a výdej
+          energie celé Země a proč se vzniklý přebytek ukládá především
+          v oceánu.
+        </p>
         <p>
           Změny složení atmosféry ovlivňují přenos záření. Abychom pochopili,
           jak se jejich účinek projeví i daleko pod hladinou oceánu,
