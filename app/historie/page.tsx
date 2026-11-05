@@ -4,12 +4,12 @@ import { Citation } from "../components/Citation";
 import { PageLead } from "../components/PageLead";
 import { HistoryTimeline, type HistoryTimelineItem } from "../components/HistoryTimeline";
 import styles from "../components/HistoryTimeline.module.css";
-import { historyEvents, historyKinds, historyPeriods, type HistoryKind } from "../data/history";
+import { historyCategories, historyEvents, historyPeriods, type HistoryCategory } from "../data/history";
 import { sourceById } from "../data/sources";
 
 export const metadata: Metadata = {
   title: "Historie",
-  description: "Časová osa klimatického poznání a politických rozhodnutí. Experimenty, měření, modely a dohody s odkazy na původní prameny.",
+  description: "Historie pozorování klimatu, měřicích metod, vysvětlování příčin a politických rozhodnutí. Chronologická osa s odkazy na původní prameny.",
 };
 
 export default function HistoryPage() {
@@ -20,7 +20,7 @@ export default function HistoryPage() {
     if (!Number.isInteger(event.year) || (index > 0 && event.year < historyEvents[index - 1].year)) {
       throw new Error("Invalid history chronology: " + event.id);
     }
-    if (!Object.hasOwn(historyKinds, event.kind) || !["academic", "institutional"].includes(event.lane)) {
+    if (!Object.hasOwn(historyCategories, event.category)) {
       throw new Error("Invalid history classification: " + event.id);
     }
     if (historyPeriods.filter(period => event.year >= period.from && event.year <= period.to).length !== 1) {
@@ -40,10 +40,9 @@ export default function HistoryPage() {
     return {
       id: event.id,
       year: event.year,
-      lane: event.lane,
-      kind: event.kind,
+      category: event.category,
       content: (
-        <article className={styles.milestone + (event.lane === "institutional" ? " " + styles.political : "")}
+        <article className={styles.milestone} data-history-category={event.category}
           aria-labelledby={"nazev-" + event.id}>
           <div className={styles.date}>
             <time dateTime={String(event.year)}>{event.year}</time>
@@ -51,8 +50,7 @@ export default function HistoryPage() {
           </div>
           <div className={styles.body}>
             <p className={styles.meta}>
-              <span>{event.lane === "institutional" ? "Politická rozhodnutí" : "Poznání a měření"}</span>
-              <span>{historyKinds[event.kind]}</span>
+              <span>{historyCategories[event.category].label}</span>
             </p>
             <h3 id={"nazev-" + event.id} className={styles.title}>{event.title}</h3>
             {event.paragraphs.map((paragraph, paragraphIndex) => (
@@ -94,11 +92,13 @@ export default function HistoryPage() {
     <div className="page-shell">
       <PageLead eyebrow="Historie poznání" title="Historie poznání klimatu."
         meta="5. listopadu 2026">
-        <p>Experimenty, měření a výpočty postupně proměňovaly naše porozumění klimatu. Osa ukazuje, co jednotlivé kroky umožnily zjistit a kde měly své meze.</p>
-        <p>Vedle vědeckého vývoje sleduje formální politická rozhodnutí. Vyberte si oblast nebo druh milníku a u každého záznamu se můžete vrátit k jeho pramenům.</p>
+        <p>Historie sleduje stejné otázky jako ostatní části webu: co se v klimatu děje, jak to měříme a čím to vysvětlujeme. Vedle nich zachycuje politická rozhodnutí.</p>
+        <p>Vyberte si oblast a sledujte její vývoj v čase. Každý milník ukazuje, co přinesl, kde měl své meze a z jakých pramenů jej známe.</p>
       </PageLead>
       <HistoryTimeline items={items} periods={historyPeriods}
-        kinds={Object.entries(historyKinds).map(([value, label]) => ({ value: value as HistoryKind, label }))} />
+        categories={Object.entries(historyCategories)
+          .filter(([value]) => historyEvents.some(event => event.category === value))
+          .map(([value, category]) => ({ value: value as HistoryCategory, ...category }))} />
     </div>
   );
 }

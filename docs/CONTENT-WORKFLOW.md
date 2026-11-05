@@ -106,7 +106,7 @@ Pod nadpis oddílu hypotéz vložte společnou komponentu `app/components/Hypoth
 1. Ověřte výběr, význam, datum, obsah a oporu tvrzení podle [HISTORY.md](../HISTORY.md).
 2. Založte nebo použijte úplné bibliografické záznamy v centrálním katalogu.
 3. Do `app/data/history.ts` přidejte stabilní `id`, rok události `year`, význam data `dateMeaning` a český název události `title`. Neopisujte sem název publikace místo vysvětlení události.
-4. Zvolte `lane: "academic"` pro poznání a měření nebo `"institutional"` pro formální politické rozhodnutí. `kind` vyberte z `historyKinds` podle povahy události.
+4. Zvolte jednu hlavní `category` z `historyCategories`: `observations`, `methods`, `mechanisms` nebo `politics`. Rozhoduje hlavní přínos milníku podle [HISTORY.md](../HISTORY.md), nikoli typ dokumentu nebo kategorie vydavatele. `culture` je připravena pro budoucí kulturní milníky. Filtr ji nabídne až po doplnění prvního zpracovaného záznamu.
 5. Každý odstavec v `paragraphs` obsahuje text a `references`. Citace má `sourceId` a podle potřeby ověřený `locator`. Pozdější ověření nebo oprava může potřebovat jiný zdroj než původní práce.
 6. Přidejte vhodné odkazy v `relatedLinks` na existující pozorování, metody či mechanismy.
 7. Zachovejte chronologické pořadí. Událost musí spadat právě do jednoho intervalu v `historyPeriods`. Zveřejněné ID a kotvu neměňte při opravě data.

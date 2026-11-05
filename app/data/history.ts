@@ -1,27 +1,39 @@
-export type HistoryLane = "academic" | "institutional";
-
-export const historyKinds = {
-  experiment: "Experiment",
-  observation: "Pozorování",
-  theory: "Fyzikální vysvětlení",
-  method: "Metoda a přístroj",
-  model: "Výpočet a model",
-  attribution: "Ověření příčin",
-  program: "Měřicí program",
-  synthesis: "Odborná syntéza",
-  institution: "Založení instituce",
-  agreement: "Mezinárodní dohoda",
+export const historyCategories = {
+  observations: {
+    label: "Pozorování",
+    description: "Co jsme zjistili o klimatu",
+    href: "/pozorovani/",
+  },
+  methods: {
+    label: "Metody",
+    description: "Jak jsme se naučili měřit",
+    href: "/metody/",
+  },
+  mechanisms: {
+    label: "Mechanismy",
+    description: "Jak vysvětlujeme příčiny",
+    href: "/mechanismy/",
+  },
+  politics: {
+    label: "Politika",
+    description: "Jak se měnila pravidla a závazky",
+    href: null,
+  },
+  culture: {
+    label: "Kultura",
+    description: "Jak se klima promítalo do kultury",
+    href: null,
+  },
 } as const;
 
-export type HistoryKind = keyof typeof historyKinds;
+export type HistoryCategory = keyof typeof historyCategories;
 export type HistoryReference = { sourceId: string; locator?: string };
 export type HistoryEvent = {
   id: string;
   year: number;
   dateMeaning: string;
   title: string;
-  lane: HistoryLane;
-  kind: HistoryKind;
+  category: HistoryCategory;
   paragraphs: { text: string; references: HistoryReference[] }[];
   relatedLinks: { href: string; label: string }[];
 };
@@ -42,8 +54,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1681,
     dateMeaning: "První vydání pojednání",
     title: "Sklo propouští sluneční a tepelné záření rozdílně",
-    lane: "academic",
-    kind: "experiment",
+    category: "mechanisms",
     paragraphs: [
       {
         text: "Edme Mariotte porovnával průchod slunečního záření a sálavého tepla sklem. Sluneční paprsky sklem procházely, zatímco přenos sálavého tepla ohně sklo výrazně omezilo. Rozdíl ukazoval, že při zkoumání záření záleží také na jeho zdroji a na materiálu, kterým prochází.",
@@ -76,8 +87,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1774,
     dateMeaning: "Pokusy na Cramontu a v Courmayeur",
     title: "Sluneční ohřev ve skleněné schránce",
-    lane: "academic",
-    kind: "experiment",
+    category: "methods",
     paragraphs: [
       {
         text: "Horace-Bénédict de Saussure porovnával sluneční ohřev na hoře Cramont a v níže položeném Courmayeur. Použil tmavou izolovanou schránku se skleněnými kryty a teploměrem, které říkal heliotermometr. Uvnitř dosahoval vysokých teplot i v chladném horském vzduchu. Pokus pomáhal rozlišit ohřev sluncem od teploty okolního vzduchu.",
@@ -114,8 +124,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1800,
     dateMeaning: "Zveřejnění práce",
     title: "Teploměr odhaluje neviditelné sluneční záření",
-    lane: "academic",
-    kind: "experiment",
+    category: "methods",
     paragraphs: [
       {
         text: "William Herschel rozložil sluneční světlo hranolem a teploměry porovnával zahřívání v různých barvách. Měřitelné zahřívání zjistil také za červeným okrajem, kde už žádné světlo neviděl. Zkoumal tak část slunečního záření, kterou oko nezachytí a kterou dnes označujeme jako infračervenou.",
@@ -146,8 +155,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1804,
     dateMeaning: "Vydání knihy",
     title: "Stejně teplé povrchy vyzařují různě",
-    lane: "academic",
-    kind: "experiment",
+    category: "mechanisms",
     paragraphs: [
       {
         text: "John Leslie naplnil kovovou kostku horkou vodou a porovnával záření jejích různě upravených stěn. Jednu ponechal lesklou, jinou pokryl papírem nebo sazemi. Teplotní odezvu zachycoval citlivým přístrojem. Přestože stěny ohřívala stejná voda, jejich povrchy předávaly zářením různé množství energie.",
@@ -179,8 +187,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1824,
     dateMeaning: "Zveřejnění práce",
     title: "Teplota Země jako otázka příjmu a ztrát tepla",
-    lane: "academic",
-    kind: "theory",
+    category: "mechanisms",
     paragraphs: [
       {
         text: "Joseph Fourier zkoumal, čím je určena teplota zemského povrchu. Rozlišoval sluneční ohřev, vnitřní teplo Země a výměnu tepla s okolním prostorem. Atmosféře přisuzoval vliv na únik tepla a při vysvětlení použil i Saussurův pokus se zasklenou schránkou.",
@@ -211,8 +218,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1840,
     dateMeaning: "Vydání knihy",
     title: "Krajina uchovává stopy rozsáhlejšího zalednění",
-    lane: "academic",
-    kind: "observation",
+    category: "observations",
     paragraphs: [
       {
         text: "Louis Agassiz popsal morény, tedy nánosy materiálu přeneseného ledovcem, bludné balvany, ohlazené skály a rýhy v krajině. Porovnával je se stopami vznikajícími u současných ledovců a vyložil je jako doklady jejich dřívějšího mnohem většího rozsahu. V knize probíral také předchozí práce Venetze a Charpentiera.",
@@ -244,8 +250,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1856,
     dateMeaning: "Zveřejnění práce",
     title: "Oxid uhličitý v pokusu se slunečním ohřevem",
-    lane: "academic",
-    kind: "experiment",
+    category: "mechanisms",
     paragraphs: [
       {
         text: "Eunice Footeová vystavila slunci dvojici skleněných válců s teploměry. Porovnávala různé plyny, tlak a vlhkost vzduchu. Popsala silnější zahřívání válce s oxidem uhličitým a jeho pomalejší chladnutí. Z výsledku usoudila, že atmosféra bohatší na tento plyn by měla vyšší teplotu.",
@@ -278,8 +283,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1861,
     dateMeaning: "Zveřejnění práce",
     title: "Přímé měření pohlcování tepelného záření plyny",
-    lane: "academic",
-    kind: "experiment",
+    category: "methods",
     paragraphs: [
       {
         text: "John Tyndall vedl tepelné záření trubicí uzavřenou deskami z kamenné soli. Měnil plyn uvnitř a pomocí termoelektrického detektoru měřil změnu prošlého záření. Dusík a kyslík v jeho pokusech pohlcovaly podstatně méně než vodní pára, oxid uhličitý a některé další plyny.",
@@ -312,8 +316,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1864,
     dateMeaning: "Zveřejnění práce",
     title: "Změny zemské dráhy jako vysvětlení dob ledových",
-    lane: "academic",
-    kind: "theory",
+    category: "mechanisms",
     paragraphs: [
       {
         text: "James Croll spojil změny protáhlosti zemské dráhy a orientace osy s délkou a intenzitou ročních období. Uvažoval také sníh a led, které odrážejí sluneční záření, a změny oceánského proudění. Astronomická změna tak v jeho vysvětlení mohla spustit další procesy zesilující ochlazování.",
@@ -345,8 +348,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1884,
     dateMeaning: "Zveřejnění práce",
     title: "Bolometr mapuje sluneční energii ve spektru",
-    lane: "academic",
-    kind: "method",
+    category: "methods",
     paragraphs: [
       {
         text: "Samuel Pierpont Langley používal bolometr, přístroj převádějící malé zahřátí na změnu elektrického odporu. Při výpravě na Mount Whitney porovnával sluneční záření v různých částech spektra a při různé dráze paprsků atmosférou. Zkoumal tím, kolik záření atmosféra zeslabuje a jak se tento účinek liší s vlnovou délkou.",
@@ -378,8 +380,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1894,
     dateMeaning: "Zveřejnění práce",
     title: "Uhlík v atmosféře má zdroje i úložiště",
-    lane: "academic",
-    kind: "theory",
+    category: "mechanisms",
     paragraphs: [
       {
         text: "Arvid Högbom porovnával zásoby uhlíku a procesy, které jej přesouvají mezi atmosférou, oceánem a horninami. Zahrnul sopečnou činnost, zvětrávání, vznik uhličitanů i spalování uhlí. Zkoumal, zda tyto toky mohou během dlouhých období měnit množství oxidu uhličitého ve vzduchu.",
@@ -411,8 +412,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1896,
     dateMeaning: "Zveřejnění práce",
     title: "Výpočet teplotní odezvy na změnu CO₂",
-    lane: "academic",
-    kind: "model",
+    category: "mechanisms",
     paragraphs: [
       {
         text: "Svante Arrhenius využil dostupná měření záření a počítal, jak by různé množství oxidu uhličitého změnilo teplotu v jednotlivých zeměpisných šířkách a ročních obdobích. Do úvah zahrnul i vodní páru a odraz slunečního záření sněhem. Výsledky zveřejnil jako tabulky pro různé násobky obsahu CO₂.",
@@ -444,8 +444,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1938,
     dateMeaning: "Zveřejnění práce",
     title: "Výpočty účinku CO₂ se setkávají s teplotními záznamy",
-    lane: "academic",
-    kind: "attribution",
+    category: "mechanisms",
     paragraphs: [
       {
         text: "Guy Stewart Callendar spojil odhady emisí a koncentrace CO₂ s výpočtem absorpce záření a se záznamy asi dvou set meteorologických stanic. Z dostupných dat vyvodil oteplování během předchozího půlstoletí a část změny přisoudil oxidu uhličitému ze spalování paliv.",
@@ -478,8 +477,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1941,
     dateMeaning: "Vydání knihy",
     title: "Výpočty oslunění dávají orbitální teorii časový průběh",
-    lane: "academic",
-    kind: "model",
+    category: "mechanisms",
     paragraphs: [
       {
         text: "Milutin Milanković sjednotil výpočty změn zemské dráhy, sklonu osy a její orientace. Převáděl je na množství sluneční energie v jednotlivých šířkách a ročních obdobích. Pro trvání sněhu přikládal velkou váhu letnímu oslunění ve vysokých severních šířkách: slabší léto umožňuje přežít větší části zimního sněhu.",
@@ -512,8 +510,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1952,
     dateMeaning: "Vydání souhrnné knihy",
     title: "Radiouhlíkové datování propojuje přírodní archivy",
-    lane: "academic",
-    kind: "method",
+    category: "methods",
     paragraphs: [
       {
         text: "Willard Libby v knize shrnul radiouhlíkové datování. Živý organismus přijímá uhlík z okolí. Po ukončení této výměny radioaktivní uhlík-14 ubývá rozpadem. Z naměřeného počtu rozpadů za daný čas tak lze odhadnout stáří vzorku. Metodu bylo možné ověřovat na vzorcích známého stáří a použít pro organické pozůstatky v klimatických archivech.",
@@ -546,8 +543,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1955,
     dateMeaning: "Zveřejnění práce",
     title: "Izotopy ve schránkách zapisují proměny oceánu",
-    lane: "academic",
-    kind: "method",
+    category: "methods",
     paragraphs: [
       {
         text: "Cesare Emiliani měřil poměr těžšího a lehčího izotopu kyslíku ve schránkách drobných mořských organismů, dírkonošců. Schránky z různých hloubek sedimentárních jader zachycovaly různá období. Změny poměru vykládal především jako změny teploty moře a sestavil průběh opakovaných chladných a teplých období.",
@@ -579,8 +575,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1956,
     dateMeaning: "Zveřejnění práce",
     title: "Přesnější výpočty záření prověřují účinek dalšího CO₂",
-    lane: "academic",
-    kind: "model",
+    category: "mechanisms",
     paragraphs: [
       {
         text: "Gilbert Plass využil podrobnější údaje o absorpci oxidu uhličitého a výpočetní postupy pro jednotlivé vrstvy atmosféry. Zkoumal pás tepelného záření kolem vlnové délky 15 mikrometrů. Ukázal, že silné pohlcování ve středu pásu samo o sobě neznamená, že přidání dalšího CO₂ už nemůže změnit přenos záření.",
@@ -613,8 +608,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1958,
     dateMeaning: "Zahájení měření na Mauna Loa",
     title: "Mauna Loa začíná pravidelně sledovat atmosférický CO₂",
-    lane: "academic",
-    kind: "program",
+    category: "observations",
     paragraphs: [
       {
         text: "Charles David Keeling zahájil v březnu 1958 na Mauna Loa měření pomocí infračerveného analyzátoru. Předcházela mu práce na přesnosti měření a rozlišování místních vlivů od složení volné atmosféry. Během prvních let záznam ukázal sezónní kolísání i růst průměrné koncentrace mezi roky.",
@@ -650,8 +644,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1967,
     dateMeaning: "Zveřejnění práce",
     title: "Model spojuje záření, proudění a vodní páru",
-    lane: "academic",
-    kind: "model",
+    category: "mechanisms",
     paragraphs: [
       {
         text: "Syukuro Manabe a Richard Wetherald počítali teplotní rovnováhu svislého sloupce atmosféry. Vedle přenosu záření zahrnuli přenos tepla konvekcí, tedy svislým pohybem vzduchu, a předepsali rozložení relativní vlhkosti. Při zvýšení CO₂ model vykazoval oteplení povrchu a nižší atmosféry i ochlazení stratosféry.",
@@ -683,8 +676,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1976,
     dateMeaning: "Zveřejnění práce",
     title: "Mořské sedimenty prověřují rytmus zemské dráhy",
-    lane: "academic",
-    kind: "attribution",
+    category: "mechanisms",
     paragraphs: [
       {
         text: "James Hays, John Imbrie a Nicholas Shackleton analyzovali přibližně půl milionu let dlouhé záznamy z hlubokomořských sedimentů. Porovnávali izotopy kyslíku a další ukazatele a hledali opakující se periody. Ve vývoji klimatu našli výrazné rytmy odpovídající přibližně 23, 41 a 100 tisícům let.",
@@ -717,8 +709,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1979,
     dateMeaning: "Zveřejnění práce",
     title: "Odhad oteplení dostává výslovné rozmezí nejistoty",
-    lane: "academic",
-    kind: "synthesis",
+    category: "mechanisms",
     paragraphs: [
       {
         text: "Skupina vedená Julem Charneym pro americkou Národní výzkumnou radu posoudila oteplení při zdvojnásobení CO₂. Porovnala výsledky tehdejších modelů a hlavní zpětné vazby. Pro ustálené globální oteplení odhadla rozmezí 1,5 až 4,5 °C se středním odhadem kolem 3 °C.",
@@ -751,8 +742,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1987,
     dateMeaning: "Zveřejnění práce",
     title: "Vzduch v ledu spojuje CO₂ s minulými ledovými cykly",
-    lane: "academic",
-    kind: "observation",
+    category: "observations",
     paragraphs: [
       {
         text: "Jean-Marc Barnola a spolupracovníci změřili oxid uhličitý ve vzduchových bublinách z antarktického vrtu Vostok. Led drtili ve vakuu bez tání a v uvolněném plynu určovali obsah CO₂. Získali záznam dlouhý přibližně 160 000 let. Nízký obsah CO₂ se pojil s chladnými obdobími Antarktidy a vyšší s teplejšími.",
@@ -789,8 +779,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1988,
     dateMeaning: "Založení panelu",
     title: "Vzniká mezivládní rámec pro hodnocení klimatického výzkumu",
-    lane: "institutional",
-    kind: "institution",
+    category: "politics",
     paragraphs: [
       {
         text: "Světová meteorologická organizace a Program OSN pro životní prostředí založily Mezivládní panel pro změnu klimatu, IPCC. Jeho úkolem se stalo hodnotit dostupné vědecké poznání o změně klimatu, jejích dopadech a možnostech reakce pro potřeby vlád.",
@@ -817,8 +806,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1990,
     dateMeaning: "Vydání hodnotící zprávy",
     title: "První zpráva IPCC odděluje zjištění, nejistoty a scénáře",
-    lane: "academic",
-    kind: "synthesis",
+    category: "mechanisms",
     paragraphs: [
       {
         text: "První hodnotící zpráva IPCC shrnula fyziku klimatu, možné dopady i reakce. Rozlišovala, co plyne z měření a fyziky, co zůstává nejisté a jaký vývoj vychází z různých emisních scénářů. Budoucí oteplení tak popisovala v závislosti na předpokládaném vývoji lidské činnosti.",
@@ -846,8 +834,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1992,
     dateMeaning: "Přijetí úmluvy",
     title: "Klimatická úmluva zavádí společný rámec vykazování a jednání",
-    lane: "institutional",
-    kind: "agreement",
+    category: "politics",
     paragraphs: [
       {
         text: "Rámcová úmluva OSN o změně klimatu byla přijata 9. května 1992. Zavázala smluvní strany k přípravě emisních inventur, zprávám a spolupráci podle rozdílných odpovědností a možností. Zřídila konferenci smluvních stran jako společný rozhodovací orgán.",
@@ -875,8 +862,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1992,
     dateMeaning: "Start družice",
     title: "Družice TOPEX/Poseidon začíná sledovat výšku oceánu",
-    lane: "academic",
-    kind: "program",
+    category: "observations",
     paragraphs: [
       {
         text: "Dne 10. srpna 1992 odstartovala družice TOPEX/Poseidon s cílem opakovaně měřit výšku mořské hladiny radarovou altimetrií, tedy určováním vzdálenosti podle doby návratu radarového pulzu. Výška hladiny se tak začala sledovat i daleko od pobřežních měřidel, podél opakovaných družicových drah.",
@@ -912,8 +898,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 1997,
     dateMeaning: "Přijetí protokolu",
     title: "Kjótský protokol stanovuje emisní závazky vybraným státům",
-    lane: "institutional",
-    kind: "agreement",
+    category: "politics",
     paragraphs: [
       {
         text: "Smluvní strany klimatické úmluvy přijaly 11. prosince 1997 Kjótský protokol. Pro průmyslové země a ekonomiky v transformaci uvedené v příloze stanovil číselné emisní závazky. První závazkové období pokrývalo roky 2008–2012. Součástí rámce bylo vykazování emisí a odborné přezkoumání.",
@@ -941,8 +926,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 2000,
     dateMeaning: "Zahájení programu",
     title: "Plováky Argo začínají soustavně měřit vnitřek oceánu",
-    lane: "academic",
-    kind: "program",
+    category: "observations",
     paragraphs: [
       {
         text: "Mezinárodní program Argo začal rozmisťovat autonomní plováky, které se pohybují mezi hladinou a hloubkou. Při výstupu měří teplotu a slanost a po vynoření předávají údaje přes družice. Základní síť byla navržena pro měření horních přibližně dvou kilometrů oceánu.",
@@ -975,8 +959,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 2005,
     dateMeaning: "Zveřejnění práce",
     title: "Rozložení ohřevu v oceánu prověřuje lidský vliv",
-    lane: "academic",
-    kind: "attribution",
+    category: "mechanisms",
     paragraphs: [
       {
         text: "Tim Barnett a spolupracovníci porovnali měření od roku 1960 s výpočty dvou klimatických modelů. Zkoumali, jak se oteplování liší mezi oceány a s hloubkou. Tento prostorový průběh obsahuje více informací o příčině než jediná hodnota průměrné teploty.",
@@ -1009,8 +992,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 2013,
     dateMeaning: "Zveřejnění práce",
     title: "Teplotní změny v různých výškách prověřují přirozené příčiny",
-    lane: "academic",
-    kind: "attribution",
+    category: "mechanisms",
     paragraphs: [
       {
         text: "Benjamin Santer a spolupracovníci porovnali družicové záznamy teplot z let 1979–2012 s klimatickými modely. Sledovali společný prostorový průběh oteplování nižší vrstvy atmosféry, troposféry, a ochlazování stratosféry nad ní. Testovali jej proti proměnlivosti zahrnující nejen vnitřní kolísání, ale také změny sluneční a sopečné činnosti.",
@@ -1043,8 +1025,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 2015,
     dateMeaning: "Zveřejnění práce",
     title: "Rostoucí CO₂ zanechává měřitelnou změnu záření u povrchu",
-    lane: "academic",
-    kind: "observation",
+    category: "mechanisms",
     paragraphs: [
       {
         text: "Daniel Feldman a spolupracovníci vyhodnotili spektra tepelného záření přicházejícího z atmosféry na dvou stanicích v Oklahomě a na Aljašce. Měření z let 2000–2010 spojili s údaji o teplotě, vlhkosti a složení vzduchu. Pomocí výpočtu přenosu záření oddělili příspěvek rostoucího CO₂ od ostatních změn.",
@@ -1077,8 +1058,7 @@ export const historyEvents: HistoryEvent[] = [
     year: 2015,
     dateMeaning: "Přijetí dohody",
     title: "Pařížská dohoda zavádí opakované národní klimatické příspěvky",
-    lane: "institutional",
-    kind: "agreement",
+    category: "politics",
     paragraphs: [
       {
         text: "Pařížská dohoda přijatá 12. prosince 2015 stanovila cíl udržet oteplení výrazně pod 2 °C oproti předindustriálnímu období a usilovat o omezení na 1,5 °C. Každá smluvní strana má připravovat, sdělovat a udržovat národní příspěvky. Nový příspěvek má předkládat každých pět let a postupně zvyšovat své úsilí.",

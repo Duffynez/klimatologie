@@ -769,7 +769,7 @@ test("publishes a complete, chronological history with traceable sources and sta
     readFile(new URL("app/data/history.ts", root), "utf8"),
     readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
   ]);
-  const { historyEvents, historyKinds, historyPeriods } = await import(
+  const { historyEvents, historyCategories, historyPeriods } = await import(
     "data:text/javascript;base64," + Buffer.from(stripTypeScriptTypes(eventsText)).toString("base64")
   );
   assert.ok(historyEvents.length > 0);
@@ -781,13 +781,12 @@ test("publishes a complete, chronological history with traceable sources and sta
     const card = rendered[index][0];
     assert.ok(card.includes('id="milnik-' + event.id + '"'));
     assert.ok(card.includes('data-history-year="' + event.year + '"'));
-    assert.ok(card.includes('data-history-lane="' + event.lane + '"'));
-    assert.ok(card.includes('data-history-kind="' + event.kind + '"'));
+    assert.ok(card.includes('data-history-category="' + event.category + '"'));
     assert.doesNotMatch(card, /\shidden(?:=|>)/);
     assert.ok(card.includes(event.title));
     assert.ok(card.includes(event.dateMeaning));
-    assert.ok(Object.hasOwn(historyKinds, event.kind));
-    assert.ok(["academic", "institutional"].includes(event.lane));
+    assert.ok(Object.hasOwn(historyCategories, event.category));
+    assert.ok(card.includes(historyCategories[event.category].label));
     assert.equal(historyPeriods.filter(period => event.year >= period.from && event.year <= period.to).length, 1);
     assert.ok(event.paragraphs.length > 0);
     for (const paragraph of event.paragraphs) {
@@ -821,24 +820,29 @@ test("publishes a complete, chronological history with traceable sources and sta
   assert.doesNotMatch(html, /citation--missing|Předchozí milník|Další milník/);
 });
 
-test("renders accessible history filters for every kind and links only populated periods", async () => {
+test("renders accessible history areas matching the site and hides unpopulated categories", async () => {
   const [html, eventsText] = await Promise.all([
     readFile(new URL("dist/client/historie/index.html", root), "utf8"),
     readFile(new URL("app/data/history.ts", root), "utf8"),
   ]);
-  const { historyEvents, historyKinds, historyPeriods } = await import(
+  const { historyEvents, historyCategories, historyPeriods } = await import(
     "data:text/javascript;base64," + Buffer.from(stripTypeScriptTypes(eventsText)).toString("base64")
   );
   assert.match(html, /aria-label="Filtry historické osy"/);
-  assert.match(html, /aria-pressed="true"[^>]*>Všechny<\/button>/);
-  assert.match(html, /aria-pressed="false"[^>]*>Vědecké<\/button>/);
-  assert.match(html, /aria-pressed="false"[^>]*>Politické<\/button>/);
-  assert.match(html, /<select id="history-kind"/);
+  assert.match(html, /<button\b[^>]*aria-label="Všechny"[^>]*aria-pressed="true"/);
+  assert.doesNotMatch(html, /<select id="history-kind"|data-history-lane=/);
   assert.match(html, /role="status" aria-live="polite" aria-atomic="true"/);
   assert.match(html, /<noscript>/);
-  for (const [kind, label] of Object.entries(historyKinds)) {
-    assert.ok(html.includes('<option value="' + kind + '">' + label + '</option>'));
-    assert.ok(historyEvents.some(event => event.kind === kind), kind);
+  const buttons = [...html.matchAll(/<button\b[^>]*>([\s\S]*?)<\/button>/g)].map(match => match[0]);
+  for (const [value, category] of Object.entries(historyCategories)) {
+    const button = buttons.find(button => button.includes('aria-label="' + category.label + '"'));
+    if (historyEvents.some(event => event.category === value)) {
+      assert.ok(button, "Missing area filter " + category.label);
+      assert.ok(button.includes('aria-pressed="false"'));
+      assert.ok(button.includes(category.description));
+    } else {
+      assert.equal(button, undefined, "Do not publish an empty area filter " + category.label);
+    }
   }
   for (const period of historyPeriods) {
     assert.ok(html.includes('href="#' + period.id + '"'));

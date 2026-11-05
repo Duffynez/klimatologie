@@ -4,11 +4,20 @@ Historie ukazuje, jak vznikaly možnosti klima poznávat, měřit a vysvětlovat
 
 ## 1. Výběr milníků
 
-Časová osa sleduje pouze dvě souběžné historie: vývoj vědeckého poznání a formální politická rozhodnutí. Kandidát na vědecký milník musí přinést nový fyzikální poznatek, měřicí možnost, metodu, zásadní pozorování, ověření hypotézy, modelový postup, odbornou syntézu nebo důležitou pozorovací infrastrukturu. Politický milník musí změnit právní rámec, závazky, vykazování nebo trvalý způsob mezinárodního rozhodování.
+Historická osa používá stejné vědecké oblasti jako hlavní struktura webu. Každý milník má jednu hlavní oblast podle svého rozhodujícího přínosu:
 
-Každý kandidát musí mít přímou klimatickou souvislost, doložitelný a trvalý dopad, primární zdroj a význam, který není obsažen v jiném milníku. Do jedné věty musí jít přesně shrnout, co po události bylo nově možné vědět, měřit nebo rozhodnout. Bez splnění těchto podmínek na osu nepatří.
+- **Pozorování:** zjištění o stavu a vývoji klimatu, rekonstrukce minulosti a vznik soustavných pozorovacích záznamů. Vymezení navazuje na [OBSERVATIONS.md](OBSERVATIONS.md).
+- **Metody:** nové možnosti měření, přístroje, přírodní archivy, datování a postupy zpracování. Vymezení navazuje na [METHODS.md](METHODS.md).
+- **Mechanismy:** vznik fyzikálních vysvětlení, jejich výpočty, ověřování příčin a syntézy poznání o fungování klimatu. Vymezení navazuje na [MECHANISMS.md](MECHANISMS.md).
+- **Politika:** změny právního rámce, závazků, vykazování nebo trvalého způsobu mezinárodního rozhodování.
 
-Nezařazujeme popularizační knihy, noviny, časopisy, filmy, fotografie, umění, aktivismus, kampaně, ceny, firemní komunikaci, lobbing, jednotlivé projevy ani obecné ekologické události bez přímého klimatického rozhodnutí. Samotný vznik organizace nestačí. Musí vytvořit zásadní vědeckou možnost nebo formální politický rámec. Opakované studie a aktualizace téhož poznatku patří do odborných článků a zdrojů, nikoli mezi nové historické milníky.
+Kandidát na vědecký milník musí přinést nový fyzikální poznatek, měřicí možnost, metodu, zásadní pozorování, ověření hypotézy, modelový postup, odbornou syntézu nebo důležitou pozorovací infrastrukturu. Zařazení neodvozujeme automaticky od použitého přístroje, druhu publikace ani kategorie vydavatele. Nový měřicí postup patří k metodám, začátek dlouhodobého klimatického záznamu k pozorováním a test příčiny k mechanismům. Vazby na další oblasti vyjadřujeme souvisejícími odkazy. Milník kvůli nim neduplikujeme.
+
+Každý kandidát musí mít přímou klimatickou souvislost, doložitelný a trvalý dopad, primární zdroj a význam, který není obsažen v jiném milníku. U vědeckého a politického milníku musí jít do jedné věty přesně shrnout, co po události bylo nově možné vědět, měřit nebo rozhodnout. Bez splnění těchto podmínek na osu nepatří.
+
+Popularizační knihy, noviny, časopisy, filmy, fotografie a umění nezařazujeme mezi vědecké objevy ani formální politická rozhodnutí. Stejně tak sem nepatří aktivismus, kampaně, ceny, firemní komunikace, lobbing, jednotlivé projevy ani obecné ekologické události bez přímého klimatického rozhodnutí. Samotný vznik organizace nestačí. Musí vytvořit zásadní vědeckou možnost nebo formální politický rámec. Opakované studie a aktualizace téhož poznatku patří do odborných článků a zdrojů, nikoli mezi nové historické milníky.
+
+Připravovaná oblast **Kultura** bude sledovat klimatická témata v umění, literatuře a společenském vnímání. Kulturní milník musí mít doložený vztah ke klimatu, vlastní pramen a vysvětlený historický význam. U něj shrneme, jak se změnilo zobrazování nebo veřejné vnímání klimatu. Kulturní zobrazení ani jeho popularita nenahrazují vědecký důkaz. Oblast se na veřejné ose objeví až s prvními zpracovanými milníky.
 
 Výběr není úplnou kronikou. Mezery posuzujeme podle chybějících kroků poznání, například měření oceánu nebo ověřování příčin změny. Počet událostí ani rovnoměrné zastoupení období a větví neurčujeme předem. Novější rok sám není důvodem k doplnění události.
 
@@ -55,12 +64,12 @@ Milník propojujeme s odpovídajícími pozorováními, metodami a mechanismy na
 
 ## 6. Podoba osy a filtry
 
-Události zobrazujeme chronologicky. Přehled období pomáhá s pohybem po stránce, vzdálenosti mezi položkami nevyjadřují délku času. Označení vědecké nebo politické větve je dostupné přímo u každého milníku, včetně mobilního zobrazení a čteček obrazovky. Význam nesmí záviset jen na barvě.
+Události zobrazujeme chronologicky. Přehled období pomáhá s pohybem po stránce, vzdálenosti mezi položkami nevyjadřují délku času. Oblast má vlastní barvu a její název je dostupný přímo u každého milníku, včetně mobilního zobrazení a čteček obrazovky. Význam nesmí záviset jen na barvě.
 
-Filtry umožní zobrazit všechny, vědecké nebo politické události a všechny dostupné druhy milníků. Lze je kombinovat a zrušit. Stránka sdělí počet výsledků a vysvětlí prázdný výběr. Filtrace nemění datum, pořadí, obsah ani identitu události. Základní úplná chronologie a odkazy na milníky fungují také bez klientského JavaScriptu.
+Filtr umožní zobrazit všechny události nebo jednu oblast: Pozorování, Metody, Mechanismy a Politika, později také Kultura. Nabízíme jen oblasti, které mají zpracovaný milník. Krátký popis vysvětlí význam každé oblasti. Volba Všechny obnoví úplnou osu. Stránka sdělí počet výsledků a případný prázdný výběr. Vědecké oblasti odkazují na stejnojmenné části webu. Filtrace nemění datum, pořadí, obsah ani identitu události. Základní úplná chronologie a odkazy na milníky fungují také bez klientského JavaScriptu.
 
 ## 7. Kontrola před zveřejněním
 
 Nejprve ověříme výběr, data, význam, oporu tvrzení a zachování souvislostí podle tohoto standardu. Potom provedeme samostatný redakční průchod podle [STYLE.md](STYLE.md). Pracovní poznámky k účelu odstavců a jejich opravám nepatří na veřejnou osu.
 
-Technické kontroly musí zachytit chybějící nebo duplicitní identitu, neplatný druh a větev, nedohledatelný zdroj, chybné řazení a rozbité místní odkazy. Testy nevyžadují pevný počet milníků ani minimální počet slov. V prohlížeči ověříme filtry včetně prázdné kombinace, reset, přímý odkaz na milník, ovládání klávesnicí a široké i mobilní rozvržení podle [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md).
+Technické kontroly musí zachytit chybějící nebo duplicitní identitu, neplatnou oblast, nedohledatelný zdroj, chybné řazení a rozbité místní odkazy. Testy nevyžadují pevný počet milníků ani minimální počet slov. V prohlížeči ověříme všechny oblasti, návrat na úplnou osu, přímý odkaz na milník, ovládání klávesnicí a široké i mobilní rozvržení podle [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md).

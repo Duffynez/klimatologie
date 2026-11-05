@@ -171,13 +171,13 @@ Podrobný popis je v `docs/SOURCES-AND-ARCHIVE.md`.
 
 ## 8. Historická osa
 
-`app/data/history.ts` drží údaje o události: stabilní `id`, `year`, význam data `dateMeaning`, český `title`, větev `lane`, druh `kind`, odstavce s citacemi a související místní odkazy. Rok události se neodvozuje od roku vydání pramene. ID zůstává stejné i při opravě data.
+`app/data/history.ts` drží údaje o události: stabilní `id`, `year`, význam data `dateMeaning`, český `title`, hlavní oblast `category`, odstavce s citacemi a související místní odkazy. `historyCategories` určuje názvy a vysvětlení oblastí Pozorování, Metody, Mechanismy, Politika a připravované Kultury. Vědecké oblasti odkazují na odpovídající katalog webu. Rok události se neodvozuje od roku vydání pramene. ID zůstává stejné i při opravě data.
 
 Bibliografie se nadále načítá výhradně z centrálního katalogu. Každý odstavec má `references` s `sourceId` a případným `locator` pro stranu, oddíl či obrázek. Jedna událost může mít dobový i navazující zdroj.
 
 Serverová stránka `app/historie/page.tsx` kontroluje identitu, chronologii, klasifikaci a existenci pramenů. Chybná položka zastaví sestavení, nevynechá se potichu. Vykreslí obsah karet a předá jej klientské komponentě `HistoryTimeline.tsx` jako React obsah. Celý zdrojový katalog ani textová data se neimportují do klientské komponenty.
 
-`HistoryTimeline` kombinuje filtr větve (všechny, vědecké, politické) s filtrem druhu milníku. Uchovává celé karty v DOM, mění jejich viditelnost, počet výsledků a odkazy na neprázdná období. Zrušení filtrů obnoví úplnou osu. Odkaz na skrytý milník filtry zruší. Původní kotvy `milnik-ID` zůstávají zachované.
+`HistoryTimeline` filtruje podle hlavní oblasti. Server předává jen oblasti se zpracovanými milníky, takže připravená Kultura zůstává do jejich doplnění skrytá. Každá událost patří do jedné oblasti, vazby na další části webu vyjadřují související odkazy. Komponenta uchovává celé karty v DOM, mění jejich viditelnost, počet výsledků a odkazy na neprázdná období. Volba Všechny obnoví úplnou osu. Odkaz na skrytý milník filtr zruší. Původní kotvy `milnik-ID` zůstávají zachované.
 
 Výchozí statický export obsahuje všechny milníky v jedné chronologii a funguje pro čtení i bez JavaScriptu. Interakce mají popisky, stav stisknutí, oznámení počtu a prázdný stav. Rozvržení a mobilní úpravy jsou v `HistoryTimeline.module.css`. Obsahový standard je [HISTORY.md](../HISTORY.md).
 

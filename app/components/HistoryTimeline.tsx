@@ -1,41 +1,36 @@
 "use client";
 
 import { useEffect, useState, type ReactNode } from "react";
-import type { HistoryKind, HistoryLane, HistoryPeriod } from "../data/history";
+import Link from "next/link";
+import type { HistoryCategory, HistoryPeriod } from "../data/history";
 import styles from "./HistoryTimeline.module.css";
 
 export type HistoryTimelineItem = {
   id: string;
   year: number;
-  lane: HistoryLane;
-  kind: HistoryKind;
+  category: HistoryCategory;
   content: ReactNode;
 };
 
-export function HistoryTimeline({ items, periods, kinds }: {
+export function HistoryTimeline({ items, periods, categories }: {
   items: HistoryTimelineItem[];
   periods: HistoryPeriod[];
-  kinds: { value: HistoryKind; label: string }[];
+  categories: { value: HistoryCategory; label: string; description: string; href: string | null }[];
 }) {
-  const [lane, setLane] = useState<HistoryLane | "all">("all");
-  const [kind, setKind] = useState<HistoryKind | "all">("all");
-  const matches = (item: HistoryTimelineItem) =>
-    (lane === "all" || item.lane === lane) && (kind === "all" || item.kind === kind);
+  const [category, setCategory] = useState<HistoryCategory | "all">("all");
+  const matches = (item: HistoryTimelineItem) => category === "all" || item.category === category;
+  const activeCategory = categories.find(option => option.value === category);
   const visibleItems = items.filter(matches);
   const visiblePeriods = periods.filter(period =>
     visibleItems.some(item => item.year >= period.from && item.year <= period.to));
 
-  const reset = () => {
-    setLane("all");
-    setKind("all");
-  };
+  const reset = () => setCategory("all");
 
   useEffect(() => {
     const revealLinkedMilestone = () => {
       const anchor = window.location.hash.slice(1);
       if (!items.some(item => `milnik-${item.id}` === anchor)) return;
-      setLane("all");
-      setKind("all");
+      setCategory("all");
       requestAnimationFrame(() => document.getElementById(anchor)?.scrollIntoView());
     };
     window.addEventListener("hashchange", revealLinkedMilestone);
@@ -45,32 +40,42 @@ export function HistoryTimeline({ items, periods, kinds }: {
   return (
     <div className={styles.timeline}>
       <div className={styles.filters} role="region" aria-label="Filtry historické osy">
-        <fieldset className={styles.lanes}>
-          <legend>Oblast</legend>
-          <div className={styles.laneChoices}>
-            {([
-              ["all", "Všechny"],
-              ["academic", "Vědecké"],
-              ["institutional", "Politické"],
-            ] as const).map(([value, label]) => (
-              <button key={value} type="button" data-history-lane={value} aria-pressed={lane === value}
-                onClick={() => setLane(value)}>{label}</button>
+        <fieldset className={styles.categories}>
+          <legend>Oblast historie</legend>
+          <div className={styles.categoryChoices}>
+            <button type="button" className={styles.categoryChoice} data-history-category="all"
+              aria-label="Všechny" aria-pressed={category === "all"} onClick={reset}>
+              <span className={styles.choiceHeading}>
+                <span>Všechny</span><span className={styles.choiceCount} aria-hidden="true">{items.length}</span>
+              </span>
+              <span className={styles.choiceDescription}>Celá časová osa</span>
+            </button>
+            {categories.map(option => (
+              <button key={option.value} type="button" className={styles.categoryChoice}
+                data-history-category={option.value} aria-label={option.label}
+                aria-describedby={`history-area-${option.value}-description`}
+                aria-pressed={category === option.value} onClick={() => setCategory(option.value)}>
+                <span className={styles.choiceHeading}>
+                  <span>{option.label}</span>
+                  <span className={styles.choiceCount} aria-hidden="true">
+                    {items.filter(item => item.category === option.value).length}
+                  </span>
+                </span>
+                <span id={`history-area-${option.value}-description`} className={styles.choiceDescription}>
+                  {option.description}
+                </span>
+              </button>
             ))}
           </div>
         </fieldset>
-        <label className={styles.kind} htmlFor="history-kind">
-          Druh milníku
-          <select id="history-kind" value={kind}
-            onChange={event => setKind(event.target.value as HistoryKind | "all")}>
-            <option value="all">Všechny druhy</option>
-            {kinds.map(option => <option key={option.value} value={option.value}>{option.label}</option>)}
-          </select>
-        </label>
-        <button className={styles.reset} type="button" onClick={reset}
-          disabled={lane === "all" && kind === "all"}>Zrušit filtry</button>
         <p className={styles.count} role="status" aria-live="polite" aria-atomic="true">
           Zobrazeno {visibleItems.length} z {items.length} milníků
         </p>
+        {activeCategory?.href && (
+          <Link className={styles.categoryLink} href={activeCategory.href}>
+            Prozkoumat {activeCategory.label.toLocaleLowerCase("cs")} →
+          </Link>
+        )}
       </div>
       <noscript><p>Filtry vyžadují JavaScript. Níže je celá chronologická osa.</p></noscript>
 
@@ -81,7 +86,7 @@ export function HistoryTimeline({ items, periods, kinds }: {
         </nav>
       ) : (
         <div className={styles.empty}>
-          <p>Pro tuto kombinaci filtrů není v ose žádný milník.</p>
+          <p>V této oblasti zatím není žádný milník.</p>
           <button type="button" onClick={reset}>Zobrazit celou osu</button>
         </div>
       )}
@@ -94,8 +99,7 @@ export function HistoryTimeline({ items, periods, kinds }: {
           <ol className={styles.events}>
             {items.filter(item => item.year >= period.from && item.year <= period.to).map(item => (
               <li key={item.id} id={`milnik-${item.id}`} className={styles.event}
-                data-history-year={item.year} data-history-lane={item.lane}
-                data-history-kind={item.kind} hidden={!matches(item)}>
+                data-history-year={item.year} data-history-category={item.category} hidden={!matches(item)}>
                 {item.content}
               </li>
             ))}

@@ -1,93 +1,98 @@
 .timeline {
-  --history-science: var(--source-science);
-  --history-science-surface: #eaf5f5;
-  --history-science-border: #9bc4c9;
+  --history-accent: var(--sea);
+  --history-surface: var(--white);
+  --history-border: var(--line);
   --history-politics: #9b452f;
-  --history-politics-surface: #fff0e8;
-  --history-politics-border: #dfab95;
   max-width: 1020px;
   margin: 36px auto 72px;
+}
+
+.timeline [data-history-category="observations"] {
+  --history-accent: #176d78;
+  --history-surface: #eaf5f5;
+  --history-border: #9bc4c9;
+}
+
+.timeline [data-history-category="methods"] {
+  --history-accent: #315f99;
+  --history-surface: #edf2fa;
+  --history-border: #a6bcda;
+}
+
+.timeline [data-history-category="mechanisms"] {
+  --history-accent: #6f4d8e;
+  --history-surface: #f4eef9;
+  --history-border: #c8b5db;
+}
+
+.timeline [data-history-category="politics"] {
+  --history-accent: var(--history-politics);
+  --history-surface: #fff0e8;
+  --history-border: #dfab95;
+}
+
+.timeline [data-history-category="culture"] {
+  --history-accent: #855b21;
+  --history-surface: #fbf2e5;
+  --history-border: #d6ba90;
 }
 
 .filters {
   display: flex;
   flex-wrap: wrap;
-  align-items: end;
-  gap: 20px 28px;
+  align-items: baseline;
+  gap: 16px 24px;
   padding: 24px;
   border: 1px solid var(--line);
   background: var(--white);
 }
 
-.lanes {
+.categories {
+  flex-basis: 100%;
   min-width: 0;
   margin: 0;
   padding: 0;
   border: 0;
 }
 
-.lanes legend,
-.kind {
+.categories legend {
+  margin-bottom: 12px;
   color: var(--ink);
   font-size: 0.88rem;
   font-weight: 700;
 }
 
-.lanes legend { margin-bottom: 8px; }
-.laneChoices { display: flex; flex-wrap: wrap; gap: 6px; }
+.categoryChoices {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
 
-.laneChoices button,
-.reset,
-.empty button,
-.kind select {
+.categoryChoice,
+.empty button {
+  min-width: 0;
   min-height: 44px;
-  padding: 9px 14px;
-  border: 1px solid var(--line);
+  padding: 14px 12px;
+  border: 1px solid var(--history-border);
   border-radius: 3px;
-  background: var(--white);
-  color: var(--ink);
+  background: var(--history-surface);
+  color: var(--history-accent);
   font: inherit;
   font-size: 0.9rem;
+  text-align: left;
+  cursor: pointer;
 }
 
-.laneChoices button,
-.reset,
-.empty button { cursor: pointer; }
-
-.laneChoices button {
-  --lane-accent: var(--sea);
-  --lane-surface: var(--white);
-  --lane-border: var(--line);
-  border-color: var(--lane-border);
-  background: var(--lane-surface);
-  color: var(--lane-accent);
-  font-weight: 700;
-}
-
-.laneChoices button[data-history-lane="academic"] {
-  --lane-accent: var(--history-science);
-  --lane-surface: var(--history-science-surface);
-  --lane-border: var(--history-science-border);
-}
-
-.laneChoices button[data-history-lane="institutional"] {
-  --lane-accent: var(--history-politics);
-  --lane-surface: var(--history-politics-surface);
-  --lane-border: var(--history-politics-border);
-}
-
-.laneChoices button[aria-pressed="true"] {
-  border-color: var(--lane-accent);
-  background: var(--lane-accent);
-  color: var(--white);
-}
-
-.laneChoices button:hover { border-color: var(--lane-accent); }
-.reset:not(:disabled):hover,
+.categoryChoice { display: flex; flex-direction: column; align-items: stretch; border-top: 4px solid var(--history-accent); }
+.choiceHeading { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-weight: 700; }
+.choiceCount { padding: 0 6px; border: 1px solid currentColor; border-radius: 20px; font-size: 0.75rem; }
+.choiceDescription { display: block; margin-top: 9px; font-size: 0.82rem; line-height: 1.45; }
+.categoryChoice[aria-pressed="true"] { border-color: var(--history-accent); background: var(--history-accent); color: var(--white); }
+.categoryChoice:hover { border-color: var(--history-accent); }
 .empty button:hover { border-color: var(--sea); }
 
 .filters button:focus-visible,
-.kind select:focus-visible,
+.categoryLink:focus-visible,
 .periodNav a:focus-visible,
 .sources summary:focus-visible,
 .related a:focus-visible,
@@ -96,10 +101,8 @@
   outline-offset: 3px;
 }
 
-.kind { display: grid; gap: 8px; flex: 1 1 210px; max-width: 320px; }
-.kind select { width: 100%; min-width: 0; }
-.reset:disabled { color: var(--muted); cursor: default; opacity: 0.7; }
-.count { flex-basis: 100%; margin: 0; font-size: 0.88rem; color: var(--muted); }
+.count { flex: 1 1 auto; margin: 0; font-size: 0.88rem; color: var(--muted); }
+.categoryLink { color: var(--sea); font-size: 0.88rem; text-underline-offset: 3px; }
 
 .periodNav {
   display: flex;
@@ -130,9 +133,6 @@
 .milestone {
   --source-book: #805a10;
   --source-politics: var(--history-politics);
-  --history-accent: var(--history-science);
-  --history-surface: var(--history-science-surface);
-  --history-border: var(--history-science-border);
   display: grid;
   grid-template-columns: 116px minmax(0, 1fr);
   gap: 24px;
@@ -143,11 +143,6 @@
   background: var(--history-surface);
 }
 
-.political {
-  --history-accent: var(--history-politics);
-  --history-surface: var(--history-politics-surface);
-  --history-border: var(--history-politics-border);
-}
 .date { padding-top: 2px; }
 .date time { display: block; color: var(--history-accent); font-family: Georgia, "Times New Roman", serif; font-size: 1.9rem; line-height: 1.15; }
 .date span { display: block; margin-top: 9px; color: var(--muted); font-size: 0.76rem; line-height: 1.45; }
@@ -169,10 +164,15 @@
 .sources a { color: var(--sea); }
 .empty { padding: 30px 0; }
 
+@media (max-width: 900px) {
+  .categoryChoices { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .categoryChoice[data-history-category="all"] { grid-column: 1 / -1; }
+}
+
 @media (max-width: 700px) {
   .timeline { margin-top: 24px; }
-  .filters { padding: 18px; gap: 18px; }
-  .kind { max-width: none; flex-basis: 100%; }
+  .filters { padding: 14px; gap: 16px; }
+  .categoryChoice { padding: 12px 10px; }
   .milestone { grid-template-columns: minmax(0, 1fr); gap: 14px; padding: 20px 16px; }
   .date { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px 16px; }
   .date span { margin: 0; }
