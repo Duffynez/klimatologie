@@ -1,4 +1,5 @@
 import { HypothesisStory } from "./HypothesisStory";
+import Image from "next/image";
 import Link from "next/link";
 import { HypothesisDiagram, type MechanismHypothesis } from "./HypothesisDiagram";
 import { SourceLink } from "./SourceLink";
@@ -94,23 +95,68 @@ export function GreenhouseRadiationArticle() {
             v celém pásmu, včetně jeho slaběji pohlcujících částí.{' '}
             <SourceLink id="DOI_10_1063_1_3653855">(Pierrehumbert 2011, obr. 2–3)</SourceLink>
           </p>
+          <p>
+            Horní křivka v obrázku zachycuje nasycení na jedné zvolené
+            vlnové délce. Čím více záření už plyn pohltil, tím méně ho
+            zbývá pro další přírůstek plynu. Pod křivkou sledujeme dvě
+            zkoušky: nejprve změnu pohlcování v trubici, potom změnu
+            záření přicházejícího ze skutečné atmosféry.
+          </p>
+          <figure id="nasyceni-schema" className={`article-figure ${styles.explanatoryFigure}`}>
+            <div className={styles.figureScroll} tabIndex={0} role="region"
+              aria-label="Nasycení pohlcování a oba testy, na úzké obrazovce posuvné do stran">
+              <a href="/media/radiacni-pusobeni-sklenikovych-plynu/nasyceni-co2.png"
+                aria-label="Otevřít grafiku nasycení CO₂ a obou testů v plné velikosti">
+                <Image className="article-figure__media"
+                  src="/media/radiacni-pusobeni-sklenikovych-plynu/nasyceni-co2.png"
+                  alt="Pohlcený podíl záření na jedné vlnové délce se s množstvím plynu blíží 100 %. Kochův pokus snížil tlak CO₂ v třiceticentimetrové trubici z 780 na 520 mmHg, pohlcený podíl se změnil nejvýše o 0,4 procentního bodu. V atmosféře však měření za roky 2000–2010 ukázala rostoucí příspěvek CO₂ k záření k povrchu: 0,20 ± 0,06 W/m² za deset let v Oklahomě a 0,20 ± 0,07 na severu Aljašky."
+                  width={1122} height={1402} unoptimized />
+              </a>
+            </div>
+            <figcaption>
+              Křivka znázorňuje princip pohlcování na jedné vlnové délce.
+              Červená představuje infračervené záření, které lidské oko
+              nevidí. Přístroje jsou schematické ilustrace. Dolní panely
+              spojují <a href="#nasyceni-laboratorni-test">pokus v trubici</a>
+              {' '}a <a href="#nasyceni-atmosfericky-test">měření atmosféry</a>.
+              Údaje v pravém panelu popisují růst příspěvku CO₂ k záření
+              směřujícímu k povrchu za jasné oblohy na dvou stanicích.
+              Vlastní grafika Klimatologie.eu vytvořená pomocí AI,
+              CC BY 4.0. Podklady:{' '}
+              <SourceLink id="2016_Harvey_Analytical_Chemistry">Harvey, oddíl 10.2</SourceLink>,{' '}
+              <SourceLink id="DOI_10_1002_andp_19003081208">Ångström (1900, s. 724)</SourceLink>
+              {' '}a <SourceLink id="DOI_10_1038_nature14240">Feldman a kol. (2015)</SourceLink>.{' '}
+              Na menší obrazovce lze obrázek posouvat do stran.{' '}
+              <a href="/media/radiacni-pusobeni-sklenikovych-plynu/nasyceni-co2.png">Otevřít v plné velikosti</a>.{' '}
+              <a href="/media/radiacni-pusobeni-sklenikovych-plynu/nasyceni-co2.csv" download>Číselné podklady</a>.{' '}
+              <a href="/media/radiacni-pusobeni-sklenikovych-plynu/nasyceni-co2.txt">Podklady a licence</a>.
+            </figcaption>
+          </figure>
 
-          <h4 id="nasyceni-laboratorni-test" className={styles.testHeading}>První test mění množství CO₂ v trubici</h4>
+          <h4 id="nasyceni-laboratorni-test" className={styles.testHeading}>První test: méně CO₂ v trubici</h4>
           <p>
             Při téměř úplném nasycení by ani výrazné ubrání plynu
             nemuselo pohlcený podíl příliš změnit. Právě to zkoumal
             pokus J. Kocha, který Ångström popsal ve své práci.
             Tepelné záření zdroje o teplotě 100 °C procházelo 30 centimetry
-            CO₂. Při tlaku 780 milimetrů rtuťového sloupce, přibližně
-            atmosférickém tlaku, plyn pohltil asi 10 % dopadajícího záření.
-            Po snížení tlaku na dvě třetiny se pohlcený podíl změnil nejvýše
-            o 0,4 procentního bodu.{' '}
+            CO₂. Porovnáním dopadajícího a prošlého záření se určovalo,
+            jakou část plyn pohltil.{' '}
             <SourceLink id="DOI_10_1002_andp_19003081208">(Ångström 1900, s. 724)</SourceLink>
           </p>
           <p>
-            Menší tlak znamenal méně CO₂ v dráze záření. Přesto se celkový
-            pohlcený podíl změnil málo. Výsledek tedy podporoval nasycení
-            pohlcování v podmínkách tohoto pokusu. Ångström z něj odvodil
+            Zpočátku byl tlak plynu 780 milimetrů rtuťového sloupce,
+            zapisovaných jako mmHg. To je přibližně atmosférický tlak.
+            Plyn při něm pohltil asi 10 % dopadajícího záření. Potom tlak
+            klesl na dvě třetiny, tedy na 520 mmHg. Při stejném objemu
+            a teplotě tak bylo v dráze záření o třetinu méně molekul CO₂.{' '}
+            <SourceLink id="DOI_10_1002_andp_19003081208">(Ångström 1900, s. 724)</SourceLink>
+          </p>
+          <p>
+            Pohlcený podíl se změnil nejvýše o 0,4 procentního bodu.
+            Jinými slovy, změna se týkala nanejvýš 0,4 % veškerého
+            dopadajícího záření. Výrazné ubrání plynu tedy ovlivnilo
+            pohlcování jen málo. Výsledek podporoval nasycení v podmínkách
+            pokusu. Ångström z něj odvodil
             širší závěr, že změny atmosférického CO₂ mají na celkové
             pohlcování zemského záření jen malý vliv.{' '}
             <SourceLink id="DOI_10_1002_andp_19003081208">(Ångström 1900, s. 724–725)</SourceLink>
@@ -134,21 +180,25 @@ export function GreenhouseRadiationArticle() {
             <SourceLink id="1956_Plass">(Plass 1956, s. 141–142)</SourceLink>
           </p>
 
-          <h4 id="nasyceni-atmosfericky-test" className={styles.testHeading}>Druhý test hledá změnu v záření atmosféry</h4>
+          <h4 id="nasyceni-atmosfericky-test" className={styles.testHeading}>Druhý test: záření skutečné atmosféry</h4>
           <p>
             Představu téměř vyčerpaného účinku lze dnes zkoušet přímo
             v atmosféře. Při růstu CO₂ by po zohlednění teploty a vlhkosti
             měl zbývat jen zanedbatelný přírůstek záření v jeho pásmu.
-            Rozhodující je přitom velikost i rozložení změny podle vlnové
-            délky. Samotný růst celkového záření by příčinu neodlišil.{' '}
+            Pozemní přístroj měří tepelné záření přicházející z atmosféry
+            a rozděluje je podle vlnové délky. Sledujeme tak velikost
+            změny i její rozložení ve spektru, podle kterého lze
+            rozpoznat příspěvek CO₂.{' '}
             <SourceLink id="DOI_10_1038_nature14240">(Feldman a kol. 2015, obr. 1–2)</SourceLink>
           </p>
           <p>
-            Feldmanův tým porovnal měření za jasné oblohy v Oklahomě
-            a na severu Aljašky s výpočtem, ve kterém se teplota i vlhkost
-            měnily podle pozorování, ale CO₂ zůstával stálý. Rozdíl mezi
-            měřením a tímto výpočtem rostl právě v pásmu CO₂. Vliv
-            ostatních proměn atmosféry tedy tuto změnu nevysvětlil.{' '}
+            Feldmanův tým využil měření za jasné oblohy v Oklahomě
+            a na severu Aljašky. Pro každé porovnání vypočítal, jaké
+            záření by k přístroji přicházelo, kdyby CO₂ zůstal na stálé
+            koncentraci. Teplota a vlhkost v jednotlivých vrstvách
+            přitom odpovídaly pozorování. Výpočet tak zachytil jejich
+            proměny a umožnil hledat účinek přibývajícího CO₂ v rozdílu
+            mezi naměřeným a vypočteným zářením.{' '}
             <SourceLink id="DOI_10_1038_nature14240">(Feldman a kol. 2015, obr. 2)</SourceLink>
           </p>
           <p>
@@ -161,8 +211,10 @@ export function GreenhouseRadiationArticle() {
             <SourceLink id="DOI_10_1038_nature14240">(Feldman a kol. 2015, obr. 4 a metody)</SourceLink>
           </p>
           <p>
-            V obou prostředích tedy zůstala měřitelná změna, kterou
-            proměny teploty a vodní páry samy nevysvětlily. Přehled měření
+            Rozdíl proti výpočtu se stálým CO₂ na obou místech rostl
+            právě v jeho absorpčním pásmu. Atmosféra tedy poskytla
+            výsledek, který představa téměř vyčerpaného účinku dalšího
+            CO₂ nevysvětlovala. Přehled měření
             a jeho zpracování obsahuje{' '}
             <Link href="/pozorovani/atmosfericka-koncentrace-co2/#zmena-infracerveneho-zareni">pozorování změny infračerveného záření</Link>.
             V následujícím příběhu ukážeme také druhou polovinu testu:
@@ -172,9 +224,11 @@ export function GreenhouseRadiationArticle() {
 
           <h4 className={styles.subheading}>Co z hypotézy zůstalo platné</h4>
           <p>
-            Silné nasycení některých částí pásma je skutečná vlastnost CO₂.
-            Dnes přijímané vysvětlení ji zahrnuje. Neobstálo její zobecnění
-            na téměř vyčerpaný účinek dalšího CO₂ v celé atmosféře.
+            Pokus v trubici podpořil nasycení pohlcování za daných podmínek.
+            Měření atmosféry přesto ukázalo rostoucí příspěvek dalšího CO₂.
+            Obě zjištění patří do dnešního vysvětlení: silné nasycení
+            některých částí pásma je skutečné, jeho rozšíření na téměř
+            vyčerpaný účinek CO₂ v celé atmosféře však neobstálo.
             Slabší části pásma i vyzařování jednotlivých vrstev zůstávají
             citlivé na množství plynu. Proto musíme současně vysvětlit
             nasycení v části spektra i pozorovanou změnu přenosu energie.{' '}
@@ -601,6 +655,12 @@ export function GreenhouseRadiationArticle() {
             <ul>
               <li><SourceLink id="DATA_AIRS_SPECTRAL_OLR">Spektrální toky AIRS</SourceLink>: veřejný produkt NASA. Stažení může vyžadovat bezplatný účet Earthdata.</li>
               <li><SourceLink id="DATA_RAGHURAMAN_2023_SPECTRAL">Výstupy modelových experimentů</SourceLink>: samostatný archiv Zenodo k práci z roku 2023.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Podklady vysvětlující grafiky</h3>
+            <ul>
+              <li><a href="/media/radiacni-pusobeni-sklenikovych-plynu/nasyceni-co2.png">Nasycení pohlcování a oba testy</a>, <a href="/media/radiacni-pusobeni-sklenikovych-plynu/nasyceni-co2.csv" download>číselné podklady</a> a <a href="/media/radiacni-pusobeni-sklenikovych-plynu/nasyceni-co2.txt">popis a licence</a>. Vlastní grafika vytvořená pomocí AI, CC BY 4.0. Křivka ilustruje princip. Čísla přebírají publikované výsledky Ångströma (1900) a Feldmana a kol. (2015).</li>
             </ul>
           </section>
         </div>

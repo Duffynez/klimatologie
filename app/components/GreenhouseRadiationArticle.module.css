@@ -1,3 +1,18 @@
+.explanatoryFigure {
+  width: min(calc(100vw - 40px), var(--max-width));
+  max-width: 1122px;
+}
+
+.figureScroll {
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.figureScroll img {
+  min-width: 980px;
+  height: auto;
+}
+
 .example {
   width: 100%;
   table-layout: fixed;

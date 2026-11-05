@@ -1,0 +1,9 @@
+test,quantity,location_or_setup,period,value,uncertainty,unit,qualifier,doi
+laboratory,source_temperature,black_body_source,1900_report,100,,degree_C,published,10.1002/andp.19003081208
+laboratory,CO2_path_length,gas_layer,1900_report,30,,cm,published,10.1002/andp.19003081208
+laboratory,initial_pressure,CO2_layer,1900_report,780,,mmHg,published,10.1002/andp.19003081208
+laboratory,reduced_pressure,CO2_layer,1900_report,520,,mmHg,calculated_as_780_times_2_over_3,10.1002/andp.19003081208
+laboratory,initial_absorbed_fraction,total_incident_radiation,1900_report,10,,percent,approximate,10.1002/andp.19003081208
+laboratory,maximum_change_in_absorbed_fraction,total_incident_radiation,1900_report,0.4,,percentage_point,published_upper_bound,10.1002/andp.19003081208
+atmosphere,CO2_surface_radiative_forcing_trend,Oklahoma_Southern_Great_Plains,2000-2010,0.20,0.06,W_m-2_decade-1,clear_sky_published_trend_and_uncertainty,10.1038/nature14240
+atmosphere,CO2_surface_radiative_forcing_trend,North_Slope_of_Alaska,2000-2010,0.20,0.07,W_m-2_decade-1,clear_sky_published_trend_and_uncertainty,10.1038/nature14240

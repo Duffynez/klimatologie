@@ -1,0 +1,75 @@
+Může být účinek CO₂ už vyčerpaný?
+Klimatologie.eu, 5. listopadu 2026
+
+Soubor: nasyceni-co2.png.
+Číselný podklad: nasyceni-co2.csv.
+
+Původ a licence
+Vlastní vysvětlující grafika Klimatologie.eu vytvořená pomocí nástroje
+imagegen. Jde o původní ilustraci, nikoli převzatý obrázek ze studií.
+Licence vlastního zpracování: CC BY 4.0.
+https://creativecommons.org/licenses/by/4.0/
+Doporučené uvedení původu: Klimatologie.eu, Může být účinek CO₂ už vyčerpaný?, 2026.
+
+Princip
+Horní křivka schematicky ukazuje pohlcený podíl na jedné zvolené vlnové
+délce v závislosti na množství plynu v dráze paprsku. Ostatní podmínky
+zůstávají stejné. Křivka ilustruje přibližování k úplnému pohlcení.
+Není měřeným spektrem CO₂ ani výpočtem konkrétní atmosféry.
+Nasycení jednotlivých částí spektra je skutečné. Historická hypotéza
+z něj vyvozovala téměř vyčerpaný účinek dalšího atmosférického CO₂.
+
+Červená v obou testech představuje infračervené záření neviditelné
+pro lidské oko. Přístroje jsou schematické ilustrace, nikoli rekonstrukce
+původní aparatury nebo konkrétní stanice ARM. Počet a šířka šipek
+nevyjadřují velikost toku. Plynová trubice není modelem celé atmosféry.
+
+Test 1: Kochův pokus popsaný Ångströmem
+Černé těleso o teplotě 100 °C, vrstva CO₂ délky 30 cm, tlak 780 mmHg.
+Pohlceno přibližně 10 % celkového dopadajícího záření.
+Po snížení tlaku na dvě třetiny se pohlcený podíl změnil nejvýše
+o 0,4 % celkového dopadajícího záření, tedy o 0,4 procentního bodu.
+Údaj 520 mmHg je přepočtem dvou třetin původních 780 mmHg.
+Při stejné teplotě a objemu odpovídá poklesu množství plynu o třetinu.
+Studie zde neudává přesný druhý pohlcený podíl, proto jej nedoplňujeme.
+Údaj 10 % se týká celého dopadajícího záření zdroje.
+Neznamená, že je na každé jednotlivé vlnové délce pohlceno právě 10 %.
+Závěr grafiky se vztahuje k uvedeným podmínkám pokusu.
+
+Test 2: spektrální měření atmosféry
+Feldman a kol. (2015), bezoblačné podmínky, 2000–2010:
+Oklahoma, Southern Great Plains: 0,20 ± 0,06 W/m² za deset let.
+Sever Aljašky, North Slope of Alaska: 0,20 ± 0,07 W/m² za deset let.
+Jde o publikované trendy příspěvku CO₂ k záření směřujícímu k povrchu.
+Znaménko ± označuje publikovanou nejistotu trendu.
+Neoznačujeme ji za 95% interval ani nejistotu jednotlivého měření.
+Studie pracuje s růstem koncentrace CO₂ o 22 ppm.
+Naměřená spektra se porovnávají s výpočtem pro stálé CO₂ a pro teplotu
+a vlhkost odpovídající pozorování. Rozdíl vykazuje růst v pásmu CO₂.
+Pro kladné ověření se používá také výpočet s měnící se koncentrací CO₂,
+který rozebírá navazující příběh druhé hypotézy v článku.
+W/m² znamená výkon na metr čtvereční.
+Výsledky nejsou globálním tokem nad atmosférou ani výsledkem pro veškerou
+oblačnost. Obě stanice sdílejí část metodiky a výpočtových podkladů.
+
+Původ čísel
+CSV je přepis publikovaných souhrnných údajů a jednoduchého přepočtu
+780 × 2/3 = 520. Není novým zpracováním původních měření.
+Rok 1900 je rokem zveřejnění Ångströmovy práce.
+
+Odborné podklady
+Ångström, K. (1900): Ueber die Bedeutung des Wasserdampfes und der
+Kohlensäure bei der Absorption der Erdatmosphäre.
+Annalen der Physik 308(12), 720–732. Kochův pokus na s. 724.
+https://doi.org/10.1002/andp.19003081208
+Plný text: https://www.realclimate.org/images/Angstrom.pdf
+
+Feldman, D. R. a kol. (2015): Observational determination of surface
+radiative forcing by CO₂ from 2000 to 2010. Nature 519, 339–343.
+Podklad: obr. 2 a 4, výsledky a metody.
+https://doi.org/10.1038/nature14240
+Plný text: https://courses.seas.harvard.edu/climate/eli/Courses/global-change-debates/Sources/CO2-saturation/more/Feldman_2015.pdf
+
+Harvey, D. (2016): Analytical Chemistry 2.1, oddíl 10.2, Spectroscopy
+Based on Absorption. Podklad ke schematické křivce pohlcování.
+Záznam na webu: https://klimatologie.eu/zdroje/#2016_Harvey_Analytical_Chemistry

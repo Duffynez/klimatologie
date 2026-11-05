@@ -4158,8 +4158,9 @@ test("publishes the greenhouse mechanism with two linked stories and open eviden
   }
   const ids = [...body.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
   assert.equal(ids.length, new Set(ids).size);
-  for (const [, target, anchor] of body.matchAll(/href="(\/[^"#]*)(?:#([^"]*))?"/g)) {
-    const targetHtml = await readFile(new URL("dist/client" + target.replace(/\/$/, "") + "/index.html", root), "utf8");
+  for (const [, target, anchor] of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#([^"]*))?"/g)) {
+    const targetFile = /\.[a-z0-9]+$/i.test(target) ? target : target.replace(/\/$/, "") + "/index.html";
+    const targetHtml = await readFile(new URL("dist/client" + targetFile, root), "utf8");
     if (anchor) assert.ok(targetHtml.includes(`id="${anchor}"`), "Missing target " + target + "#" + anchor);
   }
   const uncertainty = body.match(/<details class="method-details">([\s\S]*?)<\/details>/)?.[1];
