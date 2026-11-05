@@ -33,7 +33,10 @@ export function EarthEnergyBalanceArticle() {
         <EnergyHypothesisDiagram />
 
         <h2 id="predpovedi">Jak se vysvětlení zkoumala</h2>
-        <h3 id="slunecni-hypoteza">Silnější záření Slunce</h3>
+        <h3 id="slunecni-hypoteza" className={styles.hypothesisHeading}>
+          <span className={styles.hypothesisLabel}>Hypotéza 1</span>{' '}
+          Silnější záření Slunce
+        </h3>
         <p>
           Slunce dodává Zemi převážnou většinu energie, která udržuje její
           klima. Možnost, že se tento přísun mění, proto patřila k přirozeným
@@ -232,7 +235,10 @@ export function EarthEnergyBalanceArticle() {
           <SourceLink id="DOI_10_1073_pnas_1305332110">(Santer a kol. 2013)</SourceLink>
         </p>
 
-        <h3 id="prirozena-hypoteza">Samotné přirozené kolísání</h3>
+        <h3 id="prirozena-hypoteza" className={styles.hypothesisHeading}>
+          <span className={styles.hypothesisLabel}>Hypotéza 2</span>{' '}
+          Samotné přirozené kolísání
+        </h3>
         <p>
           Oceán a atmosféra mohou měnit své chování i bez změny Slunce nebo
           složení vzduchu. Významný krok k pochopení této možnosti udělal
@@ -440,7 +446,10 @@ export function EarthEnergyBalanceArticle() {
           <SourceLink id="DOI_10_1038_s41467_021_24544_4">(Raghuraman a kol. 2021, obr. 2)</SourceLink>
         </p>
 
-        <h3 id="lidske-pusobeni">Změny způsobené lidskou činností</h3>
+        <h3 id="lidske-pusobeni" className={styles.hypothesisHeading}>
+          <span className={styles.hypothesisLabel}>Hypotéza 3</span>{' '}
+          Změny způsobené lidskou činností
+        </h3>
         <p id="historie">
           Příběh tohoto vysvětlení začal otázkou, jak atmosféra ovlivňuje
           teplotu Země. Fourier v práci vydané roku 1827 rozebíral rozdíl
@@ -490,7 +499,7 @@ export function EarthEnergyBalanceArticle() {
           páry s oteplením růst, a tím zesilovat počáteční účinek CO₂.{' '}
           <SourceLink id="1967_Manabe_Wetherald">(Manabe a Wetherald 1967)</SourceLink>
         </p>
-        <h4 id="lidske-pusobeni-princip" className={styles.testHeading}>Proč se povrch otepluje a stratosféra chladne</h4>
+        <h4 id="lidske-pusobeni-princip" className={styles.subheading}>Proč se povrch otepluje a stratosféra chladne</h4>
         <p>
           CO₂ pohlcuje část tepelného záření a sám vyzařuje do různých
           směrů. Jeho přibývání proto mění průchod záření atmosférou
@@ -616,7 +625,7 @@ export function EarthEnergyBalanceArticle() {
           {' '}ukazuje měřený vývoj jednotlivých vrstev.{' '}
           <SourceLink id="DOI_10_1073_pnas_1305332110">(Santer a kol. 2013, obr. 3 a 4)</SourceLink>
         </p>
-        <h4 className={styles.testHeading}>Jak se výsledky obou testů doplňují</h4>
+        <h4 className={styles.subheading}>Jak se výsledky obou testů doplňují</h4>
         <p>
           První test zachycuje účinek konkrétního plynu v záření,
           druhý ověřuje prostorový obraz teplotní reakce na lidské vlivy.

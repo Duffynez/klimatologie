@@ -58,7 +58,7 @@ Příběhy rozvíjíme přes více konkrétních studií, pokud přinášejí da
 
 Uvnitř příběhu každé rozhodující porovnání zachová tuto návaznost:
 
-**Co hypotéza předpovídá → proč to z ní vyplývá → co skutečně pozorujeme → jaký závěr z porovnání plyne.**
+**Co hypotéza předpovídá → proč to z ní vyplývá → jak předpověď testujeme → co skutečně zjistíme → jaký závěr z porovnání plyne.**
 
 Předpověď vysvětlíme před uvedením výsledku. Vybíráme ověřitelné důsledky, které pomáhají rozlišit navržená vysvětlení: směr a velikost změny, časový průběh, prostorové rozložení, výškový či hloubkový profil nebo souběžné změny dalších veličin. Jejich význam a vazbu na hypotézu musí čtenář pochopit. Historickou předpověď označíme jako zveřejněnou před měřením pouze tehdy, pokud to dokládají prameny.
 
@@ -90,6 +90,17 @@ Na konci této části pojmenujeme stav poznání. Rozlišíme přímo ověřen�
 Závěrečné shrnutí umístíme do rámečku s jednotnou sazbou. Stručně spojí příčinu, navazující děj a výsledný účinek s pozorováním, kterým článek začal. Připomene hlavní důvod, proč toto vysvětlení přijímáme, v míře odpovídající jeho důkazní opoře. Shrnutí musí být srozumitelné i při samostatném přečtení.
 
 Za shrnutím následují prameny a odkazy na veřejná data. Citace jsou současně průběžně zapojené u tvrzení a porovnání, která podporují.
+
+## Vysvětlující grafika a orientace v příběhu
+
+Úvodní diagram z části 2 poskytuje přehled celého článku. Uvnitř příběhů jej doplňují obrázky, které vysvětlují vlastní děj a jeho ověřování. Pro jejich přípravu a zapojení platí:
+
+1. **Každou hypotézu vysvětlíme také obrazem.** Grafika ukáže navrženou příčinu, navazující změny a pozorovatelný účinek v příslušném prostředí. Má pomoci pochopit konkrétní vztah, například kde energie přibývá a kde ubývá. Samotné symboly spojené šipkou bez vysvětlení tohoto vztahu nestačí. Obsah i míru podrobnosti volíme pro dospělého čtenáře bez odborného vzdělání.
+2. **Propojíme děj s jeho rozlišující předpovědí a testy.** Z obrázku musí být patrné, co by se podle hypotézy mělo změnit a kde to lze zjistit. Navazující panely testů vždy oddělí předpověď, konkrétní zkoušku a naměřený nebo vypočtený výsledek. U zkoušky řekneme, co měříme nebo počítáme a s čím výsledek porovnáváme. Více testů očíslujeme, jejich počet přizpůsobíme skutečným důkazům.
+3. **Obrázek zapojíme do souvislého výkladu.** Před ním objasníme potřebný princip a krátce uvedeme, co ukazuje. Za ním rozvineme testy ve stejném pořadí a se stejným pojmenováním. U každého vysvětlíme postup, rozhodující výsledek a jeho význam pro hypotézu. Závěr příběhu propojí dílčí zjištění a ukáže, které části vysvětlení jednotlivé testy ověřují. Historický příběh a soubor studií zůstávají součástí argumentu.
+4. **Význam grafických prvků musí být jednoznačný.** Šipka má určitý směr a popsaný význam. Barvy, panely, osy a značky vysvětlíme, barvu doplníme textem. Rozlišíme očekávanou změnu od naměřené a kvalitativní schéma od číselného grafu. U čísel uvedeme veličinu, jednotku, období, oblast a potřebnou nejistotu. Velikost symbolu či šipky nesmí předstírat měřenou velikost, pokud ji nezobrazuje.
+5. **Grafiku odborně ověříme a zpřístupníme její podklady.** Při vlastním zpracování můžeme vycházet z odborných obrázků a použít AI pro ilustraci. Tvrzení, popisky, směry šipek i čísla ověříme proti zdrojům. Citace připojíme k obrázku i k příslušnému výkladu a zařadíme do pramenů. Uvedeme původ a licenci grafiky, případné použití AI a zpřístupníme použité číselné podklady podle [CONTENT.md](CONTENT.md). Technické připojení média popisuje [docs/CONTENT-WORKFLOW.md, oddíl 9](docs/CONTENT-WORKFLOW.md#9-obrázky-a-grafy).
+6. **Začátky hypotéz a testů zřetelně odlišíme.** Hypotéza má větší odstup, oddělovací linku, označení „Hypotéza 1“, „Hypotéza 2“ a případně „Hypotéza 3“ a výraznější nadpis. Test má podřízený nadpis s pořadím a konkrétním obsahem, jemné podbarvení a úzký postranní pruh. Běžné vysvětlující pododdíly zachovají klidnější sazbu. Stejné označení použijeme u všech hypotéz bez ohledu na jejich hodnocení. Zachováme hierarchii nadpisů, čitelnost na mobilu a funkční kotvy. Rozměrnou grafiku nabídneme v plné velikosti a případný vodorovný posun omezíme na obrázek.
 
 ## Obsahová kontrola autora
 
