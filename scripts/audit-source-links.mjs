@@ -65,6 +65,17 @@ for (const file of articleFiles) {
   }
 }
 
+const historyFile = "app/data/history.ts";
+const historyText = await readFile(path.join(root, historyFile), "utf8");
+for (const match of historyText.matchAll(/\bsourceId:\s*"([^"]+)"/g)) {
+  idReferences.push({
+    file: historyFile,
+    line: lineAt(historyText, match.index),
+    sourceId: match[1],
+    exists: sourceIds.has(match[1]),
+  });
+}
+
 const uniqueLegacy = uniqueByUrl(legacyLinks);
 const unresolvedLegacy = uniqueLegacy.filter((item) => !item.sourceId);
 const unresolvedDirect = uniqueByUrl(directLinks).filter((item) => !item.sourceId);

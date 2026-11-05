@@ -1,0 +1,149 @@
+.timeline {
+  max-width: 1020px;
+  margin: 36px auto 72px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 20px 28px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+
+.lanes {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.lanes legend,
+.kind {
+  color: var(--ink);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.lanes legend { margin-bottom: 8px; }
+.laneChoices { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.laneChoices button,
+.reset,
+.empty button,
+.kind select {
+  min-height: 44px;
+  padding: 9px 14px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--white);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.laneChoices button,
+.reset,
+.empty button { cursor: pointer; }
+
+.laneChoices button[aria-pressed="true"] {
+  border-color: var(--sea);
+  background: var(--sea);
+  color: var(--white);
+  font-weight: 700;
+}
+
+.laneChoices button:hover,
+.reset:not(:disabled):hover,
+.empty button:hover { border-color: var(--sea); }
+
+.filters button:focus-visible,
+.kind select:focus-visible,
+.periodNav a:focus-visible,
+.sources summary:focus-visible,
+.related a:focus-visible,
+.empty button:focus-visible {
+  outline: 3px solid var(--sea);
+  outline-offset: 3px;
+}
+
+.kind { display: grid; gap: 8px; flex: 1 1 210px; max-width: 320px; }
+.kind select { width: 100%; min-width: 0; }
+.reset:disabled { color: var(--muted); cursor: default; opacity: 0.7; }
+.count { flex-basis: 100%; margin: 0; font-size: 0.88rem; color: var(--muted); }
+
+.periodNav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 12px 22px;
+  padding: 22px 0 12px;
+  font-size: 0.9rem;
+}
+
+.periodNav span { color: var(--muted); }
+.periodNav a { color: var(--sea); text-underline-offset: 4px; }
+.period { scroll-margin-top: 110px; }
+.period[hidden], .event[hidden] { display: none; }
+
+.periodTitle {
+  padding: 20px 0 14px;
+  margin: 20px 0 0;
+  border-bottom: 1px solid var(--line);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.events { list-style: none; margin: 0; padding: 0; }
+.event { margin: 0; padding: 0; scroll-margin-top: 110px; }
+
+.milestone {
+  --history-accent: var(--source-science);
+  display: grid;
+  grid-template-columns: 116px minmax(0, 1fr);
+  gap: 24px;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.political { --history-accent: var(--source-politics); }
+.date { padding-top: 2px; }
+.date time { display: block; color: var(--history-accent); font-family: Georgia, "Times New Roman", serif; font-size: 1.9rem; line-height: 1.15; }
+.date span { display: block; margin-top: 9px; color: var(--muted); font-size: 0.76rem; line-height: 1.45; }
+.body { min-width: 0; max-width: 78ch; padding-left: 24px; border-left: 2px solid var(--history-accent); }
+.meta { display: flex; flex-wrap: wrap; gap: 5px 18px; margin: 0 0 8px; font-size: 0.78rem; color: var(--muted); }
+.meta span:first-child { color: var(--history-accent); font-weight: 700; }
+.title { margin: 0 0 15px; font-family: Georgia, "Times New Roman", serif; font-size: 1.45rem; font-weight: 400; line-height: 1.25; text-wrap: pretty; }
+.paragraph { margin: 0 0 15px; color: var(--ink); overflow-wrap: break-word; }
+.references { font-size: 0.82rem; line-height: 1.6; }
+.references > span { display: inline; }
+.locator { color: var(--muted); }
+.related { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 19px; font-size: 0.86rem; }
+.related a { color: var(--sea); text-underline-offset: 3px; }
+.sources { margin-top: 18px; font-size: 0.85rem; }
+.sources summary { width: fit-content; cursor: pointer; color: var(--muted); text-underline-offset: 3px; }
+.sources summary:hover { color: var(--sea); }
+.sources ul { margin: 12px 0 0; padding-left: 20px; }
+.sources li { margin-bottom: 9px; overflow-wrap: anywhere; }
+.sources a { color: var(--sea); }
+.empty { padding: 30px 0; }
+
+@media (max-width: 700px) {
+  .timeline { margin-top: 24px; }
+  .filters { padding: 18px; gap: 18px; }
+  .kind { max-width: none; flex-basis: 100%; }
+  .milestone { grid-template-columns: minmax(0, 1fr); gap: 14px; padding: 26px 0; }
+  .date { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px 16px; }
+  .date span { margin: 0; }
+  .body { padding-left: 16px; }
+  .title { font-size: 1.3rem; }
+  .period, .event { scroll-margin-top: 145px; }
+}
+
+@media print {
+  .filters, .periodNav, .related { display: none; }
+  .milestone { break-inside: avoid; }
+}

@@ -103,13 +103,16 @@ Pod nadpis oddílu hypotéz vložte společnou komponentu `app/components/Hypoth
 
 ## 6. Historický milník
 
-1. Nejdřív založte úplný bibliografický záznam zdroje.
-2. Do `app/data/history.ts` přidejte pouze `sourceId`, vysvětlující odstavec a `lane`.
-3. Použijte `academic` pro vývoj poznání, měření a vědecké infrastruktury.
-4. Použijte `institutional` pro formální politické rozhodnutí.
-5. Ověřte kritéria významu a vyloučené typy událostí v `CONTENT.md`.
+1. Ověřte výběr, význam, datum, obsah a oporu tvrzení podle [HISTORY.md](../HISTORY.md).
+2. Založte nebo použijte úplné bibliografické záznamy v centrálním katalogu.
+3. Do `app/data/history.ts` přidejte stabilní `id`, rok události `year`, význam data `dateMeaning` a český název události `title`. Neopisujte sem název publikace místo vysvětlení události.
+4. Zvolte `lane: "academic"` pro poznání a měření nebo `"institutional"` pro formální politické rozhodnutí. `kind` vyberte z `historyKinds` podle povahy události.
+5. Každý odstavec v `paragraphs` obsahuje text a `references`. Citace má `sourceId` a podle potřeby ověřený `locator`. Pozdější ověření nebo oprava může potřebovat jiný zdroj než původní práce.
+6. Přidejte vhodné odkazy v `relatedLinks` na existující pozorování, metody či mechanismy.
+7. Zachovejte chronologické pořadí. Událost musí spadat právě do jednoho intervalu v `historyPeriods`. Zveřejněné ID a kotvu neměňte při opravě data.
+8. Ověřte obsah a čtivost odděleně, potom zdroje, statický export, všechny filtry, reset a mobilní zobrazení podle [DEVELOPMENT.md](DEVELOPMENT.md).
 
-Rok, autor, název a typ se nesmějí opisovat do historické položky. Načítají se ze zdroje a musí zůstat konzistentní na jednom místě.
+Autor, název a rok vydání publikace zůstávají pouze v katalogu zdrojů. Datum události je samostatný údaj: například pokus z roku 1774 může být doložen knihou vydanou v roce 1786.
 
 ## 7. Projekce, důsledky a osobnosti
 

@@ -191,7 +191,7 @@ Proto:
 
 `pnpm audit:sources` je rychlá lokální kontrola, která ověřuje:
 
-- chybějící ID v citacích;
+- chybějící ID v citacích odborných článků i v odstavcích historické osy;
 - přímé externí odkazy uvnitř odborných článků;
 - starý typ `ReferenceLink`;
 - duplicitní ID a URL;

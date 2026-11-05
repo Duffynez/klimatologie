@@ -171,15 +171,15 @@ Podrobný popis je v `docs/SOURCES-AND-ARCHIVE.md`.
 
 ## 8. Historická osa
 
-`app/data/history.ts` neobsahuje celé bibliografické záznamy. Každá položka drží pouze:
+`app/data/history.ts` drží údaje o události: stabilní `id`, `year`, význam data `dateMeaning`, český `title`, větev `lane`, druh `kind`, odstavce s citacemi a související místní odkazy. Rok události se neodvozuje od roku vydání pramene. ID zůstává stejné i při opravě data.
 
-- `sourceId`;
-- jeden vysvětlující odstavec;
-- stranu osy `academic` nebo `institutional`.
+Bibliografie se nadále načítá výhradně z centrálního katalogu. Každý odstavec má `references` s `sourceId` a případným `locator` pro stranu, oddíl či obrázek. Jedna událost může mít dobový i navazující zdroj.
 
-Rok, autor, název, typ a kategorie se načtou z centrální databáze zdrojů. Jeden zdroj tak zůstává popsán na jediném místě.
+Serverová stránka `app/historie/page.tsx` kontroluje identitu, chronologii, klasifikaci a existenci pramenů. Chybná položka zastaví sestavení, nevynechá se potichu. Vykreslí obsah karet a předá jej klientské komponentě `HistoryTimeline.tsx` jako React obsah. Celý zdrojový katalog ani textová data se neimportují do klientské komponenty.
 
-Vizuálně je levá strana určena formálním politickým rozhodnutím a pravá vědeckému poznání, měření a infrastruktuře. Kritéria výběru milníků jsou v `CONTENT.md`.
+`HistoryTimeline` kombinuje filtr větve (všechny, vědecké, politické) s filtrem druhu milníku. Uchovává celé karty v DOM, mění jejich viditelnost, počet výsledků a odkazy na neprázdná období. Zrušení filtrů obnoví úplnou osu. Odkaz na skrytý milník filtry zruší. Původní kotvy `milnik-ID` zůstávají zachované.
+
+Výchozí statický export obsahuje všechny milníky v jedné chronologii a funguje pro čtení i bez JavaScriptu. Interakce mají popisky, stav stisknutí, oznámení počtu a prázdný stav. Rozvržení a mobilní úpravy jsou v `HistoryTimeline.module.css`. Obsahový standard je [HISTORY.md](../HISTORY.md).
 
 ## 9. Interaktivní části
 

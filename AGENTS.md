@@ -29,6 +29,7 @@ Na začátku úkolu se seznam s příslušnými pravidly podle této tabulky. Č
 | Psaní a jazyková redakce | [STYLE.md](STYLE.md), společná pravidla jazyka a vysvětlování. |
 | Tvorba nebo věcná revize obsahu | Příslušné oddíly [CONTENT.md](CONTENT.md). Podle typu článku také [OBSERVATIONS.md](OBSERVATIONS.md), [METHODS.md](METHODS.md) nebo [MECHANISMS.md](MECHANISMS.md). |
 | Redakce vysvětlení nebo struktury pozorování, metody či mechanismu | Příslušný standard: [OBSERVATIONS.md](OBSERVATIONS.md), [METHODS.md](METHODS.md) nebo [MECHANISMS.md](MECHANISMS.md). |
+| Výběr, obsah nebo podoba historických milníků | [HISTORY.md](HISTORY.md). |
 | Přidání či připojení článku, tématu nebo média k webu | [docs/CONTENT-WORKFLOW.md](docs/CONTENT-WORKFLOW.md). |
 | Citace, dostupnost zdrojů a archiv | Pravidla zdrojů v [CONTENT.md](CONTENT.md), technický postup v [docs/SOURCES-AND-ARCHIVE.md](docs/SOURCES-AND-ARCHIVE.md). |
 | Změny směrování, katalogů, komponent nebo sestavení | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). |

@@ -41,7 +41,7 @@ Spustí ESLint s pravidly Next.js Core Web Vitals a TypeScriptu. Adresáře s bu
 pnpm audit:sources
 ```
 
-Kontroluje vazby mezi odbornými články a centrálním katalogem. Podrobnosti jsou v `docs/SOURCES-AND-ARCHIVE.md`.
+Kontroluje vazby mezi odbornými články, historickou osou a centrálním katalogem. Podrobnosti jsou v `docs/SOURCES-AND-ARCHIVE.md`.
 
 ### Produkční build
 

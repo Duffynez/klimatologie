@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { readFile, readdir } from "node:fs/promises";
 import test from "node:test";
+import { stripTypeScriptTypes } from "node:module";
 
 const root = new URL("../", import.meta.url);
 
@@ -762,40 +763,88 @@ test("adds projections and consequences as substantive top-level sections", asyn
   assert.match(sitemap, /https:\/\/klimatologie\.eu\/dusledky\//);
 });
 
-test("separates academic and institutional events in a compact history timeline", async () => {
-  const [citation, history, events, sources] = await Promise.all([
-    readFile(new URL("app/components/Citation.tsx", root), "utf8"),
-    readFile(new URL("app/historie/page.tsx", root), "utf8"),
+test("publishes a complete, chronological history with traceable sources and stable anchors", async () => {
+  const [html, eventsText, catalogue] = await Promise.all([
+    readFile(new URL("dist/client/historie/index.html", root), "utf8"),
     readFile(new URL("app/data/history.ts", root), "utf8"),
-    readFile(new URL("app/data/sources.ts", root), "utf8"),
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
   ]);
+  const { historyEvents, historyKinds, historyPeriods } = await import(
+    "data:text/javascript;base64," + Buffer.from(stripTypeScriptTypes(eventsText)).toString("base64")
+  );
+  assert.ok(historyEvents.length > 0);
+  assert.equal(new Set(historyEvents.map(event => event.id)).size, historyEvents.length);
+  assert.deepEqual(historyEvents.map(event => event.year), historyEvents.map(event => event.year).toSorted((a, b) => a - b));
+  const rendered = [...html.matchAll(/<li\b[^>]*data-history-year="[^"]+"[^>]*>([\s\S]*?)<\/article><\/li>/g)];
+  assert.equal(rendered.length, historyEvents.length, "Static HTML must contain the entire timeline without JavaScript");
+  for (const [index, event] of historyEvents.entries()) {
+    const card = rendered[index][0];
+    assert.ok(card.includes('id="milnik-' + event.id + '"'));
+    assert.ok(card.includes('data-history-year="' + event.year + '"'));
+    assert.ok(card.includes('data-history-lane="' + event.lane + '"'));
+    assert.ok(card.includes('data-history-kind="' + event.kind + '"'));
+    assert.doesNotMatch(card, /\shidden(?:=|>)/);
+    assert.ok(card.includes(event.title));
+    assert.ok(card.includes(event.dateMeaning));
+    assert.ok(Object.hasOwn(historyKinds, event.kind));
+    assert.ok(["academic", "institutional"].includes(event.lane));
+    assert.equal(historyPeriods.filter(period => event.year >= period.from && event.year <= period.to).length, 1);
+    assert.ok(event.paragraphs.length > 0);
+    for (const paragraph of event.paragraphs) {
+      assert.ok(paragraph.text.trim());
+      assert.doesNotMatch(paragraph.text, /;/);
+      assert.ok(paragraph.references.length > 0);
+      for (const reference of paragraph.references) {
+        assert.ok(card.includes('/zdroje#' + reference.sourceId));
+        assert.ok(catalogue.includes('id="' + reference.sourceId + '"'), reference.sourceId);
+      }
+    }
+    for (const link of event.relatedLinks) {
+      assert.ok(hasArticleLink(card, link.href));
+      const [route, anchor] = link.href.split("#");
+      const target = await readFile(new URL("dist/client" + route.replace(/\/$/, "") + "/index.html", root), "utf8");
+      if (anchor) assert.ok(target.includes('id="' + anchor + '"'));
+    }
+  }
+  // These published anchors must survive corrected dates and future additions.
+  for (const id of [
+    "1681_Mariotte", "1767_Saussure", "1801_Herschel", "1804_Leslie", "1824_Fourier",
+    "1840_Agassiz", "1856_Foote", "1862_Tyndall", "1864_Croll", "1884_Langley",
+    "1894_Hogbom", "1896_Arrhenius", "1938_Callendar", "1941_Milankovic", "1952_Libby",
+    "1955_Emiliani", "1956_Plass", "1958_Keeling", "1967_Manabe_Wetherald",
+    "1976_Hays_Imbrie_Shackleton", "1979_Charney", "1987_Vostok", "1988_IPCC",
+    "1990_IPCC_FAR", "1992_UNFCCC", "1997_Kyoto", "2000_Argo", "2015_Paris",
+  ]) assert.ok(historyEvents.some(event => event.id === id), id);
+  assert.equal(historyEvents.find(event => event.id === "1767_Saussure").year, 1774);
+  assert.equal(historyEvents.find(event => event.id === "1801_Herschel").year, 1800);
+  assert.equal(historyEvents.find(event => event.id === "1862_Tyndall").year, 1861);
+  assert.doesNotMatch(html, /citation--missing|Předchozí milník|Další milník/);
+});
 
-  assert.match(citation, /citation--\$\{source\.category\}/);
-  assert.match(history, /timeline__item--\$\{source\.category\}/);
-  assert.match(history, /timeline__item--\$\{lane\}/);
-  assert.match(history, /timeline__identity/);
-  assert.match(history, /timeline__title-row[\s\S]*<Citation id=\{source\.id\}/);
-  assert.match(history, /Politická rozhodnutí/);
-  assert.match(history, /Poznání a měření/);
-  assert.doesNotMatch(history, /timeline__navigation|timeline__position|Předchozí milník|Další milník/);
-  assert.match(events, /1988_IPCC[\s\S]*lane: "institutional"/);
-  assert.match(events, /1958_Keeling/);
-  assert.match(events, /1992_UNFCCC[\s\S]*lane: "institutional"/);
-  assert.match(events, /1997_Kyoto[\s\S]*lane: "institutional"/);
-  assert.match(events, /2015_Paris[\s\S]*lane: "institutional"/);
-  const summaries = [...events.matchAll(/summary: "([^"]+)"/g)].map((match) => match[1]);
-  assert.equal(summaries.length, 28);
-  assert.ok(summaries.every((summary) => summary.split(/\s+/).length >= 65));
-  const institutionalEvents = [...events.matchAll(/lane: "institutional"/g)];
-  assert.equal(institutionalEvents.length, 4);
-  assert.doesNotMatch(events, /TIME_Greenhouse|Sullivan|Limits|BlueMarble|Stockholm|Black_Exxon|1979_WCC|Hansen_Senate|API_ActionPlan|DayAfterTomorrow|InconvenientTruth|Stripes|2018_FFF/);
-  assert.match(sources, /id: "1801_Herschel"[\s\S]*year: 1800/);
-  assert.match(sources, /id: "1862_Tyndall"[\s\S]*year: 1861/);
-  assert.match(sources, /ipcc\.ch\/about\/history/);
-  assert.match(sources, /scrippsco2\.ucsd\.edu\/history_legacy\/early_keeling_curve/);
-  assert.match(sources, /doi\.org\/10\.1038\/329408a0/);
-  assert.match(sources, /unfccc\.int\/process-and-meetings\/the-paris-agreement/);
-  assert.doesNotMatch(sources, /TIME_Greenhouse|Sullivan|Limits|BlueMarble|Stockholm|Black_Exxon|1979_WCC|Hansen_Senate|API_ActionPlan|DayAfterTomorrow|InconvenientTruth|Stripes|2018_FFF/);
+test("renders accessible history filters for every kind and links only populated periods", async () => {
+  const [html, eventsText] = await Promise.all([
+    readFile(new URL("dist/client/historie/index.html", root), "utf8"),
+    readFile(new URL("app/data/history.ts", root), "utf8"),
+  ]);
+  const { historyEvents, historyKinds, historyPeriods } = await import(
+    "data:text/javascript;base64," + Buffer.from(stripTypeScriptTypes(eventsText)).toString("base64")
+  );
+  assert.match(html, /aria-label="Filtry historické osy"/);
+  assert.match(html, /aria-pressed="true"[^>]*>Všechny<\/button>/);
+  assert.match(html, /aria-pressed="false"[^>]*>Vědecké<\/button>/);
+  assert.match(html, /aria-pressed="false"[^>]*>Politické<\/button>/);
+  assert.match(html, /<select id="history-kind"/);
+  assert.match(html, /role="status" aria-live="polite" aria-atomic="true"/);
+  assert.match(html, /<noscript>/);
+  for (const [kind, label] of Object.entries(historyKinds)) {
+    assert.ok(html.includes('<option value="' + kind + '">' + label + '</option>'));
+    assert.ok(historyEvents.some(event => event.kind === kind), kind);
+  }
+  for (const period of historyPeriods) {
+    assert.ok(html.includes('href="#' + period.id + '"'));
+    assert.ok(html.includes('id="' + period.id + '"'));
+    assert.ok(historyEvents.some(event => event.year >= period.from && event.year <= period.to));
+  }
 });
 
 test("publishes the global surface temperature article instead of the generic placeholder", async () => {
@@ -1638,7 +1687,7 @@ test("gives every heat-wave source public access and preserves corrected measure
   assert.equal((articleHtml.match(/class="article-figure__scroll"/g) ?? []).length, 2);
 });
 
-test("keeps the main section headers free of status labels and explanatory side copy", async () => {
+test("keeps catalogue headers compact and gives history a dated introduction", async () => {
   const [evidenceIndex, evidenceFallback, history, people, sources] = await Promise.all([
     readFile(new URL("app/pozorovani/page.tsx", root), "utf8"),
     readFile(new URL("app/pozorovani/[slug]/page.tsx", root), "utf8"),
@@ -1651,7 +1700,9 @@ test("keeps the main section headers free of status labels and explanatory side 
   assert.doesNotMatch(evidenceFallback, /topic\.status|<PageLead[^>]*>[\s\S]*topic\.summary/);
   assert.doesNotMatch(history, /Tato osa začíná knihovnou/);
   assert.doesNotMatch(people, /Profily propojí životopis/);
-  for (const page of [evidenceIndex, evidenceFallback, history, people, sources]) {
+  assert.match(history, /meta="5\. listopadu 2026"/);
+  assert.match(history, /<\/PageLead>/);
+  for (const page of [evidenceIndex, evidenceFallback, people, sources]) {
     assert.match(page, /<PageLead[^>]*\/>/);
   }
 });

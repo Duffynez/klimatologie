@@ -1,126 +1,1104 @@
 export type HistoryLane = "academic" | "institutional";
 
-export type HistoryEvent = {
-  sourceId: string;
-  summary: string;
-  lane?: HistoryLane;
-};
+export const historyKinds = {
+  experiment: "Experiment",
+  observation: "Pozorování",
+  theory: "Fyzikální vysvětlení",
+  method: "Metoda a přístroj",
+  model: "Výpočet a model",
+  attribution: "Ověření příčin",
+  program: "Měřicí program",
+  synthesis: "Odborná syntéza",
+  institution: "Založení instituce",
+  agreement: "Mezinárodní dohoda",
+} as const;
 
+export type HistoryKind = keyof typeof historyKinds;
+export type HistoryReference = { sourceId: string; locator?: string };
+export type HistoryEvent = {
+  id: string;
+  year: number;
+  dateMeaning: string;
+  title: string;
+  lane: HistoryLane;
+  kind: HistoryKind;
+  paragraphs: { text: string; references: HistoryReference[] }[];
+  relatedLinks: { href: string; label: string }[];
+};
+export type HistoryPeriod = { id: string; label: string; from: number; to: number };
+
+export const historyPeriods: HistoryPeriod[] = [
+  { id: "obdobi-do-1850", label: "Do roku 1850", from: 0, to: 1849 },
+  { id: "obdobi-1850-1899", label: "1850–1899", from: 1850, to: 1899 },
+  { id: "obdobi-1900-1969", label: "1900–1969", from: 1900, to: 1969 },
+  { id: "obdobi-1970-1999", label: "1970–1999", from: 1970, to: 1999 },
+  { id: "obdobi-od-2000", label: "Od roku 2000", from: 2000, to: 9999 },
+];
+
+// IDs preserve published milestone anchors even when the event date is corrected.
 export const historyEvents: HistoryEvent[] = [
   {
-    sourceId: "1681_Mariotte",
-    summary: "Mariotte porovnával, jak sklem prochází sluneční světlo a jak se za stejnou překážkou chová sálavé teplo z ohně nebo jiného zahřátého tělesa. Zjistil, že sklo propouští oba druhy záření rozdílně. V době, kdy teplo ještě nebylo chápáno jako elektromagnetické záření různých vlnových délek, šlo o důležitý experimentální postřeh: vlastnosti záření závisejí na jeho zdroji a průchod materiálem lze měřit. Tato otázka se později stala jedním ze základů výzkumu tepelného záření a energetické bilance Země.",
+    id: "1681_Mariotte",
+    year: 1681,
+    dateMeaning: "První vydání pojednání",
+    title: "Sklo propouští sluneční a tepelné záření rozdílně",
+    lane: "academic",
+    kind: "experiment",
+    paragraphs: [
+      {
+        text: "Edme Mariotte porovnával průchod slunečního záření a sálavého tepla sklem. Sluneční paprsky sklem procházely, zatímco přenos sálavého tepla ohně sklo výrazně omezilo. Rozdíl ukazoval, že při zkoumání záření záleží také na jeho zdroji a na materiálu, kterým prochází.",
+        references: [
+          {
+            sourceId: "1681_Mariotte",
+            locator: "II. část, s. 288 v souborném vydání z roku 1717"
+          }
+        ]
+      },
+      {
+        text: "Dobový pokus ještě nerozlišoval vlnové délky ani vlastnosti jednotlivých plynů. K laboratornímu měření toho, jak tepelné záření pohlcuje plyn, se dostaneme u Tyndallovy práce z roku 1861. Ta dovolila zkoumat přímo látky tvořící atmosféru.",
+        references: [
+          {
+            sourceId: "1862_Tyndall",
+            locator: "s. 1–36"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/metody/absorpcni-spektroskopie/",
+        label: "Jak měříme pohlcování záření"
+      }
+    ]
   },
   {
-    sourceId: "1767_Saussure",
-    summary: "Saussure sestrojil heliotermometr: tmavou, tepelně izolovanou schránku zakrytou několika skleněnými deskami, v níž na slunci měřil dosaženou teplotu. Opakováním pokusů v různých výškách a s odlišným uspořádáním ukázal, že dopadající sluneční záření může projít sklem a zahřát vnitřek, zatímco sklo a izolace zpomalují únik tepla. Význam přístroje spočíval v tom, že proměnil obecnou úvahu o slunečním ohřevu v kontrolovatelný experiment. Jeho výsledky později použil Fourier při hledání fyzikálního vysvětlení teploty Země.",
+    id: "1767_Saussure",
+    year: 1774,
+    dateMeaning: "Pokusy na Cramontu a v Courmayeur",
+    title: "Sluneční ohřev ve skleněné schránce",
+    lane: "academic",
+    kind: "experiment",
+    paragraphs: [
+      {
+        text: "Horace-Bénédict de Saussure porovnával sluneční ohřev na hoře Cramont a v níže položeném Courmayeur. Použil tmavou izolovanou schránku se skleněnými kryty a teploměrem, které říkal heliotermometr. Uvnitř dosahoval vysokých teplot i v chladném horském vzduchu. Pokus pomáhal rozlišit ohřev sluncem od teploty okolního vzduchu.",
+        references: [
+          {
+            sourceId: "1767_Saussure",
+            locator: "sv. II, kap. XXXV, s. 347 a násl."
+          }
+        ]
+      },
+      {
+        text: "Saussure tyto pokusy datuje do roku 1774 v knize vydané roku 1786. Fourier se později na jeho přístroj výslovně odvolal při výkladu teploty Země. Ohřev uzavřené schránky ale sám neurčuje, jak záření pohlcují atmosférické plyny. K tomu bylo potřeba samostatné měření jejich vlastností.",
+        references: [
+          {
+            sourceId: "1767_Saussure",
+            locator: "sv. II, kap. XXXV"
+          },
+          {
+            sourceId: "1824_Fourier",
+            locator: "pasáž o Saussurově přístroji"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/mechanismy/energeticka-bilance-zeme/",
+        label: "Co určuje energetickou bilanci Země"
+      }
+    ]
   },
   {
-    sourceId: "1801_Herschel",
-    summary: "Herschel rozložil sluneční světlo hranolem a teploměry měřil zahřívání v jednotlivých barvách i za červeným okrajem viditelného spektra. Nejvyšší hodnotu naměřil právě v oblasti, kterou oko nevidí, a dalšími pokusy ověřoval, že se tyto neviditelné paprsky dají odrážet a lámat. Objev infračerveného záření rozšířil fyziku světla za hranice lidského zraku. Pro pozdější klimatologii je zásadní proto, že Země většinu energie nevyzařuje jako viditelné světlo, ale právě v infračervené části spektra, kterou lze měřit pouze přístroji.",
+    id: "1801_Herschel",
+    year: 1800,
+    dateMeaning: "Zveřejnění práce",
+    title: "Teploměr odhaluje neviditelné sluneční záření",
+    lane: "academic",
+    kind: "experiment",
+    paragraphs: [
+      {
+        text: "William Herschel rozložil sluneční světlo hranolem a teploměry porovnával zahřívání v různých barvách. Měřitelné zahřívání zjistil také za červeným okrajem, kde už žádné světlo neviděl. Zkoumal tak část slunečního záření, kterou oko nezachytí a kterou dnes označujeme jako infračervenou.",
+        references: [
+          {
+            sourceId: "1801_Herschel"
+          }
+        ]
+      },
+      {
+        text: "Pokus ukázal, že viditelná jasnost není úplným měřítkem přenosu energie. Pro zkoumání tepelného záření bylo možné použít teplotní odezvu přístroje. Herschelova měření se týkala slunečního spektra, nikoli ještě množství energie, které celá Země vyzařuje do vesmíru.",
+        references: [
+          {
+            sourceId: "1801_Herschel"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/metody/pasivni-infracervena-radiometrie/",
+        label: "Jak měříme infračervené záření"
+      }
+    ]
   },
   {
-    sourceId: "1804_Leslie",
-    summary: "Leslie zahříval dutou kovovou kostku, jejíž stěny měly různé povrchy, a citlivým diferenciálním teploměrem porovnával jejich tepelné vyzařování. Ukázal, že stejně teplé plochy nevyzařují stejně: matný černý povrch se chová jinak než lesklý kov. Pokusy pomohly oddělit teplotu tělesa od schopnosti jeho povrchu záření vysílat a přijímat. Tím připravily půdu pro pozdější pojmy emisivita a pohltivost, bez nichž nelze správně popsat radiační výměnu mezi zemským povrchem, atmosférou a vesmírem ani interpretovat dálková teplotní měření.",
+    id: "1804_Leslie",
+    year: 1804,
+    dateMeaning: "Vydání knihy",
+    title: "Stejně teplé povrchy vyzařují různě",
+    lane: "academic",
+    kind: "experiment",
+    paragraphs: [
+      {
+        text: "John Leslie naplnil kovovou kostku horkou vodou a porovnával záření jejích různě upravených stěn. Jednu ponechal lesklou, jinou pokryl papírem nebo sazemi. Teplotní odezvu zachycoval citlivým přístrojem. Přestože stěny ohřívala stejná voda, jejich povrchy předávaly zářením různé množství energie.",
+        references: [
+          {
+            sourceId: "1804_Leslie",
+            locator: "s. 6–8, popis přístroje a povrchů"
+          }
+        ]
+      },
+      {
+        text: "Výsledek oddělil dvě vlastnosti, které nelze zaměňovat: teplotu tělesa a schopnost povrchu vyzařovat. Tuto schopnost dnes vyjadřuje emisivita. Když určujeme teplotu z naměřeného záření, musíme tedy brát v úvahu i vlastnosti pozorovaného povrchu.",
+        references: [
+          {
+            sourceId: "1804_Leslie"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/metody/pasivni-infracervena-radiometrie/",
+        label: "Jak záření převádíme na teplotu"
+      }
+    ]
   },
   {
-    sourceId: "1824_Fourier",
-    summary: "Fourier položil otázku, čím je určena průměrná teplota Země, a spojil ji s rovnováhou mezi energií přijatou od Slunce a teplem, které planeta odevzdává do vesmíru. Upozornil, že samotná vzdálenost od Slunce pozorovanou teplotu nevysvětluje a že atmosféra ovlivňuje ochlazování povrchu. Význam práce spočívá v zavedení planetární energetické bilance jako fyzikálního problému, který lze počítat a porovnávat s pozorováním. Fourier ještě neznal molekulární absorpci plynů, ale vymezil otázku, na kterou později odpovídaly laboratorní spektroskopie i klimatické modely.",
+    id: "1824_Fourier",
+    year: 1824,
+    dateMeaning: "Zveřejnění práce",
+    title: "Teplota Země jako otázka příjmu a ztrát tepla",
+    lane: "academic",
+    kind: "theory",
+    paragraphs: [
+      {
+        text: "Joseph Fourier zkoumal, čím je určena teplota zemského povrchu. Rozlišoval sluneční ohřev, vnitřní teplo Země a výměnu tepla s okolním prostorem. Atmosféře přisuzoval vliv na únik tepla a při vysvětlení použil i Saussurův pokus se zasklenou schránkou.",
+        references: [
+          {
+            sourceId: "1824_Fourier"
+          }
+        ]
+      },
+      {
+        text: "Tím formuloval otázku, kterou musí fyzikální popis klimatu řešit: jak se teplota ustálí při daném přísunu a odvodu energie. Jeho dobový obraz však zahrnoval i představy o teplotě meziplanetárního prostoru. Nešlo ještě o dnešní výpočet skleníkového účinku jednotlivých plynů.",
+        references: [
+          {
+            sourceId: "1824_Fourier"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/mechanismy/energeticka-bilance-zeme/",
+        label: "Dnešní měření energetické bilance"
+      }
+    ]
   },
   {
-    sourceId: "1840_Agassiz",
-    summary: "Agassiz shromáždil pozorování morén, bludných balvanů, ohlazených skal a rýh v krajině a vyložil je jako stopy někdejšího mnohem většího zalednění. Navázal přitom na dřívější poznatky Ignaze Venetze, Jeana de Charpentiera a Karla Friedricha Schimpera a rozpracoval je do rozsáhlého obrazu doby ledové. Význam jeho knihy spočíval v propojení mnoha místních geologických stop do testovatelného vysvětlení minulosti. Klima se tím stalo veličinou s hlubokou historií, kterou lze rekonstruovat z fyzických záznamů krajiny, nikoli pouze z kronik a přímých měření.",
+    id: "1840_Agassiz",
+    year: 1840,
+    dateMeaning: "Vydání knihy",
+    title: "Krajina uchovává stopy rozsáhlejšího zalednění",
+    lane: "academic",
+    kind: "observation",
+    paragraphs: [
+      {
+        text: "Louis Agassiz popsal morény, tedy nánosy materiálu přeneseného ledovcem, bludné balvany, ohlazené skály a rýhy v krajině. Porovnával je se stopami vznikajícími u současných ledovců a vyložil je jako doklady jejich dřívějšího mnohem většího rozsahu. V knize probíral také předchozí práce Venetze a Charpentiera.",
+        references: [
+          {
+            sourceId: "1840_Agassiz",
+            locator: "úvod a kapitoly o morénách a bludných balvanech"
+          }
+        ]
+      },
+      {
+        text: "Geologické stopy tak umožnily zkoumat klima i tam, kde chyběla přímá měření z minulosti. Samotný tvar krajiny však neurčoval přesné stáří zalednění ani jeho příčinu. Tyto otázky vyžadovaly další metody datování a porovnání nezávislých záznamů.",
+        references: [
+          {
+            sourceId: "1840_Agassiz"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/metody/radiometricke-a-expozicni-datovani/",
+        label: "Jak datujeme stopy minulého zalednění"
+      }
+    ]
   },
   {
-    sourceId: "1856_Foote",
-    summary: "Footeová vystavila slunečnímu záření dvojici skleněných válců s teploměry a porovnávala vzduch, vlhký vzduch, vodík a oxid uhličitý. Válec s oxidem uhličitým se zahřál výrazněji a chladl pomaleji; autorka z toho usoudila, že atmosféra s větším podílem tohoto plynu by měla vyšší teplotu. Šlo o první známou publikovanou experimentální práci, která výslovně spojila množství oxidu uhličitého s teplotou planety. Jednoduché uspořádání ještě neoddělovalo jednotlivé způsoby přenosu tepla, ale položilo jasnou, měřitelnou otázku pro další laboratorní výzkum.",
+    id: "1856_Foote",
+    year: 1856,
+    dateMeaning: "Zveřejnění práce",
+    title: "Oxid uhličitý v pokusu se slunečním ohřevem",
+    lane: "academic",
+    kind: "experiment",
+    paragraphs: [
+      {
+        text: "Eunice Footeová vystavila slunci dvojici skleněných válců s teploměry. Porovnávala různé plyny, tlak a vlhkost vzduchu. Popsala silnější zahřívání válce s oxidem uhličitým a jeho pomalejší chladnutí. Z výsledku usoudila, že atmosféra bohatší na tento plyn by měla vyšší teplotu.",
+        references: [
+          {
+            sourceId: "1856_Foote",
+            locator: "s. 382–383"
+          }
+        ]
+      },
+      {
+        text: "Práce spojila laboratorní srovnání plynů s otázkou klimatu. Uspořádání však samostatně neměřilo pohlcování infračerveného záření a neoddělovalo všechny způsoby přenosu tepla. Je proto třeba rozlišovat naměřený ohřev válce a závěr, který z něj autorka vyvodila o celé atmosféře.",
+        references: [
+          {
+            sourceId: "1856_Foote",
+            locator: "s. 382–383"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/metody/absorpcni-spektroskopie/",
+        label: "Jak odděleně měříme absorpci plynů"
+      }
+    ]
   },
   {
-    sourceId: "1862_Tyndall",
-    summary: "Tyndall vedl tepelné záření dlouhou trubicí uzavřenou deskami z kamenné soli, plnil ji různými plyny a změnu prošlého záření měřil termočlánkem s galvanometrem. Prokázal, že hlavní složky vzduchu, dusík a kyslík, záření propouštějí podstatně lépe než vodní pára, oxid uhličitý a některé další plyny. Práce tak poskytla přímý laboratorní mechanismus, kterým i malé množství určitého plynu může ovlivnit přenos tepla atmosférou. Z obecné představy o tepelném působení atmosféry se stal problém selektivní absorpce a emise, který bylo možné dále přesně měřit.",
+    id: "1862_Tyndall",
+    year: 1861,
+    dateMeaning: "Zveřejnění práce",
+    title: "Přímé měření pohlcování tepelného záření plyny",
+    lane: "academic",
+    kind: "experiment",
+    paragraphs: [
+      {
+        text: "John Tyndall vedl tepelné záření trubicí uzavřenou deskami z kamenné soli. Měnil plyn uvnitř a pomocí termoelektrického detektoru měřil změnu prošlého záření. Dusík a kyslík v jeho pokusech pohlcovaly podstatně méně než vodní pára, oxid uhličitý a některé další plyny.",
+        references: [
+          {
+            sourceId: "1862_Tyndall",
+            locator: "s. 1–36"
+          }
+        ]
+      },
+      {
+        text: "Pokus ukázal, proč samotný podíl plynu ve vzduchu neurčuje jeho význam pro přenos tepla. I málo zastoupená složka může záření výrazně ovlivnit. Laboratorní vlastnost plynu se tak dala měřit odděleně od počasí a potom použít při vysvětlování tepelného působení atmosféry.",
+        references: [
+          {
+            sourceId: "1862_Tyndall",
+            locator: "závěry práce"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/mechanismy/radiacni-pusobeni-sklenikovych-plynu/",
+        label: "Jak skleníkové plyny mění přenos záření"
+      }
+    ]
   },
   {
-    sourceId: "1864_Croll",
-    summary: "Croll spojil výpočty změn výstřednosti zemské dráhy a precese s rozdělením sluneční energie mezi roční období a polokoule. Samotnou změnu záření nepovažoval za celé vysvětlení: uvažoval také sníh a led, odrazivost povrchu, mořské proudy a další procesy, které mohou počáteční změnu zesílit. Vznikla tak první soustavná astronomická teorie střídání ledových a meziledových období. Přestože byly některé její časové odhady později opraveny, Croll ukázal, jak propojit nebeskou mechaniku s pozemskými zpětnými vazbami a vytvořit předpovědi ověřitelné geologickým záznamem.",
+    id: "1864_Croll",
+    year: 1864,
+    dateMeaning: "Zveřejnění práce",
+    title: "Změny zemské dráhy jako vysvětlení dob ledových",
+    lane: "academic",
+    kind: "theory",
+    paragraphs: [
+      {
+        text: "James Croll spojil změny protáhlosti zemské dráhy a orientace osy s délkou a intenzitou ročních období. Uvažoval také sníh a led, které odrážejí sluneční záření, a změny oceánského proudění. Astronomická změna tak v jeho vysvětlení mohla spustit další procesy zesilující ochlazování.",
+        references: [
+          {
+            sourceId: "1864_Croll"
+          }
+        ]
+      },
+      {
+        text: "Vznikla hypotéza, která spojovala vypočitatelné změny dráhy se stopami minulého klimatu. Nebyla však ještě ověřena přesně datovanými dlouhými záznamy. Pozdější test orbitálních period v mořských sedimentech je na ose zařazen u studie Hayse, Imbrieho a Shackletona z roku 1976.",
+        references: [
+          {
+            sourceId: "1976_Hays_Imbrie_Shackleton",
+            locator: "s. 1121–1132"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/mechanismy/odrazivost-snehu-a-ledu-jako-zpetna-vazba/",
+        label: "Jak sníh a led zesilují změnu"
+      }
+    ]
   },
   {
-    sourceId: "1884_Langley",
-    summary: "Langley vyvinul mimořádně citlivý bolometr a při měřeních na Mount Whitney sledoval sluneční záření v různých částech spektra a při různé tloušťce atmosféry nad přístrojem. Dokázal tak podrobněji rozlišit, které vlnové délky atmosféra propouští a které pohlcuje, a zpřesnil odhad energie přicházející od Slunce. Jeho práce spojila spektroskopii s kvantitativním měřením radiační bilance a poskytla data, z nichž později čerpal Arrhenius. Bolometrický princip se navíc stal základem citlivých detektorů používaných v infračervené astronomii, meteorologii i družicovém pozorování Země.",
+    id: "1884_Langley",
+    year: 1884,
+    dateMeaning: "Zveřejnění práce",
+    title: "Bolometr mapuje sluneční energii ve spektru",
+    lane: "academic",
+    kind: "method",
+    paragraphs: [
+      {
+        text: "Samuel Pierpont Langley používal bolometr, přístroj převádějící malé zahřátí na změnu elektrického odporu. Při výpravě na Mount Whitney porovnával sluneční záření v různých částech spektra a při různé dráze paprsků atmosférou. Zkoumal tím, kolik záření atmosféra zeslabuje a jak se tento účinek liší s vlnovou délkou.",
+        references: [
+          {
+            sourceId: "1884_Langley"
+          }
+        ]
+      },
+      {
+        text: "Měření umožnila přejít od samotného zjištění neviditelného záření k jeho podrobnějšímu rozložení ve spektru. Arrhenius se při svých pozdějších výpočtech výslovně opíral o Langleyho bolometrická pozorování. Přesnost výsledků přitom zůstávala závislá na přístrojích a na způsobu oddělení atmosférické absorpce.",
+        references: [
+          {
+            sourceId: "1896_Arrhenius",
+            locator: "s. 239–247"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/metody/mereni-radiacnich-toku/",
+        label: "Jak měříme energii přenášenou zářením"
+      }
+    ]
   },
   {
-    sourceId: "1894_Hogbom",
-    summary: "Högbom se pokusil sestavit rozpočet uhlíku v přírodě: porovnával jeho množství v atmosféře, oceánu a horninách s přísunem ze sopek, zvětráváním, ukládáním uhličitanů a dalšími toky. Do stejného rámce zahrnul také oxid uhličitý vznikající spalováním uhlí a ukázal, že lidský zdroj už lze velikostí srovnávat s některými přírodními geologickými toky. Význam práce spočíval v převodu uhlíkového cyklu z kvalitativního popisu na bilanci zásob a toků. Arrhenius díky ní mohl posuzovat nejen účinek oxidu uhličitého na teplotu, ale i reálnost změny jeho atmosférického množství.",
+    id: "1894_Hogbom",
+    year: 1894,
+    dateMeaning: "Zveřejnění práce",
+    title: "Uhlík v atmosféře má zdroje i úložiště",
+    lane: "academic",
+    kind: "theory",
+    paragraphs: [
+      {
+        text: "Arvid Högbom porovnával zásoby uhlíku a procesy, které jej přesouvají mezi atmosférou, oceánem a horninami. Zahrnul sopečnou činnost, zvětrávání, vznik uhličitanů i spalování uhlí. Zkoumal, zda tyto toky mohou během dlouhých období měnit množství oxidu uhličitého ve vzduchu.",
+        references: [
+          {
+            sourceId: "1894_Hogbom"
+          }
+        ]
+      },
+      {
+        text: "Taková bilance doplňovala otázku, jak CO₂ působí na teplotu: vysvětlovala, odkud by se mohla změna jeho koncentrace vzít. Arrhenius Högbomovy odhady přímo použil v diskusi o možných příčinách dlouhodobých klimatických změn. Nešlo ještě o dnešní úplný rozpočet lidských emisí a jejich pohlcování.",
+        references: [
+          {
+            sourceId: "1896_Arrhenius",
+            locator: "závěrečná diskuse Högbomových odhadů"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/mechanismy/puvod-rustu-atmosferickeho-co2/",
+        label: "Jak dnes určujeme původ růstu CO₂"
+      }
+    ]
   },
   {
-    sourceId: "1896_Arrhenius",
-    summary: "Arrhenius využil tehdejší měření infračervené absorpce a ručně počítal, jak by různé množství oxidu uhličitého změnilo teplotu v jednotlivých zeměpisných šířkách a ročních obdobích. Zahrnul také odezvu vodní páry a změny sněhové pokrývky a odhadl oteplení při zdvojnásobení koncentrace. Šlo o první kvantitativní výpočet citlivosti zemského klimatu na oxid uhličitý v celoplanetárním měřítku. Číselné hodnoty nesly omezení tehdejší spektroskopie, ale podstatný byl nový postup: fyzikální teorii převedl na konkrétní, kontrolovatelné výsledky, které mohly další generace zpřesňovat.",
+    id: "1896_Arrhenius",
+    year: 1896,
+    dateMeaning: "Zveřejnění práce",
+    title: "Výpočet teplotní odezvy na změnu CO₂",
+    lane: "academic",
+    kind: "model",
+    paragraphs: [
+      {
+        text: "Svante Arrhenius využil dostupná měření záření a počítal, jak by různé množství oxidu uhličitého změnilo teplotu v jednotlivých zeměpisných šířkách a ročních obdobích. Do úvah zahrnul i vodní páru a odraz slunečního záření sněhem. Výsledky zveřejnil jako tabulky pro různé násobky obsahu CO₂.",
+        references: [
+          {
+            sourceId: "1896_Arrhenius",
+            locator: "tabulka VII a navazující diskuse"
+          }
+        ]
+      },
+      {
+        text: "Fyzikální představa tím získala číselné výsledky, které bylo možné kontrolovat a zpřesňovat. Nešlo o dnešní prostorový klimatický model. Výpočet používal tehdejší měření absorpce a zjednodušený popis atmosféry, takže jeho hodnoty nemůžeme bez dalšího přebírat jako současný odhad oteplení.",
+        references: [
+          {
+            sourceId: "1896_Arrhenius"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/mechanismy/radiacni-pusobeni-sklenikovych-plynu/",
+        label: "Jak ověřujeme účinek dalšího CO₂"
+      }
+    ]
   },
   {
-    sourceId: "1938_Callendar",
-    summary: "Callendar spojil tři do té doby často oddělené části problému: odhady růstu atmosférického oxidu uhličitého, nové výpočty jeho absorpce a teplotní záznamy z přibližně dvou set meteorologických stanic. Z dostupných měření vyvodil, že se povrch Země během předchozího půlstoletí oteploval a že část změny může souviset se spalováním fosilních paliv. Význam práce spočíval v konfrontaci teorie s naměřeným vývojem skutečné atmosféry. Oživila zájem o uhlíkovou teorii klimatu a stanovila výzkumný program, v němž se společně sledují emise, koncentrace, záření a teplota.",
+    id: "1938_Callendar",
+    year: 1938,
+    dateMeaning: "Zveřejnění práce",
+    title: "Výpočty účinku CO₂ se setkávají s teplotními záznamy",
+    lane: "academic",
+    kind: "attribution",
+    paragraphs: [
+      {
+        text: "Guy Stewart Callendar spojil odhady emisí a koncentrace CO₂ s výpočtem absorpce záření a se záznamy asi dvou set meteorologických stanic. Z dostupných dat vyvodil oteplování během předchozího půlstoletí a část změny přisoudil oxidu uhličitému ze spalování paliv.",
+        references: [
+          {
+            sourceId: "1938_Callendar",
+            locator: "s. 223–240"
+          }
+        ]
+      },
+      {
+        text: "Teorii tak porovnal s vývojem skutečné atmosféry. Vstupní měření CO₂ však byla řídká a výběr stanic omezoval pokrytí Země. Výsledek byl krokem k rozlišování příčin oteplování, nikoli úplným oddělením všech přirozených a lidských vlivů.",
+        references: [
+          {
+            sourceId: "1938_Callendar",
+            locator: "části o pozorované koncentraci a teplotě"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/pozorovani/gmst/",
+        label: "Jak skládáme globální teplotní záznam"
+      }
+    ]
   },
   {
-    sourceId: "1941_Milankovic",
-    summary: "Milanković sjednotil desítky let výpočtů změn výstřednosti oběžné dráhy, sklonu zemské osy a precese a převedl je na množství sluneční energie dopadající v různých zeměpisných šířkách a ročních obdobích. Zvláštní význam přikládal letnímu záření ve vysokých severních šířkách, které ovlivňuje, zda zimní sníh roztaje. Jeho kánon dal teorii dob ledových přesnou matematickou časovou osu a konkrétní průběh, který bylo možné porovnat s geologickými záznamy. Pozdější hlubokomořské vrty skutečně odhalily klimatické rytmy odpovídající vypočteným orbitálním cyklům.",
+    id: "1941_Milankovic",
+    year: 1941,
+    dateMeaning: "Vydání knihy",
+    title: "Výpočty oslunění dávají orbitální teorii časový průběh",
+    lane: "academic",
+    kind: "model",
+    paragraphs: [
+      {
+        text: "Milutin Milanković sjednotil výpočty změn zemské dráhy, sklonu osy a její orientace. Převáděl je na množství sluneční energie v jednotlivých šířkách a ročních obdobích. Pro trvání sněhu přikládal velkou váhu letnímu oslunění ve vysokých severních šířkách: slabší léto umožňuje přežít větší části zimního sněhu.",
+        references: [
+          {
+            sourceId: "1941_Milankovic",
+            locator: "část o sekulárních změnách oslunění a problému dob ledových"
+          }
+        ]
+      },
+      {
+        text: "Teorie nabízela konkrétní časový průběh, který bylo možné porovnat s geologickými záznamy. Přesvědčivý test jeho period ale potřeboval dlouhé a datované záznamy. Takové porovnání přinesla v roce 1976 analýza hlubokomořských sedimentů.",
+        references: [
+          {
+            sourceId: "1976_Hays_Imbrie_Shackleton",
+            locator: "s. 1121–1132"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/metody/sedimentarni-jadra-a-stratigrafie/",
+        label: "Jak čteme časový záznam mořských sedimentů"
+      }
+    ]
   },
   {
-    sourceId: "1952_Libby",
-    summary: "Libby rozpracoval radiouhlíkové datování založené na tom, že živé organismy přijímají uhlík-14 vznikající působením kosmického záření, zatímco po jejich smrti jeho množství známou rychlostí klesá. Metodu ověřoval na materiálech známého stáří a ukázal, že organické nálezy lze zařadit do společné číselné časové stupnice. Pro výzkum minulého klimatu to byl zásadní posun: vrstvy rašeliny, dřevo, půda i další záznamy bylo možné nejen seřadit, ale také datovat, porovnávat mezi místy a určit rychlost změn. Pozdější kalibrace přesnost této časové osy dále zvýšily.",
+    id: "1952_Libby",
+    year: 1952,
+    dateMeaning: "Vydání souhrnné knihy",
+    title: "Radiouhlíkové datování propojuje přírodní archivy",
+    lane: "academic",
+    kind: "method",
+    paragraphs: [
+      {
+        text: "Willard Libby v knize shrnul radiouhlíkové datování. Živý organismus přijímá uhlík z okolí. Po ukončení této výměny radioaktivní uhlík-14 ubývá rozpadem. Z naměřeného počtu rozpadů za daný čas tak lze odhadnout stáří vzorku. Metodu bylo možné ověřovat na vzorcích známého stáří a použít pro organické pozůstatky v klimatických archivech.",
+        references: [
+          {
+            sourceId: "1952_Libby",
+            locator: "kap. I a VI"
+          }
+        ]
+      },
+      {
+        text: "Výpočet vyžaduje znát také výchozí obsah uhlíku-14. Ten nebyl v atmosféře vždy stejný, proto se radiouhlíkové stáří převádí na kalendářní pomocí kalibrace. Současná křivka IntCal20 využívá mimo jiné datované letokruhy. Zpřesnění časové stupnice tak stojí na porovnání nezávislých záznamů.",
+        references: [
+          {
+            sourceId: "DOI_10_1017_RDC_2020_41",
+            locator: "oddíly o podkladech kalibrační křivky"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/metody/radiometricke-a-expozicni-datovani/",
+        label: "Jak funguje datování a jeho kalibrace"
+      }
+    ]
   },
   {
-    sourceId: "1955_Emiliani",
-    summary: "Emiliani měřil poměr izotopů kyslíku ve schránkách dírkonošců uložených v hlubokomořských sedimentárních jádrech z Atlantiku, Karibiku a Tichého oceánu. Změny poměru vyložil především jako změny teploty oceánu a odhalil opakované glaciální cykly namísto několika málo nesouvisejících dob ledových. Pozdější práce ukázaly, že signál výrazně ovlivňuje také objem pevninského ledu, tím však význam metody vzrostl: vznikla souvislá mořská izotopová stratigrafie. Ta umožnila porovnávat záznamy napříč oceány, prověřit orbitální teorii a položila základy moderní paleoceanografie.",
+    id: "1955_Emiliani",
+    year: 1955,
+    dateMeaning: "Zveřejnění práce",
+    title: "Izotopy ve schránkách zapisují proměny oceánu",
+    lane: "academic",
+    kind: "method",
+    paragraphs: [
+      {
+        text: "Cesare Emiliani měřil poměr těžšího a lehčího izotopu kyslíku ve schránkách drobných mořských organismů, dírkonošců. Schránky z různých hloubek sedimentárních jader zachycovaly různá období. Změny poměru vykládal především jako změny teploty moře a sestavil průběh opakovaných chladných a teplých období.",
+        references: [
+          {
+            sourceId: "1955_Emiliani"
+          }
+        ]
+      },
+      {
+        text: "Izotopový poměr ale ovlivňuje i složení mořské vody, které se mění při ukládání vody do pevninského ledu. Pozdější orbitální test proto pracoval s izotopovým záznamem spolu s dalšími ukazateli. Rozlišení teploty a objemu ledu je podstatnou podmínkou správného čtení tohoto archivu.",
+        references: [
+          {
+            sourceId: "1976_Hays_Imbrie_Shackleton",
+            locator: "popis použitých klimatických ukazatelů"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/metody/izotopova-paleotermometrie/",
+        label: "Jak oddělujeme teplotu a složení vody"
+      }
+    ]
   },
   {
-    sourceId: "1956_Plass",
-    summary: "Plass využil přesnější laboratorní spektra a digitální výpočty k rozboru absorpčního pásu oxidu uhličitého kolem 15 mikrometrů v jednotlivých vrstvách atmosféry. Ukázal, proč silná absorpce uprostřed pásu neznamená, že další oxid uhličitý nemůže ovlivnit záření: mění se absorpce na okrajích pásu a ve vyšších, řidších vrstvách. Jeho model byl proti dnešním modelům jednoduchý, ale vrátil problém oxidu uhličitého do moderní spektroskopie a výpočetní fyziky. Především ukázal cestu od laboratorních spekter k číselnému odhadu změny radiační bilance a teploty.",
+    id: "1956_Plass",
+    year: 1956,
+    dateMeaning: "Zveřejnění práce",
+    title: "Přesnější výpočty záření prověřují účinek dalšího CO₂",
+    lane: "academic",
+    kind: "model",
+    paragraphs: [
+      {
+        text: "Gilbert Plass využil podrobnější údaje o absorpci oxidu uhličitého a výpočetní postupy pro jednotlivé vrstvy atmosféry. Zkoumal pás tepelného záření kolem vlnové délky 15 mikrometrů. Ukázal, že silné pohlcování ve středu pásu samo o sobě neznamená, že přidání dalšího CO₂ už nemůže změnit přenos záření.",
+        references: [
+          {
+            sourceId: "1956_Plass",
+            locator: "s. 140–154"
+          }
+        ]
+      },
+      {
+        text: "Při změně koncentrace záleží také na okrajích pásu a na podmínkách ve vyšších vrstvách atmosféry. Práce tak převedla námitku o nasycení absorpce na otázku konkrétního výpočtu. Její odhad teplotní odezvy přitom používal zjednodušené předpoklady o ostatních složkách klimatu.",
+        references: [
+          {
+            sourceId: "1956_Plass",
+            locator: "diskuse absorpce a teplotní odezvy"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/mechanismy/radiacni-pusobeni-sklenikovych-plynu/",
+        label: "Proč další CO₂ mění tepelné záření"
+      }
+    ]
   },
   {
-    sourceId: "1958_Keeling",
-    summary: "Charles David Keeling zahájil na observatoři Mauna Loa přesná a pravidelně kalibrovaná měření oxidu uhličitého v čistém oceánském vzduchu. Už první roky ukázaly dvě odlišné vlastnosti záznamu: pravidelné kolísání během roku a růst průměrné koncentrace mezi jednotlivými roky. Takzvaná Keelingova křivka proměnila úvahu o hromadění oxidu uhličitého v atmosféře v nepřetržité přímé pozorování. Její význam spočívá také v zavedení přísných standardů odběru, kalibrace a návaznosti měření, díky nimž lze dnešní hodnoty spolehlivě porovnávat s počátkem programu.",
+    id: "1958_Keeling",
+    year: 1958,
+    dateMeaning: "Zahájení měření na Mauna Loa",
+    title: "Mauna Loa začíná pravidelně sledovat atmosférický CO₂",
+    lane: "academic",
+    kind: "program",
+    paragraphs: [
+      {
+        text: "Charles David Keeling zahájil v březnu 1958 na Mauna Loa měření pomocí infračerveného analyzátoru. Předcházela mu práce na přesnosti měření a rozlišování místních vlivů od složení volné atmosféry. Během prvních let záznam ukázal sezónní kolísání i růst průměrné koncentrace mezi roky.",
+        references: [
+          {
+            sourceId: "1958_Keeling",
+            locator: "The Early Keeling Curve"
+          }
+        ]
+      },
+      {
+        text: "Pravidelný záznam umožnil posuzovat hromadění CO₂ podle opakovaných měření stejnou metodou. Samotná křivka ovšem popisuje koncentraci. Určení zdrojů přibývajícího uhlíku a jeho teplotního účinku vyžaduje další měření a fyzikální vysvětlení.",
+        references: [
+          {
+            sourceId: "1958_Keeling"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/pozorovani/atmosfericka-koncentrace-co2/",
+        label: "Pozorovaný růst koncentrace CO₂"
+      },
+      {
+        href: "/mechanismy/puvod-rustu-atmosferickeho-co2/",
+        label: "Jak určujeme původ přibývajícího uhlíku"
+      }
+    ]
   },
   {
-    sourceId: "1967_Manabe_Wetherald",
-    summary: "Manabe a Wetherald sestavili fyzikální model svislého sloupce atmosféry, v němž společně počítali přenos záření, proudění a rozložení vodní páry. Zkoumali, jak se ustálená teplota v různých výškách změní při jiné koncentraci oxidu uhličitého, a zachytili přitom oteplování spodní atmosféry i ochlazování výše položených vrstev. Práce se stala základem moderního modelování klimatu, protože převedla známé fyzikální zákony do výpočtu celé atmosférické struktury a ukázala, jak do výsledku vstupuje zesílení spojené s vodní párou. Na tento postup navázaly prostorové klimatické modely.",
+    id: "1967_Manabe_Wetherald",
+    year: 1967,
+    dateMeaning: "Zveřejnění práce",
+    title: "Model spojuje záření, proudění a vodní páru",
+    lane: "academic",
+    kind: "model",
+    paragraphs: [
+      {
+        text: "Syukuro Manabe a Richard Wetherald počítali teplotní rovnováhu svislého sloupce atmosféry. Vedle přenosu záření zahrnuli přenos tepla konvekcí, tedy svislým pohybem vzduchu, a předepsali rozložení relativní vlhkosti. Při zvýšení CO₂ model vykazoval oteplení povrchu a nižší atmosféry i ochlazení stratosféry.",
+        references: [
+          {
+            sourceId: "1967_Manabe_Wetherald",
+            locator: "s. 241–259, výpočty pro změnu CO₂"
+          }
+        ]
+      },
+      {
+        text: "Relativní vlhkost vyjadřuje poměr množství vodní páry k množství při nasycení. Teplejší vzduch při stejném poměru obsahuje více páry, která dále zesiluje oteplení. Model tuto zpětnou vazbu zahrnul předpokladem zachování relativní vlhkosti. Svislý sloupec přitom ještě nepopisoval plné prostorové proudění atmosféry a oceánu.",
+        references: [
+          {
+            sourceId: "1967_Manabe_Wetherald"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/mechanismy/vodni-para-jako-zpetna-vazba/",
+        label: "Jak vodní pára zesiluje oteplování"
+      }
+    ]
   },
   {
-    sourceId: "1976_Hays_Imbrie_Shackleton",
-    summary: "Hays, Imbrie a Shackleton analyzovali hlubokomořská sedimentární jádra a hledali v nich pravidelné rytmy odpovídající změnám výstřednosti zemské dráhy, sklonu osy a precese. Ve zhruba půlmilionovém záznamu našli periody předpovězené astronomickými výpočty a ukázali, že změny oběžné dráhy určují tempo střídání ledových a meziledových období. Tím poskytli dlouho očekávaný kvantitativní test Milankovićovy teorie. Práce současně ukázala, že malé, přesně načasované změny slunečního záření mohou být prostřednictvím ledu, oceánu a atmosféry zesíleny do rozsáhlé proměny klimatu.",
+    id: "1976_Hays_Imbrie_Shackleton",
+    year: 1976,
+    dateMeaning: "Zveřejnění práce",
+    title: "Mořské sedimenty prověřují rytmus zemské dráhy",
+    lane: "academic",
+    kind: "attribution",
+    paragraphs: [
+      {
+        text: "James Hays, John Imbrie a Nicholas Shackleton analyzovali přibližně půl milionu let dlouhé záznamy z hlubokomořských sedimentů. Porovnávali izotopy kyslíku a další ukazatele a hledali opakující se periody. Ve vývoji klimatu našli výrazné rytmy odpovídající přibližně 23, 41 a 100 tisícům let.",
+        references: [
+          {
+            sourceId: "1976_Hays_Imbrie_Shackleton",
+            locator: "spektrální analýza a závěry"
+          }
+        ]
+      },
+      {
+        text: "Shoda s orbitálními periodami podpořila představu, že změny zemské dráhy určují načasování ledových cyklů. Neznamenala však, že samotná změna oslunění vysvětluje jejich celou velikost. Autoři upozornili zejména na to, že silný stotisíciletý rytmus vyžaduje vysvětlení odezvou klimatického systému.",
+        references: [
+          {
+            sourceId: "1976_Hays_Imbrie_Shackleton",
+            locator: "závěrečná diskuse"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/metody/sedimentarni-jadra-a-stratigrafie/",
+        label: "Jak z vrstev sestavujeme historii klimatu"
+      }
+    ]
   },
   {
-    sourceId: "1979_Charney",
-    summary: "Americká Národní akademie věd pověřila skupinu vedenou Julem Charneym, aby nezávisle posoudila, jaké oteplení lze očekávat při zdvojnásobení koncentrace oxidu uhličitého. Odborníci porovnali dva tehdy nejpokročilejší atmosférické modely, zhodnotili hlavní zpětné vazby a dospěli k pravděpodobnému rozmezí 1,5 až 4,5 °C. Charneyho zpráva nebyla prvním výpočtem tohoto účinku, ale stala se vzorem stručné odborné syntézy: oddělila dobře podložený směr změny od nejisté přesné velikosti a vymezila rozmezí, které zůstalo ústředním měřítkem klimatického výzkumu po další desetiletí.",
+    id: "1979_Charney",
+    year: 1979,
+    dateMeaning: "Zveřejnění práce",
+    title: "Odhad oteplení dostává výslovné rozmezí nejistoty",
+    lane: "academic",
+    kind: "synthesis",
+    paragraphs: [
+      {
+        text: "Skupina vedená Julem Charneym pro americkou Národní výzkumnou radu posoudila oteplení při zdvojnásobení CO₂. Porovnala výsledky tehdejších modelů a hlavní zpětné vazby. Pro ustálené globální oteplení odhadla rozmezí 1,5 až 4,5 °C se středním odhadem kolem 3 °C.",
+        references: [
+          {
+            sourceId: "1979_Charney",
+            locator: "Summary and Conclusions"
+          }
+        ]
+      },
+      {
+        text: "Zpráva oddělila dobře podložený směr změny od nejisté velikosti. Rozmezí vycházelo z posouzení fyziky a modelů, nikoli z pouhého průměru jejich výsledků. Vztahovalo se k odezvě na zdvojnásobení CO₂ po ustálení klimatu, nikoli k předpovědi teploty v konkrétním kalendářním roce.",
+        references: [
+          {
+            sourceId: "1979_Charney",
+            locator: "Summary and Conclusions"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/mechanismy/radiacni-pusobeni-sklenikovych-plynu/",
+        label: "Fyzikální účinek změny CO₂"
+      }
+    ]
   },
   {
-    sourceId: "1987_Vostok",
-    summary: "Barnola a jeho spolupracovníci změřili oxid uhličitý ve vzduchových bublinách uzavřených v ledovém jádru z antarktické stanice Vostok. Spolu s izotopovými údaji o minulých teplotách vznikl záznam dlouhý přibližně 160 000 let, v němž nízké koncentrace oxidu uhličitého provázely ledové doby a vyšší koncentrace teplejší období. Práce rozšířila přímé rozbory atmosférických plynů daleko před éru přístrojových měření a propojila chemii starého vzduchu s fyzickým záznamem klimatu. Pozdější hlubší vrty tento společný vývoj potvrdily přes několik dalších glaciálních cyklů.",
+    id: "1987_Vostok",
+    year: 1987,
+    dateMeaning: "Zveřejnění práce",
+    title: "Vzduch v ledu spojuje CO₂ s minulými ledovými cykly",
+    lane: "academic",
+    kind: "observation",
+    paragraphs: [
+      {
+        text: "Jean-Marc Barnola a spolupracovníci změřili oxid uhličitý ve vzduchových bublinách z antarktického vrtu Vostok. Led drtili ve vakuu bez tání a v uvolněném plynu určovali obsah CO₂. Získali záznam dlouhý přibližně 160 000 let. Nízký obsah CO₂ se pojil s chladnými obdobími Antarktidy a vyšší s teplejšími.",
+        references: [
+          {
+            sourceId: "1990_CDIAC_Vostok",
+            locator: "oddíl Vostok, PDF s. 20–22"
+          },
+          {
+            sourceId: "DOI_10_25921_drbk_t875",
+            locator: "původní naměřené hodnoty"
+          }
+        ]
+      },
+      {
+        text: "Souběžný vývoj plynu a teploty sám neurčuje všechny příčiny změny. Při časovém porovnání je navíc nutné rozlišit stáří ledu a vzduchu, který se v jeho pórech uzavřel až později. Veřejný datový soubor proto uvádí oba údaje samostatně a umožňuje kontrolovat, ke kterému období koncentrace patří.",
+        references: [
+          {
+            sourceId: "DOI_10_25921_drbk_t875",
+            locator: "sloupce ice_ageBP a gas_ageBP"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/metody/ledova-jadra-a-analyza-uzavreneho-vzduchu/",
+        label: "Jak čteme led a vzduch v bublinách"
+      }
+    ]
   },
   {
-    sourceId: "1988_IPCC",
+    id: "1988_IPCC",
+    year: 1988,
+    dateMeaning: "Založení panelu",
+    title: "Vzniká mezivládní rámec pro hodnocení klimatického výzkumu",
     lane: "institutional",
-    summary: "Světová meteorologická organizace a UNEP založily Mezivládní panel pro změnu klimatu, aby vlády dostávaly pravidelné a společně posouzené hodnocení klimatického výzkumu, dopadů i možností reakce. Panel vytvořil postup, v němž odborníci shrnují tisíce publikací, text prochází několika koly připomínek a členské státy se podílejí na schvalování souhrnů pro rozhodování. Jeho význam spočívá v trvalém mostu mezi rychle rostoucím vědeckým poznáním a mezinárodní politikou. První hodnotící zpráva z roku 1990 se stala důležitým podkladem pro vyjednání Rámcové úmluvy OSN o změně klimatu.",
+    kind: "institution",
+    paragraphs: [
+      {
+        text: "Světová meteorologická organizace a Program OSN pro životní prostředí založily Mezivládní panel pro změnu klimatu, IPCC. Jeho úkolem se stalo hodnotit dostupné vědecké poznání o změně klimatu, jejích dopadech a možnostech reakce pro potřeby vlád.",
+        references: [
+          {
+            sourceId: "1988_IPCC"
+          }
+        ]
+      },
+      {
+        text: "Instituce vytvořila trvalý postup společného hodnocení. Její vznik ale není novým měřením ani samostatným důkazem příčin oteplování. Takové závěry musí být dohledatelné v podkladovém výzkumu. První hodnotící zpráva panelu následovala v roce 1990 a je zde vedena jako vědecká syntéza.",
+        references: [
+          {
+            sourceId: "1990_IPCC_FAR",
+            locator: "předmluva a souhrn"
+          }
+        ]
+      }
+    ],
+    relatedLinks: []
   },
   {
-    sourceId: "1990_IPCC_FAR",
-    summary: "První hodnotící zpráva IPCC spojila poznatky o fyzice klimatu, možných dopadech a způsobech reakce do společného mezinárodního hodnocení. Popsala pozorovaný růst skleníkových plynů, odhadla budoucí změny při různých scénářích a přehledně uvedla, které závěry jsou pevné a které ještě omezuje délka měření nebo možnosti modelů. Její význam nebyl v jednom novém objevu, ale v ustavení společného výchozího stavu poznání, k němuž se mohli vztahovat vědci i vlády. Zpráva se stala hlavním odborným podkladem pro zahájení jednání o globální klimatické úmluvě.",
+    id: "1990_IPCC_FAR",
+    year: 1990,
+    dateMeaning: "Vydání hodnotící zprávy",
+    title: "První zpráva IPCC odděluje zjištění, nejistoty a scénáře",
+    lane: "academic",
+    kind: "synthesis",
+    paragraphs: [
+      {
+        text: "První hodnotící zpráva IPCC shrnula fyziku klimatu, možné dopady i reakce. Rozlišovala, co plyne z měření a fyziky, co zůstává nejisté a jaký vývoj vychází z různých emisních scénářů. Budoucí oteplení tak popisovala v závislosti na předpokládaném vývoji lidské činnosti.",
+        references: [
+          {
+            sourceId: "1990_IPCC_FAR",
+            locator: "Policymaker Summary, Working Group I"
+          }
+        ]
+      },
+      {
+        text: "U tehdejšího pozorovaného oteplení zpráva upozorňovala, že velikost změny je ještě srovnatelná s odhadovanou přirozenou proměnlivostí. Tuto dobovou mez nelze zaměňovat s dnešním stavem poznání. Následující studie mohly otázku příčin prověřovat pomocí delších záznamů a podrobnějších prostorových vzorců změn.",
+        references: [
+          {
+            sourceId: "1990_IPCC_FAR",
+            locator: "Policymaker Summary, otázka zjištění skleníkového účinku"
+          }
+        ]
+      }
+    ],
+    relatedLinks: []
   },
   {
-    sourceId: "1992_UNFCCC",
+    id: "1992_UNFCCC",
+    year: 1992,
+    dateMeaning: "Přijetí úmluvy",
+    title: "Klimatická úmluva zavádí společný rámec vykazování a jednání",
     lane: "institutional",
-    summary: "Rámcová úmluva OSN o změně klimatu vytvořila právní a institucionální základ dlouhodobé mezinárodní klimatické politiky. Státy se zavázaly shromažďovat údaje o emisích, podávat pravidelné zprávy, spolupracovat na výzkumu a jednat o ochraně klimatického systému podle rozdílných odpovědností a možností. Úmluva sama neurčila závazné množství emisí, které musí jednotlivé země snížit. Její historický význam spočívá v něčem trvalejším: zavedla každoroční konference smluvních stran, společný jazyk, pravidla vykazování a právní prostor, v němž mohly později vzniknout Kjótský protokol a Pařížská dohoda.",
+    kind: "agreement",
+    paragraphs: [
+      {
+        text: "Rámcová úmluva OSN o změně klimatu byla přijata 9. května 1992. Zavázala smluvní strany k přípravě emisních inventur, zprávám a spolupráci podle rozdílných odpovědností a možností. Zřídila konferenci smluvních stran jako společný rozhodovací orgán.",
+        references: [
+          {
+            sourceId: "1992_UNFCCC",
+            locator: "čl. 4, 7 a 12"
+          }
+        ]
+      },
+      {
+        text: "Úmluva vstoupila v platnost v roce 1994. Vytvořila základ pro další dohody, sama však nerozdělila mezi státy právně závazné emisní kvóty typu pozdějšího Kjótského protokolu. Přijetí pravidel je třeba odlišovat od jejich plnění a od skutečné změny emisí.",
+        references: [
+          {
+            sourceId: "1992_UNFCCC",
+            locator: "čl. 4 a přehled historie úmluvy"
+          }
+        ]
+      }
+    ],
+    relatedLinks: []
   },
   {
-    sourceId: "1997_Kyoto",
+    id: "1992_TOPEX_Poseidon",
+    year: 1992,
+    dateMeaning: "Start družice",
+    title: "Družice TOPEX/Poseidon začíná sledovat výšku oceánu",
+    lane: "academic",
+    kind: "program",
+    paragraphs: [
+      {
+        text: "Dne 10. srpna 1992 odstartovala družice TOPEX/Poseidon s cílem opakovaně měřit výšku mořské hladiny radarovou altimetrií, tedy určováním vzdálenosti podle doby návratu radarového pulzu. Výška hladiny se tak začala sledovat i daleko od pobřežních měřidel, podél opakovaných družicových drah.",
+        references: [
+          {
+            sourceId: "WEB_NASA_TOPEX_POSEIDON_PO_DAAC_JPL_NASA_b5a07e8b"
+          }
+        ]
+      },
+      {
+        text: "Mise stojí na počátku současného souvislého družicového záznamu globální hladiny, který začíná rokem 1993. Porovnání vzdálených let vyžaduje navázání dalších družicových misí a opravy vlivu atmosféry i pohybu družice. Tyto kroky jsou podstatné při převodu měřených vzdáleností na změnu hladiny.",
+        references: [
+          {
+            sourceId: "DOI_10_5194_os_19_431_2023",
+            locator: "oddíly 1–2, návaznost misí a opravy měření"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/metody/radarova-a-laserova-altimetrie/",
+        label: "Jak altimetrie měří výšku hladiny"
+      },
+      {
+        href: "/pozorovani/gmsl/",
+        label: "Vývoj globální hladiny moře"
+      }
+    ]
+  },
+  {
+    id: "1997_Kyoto",
+    year: 1997,
+    dateMeaning: "Přijetí protokolu",
+    title: "Kjótský protokol stanovuje emisní závazky vybraným státům",
     lane: "institutional",
-    summary: "Kjótský protokol poprvé převedl obecný rámec klimatické úmluvy do právně závazných cílů pro průmyslové země uvedené v příloze protokolu. Vedle národních limitů zavedl společná pravidla započítávání emisí, kontrolu plnění a mechanismy umožňující část snižování uskutečnit prostřednictvím mezinárodní spolupráce. Pokrytí protokolu bylo omezené a některé významné státy se nezapojily nebo později odstoupily, přesto šlo o první praktickou zkoušku mezinárodního režimu s měřitelnými závazky. Zkušenosti s vykazováním, ověřováním i politickými limity následně ovlivnily podobu dalších dohod.",
+    kind: "agreement",
+    paragraphs: [
+      {
+        text: "Smluvní strany klimatické úmluvy přijaly 11. prosince 1997 Kjótský protokol. Pro průmyslové země a ekonomiky v transformaci uvedené v příloze stanovil číselné emisní závazky. První závazkové období pokrývalo roky 2008–2012. Součástí rámce bylo vykazování emisí a odborné přezkoumání.",
+        references: [
+          {
+            sourceId: "1997_Kyoto",
+            locator: "čl. 3, 7 a 8, příloha B"
+          }
+        ]
+      },
+      {
+        text: "Protokol vstoupil v platnost až v roce 2005. Jeho číselné závazky se nevztahovaly stejně na všechny státy světa. Zavedl také mechanismy mezinárodní spolupráce včetně obchodování s emisemi. Znění dohody dokládá rozsah povinností, nikoli samo o sobě velikost skutečně dosaženého snížení emisí.",
+        references: [
+          {
+            sourceId: "1997_Kyoto",
+            locator: "čl. 6, 12 a 17, přehled vstupu v platnost"
+          }
+        ]
+      }
+    ],
+    relatedLinks: []
   },
   {
-    sourceId: "2000_Argo",
-    summary: "Mezinárodní program Argo začal budovat světovou síť autonomních plováků, které se pravidelně ponořují, měří teplotu a slanost oceánu do hloubky přibližně dvou kilometrů a po vynoření odesílají údaje přes družice. Během několika let vzniklo rovnoměrnější a průběžnější pokrytí oceánů, než jaké mohly poskytovat výzkumné lodě a jednotlivé historické trasy. Argo zásadně zpřesnilo sledování obsahu tepla, změn vodních mas i sezónního vývoje oceánu a současně zavedlo rychlé otevřené sdílení výsledků. Stalo se základní pozorovací infrastrukturou pro výzkum klimatu, oceánografii i předpovědní systémy.",
+    id: "2000_Argo",
+    year: 2000,
+    dateMeaning: "Zahájení programu",
+    title: "Plováky Argo začínají soustavně měřit vnitřek oceánu",
+    lane: "academic",
+    kind: "program",
+    paragraphs: [
+      {
+        text: "Mezinárodní program Argo začal rozmisťovat autonomní plováky, které se pohybují mezi hladinou a hloubkou. Při výstupu měří teplotu a slanost a po vynoření předávají údaje přes družice. Základní síť byla navržena pro měření horních přibližně dvou kilometrů oceánu.",
+        references: [
+          {
+            sourceId: "2000_Argo",
+            locator: "popis programu a způsobu měření"
+          }
+        ]
+      },
+      {
+        text: "Opakované profily doplnily řídká měření z lodí a umožnily soustavněji sledovat změny tepla uloženého v oceánu. Data se veřejně sdílejí a procházejí kontrolou kvality. Rok 2000 označuje začátek programu, nikoli okamžik, kdy už síť rovnoměrně pokrývala všechny oceány.",
+        references: [
+          {
+            sourceId: "WEB_Argo_Scripps_2005",
+            locator: "stav budování sítě v roce 2005"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/pozorovani/tepelny-obsah-oceanu/",
+        label: "Jak určujeme obsah tepla v oceánu"
+      }
+    ]
   },
   {
-    sourceId: "2015_Paris",
+    id: "2005_Barnett",
+    year: 2005,
+    dateMeaning: "Zveřejnění práce",
+    title: "Rozložení ohřevu v oceánu prověřuje lidský vliv",
+    lane: "academic",
+    kind: "attribution",
+    paragraphs: [
+      {
+        text: "Tim Barnett a spolupracovníci porovnali měření od roku 1960 s výpočty dvou klimatických modelů. Zkoumali, jak se oteplování liší mezi oceány a s hloubkou. Tento prostorový průběh obsahuje více informací o příčině než jediná hodnota průměrné teploty.",
+        references: [
+          {
+            sourceId: "DOI_10_1126_science_1112418",
+            locator: "obr. 1–3"
+          }
+        ]
+      },
+      {
+        text: "Pozorované rozložení odpovídalo výpočtům zahrnujícím lidské vlivy. Samotné kolísání uvnitř klimatického systému ani zahrnuté změny Slunce a sopečné činnosti je nevysvětlovaly. Autoři prověřovali také vliv nerovnoměrného vzorkování. Závěr tak opřeli o srovnání konkrétních alternativ a jejich předpovědí.",
+        references: [
+          {
+            sourceId: "DOI_10_1126_science_1112418",
+            locator: "s. 284–287"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/mechanismy/pohlcovani-a-presun-tepla-oceanem/",
+        label: "Jak se teplo šíří v oceánu"
+      }
+    ]
+  },
+  {
+    id: "2013_Santer",
+    year: 2013,
+    dateMeaning: "Zveřejnění práce",
+    title: "Teplotní změny v různých výškách prověřují přirozené příčiny",
+    lane: "academic",
+    kind: "attribution",
+    paragraphs: [
+      {
+        text: "Benjamin Santer a spolupracovníci porovnali družicové záznamy teplot z let 1979–2012 s klimatickými modely. Sledovali společný prostorový průběh oteplování nižší vrstvy atmosféry, troposféry, a ochlazování stratosféry nad ní. Testovali jej proti proměnlivosti zahrnující nejen vnitřní kolísání, ale také změny sluneční a sopečné činnosti.",
+        references: [
+          {
+            sourceId: "DOI_10_1073_pnas_1305332110",
+            locator: "Results and Discussion"
+          }
+        ]
+      },
+      {
+        text: "Lidský vliv zůstal rozpoznatelný i při tomto širším srovnání přirozených příčin. Studie využila více družicových zpracování a modelů, aby ověřila závislost výsledku na zvolené datové sadě. Rozhodující byla shoda konkrétního vzorce změn, nikoli pouhé současné zvyšování CO₂ a povrchové teploty.",
+        references: [
+          {
+            sourceId: "DOI_10_1073_pnas_1305332110",
+            locator: "závěry a popis použitých dat"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/pozorovani/stratosfericke-ochlazovani/",
+        label: "Jak měříme ochlazování stratosféry"
+      }
+    ]
+  },
+  {
+    id: "2015_Feldman",
+    year: 2015,
+    dateMeaning: "Zveřejnění práce",
+    title: "Rostoucí CO₂ zanechává měřitelnou změnu záření u povrchu",
+    lane: "academic",
+    kind: "observation",
+    paragraphs: [
+      {
+        text: "Daniel Feldman a spolupracovníci vyhodnotili spektra tepelného záření přicházejícího z atmosféry na dvou stanicích v Oklahomě a na Aljašce. Měření z let 2000–2010 spojili s údaji o teplotě, vlhkosti a složení vzduchu. Pomocí výpočtu přenosu záření oddělili příspěvek rostoucího CO₂ od ostatních změn.",
+        references: [
+          {
+            sourceId: "DOI_10_1038_nature14240",
+            locator: "obr. 1–3 a Methods"
+          }
+        ]
+      },
+      {
+        text: "Při zvýšení koncentrace CO₂ o 22 částic na milion zjistili na obou místech přírůstek toku záření k povrchu asi 0,2 wattu na metr čtvereční za desetiletí, s nejistotami ±0,06 a ±0,07 W/m² za desetiletí. Výsledek platí pro bezoblačné podmínky na těchto stanicích. Ověřuje jednu část radiačního účinku CO₂, zatímco celková energetická nerovnováha planety zahrnuje i další toky energie.",
+        references: [
+          {
+            sourceId: "DOI_10_1038_nature14240",
+            locator: "s. 339–343"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/mechanismy/radiacni-pusobeni-sklenikovych-plynu/",
+        label: "Jak oddělujeme radiační účinek CO₂"
+      }
+    ]
+  },
+  {
+    id: "2015_Paris",
+    year: 2015,
+    dateMeaning: "Přijetí dohody",
+    title: "Pařížská dohoda zavádí opakované národní klimatické příspěvky",
     lane: "institutional",
-    summary: "Pařížská dohoda vytvořila společný rámec, v němž předkládají klimatické plány všechny smluvní strany, nikoli pouze předem vymezená skupina průmyslových zemí. Stanovila cíl udržet oteplení výrazně pod 2 °C a usilovat o omezení na 1,5 °C, zavedla pětiletý cyklus zpřísňování národních příspěvků a společná pravidla transparentnosti. Jednotlivé cíle si státy určují samy a jejich součet automaticky nezaručuje splnění teplotního cíle. Historický význam dohody spočívá v téměř univerzálním politickém rámci, který propojuje dlouhodobý směr, pravidelné vyhodnocování a opakované národní rozhodování.",
-  },
+    kind: "agreement",
+    paragraphs: [
+      {
+        text: "Pařížská dohoda přijatá 12. prosince 2015 stanovila cíl udržet oteplení výrazně pod 2 °C oproti předindustriálnímu období a usilovat o omezení na 1,5 °C. Každá smluvní strana má připravovat, sdělovat a udržovat národní příspěvky. Nový příspěvek má předkládat každých pět let a postupně zvyšovat své úsilí.",
+        references: [
+          {
+            sourceId: "2015_Paris",
+            locator: "čl. 2 a 4"
+          }
+        ]
+      },
+      {
+        text: "Dohoda vstoupila v platnost 4. listopadu 2016. Přidala rámec transparentnosti a pravidelné globální hodnocení pokroku. Povinnost předkládat příspěvky je odlišná od právně zaručeného dosažení každého národního cíle. Samotné přijetí dohody proto ještě nedokládá splnění jejího teplotního cíle.",
+        references: [
+          {
+            sourceId: "2015_Paris",
+            locator: "čl. 4, 13 a 14, přehled vstupu v platnost"
+          }
+        ]
+      }
+    ],
+    relatedLinks: []
+  }
 ];

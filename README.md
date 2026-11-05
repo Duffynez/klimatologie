@@ -6,7 +6,7 @@
 
 Cíle projektu, společné zásady a rozcestník závazných podkladů podle úkolu obsahuje [AGENTS.md](AGENTS.md). Pravidla používáme podle rozsahu práce. Již přečtené a nezměněné znění dostupné v aktuálním kontextu není nutné znovu načítat.
 
-Jazyk a srozumitelné vysvětlování mají společný standard [STYLE.md](STYLE.md). Odborný obsah a citace upravuje [CONTENT.md](CONTENT.md), zvláštní požadavky na pozorování [OBSERVATIONS.md](OBSERVATIONS.md), na metody [METHODS.md](METHODS.md) a na mechanismy [MECHANISMS.md](MECHANISMS.md). Technické postupy jsou v adresáři `docs` a rozcestník v AGENTS.md určuje, kdy je použít.
+Jazyk a srozumitelné vysvětlování mají společný standard [STYLE.md](STYLE.md). Odborný obsah a citace upravuje [CONTENT.md](CONTENT.md), zvláštní požadavky na pozorování [OBSERVATIONS.md](OBSERVATIONS.md), na metody [METHODS.md](METHODS.md) a na mechanismy [MECHANISMS.md](MECHANISMS.md). Historickou osu upravuje [HISTORY.md](HISTORY.md). Technické postupy jsou v adresáři `docs` a rozcestník v AGENTS.md určuje, kdy je použít.
 
 ## Jak web funguje v jedné minutě
 
