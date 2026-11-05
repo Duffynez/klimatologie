@@ -40,9 +40,11 @@ export function EnergyHypothesisDiagram() {
       captionId="hypothesis-map-caption"
       context={
         <p>
-          U energetické bilance W/m² vyjadřuje watty na metr čtvereční celé Země.
-          Trend za deset let říká, o kolik se tento tok změní. Podrobné podmínky
-          číselného testu přirozeného kolísání rozebírá jeho příběh.
+          Bilance ve wattech na metr čtvereční (W/m²) vyjadřuje, kolik energie
+          Země za sekundu získává nebo ztrácí v přepočtu na metr čtvereční
+          celého povrchu. Kladná hodnota znamená, že planeta přijímá více
+          energie, než odevzdává. Trend za deset let udává, o kolik se tento
+          rozdíl za desetiletí v průměru mění.
         </p>
       }
       caption={

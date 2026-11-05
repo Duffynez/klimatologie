@@ -20,7 +20,9 @@ Pozorování tvoří základ celého článku. Pokud některé potřebné pozoro
 
 Po krátkém úvodu zařadíme přehledový diagram. Porovnáme nejvýše tři konkurující hypotézy celkem, včetně jednoho dnes přijímaného vysvětlení. Vybíráme historicky významné nebo odborně relevantní možnosti, které odpovídají na tutéž otázku a vztahují se ke stejnému pozorování. Tři hypotézy jsou horní limit, počet nenaplňujeme umělými alternativami.
 
-Oddíl má jednotný nadpis „Tři hypotézy a jejich předpovědi“, při menším počtu upravíme číslovku. Bezprostředně pod nadpis patří krátký návod ke čtení diagramu. Vysvětlí, že porovnává očekávané výsledky jednotlivých hypotéz se skutečnými testy a dnešním hodnocením. Uvede, že název hypotézy odkazuje na její souvislý příběh. Případné jednotky nebo zvláštní podmínky potřebné už pro přečtení diagramu vysvětlíme před ním.
+Oddíl má jednotný nadpis „Tři hypotézy a jejich předpovědi“, při menším počtu upravíme číslovku. Bezprostředně pod nadpis patří stručný úvod, zpravidla dvě až tři věty. Přirozeným jazykem vysvětlí, že diagram porovnává očekávání jednotlivých hypotéz s tím, co vědci skutečně zjistili, a ukazuje výsledek jejich ověřování. Uvede, že kliknutí na název hypotézy otevře její příběh. Úvod neopisuje názvy všech polí ani nerozebírá pravidla výběru předpovědí. Jejich odborné požadavky stanovují následující odstavce tohoto standardu.
+
+Jednotky a zvláštní podmínky potřebné už pro přečtení diagramu objasníme v krátkém navazujícím odstavci. Vysvětlíme, co veličina v daném porovnání znamená, k jaké ploše či oblasti se vztahuje a co vyjadřuje její změna v čase. Samotné rozepsání značky jednotky nestačí. Rozlišíme hodnotu veličiny od rychlosti její změny a vysvětlení nepřerušíme obecnou odbočkou k podrobnostem v jiném oddílu.
 
 Každá větev diagramu obsahuje:
 

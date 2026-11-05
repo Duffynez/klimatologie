@@ -27,12 +27,10 @@ export function HypothesisDiagram({ hypotheses, captionId, caption, context }: P
   return (
     <>
       <p className={styles.guide}>
-        Diagram ukazuje, co bychom měli naměřit, kdyby jednotlivé hypotézy byly správné.
-        Čteme jej od jedinečné předpovědi přes způsob jejího testování a výsledek
-        k dnešnímu hodnocení. U testu uvádíme, co měříme nebo s čím výsledek porovnáváme.
-        Jedinečná předpověď odlišuje hypotézu od ostatních zde porovnávaných možností.
-        Někdy rozhoduje až souběh několika znaků. Název hypotézy odkazuje na příběh
-        jejího zkoumání a důkazy.
+        Diagram ukazuje, čím se od sebe hypotézy liší a jak dopadly jejich testy.
+        Porovnává to, co bychom podle každého vysvětlení měli pozorovat,
+        s tím, co vědci skutečně zjistili. Kliknutím na název hypotézy
+        přejdete k příběhu jejího zkoumání.
       </p>
       {context}
       <figure className={styles.diagram} aria-labelledby={captionId}>
