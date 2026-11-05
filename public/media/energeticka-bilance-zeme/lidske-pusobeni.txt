@@ -1,0 +1,82 @@
+Jak lidská činnost mění tok energie
+Klimatologie.eu, 5. listopadu 2026
+
+Soubor: lidske-pusobeni.png, 1586 × 2037 pixelů.
+Verze s vektorovou sazbou obou testů: lidske-pusobeni.svg.
+Přepis publikovaných čísel: lidske-pusobeni.csv.
+
+Vlastní vysvětlující grafika Klimatologie.eu. Horní ilustrace vznikla
+pomocí nástroje imagegen, spodní část je sázená v SVG.
+Licence grafiky: CC BY 4.0,
+https://creativecommons.org/licenses/by/4.0/
+Doporučené uvedení původu: Klimatologie.eu, Jak lidská činnost mění tok energie, 2026.
+Jde o původní zpracování, nikoli převzatý obrázek z citovaných prací.
+
+Význam schématu
+CO₂ pohlcuje i vyzařuje tepelné záření. Při původní teplotě povrchu
+a spodní atmosféry po zvýšení CO₂ uniká z celé Země méně energie.
+Při stejném slunečním příkonu vzniká přebytek. Oteplování následně
+zvyšuje vyzařování a při stálém složení atmosféry může obnovit rovnováhu
+při vyšší teplotě. Většina dodatečné energie se ukládá v oceánu.
+Stratosféra má vlastní bilanci. Přibývání CO₂ zesiluje její radiační
+ochlazování. V dolní stratosféře se významně uplatňuje také úbytek ozonu,
+který snižuje ohřev pohlcováním slunečního ultrafialového záření.
+
+Červenooranžové šipky znázorňují tepelné záření, žlutá sluneční záření.
+Modré popisky označují ochlazování hmoty. Přerušované linie družice
+vyznačují pozorované vrstvy, nejsou tokem energie ani spojením přístrojů.
+Počet a šířka šipek nevyjadřují velikost toku. Výšky a molekuly nejsou
+v měřítku. Ilustrace neukazuje průběh konkrétního měření.
+
+První test
+Předpověď: růst CO₂ má zesílit záření k povrchu ve svých charakteristických pásmech.
+Test používá pozemní spektra, měření teploty a vlhkosti a údaje o složení
+atmosféry. Výpočet s CO₂ na výchozí koncentraci odděluje jeho příspěvek.
+Feldman a kol. (2015), bezoblačné podmínky, 2000–2010:
+Oklahoma, Southern Great Plains: +0,20 ± 0,06 W/m² za deset let.
+Sever Aljašky, North Slope of Alaska: +0,20 ± 0,07 W/m² za deset let.
+Jde o publikované trendy příspěvku CO₂ a publikované nejistoty.
+Nejsou zde přeznačené na 95% intervaly. Studie sleduje nárůst CO₂ o 22 miliontin.
+W/m² vyjadřuje výkon na jednotku plochy. Výsledek se vztahuje k záření
+směřujícímu na povrch na dvou místech, nikoli ke globálnímu přebytku nad atmosférou.
+
+Druhý test
+Předpověď: změny skleníkových plynů a ozonu mají vytvořit společný
+výškový a zeměpisný obraz oteplování troposféry a ochlazování stratosféry.
+Santer a kol. (2013) porovnávají tento obraz s družicovým záznamem 1979–2012
+a s modelovým rozsahem přirozených vlivů včetně Slunce a sopek.
+Sledují tři široké vrstvy: dolní troposféru, střední a horní troposféru
+a dolní stratosféru. Obraz lidského působení rozpoznali v obou zpracováních
+družicových dat, RSS a UAH. Tato zpracování sdílejí část podkladových měření.
+Tabulka v grafice ukazuje pouze směr dlouhodobé změny. Není datovým grafem.
+Neshoda velikosti změn mezi modely a měřením zůstává zachovaná v textu článku.
+Roky 1979–2012 označují pozorovací záznam. Samostatné antropogenní běhy
+v obr. 2 studie končí v roce 2005, běhy se všemi vlivy pokračují do roku 2012.
+
+Oba testy ověřují různé části vysvětlení. Úplné vysvětlení zahrnuje také
+další skleníkové plyny, aerosoly a reakce klimatického systému.
+Antropogenní aerosoly v souhrnu část oteplování plyny tlumí.
+
+Odborné podklady
+Manabe, S. (1983): Carbon Dioxide and Climatic Change.
+Advances in Geophysics 25, 39–82. Podklad: s. 45–47.
+https://doi.org/10.1016/S0065-2687(08)60171-5
+Plný text: https://www.gfdl.noaa.gov/bibliography/related_files/sm8301.pdf
+
+Feldman, D. R. a kol. (2015): Observational determination of surface
+radiative forcing by CO₂ from 2000 to 2010. Nature 519, 339–343.
+Podklad: obr. 2 a 4, výsledky a metody.
+https://doi.org/10.1038/nature14240
+Plný text: https://www.ssec.wisc.edu/~dennyh/papers/FeldmanEtal%20Nature%202015%20Surface%20CO2%20radiative%20forcing.pdf
+
+Santer, B. D. a kol. (2013): Human and natural influences on the changing
+thermal structure of the atmosphere. PNAS 110, 17235–17240.
+Podklad: obr. 2–4, popis dat a Fingerprint Results.
+https://doi.org/10.1073/pnas.1305332110
+Plný text: https://contenthub.llnl.gov/sites/contenthub/files/news/2013-09/santer.pdf
+
+Forster, P., Storelvmo, T. a kol. (2021): The Earth’s Energy Budget,
+Climate Feedbacks, and Climate Sensitivity. IPCC AR6 WGI, kapitola 7.
+Podklad: oddíly 7.2 a 7.3, ukládání energie a součet radiačních vlivů.
+https://doi.org/10.1017/9781009157896.009
+Plný text: https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_Chapter07.pdf

@@ -3,6 +3,7 @@ import type { Source } from "./sources";
 // Sources cited by published article components.
 // Stable IDs are referenced from SourceLink components; do not rename them after publication.
 const rawArticleSources: Source[] = [
+  {id: "DOI_10_1016_S0065_2687_08_60171_5", title: "Carbon Dioxide and Climatic Change", author: "Syukuro Manabe", year: 1983, publication: "Advances in Geophysics 25, s. 39–82. Academic Press.", type: "Autorský přehled modelových výzkumů", category: "science", externalUrl: "https://doi.org/10.1016/S0065-2687(08)60171-5", citationLabel: "Manabe 1983", topics: ["mechanismy", "oxid uhličitý", "záření", "stratosféra"]},
   {id: "DOI_10_1029_2008JD010114", title: "Exploring the stratospheric/tropospheric response to solar forcing", author: "D. Rind, J. Lean, J. Lerner, P. Lonergan a A. Leboissitier", year: 2008, publication: "Journal of Geophysical Research 113, D24103. Modelové pokusy se slunečním cyklem, pohlcováním UV ozonem a odezvou povrchu a atmosféry.", type: "Původní modelová studie", category: "science", externalUrl: "https://doi.org/10.1029/2008JD010114", citationLabel: "Rind a kol. 2008", topics: ["mechanismy", "Slunce", "stratosféra", "záření"]},
   { id: "DATA_Hugonnet_2021_Figure1", title: "Hugonnet a kol. 2021: podkladová data k obrázku 1", author: "Romain Hugonnet a kol.", year: 2021, publication: "Nature, Source Data Fig. 1. Tabulka XLSX s regionálními a globálními změnami výšky a hmotnosti pro roky 2000–2019.", type: "Datový soubor", category: "science", externalUrl: "https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-021-03436-z/MediaObjects/41586_2021_3436_MOESM4_ESM.xlsx", citationLabel: "Hugonnet a kol. 2021: data k obrázku 1", topics: ["pozorování","ledovce","data"], externalLinkLabel: "Otevřít veřejná data" },
   {id: "WEB_SMHI_Stockholm_1774_1889",title: "Stockholm: měření u Slussenu od 1774 a na Skeppsholmenu od 1889",author: "Sveriges meteorologiska och hydrologiska institut (SMHI)",year: 2026,yearLabel: "přístup 2026",publication: "SMHI, dokumentace historie vlastní sítě měření mořské hladiny",type: "Dokumentace pozorovacího záznamu",category: "organization",externalUrl: "https://www.smhi.se/kunskapsbanken/oceanografi/vattenstand-i-havet/varldens-langsta-vattenstandsserie",citationLabel: "SMHI: historie měření ve Stockholmu",topics: ["pozorování","hladina moře","historie"]},
@@ -877,6 +878,7 @@ const rawArticleSources: Source[] = [
 ];
 
 const articleOpenAccessSources: Record<string, true | string> = {
+  DOI_10_1016_S0065_2687_08_60171_5: "https://www.gfdl.noaa.gov/bibliography/related_files/sm8301.pdf",
   DATA_Hugonnet_2021_Figure1: true,
   WEB_SMHI_Stockholm_1774_1889: true,
   DATA_IAP_v42_Monthly_OHC_2026: true,

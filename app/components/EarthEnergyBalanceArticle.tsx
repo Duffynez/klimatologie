@@ -490,69 +490,155 @@ export function EarthEnergyBalanceArticle() {
           páry s oteplením růst, a tím zesilovat počáteční účinek CO₂.{' '}
           <SourceLink id="1967_Manabe_Wetherald">(Manabe a Wetherald 1967)</SourceLink>
         </p>
+        <h4 id="lidske-pusobeni-princip" className={styles.testHeading}>Proč se povrch otepluje a stratosféra chladne</h4>
         <p>
-          Výpočet teploty atmosféry otevřel také{' '}
-          <a href="#slunecni-vyskovy-test">test podle výšky popsaný u sluneční hypotézy</a>.
-          Změny složení vzduchu ve druhé polovině 20. století měly
-          ohřívat troposféru, spodní vrstvu atmosféry, a ochlazovat
-          stratosféru nad ní.
-          V dolní stratosféře se přitom výrazně uplatňuje lidské poškozování
-          ozonu, který tam jinak pohlcováním slunečního záření dodává teplo.
-          Tím vzniká jiný společný obraz než při zesílení Slunce.{' '}
-          <SourceLink id="DOI_10_1073_pnas_1305332110">(Santer a kol. 2013, obr. 1 a 2)</SourceLink>
+          CO₂ pohlcuje část tepelného záření a sám vyzařuje do různých
+          směrů. Jeho přibývání proto mění průchod záření atmosférou
+          i vyzařování jednotlivých vrstev. Při původní teplotě povrchu
+          a spodní atmosféry vychází celkový odchod energie do vesmíru
+          menší. Pokud Slunce dodává stejně jako předtím, příjem převýší
+          výdej. Přebytek ohřívá povrch a troposféru. Oteplování postupně
+          zesiluje vyzařování, takže při stálém složení atmosféry může
+          vzniknout nová rovnováha při vyšší teplotě.{' '}
+          <SourceLink id="DOI_10_1016_S0065_2687_08_60171_5">(Manabe 1983, s. 45–47)</SourceLink>
         </p>
         <p>
-          <Link href="/pozorovani/stratosfericke-ochlazovani/#vyskovy-obraz">Naměřený výškový obraz změn</Link>
-          {' '}za roky 1979–2012 odpovídal v testu Santera a kolegů lidskému
-          působení. Přesná velikost změn se mezi modely a měřením lišila.
-          Rozlišující prostorový obraz byl přesto zjistitelný v obou
-          použitých zpracováních družicových dat. K oceánským profilům
-          tak přibyl test teplot v atmosféře.{' '}
-          <SourceLink id="DOI_10_1073_pnas_1305332110">(Santer a kol. 2013, obr. 3 a 4)</SourceLink>
+          Stratosféra má vlastní příjem a výdej energie. CO₂ jí pomáhá
+          energii vyzařovat. Když ho přibude, při původní teplotě se
+          zesílí její ztráta energie zářením a vrstva chladne. Současně
+          ji ohřívá ozon, který pohlcuje sluneční ultrafialové záření.
+          Lidskou činností vyvolaný úbytek ozonu tento ohřev oslabil,
+          což významně přispělo k ochlazování dolní stratosféry.
+          Odlišné změny teploty dole a nahoře tedy vyplývají z toho,
+          jak se v každé vrstvě změní příjem a výdej.{' '}
+          <SourceLink id="DOI_10_1016_S0065_2687_08_60171_5">(Manabe 1983, s. 47)</SourceLink>{' '}
+          <SourceLink id="DOI_10_1073_pnas_1305332110">(Santer a kol. 2013)</SourceLink>
         </p>
         <p>
-          Samotný účinek přibývajícího CO₂ lze hledat přímo v záření.
-          Tento test sleduje jiný článek vysvětlovaného děje než teplotní
-          porovnání.
+          Obrázek spojuje tento děj se dvěma testy. První hledá přímo
+          změnu záření způsobenou CO₂. Druhý ověřuje, zda rozložení
+          teplotních změn odpovídá společnému lidskému působení.
+          V obou případech nejprve potřebujeme určit předpověď,
+          potom provést porovnání s měřením.
+        </p>
+        <figure id="lidske-pusobeni-schema" className={`article-figure ${styles.explanatoryFigure}`}>
+          <div className={styles.figureScroll} tabIndex={0} role="region"
+            aria-label="Schéma lidského působení a obou testů, na úzké obrazovce posuvné do stran">
+            <a href="/media/energeticka-bilance-zeme/lidske-pusobeni.png"
+              aria-label="Otevřít schéma lidského působení a obou testů v plné velikosti">
+              <Image className="article-figure__media"
+                src="/media/energeticka-bilance-zeme/lidske-pusobeni.png"
+                alt="CO₂ pohlcuje a vyzařuje tepelné záření. Povrch a troposféra se oteplují, stratosféra se ochlazuje. První test porovnává záření v pásmech CO₂ na dvou stanicích v letech 2000–2010. Druhý porovnává výškové a zeměpisné rozložení družicových teplotních změn v letech 1979–2012 s modely lidského působení a přirozených vlivů. Oba testy oddělují předpověď, postup a výsledek."
+                width={1586} height={2037} unoptimized />
+            </a>
+          </div>
+          <figcaption>
+            Červenooranžové šipky ukazují tepelné záření, žlutá příchod
+            slunečního záření. Modré popisky označují ochlazování.
+            Přerušované linie u družice vyznačují pozorované vrstvy.
+            Počet ani šířka šipek nejsou měřítkem toku energie.
+            Dolní část odděluje <a href="#lidske-pusobeni-spektralni-test">test záření</a>
+            {' '}a <a href="#lidske-pusobeni-vyskovy-test">test teplot</a>.
+            Tabulka teplotních změn shrnuje jejich směr, nikoli velikost.
+            Vlastní grafika Klimatologie.eu, horní ilustrace vytvořená
+            pomocí AI, CC BY 4.0. Podklady:{' '}
+            <SourceLink id="DOI_10_1016_S0065_2687_08_60171_5">Manabe (1983)</SourceLink>,{' '}
+            <SourceLink id="DOI_10_1038_nature14240">Feldman a kol. (2015)</SourceLink>,{' '}
+            <SourceLink id="DOI_10_1073_pnas_1305332110">Santer a kol. (2013)</SourceLink>
+            {' '}a <SourceLink id="DOI_10_1017_9781009157896_009">IPCC AR6, kapitola 7</SourceLink>.{' '}
+            Na menší obrazovce lze obrázek posouvat do stran.{' '}
+            <a href="/media/energeticka-bilance-zeme/lidske-pusobeni.png">Otevřít v plné velikosti</a>.{' '}
+            <a href="/media/energeticka-bilance-zeme/lidske-pusobeni.csv" download>Číselné podklady</a>.{' '}
+            <a href="/media/energeticka-bilance-zeme/lidske-pusobeni.txt">Podklady a licence</a>.
+          </figcaption>
+        </figure>
+
+        <h4 id="lidske-pusobeni-spektralni-test" className={styles.testHeading}>První test hledá účinek CO₂ v záření k povrchu</h4>
+        <p>
           Plyny pohlcují záření v určitých pásmech vlnových délek.
           Vlnová délka rozlišuje jednotlivé druhy záření podobně, jako ve
           viditelném světle rozlišuje barvy. Účinek rostoucího CO₂ proto
-          musí zanechat konkrétní změnu v infračerveném záření, které je
-          pro oko neviditelné. K jejímu nalezení změříme jednotlivá pásma
-          a oddělíme vliv měnící se teploty, vlhkosti a dalších plynů.{' '}
+          má zesílit záření k povrchu v charakteristických infračervených
+          pásmech, která jsou pro oko neviditelná. Takto určený vzorec
+          umožňuje odlišit jeho působení od změn teploty a vlhkosti.{' '}
           <SourceLink id="DOI_10_1038_nature14240">(Feldman a kol. 2015)</SourceLink>
         </p>
         <p>
-          Feldman a kolegové tento test zveřejnili v roce 2015.
-          Použili pozemní měření záření přicházejícího z atmosféry
-          na dvou místech, v Oklahomě a na severu Aljašky.
-          Ve záznamu bezoblačných podmínek z let 2000–2010 oddělili pomocí
-          měřených profilů atmosféry a výpočtu přenosu záření účinek CO₂.
-          Nárůstu jeho koncentrace o 22 miliontin odpovídal na obou místech
+          Feldman a kolegové v roce 2015 použili měření z Oklahomy
+          a severu Aljašky. Záření k povrchu porovnali s výpočtem,
+          v němž teplota a vlhkost odpovídaly měření, ale CO₂ zůstával
+          na výchozí koncentraci. Přidali údaje o dalších plynech.
+          Rozdíl mezi měřením a tímto výpočtem ukázal, co přineslo
+          přibývání CO₂. Samostatný výpočet s rostoucím CO₂ pak ověřil,
+          zda změna odpovídá očekávaným pásmům.{' '}
+          <SourceLink id="DOI_10_1038_nature14240">(Feldman a kol. 2015, obr. 2)</SourceLink>
+        </p>
+        <p>
+          V bezoblačném záznamu z let 2000–2010 předpověď obstála.
+          Nárůstu koncentrace CO₂ o 22 miliontin odpovídal na obou místech
           přírůstek tohoto příspěvku k toku k povrchu 0,20 W/m² za deset let.
           Publikovaná nejistota trendu činila ±0,06 v Oklahomě a ±0,07 na Aljašce
-          ve stejných jednotkách.
-          Výsledek se shodoval s očekávanou změnou v pásmu CO₂.
-          Záznam a postup jeho zpracování doplňuje{' '}
+          ve stejných jednotkách. Změna v pásmech CO₂ tak doložila působení
+          tohoto plynu na záření dopadající na povrch.
+          Měření a jeho zpracování rozebírá{' '}
           <Link href="/pozorovani/atmosfericka-koncentrace-co2/#zmena-infracerveneho-zareni">pozorování CO₂ a infračerveného záření</Link>.{' '}
           <SourceLink id="DOI_10_1038_nature14240">(Feldman a kol. 2015, obr. 2 a 4)</SourceLink>
         </p>
+
+        <h4 id="lidske-pusobeni-vyskovy-test" className={styles.testHeading}>Druhý test porovnává rozložení teplotních změn</h4>
         <p>
-          Zde se ověřuje účinek konkrétního plynu. K vysvětlení oceánského
-          ohřevu se přidává prostorové porovnání Barnetta a kolegů popsané
-          výše. Laboratorní pokus, záření měřené na povrchu a teplotní profily
-          oceánu zachycují různé části stejného děje. Jejich společný význam
-          spočívá v tom, že fyzikální příčina má měřitelný účinek v atmosféře
-          a její zahrnutí pomáhá vysvětlit také rozložení následného ohřevu.{' '}
+          Následující test sleduje teplotní následek změněného záření.
+          Růst skleníkových plynů spolu s úbytkem ozonu má vytvářet
+          oteplování troposféry a ochlazování stratosféry.
+          V různých zeměpisných šířkách přitom očekáváme různou sílu změny.
+          Tento společný obraz lze porovnat s obrazy vyvolanými Sluncem,
+          sopkami a vnitřním kolísáním klimatu. Navazuje tím na{' '}
+          <a href="#slunecni-vyskovy-test">výškový test sluneční hypotézy</a>.{' '}
+          <SourceLink id="DOI_10_1073_pnas_1305332110">(Santer a kol. 2013, obr. 1–3)</SourceLink>
+        </p>
+        <p>
+          Santer a kolegové v roce 2013 porovnali družicový záznam
+          z let 1979–2012 s výpočty více klimatických modelů.
+          Sledovali tři široké vrstvy: dolní troposféru, střední
+          a horní troposféru a dolní stratosféru. V každé porovnávali
+          změny podle zeměpisné šířky. Modelové běhy s lidskými vlivy
+          poskytly očekávaný obraz. Běhy s přirozenými vlivy ukázaly,
+          jak podobný obraz může vzniknout bez lidského působení.{' '}
+          <SourceLink id="DOI_10_1073_pnas_1305332110">(Santer a kol. 2013, data a obr. 2–4)</SourceLink>
+        </p>
+        <p>
+          Obraz lidského působení byl rozpoznatelný v obou použitých
+          zpracováních družicových dat. Samotné přirozené vlivy v tomto
+          testu nevysvětlily jeho dlouhodobé zesilování.
+          Přesná velikost změn se mezi modely a měřením lišila,
+          rozlišující prostorový obraz přesto obstál.
+          <Link href="/pozorovani/stratosfericke-ochlazovani/#vyskovy-obraz">Pozorování výškových změn teploty</Link>
+          {' '}ukazuje měřený vývoj jednotlivých vrstev.{' '}
+          <SourceLink id="DOI_10_1073_pnas_1305332110">(Santer a kol. 2013, obr. 3 a 4)</SourceLink>
+        </p>
+        <h4 className={styles.testHeading}>Jak se výsledky obou testů doplňují</h4>
+        <p>
+          První test zachycuje účinek konkrétního plynu v záření,
+          druhý ověřuje prostorový obraz teplotní reakce na lidské vlivy.
+          K nim se přidává porovnání oceánského ohřevu Barnetta a kolegů
+          popsané výše. Laboratorní pokus, záření měřené na povrchu
+          a teploty atmosféry a oceánu tak zachycují různé části stejného
+          děje. Vlastnosti plynů mají měřitelný účinek v přírodě a jejich
+          zahrnutí pomáhá vysvětlit také rozložení následného ohřevu.{' '}
           <SourceLink id="1862_Tyndall">(Tyndall 1861)</SourceLink>{' '}
           <SourceLink id="DOI_10_1038_nature14240">(Feldman a kol. 2015)</SourceLink>{' '}
+          <SourceLink id="DOI_10_1073_pnas_1305332110">(Santer a kol. 2013)</SourceLink>{' '}
           <SourceLink id="DOI_10_1126_science_1112418">(Barnett a kol. 2005)</SourceLink>
         </p>
         <p>
           Dnešní vysvětlení zahrnuje celý součet lidských vlivů.
           Vedle skleníkových plynů se mění aerosoly, drobné částice
           a kapičky rozptýlené ve vzduchu. Ovlivňují sluneční záření
-          i vlastnosti oblaků a část oteplujícího účinku plynů kompenzují.
+          i vlastnosti oblaků. V souhrnu část oteplujícího účinku plynů
+          kompenzují.{' '}
+          <SourceLink id="DOI_10_1017_9781009157896_009">(IPCC AR6, oddíl 7.3)</SourceLink>
+        </p>
+        <p>
           Odborné hodnocení IPCC z roku 2021 dospělo ze souboru studií
           k závěru, že lidský vliv byl s pravděpodobností 95–100 % hlavní
           příčinou růstu obsahu tepla v oceánu od 70. let 20. století.
@@ -876,7 +962,8 @@ export function EarthEnergyBalanceArticle() {
             Dnes jej vysvětlujeme především lidským působením na složení
             atmosféry a následnými reakcemi klimatu. Toto vysvětlení
             propojuje vlastnosti plynů ověřené v laboratoři, změny
-            měřeného záření a rozložení ohřevu v oceánu.
+            měřeného záření, teploty v různých výškách atmosféry
+            a rozložení ohřevu v oceánu.
             Přirozené kolísání ovlivňuje průběh a rozmístění změny.
           </p>
         </div>
@@ -899,6 +986,7 @@ export function EarthEnergyBalanceArticle() {
               <li><SourceLink id="1896_Arrhenius">Arrhenius 1896</SourceLink>: raný výpočet vlivu množství CO₂ na teplotu.</li>
               <li><SourceLink id="1938_Callendar">Callendar 1938</SourceLink>: propojení spalování paliv, růstu CO₂ a teplotních měření.</li>
               <li><SourceLink id="1967_Manabe_Wetherald">Manabe a Wetherald 1967</SourceLink>: výpočet teplotní odezvy atmosféry.</li>
+              <li><SourceLink id="DOI_10_1016_S0065_2687_08_60171_5">Manabe 1983</SourceLink>: fyzikální vysvětlení oteplování povrchu a troposféry a ochlazování stratosféry, s. 45–47.</li>
               <li><SourceLink id="DOI_10_1175_BJERKNES_1969">Bjerknes 1969</SourceLink>: vzájemné působení rovníkového Pacifiku a atmosféry při teplých epizodách.</li>
               <li><SourceLink id="2016_OpenStax_University_Physics_2">University Physics, svazek 2</SourceLink>: otevřená učebnice, oddíly 1.5, 1.6 a 3.3.</li>
               <li><SourceLink id="DOI_10_1175_2007JCLI2110_1">Soden a kol. 2008</SourceLink>: oddělení teplotní odezvy a zpětných vazeb.</li>
@@ -922,6 +1010,7 @@ export function EarthEnergyBalanceArticle() {
               <li><SourceLink id="DOI_10_5194_essd_15_1675_2023">Von Schuckmannová a kol. 2023</SourceLink>: inventura energie, oddíl 6 a obr. 8.</li>
               <li><SourceLink id="DOI_10_1038_s41467_021_24544_4">Raghuraman a kol. 2021</SourceLink>: test vnitřní proměnlivosti a vnějšího působení. Oddíly Data availability a Code availability odkazují na veřejná data a výpočetní kód.</li>
               <li><SourceLink id="DOI_10_1017_9781009157896_005">IPCC AR6, kapitola 3</SourceLink>: souhrnné odborné posouzení lidského vlivu, zejména oddíl 3.5.1 o oceánu.</li>
+              <li><SourceLink id="DOI_10_1017_9781009157896_009">IPCC AR6, kapitola 7</SourceLink>: ukládání energie v klimatickém systému a souhrn radiačních účinků plynů a aerosolů, oddíly 7.2 a 7.3.</li>
             </ul>
           </section>
           <section>
@@ -933,6 +1022,7 @@ export function EarthEnergyBalanceArticle() {
               <li><a href="/media/energeticka-bilance-zeme/generate_figures.py" download>Skript pro vytvoření grafu a schématu</a>. Vlastní grafika Klimatologie.eu, CC BY 4.0. Číselný podklad: Loeb a kol. 2021, CC BY 4.0.</li>
               <li><a href="/media/energeticka-bilance-zeme/silnejsi-slunce.png">Schéma slunečního ohřevu</a> a <a href="/media/energeticka-bilance-zeme/silnejsi-slunce.txt">jeho podklady a licence</a>. Vlastní ilustrace vytvořená pomocí AI, CC BY 4.0. Teplotní šipky vyjadřují očekávaný směr změny.</li>
               <li><a href="/media/energeticka-bilance-zeme/prirozene-kolisani.svg">Schéma přirozeného kolísání s oběma testy</a>, <a href="/media/energeticka-bilance-zeme/prirozene-kolisani.csv" download>jeho číselné podklady</a> a <a href="/media/energeticka-bilance-zeme/prirozene-kolisani.txt">popis a licence</a>. Vlastní grafika, CC BY 4.0. Ilustrační část vytvořená pomocí AI, číselná část podle von Schuckmannové a kol. (2023) a Raghuramana a kol. (2021).</li>
+              <li><a href="/media/energeticka-bilance-zeme/lidske-pusobeni.svg">Schéma lidského působení s oběma testy</a>, <a href="/media/energeticka-bilance-zeme/lidske-pusobeni.csv" download>jeho číselné podklady</a> a <a href="/media/energeticka-bilance-zeme/lidske-pusobeni.txt">popis a licence</a>. Vlastní grafika, CC BY 4.0. Horní ilustrace vytvořená pomocí AI. Číselné výsledky podle Feldmana a kol. (2015), kvalitativní porovnání teplotních změn podle Santera a kol. (2013).</li>
             </ul>
           </section>
         </div>
