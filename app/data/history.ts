@@ -1,30 +1,43 @@
+export const historyBranches = {
+  science: "Věda",
+  politics: "Politika",
+  culture: "Kultura",
+} as const;
+
+export type HistoryBranch = keyof typeof historyBranches;
+
 export const historyCategories = {
   observations: {
+    branch: "science",
     label: "Pozorování",
     description: "Co jsme zjistili o klimatu",
     href: "/pozorovani/",
   },
   methods: {
+    branch: "science",
     label: "Metody",
     description: "Jak jsme se naučili měřit",
     href: "/metody/",
   },
   mechanisms: {
+    branch: "science",
     label: "Mechanismy",
     description: "Jak vysvětlujeme příčiny",
     href: "/mechanismy/",
   },
   politics: {
+    branch: "politics",
     label: "Politika",
     description: "Jak se měnila pravidla a závazky",
     href: null,
   },
   culture: {
+    branch: "culture",
     label: "Kultura",
     description: "Jak se klima promítalo do kultury",
     href: null,
   },
-} as const;
+} as const satisfies Record<string, { branch: HistoryBranch; label: string; description: string; href: string | null }>;
 
 export type HistoryCategory = keyof typeof historyCategories;
 export type HistoryReference = { sourceId: string; locator?: string };

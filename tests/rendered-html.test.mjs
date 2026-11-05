@@ -769,7 +769,7 @@ test("publishes a complete, chronological history with traceable sources and sta
     readFile(new URL("app/data/history.ts", root), "utf8"),
     readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
   ]);
-  const { historyEvents, historyCategories, historyPeriods } = await import(
+  const { historyEvents, historyBranches, historyCategories, historyPeriods } = await import(
     "data:text/javascript;base64," + Buffer.from(stripTypeScriptTypes(eventsText)).toString("base64")
   );
   assert.ok(historyEvents.length > 0);
@@ -786,6 +786,9 @@ test("publishes a complete, chronological history with traceable sources and sta
     assert.ok(card.includes(event.title));
     assert.ok(card.includes(event.dateMeaning));
     assert.ok(Object.hasOwn(historyCategories, event.category));
+    assert.ok(Object.hasOwn(historyBranches, historyCategories[event.category].branch));
+    assert.ok(card.includes('data-history-branch="' + historyCategories[event.category].branch + '"'));
+    assert.ok(card.includes(historyBranches[historyCategories[event.category].branch]));
     assert.ok(card.includes(historyCategories[event.category].label));
     assert.equal(historyPeriods.filter(period => event.year >= period.from && event.year <= period.to).length, 1);
     assert.ok(event.paragraphs.length > 0);
@@ -820,12 +823,12 @@ test("publishes a complete, chronological history with traceable sources and sta
   assert.doesNotMatch(html, /citation--missing|Předchozí milník|Další milník/);
 });
 
-test("renders accessible history areas matching the site and hides unpopulated categories", async () => {
+test("keeps science and politics above scientific areas and hides unpopulated branches", async () => {
   const [html, eventsText] = await Promise.all([
     readFile(new URL("dist/client/historie/index.html", root), "utf8"),
     readFile(new URL("app/data/history.ts", root), "utf8"),
   ]);
-  const { historyEvents, historyCategories, historyPeriods } = await import(
+  const { historyEvents, historyBranches, historyCategories, historyPeriods } = await import(
     "data:text/javascript;base64," + Buffer.from(stripTypeScriptTypes(eventsText)).toString("base64")
   );
   assert.match(html, /aria-label="Filtry historické osy"/);
@@ -833,17 +836,31 @@ test("renders accessible history areas matching the site and hides unpopulated c
   assert.doesNotMatch(html, /<select id="history-kind"|data-history-lane=/);
   assert.match(html, /role="status" aria-live="polite" aria-atomic="true"/);
   assert.match(html, /<noscript>/);
-  const buttons = [...html.matchAll(/<button\b[^>]*>([\s\S]*?)<\/button>/g)].map(match => match[0]);
-  for (const [value, category] of Object.entries(historyCategories)) {
-    const button = buttons.find(button => button.includes('aria-label="' + category.label + '"'));
-    if (historyEvents.some(event => event.category === value)) {
-      assert.ok(button, "Missing area filter " + category.label);
+  const fieldsets = [...html.matchAll(/<fieldset\b([^>]*)>([\s\S]*?)<\/fieldset>/g)];
+  const branches = fieldsets.find(fieldset => fieldset[2].includes("<legend>Část historie</legend>"));
+  const science = fieldsets.find(fieldset => fieldset[2].includes("<legend>Oblast vědy</legend>"));
+  assert.ok(branches && science, "Preserve both levels of the history hierarchy");
+  assert.doesNotMatch(branches[1], /\bhidden\b/);
+  assert.match(science[1], /\bhidden\b/, "Choose science before offering its subareas");
+  const buttons = [...branches[2].matchAll(/<button\b[^>]*>([\s\S]*?)<\/button>/g)].map(match => match[0]);
+  for (const [value, label] of Object.entries(historyBranches)) {
+    const button = buttons.find(button => button.includes('aria-label="' + label + '"'));
+    if (historyEvents.some(event => historyCategories[event.category].branch === value)) {
+      assert.ok(button, "Missing top-level filter " + label);
       assert.ok(button.includes('aria-pressed="false"'));
-      assert.ok(button.includes(category.description));
     } else {
-      assert.equal(button, undefined, "Do not publish an empty area filter " + category.label);
+      assert.equal(button, undefined, "Do not publish an empty branch " + label);
     }
   }
+  for (const value of ["observations", "methods", "mechanisms"]) {
+    const category = historyCategories[value];
+    assert.equal(category.branch, "science");
+    assert.ok(science[2].includes('aria-label="' + category.label + '"'));
+    assert.ok(science[2].includes(category.description));
+    assert.ok(!branches[2].includes('aria-label="' + category.label + '"'));
+  }
+  assert.ok(science[2].includes('aria-label="Všechny oblasti"'));
+  assert.ok(!science[2].includes('aria-label="Politika"'));
   for (const period of historyPeriods) {
     assert.ok(html.includes('href="#' + period.id + '"'));
     assert.ok(html.includes('id="' + period.id + '"'));

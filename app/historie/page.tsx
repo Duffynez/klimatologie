@@ -4,7 +4,7 @@ import { Citation } from "../components/Citation";
 import { PageLead } from "../components/PageLead";
 import { HistoryTimeline, type HistoryTimelineItem } from "../components/HistoryTimeline";
 import styles from "../components/HistoryTimeline.module.css";
-import { historyCategories, historyEvents, historyPeriods, type HistoryCategory } from "../data/history";
+import { historyBranches, historyCategories, historyEvents, historyPeriods, type HistoryBranch, type HistoryCategory } from "../data/history";
 import { sourceById } from "../data/sources";
 
 export const metadata: Metadata = {
@@ -23,6 +23,10 @@ export default function HistoryPage() {
     if (!Object.hasOwn(historyCategories, event.category)) {
       throw new Error("Invalid history classification: " + event.id);
     }
+    const category = historyCategories[event.category];
+    if (!Object.hasOwn(historyBranches, category.branch)) {
+      throw new Error("Invalid history branch: " + event.id);
+    }
     if (historyPeriods.filter(period => event.year >= period.from && event.year <= period.to).length !== 1) {
       throw new Error("History event must belong to one period: " + event.id);
     }
@@ -40,9 +44,10 @@ export default function HistoryPage() {
     return {
       id: event.id,
       year: event.year,
+      branch: category.branch,
       category: event.category,
       content: (
-        <article className={styles.milestone} data-history-category={event.category}
+        <article className={styles.milestone} data-history-branch={category.branch} data-history-category={event.category}
           aria-labelledby={"nazev-" + event.id}>
           <div className={styles.date}>
             <time dateTime={String(event.year)}>{event.year}</time>
@@ -50,7 +55,11 @@ export default function HistoryPage() {
           </div>
           <div className={styles.body}>
             <p className={styles.meta}>
-              <span>{historyCategories[event.category].label}</span>
+              <span className={styles.branchLabel}>{historyBranches[category.branch]}</span>
+              {category.branch === "science" && <>
+                <span aria-hidden="true">›</span>
+                <span className={styles.categoryLabel}>{category.label}</span>
+              </>}
             </p>
             <h3 id={"nazev-" + event.id} className={styles.title}>{event.title}</h3>
             {event.paragraphs.map((paragraph, paragraphIndex) => (
@@ -92,10 +101,13 @@ export default function HistoryPage() {
     <div className="page-shell">
       <PageLead eyebrow="Historie poznání" title="Historie poznání klimatu."
         meta="5. listopadu 2026">
-        <p>Historie sleduje stejné otázky jako ostatní části webu: co se v klimatu děje, jak to měříme a čím to vysvětlujeme. Vedle nich zachycuje politická rozhodnutí.</p>
-        <p>Vyberte si oblast a sledujte její vývoj v čase. Každý milník ukazuje, co přinesl, kde měl své meze a z jakých pramenů jej známe.</p>
+        <p>Historie sleduje vývoj vědeckého poznání a politických rozhodnutí. Věda se stejně jako zbytek webu člení na pozorování, metody a mechanismy: co se v klimatu děje, jak to měříme a čím to vysvětlujeme.</p>
+        <p>Vyberte si vědu nebo politiku. Ve vědě můžete výběr zúžit na jednu oblast. Každý milník ukazuje, co přinesl, kde měl své meze a z jakých pramenů jej známe.</p>
       </PageLead>
       <HistoryTimeline items={items} periods={historyPeriods}
+        branches={Object.entries(historyBranches)
+          .filter(([value]) => items.some(item => item.branch === value))
+          .map(([value, label]) => ({ value: value as HistoryBranch, label }))}
         categories={Object.entries(historyCategories)
           .filter(([value]) => historyEvents.some(event => event.category === value))
           .map(([value, category]) => ({ value: value as HistoryCategory, ...category }))} />
