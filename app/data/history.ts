@@ -362,6 +362,75 @@ export const historyEvents: HistoryEvent[] = [
     ]
   },
   {
+    id: "1853_Brusel",
+    year: 1853,
+    dateMeaning: "Závěrečná zpráva konference, 8. září",
+    title: "Státní zástupci navrhují společná námořní pozorování",
+    category: "politics",
+    paragraphs: [
+      {
+        text: "Na konferenci v Bruselu se sešli zástupci vyslaní deseti státy, aby navrhli společný postup meteorologických pozorování na moři. Závěrečná zpráva doporučila jednotné lodní záznamy, porovnávání měřidel a výměnu výsledků. Údaje o teplotě vzduchu a vody, tlaku nebo větru měly být srovnatelné bez ohledu na vlajku lodi.",
+        references: [
+          {
+            sourceId: "1853_Brussels_Conference",
+            locator: "závěrečná zpráva, oddíl Report"
+          }
+        ]
+      },
+      {
+        text: "Delegáti schválili společný návrh, k závazkům svých vlád však neměli zmocnění. Doporučili, aby národní pracoviště shromažďovala lodní deníky, zpracovávala pozorování a sdílela je se zahraničím. Konference tak popsala, jak mohou státy společně zajistit měření na rozsáhlých plochách oceánu, kde chybějí pozemní stanice.",
+        references: [
+          {
+            sourceId: "1853_Brussels_Conference",
+            locator: "oddíl Report, pravomoci delegátů a výměna výsledků"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/pozorovani/gmst/",
+        label: "Jak využíváme teplotní měření z pevniny a oceánu"
+      }
+    ]
+  },
+  {
+    id: "1854_MetOffice",
+    year: 1854,
+    dateMeaning: "Zřízení meteorologického oddělení",
+    title: "Británie zakládá státní meteorologickou službu",
+    category: "politics",
+    paragraphs: [
+      {
+        text: "Britská vláda zřídila při Board of Trade, úřadu pro obchod, meteorologické oddělení vedené Robertem FitzRoyem. Navázala tím na bruselskou konferenci z předchozího roku. Z tohoto pracoviště vznikl dnešní Met Office. Stát převzal organizaci sběru a zpracování námořních meteorologických pozorování.",
+        references: [
+          {
+            sourceId: "WEB_MetOffice_History"
+          },
+          {
+            sourceId: "1866_BoardOfTrade_MeteorologicalReport",
+            locator: "část I, body 1–3"
+          }
+        ]
+      },
+      {
+        text: "Původní úkol zahrnoval poskytování přístrojů a návodů námořníkům a soustřeďování jejich záznamů. Z nich se měly určovat například průměrné teploty vzduchu a moře nebo průběh větrů a proudů. Vláda tím zajistila stálé pracoviště pro měření a výpočty v rozsahu, který jednotlivci obtížně zvládali. Předpovědi počasí ještě nebyly součástí původního zadání.",
+        references: [
+          {
+            sourceId: "1866_BoardOfTrade_MeteorologicalReport",
+            locator: "část I, body 2–3"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/pozorovani/gmst/",
+        label: "Od jednotlivých měření k teplotnímu záznamu"
+      }
+    ]
+  },
+  {
     id: "1856_Foote",
     year: 1856,
     dateMeaning: "Zveřejnění práce",
@@ -495,6 +564,38 @@ export const historyEvents: HistoryEvent[] = [
         label: "Jak sníh a led zesilují změnu"
       }
     ]
+  },
+  {
+    id: "1870_US_WeatherService",
+    year: 1870,
+    dateMeaning: "Schválení usnesení Kongresu, 9. února",
+    title: "Zákon spojuje státní měření počasí s výstrahami před bouřemi",
+    category: "politics",
+    paragraphs: [
+      {
+        text: "Americký Kongres pověřil ministra války zajištěním meteorologických pozorování na vojenských stanicích i dalších místech ve státech a teritoriích USA. Současně požadoval varování před blížícími se bouřemi a jejich silou pro severní jezera a mořské pobřeží. Zprávy se měly šířit telegrafem a námořními signály.",
+        references: [
+          {
+            sourceId: "1870_US_WeatherService_Resolution",
+            locator: "společné usnesení č. 12, 16 Stat. 369"
+          }
+        ]
+      },
+      {
+        text: "Nová služba vznikla v armádním Signal Service. Rozhodnutí spojilo do jednoho státního úkolu pravidelné pozorování, rychlý přenos zpráv a varování pro dopravu. Meteorologická síť tak dostala institucionální zázemí a jasně určeného příjemce výsledků. Historie dnešní americké National Weather Service se počítá právě od tohoto rozhodnutí.",
+        references: [
+          {
+            sourceId: "WEB_NWS_History",
+            locator: "rok 1870"
+          },
+          {
+            sourceId: "1870_US_WeatherService_Resolution",
+            locator: "společné usnesení č. 12"
+          }
+        ]
+      }
+    ],
+    relatedLinks: []
   },
   {
     id: "1879_Stefan_Boltzmann",
@@ -745,6 +846,73 @@ export const historyEvents: HistoryEvent[] = [
     ]
   },
   {
+    id: "1919_Parizska_Letecka_Umluva",
+    year: 1919,
+    dateMeaning: "Podpis úmluvy, 13. října",
+    title: "Letecká úmluva zahrnuje výměnu meteorologických údajů",
+    category: "politics",
+    paragraphs: [
+      {
+        text: "Pařížská úmluva o letectví zařadila meteorologickou spolupráci mezi závazky smluvních států. Podle článku 35 měly v nejvyšší možné míře spolupracovat při sběru a šíření statistických, aktuálních i zvláštních meteorologických informací podle přílohy G. Informace o počasí se tím staly výslovnou součástí mezinárodních pravidel pro letecký provoz.",
+        references: [
+          {
+            sourceId: "1919_Paris_AirNavigation",
+            locator: "čl. 35 písm. a"
+          }
+        ]
+      },
+      {
+        text: "Úmluva zřídila Mezinárodní komisi pro letectví, která měla shromažďovat také meteorologické informace a upravovat technické přílohy. Vytvořila tak společný postup pro spolupráci států a další změny pravidel. Podepsána byla v říjnu 1919, v platnost však vstoupila až 11. července 1922.",
+        references: [
+          {
+            sourceId: "1919_Paris_AirNavigation",
+            locator: "čl. 34"
+          },
+          {
+            sourceId: "WEB_ICAO_ParisConvention_History"
+          }
+        ]
+      }
+    ],
+    relatedLinks: []
+  },
+  {
+    id: "1919_Statni_Meteorologicky_Ustav",
+    year: 1919,
+    dateMeaning: "Rozhodnutí vlády, 9. prosince",
+    title: "Československo zřizuje státní meteorologický ústav",
+    category: "politics",
+    paragraphs: [
+      {
+        text: "Československá vláda rozhodla o zřízení Státního ústavu meteorologického při ministerstvu školství a národní osvěty. Jeho stanovy byly schváleny 14. ledna 1920. Nový stát tím získal ústřední instituci pro meteorologickou službu, v jejímž rámci působila také vojenská složka.",
+        references: [
+          {
+            sourceId: "WEB_ACR_MeteorologicalService_History",
+            locator: "rozhodnutí č. 26314 z 9. prosince 1919 a schválení stanov 14. ledna 1920"
+          }
+        ]
+      },
+      {
+        text: "Dobový parlamentní návrh Bohumila Němce a dalších poslanců ukazuje, proč takové pracoviště považovali za potřebné. Požadovali organizaci sítě stanic, odborné zpracování pozorování, vydávání výsledků a spojení se zahraničními ústavy. Návrh z února 1919 dokládá zamýšlené úkoly ústavu, samotné rozhodnutí o jeho zřízení přišlo až v prosinci.",
+        references: [
+          {
+            sourceId: "1919_Nemec_MeteorologicalInstitute",
+            locator: "tisk 493, návrh a jeho odůvodnění"
+          },
+          {
+            sourceId: "WEB_ACR_MeteorologicalService_History"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/pozorovani/gmst/",
+        label: "Jak zpracováváme síť teplotních měření"
+      }
+    ]
+  },
+  {
     id: "1929_Radiosondy",
     year: 1929,
     dateMeaning: "Rané úspěšné lety v letech 1929–1930",
@@ -777,6 +945,104 @@ export const historyEvents: HistoryEvent[] = [
       {
         href: "/metody/radiosondaz/",
         label: "Jak funguje radiosondáž"
+      }
+    ]
+  },
+  {
+    id: "1929_SOLAS",
+    year: 1929,
+    dateMeaning: "Podpis námořní úmluvy, 31. května",
+    title: "Námořní úmluva propojuje lodní měření a výstrahy",
+    category: "politics",
+    paragraphs: [
+      {
+        text: "Úmluva o bezpečnosti lidského života na moři, známá jako SOLAS, zahrnula meteorologii do pravidel bezpečné plavby. Její článek 35 zavázal smluvní státy k podpoře sběru údajů z lodí, jejich zpracování a výměny. V mezích proveditelnosti měly také zajistit varování před bouřemi a každodenní rozhlasové zprávy o počasí.",
+        references: [
+          {
+            sourceId: "1929_SOLAS",
+            locator: "kapitola V, čl. 35"
+          }
+        ]
+      },
+      {
+        text: "Vybrané lodě měly pozorovat počasí v určených časech a výsledky bezdrátově předávat meteorologickým službám. Společný postup měl odpovídat doporučením Mezinárodní meteorologické organizace. Úmluva tak spojila státní služby a lodě do systému sběru a předávání informací pro námořníky. Podepsána byla roku 1929, v platnost vstoupila 1. ledna 1933.",
+        references: [
+          {
+            sourceId: "1929_SOLAS",
+            locator: "čl. 35 a úvodní údaj o vstupu v platnost"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/pozorovani/gmst/",
+        label: "Úloha lodních měření v teplotních řadách"
+      }
+    ]
+  },
+  {
+    id: "1935_Soil_Conservation_Act",
+    year: 1935,
+    dateMeaning: "Schválení zákona, 27. dubna",
+    title: "USA přijímají trvalý program ochrany půdy",
+    category: "politics",
+    paragraphs: [
+      {
+        text: "Za období Dust Bowl, kdy se sucho a rozsáhlá větrná eroze projevovaly prachovými bouřemi, přijaly Spojené státy zákon o ochraně půdy. Kongres označil ztrátu půdy a vláhy za hrozbu pro zemi a stanovil její omezení jako trvalý státní úkol. Při ministerstvu zemědělství vznikla Soil Conservation Service.",
+        references: [
+          {
+            sourceId: "1935_SoilConservationAct",
+            locator: "§ 1 a 5"
+          },
+          {
+            sourceId: "WEB_NRCS_History",
+            locator: "Dust Bowl a vznik Soil Conservation Service v roce 1935"
+          }
+        ]
+      },
+      {
+        text: "Zákon pověřil ministerstvo výzkumem eroze, zveřejňováním výsledků a praktickými ukázkami ochrany půdy. Umožnil spolupráci s vlastníky půdy, podporu změn hospodaření, obnovu vegetace i technická opatření. Odpověď na sucho a odnos půdy tak zahrnovala nejen pomoc při pohromě, ale také dlouhodobou práci s půdou, vodou a zemědělskými postupy.",
+        references: [
+          {
+            sourceId: "1935_SoilConservationAct",
+            locator: "§ 1–3"
+          }
+        ]
+      }
+    ],
+    relatedLinks: []
+  },
+  {
+    id: "1936_Flood_Control_Act",
+    year: 1936,
+    dateMeaning: "Schválení zákona, 22. června",
+    title: "Ochrana před povodněmi se stává federálním úkolem",
+    category: "politics",
+    paragraphs: [
+      {
+        text: "Americký Kongres označil ochranu před povodněmi za úkol federální vlády ve spolupráci se státy a místními správami. Zákon umožnil účast federace na projektech, jejichž přínosy převyšují odhadované náklady a které mají chránit životy a životní podmínky obyvatel. Ochrana před povodněmi tím dostala celostátní zákonný rámec.",
+        references: [
+          {
+            sourceId: "1936_FloodControlAct",
+            locator: "§ 1"
+          }
+        ]
+      },
+      {
+        text: "Zákon rozlišil práce na řekách, svěřené armádním ženistům pod ministerstvem války, a opatření v povodí pod ministerstvem zemědělství. Ta měla zpomalovat odtok a omezovat erozi. Politické rozhodnutí tak spojilo vodní stavby s péčí o území, z něhož voda do řek přitéká.",
+        references: [
+          {
+            sourceId: "1936_FloodControlAct",
+            locator: "§ 2"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/pozorovani/srazky-a-privalove-srazky/",
+        label: "Co měříme u srážek a jejich extrémů"
       }
     ]
   },
@@ -847,6 +1113,34 @@ export const historyEvents: HistoryEvent[] = [
     ]
   },
   {
+    id: "1944_Chicagska_Umluva",
+    year: 1944,
+    dateMeaning: "Podpis úmluvy, 7. prosince",
+    title: "Chicagská úmluva vytváří rámec pro společná meteorologická pravidla",
+    category: "politics",
+    paragraphs: [
+      {
+        text: "Chicagská úmluva o mezinárodním civilním letectví uložila smluvním státům, aby podle svých možností zajišťovaly také meteorologické služby pro mezinárodní letecký provoz. Článek 28 je zařadil vedle letišť, rádiových služeb a dalších prostředků potřebných pro leteckou navigaci.",
+        references: [
+          {
+            sourceId: "1944_ChicagoConvention",
+            locator: "čl. 28"
+          }
+        ]
+      },
+      {
+        text: "Článek 37 zavázal státy ke spolupráci na sjednocování pravidel a postupů. Mezinárodní organizace pro civilní letectví, ICAO, dostala pravomoc přijímat standardy a doporučení také pro sběr a výměnu meteorologických informací. Úmluva podepsaná v prosinci 1944 vstoupila v platnost 4. dubna 1947. Vytvořila rámec, v němž se pravidla pro meteorologické služby mohla společně rozvíjet.",
+        references: [
+          {
+            sourceId: "1944_ChicagoConvention",
+            locator: "čl. 37 písm. g a historie úmluvy ICAO"
+          }
+        ]
+      }
+    ],
+    relatedLinks: []
+  },
+  {
     id: "1952_Libby",
     year: 1949,
     dateMeaning: "Zveřejnění zkoušky na vzorcích známého stáří",
@@ -876,6 +1170,39 @@ export const historyEvents: HistoryEvent[] = [
       {
         href: "/metody/radiometricke-a-expozicni-datovani/",
         label: "Jak funguje radiouhlíkové datování a jeho kalibrace"
+      }
+    ]
+  },
+  {
+    id: "1950_WMO",
+    year: 1950,
+    dateMeaning: "Vstup zakládající úmluvy v platnost, 23. března",
+    title: "Vzniká Světová meteorologická organizace",
+    category: "politics",
+    paragraphs: [
+      {
+        text: "Dne 23. března 1950 vstoupila v platnost úmluva o Světové meteorologické organizaci, WMO, podepsaná ve Washingtonu roku 1947. Státy tím ustavily mezivládní organizaci pro spolupráci v meteorologii. Jejím posláním se stala koordinace pozorovacích sítí, výměny zpráv, výzkumu a odborného vzdělávání.",
+        references: [
+          {
+            sourceId: "1947_WMO_Convention",
+            locator: "čl. 1–2 a poznámka o vstupu v platnost, UNTS 77, s. 144"
+          }
+        ]
+      },
+      {
+        text: "Úmluva výslovně požadovala podporu rychlé výměny meteorologických informací, sjednocování pozorovacích postupů a jednotného zveřejňování pozorování a statistik. Společná pravidla měla umožnit porovnávat a spojovat údaje přes hranice států. Mezinárodní spolupráce se tím opřela o trvalou organizaci založenou smlouvou.",
+        references: [
+          {
+            sourceId: "1947_WMO_Convention",
+            locator: "čl. 2 písm. a–c"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/pozorovani/gmst/",
+        label: "Proč potřebujeme srovnatelná měření z celého světa"
       }
     ]
   },
