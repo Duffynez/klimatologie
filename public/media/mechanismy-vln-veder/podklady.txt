@@ -1,0 +1,70 @@
+Mechanismy vln veder — podklady k článku a grafice
+Datum: 6. listopadu 2026
+
+PŮVOD A LICENCE
+Schémata proudeni.svg a oteplovani-a-puda.svg jsou původní vektorové ilustrace
+Klimatologie.eu vytvořené programově s pomocí AI. Nejde o převzaté obrázky studií.
+Autorství a zdroj: Klimatologie.eu, 2026. Licence CC BY 4.0.
+Stejná licence platí pro vlastní ilustrační řadu a tento doprovod.
+Generátor je v repozitáři scripts/generate-heatwave-schematics.mjs.
+Spuštění z kořene projektu: node scripts/generate-heatwave-schematics.mjs
+
+Schémata neobsahují měřená data. Barvy rozlišují vzduch, přenos tepla a výpar.
+Šipky mají kvalitativní význam, jejich tloušťka ani počet nekódují měřený tok.
+První schéma ukazuje letní blokování, sestup a ohřev vzduchu, povrchový ohřev
+slunečním zářením a přenos teplého vzduchu větrem. Není mapou konkrétní události.
+Druhé schéma ukazuje teplotní posun klimatu a samostatné zesílení při omezení
+výparu. Rozdíl mezi oběma panely není experiment izolující jen jednu příčinu.
+Výpar i předávání tepla vzduchu mohou probíhat v obou panelech. Zobrazené toky
+netvoří úplnou povrchovou energetickou bilanci, která zahrnuje i vyzařování
+a tok tepla do půdy. Jednotlivé příspěvky oddělují experimenty popsané v článku.
+
+ODBORNÉ PODKLADY
+Rex (1950), blokování a jeho historické vymezení.
+DOI: 10.3402/tellusa.v2i3.8546
+Plný text: https://tellusjournal.org/articles/4050/files/659cecd46b781.pdf
+
+Dole a kol. (2011), ruské vedro a atmosférické blokování.
+DOI: 10.1029/2010GL046582
+Plný autorský rukopis: https://psl.noaa.gov/csi/pubs/docs/RussianHeatWave_revisedGRLmerged_version.pdf
+
+Vautard a kol. (2023), rozlišení cirkulačního a ostatního příspěvku.
+DOI: 10.1038/s41467-023-42143-3
+Plný text: https://www.nature.com/articles/s41467-023-42143-3
+Kód: https://zenodo.org/records/8310140
+
+Fischer a kol. (2007), změna půdní vody v regionálním modelu evropského léta 2003.
+DOI: 10.1175/JCLI4288.1
+Plný text: https://www.met.reading.ac.uk/~vidale/papers/Fischer_heat_waves_2007.pdf
+
+Otto a kol. (2012), vysvětlení rozdílu mezi příspěvkem k teplotě a k pravděpodobnosti.
+DOI: 10.1029/2011GL050422
+Autorský rukopis z 23. ledna 2012:
+https://cdn.knmi.nl/system/data_center_publications/files/000/069/096/original/2011gl050422pip.pdf
+
+Miralles a kol. (2014), půda a noční teplá vrstva nad povrchem.
+DOI: 10.1038/ngeo2141
+Plný text: https://climate.fas.harvard.edu/resource/mirallesea2014ngeopdf
+
+Leach a kol. (2024), atribuční pokus s předpovědním modelem.
+DOI: 10.1038/s41467-024-48280-7
+Plný text: https://www.nature.com/articles/s41467-024-48280-7
+Zpracovaná data a kód k obrázkům: https://zenodo.org/records/10728125
+
+ČÍSELNÉ PODKLADY
+vysledky-studii.csv je ruční přepis několika publikovaných souhrnných výsledků.
+Není původním měřením ani úplným modelovým výstupem. Sloupec locator určuje
+místo ve studii, qualification zachovává podmínky. Prázdné meze neznamenají
+nulovou nejistotu. U Fischera a Ottové jde o přibližné nebo ilustrační hodnoty,
+u Leache o interval 17.–83. percentilu, u Vautarda o 95% intervaly.
+Evropské sklony jsou vztaženy na stupeň globálního oteplení v letech 1950–2022,
+nikoli na desetiletí. Zbytek po odečtení cirkulačního příspěvku nelze celý
+automaticky označit za příspěvek samotného CO₂.
+
+ilustracni-rada.csv obsahuje výhradně vymyšlená čísla, nikoli staniční data.
+Výchozí denní maxima: 27, 29, 30, 32, 33, 31, 29, 28, 26 °C.
+Ke každé hodnotě je přičteno 2 °C. Hranice je striktně nad 30 °C.
+Při požadavku alespoň tří po sobě jdoucích dnů vychází původní vlna na dny
+4–6 a posunutá na dny 2–7. Hodnota přesně 30 °C se nezapočítá.
+Příklad ukazuje vliv posunu na překročení hranice. Není projekcí délky vln
+ani odhadem změny jejich pravděpodobnosti ve skutečném klimatu.

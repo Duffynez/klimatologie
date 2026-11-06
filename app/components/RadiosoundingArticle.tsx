@@ -236,6 +236,10 @@ export function RadiosoundingArticle() {
 
         <h3>Využití opakovaných sondáží</h3>
         <p>
+          Profily odhalují také teplé vrstvy nad povrchem během veder. Příklady z Francie a Ruska uvádí{" "}
+          <Link href="/pozorovani/vlny-veder/#teplota-ve-vysce">pozorování vln veder</Link>.
+        </p>
+        <p>
           Jednotlivý profil zachycuje stav atmosféry během letu. Pro klimatologii spojujeme
           opakované výstupy z mnoha stanic a porovnáváme stejné tlakové hladiny či výšky
           ve srovnatelných termínech. Tak lze sledovat dlouhodobé změny popsané v článcích

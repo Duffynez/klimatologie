@@ -788,7 +788,7 @@ test("publishes 23 mechanism topics and preserves the split snow-and-sea-ice add
     assert.ok(sitemap.includes(`<loc>https://klimatologie.eu/mechanismy/${slug}/</loc>`), "Missing sitemap route " + slug);
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     assert.ok(html.includes(`<h1>${title}</h1>`), "Wrong detail title " + slug);
-    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly"].includes(slug)) {
+    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder"].includes(slug)) {
       assert.match(html, /Co musí toto vysvětlení objasnit/);
       assert.match(html, /<section class="mechanism-detail-evidence"[^>]*>[\s\S]*<p>[^<]+<\/p><\/section>/);
     }
@@ -1847,7 +1847,7 @@ test("gives every heat-wave source public access and preserves corrected measure
   const ids = new Set([...article.matchAll(/<SourceLink id="([^"]+)"/g)].map((match) => match[1]));
   const cards = new Map([...sourcesHtml.matchAll(/<article\b[^>]*\bid="([^"]+)"[^>]*>([\s\S]*?)<\/article>/g)]
     .map((match) => [match[1], match[2]]));
-  assert.equal(ids.size, 32);
+  assert.equal(ids.size, 36);
   for (const id of ids) {
     const card = cards.get(id);
     assert.ok(card, `Missing rendered heat-wave source: ${id}`);
@@ -1865,7 +1865,7 @@ test("gives every heat-wave source public access and preserves corrected measure
   assert.match(articleHtml, /WSDI tedy neudává počet událostí/);
   assert.match(articleHtml, /nemusely připadat na stejné datum/);
   assert.match(articleHtml, /neuvádí úplný seznam použitých stanic/);
-  assert.match(articleHtml, /<p class="page-lead__meta">5\. listopadu 2026<\/p>/);
+  assert.match(articleHtml, /<p class="page-lead__meta">6\. listopadu 2026<\/p>/);
   assert.doesNotMatch(articleHtml, /Sadegh et al\., 2018|133 homogenizovaných českých stanic|souvislá zasažená plocha/);
   assert.equal((articleHtml.match(/class="article-figure__scroll"/g) ?? []).length, 2);
 });
@@ -3963,7 +3963,7 @@ test("time changes and extremes publish the full method, reproducible example an
     "Jak rozpoznáváme změny v čase", "Nejistoty a ověření", "Příklad na denních teplotách z Blue Hill", "Shrnutí",
   ]);
   assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
-  assert.match(heat, /<p class="page-lead__meta">5\. listopadu 2026<\/p>/);
+  assert.match(heat, /<p class="page-lead__meta">6\. listopadu 2026<\/p>/);
   assert.match(rain, /<p class="page-lead__meta">5\. listopadu 2026<\/p>/);
   for (const observation of [heat, rain]) assert.match(observation, /href="\/metody\/analyza-casovych-zmen-a-extremu\/?(?:#[^"]+)?"/);
   for (const slug of ["vlny-veder", "srazky-a-privalove-srazky"]) assert.ok(hasArticleLink(body, "/pozorovani/" + slug));
@@ -4448,6 +4448,7 @@ test("keeps each hypothesis independently collapsible with complete content and 
     ["puvod-rustu-atmosferickeho-co2", ["ocean", "pevnina", "fosilni-uhlik"]],
     ["slunecni-promenlivost", ["kosmicke-zareni", "zmeny-zareni"]],
     ["sopecne-aerosoly", ["popel", "sirne-kapky"]],
+    ["mechanismy-vln-veder", ["samotne-proudeni", "teplejsi-klima"]],
   ]) {
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)[1];
@@ -4463,6 +4464,40 @@ test("keeps each hypothesis independently collapsible with complete content and 
       assert.doesNotMatch(story, /<h2\b|data-hypothesis-story=/, "Do not hide another story or the following explanation");
     }
   }
+});
+
+test("heatwave mechanism connects every local evidence anchor and publishes a reproducible threshold example", async () => {
+  const path = "/mechanismy/mechanismy-vln-veder";
+  const html = await readFile(new URL("dist/client" + path + "/index.html", root), "utf8");
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "Publish the full article at the existing catalogue address");
+  for (const [, href] of body.matchAll(/href="(\/[^\"]+)"/g)) {
+    const [pathname, anchor] = href.split("#");
+    const file = /\.[a-z0-9]+$/i.test(pathname) ? pathname : pathname.replace(/\/$/, "") + "/index.html";
+    const target = await readFile(new URL("dist/client" + file, root), "utf8");
+    if (anchor) assert.ok(target.includes(`id="${anchor}"`), "Broken evidence or source anchor " + href);
+  }
+  for (const name of ["proudeni", "oteplovani-a-puda"]) {
+    assert.ok(body.includes(`/media/mechanismy-vln-veder/${name}.svg`));
+    const svg = await readFile(new URL(`dist/client/media/mechanismy-vln-veder/${name}.svg`, root), "utf8");
+    assert.match(svg, /<title[^>]*>[^<]+<\/title>/);
+    assert.match(svg, /<desc[^>]*>[^<]+<\/desc>/);
+  }
+  const csv = await readFile(new URL("dist/client/media/mechanismy-vln-veder/ilustracni-rada.csv", root), "utf8");
+  const rows = csv.trim().split(/\r?\n/).slice(1).map(line => line.split(","));
+  assert.equal(rows.length, 9);
+  for (const [, initial, shift, final, before, after] of rows) {
+    assert.equal(Number(final), Number(initial) + Number(shift));
+    assert.equal(before, String(Number(initial) > 30));
+    assert.equal(after, String(Number(final) > 30));
+  }
+  assert.deepEqual(rows.filter(row => row[4] === "true").map(row => Number(row[0])), [4, 5, 6]);
+  assert.deepEqual(rows.filter(row => row[5] === "true").map(row => Number(row[0])), [2, 3, 4, 5, 6, 7]);
+  assert.match(body, /vymyšlených denních maxim/);
+  assert.match(body, /striktně nad 30 °C/);
+  assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
+  const observation = await readFile(new URL("dist/client/pozorovani/vlny-veder/index.html", root), "utf8");
+  assert.ok(hasArticleLink(observation, path));
 });
 
 test("publishes the solar cycle mechanism with testable hypotheses, open sources and reciprocal links", async () => {

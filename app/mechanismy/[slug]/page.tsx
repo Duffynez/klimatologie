@@ -7,6 +7,7 @@ import { CarbonDioxideOriginArticle } from "../../components/CarbonDioxideOrigin
 import { GreenhouseRadiationArticle } from "../../components/GreenhouseRadiationArticle";
 import { VolcanicAerosolsArticle } from "../../components/VolcanicAerosolsArticle";
 import { SolarVariabilityArticle } from "../../components/SolarVariabilityArticle";
+import { HeatWaveMechanismsArticle } from "../../components/HeatWaveMechanismsArticle";
 import { climateMechanisms, mechanismBySlug } from "../../data/mechanisms";
 
 const combinedCryosphereSlug = "energeticka-bilance-snehu-a-morskeho-ledu";
@@ -79,6 +80,14 @@ export default async function MechanismDetail({ params }: { params: Promise<{ sl
     </div>;
   }
 
+  if (slug === "mechanismy-vln-veder") {
+    return <div className="page-shell">
+      <PageLead eyebrow={"Mechanismy / " + mechanism.category} title={mechanism.title} meta="6. listopadu 2026"><p>{mechanism.summary}</p></PageLead>
+      <HeatWaveMechanismsArticle />
+      <Link className="text-link catalog-back-link" href="/mechanismy">&larr; Zpět na všechny mechanismy</Link>
+    </div>;
+  }
+
   if (slug === "slunecni-promenlivost") {
     return <div className="page-shell">
       <PageLead eyebrow={"Mechanismy / " + mechanism.category} title={mechanism.title} meta="6. listopadu 2026"><p>{mechanism.summary}</p></PageLead>
@@ -114,7 +123,7 @@ export default async function MechanismDetail({ params }: { params: Promise<{ sl
   if (slug === "radiacni-pusobeni-sklenikovych-plynu") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow={`Mechanismy / ${mechanism.category}`} title={mechanism.title} meta="5. listopadu 2026">
+        <PageLead eyebrow={`Mechanismy / ${mechanism.category}`} title={mechanism.title} meta="6. listopadu 2026">
           <p>{mechanism.summary}</p>
         </PageLead>
         <GreenhouseRadiationArticle />

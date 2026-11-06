@@ -195,9 +195,9 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "mechanismy-vln-veder",
     title: "Proč jsou vlny veder častější a silnější?",
     category: "Živá příroda a extrémy",
-    cardSummary: "Souhra dlouhodobého oteplování, atmosférického proudění, slunečního záření a vysychání půdy.",
-    summary: "Vlny veder vznikají kombinací teplotního pozadí, atmosférické cirkulace, slunečního záření a vysychání půdy.",
-    distinguishingEvidence: "Porovnání dlouhodobého posunu teplot s průběhem jednotlivých veder. Měření proudění, půdní vlhkosti a výparu ověřují příspěvek setrvalých tlakových situací a vysychání půdy k jejich intenzitě a trvání.",
+    cardSummary: "Jak se při vzniku veder spojují oteplování, proudění vzduchu a půdní voda a čím jejich příspěvky ověřujeme.",
+    summary: "Co vysvětlí samotné proudění a co přidává oteplování a vysychání půdy? Dvě hypotézy, historie jejich zkoumání a testy na evropských, ruských a severoamerických vedrech.",
+    distinguishingEvidence: "Porovnání dnů s podobným prouděním, pokusy s půdní vodou a opakování úspěšné předpovědi v chladnějším klimatu rozlišují vznik jedné události od dlouhodobé změny teploty a pravděpodobnosti.",
   },
 ];
 

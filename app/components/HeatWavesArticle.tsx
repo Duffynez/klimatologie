@@ -479,7 +479,7 @@ export function HeatWavesArticle() {
           <SourceLink id="DOI_10_1038_s41467_020_16970_7">Perkins-Kirkpatrick a Lewis, 2020</SourceLink>
         </p>
 
-        <h3>Evropa</h3>
+        <h3 id="evropska-vedra">Evropa</h3>
         <p>
           Rousi a spoluautoři vyhledali v ERA5 události v červenci a srpnu 1979–2020. Denní maximum muselo překročit
           místní 90. percentil nejméně šest dnů po sobě. Hranice byla odvozena z patnáctidenních oken celého
@@ -501,6 +501,38 @@ export function HeatWavesArticle() {
           Jde o statistický vztah ve sledovaném období, nikoli o změnu za desetiletí nebo předpověď pro další roky.
           Výsledek také neudává počet ani trvání vln veder.{" "}
           <SourceLink id="DOI_10_1038_s41467_023_42143_3">Vautard et al., 2023</SourceLink>
+        </p>
+
+        <h3 id="rusko-2010">Západní Rusko v červenci 2010</h3>
+        <p>
+          Dole a spoluautoři zprůměrovali měsíční teploty v oblasti 50–60° severní šířky a 35–55° východní délky.
+          Červenec 2010 byl v jejich záznamu nejteplejší od začátku v roce 1880. Základ tvořily analýzy NOAA,
+          výsledek porovnali s dalšími třemi teplotními soubory. Jde o měsíční plošný průměr, nikoli nejvyšší údaj
+          jedné stanice. Jednotlivé soubory mohou sdílet měření a nejstarší část má řidší pokrytí.{" "}
+          <SourceLink id="DOI_10_1029_2010GL046582">Dole a kol. 2011, oddíl 2 a obrázek 1</SourceLink>
+        </p>
+
+        <h3 id="severni-amerika-2021">Severozápad Severní Ameriky v červnu 2021</h3>
+        <p>
+          Leach a spoluautoři zprůměrovali denní maxima ERA5 přes oblast 45–52° severní šířky a 119–123° západní délky.
+          Vrchol události připadá v časování souboru na 29. června 2021 v 00 UTC. Překročil předchozí roční maxima
+          záznamu od roku 1950. ERA5 zde poskytuje prostorově zpracovanou teplotu, nikoli samostatný staniční rekord.{" "}
+          <SourceLink id="DOI_10_1038_s41467_024_48280_7">Leach a kol. 2024, obrázek 1 a metody</SourceLink>
+        </p>
+
+        <h3 id="teplota-ve-vysce">Teplota nad povrchem během mimořádných veder</h3>
+        <p>
+          Radiosondáže z Trappes u Paříže v roce 2003 a Voroněže v roce 2010 zachytily teplé noční vrstvy nad
+          chladnějším přízemním vzduchem. Denní promíchaná vrstva dosahovala téměř 4 km, před vedry méně než 2 km.
+          Studie porovnává potenciální teplotu, tedy teplotu přepočtenou na stejný tlak, aby se oddělil účinek
+          rozpínání a stlačování vzduchu. Nejde o běžný údaj povrchového teploměru.{" "}
+          <SourceLink id="DOI_10_1038_ngeo2141">Miralles a kol. 2014, obrázek 3</SourceLink>
+        </p>
+        <p>
+          Vstupem jsou měření teploty, tlaku a vlhkosti sondou nesenou balonem. Vznik profilu a jeho chyby popisuje{" "}
+          <Link href="/metody/radiosondaz/#hotovy-profil">metoda radiosondáže</Link>.
+          Porovnání vychází z opakovaných měření dvou stanic, takže nepopisuje každé místo zasažených oblastí.
+          Původní studie použila <SourceLink id="WEB_Wyoming_Upper_Air_Archive">archiv University of Wyoming</SourceLink>.
         </p>
 
         <h3>Česká republika</h3>
@@ -547,6 +579,11 @@ export function HeatWavesArticle() {
           </p>
         </div>
 
+        <p>
+          Navazující vysvětlení <Link href="/mechanismy/mechanismy-vln-veder/#hypotezy">Proč jsou vlny veder častější a silnější?</Link>{" "}
+          porovnává příspěvek proudění, oteplování a půdní vody. Zde uvedená měření jsou podkladem jeho testů.
+        </p>
+
         <h2>Prameny a data</h2>
         <div className="article-source-groups">
           <section>
@@ -578,6 +615,9 @@ export function HeatWavesArticle() {
               <li><SourceLink id="DOI_10_1038_s41467_020_16970_7">Perkins-Kirkpatrick a Lewis, 2020: globální počet, délka a součet překročení 1950–2017</SourceLink></li>
               <li><SourceLink id="DOI_10_1038_s41467_022_31432_y">Rousi et al., 2022: evropské vlny veder 1979–2020</SourceLink></li>
               <li><SourceLink id="DOI_10_1038_s41467_023_42143_3">Vautard et al., 2023: nejteplejší letní dny v západní Evropě</SourceLink></li>
+              <li><SourceLink id="DOI_10_1029_2010GL046582">Dole a kol. 2011: červencové teploty v západním Rusku</SourceLink></li>
+              <li><SourceLink id="DOI_10_1038_ngeo2141">Miralles a kol. 2014: výškové profily během veder</SourceLink></li>
+              <li><SourceLink id="DOI_10_1038_s41467_024_48280_7">Leach a kol. 2024: severoamerické vedro v reanalýze a předpovědi</SourceLink></li>
               <li><SourceLink id="WEB_Cesky_hydrometeorologicky_us_Vlny_veder_v_historii_a_dnes_27ba4cfb">ČHMÚ, 2026: tropické dny a souvislé události v České republice</SourceLink></li>
             </ul>
           </section>

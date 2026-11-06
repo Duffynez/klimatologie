@@ -709,6 +709,12 @@ export function GreenhouseRadiationArticle() {
           </p>
         </div>
 
+        <p>
+          Jak se oteplování projeví během konkrétního počasí, rozebírá článek{" "}
+          <Link href="/mechanismy/mechanismy-vln-veder/#teplejsi-klima">Proč jsou vlny veder častější a silnější?</Link>.
+          Porovnává příspěvky teplotních podmínek, proudění a půdní vody.
+        </p>
+
         <h2 id="prameny">Prameny a veřejná data</h2>
         <div className="article-source-groups">
           <section>

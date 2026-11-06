@@ -1,0 +1,10 @@
+day,initial_tmax_degC,shift_degC,shifted_tmax_degC,initial_above_30,shifted_above_30
+1,27,2,29,false,false
+2,29,2,31,false,true
+3,30,2,32,false,true
+4,32,2,34,true,true
+5,33,2,35,true,true
+6,31,2,33,true,true
+7,29,2,31,false,true
+8,28,2,30,false,false
+9,26,2,28,false,false
