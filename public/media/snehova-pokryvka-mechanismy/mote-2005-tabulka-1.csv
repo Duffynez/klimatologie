@@ -1,0 +1,5 @@
+region,earlier_period,later_period,observed_april1_swe_change_percent,modelled_april1_swe_change_percent,nov_mar_precipitation_change_percent,source_doi,source_table
+Cascades,1945-1955,1990-1997,-29.2,-15.5,-4.6,10.1175/BAMS-86-1-39,1
+Rockies,1945-1955,1990-1997,-15.8,-8.8,0.5,10.1175/BAMS-86-1-39,1
+California,1945-1955,1990-1997,-2.2,-24.6,-1.1,10.1175/BAMS-86-1-39,1
+Interior,1945-1955,1990-1997,-21.6,-18.2,2.1,10.1175/BAMS-86-1-39,1

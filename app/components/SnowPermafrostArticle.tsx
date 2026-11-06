@@ -433,7 +433,7 @@ export function SnowPermafrostArticle() {
         </p>
 
         <h2 id="pozorovani">Pozorování</h2>
-        <h3>Jarní rozsah sněhu v Arktidě</h3>
+        <h3 id="jarni-rozsah-snehu">Jarní rozsah sněhu v Arktidě</h3>
         <p>
           NOAA Arctic Report Card vyhodnocuje zasněženou pevninu severně od 60° severní šířky bez Grónska.
           Z trendu za roky 1967–2025 vychází pokles květnového rozsahu přibližně o 15 %, tedy −2,5 % za desetiletí,
@@ -473,7 +473,7 @@ export function SnowPermafrostArticle() {
           <SourceLink id="DOI_10_25923_cfhv_c239">Mudryk et al., 2025, obr. 2</SourceLink>
         </p>
 
-        <h3>Hmotnost sněhu během jara</h3>
+        <h3 id="jarni-hmotnost-snehu">Hmotnost sněhu během jara</h3>
         <p>
           Podle Arctic Report Card byla dubnová hmotnost sněhu v roce 2025 nad průměrem 1991–2020 v severoamerické
           i euroasijské Arktidě. V červnu už rozsah zasněžené plochy klesl pod průměr. Z toho však neplyne, že na
@@ -524,6 +524,73 @@ export function SnowPermafrostArticle() {
           uvedené autory. Výsledky opraveného měsíčního produktu nezahrnují hory a popisují jiné území a období než
           Arctic Report Card.{" "}
           <SourceLink id="DOI_10_1038_s41597_021_00939_2">Luojus et al., 2021</SourceLink>
+        </p>
+
+        <h3 id="horske-snehove-zasoby">Horská zásoba vody na západě Severní Ameriky</h3>
+        <p>
+          Mote a kolegové v roce 2005 porovnávali vodní hodnotu sněhu kolem 1. dubna s měřením počasí.
+          Pro mapu trendů za roky 1950–1997 použili 824 opakovaně měřených profilů, z nichž 75 % vykazovalo pokles.
+          Profily nevzorkují rovnoměrně celou plochu hor. Podíl míst proto není podílem území.
+          Regionální průměry také závisí na zastoupení nadmořských výšek a změnách míst měření.
+          <SourceLink id="DOI_10_1175_bams_86_1_39"> (Mote a kol. 2005, obr. 1 a tabulka 1)</SourceLink>
+        </p>
+        <p>
+          Zvláštní porovnání průměrů 1945–1955 a 1990–1997 uvádí tabulka 1 původní práce.
+          <a href="/media/snehova-pokryvka-mechanismy/mote-2005-tabulka-1.csv"> Její číselný přepis</a> zachovává čtyři oblasti,
+          změny měřené i modelované zásoby a změny srážek. Procenta jsou rozdílem pozdějšího a dřívějšího průměru,
+          vyděleným dřívějším průměrem a vynásobeným stem. Nejde o trend za desetiletí.
+          Přepis umožňuje zkontrolovat publikované srovnání, nenahrazuje původní jednotlivé odběry.
+        </p>
+
+        <h3 id="skupenstvi-srazek">Kdy stanice hlásí déšť a kdy sníh</h3>
+        <p>
+          Jennings a kolegové zpracovali 17,8 milionu hlášení z 11 924 pozemních stanic severní polokoule
+          od 1. ledna 1978 do 25. února 2007. Zprávy obsahují pozorované skupenství a teplotu,
+          z teploty rosného bodu a tlaku se dopočítává relativní vlhkost.
+          Chybějící tlak autoři doplnili z meteorologické analýzy MERRA-2. Smíšené srážky a fyzikálně nevěrohodné vlhkosti vyřadili.
+          Výsledek popisuje četnost hlášení, protože soubor neobsahuje množství vody v jednotlivých srážkách.
+          <SourceLink id="DOI_10_1038_s41467_018_03629_7"> (Jennings a kol. 2018, metody)</SourceLink>
+        </p>
+        <p>
+          Pro každou stanici rozdělili záznamy do teplotních pásem širokých 1 °C a spočítali podíl sněhových hlášení.
+          Proložená křivka dovolila u 6 883 stanic určit teplotu stejně častého deště a sněhu.
+          Průměr činil 1,0 °C a 95 % stanic mělo hodnotu od −0,4 do 2,4 °C. Rozpětí vyjadřuje prostorové rozdíly.
+          V <SourceLink id="DOI_10_5061_dryad_c9h35">Dryadu</SourceLink> obsahuje soubor označený file2 zpracovaná hlášení,
+          file3 staniční prahy a file6 kód jejich výpočtu v R. Hodnota NA označuje stanici s nedostatkem dat pro proložení.
+          Čtenář tak může začít malou tabulkou prahů, nebo zopakovat jejich výpočet z přibližně 1,21 GB hlášení.
+        </p>
+
+        <h3 id="mereni-kaweah">Průběh zásoby v povodí Kaweah</h3>
+        <p>
+          Musselman a kolegové použili pro sezony 2008–2010 tři automatické stanice s měřením zatížení sněhové podušky,
+          sedm tras ručních odběrů a 24 ultrazvukových snímačů výšky na čtyřech místech.
+          Terénní průzkum zahrnoval také 1 494 navštívených bodů a 26 jam s odběrem hustoty po 10 cm.
+          Sněhová poduška poskytuje vodní hodnotu, ultrazvuk vzdálenost k povrchu sněhu. Jejich rozdílné veličiny se nesmějí zaměnit.
+          <SourceLink id="DOI_10_5194_tc_11_2847_2017"> (Musselman a kol. 2017, oddíl 2.4)</SourceLink>
+        </p>
+        <p>
+          Obrázek 3 původní práce zveřejňuje průběh vodní hodnoty na stanicích Giant Forest, Big Meadows a Farewell Gap
+          ve výškách 1 951, 2 317 a 2 896 metrů. Obrázek 4 zachycuje výšku sněhu a rozdíly sousedních čidel.
+          Tyto záznamy slouží ke kontrole vypočtené sezony, nikoli k odvození dlouhodobého trendu.
+          <a href="/media/snehova-pokryvka-mechanismy/podklady.txt"> Podklady článku</a> odkazují také na veřejné doplňkové tabulky.
+          Úplné modelové vstupy a výstupy studie poskytuje na vyžádání, proto samotný otevřený článek neumožňuje zopakovat celý výpočet.
+        </p>
+
+        <h3 id="zasoba-v-povodich">Březnová zásoba v povodích severní polokoule</h3>
+        <p>
+          Gottlieb a Mankin v roce 2024 shromáždili pro období 1981–2020 pět plošných sněhových produktů a soubor pozemních měření.
+          Plošné produkty kombinují družicová měření, stanice či modely. Jednotlivé soubory mohou sdílet vstupní měření.
+          Autoři vyhodnotili 169 povodí mimo Grónsko. Vyloučili také buňky, v nichž byla březnová zásoba ve více než polovině let nulová.
+          Pro kontrolu statistické rekonstrukce použili 2 961 stanic mimo její učící soubor.
+          <SourceLink id="DOI_10_1038_s41586_023_06794_y"> (Gottlieb a Mankin 2024, metody)</SourceLink>
+        </p>
+        <p>
+          Zpracování rozlišuje původní sněhové produkty, rekonstrukci zásoby z počasí a odhad příčin změny.
+          Medián chyby při kontrole na vynechaných stanicích činil přibližně 22 % průměrné zásoby dané stanice.
+          Jde o odmocninu průměru čtverců odchylek, nikoli o nejistotu jednoho hemisférického trendu.
+          Plný text nabízí pod obrázky soubory Source Data a v oddílu Data availability odkazy na vstupní databáze.
+          Při samostatné kontrole je nutné zachovat uvedené období, masku území a verze produktů.
+          <SourceLink id="DOI_10_1038_s41586_023_06794_y"> (Gottlieb a Mankin 2024)</SourceLink>
         </p>
 
         <h3 id="teplota-permafrostu">Teplota permafrostu ve vrtech</h3>
@@ -668,6 +735,11 @@ export function SnowPermafrostArticle() {
           </p>
         </div>
 
+        <p>
+          <Link href="/mechanismy/vznik-a-zanik-snehove-pokryvky-na-sousi/">Proč se mění množství sněhu a délka sněhové sezóny?</Link>{" "}
+          Navazující mechanismus porovnává změny srážek, skupenství a přísunu energie pomocí těchto měření.
+        </p>
+
         <h2>Prameny a data</h2>
         <div className="article-source-groups">
           <section>
@@ -677,6 +749,10 @@ export function SnowPermafrostArticle() {
               <li><SourceLink id="DOI_10_1038_s41597_021_00939_2">Luojus et al., 2021: GlobSnow v3.0 Northern Hemisphere snow water equivalent dataset</SourceLink></li>
               <li><SourceLink id="DOI_10_1126_sciadv_adv7926">Elias Chereque et al., 2025: Determining the cause of inconsistent onset-season trends in the Northern Hemisphere snow cover extent record</SourceLink></li>
               <li><SourceLink id="DOI_10_25923_cfhv_c239">Mudryk et al., 2025: Terrestrial Snow Cover, NOAA Arctic Report Card</SourceLink></li>
+              <li><SourceLink id="DOI_10_1175_bams_86_1_39">Mote a kol., 2005: Declining Mountain Snowpack in Western North America</SourceLink></li>
+              <li><SourceLink id="DOI_10_1038_s41467_018_03629_7">Jennings a kol., 2018: prostorové rozdíly skupenství srážek</SourceLink></li>
+              <li><SourceLink id="DOI_10_5194_tc_11_2847_2017">Musselman a kol., 2017: měření sněhu v povodí Kaweah a modelové oteplení</SourceLink></li>
+              <li><SourceLink id="DOI_10_1038_s41586_023_06794_y">Gottlieb a Mankin, 2024: březnová zásoba v povodích a příčiny změn</SourceLink></li>
             </ul>
           </section>
 
@@ -701,6 +777,7 @@ export function SnowPermafrostArticle() {
               <li><SourceLink id="DOI_10_7289_v5n014g9">NOAA/Rutgers Snow Cover Extent CDR</SourceLink></li>
               <li><SourceLink id="DOI_10_1594_pangaea_911944">GlobSnow v3 SWE</SourceLink></li>
               <li><SourceLink id="DOI_10_5285_9d9bfc488ec54b1297eca2c9662f9c81">ESA Snow CCI v3.1 SWE</SourceLink></li>
+              <li><SourceLink id="DOI_10_5061_dryad_c9h35">Jennings a kol., 2019: staniční údaje a výpočetní postup v Dryadu</SourceLink></li>
               <li><SourceLink id="WEB_International_Permafrost_Ass_Global_Terrestrial_Network_for_Permafrost_GTN_P_f5ca4a29">GTN-P: teplota permafrostu a aktivní vrstva</SourceLink></li>
               <li><SourceLink id="DOI_10_1594_pangaea_884711">GTN-P: globální vrtná data 2007–2016</SourceLink></li>
               <li><SourceLink id="WEB_National_Snow_and_Ice_Data_C_Circumpolar_Active_Layer_Monitoring_CALM_Program_28cfbc3c">CALM: Circumpolar Active Layer Monitoring</SourceLink></li>

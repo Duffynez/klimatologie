@@ -596,7 +596,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Měření výšky, hustoty a vodní hodnoty sněhu"
-          meta="5. listopadu 2026"
+          meta="6. listopadu 2026"
         >
           <p>
             Jak ze změřené výšky a zvážených vzorků určíme zásobu vody ve sněhu.

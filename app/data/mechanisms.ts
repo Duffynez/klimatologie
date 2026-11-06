@@ -155,8 +155,8 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "vznik-a-zanik-snehove-pokryvky-na-sousi",
     title: "Proč se mění množství sněhu a délka sněhové sezóny?",
     category: "Kryosféra",
-    cardSummary: "Sněžení, hromadění a úbytek sněhu během roku a jejich vztah k počasí.",
-    summary: "Podíl deště a sněhu, hromadění sněhu, tání, výpar a přenos větrem určují zásobu sněhu na zemi. Jejich sezónní průběh rozhoduje o začátku a konci sněhové pokrývky.",
+    cardSummary: "Jak srážky, teplota a přísun energie mění zimní zásobu a jarní zánik sněhu.",
+    summary: "Proč může sněhu ubývat i při větších srážkách a proč kratší sezona nemusí znamenat rychlejší tání každý den. Vysvětlení ověřené staničními hlášeními, měřením horské zásoby a rozborem povodí.",
     distinguishingEvidence: "Porovnání sněžení a energetické bilance se zásobou vody ve sněhu a datem odtání. Oddělení změn zimní zásoby a jarního tání vysvětluje rozdílný vývoj rozsahu, hmotnosti a délky sněhové sezóny.",
   },
   {

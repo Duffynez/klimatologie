@@ -567,6 +567,10 @@ export function SnowMeasurementArticle() {
             <SourceLink id="WEB_Pessl_Snow_Depth_Sensor">(Pessl Instruments: sněhové čidlo)</SourceLink>
           </p>
         </div>
+        <p>
+          <Link href="/mechanismy/vznik-a-zanik-snehove-pokryvky-na-sousi/">Proč se mění množství sněhu a délka sněhové sezóny?</Link>{" "}
+          Navazující článek používá měření vodní hodnoty k rozlišení vlivu srážek a tání.
+        </p>
       </div>
     </article>
   );

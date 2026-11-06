@@ -1,0 +1,102 @@
+SNĚHOVÁ POKRÝVKA: PRAMENY A REPRODUKČNÍ POSTUP
+Klimatologie.eu, 6. listopadu 2026
+
+1. Vlastní schémata
+srazky-a-zasoba.svg: stejné podmínky tání, rozdílný přísun sněhu, měření přísunu a zásoby.
+teplota-a-tani.svg: skupenství srážek, energie pro tání, odtok a ověřování v povodích.
+Jde o kvalitativní schémata vytvořená s pomocí AI. Rozměry a šipky nejsou měřená množství.
+Autor Klimatologie.eu, licence CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
+Zdrojový program grafika.mjs je vedle obrázků. Oba SVG lze znovu vytvořit příkazem:
+node grafika.mjs
+Program zapisuje pouze oba pojmenované SVG ve své složce, nepoužívá síť ani externí knihovny.
+
+2. Horské zásoby a srážky
+Philip W. Mote, Alan F. Hamlet, Martyn P. Clark, Dennis P. Lettenmaier (2005).
+Declining Mountain Snowpack in Western North America. BAMS 86(1), 39–50.
+DOI: https://doi.org/10.1175/BAMS-86-1-39
+Veřejný plný text v univerzitním archivu:
+https://research-groups.usask.ca/hydrology/documents/pubs/papers/mote_et_al_2005.pdf
+mote-2005-tabulka-1.csv přepisuje pravou polovinu tabulky 1 na tištěné straně 44.
+Porovnává průměr 1945–1955 s průměrem 1990–1997 ve všech čtyřech uvedených oblastech.
+Všechny tři číselné sloupce jsou procentní změny: 100 × (pozdější − dřívější) / dřívější.
+SWE je vodní hodnota sněhu k 1. dubnu. Srážky jsou úhrny za listopad až březen.
+Nejde o roční tempo ani o srovnání dvou jednotlivých let.
+Tabulka neuvádí intervaly nejistoty. Pozorování a model mají různé prostorové vzorkování.
+Z rozdílu procent zásoby a srážek nelze přímo vypočítat teplotní příspěvek.
+CSV jsou publikované souhrnné výsledky, nikoli původní odběry. Zachováváme i nesoulad pro Kalifornii.
+Mapa 824 profilů za roky 1950–1997 používá jiné vymezení než toto porovnání dvou průměrů.
+Kontrolní modelový pokus s pevnými měsíčními srážkami popisuje obrázek 7 a navazující text.
+
+3. Skupenství srážek
+Keith S. Jennings, Taylor S. Winchell, Ben Livneh, Noah P. Molotch (2018).
+Spatial variation of the rain–snow temperature threshold across the Northern Hemisphere.
+Nature Communications 9, 1148, CC BY 4.0.
+https://doi.org/10.1038/s41467-018-03629-7
+https://repository.library.noaa.gov/view/noaa/26564/noaa_26564_DS1.pdf
+Data zveřejněná v roce 2019:
+https://doi.org/10.5061/dryad.c9h35
+https://datadryad.org/dataset/doi:10.5061/dryad.c9h35
+file1: souřadnice a výšky stanic.
+file2: zpracovaná hlášení skupenství a počasí, přibližně 1,21 GB.
+file3: odhadnuté teploty stejně častého deště a sněhu, přibližně 202 kB.
+file6: kód výpočtu staničních prahů v R.
+Pro kontrolu je třeba oddělit počet hlášení od množství srážek. Množství vody tato data neobsahují.
+Teplotní práh je proložený bod 50% četnosti, nikoli naměřená teplota tání ledové částice.
+NA znamená nedostatek údajů k proložení stanice. Smíšené srážky byly z analýzy vyřazeny.
+Rozpětí −0,4 až 2,4 °C zahrnuje 95 % stanic, není 95% intervalem spolehlivosti průměru.
+V této redakční kontrole byl ověřen plný text a veřejný seznam souborů.
+Automatické stažení jednotlivých souborů Dryad server odmítl kódem 403, proto neuvádíme vlastní opakování výpočtu prahů.
+
+4. Povodí Kaweah
+Keith N. Musselman, Noah P. Molotch, Steven A. Margulis (2017).
+Snowmelt response to simulated warming across a large elevation gradient, southern Sierra Nevada, California.
+The Cryosphere 11, 2847–2866, CC BY 4.0.
+https://doi.org/10.5194/tc-11-2847-2017
+https://tc.copernicus.org/articles/11/2847/2017/tc-11-2847-2017.pdf
+Veřejné doplňkové tabulky:
+https://tc.copernicus.org/articles/11/2847/2017/tc-11-2847-2017-supplement.pdf
+Obrázek 3: měřená a modelovaná vodní hodnota na třech stanicích a chyby pro každou sezonu.
+Obrázek 4: měřená výška sněhu proti výpočtu.
+Obrázek 7 a tabulka S4: modelované roční objemy vody z tání při zvýšení teploty o 1 až 6 °C.
+Rozpětí −9,3 až −10,8 % na stupeň označuje výsledky tří sezon, není intervalem spolehlivosti.
+Při oteplení se upravuje i příchozí dlouhovlnné záření, relativní vlhkost a množství srážek zůstávají stejné.
+Plný vstupní a výstupní modelový soubor studie nabízí na vyžádání. Citované tabulky jsou otevřené.
+Zde nepředkládáme opakování modelového běhu ani údajnou přímou observaci budoucích sezon.
+
+5. Přisouzení dlouhodobých změn
+Alexander R. Gottlieb, Justin S. Mankin (2024).
+Evidence of human influence on Northern Hemisphere snow loss. Nature 625, 293–300, CC BY 4.0.
+https://doi.org/10.1038/s41586-023-06794-y
+https://www.nature.com/articles/s41586-023-06794-y
+Veřejný článek obsahuje metody a Source Data pod obrázky.
+Data availability uvádí původní produkty SWE, teplot a srážek i staniční archivy.
+Code availability odkazuje na kód: https://doi.org/10.5281/zenodo.10035276
+Při kontrole rozlišujte původní produkty, 120 kombinací statistické rekonstrukce a odhad lidského příspěvku.
+120 kombinací sdílí zdrojové soubory, nejde o 120 nezávislých měření.
+31 ze 169 povodí s rozlišeným lidským vlivem zahrnuje ztráty i přírůstky sněhu.
+2961 stanic nebylo použito při učení statistického modelu. Mohou se však podílet na některých vstupních produktech.
+Hodnota přibližně 22 % je medián normalizované chyby kontroly, nikoli interval hemisférického trendu.
+Kódový archiv Zenodo nebyl v této kontrole stažen. Vlastní opakování hemisférické rekonstrukce neuvádíme.
+
+6. Arktické plochy a hmotnost
+Mudryk a kol. (2025), Terrestrial Snow Cover, NOAA Arctic Report Card.
+https://doi.org/10.25923/cfhv-c239
+https://arctic.noaa.gov/report-card/report-card-2025/terrestrial-snow-cover-2025/
+Plocha: trend 1967–2025, pevnina severně od 60° bez Grónska.
+Hmotnost: měsíční vyhodnocení 1981–2025 ze čtyř produktů, některé sdílejí meteorologické vstupy.
+Dubnová hmotnost a červnová plocha jsou různé veličiny a období se liší.
+Pokles dubnové hmotnosti asi o 3 % nebyl statisticky průkazný. Z toho neplyne nulová změna každého místa.
+Rok 2025 slouží jako příklad odlišného průběhu částí sezony, sám nedokazuje dlouhodobou příčinu.
+
+7. Ilustrační aritmetika
+Nathan S. Osborne (1939), Heat of fusion of ice.
+https://doi.org/10.6028/jres.023.043
+https://nvlpubs.nist.gov/nistpubs/jres/23/jresv23n6p643_A1b.pdf
+Zaokrouhlené teplo tání 334 000 J/kg používáme pro sníh již ohřátý k bodu tání.
+Příkon 30 W/m² je ZVOLENÝ, nikoli měřený údaj. 30 × 86400 = 2592000 J/m² za den.
+Vydělením teplem tání dostaneme asi 7,7605 kg/m², tedy 7,8 mm vzniklé vody.
+Pokles zásoby o toto množství vyžaduje odtok veškeré vzniklé vody bez nového přísunu.
+Příklady 200 mm / 10 mm za den = 20 dnů a 80 mm / 8 mm za den = 10 dnů jsou rovněž ZVOLENÉ.
+Předpokládají stálou čistou ztrátu, žádné další sněžení a odchod vody ze zásoby.
+Opakování: node vypocty.mjs
+Nejde o klimatickou projekci. Účelem je rozlišit velikost zásoby, rychlost úbytku a dobu zániku.
