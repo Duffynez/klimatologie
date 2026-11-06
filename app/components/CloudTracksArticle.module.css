@@ -1,0 +1,14 @@
+.graphFigure {
+  width: min(calc(100vw - 40px), var(--max-width));
+  max-width: 1122px;
+}
+
+.graphScroll {
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.graphScroll img {
+  min-width: 900px;
+  height: auto;
+}

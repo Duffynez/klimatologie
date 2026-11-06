@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AnthropogenicAerosolsArticle } from "../../components/AnthropogenicAerosolsArticle";
 import { notFound } from "next/navigation";
 import { PageLead } from "../../components/PageLead";
 import { EarthEnergyBalanceArticle } from "../../components/EarthEnergyBalanceArticle";
@@ -71,6 +72,14 @@ export default async function MechanismDetail({ params }: { params: Promise<{ sl
 
   if (!mechanism) {
     notFound();
+  }
+
+  if (slug === "prumyslove-aerosoly-a-oblaka") {
+    return <div className="page-shell">
+      <PageLead eyebrow={"Mechanismy / " + mechanism.category} title={mechanism.title} meta="6. listopadu 2026"><p>{mechanism.summary}</p></PageLead>
+      <AnthropogenicAerosolsArticle />
+      <Link className="text-link catalog-back-link" href="/mechanismy">&larr; Zpět na všechny mechanismy</Link>
+    </div>;
   }
 
   if (slug === "sopecne-aerosoly") {

@@ -841,7 +841,7 @@ test("publishes 23 mechanism topics and preserves the split snow-and-sea-ice add
     assert.ok(sitemap.includes(`<loc>https://klimatologie.eu/mechanismy/${slug}/</loc>`), "Missing sitemap route " + slug);
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     assert.ok(html.includes(`<h1>${title}</h1>`), "Wrong detail title " + slug);
-    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen"].includes(slug)) {
+    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen", "prumyslove-aerosoly-a-oblaka"].includes(slug)) {
       assert.match(html, /Co musí toto vysvětlení objasnit/);
       assert.match(html, /<section class="mechanism-detail-evidence"[^>]*>[\s\S]*<p>[^<]+<\/p><\/section>/);
     }
@@ -854,7 +854,7 @@ test("publishes 23 mechanism topics and preserves the split snow-and-sea-ice add
   assert.match(catalogue, /Jak úbytek sněhu a ledu zesiluje oteplování\?/);
   assert.match(catalogue, /Jak souvisejí změny vlhkosti s oteplováním\?/);
   assert.match(catalogue, /Proč se objem mořské vody mění s teplotou a slaností\?/);
-  assert.match(catalogue, /Jak částice z lidské činnosti ovlivňují záření a oblaka\?/);
+  assert.match(catalogue, /Proč se za loděmi a továrnami mění jas oblaků\?/);
   assert.ok(!hasArticleLink(catalogue, "/mechanismy/energeticka-bilance-snehu-a-morskeho-ledu"));
   assert.match(sitemap, /https:\/\/klimatologie\.eu\/mechanismy\/energeticka-bilance-snehu-a-morskeho-ledu\//);
 });
@@ -2864,7 +2864,7 @@ test("reproduces the optical response calibration without inventing the missing 
   }
 });
 
-test("keeps the current catalogue of fifteen observations", async () => {
+test("keeps the current catalogue of sixteen observations", async () => {
   const evidence = await readFile(new URL("app/data/evidence.ts", root), "utf8");
   const slugs = [...evidence.matchAll(/\{ slug: "([^"]+)"/g)].map((match) => match[1]);
 
@@ -2872,6 +2872,7 @@ test("keeps the current catalogue of fifteen observations", async () => {
     "gmst",
     "stratosfericke-ochlazovani",
     "slunecni-zareni",
+    "stopy-v-oblacich",
     "atmosfericka-koncentrace-co2",
     "narust-vlhkosti",
     "srazky-a-privalove-srazky",
@@ -4501,6 +4502,7 @@ test("keeps each hypothesis independently collapsible with complete content and 
     ["puvod-rustu-atmosferickeho-co2", ["ocean", "pevnina", "fosilni-uhlik"]],
     ["slunecni-promenlivost", ["kosmicke-zareni", "zmeny-zareni"]],
     ["sopecne-aerosoly", ["popel", "sirne-kapky"]],
+    ["prumyslove-aerosoly-a-oblaka", ["teplo-a-para", "castice-a-kapky"]],
     ["mechanismy-vln-veder", ["samotne-proudeni", "teplejsi-klima"]],
     ["biologicke-mechanismy-fenologickych-zmen", ["pevny-kalendar", "rytmus-a-prostredi"]],
   ]) {
@@ -4615,6 +4617,72 @@ test("solar observation preserves real daily data, missing days and reproducible
     assert.ok(html.includes(name));
     assert.ok((await readFile(new URL("dist/client/media/slunecni-zareni/" + name, root))).length > 100);
   }
+});
+
+test("ship cloud tracks connect observations, methods, tested hypotheses and public evidence", async () => {
+  const paths = ["/mechanismy/prumyslove-aerosoly-a-oblaka", "/pozorovani/stopy-v-oblacich"];
+  const catalogue = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
+  for (const path of paths) {
+    const html = await readFile(new URL("dist/client" + path + "/index.html", root), "utf8");
+    const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+    assert.ok(body, path);
+    const bibliography = body.slice(body.indexOf('<h2 id="prameny"'));
+    for (const [, href] of body.matchAll(/href="(\/[^\"]+)"/g)) {
+      const [pathname, anchor] = href.split("#");
+      const file = /\.[a-z0-9]+$/i.test(pathname) ? pathname : pathname.replace(/\/$/, "") + "/index.html";
+      const target = await readFile(new URL("dist/client" + file, root));
+      assert.ok(target.length, href);
+      if (anchor) assert.ok(target.toString("utf8").includes(`id="${anchor}"`), href);
+    }
+    for (const id of new Set([...body.matchAll(/href="\/zdroje#([^"]+)"/g)].map(m => m[1]))) {
+      assert.ok(bibliography.includes('href="/zdroje#' + id + '"'), "Missing bibliography " + id);
+      const card = catalogue.match(new RegExp('<article[^>]+id="' + id + '"[\\s\\S]*?</article>'))?.[0];
+      assert.ok(card, "Missing source card " + id);
+      assert.doesNotMatch(card, /drive\.google\.com/);
+    }
+    assert.ok(hasArticleLink(body, paths.find(p => p !== path)), "Reciprocal observation and explanation");
+    for (const method of ["opticke-a-multispektralni-snimkovani", "mereni-radiacnich-toku"]) {
+      assert.ok(hasArticleLink(body, "/metody/" + method));
+      const related = await readFile(new URL("dist/client/metody/" + method + "/index.html", root), "utf8");
+      assert.ok(hasArticleLink(related, path));
+    }
+    assert.doesNotMatch(body.replace(/<[^>]+>/g, " ").replace(/&(?:#\d+|#x[0-9a-f]+|[a-z]+);/gi, ""), /;/);
+    const limits = body.match(/<details class="method-details">([\s\S]*?)<\/details>/)?.[1];
+    assert.ok(limits && limits.replace(/<[^>]+>/g, " ").trim().split(/\s+/).length <= 600);
+  }
+  const mechanism = await readFile(new URL("dist/client" + paths[0] + "/index.html", root), "utf8");
+  for (const id of ["test-teplota-para", "test-model-teplo", "test-dve-lode", "test-palivo"]) assert.ok(mechanism.includes(`id="${id}"`));
+  for (const name of ["teplo-a-para", "castice-a-kapky"]) {
+    assert.ok(mechanism.includes(`/media/prumyslove-aerosoly-a-oblaka/${name}.png`));
+    const png = await readFile(new URL(`dist/client/media/prumyslove-aerosoly-a-oblaka/${name}.png`, root));
+    assert.equal(png.subarray(1, 4).toString(), "PNG");
+    assert.ok(png.readUInt32BE(16) >= 1024 && png.readUInt32BE(20) >= 1024);
+  }
+});
+
+test("cloud track graph preserves the published intervals and distinguishes micrometres from percentage points", async () => {
+  const csv = await readFile(new URL("public/media/stopy-v-oblacich/diamond-2023-table-s1.csv", root), "utf8");
+  const [header, ...lines] = csv.trim().split(/\r?\n/);
+  assert.match(header, /radius_difference_um/);
+  assert.match(header, /overcast_albedo_difference_pp/);
+  const rows = lines.map(line => line.split(","));
+  assert.equal(rows.length, 7);
+  assert.deepEqual(rows.map(r => r[0]), ["2002-2004", "2005-2007", "2008-2010", "2011-2013", "2014-2016", "2017-2019", "2020-2022"]);
+  for (const row of rows) {
+    assert.equal(row[1], "SON");
+    for (const index of [2, 5]) assert.ok(Number(row[index + 1]) < Number(row[index]) && Number(row[index]) < Number(row[index + 2]));
+    assert.ok(Number(row[4]) < 0, "Radius intervals remain negative");
+  }
+  const last = rows.at(-1);
+  assert.equal(Number(last[2]), -0.16);
+  assert.equal(Number(last[5]), 0.36);
+  assert.equal(Number(last[6]), -0.004, "Do not round away the interval crossing zero");
+  assert.ok(Number(last[7]) > 0);
+  const observation = await readFile(new URL("dist/client/pozorovani/stopy-v-oblacich/index.html", root), "utf8");
+  assert.match(observation, /class="article-observation-summary"/);
+  assert.match(observation, /procentního bodu/);
+  assert.match(observation, /od −0,004 do \+0,71/);
+  assert.match(observation, /přepis čísel z doplňkové tabulky S1/);
 });
 
 test("publishes the CO2 origin mechanism with three illustrated stories and traceable evidence", async () => {

@@ -1,0 +1,39 @@
+Stopy lodí a průmyslu v oblacích: podklady obrázku a grafu
+Klimatologie.eu, 6. listopadu 2026
+
+DRUŽICOVÝ SNÍMEK
+Soubor atlantic-2018-nasa.jpg: MODIS na družici Aqua, 16. ledna 2018, Atlantik západně od Španělska a Portugalska.
+Autor obrazu Jeff Schmaltz, LANCE/EOSDIS Rapid Response. NASA Earth Observatory, Signs of Ships in the Clouds, 21. ledna 2018.
+Stránka: https://science.nasa.gov/earth/earth-observatory/signs-of-ships-in-the-clouds-91608/
+Použitý soubor: https://assets.science.nasa.gov/content/dam/science/esd/eo/images/imagerecords/91000/91608/atlantic_amo_2018016.jpg
+Verze 720 × 480 pixelů beze změny. Použito podle pravidel NASA s uvedením původu. Snímek nebyl vytvořen AI. Je příkladem vzhledu stop, není obrazovým podkladem výpočtů z let 2002–2022 níže.
+
+GRAF A ČÍSLA
+Zdroj: Michael S. Diamond (2023), Detection of large-scale cloud microphysical changes within a major shipping corridor after implementation of the International Maritime Organization 2020 fuel sulfur regulations. Atmospheric Chemistry and Physics 23, 8259–8269.
+DOI: https://doi.org/10.5194/acp-23-8259-2023
+Plný text: https://acp.copernicus.org/articles/23/8259/2023/
+Supplement: https://acp.copernicus.org/articles/23/8259/2023/acp-23-8259-2023-supplement.pdf
+Tabulka S1 na straně 11 doplňku. Ruční přepis zkontrolován proti tabulce v PDF, včetně záporné dolní meze −0,004 procentního bodu u odrazivosti v období 2020–2022.
+Licence původní práce i doplňku: CC BY 4.0. Přepis a překreslení: Klimatologie.eu, CC BY 4.0.
+
+VÝBĚR A ZPRACOVÁNÍ
+Převzaty pouze řádky SON, tedy září až listopad, pro všech sedm tříletých období od 2002–2004 do 2020–2022. Celoroční hodnoty v grafu nejsou.
+Oblast analýzy 18°–8° jižní šířky a 13° západní až 8° východní délky. Jádro koridoru tvoří tři buňky podél každé zeměpisné šířky, určené podle emisního koridoru EDGAR. Rozlišení podkladu CERES SSF1deg Edition 4A je 1° × 1°.
+Zobrazené hodnoty jsou publikované rozdíly pozorovaného koridoru oproti statistickému odhadu bez lodí. Vstupem odhadu je okolní oblačnost, poloha a podle modelu vybrané povětrnostní veličiny. Nejde o nové zpracování původního družicového záření.
+Původní studie odvozuje vlastnosti kapek z dopoledního přeletu Terra/MODIS a zářivé toky z produktu CERES. Radiativní přepočet pracuje s denním chodem Slunce při zachovaných vlastnostech oblačnosti. Odrazivost se vztahuje k oblačné části na horním okraji atmosféry.
+
+VÝZNAM SLOUPCŮ CSV
+period: tříleté kalendářní období včetně prvního i posledního roku.
+season: SON = září, říjen, listopad.
+radius_difference_um: rozdíl efektivního poloměru kapek v mikrometrech. Záporná hodnota znamená menší kapky v koridoru.
+radius_ci95_low_um a radius_ci95_high_um: dolní a horní mez publikovaného 95% intervalu spolehlivosti téhož rozdílu.
+overcast_albedo_difference_pp: rozdíl odrazivosti oblačné oblasti v procentních bodech. Kladná hodnota znamená vyšší odrazivost v koridoru. Procentní body nejsou relativní procenta změny.
+albedo_ci95_low_pp a albedo_ci95_high_pp: dolní a horní mez publikovaného 95% intervalu spolehlivosti rozdílu odrazivosti.
+
+REPRODUKCE
+Ve stejné složce ponechte diamond-2023-table-s1.csv a reproduce.py. V Pythonu s knihovnou matplotlib spusťte python reproduce.py. Vznikne diamond-2023.png, dva panely se sedmi bodovými odhady a intervaly. Oranžová označuje 2020–2022, svislá přerušovaná čára nulový rozdíl. Graf nevypočítává nové odhady ani nové intervaly.
+
+PŮVODNÍ ARCHIVY
+Data, verze 20230426: https://zenodo.org/records/7864530
+Kód, verze k publikaci: https://zenodo.org/records/8165409
+Ověřeny údaje a seznamy souborů archivů, stažen celý archiv kódu a úvodní část souboru Data_Terra_cer_2020_C_M9to11.nc. Datový soubor je dostupný jako NetCDF/HDF5. Jeho úplné stažení v této kontrole přerušil časový limit. Původní analýza z map a statistických simulací zde nebyla znovu provedena. Číselný podklad našeho grafu byl ověřen přímo v dostupné publikované tabulce S1.

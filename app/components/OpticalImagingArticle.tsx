@@ -20,7 +20,7 @@ export function OpticalImagingArticle() {
           <SourceLink id="2019_USGS_Landsat8_Handbook">(USGS, kap. 2 a 4)</SourceLink>
         </p>
 
-        <h3>Proč se díváme na několik druhů světla</h3>
+        <h3 id="spektralni-pasma">Proč se díváme na několik druhů světla</h3>
         <p>
           Sluneční záření obsahuje mnoho vlnových délek. Vlnová délka je vzdálenost
           mezi dvěma sousedními vrcholy světelné vlny. Ve viditelné oblasti ji
@@ -538,6 +538,8 @@ export function OpticalImagingArticle() {
             v souboru example.json.
           </p>
         </details>
+
+        <p>Porovnání spektrálních pásem se používá také při <Link href="/pozorovani/stopy-v-oblacich/#mereni">odvozování velikosti kapek ve stopách lodí a průmyslu</Link>. Toto použití přístroje MODIS vyžaduje výpočet průchodu světla oblakem. Na měření navazuje vysvětlení, <Link href="/mechanismy/prumyslove-aerosoly-a-oblaka/#castice-a-kapky">proč se kapky a odraz slunečního záření mění</Link>.</p>
 
         <h2>Shrnutí</h2>
         <div className="method-conclusion">

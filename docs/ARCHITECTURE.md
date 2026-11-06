@@ -78,7 +78,7 @@ Záznam vytvoří dlaždici a statickou adresu, ale plný článek vznikne teprv
 2. je importována v `app/pozorovani/[slug]/page.tsx`;
 3. route obsahuje větev pro její slug, úvod, datum a samotnou komponentu.
 
-Všech současných patnáct pozorování má vlastní komponentu. Obecná náhradní stránka na konci routy zůstává jako pojistka pro budoucí katalogovou položku bez plného článku.
+Všech současných šestnáct pozorování má vlastní komponentu. Obecná náhradní stránka na konci routy zůstává jako pojistka pro budoucí katalogovou položku bez plného článku.
 
 ### Metody
 
@@ -90,7 +90,9 @@ Titrace a coulometrie mají samostatné položky `/metody/titrace/` a `/metody/c
 
 Úvodní diagram hotových mechanismů sjednocuje `HypothesisDiagram.tsx` a jeho CSS modul. Společná komponenta obsahuje návod, sémantický seznam hypotéz a čtyři kroky každé větve. Článková komponenta `EnergyHypothesisDiagram.tsx` dodává konkrétní obsah, podmínky a kotvy pro energetickou bilanci. Diagram funguje bez klientského JavaScriptu, rozložení přizpůsobuje CSS. Samotné příběhy obaluje klientská komponenta `HypothesisStory.tsx` s vlastním CSS modulem. Používá nativní `details` se zachovanými kotvami nadpisů, výchozí HTML obsahuje celé otevřené příběhy. JavaScript doplňuje sbalení z konce příběhu s návratem k nadpisu a otevření cílového příběhu při navigaci na jeho nadpis nebo vnitřní kotvu.
 
-`app/data/mechanisms.ts` obsahuje 23 témat v pěti skupinách. Sedm plných článků má komponenty `EarthEnergyBalanceArticle.tsx`, `GreenhouseRadiationArticle.tsx`, `CarbonDioxideOriginArticle.tsx`, `SolarVariabilityArticle.tsx`, `VolcanicAerosolsArticle.tsx`, `HeatWaveMechanismsArticle.tsx` a `PhenologyMechanismsArticle.tsx`, připojené v `app/mechanismy/[slug]/page.tsx`. Ostatních 16 témat zatím ukazuje vymezení a rozlišující důkazy z katalogu. Další plné články vyžadují stejnou ruční vazbu komponenty a routy jako u metod.
+`app/data/mechanisms.ts` obsahuje 23 témat v pěti skupinách. Osm plných článků má komponenty `EarthEnergyBalanceArticle.tsx`, `GreenhouseRadiationArticle.tsx`, `CarbonDioxideOriginArticle.tsx`, `SolarVariabilityArticle.tsx`, `VolcanicAerosolsArticle.tsx`, `HeatWaveMechanismsArticle.tsx`, `PhenologyMechanismsArticle.tsx` a `AnthropogenicAerosolsArticle.tsx`, připojené v `app/mechanismy/[slug]/page.tsx`. Ostatních 15 témat zatím ukazuje vymezení a rozlišující důkazy z katalogu. Další plné články vyžadují stejnou ruční vazbu komponenty a routy jako u metod.
+
+Článek o aerosolech zachovává adresu `/mechanismy/prumyslove-aerosoly-a-oblaka/`. Dvě hypotézy o lodních stopách doplňují AI ilustrace. Je obousměrně propojený s novým pozorováním `/pozorovani/stopy-v-oblacich/`, metodou optického snímkování a měřením radiačních toků. Pozorování v `CloudTracksArticle.tsx` obsahuje původní snímek NASA a reprodukovatelný graf přepsaných výsledků tabulky S1 studie Diamond (2023), uložený s podklady v `public/media/stopy-v-oblacich/`.
 
 Článek o vlnách veder zachovává adresu `/mechanismy/mechanismy-vln-veder/`. Má dvě hypotézy a rozlišuje vznik jedné události od dlouhodobé změny její pravděpodobnosti a teploty. Je obousměrně propojený s pozorováním vln veder a mechanismem působení skleníkových plynů. Výšková pozorování mají obousměrný odkaz na radiosondáž. Vlastní kvalitativní SVG vytváří `scripts/generate-heatwave-schematics.mjs`, jejich zdroje, číselné podklady a výslovně vymyšlený početní příklad jsou v `public/media/mechanismy-vln-veder/`.
 

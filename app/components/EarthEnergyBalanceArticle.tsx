@@ -637,7 +637,7 @@ export function EarthEnergyBalanceArticle() {
           </p>
           <p>
             Dnešní vysvětlení zahrnuje celý součet lidských vlivů.
-            Vedle skleníkových plynů se mění aerosoly, drobné částice
+            Vedle skleníkových plynů se mění <Link href="/mechanismy/prumyslove-aerosoly-a-oblaka/">aerosoly</Link>, drobné částice
             a kapičky rozptýlené ve vzduchu. Ovlivňují sluneční záření
             i vlastnosti oblaků. V souhrnu část oteplujícího účinku plynů
             kompenzují.{' '}

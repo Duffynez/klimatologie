@@ -81,3 +81,5 @@ public/data/methods/reanalysis/*-original.txt binary
 public/data/pinatubo/* text eol=lf
 public/data/pinatubo/*-input.* binary
 public/data/pinatubo/*.png binary
+
+public/media/stopy-v-oblacich/*.csv text eol=lf

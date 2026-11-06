@@ -481,6 +481,8 @@ export function RadiativeFluxArticle() {
 
         <p>Samostatné měření odraženého slunečního a odcházejícího tepelného záření umožnilo ověřit také <Link href="/mechanismy/sopecne-aerosoly/#test-zareni">změnu energetické bilance po erupci Pinatuba</Link>.</p>
 
+        <p>Další použití družicových radiačních měření ukazuje <Link href="/pozorovani/stopy-v-oblacich/#mereni">pozorování stop lodí a průmyslu v oblacích</Link>. Na ně navazuje vysvětlení, <Link href="/mechanismy/prumyslove-aerosoly-a-oblaka/#rozptyl-svetla">proč menší kapky mění odraz slunečního záření</Link>.</p>
+
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>

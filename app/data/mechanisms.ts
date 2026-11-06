@@ -57,10 +57,10 @@ export const climateMechanisms: ClimateMechanism[] = [
   },
   {
     slug: "prumyslove-aerosoly-a-oblaka",
-    title: "Jak částice z lidské činnosti ovlivňují záření a oblaka?",
+    title: "Proč se za loděmi a továrnami mění jas oblaků?",
     category: "Záření a složení atmosféry",
-    cardSummary: "Rozptyl a pohlcování záření částicemi a jejich vliv na oblačné kapky.",
-    summary: "Částice z lidské činnosti rozptylují a pohlcují záření. Mohou také změnit tvorbu oblačných kapek a vlastnosti oblaků.",
+    cardSummary: "Lodní a průmyslové stopy ukazují, jak částice mění kapky a odraz světla.",
+    summary: "Co vytváří jasnější oblaka za loděmi a průmyslovými zdroji? Dvě hypotézy, letecké pokusy a změny po omezení síry v palivu. Jak částice působí na kapky, záření a klima.",
     distinguishingEvidence: "Porovnání oblastí a období s rozdílnými emisemi při zohlednění počasí. Souběžné změny částic, oblačných kapek a záření ověřují přímé působení aerosolů i jejich vliv prostřednictvím oblaků.",
   },
   {

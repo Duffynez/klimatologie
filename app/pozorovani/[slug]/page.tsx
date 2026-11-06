@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CloudTracksArticle } from "../../components/CloudTracksArticle";
 import { notFound } from "next/navigation";
 import { AtmosphericCo2Article } from "../../components/AtmosphericCo2Article";
 import { AtmosphericHumidityArticle } from "../../components/AtmosphericHumidityArticle";
@@ -28,6 +29,14 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
 
   if (!topic) {
     notFound();
+  }
+
+  if (slug === "stopy-v-oblacich") {
+    return <div className="page-shell">
+      <PageLead eyebrow="Pozorování / Atmosféra" title="Stopy lodí a průmyslu v oblacích" meta="6. listopadu 2026"><p>Jak družicové snímky a letecké průlety zachycují změny kapek, odrazivosti a kapalné vody a co ukazují zveřejněná data z lodního koridoru v Atlantiku.</p></PageLead>
+      <CloudTracksArticle />
+      <Link className="text-link catalog-back-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
+    </div>;
   }
 
   if (slug === "slunecni-zareni") {

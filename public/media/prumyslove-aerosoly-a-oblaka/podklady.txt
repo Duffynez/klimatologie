@@ -1,0 +1,36 @@
+Podklady vysvětlujících ilustrací: Proč se za loděmi a továrnami mění jas oblaků?
+Klimatologie.eu, 6. listopadu 2026
+
+PŮVOD A LICENCE
+teplo-a-para.png a castice-a-kapky.png jsou vlastní kvalitativní ilustrace vytvořené vestavěným generátorem obrázků OpenAI. Přesná zadání jsou v prompts.json. Publikujeme pod CC BY 4.0.
+Velikosti lodí, částic, kapek a šipek nejsou v měřítku. Počty nakreslených částic nejsou naměřené hodnoty. Obrázky rekonstruují argument, nekopírují obrázek z publikace.
+
+TEPLO A VODNÍ PÁRA
+Schéma navrženého děje: teplo podporuje výstup vzduchu, při výstupu vzduch chladne. Dostatečně vlhký vzduch může vytvořit kapky. Emise dodávají také vodní páru.
+Test 1: kampaň MAST u Kalifornie, červen 1994. Hobbs a kol. zachytili čtyři teplotní poruchy, všechny do 150 m od lodi. Dále po větru poruchy teploty nezachytili. Přebytek vodní páry nerozlišili od přirozené proměnlivosti. Jde o meze detekce ve sledovaných případech, nikoli o nulové emise tepla či vody. Teplotní měření uvnitř oblaku mohlo dlouhým průměrováním přehlédnout úzkou poruchu.
+Hobbs a kol. (2000), Emissions from Ships with respect to Their Effects on Clouds, oddíl 6g, s. 2586–2587.
+https://authors.library.caltech.edu/records/b3hym-2a104/files/HOBjas00.pdf?download=1
+Test 2: konkrétní simulace MAST s částicemi a s odpadním teplem oproti stejnému případu bez tepelného zdroje. Od přibližně 8 km po větru nebyl významný rozdíl. Model byl porovnán s měřenou koncentrací částic a oblačných kapek. Vzdálenost 8 km není univerzální fyzikální hranice.
+Durkee a kol. (2000), oddíl 4a5.
+https://authors.library.caltech.edu/records/48ztw-mcx69/files/DURjas00.pdf?download=1
+Verdikt: teplo může pomoci vlečce vystoupat, ale jako hlavní vysvětlení dlouhé změny kapek a jasu ve zkoumaných stopách nestačí.
+
+ČÁSTICE A KAPKY
+Při stejném množství kapalné vody vede vyšší počet kapek k menším rozměrům kapek. Jejich větší souhrnný průřez zesiluje rozptyl. Srovnání předpokládá stejné množství vody, nenahrazuje výpočet celého dalšího vývoje oblaku.
+Twomey (1974), Pollution and the Planetary Albedo.
+https://climate-dynamics.org/wp-content/uploads/2016/06/twomey74a.pdf
+Twomey (1977), The Influence of Pollution on the Shortwave Albedo of Clouds.
+https://atmos.washington.edu/academics/classes/2008Q2/591A/Articles/twomey_i1520-0469-34-7-1149.pdf
+Test 1: 27. června 1994, Tai He a Mount Vernon ve stejné vzduchové hmotě. Tai He vytvořila stopu, Mount Vernon ne. Rozdíl odpovídal velikostnímu spektru a schopnosti částic tvořit kapky. Durkee a kol. (2000), oddíl 4a2. Tato práce i Hobbs a kol. využívají společnou kampaň, nejsou nezávislými opakováními v různých letech.
+Test 2: od roku 2020 globální limit síry v lodním palivu klesl z 3,5 % na 0,5 % hmotnosti, alternativou je odpovídající čištění spalin. Družicová analýza koridoru jihovýchodního Atlantiku v letech 2002–2022 porovnává pozorované oblaky s odhadem bez lodí. Výraznější je zeslabení změny velikosti kapek, méně průkazná je změna odrazivosti. Obrázkový pojem okolní oblak představuje statistický odhad z okolních měření a povětrnostních podmínek.
+Diamond (2023), hlavní text a doplněk, tabulky S1 a S2.
+https://acp.copernicus.org/articles/23/8259/2023/
+Přesná čísla, jednotky, období a 95% intervaly použité v navazujícím pozorování jsou v /media/stopy-v-oblacich/diamond-2023-table-s1.csv. Tato čísla nejsou odměřována z AI ilustrace.
+
+GEOMETRICKÝ PŘÍKLAD V TEXTU
+Vlastní ilustrace zachování objemu. Objem koule je úměrný třetí mocnině poloměru. Osm koulí s polovičním poloměrem má stejný celkový objem jako původní koule. Součet kruhových průřezů je 8 × (1/2)² = 2násobek původního průřezu. Příklad není měření, ani předpověď dvojnásobné odrazivosti celého oblaku. Vazbu mezi počtem kapek, jejich rozměry a přenosem záření rozebírá Twomey (1977).
+
+MEZE ZOBECNĚNÍ
+Celkovou změnu jasu dále mění množství vody, mrholení, vypařování a mísení se vzduchem. K místním stopám nelze přímo přiřadit globální změnu teploty.
+Toll a kol. (2019): https://centaur.reading.ac.uk/85364/3/Toll_etal_Nature_2019.pdf
+Christensen a kol. (2022): https://acp.copernicus.org/articles/22/641/2022/
