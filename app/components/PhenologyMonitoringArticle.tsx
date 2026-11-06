@@ -397,6 +397,10 @@ export function PhenologyMonitoringArticle() {
             <SourceLink id="DOI_10_1007_s00484_014_0789_5">(Denny a kol., 2014)</SourceLink>
           </p>
         </div>
+        <p>
+          Záznam určuje, kdy událost nastala. Příčiny jejího posunu vyžadují také pokusy s teplotou, světlem a dalšími podmínkami.
+          Jejich porovnání nabízí článek <Link href="/mechanismy/biologicke-mechanismy-fenologickych-zmen/">Proč se mění doba kvetení rostlin a tahu ptáků?</Link>
+        </p>
       </div>
     </article>
   );

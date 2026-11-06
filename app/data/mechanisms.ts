@@ -187,8 +187,8 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "biologicke-mechanismy-fenologickych-zmen",
     title: "Proč se mění doba kvetení rostlin a tahu ptáků?",
     category: "Živá příroda a extrémy",
-    cardSummary: "Vliv teploty, délky dne a dostupnosti vody či potravy na sezónní rytmy organismů.",
-    summary: "Teplota, délka dne, předchozí chlad a dostupnost vody ovlivňují vývoj rostlin. U živočichů do načasování migrace a rozmnožování vstupuje také vnitřní roční rytmus a dostupnost potravy.",
+    cardSummary: "Jak teplota, zimní chlad, délka dne a potrava mění kvetení a ptačí tah.",
+    summary: "Proč samotný sezónní kalendář nestačí? Pokusy s rostlinami a ptáky ukazují, jak teplota, zimní chlad a potrava mění průběh vývoje a přípravu k tahu.",
     distinguishingEvidence: "Pokusy oddělující teplotu, délku dne a předchozí chlad, porovnané s terénními záznamy rostlin. U ptáků porovnání druhů, migračních tras a podmínek v zimovišti i hnízdišti testuje jejich vliv na načasování tahu.",
   },
   {

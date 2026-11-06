@@ -1,0 +1,48 @@
+Podklady vysvětlujících schémat fenologických mechanismů
+Klimatologie.eu, 6. listopadu 2026
+
+Soubory: kalendar.svg, prostredi.svg
+Autor zpracování: Klimatologie.eu s pomocí AI.
+Licence vlastních schémat: Creative Commons Attribution 4.0 (CC BY 4.0).
+Generátor: scripts/generate-phenology-schematics.mjs ve veřejném repozitáři projektu.
+
+Povaha grafiky
+Obě ilustrace jsou vlastní kvalitativní schémata, nikoli převzaté grafy ani měřené časové řady.
+Velikost organismů, délka světelných pruhů a šířka šipek nevyjadřují měření.
+Rostlinný a ptačí vývoj mají odlišné biologické řízení. Společný obrázek neříká, že mají společný molekulární spouštěč.
+
+1. kalendar.svg
+Roční průběh délky dne poskytuje opakující se sezónní informaci.
+Garner 1933, s. 347–348: rozdílné reakce rostlin na délku dne, neexistence jediné hranice platné pro všechny rostliny.
+https://doi.org/10.1104/pp.8.3.347
+Veřejný plný text: https://pmc.ncbi.nlm.nih.gov/articles/PMC439034/
+Robart a kol. 2018: rostoucí délka dne a příprava čížků Spinus pinus, 21 proti 20 ptákům, experiment 2015–2016.
+https://doi.org/10.1098/rsos.180876
+Veřejný plný text a odkazy na data: https://pmc.ncbi.nlm.nih.gov/articles/PMC6124035/
+Helm a Liedvogel 2024: vnitřní roční rytmy a jejich seřizování světlem.
+https://doi.org/10.1007/s00359-023-01688-w
+Veřejný plný text: https://pmc.ncbi.nlm.nih.gov/articles/PMC11226503/
+Menzel a kol. 2006: porovnání evropských fenologických řad 1971–2000.
+https://doi.org/10.1111/j.1365-2486.2006.01193.x
+
+2. prostredi.svg
+Primack a kol. 2015: zimní klid, předchozí chlad, následné teplo, meze laboratorních větví.
+https://doi.org/10.1093/aob/mcv032
+Veřejný plný text: https://pmc.ncbi.nlm.nih.gov/articles/PMC4640118/
+Wang a kol. 2020: otevření prvního květu (BBCH 60), šest druhů dřevin, teploty 12/15/18 °C, osvětlení 10/14 hodin.
+Chladové skupiny vznikly různými termíny odběru po 3/38/59 dnech s denním průměrem pod 5 °C. Nešlo o izolované náhodné přidělení délky chladu.
+https://doi.org/10.3389/fpls.2020.00443
+Plný text s původními daty XLSX: https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2020.00443/full
+Klinner a Schmaljohann 2020: změny tahového neklidu červenek a bělořitů po přesunu mezi 5 a 25 °C. Klecová aktivita není skutečný odlet. Chyběla souběžná skupina bez změny teploty.
+https://doi.org/10.1098/rspb.2020.1650
+Plný text s přílohami a daty XLSX: https://pmc.ncbi.nlm.nih.gov/articles/PMC7657862/
+Studds a Marra 2011: 194 odletových událostí 74 jedinců Setophaga ruticilla na Jamajce, roky 2003–2009 bez odletových měření roku 2006. Srážky, potrava a termíny tvoří pozorované vztahy, nikoli pokus s náhodně přidělenými srážkami.
+https://doi.org/10.1098/rspb.2011.0332
+Veřejný plný text: https://pmc.ncbi.nlm.nih.gov/articles/PMC3177634/
+
+Názorný výpočet v článku
+H = 140 stupňodnů nad 5 °C je záměrně zvolená modelová hodnota, nikoli naměřený parametr konkrétní rostliny.
+Při stálých 12 °C: 140 / (12 - 5) = 20 dnů.
+Při stálých 15 °C: 140 / (15 - 5) = 14 dnů.
+Rozdíl = 6 dnů. Model předpokládá stejnou potřebu tepla a ostatní podmínky, neřeší změnu zimního klidu ani dostupnosti vody.
+Tento výpočet se nepoužívá k odhadu terénního posunu za desetiletí.

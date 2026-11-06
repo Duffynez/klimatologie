@@ -8,6 +8,7 @@ import { GreenhouseRadiationArticle } from "../../components/GreenhouseRadiation
 import { VolcanicAerosolsArticle } from "../../components/VolcanicAerosolsArticle";
 import { SolarVariabilityArticle } from "../../components/SolarVariabilityArticle";
 import { HeatWaveMechanismsArticle } from "../../components/HeatWaveMechanismsArticle";
+import { PhenologyMechanismsArticle } from "../../components/PhenologyMechanismsArticle";
 import { climateMechanisms, mechanismBySlug } from "../../data/mechanisms";
 
 const combinedCryosphereSlug = "energeticka-bilance-snehu-a-morskeho-ledu";
@@ -76,6 +77,14 @@ export default async function MechanismDetail({ params }: { params: Promise<{ sl
     return <div className="page-shell">
       <PageLead eyebrow={"Mechanismy / " + mechanism.category} title={mechanism.title} meta="6. listopadu 2026"><p>{mechanism.summary}</p></PageLead>
       <VolcanicAerosolsArticle />
+      <Link className="text-link catalog-back-link" href="/mechanismy">&larr; Zpět na všechny mechanismy</Link>
+    </div>;
+  }
+
+  if (slug === "biologicke-mechanismy-fenologickych-zmen") {
+    return <div className="page-shell">
+      <PageLead eyebrow={"Mechanismy / " + mechanism.category} title={mechanism.title} meta="6. listopadu 2026"><p>{mechanism.summary}</p></PageLead>
+      <PhenologyMechanismsArticle />
       <Link className="text-link catalog-back-link" href="/mechanismy">&larr; Zpět na všechny mechanismy</Link>
     </div>;
   }

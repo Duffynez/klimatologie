@@ -1,0 +1,34 @@
+.testHeading {
+  margin: 40px 0 18px;
+  padding: 13px 18px;
+  border-left: 3px solid var(--sea);
+  background: rgba(29, 93, 88, 0.055);
+  color: var(--ink);
+  font-size: 1.08rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.explanatoryFigure {
+  width: min(calc(100vw - 40px), var(--max-width));
+  max-width: 1100px;
+}
+.figureScroll { overflow-x: auto; overscroll-behavior-inline: contain; }
+.figureScroll img { min-width: 680px; height: auto; }
+.testPanels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 14px;
+  margin: 20px 0 8px;
+  text-align: left;
+}
+.testPanel {
+  padding: 19px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+.testPanel h4 { margin: 0 0 14px; font-size: 1rem; }
+.testPanel dl { margin: 0; }
+.testPanel dt { margin: 12px 0 3px; font-weight: 700; }
+.testPanel dd { margin: 0; }

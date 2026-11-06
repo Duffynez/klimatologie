@@ -439,7 +439,7 @@ export function PhenologyArticle() {
         </p>
 
         <h2 id="pozorovani">Pozorování</h2>
-        <h3>Rostliny v Evropě</h3>
+        <h3 id="rostliny-v-evrope">Rostliny v Evropě</h3>
         <p>
           Evropské vyhodnocení pro roky 1971–2000 shromáždilo přes 125 000 dlouhodobých záznamů pro 542
           rostlinných a 19 živočišných druhů ve 21 zemích. Jeden takový záznam sleduje druh a fázi na určitém
@@ -499,7 +499,7 @@ export function PhenologyArticle() {
           </figcaption>
         </figure>
 
-        <h3>Ptáci</h3>
+        <h3 id="ptaci">Ptáci</h3>
         <p>
           Druhově rozlišený pohled poskytlo 2 826 588 kroužkovacích záznamů lesňáčků, americké skupiny drobných
           pěvců. Šlo o 19 druhů v Severní Americe v období 1961–2018. Odchyty autoři seskupili do buněk o velikosti
@@ -528,6 +528,29 @@ export function PhenologyArticle() {
           <SourceLink id="DOI_10_1002_ecm_1552">Romano et al., 2023</SourceLink>
         </p>
 
+        <h3 id="odlety-z-jamajky">Odlety stejných ptáků z Jamajky</h3>
+        <p>
+          Odlet ze zimoviště je jiná událost než průlet kroužkovací stanicí nebo přílet na hnízdiště.
+          Studds a Marra sledovali v rezervaci Font Hill na Jamajce 74 dospělých, barevně kroužkovaných ptáků druhu <i>Setophaga ruticilla</i>.
+          Každého pozorovali ve dvou až šesti sezónách. V letech 2003–2009, bez sledování odletů v roce 2006,
+          získali 194 odletových událostí z mangrovů a suchých křovin. Od 1. dubna do 15. května kontrolovali teritoria každé tři dny.
+          Když pták chyběl, kontroly opakovali a při závěrečné návštěvě přehrávali jeho hlas.
+          Datum tak odhadovali z opakované nepřítomnosti, nezaznamenávali přímo okamžik vzletu. <SourceLink id="DOI_10_1098_rspb_2011_0332">(Studds a Marra 2011, metody a tabulka 1)</SourceLink>
+        </p>
+        <p>
+          Srážky pocházely ze stanice Burnt Savannah asi 20 km od lokality. Potravu popisovala suchá hmotnost členovců
+          z 132 vzorků odebraných smýkáním vegetace na teritoriích. Statistický model zohlednil prostředí, pohlaví
+          a opakované záznamy téhož ptáka. Menší březnové srážky provázely pozdější odlety.
+          Rozpětí 190 mm mezi sledovanými roky odpovídalo v modelu přibližně 3 dnům rozdílu v mangrovech a 5 dnům v křovinách.
+          Rozmezí 3–5 dnů tedy porovnává prostředí, není intervalem spolehlivosti. <SourceLink id="DOI_10_1098_rspb_2011_0332">(Studds a Marra 2011, obr. 2)</SourceLink>
+        </p>
+        <p>
+          Odhad změny termínu na milimetr srážek činil −0,016 ± 0,007 dne v mangrovech a −0,025 ± 0,007 dne v křovinách,
+          kde ± označuje směrodatnou chybu odhadu. Rozdíl sklonů mezi prostředími nebyl statisticky průkazný.
+          Zjištění popisuje místní meziroční proměnlivost. Nedokládá samo globální trend ani příčinu srážkových změn.
+          Plný text zveřejňuje souhrny a modelové výsledky, samostatný soubor surových záznamů na jeho stránce není připojen. <SourceLink id="DOI_10_1098_rspb_2011_0332">(Studds a Marra 2011)</SourceLink>
+        </p>
+
         <div className="article-observation-summary">
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
@@ -540,6 +563,12 @@ export function PhenologyArticle() {
             souhrnu posunuly přibližně o dva až tři dny za desetiletí k dřívějším termínům.
           </p>
         </div>
+
+        <p>
+          Jak teplota, délka dne, zimní chlad a potrava mohou měnit průběh těchto událostí,
+          rozebírá článek <Link href="/mechanismy/biologicke-mechanismy-fenologickych-zmen/">Proč se mění doba kvetení rostlin a tahu ptáků?</Link>
+          Porovnává terénní řady s pokusy, které oddělují jednotlivé vlivy.
+        </p>
 
         <h2>Prameny a data</h2>
         <div className="article-source-groups">
@@ -572,6 +601,7 @@ export function PhenologyArticle() {
               <li><SourceLink id="DOI_10_1098_rspb_2021_2456">Büntgen et al., 2022: první kvetení ve Spojeném království 1753–2019</SourceLink></li>
               <li><SourceLink id="DOI_10_1111_1365_2656_13887">Horton et al., 2023: šest desetiletí kroužkovacích záznamů lesňáčků</SourceLink></li>
               <li><SourceLink id="DOI_10_1002_ecm_1552">Romano et al., 2023: celosvětový souhrn ptačího tahu a hnízdění</SourceLink></li>
+              <li><SourceLink id="DOI_10_1098_rspb_2011_0332">Studds a Marra, 2011: opakované odlety stejných jedinců z Jamajky, srážky a potravní podmínky</SourceLink></li>
             </ul>
           </section>
 

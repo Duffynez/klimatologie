@@ -72,6 +72,48 @@ test("Pinatubo temperature comparison preserves inputs and distinct observed ano
 
 const root = new URL("../", import.meta.url);
 
+test("phenology mechanism publishes the full argument with working evidence paths and readable graphics", async () => {
+  const route = "/mechanismy/biologicke-mechanismy-fenologickych-zmen";
+  const html = await readFile(new URL("dist/client" + route + "/index.html", root), "utf8");
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "Replace the outline at the existing address with a full article");
+  assert.match(html, /6\. listopadu 2026/);
+  assert.deepEqual([...body.matchAll(/<h2 id="([^"]+)"/g)].map(match => match[1]),
+    ["co-vysvetlujeme", "hypotezy", "pribehy", "jak-mechanismus-funguje", "shrnuti", "prameny"]);
+  assert.equal((body.slice(0, body.indexOf('<h2 id="hypotezy"')).match(/<p\b/g) ?? []).length, 2);
+  for (const id of ["test-delka-dne", "test-terenni-rady", "test-kveteni", "test-teplota-ptaci", "test-potrava"]) {
+    assert.ok(body.includes('id="' + id + '"'), "Missing test anchor " + id);
+  }
+  const bibliography = body.slice(body.indexOf('<h2 id="prameny"'));
+  const sourcePage = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
+  for (const id of new Set([...body.matchAll(/href="\/zdroje#([^"]+)"/g)].map(match => match[1]))) {
+    assert.ok(bibliography.includes('href="/zdroje#' + id + '"'), "Missing bibliography entry " + id);
+    const card = sourcePage.match(new RegExp('<article[^>]+id="' + id + '"[\\s\\S]*?</article>'))?.[0];
+    assert.ok(card, "Missing source card " + id);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+  }
+  for (const [, href] of body.matchAll(/href="(\/[^\"]+)"/g)) {
+    const [pathname, anchor] = href.split("#");
+    const file = /\.[a-z0-9]+$/i.test(pathname) ? pathname : pathname.replace(/\/$/, "") + "/index.html";
+    const target = await readFile(new URL("dist/client" + file, root), "utf8");
+    if (anchor) assert.ok(target.includes('id="' + anchor + '"'), "Broken evidence path " + href);
+  }
+  for (const name of ["kalendar", "prostredi"]) {
+    const svg = await readFile(new URL(`dist/client/media/fenologicke-mechanismy/${name}.svg`, root), "utf8");
+    assert.ok(body.includes(`/media/fenologicke-mechanismy/${name}.svg`));
+    assert.match(svg, /<title[^>]*>[^<]+<\/title>/);
+    assert.match(svg, /<desc[^>]*>[^<]+<\/desc>/);
+  }
+  for (const path of ["/pozorovani/fenologicke-posuny", "/metody/standardizovane-fenologicke-pozorovani"]) {
+    const related = await readFile(new URL("dist/client" + path + "/index.html", root), "utf8");
+    assert.ok(hasArticleLink(body, path));
+    assert.ok(hasArticleLink(related, route), "Missing reciprocal link " + path);
+  }
+  const details = body.match(/<details class="method-details">([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(details && details.replace(/<[^>]+>/g, " ").trim().split(/\s+/).length <= 600);
+  assert.doesNotMatch(body.replace(/<[^>]+>/g, " ").replace(/&(?:#\d+|#x[0-9a-f]+|[a-z]+);/gi, ""), /;/);
+});
+
 function hasArticleLink(html, path) {
   return [...html.matchAll(/href="([^"]+)"/g)].some(([, href]) =>
     href.split("#")[0].replace(/\/$/, "") === path.replace(/\/$/, ""));
@@ -799,7 +841,7 @@ test("publishes 23 mechanism topics and preserves the split snow-and-sea-ice add
     assert.ok(sitemap.includes(`<loc>https://klimatologie.eu/mechanismy/${slug}/</loc>`), "Missing sitemap route " + slug);
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     assert.ok(html.includes(`<h1>${title}</h1>`), "Wrong detail title " + slug);
-    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder"].includes(slug)) {
+    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen"].includes(slug)) {
       assert.match(html, /Co musí toto vysvětlení objasnit/);
       assert.match(html, /<section class="mechanism-detail-evidence"[^>]*>[\s\S]*<p>[^<]+<\/p><\/section>/);
     }
@@ -1748,7 +1790,7 @@ test("publishes a sourced phenology article with organism, camera, and satellite
 
   assert.match(evidencePage, /PhenologyArticle/);
   assert.match(evidencePage, /title="Sezónní jevy v živé přírodě"/);
-  assert.match(evidencePage, /meta="5\. listopadu 2026"/);
+  assert.match(evidencePage, /title="Sezónní jevy v živé přírodě"\s+meta="6\. listopadu 2026"/);
   assert.match(article, /Fenologické pozorování/);
   assert.match(article, /je datum nebo sled opakovaných záznamů/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
@@ -1811,7 +1853,7 @@ test("renders public phenology sources and preserves the meaning of dates and sa
   assert.match(articleHtml, /15 % tedy neznamená, že 15 % stromů má listy/);
   assert.match(articleHtml, /VNP22Q2\.002 poskytuje výsledky od roku 2013/);
   assert.match(articleHtml, /Není to soubor všech 419 354 původních pozorování/);
-  assert.match(articleHtml, /<p class="page-lead__meta">5\. listopadu 2026<\/p>/);
+  assert.match(articleHtml, /<p class="page-lead__meta">6\. listopadu 2026<\/p>/);
   assert.match(articleHtml, /href="\/metody\/standardizovane-fenologicke-pozorovani\/?(?:#[^"]+)?"/);
   assert.doesNotMatch(articleHtml, /Brügger a Vassella|Reed et al\., 1994|125 000 měření v čase/);
   assert.equal((articleHtml.match(/class="article-figure__scroll"/g) ?? []).length, 3);
@@ -4460,6 +4502,7 @@ test("keeps each hypothesis independently collapsible with complete content and 
     ["slunecni-promenlivost", ["kosmicke-zareni", "zmeny-zareni"]],
     ["sopecne-aerosoly", ["popel", "sirne-kapky"]],
     ["mechanismy-vln-veder", ["samotne-proudeni", "teplejsi-klima"]],
+    ["biologicke-mechanismy-fenologickych-zmen", ["pevny-kalendar", "rytmus-a-prostredi"]],
   ]) {
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)[1];
