@@ -132,7 +132,7 @@ export default function HistoryPage() {
       <PageLead eyebrow="Historie poznání" title="Historie poznání změny klimatu."
         meta="6. listopadu 2026">
         <p>Jak jsme zjistili, že se klima mění, co tyto změny způsobuje a jak na ně reagovaly státy. Osa vybírá zásadní objevy, měření a klimatická rozhodnutí.</p>
-        <p>Začněte zásadními milníky (1). Rozšířený přehled přidá důležité metody a důkazy (2), celý výběr i doplňující kroky (3). Vědu lze dále filtrovat na pozorování, metody a mechanismy.</p>
+        <p>Milníky mají tři stupně důležitosti: zásadní (1), důležité (2) a doplňující (3). Ve filtru je můžete libovolně kombinovat. Vědu lze dále filtrovat na pozorování, metody a mechanismy.</p>
       </PageLead>
       {legacyNotices}
       <HistoryTimeline items={items} periods={historyPeriods}

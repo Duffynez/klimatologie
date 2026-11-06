@@ -132,8 +132,12 @@
 .branchChoice[aria-pressed="true"] { border-color: var(--history-branch-accent); background: var(--history-branch-accent); color: var(--white); }
 .branchChoice:hover { border-color: var(--history-branch-accent); }
 .importanceChoice { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; color: var(--ink); border-color: var(--line); background: var(--white); }
-.importanceChoice[aria-pressed="true"] { border-color: var(--ink); background: var(--ink); color: var(--white); font-weight: 700; }
+.importanceChoice[data-selected="true"] { border-color: var(--sea); background: #edf5f2; font-weight: 700; }
 .importanceChoice:hover { border-color: var(--ink); }
+.importanceChoice:focus-within { outline: 3px solid var(--sea); outline-offset: 3px; }
+.importanceChoice .choiceCount { margin-left: auto; }
+.importanceCheckbox { flex: 0 0 auto; width: 18px; height: 18px; margin: 0; accent-color: var(--sea); cursor: pointer; }
+.selectAllImportances { min-height: 44px; margin-top: 8px; padding: 8px 0; border: 0; background: transparent; color: var(--sea); font: inherit; font-size: 0.84rem; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 .reset { padding: 7px 10px; background: transparent; color: var(--sea); border-color: var(--line); font-size: 0.82rem; }
 .reset:hover { border-color: var(--sea); }
 .categoryChoice { display: flex; flex-direction: column; align-items: stretch; border-top: 4px solid var(--history-accent); }
@@ -233,7 +237,6 @@
   .filters { padding: 14px; gap: 16px; }
   .categoryChoice { padding: 12px 10px; }
   .importanceChoices { display: grid; grid-template-columns: minmax(0, 1fr); }
-  .importanceChoice { justify-content: space-between; }
   .importanceLabel { margin-left: 0; }
   .milestone { grid-template-columns: minmax(0, 1fr); gap: 14px; padding: 20px 16px; }
   .date { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px 16px; }

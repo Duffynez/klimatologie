@@ -177,15 +177,15 @@ Bibliografie se nadále načítá výhradně z centrálního katalogu. Každý o
 
 Serverová stránka `app/historie/page.tsx` kontroluje identitu, chronologii, klasifikaci, důležitost a existenci pramenů. Chybná položka zastaví sestavení, nevynechá se potichu. Vykreslí obsah karet a předá jej klientské komponentě `HistoryTimeline.tsx` jako React obsah. Celý zdrojový katalog ani textová data se neimportují do klientské komponenty.
 
-`historyImportances` pojmenovává stupně Zásadní (1), Důležitý (2) a Doplňující (3). Server předává klientovi názvy a hodnoty filtrů, klasifikaci a důležitost milníků a vykreslené karty. `historyFilters.ts` obsahuje společné pravidlo pro průnik důležitosti, větve a oblasti a rozpoznání odkazu na milník.
+`historyImportances` pojmenovává stupně Zásadní (1), Důležitý (2) a Doplňující (3). Server předává klientovi názvy a hodnoty filtrů, klasifikaci a důležitost milníků a vykreslené karty. `historyFilters.ts` obsahuje společné pravidlo pro průnik vybraných důležitostí, větve a oblasti, přepínání jednotlivých stupňů a rozpoznání odkazu na milník. Pole `importances` ve stavu filtrů obsahuje libovolnou podmnožinu stupňů 1, 2 a 3. Prázdné pole znamená žádné výsledky.
 
-`HistoryTimeline` nabízí rozsahy důležitosti 1, 1–2 a 1–3. Po hydrataci bez odkazu na milník začíná stupněm 1, statické HTML obsahuje všechny milníky. Rozlišení zajišťuje `useSyncExternalStore` se serverovým a klientským snímkem, takže počáteční hydratace odpovídá HTML a čtení bez JavaScriptu zůstává úplné.
+`HistoryTimeline` nabízí tři nezávislá nativní zaškrtávací políčka důležitosti. Jejich počty označují jednotlivé stupně v aktivní větvi a oblasti. Vybrat všechny stupně mění pouze důležitosti a ostatní filtry zachová. Po hydrataci bez odkazu na milník začíná stupněm 1, statické HTML obsahuje všechny milníky se všemi políčky zaškrtnutými. Rozlišení zajišťuje `useSyncExternalStore` se serverovým a klientským snímkem, takže počáteční hydratace odpovídá HTML a čtení bez JavaScriptu zůstává úplné.
 
 Filtr větve nabízí Všechny, Vědu a Politiku. Po volbě Vědy zpřístupní podfiltr Pozorování, Metody a Mechanismy. Přepnutí větve zruší oblast, zachová důležitost. Počty u voleb respektují ostatní filtry. Tlačítko Zobrazit celou osu obnoví všechny větve a důležitosti. Přímý odkaz `milnik-ID` při načtení i při změně kotvy zruší všechna omezení a posune stránku k cíli. Komponenta uchovává celé karty v DOM a mění jejich viditelnost a odkazy na neprázdná období. Prázdné větve jako připravovaná Kultura se nenabízejí. Každá událost patří do jedné oblasti, vazby na další části webu vyjadřují související odkazy.
 
 `historyLegacyLinks` zachovává ID, názvy a odkazy na prameny vyřazených událostí. Samostatná oznámení mimo osu se zobrazí pomocí CSS `:target` pouze při návštěvě původní kotvy, i bez JavaScriptu. Nejsou milníky a nevstupují do filtrování ani počtů.
 
-Interakce mají popisky, stav stisknutí, oznámení počtu a prázdný stav. Oblasti jsou rozlišeny barvou, důležitost číslem a slovním označením. Rozvržení a mobilní úpravy jsou v `HistoryTimeline.module.css`. Obsahový standard je [HISTORY.md](../HISTORY.md).
+Interakce mají popisky, stav zaškrtnutí nebo stisknutí, oznámení počtu a prázdný stav. Oblasti jsou rozlišeny barvou, důležitost číslem a slovním označením. Rozvržení a mobilní úpravy jsou v `HistoryTimeline.module.css`. Obsahový standard je [HISTORY.md](../HISTORY.md).
 
 ## 9. Interaktivní části
 

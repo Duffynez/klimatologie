@@ -890,9 +890,9 @@ test("keeps science and politics above scientific areas and hides unpopulated br
   }
 });
 
-test("combines importance thresholds with branches and areas and reveals linked milestones", async () => {
+test("allows every importance combination with branches and areas and reveals linked milestones", async () => {
   const text = await readFile(new URL("app/components/historyFilters.ts", root), "utf8");
-  const { matchesHistoryFilters, historyFiltersForAnchor, defaultHistoryFilters, allHistoryFilters } = await import(
+  const { matchesHistoryFilters, toggleHistoryImportance, historyFiltersForAnchor, defaultHistoryFilters, allHistoryFilters } = await import(
     "data:text/javascript;base64," + Buffer.from(stripTypeScriptTypes(text)).toString("base64")
   );
   const items = [
@@ -905,13 +905,33 @@ test("combines importance thresholds with branches and areas and reveals linked 
   ];
   const select = filters => items.filter(item => matchesHistoryFilters(item, filters)).map(item => item.id);
   assert.deepEqual(select(defaultHistoryFilters), ["core-method", "core-policy"]);
-  assert.deepEqual(select({ ...defaultHistoryFilters, maxImportance: 2 }),
-    ["core-method", "extended-observation", "core-policy", "extended-policy"]);
+  const combinations = [
+    { importances: [], ids: [] },
+    { importances: [1], ids: ["core-method", "core-policy"] },
+    { importances: [2], ids: ["extended-observation", "extended-policy"] },
+    { importances: [3], ids: ["further-mechanism", "further-policy"] },
+    { importances: [1, 2], ids: ["core-method", "extended-observation", "core-policy", "extended-policy"] },
+    { importances: [1, 3], ids: ["core-method", "further-mechanism", "core-policy", "further-policy"] },
+    { importances: [2, 3], ids: ["extended-observation", "further-mechanism", "extended-policy", "further-policy"] },
+    { importances: [1, 2, 3], ids: items.map(item => item.id) },
+  ];
+  for (const { importances, ids } of combinations) {
+    assert.deepEqual(select({ ...defaultHistoryFilters, importances }), ids, JSON.stringify(importances));
+  }
   assert.deepEqual(select(allHistoryFilters), items.map(item => item.id));
-  assert.deepEqual(select({ ...defaultHistoryFilters, branch: "science", maxImportance: 2 }),
-    ["core-method", "extended-observation"]);
+  assert.deepEqual(select({ ...defaultHistoryFilters, branch: "science", importances: [2, 3] }),
+    ["extended-observation", "further-mechanism"]);
+  assert.deepEqual(select({ ...allHistoryFilters, branch: "politics", importances: [2] }), ["extended-policy"]);
   assert.deepEqual(select({ ...allHistoryFilters, branch: "science", category: "methods" }), ["core-method"]);
   assert.deepEqual(select({ ...allHistoryFilters, branch: "politics", category: "methods" }), []);
+  assert.deepEqual(select({ ...allHistoryFilters, branch: "science", category: "methods", importances: [2, 3] }), []);
+  const filtered = Object.freeze({ branch: "science", category: "methods", importances: Object.freeze([1]) });
+  const withoutOne = toggleHistoryImportance(filtered, 1);
+  assert.deepEqual(withoutOne, { ...filtered, importances: [] });
+  const withThree = toggleHistoryImportance(withoutOne, 3);
+  assert.deepEqual(withThree, { ...filtered, importances: [3] });
+  assert.deepEqual(toggleHistoryImportance(withThree, 1), { ...filtered, importances: [1, 3] });
+  assert.deepEqual(filtered.importances, [1], "Toggling must not mutate earlier selections");
   assert.deepEqual(select(historyFiltersForAnchor(items, "#milnik-further-mechanism")), items.map(item => item.id));
   assert.equal(historyFiltersForAnchor(items, "#obdobi-1900-1969"), null);
   assert.equal(historyFiltersForAnchor(items, "#milnik-missing"), null);
@@ -929,11 +949,14 @@ test("publishes accessible importance controls and complete content without Java
   assert.ok(html.includes('aria-describedby="history-importance-help"'));
   assert.ok(html.includes("1 je nejvyšší důležitost"));
   for (const [value, importance] of Object.entries(historyImportances)) {
-    const control = html.match(new RegExp('<button\\b[^>]*data-history-max-importance="' + value + '"[^>]*>'))?.[0];
+    const control = html.match(new RegExp('<input\\b[^>]*data-history-importance-option="' + value + '"[^>]*>'))?.[0];
     assert.ok(control, value);
+    assert.ok(control.includes('type="checkbox"'));
     assert.ok(control.includes('aria-label="' + importance.filterLabel + '"'));
-    assert.ok(control.includes('aria-pressed="' + (value === "3") + '"'), "Static view includes every level");
+    assert.match(control, /\schecked(?:=|\s|\/?>)/, "Static view includes every level");
   }
+  assert.ok(html.includes("Zaškrtněte libovolnou kombinaci"));
+  assert.ok(html.includes("Vybrat všechny stupně"));
   assert.match(html, /<noscript><p>Filtry vyžadují JavaScript/);
   assert.match(styles, /\.legacyNotice\s*\{[^}]*display:\s*none/);
   assert.match(styles, /\.legacyNotice:target\s*\{[^}]*display:\s*block/);

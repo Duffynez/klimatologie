@@ -44,8 +44,8 @@ export type HistoryImportance = 1 | 2 | 3;
 
 export const historyImportances = {
   1: { label: "Zásadní", description: "Hlavní objevy a klimatická rozhodnutí", filterLabel: "1 · Zásadní milníky" },
-  2: { label: "Důležitý", description: "Důležité metody, záznamy a další důkazy", filterLabel: "1–2 · Rozšířený přehled" },
-  3: { label: "Doplňující", description: "Vybraní předchůdci a podrobnější ověření", filterLabel: "1–3 · Celý výběr" },
+  2: { label: "Důležitý", description: "Důležité metody, záznamy a další důkazy", filterLabel: "2 · Důležité milníky" },
+  3: { label: "Doplňující", description: "Vybraní předchůdci a podrobnější ověření", filterLabel: "3 · Doplňující milníky" },
 } as const satisfies Record<HistoryImportance, { label: string; description: string; filterLabel: string }>;
 
 export type HistoryReference = { sourceId: string; locator?: string };

@@ -3,7 +3,7 @@ import type { HistoryBranch, HistoryCategory, HistoryImportance } from "../data/
 export type HistoryFilters = {
   branch: HistoryBranch | "all";
   category: HistoryCategory | "all";
-  maxImportance: HistoryImportance;
+  importances: readonly HistoryImportance[];
 };
 
 type FilterableMilestone = {
@@ -13,11 +13,20 @@ type FilterableMilestone = {
   importance: HistoryImportance;
 };
 
-export const defaultHistoryFilters: HistoryFilters = { branch: "all", category: "all", maxImportance: 1 };
-export const allHistoryFilters: HistoryFilters = { branch: "all", category: "all", maxImportance: 3 };
+export const defaultHistoryFilters: HistoryFilters = { branch: "all", category: "all", importances: [1] };
+export const allHistoryFilters: HistoryFilters = { branch: "all", category: "all", importances: [1, 2, 3] };
+
+export function toggleHistoryImportance(filters: HistoryFilters, importance: HistoryImportance): HistoryFilters {
+  return {
+    ...filters,
+    importances: filters.importances.includes(importance)
+      ? filters.importances.filter(value => value !== importance)
+      : [...filters.importances, importance].sort((a, b) => a - b),
+  };
+}
 
 export function matchesHistoryFilters(item: FilterableMilestone, filters: HistoryFilters) {
-  return item.importance <= filters.maxImportance &&
+  return filters.importances.includes(item.importance) &&
     (filters.branch === "all" || item.branch === filters.branch) &&
     (filters.category === "all" || item.category === filters.category);
 }

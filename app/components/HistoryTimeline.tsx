@@ -3,7 +3,7 @@
 import { useEffect, useState, useSyncExternalStore, type ReactNode } from "react";
 import Link from "next/link";
 import type { HistoryBranch, HistoryCategory, HistoryImportance, HistoryPeriod } from "../data/history";
-import { allHistoryFilters, defaultHistoryFilters, historyFiltersForAnchor, matchesHistoryFilters } from "./historyFilters";
+import { allHistoryFilters, defaultHistoryFilters, historyFiltersForAnchor, matchesHistoryFilters, toggleHistoryImportance } from "./historyFilters";
 import styles from "./HistoryTimeline.module.css";
 
 export type HistoryTimelineItem = {
@@ -30,7 +30,7 @@ export function HistoryTimeline({ items, periods, branches, categories, importan
   // Static HTML remains complete. Once hydrated, the overview starts with level 1.
   const hydrated = useSyncExternalStore(subscribeToHydration, clientSnapshot, serverSnapshot);
   const filters = hydrated ? selection : allHistoryFilters;
-  const { branch, category, maxImportance } = filters;
+  const { branch, category, importances: selectedImportances } = filters;
   const matches = (item: HistoryTimelineItem) => matchesHistoryFilters(item, filters);
   const activeCategory = categories.find(option => option.value === category);
   const visibleItems = items.filter(matches);
@@ -43,6 +43,7 @@ export function HistoryTimeline({ items, periods, branches, categories, importan
     setSelection(current => ({ ...current, branch: value, category: "all" }));
   };
   const reset = () => setSelection(allHistoryFilters);
+  const selectAllImportances = () => setSelection(current => ({ ...current, importances: allHistoryFilters.importances }));
 
   useEffect(() => {
     const revealLinkedMilestone = () => {
@@ -62,21 +63,26 @@ export function HistoryTimeline({ items, periods, branches, categories, importan
         <fieldset className={styles.importances} aria-describedby="history-importance-help">
           <legend>Důležitost milníků</legend>
           <p id="history-importance-help" className={styles.filterHelp}>
-            1 je nejvyšší důležitost. Stupně vyjadřují redakční výběr pro historii změny klimatu.
+            Zaškrtněte libovolnou kombinaci. 1 je nejvyšší důležitost.
           </p>
           <div className={styles.importanceChoices}>
             {importances.map(option => (
-              <button key={option.value} type="button" className={styles.importanceChoice}
-                data-history-max-importance={option.value} aria-label={option.filterLabel}
-                aria-pressed={maxImportance === option.value}
-                onClick={() => setSelection(current => ({ ...current, maxImportance: option.value }))}>
-                {option.filterLabel}
+              <label key={option.value} className={styles.importanceChoice}
+                data-selected={selectedImportances.includes(option.value)}>
+                <input type="checkbox" className={styles.importanceCheckbox}
+                  data-history-importance-option={option.value} aria-label={option.filterLabel}
+                  checked={selectedImportances.includes(option.value)}
+                  onChange={() => setSelection(current => toggleHistoryImportance(current, option.value))} />
+                <span>{option.filterLabel}</span>
                 <span className={styles.choiceCount} aria-hidden="true">
-                  {countFor({ maxImportance: option.value })}
+                  {countFor({ importances: [option.value] })}
                 </span>
-              </button>
+              </label>
             ))}
           </div>
+          <button type="button" className={styles.selectAllImportances} onClick={selectAllImportances}>
+            Vybrat všechny stupně
+          </button>
         </fieldset>
         <fieldset className={styles.branches}>
           <legend>Část historie</legend>
@@ -140,7 +146,7 @@ export function HistoryTimeline({ items, periods, branches, categories, importan
           </Link>
         )}
       </div>
-      <noscript><p>Filtry vyžadují JavaScript. Níže je celý výběr milníků všech tří důležitostí.</p></noscript>
+      <noscript><p>Filtry vyžadují JavaScript. Níže je celý výběr milníků všech tří stupňů důležitosti.</p></noscript>
 
       {visibleItems.length ? (
         <nav className={styles.periodNav} aria-label="Období historické osy">
@@ -149,7 +155,9 @@ export function HistoryTimeline({ items, periods, branches, categories, importan
         </nav>
       ) : (
         <div className={styles.empty}>
-          <p>Této kombinaci důležitosti a oblasti neodpovídá žádný milník.</p>
+          <p>{selectedImportances.length
+            ? "Této kombinaci důležitosti a oblasti neodpovídá žádný milník."
+            : "Není vybrán žádný stupeň důležitosti. Zaškrtněte alespoň jeden nebo vyberte všechny stupně."}</p>
           <button type="button" onClick={reset}>Zrušit filtry</button>
         </div>
       )}
