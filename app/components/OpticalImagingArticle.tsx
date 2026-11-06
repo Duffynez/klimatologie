@@ -31,12 +31,13 @@ export function OpticalImagingArticle() {
         <p>
           Když světlo dopadne na povrch, část se pohltí a část se odrazí.
           Poměr se mění podle materiálu a vlnové délky. Chlorofyl, zelené barvivo
-          listů, silně pohlcuje červené světlo. Blízké infračervené záření se
-          naproti tomu výrazně rozptyluje uvnitř listů a značná část se vrací ven.
+          listů, silně pohlcuje červené světlo. V části blízkého infračerveného
+          pásma je pohlcování slabší. Laboratorní měření ukazují, že například
+          list topolu v této oblasti odráží mnohem více světla než v červené.
           Porost proto může být v červeném pásmu poměrně tmavý a v blízkém
           infračerveném pásmu světlý. Tato dvojice měření poskytuje informaci
           o vegetaci, která v běžné barevné fotografii není vidět.{" "}
-          <SourceLink id="DOI_10_1104_pp_47_5_656">(Woolley 1971, měřená spektra listů)</SourceLink>
+          <SourceLink id="DOI_10_6028_NBS_RPT_9052">(Gates a kol. 1967, obr. 1)</SourceLink>
         </p>
         <p>
           Sníh a čistý led mají jiný průběh odrazu. Ve viditelné oblasti odrážejí

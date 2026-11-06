@@ -5,7 +5,7 @@
       "slug": "opticke-a-multispektralni-snimkovani",
       "sourceIds": [
         "2019_USGS_Landsat8_Handbook",
-        "DOI_10_1104_pp_47_5_656",
+        "DOI_10_6028_NBS_RPT_9052",
         "DOI_10_1016_0034_4257_95_00137_P",
         "DOI_10_3390_rs61110286",
         "WEB_Creative_Commons_Deed_Attribution_4_0_International_Creative_Comm_f3dd853d",
@@ -61,10 +61,11 @@
       ]
     },
     {
-      "id": "DOI_10_1104_pp_47_5_656",
-      "externalUrl": "https://doi.org/10.1104/pp.47.5.656",
-      "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC396745/?page=2#supplementary-material1",
-      "openAccessLinkLabel": "Otevřít plný text u měřených spekter (strana 657)",
+      "id": "DOI_10_6028_NBS_RPT_9052",
+      "externalUrl": "https://doi.org/10.6028/NBS.RPT.9052",
+      "openAccessUrl": "https://nvlpubs.nist.gov/nistpubs/Legacy/RPT/nbsreport9052.pdf#page=71",
+      "externalLinkLabel": "Otevřít DOI zprávy NBS",
+      "openAccessLinkLabel": "Otevřít plný text u měřených spekter (PDF, strana 71)",
       "originalReaderRouteOpenedInBrowser": false
     },
     {
@@ -608,6 +609,22 @@
     }
   ],
   "additionalFileChecks": [
+    {
+      "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/RPT/nbsreport9052.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 5398908,
+      "truncated": false,
+      "sha256": "6283e2fbb5afee75bbfe831dad975d49007d906979a76b79cdb9a80fc407b62b"
+    },
+    {
+      "url": "https://doi.org/10.6028/NBS.RPT.9052",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 5398908,
+      "truncated": false,
+      "sha256": "6283e2fbb5afee75bbfe831dad975d49007d906979a76b79cdb9a80fc407b62b"
+    },
     {
       "url": "https://ntrs.nasa.gov/api/citations/19740022614/downloads/19740022614.pdf",
       "status": 200,
