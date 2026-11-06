@@ -1091,9 +1091,11 @@ test("publishes a sourced ocean heat content article instead of the generic plac
   assert.match(article, /K odborným pracím uvádíme veřejný plný text bez předplatného/);
   assert.match(article, /zdrojů tohoto článku nepoužívají/);
   assert.doesNotMatch(
-    `${article}\n${sourceCatalogueText}`,
+    article,
     /DOI_10_1126_science_287_5461_2225|DOI_10_1029_2008gl037155|DOI_10_1038_nature09043/,
   );
+  // Levitus 2000 now supports the history timeline with an open full text.
+  assert.doesNotMatch(sourceCatalogueText, /DOI_10_1029_2008gl037155|DOI_10_1038_nature09043/);
   const oceanHeatSourceIds = [
     ...article.matchAll(/<SourceLink id="([^"]+)"/g),
   ].map((match) => match[1]);

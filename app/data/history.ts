@@ -839,6 +839,32 @@ export const historyEvents: HistoryEvent[] = [
     ]
   },
   {
+    id: "1957_Revelle_Suess",
+    year: 1957,
+    dateMeaning: "Zveřejnění práce",
+    title: "Chemie mořské vody omezuje pohlcování dalšího CO₂",
+    category: "mechanisms",
+    importance: 1,
+    paragraphs: [
+      {
+        text: "Roger Revelle a Hans Suess zkoumali, kolik oxidu uhličitého ze spalování fosilních paliv může přijmout oceán. Z podílu radioaktivního uhlíku v rostlinách a mořských materiálech odhadovali rychlost výměny uhlíku mezi vzduchem a vodou. Tento odhad spojili s výpočtem chemické rovnováhy mořské vody.",
+        references: [
+          { sourceId: "DOI_10_1111_j_2153_3490_1957_tb01849_x", locator: "s. 20–24" }
+        ]
+      },
+      {
+        text: "Výpočet ukázal, že pohlcený CO₂ mění chemické složení vody a omezuje její schopnost přijímat další CO₂ ze vzduchu. Rychlá výměna jednotlivých molekul proto neznamená stejně rychlé odstranění dodatečných emisí. Práce popsala důležitý důvod, proč velká zásoba uhlíku v oceánu sama nezabrání růstu koncentrace CO₂ v atmosféře.",
+        references: [
+          { sourceId: "DOI_10_1111_j_2153_3490_1957_tb01849_x", locator: "s. 24–26, obr. 2" }
+        ]
+      }
+    ],
+    relatedLinks: [
+      { href: "/mechanismy/pohlcovani-co2-oceanem-a-uhlicitanova-chemie/", label: "Jak oceán přijímá CO₂" },
+      { href: "/mechanismy/puvod-rustu-atmosferickeho-co2/", label: "Proč CO₂ v atmosféře přibývá" }
+    ]
+  },
+  {
     id: "1958_Keeling",
     year: 1958,
     dateMeaning: "Zahájení měření na Mauna Loa",
@@ -909,6 +935,31 @@ export const historyEvents: HistoryEvent[] = [
     ]
   },
   {
+    id: "1975_Ramanathan",
+    year: 1975,
+    dateMeaning: "Zveřejnění práce",
+    title: "Freony zesilují skleníkový efekt i v malých koncentracích",
+    category: "mechanisms",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Veerabhadran Ramanathan vypočítal, jak dva chlorfluorované uhlovodíky, označované jako freony CFC-11 a CFC-12, mění únik tepelného záření do vesmíru. Tyto průmyslové plyny pohlcují záření také v části spektra, kterou jinak atmosféra poměrně dobře propouští.",
+        references: [
+          { sourceId: "DOI_10_1126_science_190_4209_50", locator: "s. 50–51" }
+        ]
+      },
+      {
+        text: "Při zvýšení jejich koncentrace model vykazoval oteplení povrchu. Práce ukázala, že pro klimatický význam plynu rozhoduje vedle množství také to, jaké záření pohlcuje. Rozšířila výpočty lidského vlivu na klima o látky přítomné v mnohem menších koncentracích než oxid uhličitý.",
+        references: [
+          { sourceId: "DOI_10_1126_science_190_4209_50", locator: "s. 51–52" }
+        ]
+      }
+    ],
+    relatedLinks: [
+      { href: "/mechanismy/radiacni-pusobeni-sklenikovych-plynu/", label: "Jak skleníkové plyny mění přenos záření" }
+    ]
+  },
+  {
     id: "1976_Hays_Imbrie_Shackleton",
     year: 1976,
     dateMeaning: "Zveřejnění práce",
@@ -940,6 +991,32 @@ export const historyEvents: HistoryEvent[] = [
         href: "/metody/sedimentarni-jadra-a-stratigrafie/",
         label: "Jak z vrstev sestavujeme historii klimatu"
       }
+    ]
+  },
+  {
+    id: "1978_Nimbus7_Sea_Ice",
+    year: 1978,
+    dateMeaning: "Začátek dlouhodobého družicového záznamu",
+    title: "Začíná dlouhodobý družicový záznam mořského ledu",
+    category: "observations",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Na podzim 1978 začala družice Nimbus-7 pořizovat pravidelná mikrovlnná měření polárních oblastí. Z nich se odvozuje, jakou část mořské hladiny pokrývá led. Na měření navázaly další družice a vznikl dlouhodobý záznam pro sledování změn zalednění v Arktidě i kolem Antarktidy.",
+        references: [
+          { sourceId: "WEB_NSIDC_Passive_Microwave_Record", locator: "Overview" }
+        ]
+      },
+      {
+        text: "Společné zpracování měření z navazujících přístrojů umožňuje porovnávat rozsah mořského ledu mezi desetiletími. Veřejný soubor Sea Ice Index zpřístupňuje mapy a číselné údaje o rozloze zalednění od konce roku 1978. Čtenář tak může sledovat sezonní cyklus i dlouhodobé změny ve stejném záznamu.",
+        references: [
+          { sourceId: "WEB_NSIDC_Passive_Microwave_Record", locator: "návaznost družicových měření" },
+          { sourceId: "DOI_10_7265_a98x_0f50" }
+        ]
+      }
+    ],
+    relatedLinks: [
+      { href: "/pozorovani/ubytek-arktickeho-ledu/", label: "Jak měříme změny arktického mořského ledu" }
     ]
   },
   {
@@ -1167,6 +1244,59 @@ export const historyEvents: HistoryEvent[] = [
     relatedLinks: []
   },
   {
+    id: "1998_Mann_Bradley_Hughes",
+    year: 1998,
+    dateMeaning: "Zveřejnění rekonstrukce",
+    title: "Přírodní archivy zasazují oteplování do minulých staletí",
+    category: "observations",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Michael Mann, Raymond Bradley a Malcolm Hughes spojili údaje z letokruhů, korálů, ledových vrtů a dalších záznamů. Porovnáním s přístrojovými teplotami stanovili vztahy, podle nichž rekonstruovali dřívější teplotní vývoj. Výsledkem byl také odhad průměrné teploty severní polokoule od roku 1400.",
+        references: [
+          { sourceId: "DOI_10_1038_33859", locator: "s. 779–783, Data a Calibration" }
+        ]
+      },
+      {
+        text: "Rekonstrukce umožnila porovnat oteplování 20. století s předchozími staletími a ukázala výrazné teplo závěru zkoumaného období. Směrem do minulosti ubývalo dostupných záznamů, což autoři vyjádřili širším rozmezím nejistoty. Veřejný archiv podkladů obsahuje vstupní data, výsledky a výpočetní kód pro kontrolu postupu.",
+        references: [
+          { sourceId: "DOI_10_1038_33859", locator: "obr. 5 a závěry" },
+          { sourceId: "DOI_10_26208_51cv_tr24" }
+        ]
+      }
+    ],
+    relatedLinks: [
+      { href: "/metody/dendrochronologie/", label: "Jak letokruhy uchovávají klimatický záznam" },
+      { href: "/pozorovani/gmst/", label: "Jak určujeme novodobou změnu teploty" }
+    ]
+  },
+  {
+    id: "2000_Levitus",
+    year: 2000,
+    dateMeaning: "Zveřejnění práce",
+    title: "Měření pod hladinou dokládají hromadění tepla v oceánu",
+    category: "observations",
+    importance: 1,
+    paragraphs: [
+      {
+        text: "Sydney Levitus a spolupracovníci sestavili přehled oceánských teplot z let 1948–1998. Měření rozdělili podle oblasti a hloubky a z teplotních změn vypočítali změnu množství tepla uloženého ve vodě. Analýza zahrnovala vrstvy od hladiny do hloubky tří kilometrů.",
+        references: [
+          { sourceId: "DOI_10_1126_science_287_5461_2225", locator: "s. 2225–2226, postup sestavení dat" }
+        ]
+      },
+      {
+        text: "Mezi polovinou 50. a polovinou 90. let tepelný obsah světového oceánu vzrostl. Výsledek doložil hromadění tepla také pod povrchem a doplnil poznání z měření vzduchu a mořské hladiny. Samotná studie ještě neurčovala, jaký díl ohřevu způsobila lidská činnost. Pro takový závěr bylo třeba porovnat pozorovaný průběh s výpočty různých příčin.",
+        references: [
+          { sourceId: "DOI_10_1126_science_287_5461_2225", locator: "obr. 4 a Discussion" }
+        ]
+      }
+    ],
+    relatedLinks: [
+      { href: "/pozorovani/tepelny-obsah-oceanu/", label: "Jak určujeme změnu obsahu tepla v oceánu" },
+      { href: "/mechanismy/pohlcovani-a-presun-tepla-oceanem/", label: "Jak se teplo ukládá a šíří v oceánu" }
+    ]
+  },
+  {
     id: "2000_Argo",
     year: 2000,
     dateMeaning: "Zahájení programu",
@@ -1232,6 +1362,58 @@ export const historyEvents: HistoryEvent[] = [
         href: "/mechanismy/pohlcovani-a-presun-tepla-oceanem/",
         label: "Jak se teplo šíří v oceánu"
       }
+    ]
+  },
+  {
+    id: "2006_GRACE",
+    year: 2006,
+    dateMeaning: "Zveřejnění výsledku měření z let 2002–2005",
+    title: "Změny gravitace umožňují měřit úbytek antarktického ledu",
+    category: "methods",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Isabella Velicogna a John Wahr využili družice GRACE k odhadu změny hmotnosti antarktického ledového příkrovu. Úbytek hmoty se projevuje změnou gravitačního pole, kterou družice sledují. Z měření z let 2002–2005 autoři odvodili celkový úbytek ledu, převážně v západní Antarktidě.",
+        references: [
+          { sourceId: "DOI_10_1126_science_1123785", locator: "s. 1754–1756, obr. 1 a 2" }
+        ]
+      },
+      {
+        text: "Metoda poskytla nový způsob, jak určit změnu celkové hmotnosti rozsáhlého příkrovu. Gravitační signál ovšem zahrnuje také pomalý pohyb zemského podloží po ústupu dávného zalednění. Autoři jeho příspěvek odhadli pomocí modelů a oddělili jej od současné změny ledu.",
+        references: [
+          { sourceId: "DOI_10_1126_science_1123785", locator: "s. 1755–1756, oprava vlivu pohybu podloží" }
+        ]
+      }
+    ],
+    relatedLinks: [
+      { href: "/metody/druzicova-gravimetrie/", label: "Jak družice měří změny gravitačního pole" },
+      { href: "/pozorovani/nestabilita-prikrovu/", label: "Jak určujeme změnu hmotnosti ledových příkrovů" }
+    ]
+  },
+  {
+    id: "2009_Carbon_Budget",
+    year: 2009,
+    dateMeaning: "Zveřejnění práce",
+    title: "Uhlíkový rozpočet propojuje oteplení s celkovými emisemi",
+    category: "mechanisms",
+    importance: 1,
+    paragraphs: [
+      {
+        text: "Myles Allen a spolupracovníci propojili modely klimatu s modely výměny uhlíku mezi atmosférou, oceánem a pevninou. Porovnávali různé průběhy emisí CO₂ v čase. Zjistili, že vrchol oteplení způsobeného CO₂ závisí především na celkovém vypuštěném množství a podstatně méně na přesném časovém rozložení emisí.",
+        references: [
+          { sourceId: "DOI_10_1038_nature08019", locator: "s. 1163–1165, obr. 1–3" }
+        ]
+      },
+      {
+        text: "Výsledek dal fyzikální oporu uhlíkovému rozpočtu, tedy omezenému součtu emisí CO₂ slučitelnému se zvoleným teplotním cílem. Pro omezení oteplení je tak důležité sledovat emise nashromážděné za celé období. Velikost konkrétního rozpočtu závisí také na zvolené míře rizika překročení cíle a na oteplování způsobeném dalšími látkami.",
+        references: [
+          { sourceId: "DOI_10_1038_nature08019", locator: "s. 1165–1166, závěry a Methods Summary" }
+        ]
+      }
+    ],
+    relatedLinks: [
+      { href: "/mechanismy/puvod-rustu-atmosferickeho-co2/", label: "Jak se emise promítají do množství CO₂ v atmosféře" },
+      { href: "/mechanismy/pohlcovani-a-presun-tepla-oceanem/", label: "Jak oceán ovlivňuje průběh oteplování" }
     ]
   },
   {
@@ -1330,5 +1512,30 @@ export const historyEvents: HistoryEvent[] = [
       }
     ],
     relatedLinks: []
+  },
+  {
+    id: "2016_Kigali",
+    year: 2016,
+    dateMeaning: "Přijetí dodatku",
+    title: "Kigalský dodatek stanovuje omezení silných skleníkových plynů",
+    category: "politics",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Smluvní strany Montrealského protokolu přijaly 15. října 2016 v Kigali dodatek o hydrofluorovaných uhlovodících, zkráceně HFC. Tyto průmyslové plyny silně zesilují skleníkový efekt. Dodatek stanovil postupné omezování jejich výroby a spotřeby, s rozdílnými harmonogramy pro jednotlivé skupiny států.",
+        references: [
+          { sourceId: "2016_Kigali", locator: "čl. I, nový čl. 2J, změny čl. 5 a příloha F protokolu" }
+        ]
+      },
+      {
+        text: "Dodatek vstoupil v platnost 1. ledna 2019. Pro státy, které jej přijmou, zavádí závazné limity a vykazování výroby a spotřeby těchto látek. Klimatická politika tím získala konkrétní mezinárodní režim pro další skupinu skleníkových plynů.",
+        references: [
+          { sourceId: "2016_Kigali", locator: "čl. IV, změny čl. 7 protokolu a záznam o vstupu v platnost" }
+        ]
+      }
+    ],
+    relatedLinks: [
+      { href: "/mechanismy/radiacni-pusobeni-sklenikovych-plynu/", label: "Jak různé plyny ovlivňují klima" }
+    ]
   }
 ];
