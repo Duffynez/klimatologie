@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OzoneStratosphereArticle } from "../../components/OzoneStratosphereArticle";
 import Link from "next/link";
 import { AnthropogenicAerosolsArticle } from "../../components/AnthropogenicAerosolsArticle";
 import { notFound } from "next/navigation";
@@ -72,6 +73,14 @@ export default async function MechanismDetail({ params }: { params: Promise<{ sl
 
   if (!mechanism) {
     notFound();
+  }
+
+  if (slug === "zmeny-ozonu-ve-stratosfere") {
+    return <div className="page-shell">
+      <PageLead eyebrow={"Mechanismy / " + mechanism.category} title={mechanism.title} meta="6. listopadu 2026"><p>{mechanism.summary}</p></PageLead>
+      <OzoneStratosphereArticle />
+      <Link className="text-link catalog-back-link" href="/mechanismy">&larr; Zpět na všechny mechanismy</Link>
+    </div>;
   }
 
   if (slug === "prumyslove-aerosoly-a-oblaka") {

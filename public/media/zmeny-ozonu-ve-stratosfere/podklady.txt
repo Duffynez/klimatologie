@@ -1,0 +1,83 @@
+Ozon a teplota stratosféry
+Klimatologie.eu, 6. listopadu 2026
+
+GRAFIKY
+co2-a-ochlazovani.png a ozon-a-ohrev.png
+Vlastní kvalitativní ilustrace vytvořené vestavěným nástrojem image_gen.
+Licence vlastních ilustrací: Creative Commons Attribution 4.0 International.
+Původní zadání: prompts.json. Navazující odborné opravy: edits.json.
+Nejde o překreslení konkrétního cizího obrázku ani o výstup klimatického modelu.
+Molekuly, tloušťky vrstev, částice a šipky nejsou v měřítku.
+Směry dějů, popisky a hodnoty byly kontrolovány proti níže uvedeným zdrojům.
+
+PRVNÍ GRAFIKA
+Molekulární schéma: CO2 pohlcuje i vyzařuje infračervené záření. Srážky vyměňují energii s okolním vzduchem. O ochlazení rozhoduje změna čisté výměny energie v daných stratosférických podmínkách.
+Manabe a Wetherald (1967), s. 250–251
+DOI: 10.1175/1520-0469(1967)024<0241:TEOTAW>2.0.CO;2
+https://www.gfdl.noaa.gov/bibliography/related_files/sm6701.pdf
+Shine a kol. (2003), oddíl 3b
+DOI: 10.1256/qj.02.186
+https://acomstaff.acom.ucar.edu/randel/Shine.pdf
+
+Číselný test:
+Ivy, Solomon a Rieder (2016), tabulka 1, antarktická část, řádek GHG
+DOI: 10.1175/JCLI-D-15-0503.1
+https://dspace.mit.edu/server/api/core/bitstreams/8b668a42-dff7-4f08-a805-508894e0e81e/content
+Období trendu 1980–2000, průměr 60–90 stupňů jižní šířky, 50 hPa.
+Jižní zima JJA = červen–srpen, trend −0,16 K za deset let.
+Jižní jaro SON = září–listopad, trend −0,15 K za deset let.
+Jde o radiační příspěvek CO2, CH4 a N2O při pevném ozonu a pevném dynamickém ohřevu, nikoli o přímé měření celkové teplotní změny nebo izolovaný účinek samotného CO2.
+Teplotní rozdíl 1 K odpovídá rozdílu 1 stupně Celsia.
+V tabulce je u obou těchto trendů nejistota 2 sigma zaokrouhlená na 0,00. Neznamená to nulovou fyzikální nebo modelovou nejistotu.
+
+DRUHÁ GRAFIKA
+Pohlcování světla a fotochemie:
+Gorshelev a kol. (2014), DOI 10.5194/amt-7-609-2014
+Serdyuchenko a kol. (2014), DOI 10.5194/amt-7-625-2014
+NASA, oddíly 4.2.10–4.2.11:
+https://acd-ext.gsfc.nasa.gov/anonftp/acd/daac_ozone/Lecture4/Text/Lecture_4/OVER%2A%2Af12-18.html
+
+Test 1:
+Randel a Wu (1999), obrázky 5, 8, 14 a 15
+DOI: 10.1175/1520-0442(1999)012<1467:COTAAA>2.0.CO;2
+https://acomstaff.acom.ucar.edu/randel/JCli_99.pdf
+Překryv největších výškových změn přibližně 12–21 km.
+Teplotní rozdíl obrázku 5: průměr vybraných antarktických stanic, 1986–1995 minus 1970–1979.
+Ozonový profil obrázku 15 pochází z let 1992–1993. Nejde o totožně časově vymezené vzorky.
+V doplněné tabulce pozorování uvádíme zaokrouhlené shrnutí studie pro hladinu 100 hPa. Nerozlišenou zimní změnu neoznačujeme číselnou nulou.
+
+Test 2:
+Keeble a kol. (2014), oddíly 2, 3.2 a 4, obrázky 3 a 7
+DOI: 10.5194/acp-14-13705-2014
+https://acp.copernicus.org/articles/14/13705/2014/acp-14-13705-2014.pdf
+Dvě simulace UM-UKCA, REF2000 a NHC, stejné vnější podmínky roku 2000.
+V NHC je vypnuta aktivace chloru reakcemi na částicích polárních stratosférických oblaků. Plynná chemie a další procesy pokračují.
+Zobrazená HCl + ClONO2 -> Cl2 + HNO3 je jedna povrchová reakce, nikoli úplný cyklus ničení ozonu.
+Každý běh trval 30 modelových let, porovnávají se poslední 20leté průměry.
+Rozdíl teplot REF2000 minus NHC u maxima v listopadu–prosinci kolem 70 hPa, průměr 75–90 stupňů jižní šířky, přibližně −12 K.
+Číslo není pozorovaný historický rozdíl a neporovnáváme je přímo s rozdílem 1986–1995 minus 1970–1979.
+
+VEŘEJNÝ ČÍSELNÝ SOUBOR
+ivy2016-table1.csv přepisuje celou antarktickou část tabulky 1 studie Ivy a kol. (2016).
+35 řádků, 7 řad a 5 časových průměrů. Všechny trendy patří letům 1980–2000, 60–90 stupňům jižní šířky a hladině 50 hPa.
+MERRA_temperature a HadAT2_temperature: trendy odvozené z reanalýzy a radiosondových dat.
+Řady s ozone_radiative: vypočtený radiační příspěvek změn ozonu podle čtyř datových sad.
+CO2_CH4_N2O_radiative: vypočtený společný příspěvek tří plynů.
+DJF = prosinec–únor, MAM = březen–květen, JJA = červen–srpen, SON = září–listopad.
+uncertainty_2sigma_C_per_decade je oboustranná poloviční šířka intervalu 2 sigma, přepsaná tak, jak ji zaokrouhlili autoři.
+Zaokrouhlené 0,00 není doklad nulové nejistoty.
+Jde o výsledky publikované tabulky, nikoli surové sondážní údaje.
+Číselný přepis Klimatologie.eu je volně použitelný s uvedením původní studie.
+
+DALŠÍ KONTROLA
+Solomon a kol. (2017), DOI 10.1002/2017JD026719
+https://acomstaff.acom.ucar.edu/dkin/Documents/Solomon_et_al-2017-Journal_of_Geophysical_Research__Atmospheres.pdf
+Opačné změny ozonu a teploty při porovnání období před rokem 2000 s lety 2000–2014. Novější období vylučuje mimořádný rok 2002.
+Teploty z MERRA, ozonové sondy z jižního pólu a Syowa, oddělené modelové scénáře.
+Ozonové a teplotní trendové řady nemají totožné počátky ani prostorové pokrytí.
+
+PŮVODNÍ PROFILY
+NOAA GML: https://gml.noaa.gov/ozwv/ozsondes/
+https://gml.noaa.gov/aftp/data/ozwv/Ozonesonde/
+Jednotlivé veřejné profily. V článku jsou historické výsledky převzaty ze studií, nejsou prezentovány jako nový vlastní trend z tohoto archivu.
+

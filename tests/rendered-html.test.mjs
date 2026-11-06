@@ -843,7 +843,7 @@ test("publishes 23 mechanism topics and preserves the split snow-and-sea-ice add
     assert.ok(sitemap.includes(`<loc>https://klimatologie.eu/mechanismy/${slug}/</loc>`), "Missing sitemap route " + slug);
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     assert.ok(html.includes(`<h1>${title}</h1>`), "Wrong detail title " + slug);
-    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen", "prumyslove-aerosoly-a-oblaka"].includes(slug)) {
+    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen", "prumyslove-aerosoly-a-oblaka", "zmeny-ozonu-ve-stratosfere"].includes(slug)) {
       assert.match(html, /Co musí toto vysvětlení objasnit/);
       assert.match(html, /<section class="mechanism-detail-evidence"[^>]*>[\s\S]*<p>[^<]+<\/p><\/section>/);
     }
@@ -4505,6 +4505,7 @@ test("keeps each hypothesis independently collapsible with complete content and 
     ["slunecni-promenlivost", ["kosmicke-zareni", "zmeny-zareni"]],
     ["sopecne-aerosoly", ["popel", "sirne-kapky"]],
     ["prumyslove-aerosoly-a-oblaka", ["teplo-a-para", "castice-a-kapky"]],
+    ["zmeny-ozonu-ve-stratosfere", ["rust-co2", "ubytek-ozonu"]],
     ["mechanismy-vln-veder", ["samotne-proudeni", "teplejsi-klima"]],
     ["biologicke-mechanismy-fenologickych-zmen", ["pevny-kalendar", "rytmus-a-prostredi"]],
   ]) {
@@ -4685,6 +4686,69 @@ test("cloud track graph preserves the published intervals and distinguishes micr
   assert.match(observation, /procentního bodu/);
   assert.match(observation, /od −0,004 do \+0,71/);
   assert.match(observation, /přepis čísel z doplňkové tabulky S1/);
+});
+
+test("ozone cooling links observed seasons, model interventions and accessible evidence", async () => {
+  const path = "/mechanismy/zmeny-ozonu-ve-stratosfere";
+  const html = await readFile(new URL("dist/client" + path + "/index.html", root), "utf8");
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.match(html, /Proč se nad Antarktidou ochladila jarní stratosféra/);
+  assert.doesNotMatch(html, /class="mechanism-detail-evidence"/);
+  for (const id of ["rust-co2", "ubytek-ozonu", "test-co2", "test-profily", "test-chemie"]) {
+    assert.ok(body.includes('id="' + id + '"'));
+  }
+  const bibliography = body.slice(body.indexOf('<h2 id="prameny"'));
+  const catalogue = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
+  for (const id of new Set([...body.matchAll(/href="\/zdroje#([^"]+)"/g)].map(m => m[1]))) {
+    assert.ok(bibliography.includes('href="/zdroje#' + id + '"'), "Missing bibliography " + id);
+    const card = catalogue.match(new RegExp('<article[^>]+id="' + id + '"[\\s\\S]*?</article>'))?.[0];
+    assert.ok(card, "Missing source card " + id);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    if (id !== "MEDIA_OZONE_STRATOSPHERE_2026") assert.match(card, /Otevřít (plný text|veřejn)/);
+  }
+  for (const target of ["/pozorovani/stratosfericke-ochlazovani", "/metody/radiosondaz", "/metody/absorpcni-spektroskopie"]) {
+    const related = await readFile(new URL("dist/client" + target + "/index.html", root), "utf8");
+    assert.ok(hasArticleLink(body, target));
+    assert.ok(hasArticleLink(related, path), "Missing reciprocal link " + target);
+  }
+  for (const [, href] of body.matchAll(/href="(\/[^"]+)"/g)) {
+    const [pathname, anchor] = href.split("#");
+    const file = /\.[a-z0-9]+$/i.test(pathname) ? pathname : pathname.replace(/\/$/, "") + "/index.html";
+    const target = await readFile(new URL("dist/client" + file, root));
+    assert.ok(target.length, href);
+    if (anchor) assert.ok(target.toString("utf8").includes('id="' + anchor + '"'), href);
+  }
+  for (const name of ["co2-a-ochlazovani", "ozon-a-ohrev"]) {
+    assert.ok(body.includes("/media/zmeny-ozonu-ve-stratosfere/" + name + ".png"));
+    const png = await readFile(new URL("dist/client/media/zmeny-ozonu-ve-stratosfere/" + name + ".png", root));
+    assert.equal(png.subarray(1, 4).toString(), "PNG");
+    assert.ok(png.readUInt32BE(16) >= 1024 && png.readUInt32BE(20) >= 1024);
+  }
+  const limits = body.match(/<details class="method-details">([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(limits && limits.replace(/<[^>]+>/g, " ").trim().split(/\s+/).length <= 600);
+  assert.doesNotMatch(body.replace(/<[^>]+>/g, " ").replace(/&(?:#\d+|#x[0-9a-f]+|[a-z]+);/gi, ""), /;/);
+  assert.match(body, /class="method-conclusion"/);
+  const observation = await readFile(new URL("dist/client/pozorovani/stratosfericke-ochlazovani/index.html", root), "utf8");
+  assert.match(observation, /id="antarkticke-jaro"/);
+  assert.match(observation, /1986–1995 minus 1970–1979/);
+  assert.match(observation, /Výrazná společná změna nebyla rozlišena/);
+});
+
+test("ozone model data retain model boundaries and published uncertainty columns", async () => {
+  const csv = await readFile(new URL("public/media/zmeny-ozonu-ve-stratosfere/ivy2016-table1.csv", root), "utf8");
+  const [header, ...lines] = csv.trim().split(/\r?\n/);
+  assert.match(header, /uncertainty_2sigma_C_per_decade/);
+  const rows = lines.map(l => l.split(","));
+  assert.equal(rows.length, 35);
+  assert.equal(new Set(rows.map(r => r[0])).size, 7);
+  assert.ok(rows.every(r => r[4] === "1980-2000" && r[5] === "60S-90S" && r[6] === "50"));
+  const ghg = season => rows.find(r => r[0] === "CO2_CH4_N2O_radiative" && r[1] === season);
+  assert.equal(Number(ghg("JJA")[2]), -0.16);
+  assert.equal(Number(ghg("SON")[2]), -0.15);
+  assert.equal(Number(rows.find(r => r[0] === "MERRA_temperature" && r[1] === "SON")[3]), 2.32);
+  const provenance = await readFile(new URL("public/media/zmeny-ozonu-ve-stratosfere/podklady.txt", root), "utf8");
+  assert.match(provenance, /Zaokrouhlené 0,00 není doklad nulové nejistoty/);
 });
 
 test("publishes the CO2 origin mechanism with three illustrated stories and traceable evidence", async () => {

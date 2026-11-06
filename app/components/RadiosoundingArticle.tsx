@@ -515,6 +515,9 @@ export function RadiosoundingArticle() {
             <SourceLink id="WEB_NOAA_Radiosonde_Observation_27e1f005">(NOAA: radiosondová pozorování)</SourceLink>
           </p>
         </div>
+        <aside className="article-related-mechanism" aria-label="Navazující vysvětlení">
+          <p>Porovnání výškových teplotních profilů s ozonem pomáhá testovat, <Link href="/mechanismy/zmeny-ozonu-ve-stratosfere/#test-profily">proč se nad Antarktidou ochladila jarní stratosféra</Link>.</p>
+        </aside>
       </div>
     </article>
   );

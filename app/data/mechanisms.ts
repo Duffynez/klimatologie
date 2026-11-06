@@ -65,10 +65,10 @@ export const climateMechanisms: ClimateMechanism[] = [
   },
   {
     slug: "zmeny-ozonu-ve-stratosfere",
-    title: "Jak změny ozonu ovlivňují teplotu stratosféry?",
+    title: "Proč se nad Antarktidou ochladila jarní stratosféra?",
     category: "Záření a složení atmosféry",
-    cardSummary: "Pohlcování záření ozonem a změny teploty při jeho úbytku či přibývání.",
-    summary: "Ozon pohlcuje ultrafialové i infračervené záření, takže změna jeho množství ovlivňuje teplotu stratosféry.",
+    cardSummary: "Ozon, CO₂ a proudění v testech výrazného jarního ochlazení.",
+    summary: "Proč se dolní stratosféra nad Antarktidou na konci 20. století nejvíce ochladila právě na jaře? Porovnání vlivu CO₂ a ozonu, kontrolované pokusy a vysvětlení výměny energie.",
     distinguishingEvidence: "Porovnání změn ozonu a teploty v jednotlivých výškách, oblastech a ročních obdobích. Chemická měření a vývoj po omezení látek poškozujících ozon pomáhají oddělit jeho vliv od CO₂ a proudění.",
   },
   {

@@ -640,6 +640,23 @@ export function StratosphericCoolingArticle() {
           <SourceLink id="DOI_10_1073_pnas_1305332110">(Santer a kol. 2013, obr. 2h a 2i)</SourceLink>
         </p>
 
+        <h3 id="antarkticke-jaro">Jarní změna nad Antarktidou</h3>
+        <p>Globální průměr skrývá výrazné rozdíly mezi ročními obdobími. Randel a Wu v roce 1999 zpracovali dlouhé teplotní řady osmi antarktických radiosondových stanic. Z denních údajů odstranili pravidelný roční chod a odchylky průměrovali po kalendářních měsících. Pro společné sezónní srovnání vyřadili stanici SANAE, jejíž zimní vývoj se neshodoval s ostatními. Následující tabulka shrnuje jejich porovnání let 1986–1995 s lety 1970–1979 v hladině 100 hPa, přibližně 16 km. <SourceLink id="DOI_10_1175_Randel_Wu_1999_COTAAA">(Randel a Wu 1999, oddíly 2–3 a obrázek 5)</SourceLink></p>
+        <div className="energy-comparison energy-comparison__scroll" tabIndex={0} role="region" aria-label="Rozdíl antarktické teploty v jednotlivých měsících">
+          <table className="article-table">
+            <caption>Změna teploty v hladině 100 hPa: 1986–1995 minus 1970–1979</caption>
+            <thead><tr><th scope="col">Měsíc</th><th scope="col">Roční doba na jižní polokouli</th><th scope="col">Rozdíl v průměru stanic</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Březen</th><td>Konec léta a začátek podzimu</td><td>Přibližně −1 °C</td></tr>
+              <tr><th scope="row">Červenec</th><td>Zima</td><td>Výrazná společná změna nebyla rozlišena</td></tr>
+              <tr><th scope="row">Listopad</th><td>Jaro</td><td>Přibližně −6 °C</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Hodnoty jsou zaokrouhleným shrnutím výsledků studie, nikoli novým přepočtem jednotlivých sondáží. Největší ochlazení zasahovalo vrstvu přibližně 12–21 km, mezi stanicemi se jeho velikost lišila. Nad ní se na jaře objevovalo i oteplení. Družicový záznam MSU za roky 1979–1997 zachytil podobné jarní maximum ochlazování. Měří ovšem širší vrstvu, takže před porovnáním se sondami autoři přizpůsobili jejich výškové vážení. <SourceLink id="DOI_10_1175_Randel_Wu_1999_COTAAA">(Randel a Wu 1999, obrázky 5, 8 a 9)</SourceLink></p>
+        <p>Sondy umožňují porovnat teplotu také s ozonem. Přístroj pro ozon nasává vzduch do elektrochemického čidla, jehož proud se mění s množstvím tohoto plynu. Připojená radiosonda současně zaznamenává teplotu a další meteorologické veličiny. Vzniknou tak dva profily při témže výstupu. <SourceLink id="WEB_NOAA_OZONESONDES_PROFILES">NOAA zveřejňuje postup i soubory jednotlivých profilů</SourceLink>. Cestu teplotního údaje k výškovému profilu vysvětluje <Link href="/metody/radiosondaz/#hotovy-profil">radiosondáž</Link>.</p>
+        <p>Solomon a kolegové později porovnali vývoj před rokem 2000 s obdobím 2000–2014. V ozonových profilech jižního pólu a stanice Syowa se v řadě měsíců dřívější úbytek obrátil v přírůstek. Odpovídající sezónní a výškový obrat teploty zachytila reanalýza MERRA pro oblast 75–90° j. š. Teplotní trendy před rokem 2000 počítali od roku 1979, starší ozonové sondáže měly nerovnoměrné pokrytí. Z novějšího období vynechali mimořádný rok 2002. Jde o porovnání časových trendů různých veličin, nikoli o tvrzení, že byl každý rok teplejší než předchozí. <SourceLink id="DOI_10_1002_2017JD026719">(Solomon a kol. 2017, oddíl 2 a obrázky 1 a 5)</SourceLink></p>
+
         <div className="article-observation-summary">
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
@@ -649,18 +666,19 @@ export function StratosphericCoolingArticle() {
             stratosféra prodělala výrazné teplé vrcholy na začátku osmdesátých a devadesátých let a od poloviny
             devadesátých let se ochlazovala pomaleji. Ve střední a horní stratosféře pokračoval pokles také v novější
             části záznamu. Rok 2024 byl proti předchozímu roku mírně teplejší, celý průběh let 1979–2024 však zůstal
-            ve všech sledovaných vrstvách klesající.
+            ve všech sledovaných vrstvách klesající. Nad Antarktidou mělo ochlazení silný sezónní průběh: v listopadu byl vzduch kolem 16 km v letech 1986–1995 přibližně o 6 °C chladnější než v letech 1970–1979, zatímco v červenci se podobná společná změna neprojevila.
           </p>
         </div>
 
         <aside className="article-related-mechanism" aria-label="Navazující vysvětlení">
+          <p className="eyebrow">Navazující vysvětlení</p>
           <p>Opačnou teplotní odezvu po Pinatubu vysvětluje <Link href="/mechanismy/sopecne-aerosoly/#test-teplota">test sopečných aerosolů</Link>.</p>
           <p>Oteplující složku spojenou se sluneční aktivitou vysvětluje článek <Link href="/mechanismy/slunecni-promenlivost/#test-stratosfera">Jak sluneční cyklus ovlivňuje klima?</Link></p>
-          <p className="eyebrow">Navazující vysvětlení</p>
           <p>Jak souběh oteplování troposféry a ochlazování stratosféry pomáhá rozlišit příčiny změn, vysvětluje <Link href="/mechanismy/energeticka-bilance-zeme/#lidske-pusobeni">příběh testování lidského vlivu na klima</Link>.</p>
+          <p><Link href="/mechanismy/zmeny-ozonu-ve-stratosfere/#test-profily">Proč se nad Antarktidou ochladila jarní stratosféra?</Link> porovnává vliv CO₂ a ozonu a odděluje jejich účinek od proudění.</p>
         </aside>
-
         <h2>Prameny, data a licence</h2>
+        <p><SourceLink id="DOI_10_1175_Randel_Wu_1999_COTAAA">Randel a Wu 1999</SourceLink>: antarktické radiosondy, družice a měsíční rozdíly v tabulce. <SourceLink id="DOI_10_1002_2017JD026719">Solomon a kol. 2017</SourceLink>: navazující ozonové a teplotní trendy. <SourceLink id="WEB_NOAA_OZONESONDES_PROFILES">NOAA: ozonové sondy a veřejný archiv</SourceLink> zpřístupňuje jednotlivé výstupy.</p>
         <p><SourceLink id="DOI_10_1073_pnas_2525500123">Li a kol. 2026</SourceLink>: výšková teplotní stopa velkých událostí. <SourceLink id="DATA_Li_2026_VOLCANIC_TEMPERATURE">Veřejná data a kód studie</SourceLink> umožňují kontrolu jejich zpracování.</p>
         <p>
           Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez

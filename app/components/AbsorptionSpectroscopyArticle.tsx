@@ -26,7 +26,7 @@ export function AbsorptionSpectroscopyArticle() {
           také skutečná měření, na kterých později zopakujeme převod signálu na výsledek.
         </p>
 
-        <h3>Co se o plynu dozvíme ze světla</h3>
+        <h3 id="pohlcovani-svetla">Co se o plynu dozvíme ze světla</h3>
         <p>
           Světlo je elektromagnetické vlnění. Vzdálenost mezi dvěma sousedními vrcholy vlny
           se nazývá <strong>vlnová délka</strong>. Ve viditelné oblasti ji vnímáme jako barvu.
@@ -468,6 +468,7 @@ export function AbsorptionSpectroscopyArticle() {
             {" "}ukazuje, jak naměřené absorpční vlastnosti souvisejí s přenosem
             energie v atmosféře a proč silné pohlcování části spektra účinek nezastaví.
           </p>
+          <p>Laboratorní měření pohlcování ozonu využívá také vysvětlení <Link href="/mechanismy/zmeny-ozonu-ve-stratosfere/#pohlcovani-a-teplo">jarního ochlazení stratosféry nad Antarktidou</Link>.</p>
         </aside>
       </div>
     </article>
