@@ -113,7 +113,7 @@ export function GlacierBalanceArticle() {
           a hustší. Pro určení jeho hmotnosti potřebujeme vedle tloušťky také hustotu. Z jednotlivých
           vrstev odebereme známý objem a zvážíme jej. Po odečtení hmotnosti prázdného odběráku zbude
           hmotnost sněhu, kterou vydělíme odebraným objemem. Tak získáme hustotu každé vrstvy.
-          <SourceLink id="DOI_10_5194_essd_14_3293_2022"> Geibel et al., 2022, oddíl 2.3</SourceLink>
+          <SourceLink id="DOI_10_5194_essd_14_3293_2022"> Geibel a kol., 2022, oddíl 2.3.5</SourceLink>
         </p>
         <p>
           Váhu kalibrujeme pomocí referenčních závaží a samostatně ověřujeme objem odběráku.
@@ -146,7 +146,8 @@ export function GlacierBalanceArticle() {
           Návštěvy obvykle připadají na jiná data. Pro převod na tento rok se proto výpočtem doplní
           sněžení a tání mezi návštěvou a hranicí období. GLAMOS, švýcarská síť sledování ledovců,
           zveřejňuje bilance za skutečná i pevná data odděleně.
-          <SourceLink id="DOI_10_18750_massbalance_2021_r2021"> GLAMOS, 2021</SourceLink>
+          <SourceLink id="DOI_10_5194_essd_14_3293_2022"> Geibel a kol., sjednocení dat návštěv</SourceLink>{" "}
+          <SourceLink id="DOI_10_18750_massbalance_2021_r2021">(GLAMOS, vydání 2021)</SourceLink>
         </p>
 
         <h3>Bilanci určíme pro celou plochu</h3>
@@ -185,7 +186,7 @@ export function GlacierBalanceArticle() {
           plocha. Znak <InlineMath tex={String.raw`\sum`} /> znamená součet přes všechna pásma.
           Plochy zadáme ve stejné jednotce, například km², a bilance v metrech vodního ekvivalentu.
           Ve stejných metrech pak vyjde i celkový průměr.
-          <SourceLink id="DOI_10_5194_tc_7_1227_2013"> Zemp et al., 2013, rovnice 7 a 8</SourceLink>
+          <SourceLink id="DOI_10_5194_tc_7_1227_2013"> Zemp a kol., 2013, rovnice 8</SourceLink>
         </p>
         <p>
           U ustupujícího ledovce aktualizujeme také jeho obrys a plochy pásem. Výsledek pak popisuje
@@ -243,7 +244,7 @@ export function GlacierBalanceArticle() {
           šestnáct let měření švédského Storglaciären, zahájených v zimě 1945/46. V horní části ledovce
           používal odběry jader, které umožnily rozpoznat letní rozhraní ve sněhu a zahustit síť bez
           kopání mnoha hlubokých jam. Mapa zimního přírůstku pro rok 1961 vycházela z 370 bodů.
-          <SourceLink id="DOI_10_3189_s002214300002757x"> Schytt, 1962</SourceLink>
+          <SourceLink id="DOI_10_3189_s002214300002757x"> Schytt, 1962, s. 281–282 a obr. 1</SourceLink>
         </p>
         <p>
           Pro měření ledu se používají například hliníkové tyče dlouhé 4–6 m, plastové trubky nebo
@@ -277,9 +278,10 @@ export function GlacierBalanceArticle() {
             <SourceLink id="DOI_10_5194_essd_14_3293_2022"> Geibel et al., 2022</SourceLink>
           </p>
           <p>
-            Zemp et al. pro zkoumaná období odhadli průměrnou roční nejistotu terénních měření
-            na 0,14 m a prostorového převodu na 0,28 m vodního ekvivalentu. Nejde o univerzální
-            přesnost metody. Hůře zastoupené mohou být strmé části a plochy pokryté sutí nebo lavinovými nánosy.
+            Zemp a spoluautoři odhadli pro zkoumané ledovce nejistotu bodových měření
+            na 0,14 m vodního ekvivalentu za rok a nejistotu převodu na celou plochu na 0,28 m za rok.
+            První odhad se u většiny ledovců týkal jen vlastního odečtu v bodě.
+            Hůře zastoupené mohou být strmé části a plochy pokryté sutí nebo lavinovými nánosy.
             Při silném tání navíc vypadávají tyče právě z míst velkého úbytku. Společná chyba hustoty
             či odhadu sněhu ve vyšších polohách zasáhne více pásem současně a větší počet bodů ji
             neodstraní. Roky bez terénních dat doplněné modelem se proto označují jako odhad.

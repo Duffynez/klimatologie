@@ -558,7 +558,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Měření hloubky sezónního rozmrzání"
-          meta="31. října 2026"
+          meta="6. listopadu 2026"
         >
           <p>
             Jak kovová sonda najde zmrzlou půdu a jak měření v síti ukáže tloušťku aktivní vrstvy.
@@ -577,7 +577,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Terénní měření bilance ledovců"
-          meta="31. října 2026"
+          meta="6. listopadu 2026"
         >
           <p>
             Jak měřicí tyče a odběry sněhu zachycují přírůstky a ztráty na povrchu ledovce.

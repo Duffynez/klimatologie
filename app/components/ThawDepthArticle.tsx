@@ -173,7 +173,7 @@ export function ThawDepthArticle() {
           uvnitř. Voda v ní v zimě zamrzne. Při letním odtávání ledu shora klesá malá skleněná
           kulička a zůstává na rozhraní vody a ledu. Při opětovném zamrznutí uvázne v ledu
           v nejnižší dosažené poloze. Tím uchová údaj i po skončení léta.{" "}
-          <SourceLink id="DOI_10_4095_202802">(Nixon a kol., konstrukce měřidla)</SourceLink>
+          <SourceLink id="DOI_10_4095_202802">(Nixon a kol., s. 102–104, obr. 4)</SourceLink>
         </p>
         <p>
           <SourceLink id="DOI_10_4095_202802">Nixon a spoluautoři (1995)</SourceLink>{" "}
@@ -234,7 +234,7 @@ export function ThawDepthArticle() {
           orientační přesnost ±2 cm. Metody se ověřují také vzájemným porovnáním.
           Na aljašském West Docku například v roce 1998 vyšel průměr sondované sítě 34 cm
           a hloubka z teplotního profilu 33 cm podle{" "}
-          <SourceLink id="DOI_10_1080_10889370009377698">Browna a spoluautorů (2000), tabulky 2</SourceLink>.{" "}
+          <SourceLink id="DOI_10_1080_10889370009377698">Browna a spoluautorů (2000), tabulky 2 na s. 183</SourceLink>.{" "}
           <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíl 4.3.4.4)</SourceLink>
         </p>
         <details className="method-details">
@@ -246,7 +246,7 @@ export function ThawDepthArticle() {
             až desítek centimetrů a ve skalním podloží se sondování nehodí. Délka tyče omezuje dosah,
             delší sondy se hůře zasouvají a vytahují. Zaokrouhlení na centimetry přispívá nejvýše
             půl centimetrem. Ani průměr dvou odečtů zapsaný na půl centimetru tím nezískává takovou
-            přesnost. Hodnota ±2 cm v <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">oddílu 4.3.4.3 příručky WMO</SourceLink>{" "}
+            přesnost. Hodnota ±2 cm v <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">oddílu 4.3.4.4 příručky WMO</SourceLink>{" "}
             platí pro dobře rozpoznatelné rozhraní v jemnozrnné půdě.
           </p>
           <p>
@@ -260,10 +260,11 @@ export function ThawDepthArticle() {
           </p>
           <h3>Jiné přístroje a jiná vymezení hranice</h3>
           <p>
-            U mrazových trubic uvádí WMO orientační přesnost kolem 2 cm i při milimetrovém odečtu.
-            Trubice může měnit tok tepla v půdě, nedostatečné ukotvení dovoluje zdvih přístroje mrazem.
+            U správně instalované a udržované mrazové trubice uvádí WMO přesnost kolem 2 cm.
+            Odečet může být po milimetrech. Trubice může měnit tok tepla v půdě a při nedostatečném
+            ukotvení může mráz přístroj zdvihnout.
             U teplotních čidel záleží na kalibraci, skutečné hloubce, četnosti záznamu a interpolaci.{" "}
-            <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíl 4.3.5.3)</SourceLink>
+            <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, oddíly 4.3.5.2 a 4.3.5.3)</SourceLink>
           </p>
           <p>
             Teplota 0 °C a mechanicky pevná hranice nemusejí ležet ve stejné hloubce.
@@ -366,9 +367,10 @@ export function ThawDepthArticle() {
         <details className="method-details">
           <summary>Data, kontrola výpočtu a soubory ke stažení</summary>
           <p>
-            Používáme export GTN-P stažený 4. října 2026. Jeho metadata uvádějí poslední změnu
-            25. června 2026. <a href={`${dataPath}/barrow-gtnp.zip`}>Původní soubor ZIP</a>{" "}
-            uchováváme beze změny. Obsahuje CSV s hloubkami a JSON s metadaty.
+            Pro výpočet používáme <a href={`${dataPath}/barrow-gtnp.zip`}>export GTN-P ze 4. října 2026</a>.
+            Archiv obsahuje CSV s hloubkami a JSON s tehdejším popisem lokality.
+            <SourceLink id="WEB_GTN_P_Barrow_ALT_dataset_14"> Aktuální export GTN-P</SourceLink>{" "}
+            měl při kontrole 6. listopadu 2026 shodné CSV s hloubkami a aktualizovaná metadata.
             <a href={`${dataPath}/barrow-1996.csv`}> Výběr 121 záznamů pro rok 1996</a>{" "}
             zachovává hodnoty a příznaky, pouze je řadí podle souřadnic. CSV používá desetinnou tečku
             a čárku jako oddělovač. Chybějící měření leží na souřadnicích 1 000 a 100 m
@@ -389,17 +391,20 @@ export function ThawDepthArticle() {
         <h3>Prohlubování rozmrzání při sesedání půdy v Kanadě</h3>
         <p>
           <SourceLink id="DOI_10_1029_2023jf007262">O’Neill a spoluautoři (2023)</SourceLink>{" "}
-          vyhodnotili údaje z mrazových trubic na 28 kanadských lokalitách se záznamy zasahujícími
-          do všech tří desetiletí období 1991–2018. Měřili polohu rozhraní rozmrzání i povrchu
-          vůči pevné referenci. Před porovnáním vyřadili období s poškozenými nebo nestabilními přístroji.
+          porovnali záznamy z 28 kanadských lokalit v období 1991–2018. Pro srovnání vybrali
+          lokality s alespoň třemi roky měření v každém z prvních dvou desetiletí a dvěma roky v posledním.
+          Mrazové trubice měřily polohu rozhraní rozmrzání i povrchu vůči pevné značce.
+          Před porovnáním autoři vyřadili údaje z poškozených nebo nestabilních přístrojů.
+          Záznamy použité ve studii jsou dostupné v
+          <SourceLink id="DOI_10_13140_rg_2_2_24418_91845"> autorském souboru ds01.csv</SourceLink>.
         </p>
         <p>
-          Mezi průměry let 1991–1999 a 2010–2018 se hranice rozmrzání vůči pevné referenci
+          Mezi obdobími 1991–1999 a 2010–2018 se hranice rozmrzání vůči pevné značce
           posunula v průměru o 12 cm hlouběji. <strong>Povrch klesl o 7 cm</strong>.
-          Tloušťka aktivní vrstvy se proto zvětšila o rozdíl těchto posunů,
-          tedy o 12 − 7 = 5 cm. Jde o průměr celého souboru lokalit.
-          Společné měření hloubky a výšky povrchu zde odhaluje část postupu tání,
-          kterou by samotný odečet od sesedající půdy nezachytil.
+          Oba údaje jsou zaokrouhlené na celé centimetry. Tloušťka aktivní vrstvy se zvětšila
+          asi o 5 cm, což odpovídá rozdílu obou posunů. Při měření od sesedajícího povrchu
+          bychom zachytili tuto menší změnu.{" "}
+          <SourceLink id="DOI_10_1029_2023jf007262">(O’Neill a kol., oddíl 4.1)</SourceLink>
         </p>
 
         <h2>Shrnutí</h2>
