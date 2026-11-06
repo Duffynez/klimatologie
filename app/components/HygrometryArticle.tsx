@@ -513,6 +513,8 @@ export function HygrometryArticle() {
             <SourceLink id="2013_Vaisala_HMT330">(Vaisala, 2013: HMT330)</SourceLink>
           </p>
         </div>
+        <p>Rozdíl mezi množstvím páry a relativní vlhkostí využívá mechanismus <Link href="/mechanismy/vodni-para-jako-zpetna-vazba/#nasyceni">vlhkostní zpětné vazby</Link>. Ukazuje, proč může při oteplování páry přibývat a procentní údaj přitom klesat.</p>
+
         <h2>Zdroje a podklady k ověření</h2>
         <p>
           Principy a převody dokládá <SourceLink id="2013_NPL_Humidity">příručka NPL</SourceLink>,

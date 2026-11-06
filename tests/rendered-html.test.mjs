@@ -4,6 +4,72 @@ import { readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 import { stripTypeScriptTypes } from "node:module";
 
+test("water-vapour mechanism connects two hypotheses to observations, methods and accessible evidence", async () => {
+  const route = "/mechanismy/vodni-para-jako-zpetna-vazba";
+  const html = await readFile(new URL("dist/client" + route + "/index.html", root), "utf8");
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.doesNotMatch(html, /class="mechanism-detail-evidence"/);
+  assert.match(html, /Jak změny vodní páry ovlivňují oteplování\?/);
+  assert.equal((body.slice(0, body.indexOf('<h2 id="hypotezy"')).match(/<p\b/g) ?? []).length, 2);
+  const bibliography = body.slice(body.indexOf('<h2 id="prameny"'));
+  const catalogue = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
+  for (const id of new Set([...body.matchAll(/href="\/zdroje#([^"]+)"/g)].map(m => m[1]))) {
+    assert.ok(bibliography.includes('href="/zdroje#' + id + '"'), "Missing bibliography " + id);
+    const card = catalogue.match(new RegExp('<article[^>]+id="' + id + '"[\\s\\S]*?</article>'))?.[0];
+    assert.ok(card, "Missing source card " + id);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    assert.match(card, /Otevřít (plný text|veřejn|autorskou kopii|data a dokumentaci|podklady)/);
+  }
+  for (const [, href] of body.matchAll(/href="(\/[^"]+)"/g)) {
+    const [pathname, anchor] = href.split("#");
+    const file = /\.[a-z0-9]+$/i.test(pathname) ? pathname : pathname.replace(/\/$/, "") + "/index.html";
+    const target = await readFile(new URL("dist/client" + file, root));
+    assert.ok(target.length, href);
+    if (anchor) assert.ok(target.toString().includes('id="' + anchor + '"'), "Broken anchor " + href);
+  }
+  for (const target of ["/pozorovani/narust-vlhkosti", "/metody/hygrometrie", "/metody/pasivni-infracervena-radiometrie"]) {
+    const related = await readFile(new URL("dist/client" + target + "/index.html", root), "utf8");
+    assert.ok(hasArticleLink(body, target));
+    assert.ok(hasArticleLink(related, route), "Missing reciprocal link " + target);
+  }
+  const limits = body.match(/<details class="method-details">([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(limits && limits.replace(/<[^>]+>/g, " ").trim().split(/\s+/).length <= 600);
+  assert.match(body, /class="method-conclusion"/);
+  assert.doesNotMatch(body.replace(/<[^>]+>/g, " ").replace(/&[^;]+;/g, ""), /;/);
+  for (const name of ["vysusovani", "zesileni"]) {
+    const png = await readFile(new URL("dist/client/media/vodni-para-jako-zpetna-vazba/" + name + ".png", root));
+    assert.equal(png.subarray(1, 4).toString(), "PNG");
+    assert.ok(png.readUInt32BE(16) >= 1024 && png.readUInt32BE(20) >= 1024);
+    assert.ok(body.includes("/media/vodni-para-jako-zpetna-vazba/" + name + ".png"));
+  }
+});
+
+test("water-vapour charts retain the published periods, uncertainty meanings and derived values", async () => {
+  const path = "public/media/vodni-para-jako-zpetna-vazba/";
+  const rows = async name => (await readFile(new URL(path + name, root), "utf8")).trim().split(/\r?\n/).slice(1).map(r => r.split(","));
+  const pinatubo = await rows("pinatubo.csv");
+  assert.deepEqual(pinatubo.map(r => +r[2]), [.30, .31, .19]);
+  assert.ok(pinatubo.every(r => r[3] === "1991-06/1995-12" && r[5] === "not_reported_for_this_summary_value"));
+  assert.match(pinatubo[0][4], /not_ENSO_adjusted/);
+  const dessler = await rows("dessler2008.csv");
+  assert.deepEqual(dessler.map(r => +r[0]), [2003, 2004, 2005, 2006, 2007]);
+  assert.equal((dessler.reduce((sum,r) => sum + +r[4], 0) / 5).toFixed(2), "2.04");
+  const chung = await rows("chung2014.csv");
+  assert.deepEqual(chung.map(r => +r[2]), [.04, .17, .13, .15, -.08]);
+  assert.deepEqual(chung.map(r => +r[3]), [.04, .06, .04, .04, .10]);
+  assert.ok(chung.every(r => r[4] === "2_standard_errors_linear_trend" && r[5] === "1979/2005"));
+  const observation = await readFile(new URL("dist/client/pozorovani/narust-vlhkosti/index.html", root), "utf8");
+  assert.match(observation, /id="horni-troposfera"/);
+  const tableRows = [...observation.matchAll(/<tr><th scope="row">[^<]+<\/th><td>\+([\d,]+) ± ([\d,]+)<\/td><\/tr>/g)];
+  assert.equal(tableRows.length, 3);
+  tableRows.forEach((r,i) => assert.deepEqual(r.slice(1).map(n => +n.replace(",", ".")), chung[i].slice(2,4).map(Number)));
+  for (const name of ["vysusovani.png", "zesileni.png", "pinatubo.png", "pinatubo.svg", "pinatubo.csv", "dessler2008.csv", "chung2014.csv", "plot.py", "podklady.txt", "prompts.json"]) {
+    assert.deepEqual(await readFile(new URL(path + name, root)), await readFile(new URL("dist/client/media/vodni-para-jako-zpetna-vazba/" + name, root)));
+  }
+});
+
+
 test("publishes ice-sheet mechanisms with distinct water and ice budgets and traceable local tests", async () => {
   const route = "/mechanismy/hmotnostni-bilance-a-dynamika-ledovych-prikrovu";
   const html = await readFile(new URL("dist/client" + route + "/index.html", root), "utf8");
@@ -1013,7 +1079,7 @@ test("publishes 23 mechanism topics and preserves the split snow-and-sea-ice add
     assert.ok(sitemap.includes(`<loc>https://klimatologie.eu/mechanismy/${slug}/</loc>`), "Missing sitemap route " + slug);
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     assert.ok(html.includes(`<h1>${title}</h1>`), "Wrong detail title " + slug);
-    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen", "prumyslove-aerosoly-a-oblaka", "zmeny-ozonu-ve-stratosfere", "prenos-tepla-do-pudy-a-tani-permafrostu", "pohlcovani-a-presun-tepla-oceanem", "hmotnostni-bilance-a-dynamika-ledovych-prikrovu"].includes(slug)) {
+    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen", "prumyslove-aerosoly-a-oblaka", "zmeny-ozonu-ve-stratosfere", "prenos-tepla-do-pudy-a-tani-permafrostu", "pohlcovani-a-presun-tepla-oceanem", "hmotnostni-bilance-a-dynamika-ledovych-prikrovu", "vodni-para-jako-zpetna-vazba"].includes(slug)) {
       assert.match(html, /Co musí toto vysvětlení objasnit/);
       assert.match(html, /<section class="mechanism-detail-evidence"[^>]*>[\s\S]*<p>[^<]+<\/p><\/section>/);
     }
@@ -1024,7 +1090,7 @@ test("publishes 23 mechanism topics and preserves the split snow-and-sea-ice add
   }
   assert.match(catalogue, /Jak oblaka zesilují nebo tlumí oteplování\?/);
   assert.match(catalogue, /Jak úbytek sněhu a ledu zesiluje oteplování\?/);
-  assert.match(catalogue, /Jak souvisejí změny vlhkosti s oteplováním\?/);
+  assert.match(catalogue, /Jak změny vodní páry ovlivňují oteplování\?/);
   assert.match(catalogue, /Proč se objem mořské vody mění s teplotou a slaností\?/);
   assert.match(catalogue, /Proč se za loděmi a továrnami mění jas oblaků\?/);
   assert.ok(!hasArticleLink(catalogue, "/mechanismy/energeticka-bilance-snehu-a-morskeho-ledu"));
@@ -1465,7 +1531,7 @@ test("publishes a sourced atmospheric humidity article instead of the generic pl
 
   assert.match(evidencePage, /AtmosphericHumidityArticle/);
   assert.match(evidencePage, /title="Vlhkost atmosféry"/);
-  assert.match(evidencePage, /title="Vlhkost atmosféry"\s+meta="5\. listopadu 2026"/);
+  assert.match(evidencePage, /title="Vlhkost atmosféry"\s+meta="6\. listopadu 2026"/);
   assert.match(article, /Vlhkost atmosféry popisuje množství vodní páry ve vzduchu/);
   assert.doesNotMatch(article, /Potřebné informace|article-glossary/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
@@ -1498,12 +1564,15 @@ test("publishes a sourced atmospheric humidity article instead of the generic pl
   const humiditySourceIds = [
     ...article.matchAll(/<SourceLink id="([^"]+)"/g),
   ].map((match) => match[1]);
-  assert.equal(new Set(humiditySourceIds).size, 33);
+  assert.equal(new Set(humiditySourceIds).size, 37);
   for (const id of new Set(humiditySourceIds)) {
     const catalogueOccurrences = sourceCatalogueText.split(id).length - 1;
-    assert.ok(catalogueOccurrences >= 2, `${id} must exist and be marked as open access`);
+    const inlineRecord = sourceCatalogueText.split(/\r?\n/).find(line => line.includes(`id: "${id}"`));
+    const inlineOpenAccess = inlineRecord?.includes('availability: "open-access"');
+    assert.ok(catalogueOccurrences >= 2 || inlineOpenAccess, `${id} must exist and be marked as open access`);
     if (id.startsWith("DOI_")) {
-      assert.match(sourceCatalogueText, new RegExp(`${id}:\\s*"https://`));
+      if (inlineOpenAccess) assert.match(inlineRecord, /openAccessUrl: "https:\/\//);
+      else assert.match(sourceCatalogueText, new RegExp(`${id}:\\s*"https://`));
     }
   }
   assert.match(article, /Open Government Licence v3\.0/);
@@ -4682,6 +4751,7 @@ test("keeps each hypothesis independently collapsible with complete content and 
     ["biologicke-mechanismy-fenologickych-zmen", ["pevny-kalendar", "rytmus-a-prostredi"]],
     ["prenos-tepla-do-pudy-a-tani-permafrostu", ["teplo-z-hloubky", "teplo-od-povrchu"]],
     ["hmotnostni-bilance-a-dynamika-ledovych-prikrovu", ["povrchova-bilance", "povrch-a-odtok-ledu"]],
+    ["vodni-para-jako-zpetna-vazba", ["vysusovani", "zesileni"]],
   ]) {
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)[1];

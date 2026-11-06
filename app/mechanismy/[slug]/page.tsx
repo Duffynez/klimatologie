@@ -1,3 +1,4 @@
+import { WaterVapourFeedbackArticle } from "../../components/WaterVapourFeedbackArticle";
 import type { Metadata } from "next";
 import { OceanHeatTransportArticle } from "../../components/OceanHeatTransportArticle";
 import { OzoneStratosphereArticle } from "../../components/OzoneStratosphereArticle";
@@ -76,6 +77,14 @@ export default async function MechanismDetail({ params }: { params: Promise<{ sl
 
   if (!mechanism) {
     notFound();
+  }
+
+  if (slug === "vodni-para-jako-zpetna-vazba") {
+    return <div className="page-shell">
+      <PageLead eyebrow={"Mechanismy / " + mechanism.category} title={mechanism.title} meta="6. listopadu 2026"><p>{mechanism.summary}</p></PageLead>
+      <WaterVapourFeedbackArticle />
+      <Link className="text-link catalog-back-link" href="/mechanismy">&larr; Zpět na všechny mechanismy</Link>
+    </div>;
   }
 
   if (slug === "pohlcovani-a-presun-tepla-oceanem") {

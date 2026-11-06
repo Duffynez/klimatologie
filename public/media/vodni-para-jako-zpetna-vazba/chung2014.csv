@@ -1,0 +1,6 @@
+quantity,kind,trend_K_per_decade,uncertainty_plus_minus_K_per_decade,uncertainty_type,period,source
+T12_HIRS_6_7um,observation,0.04,0.04,2_standard_errors_linear_trend,1979/2005,Chung_et_al_2014_figure1
+T2_MSU_AMSU,observation,0.17,0.06,2_standard_errors_linear_trend,1979/2005,Chung_et_al_2014_figure1
+T2_minus_T12,observation,0.13,0.04,2_standard_errors_linear_trend,1979/2005,Chung_et_al_2014_figure1
+T2_minus_T12,model_ensemble_mean,0.15,0.04,2_standard_errors_linear_trend,1979/2005,Chung_et_al_2014_figure1
+T2_minus_T12,model_fixed_water_vapour,-0.08,0.10,2_standard_errors_linear_trend,1979/2005,Chung_et_al_2014_figure1

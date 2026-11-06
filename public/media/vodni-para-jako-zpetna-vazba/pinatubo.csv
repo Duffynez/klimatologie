@@ -1,0 +1,4 @@
+series,kind,cooling_C,period,comparison,uncertainty,source
+druzicovy_odhad,observation,0.30,1991-06/1995-12,anomaly_relative_to_1991-01/1991-05_not_ENSO_adjusted,not_reported_for_this_summary_value,Soden_et_al_2002_p729
+model_s_vazbou,model,0.31,1991-06/1995-12,volcanic_minus_control_experiment,not_reported_for_this_summary_value,Soden_et_al_2002_p729
+model_potlacena_dlouhovlnna_vazba,model,0.19,1991-06/1995-12,volcanic_minus_control_experiment,not_reported_for_this_summary_value,Soden_et_al_2002_p729

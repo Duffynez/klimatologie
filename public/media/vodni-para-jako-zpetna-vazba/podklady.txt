@@ -1,0 +1,42 @@
+VODNÍ PÁRA A KLIMATICKÁ ZPĚTNÁ VAZBA
+Klimatologie.eu, 6. listopadu 2026
+
+ILUSTRACE
+vysusovani.png: historická vysušující hypotéza a regionální test HALOE.
+zesileni.png: zesilující vazba, radiační účinek a dva konkrétní testy.
+Vytvořeno vestavěným image_gen. Zadání jsou v prompts.json.
+Kvalitativní schémata, nikoli měřené řezy atmosférou. Výšky, šipky a tečky nejsou v měřítku.
+Pára je neviditelný plyn. Oblak tvoří kapalné kapky nebo led.
+U vysušování grafika představuje návrh, nikoli pozorovaný výsledek. Verdikt platí pro uvedený test předpovědi.
+U radiační dvojice držíme stejný teplotní profil a měníme pouze množství páry.
+Šipky záření značí pohlcování a vyzařování, nikoli odraz od nepropustného stropu.
+Ilustrace: CC BY 4.0, kredit Klimatologie.eu.
+
+ČÍSELNÉ PODKLADY
+pinatubo.csv: tři průměrné velikosti ochlazení dolní troposféry od června 1991 do prosince 1995.
+Přepis textu Soden a kol. (2002), Science 296, s. 729, DOI 10.1126/science.296.5568.727.
+Pozorování 0.30 °C používá odchylky od ledna až května 1991 a nemá odstraněný signál ENSO.
+Modelové průměry 0.31 a 0.19 °C jsou rozdílem sopečného a kontrolního pokusu.
+Potlačená vazba znamená vyřazení dlouhovlnné radiační odezvy páry, ne vypnutí jejího koloběhu.
+Text publikace dále uvádí po odečtení ENSO souhrn 0.33 ± 0.03 K. Poznámka 43 rozlišuje tři úpravy 0.29, 0.32 a 0.36 K.
+Tato různost není společným statistickým intervalem pro tři sloupce grafu. Proto v grafu nejsou vymyšlené chybové úsečky.
+plot.py čte pinatubo.csv a vytváří pinatubo.png a pinatubo.svg. Spuštění: python plot.py, závislost matplotlib.
+
+dessler2008.csv: úplný číselný přepis tabulky 1 článku Dessler, Zhang a Yang (2008), DOI 10.1029/2008GL035333.
+Každý řádek porovnává leden uvedeného roku s lednem 2008.
+Teplotní rozdíly jsou v kelvinech. Rozdíl 1 K má stejnou velikost jako rozdíl 1 °C.
+Radiační příspěvky jsou ve W/m²/K. Průměr publikovaných celkových příspěvků je 2.038, po zaokrouhlení 2.04.
+Rozmezí 0.94 až 2.69 popisuje pět odhadů. Není to interval spolehlivosti.
+Původní analýza používá AIRS měsíční Level 3, verzi 5. Novější verze produktů nejsou totožným vstupem.
+
+chung2014.csv: přepis vybraných trendů z popisku obrázku 1, Chung a kol. (2014), DOI 10.1073/pnas.1409659111.
+Období 1979–2005. Jasové teploty jsou radiometrické veličiny, ne teplota vzduchu v jediném místě.
+T12: pásmo HIRS 6.7 mikrometru. T2: upravený mikrovlnný signál MSU/AMSU.
+Uvedené intervaly jsou ± dvě standardní chyby lineárního trendu, nikoli rozptyl jednotlivých modelů.
+Měřená hodnota T2 minus T12 je samostatně zpracovaný rozdíl. Nejistoty prvních dvou řádků se proto prostě nesčítají.
+Tři řádky jsou pozorování, dva modelové výsledky. CSV je výslovně rozlišuje.
+
+Plné texty a původní data zpřístupňují karty zdrojů na Klimatologie.eu.
+CSV přepisují zveřejněné výsledky, nikoli jednotlivé původní profily nebo radiance.
+NOAA IR Sounder UTH verze 4 rozšiřuje starší záznam. Nejde o stejnou verzi, kterou použil Chungův tým v roce 2014.
+Původní ilustrace a graf CC BY 4.0. Bibliografické údaje a přepsané výsledky citujte se jmény původních autorů.

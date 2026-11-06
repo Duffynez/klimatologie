@@ -496,6 +496,8 @@ export function InfraredRadiometryArticle() {
           </p>
         </details>
 
+        <p>Porovnání infračerveného a mikrovlnného záření umožňuje testovat <Link href="/mechanismy/vodni-para-jako-zpetna-vazba/#test-vysusovani">změny vodní páry v horní troposféře</Link>. Konkrétní naměřené trendy uvádí <Link href="/pozorovani/narust-vlhkosti/#horni-troposfera">pozorování vlhkosti</Link>. Navazující mechanismus vysvětluje, jak se z těchto měření posuzuje její vliv na oteplování.</p>
+
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>

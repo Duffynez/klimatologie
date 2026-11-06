@@ -81,10 +81,10 @@ export const climateMechanisms: ClimateMechanism[] = [
   },
   {
     slug: "vodni-para-jako-zpetna-vazba",
-    title: "Jak souvisejí změny vlhkosti s oteplováním?",
+    title: "Jak změny vodní páry ovlivňují oteplování?",
     category: "Atmosféra a oceán",
-    cardSummary: "Vztah teploty, výparu a vlhkosti a další působení vodní páry na záření.",
-    summary: "Teplota, výpar a přenos vzduchu společně určují množství vodní páry a relativní vlhkost. Vodní pára následně mění přenos infračerveného záření.",
+    cardSummary: "Spor o vysušování horní troposféry a testy zesilujícího účinku vodní páry.",
+    summary: "Proč při oteplování přibývá vodní páry, i když relativní vlhkost místy klesá? Dvě hypotézy, jejich historie a testy pomocí družicových profilů, záření a ochlazení po Pinatubu.",
     distinguishingEvidence: "Současný růst množství páry a pokles relativní vlhkosti nad částí pevniny, rozdíly mezi souší a oceánem a výškové profily. Radiační měření ověřují další článek vazby mezi vlhkostí a oteplováním.",
   },
   {

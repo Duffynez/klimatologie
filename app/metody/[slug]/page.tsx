@@ -716,7 +716,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Hygrometrie"
-          meta="5. listopadu 2026"
+          meta="6. listopadu 2026"
         >
           <p>
             Vodní pára mění elektrické vlastnosti některých materiálů a při ochlazení se sráží

@@ -632,6 +632,49 @@ export function AtmosphericHumidityArticle() {
           </SourceLink>
         </p>
 
+        <h3 id="horni-troposfera">Vodní pára v horní troposféře</h3>
+        <p>
+          Změny ve výšce sledujeme také pomocí tepelného záření. Chung a kol. v roce 2014 porovnali dva
+          družicové signály z let 1979–2005. Infračervené pásmo přístroje HIRS kolem vlnové délky
+          6,7 mikrometru je citlivé na páru i teplotu horní troposféry. Mikrovlnné měření MSU a AMSU
+          v pásmu kyslíku poskytuje samostatnou informaci o teplotě. Autoři použili záznamy propojené
+          mezi družicemi a z mikrovlnného údaje odstranili příspěvek stratosféry. Ověření přístrojů
+          a převod záření na veličiny popisují metody <Link href="/metody/pasivni-infracervena-radiometrie/#teplota-atmosfery">infračervené</Link>{" "}
+          a <Link href="/metody/pasivni-mikrovlnna-radiometrie/#teplota-atmosfery">mikrovlnné radiometrie</Link>.{" "}
+          <SourceLink id="DOI_10_1073_pnas_1409659111">(Chung a kol. 2014)</SourceLink>
+        </p>
+        <p>
+          Tabulka uvádí změnu jasové teploty. To je teplota ideálního zářiče, který by v daném pásmu vydával
+          stejně silné záření, nikoli teplota vzduchu v jediném bodě. Rozdíl obou signálů rostl.
+          Výpočty přenosu záření spojily tento vývoj s přibýváním páry ve výšce.
+          Značka ± zde označuje dvě standardní chyby lineárního trendu. Podklady jsou
+          v <Link href="/media/vodni-para-jako-zpetna-vazba/chung2014.csv">CSV přepisu obrázku 1</Link>.{" "}
+          <SourceLink id="DOI_10_1073_pnas_1409659111">(Chung a kol. 2014, obrázek 1)</SourceLink>
+        </p>
+        <div className="method-data-output method-data-output--compact">
+          <div className="method-data-output__table-wrap">
+          <table>
+            <caption>Globální průměr, 1979–2005. Trend jasové teploty v K za desetiletí.</caption>
+            <thead><tr><th scope="col">Pozorovaný signál</th><th scope="col">Trend ± dvě standardní chyby</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Infračervené pásmo páry HIRS</th><td>+0,04 ± 0,04</td></tr>
+              <tr><th scope="row">Mikrovlnné měření MSU/AMSU</th><td>+0,17 ± 0,06</td></tr>
+              <tr><th scope="row">Mikrovlnný minus infračervený signál</th><td>+0,13 ± 0,04</td></tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+        <p>
+          Jiný přístroj, AIRS na družici Aqua, umožnil porovnat odhady vlhkosti v různých výškách
+          v letech 2003–2008. V globálním průměru měla teplejší zima 2006/2007 více páry než chladnější
+          zima 2007/2008 ve všech sledovaných troposférických hladinách. Relativní vlhkost měla
+          regionálně kladné i záporné změny. V globálním průměru se mezi hladinami 800 a 300 hPa
+          měnila málo. Původní analýza používá měsíční produkt AIRS Level 3, verzi 5. Doplněný záznam
+          HIRS je dnes dostupný jako <SourceLink id="DATA_NOAA_HIRS_UTH_V4">NOAA IR Sounder UTH v4</SourceLink>,
+          tedy v novější verzi než použila studie z roku 2014.{" "}
+          <SourceLink id="DOI_10_1029_2008GL035333">(Dessler a kol. 2008, obrázky 2 a 3)</SourceLink>
+        </p>
+
         <div className="article-observation-summary">
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
@@ -644,7 +687,10 @@ export function AtmosphericHumidityArticle() {
           </p>
         </div>
 
+        <p>Navazující mechanismus vysvětluje, <Link href="/mechanismy/vodni-para-jako-zpetna-vazba/">jak změny vodní páry ovlivňují oteplování</Link>. Porovnává historickou hypotézu vysušování s výsledky družicových měření a s ochlazením po Pinatubu.</p>
+
         <h2>Prameny, data a licence</h2>
+        <p>Nový oddíl horní troposféry vychází z <SourceLink id="DOI_10_1073_pnas_1409659111">Chunga a kol. (2014)</SourceLink> a <SourceLink id="DOI_10_1029_2008GL035333">Desslera a kol. (2008)</SourceLink>. Karty zpřístupňují plné texty. Navazující data a dokumentaci nabízí <SourceLink id="DATA_NOAA_HIRS_UTH_V4">NOAA</SourceLink>, přepis publikovaných souhrnů je v <SourceLink id="MEDIA_WATER_VAPOUR_2026">podkladech vodní páry</SourceLink>.</p>
         <p>
           Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez
           předplatného. U studií vede záznam v databázi na DOI i na veřejný plný text a u dat a institucionálních

@@ -110,7 +110,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Atmosféra"
           title="Vlhkost atmosféry"
-          meta="5. listopadu 2026"
+          meta="6. listopadu 2026"
         >
           <p>
             Co přesně vyjadřuje měrná a relativní vlhkost, jak se vodní pára měří u povrchu, ve výšce a v celém
