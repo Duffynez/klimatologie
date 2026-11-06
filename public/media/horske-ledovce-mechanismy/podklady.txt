@@ -1,0 +1,32 @@
+Horské ledovce: schémata, číselné podklady a příklady
+Klimatologie.eu, 6. listopadu 2026
+
+PŮVOD A LICENCE
+Soubor grafika.mjs vytváří mene-snehu.svg a vetsi-tani.svg. Jde o vlastní kvalitativní schémata vytvořená s pomocí AI a odborně zkontrolovaná proti níže uvedeným pramenům. Licence vlastní grafiky a kódu: CC BY 4.0, https://creativecommons.org/licenses/by/4.0/ .
+Nejde o kopie obrázků z publikací. Profil údolí, tloušťka ledu, poloha sněhové hranice, rozměry značek a šipky nemají číselné měřítko. Přerušovaný obrys ve druhém schématu značí dřívější rozměr, nikoli výsledek konkrétního měření.
+V prvním schématu se předpokládá nezměněná letní ztráta. Jde o podmínku testované varianty, ne tvrzení, že sníh a tání jsou v přírodě nezávislé.
+
+ODBORNÉ PODKLADY SCHÉMAT
+Schytt (1962), Mass Balance Studies in Kebnekajse, DOI 10.3189/S002214300002757X. Oddělení přírůstků a ztrát a převod na vodní ekvivalent.
+Vincent et al. (2005), Solving the paradox of the end of the Little Ice Age in the Alps, DOI 10.1029/2005GL022552, obr. 3. Varianty zvýšení zimních srážek 1760–1830 o 25 % a 35 % proti průměru 20. století. Nejde o meze intervalu spolehlivosti.
+Thibert et al. (2013), Climatic drivers of seasonal glacier mass balances: an analysis of 6 decades at Glacier de Sarennes (French Alps), DOI 10.5194/tc-7-47-2013. Plný text: https://tc.copernicus.org/articles/7/47/2013/tc-7-47-2013.pdf .
+Oerlemans et al. (2009), Retreating alpine glaciers: increased melt rates due to accumulation of dust (Vadret da Morteratsch, Switzerland), DOI 10.3189/002214309789470969. Energetická bilance, zimní sníh jako vstup modelu a samostatné ověření úbytku povrchu bez sněhu. Údaj 11,7 W/m² je střední kvadratický rozdíl odhadů, nikoli interval spolehlivosti. Rozdíl 3,32 m vodního ekvivalentu v oddílu 4 je modelový kumulovaný účinek ztmavnutí za 2003–2006 v jednom místě, ne hmotnostní bilance celého ledovce. Hodnota pevné odrazivosti 0,32 byla nastavena podle období před rokem 2003.
+Jóhannesson et al. (1989), Time–Scale for Adjustment of Glaciers to Changes in Mass Balance, DOI 10.3189/S002214300000928X. Bilance, změna geometrie a doba přizpůsobení.
+Pelto and Hedlund (2001), Terminus behavior and response time of North Cascade glaciers, Washington, U.S.A., DOI 10.3189/172756501781832098. Pozorovaný první nástup reakce čela 4–16 let u 21 ledovců. Není totožný s delší dobou přizpůsobení ledovce. Jednoduchý odhad z tloušťky a bilance na čele podhodnotil delší odezvu dvou skupin.
+
+TABULKA SARENNES
+sarennes-tabulka-1.csv je přepis čtyř průměrných sezonních hodnot z tabulky 1 Thiberta et al. (2013), strana 49. Původní článek je pod CC BY 3.0, https://creativecommons.org/licenses/by/3.0/ .
+Jednotka: m vodního ekvivalentu za rok. Plus znamená přírůstek hmotnosti, minus ztrátu. Průměry pocházejí ze statisticky zpracované řady. Nejde o původní jednotlivé odečty tyčí. Tabulka 1 přejímá vyhodnocení Eckerta et al. (2011).
+Zima: 1949–1976 +1,48, 1977–2007 +1,88. Léto: 1949–1982 −2,26, 1983–2007 −3,22.
+Zlom byl pro každou sezonu určen zvlášť. Rozdíly +0,40 a −0,96 proto nelze sečíst do změny roční bilance. Původní tabulka pro tyto průměry neuvádí intervaly nejistoty. Nejistotu parametrů a zlomů rozebírá studie a její obrázky, není nahrazena domyšlenými chybovými úsečkami.
+Abstrakt práce uvádí i procentní změnu zimního přírůstku, která se neshoduje s prostým procentním rozdílem zaokrouhlených průměrů tabulky 1. Článek Klimatologie.eu používá výslovně absolutní hodnoty této tabulky a procenta z abstraktu s nimi nekombinuje.
+
+POČETNÍ PŘÍKLADY
+vypocty.mjs používá 10 W/m² po 86 400 sekund a zaokrouhlené skupenské teplo tání 334 000 J/kg. Výsledek je 2,586826... kg/m², zaokrouhleně 2,6 mm vody. Předpoklad: povrch je na bodu tání, celý uvedený čistý příkon je dostupný pro tání, energie není zároveň počítána na ohřev studeného ledu. Příklad neurčuje odtok, dokud nezohledníme zadržení vody a její znovuzamrznutí.
+Podklad skupenského tepla: Osborne (1939), Heat of fusion of ice. A revision, DOI 10.6028/jres.023.043. Původní výsledek 333,5 ± 0,2 tehdejšího mezinárodního joulu na gram. Pro jednoduchý příklad používáme obvyklou zaokrouhlenou hodnotu 334 kJ/kg, nikoli historickou přesnost převáděnou na dnešní jednotky.
+Druhý příklad má záměrně zvolené hodnoty +2 a −3 m vodního ekvivalentu, jejich součet je −1 m. Nejde o měření konkrétního ledovce.
+
+VEŘEJNÁ DATA
+WGMS FoG 2026-02-10: https://doi.org/10.5904/wgms-fog-2026-02-10 . Katalog verzí: https://wgms.ch/data_databaseversions/ . Přepis tabulky 1 není novým výpočtem z dnešní verze FoG.
+GlaMBIE: https://doi.org/10.5904/wgms-glambie-2024-07 . Globální úbytek: GlaMBIE Team (2025), DOI 10.1038/s41586-024-08545-z, 273 ± 16 Gt/rok za 2000–2023, nejistota na úrovni 95 %. Součet nezahrnuje hlavní grónský ani antarktický příkrov a změny objemu pod vodní hladinou.
+Historické rozměry, terénní výsledky a testy čel jsou přístupné také v tabulkách a obrázcích původních prací. Místní odhady nevyjadřují podíl daného procesu na globálním úbytku.

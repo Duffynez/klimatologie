@@ -224,7 +224,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Kryosféra"
           title="Horské ledovce"
-          meta="5. listopadu 2026"
+          meta="6. listopadu 2026"
         >
           <p>
             Jak se měří poloha čela, plocha, výška povrchu a změna hmotnosti ledovců, jak se spojují terénní a

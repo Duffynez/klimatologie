@@ -69,7 +69,7 @@ export function GlacierBalanceArticle() {
           <SourceLink id="WEB_World_Glacier_Monitoring_Ser_glosar_UNESCO_a_WGMS_06fc9a79"> Cogley et al., 2011</SourceLink>
         </p>
 
-        <h3>Tloušťku ledu převedeme na hmotnost</h3>
+        <h3 id="vodni-ekvivalent">Tloušťku ledu převedeme na hmotnost</h3>
         <p>
           Z rozdílu dvou odečtů známe tloušťku vrstvy, která odtála. Představme si ji nad plochou jednoho
           metru čtverečního. Součin této plochy a tloušťky dává objem ztraceného ledu. Hustota říká,
@@ -150,7 +150,7 @@ export function GlacierBalanceArticle() {
           <SourceLink id="DOI_10_18750_massbalance_2021_r2021">(GLAMOS, vydání 2021)</SourceLink>
         </p>
 
-        <h3>Bilanci určíme pro celou plochu</h3>
+        <h3 id="plosna-bilance">Bilanci určíme pro celou plochu</h3>
         <p>
           Dosud máme změnu hmotnosti v jednotlivých místech. Pro celý ledovec potřebujeme zjistit,
           jakou plochu jejich hodnoty zastupují. Tyče a sněhová měření se proto rozmísťují do různých
@@ -479,6 +479,10 @@ export function GlacierBalanceArticle() {
             <SourceLink id="WEB_World_Glacier_Monitoring_Ser_WMO_2024_a75c9125">(WMO, 2024: měření kryosféry)</SourceLink>
           </p>
         </div>
+        <p>
+          Jak sezonní bilance pomáhá rozlišit vliv sněžení a tání a proč poloha čela reaguje se zpožděním, vysvětluje článek
+          <Link href="/mechanismy/hmotnostni-bilance-horskych-ledovcu/"> Proč horské ledovce ztrácejí hmotu a ustupují?</Link>
+        </p>
       </div>
     </article>
   );

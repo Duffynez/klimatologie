@@ -164,7 +164,7 @@ export const climateMechanisms: ClimateMechanism[] = [
     title: "Proč horské ledovce ztrácejí hmotu a ustupují?",
     category: "Kryosféra",
     cardSummary: "Vliv sněžení, tání a proudění ledu na hmotnost ledovce a polohu jeho čela.",
-    summary: "Sněžení přidává hmotnost. Odtok tavné vody, odlamování ledu a jeho přímý přechod na vodní páru ji ubírají. Proudění ledu a tvar údolí ovlivňují, jak a s jakým zpožděním se změní jeho délka a poloha čela.",
+    summary: "Jak odlišíme menší zimní přírůstky od většího letního tání a proč může čelo ustupovat se zpožděním. Vysvětlení bilance, přísunu energie a proudění ledu opřené o sezonní měření a historii konkrétních ledovců.",
     distinguishingEvidence: "Porovnání zimních přírůstků, letních ztrát a toku ledu s celkovou bilancí. Společný vývoj rychlosti, tloušťky a polohy čela ověřuje, zda vysvětlení zachytí i časovou odezvu ledovce.",
   },
   {

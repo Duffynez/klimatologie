@@ -406,6 +406,65 @@ export function MountainGlaciersArticle() {
           <SourceLink id="DOI_10_1038_s41586_024_08545_z">GlaMBIE Team, 2025</SourceLink>
         </p>
 
+        <h2 id="mistni-zaznamy">Místní záznamy, které rozlišují různé změny ledovce</h2>
+        <h3 id="historicke-objemy">Historické objemy alpských ledovců</h3>
+        <p>
+          U ledovců Saint-Sorlin a Argentière lze porovnat dnešní měření s rozsahem zachyceným starými mapami a morénami,
+          valy hornin u někdejšího okraje ledu. Vincent a kol. použili tyto podklady pro rekonstrukci objemu na konci malé doby ledové,
+          přibližně kolem roku 1830. Chybějící tvar povrchu doplnili výpočtem nebo geometrickým odhadem.
+          Historický objem je proto odvozený výsledek s větší nejistotou než pozdější fotogrammetrické mapování.
+          Přímá sezonní měření pro toto období neexistují. Rekonstrukce a její meze jsou v obrázcích 2–3 a oddílu 2
+          <SourceLink id="DOI_10_1029_2005gl022552"> studie Vincenta a kol. (2005)</SourceLink>.
+        </p>
+
+        <h3 id="sezonni-bilance-sarennes">Zimní a letní bilance Sarennes</h3>
+        <p>
+          Sarennes ve francouzských Alpách má dlouhou řadu oddělených sezonních měření. Thibert a kol. zpracovali roky 1949–2007,
+          kdy se na čtyřech až pěti místech odebíral zimní sníh a opakovaně měřil úbytek u tyčí.
+          Zimní bilanci určili z vrstev a hustoty sněhu, letní jako rozdíl roční a zimní bilance.
+          Během období tání se na ledovec vraceli šestkrát až sedmkrát. Termíny sledovaly maximum a minimum zásoby, nikoli pevné kalendářní datum.
+          <SourceLink id="DOI_10_5194_tc_7_47_2013"> (Thibert a kol. 2013, oddíl 2)</SourceLink>
+        </p>
+        <p>
+          Ve zpracované řadě vzrostl průměrný zimní přírůstek z +1,48 m vodního ekvivalentu za rok v letech 1949–1976
+          na +1,88 m v letech 1977–2007. Letní bilance se změnila z −2,26 m v letech 1949–1982 na −3,22 m v letech 1983–2007.
+          Jde o průměry s různými hranicemi období. Statistický postup odděloval rozdíly mezi měřicími místy a společný časový průběh
+          a doplnil 27 chybějících hodnot. Tabulka 1 neudává u těchto průměrů vlastní intervaly nejistoty.
+          <SourceLink id="DOI_10_5194_tc_7_47_2013"> (Thibert a kol. 2013, tabulka 1)</SourceLink>
+        </p>
+        <p>
+          <SourceLink id="DOI_10_5904_wgms_fog_2026_02_10">Veřejný archiv WGMS FoG 2026</SourceLink> obsahuje záznam pod názvem
+          <em> SARENNE</em>, s identifikátorem <code>glacier_id = 357</code>. Po rozbalení souboru z katalogu verzí lze v tabulce
+          <code> data/mass_balance.csv</code> vybrat tento ledovec. Sloupce <code>winter_balance</code>, <code>summer_balance</code> a
+          <code> annual_balance</code> udávají metry vodního ekvivalentu za příslušnou sezonu či rok. Popis polí je v <code>datapackage.json</code>.
+          Tyto roční záznamy nejsou statisticky vyrovnanými průměry studie z roku 2013.
+        </p>
+
+        <h3 id="misto-morteratsch">Odrazivost a úbytek povrchu na Morteratschi</h3>
+        <p>
+          Automatická stanice na dolním jazyku ledovce Morteratsch ve Švýcarsku sledovala v letech 1995–2007 počasí a radiační toky.
+          Poměr odraženého a dopadajícího slunečního záření udává odrazivost, nazývanou také albedo.
+          Typická letní odrazivost odkrytého ledu poklesla z přibližně 0,32 na 0,15, tedy z 32 % na 15 % vráceného záření.
+          Úbytek povrchu zaznamenávalo samostatně upevněné zvukové výškové čidlo a měřicí tyče.
+          Pozorování zachycuje jedno místo na ledovci. Nelze je bez prostorového doplnění vydávat za jeho celkovou bilanci.
+          <SourceLink id="DOI_10_3189_002214309789470969"> (Oerlemans a kol. 2009, obr. 3 a 5)</SourceLink>
+        </p>
+        <p>
+          Veřejný plný text zpřístupňuje grafy naměřeného průběhu a popis přístrojů i výpočtu. Neobsahuje však souvislou tabulku
+          všech původních časových odečtů stanice. Bez ní lze kontrolovat zveřejněná porovnání, ale nelze celý energetický výpočet
+          nezávisle zopakovat. Tato mez se týká místního testu Morteratsch, nikoli dostupnosti sezonních dat WGMS.
+        </p>
+
+        <h3 id="cela-kaskady">Různý průběh změn čel v severních Kaskádách</h3>
+        <p>
+          Pelto a Hedlund sestavili historii 38 ledovců v americkém státě Washington od konce 19. století do 90. let 20. století.
+          Spojili mapy, letecké a pozemní fotografie a měření v terénu. Některá čela po ústupu přešla v polovině 20. století do postupu,
+          jiná přibližně stála a další ustupovala dál. Tabulky 1–2 studie uchovávají posuny i roky změny směru.
+          Při porovnávání dvojic fotografií autoři vyřadili případy, v nichž se odhady dvou pozorovatelů lišily o více než 20 metrů.
+          Pozorované rozdíly v poloze čel je nutné odlišit od modelových odhadů doby přizpůsobení celého ledovce.
+          <SourceLink id="DOI_10_3189_172756501781832098"> (Pelto a Hedlund 2001)</SourceLink>
+        </p>
+
         <h2 id="pozorovani">Pozorování</h2>
         <p>
           Dlouhodobá měření ukazují dvě souběžné změny: čela ledovců jsou ve většině sledovaných oblastí dále proti
@@ -497,17 +556,26 @@ export function MountainGlaciersArticle() {
           </p>
         </div>
 
+        <p>
+          Jak přírůstky sněhu, tání a proudění společně vysvětlují měřený úbytek a rozdílnou odezvu čel, rozebírá článek
+          <Link href="/mechanismy/hmotnostni-bilance-horskych-ledovcu/"> Proč horské ledovce ztrácejí hmotu a ustupují?</Link>
+        </p>
+
         <h2>Prameny a data</h2>
         <p>
           Karty zdrojů oddělují trvalý identifikátor DOI od veřejného plného textu nebo dat. U Hugonneta a kol.
-          (2021) a WGMS (2026) je dostupný recenzovaný autorský rukopis v institucionálním repozitáři. Ostatní
-          citované studie lze celé číst u vydavatele. U rozsáhlých datových souborů vede odkaz nejprve na katalog
+          (2021) a WGMS (2026) je dostupný recenzovaný autorský rukopis v institucionálním repozitáři. Další
+          plné texty jsou u vydavatelů nebo v institucionálních a autorských archivech. U rozsáhlých datových souborů vede odkaz nejprve na katalog
           s dokumentací a možnostmi stažení.
         </p>
         <div className="article-source-groups">
           <section>
             <h3>Primární studie</h3>
             <ul>
+              <li><SourceLink id="DOI_10_1029_2005gl022552">Vincent a kol., 2005</SourceLink>: historické mapy, morény a rekonstrukce alpských ledovců.</li>
+              <li><SourceLink id="DOI_10_5194_tc_7_47_2013">Thibert a kol., 2013</SourceLink>: sezonní řada Sarennes a její zpracování.</li>
+              <li><SourceLink id="DOI_10_3189_002214309789470969">Oerlemans a kol., 2009</SourceLink>: místní měření počasí, odrazivosti a úbytku povrchu na Morteratschi.</li>
+              <li><SourceLink id="DOI_10_3189_172756501781832098">Pelto a Hedlund, 2001</SourceLink>: fotografické a terénní záznamy změn čel v severních Kaskádách.</li>
               <li>
                 <SourceLink id="DOI_10_3189_s002214300002757x">Schytt, 1962</SourceLink>:
                 původní popis prvních šestnácti let hmotnostní bilance Storglaciären.
