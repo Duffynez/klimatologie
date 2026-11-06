@@ -621,6 +621,10 @@ export function StratosphericCoolingArticle() {
           </SourceLink>
         </p>
 
+                <h3 id="pinatubo">Teplý vrchol po červnu 1991</h3>
+        <p>Měsíční záznam UAH TLS v6.1 ukazuje po červnu 1991 rychlý vzestup teploty spodní stratosféry. V říjnu dosáhl globální průměr přibližně 1,44 °C nad průměrem let 1988–1990. Teplá odchylka potom slábla. Společný <Link href="/pozorovani/gmst/#pinatubo">graf povrchu a stratosféry</Link> ukazuje, že oba výškové záznamy měly odlišný směr i načasování výkyvu. Změna vztažného období pouze posouvá nulu, nemění průběh křivky. <SourceLink id="WEB_nsstc_uah_edu_Index_of_data_msu_9b9f4900">(UAH TLS v6.1, vlastní přepočet)</SourceLink></p>
+        <p>Li a kolegové v roce 2026 zkoumali šest širokých výškových vrstev v družicovém záznamu 1986–2024. Po oddělení dlouhodobého vývoje, slunečního cyklu a hlavních přirozených výkyvů byl po Pinatubu patrný souběh oteplení stratosféry a ochlazení troposféry. Obě odchylky bylo možné odlišit od běžného kolísání, jehož velikost odhadovali z měření i modelových simulací. <SourceLink id="DOI_10_1073_pnas_2525500123">(Li a kol. 2026, obrázky 1–3)</SourceLink></p>
+
         <h3 id="slunecni-cyklus">Sluneční cyklus uvnitř dlouhodobé změny</h3>
         <p>Randel a kolegové v záznamu 1979–2015 oddělili složku teploty, která kolísá společně se sluneční aktivitou. Tato složka byla oteplující a její velikost rostla směrem do horní stratosféry. Nejzřetelněji se projevovala v tropických a přilehlých oblastech. Podobný výškový obraz vyšel při napojení původního SSU na přístroje MLS, SABER i AMSU. Napojení sdílejí starší měření, takže nejsou třemi zcela nezávislými záznamy. Dlouhodobý pokles a menší opakovaný sluneční výkyv jsou dvě oddělitelné složky téhož teplotního průběhu. <SourceLink id="DOI_10_1175_jcli_d_15_0629_1">(Randel a kol. 2016, oddíl 5d a obrázek 15)</SourceLink></p>
 
@@ -650,12 +654,14 @@ export function StratosphericCoolingArticle() {
         </div>
 
         <aside className="article-related-mechanism" aria-label="Navazující vysvětlení">
+          <p>Opačnou teplotní odezvu po Pinatubu vysvětluje <Link href="/mechanismy/sopecne-aerosoly/#test-teplota">test sopečných aerosolů</Link>.</p>
           <p>Oteplující složku spojenou se sluneční aktivitou vysvětluje článek <Link href="/mechanismy/slunecni-promenlivost/#test-stratosfera">Jak sluneční cyklus ovlivňuje klima?</Link></p>
           <p className="eyebrow">Navazující vysvětlení</p>
           <p>Jak souběh oteplování troposféry a ochlazování stratosféry pomáhá rozlišit příčiny změn, vysvětluje <Link href="/mechanismy/energeticka-bilance-zeme/#lidske-pusobeni">příběh testování lidského vlivu na klima</Link>.</p>
         </aside>
 
         <h2>Prameny, data a licence</h2>
+        <p><SourceLink id="DOI_10_1073_pnas_2525500123">Li a kol. 2026</SourceLink>: výšková teplotní stopa velkých událostí. <SourceLink id="DATA_Li_2026_VOLCANIC_TEMPERATURE">Veřejná data a kód studie</SourceLink> umožňují kontrolu jejich zpracování.</p>
         <p>
           Všechny odborné práce, metodické dokumenty a datové soubory použité v tomto článku lze otevřít bez
           předplatného. U studií vede záznam v databázi na DOI i na veřejný plný text a u dat a institucionálních

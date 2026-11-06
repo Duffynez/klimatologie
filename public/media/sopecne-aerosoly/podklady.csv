@@ -1,0 +1,4 @@
+quantity,value,unit,scope,period,source
+local_day_temperature_effect,-8,degC,maximum local estimated effect below Mount St Helens plume,18 May 1980,10.1126/science.216.4546.628
+local_night_temperature_effect,8,degC,maximum local estimated effect below Mount St Helens plume,18-19 May 1980,10.1126/science.216.4546.628
+net_radiation_anomaly,-4.3,W m-2,40S to 40N relative to same calendar months in 1985-1989,August 1991,10.1126/science.259.5100.1411

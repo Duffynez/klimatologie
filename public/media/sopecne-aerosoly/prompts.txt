@@ -1,0 +1,56 @@
+Režim: vestavěný image_gen. Vlastní ilustrace, CC BY 4.0.
+
+1. Popel
+
+Create a polished Czech scientific explanatory infographic for Klimatologie.eu. Portrait ~1200x1500, warm ivory background, deep teal headings, restrained ochre sunlight, rust and blue accents, fine realistic scientific illustrations and generous readable typography. Adult science magazine, information-rich, not cartoon, no smiling sun, no invented chart data. ALL Czech text exact with diacritics, large enough to read. Explain a hypothesis and its tests with unambiguous numbered sections.
+Title: "Může za ochlazení sopečný popel?"
+Subtitle: "Hypotéza 1 · Pevné úlomky hornin zastíní povrch"
+Top half: detailed atmospheric cross-section of erupting volcanic cone at left, wind transports mineral ash plume to right over land and a small meteorological station. Microscopic inset angular mineral fragments labelled "Popel = pevné úlomky hornin". Golden sunlight partly scattered by particles, some absorbed in dark ash; reduced arrows reach surface. Labels "Méně sluneční energie u povrchu", "Větší částice postupně vypadávají". Show settling particles, not entire ash instantaneously falling. Label on fine particles "Jemný popel může přetrvat déle". No temperature numbers on cross-section.
+Middle narrow prediction band, text: "PŘEDPOVĚĎ" and "Pokud popel způsobuje déletrvající ochlazení, musí po tuto dobu tvořit hlavní vrstvu částic."
+Bottom half two numbered evidence panels side by side or stacked, visually separate TEST procedure from RESULT:
+"1 · Teplota pod čerstvým oblakem"
+"TEST: Porovnáme teplotu se stavem před erupcí a s předpovědí počasí."
+Illustrate weather station under moving ash in daytime with small inset nighttime IR re-emission down, not inaccurate one-way blanket.
+"VÝSLEDEK: Mount St. Helens, 18.–19. května 1980. Ve dne až o 8 °C chladněji, v noci až o 8 °C tepleji. Místní účinek rychle slábl."
+"2 · Co zůstalo po Pinatubu?"
+"TEST: Sledujeme trvání vrstvy a složení částic."
+Illustrate microscope circular inset angular ash and many liquid spherical droplets, explicit labels "Popel" and "Kapky kyseliny sírové a vody".
+"VÝSLEDEK: V dlouhodobé vrstvě převládly sirné kapky. Část jemného popela zůstávala také."
+Bottom verdict teal/ochre framed: "Popel ovlivní místní teplotu. Sám nevysvětluje dlouhodobější ochlazení po Pinatubu."
+Small footer: "Schéma, nikoli měřený profil · Robock a Mass 1982 · Self a kol. 1996"
+Do not add extra claims. Do not mislabel ash as sulfur gas. Keep arrows and inset connectors clear. All text separate from scenic illustrations.
+
+2. Sirné kapky
+
+Create a sophisticated Czech scientific explanatory infographic, portrait ~1200x1600 for Klimatologie.eu. Ivory background, dark teal headings, ochre sunlight, muted blue cooler surface and rust warm stratospheric layer. Realistic textbook atmospheric cutaway and microscope-style particle insets, clean spacious labels, not childish clipart. Precise large Czech diacritics. No fabricated charts or measurement curves. This is second in a matched infographic series.
+Title "Jak sirné kapky ochlazují povrch"
+Subtitle "Hypotéza 2 · Dlouhodobý účinek po erupci Pinatuba"
+Upper half detailed causal process with clear numbered small steps:
+"1 · Erupce dopraví SO₂ do stratosféry"
+Show volcanic eruption inject gas above cloud/weather/tropopause into high layer, SO₂ labels chemical formula. Not gas escaping space.
+"2 · Z plynu vzniká kyselina sírová"
+"Chemické reakce během několika týdnů"
+Inset transformation gas molecules to transparent droplets clearly label "Kapky kyseliny sírové a vody". Do NOT depict sulfuric acid as ash or solid crystals. Visible scale conceptual not real measured.
+"3 · Kapky mění průchod záření"
+Cross-section labels "STRATOSFÉRA" (thin aerosol layer high above tropospheric clouds), "TROPOSFÉRA", "POVRCH A OCEÁN". Golden incoming sunlight arrow reaches droplets and some branches upward to space. Label "Více slunečního záření zpět do vesmíru". Fewer golden arrows continue down, surface blue label "Povrch se ochlazuje". Separate red upward infrared arrows from Earth absorbed partly at aerosol layer, label "Kapky pohlcují část záření" and red "Spodní stratosféra se otepluje". Explain in small line "Rozptyl světla a pohlcování záření jsou dva různé děje." Not all infrared blocked, show continuing upward arrow. Surface has NO red warminglabel. Aerosol layer red meanslocalwarmingnotglobalwarming. Weather clouds below do not wash aerosols in stratosphere.
+Middle prediction framed: "PŘEDPOVĚĎ: Sirné kapky přetrvají, zvýší odraz slunečního záření a vyvolají opačnou teplotní odezvu dole a nahoře."
+Bottom three clear numbered panels, separate labels TEST and RESULT with small detailed apparatus:
+"1 · Složení částic"
+"TEST: Rozbor částic a infračerveného spektra po erupci."
+"VÝSLEDEK: Hlavní dlouhodobou vrstvu tvořily kapky kyseliny sírové a vody."
+Tiny aircraft plus droplet magnification.
+"2 · Energetická bilance"
+"TEST: Družice ERBE porovná odražené sluneční a vyzářené tepelné záření s lety 1985–1989."
+"VÝSLEDEK: V srpnu 1991 čistý ochlazující účinek 4,3 W/m² v pásu 40° j. š. až 40° s. š."
+Meaningnetincominganomaly -4.3, do notglobal label. Satellite measuring outgoing separate solar gold and thermal red rays not firing down.
+"3 · Teplotní odezva"
+"TEST: Předpověď s aerosoly porovnáme s následným měřením a s výpočtem bez erupce."
+"VÝSLEDEK: Pozorované ochlazení pod vrstvou a oteplení stratosféry odpovídají tomuto mechanismu."
+Do notdrawinventedcurves. Small distinct surface blue thermometer and high stratosphere red thermometer.
+Bottom verdict "Obstálo: propojené testy částic, záření a teploty."
+Footer "Schéma, nikoli měřený profil · Self a kol. 1996 · Minnis a kol. 1993 · Hansen a kol. 1992 · Li a kol. 2026"
+Do not add any other numerical results. Accurate realistic adult editorial layout.
+
+Následná úprava chemického schématu
+
+Edit this scientific Czech infographic preserving all layout, scenes, text, tests, and numbers exactly. Make one correction in the upper middle chemistry column only: remove both ball-and-stick molecular diagrams completely, because they can imply incorrect atom counts. Replace that small horizontal transformation area with clean large typographic chemical formulas 'SO₂ → H₂SO₄', with small Czech text underneath 'oxid siřičitý → kyselina sírová'. Below this place a small label '+ voda' beside the downward arrow toward the existing droplet inset. Keep existing words 'Chemické reakce během několika týdnů', existing droplets and other sections. No molecular ball diagrams anywhere. All other content and original dimensions unchanged.

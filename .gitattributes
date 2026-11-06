@@ -76,3 +76,8 @@ public/data/methods/uncertainty/*-original.csv binary
 # Preserve the NOAA subset responses and reproducible reanalysis outputs.
 public/data/methods/reanalysis/* text eol=lf
 public/data/methods/reanalysis/*-original.txt binary
+
+# Preserve the downloaded Pinatubo comparison inputs and their SHA-256 hashes.
+public/data/pinatubo/* text eol=lf
+public/data/pinatubo/*-input.* binary
+public/data/pinatubo/*.png binary

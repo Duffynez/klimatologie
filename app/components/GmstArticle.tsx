@@ -491,6 +491,14 @@ export function GmstArticle() {
           </SourceLink>
         </p>
 
+        <h3 id="pinatubo">Teplotní výkyv v letech 1991–1993</h3>
+        <p>V záznamu GISTEMP v4 činil roční globální průměr roku 1991 přibližně 0,41 °C nad základem 1951–1980. V roce 1992 to bylo 0,22 °C a v roce 1993 0,23 °C. Rozdíl roků 1992 a 1991 vypočtený z měsíčních hodnot je −0,18 °C po zaokrouhlení. Jde o celkovou pozorovanou změnu, v níž se skládá několik vlivů. <SourceLink id="WEB_NASA_Data_GISS_GISS_Surface_Temperature_Analysis_GIST_4f73fdd3">(NASA GISTEMP v4)</SourceLink></p>
+        <figure className="article-figure">
+          <Image className="article-figure__media" src="/data/pinatubo/temperatures.png" width={1760} height={1248} alt="Měsíční teplota povrchu a spodní stratosféry v letech 1988–1996. Po červnu 1991 se dolní stratosféra prudce otepluje, zatímco u povrchu přichází pokles později." unoptimized />
+          <figcaption>Každý záznam je vztažen ke svému průměru 1988–1990. Graf neodečítá El Niño, sluneční cyklus ani dlouhodobý vývoj. Osy teplot mají různá měřítka. TLS představuje teplotu široké výškové vrstvy, nikoli jediného bodu. Čárkovaná čára označuje 15. červen 1991, den hlavní erupce Pinatuba. <SourceLink id="WEB_NASA_Data_GISS_GISS_Surface_Temperature_Analysis_GIST_4f73fdd3">(GISTEMP v4)</SourceLink>{" "}<SourceLink id="WEB_nsstc_uah_edu_Index_of_data_msu_9b9f4900">(UAH TLS v6.1)</SourceLink>. Vlastní graf z veřejných dat, CC BY 4.0.</figcaption>
+        </figure>
+        <p>Pro kontrolu jsou dostupné <a href="/data/pinatubo/gistemp-input.csv">nezměněné vstupy GISTEMP</a>, <a href="/data/pinatubo/uah-tls-input.txt">vstupy UAH</a>, <a href="/data/pinatubo/temperatures.csv">vybrané měsíce a přepočet</a>, <a href="/data/pinatubo/provenance.json">původ dat</a> a <a href="/data/pinatubo/reproduce.py">skript pro zopakování grafu</a>. Výškový záznam rozebírá <Link href="/pozorovani/stratosfericke-ochlazovani/#pinatubo">pozorování teploty stratosféry</Link>.</p>
+
         <h3 id="zpomaleni-2002-2012">Dočasné zpomalení a rozdíly mezi sezónami</h3>
         <p>
           Příkladem nerovnoměrného průběhu je období 2002–2012, rozebrané
@@ -516,12 +524,14 @@ export function GmstArticle() {
         </div>
 
         <aside className="article-related-mechanism" aria-label="Navazující vysvětlení">
+          <p>Teplotní výkyv po roce 1991 a testování jeho příčiny vysvětluje článek <Link href="/mechanismy/sopecne-aerosoly/">Proč mohou velké sopečné erupce ochladit Zemi?</Link></p>
           <p className="eyebrow">Navazující vysvětlení</p>
           <p>Proč přebytek energie vede k ohřívání Země a jak oteplení ovlivňuje její další vyzařování, vysvětluje článek <Link href="/mechanismy/energeticka-bilance-zeme/#nerovnovaha-a-teplota">Proč v klimatickém systému přibývá energie</Link>.</p>
           <p>Proč se rychlost oteplování u povrchu mění, rozebírá <Link href="/mechanismy/energeticka-bilance-zeme/#prirozena-hypoteza">příběh přirozeného kolísání</Link>, včetně pokusu s teplotou rovníkového Pacifiku.</p>
         </aside>
 
         <h2>Prameny, data a licence</h2>
+        <p><SourceLink id="WEB_nsstc_uah_edu_Index_of_data_msu_9b9f4900">UAH TLS v6.1</SourceLink>: globální měsíční teploty spodní stratosféry pro společný graf kolem Pinatuba. <a href="/data/pinatubo/provenance.json">Verze, původ a přepočet obou datových řad</a>.</p>
         <div className="article-source-groups">
           <section>
             <h3>Historické a primární práce</h3>

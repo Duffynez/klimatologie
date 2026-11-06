@@ -48,7 +48,7 @@ Hlavní navigace není odvozena automaticky ze složek. Je to ručně udržovan�
 | `/metody/` | `app/metody/page.tsx` | `app/data/methods.ts`. |
 | `/metody/[slug]/` | `app/metody/[slug]/page.tsx` | Katalog metod; hotové články se připojují ručně. |
 | `/mechanismy/` | `app/mechanismy/page.tsx` | `app/data/mechanisms.ts`. |
-| `/mechanismy/[slug]/` | `app/mechanismy/[slug]/page.tsx` | Dva plné články o přibývání energie a účinku dalšího CO₂ na záření, obecné detailní stránky ostatních témat. |
+| `/mechanismy/[slug]/` | `app/mechanismy/[slug]/page.tsx` | Pět plných mechanismových článků, obecné detailní stránky ostatních témat. |
 | `/projekce/` | `app/projekce/page.tsx` | Lokální pole témat přímo v souboru stránky. |
 | `/dusledky/` | `app/dusledky/page.tsx` | Lokální pole témat přímo v souboru stránky. |
 | `/historie/` | `app/historie/page.tsx` | `app/data/history.ts` a zdroje podle ID. |
@@ -90,7 +90,7 @@ Titrace a coulometrie mají samostatné položky `/metody/titrace/` a `/metody/c
 
 Úvodní diagram hotových mechanismů sjednocuje `HypothesisDiagram.tsx` a jeho CSS modul. Společná komponenta obsahuje návod, sémantický seznam hypotéz a čtyři kroky každé větve. Článková komponenta `EnergyHypothesisDiagram.tsx` dodává konkrétní obsah, podmínky a kotvy pro energetickou bilanci. Diagram funguje bez klientského JavaScriptu, rozložení přizpůsobuje CSS. Samotné příběhy obaluje klientská komponenta `HypothesisStory.tsx` s vlastním CSS modulem. Používá nativní `details` se zachovanými kotvami nadpisů, výchozí HTML obsahuje celé otevřené příběhy. JavaScript doplňuje sbalení z konce příběhu s návratem k nadpisu a otevření cílového příběhu při navigaci na jeho nadpis nebo vnitřní kotvu.
 
-`app/data/mechanisms.ts` obsahuje 23 témat v pěti skupinách. Čtyři plné články mají komponenty `EarthEnergyBalanceArticle.tsx`, `GreenhouseRadiationArticle.tsx`, `CarbonDioxideOriginArticle.tsx` a `SolarVariabilityArticle.tsx`, připojené v `app/mechanismy/[slug]/page.tsx`. Ostatních 19 témat zatím ukazuje vymezení a rozlišující důkazy z katalogu. Další plné články vyžadují stejnou ruční vazbu komponenty a routy jako u metod.
+`app/data/mechanisms.ts` obsahuje 23 témat v pěti skupinách. Pět plných článků má komponenty `EarthEnergyBalanceArticle.tsx`, `GreenhouseRadiationArticle.tsx`, `CarbonDioxideOriginArticle.tsx`, `SolarVariabilityArticle.tsx` a `VolcanicAerosolsArticle.tsx`, připojené v `app/mechanismy/[slug]/page.tsx`. Ostatních 18 témat zatím ukazuje vymezení a rozlišující důkazy z katalogu. Další plné články vyžadují stejnou ruční vazbu komponenty a routy jako u metod.
 
 Rozcestník `/mechanismy/` používá stejnou podobu tematických skupin a dlaždic jako metody. Každá dlaždice obsahuje číslo, otázku a stručný popis `cardSummary`. Všechna témata mají stejnou podobu bez rozlišení stavu zpracování. Delší `summary` a rozlišující důkazy zůstávají v datovém katalogu pro detailní stránky.
 

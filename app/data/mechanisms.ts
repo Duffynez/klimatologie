@@ -51,8 +51,8 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "sopecne-aerosoly",
     title: "Proč mohou velké sopečné erupce ochladit Zemi?",
     category: "Záření a složení atmosféry",
-    cardSummary: "Působení sopečných částic na průchod záření atmosférou a na teplotu.",
-    summary: "Částice vzniklé po velkých erupcích dočasně mění průchod slunečního a infračerveného záření atmosférou.",
+    cardSummary: "Popel, sirné kapky a testy ochlazení po erupci Pinatuba.",
+    summary: "Proč po erupci Pinatuba klesla teplota u povrchu, zatímco spodní stratosféra se oteplila? Dvě hypotézy a jejich ověření měřením částic, záření a teploty.",
     distinguishingEvidence: "Časová návaznost mezi erupcí, změnou množství stratosférických částic, průchodem záření a teplotou. Porovnání ochlazení povrchu s oteplením části stratosféry a následným odezněním účinku.",
   },
   {

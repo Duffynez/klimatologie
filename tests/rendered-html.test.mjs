@@ -4,6 +4,72 @@ import { readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 import { stripTypeScriptTypes } from "node:module";
 
+test("publishes the volcanic mechanism with evidence, full texts, graphics and reciprocal observations", async () => {
+  const html = await readFile(new URL("dist/client/mechanismy/sopecne-aerosoly/index.html", root), "utf8");
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.deepEqual([...body.matchAll(/<h2 id="([^"]+)"/g)].map(m => m[1]), ["co-vysvetlujeme", "hypotezy", "pribehy", "jak-mechanismus-funguje", "shrnuti", "prameny"]);
+  assert.equal((body.slice(0, body.indexOf('<h2 id="hypotezy"')).match(/<p\b/g) ?? []).length, 2);
+  assert.match(html, /6\. listopadu 2026/);
+  for (const id of ["test-popel-teplota", "test-popel-slozeni", "test-kapky", "test-zareni", "test-teplota"]) assert.ok(body.includes('id="' + id + '"'));
+  for (const value of ["4,3 W/m²", "40° jižní", "1985–1989", "59–77 %", "Sám nestačí", "Obstála, dnes přijímaná"]) assert.ok(body.includes(value), value);
+  const bibliography = body.slice(body.indexOf('<h2 id="prameny"'));
+  const catalogue = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
+  for (const id of new Set([...body.matchAll(/href="\/zdroje#([^"]+)"/g)].map(m => m[1]))) {
+    assert.ok(bibliography.includes('href="/zdroje#' + id + '"'), "Missing bibliography " + id);
+    const card = catalogue.match(new RegExp('<article[^>]+id="' + id + '"[\\s\\S]*?</article>'))?.[0];
+    assert.ok(card, "Missing source card " + id);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    if (id.startsWith("DOI_")) {
+      assert.ok(card.includes("doi.org/"), "Missing DOI " + id);
+      assert.ok(card.includes("Otevřít plný text"), "Missing full text " + id);
+    }
+  }
+  for (const target of ["/pozorovani/gmst", "/pozorovani/stratosfericke-ochlazovani", "/metody/mereni-radiacnich-toku"]) {
+    const related = await readFile(new URL("dist/client" + target + "/index.html", root), "utf8");
+    assert.ok(hasArticleLink(body, target));
+    assert.ok(hasArticleLink(related, "/mechanismy/sopecne-aerosoly"), "Missing reciprocal link " + target);
+  }
+  for (const [, target, anchor] of body.matchAll(/href="(\/(?:pozorovani|metody|mechanismy)\/[^"#]+)(?:#([^"]+))?"/g)) {
+    const related = await readFile(new URL("dist/client" + target.replace(/\/$/, "") + "/index.html", root), "utf8");
+    if (anchor) assert.ok(related.includes('id="' + anchor + '"'), "Missing anchor " + target + "#" + anchor);
+  }
+  for (const name of ["popel.png", "sirne-kapky.png", "podklady.csv", "podklady.txt"]) {
+    assert.ok(body.includes("/media/sopecne-aerosoly/" + name));
+    assert.ok((await readFile(new URL("dist/client/media/sopecne-aerosoly/" + name, root))).length > 100);
+  }
+  const limits = body.match(/<details class="method-details">([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(limits && limits.replace(/<[^>]+>/g, " ").trim().split(/\s+/).length <= 600);
+  assert.doesNotMatch(body.replace(/<[^>]+>/g, " ").replace(/&(?:#\d+|#x[0-9a-f]+|[a-z]+);/gi, ""), /;/);
+});
+
+test("Pinatubo temperature comparison preserves inputs and distinct observed anomalies", async () => {
+  const { createHash } = await import("node:crypto");
+  const base = new URL("public/data/pinatubo/", root);
+  const metadata = JSON.parse(await readFile(new URL("provenance.json", base), "utf8"));
+  for (const input of metadata.inputs) {
+    const bytes = await readFile(new URL(input.file, base));
+    assert.equal(createHash("sha256").update(bytes).digest("hex"), input.sha256);
+  }
+  const rows = (await readFile(new URL("temperatures.csv", base), "utf8")).trim().split(/\r?\n/).slice(1).map(l => l.split(","));
+  assert.equal(rows.length, 108);
+  assert.equal(new Set(rows.map(r => r[0])).size, 108);
+  const reference = rows.filter(r => r[0] < "1991-01-01");
+  assert.equal(reference.length, 36);
+  for (const column of [3, 4]) assert.ok(Math.abs(reference.reduce((a, r) => a + Number(r[column]), 0) / 36) < 1e-6);
+  const mean = year => { const selected = rows.filter(r => r[0].startsWith(year)); return selected.reduce((a,r) => a + Number(r[1]), 0) / selected.length; };
+  assert.ok(Math.abs(mean("1992") - mean("1991") + 0.1833333333) < 1e-6);
+  const peak = rows.reduce((a,b) => Number(a[4]) > Number(b[4]) ? a : b);
+  assert.equal(peak[0], "1991-10-15");
+  assert.ok(Math.abs(Number(peak[4]) - 1.440833) < 1e-6);
+  const observation = await readFile(new URL("dist/client/pozorovani/gmst/index.html", root), "utf8");
+  for (const name of ["temperatures.png", "gistemp-input.csv", "uah-tls-input.txt", "temperatures.csv", "provenance.json", "reproduce.py"]) {
+    assert.ok(observation.includes("/data/pinatubo/" + name));
+    assert.ok((await readFile(new URL("dist/client/data/pinatubo/" + name, root))).length > 100);
+  }
+});
+
+
 const root = new URL("../", import.meta.url);
 
 function hasArticleLink(html, path) {
@@ -722,7 +788,7 @@ test("publishes 23 mechanism topics and preserves the split snow-and-sea-ice add
     assert.ok(sitemap.includes(`<loc>https://klimatologie.eu/mechanismy/${slug}/</loc>`), "Missing sitemap route " + slug);
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     assert.ok(html.includes(`<h1>${title}</h1>`), "Wrong detail title " + slug);
-    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost"].includes(slug)) {
+    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly"].includes(slug)) {
       assert.match(html, /Co musí toto vysvětlení objasnit/);
       assert.match(html, /<section class="mechanism-detail-evidence"[^>]*>[\s\S]*<p>[^<]+<\/p><\/section>/);
     }
@@ -972,7 +1038,7 @@ test("publishes the global surface temperature article instead of the generic pl
 
   assert.match(evidencePage, /GmstArticle/);
   assert.match(evidencePage, /title="Globální teplota u povrchu"/);
-  assert.match(evidencePage, /title="Globální teplota u povrchu"\s+meta="5\. listopadu 2026"/);
+  assert.match(evidencePage, /title="Globální teplota u povrchu"\s+meta="6\. listopadu 2026"/);
   assert.match(article, /Globální teplota u povrchu vyjadřuje, jak se průměrná teplota/);
   assert.match(article, /Historie globálního výpočtu/);
   assert.match(article, /Jak vzniká globální výpočet/);
@@ -3720,7 +3786,7 @@ test("quality control and homogenization connects a complete method to global te
     "Jak získáme srovnatelný klimatický záznam", "Nejistoty a ověření", "Příklad: kontrola a úpravy teplot v Ruzyni", "Shrnutí",
   ]);
   assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
-  assert.match(observation, /<p class="page-lead__meta">5\. listopadu 2026<\/p>/);
+  assert.match(observation, /<p class="page-lead__meta">6\. listopadu 2026<\/p>/);
   assert.match(body, /EZM00011518/);
   assert.match(body, /v4\.0\.1\.20261029/);
   assert.match(body, /719/);
@@ -4380,6 +4446,7 @@ test("keeps each hypothesis independently collapsible with complete content and 
     ["radiacni-pusobeni-sklenikovych-plynu", ["nasyceni", "promena-prenosu"]],
     ["puvod-rustu-atmosferickeho-co2", ["ocean", "pevnina", "fosilni-uhlik"]],
     ["slunecni-promenlivost", ["kosmicke-zareni", "zmeny-zareni"]],
+    ["sopecne-aerosoly", ["popel", "sirne-kapky"]],
   ]) {
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)[1];

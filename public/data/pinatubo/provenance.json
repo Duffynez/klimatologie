@@ -1,0 +1,21 @@
+{
+  "accessed": "2026-11-06",
+  "coverage": "1988-01 to 1996-12",
+  "processing": "Monthly anomalies, each series rebased by subtracting its own 36-month mean for 1988–1990. No smoothing, detrending or removal of ENSO, solar variability or QBO. UAH first GLOBAL column used, not its running-mean columns.",
+  "interpretation": "Observed changes include all influences. Annual 1992 minus 1991 difference is not an attribution estimate.",
+  "inputs": [
+    {
+      "file": "gistemp-input.csv",
+      "url": "https://data.giss.nasa.gov/gistemp/tabledata_v4/GLB.Ts+dSST.csv",
+      "original_reference": "1951–1980",
+      "sha256": "4c64eda288bce32b8d76926278f346ecea1e53506df8ee72a3d5accb0657c416"
+    },
+    {
+      "file": "uah-tls-input.txt",
+      "url": "https://www.nsstc.uah.edu/data/msu/v6.1/tls/tlsglhmam_6.1.txt",
+      "original_reference": "1981–2010, as specified in input header",
+      "sha256": "84b1d44cb256b5b284b58cd51ce7163309ed4a6062f973b161571f699bf0aa27"
+    }
+  ],
+  "output_license": "Original chart and script: CC BY 4.0. Input data retain their providers' terms and attribution."
+}

@@ -1,0 +1,12 @@
+Podklady vysvětlujících grafik, 6. listopadu 2026
+Vlastní ilustrace pomocí vestavěného image_gen, CC BY 4.0. Úplné zadání: prompts.txt.
+Jde o schémata fyziky a publikovaných testů. Nejde o fotografie přístrojů, skutečné mikroskopické snímky ani měřené výškové profily.
+
+Popel: Robock a Mass (1982), Science 216, 628–630, DOI 10.1126/science.216.4546.628.
+Den a noc: lokální odhad proti vývoji bez oblaku na základě rozdílů 24 hodin a chyb předpovědi. Hodnoty až −8 a +8 °C nejsou globální.
+Složení po Pinatubu: Self a kol. (1996), The Atmospheric Impact of the 1991 Mount Pinatubo Eruption, Fire and Mud. Veřejná kapitola NASA NTRS 19990021520. Přetrvávaly také jemné částice popela, většinový dlouhodobý aerosol tvořily kapky kyseliny sírové a vody.
+Chemie a záření: Robock (2000), DOI 10.1029/1998RG000054. Šipka SO2 → H2SO4 shrnuje více reakcí. Do roztoku vstupuje voda. Není to úplná chemická rovnice.
+Energetická bilance: Minnis a kol. (1993), Science 259, 1411–1415, DOI 10.1126/science.259.5100.1411, s. 1412 a obr. 2. Čistá změna v srpnu 1991 −4,3 W/m² pro oblast 40° S až 40° N. Základ tvoří stejné měsíce let 1985–1989. Nesmí se zaměnit s globálním odhadem 2,7 ± 1,0 W/m², který autoři získali za dalších předpokladů.
+Teplotní předpověď: Hansen a kol. (1992), DOI 10.1029/91GL02788, vyšla v lednu 1992 před očekávaným hlavním vrcholem ochlazení.
+Výškový test: Li a kol. (2026), DOI 10.1073/pnas.2525500123. Zpracování odděluje dlouhodobý vývoj, ENSO, sluneční cyklus a QBO.
+Všechny prameny jsou propojené s katalogem zdrojů na webu. Číselné podklady jsou v podklady.csv. Skutečný teplotní graf a jeho vstupy jsou odděleně v /data/pinatubo/.

@@ -5,6 +5,7 @@ import { PageLead } from "../../components/PageLead";
 import { EarthEnergyBalanceArticle } from "../../components/EarthEnergyBalanceArticle";
 import { CarbonDioxideOriginArticle } from "../../components/CarbonDioxideOriginArticle";
 import { GreenhouseRadiationArticle } from "../../components/GreenhouseRadiationArticle";
+import { VolcanicAerosolsArticle } from "../../components/VolcanicAerosolsArticle";
 import { SolarVariabilityArticle } from "../../components/SolarVariabilityArticle";
 import { climateMechanisms, mechanismBySlug } from "../../data/mechanisms";
 
@@ -68,6 +69,14 @@ export default async function MechanismDetail({ params }: { params: Promise<{ sl
 
   if (!mechanism) {
     notFound();
+  }
+
+  if (slug === "sopecne-aerosoly") {
+    return <div className="page-shell">
+      <PageLead eyebrow={"Mechanismy / " + mechanism.category} title={mechanism.title} meta="6. listopadu 2026"><p>{mechanism.summary}</p></PageLead>
+      <VolcanicAerosolsArticle />
+      <Link className="text-link catalog-back-link" href="/mechanismy">&larr; Zpět na všechny mechanismy</Link>
+    </div>;
   }
 
   if (slug === "slunecni-promenlivost") {
