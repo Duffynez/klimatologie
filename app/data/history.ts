@@ -973,7 +973,7 @@ export const historyEvents: HistoryEvent[] = [
       }
     ],
     relatedLinks: [
-      { href: "/mechanismy/pohlcovani-a-presun-tepla-oceanem/", label: "Jak oceán přijímá a přenáší teplo" }
+      { href: "/mechanismy/pohlcovani-a-presun-tepla-oceanem/", label: "Proč se teplo v Jižním oceánu ukládá jinde, než přichází" }
     ]
   },
   {
@@ -1402,7 +1402,7 @@ export const historyEvents: HistoryEvent[] = [
     ],
     relatedLinks: [
       { href: "/pozorovani/tepelny-obsah-oceanu/", label: "Jak určujeme změnu obsahu tepla v oceánu" },
-      { href: "/mechanismy/pohlcovani-a-presun-tepla-oceanem/", label: "Jak se teplo ukládá a šíří v oceánu" }
+      { href: "/mechanismy/pohlcovani-a-presun-tepla-oceanem/", label: "Proč se teplo v Jižním oceánu ukládá jinde, než přichází" }
     ]
   },
   {
@@ -1559,7 +1559,7 @@ export const historyEvents: HistoryEvent[] = [
     relatedLinks: [
       {
         href: "/mechanismy/pohlcovani-a-presun-tepla-oceanem/",
-        label: "Jak se teplo šíří v oceánu"
+        label: "Proč se teplo v Jižním oceánu ukládá jinde, než přichází"
       }
     ]
   },
@@ -1631,7 +1631,7 @@ export const historyEvents: HistoryEvent[] = [
     ],
     relatedLinks: [
       { href: "/mechanismy/puvod-rustu-atmosferickeho-co2/", label: "Jak se emise promítají do množství CO₂ v atmosféře" },
-      { href: "/mechanismy/pohlcovani-a-presun-tepla-oceanem/", label: "Jak oceán ovlivňuje průběh oteplování" }
+      { href: "/mechanismy/pohlcovani-a-presun-tepla-oceanem/", label: "Proč se teplo v Jižním oceánu ukládá jinde, než přichází" }
     ]
   },
   {

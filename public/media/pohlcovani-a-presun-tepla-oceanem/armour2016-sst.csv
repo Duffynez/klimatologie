@@ -1,0 +1,4 @@
+region,period,trend_C_per_decade,uncertainty,source
+south_of_50S,1950-2012,0.02,not_reported_for_this_summary,10.1038/ngeo2731
+40S_to_50S,1950-2012,0.11,not_reported_for_this_summary,10.1038/ngeo2731
+global_ocean,1950-2012,0.08,not_reported_for_this_summary,10.1038/ngeo2731

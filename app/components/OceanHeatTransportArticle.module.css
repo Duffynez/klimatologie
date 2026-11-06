@@ -1,0 +1,23 @@
+.testHeading {
+  margin: 40px 0 18px;
+  padding: 13px 18px;
+  border-left: 3px solid var(--sea);
+  background: rgba(35, 107, 117, 0.055);
+  font-size: 1.08rem;
+  line-height: 1.4;
+}
+
+.explanatoryFigure {
+  width: min(calc(100vw - 40px), var(--max-width));
+  max-width: 1122px;
+}
+
+.figureScroll {
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.figureScroll img {
+  min-width: 980px;
+  height: auto;
+}

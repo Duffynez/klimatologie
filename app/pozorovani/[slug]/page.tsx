@@ -148,7 +148,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Oceány"
           title="Obsah tepla v oceánu"
-          meta="5. listopadu 2026"
+          meta="6. listopadu 2026"
         >
           <p>
             Jak se z teplot naměřených v různých hloubkách počítá změna obsahu tepla, jak se měření vyvíjela a co

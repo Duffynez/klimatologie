@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SourceLink } from "./SourceLink";
+import oceanTransportStyles from "./OceanHeatTransportArticle.module.css";
 
 export function OceanHeatArticle() {
   return (
@@ -483,6 +484,18 @@ export function OceanHeatArticle() {
           </SourceLink>
         </p>
 
+        <h3 id="jizni-ocean">Pomalý ohřev hladiny a příjem tepla v Jižním oceánu</h3>
+        <p>Armour a kolegové porovnali povrchové teploty z dat NOAA ERSST v3b za roky 1950–2012. Jižně od 50° jižní šířky vyšel trend 0,02 °C za deset let, mezi 40° a 50° jižní šířky 0,11 °C a pro celý světový oceán 0,08 °C. Jde o rychlost změny průměrné teploty hladiny, nikoli o teplotu vody ani o obsah tepla celého sloupce. Graf přebírá zaokrouhlené hodnoty z textu studie. <SourceLink id="DOI_10_1038_ngeo2731">(Armour a kol. 2016, úvod a metody)</SourceLink></p>
+        <figure className={`article-figure ${oceanTransportStyles.explanatoryFigure}`}>
+          <div className={oceanTransportStyles.figureScroll} tabIndex={0} role="region" aria-label="Graf povrchových trendů, na úzké obrazovce posuvný do stran">
+            <a href="/media/pohlcovani-a-presun-tepla-oceanem/povrchove-trendy.png" aria-label="Otevřít graf povrchových trendů v plné velikosti"><Image className="article-figure__media" src="/media/pohlcovani-a-presun-tepla-oceanem/povrchove-trendy.png" width={1440} height={780} alt="Za roky 1950–2012 činil povrchový trend jižně od 50° jižní šířky 0,02 stupně za deset let, v pásu 40–50° 0,11 stupně a v celém oceánu 0,08 stupně." unoptimized /></a>
+          </div>
+          <figcaption>Délka sloupců udává trend povrchové teploty v °C za deset let. Šedý sloupec je celosvětové porovnání. Studie u těchto tří zaokrouhlených údajů neuvádí jednotlivé intervaly nejistoty, proto je nedokreslujeme. Vlastní graf, CC BY 4.0. <SourceLink id="DOI_10_1038_ngeo2731">Zdroj hodnot</SourceLink>, <a href="/media/pohlcovani-a-presun-tepla-oceanem/armour2016-sst.csv">CSV</a> a <SourceLink id="MEDIA_OCEAN_HEAT_TRANSPORT_2026">postup zpracování</SourceLink>.</figcaption>
+        </figure>
+        <p>Pro období 1982–2012 autoři přidali podpovrchové teploty EN4 a Ishii a vyhodnocení toků přes hladinu OAFlux. Největší ohřev vodního sloupce ležel v pásu kolem 40–50° jižní šířky. V rychleji se ohřívajících severnějších oblastech přitom změna povrchového toku směřovala k větším ztrátám energie. V jižnějších oblastech s pomalým ohřevem či ochlazením naopak příjem přes hladinu rostl. Mapy změny povrchového toku a ukládání tepla se tedy nepřekrývaly. <SourceLink id="DOI_10_1038_ngeo2731">(Armour a kol. 2016, obrázek 1)</SourceLink></p>
+        <p>OAFlux kombinuje meteorologické údaje s výpočtem výměny tepla a radiačními produkty, nejde o přímé měření toku v každém bodě mapy. V tomto porovnání chyběly hodnoty pod mořským ledem. Podpovrchové rekonstrukce se shodovaly v hlavním rozložení změn, jejich přesná velikost závisela také na řidším pokrytí starších měření. Uvedené historické trendy nepřenášíme automaticky na každé pozdější období. <SourceLink id="DOI_10_1038_ngeo2731">(Armour a kol. 2016, metody)</SourceLink></p>
+        <p>Polohu hluboce promíchané vrstvy určovali Sallée a kolegové z lodních profilů a Argo podle změn hustoty vody. Nejhlubší zimní vrstvy ležely při severním okraji proudu obtékajícího Antarktidu. V některých oblastech přesáhl rozdíl mezi zimní a letní hloubkou 400 metrů. To umožňuje porovnat místo hlubokého promíchávání s místem pomalého a rychlého oteplování. <SourceLink id="DOI_10_1002_jgrc_20157">(Sallée a kol. 2013, oddíly 2–3)</SourceLink></p>
+
         <h3 id="hloubkovy-obraz">Jak se liší rozložení ohřevu</h3>
         <p>
           Rozdíly mezi oceány zachycoval už rozbor Barnetta a kolegů z roku 2005.
@@ -573,7 +586,7 @@ export function OceanHeatArticle() {
             nejvyšší hodnoty celého záznamu a proti roku 2024 přibylo přibližně 23 zettajoulů. Jednotlivé části oceánu
             se mění různými směry a rychlostmi, ale jejich globální součet roste. Kladná celková změna pokračuje také
             pod hloubkou 2 000 metrů. V rozboru místních záznamů s průměrnými počátky v letech 1986–1989 a konci
-            v letech 2015–2017 činil součet pro vrstvy 2–6 kilometrů přibližně 34,5 terawattu.
+            v letech 2015–2017 činil součet pro vrstvy 2–6 kilometrů přibližně 34,5 terawattu. V Jižním oceánu se v rozboru let 1982–2012 prostorově lišilo zesilování příjmu přes hladinu a ukládání tepla do vody.
           </p>
         </div>
 
@@ -582,7 +595,13 @@ export function OceanHeatArticle() {
           <p>Jak přibývání tepla v oceánu souvisí s rozdílem mezi přijatým a odevzdaným zářením Země, vysvětluje článek <Link href="/mechanismy/energeticka-bilance-zeme/#porovnani">Proč v klimatickém systému přibývá energie</Link>.</p>
         </aside>
 
+        <aside className="article-related-mechanism" aria-label="Vysvětlení prostorového rozložení tepla">
+          <p className="eyebrow">Navazující vysvětlení</p>
+          <p>Rozdíl mezi místem příjmu a ukládání tepla rozebírá mechanismus <Link href="/mechanismy/pohlcovani-a-presun-tepla-oceanem/">Proč se teplo v Jižním oceánu ukládá jinde, než přichází?</Link> Porovnává místní promíchávání s přenosem energie prouděním.</p>
+        </aside>
+
         <h2>Prameny, data a licence</h2>
+        <p>Regionální rozbor doplňují <SourceLink id="DOI_10_1038_ngeo2731">Armour a kol. 2016</SourceLink> a <SourceLink id="DOI_10_1002_jgrc_20157">Sallée a kol. 2013</SourceLink>. Vstupní údaje zpřístupňují <SourceLink id="DATA_NOAA_ERSST_V3B">NOAA ERSST v3b</SourceLink>, <SourceLink id="DATA_METOFFICE_EN4">Met Office EN4</SourceLink> a <SourceLink id="DATA_WHOI_OAFLUX">WHOI OAFlux</SourceLink>.</p>
         <p>
           K odborným pracím uvádíme veřejný plný text bez předplatného. Pokud má práce DOI, odkazujeme i na něj. Datové portály vedou
           k původnímu poskytovateli. U IAP lze pro kontrolu globálních hodnot použít přímo textovou tabulku,

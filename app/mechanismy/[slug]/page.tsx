@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OceanHeatTransportArticle } from "../../components/OceanHeatTransportArticle";
 import { OzoneStratosphereArticle } from "../../components/OzoneStratosphereArticle";
 import Link from "next/link";
 import { AnthropogenicAerosolsArticle } from "../../components/AnthropogenicAerosolsArticle";
@@ -74,6 +75,14 @@ export default async function MechanismDetail({ params }: { params: Promise<{ sl
 
   if (!mechanism) {
     notFound();
+  }
+
+  if (slug === "pohlcovani-a-presun-tepla-oceanem") {
+    return <div className="page-shell">
+      <PageLead eyebrow={"Mechanismy / " + mechanism.category} title={mechanism.title} meta="6. listopadu 2026"><p>{mechanism.summary}</p></PageLead>
+      <OceanHeatTransportArticle />
+      <Link className="text-link catalog-back-link" href="/mechanismy">&larr; Zpět na všechny mechanismy</Link>
+    </div>;
   }
 
   if (slug === "zmeny-ozonu-ve-stratosfere") {

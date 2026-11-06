@@ -1,0 +1,5 @@
+{
+  "tool": "image_gen",
+  "mode": "built-in edit",
+  "prompt": "Edit this existing Czech scientific infographic precisely. Keep all layout, every Czech word, fonts, colors, panels, illustration and arrows unchanged. Correct one scientific visual detail only: remove ALL orange heat-anomaly dots from the rising deep-water teal arrow and from the deep water on the LEFT below the shallow surface mixed layer. That water carries little recent warming, so the large dense orange dots there are misleading. Keep dense orange heat dots at the surface beneath the downward heat flux arrows, in the northward/rightward surface current, on the down-right subduction arrow, and in the northern/right subsurface heat storage region. Do not add any new labels. Exact original dimensions."
+}

@@ -73,10 +73,10 @@ export const climateMechanisms: ClimateMechanism[] = [
   },
   {
     slug: "pohlcovani-a-presun-tepla-oceanem",
-    title: "Jak se teplo dostává do oceánu a šíří se v něm?",
+    title: "Proč se teplo v Jižním oceánu ukládá jinde, než přichází?",
     category: "Atmosféra a oceán",
-    cardSummary: "Příjem energie přes mořskou hladinu a přenos tepla mezi oblastmi a hloubkami.",
-    summary: "Oceán přijímá většinu přebytečné energie a prouděním ji přemisťuje mezi oblastmi a hloubkami.",
+    cardSummary: "Promíchávání a proudění v testech nerovnoměrného oteplování oceánu.",
+    summary: "Pomalé oteplování hladiny nemusí znamenat malý příjem tepla. Jak výstup hlubinné vody, proudění a zanořování rozdělují přijatou energii v Jižním oceánu?",
     distinguishingEvidence: "Porovnání toků tepla přes hladinu a přenosu proudy se změnou zásoby tepla v různých oblastech a hloubkách. Společná bilance odlišuje přesun energie uvnitř oceánu od jejího celkového přírůstku.",
   },
   {

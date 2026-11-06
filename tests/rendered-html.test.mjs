@@ -4,6 +4,73 @@ import { readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 import { stripTypeScriptTypes } from "node:module";
 
+test("ocean heat transport connects the regional observation, two tested hypotheses and public evidence", async () => {
+  const path = "/mechanismy/pohlcovani-a-presun-tepla-oceanem";
+  const html = await readFile(new URL("dist/client" + path + "/index.html", root), "utf8");
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.doesNotMatch(html, /class="mechanism-detail-evidence"/);
+  assert.match(html, /Proč se teplo v Jižním oceánu ukládá jinde, než přichází/);
+  assert.deepEqual([...body.matchAll(/<h2 id="([^"]+)"/g)].map(m => m[1]),
+    ["co-vysvetlujeme", "hypotezy", "pribehy", "jak-mechanismus-funguje", "shrnuti", "prameny"]);
+  assert.equal((body.slice(0, body.indexOf('<h2 id="hypotezy"')).match(/<p\b/g) ?? []).length, 2);
+  for (const id of ["test-promichavani", "test-rozlozeni", "test-stale-proudeni"]) {
+    assert.ok(body.includes('id="' + id + '"'));
+  }
+  const bibliography = body.slice(body.indexOf('<h2 id="prameny"'));
+  const catalogue = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
+  for (const id of new Set([...body.matchAll(/href="\/zdroje#([^"]+)"/g)].map(m => m[1]))) {
+    assert.ok(bibliography.includes('href="/zdroje#' + id + '"'), "Missing bibliography " + id);
+    const card = catalogue.match(new RegExp('<article[^>]+id="' + id + '"[\\s\\S]*?</article>'))?.[0];
+    assert.ok(card, "Missing source card " + id);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    assert.match(card, /Otevřít (plný text|veřejn)/);
+  }
+  for (const [, href] of body.matchAll(/href="(\/[^"]+)"/g)) {
+    const [pathname, anchor] = href.split("#");
+    const file = /\.[a-z0-9]+$/i.test(pathname) ? pathname : pathname.replace(/\/$/, "") + "/index.html";
+    const target = await readFile(new URL("dist/client" + file, root));
+    assert.ok(target.length, href);
+    if (anchor) assert.ok(target.toString("utf8").includes('id="' + anchor + '"'), href);
+  }
+  for (const target of ["/pozorovani/tepelny-obsah-oceanu", "/metody/konduktometrie", "/metody/odporova-termometrie-a-termistory"]) {
+    const related = await readFile(new URL("dist/client" + target + "/index.html", root), "utf8");
+    assert.ok(hasArticleLink(body, target));
+    assert.ok(hasArticleLink(related, path), "Missing reciprocal link " + target);
+  }
+  const observation = await readFile(new URL("dist/client/pozorovani/tepelny-obsah-oceanu/index.html", root), "utf8");
+  assert.match(observation, /id="jizni-ocean"/);
+  assert.match(observation, /povrchove-trendy.png/);
+  for (const name of ["mistni-promichavani", "prenos-proudenim"]) {
+    const png = await readFile(new URL("dist/client/media/pohlcovani-a-presun-tepla-oceanem/" + name + ".png", root));
+    assert.equal(png.subarray(1, 4).toString(), "PNG");
+    assert.ok(png.readUInt32BE(16) >= 1024 && png.readUInt32BE(20) >= 1024);
+    assert.ok(body.includes("/media/pohlcovani-a-presun-tepla-oceanem/" + name + ".png"));
+  }
+  const limits = body.match(/<details class="method-details">([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(limits && limits.replace(/<[^>]+>/g, " ").trim().split(/\s+/).length <= 600);
+  assert.doesNotMatch(body.replace(/<[^>]+>/g, " ").replace(/&(?:#\d+|#x[0-9a-f]+|[a-z]+);/gi, ""), /;/);
+  assert.match(body, /class="method-conclusion"/);
+  assert.match(body, /jedna směrodatná odchylka mezi modely/);
+  assert.match(body, /Vlastní soubory výsledků této práce nabízí na vyžádání/);
+});
+
+test("ocean observation chart preserves published period, quantities and missing uncertainties", async () => {
+  const base = "public/media/pohlcovani-a-presun-tepla-oceanem/";
+  const csv = await readFile(new URL(base + "armour2016-sst.csv", root), "utf8");
+  const [header, ...lines] = csv.trim().split(/\r?\n/);
+  assert.equal(header, "region,period,trend_C_per_decade,uncertainty,source");
+  const rows = lines.map(l => l.split(","));
+  assert.deepEqual(rows.map(r => Number(r[2])), [.02, .11, .08]);
+  assert.ok(rows.every(r => r[1] === "1950-2012" && r[3] === "not_reported_for_this_summary"));
+  const provenance = await readFile(new URL(base + "podklady.txt", root), "utf8");
+  assert.match(provenance, /Neprováděli jsme nový výpočet/);
+  for (const name of ["armour2016-sst.csv", "plot.py", "povrchove-trendy.png", "podklady.txt", "prompts.json", "edits.json"]) {
+    assert.deepEqual(await readFile(new URL(base + name, root)),
+      await readFile(new URL("dist/client/media/pohlcovani-a-presun-tepla-oceanem/" + name, root)));
+  }
+});
+
 test("publishes the permafrost mechanism with complete evidence paths and reproducible physical examples", async () => {
   const path = "/mechanismy/prenos-tepla-do-pudy-a-tani-permafrostu";
   const html = await readFile(new URL("dist/client" + path + "/index.html", root), "utf8");
@@ -888,7 +955,7 @@ test("publishes 23 mechanism topics and preserves the split snow-and-sea-ice add
     assert.ok(sitemap.includes(`<loc>https://klimatologie.eu/mechanismy/${slug}/</loc>`), "Missing sitemap route " + slug);
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     assert.ok(html.includes(`<h1>${title}</h1>`), "Wrong detail title " + slug);
-    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen", "prumyslove-aerosoly-a-oblaka", "zmeny-ozonu-ve-stratosfere", "prenos-tepla-do-pudy-a-tani-permafrostu"].includes(slug)) {
+    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen", "prumyslove-aerosoly-a-oblaka", "zmeny-ozonu-ve-stratosfere", "prenos-tepla-do-pudy-a-tani-permafrostu", "pohlcovani-a-presun-tepla-oceanem"].includes(slug)) {
       assert.match(html, /Co musí toto vysvětlení objasnit/);
       assert.match(html, /<section class="mechanism-detail-evidence"[^>]*>[\s\S]*<p>[^<]+<\/p><\/section>/);
     }
@@ -1236,7 +1303,7 @@ test("publishes a sourced ocean heat content article instead of the generic plac
   ]);
 
   assert.match(evidencePage, /OceanHeatArticle/);
-  assert.match(evidencePage, /if \(slug === "tepelny-obsah-oceanu"\)[\s\S]*?meta="5\. listopadu 2026"/);
+  assert.match(evidencePage, /if \(slug === "tepelny-obsah-oceanu"\)[\s\S]*?meta="6\. listopadu 2026"/);
   assert.match(article, /Obsah tepla v oceánu vyjadřuje/);
   assert.match(article, /Jak vzniká globální výpočet/);
   assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
@@ -1265,13 +1332,14 @@ test("publishes a sourced ocean heat content article instead of the generic plac
   const oceanHeatSourceIds = [
     ...article.matchAll(/<SourceLink id="([^"]+)"/g),
   ].map((match) => match[1]);
-  assert.equal(new Set(oceanHeatSourceIds).size, 36);
+  assert.equal(new Set(oceanHeatSourceIds).size, 42);
+  const renderedSources = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
   for (const id of new Set(oceanHeatSourceIds)) {
-    const catalogueOccurrences = sourceCatalogueText.split(id).length - 1;
-    assert.ok(catalogueOccurrences >= 2, `${id} must exist and be marked as open access`);
-    if (id.startsWith("DOI_")) {
-      assert.match(sourceCatalogueText, new RegExp(`"?${id}"?:\\s*"https://`));
-    }
+    const start = renderedSources.indexOf('id="' + id + '"');
+    assert.ok(start >= 0, "Missing ocean source " + id);
+    const card = renderedSources.slice(start, renderedSources.indexOf("</article>", start));
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    assert.match(card, /Otevřít (plný text|veřejn)/);
   }
   assert.match(sourceCatalogueText, /repository\.library\.noaa\.gov\/view\/noaa\/73259\/noaa_73259_DS1\.pdf/);
   assert.match(sourceCatalogueText, /drum\.lib\.umd\.edu\/bitstreams\/e5f2ef03/);
@@ -4551,6 +4619,7 @@ test("keeps each hypothesis independently collapsible with complete content and 
     ["sopecne-aerosoly", ["popel", "sirne-kapky"]],
     ["prumyslove-aerosoly-a-oblaka", ["teplo-a-para", "castice-a-kapky"]],
     ["zmeny-ozonu-ve-stratosfere", ["rust-co2", "ubytek-ozonu"]],
+    ["pohlcovani-a-presun-tepla-oceanem", ["mistni-promichavani", "prenos-proudenim"]],
     ["mechanismy-vln-veder", ["samotne-proudeni", "teplejsi-klima"]],
     ["biologicke-mechanismy-fenologickych-zmen", ["pevny-kalendar", "rytmus-a-prostredi"]],
     ["prenos-tepla-do-pudy-a-tani-permafrostu", ["teplo-z-hloubky", "teplo-od-povrchu"]],

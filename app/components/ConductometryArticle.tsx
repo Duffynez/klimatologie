@@ -559,6 +559,10 @@ export function ConductometryArticle() {
             Před použitím původní funkce by se vodivost v S/m násobila deseti.
           </p>
         </details>
+        <aside className="article-related-mechanism" aria-label="Navazující vysvětlení oceánského přenosu tepla">
+          <p className="eyebrow">Navazující vysvětlení</p>
+          <p>Profily teploty a slanosti pomáhají rozlišit místní promíchávání od přenosu energie proudy. Jak tato měření používáme, ukazuje mechanismus <Link href="/mechanismy/pohlcovani-a-presun-tepla-oceanem/#test-promichavani">nerovnoměrného oteplování Jižního oceánu</Link>.</p>
+        </aside>
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>
