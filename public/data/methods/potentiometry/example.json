@@ -1,8 +1,10 @@
 {
   "accessed": "2026-10-19",
+  "verified": "2026-11-06",
   "actual_experiment": {
     "source_doi": "10.1515/pac-2020-0202",
-    "source_url": "https://www.degruyterbrill.com/document/doi/10.1515/pac-2020-0202/pdf",
+    "source_url": "https://www.degruyterbrill.com/document/doi/10.1515/pac-2020-0202/html#j_pac-2020-0202_tab_007",
+    "calibration_table_url": "https://www.degruyterbrill.com/document/doi/10.1515/pac-2020-0202/html#j_pac-2020-0202_tab_003",
     "tables": [
       3,
       7
@@ -54,7 +56,7 @@
   },
   "handbook_illustration": {
     "source_id": "WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a",
-    "source_url": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/Handbook_2007/Guide_all_in_one.pdf",
+    "source_url": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/Handbook_2007/Guide_all_in_one.pdf#page=118",
     "location": "SOP 6a, version 3.0, 12 October 2007, section 8.3, page 6 of 7",
     "data_level": "Worked example in a methodological guide. No actual ocean sample identification is supplied.",
     "temperature_C": 25,

@@ -266,8 +266,9 @@ export function PotentiometryArticle() {
         <h2>Příklad kalibrace a kontroly výsledku</h2>
         <h3>Třetí roztok ověří převod</h3>
         <p>
-          Použijeme zveřejněný experiment <SourceLink id="DOI_10_1515_pac_2020_0202">Stoicy a kolegyň (2021), tabulky 3 a 7</SourceLink>.
-          Dva roztoky měly při 25 °C přiřazené pHₜ 7,622 a 8,209. Autorky jimi kalibrovaly
+          Použijeme zveřejněný experiment <SourceLink id="DOI_10_1515_pac_2020_0202">Stoicy a kolegyň (2021)</SourceLink>.
+          Z karty zdroje se dostaneme přímo k tabulce 7 s výsledky čtyř elektrod.
+          Referenční hodnoty najdeme v tabulce 3. Dva roztoky měly při 25 °C přiřazené pHₜ 7,622 a 8,209. Autorky jimi kalibrovaly
           čtyři kombinované skleněné elektrody. Pak změřily třetí roztok s referenčním pHₜ
           8,101. Všechny tři roztoky měly praktickou salinitu 35, bezrozměrný údaj o slanosti
           přibližně odpovídající běžné mořské vodě. Přiřazené hodnoty obou kalibračních
@@ -320,8 +321,9 @@ export function PotentiometryArticle() {
             Přepis čtyř kontrolních výsledků je v <a href={dataPath + "/control-results.csv"}>tabulce CSV</a>.
             <a href={dataPath + "/example.json"}> Datový soubor JSON</a> obsahuje referenční hodnoty,
             zdrojové tabulky, stupnici, teplotu, salinitu i oddělenou ukázku z postupu 6a.
-            Přístup ke zdrojům byl ověřen 19. října 2026. V metodické ukázce druhý pufr,
-            2-aminopyridin, poskytuje pHₜ 6,7866 a napětí 4,9 mV. Oba pufry dávají sklon
+            Přepisy jsme 6. listopadu 2026 porovnali s původními tabulkami a příručkou.
+            V metodické ukázce druhý pufr, 2-aminopyridin, poskytuje pHₜ 6,7866 a napětí 4,9 mV.
+            Oba pufry dávají sklon
             59,14 mV na stupeň pH, blízký teoretické hodnotě 59,16 použité ve výpočtu vzorku.
           </p>
           <p>

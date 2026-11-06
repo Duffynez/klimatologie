@@ -2847,7 +2847,7 @@ test("publishes solution spectrophotometry with the correct data level and conne
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">6\. listopadu 2026<\/p>/);
   assert.deepEqual([...body.matchAll(/<h2\b[^>]*>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak změříme pH pomocí světla", "Nejistoty a ověření", "Příklad: výpočet ze skutečných absorbancí", "Shrnutí",
   ]);
@@ -2868,7 +2868,13 @@ test("publishes solution spectrophotometry with the correct data level and conne
     assert.ok(card, `Missing spectrophotometry source ${id}`);
     assert.doesNotMatch(card, /drive\.google\.com/);
     assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
-    if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
+    if (id === "DOI_10_26008_1912_bco_dmo_905235_1") {
+      assert.match(card, /DOI 10\.26008\/1912\/bco-dmo\.905235\.1/);
+      assert.match(card, /Otevřít veřejný zdroj a dokumentaci/);
+      assert.match(card, /Stáhnout úplný datový soubor/);
+    } else if (id.startsWith("DOI_")) {
+      assert.match(card, /Otevřít DOI/);
+    }
   }
   for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
     const href = match[1];
@@ -2922,7 +2928,7 @@ test("publishes potentiometry with connected sources and distinct actual and ill
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">6\. listopadu 2026<\/p>/);
   assert.deepEqual([...body.matchAll(/<h2\b[^>]*>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak měříme pH pomocí elektrod", "Nejistoty a ověření", "Příklad kalibrace a kontroly výsledku", "Shrnutí",
   ]);

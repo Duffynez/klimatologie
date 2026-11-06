@@ -1,0 +1,697 @@
+{
+  "date": "2026-11-06",
+  "methodOrder": [
+    15,
+    16
+  ],
+  "baseCommit": "0854474",
+  "articles": [
+    {
+      "slug": "spektrofotometrie",
+      "title": "Spektrofotometrie roztoků",
+      "sourceIds": [
+        "WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a",
+        "DOI_10_3389_fmars_2018_00177",
+        "2006_NOAA_P16N_pH_Method",
+        "2011_USGS_Shipboard_pH_Photo",
+        "2016_Harvey_Analytical_Chemistry",
+        "DOI_10_5194_os_7_597_2011",
+        "DOI_10_1021_es200665d",
+        "DOI_10_1073_pnas_0906044106",
+        "DOI_10_1002_andp_18521620505",
+        "DOI_10_26008_1912_bco_dmo_905235_1"
+      ]
+    },
+    {
+      "slug": "potenciometrie",
+      "title": "Potenciometrie",
+      "sourceIds": [
+        "2016_Harvey_Analytical_Chemistry",
+        "DOI_10_1515_pac_2020_0202",
+        "2008_USGS_pH_Field_Manual",
+        "WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a",
+        "DOI_10_4319_lom_2010_8_172",
+        "DOI_10_1515_zpch_1909_6720",
+        "2019_NOC_Discovery_103",
+        "2022_NORA_Reuse_Policy"
+      ]
+    }
+  ],
+  "changes": [
+    "Beerův sken má kartu s veřejným náhledem a stažením v Zenodo.",
+    "Woosleyho DOI zůstává v bibliografických údajích. Tlačítka vedou na skutečnou dokumentaci BCO-DMO a na úplný CSV. Původní přesměrování DOI ukázalo CAPTCHA.",
+    "Text o spektrofotometrii nyní vztahuje desetinásobnou změnu k veličině zahrnuté do celkové stupnice pHₜ. Kalibrační rovnici čištěného mCP odkazuje na Liua a kolegy. U Aßmannova přístroje vysvětluje průběh jedné dávky barviva kyvetou.",
+    "Karta Stoicy a kolegyň vede do otevřeného článku k tabulce 7. Metadata příkladu míří také k referenční tabulce 3 a přímo na stranu PDF 118 s ukázkou převodu napětí."
+  ],
+  "sourceChecks": [
+    {
+      "id": "WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a",
+      "title": "Guide to Best Practices for Ocean CO₂ Measurements",
+      "author": "Andrew G. Dickson, Christopher L. Sabine a James R. Christian (eds.)",
+      "year": 2007,
+      "type": "Metodická příručka",
+      "publication": "PICES Special Publication 3 / IOCCP Report 8",
+      "externalUrl": "https://doi.org/10.25607/OBP-1342",
+      "openAccessUrl": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/Handbook_2007/Guide_all_in_one.pdf",
+      "role": "Primární měřicí protokoly",
+      "evidence": "Úplná příručka má 196 stran. SOP 6a je na stranách PDF 113–119 a číselná ukázka na straně 118. SOP 6b na stranách 121–127 popisuje měření při 434, 578 a 730 nm, teplotu, kyvetu a korekci přídavku.",
+      "access": {
+        "browserVerified": true,
+        "method": "browser navigation and PDF validation",
+        "pdfPages": 196,
+        "sha256": "1aaac8e647d9e0b12eaa31e669504e51bbc85fdebed4442464cc8e14cdc7ddfd"
+      }
+    },
+    {
+      "id": "DOI_10_3389_fmars_2018_00177",
+      "title": "Metrology of pH Measurements in Brackish Waters—Part 2: Experimental Characterization of Purified meta-Cresol Purple for Spectrophotometric pHT Measurements",
+      "author": "Jens D. Müller a Gregor Rehder",
+      "year": 2018,
+      "type": "Primární studie kalibrace a metrologické návaznosti",
+      "publication": "Frontiers in Marine Science 5, článek 177",
+      "externalUrl": "https://doi.org/10.3389/fmars.2018.00177",
+      "openAccessUrl": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2018.00177/full",
+      "role": "Primární kalibrace pro méně slanou vodu",
+      "evidence": "Vydavatel zobrazuje celý článek. Teoretické vztahy, absorpční pásma a experimentální kalibrace mCP vysvětlují převod ze dvou absorbancí a návaznost na pufry TRIS.",
+      "access": {
+        "browserVerified": true,
+        "method": "rendered page"
+      }
+    },
+    {
+      "id": "2006_NOAA_P16N_pH_Method",
+      "title": "NDP-090: pH Measurements, Section P16N_2006",
+      "author": "NOAA NCEI, University of Miami a University of South Florida",
+      "year": 2006,
+      "type": "Veřejná metodická dokumentace oceánografické plavby",
+      "publication": "OCADS, dokumentace měření na řezu P16N v roce 2006, přístup 19. října 2026",
+      "externalUrl": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/ndp_090/ph090.html",
+      "role": "Dokumentace měření provozovatele",
+      "evidence": "Stránka NOAA obsahuje úplné oddíly laboratoří UM a USF k řezu P16N_2006, včetně měření pozadí, vlnové délky 730 nm a korekce přídavku indikátoru.",
+      "access": {
+        "browserVerified": true,
+        "method": "rendered page"
+      }
+    },
+    {
+      "id": "2011_USGS_Shipboard_pH_Photo",
+      "title": "CTD rosette used on Coast Guard ice breaker in Canadian Basin",
+      "author": "U.S. Geological Survey",
+      "year": 2011,
+      "type": "Fotografie spektrofotometru a licence Public Domain",
+      "publication": "Fotografie palubní analýzy pH, zveřejněna 17. srpna 2011. Původní název stránky odkazuje na odběr vzorků. Přístup 19. října 2026",
+      "externalUrl": "https://www.usgs.gov/media/images/ctd-rosette-used-coast-guard-ice-breaker-canadian-basin-2",
+      "role": "Původ fotografie",
+      "evidence": "Karta USGS uvádí analýzu vody ze vzorků Kanadské pánve na palubě spektrofotometrem, datum zveřejnění 17. srpna 2011 a Public Domain. Na stránce je dostupná fotografie.",
+      "access": {
+        "browserVerified": true,
+        "method": "rendered page"
+      }
+    },
+    {
+      "id": "2016_Harvey_Analytical_Chemistry",
+      "title": "Analytical Chemistry 2.1",
+      "author": "David Harvey",
+      "year": 2016,
+      "type": "Vysokoškolská učebnice analytické chemie",
+      "publication": "David T. Harvey, DePauw University. Otevřená učebnice, elektronické vydání na LibreTexts.",
+      "externalUrl": "https://sites.google.com/depauw.edu/dth/analytical-curriculum-projects/analytical-chemistry-2-1",
+      "openAccessUrl": "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_by_David_Harvey/Analytical_Chemistry_2.1_(Harvey)",
+      "role": "Vysokoškolská učebnice",
+      "evidence": "LibreTexts otevírá plnou knihu. Oddíl 10.2 vysvětluje absorbanci a zákon úměrnosti v odpovídajícím rozsahu. Oddíl 11.2 vysvětluje skleněnou a referenční elektrodu.",
+      "access": {
+        "browserVerified": true,
+        "method": "rendered page"
+      }
+    },
+    {
+      "id": "DOI_10_5194_os_7_597_2011",
+      "title": "Spectrophotometric high-precision seawater pH determination for use in underway measuring systems",
+      "author": "S. Aßmann, C. Frank a A. Körtzinger",
+      "year": 2011,
+      "type": "Studie",
+      "publication": "Ocean Science",
+      "externalUrl": "https://doi.org/10.5194/os-7-597-2011",
+      "openAccessUrl": "https://os.copernicus.org/articles/7/597/2011/os-7-597-2011.pdf",
+      "role": "Primární ověření spektrofotometru",
+      "evidence": "Úplný vydavatelský PDF má 11 stran. Obrázek 6 používá řadu koncentrací během jedné injekce mCP do proudící vody. Oddíl 4.1.2 uvádí posuny +0,0005 vůči laboratornímu spektrofotometru a +0,0081 pH vůči certifikovanému pufru.",
+      "access": {
+        "browserVerified": true,
+        "method": "browser navigation and PDF validation",
+        "pdfPages": 11,
+        "sha256": "66de0fa1b1dab36997e6d084ead5d559c22c1ab992fa1e366329714b9775baed"
+      }
+    },
+    {
+      "id": "DOI_10_1021_es200665d",
+      "title": "Purification and Characterization of meta-Cresol Purple for Spectrophotometric Seawater pH Measurements",
+      "author": "Xuewu Liu, Mark C. Patsavas a Robert H. Byrne",
+      "year": 2011,
+      "type": "Původní metoda čištění, kalibrace a ověření indikátoru",
+      "publication": "Environmental Science & Technology 45(11), s. 4862–4868",
+      "externalUrl": "https://doi.org/10.1021/es200665d",
+      "openAccessUrl": "https://europepmc.org/article/PMC/3103190#free-full-text",
+      "role": "Primární metoda kalibrace a čištění",
+      "evidence": "Europe PMC po načtení ukáže celý text s výsledky a rovnicemi 18 a 19. Automatické stahování zde vrátilo 403 a NIH PMC zobrazilo kontrolu prohlížeče. Text v Europe PMC dokládá rozsah 278,15–308,15 K a salinitu 20–40 i hodnoty porovnání čištěného a nečištěného barviva.",
+      "access": {
+        "browserVerified": true,
+        "method": "rendered full text"
+      }
+    },
+    {
+      "id": "DOI_10_1073_pnas_0906044106",
+      "title": "Physical and biogeochemical modulation of ocean acidification in the central North Pacific",
+      "author": "John E. Dore a kol.",
+      "year": 2009,
+      "type": "Studie",
+      "publication": "Proceedings of the National Academy of Sciences",
+      "externalUrl": "https://doi.org/10.1073/pnas.0906044106",
+      "openAccessUrl": "https://hahana.soest.hawaii.edu/cmoreserver/summercourse/2015/documents/Bottjer_05-30/Dore_2009_OA_NPSG.pdf",
+      "role": "Primární pozorování pH v oceánu",
+      "evidence": "Šestistránkový PDF zpřístupňuje University of Hawaiʻi. Obrázek 4 rozlišuje pH ze spektrofotometrie a z DIC a alkality, laboratorní podmínky a podmínky v místě odběru. Přímá měření pokrývají roky 1992–1998 a 2003–2007.",
+      "access": {
+        "browserVerified": true,
+        "method": "browser navigation and PDF validation",
+        "pdfPages": 6,
+        "sha256": "ce400215312453118fdb6196a9468961486902fbe54a73cf007f409158441d16"
+      }
+    },
+    {
+      "id": "DOI_10_1002_andp_18521620505",
+      "title": "Bestimmung der Absorption des rothen Lichts in farbigen Flüssigkeiten",
+      "author": "August Beer",
+      "year": 1852,
+      "type": "Původní práce o pohlcování světla v roztocích",
+      "publication": "Annalen der Physik und Chemie 86 (celková řada 162), s. 78–88. Úplný veřejný sken s náhledem a stažením v Zenodo.",
+      "externalUrl": "https://doi.org/10.1002/andp.18521620505",
+      "openAccessUrl": "https://zenodo.org/records/1799630",
+      "openAccessLinkLabel": "Otevřít plný text v Zenodo",
+      "role": "Původní historická práce",
+      "evidence": "Přímý odkaz na PDF prohlížeč při navigaci odmítl. Veřejná stránka Zenodo zobrazuje náhled i tlačítko stažení. Úplný soubor má 11 stran, od 78 do 88, a kontrolní otisk souhlasí s repozitářem.",
+      "access": {
+        "browserVerified": true,
+        "method": "browser navigation and PDF validation",
+        "pdfPages": 11,
+        "sha256": "8452f0ea195d17e822531f0b70646f8b16077a5000ed0788fd6dacd8d0c3f6ff"
+      }
+    },
+    {
+      "id": "DOI_10_26008_1912_bco_dmo_905235_1",
+      "title": "Raw pH data acquired during the pH internal consistency experiment",
+      "author": "Ryan J. Woosley",
+      "year": 2023,
+      "type": "Datový soubor a metodika experimentu",
+      "publication": "BCO-DMO, verze 1 z 28. července 2023. DOI 10.26008/1912/bco-dmo.905235.1. Úplný soubor má 3 600 řádků měření a licenci CC BY 4.0.",
+      "externalUrl": "https://www.bco-dmo.org/dataset/905235",
+      "externalLinkLabel": "Otevřít veřejný zdroj a dokumentaci (BCO-DMO)",
+      "openAccessUrl": "https://datadocs.bco-dmo.org/dataset/905235/file/YVl5ygMuDDDNAV/905235_v1_rawph.csv",
+      "openAccessLinkLabel": "Stáhnout úplný datový soubor (CSV)",
+      "role": "Původní data a metodika",
+      "evidence": "DOI přesměrovalo na obrazovou kontrolu repozitáře. Veřejná stránka BCO-DMO funguje bez účtu a poskytuje dokumentaci verze 1. Její stabilní odkaz na CSV vrací 3 600 datových řádků a stejný SHA-256 jako původní podklad. Čtyři vybrané řádky A–D souhlasí pole po poli.",
+      "access": {
+        "browserVerified": true,
+        "method": "browser dataset page and CSV validation",
+        "sha256": "e29a43ef75ca386fe41080961495ca232e1bed6385445f0fb59a828f2d88e424"
+      }
+    },
+    {
+      "id": "DOI_10_1515_pac_2020_0202",
+      "title": "Feasibility of multifunction calibration of H⁺-responsive glass electrodes in seawater (IUPAC Technical Report)",
+      "author": "Daniela Stoica, Bárbara Velasco Anes, Paola Fisicaro a Maria Filomena Camões",
+      "year": 2021,
+      "type": "Primární experiment, kalibrace a veřejná tabulková data",
+      "publication": "Pure and Applied Chemistry 93(12), s. 1487–1497. Tabulka 3 uvádí referenční pH pufrů a tabulka 7 výsledky ověření čtyř elektrod.",
+      "externalUrl": "https://doi.org/10.1515/pac-2020-0202",
+      "openAccessUrl": "https://www.degruyterbrill.com/document/doi/10.1515/pac-2020-0202/html#j_pac-2020-0202_tab_007",
+      "openAccessLinkLabel": "Otevřít plný text u tabulky 7",
+      "role": "Primární kalibrace a kontrola elektrod",
+      "evidence": "Tlačítko míří do otevřeného vydavatelského HTML přímo k tabulce 7. Prohlížeč vykreslil tabulky 3 a 7 s pHₜ 7,622, 8,101 a 8,209 a výsledky elektrod 8,10, 8,10, 8,09 a 8,10. Přímý PDF a automatické čtení HTML vrátily prázdnou odpověď.",
+      "access": {
+        "browserVerified": true,
+        "method": "rendered full text"
+      }
+    },
+    {
+      "id": "2008_USGS_pH_Field_Manual",
+      "title": "pH, version 2.0 (October 2008)",
+      "author": "George F. Ritz a Jim A. Collins (revize)",
+      "year": 2008,
+      "type": "Veřejná metodika a popis pH elektrody",
+      "publication": "U.S. Geological Survey, TWRI Book 9, chapter A6.4, 30 s.",
+      "externalUrl": "https://pubs.usgs.gov/twri/twri9a6/twri9a64/twri9a_6.4_ver2.0.pdf",
+      "role": "Metodika USGS",
+      "evidence": "Úplné 30stránkové vydání z roku 2008 obsahuje konstrukci kombinované skleněné elektrody a teoretický sklon 59,16 mV na jednotku pH při 25 °C. Rozsah 0–14 uvádí jako doporučený rozsah pH-metru.",
+      "access": {
+        "browserVerified": true,
+        "method": "browser navigation and PDF validation",
+        "pdfPages": 30,
+        "sha256": "26cfd52f3f2761ac08a534496e4320ca85378fe44d81534b33c11927ec26b65a"
+      }
+    },
+    {
+      "id": "DOI_10_4319_lom_2010_8_172",
+      "title": "Testing the Honeywell Durafet® for seawater pH applications",
+      "author": "Todd R. Martz a kol.",
+      "year": 2010,
+      "type": "Studie",
+      "publication": "Limnology and Oceanography: Methods",
+      "externalUrl": "https://doi.org/10.4319/lom.2010.8.172",
+      "openAccessUrl": "https://www.ioccp.org/images/07instrumentsANDsensors/MartzT10.pdf",
+      "role": "Primární test čidla ISFET",
+      "evidence": "Veřejný 13stránkový PDF od IOCCP obsahuje princip Durafetu a zkoušky v nádrži, při plavbě i na kotvení. Uvádí stabilitu lepší než 0,005 pH v průběhu týdnů až měsíců při nízkém tlaku.",
+      "access": {
+        "browserVerified": true,
+        "method": "browser navigation and PDF validation",
+        "pdfPages": 13,
+        "sha256": "527a89276375ebcf5756250b905905ad5628556df19353a7eded48fa7b660925"
+      }
+    },
+    {
+      "id": "DOI_10_1515_zpch_1909_6720",
+      "title": "Über elektrische Phasengrenzkräfte",
+      "author": "Fritz Haber a Zygmunt Klemensiewicz",
+      "year": 1909,
+      "type": "Původní teorie a experimenty se skleněnou elektrodou",
+      "publication": "Zeitschrift für Physikalische Chemie 67U, s. 385–431",
+      "externalUrl": "https://doi.org/10.1515/zpch-1909-6720",
+      "openAccessUrl": "https://knowledge.electrochem.org/estir/hist/hist-65-Haber.pdf",
+      "role": "Původní historická práce",
+      "evidence": "Digitalizovaný PDF v Electrochemical Society má 49 stran včetně úvodu k digitalizaci. Obsahuje práci Habera a Klemensiewicze se skleněnou elektrodou, uvedenou v ročníku 67 časopisu na stranách 385–431.",
+      "access": {
+        "browserVerified": true,
+        "method": "browser navigation and PDF validation",
+        "pdfPages": 49,
+        "sha256": "a64d66dab0d7a05c912969bb8ae9e323085620994dd94ecddd0d93fbc7ad23fe"
+      }
+    },
+    {
+      "id": "2019_NOC_Discovery_103",
+      "title": "RRS Discovery Cruise 103, 21 Jun – 10 Jul 2019. Water column and seafloor time-series studies at the Porcupine Abyssal Plain Sustained Observatory",
+      "author": "Susan E. Hartman a kolektiv",
+      "year": 2019,
+      "type": "Primární zpráva z plavby, dokumentace nasazení a fotografie SeaFETu",
+      "publication": "National Oceanography Centre, Cruise Report 61, 146 s. NERC Open Research Archive (NORA)",
+      "externalUrl": "https://nora.nerc.ac.uk/id/eprint/525366/",
+      "openAccessUrl": "https://nora.nerc.ac.uk/id/eprint/525366/7/NOC_CR61_Final_keywords%20updated%2016.10.23.pdf",
+      "role": "Primární zpráva a fotografie",
+      "evidence": "Veřejný PDF z NORA má 146 stran. Strany 58–60 potvrzují SeaFET 257 v hloubce 30 m a fotografii. Strana 63 popisuje ustalování a závadu. JPEG na Klimatologie.eu je bajtově shodný s vloženým snímkem v PDF.",
+      "access": {
+        "browserVerified": true,
+        "method": "browser navigation and PDF validation",
+        "pdfPages": 146,
+        "sha256": "9e5cb39c0ddd9e405560c96894d333e2a316bb4cf23ceacbdaf59550e57dea8b"
+      }
+    },
+    {
+      "id": "2022_NORA_Reuse_Policy",
+      "title": "NERC Open Research Archive: Access/use policy",
+      "author": "NERC Open Research Archive (NORA)",
+      "year": 2022,
+      "type": "Podmínky vzdělávacího použití nezměněných materiálů s uvedením autorství, zdroje a copyrightu",
+      "publication": "Podmínky aktualizované 3. listopadu 2022, přístup 19. října 2026",
+      "externalUrl": "https://nora.nerc.ac.uk/policies.html",
+      "role": "Podmínky vzdělávacího použití",
+      "evidence": "Veřejná pravidla NORA povolují vzdělávací použití jednotlivých kopií s uvedením autorů, bibliografie, odkazu na metadata a původního copyrightu. Článek tyto údaje uvádí u fotografie.",
+      "access": {
+        "browserVerified": true,
+        "method": "rendered page"
+      }
+    }
+  ],
+  "verifiedData": {
+    "spectro": {
+      "rowCount": 3600,
+      "originalSha256": "e29a43ef75ca386fe41080961495ca232e1bed6385445f0fb59a828f2d88e424",
+      "matchingRows": 4,
+      "raw_pHt": [
+        "7.6391",
+        "7.6378",
+        "7.6381",
+        "7.6376"
+      ]
+    },
+    "potentiometry": {
+      "table7Differences": [
+        "-0.001",
+        "-0.001",
+        "-0.011",
+        "-0.001"
+      ],
+      "SOP6aPdfPage": 118,
+      "slope": "59.14",
+      "sample_pHt": "8.0023"
+    },
+    "beer": {
+      "pages": 11,
+      "md5": "17952597784890567d6a93de751582fd"
+    },
+    "nocPhoto": {
+      "pdfPage": 60,
+      "sameJPEG": true,
+      "sha256": "777b47b6a88b203c35da77116c0acb0d31315fc7157aa2d6b538e25943cbb66e"
+    }
+  },
+  "httpChecks": [
+    {
+      "id": "src-01",
+      "url": "https://doi.org/10.25607/OBP-1342",
+      "finalUrl": "https://repository.oceanbestpractices.org/handle/11329/249",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 5952,
+      "sha256": "fb531827be8095a64606c898d6259e8a735a9a22ff1729fb7f0ca71905d46261",
+      "truncated": false
+    },
+    {
+      "id": "src-02",
+      "url": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/Handbook_2007/Guide_all_in_one.pdf",
+      "finalUrl": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/Handbook_2007/Guide_all_in_one.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 5434312,
+      "sha256": "1aaac8e647d9e0b12eaa31e669504e51bbc85fdebed4442464cc8e14cdc7ddfd",
+      "truncated": false
+    },
+    {
+      "id": "src-03",
+      "url": "https://doi.org/10.3389/fmars.2018.00177",
+      "finalUrl": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2018.00177/full",
+      "status": 200,
+      "contentType": "text/html;charset=utf-8",
+      "bytes": 707419,
+      "sha256": "e125b60ff036ee266b10e62c55a6f197715375b51feb16831af2d2da4e74db87",
+      "truncated": false
+    },
+    {
+      "id": "src-04",
+      "url": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2018.00177/full",
+      "finalUrl": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2018.00177/full",
+      "status": 200,
+      "contentType": "text/html;charset=utf-8",
+      "bytes": 707419,
+      "sha256": "e125b60ff036ee266b10e62c55a6f197715375b51feb16831af2d2da4e74db87",
+      "truncated": false
+    },
+    {
+      "id": "src-05",
+      "url": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/ndp_090/ph090.html",
+      "finalUrl": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/ndp_090/ph090.html",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 26788,
+      "sha256": "a32ca72b6dcd737984a566c8c18d6e9d8acc353b9231f873eecddffec031275b",
+      "truncated": false
+    },
+    {
+      "id": "src-06",
+      "url": "https://www.usgs.gov/media/images/ctd-rosette-used-coast-guard-ice-breaker-canadian-basin-2",
+      "finalUrl": "https://www.usgs.gov/media/images/ctd-rosette-used-coast-guard-ice-breaker-canadian-basin-2",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 85578,
+      "sha256": "7c1d17c1605222c1cda0262e63eff70d9e3d1bb2cf1a32805136696297bdf2a8",
+      "truncated": false
+    },
+    {
+      "id": "src-07",
+      "url": "https://sites.google.com/depauw.edu/dth/analytical-curriculum-projects/analytical-chemistry-2-1",
+      "finalUrl": "https://sites.google.com/depauw.edu/dth/analytical-curriculum-projects/analytical-chemistry-2-1",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 126045,
+      "sha256": "d0ae75d0ca67fd862a23072a3a979b89076743a926bd671322571f4d5305e338",
+      "truncated": false
+    },
+    {
+      "id": "src-08",
+      "url": "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_by_David_Harvey/Analytical_Chemistry_2.1_(Harvey)",
+      "finalUrl": "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_by_David_Harvey/Analytical_Chemistry_2.1_(Harvey)",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 184903,
+      "sha256": "fcad574e3f2058468b903409e1a59fccdf52e45f1cad6683a490eda3a395d913",
+      "truncated": false
+    },
+    {
+      "id": "src-09",
+      "url": "https://doi.org/10.5194/os-7-597-2011",
+      "finalUrl": "https://os.copernicus.org/articles/7/597/2011/",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 121894,
+      "sha256": "acd7a3bd2d7cf7e1bccab66363d67bd428290a585160683d31546dc8056ce49f",
+      "truncated": false
+    },
+    {
+      "id": "src-10",
+      "url": "https://os.copernicus.org/articles/7/597/2011/os-7-597-2011.pdf",
+      "finalUrl": "https://os.copernicus.org/articles/7/597/2011/os-7-597-2011.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 1979616,
+      "sha256": "66de0fa1b1dab36997e6d084ead5d559c22c1ab992fa1e366329714b9775baed",
+      "truncated": false
+    },
+    {
+      "id": "src-11",
+      "url": "https://doi.org/10.1021/es200665d",
+      "finalUrl": "https://pubs.acs.org/doi/10.1021/es200665d",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 5582,
+      "sha256": "c051c9096c8cd304c09a754f640ea143ade386333d207350fddfb6affc3a0cd9",
+      "truncated": false
+    },
+    {
+      "id": "src-12",
+      "url": "https://europepmc.org/article/PMC/3103190#free-full-text",
+      "finalUrl": "https://europepmc.org/article/PMC/3103190#free-full-text",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 5599,
+      "sha256": "7c6f7ea87740c0fa833097a5443964525cb2182eafa08e838ef9fec027fc738d",
+      "truncated": false
+    },
+    {
+      "id": "src-13",
+      "url": "https://doi.org/10.1073/pnas.0906044106",
+      "finalUrl": "https://pnas.org/doi/full/10.1073/pnas.0906044106",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 5654,
+      "sha256": "1471bbb293843cd8936aa7dbe8f493d56e783eb25361eb808084951252bf6db6",
+      "truncated": false
+    },
+    {
+      "id": "src-14",
+      "url": "https://hahana.soest.hawaii.edu/cmoreserver/summercourse/2015/documents/Bottjer_05-30/Dore_2009_OA_NPSG.pdf",
+      "finalUrl": "https://hahana.soest.hawaii.edu/cmoreserver/summercourse/2015/documents/Bottjer_05-30/Dore_2009_OA_NPSG.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 1869153,
+      "sha256": "ce400215312453118fdb6196a9468961486902fbe54a73cf007f409158441d16",
+      "truncated": false
+    },
+    {
+      "id": "src-15",
+      "url": "https://doi.org/10.1002/andp.18521620505",
+      "finalUrl": "https://onlinelibrary.wiley.com/doi/10.1002/andp.18521620505",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 5657,
+      "sha256": "9f7d8e1ff40a3997d0c3daa565730f378e91897cfe48cf4dad012cc2da37b9c3",
+      "truncated": false
+    },
+    {
+      "id": "src-16",
+      "url": "https://zenodo.org/records/1799630/files/article.pdf",
+      "finalUrl": "https://zenodo.org/records/1799630/files/article.pdf",
+      "status": 200,
+      "contentType": "application/octet-stream, application/octet-stream",
+      "bytes": 464266,
+      "sha256": "8452f0ea195d17e822531f0b70646f8b16077a5000ed0788fd6dacd8d0c3f6ff",
+      "truncated": false
+    },
+    {
+      "id": "src-17",
+      "url": "https://doi.org/10.26008/1912/bco-dmo.905235.1",
+      "finalUrl": "https://darchive.mblwhoilibrary.org/captcha/index.php?redirect=/handle/1912/66592",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 3038,
+      "sha256": "009d428b3e2d47ec83e22392408c6dbb79f98ef1a792d899f2b3f2346fe71709",
+      "truncated": false
+    },
+    {
+      "id": "src-18",
+      "url": "https://www.bco-dmo.org/dataset/905235",
+      "finalUrl": "https://www.bco-dmo.org/dataset/905235",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 150273,
+      "sha256": "28fa45aa086dcd8915646065640ef3e8efd3ebbcedda1a03fa22b84b484e8c00",
+      "truncated": false
+    },
+    {
+      "id": "src-19",
+      "url": "https://doi.org/10.1515/pac-2020-0202",
+      "finalUrl": "https://www.degruyterbrill.com/document/doi/10.1515/pac-2020-0202/html",
+      "status": 202,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "truncated": false
+    },
+    {
+      "id": "src-20",
+      "url": "https://www.degruyterbrill.com/document/doi/10.1515/pac-2020-0202/pdf",
+      "finalUrl": "https://www.degruyterbrill.com/document/doi/10.1515/pac-2020-0202/pdf",
+      "status": 202,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "truncated": false
+    },
+    {
+      "id": "src-21",
+      "url": "https://pubs.usgs.gov/twri/twri9a6/twri9a64/twri9a_6.4_ver2.0.pdf",
+      "finalUrl": "https://pubs.usgs.gov/twri/twri9a6/twri9a64/twri9a_6.4_ver2.0.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 198978,
+      "sha256": "26cfd52f3f2761ac08a534496e4320ca85378fe44d81534b33c11927ec26b65a",
+      "truncated": false
+    },
+    {
+      "id": "src-22",
+      "url": "https://doi.org/10.4319/lom.2010.8.172",
+      "finalUrl": "https://aslopubs.onlinelibrary.wiley.com/doi/10.4319/lom.2010.8.172",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 5703,
+      "sha256": "1605724a094727dd1f74c52368814076ca78dbcc9722df51efbf0c32d683a342",
+      "truncated": false
+    },
+    {
+      "id": "src-23",
+      "url": "https://www.ioccp.org/images/07instrumentsANDsensors/MartzT10.pdf",
+      "finalUrl": "https://www.ioccp.org/images/07instrumentsANDsensors/MartzT10.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 2024155,
+      "sha256": "527a89276375ebcf5756250b905905ad5628556df19353a7eded48fa7b660925",
+      "truncated": false
+    },
+    {
+      "id": "src-24",
+      "url": "https://doi.org/10.1515/zpch-1909-6720",
+      "finalUrl": "https://www.degruyterbrill.com/document/doi/10.1515/zpch-1909-6720/html",
+      "status": 202,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "truncated": false
+    },
+    {
+      "id": "src-25",
+      "url": "https://knowledge.electrochem.org/estir/hist/hist-65-Haber.pdf",
+      "finalUrl": "https://knowledge.electrochem.org/estir/hist/hist-65-Haber.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 2666939,
+      "sha256": "a64d66dab0d7a05c912969bb8ae9e323085620994dd94ecddd0d93fbc7ad23fe",
+      "truncated": false
+    },
+    {
+      "id": "src-26",
+      "url": "https://nora.nerc.ac.uk/id/eprint/525366/",
+      "finalUrl": "https://nora.nerc.ac.uk/id/eprint/525366/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 51728,
+      "sha256": "49cbd3e881b6f008d51b4c9bd6cf2dea67bda6bc9c5fef6a0d723c2f8a399a7d",
+      "truncated": false
+    },
+    {
+      "id": "src-27",
+      "url": "https://nora.nerc.ac.uk/id/eprint/525366/7/NOC_CR61_Final_keywords%20updated%2016.10.23.pdf",
+      "finalUrl": "https://nora.nerc.ac.uk/id/eprint/525366/7/NOC_CR61_Final_keywords%20updated%2016.10.23.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 13954781,
+      "sha256": "9e5cb39c0ddd9e405560c96894d333e2a316bb4cf23ceacbdaf59550e57dea8b",
+      "truncated": false
+    },
+    {
+      "id": "src-28",
+      "url": "https://nora.nerc.ac.uk/policies.html",
+      "finalUrl": "https://nora.nerc.ac.uk/policies.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 16549,
+      "sha256": "598855ae896a0dabd24daef4f6c41b67ea0cea312a9342af2d7116ddfd200211",
+      "truncated": false
+    },
+    {
+      "id": "src-29",
+      "url": "https://datadocs.bco-dmo.org/dataset/905235/file/YVl5ygMuDDDNAV/905235_v1_rawph.csv",
+      "finalUrl": "https://s3.amazonaws.com/bcodmo-files-prod/YVl5ygMuDDDNAV/905235_v1_rawph.csv",
+      "status": 200,
+      "contentType": "binary/octet-stream",
+      "bytes": 311164,
+      "sha256": "e29a43ef75ca386fe41080961495ca232e1bed6385445f0fb59a828f2d88e424",
+      "truncated": false
+    },
+    {
+      "id": "stoica-full",
+      "url": "https://www.degruyterbrill.com/document/doi/10.1515/pac-2020-0202/html",
+      "finalUrl": "https://www.degruyterbrill.com/document/doi/10.1515/pac-2020-0202/html",
+      "status": 202,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "truncated": false
+    },
+    {
+      "id": "stoica-table",
+      "url": "https://www.degruyterbrill.com/document/doi/10.1515/pac-2020-0202/html#j_pac-2020-0202_tab_007",
+      "finalUrl": "https://www.degruyterbrill.com/document/doi/10.1515/pac-2020-0202/html#j_pac-2020-0202_tab_007",
+      "status": 202,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "truncated": false
+    },
+    {
+      "id": "liu-pmc",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3103190/",
+      "finalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3103190/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 21409,
+      "sha256": "5dee08e791e40073276689b525afea47ac4fb50ad8fbea126968202b54414bdb",
+      "truncated": false
+    },
+    {
+      "id": "beer-record",
+      "url": "https://zenodo.org/records/1799630",
+      "finalUrl": "https://zenodo.org/records/1799630",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 59949,
+      "sha256": "0181d4d426ad1e6cf8d09de209f58583f9d57da05a713bf23d1a1aba0a505dc8",
+      "truncated": false
+    },
+    {
+      "id": "usgs-photo",
+      "url": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/full_width/public/228.JPG?itok=lLfnjNAx",
+      "finalUrl": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/full_width/public/228.JPG?itok=lLfnjNAx",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 282785,
+      "sha256": "fc84701936091917c8b84d87ea2d83a6c614d630c231bf60209e8447f61a9af8",
+      "truncated": false
+    }
+  ],
+  "browserNotes": "Prohlížeč prošel cestu z obou článků přes 16 karet. U PDF byly ověřeny úplné soubory a u textů vykreslený obsah, protože samotný stavový kód nestačí. Potvrzeny dvě rozložení článku bez vodorovného přetékání celé stránky."
+}

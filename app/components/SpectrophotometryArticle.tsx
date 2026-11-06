@@ -20,8 +20,9 @@ export function SpectrophotometryArticle() {
         <p>
           pH popisuje kyselost roztoku. Když přibývají vodíkové ionty, jeho hodnota klesá.
           Vodíkový iont je kladně nabitá podoba vodíku, která ve vodě přechází mezi molekulami.
-          Stupnice je logaritmická: pokles o jeden stupeň znamená desetinásobek příslušné
-          koncentrace vodíkových iontů. Mořská voda přitom může mít stále pH vyšší než sedm
+          Na celkové stupnici pHₜ znamená pokles o jednotku desetinásobek množství vodíkových
+          iontů započítaných na kilogram roztoku. Co do tohoto součtu patří, vysvětlíme při
+          kalibraci. Mořská voda přitom může mít stále pH vyšší než sedm
           a zároveň postupně okyselovat. Pro sledování této změny potřebujeme zachytit i malé
           rozdíly mezi jednotlivými odběry. Souvislosti vysvětluje článek o{" "}
           <Link href="/pozorovani/acidifikace-oceanu/#mereni-ph">acidifikaci oceánu</Link>.{" "}
@@ -134,7 +135,7 @@ export function SpectrophotometryArticle() {
           Používáme celkovou stupnici pH, označenou pHₜ. Ta započítává volné vodíkové ionty
           i jejich podíl vázaný v hydrogensíranu, jedné z rozpuštěných sirných sloučenin.
           Pro čištěný mCP můžeme převod na tuto stupnici zapsat pomocí tří kalibračních parametrů:{" "}
-          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 6b, oddíly 2–3)</SourceLink>
+          <SourceLink id="DOI_10_1021_es200665d">(Liu a kol., rovnice 18)</SourceLink>
         </p>
         <Equation tex={String.raw`\mathrm{pH}_{\mathrm T}=P+\log_{10}\!\left(\frac{R-e_{\mathrm a}}{1-R\,e_{\mathrm b}}\right)`} />
         <p>
@@ -164,11 +165,12 @@ export function SpectrophotometryArticle() {
         <p>
           Takto získané pH zatím patří směsi vody a indikátoru. Protože indikátor sám přijímá
           a odevzdává vodíkové ionty, jeho přidání trochu změní pH vzorku.
-          Změnu určíme měřením při několika malých přídavcích. Pro ně je závislost pH na
-          přidaném množství přibližně přímková. Přímku prodloužíme k nulovému přídavku. Dostaneme odhad pH původní vody,
-          přestože bez barviva bychom tento optický signál neměli.
-          Takto korekci prováděli{" "}
-          <SourceLink id="DOI_10_5194_os_7_597_2011">Aßmann a kol. (2011), obrázek 6</SourceLink>.
+          Změnu určíme měřením při několika malých koncentracích indikátoru.
+          Závislost pH na jeho množství přibližně vystihuje přímka. Jejím prodloužením
+          k nulovému množství odhadneme pH původní vody.{" "}
+          <SourceLink id="DOI_10_5194_os_7_597_2011">Aßmann a kol. (2011, obrázek 6)</SourceLink>{" "}
+          vstříkli jednu dávku barviva do proudící vody a během jejího průchodu
+          kyvetou počítali ze spekter pH při různých koncentracích barviva.
         </p>
 
         <figure className="article-figure article-figure--scroll-mobile">
@@ -339,6 +341,7 @@ export function SpectrophotometryArticle() {
           <p>
             V <a href={`${dataPath}/woosley-batch2-bottle15.csv`}>tabulce CSV</a> jsou čtyři
             opakování A–D vybrané láhve, všechna s příznakem kvality 2, tedy dobrá data.
+            Karta BCO-DMO nabízí také stažení úplného zdrojového souboru s 3 600 řádky.
             <a href={`${dataPath}/reproduce.py`}> Skript v Pythonu</a> bez dalších knihoven
             přepočítá poměry a pH a ověří shodu se zdrojem na jeho uvedená desetinná místa.
             CSV a skript uložte do stejné složky a spusťte <code>python reproduce.py</code>.
@@ -365,8 +368,8 @@ export function SpectrophotometryArticle() {
           <p>
             Spektrofotometrie umožňuje stanovovat koncentrace rozpuštěných látek,
             například živin, a pomocí indikátorů také pH. V oceánografii slouží ke
-            sledování chemického složení vody a acidifikace. Indikátor m-kresolová
-            purpurová je použitelný přibližně v rozsahu pH 7,4–9,0, který zahrnuje i
+            sledování chemického složení vody a acidifikace. Indikátor m-kresolový
+            purpur je použitelný přibližně v rozsahu pH 7,4–9,0, který zahrnuje i
             běžné mořské prostředí.{" "}
             <SourceLink id="DOI_10_5194_os_7_597_2011">(Aßmann a kol., 2011)</SourceLink>
           </p>
