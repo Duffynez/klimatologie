@@ -1,0 +1,54 @@
+Klimatologie.eu • Proč Grónsko a Antarktida ztrácejí led?
+Datum: 6. listopadu 2026
+
+VLASTNÍ GRAFIKA
+povrchova-bilance.svg a povrch-a-odtok-ledu.svg jsou vlastní kvalitativní schémata,
+vytvořená v editovatelném SVG s pomocí AI. Nejde o kopie obrázků z citovaných studií,
+o mapu konkrétního šelfu ani o vykreslená měřená data. Geometrie a délky šipek jsou
+ilustrativní. Rozpad šelfu a jeho tání zespodu jsou dvě různé cesty změny opory.
+Obě schémata lze znovu vytvořit příkazem node grafika.mjs ve složce se souborem.
+Autor: Klimatologie.eu s pomocí AI. Licence vlastní grafiky a kódu: CC BY 4.0.
+https://creativecommons.org/licenses/by/4.0/
+
+VĚCNÉ PODKLADY SCHÉMAT
+Povrchová bilance, energie, zadržení vody a říční odtok:
+van As a kol. (2012), zejména metody a obr. 8.
+https://doi.org/10.5194/tc-6-199-2012
+Rozdělení hmotnostní bilance a kontrola pomocí GRACE:
+van den Broeke a kol. (2009), obr. 1–2.
+https://doi.org/10.1126/science.1178176
+Mechanická opora šelfu, odpor bočních stěn a kontakty se dnem:
+Thomas (1973).
+https://doi.org/10.3189/S002214300002270X
+Změny rychlosti po rozpadu Larsen B:
+Scambos a kol. (2004), obr. 1–3.
+https://doi.org/10.1029/2004GL020670
+Odvození spodních ztrát z výšek, firnu, přítoku a polohy čela:
+Pritchard a kol. (2012), obr. 1–4.
+https://doi.org/10.1038/nature10968
+Veřejná data k této studii:
+https://doi.org/10.1594/PANGAEA.775984
+
+ČÍSELNÁ TABULKA
+tabulka-4.csv je doslovný přepis čísel čtyř řádků tabulky 4 studie:
+Otosaka a kol. (2026), Mass balance of the Greenland and Antarctic ice sheets
+from the 1970s to 2023. Scientific Data 13, 1301.
+https://doi.org/10.1038/s41597-026-08088-0
+Veřejný plný text: https://escholarship.org/content/qt37q7g6zh/qt37q7g6zh.pdf
+Původní časové řady IMBIE a metadata (OGL-UK 3.0):
+https://doi.org/10.5285/128c5e33-5224-4197-82f0-19dcc95b80a0
+https://ramadda.data.bas.ac.uk/repository/entry/show?entryid=128c5e33-5224-4197-82f0-19dcc95b80a0
+
+Jednotka všech číselných sloupců: Gt/rok (gigatuny za rok).
+Záporné znaménko označuje ztrátu, kladné přírůstek.
+Povrchový a dynamický sloupec jsou odchylky vůči referenci, nikoli absolutní toky.
+Reference: 1960–1990 pro Grónsko, 1979–2008 pro Antarktidu.
+Dynamická odchylka je odvozena odečtením modelové povrchové odchylky od celkové
+bilance. Její nejistota proto není nezávislá na nejistotách ostatních sloupců.
+Nejistoty přebíráme tak, jak jsou publikovány. Neoznačujeme je jako 95% intervaly.
+
+bilance.mjs ověřuje součet povrchového a dynamického příspěvku v každém řádku.
+Nejde o opakování družicového zpracování ani o nový výpočet nejistot.
+Čísla tabulky nepřepočítáváme z průměrů veřejných měsíčních CSV. Prostý průměr
+měsíčních řádků Grónska se od některých publikovaných zaokrouhlených hodnot
+liší přibližně o 1 Gt/rok. Tabulka článku zachovává hodnoty původní publikace.

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="660" viewBox="0 0 1100 660" role="img" aria-labelledby="title desc">
+<title id="title">Pohyb ledu: šelf může přenášet odpor proti toku</title><desc id="desc">Dva schematické řezy ukazují ukotvený led a plovoucí šelf. Vlevo se šelf opírá o podmořskou vyvýšeninu a může brzdit ledovec. Vpravo ztenčení či rozpad oporu zeslabí a led z pevniny může zrychlit. Oceánská voda může tavit spodní stranu šelfu.</desc>
+<style>svg{--sea:#1d5d58;--heat:#b65a36;--water:#287aa1;--resist:#8b3857;font-family:Arial,sans-serif}path,line,rect,circle{vector-effect:non-scaling-stroke}</style>
+<defs><marker id="sea" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#1d5d58"/></marker><marker id="heat" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#b65a36"/></marker><marker id="water" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#287aa1"/></marker><marker id="resist" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#8b3857"/></marker></defs>
+<rect width="1100" height="660" rx="12" fill="#f8f5ed"/>
+<text x="38" y="48" font-size="29" fill="#173b3f" font-weight="700" text-anchor="start"><tspan x="38" dy="0">Pohyb ledu: šelf může přenášet odpor proti toku</tspan></text>
+<text x="38" y="84" font-size="22" fill="#173b3f" font-weight="400" text-anchor="start"><tspan x="38" dy="0">Ztráta plovoucího ledu může změnit tok ledu, který dosud leží na podloží.</tspan></text>
+  <rect x="38" y="110" width="495" height="367" rx="8" fill="#fff" stroke="#c5d3cd"/>
+  <rect x="553" y="110" width="509" height="367" rx="8" fill="#fff" stroke="#c5d3cd"/>
+  <text x="58" y="147" font-size="23" fill="#173b3f" font-weight="700" text-anchor="start"><tspan x="58" dy="0">A • Šelf s mechanickou oporou</tspan></text>
+  <text x="573" y="147" font-size="23" fill="#173b3f" font-weight="700" text-anchor="start"><tspan x="573" dy="0">B • Oslabení nebo ztráta opory</tspan></text>
+  <path d="M205 285H513V418H58V374Z" fill="#b7dce7"/>
+  <path d="M720 285H1042V418H573V374Z" fill="#b7dce7"/>
+  <path d="M58 307L194 324L246 373L367 399L423 335L467 402L513 415V448H58Z" fill="#b7ad99"/>
+  <path d="M573 307L709 324L761 373L882 399L938 335L982 402L1042 415V448H573Z" fill="#b7ad99"/>
+  <path d="M58 198Q158 218 221 254L490 268L490 336L423 335L249 327L194 324L58 307Z" fill="#d9e9eb" stroke="#7fadb6" stroke-width="2"/>
+  <path d="M573 216Q660 229 730 266L861 278L861 310L730 322L709 324L573 307Z" fill="#d9e9eb" stroke="#7fadb6" stroke-width="2"/>
+  <path d="M900 277L938 277L938 305L900 305Z M966 279L1002 280L1002 302L966 302Z" fill="#d9e9eb" stroke="#7fadb6" stroke-width="2"/>
+  <path d="M84 270L178 280" fill="none" stroke="var(--sea)" stroke-width="5" marker-end="url(#sea)"/>
+  <path d="M594 277L710 291" fill="none" stroke="var(--sea)" stroke-width="5" marker-end="url(#sea)"/>
+  <path d="M714 291L803 295" fill="none" stroke="var(--sea)" stroke-width="5" marker-end="url(#sea)"/>
+  <path d="M403 313L326 313" fill="none" stroke="var(--resist)" stroke-width="5" marker-end="url(#resist)"/>
+  <text x="266" y="294" font-size="18" fill="#8b3857" font-weight="400" text-anchor="start"><tspan x="266" dy="0">Odpor proti toku</tspan></text>
+  <text x="283" y="197" font-size="23" fill="#173b3f" font-weight="700" text-anchor="start"><tspan x="283" dy="0">Plovoucí šelf</tspan></text>
+  <path d="M369 209L369 262" stroke="#526869" stroke-width="2"/>
+  <text x="58" y="184" font-size="20" fill="#173b3f" font-weight="400" text-anchor="start"><tspan x="58" dy="0">Led na podloží</tspan></text>
+  <text x="575" y="184" font-size="22" fill="#1d5d58" font-weight="700" text-anchor="start"><tspan x="575" dy="0">Přítok může zrychlit.</tspan></text>
+  <text x="838" y="236" font-size="22" fill="#173b3f" font-weight="400" text-anchor="start"><tspan x="838" dy="0">Rozpad</tspan></text>
+  <path d="M927 244L927 271" stroke="#526869" stroke-width="2"/>
+  <circle cx="205" cy="325" r="7" fill="#b65a36"/>
+  <path d="M205 332L193 386" stroke="#b65a36" stroke-width="2"/>
+  <text x="66" y="410" font-size="21" fill="#173b3f" font-weight="400" text-anchor="start"><tspan x="66" dy="0">Linie ukotvení</tspan></text>
+  <path d="M423 341L423 417" stroke="#526869" stroke-width="2"/>
+  <text x="317" y="440" font-size="21" fill="#173b3f" font-weight="400" text-anchor="start"><tspan x="317" dy="0">Kontakt se dnem</tspan></text>
+  <path d="M1030 352Q1000 318 962 318Q914 317 876 325L805 342" fill="none" stroke="var(--heat)" stroke-width="5" marker-end="url(#heat)"/>
+  <text x="777" y="414" font-size="21" fill="#9c482d" font-weight="400" text-anchor="start"><tspan x="777" dy="0">Teplo z oceánu může</tspan><tspan x="777" dy="29">tavit šelf zespodu.</tspan></text>
+  <rect x="38" y="495" width="1024" height="111" rx="8" fill="#e8efea"/>
+  <text x="58" y="526" font-size="23" fill="#173b3f" font-weight="700" text-anchor="start"><tspan x="58" dy="0">Opora závisí na geometrii a kontaktech.</tspan></text>
+  <text x="58" y="558" font-size="21" fill="#173b3f" font-weight="400" text-anchor="start"><tspan x="58" dy="0">Odpor přenášejí také boky zálivu, které v řezu nejsou vidět.</tspan><tspan x="58" dy="29">Ne každý plovoucí okraj brzdí stejně. Rozpad a spodní tání jsou různé děje.</tspan></text>
+<text x="38" y="639" font-size="18" fill="#526869" font-weight="400" text-anchor="start"><tspan x="38" dy="0">Kvalitativní schéma • délky šipek ani rozměry neudávají měřené hodnoty</tspan></text>
+</svg>

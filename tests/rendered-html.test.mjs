@@ -4,6 +4,64 @@ import { readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 import { stripTypeScriptTypes } from "node:module";
 
+test("publishes ice-sheet mechanisms with distinct water and ice budgets and traceable local tests", async () => {
+  const route = "/mechanismy/hmotnostni-bilance-a-dynamika-ledovych-prikrovu";
+  const html = await readFile(new URL("dist/client" + route + "/index.html", root), "utf8");
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "Replace the catalogue outline with the full article");
+  assert.deepEqual([...body.matchAll(/<h2 id="([^"]+)"/g)].map(m => m[1]), ["co-vysvetlujeme", "hypotezy", "pribehy", "jak-mechanismus-funguje", "shrnuti", "prameny"]);
+  assert.equal((body.slice(0, body.indexOf('<h2 id="hypotezy"')).match(/<p\b/g) ?? []).length, 2);
+  assert.match(html, /6\. listopadu 2026/);
+  for (const id of ["test-reka", "test-gronska-bilance", "test-larsen", "test-spodek-selfu"]) {
+    assert.ok(body.includes(`id="${id}"`));
+  }
+  const bibliography = body.slice(body.indexOf('<h2 id="prameny"'));
+  const catalogue = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
+  for (const id of new Set([...body.matchAll(/href="\/zdroje#([^"]+)"/g)].map(m => m[1]))) {
+    assert.ok(bibliography.includes('href="/zdroje#' + id + '"'), "Missing bibliography entry " + id);
+    const card = catalogue.match(new RegExp('<article[^>]+id="' + id + '"[\\s\\S]*?</article>'))?.[0];
+    assert.ok(card, "Missing source card " + id);
+    assert.match(card, /doi\.org\//);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    assert.match(card, /Otevřít plný text|Otevřít veřejná data/);
+  }
+  for (const [, href] of body.matchAll(/href="(\/[^\"]+)"/g)) {
+    const [pathname, anchor] = href.split("#");
+    const file = /\.[a-z0-9]+$/i.test(pathname) ? pathname : pathname.replace(/\/$/, "") + "/index.html";
+    const target = await readFile(new URL("dist/client" + file, root), "utf8");
+    if (anchor) assert.ok(target.includes(`id="${anchor}"`), "Broken source or evidence link " + href);
+  }
+  for (const target of ["/pozorovani/nestabilita-prikrovu", "/metody/radarova-interferometrie-a-sledovani-pohybu-povrchu"]) {
+    const related = await readFile(new URL("dist/client" + target + "/index.html", root), "utf8");
+    assert.ok(hasArticleLink(body, target));
+    assert.ok(hasArticleLink(related, route), "Missing reciprocal explanation " + target);
+  }
+  const base = new URL("public/media/ledove-prikrovy-mechanismy/", root);
+  for (const file of ["povrchova-bilance.svg", "povrch-a-odtok-ledu.svg", "grafika.mjs", "tabulka-4.csv", "bilance.mjs", "podklady.txt"]) {
+    const original = await readFile(new URL(file, base));
+    assert.deepEqual(original, await readFile(new URL("dist/client/media/ledove-prikrovy-mechanismy/" + file, root)));
+    if (file.endsWith(".svg")) {
+      assert.ok(body.includes("/media/ledove-prikrovy-mechanismy/" + file));
+      assert.match(original.toString(), /<title[^>]*>[^<]+<\/title>/);
+      assert.match(original.toString(), /<desc[^>]*>[^<]+<\/desc>/);
+    }
+  }
+  const rows = (await readFile(new URL("tabulka-4.csv", base), "utf8")).trim().split(/\r?\n/).slice(1).map(r => r.split(","));
+  const renderedRows = [...body.matchAll(/<tr><th scope="row">([^<]+)<\/th>([\s\S]*?)<\/tr>/g)];
+  assert.equal(renderedRows.length, rows.length);
+  rows.forEach((r,i) => {
+    assert.ok(renderedRows[i][1].includes(r[1].replace("-", "–")));
+    const numbers = [...renderedRows[i][2].replaceAll("−", "-").matchAll(/<td>([+-]?\d+) ± (\d+)<\/td>/g)].flatMap(m => [Number(m[1]), Number(m[2])]);
+    assert.deepEqual(numbers, r.slice(2).map(Number), "Rendered table must preserve the primary publication's signed values and uncertainties");
+  });
+  assert.match(body, /odchylky od referenčních podmínek/);
+  assert.match(body, /zbytek po odečtení modelové povrchové odchylky/);
+  assert.match(body, /katex/);
+  const uncertainty = body.slice(body.indexOf('<p id="nejistoty"'), body.indexOf('<h2 id="shrnuti"'));
+  assert.ok(uncertainty.replace(/<[^>]+>/g, " ").split(/\s+/).length <= 600);
+  assert.doesNotMatch(body.replace(/<[^>]+>/g, " ").replace(/&[^;]+;/g, " "), /;/);
+});
+
 test("ocean heat transport connects the regional observation, two tested hypotheses and public evidence", async () => {
   const path = "/mechanismy/pohlcovani-a-presun-tepla-oceanem";
   const html = await readFile(new URL("dist/client" + path + "/index.html", root), "utf8");
@@ -955,7 +1013,7 @@ test("publishes 23 mechanism topics and preserves the split snow-and-sea-ice add
     assert.ok(sitemap.includes(`<loc>https://klimatologie.eu/mechanismy/${slug}/</loc>`), "Missing sitemap route " + slug);
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     assert.ok(html.includes(`<h1>${title}</h1>`), "Wrong detail title " + slug);
-    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen", "prumyslove-aerosoly-a-oblaka", "zmeny-ozonu-ve-stratosfere", "prenos-tepla-do-pudy-a-tani-permafrostu", "pohlcovani-a-presun-tepla-oceanem"].includes(slug)) {
+    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen", "prumyslove-aerosoly-a-oblaka", "zmeny-ozonu-ve-stratosfere", "prenos-tepla-do-pudy-a-tani-permafrostu", "pohlcovani-a-presun-tepla-oceanem", "hmotnostni-bilance-a-dynamika-ledovych-prikrovu"].includes(slug)) {
       assert.match(html, /Co musí toto vysvětlení objasnit/);
       assert.match(html, /<section class="mechanism-detail-evidence"[^>]*>[\s\S]*<p>[^<]+<\/p><\/section>/);
     }
@@ -1754,7 +1812,7 @@ test("publishes a sourced ice-sheet mass article with three measurement methods"
 
   assert.match(evidencePage, /IceSheetsArticle/);
   assert.match(evidencePage, /title="Změna hmotnosti ledových příkrovů"/);
-  assert.match(evidencePage, /title="Změna hmotnosti ledových příkrovů"\s+meta="5\. listopadu 2026"/);
+  assert.match(evidencePage, /title="Změna hmotnosti ledových příkrovů"\s+meta="6\. listopadu 2026"/);
   assert.match(article, /Změna hmotnosti ledového příkrovu vyjadřuje, o kolik se mezi dvěma určenými okamžiky změnila/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
   assert.match(article, /Výška povrchu/);
@@ -1816,7 +1874,7 @@ test("renders open ice-sheet papers and distinguishes revised estimates and data
   assert.match(cards.get("DOI_10_5285_77b64c55_7166_4a06_9def_2e400398e452"), /ramadda\.data\.bas\.ac\.uk/);
   assert.match(cards.get("DOI_10_5285_128c5e33_5224_4197_82f0_19dcc95b80a0"), /ramadda\.data\.bas\.ac\.uk/);
   assert.match(articleHtml, /1,85 GB/);
-  assert.match(articleHtml, /<p class="page-lead__meta">5\. listopadu 2026<\/p>/);
+  assert.match(articleHtml, /<p class="page-lead__meta">6\. listopadu 2026<\/p>/);
   assert.doesNotMatch(articleHtml, /5 120 ± 544|intervaly zasahují na obě strany nuly/);
 });
 
@@ -4623,6 +4681,7 @@ test("keeps each hypothesis independently collapsible with complete content and 
     ["mechanismy-vln-veder", ["samotne-proudeni", "teplejsi-klima"]],
     ["biologicke-mechanismy-fenologickych-zmen", ["pevny-kalendar", "rytmus-a-prostredi"]],
     ["prenos-tepla-do-pudy-a-tani-permafrostu", ["teplo-z-hloubky", "teplo-od-povrchu"]],
+    ["hmotnostni-bilance-a-dynamika-ledovych-prikrovu", ["povrchova-bilance", "povrch-a-odtok-ledu"]],
   ]) {
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)[1];

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="660" viewBox="0 0 1100 660" role="img" aria-labelledby="title desc">
+<title id="title">Tání povrchu a odtok vody</title><desc id="desc">Sněžení přidává hmotu. Energie taví povrch, část vody znovu zamrzne a část odteče do řeky. Místní vodní bilance se porovnává s řekou, hmotnost celého příkrovu s družicovou gravitací. Pevný led odtéká samostatnou cestou.</desc>
+<style>svg{--sea:#1d5d58;--heat:#b65a36;--water:#287aa1;--resist:#8b3857;font-family:Arial,sans-serif}path,line,rect,circle{vector-effect:non-scaling-stroke}</style>
+<defs><marker id="sea" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#1d5d58"/></marker><marker id="heat" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#b65a36"/></marker><marker id="water" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#287aa1"/></marker><marker id="resist" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#8b3857"/></marker></defs>
+<rect width="1100" height="660" rx="12" fill="#f8f5ed"/>
+<text x="38" y="48" font-size="29" fill="#173b3f" font-weight="700" text-anchor="start"><tspan x="38" dy="0">Tání povrchu a odtok vody</tspan></text>
+<text x="38" y="84" font-size="22" fill="#173b3f" font-weight="400" text-anchor="start"><tspan x="38" dy="0">Tání a skutečná ztráta hmotnosti nejsou stejné množství.</tspan></text>
+  <path d="M38 443 L38 367 Q260 353 475 385 Q675 418 832 449 L1062 469 L1062 484 L38 484Z" fill="#b7ad99"/>
+  <path d="M38 367 L38 253 Q239 248 426 300 Q612 342 802 391 L832 449 Q665 420 475 385 Q260 353 38 367Z" fill="#d9e9eb" stroke="#7fadb6" stroke-width="2"/>
+  <path d="M38 253 Q239 248 426 300 Q612 342 802 391" fill="none" stroke="#fff" stroke-width="10"/>
+  <text x="72" y="136" font-size="23" fill="#173b3f" font-weight="700" text-anchor="start"><tspan x="72" dy="0">Sněžení</tspan><tspan x="72" dy="29">přidává hmotu</tspan></text>
+  <path d="M155 181L155 228" fill="none" stroke="var(--sea)" stroke-width="5" marker-end="url(#sea)"/>
+  <text x="400" y="136" font-size="23" fill="#9c482d" font-weight="400" text-anchor="start"><tspan x="400" dy="0">Záření a výměna tepla</tspan><tspan x="400" dy="29">se vzduchem dodávají energii</tspan></text>
+  <path d="M525 182L525 307" fill="none" stroke="var(--heat)" stroke-width="5" marker-end="url(#heat)"/>
+  <text x="744" y="234" font-size="23" fill="#173b3f" font-weight="700" text-anchor="start"><tspan x="744" dy="0">Povrch taje</tspan><tspan x="744" dy="29">a voda se rozděluje</tspan></text>
+  <path d="M744 265Q685 283 652 346" fill="none" stroke="var(--water)" stroke-width="5" marker-end="url(#water)"/>
+  <path d="M618 360Q560 355 549 388" fill="none" stroke="var(--water)" stroke-width="5" marker-end="url(#water)"/>
+  <text x="266" y="428" font-size="22" fill="#173b3f" font-weight="400" text-anchor="start"><tspan x="266" dy="0">Část vody se zadrží</tspan><tspan x="266" dy="29">nebo znovu zamrzne.</tspan></text>
+  <path d="M670 365Q780 401 842 431Q927 440 1039 450" fill="none" stroke="var(--water)" stroke-width="5" marker-end="url(#water)"/>
+  <text x="830" y="358" font-size="23" fill="#20688b" font-weight="700" text-anchor="start"><tspan x="830" dy="0">Odtok vody</tspan><tspan x="830" dy="29">do řeky</tspan></text>
+  <path d="M97 322L224 326" fill="none" stroke="var(--sea)" stroke-width="5" marker-end="url(#sea)"/>
+  <text x="62" y="395" font-size="20" fill="#173b3f" font-weight="400" text-anchor="start"><tspan x="62" dy="0">Pevný led také proudí.</tspan></text>
+  <rect x="38" y="506" width="495" height="100" rx="8" fill="#fff" stroke="#c5d3cd"/>
+  <text x="58" y="537" font-size="21" fill="#173b3f" font-weight="700" text-anchor="start"><tspan x="58" dy="0">TEST 1 • Povodí v západním Grónsku</tspan></text>
+  <text x="58" y="570" font-size="21" fill="#173b3f" font-weight="400" text-anchor="start"><tspan x="58" dy="0">Výpočet odtoku ↔ měření řeky Watson</tspan></text>
+  <rect x="553" y="506" width="509" height="100" rx="8" fill="#fff" stroke="#c5d3cd"/>
+  <text x="573" y="537" font-size="21" fill="#173b3f" font-weight="700" text-anchor="start"><tspan x="573" dy="0">TEST 2 • Celý grónský příkrov</tspan></text>
+  <text x="573" y="570" font-size="21" fill="#173b3f" font-weight="400" text-anchor="start"><tspan x="573" dy="0">Bilance povrchu a ledu ↔ gravitace</tspan></text>
+<text x="38" y="639" font-size="18" fill="#526869" font-weight="400" text-anchor="start"><tspan x="38" dy="0">Kvalitativní schéma • délky šipek ani rozměry neudávají měřené hodnoty</tspan></text>
+</svg>

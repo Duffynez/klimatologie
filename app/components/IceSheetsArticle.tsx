@@ -529,6 +529,56 @@ export function IceSheetsArticle() {
           <SourceLink id="DOI_10_5194_essd_18_1729_2026">Nilsson a Gardner, 2026, oddíl 5.2 a tabulka 3</SourceLink>
         </p>
 
+        <h2 id="mistni-zmeny">Místní měření tání, pohybu a ztenčování</h2>
+        <h3 id="povrchovy-odtok">Tavná voda a bilance Grónska</h3>
+        <p>
+          V oblasti Kangerlussuaq v západním Grónsku sledovalo šest meteorologických stanic podmínky pro tání v letech 2009 a 2010.
+          Van As a kolegové spojili tato měření s družicovou odrazivostí povrchu a s výpočtem tání a opětovného zamrzání vody.
+          Pro rok 2010 vyšel odtok z vymezeného povodí 6,6 ± 1,0 km³ vody. Odhad z měření hloubky a proudění řeky Watson činil 5,3 ± 1,1 km³.
+          Rozmezí se překrývají. Říční měření nepokrývalo celou sezonu a při srovnání zůstává nejistá i skutečná rozloha povodí pod ledem.
+          Jde o místní objem odtékající vody, nikoli o celkovou změnu hmotnosti grónského příkrovu.
+          <SourceLink id="DOI_10_5194_tc_6_199_2012"> (van As a kol. 2012, obr. 8 a oddíly 3.4–4)</SourceLink>
+        </p>
+        <p>
+          Pro celý příkrov van den Broeke a kolegové porovnali modelovou povrchovou bilanci s tokem ledu určeným zejména z jeho rychlosti a tloušťky.
+          Společný výsledek se za období 2003–2008 shodoval s vývojem hmotnosti podle družic GRACE.
+          Studie pro toto období uvádí trend −237 ± 20 Gt/rok z bilance přírůstků a odtoku.
+          Povrchový výpočet zachytil téměř celé sezonní kolísání gravitačního záznamu. Porovnání ročního rytmu a víceletého trendu tak představuje dvě různé kontroly téhož výpočtu.
+          <SourceLink id="DOI_10_1126_science_1178176"> (van den Broeke a kol. 2009, obr. 1)</SourceLink>
+        </p>
+
+        <h3 id="larsen-b">Rychlost a výška ledovců u Larsen B</h3>
+        <p>
+          Po rozpadu velké části šelfu Larsen B v roce 2002 porovnali Scambos a kolegové pět snímků Landsatu z let 2000–2003.
+          Posuny rozpoznatelných povrchových znaků převedli pomocí času mezi snímky na rychlosti dolních částí šesti přítokových ledovců.
+          Hektoria, Green, Jorum a Crane zvýšily rychlost přibližně dvakrát až šestkrát. Flask a Leppard, před nimiž jižní část šelfu zůstala,
+          změnily rychlost jen málo. Snímky byly vzájemně prostorově zarovnány, nejistota posunu činila přibližně 20–40 metrů.
+          <SourceLink id="DOI_10_1029_2004gl020670"> (Scambos a kol. 2004, metody a obr. 1–2)</SourceLink>
+        </p>
+        <p>
+          Laser ICESat poskytl další měřenou veličinu: změnu výšky povrchu.
+          U Hektorie mezi únorem či březnem a zářím 2003 vyšel místní pokles až 38 ± 6 metrů.
+          Nejistotu určovalo hlavně přenesení sklonu povrchu mezi odlišnými dráhami měření, nikoli samotná přesnost laseru.
+          Jde o maximum v porovnávaných profilech. Nelze je zaměnit za průměr ledovce ani za příspěvek celé Antarktidy k hladině moře.
+          <SourceLink id="DOI_10_1029_2004gl020670"> (Scambos a kol. 2004, obr. 3)</SourceLink>
+        </p>
+
+        <h3 id="ztencovani-selfu">Ztenčování plovoucích šelfů</h3>
+        <p>
+          Pritchard a kolegové vyhodnotili přibližně 4,5 milionu výškoměrných měření ICESat z let 2003–2008.
+          Opravili mimo jiné pohyb plovoucího povrchu při přílivu a pomocí modelu odečetli změny sněhu a firnu, tedy starého sněhu se vzduchovými mezerami.
+          Zbývající změnu výšky převedli pomocí vztlaku na změnu celé tloušťky plovoucího ledu.
+          Největší ztenčování u šelfů Amundsenova a Bellingshausenova moře dosahovalo 6,8 metru za rok.
+          Je to odvozená změna tloušťky, nikoli přímo naměřená rychlost tání na spodní straně šelfu.
+          <SourceLink id="DOI_10_1038_nature10968"> (Pritchard a kol. 2012, obr. 1–3)</SourceLink>
+        </p>
+        <p>
+          Ztenčování bylo prostorově nerovnoměrné. Některé silně ponořené šelfy rychle ubývaly, zatímco u sousedních mělčích šelfů
+          vycházely změny malé nebo statisticky neprůkazné. Zveřejněný <SourceLink id="DOI_10_1594_pangaea_775984">soubor PANGAEA</SourceLink>
+          obsahuje opravené výšky i modelové změny povrchové bilance a firnu. Umožňuje kontrolovat, která část odvozeného ztenčování závisí na opravě povrchových vrstev.
+          <SourceLink id="DOI_10_1038_nature10968"> (Pritchard a kol. 2012)</SourceLink>
+        </p>
+
         <div className="article-observation-summary">
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
@@ -542,11 +592,21 @@ export function IceSheetsArticle() {
           </p>
         </div>
 
+        <p>
+          Proč se tyto měřené změny objevují a jak lze odlišit povrchové tání od zrychleného odtoku pevného ledu,
+          vysvětluje článek <Link href="/mechanismy/hmotnostni-bilance-a-dynamika-ledovych-prikrovu/">Proč Grónsko a Antarktida ztrácejí led?</Link>
+        </p>
+
         <h2>Prameny a data</h2>
         <div className="article-source-groups">
           <section>
             <h3>Primární studie</h3>
             <ul>
+              <li><SourceLink id="DOI_10_5194_tc_6_199_2012">Van As a kol., 2012</SourceLink>: tání a říční odtok v oblasti Kangerlussuaq.</li>
+              <li><SourceLink id="DOI_10_1126_science_1178176">Van den Broeke a kol., 2009</SourceLink>: rozdělení grónské bilance a kontrola pomocí GRACE.</li>
+              <li><SourceLink id="DOI_10_1029_2004gl020670">Scambos a kol., 2004</SourceLink>: rychlosti a výšky ledovců před rozpadem Larsen B a po něm.</li>
+              <li><SourceLink id="DOI_10_1038_nature10968">Pritchard a kol., 2012</SourceLink>: ztenčování šelfů a oprava změn sněhu a firnu.
+                <SourceLink id="DOI_10_1594_pangaea_775984"> Veřejná data k této studii</SourceLink>.</li>
               <li>
                 <SourceLink id="DOI_10_1038_274539a0">Brooks et al., 1978</SourceLink>:
                 první mapa části grónského příkrovu z družicového výškoměru GEOS-3.

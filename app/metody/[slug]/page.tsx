@@ -351,7 +351,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "radarova-interferometrie-a-sledovani-pohybu-povrchu") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Radarová interferometrie a sledování pohybu povrchu" meta="31. října 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Radarová interferometrie a sledování pohybu povrchu" meta="6. listopadu 2026">
           <p>Jak se z opakovaných radarových snímků měří pohyb povrchu a jak mapy rychlosti ledu pomáhají určit odtok z ledových příkrovů.</p>
         </PageLead>
         <InterferometryArticle />

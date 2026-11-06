@@ -172,7 +172,7 @@ export const climateMechanisms: ClimateMechanism[] = [
     title: "Proč Grónsko a Antarktida ztrácejí led?",
     category: "Kryosféra",
     cardSummary: "Sněžení, tání a odtok ledu do oceánu v různých částech ledových příkrovů.",
-    summary: "Přírůstky sněhu a odtok tavné vody se kombinují s prouděním ledu a jeho odtokem do oceánu. Jejich podíl na změně hmotnosti se liší mezi Grónskem a oblastmi Antarktidy.",
+    summary: "Co odhalují grónské řeky, družicová měření a rozpad šelfu Larsen B? Jak rozlišíme tání na povrchu od zrychleného odtoku ledu do moře a proč záleží na mechanické opoře ledovců?",
     distinguishingEvidence: "Oddělené bilance povrchu a odtoku ledu, porovnané s celkovou změnou hmotnosti. Vztah mezi oteplováním oceánu, táním ledových šelfů, pohybem linie ukotvení a zrychlováním ledu testuje dynamické vysvětlení.",
   },
   {

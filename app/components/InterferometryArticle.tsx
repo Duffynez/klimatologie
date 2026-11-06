@@ -431,6 +431,11 @@ export function InterferometryArticle() {
           </p>
         </details>
 
+        <p>
+          Jak změna rychlosti ledu pomáhá vysvětlit ztrátu hmotnosti a co ukázalo porovnání ledovců po rozpadu šelfu Larsen B,
+          rozebírá článek <Link href="/mechanismy/hmotnostni-bilance-a-dynamika-ledovych-prikrovu/#test-larsen">Proč Grónsko a Antarktida ztrácejí led?</Link>
+        </p>
+
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>
