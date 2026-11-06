@@ -1,0 +1,28 @@
+Mořský led: vznik, tání a pohyb
+Klimatologie.eu, 6. listopadu 2026
+
+GRAFIKA
+Soubory pohyb-a-vyvoz.svg a energie-a-rust.svg jsou vlastní kvalitativní fyzikální schémata připravená s pomocí AI. Autor Klimatologie.eu, licence CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
+Nejde o měření, geograficky přesné mapy ani přímé reprodukce obrázků studií. Rozměry ledu, pevnin a šipek jsou zvolené pro výklad. Schémata nezobrazují kvantitativní poměry toků nebo tlouštěk.
+Reprodukce: node public/media/morsky-led-mechanismy/grafika.mjs
+
+Pohyb a vývoz: Smedsrud et al. 2017, The Cryosphere 11, 65–79, https://doi.org/10.5194/tc-11-65-2017 (zejména obr. 2 a oddíl 2). Spreen et al. 2020, JGR Oceans 125, e2019JC016039, https://doi.org/10.1029/2019JC016039 (obr. 1, oddíly 2 a 3). Družice poskytuje pohyb a koncentraci, sonar ponořenou část. Převod ponoru na tloušťku vyžaduje předpoklady o vztlaku a hustotě.
+Energie: Maykut & Untersteiner 1971, JGR 76, 1550–1575, https://doi.org/10.1029/JC076i006p01550 (obr. 1 a rovnice). Perovich et al. 2011, Annals of Glaciology 52(57), 355–359, https://doi.org/10.3189/172756411795931714 (oddíl Approach, rovnice 1–4). Zimní a letní panel ukazují odlišné podmínky. Měřidla jsou schematická, nikoli technický výkres konkrétní bóje.
+
+DATA A VÝPOČET
+perovich-2011-tabulka.tsv je veřejný export z https://doi.pangaea.de/10.1594/PANGAEA.817713?format=textfile, stažený 6. listopadu 2026. Všechny hodnoty a text metadat jsou zachované. Pro uložení jsme odstranili jednu koncovou mezeru za citací na druhém řádku.
+Citace: Perovich, Donald K., Richter-Menge, Jacqueline A., Jones, Kathleen F., Light, Bonnie, Elder, Bruce C., Polashenski, Christopher, Laroche, Daniel, Markus, Thorsten, Lindsay, Ronald (2011): (Table 1) Snow and sea ice thickness, solar heat input and solar heat used for melting at seven ice mass-balance buoys in the Arctic in 2008. PANGAEA. https://doi.org/10.1594/PANGAEA.817713. Licence CC BY 3.0, https://creativecommons.org/licenses/by/3.0/.
+Export zachovává metadata, přibližné polohy a všech sedm řádků. Obsahuje souhrnnou tabulku studie, nikoli původní časové řady přístrojů. Článek z ní vybírá spodní tání, jeho energetický přepočet a odhad slunečního vstupu do vody.
+Bóje 2 přestala měřit před úplným roztáním kry. Zbylá tloušťka 0,53 m v tabulce tedy není tloušťkou na konci celé sezony.
+Tabulka 1 původního PDF i PANGAEA uvádějí sluneční vstup do vody u bóje 2 jako 640 MJ/m². Souvislý text studie na straně 357 v odstavci o obr. 2 uvádí při srovnání bójí 2 a 5 hodnotu 390 MJ/m², která v tabulce patří bóji 1. Naše tabulka a výpočet používají konzistentně tabulku 1. Neopravujeme originální data ani nepřebíráme číselné srovnání z tohoto odstavce.
+vypocty.mjs převádí spodní tání na energii pomocí hustoty 900 kg/m³ a tepla tání 334 kJ/kg, stejně jako rovnice 4 studie. Energie v MJ/m² = tloušťka v metrech × 900 × 334 / 1000. Bóje 5: 0,16 × 900 × 334 / 1000 = 48,096 MJ/m², v tabulce zaokrouhleno na 48. Tento výpočet není nezávislým měřením tepelného toku.
+Skript také počítá Pearsonovu korelaci mezi sedmi tabulkovými hodnotami slunečního vstupu do vody a energie spodního tání. Výsledek je 0,9755836212, po zaokrouhlení 0,98. Původní studie v obr. 3 a textu uvádí 0,94. Rozdíl dostupné podklady nevysvětlují. Článek zachovává původní číslo i vlastní reprodukovatelný přepočet a nevydává je za totožný výsledek. Korelace nedokazuje výlučný zdroj tepla a sedm bójí není arktický plošný průměr. Sluneční vstup je vztažen k celé buňce 25 × 25 km, úbytek ke konkrétnímu ledu u bóje. Rozdíl těchto čísel není uzavřenou bilancí oceánu.
+Reprodukce: node public/media/morsky-led-mechanismy/vypocty.mjs
+
+DALŠÍ VEŘEJNÉ PODKLADY
+Plocha vývozu 1935–2014: https://doi.org/10.1594/PANGAEA.868944. Měsíční rekonstrukce spojená s přímějším družicovým odhadem, ne 80 let radarových snímků. Válečné roky 1940–1945 bez tlakových měření autoři nahradili dlouhodobými průměry, viz oddíl 3 studie.
+Objem vývozu červen 1992 až srpen 2014: https://doi.org/10.21334/npolar.2020.696b80db. Měsíční odvozené transporty, CSV a XLS, CC BY 4.0. Mezery odpovídají chybějícím měřením. Hlavní řada používá pohyb JPL.
+Kontrola CSV 6. listopadu 2026: veřejný soubor https://api.npolar.no/dataset/696b80db-60bf-4d07-8d1a-f3dbbd376494/_file/67cfcdb69381fb33c09453f1e73241c5 má sloupec „Volume transport [km^3/day]“ a za červen 1992 hodnotu −176. Tabulka 1 studie uvádí za tento měsíc +175 km³. Také červenec má v CSV +14 a ve studii −14. Archivní popis přitom označuje vývoz na jih za kladný. Znaménka a jednotky souboru proto nelze bez vyjasnění převzít. Článek nepřepočítává dlouhodobé trendy z tohoto CSV, používá publikované výsledky studie. Soubor neopravujeme ani jeho shodu s tabulkou studie nepředstíráme.
+Plocha mořského ledu: Doerr, Notz & Kern 2021, UHH Sea Ice Area Product, verze 2019_fv0.01, https://doi.org/10.25592/uhhfdm.8559. Měsíční výsledky různých algoritmů, NetCDF, CC BY 4.0. Pro článek Kim et al. 2023 je relevantní úsek 1979–2019, nikoli pozdější aktualizace produktu.
+Kim et al. 2023, https://doi.org/10.1038/s41467-023-38511-8: používáme historickou analýzu, obr. 1–3 a Methods, nikoli budoucí projekce. Deset modelů pro vynucené odezvy a 38 modelů pro 516 kontrolních úseků jsou odlišné soubory. GHG+ obsahuje také ozon a využití půdy. Intervaly detekce jsou 5.–95. percentil.
+Simulace ALL s historickými vstupy do roku 2014 jsou v letech 2015–2019 prodloužené scénářem SSP2-4.5. Družicové měsíční plochy zůstávají pozorováním. Kontrolní úseky se dělí na dvě stejně velké sady pro odhad a kontrolu statistického rozkladu.

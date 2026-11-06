@@ -4,6 +4,66 @@ import { readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 import { stripTypeScriptTypes } from "node:module";
 
+test("sea ice mechanism separates area export, volume export and measured melting with reproducible data", async () => {
+  const route = "/mechanismy/vznik-tani-a-pohyb-morskeho-ledu";
+  const html = await readFile(new URL("dist/client" + route + "/index.html", root), "utf8");
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "Publish the full mechanism at its existing address");
+  assert.equal((body.slice(0, body.indexOf('<h2 id="hypotezy"')).match(/<p\b/g) ?? []).length, 2);
+  assert.match(body, /Dvě hypotézy a jejich předpovědi/);
+  for (const id of ["test-plocha", "test-objem", "test-boje", "test-priciny"]) assert.ok(body.includes(`id="${id}"`));
+  const bibliography = body.slice(body.indexOf('<h2 id="prameny"'));
+  const catalogue = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
+  for (const id of new Set([...body.matchAll(/href="\/zdroje#([^"]+)"/g)].map(m => m[1]))) {
+    assert.ok(bibliography.includes('href="/zdroje#' + id + '"'), "Missing bibliography entry " + id);
+    const card = catalogue.match(new RegExp('<article[^>]+id="' + id + '"[\\s\\S]*?</article>'))?.[0];
+    assert.ok(card, "Missing source card " + id);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    if (id.startsWith("DOI_")) {
+      assert.match(card, /doi\.org\//);
+      assert.match(card, /Otevřít plný text|Otevřít veřejná data/);
+    }
+  }
+  for (const [, href] of body.matchAll(/href="(\/[^\"]+)"/g)) {
+    const [pathname, anchor] = href.split("#");
+    const file = /\.[a-z0-9]+$/i.test(pathname) ? pathname : pathname.replace(/\/$/, "") + "/index.html";
+    const target = await readFile(new URL("dist/client" + file, root), "utf8");
+    if (anchor) assert.ok(target.includes(`id="${anchor}"`), "Broken evidence link " + href);
+  }
+  for (const target of ["/pozorovani/ubytek-arktickeho-ledu", "/metody/pasivni-mikrovlnna-radiometrie"]) {
+    const related = await readFile(new URL("dist/client" + target + "/index.html", root), "utf8");
+    assert.ok(hasArticleLink(body, target));
+    assert.ok(hasArticleLink(related, route), "Missing reciprocal link " + target);
+  }
+  const base = new URL("public/media/morsky-led-mechanismy/", root);
+  for (const file of ["pohyb-a-vyvoz.svg", "energie-a-rust.svg", "grafika.mjs", "perovich-2011-tabulka.tsv", "vypocty.mjs", "podklady.txt"]) {
+    const original = await readFile(new URL(file, base));
+    assert.deepEqual(original, await readFile(new URL("dist/client/media/morsky-led-mechanismy/" + file, root)));
+    if (file.endsWith(".svg")) {
+      assert.ok(body.includes("/media/morsky-led-mechanismy/" + file));
+      assert.match(original.toString(), /<title[^>]*>[^<]+<\/title>/);
+      assert.match(original.toString(), /<desc[^>]*>[^<]+<\/desc>/);
+    }
+  }
+  const { calculate } = await import(new URL("vypocty.mjs", base));
+  const result = calculate();
+  const rows = [...body.matchAll(/<tr><th scope="row">([^<]+)<\/th>([\s\S]*?)<\/tr>/g)];
+  assert.equal(rows.length, 7, "Keep all buoys, including the incomplete record");
+  result.data.forEach((r, i) => {
+    const cells = [...rows[i][2].matchAll(/<td>([^<]+)<\/td>/g)].map(m => Number(m[1].replace(",", ".")));
+    assert.deepEqual(cells, [r.bottomMeltM, r.publishedMeltMJm2, r.solarMJm2]);
+    assert.equal(Math.round(r.calculatedMeltMJm2), r.publishedMeltMJm2);
+  });
+  assert.ok(Math.abs(result.correlation - 0.9755836212195003) < 1e-12);
+  assert.match(body, /0,94/);
+  assert.match(body, /0,98/);
+  assert.match(body, /před úplným roztáním kry/);
+  assert.match(body, /GHG\+/);
+  const uncertainty = body.slice(body.indexOf('<h2 id="nejistoty"'), body.indexOf('<h2 id="dalsi-overeni"'));
+  assert.ok(uncertainty.replace(/<[^>]+>/g, " ").split(/\s+/).length <= 600);
+  assert.doesNotMatch(body.replace(/<[^>]+>/g, " ").replace(/&[^;]+;/g, " "), /;/);
+});
+
 test("snow mechanism publishes traceable evidence and distinguishes stock, melting and outflow", async () => {
   const route = "/mechanismy/vznik-a-zanik-snehove-pokryvky-na-sousi";
   const html = await readFile(new URL("dist/client" + route + "/index.html", root), "utf8");
@@ -686,7 +746,7 @@ test("publishes microwave radiometry with the full signal-to-ice explanation and
   assert.deepEqual([...body.matchAll(/<h2\b[^>]*>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak mikrovlny rozliší led a vodu", "Nejistoty a ověření", "Příklad: zimní měření severně od Aljašky", "Shrnutí",
   ]);
-  assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">6\. listopadu 2026<\/p>/);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
   assert.match(body, /matematické jádro metody, nikoli oficiální/);
   assert.doesNotMatch(body, /_vinext\/image|katex-error|Potřebné informace/);
@@ -1201,7 +1261,7 @@ test("publishes 23 mechanism topics and preserves the split snow-and-sea-ice add
     assert.ok(sitemap.includes(`<loc>https://klimatologie.eu/mechanismy/${slug}/</loc>`), "Missing sitemap route " + slug);
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     assert.ok(html.includes(`<h1>${title}</h1>`), "Wrong detail title " + slug);
-    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen", "prumyslove-aerosoly-a-oblaka", "zmeny-ozonu-ve-stratosfere", "prenos-tepla-do-pudy-a-tani-permafrostu", "pohlcovani-a-presun-tepla-oceanem", "hmotnostni-bilance-a-dynamika-ledovych-prikrovu", "vodni-para-jako-zpetna-vazba", "hmotnostni-bilance-horskych-ledovcu", "vznik-a-zanik-snehove-pokryvky-na-sousi"].includes(slug)) {
+    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen", "prumyslove-aerosoly-a-oblaka", "zmeny-ozonu-ve-stratosfere", "prenos-tepla-do-pudy-a-tani-permafrostu", "pohlcovani-a-presun-tepla-oceanem", "hmotnostni-bilance-a-dynamika-ledovych-prikrovu", "vodni-para-jako-zpetna-vazba", "hmotnostni-bilance-horskych-ledovcu", "vznik-a-zanik-snehove-pokryvky-na-sousi", "vznik-tani-a-pohyb-morskeho-ledu"].includes(slug)) {
       assert.match(html, /Co musí toto vysvětlení objasnit/);
       assert.match(html, /<section class="mechanism-detail-evidence"[^>]*>[\s\S]*<p>[^<]+<\/p><\/section>/);
     }
@@ -1879,7 +1939,7 @@ test("publishes a sourced Arctic sea ice article with extent, age, and thickness
 
   assert.match(evidencePage, /ArcticSeaIceArticle/);
   assert.match(evidencePage, /title="Arktický mořský led"/);
-  assert.match(evidencePage, /title="Arktický mořský led"\s+meta="2\. listopadu 2026"/);
+  assert.match(evidencePage, /title="Arktický mořský led"\s+meta="6\. listopadu 2026"/);
   assert.match(article, /Arktický mořský led je zmrzlá mořská voda/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
   assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
@@ -4876,6 +4936,7 @@ test("keeps each hypothesis independently collapsible with complete content and 
     ["vodni-para-jako-zpetna-vazba", ["vysusovani", "zesileni"]],
     ["hmotnostni-bilance-horskych-ledovcu", ["mene-snehu", "vetsi-tani"]],
     ["vznik-a-zanik-snehove-pokryvky-na-sousi", ["zmena-srazek", "teplota-a-tani"]],
+    ["vznik-tani-a-pohyb-morskeho-ledu", ["silnejsi-vyvoz", "energie-a-tani"]],
   ]) {
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)[1];

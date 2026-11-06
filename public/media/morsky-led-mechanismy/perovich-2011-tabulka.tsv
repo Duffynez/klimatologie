@@ -1,0 +1,40 @@
+/* DATA DESCRIPTION:
+Citation:	Perovich, Donald K; Richter-Menge, Jacqueline A; Jones, Kathleen F; Light, Bonnie; Elder, Bruce C; Polashenski, Christopher; Laroche, Daniel; Markus, Thorsten; Lindsay, Ronald (2011): (Table 1) Snow and sea ice thickness, solar heat input and solar heat used for melting at seven ice mass-balance buoys in the Arctic in 2008 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.817713,
+	Supplement to: Perovich, DK et al. (2011): Arctic sea-ice melt in 2008 and the role of solar heating. Annals of Glaciology, 52(57), 355-359, https://doi.org/10.3189/172756411795931714
+Abstract:	There has been a marked decline in the summer extent of Arctic sea ice over the past few decades. Data from autonomous ice mass-balance buoys can enhance our understanding of this decline. These buoys monitor changes in snow deposition and ablation, ice growth, and ice surface and bottom melt. Results from the summer of 2008 showed considerable large-scale spatial variability in the amount of surface and bottom melt. Small amounts of melting were observed north of Greenland, while melting in the southern Beaufort Sea was quite large. Comparison of net solar heat input to the ice and heat required for surface ablation showed only modest correlation. However, there was a strong correlation between solar heat input to the ocean and bottom melting. As the ice concentration in the Beaufort Sea region decreased, there was an increase in solar heat to the ocean and an increase in bottom melting.
+Project(s):	International Polar Year (2007-2008) (IPY) (URI: https://www.ipy.org/)
+Coverage:	MEDIAN LATITUDE: 82.671429 * MEDIAN LONGITUDE: -89.957143 * SOUTH-BOUND LATITUDE: 73.800000 * WEST-BOUND LONGITUDE: -141.400000 * NORTH-BOUND LATITUDE: 86.800000 * EAST-BOUND LONGITUDE: 4.900000
+	DATE/TIME START: 2008-08-01T00:00:00 * DATE/TIME END: 2008-08-01T00:00:00
+Event(s):	Arctic-IBM_1 * LATITUDE: 85.500000 * LONGITUDE: -133.300000 * LOCATION: Arctic Ocean * METHOD/DEVICE: Sea ice buoy (BUOY_SI)
+	Arctic-IBM_2 * LATITUDE: 73.800000 * LONGITUDE: -141.400000 * LOCATION: Arctic Ocean * METHOD/DEVICE: Sea ice buoy (BUOY_SI)
+	Arctic-IBM_3 * LATITUDE: 80.300000 * LONGITUDE: -128.700000 * LOCATION: Arctic Ocean * METHOD/DEVICE: Sea ice buoy (BUOY_SI)
+	Arctic-IBM_4 * LATITUDE: 86.800000 * LONGITUDE: -68.400000 * LOCATION: Arctic Ocean * METHOD/DEVICE: Sea ice buoy (BUOY_SI)
+	Arctic-IBM_5 * LATITUDE: 85.400000 * LONGITUDE: -56.900000 * LOCATION: Arctic Ocean * METHOD/DEVICE: Sea ice buoy (BUOY_SI)
+	Arctic-IBM_6 * LATITUDE: 84.400000 * LONGITUDE: -105.900000 * LOCATION: Arctic Ocean * METHOD/DEVICE: Sea ice buoy (BUOY_SI)
+	Arctic-IBM_7 * LATITUDE: 82.500000 * LONGITUDE: 4.900000 * LOCATION: Arctic Ocean * METHOD/DEVICE: Sea ice buoy (BUOY_SI)
+Comment:	Positions of buoys only approximate! Data extracted in the frame of a joint ICSTI/PANGAEA IPY effort, see http://doi.pangaea.de/10.1594/PANGAEA.150150
+Parameter(s):	Event label (Event)
+	Latitude of event (Latitude)
+	Longitude of event (Longitude)
+	DATE/TIME (Date/Time) * GEOCODE
+	Season (Season) * PI: Perovich, Donald K (donald.k.perovich@usace.army.mil, https://engineering.dartmouth.edu/people/faculty/donald-perovich)
+	Snow thickness [m] (Snow thick) * PI: Perovich, Donald K (donald.k.perovich@usace.army.mil, https://engineering.dartmouth.edu/people/faculty/donald-perovich)
+	Sea ice thickness [m] (EsEs) * PI: Perovich, Donald K (donald.k.perovich@usace.army.mil, https://engineering.dartmouth.edu/people/faculty/donald-perovich) * COMMENT: before melt
+	Sea ice thickness [m] (EsEs) * PI: Perovich, Donald K (donald.k.perovich@usace.army.mil, https://engineering.dartmouth.edu/people/faculty/donald-perovich) * COMMENT: after melt
+	Sea ice melt [m] (Sea ice melt) * PI: Perovich, Donald K (donald.k.perovich@usace.army.mil, https://engineering.dartmouth.edu/people/faculty/donald-perovich) * COMMENT: amount of surface melt
+	Sea ice melt [m] (Sea ice melt) * PI: Perovich, Donald K (donald.k.perovich@usace.army.mil, https://engineering.dartmouth.edu/people/faculty/donald-perovich) * COMMENT: amount of bottom melt
+	Solar heat [MJ/m**2] (Solar heat) * PI: Perovich, Donald K (donald.k.perovich@usace.army.mil, https://engineering.dartmouth.edu/people/faculty/donald-perovich) * COMMENT: used for surface melting
+	Solar heat [MJ/m**2] (Solar heat) * PI: Perovich, Donald K (donald.k.perovich@usace.army.mil, https://engineering.dartmouth.edu/people/faculty/donald-perovich) * COMMENT: input to the ice
+	Solar heat [MJ/m**2] (Solar heat) * PI: Perovich, Donald K (donald.k.perovich@usace.army.mil, https://engineering.dartmouth.edu/people/faculty/donald-perovich) * COMMENT: used for bottom melting
+	Solar heat [MJ/m**2] (Solar heat) * PI: Perovich, Donald K (donald.k.perovich@usace.army.mil, https://engineering.dartmouth.edu/people/faculty/donald-perovich) * COMMENT: input to the ocean
+License:	Creative Commons Attribution 3.0 Unported (CC-BY-3.0) (URI: https://creativecommons.org/licenses/by/3.0/)
+Size:	70 data points
+*/
+Event	Latitude	Longitude	Date/Time	Season	Snow thick [m]	EsEs [m] (before melt)	EsEs [m] (after melt)	Sea ice melt [m] (amount of surface melt)	Sea ice melt [m] (amount of bottom melt)	Solar heat [MJ/m**2] (used for surface melting)	Solar heat [MJ/m**2] (input to the ice)	Solar heat [MJ/m**2] (used for bottom melting)	Solar heat [MJ/m**2] (input to the ocean)
+Arctic-IBM_1	85.5	-133.3	2008	summer	0.20	1.83	0.51	0.52	0.80	178	305	240	390
+Arctic-IBM_2	73.8	-141.4	2008	summer	0.07	3.17	0.53	0.87	1.77	269	635	532	640
+Arctic-IBM_3	80.3	-128.7	2008	summer	0.10	2.90	1.83	0.61	0.46	194	524	138	244
+Arctic-IBM_4	86.8	-68.4	2008	summer	0.16	2.13	1.76	0.16	0.21	66	417	63	151
+Arctic-IBM_5	85.4	-56.9	2008	summer	0.42	2.79	2.39	0.24	0.16	118	382	48	131
+Arctic-IBM_6	84.4	-105.9	2008	summer	0.08	2.92	1.60	0.63	0.69	198	428	207	240
+Arctic-IBM_7	82.5	4.9	2008	summer	0.15	1.99	1.25	0.23	0.51	86	300	153	193

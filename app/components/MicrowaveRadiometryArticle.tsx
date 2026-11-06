@@ -519,6 +519,12 @@ export function MicrowaveRadiometryArticle() {
           </p>
         </details>
 
+        <p>
+          Použití těchto map při rozlišení odnášení ker a jejich tání ukazuje článek
+          <Link href="/mechanismy/vznik-tani-a-pohyb-morskeho-ledu/"> proč arktický mořský led ubývá a tenčí se</Link>.
+          Koncentrace je zde vstupem do výpočtu vývozu i do odhadu slunečního ohřevu vody mezi krami.
+        </p>
+
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>

@@ -588,6 +588,59 @@ export function ArcticSeaIceArticle() {
           <SourceLink id="DOI_10_1029_2021gl097448">Kacimi &amp; Kwok, 2022</SourceLink>
         </p>
 
+        <h3 id="vyvoz-ledu">Plocha a objem vývozu Framským průlivem</h3>
+        <p>
+          Vývoz vyjadřuje množství ledu, které za zvolené období překročí měřicí průřez směrem z Arktidy.
+          Smedsrud a kolegové spojili družicový posun ker a jejich koncentraci s rekonstrukcí podle rozdílu tlaku vzduchu.
+          Záznam z let 1935–2014 má od února 2004 pohyb odvozený z radarových snímků, starší hodnoty jsou dopočtené podle vztahu ověřeného v překryvu.
+          Chybějící válečné roky 1940–1945 autoři nahradili dlouhodobými průměry.
+          V celém období nevyšel průkazný trend plochy vývozu. V úseku 1979–2014 rostla přibližně o 6 % za desetiletí.
+          <SourceLink id="DOI_10_5194_tc_11_65_2017"> (Smedsrud a kol. 2017)</SourceLink>{" "}
+          <SourceLink id="DOI_10_1594_pangaea_868944">Veřejná tabulka</SourceLink> obsahuje měsíční hodnoty v tisících km².
+        </p>
+        <p>
+          Spreen a kolegové přidali pro roky 1992–2014 ponor ze sonarů, z něhož pomocí vztlaku a předpokládané hustoty odvodili tloušťku.
+          Většinou pracovaly dva nebo tři sonary, nejvýše čtyři. Tloušťku mezi nimi interpolovali a mimo síť doplnili podle prostorového průběhu.
+          Součin tloušťky, koncentrace a posunu přes jednotlivé části průřezu poskytl denní objemový transport.
+          Archiv nabízí <SourceLink id="DOI_10_21334_npolar_2020_696b80db">měsíční výsledky od června 1992 do srpna 2014</SourceLink>
+          jako CSV a XLS pod CC BY 4.0. Mezery při nefunkčních sonarech zůstávají v záznamu označené.
+          Ověřený CSV má proti měsíční tabulce studie opačná znaménka a nejasné označení jednotek.
+          Zdejší trendy proto přebíráme ze studie. <a href="/media/morsky-led-mechanismy/podklady.txt">Konkrétní rozdíl v souboru</a> uvádíme v podkladech.
+          <SourceLink id="DOI_10_1029_2019jc016039"> (Spreen a kol. 2020, oddíl 2)</SourceLink>
+        </p>
+        <p>
+          Objemový vývoz v hlavním výpočtu s pohybem podle laboratoře NASA Jet Propulsion Laboratory, zkráceně JPL, klesal přibližně o 27 % za desetiletí.
+          Další zpracování pohybu dávala pokles 38 a 44 %, druhé bez letních měsíců. Tyto varianty sdílejí sonary a část družicových měření, nejde o nezávislé přístrojové záznamy.
+          Akustická kontrola rychlosti v letech 2012–2014 ukázala, že družicový odhad rychlosti může být příliš malý.
+          Absolutní transport je proto pravděpodobně podhodnocený. Rozdíl proti uvedenému plošnému vývozu zahrnuje jinou veličinu, období i způsob zpracování.
+          <SourceLink id="DOI_10_1029_2019jc016039"> (Spreen a kol. 2020, oddíly 3.3 a 3.6)</SourceLink>
+        </p>
+
+        <h3 id="boje-a-tani">Horní a spodní tání u sedmi bójí</h3>
+        <p>
+          V létě 2008 zaznamenávalo sedm bójí na rovném víceletém ledu, převážně v západní Arktidě, polohu horního a spodního povrchu.
+          Akustická měřidla určovala jejich vzdálenost od pevného rámu, řetězec teplotních čidel sledoval vnitřek ledu.
+          Před táním měly kry tloušťku 1,83 až 3,17 m. Naměřené spodní tání činilo 0,16 až 1,77 m.
+          Bóje 2 v Beaufortově moři však přestala pracovat před úplným roztáním kry, takže její záznam nezahrnuje konec celé sezony.
+          <SourceLink id="DOI_10_3189_172756411795931714"> (Perovich a kol. 2011)</SourceLink>
+        </p>
+        <p>
+          <SourceLink id="DOI_10_1594_pangaea_817713">PANGAEA poskytuje všech sedm řádků tabulky 1</SourceLink> pod licencí CC BY 3.0.
+          Jde o souhrnné hodnoty s přibližnými polohami, nikoli původní časové záznamy přístrojů.
+          Vedle tání obsahují energetický přepočet úbytku a samostatný odhad slunečního vstupu.
+          Ten vznikl z koncentrace ledu a opravené meteorologické reanalýzy pro buňky 25 × 25 km.
+          Tabulka nedává intervaly nejistoty jednotlivých údajů. Výsledky popisují tyto kry, nikoli arktický plošný průměr.
+        </p>
+
+        <h3 id="plocha-pro-prisouzeni">Srovnatelné měsíční plochy pro roky 1979–2019</h3>
+        <p>
+          Pro porovnání s klimatickými výpočty se používá také měsíční plocha ledu.
+          Produkt <SourceLink id="DOI_10_25592_uhhfdm_8559">UHH Sea Ice Area, verze 2019_fv0.01</SourceLink> uchovává výsledky různých zpracování odděleně.
+          Pro družicový úsek 1979–2019 zahrnuje OSI SAF, NASA Team a Bootstrap. Plocha vzniká součtem ploch buněk násobených koncentrací,
+          nikoli započítáním celé buňky nad prahovou koncentrací. Soubor NetCDF pro severní polokouli je veřejný pod CC BY 4.0.
+          Produkt obsahuje také starší historické rekonstrukce, které mají odlišné pokrytí. Shoda tří družicových algoritmů není shodou tří nezávislých přístrojů.
+        </p>
+
         <div className="article-observation-summary">
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
@@ -602,17 +655,24 @@ export function ArcticSeaIceArticle() {
           </p>
         </div>
 
+        <p>
+          Navazující vysvětlení <Link href="/mechanismy/vznik-tani-a-pohyb-morskeho-ledu/">proč arktický mořský led ubývá a tenčí se</Link>{" "}
+          porovnává odvoz ker, tepelnou bilanci a příčiny dlouhodobých změn.
+        </p>
+
         <h2>Prameny a data</h2>
         <p>
           Všechny zde použité odborné práce a metodické dokumenty mají veřejně dostupný plný text. U studií vede
           DOI na bibliografický záznam a samostatný odkaz v katalogu na celý text. Datové portály uvádějí verzi,
           pokrytí a podmínky stažení. Některá data NASA vyžadují bezplatné přihlášení Earthdata. Kontrola proběhla
-          2. listopadu 2026. Zdroje tohoto článku nepoužívají archivní kopie na Google Drive.
+          u doplněných podkladů vývozu a bójí 6. listopadu 2026. Zdroje tohoto článku nepoužívají archivní kopie na Google Drive.
         </p>
         <div className="article-source-groups">
           <section>
             <h3>Primární studie</h3>
             <ul>
+              <li><SourceLink id="DOI_10_5194_tc_11_65_2017">Smedsrud a kol. 2017</SourceLink> a <SourceLink id="DOI_10_1029_2019jc016039">Spreen a kol. 2020</SourceLink>: plocha a objem vývozu Framským průlivem.</li>
+              <li><SourceLink id="DOI_10_3189_172756411795931714">Perovich a kol. 2011</SourceLink>: horní a spodní tání sedmi ker v létě 2008.</li>
               <li>
                 <SourceLink id="WEB_NASA_Cavalieri_1997_Sea_Ice_User_Guide">Cavalieri et al., 1997</SourceLink>:
                 původní příručka zpracování koncentrace a propojení přístrojů SMMR a SSM/I.
@@ -664,6 +724,9 @@ export function ArcticSeaIceArticle() {
           <section>
             <h3>Datové portály a stahování</h3>
             <ul>
+              <li><SourceLink id="DOI_10_1594_pangaea_868944">Plocha vývozu 1935–2014</SourceLink> a <SourceLink id="DOI_10_21334_npolar_2020_696b80db">objem vývozu 1992–2014</SourceLink>: měsíční zpracované výsledky.</li>
+              <li><SourceLink id="DOI_10_1594_pangaea_817713">Bóje v létě 2008</SourceLink>: přepis tabulky 1 v PANGAEA, CC BY 3.0.</li>
+              <li><SourceLink id="DOI_10_25592_uhhfdm_8559">UHH Sea Ice Area Product</SourceLink>: měsíční plochy, verze 2019_fv0.01, CC BY 4.0.</li>
               <li>
                 <SourceLink id="DOI_10_7265_a98x_0f50">Sea Ice Index v4</SourceLink>: denní a
                 měsíční koncentrace, rozsah, plocha, mapy a hranice od roku 1978.

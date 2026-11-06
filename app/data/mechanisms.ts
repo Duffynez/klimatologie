@@ -145,11 +145,11 @@ export const climateMechanisms: ClimateMechanism[] = [
   },
   {
     slug: "vznik-tani-a-pohyb-morskeho-ledu",
-    title: "Proč se mění rozsah a tloušťka mořského ledu?",
+    title: "Proč arktický mořský led ubývá a tenčí se?",
     category: "Kryosféra",
-    cardSummary: "Růst a tání mořského ledu spolu s jeho pohybem působením větru a proudů.",
-    summary: "Výměna tepla mezi atmosférou, sněhem, ledem a oceánem řídí zamrzání a tání. Vítr a proudy led přesouvají, stlačují a odnášejí z jednotlivých oblastí.",
-    distinguishingEvidence: "Porovnání energetických toků, růstu a tání s měřeným pohybem a vývozem ledu. Vysvětlení musí současně zachytit změny rozsahu, tloušťky, stáří a objemu během roku.",
+    cardSummary: "Jak růst, tání a vývoz ker mění arktickou zásobu ledu a jak jejich vlivy rozlišíme.",
+    summary: "Proč větší plocha odnášených ker nemusí znamenat větší úbytek objemu a jak oteplování mění růst a tání. Vysvětlení ověřené měřením ve Framském průlivu, sedmi ledovými bójemi a rozborem dlouhodobých změn.",
+    distinguishingEvidence: "Porovnání plochy a objemu vývozu, měřeného tání a odhadu pohlcené energie. Družicové řady a klimatické výpočty rozlišují příspěvek skleníkových plynů od přirozených vlivů a kolísání.",
   },
   {
     slug: "vznik-a-zanik-snehove-pokryvky-na-sousi",

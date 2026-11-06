@@ -205,7 +205,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Kryosféra"
           title="Arktický mořský led"
-          meta="2. listopadu 2026"
+          meta="6. listopadu 2026"
         >
           <p>
             Co přesně znamenají rozsah, plocha, stáří, tloušťka a objem mořského ledu, jak vznikají družicová data a
