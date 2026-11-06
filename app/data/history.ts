@@ -935,6 +935,48 @@ export const historyEvents: HistoryEvent[] = [
     ]
   },
   {
+    id: "1969_Budyko",
+    year: 1969,
+    dateMeaning: "Zveřejnění modelového výpočtu",
+    title: "Model počítá zesilující účinek sněhu a ledu",
+    category: "mechanisms",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Michail Budyko sestavil jednoduchý model, který pro jednotlivé zeměpisné šířky porovnával přijaté sluneční záření, vyzařované teplo a přenos tepla mezi oblastmi. Rozsah sněhu a ledu se v něm měnil s teplotou. Protože světlý sníh a led odrážejí více slunečního záření, jejich rozšiřování dále zesilovalo ochlazování.",
+        references: [{ sourceId: "1969_Budyko", locator: "s. 611–616, rovnice 1–6" }]
+      },
+      {
+        text: "Výpočet ukázal, že při zapojení této zpětné vazby může poměrně malá změna přísunu energie vyvolat velký posun hranice zalednění. V opačném směru ústup ledu umožňuje povrchu pohltit více sluneční energie. Práce dala známému vztahu mezi ledem a odrazivostí podobu výpočtu, v němž lze zkoumat citlivost klimatu i přechod k rozsáhlému zalednění. Konkrétní prahy přechodu platily pro tento zjednodušený model.",
+        references: [{ sourceId: "1969_Budyko", locator: "s. 615–617, obrázek 5" }]
+      }
+    ],
+    relatedLinks: [
+      { href: "/mechanismy/odrazivost-snehu-a-ledu-jako-zpetna-vazba/", label: "Jak změna odrazivosti zesiluje změnu teploty" }
+    ]
+  },
+  {
+    id: "1969_Manabe_Bryan",
+    year: 1969,
+    dateMeaning: "Zveřejnění společného modelu",
+    title: "Výpočet propojuje atmosféru s proudícím oceánem",
+    category: "methods",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Syukuro Manabe a Kirk Bryan propojili trojrozměrný model atmosféry s modelem oceánského proudění. Atmosféra určovala přísun tepla, vody a působení větru na hladinu. Vypočtená teplota povrchové vody zase ovlivňovala atmosféru. Součástí byl i jednoduchý popis mořského ledu.",
+        references: [{ sourceId: "1969_Manabe_Bryan", locator: "s. 786–787" }]
+      },
+      {
+        text: "Tím mohli počítat klima, v němž si atmosféra a oceán navzájem mění podmínky. Porovnání výpočtů s oceánským prouděním a bez něj ukázalo jeho vliv na rozložení teploty a srážek. Model používal výrazně zjednodušenou geografii a hledal ustálený stav. Jeho přínosem bylo uskutečněné propojení obou částí klimatického systému, potřebné pro zkoumání společné odezvy atmosféry a oceánu.",
+        references: [{ sourceId: "1969_Manabe_Bryan", locator: "s. 786–789, obrázky 1–4" }]
+      }
+    ],
+    relatedLinks: [
+      { href: "/mechanismy/pohlcovani-a-presun-tepla-oceanem/", label: "Jak oceán přijímá a přenáší teplo" }
+    ]
+  },
+  {
     id: "1975_Ramanathan",
     year: 1975,
     dateMeaning: "Zveřejnění práce",
@@ -1149,6 +1191,48 @@ export const historyEvents: HistoryEvent[] = [
     relatedLinks: []
   },
   {
+    id: "1992_Charlson",
+    year: 1992,
+    dateMeaning: "Zveřejnění souhrnného výpočtu",
+    title: "Průmyslové aerosoly částečně vyvažují skleníkové oteplování",
+    category: "mechanisms",
+    importance: 1,
+    paragraphs: [
+      {
+        text: "Robert Charlson a jeho spoluautoři spojili údaje o emisích síry, množství částic v atmosféře a jejich působení na sluneční záření. Vyčíslili globální ochlazující účinek síranových aerosolů, drobných částic vznikajících také z emisí při spalování fosilních paliv. Částice rozptylují sluneční světlo a prostřednictvím změn oblačných kapek mohou zvyšovat také odrazivost oblaků.",
+        references: [{ sourceId: "1992_Charlson", locator: "s. 423–428, oddíly o přímém a nepřímém radiačním vlivu" }]
+      },
+      {
+        text: "Dobový odhad ukázal, že tento ochlazující vliv je dost velký, aby částečně tlumil oteplování skleníkovými plyny. Síranové částice ovšem zůstávají v atmosféře krátce a jejich množství se mezi oblastmi výrazně liší. Při vysvětlování průběhu oteplování proto bylo potřeba počítat současně s oběma vlivy a jejich rozdílným rozložením. Tento závěr se týkal především síranových aerosolů, zatímco například saze sluneční záření také pohlcují.",
+        references: [{ sourceId: "1992_Charlson", locator: "s. 423–424 a 428–429" }]
+      }
+    ],
+    relatedLinks: [
+      { href: "/mechanismy/prumyslove-aerosoly-a-oblaka/", label: "Jak částice z lidské činnosti mění záření a oblaka" }
+    ]
+  },
+  {
+    id: "1992_Keeling_Shertz",
+    year: 1992,
+    dateMeaning: "Zveřejnění měření a metody bilance",
+    title: "Atmosférický kyslík pomáhá sledovat osud vypouštěného uhlíku",
+    category: "methods",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Ralph Keeling a Stephen Shertz zveřejnili velmi přesná měření poměru kyslíku k dusíku ve vzduchu ze tří stanic na obou polokoulích. Poměr umožnil zachytit drobné změny množství kyslíku, které jsou vedle jeho velkého atmosférického podílu obtížně měřitelné. V záznamu z La Jolly zjistili vedle sezonního kolísání také pokles odpovídající spotřebě kyslíku při spalování fosilních paliv.",
+        references: [{ sourceId: "DOI_10_1038_358723a0", locator: "s. 723–726, obrázek 1" }]
+      },
+      {
+        text: "Měření kyslíku přidalo k samotnému CO₂ další informaci o pohybu uhlíku. Rostliny při fotosyntéze přijímají CO₂ a uvolňují kyslík, zatímco rozpouštění CO₂ v oceánu takový protějšek nemá. Společná bilance obou plynů proto umožnila lépe rozlišovat, jak se na pohlcování emisí podílí pevninská biosféra a oceán. Autoři přitom zohlednili i samostatnou výměnu kyslíku mezi mořem a vzduchem.",
+        references: [{ sourceId: "DOI_10_1038_358723a0", locator: "s. 724–726, rozbor sezonních změn a uhlíkové bilance" }]
+      }
+    ],
+    relatedLinks: [
+      { href: "/mechanismy/puvod-rustu-atmosferickeho-co2/", label: "Jak kyslík pomáhá ověřit původ a bilanci rostoucího CO₂" }
+    ]
+  },
+  {
     id: "1992_UNFCCC",
     year: 1992,
     dateMeaning: "Přijetí úmluvy",
@@ -1212,6 +1296,31 @@ export const historyEvents: HistoryEvent[] = [
         href: "/pozorovani/gmsl/",
         label: "Vývoj globální hladiny moře"
       }
+    ]
+  },
+  {
+    id: "1993_Alley",
+    year: 1993,
+    dateMeaning: "Zveřejnění rekonstrukce minulé změny",
+    title: "Grónský led odhaluje náhlou změnu sněhových přírůstků",
+    category: "observations",
+    importance: 1,
+    paragraphs: [
+      {
+        text: "Richard Alley a jeho spoluautoři rozpoznávali roční vrstvy v ledovém jádru GISP2 z centrálního Grónska. Jejich počítání kontrolovali pomocí chemických a elektrických vlastností ledu i stop sopečných erupcí. Z tloušťky vrstev po opravě jejich ztenčování pohybem ledu odhadli, kolik sněhu se v jednotlivých letech nahromadilo.",
+        references: [{ sourceId: "1993_Alley", locator: "s. 527–528, obrázek 1 a tabulka 1" }]
+      },
+      {
+        text: "Na konci mladšího dryasu, chladného období při ústupu poslední doby ledové, našli prudké zvýšení sněhových přírůstků. Podle jejich rekonstrukce se mohly zdvojnásobit během jednoho až tří let. Záznam tak doložil, že regionální klima může přejít do odlišného stavu velmi rychle. Výsledek se týkal sněhových přírůstků v Grónsku a zpřesnil časový průběh již známé náhlé klimatické změny.",
+        references: [{ sourceId: "1993_Alley", locator: "s. 528–529, obrázek 2" }]
+      },
+      {
+        text: "Veřejný archiv PANGAEA zpřístupňuje související soubor ročních vrstev a odvozených přírůstků. Jeho popis výslovně rozlišuje tuto pozdější kompilaci od přesných podkladů článku z roku 1993.",
+        references: [{ sourceId: "DOI_10_1594_PANGAEA_55534", locator: "popis parametru Accumulation of snow/ice per year a datový soubor" }]
+      }
+    ],
+    relatedLinks: [
+      { href: "/metody/ledova-jadra-a-analyza-uzavreneho-vzduchu/", label: "Jak čteme a datujeme klimatický záznam v ledu" }
     ]
   },
   {
@@ -1331,6 +1440,96 @@ export const historyEvents: HistoryEvent[] = [
     ]
   },
   {
+    id: "2003_Parmesan_Yohe",
+    year: 2003,
+    dateMeaning: "Zveřejnění syntézy pozorování",
+    title: "Pozorování organismů ukazují společnou odezvu na oteplování",
+    category: "observations",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Camille Parmesan a Gary Yohe vyhodnotili studie zahrnující více než 1 700 druhů. Sledovali změny jejich výskytu i načasování jarních událostí, například rozmnožování nebo kvetení. V souhrnu zjistili posuny směrem k pólům či do vyšších poloh a dřívější začátek jarních událostí, tedy změny očekávané při oteplování.",
+        references: [{ sourceId: "2003_Parmesan_Yohe", locator: "s. 37–40, obrázky 1 a 2" }]
+      },
+      {
+        text: "Význam syntézy spočíval v opakování podobného vzorce u různých skupin organismů a v různých oblastech. Autoři porovnávali také nezměněné záznamy a změny opačným směrem. Místní zásahy do krajiny mohou ovlivnit jednotlivé druhy, ale společný směr mnoha pozorování poskytl širší oporu závěru, že již probíhající oteplování mění živou přírodu. Neznamenal stejnou odezvu každého druhu.",
+        references: [{ sourceId: "2003_Parmesan_Yohe", locator: "s. 39–42, rozbor společného vzorce a oddíl Methods" }]
+      }
+    ],
+    relatedLinks: [
+      { href: "/metody/standardizovane-fenologicke-pozorovani/", label: "Jak zaznamenáváme dobu kvetení a dalších přírodních událostí" }
+    ]
+  },
+  {
+    id: "2004_Sabine",
+    year: 2004,
+    dateMeaning: "Zveřejnění inventury pro stav v roce 1994",
+    title: "Globální inventura vyčísluje uhlík z lidských emisí v oceánu",
+    category: "observations",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Christopher Sabine a jeho spoluautoři spojili měření z 95 oceánografických plaveb a 9 618 stanic převážně z 90. let. Z rozpuštěného anorganického uhlíku potřebovali oddělit část pocházející z lidských emisí. Pomocí chemických ukazatelů a odhadu podmínek při posledním styku vody s atmosférou odečetli přirozené příspěvky, například uhlík uvolněný rozkladem organické hmoty.",
+        references: [{ sourceId: "2004_Sabine", locator: "s. 367–368, popis měření a separační metody, obrázek 1" }]
+      },
+      {
+        text: "Pro období od roku 1800 do roku 1994 odhadli nahromadění 118 ± 19 miliard tun uhlíku z lidských emisí v oceánu. Mapa ukázala také výrazně nerovnoměrné rozložení této zásoby. Práce tak doplnila atmosférická měření globální inventurou uvnitř oceánu a umožnila vyčíslit, kolik vypuštěného uhlíku se tam uložilo. Číslo je výsledkem zpracování měření a chemického rozlišení jednotlivých příspěvků.",
+        references: [{ sourceId: "2004_Sabine", locator: "s. 368–370, obrázky 2 a 3 a tabulka 1" }]
+      }
+    ],
+    relatedLinks: [
+      { href: "/mechanismy/pohlcovani-co2-oceanem-a-uhlicitanova-chemie/", label: "Jak oceán pohlcuje CO₂" },
+      { href: "/metody/coulometrie/", label: "Jak měříme rozpuštěný anorganický uhlík" }
+    ]
+  },
+  {
+    id: "2004_Stott",
+    year: 2004,
+    dateMeaning: "Zveřejnění rozboru evropského léta 2003",
+    title: "Metoda vyčísluje lidský vliv na pravděpodobnost extrémního léta",
+    category: "methods",
+    importance: 1,
+    paragraphs: [
+      {
+        text: "Peter Stott, Dáithí Stone a Myles Allen zkoumali, jak lidské působení změnilo pravděpodobnost mimořádně horkého evropského léta. Porovnali pozorování s klimatickými výpočty zahrnujícími lidské i přírodní vlivy a s odhadem světa ovlivňovaného pouze přírodními příčinami. Předmětem byla průměrná teplota celého léta nad velkou částí kontinentální Evropy.",
+        references: [{ sourceId: "2004_Stott", locator: "s. 610–612, obrázky 1–3" }]
+      },
+      {
+        text: "Pro vysokou teplotní hranici překročenou v roce 2003 odhadli, že lidský vliv velmi pravděpodobně alespoň zdvojnásobil pravděpodobnost jejího překročení. Postup umožnil vyjádřit podíl klimatické změny na riziku extrémní události, i když se počasí přirozeně mění rok od roku. Pozdější oprava upřesnila popis použitého statistického výpočtu.",
+        references: [
+          { sourceId: "2004_Stott", locator: "s. 612–614, obrázek 4 a Methods" },
+          { sourceId: "2005_Stott_Corrigendum", locator: "s. 1200, prostřední oznámení" }
+        ]
+      }
+    ],
+    relatedLinks: [
+      { href: "/mechanismy/mechanismy-vln-veder/", label: "Jak se oteplování promítá do vln veder" },
+      { href: "/metody/analyza-casovych-zmen-a-extremu/", label: "Jak vyhodnocujeme četnost extrémních hodnot" }
+    ]
+  },
+  {
+    id: "2005_EU_ETS",
+    year: 2005,
+    dateMeaning: "Zahájení systému emisního obchodování",
+    title: "Evropská unie spouští systém emisních povolenek",
+    category: "politics",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Evropská unie spustila systém obchodování s emisními povolenkami, označovaný EU ETS. První období 2005–2007 zahrnovalo emise CO₂ z elektráren a energeticky náročných průmyslových provozů. Právní základ vytvořila směrnice přijatá v roce 2003. Celkové množství přidělovaných povolenek tehdy stanovovaly národní plány posuzované Evropskou komisí.",
+        references: [
+          { sourceId: "2003_EU_ETS_Directive", locator: "články 4 a 9–11, příloha I" },
+          { sourceId: "WEB_EC_EU_ETS_History", locator: "Phase 1 (2005–2007)" }
+        ]
+      },
+      {
+        text: "Provozovatelé museli sledovat a vykazovat emise a za každý rok odevzdat odpovídající počet povolenek podle ověřeného množství vypuštěných plynů. Povolenky mohli mezi sebou převádět. Klimatická politika tak získala společný přeshraniční nástroj, který spojil omezený počet povolenek s povinnou evidencí, ověřováním emisí a sankcemi za nesplnění povinností.",
+        references: [{ sourceId: "2003_EU_ETS_Directive", locator: "články 12 a 14–16" }]
+      }
+    ],
+    relatedLinks: []
+  },
+  {
     id: "2005_Barnett",
     year: 2005,
     dateMeaning: "Zveřejnění práce",
@@ -1389,6 +1588,25 @@ export const historyEvents: HistoryEvent[] = [
       { href: "/metody/druzicova-gravimetrie/", label: "Jak družice měří změny gravitačního pole" },
       { href: "/pozorovani/nestabilita-prikrovu/", label: "Jak určujeme změnu hmotnosti ledových příkrovů" }
     ]
+  },
+  {
+    id: "2008_UK_Climate_Change_Act",
+    year: 2008,
+    dateMeaning: "Přijetí klimatického zákona",
+    title: "Britský klimatický zákon zavádí pětileté emisní rozpočty",
+    category: "politics",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Britský parlament přijal Climate Change Act, který uložil vládě stanovovat závazné emisní rozpočty pro navazující pětiletá období. Rozpočet omezuje celkové emise země za dané období po odečtení odstraňovaných skleníkových plynů. Zákon upravuje také započítávání emisních kreditů, tedy jednotek představujících snížení emisí nebo odstranění plynů. První období zahrnovalo roky 2008–2012. Původním dlouhodobým cílem bylo do roku 2050 snížit takto počítané emise nejméně o 80 % vůči referenci roku 1990.",
+        references: [{ sourceId: "2008_UK_Climate_Change_Act", locator: "oddíly 1, 4 a 26–27, původní znění" }]
+      },
+      {
+        text: "Zákon ustavil odborný Výbor pro změnu klimatu, který radí s nastavením rozpočtů a předkládá parlamentu pravidelné zprávy o dosaženém pokroku. Dlouhodobý klimatický cíl tak doplnila kratší závazná období, průběžné odborné hodnocení a povinnost vlády reagovat. Jde o změnu způsobu rozhodování a kontroly klimatické politiky, jejíž plnění lze posuzovat po jednotlivých obdobích.",
+        references: [{ sourceId: "2008_UK_Climate_Change_Act", locator: "oddíly 32, 34 a 36–37" }]
+      }
+    ],
+    relatedLinks: []
   },
   {
     id: "2009_Carbon_Budget",
