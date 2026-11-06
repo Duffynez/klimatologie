@@ -455,6 +455,48 @@ export const historyEvents: HistoryEvent[] = [
     ]
   },
   {
+    id: "1894_Glacier_Monitoring",
+    year: 1894,
+    dateMeaning: "Zahájení mezinárodní koordinace sledování ledovců",
+    title: "Změny ledovců získávají mezinárodní pozorovací síť",
+    category: "observations",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Vznikla Mezinárodní ledovcová komise, která začala spojovat pozorování změn ledovců z různých pohoří. François-Alphonse Forel a Léon Du Pasquier ve společných zprávách zveřejňovali údaje o postupu a ústupu ledovcových čel, tedy jejich dolních okrajů. Místní měření se tak stala součástí soustavného mezinárodního porovnávání.",
+        references: [
+          {
+            sourceId: "WEB_World_Glacier_Monitoring_Ser_WGMS_2020_6e490990",
+            locator: "s. 1, vznik komise v srpnu 1894"
+          },
+          {
+            sourceId: "1896_Forel_Du_Pasquier",
+            locator: "s. 129–130 a zprávy z jednotlivých pohoří"
+          }
+        ]
+      },
+      {
+        text: "Společné zprávy umožnily porovnávat, zda se ledovce v různých pohořích prodlužují, nebo zkracují, a rozlišovat společný vývoj od místních rozdílů. Vznikl základ dlouhodobých záznamů, které pomáhají sledovat proměny zalednění při změnách klimatu. Na tuto spolupráci navazuje dnešní Světová služba pro sledování ledovců (WGMS).",
+        references: [
+          {
+            sourceId: "1896_Forel_Du_Pasquier",
+            locator: "s. 129–132 a 144–147"
+          },
+          {
+            sourceId: "WEB_World_Glacier_Monitoring_Ser_WGMS_2020_6e490990",
+            locator: "s. 1–2"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/pozorovani/ustup-ledovcu/",
+        label: "Co ukazují dlouhodobá měření horských ledovců"
+      }
+    ]
+  },
+  {
     id: "1896_Arrhenius",
     year: 1896,
     dateMeaning: "Zveřejnění práce",
@@ -484,6 +526,78 @@ export const historyEvents: HistoryEvent[] = [
       {
         href: "/mechanismy/radiacni-pusobeni-sklenikovych-plynu/",
         label: "Jak ověřujeme účinek dalšího CO₂"
+      }
+    ]
+  },
+  {
+    id: "1912_De_Geer",
+    year: 1912,
+    dateMeaning: "Zveřejnění souhrnné práce o datování ústupu ledu",
+    title: "Roční vrstvy sedimentů umožňují datovat ústup ledu",
+    category: "methods",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Gerard De Geer shrnul postup, kterým sestavoval časový průběh ústupu skandinávského ledovce. Voda z letního tání odnášela materiál a ukládala jej před ledovcem. Každoroční opakování vytvářelo rozpoznatelné vrstvy usazenin, takzvané varvy. De Geer je počítal a měřil jejich tloušťku na různých místech.",
+        references: [
+          {
+            sourceId: "1912_De_Geer",
+            locator: "s. 458 a 461–463"
+          }
+        ]
+      },
+      {
+        text: "Podle shodného sledu silnějších a tenčích vrstev spojoval místní záznamy do společné časové řady. Nejstarší vrstva na každém místě ukazovala, kdy se tam po ústupu ledu mohly usazeniny začít ukládat. Z rozdílu v počtu vrstev určoval, kolik let uplynulo mezi odledněním různých míst, a počítal rychlost ústupu ledovce. Geologické stopy klimatické změny tak získaly časové měřítko s rozlišením jednotlivých roků.",
+        references: [
+          {
+            sourceId: "1912_De_Geer",
+            locator: "s. 463–465, obrázky 2 a 3"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/metody/sedimentarni-jadra-a-stratigrafie/",
+        label: "Jak čteme a datujeme vrstvy sedimentů"
+      }
+    ]
+  },
+  {
+    id: "1916_Von_Post",
+    year: 1916,
+    dateMeaning: "Představení pylových diagramů na sjezdu v Kristianii",
+    title: "Pylové diagramy odhalují proměny vegetace a klimatu",
+    category: "methods",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Lennart von Post představil v Kristianii, dnešním Oslu, pylové diagramy. Tyto grafy zachycují podíly pylu jednotlivých dřevin v postupně ukládaných vrstvách rašeliny. Pod mikroskopem určoval a počítal zachovaná pylová zrna. Z jejich podílů pak sestavoval průběh změn lesní vegetace.",
+        references: [
+          {
+            sourceId: "1916_Von_Post_Quellmoore",
+            locator: "s. 262–264, obrázky 10 a 11 a poznámka k přednášce z roku 1916"
+          }
+        ]
+      },
+      {
+        text: "Změny podílů borovice, břízy a teplomilnějších listnatých dřevin umožnily sledovat vývoj krajiny po poslední době ledové. Protože rostliny mají různé nároky na teplotu a vláhu, bylo možné z proměn vegetace usuzovat i na vývoj klimatu. Srovnávání pylových záznamů navíc pomáhalo přiřazovat vrstvy z různých míst ke stejnému období.",
+        references: [
+          {
+            sourceId: "1916_Von_Post_Quellmoore",
+            locator: "s. 262–265"
+          },
+          {
+            sourceId: "DOI_10_1007_s00334_017_0628_9",
+            locator: "s. 313–314, oddíl o botanických a geologických otázkách pylové statistiky"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/metody/pylova-analyza-a-mikrofosilie/",
+        label: "Jak pylová analýza rekonstruuje minulou vegetaci"
       }
     ]
   },
@@ -586,6 +700,40 @@ export const historyEvents: HistoryEvent[] = [
       {
         href: "/metody/sedimentarni-jadra-a-stratigrafie/",
         label: "Jak čteme časový záznam mořských sedimentů"
+      }
+    ]
+  },
+  {
+    id: "1947_Urey",
+    year: 1947,
+    dateMeaning: "Zveřejnění teoretického základu izotopového teploměru",
+    title: "Izotopy kyslíku nabízejí teploměr pro dávné klima",
+    category: "methods",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Harold Urey vypočítal, jak teplota ovlivňuje rozdělení izotopů kyslíku mezi vodou a uhličitanem, z něhož vznikají například mořské schránky. Izotopy jsou atomy téhož prvku s různou hmotností. Jejich poměr v uhličitanu se vůči okolní vodě mění s teplotou při jeho vzniku.",
+        references: [
+          {
+            sourceId: "DOI_10_1039_JR9470000562",
+            locator: "s. 578–579"
+          }
+        ]
+      },
+      {
+        text: "Navrhl proto využít zachované uhličitany jako geologický teploměr. Přesné měření izotopového poměru mělo umožnit odhadnout teplotu jejich vzniku, a tím získat číselné údaje o klimatu dávno před přístrojovými měřeními. Práce formulovala fyzikální základ metody i potřebu laboratorně ověřit vztah mezi teplotou a izotopovým poměrem.",
+        references: [
+          {
+            sourceId: "DOI_10_1039_JR9470000562",
+            locator: "s. 578–579, návrh geologického využití"
+          }
+        ]
+      }
+    ],
+    relatedLinks: [
+      {
+        href: "/metody/izotopova-paleotermometrie/",
+        label: "Jak z izotopů určujeme teplotu vzniku schránek"
       }
     ]
   },
