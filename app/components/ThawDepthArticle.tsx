@@ -407,6 +407,11 @@ export function ThawDepthArticle() {
           <SourceLink id="DOI_10_1029_2023jf007262">(O’Neill a kol., oddíl 4.1)</SourceLink>
         </p>
 
+        <p>
+          Co přísun tepla, sníh a množství půdního ledu znamenají pro naměřený postup rozmrzání,
+          vysvětluje článek <Link href="/mechanismy/prenos-tepla-do-pudy-a-tani-permafrostu/">Proč rozmrzá permafrost?</Link>
+        </p>
+
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>

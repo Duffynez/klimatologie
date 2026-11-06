@@ -1,0 +1,61 @@
+Klimatologie.eu: Proč rozmrzá permafrost?
+Datum přípravy a kontroly: 6. listopadu 2026.
+
+Původ a licence
+Obě SVG jsou vlastní kvalitativní schémata vytvořená s pomocí AI v editovatelném
+zdrojovém kódu scripts/generate-permafrost-schematics.mjs. Licence CC BY 4.0.
+Nejde o převzaté obrázky ani o digitalizované teplotní křivky. Jejich polohy,
+tloušťky vrstev a délky šipek nemají číselné měřítko.
+
+teplo-z-hloubky.svg
+Princip: přirozený tok tepla zdola a mělká odchylka od hlubokého profilu.
+Podklad: Lachenbruch et al. 1982, obr. 3, tab. 2, s. 6–25.
+DOI https://doi.org/10.3133/ofr82535
+Plný text https://pubs.usgs.gov/of/1982/0535/report.pdf
+Modrá přerušovaná čára je idealizovaný profil při stálém toku a vodivosti.
+Oranžová čára ukazuje kvalitativní změnu po ohřevu od povrchu. Změnu sklonu
+teplotního profilu u spodní hranice způsobenou rozdílnou vodivostí zde pro
+přehlednost nekreslíme.
+Profil není důkaz sám o sobě. Naměřené hodnoty a podmínky testu jsou v článku.
+
+teplo-od-povrchu.svg
+Princip: letní přísun tepla dolů a zimní omezení ztráty tepla pod sněhem.
+Podklad: Lachenbruch 1994, s. 12–20.
+DOI https://doi.org/10.3133/ofr94694
+Plný text https://pubs.usgs.gov/of/1994/0694/report.pdf
+Terénní zkouška: Hinkel a Hurd 2006, zejména obr. 4, 7, 8, tab. 2.
+DOI https://doi.org/10.1657/1523-0430(2006)38[530:PDATFS]2.0.CO;2
+Plný text https://www.tandfonline.com/doi/full/10.1657/1523-0430%282006%2938%5B530%3APDATFS%5D2.0.CO%3B2
+Plot přerozděluje sníh. Nepředstavuje zdroj tepla. V zimě je vzduch chladnější
+než půda. Menší ztrátu tepla označují přerušená cesta a slovní popisek.
+Rozsah 2–14 °C v textu je místní zimní rozdíl oproti kontrole, ne trend za desetiletí.
+Celoroční účinek zahrnuje i opožděné odtání závěje a změnu vodních poměrů.
+
+Další porovnání
+Clow 2014: opakovaná měření 1973–2013, oteplení ve 20 m o 2–3 °C od konce
+osmdesátých let je předběžné regionální vyhodnocení v oddílu 3, nikoli globální údaj.
+https://doi.org/10.5194/essd-6-201-2014
+https://essd.copernicus.org/articles/6/201/2014/essd-6-201-2014.pdf
+Smith et al. 2022: syntéza tepelného stavu a role ledu, sněhu, vegetace a vody.
+https://doi.org/10.1038/s43017-021-00240-1
+https://par.nsf.gov/servlets/purl/10321741
+
+Veřejné podklady a jejich meze
+GTN-P 2018: roční teploty 2007–2016 s polohou, hloubkou a přesností měření.
+https://doi.org/10.1594/PANGAEA.884711
+Přímý tabulkový soubor: https://doi.pangaea.de/10.1594/PANGAEA.884711?format=textfile
+Samostatná úplná strojová řada sněhového pokusu z roku 2006 zde není doložena.
+Plný text obsahuje grafy a číselné tabulky. Schéma není náhradou chybějících dat.
+
+Vlastní výpočty
+vypocty.mjs je samostatný skript pro Node.js bez závislostí, který vypíše vypocty.csv.
+Harmonický roční cyklus: d = sqrt(alpha P / pi), A(z)/A(0) = exp(-z/d),
+zpoždění = P z/(2 pi d). Alpha = 0.016 cm2/s podle Lachenbruch et al. 1982,
+rovnice 19b. Jde o model homogenního poloprostoru bez tání a pohybu vody.
+P = 365.25 dne je zvolená délka ročního cyklu. Pro 4 m vychází přibližně
+37 % amplitudy a 58 dnů zpoždění. Pro 8 m asi 14 % a 116 dnů.
+Energetický příklad: h = 0.5 m a podíl ledu theta = 0.4 jsou zvolené hodnoty.
+Lv = 73 cal/cm3 = 305.432 MJ/m3 podle stejné studie, rovnice 31c.
+E/S = h theta Lv = 61.0864 MJ/m2, pouze na tání ledu již na bodu tání.
+Převod geotermálního toku z tab. 2: (1.3 ± 0.2) HFU = (0.054392 ± 0.008368) W/m2.
+Zaokrouhlení v článku se nevydává za přesnost měření.

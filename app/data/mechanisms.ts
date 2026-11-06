@@ -180,7 +180,7 @@ export const climateMechanisms: ClimateMechanism[] = [
     title: "Proč rozmrzá permafrost?",
     category: "Kryosféra",
     cardSummary: "Šíření tepla do zmrzlé půdy a vliv sněhu, vody a vlastností podloží.",
-    summary: "Teplo se šíří půdou a jeho průběh mění sněhová izolace, voda, led a vlastnosti hornin nebo sedimentu.",
+    summary: "Co odhalují hluboké vrty a pokus se sněhovým plotem o cestě tepla do půdy? Proč oteplování, tání ledu a sesedání terénu nepostupují stejným tempem?",
     distinguishingEvidence: "Zpoždění a zeslabení teplotních změn s hloubkou, porovnané s přenosem tepla a energií potřebnou k tání. Rozdíly mezi místy ověřují vliv sněhové izolace, vody a vlastností podloží.",
   },
   {

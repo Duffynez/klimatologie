@@ -4,6 +4,51 @@ import { readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 import { stripTypeScriptTypes } from "node:module";
 
+test("publishes the permafrost mechanism with complete evidence paths and reproducible physical examples", async () => {
+  const path = "/mechanismy/prenos-tepla-do-pudy-a-tani-permafrostu";
+  const html = await readFile(new URL("dist/client" + path + "/index.html", root), "utf8");
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "Publish the full article at the existing catalogue address");
+  assert.deepEqual([...body.matchAll(/<h2 id="([^"]+)"/g)].map(m => m[1]), ["co-vysvetlujeme", "hypotezy", "pribehy", "jak-mechanismus-funguje", "shrnuti", "prameny"]);
+  assert.equal((body.slice(0, body.indexOf('<h2 id="hypotezy"')).match(/<p\b/g) ?? []).length, 2);
+  assert.match(html, /6\. listopadu 2026/);
+  assert.equal((body.match(/<h4 id="test-/g) ?? []).length, 4);
+  const bibliography = body.slice(body.indexOf('<h2 id="prameny"'));
+  for (const id of new Set([...body.matchAll(/href="\/zdroje#([^"]+)"/g)].map(m => m[1]))) {
+    assert.ok(bibliography.includes('href="/zdroje#' + id + '"'), "Missing bibliography " + id);
+  }
+  for (const [, href] of body.matchAll(/href="(\/[^\"]+)"/g)) {
+    const [pathname, anchor] = href.split("#");
+    const file = /\.[a-z0-9]+$/i.test(pathname) ? pathname : pathname.replace(/\/$/, "") + "/index.html";
+    const target = await readFile(new URL("dist/client" + file, root), "utf8");
+    if (anchor) assert.ok(target.includes(`id="${anchor}"`), "Broken evidence or source anchor " + href);
+  }
+  for (const target of ["/pozorovani/snehova-pokryvka-a-permafrost", "/metody/mereni-hloubky-sezonniho-rozmrzani"]) {
+    const related = await readFile(new URL("dist/client" + target + "/index.html", root), "utf8");
+    assert.ok(hasArticleLink(body, target));
+    assert.ok(hasArticleLink(related, path), "Missing reciprocal explanation " + target);
+  }
+  for (const name of ["teplo-z-hloubky", "teplo-od-povrchu"]) {
+    const svg = await readFile(new URL(`dist/client/media/permafrost-mechanismy/${name}.svg`, root), "utf8");
+    assert.ok(body.includes(`/media/permafrost-mechanismy/${name}.svg`));
+    assert.match(svg, /<title[^>]*>[^<]+<\/title>/);
+    assert.match(svg, /<desc[^>]*>[^<]+<\/desc>/);
+  }
+  const { execFileSync } = await import("node:child_process");
+  const { fileURLToPath } = await import("node:url");
+  const example = new URL("public/media/permafrost-mechanismy/", root);
+  const csv = await readFile(new URL("vypocty.csv", example), "utf8");
+  const output = execFileSync(process.execPath, [fileURLToPath(new URL("vypocty.mjs", example))], { encoding: "utf8" });
+  assert.equal(output.trim().replaceAll("\r\n", "\n"), csv.trim().replaceAll("\r\n", "\n"));
+  for (const file of ["vypocty.csv", "vypocty.mjs", "podklady.txt"]) {
+    assert.deepEqual(await readFile(new URL(file, example)), await readFile(new URL("dist/client/media/permafrost-mechanismy/" + file, root)));
+  }
+  assert.match(body, /katex/);
+  const uncertainty = body.slice(body.indexOf('<p id="nejistoty"'), body.indexOf('<h2 id="shrnuti"'));
+  assert.ok(uncertainty.replace(/<[^>]+>/g, " ").split(/\s+/).length <= 600);
+  assert.doesNotMatch(body.replace(/<[^>]+>/g, " ").replace(/&[^;]+;/g, " "), /;/);
+});
+
 test("publishes the volcanic mechanism with evidence, full texts, graphics and reciprocal observations", async () => {
   const html = await readFile(new URL("dist/client/mechanismy/sopecne-aerosoly/index.html", root), "utf8");
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
@@ -843,7 +888,7 @@ test("publishes 23 mechanism topics and preserves the split snow-and-sea-ice add
     assert.ok(sitemap.includes(`<loc>https://klimatologie.eu/mechanismy/${slug}/</loc>`), "Missing sitemap route " + slug);
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     assert.ok(html.includes(`<h1>${title}</h1>`), "Wrong detail title " + slug);
-    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen", "prumyslove-aerosoly-a-oblaka", "zmeny-ozonu-ve-stratosfere"].includes(slug)) {
+    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen", "prumyslove-aerosoly-a-oblaka", "zmeny-ozonu-ve-stratosfere", "prenos-tepla-do-pudy-a-tani-permafrostu"].includes(slug)) {
       assert.match(html, /Co musí toto vysvětlení objasnit/);
       assert.match(html, /<section class="mechanism-detail-evidence"[^>]*>[\s\S]*<p>[^<]+<\/p><\/section>/);
     }
@@ -1716,7 +1761,7 @@ test("publishes a sourced snow-cover and permafrost article with distinct observ
 
   assert.match(evidencePage, /SnowPermafrostArticle/);
   assert.match(evidencePage, /title="Sněhová pokrývka a permafrost"/);
-  assert.match(evidencePage, /title="Sněhová pokrývka a permafrost"\s+meta="3\. listopadu 2026"/);
+  assert.match(evidencePage, /title="Sněhová pokrývka a permafrost"\s+meta="6\. listopadu 2026"/);
   assert.match(article, /Sníh na souši pozorujeme jako plochu, dobu trvání, výšku a množství vody/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
   assert.match(article, /Mapa rozsahu sněhu/);
@@ -1779,7 +1824,7 @@ test("renders open snow and permafrost sources with qualified trends and data co
   assert.match(articleHtml, /3 500 řádků pro 140 kódů lokalit/);
   assert.match(articleHtml, /Z 316 registrovaných míst vybrala 156/);
   assert.match(articleHtml, /Jediný panel porovnává dubnovou hmotnost/);
-  assert.match(articleHtml, /<p class="page-lead__meta">3\. listopadu 2026<\/p>/);
+  assert.match(articleHtml, /<p class="page-lead__meta">6\. listopadu 2026<\/p>/);
   assert.doesNotMatch(articleHtml, /Čtyři nezávislé podklady|s úplným desetiletým výsledkem|severoamerické \(a\) a euroasijské \(b\)/);
 });
 
@@ -4508,6 +4553,7 @@ test("keeps each hypothesis independently collapsible with complete content and 
     ["zmeny-ozonu-ve-stratosfere", ["rust-co2", "ubytek-ozonu"]],
     ["mechanismy-vln-veder", ["samotne-proudeni", "teplejsi-klima"]],
     ["biologicke-mechanismy-fenologickych-zmen", ["pevny-kalendar", "rytmus-a-prostredi"]],
+    ["prenos-tepla-do-pudy-a-tani-permafrostu", ["teplo-z-hloubky", "teplo-od-povrchu"]],
   ]) {
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)[1];

@@ -1,0 +1,16 @@
+typ,velicina,hodnota,jednotka
+vstup,teplotni_vodivost,0.0000016,m2/s
+vstup,perioda,31557600,s
+model,hloubka_e_nasobneho_utlumu,4.00900907,m
+model,pomer_amplitud_v_0_m,1,1
+model,zpozdeni_v_0_m,0,den
+model,pomer_amplitud_v_4_m,0.368707071,1
+model,zpozdeni_v_4_m,58.0007099,den
+model,pomer_amplitud_v_8_m,0.135944905,1
+model,zpozdeni_v_8_m,116.00142,den
+prevod,geotermalni_tok,0.054392,W/m2
+prevod,odhad_meze_tok_plus_minus,0.008368,W/m2
+vstup,objemove_skupenske_teplo_ledu,305.432,MJ/m3
+zvoleny_vstup,tloustka_vrstvy,0.5,m
+zvoleny_vstup,objemovy_podil_ledu,0.4,1
+model,energie_pouze_na_tani,61.0864,MJ/m2

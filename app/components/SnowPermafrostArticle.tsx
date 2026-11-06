@@ -526,7 +526,7 @@ export function SnowPermafrostArticle() {
           <SourceLink id="DOI_10_1038_s41597_021_00939_2">Luojus et al., 2021</SourceLink>
         </p>
 
-        <h3>Teplota permafrostu ve vrtech</h3>
+        <h3 id="teplota-permafrostu">Teplota permafrostu ve vrtech</h3>
         <p>
           Z celkem 154 vrtů použili Biskaborn et al. pro trend 123 míst. Prostorově vážené tempo oteplování
           za období 2007–2016 vyšlo 0,29 ± 0,12 °C za desetiletí. Jde o sklon přímky proložené ročními teplotami
@@ -567,6 +567,38 @@ export function SnowPermafrostArticle() {
             Mapový podklad World Borders má podle původního popisku licenci CC BY-SA 3.0. Obrázek převzat bez úprav.
           </figcaption>
         </figure>
+
+        <h3 id="hluboke-profily">Hluboké profily a jejich opakované měření</h3>
+        <p>
+          Vrty v Prudhoe Bay umožnily porovnat teplotu od povrchu až pod zmrzlou vrstvu.
+          V devíti vrtech s malým zbytkovým vlivem vrtání se přibližně v 600 metrech měnil sklon teplotního profilu.
+          V horních přibližně 160 metrech naměřené teploty vybočovaly k vyšším hodnotám oproti přímce prodloužené z hlubší části.
+          V 50 metrech činila průměrná odchylka asi 1 °C. Jde o porovnání hloubek při měření, nikoli o přímo pozorovanou stoletou časovou řadu.
+          <SourceLink id="DOI_10_3133_ofr82535"> (Lachenbruch a kol. 1982, obr. 3 a tab. 2)</SourceLink>
+        </p>
+        <p>
+          Pozdější soubor 23 severoaljašských vrtů zahrnuje opakovaná měření z let 1973–2013.
+          Předběžné vyhodnocení ukázalo od konce osmdesátých let oteplení ve 20 metrech o 2–3 °C podle lokality.
+          U většiny vrtů zbytková porucha způsobená vrtáním do roku 1989 klesla přibližně na 0,1 °C nebo méně.
+          Zpracování a kalibraci popisuje <SourceLink id="DOI_10_5194_essd_6_201_2014">Clow (2014)</SourceLink>.
+        </p>
+
+        <h3 id="snih-a-teplota-pudy">Půda pod sněhovými závějemi</h3>
+        <p>
+          U sněhového plotu v Barrow se v letech 1999–2005 měřily teploty v 5, 30 a 50 centimetrech na devíti místech,
+          kontrolu tvořila tři místa na okolní tundře. Pod závějemi byla půda v zimě o 2–14 °C teplejší, v létě zpravidla o 2–3 °C chladnější než kontrola.
+          Na většině ovlivněných míst půda v 50 centimetrech, zpočátku celoročně zmrzlá, později v létě rozmrzala.
+          <SourceLink id="DOI_10_1657_Hinkel_Hurd_2006"> (Hinkel a Hurd 2006, obr. 4 a 8)</SourceLink>
+        </p>
+        <p>
+          Výšková měření mezi roky 2000 a 2004 zachytila podél jižního profilu průměrný pokles povrchu o 4,3 cm a podél severního o 6,1 cm.
+          Prostřední profil měl téměř nulovou průměrnou změnu, přesto na něm místy půda klesala a jinde se zvedala.
+          V terénu přibývaly a zvětšovaly se tůně. <SourceLink id="DOI_10_1657_Hinkel_Hurd_2006">(Hinkel a Hurd 2006, obr. 6 a diskuse)</SourceLink>
+        </p>
+        <p>
+          <Link href="/mechanismy/prenos-tepla-do-pudy-a-tani-permafrostu/">Proč permafrost rozmrzá</Link> vysvětluje navazující článek:
+          porovnává hluboké profily, opakované měření a sněhový pokus jako zkoušky různých cest přenosu tepla.
+        </p>
 
         <h3>Novější regionální měření a aktivní vrstva</h3>
         <p>
@@ -653,6 +685,8 @@ export function SnowPermafrostArticle() {
             <ul>
               <li><SourceLink id="DOI_10_5194_essd_7_245_2015">Biskaborn et al., 2015: The new database of the Global Terrestrial Network for Permafrost</SourceLink></li>
               <li><SourceLink id="DOI_10_1038_s41467_018_08240_4">Biskaborn et al., 2019: Permafrost is warming at a global scale</SourceLink></li>
+              <li><SourceLink id="DOI_10_3133_ofr82535">Lachenbruch a kol., 1982: Thermal regime of permafrost at Prudhoe Bay, Alaska</SourceLink></li>
+              <li><SourceLink id="DOI_10_1657_Hinkel_Hurd_2006">Hinkel a Hurd, 2006: Permafrost Destabilization and Thermokarst Following Snow Fence Installation</SourceLink></li>
               <li><SourceLink id="DOI_10_1080_1088937x_2021_1988001">Nelson et al., 2021: Cool, CALM, collected: the Circumpolar Active Layer Monitoring program and network</SourceLink></li>
               <li><SourceLink id="DOI_10_1002_ppp_2088">Strand et al., 2021: Active layer thickening and controls on interannual variability in the Nordic Arctic compared to the circum-Arctic</SourceLink></li>
               <li><SourceLink id="DOI_10_5194_essd_6_201_2014">Clow, 2014: Temperature data from deep boreholes in arctic Alaska</SourceLink></li>
