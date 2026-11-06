@@ -1,10 +1,11 @@
 {
   "source": {
     "doi": "10.1021/ac402366t",
-    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3933304/",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3933304/#T1",
     "table": "Table 1",
     "version": "Public author manuscript, final article Analytical Chemistry 85(21), 10392–10398 (2013)",
     "accessed": "2026-10-19",
+    "verified": "2026-11-06",
     "selection": "Three experimental GISP rows, HP measurement count and oxygen-18 columns only. No weighted average, assigned IAEA value, oxygen-17 or 17O-excess rows."
   },
   "data_level": "Published calibrated laboratory means, NOT raw ion currents or individual replicate measurements. Measurement calendar dates are not specified in the table.",

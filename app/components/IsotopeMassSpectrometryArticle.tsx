@@ -59,7 +59,7 @@ export function IsotopeMassSpectrometryArticle() {
           Odebranou vodu uchováváme v těsně uzavřené nádobce. U srážek k ní patří místo a období
           odběru, u roztátého vzorku ledového jádra také hloubka, ze které pochází.
           Pro popisovaný rozbor USGS obvykle odměřuje 2 ml vody. Voda se uzavře do skleněné
-          nádoby s malým množstvím oxidu uhličitého a nádoba se udržuje při stálé teplotě.{" "}
+          nádoby s malým množstvím oxidu uhličitého. USGS nádobu udržuje při teplotě 25 °C.{" "}
           <SourceLink id="DOI_10_3133_tm10C2">(USGS, postup analýzy)</SourceLink>
         </p>
         <p>
@@ -280,8 +280,8 @@ export function IsotopeMassSpectrometryArticle() {
           <p>
             Zbytky předchozího plynu mohou ovlivnit další měření. Proměny odezvy se sledují
             opakovanými referencemi v průběhu série, vedle nich se měří samostatné kontrolní vody.
-            <SourceLink id="DOI_10_3133_tm10C2"> USGS</SourceLink> uvádí opakované měření nejméně
-            třetiny vzorků v různých dnech a pravidelné zařazování externího kontrolního vzorku.
+            <SourceLink id="DOI_10_3133_tm10C2">USGS</SourceLink> uvádí, že přibližně třetinu vzorků
+            připravuje a měří dvakrát v různých dnech. Pravidelně zařazuje také externí kontrolní vzorek.
             U popsané validace vod od −55 do +5 ‰ uvádí přesnost a shodu s referencemi ±0,07 ‰.
             Jde o údaj tohoto laboratorního postupu.
           </p>
@@ -308,7 +308,7 @@ export function IsotopeMassSpectrometryArticle() {
         <h2>Příklad: stejná voda ve třech laboratořích</h2>
         <p>
           Použijeme mezinárodní referenční vodu GISP.
-          <SourceLink id="DOI_10_1021_ac402366t"> Tabulka 1 studie Bermanové a kolegů (2013)</SourceLink>{" "}
+          <SourceLink id="DOI_10_1021_ac402366t">Tabulka 1 studie Bermanové a kolegů (2013)</SourceLink>{" "}
           uvádí její rozbory dvěma laboratořemi IRMS a jednou optickou metodou.
           Začínáme zveřejněnými průměry δ¹⁸O po kalibraci, původní elektrické signály
           tabulka neobsahuje. Spočítáme význam jednoho výsledku a rozdíly mezi laboratořemi.
@@ -366,7 +366,8 @@ export function IsotopeMassSpectrometryArticle() {
             Přepis obsahuje tři experimentální řádky GISP a sloupec δ¹⁸O z tabulky 1.
             Nepřebírá vážený souhrn ani další izotopy. Studie byla vydána v roce 2013,
             konkrétní kalendářní data těchto rozborů tabulka neuvádí.
-            Veřejný autorský rukopis v repozitáři PMC byl otevřen 19. října 2026.
+            Tři řádky jsme 6. listopadu 2026 porovnali s veřejným autorským rukopisem
+            v repozitáři PMC. Odkaz na plný text na kartě zdroje vede přímo k tabulce.
           </p>
           <ul>
             <li><a href={`${dataPath}/gisp-comparison.csv`}>Přepis tří výsledků v CSV</a></li>

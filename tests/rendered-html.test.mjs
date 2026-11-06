@@ -2680,7 +2680,7 @@ test("publishes absorption spectroscopy with a boxed conclusion and complete sou
   assert.equal((body.match(/<details\b/g) ?? []).length, 2);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
   assert.match(body, /Příklad výpočtu z osmi měření/);
-  assert.match(html, /<p class="page-lead__meta">2\. listopadu 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">6\. listopadu 2026<\/p>/);
   assert.match(body, /noaa-aircraft-crds\.jpg/);
   assert.match(body, /crds-principle\.svg/);
   assert.match(body, /repeat-measurements\.png/);

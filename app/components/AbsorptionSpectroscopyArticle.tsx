@@ -265,9 +265,9 @@ export function AbsorptionSpectroscopyArticle() {
 
         <h3>Vývoj a další provedení</h3>
         <p>
-          <SourceLink id="1862_Tyndall">John Tyndall v roce 1861</SourceLink> měřil průchod
-          tepelného záření trubicí naplněnou různými plyny a ukázal velké rozdíly v jejich
-          absorpci. O století později už <SourceLink id="DOI_10_1111_j_2153_3490_1960_tb01300_x">Keelingova
+          <SourceLink id="1862_Tyndall">John Tyndall v práci z roku 1861</SourceLink> popsal,
+          jak měřil průchod tepelného záření trubicí naplněnou různými plyny. Naměřil velké
+          rozdíly v jejich absorpci. O století později už <SourceLink id="DOI_10_1111_j_2153_3490_1960_tb01300_x">Keelingova
           práce z roku 1960</SourceLink> popisovala souvislé analyzátorové záznamy CO₂
           a jejich vazbu na směsi určené manometricky. Laserové dutiny následně umožnily
           využít úzké absorpční čáry a dlouhou optickou dráhu v kompaktním přístroji,
@@ -314,7 +314,7 @@ export function AbsorptionSpectroscopyArticle() {
           suchého vzduchu. Její vztah ke staničním měřením vysvětluje
           <Link href="/pozorovani/atmosfericka-koncentrace-co2/#druzicova-mereni"> pozorování atmosférického CO₂</Link>.
           Staniční přístroj zachycuje vzduch nasátý v místě odběru,
-          zatímco družicový údaj zahrnuje celou sledovanou dráhu atmosférou.{" "}
+          zatímco družicový údaj popisuje průměrný molární zlomek CO₂ v pozorovaném sloupci vzduchu.{" "}
           <SourceLink id="DOI_10_5194_amt_10_549_2017">(význam družicového XCO₂)</SourceLink>
         </p>
 
@@ -364,8 +364,8 @@ export function AbsorptionSpectroscopyArticle() {
           <SourceLink id="2021_NOAA_CO2_Analysis">Tabulka A1 metodiky NOAA</SourceLink> zachycuje
           osm opakovaných rozborů jednoho vzorku z 24. ledna 2017.
           Počítá molární zlomek nejběžnější podoby CO₂, tedy ¹⁶O¹²C¹⁶O.
-          Začínáme zveřejněnými odezvami analyzátoru, zpracování původního světelného signálu
-          už provedla laboratoř. První vzorek obklopují tato dvě měření reference:
+          Začínáme zveřejněnými odezvami analyzátoru. Původní světelný signál tabulka neobsahuje.
+          První rozbor vzorku je v tabulce mezi těmito dvěma měřeními reference:
         </p>
         <figure className="article-figure">
           <div className="article-figure__scroll" tabIndex={0} role="region" aria-label="První tři odezvy z tabulky NOAA">
@@ -417,8 +417,8 @@ export function AbsorptionSpectroscopyArticle() {
         <details className="article-details">
           <summary>Data a postup pro zopakování výpočtu</summary>
           <p>
-            Podkladem je verze 2.1 metodiky účinná od 15. dubna 2021, tabulka A1 na straně 9.
-            Přepis obsahuje všech 16 zveřejněných řádků. U prvních sedmi vzorků lze poměr
+            Podkladem je verze 2.1 metodiky účinná od 15. dubna 2021. Z karty zdroje lze
+            otevřít přímo stranu 9 s tabulkou A1. Přepis obsahuje všech 16 zveřejněných řádků. U prvních sedmi vzorků lze poměr
             ověřit z obou sousedních referencí. Reference následující po osmém vzorku v tabulce
             chybí, proto jeho poměr přebíráme a chybějící odezvu nedoplňujeme.
             Pro převod všech osmi měření používáme zveřejněné poměry a koeficienty.{" "}
@@ -427,7 +427,7 @@ export function AbsorptionSpectroscopyArticle() {
           <p>
             Příklad má datum měření 2017. Tabulka výslovně neuvádí verzi stupnice použité
             pro tyto hodnoty, takže jim nepřiřazujeme označení současné X2019.
-            Soubory byly převzaty 19. října 2026. Data NOAA jsou veřejně použitelná
+            Přepis jsme 6. listopadu 2026 porovnali s původní tabulkou NOAA. Data jsou veřejně použitelná
             s uvedením původu podle <SourceLink id="WEB_NOAA_GML_Terms">podmínek NOAA GML</SourceLink>.
           </p>
           <ul>
