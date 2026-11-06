@@ -1,0 +1,18 @@
+Grafiky ke článku Jak sluneční cyklus ovlivňuje klima?
+Klimatologie.eu, 6. listopadu 2026.
+
+kosmicke-zareni.png: vlastní vysvětlující ilustrace vytvořená pomocí AI.
+Horní děj je navržená hypotéza, nikoli naměřená změna oblačnosti.
+První test: Dunne a kol. 2016, DOI 10.1126/science.aaf2649.
+Druhý test: Gordon a kol. 2017, DOI 10.1002/2017JD026844, oddíl 3.5 a tabulka 4.
+0,2 % označuje globální roční změnu počtu kondenzačních jader pro nízké oblaky mezi slunečním maximem a minimem v modelu dnešní atmosféry. Nejde o změnu oblačné plochy. Jádra jsou vyhodnocena při přesycení páry o 0,2 %, což je jiná veličina se shodným číselným zápisem. Předindustriální výsledek modelu je 0,3 %.
+Další družicové testy rozebírá text: Kristjánsson a kol. 2008, DOI 10.5194/acp-8-7373-2008 a Svensmark a kol. 2021, DOI 10.1038/s41598-021-99033-1.
+
+zmeny-zareni.png: vlastní vysvětlující ilustrace vytvořená pomocí AI.
+Fyzika: Gray a kol. 2010, DOI 10.1029/2009RG000282, zejména oddíl 4.2.
+Družicové teploty: Randel a kol. 2016, DOI 10.1175/JCLI-D-15-0629.1, oddíl 5d, obrázek 15, 1979–2015.
+Povrchová odezva: Amdur a kol. 2021, DOI 10.1175/JCLI-D-20-0312.1. Nejpravděpodobnější citlivost 0,05 K na 1 W/m² TSI, 95% interval 0,03–0,09. Rozdíl 1 K = rozdíl 1 °C. TSI je vztažen k ploše kolmé k paprskům nad atmosférou, ne ke kulovému povrchu planety. Není to rovnovážná citlivost na zdvojnásobení CO₂. Data a výpočty: https://github.com/tamdur/SolarCycleSensitivity
+
+Šipky a velikosti objektů jsou schematické. Přístroje jsou ilustrace, nikoli dokumentární fotografie. Grafiky neobsahují rekonstruované křivky vydávané za měření.
+Obě vlastní grafiky: CC BY 4.0, https://creativecommons.org/licenses/by/4.0/
+Podklady.csv je vlastní přepis souhrnných výsledků studií. Nenahrazuje původní data.

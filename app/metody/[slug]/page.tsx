@@ -423,7 +423,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "mereni-radiacnich-toku") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Měření radiačních toků" meta="1. listopadu 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Měření radiačních toků" meta="6. listopadu 2026">
           <p>Jak přístroje měří sluneční a tepelné záření a jak ze čtyř měřených složek zjistíme, kolik energie povrch zářením získává.</p>
         </PageLead>
         <RadiativeFluxArticle />

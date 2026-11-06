@@ -1,0 +1,60 @@
+import Image from "next/image";
+import Link from "next/link";
+import { SourceLink } from "./SourceLink";
+
+const media = "/media/slunecni-zareni";
+
+export function SolarIrradianceArticle() {
+  return <article className="article-layout"><div className="article-prose">
+    <h2 id="velicina">Co měříme nad atmosférou</h2>
+    <p className="article-prose__intro">Celkový sluneční příkon vyjadřuje, kolik energie přinese sluneční záření za sekundu na metr čtvereční plochy kolmé ke směru paprsků. Zahrnuje celý viditelný sluneční kotouč a všechny vlnové délky. Udává se ve wattech na metr čtvereční, W/m². V odborných datech se označuje zkratkou TSI z anglického <em>total solar irradiance</em>. Zde sledujeme měření z družice nad zemskou atmosférou, ještě před zeslabením záření oblaky, plyny a částicemi. <SourceLink id="DATA_SORCE_TIM_V20">(LASP: dokumentace SORCE TIM)</SourceLink></p>
+    <p>Země se během roku pohybuje po mírně protáhlé dráze. I při neměnném Slunci by proto příkon během roku kolísal se vzdáleností. Abychom v grafu sledovali změny samotného Slunce, používáme údaje přepočtené na jednu astronomickou jednotku, zkráceně AU. Ta představuje přibližně 150 milionů kilometrů, tedy obvyklou vzdálenost Země od Slunce. Soubor obsahuje také hodnotu pro skutečnou vzdálenost daného dne. Obě veličiny odpovídají na odlišnou otázku. <SourceLink id="DATA_SORCE_TIM_V20">(SORCE TIM, definice sloupců)</SourceLink></p>
+
+    <h2 id="historie">Proč bylo potřeba měřit z družic</h2>
+    <p>Pozemní měření slunečního záření zahrnuje i proměny atmosféry, kterou světlo prošlo. Zeslabení na stanici proto může pocházet z oblačnosti nebo částic ve vzduchu, i když se výkon Slunce nezměnil. Družice umožnily měřit nad touto překážkou. Souvislý kosmický záznam celkového slunečního příkonu začíná rokem 1978 a postupně jej tvořilo několik překrývajících se přístrojů. Díky jejich souběhu bylo možné porovnávat změny během opakovaných slunečních cyklů. <SourceLink id="DOI_10_1029_2010GL045777">(Kopp a Leanová 2011)</SourceLink></p>
+    <p>Družice Solar Radiation and Climate Experiment, SORCE, přidala v roce 2003 přístroj Total Irradiance Monitor, TIM. Jeho zveřejněné denní výsledky pokrývají 25. únor 2003 až 25. únor 2020. V tomto článku používáme dokončenou verzi 20. Záznam zahrnuje ústup aktivity do minima kolem roku 2008, následující vzestup i další pokles. Pozdější měření pokračují jinými misemi, například TSIS-1. Zde graf úmyslně tvoří jedna dokončená mise, aby bylo zřejmé, co je skutečně společně zpracované měření. <SourceLink id="DATA_SORCE_TIM_V20">(LASP: SORCE TIM)</SourceLink>{" "}<SourceLink id="WEB_LASP_TSIS_TIM">(LASP: TSIS TIM)</SourceLink></p>
+
+    <h2 id="mereni">Jak radiometr získá hodnotu příkonu</h2>
+    <p>TIM nechává záření vstupovat přes otvor známé plochy do dutiny s pohlcujícím povrchem. Dutinu lze ohřívat také elektricky. Přístroj porovnává elektrický výkon potřebný k udržení stejné teploty při zakrytém a odkrytém vstupu. Když část ohřevu dodá Slunce, elektrického ohřevu je třeba méně. Rozdíl umožní určit přijatý zářivý výkon. Po vydělení plochou otvoru získáme příkon ve W/m². Obecný význam těchto toků a jejich použití v bilanci popisuje <Link href="/metody/mereni-radiacnich-toku/#druzicova-bilance">měření radiačních toků</Link>. <SourceLink id="DOI_10_1029_2010GL045777">(Kopp a Leanová 2011)</SourceLink></p>
+    <p>Přístroj se při dlouhém vystavení Slunci mění. TIM proto obsahuje více dutin, které se otevírají s rozdílnou četností. Porovnání často používané dutiny s méně vystavovanou referencí pomáhá určit a opravit změnu citlivosti. Zpracování dále převádí údaje na společnou vzdálenost a ze zahuštěných měření počítá denní průměry. Zveřejněný Level 3 je již takto zpracovaný výsledek, nikoli původní elektrický signál. <SourceLink id="DOI_10_1029_2010GL045777">(Kopp a Leanová 2011)</SourceLink>{" "}<SourceLink id="DATA_SORCE_TIM_V20">(SORCE TIM, popis zpracování)</SourceLink></p>
+
+    <h2 id="data">Veřejná data a vznik našeho grafu</h2>
+    <p>Textový soubor SORCE TIM Level 3, verze 20, obsahuje 6 210 denních řádků. U každého dne uvádí příkon pro vzdálenost 1 AU i skutečnou vzdálenost, údaje o nejistotě a příznak předběžného výsledku. Kopii staženou 6. listopadu 2026 zpřístupňujeme beze změny. Pro graf bereme pátý sloupec, <code>tsi_1au</code>. Vyřadíme 328 řádků s nulovou hodnotou příkonu, která nepředstavuje platné měření. Zůstává 5 882 denních průměrů. Všechny mají příznak konečného výsledku. <SourceLink id="DATA_SORCE_TIM_V20">(SORCE TIM, verze 20)</SourceLink></p>
+    <p>Světlá křivka níže zachovává denní průměry. Tmavá křivka jejich krátké výkyvy tlumí prostým průměrováním po kalendářních měsících. Měsíční bod zobrazíme jen tehdy, když obsahuje nejméně 20 platných dnů. Toto pravidlo je naše volba pro přehledný graf. Chybějící dny ani měsíce nedopočítáváme a křivka přes mezery nepokračuje. Roční hodnoty označené v obrázku počítáme zvlášť ze všech platných dnů daného roku. Roky 2008 a 2015 mají úplné pokrytí.</p>
+    <ul>
+      <li><a href={`${media}/sorce_tsi_L3_c24h_v20.txt`}>Původní textový soubor LASP včetně dokumentace</a></li>
+      <li><a href={`${media}/mesicni-prumery.csv`}>Měsíční průměry a počet dostupných dnů</a> a <a href={`${media}/rocni-prumery.csv`}>roční průměry</a></li>
+      <li><a href={`${media}/reproduce.py`}>Výpočet a vykreslení v Pythonu</a>, <a href={`${media}/metadata.json`}>verze, kontrolní otisk a pravidla výběru</a></li>
+    </ul>
+
+    <h2 id="srovnani">Co kontroluje porovnání přístrojů</h2>
+    <p>Různé družicové radiometry se dobře shodovaly v krátkodobých změnách, ale jejich absolutní hodnoty byly posunuté. TIM naměřil pro sluneční minimum roku 2008 přibližně 1 360,8 ± 0,5 W/m². Starší běžně používaná hodnota byla 1 365,4 ± 1,3 W/m². Kopp a Leanová tento rozdíl v roce 2011 prověřili spolu s laboratorními porovnáními. Významnou příčinou vyšších starších hodnot bylo rozptýlené světlo uvnitř přístrojů, které přidávalo nežádoucí signál. Konstrukce vstupních otvorů TIM tento problém omezovala. <SourceLink id="DOI_10_1029_2010GL045777">(Kopp a Leanová 2011)</SourceLink></p>
+    <p>Oprava přibližně o 4,6 W/m² tedy znamenala zpřesnění měřítka, ne náhlé zeslábnutí Slunce. Současně bylo dál možné sledovat mnohem menší změny jednoho stabilního přístroje během cyklu. Porovnávání různých přístrojů kontroluje kalibraci, zatímco opakování téhož měření lépe zachycuje malé časové rozdíly. Pro mnohadesetiletý souvislý záznam potřebujeme obojí. <SourceLink id="DOI_10_1029_2010GL045777">(Kopp a Leanová 2011)</SourceLink></p>
+    <p>Hlavní nejistoty se týkají absolutního měřítka a pomalé změny citlivosti. Jednotlivé výpadky navíc omezují výpověď časových průměrů. Krátkodobé kolísání přístroj rozlišuje podstatně jemněji než absolutní hodnotu celého příkonu. <SourceLink id="DATA_SORCE_TIM_V20">(SORCE TIM, popis nejistot)</SourceLink></p>
+    <details className="method-details"><summary>Nejistoty a propojení dlouhých záznamů</summary>
+      <p>Dokumentace udává počáteční absolutní nejistotu přibližně 0,48 W/m² a samostatně citlivost k malým změnám. Nejistota dlouhodobé stability je odhadnuta na méně než 0,014 W/m² za rok. Absolutní kalibrační chyba může posouvat mnoho po sobě jdoucích dnů společně. Průměrováním proto nezmizí jako náhodný šum. U rozdílu ročních průměrů zde uvádíme vypočtenou hodnotu bez nově odvozeného intervalu nejistoty, protože jednoduché dělení denní chyby odmocninou z počtu dnů by společné chyby nevystihlo. <SourceLink id="DATA_SORCE_TIM_V20">(SORCE TIM, dokumentace v hlavičce)</SourceLink></p>
+      <p>Delší složené záznamy propojují různé družice přes období společného provozu a používají opravy stárnutí přístrojů. Jejich rozdíly mohou ovlivnit velmi pomalý trend mezi vzdálenými slunečními minimy. Náš graf nepřipojuje jinou misi a neodvozuje trend pro dobu před rokem 2003 nebo po únoru 2020. Přímý záznam také nelze bez další rekonstrukce prodloužit do staletí před družicovým měřením. <SourceLink id="DOI_10_1029_2010GL045777">(Kopp a Leanová 2011)</SourceLink></p>
+    </details>
+
+    <h2 id="pozorovani">Pozorování</h2>
+    <p>Na vodorovné ose grafu jsou roky, na svislé příkon při vzdálenosti 1 AU. Osa nezačíná nulou, aby byly čitelné změny menší než jedna tisícina celkové hodnoty. Světlá denní křivka ukazuje krátké výkyvy, tmavá měsíční křivka pomalejší vývoj. Výrazné mezery kolem let 2013–2014 odpovídají chybějícím měřením, nikoli poklesu sluneční energie na nulu.</p>
+    <figure className="article-figure article-figure--scroll-mobile article-figure--scroll-wide">
+      <div className="article-figure__scroll" tabIndex={0} role="region" aria-label="Datový graf slunečního příkonu, na mobilu posuvný do stran">
+      <a href={`${media}/sorce-tim-2003-2020.png`}><Image className="article-figure__media" src={`${media}/sorce-tim-2003-2020.png`} width={2160} height={1152} alt="Denní a měsíční celkový sluneční příkon SORCE TIM při vzdálenosti 1 AU v letech 2003 až 2020. Klesá k minimu kolem roku 2008, roste k maximální části následujícího cyklu a opět klesá. Roční průměr 2008 je 1360,78 a 2015 je 1361,68 wattů na metr čtvereční." unoptimized /></a>
+      </div>
+      <figcaption>Vlastní graf z měření <SourceLink id="DATA_SORCE_TIM_V20">LASP SORCE TIM, verze 20</SourceLink>. Tmavá křivka vyžaduje alespoň 20 měřených dnů za měsíc. Mezery nejsou interpolované. Roční označené hodnoty mají úplné denní pokrytí. <a href={`${media}/sorce-tim-2003-2020.svg`}>Vektorový graf</a>{" · "}<a href={`${media}/podklady.txt`}>Původ dat a licence</a>.</figcaption>
+    </figure>
+    <p>Roční průměr za rok 2008 je 1 360,78 W/m² a za rok 2015 1 361,68 W/m². Rozdíl činí 0,90 W/m², přibližně 0,066 % hodnoty roku 2008. První rok má 366 a druhý 365 platných denních hodnot. Jde o rozdíl dvou úplných ročních průměrů, nikoli o rozdíl nejnižšího a nejvyššího jednotlivého dne. Přesnější nezaokrouhlené hodnoty jsou v <a href={`${media}/rocni-prumery.csv`}>tabulce ročních průměrů</a>.</p>
+    <p>Po vyšších hodnotách uprostřed desetiletí příkon opět klesá. Celý záznam tak ukazuje opakované kolísání, nikoli souvislý růst. Denní změny jsou přitom někdy větší než rozdíl ročních průměrů. Takto krátký výkyv a změna udržovaná po několik let představují různé průběhy přísunu energie. Graf sám neurčuje, jak velkou změnu teploty daný příkon vyvolá. <SourceLink id="DATA_SORCE_TIM_V20">(SORCE TIM, verze 20)</SourceLink></p>
+    <div className="article-observation-summary"><p className="eyebrow">Shrnutí pozorování</p><p>Družicové měření SORCE TIM za období 25. února 2003 až 25. února 2020 ukazuje celkový sluneční příkon blízký 1 361 W/m² a jeho krátké i víceleté kolísání. Při přepočtu na stejnou vzdálenost vzrostl mezi úplnými ročními průměry 2008 a 2015 o 0,90 W/m², tedy asi o 0,07 %. Následoval další pokles. Záznam tedy zachycuje proměnlivé Slunce s cyklickým průběhem, bez souvislého růstu v celém sledovaném období.</p></div>
+    <aside className="article-related-mechanism" aria-label="Navazující vysvětlení"><p>Co tento měřený rozdíl dělá s atmosférou a oceánem a jak se ověřovala možná role kosmického záření, vysvětluje článek <Link href="/mechanismy/slunecni-promenlivost/#co-vysvetlujeme">Jak sluneční cyklus ovlivňuje klima?</Link></p></aside>
+
+    <h2 id="prameny">Prameny, data a licence</h2>
+    <ul>
+      <li><SourceLink id="DOI_10_1029_2010GL045777">Kopp a Leanová 2011</SourceLink>: původní porovnání měření, laboratorní kontrola, konstrukce TIM a kalibrace příkonu.</li>
+      <li><SourceLink id="DATA_SORCE_TIM_V20">LASP: SORCE TIM Level 3, verze 20</SourceLink>: veřejná denní data a jejich dokumentace. V článku používáme kopii ze 6. listopadu 2026.</li>
+      <li><SourceLink id="WEB_LASP_TSIS_TIM">LASP: TSIS TIM</SourceLink>: dokumentace navazujícího měření. Data této mise nejsou připojena do zdejšího grafu.</li>
+      <li><a href={`${media}/podklady.txt`}>Původ dat, výběr, licence a postup opakování</a>. Graf a vlastní zpracování Klimatologie.eu, CC BY 4.0. Původní data LASP zachovávají podmínky poskytovatele.</li>
+    </ul>
+  </div></article>;
+}

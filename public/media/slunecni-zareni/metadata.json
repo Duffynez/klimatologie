@@ -1,0 +1,15 @@
+{
+  "source": "https://lasp.colorado.edu/data/sorce/tsi_data/daily/sorce_tsi_L3_c24h_latest.txt",
+  "downloaded": "2026-11-06",
+  "version": 20,
+  "sha256": "2eb0f129d82a9597d89db795407780fe2c763e012c6250776d2ba768c8c4e9e6",
+  "total_rows": 6210,
+  "valid_days": 5882,
+  "excluded_zero_or_invalid_tsi": 328,
+  "excluded_provisional": 0,
+  "column": "tsi_1au (column 5), W/m2, normalized to 1 AU",
+  "monthly_rule": "unweighted mean of final positive daily means, at least 20 valid days, otherwise gap",
+  "annual_2008": 1360.779499726776,
+  "annual_2015": 1361.6800024657534,
+  "difference_2015_minus_2008": 0.9005027389773659
+}

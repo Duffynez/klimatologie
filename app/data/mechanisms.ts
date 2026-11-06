@@ -41,10 +41,10 @@ export const climateMechanisms: ClimateMechanism[] = [
   },
   {
     slug: "slunecni-promenlivost",
-    title: "Jak změny slunečního záření ovlivňují klima?",
+    title: "Jak sluneční cyklus ovlivňuje klima?",
     category: "Záření a složení atmosféry",
-    cardSummary: "Změny slunečního výkonu a jejich vliv na množství energie přijímané Zemí.",
-    summary: "Změny slunečního výkonu ovlivňují množství energie, které vstupuje do klimatického systému.",
+    cardSummary: "Proměnlivý sluneční příkon, oteplující stopa ve stratosféře a testy vlivu kosmického záření na oblaka.",
+    summary: "Jak se malá změna Slunce projeví v atmosféře a oceánu? Dvě hypotézy, laboratorní i družicové testy a vysvětlení velikosti teplotní odezvy na sluneční cyklus.",
     distinguishingEvidence: "Porovnání změřených změn slunečního záření s velikostí, načasováním a výškovým průběhem teplotní odezvy. Ověření vztahu k jedenáctiletému slunečnímu cyklu i dlouhodobému vývoji.",
   },
   {

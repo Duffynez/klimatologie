@@ -234,6 +234,8 @@ export function EarthEnergyBalanceArticle() {
           </p>
         </HypothesisStory>
 
+        <p>Malou cyklickou odezvu, která v těchto záznamech skutečně existuje, rozebírá samostatný článek <Link href="/mechanismy/slunecni-promenlivost/#co-vysvetlujeme">Jak sluneční cyklus ovlivňuje klima?</Link> Navazuje na měření slunečního příkonu a porovnává působení záření s hypotézou vlivu kosmických částic na oblaka.</p>
+
         <HypothesisStory id="prirozena-hypoteza" number={2} title="Samotné přirozené kolísání">
           <p>
             Oceán a atmosféra mohou měnit své chování i bez změny Slunce nebo

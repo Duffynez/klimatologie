@@ -1,0 +1,6 @@
+quantity,value,unit,scope,source
+solar_cycle_CCN_change_present_day,0.2,percent,global annual mean low cloud level CCN at 0.2 percent supersaturation model solar min versus max,Gordon 2017 Table 4 DOI 10.1002/2017JD026844
+solar_cycle_CCN_change_preindustrial,0.3,percent,global annual mean low cloud level CCN at 0.2 percent supersaturation model solar min versus max,Gordon 2017 Table 4 DOI 10.1002/2017JD026844
+surface_solar_sensitivity_best,0.05,K per W/m2 TSI,likelihood maximization global surface temperature solar cycle response,Amdur 2021 DOI 10.1175/JCLI-D-20-0312.1
+surface_solar_sensitivity_95CI_low,0.03,K per W/m2 TSI,95 percent confidence interval,Amdur 2021 DOI 10.1175/JCLI-D-20-0312.1
+surface_solar_sensitivity_95CI_high,0.09,K per W/m2 TSI,95 percent confidence interval,Amdur 2021 DOI 10.1175/JCLI-D-20-0312.1

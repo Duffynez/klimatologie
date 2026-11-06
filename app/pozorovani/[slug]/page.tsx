@@ -15,6 +15,7 @@ import { HeatWavesArticle } from "../../components/HeatWavesArticle";
 import { SnowPermafrostArticle } from "../../components/SnowPermafrostArticle";
 import { StratosphericCoolingArticle } from "../../components/StratosphericCoolingArticle";
 import { PageLead } from "../../components/PageLead";
+import { SolarIrradianceArticle } from "../../components/SolarIrradianceArticle";
 import { evidenceBySlug, evidenceTopics } from "../../data/evidence";
 
 export function generateStaticParams() {
@@ -27,6 +28,14 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
 
   if (!topic) {
     notFound();
+  }
+
+  if (slug === "slunecni-zareni") {
+    return <div className="page-shell">
+      <PageLead eyebrow="Pozorování / Atmosféra" title="Proměny slunečního záření" meta="6. listopadu 2026"><p>Jak družice měří sluneční příkon nad atmosférou, jak se porovnávají přístroje a co ukazuje graf z veřejných dat SORCE TIM.</p></PageLead>
+      <SolarIrradianceArticle />
+      <Link className="text-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
+    </div>;
   }
 
   if (slug === "gmst") {
@@ -54,7 +63,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Atmosféra"
           title="Teplota stratosféry"
-          meta="5. listopadu 2026"
+          meta="6. listopadu 2026"
         >
           <p>
             Jak se teplota stratosféry měří balóny, družicemi a rádiovými zákryty, jak se měření vyvíjela a co

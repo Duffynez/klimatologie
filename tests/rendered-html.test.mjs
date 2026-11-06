@@ -350,7 +350,7 @@ test("publishes radiative fluxes with a complete example and reciprocal ocean co
     "Jak měříme přenos energie zářením", "Nejistoty a ověření",
     "Příklad: jedna hodina na stanici Table Mountain", "Shrnutí",
   ]);
-  assert.match(html, /<p class="page-lead__meta">1\. listopadu 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">6\. listopadu 2026<\/p>/);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
   assert.doesNotMatch(body, /_vinext\/image|katex-error|Potřebné informace|RTV/);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
@@ -722,7 +722,7 @@ test("publishes 23 mechanism topics and preserves the split snow-and-sea-ice add
     assert.ok(sitemap.includes(`<loc>https://klimatologie.eu/mechanismy/${slug}/</loc>`), "Missing sitemap route " + slug);
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     assert.ok(html.includes(`<h1>${title}</h1>`), "Wrong detail title " + slug);
-    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2"].includes(slug)) {
+    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost"].includes(slug)) {
       assert.match(html, /Co musí toto vysvětlení objasnit/);
       assert.match(html, /<section class="mechanism-detail-evidence"[^>]*>[\s\S]*<p>[^<]+<\/p><\/section>/);
     }
@@ -1020,7 +1020,7 @@ test("publishes a full stratospheric temperature article instead of the generic 
 
   assert.match(evidencePage, /StratosphericCoolingArticle/);
   assert.match(evidencePage, /title="Teplota stratosféry"/);
-  assert.match(evidencePage, /title="Teplota stratosféry"\s+meta="5\. listopadu 2026"/);
+  assert.match(evidencePage, /title="Teplota stratosféry"\s+meta="6\. listopadu 2026"/);
   assert.match(article, /Teplotou stratosféry označujeme teplotu vzduchu mezi tropopauzou a stratopauzou/);
   assert.doesNotMatch(article, /Potřebné informace|article-glossary/);
   assert.match(article, /váhová funkce/);
@@ -2743,13 +2743,14 @@ test("reproduces the optical response calibration without inventing the missing 
   }
 });
 
-test("keeps the current catalogue of fourteen observations", async () => {
+test("keeps the current catalogue of fifteen observations", async () => {
   const evidence = await readFile(new URL("app/data/evidence.ts", root), "utf8");
   const slugs = [...evidence.matchAll(/\{ slug: "([^"]+)"/g)].map((match) => match[1]);
 
   assert.deepEqual(slugs, [
     "gmst",
     "stratosfericke-ochlazovani",
+    "slunecni-zareni",
     "atmosfericka-koncentrace-co2",
     "narust-vlhkosti",
     "srazky-a-privalove-srazky",
@@ -4370,6 +4371,7 @@ test("keeps each hypothesis independently collapsible with complete content and 
     ["energeticka-bilance-zeme", ["slunecni-hypoteza", "prirozena-hypoteza", "lidske-pusobeni"]],
     ["radiacni-pusobeni-sklenikovych-plynu", ["nasyceni", "promena-prenosu"]],
     ["puvod-rustu-atmosferickeho-co2", ["ocean", "pevnina", "fosilni-uhlik"]],
+    ["slunecni-promenlivost", ["kosmicke-zareni", "zmeny-zareni"]],
   ]) {
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)[1];
@@ -4384,6 +4386,69 @@ test("keeps each hypothesis independently collapsible with complete content and 
       assert.match(story, /Sbalit hypotézu a vrátit se k nadpisu/);
       assert.doesNotMatch(story, /<h2\b|data-hypothesis-story=/, "Do not hide another story or the following explanation");
     }
+  }
+});
+
+test("publishes the solar cycle mechanism with testable hypotheses, open sources and reciprocal links", async () => {
+  const path = "/mechanismy/slunecni-promenlivost";
+  const html = await readFile(new URL("dist/client" + path + "/index.html", root), "utf8");
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.deepEqual([...body.matchAll(/<h2 id="([^"]+)"/g)].map(m => m[1]), ["co-vysvetlujeme", "hypotezy", "pribehy", "mechanismus", "shrnuti", "prameny"]);
+  assert.equal((body.slice(0, body.indexOf('<h2 id="hypotezy"')).match(/<p\b/g) ?? []).length, 2);
+  for (const id of ["test-komora", "test-rust", "test-oblaka", "test-stratosfera", "test-povrch"]) assert.ok(body.includes('id="' + id + '"'));
+  for (const value of ["0,2 %", "0,05 °C", "0,03–0,09 °C", "1979–2015", "1882–2019", "1,7 W/m²", "Silné zesílení není prokázané"]) assert.ok(body.includes(value), value);
+  const bibliography = body.slice(body.indexOf('<h2 id="prameny"'));
+  const catalogue = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
+  for (const id of new Set([...body.matchAll(/href="\/zdroje#([^"]+)"/g)].map(m => m[1]))) {
+    assert.ok(bibliography.includes('href="/zdroje#' + id + '"'), "Missing bibliography " + id);
+    const card = catalogue.match(new RegExp('<article[^>]+id="' + id + '"[\\s\\S]*?</article>'))?.[0];
+    assert.ok(card, "Missing card " + id);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+  }
+  for (const target of ["/pozorovani/slunecni-zareni", "/pozorovani/stratosfericke-ochlazovani", "/metody/mereni-radiacnich-toku", "/mechanismy/energeticka-bilance-zeme"]) {
+    const related = await readFile(new URL("dist/client" + target + "/index.html", root), "utf8");
+    assert.ok(hasArticleLink(body, target));
+    assert.ok(hasArticleLink(related, path), "Missing reciprocal link " + target);
+  }
+  for (const [, target, anchor] of body.matchAll(/href="(\/(?:pozorovani|metody|mechanismy)\/[^"#]+)(?:#([^"]+))?"/g)) {
+    const related = await readFile(new URL("dist/client" + target.replace(/\/$/, "") + "/index.html", root), "utf8");
+    if (anchor) assert.ok(related.includes('id="' + anchor + '"'), "Missing anchor " + target + "#" + anchor);
+  }
+  for (const name of ["kosmicke-zareni.png", "zmeny-zareni.png", "podklady.csv", "podklady.txt"]) {
+    assert.ok(body.includes("/media/slunecni-promenlivost/" + name));
+    assert.ok((await readFile(new URL("dist/client/media/slunecni-promenlivost/" + name, root))).length > 100);
+  }
+  const limits = body.match(/<details class="method-details">([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(limits);
+  assert.ok(limits.replace(/<[^>]+>/g, " ").trim().split(/\s+/).length <= 600);
+  assert.doesNotMatch(body.replace(/<[^>]+>/g, " ").replace(/&(?:#\d+|#x[0-9a-f]+|[a-z]+);/gi, ""), /;/);
+});
+
+test("solar observation preserves real daily data, missing days and reproducible complete-year means", async () => {
+  const base = new URL("public/media/slunecni-zareni/", root);
+  const raw = await readFile(new URL("sorce_tsi_L3_c24h_v20.txt", base), "utf8");
+  const rows = raw.split(/\r?\n/).filter(l => l.trim() && !l.startsWith(";")).map(l => l.trim().split(/\s+/).map(Number));
+  assert.equal(rows.length, 6210);
+  const valid = rows.filter(r => r[4] > 0 && r[14] === 0);
+  assert.equal(valid.length, 5882);
+  const year = y => valid.filter(r => Math.floor(r[0] / 10000) === y);
+  assert.equal(year(2008).length, 366);
+  assert.equal(year(2015).length, 365);
+  const mean = a => a.reduce((s, r) => s + r[4], 0) / a.length;
+  const meta = JSON.parse(await readFile(new URL("metadata.json", base), "utf8"));
+  assert.ok(Math.abs(mean(year(2015)) - mean(year(2008)) - meta.difference_2015_minus_2008) < 1e-9);
+  const monthly = (await readFile(new URL("mesicni-prumery.csv", base), "utf8")).trim().split(/\r?\n/).slice(1).map(l => l.split(","));
+  assert.ok(monthly.some(r => Number(r[1]) === 0 && r[2] === ""), "Keep measurement gaps visible");
+  assert.ok(monthly.every(r => Number(r[1]) >= 20 || r[2] === ""));
+  const html = await readFile(new URL("dist/client/pozorovani/slunecni-zareni/index.html", root), "utf8");
+  assert.match(html, /1 360,78 W\/m²/);
+  assert.match(html, /1 361,68 W\/m²/);
+  assert.match(html, /class="article-observation-summary"/);
+  assert.ok(hasArticleLink(html, "/mechanismy/slunecni-promenlivost"));
+  for (const name of ["sorce_tsi_L3_c24h_v20.txt", "mesicni-prumery.csv", "rocni-prumery.csv", "reproduce.py", "metadata.json", "sorce-tim-2003-2020.png", "podklady.txt"]) {
+    assert.ok(html.includes(name));
+    assert.ok((await readFile(new URL("dist/client/media/slunecni-zareni/" + name, root))).length > 100);
   }
 });
 

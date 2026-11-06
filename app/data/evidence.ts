@@ -9,6 +9,7 @@ export type EvidenceTopic = {
 export const evidenceTopics: EvidenceTopic[] = [
   { slug: "gmst", title: "Globální teplota u povrchu", category: "Atmosféra", summary: "Jak se z pozemních a oceánských měření počítá globální změna teploty a co ukazují zveřejněná data.", status: "hotovo" },
   { slug: "stratosfericke-ochlazovani", title: "Teplota stratosféry", category: "Atmosféra", summary: "Jak se teplota stratosféry měří balóny, družicemi a rádiovými zákryty a co ukazují zveřejněná data.", status: "hotovo" },
+  { slug: "slunecni-zareni", title: "Proměny slunečního záření", category: "Atmosféra", summary: "Družicové měření příkonu nad atmosférou, kalibrace přístrojů a graf z veřejných dat SORCE TIM.", status: "hotovo" },
   { slug: "atmosfericka-koncentrace-co2", title: "Oxid uhličitý v atmosféře", category: "Atmosféra", summary: "Jak se CO₂ měří na stanicích, ve vzorcích vzduchu, v ledu a z družic a co ukazují zveřejněná data.", status: "hotovo" },
   { slug: "narust-vlhkosti", title: "Vlhkost atmosféry", category: "Atmosféra", summary: "Jak se vodní pára měří u povrchu, ve výšce a v celém sloupci atmosféry a co ukazují zveřejněná data.", status: "hotovo" },
   { slug: "srazky-a-privalove-srazky", title: "Srážky a přívalové srážky", category: "Atmosféra", summary: "Jak se měří celkové úhrny, nejvyšší denní a hodinové srážky a co ukazují zveřejněná data.", status: "hotovo" },

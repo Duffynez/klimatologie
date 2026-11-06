@@ -1,0 +1,18 @@
+Proměny slunečního záření, Klimatologie.eu, 6. listopadu 2026
+
+Původ: LASP, University of Colorado Boulder, SORCE TIM Level 3 daily TSI, version 20.
+https://lasp.colorado.edu/sorce/data/tsi-data/
+https://lasp.colorado.edu/data/sorce/tsi_data/daily/sorce_tsi_L3_c24h_latest.txt
+Staženo 6. listopadu 2026. Nezměněná místní kopie: sorce_tsi_L3_c24h_v20.txt.
+Celá mise: 25. února 2003 – 25. února 2020. 6210 denních řádků, 5882 platných nenulových finálních denních průměrů.
+Sloupec 5: TSI přepočtené na 1 AU, W/m². Sloupec 15: předběžnost, 0 znamená finální.
+Nulové hodnoty nepředstavují platné měření a nejsou kresleny.
+Měsíční průměry: aritmetický průměr platných denních hodnot, alespoň 20 dnů. Při menším pokrytí chybějící hodnota, bez interpolace. Kritérium 20 dnů je naše vizualizační volba.
+Roční průměry: všechny platné denní hodnoty, tabulka obsahuje i neúplné roky a výslovné označení úplnosti. V článku porovnáváme úplné roky 2008 a 2015.
+Roční rozdíl vypočtený z nezaokrouhlených průměrů: 0,9005027389773659 W/m².
+Graf rozlišuje denní a měsíční průběh. Svislá osa nezačíná nulou. Nevkládá jinou misi, rekonstrukci ani modelová data.
+Opakování: Python 3 s matplotlib, příkaz python reproduce.py ve složce s původním datovým souborem. Skript vytvoří obě tabulky, metadata.json, PNG a SVG. SHA-256 původního souboru je v metadata.json.
+
+Vlastní graf a zpracování: Klimatologie.eu, CC BY 4.0.
+Původní veřejná data LASP jsou předána beze změny, zachovávají dokumentaci a podmínky poskytovatele. Licence našeho grafu nepřeznačuje licenci původních dat.
+Metodická práce: Kopp a Lean 2011, DOI 10.1029/2010GL045777.

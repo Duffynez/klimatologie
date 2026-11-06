@@ -5,6 +5,7 @@ import { PageLead } from "../../components/PageLead";
 import { EarthEnergyBalanceArticle } from "../../components/EarthEnergyBalanceArticle";
 import { CarbonDioxideOriginArticle } from "../../components/CarbonDioxideOriginArticle";
 import { GreenhouseRadiationArticle } from "../../components/GreenhouseRadiationArticle";
+import { SolarVariabilityArticle } from "../../components/SolarVariabilityArticle";
 import { climateMechanisms, mechanismBySlug } from "../../data/mechanisms";
 
 const combinedCryosphereSlug = "energeticka-bilance-snehu-a-morskeho-ledu";
@@ -69,10 +70,18 @@ export default async function MechanismDetail({ params }: { params: Promise<{ sl
     notFound();
   }
 
+  if (slug === "slunecni-promenlivost") {
+    return <div className="page-shell">
+      <PageLead eyebrow={"Mechanismy / " + mechanism.category} title={mechanism.title} meta="6. listopadu 2026"><p>{mechanism.summary}</p></PageLead>
+      <SolarVariabilityArticle />
+      <Link className="text-link catalog-back-link" href="/mechanismy">&larr; Zpět na všechny mechanismy</Link>
+    </div>;
+  }
+
   if (slug === "energeticka-bilance-zeme") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow={`Mechanismy / ${mechanism.category}`} title={mechanism.title} meta="5. listopadu 2026">
+        <PageLead eyebrow={`Mechanismy / ${mechanism.category}`} title={mechanism.title} meta="6. listopadu 2026">
           <p>Co způsobuje přibývání energie v oceánu, atmosféře, pevnině a ledu? Tři hypotézy, historie jejich zkoumání a měření, podle kterých mezi nimi rozlišujeme.</p>
         </PageLead>
         <EarthEnergyBalanceArticle />

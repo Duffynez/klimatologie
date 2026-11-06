@@ -621,6 +621,9 @@ export function StratosphericCoolingArticle() {
           </SourceLink>
         </p>
 
+        <h3 id="slunecni-cyklus">Sluneční cyklus uvnitř dlouhodobé změny</h3>
+        <p>Randel a kolegové v záznamu 1979–2015 oddělili složku teploty, která kolísá společně se sluneční aktivitou. Tato složka byla oteplující a její velikost rostla směrem do horní stratosféry. Nejzřetelněji se projevovala v tropických a přilehlých oblastech. Podobný výškový obraz vyšel při napojení původního SSU na přístroje MLS, SABER i AMSU. Napojení sdílejí starší měření, takže nejsou třemi zcela nezávislými záznamy. Dlouhodobý pokles a menší opakovaný sluneční výkyv jsou dvě oddělitelné složky téhož teplotního průběhu. <SourceLink id="DOI_10_1175_jcli_d_15_0629_1">(Randel a kol. 2016, oddíl 5d a obrázek 15)</SourceLink></p>
+
         <h3 id="vyskovy-obraz">Současná změna ve spodní atmosféře</h3>
         <p>
           Santer a kolegové porovnali pro roky 1979–2012 družicová zpracování
@@ -647,6 +650,7 @@ export function StratosphericCoolingArticle() {
         </div>
 
         <aside className="article-related-mechanism" aria-label="Navazující vysvětlení">
+          <p>Oteplující složku spojenou se sluneční aktivitou vysvětluje článek <Link href="/mechanismy/slunecni-promenlivost/#test-stratosfera">Jak sluneční cyklus ovlivňuje klima?</Link></p>
           <p className="eyebrow">Navazující vysvětlení</p>
           <p>Jak souběh oteplování troposféry a ochlazování stratosféry pomáhá rozlišit příčiny změn, vysvětluje <Link href="/mechanismy/energeticka-bilance-zeme/#lidske-pusobeni">příběh testování lidského vlivu na klima</Link>.</p>
         </aside>

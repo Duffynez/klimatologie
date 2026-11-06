@@ -78,7 +78,7 @@ Záznam vytvoří dlaždici a statickou adresu, ale plný článek vznikne teprv
 2. je importována v `app/pozorovani/[slug]/page.tsx`;
 3. route obsahuje větev pro její slug, úvod, datum a samotnou komponentu.
 
-Všech současných čtrnáct pozorování má vlastní komponentu. Obecná náhradní stránka na konci routy zůstává jako pojistka pro budoucí katalogovou položku bez plného článku.
+Všech současných patnáct pozorování má vlastní komponentu. Obecná náhradní stránka na konci routy zůstává jako pojistka pro budoucí katalogovou položku bez plného článku.
 
 ### Metody
 
@@ -90,7 +90,7 @@ Titrace a coulometrie mají samostatné položky `/metody/titrace/` a `/metody/c
 
 Úvodní diagram hotových mechanismů sjednocuje `HypothesisDiagram.tsx` a jeho CSS modul. Společná komponenta obsahuje návod, sémantický seznam hypotéz a čtyři kroky každé větve. Článková komponenta `EnergyHypothesisDiagram.tsx` dodává konkrétní obsah, podmínky a kotvy pro energetickou bilanci. Diagram funguje bez klientského JavaScriptu, rozložení přizpůsobuje CSS. Samotné příběhy obaluje klientská komponenta `HypothesisStory.tsx` s vlastním CSS modulem. Používá nativní `details` se zachovanými kotvami nadpisů, výchozí HTML obsahuje celé otevřené příběhy. JavaScript doplňuje sbalení z konce příběhu s návratem k nadpisu a otevření cílového příběhu při navigaci na jeho nadpis nebo vnitřní kotvu.
 
-`app/data/mechanisms.ts` obsahuje 23 témat v pěti skupinách. Tři plné články mají komponenty `EarthEnergyBalanceArticle.tsx`, `GreenhouseRadiationArticle.tsx` a `CarbonDioxideOriginArticle.tsx`, připojené v `app/mechanismy/[slug]/page.tsx`. Ostatních 20 témat zatím ukazuje vymezení a rozlišující důkazy z katalogu. Další plné články vyžadují stejnou ruční vazbu komponenty a routy jako u metod.
+`app/data/mechanisms.ts` obsahuje 23 témat v pěti skupinách. Čtyři plné články mají komponenty `EarthEnergyBalanceArticle.tsx`, `GreenhouseRadiationArticle.tsx`, `CarbonDioxideOriginArticle.tsx` a `SolarVariabilityArticle.tsx`, připojené v `app/mechanismy/[slug]/page.tsx`. Ostatních 19 témat zatím ukazuje vymezení a rozlišující důkazy z katalogu. Další plné články vyžadují stejnou ruční vazbu komponenty a routy jako u metod.
 
 Rozcestník `/mechanismy/` používá stejnou podobu tematických skupin a dlaždic jako metody. Každá dlaždice obsahuje číslo, otázku a stručný popis `cardSummary`. Všechna témata mají stejnou podobu bez rozlišení stavu zpracování. Delší `summary` a rozlišující důkazy zůstávají v datovém katalogu pro detailní stránky.
 
@@ -260,3 +260,5 @@ Dokumentace má také popsat místa, kde architektura není ideální:
 - jeden globální CSS soubor má velký rozsah dopadu.
 
 Tyto body nejsou důvodem k okamžitému přepisu. Jsou upozorněním pro budoucí změny: nová abstrakce má vzniknout až tehdy, když skutečně zjednoduší správu a zachová stabilní adresy a ID.
+
+Článek „Jak sluneční cyklus ovlivňuje klima?“ je propojený s novým pozorováním slunečního příkonu (`SolarIrradianceArticle.tsx`), teplotou stratosféry a měřením radiačních toků. Obsahuje dva příběhy, dvě vysvětlující grafiky a veřejné číselné podklady. Pozorování přikládá nezměněná denní data SORCE TIM v20, CSV průměrů, metadata, skript reprodukce a datový graf.

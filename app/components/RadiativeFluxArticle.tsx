@@ -256,6 +256,7 @@ export function RadiativeFluxArticle() {
         </p>
 
         <h3 id="druzicova-bilance">Historie a měření z družic</h3>
+        <p>Samostatné sledování příchozího slunečního příkonu nad atmosférou ukazuje <Link href="/pozorovani/slunecni-zareni/#mereni">pozorování slunečního záření</Link>. Obsahuje vysvětlení elektrického porovnání v dutinovém radiometru i graf z dat SORCE TIM. Jeho klimatický význam rozebírá <Link href="/mechanismy/slunecni-promenlivost/#prikon">výpočet slunečního příkonu pro celou Zemi</Link>.</p>
         <p>
           Srovnávání ohřevu zářením s elektrickým ohřevem má dlouhou historii.
           Knut Ångström v práci z roku 1899 popsal kompenzační pyrheliometr
