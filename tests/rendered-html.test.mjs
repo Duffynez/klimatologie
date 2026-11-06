@@ -365,7 +365,11 @@ test("publishes thermal infrared radiometry with its source trail and temperatur
   for (const id of ids) {
     const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
     assert.ok(card, "Missing source " + id);
-    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    if (id === "2023_Landsat_Aletsch_STAC") {
+      assert.match(card, /href="https:\/\/planetarycomputer\.microsoft\.com\/api\/stac\/v1\/collections\/landsat-c2-l2\/items\/LC08_L2SP_195028_20230820_02_T1"[^>]*>Otevřít metadata celé scény \(STAC\)/);
+    } else {
+      assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    }
     if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
   }
   for (const m of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
@@ -556,7 +560,7 @@ test("publishes optical imaging with open evidence, a reproducible scene and rec
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">6\. listopadu 2026<\/p>/);
   assert.deepEqual([...body.matchAll(/<h2>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak z odraženého světla poznáváme povrch", "Nejistoty a ověření",
     "Příklad: tři povrchy u Aletschského ledovce", "Shrnutí",
@@ -577,7 +581,14 @@ test("publishes optical imaging with open evidence, a reproducible scene and rec
     const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
     assert.ok(card, "Missing optical source " + id);
     assert.doesNotMatch(card, /drive\.google\.com/);
-    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    if (id === "2023_Landsat_Aletsch_STAC") {
+      assert.match(card, /Otevřít metadata celé scény \(STAC\)/);
+      assert.match(card, /href="\/data\/methods\/optical-imaging\/aletsch-20230820\.tif"[^>]*>Stáhnout optický výřez \(GeoTIFF\)/);
+    } else if (id === "DOI_10_1594_PANGAEA_909133") {
+      assert.match(card, /href="https:\/\/store\.pangaea\.de\/Publications\/PaulF-etal_2019\/c3s_gi_rgi11_s2_2015_v2\.zip"[^>]*>Stáhnout obrysy z PANGAEA \(ZIP\)/);
+    } else {
+      assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    }
     if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
   }
   for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {

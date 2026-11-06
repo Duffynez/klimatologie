@@ -319,14 +319,15 @@ export function PhotogrammetryArticle() {
 
         <h2>Příklad: změna části ledovce Scott Turnerbreen</h2>
         <p>
-          Použijeme dva veřejné výškové modely z okolí Longyearbyenu
-          na Špicberkách. Pocházejí z leteckých stereosnímků Norského polárního
-          institutu a v ukázkovém souboru projektu xDEM mají označení 1990
-          a 2009. Začínáme tedy u již vytvořených výškových modelů.
-          Ukázka opakuje jejich zarovnání a výpočet změny, nikoli rekonstrukci
-          z původních fotografií.{" "}
-          <SourceLink id="DOI_10_21334_NPOLAR_2014_DCE53A47">(Norský polární institut: výšková data)</SourceLink>{" "}
-          <SourceLink id="2026_xDEM_Longyearbyen_Frozen">(přesná použitá verze a její dokumentace)</SourceLink>
+          Použijeme dva výškové modely z leteckých stereosnímků Norského
+          polárního institutu. Zachycují okolí Longyearbyenu na Špicberkách.
+          Přímo zde lze stáhnout{" "}
+          <a href="/data/methods/photogrammetry/DEM_1990.tif">model označený 1990</a>{" "}
+          a <a href="/data/methods/photogrammetry/DEM_2009_ref.tif">model označený 2009</a>,{" "}
+          oba z neměnné verze xDEM. Ukázka začíná u těchto
+          hotových modelů a opakuje jejich zarovnání a výpočet změny.{" "}
+          <SourceLink id="DOI_10_21334_NPOLAR_2014_DCE53A47">(původní datová sada Norského polárního institutu)</SourceLink>{" "}
+          <SourceLink id="2026_xDEM_Longyearbyen_Frozen">(použité soubory xDEM a dokumentace)</SourceLink>
         </p>
         <p>
           Nejprve vynecháme ledovce a jejich bezprostřední okolí a na
@@ -337,7 +338,7 @@ export function PhotogrammetryArticle() {
           Tím se výrazně zmenšil celkový výškový nesoulad obou map.
           Použité hranice ledovců pocházejí ze souboru Norského polárního
           institutu pro rok 1990 a období 2001–2010.{" "}
-          <SourceLink id="DOI_10_21334_NPOLAR_2013_89F430F8">(hranice ledovců)</SourceLink>{" "}
+          <SourceLink id="DOI_10_21334_NPOLAR_2013_89F430F8">(veřejné soubory s obrysy ledovců)</SourceLink>{" "}
           Výsledek našeho výpočtu obsahují <a href="/data/methods/photogrammetry/example.json">metadata příkladu</a>.
         </p>
         <p>
@@ -396,10 +397,8 @@ export function PhotogrammetryArticle() {
             zachovává <a href="/data/methods/photogrammetry/source-README.md">README datového souboru</a>.
           </p>
           <p>
-            K dispozici jsou <a href="/data/methods/photogrammetry/DEM_1990.tif">model 1990 (4,5 MB)</a>,{" "}
-            <a href="/data/methods/photogrammetry/DEM_2009_ref.tif">model 2009 (4,5 MB)</a>{" "}
-            a <a href="/data/methods/photogrammetry/excluded-glaciers.tif">maska vyloučených ledovců</a>.
-            Maska zahrnuje oba soubory obrysů rozšířené o 100 metrů.
+            <a href="/data/methods/photogrammetry/excluded-glaciers.tif">Maska vyloučených ledovců</a>{" "}
+            zahrnuje oba soubory obrysů rozšířené o 100 metrů.
             Z okolního terénu vybíráme buňky nad 50 metry, se sklonem
             5–45° a počátečním rozdílem výšek menším než 50 metrů.
             Vynecháváme okraje sítě a chybějící hodnoty. Tyto filtry
@@ -430,8 +429,9 @@ export function PhotogrammetryArticle() {
             521 150 a 521 550 metrů a severní souřadnice 8 669 470
             a 8 669 870 metrů. Je celý uvnitř obrysu z roku 1990
             i novějšího obrysu, který pro tento ledovec pochází z roku 2003.
-            Samotný název souboru obrysů „2010“ tedy neoznačuje rok
-            snímku každého ledovce.
+            Rok snímku udává pole <code>YEAR_</code>. V původním souboru
+            z let 2001–2010 má Scott Turnerbreen identifikátor <code>14211</code>.{" "}
+            <SourceLink id="DOI_10_21334_NPOLAR_2013_89F430F8">(tabulka obrysů Norského polárního institutu)</SourceLink>
           </p>
           <p>
             Pro jednoduché zopakování součtu stáhněte CSV, example.json

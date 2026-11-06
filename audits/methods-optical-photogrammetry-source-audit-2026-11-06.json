@@ -1,0 +1,722 @@
+{
+  "checkedAt": "2026-11-06",
+  "articles": [
+    {
+      "slug": "opticke-a-multispektralni-snimkovani",
+      "sourceIds": [
+        "2019_USGS_Landsat8_Handbook",
+        "DOI_10_1104_pp_47_5_656",
+        "DOI_10_1016_0034_4257_95_00137_P",
+        "DOI_10_3390_rs61110286",
+        "WEB_Creative_Commons_Deed_Attribution_4_0_International_Creative_Comm_f3dd853d",
+        "DOI_10_3390_rs61212275",
+        "2024_USGS_Landsat_C2_L2_Guide",
+        "DOI_10_1016_j_rse_2006_03_002",
+        "2026_USGS_Landsat_NDVI",
+        "1974_Rouse_ERTS_Vegetation",
+        "2026_USGS_Landsat_NDSI",
+        "DOI_10_5194_essd_12_1805_2020",
+        "WEB_U_S_Geological_Survey_Prirucka_MCD12Q2_v6_1_dbceb14f",
+        "DOI_10_1594_PANGAEA_909133",
+        "DOI_10_3390_rs8070575",
+        "2000_NASA_Measuring_Vegetation",
+        "DOI_10_5066_P9OGBGM6",
+        "2023_Landsat_Aletsch_STAC"
+      ]
+    },
+    {
+      "slug": "fotogrammetrie-a-porovnavani-vyskovych-modelu",
+      "sourceIds": [
+        "DOI_10_3133_tm11C11",
+        "DOI_10_1029_2011JF002289",
+        "DOI_10_3390_rs9020186",
+        "WEB_Creative_Commons_Deed_Attribution_4_0_International_Creative_Comm_f3dd853d",
+        "DOI_10_5194_tc_5_271_2011",
+        "DOI_10_5194_tc_16_3249_2022",
+        "DOI_10_5194_tc_7_877_2013",
+        "1972_Finsterwalder_Vernagtferner",
+        "DOI_10_1038_s41586_021_03436_z",
+        "DOI_10_21334_NPOLAR_2014_DCE53A47",
+        "2026_xDEM_Longyearbyen_Frozen",
+        "DOI_10_21334_NPOLAR_2013_89F430F8"
+      ]
+    }
+  ],
+  "originalSourceCount": 28,
+  "originalUrlCount": 46,
+  "sourceChecks": [
+    {
+      "id": "2019_USGS_Landsat8_Handbook",
+      "externalUrl": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/atoms/files/LSDS-1574_L8_Data_Users_Handbook-v5.0.pdf",
+      "openAccessUrl": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/atoms/files/LSDS-1574_L8_Data_Users_Handbook-v5.0.pdf",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/atoms/files/LSDS-1574_L8_Data_Users_Handbook-v5.0.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "bytes": 7231518,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "DOI_10_1104_pp_47_5_656",
+      "externalUrl": "https://doi.org/10.1104/pp.47.5.656",
+      "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC396745/?page=2#supplementary-material1",
+      "openAccessLinkLabel": "Otevřít plný text u měřených spekter (strana 657)",
+      "originalReaderRouteOpenedInBrowser": false
+    },
+    {
+      "id": "DOI_10_1016_0034_4257_95_00137_P",
+      "externalUrl": "https://doi.org/10.1016/0034-4257(95)00137-P",
+      "openAccessUrl": "https://modis-snow-ice.gsfc.nasa.gov/uploads/pap_dev95.pdf",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://doi.org/10.1016/0034-4257(95)00137-P",
+          "status": 200,
+          "contentType": "text/html;charset=UTF-8",
+          "bytes": 2721,
+          "truncated": false
+        },
+        {
+          "url": "https://modis-snow-ice.gsfc.nasa.gov/uploads/pap_dev95.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "bytes": 1270241,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "DOI_10_3390_rs61110286",
+      "externalUrl": "https://doi.org/10.3390/rs61110286",
+      "openAccessUrl": "https://mdpi-res.com/d_attachment/remotesensing/remotesensing-06-10286/article_deploy/remotesensing-06-10286.pdf",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://doi.org/10.3390/rs61110286",
+          "status": 403,
+          "contentType": "text/html",
+          "bytes": 398,
+          "truncated": false
+        },
+        {
+          "url": "https://mdpi-res.com/d_attachment/remotesensing/remotesensing-06-10286/article_deploy/remotesensing-06-10286.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "bytes": 5543095,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "WEB_Creative_Commons_Deed_Attribution_4_0_International_Creative_Comm_f3dd853d",
+      "externalUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "openAccessUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://creativecommons.org/licenses/by/4.0/",
+          "status": 200,
+          "contentType": "text/html",
+          "bytes": 31950,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "DOI_10_3390_rs61212275",
+      "externalUrl": "https://doi.org/10.3390/rs61212275",
+      "openAccessUrl": "https://mdpi-res.com/d_attachment/remotesensing/remotesensing-06-12275/article_deploy/remotesensing-06-12275.pdf",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://doi.org/10.3390/rs61212275",
+          "status": 403,
+          "contentType": "text/html",
+          "bytes": 398,
+          "truncated": false
+        },
+        {
+          "url": "https://mdpi-res.com/d_attachment/remotesensing/remotesensing-06-12275/article_deploy/remotesensing-06-12275.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "bytes": 6475385,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "2024_USGS_Landsat_C2_L2_Guide",
+      "externalUrl": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/media/files/LSDS-1619_Landsat8-9-Collection2-Level2-Science-Product-Guide-v6.pdf",
+      "openAccessUrl": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/media/files/LSDS-1619_Landsat8-9-Collection2-Level2-Science-Product-Guide-v6.pdf",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/media/files/LSDS-1619_Landsat8-9-Collection2-Level2-Science-Product-Guide-v6.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "bytes": 3092375,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "DOI_10_1016_j_rse_2006_03_002",
+      "externalUrl": "https://doi.org/10.1016/j.rse.2006.03.002",
+      "openAccessUrl": "https://misr.jpl.nasa.gov/media/documents/schaepman2006.pdf",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://doi.org/10.1016/j.rse.2006.03.002",
+          "status": 200,
+          "contentType": "text/html;charset=UTF-8",
+          "bytes": 2699,
+          "truncated": false
+        },
+        {
+          "url": "https://misr.jpl.nasa.gov/media/documents/schaepman2006.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "bytes": 521736,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "2026_USGS_Landsat_NDVI",
+      "externalUrl": "https://www.usgs.gov/landsat-missions/landsat-normalized-difference-vegetation-index",
+      "openAccessUrl": "https://www.usgs.gov/landsat-missions/landsat-normalized-difference-vegetation-index",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://www.usgs.gov/landsat-missions/landsat-normalized-difference-vegetation-index",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "bytes": 92259,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "1974_Rouse_ERTS_Vegetation",
+      "externalUrl": "https://ntrs.nasa.gov/citations/19740022614",
+      "openAccessUrl": "https://ntrs.nasa.gov/api/citations/19740022614/downloads/19740022614.pdf",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://ntrs.nasa.gov/citations/19740022614",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "bytes": 93943,
+          "truncated": false
+        },
+        {
+          "url": "https://ntrs.nasa.gov/api/citations/19740022614/downloads/19740022614.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "bytes": 14000000,
+          "truncated": true
+        }
+      ]
+    },
+    {
+      "id": "2026_USGS_Landsat_NDSI",
+      "externalUrl": "https://www.usgs.gov/landsat-missions/normalized-difference-snow-index",
+      "openAccessUrl": "https://www.usgs.gov/landsat-missions/normalized-difference-snow-index",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://www.usgs.gov/landsat-missions/normalized-difference-snow-index",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "bytes": 92372,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "DOI_10_5194_essd_12_1805_2020",
+      "externalUrl": "https://doi.org/10.5194/essd-12-1805-2020",
+      "openAccessUrl": "https://essd.copernicus.org/articles/12/1805/2020/",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://doi.org/10.5194/essd-12-1805-2020",
+          "status": 200,
+          "contentType": "text/html",
+          "bytes": 290524,
+          "truncated": false
+        },
+        {
+          "url": "https://essd.copernicus.org/articles/12/1805/2020/",
+          "status": 200,
+          "contentType": "text/html",
+          "bytes": 290524,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "WEB_U_S_Geological_Survey_Prirucka_MCD12Q2_v6_1_dbceb14f",
+      "externalUrl": "https://lpdaac.usgs.gov/documents/1417/MCD12Q2_User_Guide_V61.pdf",
+      "openAccessUrl": "https://lpdaac.usgs.gov/documents/1417/MCD12Q2_User_Guide_V61.pdf",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://lpdaac.usgs.gov/documents/1417/MCD12Q2_User_Guide_V61.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "bytes": 558236,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "DOI_10_1594_PANGAEA_909133",
+      "externalUrl": "https://doi.org/10.1594/PANGAEA.909133",
+      "openAccessUrl": "https://store.pangaea.de/Publications/PaulF-etal_2019/c3s_gi_rgi11_s2_2015_v2.zip",
+      "openAccessLinkLabel": "Stáhnout obrysy z PANGAEA (ZIP)",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://doi.org/10.1594/PANGAEA.909133",
+          "status": 200,
+          "contentType": "text/html;charset=utf-8",
+          "bytes": 39251,
+          "truncated": false
+        },
+        {
+          "url": "https://doi.pangaea.de/10.1594/PANGAEA.909133",
+          "status": 200,
+          "contentType": "text/html;charset=utf-8",
+          "bytes": 39251,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "DOI_10_3390_rs8070575",
+      "externalUrl": "https://doi.org/10.3390/rs8070575",
+      "openAccessUrl": "https://www.nve.no/Media/4851/2016_paul_sentinel2_remotesensing-08-00575-v2.pdf",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://doi.org/10.3390/rs8070575",
+          "status": 403,
+          "contentType": "text/html",
+          "bytes": 395,
+          "truncated": false
+        },
+        {
+          "url": "https://www.nve.no/Media/4851/2016_paul_sentinel2_remotesensing-08-00575-v2.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "bytes": 8393776,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "2000_NASA_Measuring_Vegetation",
+      "externalUrl": "https://science.nasa.gov/earth/earth-observatory/measuring-vegetation-ndvi-evi/",
+      "openAccessUrl": "https://science.nasa.gov/earth/earth-observatory/measuring-vegetation-ndvi-evi/",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://science.nasa.gov/earth/earth-observatory/measuring-vegetation-ndvi-evi/",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "bytes": 321736,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "DOI_10_5066_P9OGBGM6",
+      "externalUrl": "https://doi.org/10.5066/P9OGBGM6",
+      "openAccessUrl": "https://planetarycomputer.microsoft.com/dataset/landsat-c2-l2",
+      "openAccessLinkLabel": "Otevřít veřejná data v katalogu Planetary Computer",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://doi.org/10.5066/P9OGBGM6",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "bytes": 137589,
+          "truncated": false
+        },
+        {
+          "url": "https://planetarycomputer.microsoft.com/dataset/landsat-c2-l2",
+          "status": 200,
+          "contentType": "text/html",
+          "bytes": 5087,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "2023_Landsat_Aletsch_STAC",
+      "externalUrl": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/landsat-c2-l2/items/LC08_L2SP_195028_20230820_02_T1",
+      "openAccessUrl": "/data/methods/optical-imaging/aletsch-20230820.tif",
+      "externalLinkLabel": "Otevřít metadata celé scény (STAC)",
+      "openAccessLinkLabel": "Stáhnout optický výřez (GeoTIFF)",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/landsat-c2-l2/items/LC08_L2SP_195028_20230820_02_T1",
+          "status": 200,
+          "contentType": "application/geo+json; charset=utf-8",
+          "bytes": 23201,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "DOI_10_3133_tm11C11",
+      "externalUrl": "https://doi.org/10.3133/tm11C11",
+      "openAccessUrl": "https://pubs.usgs.gov/publication/tm11C11/full",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://doi.org/10.3133/tm11C11",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "bytes": 52151,
+          "truncated": false
+        },
+        {
+          "url": "https://pubs.usgs.gov/publication/tm11C11/full",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "bytes": 920207,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "DOI_10_1029_2011JF002289",
+      "externalUrl": "https://doi.org/10.1029/2011JF002289",
+      "openAccessUrl": "https://discovery.ucl.ac.uk/10092276/1/Robson_James_et_al-2012-Journal_of_Geophysical_Research__Earth_Surface_%282003-2012%29.pdf",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://doi.org/10.1029/2011JF002289",
+          "status": 403,
+          "contentType": "text/html; charset=UTF-8",
+          "bytes": 5696,
+          "truncated": false
+        },
+        {
+          "url": "https://discovery.ucl.ac.uk/10092276/1/Robson_James_et_al-2012-Journal_of_Geophysical_Research__Earth_Surface_%282003-2012%29.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "bytes": 6514663,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "DOI_10_3390_rs9020186",
+      "externalUrl": "https://doi.org/10.3390/rs9020186",
+      "openAccessUrl": "https://mdpi-res.com/d_attachment/remotesensing/remotesensing-09-00186/article_deploy/remotesensing-09-00186.pdf",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://doi.org/10.3390/rs9020186",
+          "status": 403,
+          "contentType": "text/html",
+          "bytes": 395,
+          "truncated": false
+        },
+        {
+          "url": "https://mdpi-res.com/d_attachment/remotesensing/remotesensing-09-00186/article_deploy/remotesensing-09-00186.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "bytes": 5497619,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "DOI_10_5194_tc_5_271_2011",
+      "externalUrl": "https://doi.org/10.5194/tc-5-271-2011",
+      "openAccessUrl": "https://tc.copernicus.org/articles/5/271/2011/tc-5-271-2011.pdf",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://doi.org/10.5194/tc-5-271-2011",
+          "status": 200,
+          "contentType": "text/html",
+          "bytes": 136861,
+          "truncated": false
+        },
+        {
+          "url": "https://tc.copernicus.org/articles/5/271/2011/tc-5-271-2011.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "bytes": 7426384,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "DOI_10_5194_tc_16_3249_2022",
+      "externalUrl": "https://doi.org/10.5194/tc-16-3249-2022",
+      "openAccessUrl": "https://tc.copernicus.org/articles/16/3249/2022/",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://doi.org/10.5194/tc-16-3249-2022",
+          "status": 200,
+          "contentType": "text/html",
+          "bytes": 411461,
+          "truncated": false
+        },
+        {
+          "url": "https://tc.copernicus.org/articles/16/3249/2022/",
+          "status": 200,
+          "contentType": "text/html",
+          "bytes": 411461,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "DOI_10_5194_tc_7_877_2013",
+      "externalUrl": "https://doi.org/10.5194/tc-7-877-2013",
+      "openAccessUrl": "https://tc.copernicus.org/articles/7/877/2013/tc-7-877-2013.pdf",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://doi.org/10.5194/tc-7-877-2013",
+          "status": 200,
+          "contentType": "text/html",
+          "bytes": 125197,
+          "truncated": false
+        },
+        {
+          "url": "https://tc.copernicus.org/articles/7/877/2013/tc-7-877-2013.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "bytes": 817284,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "1972_Finsterwalder_Vernagtferner",
+      "externalUrl": "https://epic.awi.de/36114/1/Finsterwalder_1972.pdf",
+      "openAccessUrl": "https://epic.awi.de/36114/1/Finsterwalder_1972.pdf",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://epic.awi.de/36114/1/Finsterwalder_1972.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "bytes": 9491423,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "DOI_10_1038_s41586_021_03436_z",
+      "externalUrl": "https://doi.org/10.1038/s41586-021-03436-z",
+      "openAccessUrl": "https://www.dora.lib4ri.ch/wsl/islandora/object/wsl%3A27038/datastream/PDF2/Hugonnet-2021-Accelerated_global_glacier_mass_loss-%28accepted_version%29.pdf",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://doi.org/10.1038/s41586-021-03436-z",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "bytes": 495795,
+          "truncated": false
+        },
+        {
+          "url": "https://www.dora.lib4ri.ch/wsl/islandora/object/wsl%3A27038/datastream/PDF2/Hugonnet-2021-Accelerated_global_glacier_mass_loss-%28accepted_version%29.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "bytes": 386923,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "DOI_10_21334_NPOLAR_2014_DCE53A47",
+      "externalUrl": "https://doi.org/10.21334/NPOLAR.2014.DCE53A47",
+      "openAccessUrl": "https://data.npolar.no/dataset/dce53a47-c726-4845-85c3-a65b46fe2fea/file",
+      "openAccessLinkLabel": "Otevřít veřejná data (výškové modely)",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://doi.org/10.21334/NPOLAR.2014.DCE53A47",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "bytes": 57715,
+          "truncated": false
+        },
+        {
+          "url": "https://data.npolar.no/dataset/dce53a47-c726-4845-85c3-a65b46fe2fea",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "bytes": 57715,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "2026_xDEM_Longyearbyen_Frozen",
+      "externalUrl": "https://github.com/GlacioHack/xdem-data/tree/ca0e87271925d28928526bbce200162f002d6a93/data/Longyearbyen",
+      "openAccessUrl": "https://raw.githubusercontent.com/GlacioHack/xdem-data/ca0e87271925d28928526bbce200162f002d6a93/README.md",
+      "externalLinkLabel": "Otevřít veřejná data xDEM (použitá verze)",
+      "openAccessLinkLabel": "Otevřít popis dat a licence (README)",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://github.com/GlacioHack/xdem-data/tree/ca0e87271925d28928526bbce200162f002d6a93/data/Longyearbyen",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "bytes": 174256,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "DOI_10_21334_NPOLAR_2013_89F430F8",
+      "externalUrl": "https://doi.org/10.21334/NPOLAR.2013.89F430F8",
+      "openAccessUrl": "https://data.npolar.no/dataset/89f430f8-862f-11e2-8036-005056ad0004/file",
+      "openAccessLinkLabel": "Otevřít veřejná data (obrysy ledovců)",
+      "originalReaderRouteOpenedInBrowser": true,
+      "originalGetChecks": [
+        {
+          "url": "https://doi.org/10.21334/NPOLAR.2013.89F430F8",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "bytes": 36747,
+          "truncated": false
+        },
+        {
+          "url": "https://data.npolar.no/dataset/89f430f8-862f-11e2-8036-005056ad0004",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "bytes": 36747,
+          "truncated": false
+        }
+      ]
+    }
+  ],
+  "additionalFileChecks": [
+    {
+      "url": "https://ntrs.nasa.gov/api/citations/19740022614/downloads/19740022614.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 16848053,
+      "truncated": false,
+      "sha256": "b0fe7e743c3a8e6e71de9a2dabc18a5d76eaf9d26ef8e3389577db3115789de0"
+    },
+    {
+      "url": "https://store.pangaea.de/Publications/PaulF-etal_2019/c3s_gi_rgi11_s2_2015_v2.zip",
+      "status": 200,
+      "contentType": "application/zip",
+      "bytes": 7824789,
+      "truncated": false,
+      "sha256": "7ab160fb022cc4fca45620d169dfe19d5fb17d4d1b9b0462650c948f87138991"
+    },
+    {
+      "url": "https://next.api.npolar.no/dataset/89f430f8-862f-11e2-8036-005056ad0004/attachment/0e725632-7d1d-48e6-8f36-88c7e3c6d9be/_blob",
+      "status": 200,
+      "contentType": "application/x-zip-compressed",
+      "bytes": 3312243,
+      "truncated": false,
+      "sha256": "13073519078c0cb946cf2f3bbb1b661b9cc7e373a254478878ca6118456a7561"
+    },
+    {
+      "url": "https://next.api.npolar.no/dataset/89f430f8-862f-11e2-8036-005056ad0004/attachment/4494bb0d-8b90-480b-aed1-47f7955ce81b/_blob",
+      "status": 200,
+      "contentType": "application/x-zip-compressed",
+      "bytes": 5003825,
+      "truncated": false,
+      "sha256": "eb36f6d9a17750a9b5a09071c29208aa9d1eecacb9b79205a45f221820d59379"
+    },
+    {
+      "url": "https://next.api.npolar.no/dataset/dce53a47-c726-4845-85c3-a65b46fe2fea/attachment/1209333c-8946-4a88-93cd-c36fcfdcda10/_blob",
+      "status": 200,
+      "contentType": "application/zip",
+      "bytes": 4242972,
+      "truncated": false,
+      "sha256": "abc2d84612a4abfee4fc2c632ff2ae064f484261c412bbf2810f32f0659c0e5d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/GlacioHack/xdem-data/ca0e87271925d28928526bbce200162f002d6a93/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 4634,
+      "truncated": false,
+      "sha256": "313ce7d345c2b8c36a836e3c2586ec54c92e9c0e149534d2e47844f665a2aa28"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/GlacioHack/xdem-data/ca0e87271925d28928526bbce200162f002d6a93/data/Longyearbyen/DEM_1990.tif",
+      "status": 200,
+      "contentType": "image/tiff",
+      "bytes": 4478402,
+      "truncated": false,
+      "sha256": "c9b0b556021545118492509433865e353b47b98105cf4519d3fb41980304e2c2"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/GlacioHack/xdem-data/ca0e87271925d28928526bbce200162f002d6a93/data/Longyearbyen/DEM_2009_ref.tif",
+      "status": 200,
+      "contentType": "image/tiff",
+      "bytes": 4540706,
+      "truncated": false,
+      "sha256": "6180136b56438dc67179b70ce99380ab30fa99cb082b3228659f3fe4cff2650a"
+    }
+  ],
+  "reproduction": {
+    "aletsch": {
+      "upstream": "Microsoft Planetary Computer public SAS service",
+      "shape": [
+        598,
+        341
+      ],
+      "bandCount": 8,
+      "allUpstreamWindowPixelsMatchPublicGeoTiff": true,
+      "indexRows": [
+        {
+          "label": "A",
+          "ndsi": 0.9755165596156407,
+          "ndvi": -0.08935826919943263
+        },
+        {
+          "label": "B",
+          "ndsi": -0.309274272525126,
+          "ndvi": 0.1049126682585441
+        },
+        {
+          "label": "C",
+          "ndsi": -0.5847583962286239,
+          "ndvi": 0.6806161745827984
+        }
+      ]
+    },
+    "alpineInventory": {
+      "recordsAbove0_01Km2": 4395,
+      "sumAreaKm2": 1805.883618,
+      "catalogueSummaryCount": 4394
+    },
+    "scottTurnerbreen": {
+      "demFilesByteExact": true,
+      "rebuiltMaskAllPixelsMatch": true,
+      "officialOutlineId": 14211,
+      "newerOutlineYear": 2003,
+      "heldOutCount": 160866,
+      "heldOutMedianBeforeM": -2.6534805297851562,
+      "heldOutMedianAfterM": -0.0945416581607077,
+      "cells": 400,
+      "areaM2": 160000,
+      "meanChangeM": -17.318124310916428,
+      "volumeChangeM3": -2770899.8897466287
+    }
+  }
+}

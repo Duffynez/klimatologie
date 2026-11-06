@@ -435,7 +435,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "fotogrammetrie-a-porovnavani-vyskovych-modelu") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Fotogrammetrie a porovnávání výškových modelů" meta="31. října 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Fotogrammetrie a porovnávání výškových modelů" meta="6. listopadu 2026">
           <p>Jak různé pohledy na stejný povrch umožňují určit jeho výšku a jak porovnáním dvou výškových map zjistíme změnu objemu ledovce.</p>
         </PageLead>
         <PhotogrammetryArticle />
@@ -447,7 +447,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "opticke-a-multispektralni-snimkovani") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Optické a multispektrální snímkování" meta="31. října 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Optické a multispektrální snímkování" meta="6. listopadu 2026">
           <p>Jak družice měří odražené světlo v několika pásmech a jak z těchto měření rozpoznáváme vegetaci, sníh a led.</p>
         </PageLead>
         <OpticalImagingArticle />

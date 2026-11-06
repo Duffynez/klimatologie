@@ -26,8 +26,7 @@ export function OpticalImagingArticle() {
           mezi dvěma sousedními vrcholy světelné vlny. Ve viditelné oblasti ji
           vnímáme jako barvu. Za červenou částí spektra následuje infračervené
           záření, které už lidské oko nevidí. Družicový přístroj může měřit
-          i tuto část spektra.{" "}
-          <SourceLink id="2000_NASA_Measuring_Vegetation">(NASA: světlo a vegetace)</SourceLink>
+          i tuto část spektra.
         </p>
         <p>
           Když světlo dopadne na povrch, část se pohltí a část se odrazí.
@@ -37,7 +36,7 @@ export function OpticalImagingArticle() {
           Porost proto může být v červeném pásmu poměrně tmavý a v blízkém
           infračerveném pásmu světlý. Tato dvojice měření poskytuje informaci
           o vegetaci, která v běžné barevné fotografii není vidět.{" "}
-          <SourceLink id="2000_NASA_Measuring_Vegetation">(NASA: optické vlastnosti listů)</SourceLink>
+          <SourceLink id="DOI_10_1104_pp_47_5_656">(Woolley 1971, měřená spektra listů)</SourceLink>
         </p>
         <p>
           Sníh a čistý led mají jiný průběh odrazu. Ve viditelné oblasti odrážejí
@@ -91,9 +90,9 @@ export function OpticalImagingArticle() {
           <Image src="/media/optical-imaging/oli-before-flight.jpg" width={1430} height={639} unoptimized
             alt="Dvě fotografie přístroje OLI před letem. Vlevo je odkrytá konstrukce s chladičem a kalibračními panely, vpravo přístroj zakrytý bílou tepelnou izolací." />
           <figcaption>
-            OLI před instalací na družici Landsat 8. V levém snímku je u levého
-            okraje chladič a uprostřed zadní strany panelů používaných při
-            sluneční kalibraci. Detektory jsou uvnitř přístroje. Pravý snímek
+            OLI před instalací na družici Landsat 8. Na levém snímku je u levého
+            okraje chladič a uprostřed zadní strany jsou panely pro sluneční
+            kalibraci. Detektory jsou uvnitř přístroje. Pravý snímek
             ukazuje stejný přístroj s tepelnou izolací.
             Převzato beze změny z{" "}
             <SourceLink id="DOI_10_3390_rs61110286">Knight a Kvaran (2014), obr. 2</SourceLink>,
@@ -204,7 +203,7 @@ export function OpticalImagingArticle() {
           výsledek jedničce. V porovnání podobných porostů pomáhá vyšší NDVI
           rozpoznat silnější zastoupení zelené vegetace.{" "}
           <SourceLink id="2026_USGS_Landsat_NDVI">(definice USGS)</SourceLink>{" "}
-          <SourceLink id="2000_NASA_Measuring_Vegetation">(NASA: význam vegetačního indexu)</SourceLink>
+          <SourceLink id="1974_Rouse_ERTS_Vegetation">(Rouse a kol. 1974, měření porostů)</SourceLink>
         </p>
         <p>
           Pro sníh využijeme stejný způsob porovnání, ale jinou dvojici pásem.
@@ -276,9 +275,11 @@ export function OpticalImagingArticle() {
         </p>
         <p>
           Konkrétním použitím je soupis alpských ledovců publikovaný Paulem
-          a kolegy v roce 2020. Z multispektrálních snímků družice Sentinel-2
-          nejprve automaticky vymezili čistý led a sníh. Odborníci na jednotlivé
-          oblasti potom doplnili části pokryté sutí a upravili obrysy.
+          a kolegy v roce 2020. Ve snímcích Sentinel-2 nejprve vyhledali plochy
+          s čistým ledem a sněhem podle poměru červeného a krátkovlnného
+          infračerveného pásma. Podmínka v modrém pásmu pomohla vyloučit
+          zastíněné skály. Odborníci potom doplnili části ledovců pokryté sutí
+          a upravili obrysy.
           Snímky pocházely převážně ze srpna 2015, část z let 2016 a 2017.
           Výsledný soupis obsahuje 4 395 ledovců větších než 0,01 km²
           s celkovou plochou 1 806 ± 60 km². Znak ± zde vyjadřuje autory
@@ -286,10 +287,10 @@ export function OpticalImagingArticle() {
           <SourceLink id="DOI_10_5194_essd_12_1805_2020">(Paul a kol. 2020, oddíly 3–5)</SourceLink>
         </p>
         <p>
-          Výsledné obrysy jsou veřejně dostupné jako{" "}
-          <SourceLink id="DOI_10_1594_PANGAEA_909133">mapová data v archivu PANGAEA</SourceLink>.
-          Umožňují určit rozlohu jednotlivých ledovců a srovnávat jejich hranice
-          se staršími soupisy. Jak se plocha vztahuje k dalším sledovaným
+          Karta <SourceLink id="DOI_10_1594_PANGAEA_909133">inventáře v archivu PANGAEA</SourceLink>{" "}
+          vede přímo ke stažení obrysů v ZIP. V tabulce obrysů je 4 395
+          záznamů a součet sloupce <code>AREA_KM2</code> je 1 805,88 km².
+          Jak se plocha vztahuje k dalším sledovaným
           vlastnostem, vysvětluje pozorování{" "}
           <Link href="/pozorovani/ustup-ledovcu/#plocha">horských ledovců</Link>.
           Změnu hmotnosti přímo na ledovci popisuje samostatná metoda{" "}
@@ -406,10 +407,10 @@ export function OpticalImagingArticle() {
           Použijeme skutečný snímek Landsatu 8 z 20. srpna 2023, pořízený
           v 10:16 UTC nad švýcarskými Alpami. Z produktu Collection 2 Level 2
           vybereme oblast Aletschského ledovce. Začínáme tedy u odrazivosti
-          povrchu, kterou už vypočetl USGS. Data jsou veřejně dostupná
-          prostřednictvím Microsoft Planetary Computer.{" "}
-          <SourceLink id="DOI_10_5066_P9OGBGM6">(datový soubor USGS)</SourceLink>{" "}
-          <SourceLink id="2023_Landsat_Aletsch_STAC">(přesný záznam snímku)</SourceLink>
+          povrchu, kterou už vypočetl USGS.{" "}
+          <SourceLink id="DOI_10_5066_P9OGBGM6">(popis datové sady USGS)</SourceLink>{" "}
+          Karta <SourceLink id="2023_Landsat_Aletsch_STAC">konkrétního snímku</SourceLink>{" "}
+          vede k metadatům celé scény a ke stažení použitého výřezu v GeoTIFF.
         </p>
         <p>
           Ve snímku jsou vyznačeny tři pixely. A leží na světlém ledovcovém
@@ -529,8 +530,9 @@ export function OpticalImagingArticle() {
             <a href="/data/methods/optical-imaging/plot.py"> Skript plot.py</a>{" "}
             z něj obnoví oba obrázky, potřebuje knihovny NumPy, Rasterio
             a Matplotlib. <a href="/data/methods/optical-imaging/download.py">Skript download.py</a>{" "}
-            umožňuje stáhnout stejné výřezy z původních souborů znovu,
-            navíc používá knihovnu Requests. Přesné adresy vstupů, pořadí
+            znovu stáhne stejné výřezy z Microsoft Planetary Computer.
+            Pomocí knihovny Requests si bez účtu vyžádá dočasné adresy,
+            které jsou pro stažení původních pásem potřeba. Přesné adresy vstupů, pořadí
             pásem, koeficienty, pravidla zobrazení a kontrolní součty jsou
             v souboru example.json.
           </p>
