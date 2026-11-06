@@ -8,6 +8,7 @@
   --history-branch-border: #9bc4c9;
   max-width: 1020px;
   margin: 36px auto 72px;
+  scroll-margin-top: 110px;
 }
 
 .timeline [data-history-branch="all"] {
@@ -69,6 +70,7 @@
 }
 
 .branches,
+.importances,
 .categories {
   flex-basis: 100%;
   min-width: 0;
@@ -78,6 +80,7 @@
 }
 
 .branches legend,
+.importances legend,
 .categories legend {
   margin-bottom: 12px;
   color: var(--ink);
@@ -88,6 +91,9 @@
 .categories { padding-top: 12px; border-top: 1px solid var(--line); }
 .categories[hidden] { display: none; }
 .branchChoices { display: flex; flex-wrap: wrap; gap: 8px; }
+.importances { padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+.filterHelp { margin: -2px 0 14px; color: var(--muted); font-size: 0.84rem; }
+.importanceChoices { display: flex; flex-wrap: wrap; gap: 8px; }
 
 .categoryChoices {
   display: grid;
@@ -96,6 +102,8 @@
 }
 
 .branchChoice,
+.importanceChoice,
+.reset,
 .categoryChoice,
 .empty button {
   min-width: 0;
@@ -123,6 +131,11 @@
 }
 .branchChoice[aria-pressed="true"] { border-color: var(--history-branch-accent); background: var(--history-branch-accent); color: var(--white); }
 .branchChoice:hover { border-color: var(--history-branch-accent); }
+.importanceChoice { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; color: var(--ink); border-color: var(--line); background: var(--white); }
+.importanceChoice[aria-pressed="true"] { border-color: var(--ink); background: var(--ink); color: var(--white); font-weight: 700; }
+.importanceChoice:hover { border-color: var(--ink); }
+.reset { padding: 7px 10px; background: transparent; color: var(--sea); border-color: var(--line); font-size: 0.82rem; }
+.reset:hover { border-color: var(--sea); }
 .categoryChoice { display: flex; flex-direction: column; align-items: stretch; border-top: 4px solid var(--history-accent); }
 .choiceHeading { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-weight: 700; }
 .choiceCount { padding: 0 6px; border: 1px solid currentColor; border-radius: 20px; font-size: 0.75rem; }
@@ -190,6 +203,8 @@
 .meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; margin: 0 0 12px; font-size: 0.78rem; color: var(--muted); }
 .branchLabel { padding: 4px 9px; border-radius: 3px; background: var(--history-branch-accent); color: var(--white); font-weight: 700; }
 .categoryLabel { color: var(--history-accent); font-weight: 700; }
+.importanceLabel { margin-left: auto; padding: 3px 8px; border: 1px solid currentColor; border-radius: 3px; color: var(--ink); white-space: nowrap; }
+.importanceLabel[data-history-importance="1"] { font-weight: 700; border-width: 2px; }
 .title { margin: 0 0 15px; font-family: Georgia, "Times New Roman", serif; font-size: 1.45rem; font-weight: 400; line-height: 1.25; text-wrap: pretty; }
 .paragraph { margin: 0 0 15px; color: var(--ink); overflow-wrap: break-word; }
 .references { font-size: 0.82rem; line-height: 1.6; }
@@ -204,6 +219,10 @@
 .sources li { margin-bottom: 9px; overflow-wrap: anywhere; }
 .sources a { color: var(--sea); }
 .empty { padding: 30px 0; }
+.legacyNotice { display: none; max-width: 1020px; margin: 24px auto; padding: 20px; border: 1px solid var(--line); background: var(--white); scroll-margin-top: 110px; }
+.legacyNotice:target { display: block; }
+.legacyNotice h2 { font-size: 1.2rem; margin: 0 0 12px; }
+.legacyNotice a { color: var(--sea); }
 
 @media (max-width: 900px) {
   .categoryChoices { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -213,11 +232,14 @@
   .timeline { margin-top: 24px; }
   .filters { padding: 14px; gap: 16px; }
   .categoryChoice { padding: 12px 10px; }
+  .importanceChoices { display: grid; grid-template-columns: minmax(0, 1fr); }
+  .importanceChoice { justify-content: space-between; }
+  .importanceLabel { margin-left: 0; }
   .milestone { grid-template-columns: minmax(0, 1fr); gap: 14px; padding: 20px 16px; }
   .date { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px 16px; }
   .date span { margin: 0; }
   .title { font-size: 1.3rem; }
-  .period, .event { scroll-margin-top: 145px; }
+  .timeline, .period, .event, .legacyNotice { scroll-margin-top: 145px; }
 }
 
 @media print {

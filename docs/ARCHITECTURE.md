@@ -171,15 +171,21 @@ Podrobný popis je v `docs/SOURCES-AND-ARCHIVE.md`.
 
 ## 8. Historická osa
 
-`app/data/history.ts` drží údaje o události: stabilní `id`, `year`, význam data `dateMeaning`, český `title`, hlavní oblast `category`, odstavce s citacemi a související místní odkazy. `historyBranches` pojmenovává nadřazené větve Věda, Politika a připravovaná Kultura. `historyCategories` určuje názvy a vysvětlení oblastí a jejich nadřazenou větev v poli `branch`. Pozorování, Metody a Mechanismy patří pod Vědu a odkazují na odpovídající katalog webu. Větev milníku se odvozuje od oblasti, neukládá se u něj podruhé. Rok události se neodvozuje od roku vydání pramene. ID zůstává stejné i při opravě data.
+`app/data/history.ts` drží údaje o události: stabilní `id`, `year`, význam data `dateMeaning`, český `title`, hlavní oblast `category`, povinnou důležitost `importance` 1–3, odstavce s citacemi a související místní odkazy. `historyBranches` pojmenovává nadřazené větve Věda, Politika a připravovaná Kultura. `historyCategories` určuje názvy a vysvětlení oblastí a jejich nadřazenou větev v poli `branch`. Pozorování, Metody a Mechanismy patří pod Vědu a odkazují na odpovídající katalog webu. Větev milníku se odvozuje od oblasti, neukládá se u něj podruhé. Rok události se neodvozuje od roku vydání pramene. ID zůstává stejné i při opravě data.
 
 Bibliografie se nadále načítá výhradně z centrálního katalogu. Každý odstavec má `references` s `sourceId` a případným `locator` pro stranu, oddíl či obrázek. Jedna událost může mít dobový i navazující zdroj.
 
-Serverová stránka `app/historie/page.tsx` kontroluje identitu, chronologii, klasifikaci a existenci pramenů. Chybná položka zastaví sestavení, nevynechá se potichu. Vykreslí obsah karet a předá jej klientské komponentě `HistoryTimeline.tsx` jako React obsah. Celý zdrojový katalog ani textová data se neimportují do klientské komponenty.
+Serverová stránka `app/historie/page.tsx` kontroluje identitu, chronologii, klasifikaci, důležitost a existenci pramenů. Chybná položka zastaví sestavení, nevynechá se potichu. Vykreslí obsah karet a předá jej klientské komponentě `HistoryTimeline.tsx` jako React obsah. Celý zdrojový katalog ani textová data se neimportují do klientské komponenty.
 
-`HistoryTimeline` nabízí hlavní filtr Všechny, Věda a Politika. Po volbě Vědy zpřístupní podfiltr Pozorování, Metody a Mechanismy. Přepnutí hlavní větve zruší podfiltr. Server předává jen větve a oblasti se zpracovanými milníky, takže připravená Kultura zůstává do jejich doplnění skrytá. Každá událost patří do jedné oblasti, vazby na další části webu vyjadřují související odkazy. Komponenta uchovává celé karty v DOM, mění jejich viditelnost, počet výsledků a odkazy na neprázdná období. Volba Všechny obnoví úplnou osu, Všechny oblasti celou Vědu. Odkaz na skrytý milník zruší oba filtry. Původní kotvy `milnik-ID` zůstávají zachované.
+`historyImportances` pojmenovává stupně Zásadní (1), Důležitý (2) a Doplňující (3). Server předává klientovi názvy a hodnoty filtrů, klasifikaci a důležitost milníků a vykreslené karty. `historyFilters.ts` obsahuje společné pravidlo pro průnik důležitosti, větve a oblasti a rozpoznání odkazu na milník.
 
-Výchozí statický export obsahuje všechny milníky v jedné chronologii a funguje pro čtení i bez JavaScriptu. Interakce mají popisky, stav stisknutí, oznámení počtu a prázdný stav. Rozvržení a mobilní úpravy jsou v `HistoryTimeline.module.css`. Obsahový standard je [HISTORY.md](../HISTORY.md).
+`HistoryTimeline` nabízí rozsahy důležitosti 1, 1–2 a 1–3. Po hydrataci bez odkazu na milník začíná stupněm 1, statické HTML obsahuje všechny milníky. Rozlišení zajišťuje `useSyncExternalStore` se serverovým a klientským snímkem, takže počáteční hydratace odpovídá HTML a čtení bez JavaScriptu zůstává úplné.
+
+Filtr větve nabízí Všechny, Vědu a Politiku. Po volbě Vědy zpřístupní podfiltr Pozorování, Metody a Mechanismy. Přepnutí větve zruší oblast, zachová důležitost. Počty u voleb respektují ostatní filtry. Tlačítko Zobrazit celou osu obnoví všechny větve a důležitosti. Přímý odkaz `milnik-ID` při načtení i při změně kotvy zruší všechna omezení a posune stránku k cíli. Komponenta uchovává celé karty v DOM a mění jejich viditelnost a odkazy na neprázdná období. Prázdné větve jako připravovaná Kultura se nenabízejí. Každá událost patří do jedné oblasti, vazby na další části webu vyjadřují související odkazy.
+
+`historyLegacyLinks` zachovává ID, názvy a odkazy na prameny vyřazených událostí. Samostatná oznámení mimo osu se zobrazí pomocí CSS `:target` pouze při návštěvě původní kotvy, i bez JavaScriptu. Nejsou milníky a nevstupují do filtrování ani počtů.
+
+Interakce mají popisky, stav stisknutí, oznámení počtu a prázdný stav. Oblasti jsou rozlišeny barvou, důležitost číslem a slovním označením. Rozvržení a mobilní úpravy jsou v `HistoryTimeline.module.css`. Obsahový standard je [HISTORY.md](../HISTORY.md).
 
 ## 9. Interaktivní části
 

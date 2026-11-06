@@ -1,6 +1,6 @@
 # Standard historické osy
 
-Historie ukazuje, jak vznikaly možnosti klima poznávat, měřit a vysvětlovat a jak se měnila formální politická rozhodnutí. Navazuje na tři cíle projektu v [AGENTS.md](AGENTS.md). Jazyk a redakční kontrolu stanovuje [STYLE.md](STYLE.md), dostupnost a citování pramenů [CONTENT.md](CONTENT.md). Technické připojení milníku popisuje [docs/CONTENT-WORKFLOW.md](docs/CONTENT-WORKFLOW.md).
+Historie vybírá zásadní kroky v poznání změny klimatu, jejích přirozených a lidských příčin a v politické reakci na ni. Navazuje na tři cíle projektu v [AGENTS.md](AGENTS.md). Jazyk a redakční kontrolu stanovuje [STYLE.md](STYLE.md), dostupnost a citování pramenů [CONTENT.md](CONTENT.md). Technické připojení milníku popisuje [docs/CONTENT-WORKFLOW.md](docs/CONTENT-WORKFLOW.md).
 
 ## 1. Výběr milníků
 
@@ -10,11 +10,11 @@ Nejvyšší úroveň historické osy tvoří **Věda** a **Politika**. Věda se 
 - **Metody:** nové možnosti měření, přístroje, přírodní archivy, datování a postupy zpracování. Vymezení navazuje na [METHODS.md](METHODS.md).
 - **Mechanismy:** vznik fyzikálních vysvětlení, jejich výpočty, ověřování příčin a syntézy poznání o fungování klimatu. Vymezení navazuje na [MECHANISMS.md](MECHANISMS.md).
 
-Samostatná větev **Politika** sleduje změny právního rámce, závazků, vykazování nebo trvalého způsobu mezinárodního rozhodování. Politické milníky neřadíme do vědeckých oblastí.
+Samostatná větev **Politika** sleduje zásadní změny právního rámce, klimatických závazků, vykazování emisí nebo trvalého způsobu rozhodování o změně klimatu. Politické milníky neřadíme do vědeckých oblastí.
 
 Kandidát na vědecký milník musí přinést nový fyzikální poznatek, měřicí možnost, metodu, zásadní pozorování, ověření hypotézy, modelový postup, odbornou syntézu nebo důležitou pozorovací infrastrukturu. Zařazení neodvozujeme automaticky od použitého přístroje, druhu publikace ani kategorie vydavatele. Nový měřicí postup patří k metodám, začátek dlouhodobého klimatického záznamu k pozorováním a test příčiny k mechanismům. Vazby na další oblasti vyjadřujeme souvisejícími odkazy. Milník kvůli nim neduplikujeme.
 
-Každý kandidát musí mít přímou klimatickou souvislost, doložitelný a trvalý dopad, primární zdroj a význam, který není obsažen v jiném milníku. U vědeckého a politického milníku musí jít do jedné věty přesně shrnout, co po události bylo nově možné vědět, měřit nebo rozhodnout. Bez splnění těchto podmínek na osu nepatří.
+Každý kandidát musí mít přímou souvislost s poznáním změny klimatu nebo s politickou reakcí na ni, doložitelný a trvalý dopad, primární zdroj a význam, který není obsažen v jiném milníku. Obecný přínos fyzice, meteorologii, letectví, námořnictví nebo ochraně krajiny sám nestačí. Základy přístrojů a fyzikálních zákonů vysvětlujeme v příslušných odborných článcích. Na osu patří až jejich rozhodující využití nebo přínos pro poznání klimatických změn. U vědeckého a politického milníku musí jít do jedné věty přesně shrnout, co po události bylo nově možné vědět, měřit nebo rozhodnout. Bez splnění těchto podmínek na osu nepatří.
 
 Popularizační knihy, noviny, časopisy, filmy, fotografie a umění nezařazujeme mezi vědecké objevy ani formální politická rozhodnutí. Stejně tak sem nepatří aktivismus, kampaně, ceny, firemní komunikace, lobbing, jednotlivé projevy ani obecné ekologické události bez přímého klimatického rozhodnutí. Samotný vznik organizace nestačí. Musí vytvořit zásadní vědeckou možnost nebo formální politický rámec. Opakované studie a aktualizace téhož poznatku patří do odborných článků a zdrojů, nikoli mezi nové historické milníky.
 
@@ -22,13 +22,23 @@ Připravovaná větev **Kultura** bude stát vedle Vědy a Politiky a sledovat k
 
 Výběr není úplnou kronikou. Mezery posuzujeme podle chybějících kroků poznání, například měření oceánu nebo ověřování příčin změny. Počet událostí ani rovnoměrné zastoupení období a větví neurčujeme předem. Novější rok sám není důvodem k doplnění události.
 
+### Důležitost
+
+Nejprve rozhodneme, zda událost do výběru patří. Teprve potom jí přiřadíme povinnou důležitost `importance` 1, 2 nebo 3. Stupeň 3 neslouží k zachování událostí bez přímé klimatické souvislosti.
+
+- **1 — Zásadní:** hlavní objevy, přelomová pozorování, vysvětlení příčin a rozhodující klimatická rozhodnutí. Tvoří srozumitelný základní příběh vývoje poznání a politiky.
+- **2 — Důležitý:** metody rekonstrukce, soustavné klimatické záznamy, další klíčové důkazy a syntézy, které tento příběh rozšiřují o samostatný přínos.
+- **3 — Doplňující:** vybraní předchůdci a podrobnější ověření klimatických hypotéz, jejichž přínos je užší. Ani zde neopakujeme tentýž výsledek.
+
+Důležitost je redakční hodnocení přínosu pro tuto osu. Nevyjadřuje pravdivost výsledku, vědeckou jistotu, kvalitu pramene ani prestiž autora. Oporu konkrétního přínosu musí obsahovat vysvětlení a citace milníku. Úroveň neurčujeme podle stáří, vědecké oblasti nebo kvóty pro danou větev.
+
 ## 2. Událost a její datum
 
 Milník má vlastní stabilní identitu, český název vystihující událost, datum a vysvětlení významu data. Rozlišujeme provedení pokusu, zveřejnění výsledku, zahájení měření, založení instituce, přijetí dohody a její vstup v platnost. Dlouhodobý vývoj můžeme vyjádřit obdobím. Přesný den uvádíme pouze tehdy, když je doložený a pomáhá porozumět události.
 
 Rok události je nezávislý na roce vydání pramene. Bibliografie popisuje skutečně použitý dokument, jeho vydání a autora. U dodatečné zprávy o starším experimentu zůstávají obě data rozlišená. Původní názvy prací uvádíme v citacích a přehledu pramenů, vlastní nadpis milníku vysvětlí čtenáři obsah česky.
 
-Zveřejněná ID zdrojů a kotvy milníků zachováváme i při opravě data nebo názvu. Číslice v historickém ID nejsou dokladem datování.
+Zveřejněná ID zdrojů a kotvy milníků zachováváme i při opravě data nebo názvu. Číslice v historickém ID nejsou dokladem datování. Při redakčním vyřazení události zachováme její původní kotvu jako stručný odkaz na prameny, který se zobrazí pouze návštěvníkovi daného odkazu. Vyřazená událost se nezobrazuje mezi milníky ani v jejich počtech.
 
 ## 3. Vědecký milník
 
@@ -67,10 +77,14 @@ Milník propojujeme s odpovídajícími pozorováními, metodami a mechanismy na
 
 Události zobrazujeme chronologicky. Přehled období pomáhá s pohybem po stránce, vzdálenosti mezi položkami nevyjadřují délku času. Větev je pojmenovaná přímo u každého milníku. Vědecká karta uvádí také svou oblast, například Věda › Metody. Větve i vědecké oblasti rozlišujeme barvou, jejich názvy zůstávají dostupné také na mobilu a čtečkám obrazovky. Význam nesmí záviset jen na barvě.
 
-Hlavní filtr umožní zobrazit všechny události, Vědu nebo Politiku, později také Kulturu. Po volbě Vědy nabídne podfiltr Pozorování, Metody a Mechanismy s krátkým vysvětlením oblastí. Všechny oblasti obnoví celou vědeckou větev, Všechny úplnou osu. Přepnutí hlavní větve zruší výběr vědecké oblasti. Nabízíme jen větve a oblasti, které mají zpracovaný milník. Stránka sdělí počet výsledků a případný prázdný výběr. Vědecké oblasti odkazují na stejnojmenné části webu. Filtrace nemění datum, pořadí, obsah ani identitu události. Základní úplná chronologie a odkazy na milníky fungují také bez klientského JavaScriptu.
+Výchozí interaktivní pohled ukazuje pouze zásadní milníky s důležitostí 1. Volba 1–2 přidá důležité milníky a 1–3 celý redakční výběr. Důležitost zobrazujeme také textem a číslem na každé kartě. Nižší číslo vždy znamená vyšší důležitost.
+
+Filtr větve nabízí Všechny, Vědu nebo Politiku, později také Kulturu. Po volbě Vědy nabídne podfiltr Pozorování, Metody a Mechanismy s krátkým vysvětlením oblastí. Důležitost se kombinuje s větví a oblastí. Přepnutí větve zruší pouze výběr vědecké oblasti, důležitost zachová. Volba Všechny zahrne všechny větve a Všechny oblasti celou Vědu v právě zvolené důležitosti. Samostatné tlačítko Zobrazit celou osu zruší všechna omezení.
+
+Nabízíme jen větve a oblasti se zpracovanými milníky. Počty u voleb odpovídají ostatním aktivním filtrům, nulový výsledek má srozumitelné vysvětlení a možnost zrušit filtry. Vědecké oblasti odkazují na stejnojmenné části webu. Filtrace nemění datum, pořadí, obsah ani identitu události. Přímý odkaz na zachovaný milník při otevření stránky i při změně kotvy zruší všechna omezení a zobrazí cíl. Statické HTML obsahuje celý výběr, takže chronologie všech tří důležitostí a odkazy fungují i bez JavaScriptu.
 
 ## 7. Kontrola před zveřejněním
 
 Nejprve ověříme výběr, data, význam, oporu tvrzení a zachování souvislostí podle tohoto standardu. Potom provedeme samostatný redakční průchod podle [STYLE.md](STYLE.md). Pracovní poznámky k účelu odstavců a jejich opravám nepatří na veřejnou osu.
 
-Technické kontroly musí zachytit chybějící nebo duplicitní identitu, neplatnou oblast nebo její nadřazenou větev, nedohledatelný zdroj, chybné řazení a rozbité místní odkazy. Testy nevyžadují pevný počet milníků ani minimální počet slov. V prohlížeči ověříme obě úrovně filtrů, zrušení podfiltru při změně větve, návrat na úplnou osu, přímý odkaz na milník, ovládání klávesnicí a široké i mobilní rozvržení podle [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md).
+Technické kontroly musí zachytit chybějící nebo duplicitní identitu, neplatnou oblast nebo její nadřazenou větev, chybějící či neplatnou důležitost, nedohledatelný zdroj, chybné řazení a rozbité místní odkazy. Testy nevyžadují pevný počet milníků ani minimální počet slov. V prohlížeči ověříme výchozí stupeň 1, rozšíření na 1–2 a 1–3, kombinace s oběma úrovněmi tematických filtrů, zrušení podfiltru při změně větve, návrat na úplnou osu, přímý odkaz na skrytý i vyřazený milník, ovládání klávesnicí a široké i mobilní rozvržení podle [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md).

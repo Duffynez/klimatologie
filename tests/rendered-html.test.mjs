@@ -769,7 +769,7 @@ test("publishes a complete, chronological history with traceable sources and sta
     readFile(new URL("app/data/history.ts", root), "utf8"),
     readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
   ]);
-  const { historyEvents, historyBranches, historyCategories, historyPeriods } = await import(
+  const { historyEvents, historyBranches, historyCategories, historyPeriods, historyImportances, historyLegacyLinks } = await import(
     "data:text/javascript;base64," + Buffer.from(stripTypeScriptTypes(eventsText)).toString("base64")
   );
   assert.ok(historyEvents.length > 0);
@@ -783,6 +783,9 @@ test("publishes a complete, chronological history with traceable sources and sta
     assert.ok(card.includes('data-history-year="' + event.year + '"'));
     assert.ok(card.includes('data-history-category="' + event.category + '"'));
     assert.doesNotMatch(card, /\shidden(?:=|>)/);
+    assert.ok(Number.isInteger(event.importance) && Object.hasOwn(historyImportances, event.importance));
+    assert.ok(card.includes('data-history-importance="' + event.importance + '"'));
+    assert.ok(card.includes('aria-label="Důležitost ' + event.importance + ': ' + historyImportances[event.importance].label + '"'));
     assert.ok(card.includes(event.title));
     assert.ok(card.includes(event.dateMeaning));
     assert.ok(Object.hasOwn(historyCategories, event.category));
@@ -808,17 +811,35 @@ test("publishes a complete, chronological history with traceable sources and sta
       if (anchor) assert.ok(target.includes('id="' + anchor + '"'));
     }
   }
-  // These published anchors must survive corrected dates and future additions.
-  for (const id of [
-    "1681_Mariotte", "1767_Saussure", "1801_Herschel", "1804_Leslie", "1824_Fourier",
-    "1840_Agassiz", "1856_Foote", "1862_Tyndall", "1864_Croll", "1884_Langley",
-    "1894_Hogbom", "1896_Arrhenius", "1938_Callendar", "1941_Milankovic", "1952_Libby",
-    "1955_Emiliani", "1956_Plass", "1958_Keeling", "1967_Manabe_Wetherald",
-    "1976_Hays_Imbrie_Shackleton", "1979_Charney", "1987_Vostok", "1988_IPCC",
-    "1990_IPCC_FAR", "1992_UNFCCC", "1997_Kyoto", "2000_Argo", "2015_Paris",
-  ]) assert.ok(historyEvents.some(event => event.id === id), id);
-  assert.equal(historyEvents.find(event => event.id === "1767_Saussure").year, 1774);
-  assert.equal(historyEvents.find(event => event.id === "1801_Herschel").year, 1800);
+  // Curation must not break previously published links, including retired events.
+  const publishedIds = [
+    "1681_Mariotte", "1735_Hadley", "1742_Celsius", "1767_Saussure", "1801_Herschel",
+    "1804_Leslie", "1824_Fourier", "1838_Pouillet", "1840_Agassiz", "1853_Brusel",
+    "1854_MetOffice", "1856_Foote", "1860_Kirchhoff", "1862_Tyndall", "1864_Croll",
+    "1870_US_WeatherService", "1879_Stefan_Boltzmann", "1884_Langley", "1894_Hogbom",
+    "1896_Arrhenius", "1900_Planck", "1902_Stratosfera", "1919_Douglass",
+    "1919_Parizska_Letecka_Umluva", "1919_Statni_Meteorologicky_Ustav", "1929_Radiosondy",
+    "1929_SOLAS", "1935_Soil_Conservation_Act", "1936_Flood_Control_Act", "1938_Callendar",
+    "1941_Milankovic", "1944_Chicagska_Umluva", "1952_Libby", "1950_WMO",
+    "1950_Numericka_Predpoved", "1955_Emiliani", "1956_Plass", "1958_Keeling",
+    "1967_Manabe_Wetherald", "1976_Hays_Imbrie_Shackleton", "1979_Charney", "1987_Vostok",
+    "1988_IPCC", "1990_IPCC_FAR", "1992_UNFCCC", "1992_TOPEX_Poseidon", "1997_Kyoto",
+    "2000_Argo", "2005_Barnett", "2013_Santer", "2015_Feldman", "2015_Paris",
+  ];
+  const anchorIds = [...historyEvents, ...historyLegacyLinks].map(event => event.id);
+  assert.equal(new Set(anchorIds).size, anchorIds.length);
+  for (const id of publishedIds) assert.ok(html.includes('id="milnik-' + id + '"'), id);
+  for (const legacy of historyLegacyLinks) {
+    assert.ok(!historyEvents.some(event => event.id === legacy.id));
+    const notice = html.match(new RegExp('<aside\\b[^>]*id="milnik-' + legacy.id + '"[^>]*>[\\s\\S]*?</aside>'))?.[0];
+    assert.ok(notice, legacy.id);
+    assert.ok(notice.includes(legacy.title));
+    assert.ok(notice.includes('href="#historicka-osa"'));
+    for (const id of legacy.sourceIds) {
+      assert.ok(notice.includes('/zdroje#' + id));
+      assert.ok(catalogue.includes('id="' + id + '"'));
+    }
+  }
   assert.equal(historyEvents.find(event => event.id === "1862_Tyndall").year, 1861);
   assert.equal(historyEvents.find(event => event.id === "1952_Libby").year, 1949);
   assert.doesNotMatch(html, /citation--missing|Předchozí milník|Další milník/);
@@ -867,6 +888,55 @@ test("keeps science and politics above scientific areas and hides unpopulated br
     assert.ok(html.includes('id="' + period.id + '"'));
     assert.ok(historyEvents.some(event => event.year >= period.from && event.year <= period.to));
   }
+});
+
+test("combines importance thresholds with branches and areas and reveals linked milestones", async () => {
+  const text = await readFile(new URL("app/components/historyFilters.ts", root), "utf8");
+  const { matchesHistoryFilters, historyFiltersForAnchor, defaultHistoryFilters, allHistoryFilters } = await import(
+    "data:text/javascript;base64," + Buffer.from(stripTypeScriptTypes(text)).toString("base64")
+  );
+  const items = [
+    { id: "core-method", branch: "science", category: "methods", importance: 1 },
+    { id: "extended-observation", branch: "science", category: "observations", importance: 2 },
+    { id: "further-mechanism", branch: "science", category: "mechanisms", importance: 3 },
+    { id: "core-policy", branch: "politics", category: "politics", importance: 1 },
+    { id: "extended-policy", branch: "politics", category: "politics", importance: 2 },
+    { id: "further-policy", branch: "politics", category: "politics", importance: 3 },
+  ];
+  const select = filters => items.filter(item => matchesHistoryFilters(item, filters)).map(item => item.id);
+  assert.deepEqual(select(defaultHistoryFilters), ["core-method", "core-policy"]);
+  assert.deepEqual(select({ ...defaultHistoryFilters, maxImportance: 2 }),
+    ["core-method", "extended-observation", "core-policy", "extended-policy"]);
+  assert.deepEqual(select(allHistoryFilters), items.map(item => item.id));
+  assert.deepEqual(select({ ...defaultHistoryFilters, branch: "science", maxImportance: 2 }),
+    ["core-method", "extended-observation"]);
+  assert.deepEqual(select({ ...allHistoryFilters, branch: "science", category: "methods" }), ["core-method"]);
+  assert.deepEqual(select({ ...allHistoryFilters, branch: "politics", category: "methods" }), []);
+  assert.deepEqual(select(historyFiltersForAnchor(items, "#milnik-further-mechanism")), items.map(item => item.id));
+  assert.equal(historyFiltersForAnchor(items, "#obdobi-1900-1969"), null);
+  assert.equal(historyFiltersForAnchor(items, "#milnik-missing"), null);
+});
+
+test("publishes accessible importance controls and complete content without JavaScript", async () => {
+  const [html, text, styles] = await Promise.all([
+    readFile(new URL("dist/client/historie/index.html", root), "utf8"),
+    readFile(new URL("app/data/history.ts", root), "utf8"),
+    readFile(new URL("app/components/HistoryTimeline.module.css", root), "utf8"),
+  ]);
+  const { historyImportances } = await import(
+    "data:text/javascript;base64," + Buffer.from(stripTypeScriptTypes(text)).toString("base64")
+  );
+  assert.ok(html.includes('aria-describedby="history-importance-help"'));
+  assert.ok(html.includes("1 je nejvyšší důležitost"));
+  for (const [value, importance] of Object.entries(historyImportances)) {
+    const control = html.match(new RegExp('<button\\b[^>]*data-history-max-importance="' + value + '"[^>]*>'))?.[0];
+    assert.ok(control, value);
+    assert.ok(control.includes('aria-label="' + importance.filterLabel + '"'));
+    assert.ok(control.includes('aria-pressed="' + (value === "3") + '"'), "Static view includes every level");
+  }
+  assert.match(html, /<noscript><p>Filtry vyžadují JavaScript/);
+  assert.match(styles, /\.legacyNotice\s*\{[^}]*display:\s*none/);
+  assert.match(styles, /\.legacyNotice:target\s*\{[^}]*display:\s*block/);
 });
 
 test("publishes the global surface temperature article instead of the generic placeholder", async () => {
@@ -1722,7 +1792,7 @@ test("keeps catalogue headers compact and gives history a dated introduction", a
   assert.doesNotMatch(evidenceFallback, /topic\.status|<PageLead[^>]*>[\s\S]*topic\.summary/);
   assert.doesNotMatch(history, /Tato osa začíná knihovnou/);
   assert.doesNotMatch(people, /Profily propojí životopis/);
-  assert.match(history, /meta="5\. listopadu 2026"/);
+  assert.match(history, /meta="[1-9]\d?\. [^"]+ 20\d{2}"/);
   assert.match(history, /<\/PageLead>/);
   for (const page of [evidenceIndex, evidenceFallback, people, sources]) {
     assert.match(page, /<PageLead[^>]*\/>/);

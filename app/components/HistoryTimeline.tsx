@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useState, useSyncExternalStore, type ReactNode } from "react";
 import Link from "next/link";
-import type { HistoryBranch, HistoryCategory, HistoryPeriod } from "../data/history";
+import type { HistoryBranch, HistoryCategory, HistoryImportance, HistoryPeriod } from "../data/history";
+import { allHistoryFilters, defaultHistoryFilters, historyFiltersForAnchor, matchesHistoryFilters } from "./historyFilters";
 import styles from "./HistoryTimeline.module.css";
 
 export type HistoryTimelineItem = {
@@ -10,51 +11,79 @@ export type HistoryTimelineItem = {
   year: number;
   branch: HistoryBranch;
   category: HistoryCategory;
+  importance: HistoryImportance;
   content: ReactNode;
 };
 
-export function HistoryTimeline({ items, periods, branches, categories }: {
+const subscribeToHydration = () => () => {};
+const clientSnapshot = () => true;
+const serverSnapshot = () => false;
+
+export function HistoryTimeline({ items, periods, branches, categories, importances }: {
   items: HistoryTimelineItem[];
   periods: HistoryPeriod[];
   branches: { value: HistoryBranch; label: string }[];
   categories: { value: HistoryCategory; branch: HistoryBranch; label: string; description: string; href: string | null }[];
+  importances: { value: HistoryImportance; label: string; description: string; filterLabel: string }[];
 }) {
-  const [branch, setBranch] = useState<HistoryBranch | "all">("all");
-  const [category, setCategory] = useState<HistoryCategory | "all">("all");
-  const matches = (item: HistoryTimelineItem) =>
-    (branch === "all" || item.branch === branch) && (category === "all" || item.category === category);
+  const [selection, setSelection] = useState(defaultHistoryFilters);
+  // Static HTML remains complete. Once hydrated, the overview starts with level 1.
+  const hydrated = useSyncExternalStore(subscribeToHydration, clientSnapshot, serverSnapshot);
+  const filters = hydrated ? selection : allHistoryFilters;
+  const { branch, category, maxImportance } = filters;
+  const matches = (item: HistoryTimelineItem) => matchesHistoryFilters(item, filters);
   const activeCategory = categories.find(option => option.value === category);
   const visibleItems = items.filter(matches);
   const visiblePeriods = periods.filter(period =>
     visibleItems.some(item => item.year >= period.from && item.year <= period.to));
+  const countFor = (overrides: Partial<typeof filters>) =>
+    items.filter(item => matchesHistoryFilters(item, { ...filters, ...overrides })).length;
 
   const selectBranch = (value: HistoryBranch | "all") => {
-    setBranch(value);
-    setCategory("all");
+    setSelection(current => ({ ...current, branch: value, category: "all" }));
   };
-  const reset = () => selectBranch("all");
+  const reset = () => setSelection(allHistoryFilters);
 
   useEffect(() => {
     const revealLinkedMilestone = () => {
-      const anchor = window.location.hash.slice(1);
-      if (!items.some(item => `milnik-${item.id}` === anchor)) return;
-      setBranch("all");
-      setCategory("all");
-      requestAnimationFrame(() => document.getElementById(anchor)?.scrollIntoView());
+      const linkedFilters = historyFiltersForAnchor(items, window.location.hash);
+      if (!linkedFilters) return;
+      setSelection(linkedFilters);
+      requestAnimationFrame(() => document.getElementById(window.location.hash.slice(1))?.scrollIntoView());
     };
+    revealLinkedMilestone();
     window.addEventListener("hashchange", revealLinkedMilestone);
     return () => window.removeEventListener("hashchange", revealLinkedMilestone);
   }, [items]);
 
   return (
-    <div className={styles.timeline}>
+    <div id="historicka-osa" className={styles.timeline}>
       <div className={styles.filters} role="region" aria-label="Filtry historické osy">
+        <fieldset className={styles.importances} aria-describedby="history-importance-help">
+          <legend>Důležitost milníků</legend>
+          <p id="history-importance-help" className={styles.filterHelp}>
+            1 je nejvyšší důležitost. Stupně vyjadřují redakční výběr pro historii změny klimatu.
+          </p>
+          <div className={styles.importanceChoices}>
+            {importances.map(option => (
+              <button key={option.value} type="button" className={styles.importanceChoice}
+                data-history-max-importance={option.value} aria-label={option.filterLabel}
+                aria-pressed={maxImportance === option.value}
+                onClick={() => setSelection(current => ({ ...current, maxImportance: option.value }))}>
+                {option.filterLabel}
+                <span className={styles.choiceCount} aria-hidden="true">
+                  {countFor({ maxImportance: option.value })}
+                </span>
+              </button>
+            ))}
+          </div>
+        </fieldset>
         <fieldset className={styles.branches}>
           <legend>Část historie</legend>
           <div className={styles.branchChoices}>
             <button type="button" className={styles.branchChoice} data-history-branch="all"
-              aria-label="Všechny" aria-pressed={branch === "all"} onClick={reset}>
-              Všechny <span className={styles.choiceCount} aria-hidden="true">{items.length}</span>
+              aria-label="Všechny" aria-pressed={branch === "all"} onClick={() => selectBranch("all")}>
+              Všechny <span className={styles.choiceCount} aria-hidden="true">{countFor({ branch: "all", category: "all" })}</span>
             </button>
             {branches.map(option => (
               <button key={option.value} type="button" className={styles.branchChoice}
@@ -62,7 +91,7 @@ export function HistoryTimeline({ items, periods, branches, categories }: {
                 aria-pressed={branch === option.value} onClick={() => selectBranch(option.value)}>
                 {option.label}{" "}
                 <span className={styles.choiceCount} aria-hidden="true">
-                  {items.filter(item => item.branch === option.value).length}
+                  {countFor({ branch: option.value, category: "all" })}
                 </span>
               </button>
             ))}
@@ -72,11 +101,12 @@ export function HistoryTimeline({ items, periods, branches, categories }: {
           <legend>Oblast vědy</legend>
           <div className={styles.categoryChoices}>
             <button type="button" className={styles.categoryChoice} data-history-category="all"
-              aria-label="Všechny oblasti" aria-pressed={category === "all"} onClick={() => setCategory("all")}>
+              aria-label="Všechny oblasti" aria-pressed={category === "all"}
+              onClick={() => setSelection(current => ({ ...current, category: "all" }))}>
               <span className={styles.choiceHeading}>
                 <span>Všechny oblasti</span>
                 <span className={styles.choiceCount} aria-hidden="true">
-                  {items.filter(item => item.branch === "science").length}
+                  {countFor({ branch: "science", category: "all" })}
                 </span>
               </span>
               <span className={styles.choiceDescription}>Celý vývoj vědeckého poznání</span>
@@ -85,11 +115,12 @@ export function HistoryTimeline({ items, periods, branches, categories }: {
               <button key={option.value} type="button" className={styles.categoryChoice}
                 data-history-category={option.value} aria-label={option.label}
                 aria-describedby={`history-area-${option.value}-description`}
-                aria-pressed={category === option.value} onClick={() => setCategory(option.value)}>
+                aria-pressed={category === option.value}
+                onClick={() => setSelection(current => ({ ...current, category: option.value }))}>
                 <span className={styles.choiceHeading}>
                   <span>{option.label}</span>
                   <span className={styles.choiceCount} aria-hidden="true">
-                    {items.filter(item => item.category === option.value).length}
+                    {countFor({ branch: "science", category: option.value })}
                   </span>
                 </span>
                 <span id={`history-area-${option.value}-description`} className={styles.choiceDescription}>
@@ -102,13 +133,14 @@ export function HistoryTimeline({ items, periods, branches, categories }: {
         <p className={styles.count} role="status" aria-live="polite" aria-atomic="true">
           Zobrazeno {visibleItems.length} z {items.length} milníků
         </p>
+        <button type="button" className={styles.reset} onClick={reset}>Zobrazit celou osu</button>
         {activeCategory?.href && (
           <Link className={styles.categoryLink} href={activeCategory.href}>
             Prozkoumat {activeCategory.label.toLocaleLowerCase("cs")} →
           </Link>
         )}
       </div>
-      <noscript><p>Filtry vyžadují JavaScript. Níže je celá chronologická osa.</p></noscript>
+      <noscript><p>Filtry vyžadují JavaScript. Níže je celý výběr milníků všech tří důležitostí.</p></noscript>
 
       {visibleItems.length ? (
         <nav className={styles.periodNav} aria-label="Období historické osy">
@@ -117,8 +149,8 @@ export function HistoryTimeline({ items, periods, branches, categories }: {
         </nav>
       ) : (
         <div className={styles.empty}>
-          <p>V této oblasti zatím není žádný milník.</p>
-          <button type="button" onClick={reset}>Zobrazit celou osu</button>
+          <p>Této kombinaci důležitosti a oblasti neodpovídá žádný milník.</p>
+          <button type="button" onClick={reset}>Zrušit filtry</button>
         </div>
       )}
 
@@ -131,7 +163,7 @@ export function HistoryTimeline({ items, periods, branches, categories }: {
             {items.filter(item => item.year >= period.from && item.year <= period.to).map(item => (
               <li key={item.id} id={`milnik-${item.id}`} className={styles.event}
                 data-history-year={item.year} data-history-branch={item.branch}
-                data-history-category={item.category} hidden={!matches(item)}>
+                data-history-category={item.category} data-history-importance={item.importance} hidden={!matches(item)}>
                 {item.content}
               </li>
             ))}

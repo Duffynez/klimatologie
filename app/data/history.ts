@@ -40,6 +40,14 @@ export const historyCategories = {
 } as const satisfies Record<string, { branch: HistoryBranch; label: string; description: string; href: string | null }>;
 
 export type HistoryCategory = keyof typeof historyCategories;
+export type HistoryImportance = 1 | 2 | 3;
+
+export const historyImportances = {
+  1: { label: "Zásadní", description: "Hlavní objevy a klimatická rozhodnutí", filterLabel: "1 · Zásadní milníky" },
+  2: { label: "Důležitý", description: "Důležité metody, záznamy a další důkazy", filterLabel: "1–2 · Rozšířený přehled" },
+  3: { label: "Doplňující", description: "Vybraní předchůdci a podrobnější ověření", filterLabel: "1–3 · Celý výběr" },
+} as const satisfies Record<HistoryImportance, { label: string; description: string; filterLabel: string }>;
+
 export type HistoryReference = { sourceId: string; locator?: string };
 export type HistoryEvent = {
   id: string;
@@ -47,6 +55,7 @@ export type HistoryEvent = {
   dateMeaning: string;
   title: string;
   category: HistoryCategory;
+  importance: HistoryImportance;
   paragraphs: { text: string; references: HistoryReference[] }[];
   relatedLinks: { href: string; label: string }[];
 };
@@ -60,213 +69,199 @@ export const historyPeriods: HistoryPeriod[] = [
   { id: "obdobi-od-2000", label: "Od roku 2000", from: 2000, to: 9999 },
 ];
 
-// IDs preserve published milestone anchors even when the event date is corrected.
-export const historyEvents: HistoryEvent[] = [
+// Published anchors for events outside the curated timeline still lead to their sources.
+export const historyLegacyLinks: { id: string; title: string; sourceIds: string[] }[] = [
   {
     id: "1681_Mariotte",
-    year: 1681,
-    dateMeaning: "První vydání pojednání",
     title: "Sklo propouští sluneční a tepelné záření rozdílně",
-    category: "mechanisms",
-    paragraphs: [
-      {
-        text: "Edme Mariotte porovnával průchod slunečního záření a sálavého tepla sklem. Sluneční paprsky sklem procházely, zatímco přenos sálavého tepla ohně sklo výrazně omezilo. Rozdíl ukazoval, že při zkoumání záření záleží také na jeho zdroji a na materiálu, kterým prochází.",
-        references: [
-          {
-            sourceId: "1681_Mariotte",
-            locator: "II. část, s. 288 v souborném vydání z roku 1717"
-          }
-        ]
-      },
-      {
-        text: "Dobový pokus ještě nerozlišoval vlnové délky ani vlastnosti jednotlivých plynů. K laboratornímu měření toho, jak tepelné záření pohlcuje plyn, se dostaneme u Tyndallovy práce z roku 1861. Ta dovolila zkoumat přímo látky tvořící atmosféru.",
-        references: [
-          {
-            sourceId: "1862_Tyndall",
-            locator: "s. 1–36"
-          }
-        ]
-      }
-    ],
-    relatedLinks: [
-      {
-        href: "/metody/absorpcni-spektroskopie/",
-        label: "Jak měříme pohlcování záření"
-      }
+    sourceIds: [
+      "1681_Mariotte",
+      "1862_Tyndall"
     ]
   },
   {
     id: "1735_Hadley",
-    year: 1735,
-    dateMeaning: "Zveřejnění vysvětlení pasátů",
     title: "Ohřev a rotace Země vysvětlují pasáty",
-    category: "mechanisms",
-    paragraphs: [
-      {
-        text: "George Hadley hledal vysvětlení pasátů, stálých větrů vanoucích v tropech od východu. Uvažoval, že silný sluneční ohřev u rovníku vede ke stoupání vzduchu. Na jeho místo přitéká při povrchu vzduch z vyšších zeměpisných šířek. Směr tohoto proudění spojil s rotací Země.",
-        references: [
-          {
-            sourceId: "1735_Hadley",
-            locator: "s. 58–61"
-          }
-        ]
-      },
-      {
-        text: "Povrch u rovníku urazí při jedné otočce Země větší vzdálenost než povrch blíže k pólům. Hadley tím vysvětloval, proč se vzduch proudící k rovníku vůči povrchu odchyluje směrem na západ. Pravidelný vzorec větrů tak dostal fyzikální vysvětlení spojující nerovnoměrný ohřev a pohyb na rotující planetě.",
-        references: [
-          {
-            sourceId: "1735_Hadley",
-            locator: "s. 60–62"
-          }
-        ]
-      }
-    ],
-    relatedLinks: [
-      {
-        href: "/mechanismy/vnitrni-promenlivost-atmosfery-a-oceanu/",
-        label: "Jak proudění přerozděluje teplo"
-      }
+    sourceIds: [
+      "1735_Hadley"
     ]
   },
   {
     id: "1742_Celsius",
-    year: 1742,
-    dateMeaning: "Zveřejnění práce o teplotní stupnici",
     title: "Teplotní stupnice dostává reprodukovatelné pevné body",
-    category: "methods",
-    paragraphs: [
-      {
-        text: "Anders Celsius zkoumal, jak vytvořit teplotní stupnici, kterou lze zopakovat na různých teploměrech. Vycházel z teploty tajícího sněhu a vroucí vody. Pokusy ověřoval stálost prvního bodu a závislost druhého na tlaku vzduchu, měřeném barometrem.",
-        references: [
-          {
-            sourceId: "1894_Celsius_Thermometrie",
-            locator: "s. 117–122, překlad práce z roku 1742"
-          }
-        ]
-      },
-      {
-        text: "Mezi oba body vložil sto dílků. Jeho původní stupnice měla u varu nulu a u tání sněhu sto, tedy opačné číslování než dnes. Podstatným přínosem byl popsaný postup, podle kterého bylo možné teploměry nastavit a jejich údaje porovnávat. Takové společné měřítko je základem srovnatelných teplotních záznamů.",
-        references: [
-          {
-            sourceId: "1894_Celsius_Thermometrie",
-            locator: "s. 122–123"
-          }
-        ]
-      }
-    ],
-    relatedLinks: [
-      {
-        href: "/metody/odporova-termometrie-a-termistory/",
-        label: "Jak dnes měříme teplotu"
-      }
+    sourceIds: [
+      "1894_Celsius_Thermometrie"
     ]
   },
   {
     id: "1767_Saussure",
-    year: 1774,
-    dateMeaning: "Pokusy na Cramontu a v Courmayeur",
     title: "Sluneční ohřev ve skleněné schránce",
-    category: "methods",
-    paragraphs: [
-      {
-        text: "Horace-Bénédict de Saussure porovnával sluneční ohřev na hoře Cramont a v níže položeném Courmayeur. Použil tmavou izolovanou schránku se skleněnými kryty a teploměrem, které říkal heliotermometr. Uvnitř dosahoval vysokých teplot i v chladném horském vzduchu. Pokus pomáhal rozlišit ohřev sluncem od teploty okolního vzduchu.",
-        references: [
-          {
-            sourceId: "1767_Saussure",
-            locator: "sv. II, kap. XXXV, s. 347 a násl."
-          }
-        ]
-      },
-      {
-        text: "Saussure tyto pokusy datuje do roku 1774 v knize vydané roku 1786. Fourier se později na jeho přístroj výslovně odvolal při výkladu teploty Země. Ohřev uzavřené schránky ale sám neurčuje, jak záření pohlcují atmosférické plyny. K tomu bylo potřeba samostatné měření jejich vlastností.",
-        references: [
-          {
-            sourceId: "1767_Saussure",
-            locator: "sv. II, kap. XXXV"
-          },
-          {
-            sourceId: "1824_Fourier",
-            locator: "pasáž o Saussurově přístroji"
-          }
-        ]
-      }
-    ],
-    relatedLinks: [
-      {
-        href: "/mechanismy/energeticka-bilance-zeme/",
-        label: "Co určuje energetickou bilanci Země"
-      }
+    sourceIds: [
+      "1767_Saussure",
+      "1824_Fourier"
     ]
   },
   {
     id: "1801_Herschel",
-    year: 1800,
-    dateMeaning: "Zveřejnění práce",
     title: "Teploměr odhaluje neviditelné sluneční záření",
-    category: "methods",
-    paragraphs: [
-      {
-        text: "William Herschel rozložil sluneční světlo hranolem a teploměry porovnával zahřívání v různých barvách. Měřitelné zahřívání zjistil také za červeným okrajem, kde už žádné světlo neviděl. Zkoumal tak část slunečního záření, kterou oko nezachytí a kterou dnes označujeme jako infračervenou.",
-        references: [
-          {
-            sourceId: "1801_Herschel"
-          }
-        ]
-      },
-      {
-        text: "Pokus ukázal, že viditelná jasnost není úplným měřítkem přenosu energie. Pro zkoumání tepelného záření bylo možné použít teplotní odezvu přístroje. Herschelova měření se týkala slunečního spektra, nikoli ještě množství energie, které celá Země vyzařuje do vesmíru.",
-        references: [
-          {
-            sourceId: "1801_Herschel"
-          }
-        ]
-      }
-    ],
-    relatedLinks: [
-      {
-        href: "/metody/pasivni-infracervena-radiometrie/",
-        label: "Jak měříme infračervené záření"
-      }
+    sourceIds: [
+      "1801_Herschel"
     ]
   },
   {
     id: "1804_Leslie",
-    year: 1804,
-    dateMeaning: "Vydání knihy",
     title: "Stejně teplé povrchy vyzařují různě",
-    category: "mechanisms",
-    paragraphs: [
-      {
-        text: "John Leslie naplnil kovovou kostku horkou vodou a porovnával záření jejích různě upravených stěn. Jednu ponechal lesklou, jinou pokryl papírem nebo sazemi. Teplotní odezvu zachycoval citlivým přístrojem. Přestože stěny ohřívala stejná voda, jejich povrchy předávaly zářením různé množství energie.",
-        references: [
-          {
-            sourceId: "1804_Leslie",
-            locator: "s. 6–8, popis přístroje a povrchů"
-          }
-        ]
-      },
-      {
-        text: "Výsledek oddělil dvě vlastnosti, které nelze zaměňovat: teplotu tělesa a schopnost povrchu vyzařovat. Tuto schopnost dnes vyjadřuje emisivita. Když určujeme teplotu z naměřeného záření, musíme tedy brát v úvahu i vlastnosti pozorovaného povrchu.",
-        references: [
-          {
-            sourceId: "1804_Leslie"
-          }
-        ]
-      }
-    ],
-    relatedLinks: [
-      {
-        href: "/metody/pasivni-infracervena-radiometrie/",
-        label: "Jak záření převádíme na teplotu"
-      }
+    sourceIds: [
+      "1804_Leslie"
     ]
   },
+  {
+    id: "1838_Pouillet",
+    title: "Přístroj měří energii přicházející ze Slunce",
+    sourceIds: [
+      "1838_Pouillet"
+    ]
+  },
+  {
+    id: "1853_Brusel",
+    title: "Státní zástupci navrhují společná námořní pozorování",
+    sourceIds: [
+      "1853_Brussels_Conference"
+    ]
+  },
+  {
+    id: "1854_MetOffice",
+    title: "Británie zakládá státní meteorologickou službu",
+    sourceIds: [
+      "WEB_MetOffice_History",
+      "1866_BoardOfTrade_MeteorologicalReport"
+    ]
+  },
+  {
+    id: "1860_Kirchhoff",
+    title: "Pohlcování a vyzařování spojuje jeden zákon",
+    sourceIds: [
+      "1901_Kirchhoff_Radiation_Translation"
+    ]
+  },
+  {
+    id: "1870_US_WeatherService",
+    title: "Zákon spojuje státní měření počasí s výstrahami před bouřemi",
+    sourceIds: [
+      "1870_US_WeatherService_Resolution",
+      "WEB_NWS_History"
+    ]
+  },
+  {
+    id: "1879_Stefan_Boltzmann",
+    title: "Teplota určuje celkový výkon tepelného záření",
+    sourceIds: [
+      "1879_Stefan",
+      "1884_Boltzmann"
+    ]
+  },
+  {
+    id: "1884_Langley",
+    title: "Bolometr mapuje sluneční energii ve spektru",
+    sourceIds: [
+      "1884_Langley",
+      "1896_Arrhenius"
+    ]
+  },
+  {
+    id: "1900_Planck",
+    title: "Zákon popisuje tepelné záření po vlnových délkách",
+    sourceIds: [
+      "DOI_10_1002_andp_19013090310"
+    ]
+  },
+  {
+    id: "1902_Stratosfera",
+    title: "Balónová měření odhalují stratosféru",
+    sourceIds: [
+      "1902_Teisserenc_de_Bort",
+      "1902_Assmann"
+    ]
+  },
+  {
+    id: "1919_Parizska_Letecka_Umluva",
+    title: "Letecká úmluva zahrnuje výměnu meteorologických údajů",
+    sourceIds: [
+      "1919_Paris_AirNavigation",
+      "WEB_ICAO_ParisConvention_History"
+    ]
+  },
+  {
+    id: "1919_Statni_Meteorologicky_Ustav",
+    title: "Československo zřizuje státní meteorologický ústav",
+    sourceIds: [
+      "WEB_ACR_MeteorologicalService_History",
+      "1919_Nemec_MeteorologicalInstitute"
+    ]
+  },
+  {
+    id: "1929_Radiosondy",
+    title: "Balón vysílá měření atmosféry rádiem",
+    sourceIds: [
+      "WEB_nist_gov_Tuning_into_Weather_Forecasting_NIST_be922613",
+      "2015_Roshydromet_Radiosonde",
+      "1938_Diamond_Radiometeorography"
+    ]
+  },
+  {
+    id: "1929_SOLAS",
+    title: "Námořní úmluva propojuje lodní měření a výstrahy",
+    sourceIds: [
+      "1929_SOLAS"
+    ]
+  },
+  {
+    id: "1935_Soil_Conservation_Act",
+    title: "USA přijímají trvalý program ochrany půdy",
+    sourceIds: [
+      "1935_SoilConservationAct",
+      "WEB_NRCS_History"
+    ]
+  },
+  {
+    id: "1936_Flood_Control_Act",
+    title: "Ochrana před povodněmi se stává federálním úkolem",
+    sourceIds: [
+      "1936_FloodControlAct"
+    ]
+  },
+  {
+    id: "1944_Chicagska_Umluva",
+    title: "Chicagská úmluva vytváří rámec pro společná meteorologická pravidla",
+    sourceIds: [
+      "1944_ChicagoConvention"
+    ]
+  },
+  {
+    id: "1950_WMO",
+    title: "Vzniká Světová meteorologická organizace",
+    sourceIds: [
+      "1947_WMO_Convention"
+    ]
+  },
+  {
+    id: "1950_Numericka_Predpoved",
+    title: "Počítač počítá vývoj počasí z fyzikálních rovnic",
+    sourceIds: [
+      "1950_Charney_Fjortoft_von_Neumann"
+    ]
+  }
+];
+
+// IDs preserve published milestone anchors even when the event date is corrected.
+export const historyEvents: HistoryEvent[] = [
   {
     id: "1824_Fourier",
     year: 1824,
     dateMeaning: "Zveřejnění práce",
     title: "Teplota Země jako otázka příjmu a ztrát tepla",
     category: "mechanisms",
+    importance: 1,
     paragraphs: [
       {
         text: "Joseph Fourier zkoumal, čím je určena teplota zemského povrchu. Rozlišoval sluneční ohřev, vnitřní teplo Země a výměnu tepla s okolním prostorem. Atmosféře přisuzoval vliv na únik tepla a při vysvětlení použil i Saussurův pokus se zasklenou schránkou.",
@@ -293,48 +288,12 @@ export const historyEvents: HistoryEvent[] = [
     ]
   },
   {
-    id: "1838_Pouillet",
-    year: 1838,
-    dateMeaning: "Zveřejnění měření slunečního tepla",
-    title: "Přístroj měří energii přicházející ze Slunce",
-    category: "methods",
-    paragraphs: [
-      {
-        text: "Claude Pouillet měřil sluneční záření přístrojem zvaným pyrheliometr. Jeho začerněná nádobka s vodou se na slunci zahřívala. Z růstu teploty, množství vody, vlastností nádobky a doby osvitu vypočítal energii dopadající na jednotku plochy za daný čas. Zahřívání porovnával s měřením ve stínu.",
-        references: [
-          {
-            sourceId: "1838_Pouillet",
-            locator: "s. 2–4, popis přístroje a výpočtu"
-          }
-        ]
-      },
-      {
-        text: "Při různých výškách Slunce procházejí paprsky různě dlouhou cestou atmosférou. Pouillet využil tuto změnu k odhadu zeslabení záření vzduchem a množství energie přicházející nad atmosféru. Sluneční ohřev Země tak začal vyjadřovat měřitelným přísunem energie, který lze použít v tepelné bilanci planety.",
-        references: [
-          {
-            sourceId: "1838_Pouillet",
-            locator: "s. 5–9, odhad propustnosti atmosféry a příjmu Země"
-          }
-        ]
-      }
-    ],
-    relatedLinks: [
-      {
-        href: "/metody/mereni-radiacnich-toku/",
-        label: "Jak měříme energii přenášenou zářením"
-      },
-      {
-        href: "/mechanismy/energeticka-bilance-zeme/",
-        label: "Jak vzniká energetická bilance Země"
-      }
-    ]
-  },
-  {
     id: "1840_Agassiz",
     year: 1840,
     dateMeaning: "Vydání knihy",
     title: "Krajina uchovává stopy rozsáhlejšího zalednění",
     category: "observations",
+    importance: 1,
     paragraphs: [
       {
         text: "Louis Agassiz popsal morény, tedy nánosy materiálu přeneseného ledovcem, bludné balvany, ohlazené skály a rýhy v krajině. Porovnával je se stopami vznikajícími u současných ledovců a vyložil je jako doklady jejich dřívějšího mnohem většího rozsahu. V knize probíral také předchozí práce Venetze a Charpentiera.",
@@ -362,80 +321,12 @@ export const historyEvents: HistoryEvent[] = [
     ]
   },
   {
-    id: "1853_Brusel",
-    year: 1853,
-    dateMeaning: "Závěrečná zpráva konference, 8. září",
-    title: "Státní zástupci navrhují společná námořní pozorování",
-    category: "politics",
-    paragraphs: [
-      {
-        text: "Na konferenci v Bruselu se sešli zástupci vyslaní deseti státy, aby navrhli společný postup meteorologických pozorování na moři. Závěrečná zpráva doporučila jednotné lodní záznamy, porovnávání měřidel a výměnu výsledků. Údaje o teplotě vzduchu a vody, tlaku nebo větru měly být srovnatelné bez ohledu na vlajku lodi.",
-        references: [
-          {
-            sourceId: "1853_Brussels_Conference",
-            locator: "závěrečná zpráva, oddíl Report"
-          }
-        ]
-      },
-      {
-        text: "Delegáti schválili společný návrh, k závazkům svých vlád však neměli zmocnění. Doporučili, aby národní pracoviště shromažďovala lodní deníky, zpracovávala pozorování a sdílela je se zahraničím. Konference tak popsala, jak mohou státy společně zajistit měření na rozsáhlých plochách oceánu, kde chybějí pozemní stanice.",
-        references: [
-          {
-            sourceId: "1853_Brussels_Conference",
-            locator: "oddíl Report, pravomoci delegátů a výměna výsledků"
-          }
-        ]
-      }
-    ],
-    relatedLinks: [
-      {
-        href: "/pozorovani/gmst/",
-        label: "Jak využíváme teplotní měření z pevniny a oceánu"
-      }
-    ]
-  },
-  {
-    id: "1854_MetOffice",
-    year: 1854,
-    dateMeaning: "Zřízení meteorologického oddělení",
-    title: "Británie zakládá státní meteorologickou službu",
-    category: "politics",
-    paragraphs: [
-      {
-        text: "Britská vláda zřídila při Board of Trade, úřadu pro obchod, meteorologické oddělení vedené Robertem FitzRoyem. Navázala tím na bruselskou konferenci z předchozího roku. Z tohoto pracoviště vznikl dnešní Met Office. Stát převzal organizaci sběru a zpracování námořních meteorologických pozorování.",
-        references: [
-          {
-            sourceId: "WEB_MetOffice_History"
-          },
-          {
-            sourceId: "1866_BoardOfTrade_MeteorologicalReport",
-            locator: "část I, body 1–3"
-          }
-        ]
-      },
-      {
-        text: "Původní úkol zahrnoval poskytování přístrojů a návodů námořníkům a soustřeďování jejich záznamů. Z nich se měly určovat například průměrné teploty vzduchu a moře nebo průběh větrů a proudů. Vláda tím zajistila stálé pracoviště pro měření a výpočty v rozsahu, který jednotlivci obtížně zvládali. Předpovědi počasí ještě nebyly součástí původního zadání.",
-        references: [
-          {
-            sourceId: "1866_BoardOfTrade_MeteorologicalReport",
-            locator: "část I, body 2–3"
-          }
-        ]
-      }
-    ],
-    relatedLinks: [
-      {
-        href: "/pozorovani/gmst/",
-        label: "Od jednotlivých měření k teplotnímu záznamu"
-      }
-    ]
-  },
-  {
     id: "1856_Foote",
     year: 1856,
     dateMeaning: "Zveřejnění práce",
     title: "Oxid uhličitý v pokusu se slunečním ohřevem",
     category: "mechanisms",
+    importance: 3,
     paragraphs: [
       {
         text: "Eunice Footeová vystavila slunci dvojici skleněných válců s teploměry. Porovnávala různé plyny, tlak a vlhkost vzduchu. Popsala silnější zahřívání válce s oxidem uhličitým a jeho pomalejší chladnutí. Z výsledku usoudila, že atmosféra bohatší na tento plyn by měla vyšší teplotu.",
@@ -464,48 +355,12 @@ export const historyEvents: HistoryEvent[] = [
     ]
   },
   {
-    id: "1860_Kirchhoff",
-    year: 1860,
-    dateMeaning: "Zveřejnění obecného zákona záření",
-    title: "Pohlcování a vyzařování spojuje jeden zákon",
-    category: "mechanisms",
-    paragraphs: [
-      {
-        text: "Gustav Kirchhoff odvodil vztah mezi pohlcováním a vyzařováním tepelného záření. Při tepelné rovnováze platí pro stejnou vlnovou délku a směr: čím účinněji těleso záření pohlcuje, tím účinněji je při dané teplotě také vyzařuje. Odvození vycházelo z výměny záření mezi tělesem a okolím o stejné teplotě.",
-        references: [
-          {
-            sourceId: "1901_Kirchhoff_Radiation_Translation",
-            locator: "s. 75–78 a 89–93"
-          }
-        ]
-      },
-      {
-        text: "Jako společné měřítko zavedl ideální černé těleso, které pohltí veškeré dopadající záření. Jeho tepelné záření závisí na teplotě a vlnové délce, nikoli na použitém materiálu. Vznikl tak základ pro výpočet záření skutečných látek z jejich teploty a schopnosti pohlcovat záření.",
-        references: [
-          {
-            sourceId: "1901_Kirchhoff_Radiation_Translation",
-            locator: "s. 76–78 a 92–96"
-          }
-        ]
-      }
-    ],
-    relatedLinks: [
-      {
-        href: "/mechanismy/radiacni-pusobeni-sklenikovych-plynu/",
-        label: "Pohlcování a vyzařování v atmosféře"
-      },
-      {
-        href: "/metody/absorpcni-spektroskopie/",
-        label: "Jak měříme absorpci jednotlivých látek"
-      }
-    ]
-  },
-  {
     id: "1862_Tyndall",
     year: 1861,
     dateMeaning: "Zveřejnění práce",
     title: "Přímé měření pohlcování tepelného záření plyny",
     category: "methods",
+    importance: 1,
     paragraphs: [
       {
         text: "John Tyndall vedl tepelné záření trubicí uzavřenou deskami z kamenné soli. Měnil plyn uvnitř a pomocí termoelektrického detektoru měřil změnu prošlého záření. Dusík a kyslík v jeho pokusech pohlcovaly podstatně méně než vodní pára, oxid uhličitý a některé další plyny.",
@@ -539,6 +394,7 @@ export const historyEvents: HistoryEvent[] = [
     dateMeaning: "Zveřejnění práce",
     title: "Změny zemské dráhy jako vysvětlení dob ledových",
     category: "mechanisms",
+    importance: 3,
     paragraphs: [
       {
         text: "James Croll spojil změny protáhlosti zemské dráhy a orientace osy s délkou a intenzitou ročních období. Uvažoval také sníh a led, které odrážejí sluneční záření, a změny oceánského proudění. Astronomická změna tak v jeho vysvětlení mohla spustit další procesy zesilující ochlazování.",
@@ -566,116 +422,12 @@ export const historyEvents: HistoryEvent[] = [
     ]
   },
   {
-    id: "1870_US_WeatherService",
-    year: 1870,
-    dateMeaning: "Schválení usnesení Kongresu, 9. února",
-    title: "Zákon spojuje státní měření počasí s výstrahami před bouřemi",
-    category: "politics",
-    paragraphs: [
-      {
-        text: "Americký Kongres pověřil ministra války zajištěním meteorologických pozorování na vojenských stanicích i dalších místech ve státech a teritoriích USA. Současně požadoval varování před blížícími se bouřemi a jejich silou pro severní jezera a mořské pobřeží. Zprávy se měly šířit telegrafem a námořními signály.",
-        references: [
-          {
-            sourceId: "1870_US_WeatherService_Resolution",
-            locator: "společné usnesení č. 12, 16 Stat. 369"
-          }
-        ]
-      },
-      {
-        text: "Nová služba vznikla v armádním Signal Service. Rozhodnutí spojilo do jednoho státního úkolu pravidelné pozorování, rychlý přenos zpráv a varování pro dopravu. Meteorologická síť tak dostala institucionální zázemí a jasně určeného příjemce výsledků. Historie dnešní americké National Weather Service se počítá právě od tohoto rozhodnutí.",
-        references: [
-          {
-            sourceId: "WEB_NWS_History",
-            locator: "rok 1870"
-          },
-          {
-            sourceId: "1870_US_WeatherService_Resolution",
-            locator: "společné usnesení č. 12"
-          }
-        ]
-      }
-    ],
-    relatedLinks: []
-  },
-  {
-    id: "1879_Stefan_Boltzmann",
-    year: 1879,
-    dateMeaning: "Zveřejnění vztahu v roce 1879, teoretické odvození v roce 1884",
-    title: "Teplota určuje celkový výkon tepelného záření",
-    category: "mechanisms",
-    paragraphs: [
-      {
-        text: "Josef Stefan porovnal dostupná měření tepelného záření a v roce 1879 navrhl vztah ke čtvrté mocnině absolutní teploty. Ta se měří od absolutní nuly a dnes ji vyjadřujeme v kelvinech. Ludwig Boltzmann v roce 1884 odvodil tento vztah z termodynamiky a tlaku, kterým záření působí.",
-        references: [
-          {
-            sourceId: "1879_Stefan",
-            locator: "s. 421–422"
-          },
-          {
-            sourceId: "1884_Boltzmann",
-            locator: "s. 291–294"
-          }
-        ]
-      },
-      {
-        text: "Zákon určuje celkovou energii vyzářenou jednotkou plochy ideálního černého tělesa za sekundu. Při zdvojnásobení teploty v kelvinech se tento výkon zvětší šestnáctkrát. Výpočet tak dává číselný vztah mezi teplotou a odvodem energie zářením, potřebný při zkoumání teploty Slunce i energetické bilance Země.",
-        references: [
-          {
-            sourceId: "1884_Boltzmann",
-            locator: "s. 291–294"
-          },
-          {
-            sourceId: "1879_Stefan",
-            locator: "s. 426–427, odhad teploty Slunce"
-          }
-        ]
-      }
-    ],
-    relatedLinks: [
-      {
-        href: "/mechanismy/energeticka-bilance-zeme/",
-        label: "Jak teplota ovlivňuje výdej energie Země"
-      }
-    ]
-  },
-  {
-    id: "1884_Langley",
-    year: 1884,
-    dateMeaning: "Zveřejnění práce",
-    title: "Bolometr mapuje sluneční energii ve spektru",
-    category: "methods",
-    paragraphs: [
-      {
-        text: "Samuel Pierpont Langley používal bolometr, přístroj převádějící malé zahřátí na změnu elektrického odporu. Při výpravě na Mount Whitney porovnával sluneční záření v různých částech spektra a při různé dráze paprsků atmosférou. Zkoumal tím, kolik záření atmosféra zeslabuje a jak se tento účinek liší s vlnovou délkou.",
-        references: [
-          {
-            sourceId: "1884_Langley"
-          }
-        ]
-      },
-      {
-        text: "Měření umožnila přejít od samotného zjištění neviditelného záření k jeho podrobnějšímu rozložení ve spektru. Arrhenius se při svých pozdějších výpočtech výslovně opíral o Langleyho bolometrická pozorování. Přesnost výsledků přitom zůstávala závislá na přístrojích a na způsobu oddělení atmosférické absorpce.",
-        references: [
-          {
-            sourceId: "1896_Arrhenius",
-            locator: "s. 239–247"
-          }
-        ]
-      }
-    ],
-    relatedLinks: [
-      {
-        href: "/metody/mereni-radiacnich-toku/",
-        label: "Jak měříme energii přenášenou zářením"
-      }
-    ]
-  },
-  {
     id: "1894_Hogbom",
     year: 1894,
     dateMeaning: "Zveřejnění práce",
     title: "Uhlík v atmosféře má zdroje i úložiště",
     category: "mechanisms",
+    importance: 3,
     paragraphs: [
       {
         text: "Arvid Högbom porovnával zásoby uhlíku a procesy, které jej přesouvají mezi atmosférou, oceánem a horninami. Zahrnul sopečnou činnost, zvětrávání, vznik uhličitanů i spalování uhlí. Zkoumal, zda tyto toky mohou během dlouhých období měnit množství oxidu uhličitého ve vzduchu.",
@@ -708,6 +460,7 @@ export const historyEvents: HistoryEvent[] = [
     dateMeaning: "Zveřejnění práce",
     title: "Výpočet teplotní odezvy na změnu CO₂",
     category: "mechanisms",
+    importance: 1,
     paragraphs: [
       {
         text: "Svante Arrhenius využil dostupná měření záření a počítal, jak by různé množství oxidu uhličitého změnilo teplotu v jednotlivých zeměpisných šířkách a ročních obdobích. Do úvah zahrnul i vodní páru a odraz slunečního záření sněhem. Výsledky zveřejnil jako tabulky pro různé násobky obsahu CO₂.",
@@ -735,89 +488,12 @@ export const historyEvents: HistoryEvent[] = [
     ]
   },
   {
-    id: "1900_Planck",
-    year: 1900,
-    dateMeaning: "Představení zákona v roce 1900, podrobná práce vyšla roku 1901",
-    title: "Zákon popisuje tepelné záření po vlnových délkách",
-    category: "mechanisms",
-    paragraphs: [
-      {
-        text: "Max Planck sestavil zákon popisující, jak je tepelné záření ideálního černého tělesa rozděleno mezi vlnové délky. Navázal na laboratorní měření, kterým dřívější vztah nevyhovoval zejména u dlouhých vln. Nový vztah představil v roce 1900 a podrobně jej odvodil v práci vydané roku 1901.",
-        references: [
-          {
-            sourceId: "DOI_10_1002_andp_19013090310",
-            locator: "s. 553–554 a 560–561"
-          }
-        ]
-      },
-      {
-        text: "Z teploty lze podle tohoto zákona vypočítat celý průběh spektra. Teplejší těleso vyzařuje více energie a maximum jeho záření leží na kratší vlnové délce. To pomáhá rozlišovat krátkovlnné sluneční záření a dlouhovlnné tepelné záření Země a tvoří základ určování teploty ze zachyceného záření.",
-        references: [
-          {
-            sourceId: "DOI_10_1002_andp_19013090310",
-            locator: "s. 560–563, výsledný zákon a poloha maxima"
-          }
-        ]
-      }
-    ],
-    relatedLinks: [
-      {
-        href: "/metody/pasivni-infracervena-radiometrie/",
-        label: "Jak ze spektra určujeme teplotu"
-      }
-    ]
-  },
-  {
-    id: "1902_Stratosfera",
-    year: 1902,
-    dateMeaning: "Zveřejnění výsledků balónových měření",
-    title: "Balónová měření odhalují stratosféru",
-    category: "observations",
-    paragraphs: [
-      {
-        text: "Léon Teisserenc de Bort a Richard Assmann zveřejnili výsledky měření teploty vysoko nad zemí. Přístroje vynášené balóny ukázaly, že dosavadní pokles teploty s výškou se přibližně mezi 8 a 13 kilometry zastavuje. Nad touto hranicí naměřili vrstvu se stálou, nebo dokonce rostoucí teplotou.",
-        references: [
-          {
-            sourceId: "1902_Teisserenc_de_Bort",
-            locator: "s. 987–989"
-          },
-          {
-            sourceId: "1902_Assmann",
-            locator: "s. 495–504"
-          }
-        ]
-      },
-      {
-        text: "Výsledky dvou měřicích programů odkryly odlišné uspořádání vyšší atmosféry. Teplotní profil, tedy průběh teploty podle výšky, se stal podkladem pro rozlišení spodní troposféry a nad ní ležící stratosféry. Poznání atmosféry se tak rozšířilo od přízemních údajů k její svislé stavbě.",
-        references: [
-          {
-            sourceId: "1902_Teisserenc_de_Bort",
-            locator: "s. 988–989"
-          },
-          {
-            sourceId: "1902_Assmann",
-            locator: "s. 502–504"
-          }
-        ]
-      }
-    ],
-    relatedLinks: [
-      {
-        href: "/pozorovani/stratosfericke-ochlazovani/",
-        label: "Jak dnes sledujeme teplotu stratosféry"
-      },
-      {
-        href: "/metody/radiosondaz/",
-        label: "Jak měříme svislý profil atmosféry"
-      }
-    ]
-  },
-  {
     id: "1919_Douglass",
     year: 1919,
     dateMeaning: "Vydání souhrnné práce o letokruzích a klimatu",
     title: "Letokruhy poskytují datovaný záznam minulého klimatu",
     category: "methods",
+    importance: 2,
     paragraphs: [
       {
         text: "Andrew Ellicott Douglass shrnul výzkum letokruhů a jejich vztahu ke klimatu. Porovnával sled širokých a úzkých letokruhů u různých stromů a hledal společné vzorce. Tím mohl přiřadit letokruhy ke stejným kalendářním rokům a rozpoznat chybějící nebo zdánlivě zdvojený přírůstek.",
@@ -846,212 +522,12 @@ export const historyEvents: HistoryEvent[] = [
     ]
   },
   {
-    id: "1919_Parizska_Letecka_Umluva",
-    year: 1919,
-    dateMeaning: "Podpis úmluvy, 13. října",
-    title: "Letecká úmluva zahrnuje výměnu meteorologických údajů",
-    category: "politics",
-    paragraphs: [
-      {
-        text: "Pařížská úmluva o letectví zařadila meteorologickou spolupráci mezi závazky smluvních států. Podle článku 35 měly v nejvyšší možné míře spolupracovat při sběru a šíření statistických, aktuálních i zvláštních meteorologických informací podle přílohy G. Informace o počasí se tím staly výslovnou součástí mezinárodních pravidel pro letecký provoz.",
-        references: [
-          {
-            sourceId: "1919_Paris_AirNavigation",
-            locator: "čl. 35 písm. a"
-          }
-        ]
-      },
-      {
-        text: "Úmluva zřídila Mezinárodní komisi pro letectví, která měla shromažďovat také meteorologické informace a upravovat technické přílohy. Vytvořila tak společný postup pro spolupráci států a další změny pravidel. Podepsána byla v říjnu 1919, v platnost však vstoupila až 11. července 1922.",
-        references: [
-          {
-            sourceId: "1919_Paris_AirNavigation",
-            locator: "čl. 34"
-          },
-          {
-            sourceId: "WEB_ICAO_ParisConvention_History"
-          }
-        ]
-      }
-    ],
-    relatedLinks: []
-  },
-  {
-    id: "1919_Statni_Meteorologicky_Ustav",
-    year: 1919,
-    dateMeaning: "Rozhodnutí vlády, 9. prosince",
-    title: "Československo zřizuje státní meteorologický ústav",
-    category: "politics",
-    paragraphs: [
-      {
-        text: "Československá vláda rozhodla o zřízení Státního ústavu meteorologického při ministerstvu školství a národní osvěty. Jeho stanovy byly schváleny 14. ledna 1920. Nový stát tím získal ústřední instituci pro meteorologickou službu, v jejímž rámci působila také vojenská složka.",
-        references: [
-          {
-            sourceId: "WEB_ACR_MeteorologicalService_History",
-            locator: "rozhodnutí č. 26314 z 9. prosince 1919 a schválení stanov 14. ledna 1920"
-          }
-        ]
-      },
-      {
-        text: "Dobový parlamentní návrh Bohumila Němce a dalších poslanců ukazuje, proč takové pracoviště považovali za potřebné. Požadovali organizaci sítě stanic, odborné zpracování pozorování, vydávání výsledků a spojení se zahraničními ústavy. Návrh z února 1919 dokládá zamýšlené úkoly ústavu, samotné rozhodnutí o jeho zřízení přišlo až v prosinci.",
-        references: [
-          {
-            sourceId: "1919_Nemec_MeteorologicalInstitute",
-            locator: "tisk 493, návrh a jeho odůvodnění"
-          },
-          {
-            sourceId: "WEB_ACR_MeteorologicalService_History"
-          }
-        ]
-      }
-    ],
-    relatedLinks: [
-      {
-        href: "/pozorovani/gmst/",
-        label: "Jak zpracováváme síť teplotních měření"
-      }
-    ]
-  },
-  {
-    id: "1929_Radiosondy",
-    year: 1929,
-    dateMeaning: "Rané úspěšné lety v letech 1929–1930",
-    title: "Balón vysílá měření atmosféry rádiem",
-    category: "methods",
-    paragraphs: [
-      {
-        text: "Robert Bureau ve Francii v roce 1929 a Pavel Molčanov v Sovětském svazu v roce 1930 patřili k průkopníkům radiosond. Balón vynášel měřicí přístroje s rádiovým vysílačem a údaje přijímala stanice na zemi už během letu. Pro získání výsledků tak nebylo nutné nejprve nalézt dopadlý přístroj.",
-        references: [
-          {
-            sourceId: "WEB_nist_gov_Tuning_into_Weather_Forecasting_NIST_be922613",
-            locator: "Where did the radiosonde get its name?"
-          },
-          {
-            sourceId: "2015_Roshydromet_Radiosonde"
-          }
-        ]
-      },
-      {
-        text: "Pohyb měřidla nebo změnu elektrické vlastnosti čidla bylo možné převést na rozlišitelný rádiový signál. Postup dovolil zaznamenávat tlak, teplotu a vlhkost v průběhu výstupu. Podrobný popis přístrojů, kalibrace a naměřených profilů zveřejnili například Diamond, Hinman a Dunmore v roce 1938.",
-        references: [
-          {
-            sourceId: "1938_Diamond_Radiometeorography",
-            locator: "s. 369–372 a 384–389"
-          }
-        ]
-      }
-    ],
-    relatedLinks: [
-      {
-        href: "/metody/radiosondaz/",
-        label: "Jak funguje radiosondáž"
-      }
-    ]
-  },
-  {
-    id: "1929_SOLAS",
-    year: 1929,
-    dateMeaning: "Podpis námořní úmluvy, 31. května",
-    title: "Námořní úmluva propojuje lodní měření a výstrahy",
-    category: "politics",
-    paragraphs: [
-      {
-        text: "Úmluva o bezpečnosti lidského života na moři, známá jako SOLAS, zahrnula meteorologii do pravidel bezpečné plavby. Její článek 35 zavázal smluvní státy k podpoře sběru údajů z lodí, jejich zpracování a výměny. V mezích proveditelnosti měly také zajistit varování před bouřemi a každodenní rozhlasové zprávy o počasí.",
-        references: [
-          {
-            sourceId: "1929_SOLAS",
-            locator: "kapitola V, čl. 35"
-          }
-        ]
-      },
-      {
-        text: "Vybrané lodě měly pozorovat počasí v určených časech a výsledky bezdrátově předávat meteorologickým službám. Společný postup měl odpovídat doporučením Mezinárodní meteorologické organizace. Úmluva tak spojila státní služby a lodě do systému sběru a předávání informací pro námořníky. Podepsána byla roku 1929, v platnost vstoupila 1. ledna 1933.",
-        references: [
-          {
-            sourceId: "1929_SOLAS",
-            locator: "čl. 35 a úvodní údaj o vstupu v platnost"
-          }
-        ]
-      }
-    ],
-    relatedLinks: [
-      {
-        href: "/pozorovani/gmst/",
-        label: "Úloha lodních měření v teplotních řadách"
-      }
-    ]
-  },
-  {
-    id: "1935_Soil_Conservation_Act",
-    year: 1935,
-    dateMeaning: "Schválení zákona, 27. dubna",
-    title: "USA přijímají trvalý program ochrany půdy",
-    category: "politics",
-    paragraphs: [
-      {
-        text: "Za období Dust Bowl, kdy se sucho a rozsáhlá větrná eroze projevovaly prachovými bouřemi, přijaly Spojené státy zákon o ochraně půdy. Kongres označil ztrátu půdy a vláhy za hrozbu pro zemi a stanovil její omezení jako trvalý státní úkol. Při ministerstvu zemědělství vznikla Soil Conservation Service.",
-        references: [
-          {
-            sourceId: "1935_SoilConservationAct",
-            locator: "§ 1 a 5"
-          },
-          {
-            sourceId: "WEB_NRCS_History",
-            locator: "Dust Bowl a vznik Soil Conservation Service v roce 1935"
-          }
-        ]
-      },
-      {
-        text: "Zákon pověřil ministerstvo výzkumem eroze, zveřejňováním výsledků a praktickými ukázkami ochrany půdy. Umožnil spolupráci s vlastníky půdy, podporu změn hospodaření, obnovu vegetace i technická opatření. Odpověď na sucho a odnos půdy tak zahrnovala nejen pomoc při pohromě, ale také dlouhodobou práci s půdou, vodou a zemědělskými postupy.",
-        references: [
-          {
-            sourceId: "1935_SoilConservationAct",
-            locator: "§ 1–3"
-          }
-        ]
-      }
-    ],
-    relatedLinks: []
-  },
-  {
-    id: "1936_Flood_Control_Act",
-    year: 1936,
-    dateMeaning: "Schválení zákona, 22. června",
-    title: "Ochrana před povodněmi se stává federálním úkolem",
-    category: "politics",
-    paragraphs: [
-      {
-        text: "Americký Kongres označil ochranu před povodněmi za úkol federální vlády ve spolupráci se státy a místními správami. Zákon umožnil účast federace na projektech, jejichž přínosy převyšují odhadované náklady a které mají chránit životy a životní podmínky obyvatel. Ochrana před povodněmi tím dostala celostátní zákonný rámec.",
-        references: [
-          {
-            sourceId: "1936_FloodControlAct",
-            locator: "§ 1"
-          }
-        ]
-      },
-      {
-        text: "Zákon rozlišil práce na řekách, svěřené armádním ženistům pod ministerstvem války, a opatření v povodí pod ministerstvem zemědělství. Ta měla zpomalovat odtok a omezovat erozi. Politické rozhodnutí tak spojilo vodní stavby s péčí o území, z něhož voda do řek přitéká.",
-        references: [
-          {
-            sourceId: "1936_FloodControlAct",
-            locator: "§ 2"
-          }
-        ]
-      }
-    ],
-    relatedLinks: [
-      {
-        href: "/pozorovani/srazky-a-privalove-srazky/",
-        label: "Co měříme u srážek a jejich extrémů"
-      }
-    ]
-  },
-  {
     id: "1938_Callendar",
     year: 1938,
     dateMeaning: "Zveřejnění práce",
     title: "Výpočty účinku CO₂ se setkávají s teplotními záznamy",
     category: "mechanisms",
+    importance: 1,
     paragraphs: [
       {
         text: "Guy Stewart Callendar spojil odhady emisí a koncentrace CO₂ s výpočtem absorpce záření a se záznamy asi dvou set meteorologických stanic. Z dostupných dat vyvodil oteplování během předchozího půlstoletí a část změny přisoudil oxidu uhličitému ze spalování paliv.",
@@ -1085,6 +561,7 @@ export const historyEvents: HistoryEvent[] = [
     dateMeaning: "Vydání knihy",
     title: "Výpočty oslunění dávají orbitální teorii časový průběh",
     category: "mechanisms",
+    importance: 1,
     paragraphs: [
       {
         text: "Milutin Milanković sjednotil výpočty změn zemské dráhy, sklonu osy a její orientace. Převáděl je na množství sluneční energie v jednotlivých šířkách a ročních obdobích. Pro trvání sněhu přikládal velkou váhu letnímu oslunění ve vysokých severních šířkách: slabší léto umožňuje přežít větší části zimního sněhu.",
@@ -1113,39 +590,12 @@ export const historyEvents: HistoryEvent[] = [
     ]
   },
   {
-    id: "1944_Chicagska_Umluva",
-    year: 1944,
-    dateMeaning: "Podpis úmluvy, 7. prosince",
-    title: "Chicagská úmluva vytváří rámec pro společná meteorologická pravidla",
-    category: "politics",
-    paragraphs: [
-      {
-        text: "Chicagská úmluva o mezinárodním civilním letectví uložila smluvním státům, aby podle svých možností zajišťovaly také meteorologické služby pro mezinárodní letecký provoz. Článek 28 je zařadil vedle letišť, rádiových služeb a dalších prostředků potřebných pro leteckou navigaci.",
-        references: [
-          {
-            sourceId: "1944_ChicagoConvention",
-            locator: "čl. 28"
-          }
-        ]
-      },
-      {
-        text: "Článek 37 zavázal státy ke spolupráci na sjednocování pravidel a postupů. Mezinárodní organizace pro civilní letectví, ICAO, dostala pravomoc přijímat standardy a doporučení také pro sběr a výměnu meteorologických informací. Úmluva podepsaná v prosinci 1944 vstoupila v platnost 4. dubna 1947. Vytvořila rámec, v němž se pravidla pro meteorologické služby mohla společně rozvíjet.",
-        references: [
-          {
-            sourceId: "1944_ChicagoConvention",
-            locator: "čl. 37 písm. g a historie úmluvy ICAO"
-          }
-        ]
-      }
-    ],
-    relatedLinks: []
-  },
-  {
     id: "1952_Libby",
     year: 1949,
     dateMeaning: "Zveřejnění zkoušky na vzorcích známého stáří",
     title: "Radiouhlíkové datování prochází zkouškou známého stáří",
     category: "methods",
+    importance: 2,
     paragraphs: [
       {
         text: "James Arnold a Willard Libby změřili radioaktivitu uhlíku ve dřevě, jehož stáří znali z archeologických souvislostí nebo letokruhů. Srovnání ukázalo očekávaný úbytek uhlíku-14 se stářím vzorku. Výsledky zveřejněné v roce 1949 tak ověřily, že radioaktivní rozpad může sloužit jako hodiny pro datování organických pozůstatků.",
@@ -1174,77 +624,12 @@ export const historyEvents: HistoryEvent[] = [
     ]
   },
   {
-    id: "1950_WMO",
-    year: 1950,
-    dateMeaning: "Vstup zakládající úmluvy v platnost, 23. března",
-    title: "Vzniká Světová meteorologická organizace",
-    category: "politics",
-    paragraphs: [
-      {
-        text: "Dne 23. března 1950 vstoupila v platnost úmluva o Světové meteorologické organizaci, WMO, podepsaná ve Washingtonu roku 1947. Státy tím ustavily mezivládní organizaci pro spolupráci v meteorologii. Jejím posláním se stala koordinace pozorovacích sítí, výměny zpráv, výzkumu a odborného vzdělávání.",
-        references: [
-          {
-            sourceId: "1947_WMO_Convention",
-            locator: "čl. 1–2 a poznámka o vstupu v platnost, UNTS 77, s. 144"
-          }
-        ]
-      },
-      {
-        text: "Úmluva výslovně požadovala podporu rychlé výměny meteorologických informací, sjednocování pozorovacích postupů a jednotného zveřejňování pozorování a statistik. Společná pravidla měla umožnit porovnávat a spojovat údaje přes hranice států. Mezinárodní spolupráce se tím opřela o trvalou organizaci založenou smlouvou.",
-        references: [
-          {
-            sourceId: "1947_WMO_Convention",
-            locator: "čl. 2 písm. a–c"
-          }
-        ]
-      }
-    ],
-    relatedLinks: [
-      {
-        href: "/pozorovani/gmst/",
-        label: "Proč potřebujeme srovnatelná měření z celého světa"
-      }
-    ]
-  },
-  {
-    id: "1950_Numericka_Predpoved",
-    year: 1950,
-    dateMeaning: "Zveřejnění výpočtů na počítači ENIAC",
-    title: "Počítač počítá vývoj počasí z fyzikálních rovnic",
-    category: "methods",
-    paragraphs: [
-      {
-        text: "Jule Charney, Ragnar Fjørtoft a John von Neumann použili elektronický počítač ENIAC k výpočtu vývoje atmosférického proudění. Z počátečního stavu odvozeného z měření počítali změny v síti bodů a postupovali po časových krocích. Zveřejnili čtyři předpovědi proudění na 24 hodin.",
-        references: [
-          {
-            sourceId: "1950_Charney_Fjortoft_von_Neumann",
-            locator: "abstrakt a popis výpočetního postupu"
-          }
-        ]
-      },
-      {
-        text: "Vypočtené mapy porovnali se skutečným vývojem. Práce ukázala, že fyzikální rovnice lze převést na proveditelný počítačový postup a jeho výsledky ověřovat pozorováním. Šlo o model počasí se zjednodušeným popisem proudění. Tento způsob výpočtu připravil cestu i pozdějším modelům dlouhodobého vývoje klimatu.",
-        references: [
-          {
-            sourceId: "1950_Charney_Fjortoft_von_Neumann",
-            locator: "obr. 2–5 a porovnání předpovědí s pozorováním"
-          }
-        ]
-      }
-    ],
-    relatedLinks: [
-      {
-        href: "/metody/asimilace-dat-a-reanalyzy/",
-        label: "Jak propojujeme pozorování s výpočetním modelem"
-      }
-    ]
-  },
-  {
     id: "1955_Emiliani",
     year: 1955,
     dateMeaning: "Zveřejnění práce",
     title: "Izotopy ve schránkách zapisují proměny oceánu",
     category: "methods",
+    importance: 2,
     paragraphs: [
       {
         text: "Cesare Emiliani měřil poměr těžšího a lehčího izotopu kyslíku ve schránkách drobných mořských organismů, dírkonošců. Schránky z různých hloubek sedimentárních jader zachycovaly různá období. Změny poměru vykládal především jako změny teploty moře a sestavil průběh opakovaných chladných a teplých období.",
@@ -1277,6 +662,7 @@ export const historyEvents: HistoryEvent[] = [
     dateMeaning: "Zveřejnění práce",
     title: "Přesnější výpočty záření prověřují účinek dalšího CO₂",
     category: "mechanisms",
+    importance: 2,
     paragraphs: [
       {
         text: "Gilbert Plass využil podrobnější údaje o absorpci oxidu uhličitého a výpočetní postupy pro jednotlivé vrstvy atmosféry. Zkoumal pás tepelného záření kolem vlnové délky 15 mikrometrů. Ukázal, že silné pohlcování ve středu pásu samo o sobě neznamená, že přidání dalšího CO₂ už nemůže změnit přenos záření.",
@@ -1310,6 +696,7 @@ export const historyEvents: HistoryEvent[] = [
     dateMeaning: "Zahájení měření na Mauna Loa",
     title: "Mauna Loa začíná pravidelně sledovat atmosférický CO₂",
     category: "observations",
+    importance: 1,
     paragraphs: [
       {
         text: "Charles David Keeling zahájil v březnu 1958 na Mauna Loa měření pomocí infračerveného analyzátoru. Předcházela mu práce na přesnosti měření a rozlišování místních vlivů od složení volné atmosféry. Během prvních let záznam ukázal sezónní kolísání i růst průměrné koncentrace mezi roky.",
@@ -1346,6 +733,7 @@ export const historyEvents: HistoryEvent[] = [
     dateMeaning: "Zveřejnění práce",
     title: "Model spojuje záření, proudění a vodní páru",
     category: "mechanisms",
+    importance: 1,
     paragraphs: [
       {
         text: "Syukuro Manabe a Richard Wetherald počítali teplotní rovnováhu svislého sloupce atmosféry. Vedle přenosu záření zahrnuli přenos tepla konvekcí, tedy svislým pohybem vzduchu, a předepsali rozložení relativní vlhkosti. Při zvýšení CO₂ model vykazoval oteplení povrchu a nižší atmosféry i ochlazení stratosféry.",
@@ -1378,6 +766,7 @@ export const historyEvents: HistoryEvent[] = [
     dateMeaning: "Zveřejnění práce",
     title: "Mořské sedimenty prověřují rytmus zemské dráhy",
     category: "mechanisms",
+    importance: 1,
     paragraphs: [
       {
         text: "James Hays, John Imbrie a Nicholas Shackleton analyzovali přibližně půl milionu let dlouhé záznamy z hlubokomořských sedimentů. Porovnávali izotopy kyslíku a další ukazatele a hledali opakující se periody. Ve vývoji klimatu našli výrazné rytmy odpovídající přibližně 23, 41 a 100 tisícům let.",
@@ -1411,6 +800,7 @@ export const historyEvents: HistoryEvent[] = [
     dateMeaning: "Zveřejnění práce",
     title: "Odhad oteplení dostává výslovné rozmezí nejistoty",
     category: "mechanisms",
+    importance: 1,
     paragraphs: [
       {
         text: "Skupina vedená Julem Charneym pro americkou Národní výzkumnou radu posoudila oteplení při zdvojnásobení CO₂. Porovnala výsledky tehdejších modelů a hlavní zpětné vazby. Pro ustálené globální oteplení odhadla rozmezí 1,5 až 4,5 °C se středním odhadem kolem 3 °C.",
@@ -1444,6 +834,7 @@ export const historyEvents: HistoryEvent[] = [
     dateMeaning: "Zveřejnění práce",
     title: "Vzduch v ledu spojuje CO₂ s minulými ledovými cykly",
     category: "observations",
+    importance: 1,
     paragraphs: [
       {
         text: "Jean-Marc Barnola a spolupracovníci změřili oxid uhličitý ve vzduchových bublinách z antarktického vrtu Vostok. Led drtili ve vakuu bez tání a v uvolněném plynu určovali obsah CO₂. Získali záznam dlouhý přibližně 160 000 let. Nízký obsah CO₂ se pojil s chladnými obdobími Antarktidy a vyšší s teplejšími.",
@@ -1481,6 +872,7 @@ export const historyEvents: HistoryEvent[] = [
     dateMeaning: "Založení panelu",
     title: "Vzniká mezivládní rámec pro hodnocení klimatického výzkumu",
     category: "politics",
+    importance: 1,
     paragraphs: [
       {
         text: "Světová meteorologická organizace a Program OSN pro životní prostředí založily Mezivládní panel pro změnu klimatu, IPCC. Jeho úkolem se stalo hodnotit dostupné vědecké poznání o změně klimatu, jejích dopadech a možnostech reakce pro potřeby vlád.",
@@ -1508,6 +900,7 @@ export const historyEvents: HistoryEvent[] = [
     dateMeaning: "Vydání hodnotící zprávy",
     title: "První zpráva IPCC odděluje zjištění, nejistoty a scénáře",
     category: "mechanisms",
+    importance: 2,
     paragraphs: [
       {
         text: "První hodnotící zpráva IPCC shrnula fyziku klimatu, možné dopady i reakce. Rozlišovala, co plyne z měření a fyziky, co zůstává nejisté a jaký vývoj vychází z různých emisních scénářů. Budoucí oteplení tak popisovala v závislosti na předpokládaném vývoji lidské činnosti.",
@@ -1536,6 +929,7 @@ export const historyEvents: HistoryEvent[] = [
     dateMeaning: "Přijetí úmluvy",
     title: "Klimatická úmluva zavádí společný rámec vykazování a jednání",
     category: "politics",
+    importance: 1,
     paragraphs: [
       {
         text: "Rámcová úmluva OSN o změně klimatu byla přijata 9. května 1992. Zavázala smluvní strany k přípravě emisních inventur, zprávám a spolupráci podle rozdílných odpovědností a možností. Zřídila konferenci smluvních stran jako společný rozhodovací orgán.",
@@ -1564,6 +958,7 @@ export const historyEvents: HistoryEvent[] = [
     dateMeaning: "Start družice",
     title: "Družice TOPEX/Poseidon začíná sledovat výšku oceánu",
     category: "observations",
+    importance: 2,
     paragraphs: [
       {
         text: "Dne 10. srpna 1992 odstartovala družice TOPEX/Poseidon s cílem opakovaně měřit výšku mořské hladiny radarovou altimetrií, tedy určováním vzdálenosti podle doby návratu radarového pulzu. Výška hladiny se tak začala sledovat i daleko od pobřežních měřidel, podél opakovaných družicových drah.",
@@ -1600,6 +995,7 @@ export const historyEvents: HistoryEvent[] = [
     dateMeaning: "Přijetí protokolu",
     title: "Kjótský protokol stanovuje emisní závazky vybraným státům",
     category: "politics",
+    importance: 1,
     paragraphs: [
       {
         text: "Smluvní strany klimatické úmluvy přijaly 11. prosince 1997 Kjótský protokol. Pro průmyslové země a ekonomiky v transformaci uvedené v příloze stanovil číselné emisní závazky. První závazkové období pokrývalo roky 2008–2012. Součástí rámce bylo vykazování emisí a odborné přezkoumání.",
@@ -1628,6 +1024,7 @@ export const historyEvents: HistoryEvent[] = [
     dateMeaning: "Zahájení programu",
     title: "Plováky Argo začínají soustavně měřit vnitřek oceánu",
     category: "observations",
+    importance: 2,
     paragraphs: [
       {
         text: "Mezinárodní program Argo začal rozmisťovat autonomní plováky, které se pohybují mezi hladinou a hloubkou. Při výstupu měří teplotu a slanost a po vynoření předávají údaje přes družice. Základní síť byla navržena pro měření horních přibližně dvou kilometrů oceánu.",
@@ -1661,6 +1058,7 @@ export const historyEvents: HistoryEvent[] = [
     dateMeaning: "Zveřejnění práce",
     title: "Rozložení ohřevu v oceánu prověřuje lidský vliv",
     category: "mechanisms",
+    importance: 2,
     paragraphs: [
       {
         text: "Tim Barnett a spolupracovníci porovnali měření od roku 1960 s výpočty dvou klimatických modelů. Zkoumali, jak se oteplování liší mezi oceány a s hloubkou. Tento prostorový průběh obsahuje více informací o příčině než jediná hodnota průměrné teploty.",
@@ -1694,6 +1092,7 @@ export const historyEvents: HistoryEvent[] = [
     dateMeaning: "Zveřejnění práce",
     title: "Teplotní změny v různých výškách prověřují přirozené příčiny",
     category: "mechanisms",
+    importance: 3,
     paragraphs: [
       {
         text: "Benjamin Santer a spolupracovníci porovnali družicové záznamy teplot z let 1979–2012 s klimatickými modely. Sledovali společný prostorový průběh oteplování nižší vrstvy atmosféry, troposféry, a ochlazování stratosféry nad ní. Testovali jej proti proměnlivosti zahrnující nejen vnitřní kolísání, ale také změny sluneční a sopečné činnosti.",
@@ -1727,6 +1126,7 @@ export const historyEvents: HistoryEvent[] = [
     dateMeaning: "Zveřejnění práce",
     title: "Rostoucí CO₂ zanechává měřitelnou změnu záření u povrchu",
     category: "mechanisms",
+    importance: 3,
     paragraphs: [
       {
         text: "Daniel Feldman a spolupracovníci vyhodnotili spektra tepelného záření přicházejícího z atmosféry na dvou stanicích v Oklahomě a na Aljašce. Měření z let 2000–2010 spojili s údaji o teplotě, vlhkosti a složení vzduchu. Pomocí výpočtu přenosu záření oddělili příspěvek rostoucího CO₂ od ostatních změn.",
@@ -1760,6 +1160,7 @@ export const historyEvents: HistoryEvent[] = [
     dateMeaning: "Přijetí dohody",
     title: "Pařížská dohoda zavádí opakované národní klimatické příspěvky",
     category: "politics",
+    importance: 1,
     paragraphs: [
       {
         text: "Pařížská dohoda přijatá 12. prosince 2015 stanovila cíl udržet oteplení výrazně pod 2 °C oproti předindustriálnímu období a usilovat o omezení na 1,5 °C. Každá smluvní strana má připravovat, sdělovat a udržovat národní příspěvky. Nový příspěvek má předkládat každých pět let a postupně zvyšovat své úsilí.",

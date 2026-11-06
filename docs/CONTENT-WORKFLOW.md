@@ -109,9 +109,9 @@ Každý celý příběh hypotézy obalte komponentou `HypothesisStory` z `app/co
 2. Založte nebo použijte úplné bibliografické záznamy v centrálním katalogu.
 3. Do `app/data/history.ts` přidejte stabilní `id`, rok události `year`, význam data `dateMeaning` a český název události `title`. Neopisujte sem název publikace místo vysvětlení události.
 4. Zvolte jednu hlavní `category` z `historyCategories`: `observations`, `methods`, `mechanisms` nebo `politics`. První tři oblasti patří do nadřazené větve Věda, politická do Politiky. Větev určuje `historyCategories[category].branch`, u milníku ji nezadávejte samostatně. Rozhoduje hlavní přínos milníku podle [HISTORY.md](../HISTORY.md), nikoli typ dokumentu nebo kategorie vydavatele. `culture` je připravena pro budoucí kulturní milníky v samostatné větvi. Filtr ji nabídne až po doplnění prvního zpracovaného záznamu.
-5. Každý odstavec v `paragraphs` obsahuje text a `references`. Citace má `sourceId` a podle potřeby ověřený `locator`. Pozdější ověření nebo oprava může potřebovat jiný zdroj než původní práce.
+5. Každému milníku přiřaďte `importance` 1, 2 nebo 3 podle [HISTORY.md](../HISTORY.md#důležitost). Stupeň 1 je nejvyšší. Každý odstavec v `paragraphs` obsahuje text a `references`. Citace má `sourceId` a podle potřeby ověřený `locator`. Pozdější ověření nebo oprava může potřebovat jiný zdroj než původní práce.
 6. Přidejte vhodné odkazy v `relatedLinks` na existující pozorování, metody či mechanismy.
-7. Zachovejte chronologické pořadí. Událost musí spadat právě do jednoho intervalu v `historyPeriods`. Zveřejněné ID a kotvu neměňte při opravě data.
+7. Zachovejte chronologické pořadí. Událost musí spadat právě do jednoho intervalu v `historyPeriods`. Zveřejněné ID a kotvu neměňte při opravě data. Při vyřazení přesuňte ID, název a ID pramenů do `historyLegacyLinks`, aby starší odkaz zachoval cestu k pramenům. Vyřazený záznam se nezapočítává mezi milníky.
 8. Ověřte obsah a čtivost odděleně, potom zdroje, statický export, všechny filtry, reset a mobilní zobrazení podle [DEVELOPMENT.md](DEVELOPMENT.md).
 
 Autor, název a rok vydání publikace zůstávají pouze v katalogu zdrojů. Datum události je samostatný údaj: například pokus z roku 1774 může být doložen knihou vydanou v roce 1786.

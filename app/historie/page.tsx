@@ -4,12 +4,12 @@ import { Citation } from "../components/Citation";
 import { PageLead } from "../components/PageLead";
 import { HistoryTimeline, type HistoryTimelineItem } from "../components/HistoryTimeline";
 import styles from "../components/HistoryTimeline.module.css";
-import { historyBranches, historyCategories, historyEvents, historyPeriods, type HistoryBranch, type HistoryCategory } from "../data/history";
+import { historyBranches, historyCategories, historyEvents, historyImportances, historyLegacyLinks, historyPeriods, type HistoryBranch, type HistoryCategory, type HistoryImportance } from "../data/history";
 import { sourceById } from "../data/sources";
 
 export const metadata: Metadata = {
   title: "Historie",
-  description: "Historie pozorování klimatu, měřicích metod, vysvětlování příčin a politických rozhodnutí. Chronologická osa s odkazy na původní prameny.",
+  description: "Zásadní milníky poznání změny klimatu a klimatické politiky. Chronologická osa se třemi stupni důležitosti, filtry a původními prameny.",
 };
 
 export default function HistoryPage() {
@@ -23,6 +23,10 @@ export default function HistoryPage() {
     if (!Object.hasOwn(historyCategories, event.category)) {
       throw new Error("Invalid history classification: " + event.id);
     }
+    if (!Number.isInteger(event.importance) || !Object.hasOwn(historyImportances, event.importance)) {
+      throw new Error("Invalid history importance: " + event.id);
+    }
+    const importance = historyImportances[event.importance];
     const category = historyCategories[event.category];
     if (!Object.hasOwn(historyBranches, category.branch)) {
       throw new Error("Invalid history branch: " + event.id);
@@ -46,6 +50,7 @@ export default function HistoryPage() {
       year: event.year,
       branch: category.branch,
       category: event.category,
+      importance: event.importance,
       content: (
         <article className={styles.milestone} data-history-branch={category.branch} data-history-category={event.category}
           aria-labelledby={"nazev-" + event.id}>
@@ -60,6 +65,11 @@ export default function HistoryPage() {
                 <span aria-hidden="true">›</span>
                 <span className={styles.categoryLabel}>{category.label}</span>
               </>}
+              <span className={styles.importanceLabel} data-history-importance={event.importance}
+                aria-label={"Důležitost " + event.importance + ": " + importance.label}
+                title={importance.description}>
+                {event.importance} · {importance.label}
+              </span>
             </p>
             <h3 id={"nazev-" + event.id} className={styles.title}>{event.title}</h3>
             {event.paragraphs.map((paragraph, paragraphIndex) => (
@@ -97,14 +107,37 @@ export default function HistoryPage() {
     };
   });
 
+  const legacyNotices = historyLegacyLinks.map(legacy => {
+    if (!legacy.id || ids.has(legacy.id) || !legacy.title.trim() || !legacy.sourceIds.length) {
+      throw new Error("Invalid legacy history link: " + legacy.id);
+    }
+    ids.add(legacy.id);
+    for (const sourceId of legacy.sourceIds) {
+      if (!sourceById(sourceId)) throw new Error("Missing legacy history source: " + sourceId);
+    }
+    return (
+      <aside key={legacy.id} id={"milnik-" + legacy.id} className={styles.legacyNotice}
+        aria-labelledby={"byvaly-" + legacy.id}>
+        <h2 id={"byvaly-" + legacy.id}>{legacy.title}</h2>
+        <p>Tato událost už není součástí užšího výběru o změně klimatu. Její prameny zůstávají dostupné:{" "}
+          {legacy.sourceIds.map(id => <span key={id}><Citation id={id} />{" "}</span>)}
+        </p>
+        <a href="#historicka-osa">Prohlédnout současnou osu →</a>
+      </aside>
+    );
+  });
+
   return (
     <div className="page-shell">
-      <PageLead eyebrow="Historie poznání" title="Historie poznání klimatu."
-        meta="5. listopadu 2026">
-        <p>Historie sleduje vývoj vědeckého poznání a politických rozhodnutí. Věda se stejně jako zbytek webu člení na pozorování, metody a mechanismy: co se v klimatu děje, jak to měříme a čím to vysvětlujeme.</p>
-        <p>Vyberte si vědu nebo politiku. Ve vědě můžete výběr zúžit na jednu oblast. Každý milník ukazuje, co přinesl, kde měl své meze a z jakých pramenů jej známe.</p>
+      <PageLead eyebrow="Historie poznání" title="Historie poznání změny klimatu."
+        meta="6. listopadu 2026">
+        <p>Jak jsme zjistili, že se klima mění, co tyto změny způsobuje a jak na ně reagovaly státy. Osa vybírá zásadní objevy, měření a klimatická rozhodnutí.</p>
+        <p>Začněte zásadními milníky (1). Rozšířený přehled přidá důležité metody a důkazy (2), celý výběr i doplňující kroky (3). Vědu lze dále filtrovat na pozorování, metody a mechanismy.</p>
       </PageLead>
+      {legacyNotices}
       <HistoryTimeline items={items} periods={historyPeriods}
+        importances={Object.entries(historyImportances)
+          .map(([value, importance]) => ({ value: Number(value) as HistoryImportance, ...importance }))}
         branches={Object.entries(historyBranches)
           .filter(([value]) => items.some(item => item.branch === value))
           .map(([value, label]) => ({ value: value as HistoryBranch, label }))}
