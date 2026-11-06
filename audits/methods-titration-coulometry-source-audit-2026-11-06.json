@@ -1,0 +1,638 @@
+{
+  "date": "2026-11-06",
+  "methodOrder": [
+    17,
+    18
+  ],
+  "baseCommit": "6329ffd",
+  "articles": [
+    {
+      "slug": "titrace",
+      "title": "Titrace",
+      "sourceIds": [
+        "WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a",
+        "DOI_10_1016_S0304_4203_02_00133_0",
+        "2016_NOAA_SOP3b_Open_Cell",
+        "2011_Hartman_VINDTA",
+        "2022_NORA_Reuse_Policy",
+        "DOI_10_5670_oceanog_2010_22",
+        "DOI_10_1073_pnas_0906044106",
+        "2026_HOT_Alkalinity_Method",
+        "1940_Thompson_Anderson_Alkalinity"
+      ]
+    },
+    {
+      "slug": "coulometrie",
+      "title": "Coulometrie",
+      "sourceIds": [
+        "WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a",
+        "DOI_10_2172_10194787",
+        "2016_Harvey_Analytical_Chemistry",
+        "2026_USGS_Gas_Hydrates_Biogeochemistry",
+        "2018_USGS_Coulometer_Photo",
+        "DOI_10_5670_oceanog_2010_22",
+        "DOI_10_3334_CDIAC_otg_ndp080",
+        "DOI_10_1073_pnas_0906044106",
+        "DOI_10_1098_rstl_1834_0008",
+        "DOI_10_1016_S0304_4203_02_00133_0"
+      ]
+    }
+  ],
+  "changes": [
+    "Titrační příklad odkazuje na tabulku v samostatném patnáctistránkovém protokolu SOP 3b. Shrnutí rozlišuje rozsah otevřené titrace a vyšší rozsah upravené uzavřené titrace.",
+    "Karta Thompsona a Andersona vede na záznam Yale s tlačítkem Download. Tudy se v prohlížeči otevřel celý sken.",
+    "V coulometrickém CSV je ve druhé minutě druhého rozboru opraveno 172 681 na 192 681 impulzů. Přepočet vychází z posledního odečtu a potvrzuje průměr 2 122,132 µmol/kg. Aktualizován kontrolní otisk CSV.",
+    "Karta Johnsonova manuálu otevírá PDF přímo u původního výpisu. Karta NDP-080 výslovně označuje dokumentaci a data NOAA. Ověřeno stažení CSV a přítomnost hodnot DIC."
+  ],
+  "sourceChecks": [
+    {
+      "id": "WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a",
+      "title": "Guide to Best Practices for Ocean CO₂ Measurements",
+      "author": "Andrew G. Dickson, Christopher L. Sabine a James R. Christian (eds.)",
+      "year": 2007,
+      "type": "Metodická příručka",
+      "publication": "PICES Special Publication 3 / IOCCP Report 8",
+      "externalUrl": "https://doi.org/10.25607/OBP-1342",
+      "openAccessUrl": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/Handbook_2007/Guide_all_in_one.pdf",
+      "role": "Původní metodická příručka",
+      "evidence": "Úplný PDF má 196 stran. Kapitola 2 dokládá složení uhličitanového systému. SOP 2 popisuje extrakci CO₂, řízení proudu a kalibraci. SOP 3a přiřazuje vyšší rozsah 3 200–4 600 µmol/kg upravené uzavřené titraci.",
+      "access": {
+        "browserVerified": true,
+        "method": "Browser destination plus full PDF content validation",
+        "pdfPages": 196,
+        "sha256": "1aaac8e647d9e0b12eaa31e669504e51bbc85fdebed4442464cc8e14cdc7ddfd"
+      }
+    },
+    {
+      "id": "DOI_10_1016_S0304_4203_02_00133_0",
+      "title": "Reference materials for oceanic CO₂ analysis: a method for the certification of total alkalinity",
+      "author": "Andrew G. Dickson, J. D. Afghan a G. C. Anderson",
+      "year": 2003,
+      "type": "Primární popis a ověření otevřené titrace",
+      "publication": "Marine Chemistry 80, s. 185–197",
+      "externalUrl": "https://doi.org/10.1016/S0304-4203(02)00133-0",
+      "openAccessUrl": "https://www.ioccp.org/images/D4standards/Dickson%20et%20al%20CRMS.pdf",
+      "role": "Primární ověření certifikace",
+      "evidence": "Úplný 13stránkový PDF na IOCCP dokládá dvoustupňovou otevřenou titraci a coulometrickou kalibraci kyseliny. Tabulka 3 potvrzuje 2 172,21 µmol/kg pro uhličitanový roztok a rozdíl 0,63 µmol/kg při porovnání rozborů přirozené vody.",
+      "access": {
+        "browserVerified": true,
+        "method": "Browser destination plus full PDF content validation",
+        "pdfPages": 13,
+        "sha256": "211f112944eea35fa20e9db08712c6b05fcffd0486e809c4e64451bd739641ff"
+      }
+    },
+    {
+      "id": "2011_Hartman_VINDTA",
+      "title": "Operating manual for the Marianda VINDTA 3C for the laboratory based determination of Total Alkalinity and Total Dissolved Inorganic Carbon in seawater",
+      "author": "S. E. Hartman, C. Dumousseaud a A. Roberts",
+      "year": 2011,
+      "type": "Otevřená přístrojová dokumentace a fotografie",
+      "publication": "National Oceanography Centre, Southampton, Internal Document 01, 66 s. / NERC Open Research Archive (NORA)",
+      "externalUrl": "https://nora.nerc.ac.uk/id/eprint/275961/",
+      "openAccessUrl": "https://nora.nerc.ac.uk/id/eprint/275961/1/NOC_ID_01.pdf",
+      "role": "Původní dokumentace přístroje a fotografie",
+      "evidence": "NORA otevřel úplný 66stránkový PDF. Obrázek 1.1 na straně 9 označuje dávkovač, alkalinitní celu i DIC části VINDTA. Použitý JPEG je bajtově shodný s fotografií vloženou v PDF.",
+      "access": {
+        "browserVerified": true,
+        "method": "Browser destination plus full PDF content validation",
+        "pdfPages": 66,
+        "sha256": "c7e9a58290b4d9942768b13e283772656e4bec798985c0dba0563dbd02c9f186"
+      }
+    },
+    {
+      "id": "2022_NORA_Reuse_Policy",
+      "title": "NERC Open Research Archive: Access/use policy",
+      "author": "NERC Open Research Archive (NORA)",
+      "year": 2022,
+      "type": "Podmínky vzdělávacího použití nezměněných materiálů s uvedením autorství, zdroje a copyrightu",
+      "publication": "Podmínky aktualizované 3. listopadu 2022, přístup 19. října 2026",
+      "externalUrl": "https://nora.nerc.ac.uk/policies.html",
+      "role": "Podmínky vzdělávacího použití",
+      "evidence": "Veřejný text NORA popisuje vzdělávací použití jednotlivých kopií a požaduje uvedení autorů, bibliografie, odkazu na záznam a původního označení copyrightu.",
+      "access": {
+        "browserVerified": true,
+        "method": "Rendered source page"
+      }
+    },
+    {
+      "id": "DOI_10_5670_oceanog_2010_22",
+      "title": "Standards for Ocean Measurements",
+      "author": "Andrew G. Dickson",
+      "year": 2010,
+      "type": "Metodická studie",
+      "publication": "Oceanography",
+      "externalUrl": "https://doi.org/10.5670/oceanog.2010.22",
+      "openAccessUrl": "https://tos.org/oceanography/assets/docs/23-3_dickson.pdf",
+      "role": "Přehled certifikovaných měřicích referencí",
+      "evidence": "Vydavatelský PDF má 15 stran. Dickson popisuje vývoj a použití referenční mořské vody pro DIC a alkalinitu a jejich úlohu při porovnávání laboratoří.",
+      "access": {
+        "browserVerified": true,
+        "method": "Browser destination plus full PDF content validation",
+        "pdfPages": 15,
+        "sha256": "15def6c3e69c30d1855dbee3eb53ac2a79ac8598688eb0930ddeb315c59bf431"
+      }
+    },
+    {
+      "id": "DOI_10_1073_pnas_0906044106",
+      "title": "Physical and biogeochemical modulation of ocean acidification in the central North Pacific",
+      "author": "John E. Dore a kol.",
+      "year": 2009,
+      "type": "Studie",
+      "publication": "Proceedings of the National Academy of Sciences",
+      "externalUrl": "https://doi.org/10.1073/pnas.0906044106",
+      "openAccessUrl": "https://hahana.soest.hawaii.edu/cmoreserver/summercourse/2015/documents/Bottjer_05-30/Dore_2009_OA_NPSG.pdf",
+      "role": "Primární vyhodnocení dlouhodobých měření",
+      "evidence": "Úplný šestistránkový PDF od University of Hawaiʻi potvrzuje, že trend pH povrchové vody −0,0019 ± 0,0002 za rok vychází z DIC a alkality při podmínkách v místě odběru. Zvlášť hodnotí přímé rozbory.",
+      "access": {
+        "browserVerified": true,
+        "method": "Browser destination plus full PDF content validation",
+        "pdfPages": 6,
+        "sha256": "ce400215312453118fdb6196a9468961486902fbe54a73cf007f409158441d16"
+      }
+    },
+    {
+      "id": "2026_HOT_Alkalinity_Method",
+      "title": "Dissolved Inorganic Carbon and Total Alkalinity",
+      "author": "Hawaii Ocean Time-series, University of Hawaiʻi at Mānoa",
+      "year": 2026,
+      "yearLabel": "přístup 2026",
+      "type": "Měřicí postup, kontrola kvality a přístup k datům",
+      "publication": "Veřejná dokumentace programu HOT, ověřeno 6. listopadu 2026",
+      "externalUrl": "https://hahana.soest.hawaii.edu/hot/methods/dicalk.html",
+      "role": "Dokumentace provozovatele měření",
+      "evidence": "Veřejná stránka programu HOT vysvětluje odběr, kalibraci a analytické postupy pro DIC a alkalinitu. Nabízí výsledky a odkaz na databázi HOT-DOGS. Rok na kartě označuje přístup.",
+      "access": {
+        "browserVerified": true,
+        "method": "Rendered source page"
+      }
+    },
+    {
+      "id": "1940_Thompson_Anderson_Alkalinity",
+      "title": "The determination of the alkalinity of sea water",
+      "author": "Thomas G. Thompson a Don H. Anderson",
+      "year": 1940,
+      "type": "Původní měření alkalinity skleněnou elektrodou",
+      "publication": "Journal of Marine Research 3(3), s. 224–229. Sedmistránkový sken včetně archivní obálky je na záznamu Yale pod tlačítkem Download.",
+      "externalUrl": "https://elischolar.library.yale.edu/journal_of_marine_research/572/",
+      "externalLinkLabel": "Otevřít plný text přes záznam Yale",
+      "role": "Původní historická práce",
+      "evidence": "Přímý automatický GET vrátil 403. Záznam Yale se v prohlížeči otevřel a jeho tlačítko Download bez přihlášení zobrazilo sedmistránkový PDF včetně archivní obálky. Abstrakt dokládá měření přebytku kyseliny skleněnou elektrodou v laboratoři i v terénu.",
+      "access": {
+        "browserVerified": true,
+        "method": "Clicked Download from public repository record and observed PDF viewer showing 7 pages",
+        "pdfPages": 7
+      }
+    },
+    {
+      "id": "DOI_10_2172_10194787",
+      "title": "Single-Operator Multiparameter Metabolic Analyzer (SOMMA) for Total Carbon Dioxide (CT) with Coulometric Detection. Operator’s Manual",
+      "author": "Kenneth M. Johnson",
+      "year": 1992,
+      "type": "Původní přístrojový manuál a výpis skutečných měření",
+      "publication": "Brookhaven National Laboratory, BNL-48368, verze 1.0, leden 1992. Veřejná kopie UNT Digital Library, výpis v obrázku 10 na tištěné straně 50 (strana 57 v PDF).",
+      "externalUrl": "https://doi.org/10.2172/10194787",
+      "openAccessUrl": "https://digital.library.unt.edu/ark:/67531/metadc1395112/m2/1/high_res_d/10194787.pdf#page=57",
+      "openAccessLinkLabel": "Otevřít plný text u výpisu (PDF, strana 57)",
+      "role": "Původní manuál a výpis měření",
+      "evidence": "PDF má 78 stran. Přímý odkaz míří na stranu 57 (tištěná strana 50) s obrázkem 10. Všech 20 odečtů bylo vizuálně porovnáno s originálem. Ve druhé minutě druhého rozboru je 192 681 impulzů. Přepočet posledních odečtů dává průměr 2 122,132 µmol/kg.",
+      "access": {
+        "browserVerified": true,
+        "method": "Browser destination plus full PDF content validation",
+        "pdfPages": 78,
+        "sha256": "c0f2efefd9ffcb62d713757d284a5e1eccff3352151d9388d5b8900e271caf0c"
+      }
+    },
+    {
+      "id": "2016_Harvey_Analytical_Chemistry",
+      "title": "Analytical Chemistry 2.1",
+      "author": "David Harvey",
+      "year": 2016,
+      "type": "Vysokoškolská učebnice analytické chemie",
+      "publication": "David T. Harvey, DePauw University. Otevřená učebnice, elektronické vydání na LibreTexts.",
+      "externalUrl": "https://sites.google.com/depauw.edu/dth/analytical-curriculum-projects/analytical-chemistry-2-1",
+      "openAccessUrl": "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_by_David_Harvey/Analytical_Chemistry_2.1_(Harvey)",
+      "role": "Vysokoškolská učebnice",
+      "evidence": "LibreTexts zpřístupňuje plný text. Oddíl 11.3 vysvětluje určení látkového množství z náboje a použití přímé i nepřímé coulometrie.",
+      "access": {
+        "browserVerified": true,
+        "method": "Rendered source page"
+      }
+    },
+    {
+      "id": "2026_USGS_Gas_Hydrates_Biogeochemistry",
+      "title": "Gas Hydrates Project Biogeochemistry Laboratory",
+      "author": "U.S. Geological Survey, Woods Hole Coastal and Marine Science Center",
+      "year": 2026,
+      "yearLabel": "přístup 2026",
+      "type": "Dokumentace využití přístrojů při výzkumu mořského uhlíkového cyklu",
+      "publication": "Veřejná dokumentace laboratoře, ověřeno 6. listopadu 2026",
+      "externalUrl": "https://www.usgs.gov/labs/gas-hydrates-project-biogeochemistry-laboratory",
+      "role": "Dokumentace provozovatele laboratoře",
+      "evidence": "Veřejná stránka USGS uvádí, že laboratoř používá coulometr UIC při výzkumu mořského prostředí. Rok na kartě označuje přístup.",
+      "access": {
+        "browserVerified": true,
+        "method": "Rendered source page"
+      }
+    },
+    {
+      "id": "2018_USGS_Coulometer_Photo",
+      "title": "Coulmeter",
+      "author": "Adrian Mann, U.S. Geological Survey",
+      "year": 2018,
+      "type": "Fotografie coulometru pro rozpuštěný anorganický uhlík, public domain",
+      "publication": "Woods Hole Coastal and Marine Science Center, zveřejněno 6. listopadu 2018",
+      "externalUrl": "https://www.usgs.gov/media/images/coulmeter",
+      "role": "Původ přístrojové fotografie",
+      "evidence": "Veřejná karta USGS identifikuje snímek coulometru, fotografa Adriana Manna, datum zveřejnění 6. listopadu 2018 a Public Domain.",
+      "access": {
+        "browserVerified": true,
+        "method": "Rendered source page"
+      }
+    },
+    {
+      "id": "DOI_10_3334_CDIAC_otg_ndp080",
+      "title": "Carbon Dioxide, Hydrographic and Chemical Data Obtained During the Nine R/V Knorr Cruises Comprising the Indian Ocean CO₂ Survey, 1994–1996",
+      "author": "Kenneth M. Johnson a kolektiv, dokumentaci připravil Alexander Kozyr",
+      "year": 2013,
+      "type": "Veřejná data a primární zpráva o měření a jeho ověření",
+      "publication": "NCEI, NDP-080. Dokumentace vydána v roce 2002, archivní datový záznam 2013, přístup 19. října 2026.",
+      "externalUrl": "https://doi.org/10.3334/CDIAC/otg.ndp080",
+      "openAccessUrl": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/ndp_080/index.html",
+      "openAccessLinkLabel": "Otevřít veřejná data a dokumentaci NOAA",
+      "role": "Primární data a zpráva o plavbách",
+      "evidence": "Zpráva NDP-080 uvádí 18 963 měření DIC a v tabulce 10 166 párových porovnání. Průměr rozdílů jednotlivých plaveb je −4,16 µmol/kg a jejich směrodatná odchylka 1,21 µmol/kg. Z odkazu v dokumentaci se otevřel adresář s CSV. Jeden úplný soubor obsahuje 1 978 kladných hodnot TCARBN s příznakem kvality 2.",
+      "access": {
+        "browserVerified": true,
+        "method": "Browser dataset and download directory, file content validation",
+        "sha256": "9fbbcf3acda3210e53a2eac6921ff92b56961395aa2a12d9bdbc642c6a059241"
+      }
+    },
+    {
+      "id": "DOI_10_1098_rstl_1834_0008",
+      "title": "Experimental Researches in Electricity. Seventh Series.",
+      "author": "Michael Faraday",
+      "year": 1834,
+      "type": "Původní experimenty a zákon elektrolýzy",
+      "publication": "Philosophical Transactions of the Royal Society of London 124, s. 77–122",
+      "externalUrl": "https://doi.org/10.1098/rstl.1834.0008",
+      "openAccessUrl": "https://knowledge.electrochem.org/estir/hist/hist-06-Faraday-7.pdf",
+      "role": "Původní historická práce",
+      "evidence": "Otevřený 48stránkový sken u Electrochemical Society obsahuje sedmou sérii Faradayových výzkumů, včetně porovnávání elektrochemických přeměn při průchodu náboje.",
+      "access": {
+        "browserVerified": true,
+        "method": "Browser destination plus full PDF content validation",
+        "pdfPages": 48,
+        "sha256": "38294b011668382b9c8429e2656ae615f4486b8d981a4dae54002b1bb183adb6"
+      }
+    },
+    {
+      "id": "2016_NOAA_SOP3b_Open_Cell",
+      "title": "SOP 3b: Determination of total alkalinity in sea water using an open-cell titration",
+      "author": "Andrew G. Dickson, Christopher L. Sabine a James R. Christian (eds.)",
+      "year": 2016,
+      "type": "Měřicí protokol a data příkladu",
+      "publication": "Guide to Best Practices for Ocean CO₂ Measurements, SOP 3b, verze 3.02 z 5. ledna 2016. Samostatný protokol na 15 stranách, údaje příkladu na stranách 9 a 10.",
+      "externalUrl": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/Handbook_2007/sop03b.pdf#page=10",
+      "externalLinkLabel": "Otevřít plný text u tabulky odečtů (PDF, strana 10)",
+      "role": "Původní protokol a měřicí příklad",
+      "evidence": "Samostatný 15stránkový SOP 3b, verze 3.02 z roku 2016, se otevírá u tabulky na straně 10. Strany 9–10 se textově shodují se stranami 81–82 příručky. Všech 22 přepsaných dvojic odpovídá originálu.",
+      "access": {
+        "browserVerified": true,
+        "method": "Browser destination plus full PDF content validation",
+        "pdfPages": 15,
+        "sha256": "ef485c1a3d0e3e864efb355a866508b8f00ff32be44cdbff628dbe60dddbb9c6"
+      }
+    }
+  ],
+  "httpChecks": [
+    {
+      "id": "src-01",
+      "url": "https://doi.org/10.25607/OBP-1342",
+      "finalUrl": "https://repository.oceanbestpractices.org/handle/11329/249",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 5952,
+      "sha256": "fb531827be8095a64606c898d6259e8a735a9a22ff1729fb7f0ca71905d46261",
+      "truncated": false
+    },
+    {
+      "id": "src-02",
+      "url": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/Handbook_2007/Guide_all_in_one.pdf",
+      "finalUrl": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/Handbook_2007/Guide_all_in_one.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 5434312,
+      "sha256": "1aaac8e647d9e0b12eaa31e669504e51bbc85fdebed4442464cc8e14cdc7ddfd",
+      "truncated": false
+    },
+    {
+      "id": "src-03",
+      "url": "https://doi.org/10.1016/S0304-4203(02)00133-0",
+      "finalUrl": "https://linkinghub.elsevier.com/retrieve/pii/S0304420302001330",
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "bytes": 2712,
+      "sha256": "bce261a0c34e5a6afcdd87a8ccc0906105882dff46151ed1b05ba6f7902337e9",
+      "truncated": false
+    },
+    {
+      "id": "src-04",
+      "url": "https://www.ioccp.org/images/D4standards/Dickson%20et%20al%20CRMS.pdf",
+      "finalUrl": "https://www.ioccp.org/images/D4standards/Dickson%20et%20al%20CRMS.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 268384,
+      "sha256": "211f112944eea35fa20e9db08712c6b05fcffd0486e809c4e64451bd739641ff",
+      "truncated": false
+    },
+    {
+      "id": "src-05",
+      "url": "https://nora.nerc.ac.uk/id/eprint/275961/",
+      "finalUrl": "https://nora.nerc.ac.uk/id/eprint/275961/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 44668,
+      "sha256": "c23b3f2fe159499a6683f1de9756795639aa487fbc872080ec67e4b02e95ba61",
+      "truncated": false
+    },
+    {
+      "id": "src-06",
+      "url": "https://nora.nerc.ac.uk/id/eprint/275961/1/NOC_ID_01.pdf",
+      "finalUrl": "https://nora.nerc.ac.uk/id/eprint/275961/1/NOC_ID_01.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 1340839,
+      "sha256": "c7e9a58290b4d9942768b13e283772656e4bec798985c0dba0563dbd02c9f186",
+      "truncated": false
+    },
+    {
+      "id": "src-07",
+      "url": "https://nora.nerc.ac.uk/policies.html",
+      "finalUrl": "https://nora.nerc.ac.uk/policies.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 16549,
+      "sha256": "598855ae896a0dabd24daef4f6c41b67ea0cea312a9342af2d7116ddfd200211",
+      "truncated": false
+    },
+    {
+      "id": "src-08",
+      "url": "https://doi.org/10.5670/oceanog.2010.22",
+      "finalUrl": "https://tos.org/oceanography/article/standards-for-ocean-measurements",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 40588,
+      "sha256": "ea5295d86d234f585341ce39efae399c302670c07ca1d2b1433a343993da096a",
+      "truncated": false
+    },
+    {
+      "id": "src-09",
+      "url": "https://tos.org/oceanography/assets/docs/23-3_dickson.pdf",
+      "finalUrl": "https://tos.org/oceanography/assets/docs/23-3_dickson.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 450067,
+      "sha256": "15def6c3e69c30d1855dbee3eb53ac2a79ac8598688eb0930ddeb315c59bf431",
+      "truncated": false
+    },
+    {
+      "id": "src-10",
+      "url": "https://doi.org/10.1073/pnas.0906044106",
+      "finalUrl": "https://pnas.org/doi/full/10.1073/pnas.0906044106",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 5654,
+      "sha256": "4680aeb5415545828a6217023f4a9543ce7cade7e4ee9cb78f294edd72fd4e6e",
+      "truncated": false
+    },
+    {
+      "id": "src-11",
+      "url": "https://hahana.soest.hawaii.edu/cmoreserver/summercourse/2015/documents/Bottjer_05-30/Dore_2009_OA_NPSG.pdf",
+      "finalUrl": "https://hahana.soest.hawaii.edu/cmoreserver/summercourse/2015/documents/Bottjer_05-30/Dore_2009_OA_NPSG.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 1869153,
+      "sha256": "ce400215312453118fdb6196a9468961486902fbe54a73cf007f409158441d16",
+      "truncated": false
+    },
+    {
+      "id": "src-12",
+      "url": "https://hahana.soest.hawaii.edu/hot/methods/dicalk.html",
+      "finalUrl": "https://hahana.soest.hawaii.edu/hot/methods/dicalk.html",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 20091,
+      "sha256": "644d09cb7bfd546f691805e68ef6b3ae73e9439a6e3f20170deaf251c4baf0e4",
+      "truncated": false
+    },
+    {
+      "id": "src-13",
+      "url": "https://elischolar.library.yale.edu/journal_of_marine_research/572/",
+      "finalUrl": "https://elischolar.library.yale.edu/journal_of_marine_research/572/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 32829,
+      "sha256": "78ae59d1d81a68a26fd4bbe5d3da5e3859d41ce450de7c34644295c5230161b7",
+      "truncated": false
+    },
+    {
+      "id": "src-14",
+      "url": "https://elischolar.library.yale.edu/cgi/viewcontent.cgi?article=1571&context=journal_of_marine_research",
+      "finalUrl": "https://elischolar.library.yale.edu/cgi/viewcontent.cgi?article=1571&context=journal_of_marine_research",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 5894,
+      "sha256": "d97a58f24f833d4da226b3dfda8a0697922325c4df837bb2c1d15370079f6ed7",
+      "truncated": false
+    },
+    {
+      "id": "src-15",
+      "url": "https://doi.org/10.2172/10194787",
+      "finalUrl": "https://www.osti.gov/biblio/10194787",
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "bytes": 43640,
+      "sha256": "5a020d897d3cccd667a94df50c12ae8d8ee59a2732012c6c325fe8fc9acb86e6",
+      "truncated": false
+    },
+    {
+      "id": "src-16",
+      "url": "https://digital.library.unt.edu/ark:/67531/metadc1395112/m2/1/high_res_d/10194787.pdf",
+      "finalUrl": "https://digital.library.unt.edu/ark:/67531/metadc1395112/m2/1/high_res_d/10194787.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 4983809,
+      "sha256": "c0f2efefd9ffcb62d713757d284a5e1eccff3352151d9388d5b8900e271caf0c",
+      "truncated": false
+    },
+    {
+      "id": "src-17",
+      "url": "https://sites.google.com/depauw.edu/dth/analytical-curriculum-projects/analytical-chemistry-2-1",
+      "finalUrl": "https://sites.google.com/depauw.edu/dth/analytical-curriculum-projects/analytical-chemistry-2-1",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 126122,
+      "sha256": "342831f2f74e9ba777314462a649d5c990c2485372550ec6f014d332f5de1cb3",
+      "truncated": false
+    },
+    {
+      "id": "src-18",
+      "url": "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_by_David_Harvey/Analytical_Chemistry_2.1_(Harvey)",
+      "finalUrl": "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_by_David_Harvey/Analytical_Chemistry_2.1_(Harvey)",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 184903,
+      "sha256": "81dd94e2c792b5bcbc2fce077861a1d238142f50b3dad33853fb22904feef031",
+      "truncated": false
+    },
+    {
+      "id": "src-19",
+      "url": "https://www.usgs.gov/labs/gas-hydrates-project-biogeochemistry-laboratory",
+      "finalUrl": "https://www.usgs.gov/labs/gas-hydrates-project-biogeochemistry-laboratory",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 97147,
+      "sha256": "44d02b9c2ae45434b0d08231dcd5342efb3b32e8c5b8e11073d15227c85e5372",
+      "truncated": false
+    },
+    {
+      "id": "src-20",
+      "url": "https://www.usgs.gov/media/images/coulmeter",
+      "finalUrl": "https://www.usgs.gov/media/images/coulmeter",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 85818,
+      "sha256": "56b6853f2852dfef7667141840877a2ad94db536af79a942361fb4b73e6743fb",
+      "truncated": false
+    },
+    {
+      "id": "src-21",
+      "url": "https://doi.org/10.3334/CDIAC/otg.ndp080",
+      "error": "HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=18)"
+    },
+    {
+      "id": "src-22",
+      "url": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/ndp_080/index.html",
+      "finalUrl": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/ndp_080/index.html",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 17208,
+      "sha256": "5f8ef1d1527e392b6e01d89079aec90071cdadb4606468a6b66b71991e95256b",
+      "truncated": false
+    },
+    {
+      "id": "src-23",
+      "url": "https://doi.org/10.1098/rstl.1834.0008",
+      "finalUrl": "https://royalsocietypublishing.org/rstl/article/doi/10.1098/rstl.1834.0008/118012/VI-Experimental-researches-in-electricity-Seventh",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 5950,
+      "sha256": "c552f5368d10865c2e93d3924231704a3f97b98a437a7922fd88127d428051d0",
+      "truncated": false
+    },
+    {
+      "id": "src-24",
+      "url": "https://knowledge.electrochem.org/estir/hist/hist-06-Faraday-7.pdf",
+      "finalUrl": "https://knowledge.electrochem.org/estir/hist/hist-06-Faraday-7.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 5650168,
+      "sha256": "38294b011668382b9c8429e2656ae615f4486b8d981a4dae54002b1bb183adb6",
+      "truncated": false
+    },
+    {
+      "id": "ndp-directory",
+      "url": "https://www.ncei.noaa.gov/data/oceans/ncei/ocads/data/0115009/",
+      "finalUrl": "https://www.ncei.noaa.gov/data/oceans/ncei/ocads/data/0115009/",
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "bytes": 3898,
+      "sha256": "b3906fd995dad954d4393e4ca097225d54bfbf0c657cec20a8211ca6df112d0c",
+      "truncated": false
+    },
+    {
+      "id": "ndp-first-csv",
+      "url": "https://www.ncei.noaa.gov/data/oceans/ncei/ocads/data/0115009/316N19941201_export_whp.csv",
+      "finalUrl": "https://www.ncei.noaa.gov/data/oceans/ncei/ocads/data/0115009/316N19941201_export_whp.csv",
+      "status": 200,
+      "contentType": "text/csv",
+      "bytes": 1232319,
+      "sha256": "9fbbcf3acda3210e53a2eac6921ff92b56961395aa2a12d9bdbc642c6a059241",
+      "truncated": false
+    },
+    {
+      "id": "titration-data",
+      "url": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/Handbook_2007/Guide_all_in_one.pdf#page=81",
+      "finalUrl": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/Handbook_2007/Guide_all_in_one.pdf#page=81",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 5434312,
+      "sha256": "1aaac8e647d9e0b12eaa31e669504e51bbc85fdebed4442464cc8e14cdc7ddfd",
+      "truncated": false
+    },
+    {
+      "id": "ndp-report",
+      "url": "https://www.ncei.noaa.gov/data/oceans/ncei/ocads/data/0115009/ndp080.pdf",
+      "finalUrl": "https://www.ncei.noaa.gov/data/oceans/ncei/ocads/data/0115009/ndp080.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 4956821,
+      "sha256": "abaa367a7405a7f261eb04ebb1b05fc133c6253b03218f274b43b642b48e95c4",
+      "truncated": false
+    },
+    {
+      "id": "somma-figure10",
+      "url": "https://digital.library.unt.edu/ark:/67531/metadc1395112/m2/1/high_res_d/10194787.pdf#page=57",
+      "finalUrl": "https://digital.library.unt.edu/ark:/67531/metadc1395112/m2/1/high_res_d/10194787.pdf#page=57",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 4983809,
+      "sha256": "c0f2efefd9ffcb62d713757d284a5e1eccff3352151d9388d5b8900e271caf0c",
+      "truncated": false
+    },
+    {
+      "id": "sop3b-revision",
+      "url": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/Handbook_2007/sop03b.pdf#page=10",
+      "finalUrl": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/Handbook_2007/sop03b.pdf#page=10",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 1319484,
+      "sha256": "ef485c1a3d0e3e864efb355a866508b8f00ff32be44cdbff628dbe60dddbb9c6",
+      "truncated": false
+    }
+  ],
+  "verifiedData": {
+    "titration": {
+      "rowsCompared": 22,
+      "rowsUsed": 21,
+      "standalonePages": 15,
+      "sameExamplePagesAsFullGuide": true,
+      "publishedFinal": 2260.06
+    },
+    "coulometry": {
+      "rowsComparedToFigure": 20,
+      "correctedReplicate": 2,
+      "correctedMinute": 2,
+      "oldCount": 172681,
+      "actualCount": 192681,
+      "recalculatedResults": [
+        2122.2238426661847,
+        2122.0405185067966
+      ],
+      "mean": 2122.132180586491
+    },
+    "knorr": {
+      "filesInDirectory": 11,
+      "exampleCsvGoodDicRows": 1978,
+      "exampleCsvSha256": "9fbbcf3acda3210e53a2eac6921ff92b56961395aa2a12d9bdbc642c6a059241"
+    },
+    "photo": {
+      "xref": 30,
+      "width": 688,
+      "height": 542,
+      "matches": true,
+      "sha256": "afdfe40f7d80aa67eca39876cc6a45ad2e1e4e8925ded49a0ede4131598ce70b"
+    }
+  },
+  "browserNotes": "Kontrola 14 stávajících a jednoho nového zdroje. Přímá navigace na Yale není průkazná, proto byl ověřen otevřený PDF v novém okně po kliknutí na Download v repozitáři. Mobilní stránky mají posuvná schémata a tabulky bez přetékání celé stránky."
+}

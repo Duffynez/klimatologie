@@ -1,11 +1,12 @@
 {
   "title": "Published seawater titration, SOP 3b section 7.4",
-  "source_id": "WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a",
-  "source_url": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/Handbook_2007/Guide_all_in_one.pdf",
+  "source_id": "2016_NOAA_SOP3b_Open_Cell",
+  "source_url": "https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/Handbook_2007/sop03b.pdf#page=10",
   "guide_doi": "10.25607/OBP-1342",
   "sop_version": "3.02, January 5, 2016",
-  "source_pages": "SOP 3b pp. 9-10, PDF pages 81-82",
+  "source_pages": "Standalone SOP 3b pp. 9-10. The same pages are 81-82 in the full guide PDF.",
   "accessed": "2026-10-19",
+  "verified": "2026-11-06",
   "sample_context": "Published titration record for a seawater sample. Collection place, collection date and sample identifier are not supplied by the guide.",
   "data_level": "22 published pairs of cumulative delivered acid volume and electrode voltage, manually transcribed without resampling. The example reproduces the initial Gran estimate only. The final nonlinear result is quoted from the guide.",
   "selection": "Use rows 1-21, 3.500-4.500 mL, equal weights. Retain but exclude 4.550 mL because the guide flags it outside its final pH range. This fixed selection reproduces an explicit initial estimate, not the handbook nonlinear fitting/selection algorithm.",
@@ -22,5 +23,5 @@
   "published_final_E0_V": 0.394401,
   "published_final_stage": "Nonlinear least-squares evaluation accounting for sulfate and fluoride. Value before any correction for preservative dilution.",
   "csv_sha256_lf": "e2f698ea1db695d57b6ce798bc22d905a1eb05430d425a95081e568b57eef172",
-  "source_pdf_sha256": "1aaac8e647d9e0b12eaa31e669504e51bbc85fdebed4442464cc8e14cdc7ddfd"
+  "source_pdf_sha256": "ef485c1a3d0e3e864efb355a866508b8f00ff32be44cdbff628dbe60dddbb9c6"
 }

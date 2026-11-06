@@ -1,11 +1,12 @@
 {
   "title": "SOMMA analysis printout, Johnson 1992, Figure 10",
   "source_id": "DOI_10_2172_10194787",
-  "source_url": "https://digital.library.unt.edu/ark:/67531/metadc1395112/m2/1/high_res_d/10194787.pdf",
+  "source_url": "https://digital.library.unt.edu/ark:/67531/metadc1395112/m2/1/high_res_d/10194787.pdf#page=57",
   "source_doi": "10.2172/10194787",
   "source_version": "SOMMA Manual, Version 1.0, January 1992",
   "source_pages": "Printed pp. 45-50, PDF pp. 52-57. Figure 10 on printed p. 50.",
   "accessed": "2026-10-19",
+  "verified": "2026-11-06",
   "sample_context": "Two replicate analyses from the original printed instrument record. Sample collection place, collection date and identifier are not provided. The earlier system-cleaning readings are separate and are not included in the CSV.",
   "data_level": "20 cumulative instrument counts, transcribed from Figure 10. The calculation uses the final reading of each replicate and the published calibration inputs. The record provides counts, not the continuous current waveform.",
   "selection": "All ten minute readings from each of the two sample analyses. No interpolation or rejected values. Use minute 10 as the final reading.",
@@ -34,6 +35,6 @@
   "published_mean_umol_per_kg": 2122.132,
   "reported_result_stage": "Instrument printout concentration, with electronic/background correction and gas calibration. No additional preservative or headspace correction is invented.",
   "rounding": "Use the printed volume factor to reproduce printed results. Recalculating it from rounded volume and density changes concentrations by approximately 0.00084 umol/kg.",
-  "csv_sha256_lf": "8f788ce5fff291c50c8d3a4d7ee83f12a992f4a275002e76b24da163386c9de2",
+  "csv_sha256_lf": "17f732e8184e68b5602944038d8d9b1e8e360fbe45388902bd0434d365e81a21",
   "source_pdf_sha256": "c0f2efefd9ffcb62d713757d284a5e1eccff3352151d9388d5b8900e271caf0c"
 }

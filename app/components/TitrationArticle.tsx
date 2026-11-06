@@ -27,7 +27,7 @@ export function TitrationArticle() {
           <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(Dickson a kol., kap. 2)</SourceLink>
         </p>
         <p>
-          Největší podíl mají v běžné mořské vodě hydrogenuhličitanové a uhličitanové ionty.
+          K alkalinitě běžné mořské vody nejvíc přispívají hydrogenuhličitanové a uhličitanové ionty.
           Oba obsahují uhlík a kyslík, ale vážou rozdílné množství vodíku. Uhličitan
           přijme jeden H⁺ a vznikne hydrogenuhličitan. Ten může přijmout další H⁺.
           Při dostatečném okyselení se tak uhlík převede na rozpuštěný oxid uhličitý a vznikne voda.
@@ -132,7 +132,7 @@ export function TitrationArticle() {
           Postup popisují{" "}
           <SourceLink id="DOI_10_1016_S0304_4203_02_00133_0">Dickson, Afghan a Anderson (2003)</SourceLink>{" "}
           a jeho novější pracovní verze{" "}
-          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">SOP 3b z roku 2016</SourceLink>.
+          <SourceLink id="2016_NOAA_SOP3b_Open_Cell">SOP 3b z roku 2016</SourceLink>.
         </p>
         <figure className="article-figure">
           <Image src="/media/titration/vindta-noc.jpg" width={688} height={542} unoptimized
@@ -236,8 +236,8 @@ export function TitrationArticle() {
           ALOHA severně od Havaje. Z jeho měření alkalinity a anorganického uhlíku
           v letech 1988–2007 vypočítali{" "}
           <SourceLink id="DOI_10_1073_pnas_0906044106">Dore a kolegové (2009)</SourceLink>{" "}
-          pokles pH povrchové vrstvy do 30 metrů o 0,0019 ± 0,0002 za rok.
-          Uvedené ± vyjadřuje standardní chybu odhadu časového trendu.
+          pokles pH povrchové vrstvy do 30 metrů o 0,0019 ± 0,0002 za rok
+          při teplotě a tlaku v místě odběru. Uvedené ± vyjadřuje standardní chybu odhadu časového trendu.
           Titrace zde dodala jednu ze vstupních veličin, pH vzniklo navazujícím
           výpočtem. Program zveřejňuje{" "}
           <SourceLink id="2026_HOT_Alkalinity_Method">popis měření, kontroly i odkazy na data</SourceLink>.
@@ -249,9 +249,9 @@ export function TitrationArticle() {
           Spojení známé dávky kyseliny s měřením jejího přebytku má v oceánografii
           dlouhou historii.{" "}
           <SourceLink id="1940_Thompson_Anderson_Alkalinity">Thompson a Anderson (1940)</SourceLink>{" "}
-          popsali použití skleněné elektrody v lodní laboratoři. Po jediné dávce
-          kyseliny měřili zbývající kyselost. Pozdější postupy začaly využívat více
-          bodů křivky a výpočet chemických rovnováh. Dvoustupňovou otevřenou titraci
+          popsali měření přebytku kyseliny skleněnou elektrodou v laboratoři i v terénu.
+          Plný sken se v archivu Yale otevře tlačítkem Download. Pozdější postupy
+          začaly využívat více bodů křivky a výpočet chemických rovnováh. Dvoustupňovou otevřenou titraci
           pro certifikaci mořské vody doložili{" "}
           <SourceLink id="DOI_10_1016_S0304_4203_02_00133_0">Dickson a kolegové (2003)</SourceLink>.
         </p>
@@ -331,7 +331,8 @@ export function TitrationArticle() {
           Měřicí příručka zveřejňuje celý záznam titrace vzorku mořské vody:
           22 dvojic přidaného objemu kyseliny a napětí elektrody.
           Použijeme{" "}
-          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">SOP 3b, verzi 3.02 z 5. ledna 2016, oddíl 7.4, s. 9–10</SourceLink>.
+          <SourceLink id="2016_NOAA_SOP3b_Open_Cell">SOP 3b, verzi 3.02 z 5. ledna 2016, oddíl 7.4, s. 9–10</SourceLink>.
+          Karta vede přímo na stranu 10 s tabulkou. Na předchozí straně jsou údaje o vzorku.
           Příručka u tohoto vzorku neuvádí místo ani datum odběru.
           Zopakujeme počáteční Granův odhad a porovnáme jej s konečným výsledkem
           uvedeným v příručce.
@@ -374,7 +375,7 @@ export function TitrationArticle() {
             veličinu G. Modré body jsou přepočtené odečty, oranžová přímka
             jejich proložení. Přerušovaný úsek vede k odhadnutému bodu ekvivalence.
             Vlastní výpočet z dat příručky, stále jde o počáteční Granův odhad.{" "}
-            <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 3b, oddíl 7.4)</SourceLink>
+            <SourceLink id="2016_NOAA_SOP3b_Open_Cell">(SOP 3b, oddíl 7.4)</SourceLink>
           </figcaption>
         </figure>
         <p>
@@ -391,7 +392,7 @@ export function TitrationArticle() {
           je přibližně 3,32 µmol/kg. Ukazuje význam zpřesnění chemického popisu,
           není odhadem nejistoty měření. Konečnou hodnotu zde přebíráme ze zdroje,
           přiložený skript opakuje výpočet Granova odhadu.{" "}
-          <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(SOP 3b, oddíl 7.4)</SourceLink>
+          <SourceLink id="2016_NOAA_SOP3b_Open_Cell">(SOP 3b, oddíl 7.4)</SourceLink>
         </p>
         <details className="article-details">
           <summary>Data, nastavení a opakování výpočtu</summary>
@@ -435,10 +436,12 @@ export function TitrationArticle() {
           </p>
           <p>
             Titrace umožňuje stanovovat koncentrace látek v roztocích a jejich schopnost
-            vázat kyselinu. V oceánografii měří celkovou alkalinitu. Standardní postup
-            je určen pro 2 000–2 500 µmol/kg a lze jej upravit i pro 3 200–4 600
-            µmol/kg. Výsledky slouží ke zkoumání ukládání uhlíku a acidifikace oceánu.{" "}
-            <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(Dickson a kol.: postup SOP 3a)</SourceLink>
+            vázat kyselinu. V oceánografii měří celkovou alkalinitu. Otevřená titrace
+            podle <SourceLink id="2016_NOAA_SOP3b_Open_Cell">SOP 3b</SourceLink> je vhodná
+            pro běžné hodnoty 2 000–2 500 µmol/kg. Pro vyšší hodnoty 3 200–4 600 µmol/kg,
+            pozorované třeba v Černém moři, příručka uvádí úpravu{" "}
+            <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">uzavřené titrace SOP 3a</SourceLink>.
+            Výsledky slouží ke zkoumání ukládání uhlíku a acidifikace oceánu.
           </p>
         </div>
       </div>

@@ -3057,7 +3057,7 @@ test("publishes titration with open sources, full data and a clearly scoped calc
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">6\. listopadu 2026<\/p>/);
   assert.deepEqual([...body.matchAll(/<h2\b[^>]*>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak ze spotřeby kyseliny zjistíme alkalinitu", "Nejistoty a ověření", "Příklad: přepočet zveřejněné titrace", "Shrnutí",
   ]);
@@ -3126,7 +3126,7 @@ test("publishes coulometry with a complete charge-to-carbon explanation and open
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">6\. listopadu 2026<\/p>/);
   assert.deepEqual([...body.matchAll(/<h2\b[^>]*>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak elektrický náboj určí množství uhlíku", "Nejistoty a ověření",
     "Příklad: dva rozbory z původního výpisu přístroje", "Shrnutí",
@@ -3167,6 +3167,7 @@ test("reproduces both original SOMMA sample analyses from all twenty published r
   for (const replicate of [1, 2]) {
     const series = rows.filter(r => r[0] === replicate);
     assert.deepEqual(series.map(r => r[1]), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+    if (replicate === 2) assert.equal(series[1][2], 192681, "Match minute 2 of replicate 2 in Figure 10");
     const count = series.at(-1)[2];
     assert.equal(count, replicate === 1 ? 301133 : 301107);
     const amount = (

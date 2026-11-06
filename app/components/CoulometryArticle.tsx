@@ -287,8 +287,9 @@ export function CoulometryArticle() {
         <p>
           Rozhodující jsou zachování vzorku, úplné oddělení CO₂, známá hmotnost
           vody a stálá odezva coulometru. Opakovatelnost měření při průzkumu
-          Indického oceánu byla vyjádřena směrodatnou odchylkou přibližně
-          1,2 µmol/kg. Ta popisuje, jak se opakované výsledky rozptylují kolem průměru. Porovnání s odlišným postupem na souši však
+          Indického oceánu byla vyhodnocena z duplicitních vzorků a měření referenční
+          vody. Autoři uvádějí směrodatnou odchylku přibližně 1,2 µmol/kg.
+          Porovnání s odlišným postupem na souši zároveň
           ukázalo i soustavný rozdíl několika µmol/kg.{" "}
           <SourceLink id="DOI_10_3334_CDIAC_otg_ndp080">Dokumentace průzkumu</SourceLink>{" "}
           tak umožňuje posoudit opakovatelnost i shodu mezi metodami.
@@ -334,9 +335,10 @@ export function CoulometryArticle() {
 
         <h2>Příklad: dva rozbory z původního výpisu přístroje</h2>
         <p>
-          <SourceLink id="DOI_10_2172_10194787">Johnsonův manuál, obrázek 10 na straně 50</SourceLink>,{" "}
-          zveřejňuje skutečný výpis dvou opakovaných rozborů jednoho vzorku.
-          Obsahuje deset postupných odečtů každého měření a koeficienty použité
+          <SourceLink id="DOI_10_2172_10194787">Johnsonův manuál</SourceLink> zveřejňuje skutečný
+          výpis dvou opakovaných rozborů jednoho vzorku. Karta vede na obrázek 10
+          na straně 57 souboru PDF, která v tištěném manuálu nese číslo 50.
+          Výpis obsahuje deset postupných odečtů každého měření a koeficienty použité
           přístrojem. Místo ani datum odběru nejsou uvedeny. Zopakujeme výpočet
           z těchto odečtů až ke koncentraci uhlíku.
         </p>

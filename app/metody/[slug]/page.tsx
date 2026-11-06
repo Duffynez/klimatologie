@@ -459,7 +459,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "coulometrie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Laboratorní analýza" title="Coulometrie" meta="31. října 2026">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Coulometrie" meta="6. listopadu 2026">
           <p>Jak elektrický proud vytváří měřicí činidlo a prošlý náboj umožňuje určit množství rozpuštěného anorganického uhlíku v mořské vodě.</p>
         </PageLead>
         <CoulometryArticle />
@@ -471,7 +471,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "titrace") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Laboratorní analýza" title="Titrace" meta="31. října 2026">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Titrace" meta="6. listopadu 2026">
           <p>Titrace určuje množství reagujících látek podle spotřeby známého činidla. Při rozboru mořské vody tak získáváme celkovou alkalinitu, jeden z podkladů pro sledování acidifikace oceánu.</p>
         </PageLead>
         <TitrationArticle />
