@@ -276,12 +276,13 @@ export function RadiativeFluxArticle() {
           System</em>, měří sluneční pásmo a široké pásmo zahrnující i tepelné
           záření. Družice však vidí každé místo jen z určitého směru. K výpočtu
           celkového toku proto slouží vztahy popisující, jak se záření rozděluje
-          do různých směrů. Vycházejí z pozorování různých povrchů a oblačnosti.
-          Jednotlivá měření se potom spojují v prostoru a čase.{" "}
-          <SourceLink id="WEB_NASA_CERES_FAQ">(NASA: měření CERES a převod na toky)</SourceLink>
+          do různých směrů. Autoři je odvodili z měření CERES pod různými úhly
+          zvlášť pro různé typy povrchu a podmínky oblačnosti.{" "}
+          <SourceLink id="DOI_10_5194_amt_8_611_2015">(Su a kol. 2015, oddíl 2 a rovnice 1–2)</SourceLink>
         </p>
         <p>
-          Výsledkem jsou například měsíční mapy produktu EBAF, anglicky
+          Spojením jednotlivých měření v prostoru a čase vznikají například
+          měsíční mapy produktu EBAF, anglicky
           <em> Energy Balanced and Filled</em>, které popisují radiační bilanci
           na horní hranici atmosféry. Příchozí sluneční energii do bilance
           dodávají samostatná družicová měření Slunce. Přepočítávají se podle

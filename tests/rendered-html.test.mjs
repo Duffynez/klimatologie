@@ -394,7 +394,7 @@ test("publishes thermal infrared radiometry with its source trail and temperatur
     "Jak ze záření zjistíme teplotu", "Nejistoty a ověření",
     "Příklad: teplota jednoho místa u Aletschského ledovce", "Shrnutí",
   ]);
-  assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">6\. listopadu 2026<\/p>/);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
   assert.doesNotMatch(body, /_vinext\/image|katex-error|Potřebné informace/);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
@@ -409,6 +409,8 @@ test("publishes thermal infrared radiometry with its source trail and temperatur
     assert.ok(card, "Missing source " + id);
     if (id === "2023_Landsat_Aletsch_STAC") {
       assert.match(card, /href="https:\/\/planetarycomputer\.microsoft\.com\/api\/stac\/v1\/collections\/landsat-c2-l2\/items\/LC08_L2SP_195028_20230820_02_T1"[^>]*>Otevřít metadata celé scény \(STAC\)/);
+    } else if (id === "2023_Landsat_Aletsch_Thermal_Window") {
+      assert.match(card, /href="\/data\/methods\/infrared-radiometry\/aletsch-thermal\.tif"[^>]*>Stáhnout tepelný výřez \(GeoTIFF\)/);
     } else {
       assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
     }

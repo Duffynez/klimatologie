@@ -65,7 +65,7 @@ export function InfraredRadiometryArticle() {
           do 11,2 mikrometru. Mikrometr je miliontina metru. Toto pásmo
           leží v části infračerveného spektra, kterou za bezoblačné oblohy prochází
           podstatná část záření povrchu až k družici.{" "}
-          <SourceLink id="WEB_NASA_TIRS">(NASA: pásma TIRS)</SourceLink>{" "}
+          <SourceLink id="DOI_10_3390_rs6098803">(Montanaro a kol. 2014, oddíly 1.1 a 1.2)</SourceLink>{" "}
           a <SourceLink id="2024_USGS_Landsat_C2_L2_Guide">(USGS: volba pásma pro povrchovou teplotu)</SourceLink>
         </p>
         <p>
@@ -75,7 +75,7 @@ export function InfraredRadiometryArticle() {
           energii potřebnou k přechodu do stavu, ve kterém přispěje k elektrickému
           proudu. Více zachyceného záření tak vytváří větší signál. Elektronika jej
           změří a uloží jako číselný údaj pro příslušné místo v obrazu.{" "}
-          <SourceLink id="WEB_NASA_TIRS">(NASA: polovodičové detektory TIRS)</SourceLink>
+          <SourceLink id="DOI_10_3390_rs6098803">(Montanaro a kol. 2014, oddíl 1.2)</SourceLink>
         </p>
         <figure className="article-figure">
           <Image src="/media/infrared-radiometry/tirs-testing.jpg" width={3327} height={2550} unoptimized
@@ -220,7 +220,7 @@ export function InfraredRadiometryArticle() {
           Stejný převod aplikovaný přímo na tuto zář poskytuje
           takzvanou jasovou teplotu: teplotu černého tělesa, které by vytvořilo
           tento dosud neopravený signál.{" "}
-          <SourceLink id="2019_USGS_Landsat8_Handbook">(USGS: převod záře na jasovou teplotu, oddíl 5.3.3)</SourceLink>
+          <SourceLink id="2019_USGS_Landsat8_Handbook">(USGS, převod záře na jasovou teplotu v oddílu 5.3)</SourceLink>
         </p>
         <p>
           Provedením celého postupu na jednotlivých místech vznikne mapa teploty
@@ -304,7 +304,7 @@ export function InfraredRadiometryArticle() {
           doplnit čas mezi přelety mikrovlnných radiometrů. Hotové mapy a jejich
           spojení se srážkoměry popisuje pozorování
           <Link href="/pozorovani/srazky-a-privalove-srazky/#druzice"> srážek a přívalových srážek</Link>.{" "}
-          <SourceLink id="WEB_NASA_Algorithm_Theoretical_Basis_Document_79780237">(IMERG V07, oddíly 3.2 a 3.3)</SourceLink>
+          <SourceLink id="WEB_NASA_Algorithm_Theoretical_Basis_Document_79780237">(IMERG V07, oddíly 3.6–3.8)</SourceLink>
         </p>
 
         <h2>Nejistoty a ověření</h2>
@@ -381,8 +381,8 @@ export function InfraredRadiometryArticle() {
           Level 2, která už obsahují kalibrovanou zář a vypočtené atmosférické
           i povrchové vstupy. Z nich zopakujeme závěrečné oddělení příspěvků
           a přibližný převod na teplotu.{" "}
-          <SourceLink id="2023_Landsat_Aletsch_STAC">(konkrétní snímek)</SourceLink>{" "}
-          a <SourceLink id="DOI_10_5066_P9OGBGM6">(datový soubor USGS)</SourceLink>
+          <SourceLink id="2023_Landsat_Aletsch_Thermal_Window">Na kartě dat je ke stažení použitý tepelný výřez</SourceLink>.{" "}
+          <SourceLink id="DOI_10_5066_P9OGBGM6">(Datová sada USGS)</SourceLink>
         </p>
         <figure className="article-figure">
           <div style={{ overflowX: "auto" }} tabIndex={0} role="region" aria-label="Porovnání optického obrazu a teplotní mapy, na malém displeji posuvné">
@@ -395,8 +395,10 @@ export function InfraredRadiometryArticle() {
             v okamžiku přeletu. Barvy vpravo vyjadřují stupně Celsia podle stupnice,
             šedě jsou vyřazená nebo chybějící teplotní data. Vyřazujeme označené
             oblaky, jejich okolní masku, cirry, stíny a příznaky saturace nebo
-            zakrytí terénem. C označuje místo výpočtu. Vlastní zobrazení veřejných{" "}
-            <SourceLink id="DOI_10_5066_P9OGBGM6">dat USGS</SourceLink>, výřez přibližně 10,2 × 17,9 km.
+            zakrytí terénem. C označuje místo výpočtu. Vlastní zobrazení{" "}
+            <SourceLink id="2023_Landsat_Aletsch_STAC">optického</SourceLink> a{" "}
+            <SourceLink id="2023_Landsat_Aletsch_Thermal_Window">tepelného výřezu</SourceLink>{" "}
+            z dat USGS. Výřez měří přibližně 10,2 × 17,9 km.
           </figcaption>
         </figure>
         <p>
@@ -432,7 +434,7 @@ export function InfraredRadiometryArticle() {
           String.raw`B\approx10{,}8081\,\mathrm{W/(m^2\,sr\,\mu m)}`,
         ]} />
         <p>
-          Z metadat pásma 10 převezmeme konstanty <InlineMath tex="K_1" /> = 774,8853
+          Z metadat produktu Level 1 pro pásmo 10 převezmeme konstanty <InlineMath tex="K_1" /> = 774,8853
           W/(m²·sr·µm) a <InlineMath tex="K_2" /> = 1321,0789 K. Přibližný převod
           záře na teplotu potom dává:
         </p>
@@ -459,7 +461,7 @@ export function InfraredRadiometryArticle() {
             V původním rastru jde o řádek 2717 a sloupec 5609, počítané od nuly.
             Výběr navazuje na interpretaci optického snímku a nepředstavuje
             reprezentativní vzorek oblasti.{" "}
-            <SourceLink id="2023_Landsat_Aletsch_STAC">Původní metadata a pásma</SourceLink>.
+            <SourceLink id="2023_Landsat_Aletsch_STAC">Metadata celé scény (STAC)</SourceLink>.
           </p>
           <p>
             Uložené celé hodnoty jsou 9724, 1907 a 938 pro tři záře, 7333 pro

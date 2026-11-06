@@ -1,0 +1,227 @@
+{
+  "auditedOn": "2026-11-06",
+  "articles": [
+    {
+      "slug": "mereni-radiacnich-toku",
+      "catalogueOrder": 21,
+      "sourceIds": [
+        "WEB_NOAA_SURFRAD_Overview",
+        "DOI_10_2172_1432706",
+        "WEB_NOAA_Radiation_Instruments",
+        "WEB_NOAA_SURFRAD_Readme",
+        "WEB_NOAA_SURFRAD_Table_Mountain",
+        "WEB_NOAA_GML_Terms",
+        "DOI_10_5194_amt_19_983_2026",
+        "1899_Angstrom_Pyrheliometer",
+        "DOI_10_5194_amt_8_611_2015",
+        "DOI_10_1175_JCLI_D_17_0208_1",
+        "DOI_10_1029_2020EA001224",
+        "DATA_NOAA_SURFRAD_tbl23172"
+      ]
+    },
+    {
+      "slug": "pasivni-infracervena-radiometrie",
+      "catalogueOrder": 22,
+      "sourceIds": [
+        "WEB_NASA_TIRS",
+        "DOI_10_1002_andp_19013090310",
+        "WEB_USGS_C2_Surface_Temperature",
+        "2019_USGS_Landsat8_Handbook",
+        "DOI_10_3390_rs6098803",
+        "2024_USGS_Landsat_C2_L2_Guide",
+        "WEB_NASA_TIRS_Test_2011",
+        "WEB_NASA_Guidelines_for_using_NASA_Images_and_Media_Guide_e6f9e9e4",
+        "DOI_10_3390_rs61111244",
+        "WEB_USGS_Atmospheric_Auxiliary",
+        "DOI_10_1038_s41597_019_0236_x",
+        "1961_Hanel_Stroud_TIROS_II",
+        "WEB_NASA_CLIMCAPS_Temperature",
+        "DOI_10_1175_jtech_d_16_0018_1",
+        "WEB_NASA_Algorithm_Theoretical_Basis_Document_79780237",
+        "WEB_USGS_TIRS_Calibration_Notices",
+        "2023_Landsat_Aletsch_Thermal_Window",
+        "DOI_10_5066_P9OGBGM6",
+        "2023_Landsat_Aletsch_STAC"
+      ]
+    }
+  ],
+  "examples": {
+    "surfrad": {
+      "date": "2023-06-21",
+      "intervalUtc": "18:00–19:00",
+      "sourceRows": 1440,
+      "usedRows": 60,
+      "sourceSha256": "b85ce2336079c56fb899462eb68d5e0400acc543a95d281d06cc1a09645bfa67",
+      "net_W_m2": 658.0361937036682,
+      "netEnergy_MJ_m2": 2.3689302973332054,
+      "maxDifferenceFromNoaaNet_W_m2": 0.15357269689388886
+    },
+    "landsat": {
+      "product": "LC08_L2SP_195028_20230820_20230826_02_T1",
+      "windowWidth": 341,
+      "windowHeight": 598,
+      "matchedBands": 10,
+      "publishedTiffSha256": "c390f54ffd5db803c898806554ed2e5a1e5247caee8d408cdd1d605544f75384",
+      "brightnessTemperature_K": 300.88877620365713,
+      "recomputedSurfaceTemperature_K": 308.21159872305276,
+      "usgsSurfaceTemperature_K": 308.09515892
+    }
+  },
+  "sources": [
+    {
+      "id": "WEB_NOAA_SURFRAD_Overview",
+      "readerUrl": "https://gml.noaa.gov/grad/surfrad/overview.html",
+      "evidence": "Veřejná dokumentace sítě a samostatného měření přímého a difuzního toku, jeho kontroly a kalibrace."
+    },
+    {
+      "id": "DOI_10_2172_1432706",
+      "readerUrl": "https://www.arm.gov/publications/tech_reports/handbooks/sirs_handbook.pdf",
+      "evidence": "Příručka DOE dokládá jednotky, přístrojové uspořádání, termočlánky, kalibraci a orientaci čidel."
+    },
+    {
+      "id": "WEB_NOAA_Radiation_Instruments",
+      "readerUrl": "https://gml.noaa.gov/grad/instruments.html",
+      "evidence": "Popisy konkrétních pyranometrů, pyrheliometrů, pyrgeometrů a dutinových referenčních radiometrů."
+    },
+    {
+      "id": "WEB_NOAA_SURFRAD_Readme",
+      "readerUrl": "https://gml.noaa.gov/aftp/data/radiation/surfrad/Boulder_CO/README_SURFRAD.txt",
+      "evidence": "Veřejný popis sloupců, časové značky konce průměrovacího intervalu, příznaků kvality a zpracování toků. Obsahuje licenci CC0 1.0."
+    },
+    {
+      "id": "WEB_NOAA_SURFRAD_Table_Mountain",
+      "readerUrl": "https://gml.noaa.gov/grad/surfrad/tablemt.html",
+      "evidence": "Původní dokumentace stanice. Fotografie tracker1.jpg je bajtově shodná s fotografií u článku."
+    },
+    {
+      "id": "WEB_NOAA_GML_Terms",
+      "readerUrl": "https://gml.noaa.gov/about/disclaimer.html",
+      "evidence": "Podmínky použití materiálů NOAA a uvedení původu fotografie."
+    },
+    {
+      "id": "DOI_10_5194_amt_19_983_2026",
+      "readerUrl": "https://amt.copernicus.org/articles/19/983/2026/amt-19-983-2026.pdf",
+      "evidence": "Kalibrace pyrgeometru PIR, oddělená ověřovací data a mediány rozdílů vůči referenci do 1 W/m² na obr. 7."
+    },
+    {
+      "id": "1899_Angstrom_Pyrheliometer",
+      "readerUrl": "https://archive.org/details/astrophysicaljou09ameruoft/page/332/mode/1up",
+      "evidence": "Původní článek na stranách 332–346 popisuje elektrickou náhradu ohřevu ve dvojici proužků. Čtečka otevřela stranu 332 a PDF celého svazku se stáhlo. Předchozí adresa NASA ADS v prohlížeči vrátila 504."
+    },
+    {
+      "id": "DOI_10_5194_amt_8_611_2015",
+      "readerUrl": "https://amt.copernicus.org/articles/8/611/2015/amt-8-611-2015.pdf",
+      "evidence": "Úplné vydavatelské PDF má 22 stran. Oddíl 2 a rovnice 1–2 dokládají převod směrové záře na tok podle geometrie a typu scény."
+    },
+    {
+      "id": "DOI_10_1175_JCLI_D_17_0208_1",
+      "readerUrl": "https://ceres.larc.nasa.gov/documents/pdfs/Loeb_JCLIM_EBAF_ed4_2018_01.pdf",
+      "evidence": "Plná studie popisuje CERES EBAF Edition 4.0, časové a prostorové zpracování a nastavení absolutní bilance podle ukládání tepla."
+    },
+    {
+      "id": "DOI_10_1029_2020EA001224",
+      "readerUrl": "https://atmos.washington.edu/~roj/nobackup/publications/Hinkelman_and_Marchand_2020_EA_CERES_CloudSat_Fluxes_over_Macquaire_Island.pdf",
+      "evidence": "Úplné PDF na University of Washington potvrzuje porovnání s měřením na Macquarie v letech 2016–2018 a rozdíly přibližně +10 a −10 W/m²."
+    },
+    {
+      "id": "DATA_NOAA_SURFRAD_tbl23172",
+      "readerUrl": "https://gml.noaa.gov/aftp/data/radiation/surfrad/Boulder_CO/2023/tbl23172.dat",
+      "evidence": "Původní denní DAT, 351 410 B a 1 440 záznamů. Kontrolní přepočet 60 vybraných minut souhlasí."
+    },
+    {
+      "id": "WEB_NASA_TIRS",
+      "readerUrl": "https://science.nasa.gov/mission/landsat/tirs/",
+      "evidence": "Oficiální přehled přístroje a jeho využití. Technické vlastnosti pásma a vznik signálu jsou doloženy prací autorů kalibrace."
+    },
+    {
+      "id": "DOI_10_1002_andp_19013090310",
+      "readerUrl": "https://myweb.rz.uni-augsburg.de/~eckern/adp/history/historic-papers/1901_309_553-563.pdf",
+      "evidence": "Úplný 11stránkový sken původního vydání na Univerzitě v Augsburgu. Vztah spektrálního vyzařování a teploty je fyzikálním základem metody."
+    },
+    {
+      "id": "WEB_USGS_C2_Surface_Temperature",
+      "readerUrl": "https://www.usgs.gov/landsat-missions/landsat-collection-2-surface-temperature",
+      "evidence": "Dokumentace původu emisivity, významu povrchové teploty, chybějících dat a vlivu oblačnosti."
+    },
+    {
+      "id": "2019_USGS_Landsat8_Handbook",
+      "readerUrl": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/atoms/files/LSDS-1574_L8_Data_Users_Handbook-v5.0.pdf",
+      "evidence": "Příručka přístroje. Oddíl 5.3 uvádí převod na jasovou teplotu a význam metadatových konstant."
+    },
+    {
+      "id": "DOI_10_3390_rs6098803",
+      "readerUrl": "https://mdpi-res.com/d_attachment/remotesensing/remotesensing-06-08803/article_deploy/remotesensing-06-08803.pdf",
+      "evidence": "Původní práce. Oddíly 1.1 a 1.2 dokládají pásmo a odezvu detektoru. Oddíly 3 a 4 popisují pozemní a palubní kalibraci."
+    },
+    {
+      "id": "2024_USGS_Landsat_C2_L2_Guide",
+      "readerUrl": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/media/files/LSDS-1619_Landsat8-9-Collection2-Level2-Science-Product-Guide-v6.pdf",
+      "evidence": "Veřejná příručka v6.0. Popisuje ST_B10, mezivýsledky, měřítka a příznaky kvality výpočtu."
+    },
+    {
+      "id": "WEB_NASA_TIRS_Test_2011",
+      "readerUrl": "https://science.nasa.gov/missions/landsat/landsats-tirs-instrument-comes-out-of-first-round-of-thermal-vacuum-testing/",
+      "evidence": "Zpráva o zkouškách a původní fotografie NASA/Goddard/Bill Hrybyk. Stažený originál je bajtově shodný."
+    },
+    {
+      "id": "WEB_NASA_Guidelines_for_using_NASA_Images_and_Media_Guide_e6f9e9e4",
+      "readerUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "evidence": "Oficiální podmínky vzdělávacího použití fotografie a uvedení původu."
+    },
+    {
+      "id": "DOI_10_3390_rs61111244",
+      "readerUrl": "https://mdpi-res.com/d_attachment/remotesensing/remotesensing-06-11244/article_deploy/remotesensing-06-11244.pdf",
+      "evidence": "Primární korekce a ověření s bójemi. Obr. 14 dokládá 28 z 32 scén do ±1,5 K a tabulka 3 uvádí průměr −0,56 K a směrodatnou odchylku 0,76 K pro pásmo 10."
+    },
+    {
+      "id": "WEB_USGS_Atmospheric_Auxiliary",
+      "readerUrl": "https://www.usgs.gov/landsat-missions/landsat-collection-2-atmospheric-auxiliary-data",
+      "evidence": "Vstupní meteorologické produkty pro jednotlivá období. GEOS FP-IT pro daný snímek potvrzuje také jeho MTL."
+    },
+    {
+      "id": "DOI_10_1038_s41597_019_0236_x",
+      "readerUrl": "https://www.nature.com/articles/s41597-019-0236-x.pdf",
+      "evidence": "Původní datová práce o družicovém záznamu teploty hladiny za roky 1981–2016 a spojování více přístrojů."
+    },
+    {
+      "id": "1961_Hanel_Stroud_TIROS_II",
+      "readerUrl": "https://ntrs.nasa.gov/api/citations/19980227099/downloads/19980227099.pdf",
+      "evidence": "Plná původní zpráva v NTRS popisuje radiometr TIROS II a jeho pásmo 8–12 μm."
+    },
+    {
+      "id": "WEB_NASA_CLIMCAPS_Temperature",
+      "readerUrl": "https://airs.jpl.nasa.gov/data/guides-docs/climcaps-science/climcaps-science-guide/geophysical-products/temperature",
+      "evidence": "Oficiální dokumentace teplotních profilů z infračervených a mikrovlnných kanálů."
+    },
+    {
+      "id": "DOI_10_1175_jtech_d_16_0018_1",
+      "readerUrl": "https://repository.library.noaa.gov/view/noaa/41087/noaa_41087_DS1.pdf",
+      "evidence": "Úplné 18stránkové PDF v NOAA. Oddíly 1 a 3 popisují tři kanály SSU, jejich výškovou citlivost a sjednocení s AMSU-A."
+    },
+    {
+      "id": "WEB_NASA_Algorithm_Theoretical_Basis_Document_79780237",
+      "readerUrl": "https://gpm.nasa.gov/sites/default/files/2023-07/IMERG_V07_ATBD_final_230712.pdf",
+      "evidence": "Metodika IMERG V07. Oddíly 3.6–3.8 popisují kalibraci infračerveného odhadu, časovou interpolaci a využití srážkoměrů."
+    },
+    {
+      "id": "WEB_USGS_TIRS_Calibration_Notices",
+      "readerUrl": "https://www.usgs.gov/landsat-missions/landsat-8-oli-and-tirs-calibration-notices",
+      "evidence": "Původní provozní oznámení dokládají zavedení opravy rozptýleného záření a pozdější kalibrační úpravy."
+    },
+    {
+      "id": "2023_Landsat_Aletsch_Thermal_Window",
+      "readerUrl": "https://klimatologie.eu/data/methods/infrared-radiometry/aletsch-thermal.tif",
+      "evidence": "Přímý tepelný GeoTIFF, 341 × 598 buněk a deset vrstev. Každá vrstva byla porovnána s původním veřejným rastrem."
+    },
+    {
+      "id": "DOI_10_5066_P9OGBGM6",
+      "readerUrl": "https://planetarycomputer.microsoft.com/dataset/landsat-c2-l2",
+      "evidence": "Veřejný distribuční katalog kolekce USGS. Přesný výřez je na samostatné kartě a jeho původ je uveden v doprovodném JSON."
+    },
+    {
+      "id": "2023_Landsat_Aletsch_STAC",
+      "readerUrl": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/landsat-c2-l2/items/LC08_L2SP_195028_20230820_02_T1",
+      "evidence": "Původní metadata celé scény a samostatný odkaz na optický výřez. STAC určuje scénu a adresy pásem."
+    }
+  ]
+}

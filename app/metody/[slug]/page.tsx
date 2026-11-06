@@ -411,7 +411,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "pasivni-infracervena-radiometrie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Pasivní infračervená radiometrie" meta="31. října 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Pasivní infračervená radiometrie" meta="6. listopadu 2026">
           <p>Jak družice zachytí tepelné záření a jak z něj po oddělení vlivu atmosféry a vlastností povrchu získáme teplotní mapu.</p>
         </PageLead>
         <InfraredRadiometryArticle />
