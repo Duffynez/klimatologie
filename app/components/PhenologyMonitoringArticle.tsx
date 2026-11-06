@@ -51,13 +51,13 @@ export function PhenologyMonitoringArticle() {
           <SourceLink id="DOI_10_3133_ofr20181060">(USGS, výběr míst a rostlin)</SourceLink>
         </p>
         <p>
-          Pro vybraný druh pak použijeme společný popis sledované fáze. U fáze nazvané
-          v USA-NPN <strong>Leaves</strong> hledáme alespoň jeden živý rozvinutý list.
-          Za rozvinutý považujeme list, který už celý vyšel z pupenu. Je vidět i místo jeho připojení
-          ke stonku, přímo nebo prostřednictvím stopky zvané řapík. List přitom může dál růst. Tento znak nám umožňuje
-          rozhodnout, zda už fáze začala, i když koruna ještě zdaleka není plně olistěná.
-          <SourceLink id="2016_USANPN_Focus_On_Leaves"> Pokyny USA-NPN k pozorování listů</SourceLink>{" "}
-          doplňují definice fotografiemi jednotlivých stavů.
+          Pro vybraný druh použijeme společný popis sledované fáze. U javoru červeného
+          hledáme ve fázi <strong>Leaves</strong> alespoň jeden živý rozvinutý list.
+          List už musí celý vyčnívat z otevírajícího se pupenu nebo z místa růstu na stonku.
+          Pozorovatel vidí, kde se list připojuje ke stonku nebo k řapíku, krátké stopce listu.
+          List přitom může dál růst. Takto fázi vymezuje{" "}
+          <SourceLink id="WEB_USANPN_Red_Maple_Protocol">protokol USA-NPN pro javor červený</SourceLink>.
+          Jednotlivé stavy ukazují <SourceLink id="2016_USANPN_Focus_On_Leaves">referenční fotografie USA-NPN</SourceLink>.
         </p>
         <p>
           S popisem se seznámíme přímo u sledované rostliny. Prohlédneme její pupeny a listy
@@ -185,8 +185,9 @@ export function PhenologyMonitoringArticle() {
         <p>
           <SourceLink id="DOI_10_1111_gcb_15000">Menzel a kolegové (2020)</SourceLink>{" "}
           tento postup použili na záznamy z Německa, Rakouska a Švýcarska z let 1951–2018.
-          Zahrnuli přes 4,2 milionu pozorování a pro jednotlivé druhy, fáze a stanice vybrali
-          záznamy trvající alespoň 30 let. Změny načasování porovnali se změnami teplot.
+          U každé kombinace druhu, fáze a stanice vybrali záznamy dlouhé alespoň 30 let,
+          které končily v roce 2000 nebo později. Tak získali přes 4,2 milionu pozorování.
+          Změny načasování porovnali se změnami teplot.
           U planě rostoucích rostlin zjistili převahu časnějších jarních a letních fází
           a silnou souvislost těchto posunů se zimním a jarním oteplováním.
           Fenologická pozorování zde dodala biologická data, teplotní měření umožnila zkoumat příčinu jejich změn.
@@ -293,8 +294,8 @@ export function PhenologyMonitoringArticle() {
           tedy přítomnost živých rozvinutých listů. Pro malou ukázku zpracování vezmeme tři stromy
           s nejnižšími číselnými identifikátory na dané ploše. Každý má 31 návštěv od 11. března
           do 23. května. Jde o výběr pro vysvětlení výpočtu, nikoli o odhad nástupu jara pro celý les.
-          <SourceLink id="DOI_10_5066_f78s4n1v"> Zdrojem je veřejný soubor USA-NPN</SourceLink>,
-          stažený 19. října 2026.
+          <SourceLink id="DATA_USANPN_Harvard_Leaves_2016"> Původní dotaz do databáze USA-NPN</SourceLink>{" "}
+          poskytl export z 19. října 2026.
         </p>
         <p>
           Začneme stromem 352210. Při návštěvách 6., 9. a 11. května má zapsané „ne“.
@@ -333,7 +334,7 @@ export function PhenologyMonitoringArticle() {
           <figcaption>
             Svislá osa rozlišuje stromy, vodorovná ukazuje data návštěv od 20. dubna do 18. května 2016.
             Šedý křížek znamená „ne“, zelený bod „ano“ a oranžový úsek ohraničuje nástup fáze.
-            Vlastní zpracování dat <SourceLink id="DOI_10_5066_f78s4n1v">USA-NPN / NEON</SourceLink>, CC BY 4.0.
+            Vlastní zpracování dat <SourceLink id="DATA_USANPN_Harvard_Leaves_2016">USA-NPN / NEON</SourceLink>, CC BY 4.0.
           </figcaption>
         </figure>
         <p>

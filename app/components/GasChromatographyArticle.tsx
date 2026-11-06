@@ -15,7 +15,7 @@ export function GasChromatographyArticle() {
           aby bylo možné určit jejich zastoupení. V klimatologii se používá k měření metanu,
           oxidu dusného a dalších plynů v ovzduší i ve vzduchu získaném z ledových jader.
           Přístroj, který rozdělení a následné měření provádí, se nazývá plynový chromatograf.{" "}
-          <SourceLink id="DOI_10_5194_essd_11_473_2019">(Rubino a kol., 2019, oddíl 2)</SourceLink>
+          <SourceLink id="DOI_10_5194_essd_11_473_2019">(Rubino a kol., 2019, oddíl 2.3)</SourceLink>
         </p>
         <p>
           Podrobně projdeme stanovení metanu ve vzduchu pomocí plamenového ionizačního detektoru.
@@ -73,7 +73,7 @@ export function GasChromatographyArticle() {
         </p>
         <p>
           K dávkování slouží krátký úsek trubice s přesně daným objemem, zvaný
-          <strong> dávkovací smyčka</strong>. V popsaném systému má objem 5 mililitrů.
+          <strong> dávkovací smyčka</strong>. V sestavě Langové a kolegů měla objem 5 mililitrů.
           Nejprve se propláchne a naplní vzorkem. Po vyrovnání tlaku přepne ventil smyčku
           do cesty nosného plynu. Helium z ní vytlačí dávku vzduchu do kolony.
           Přepnutí tak vytvoří jasný začátek analýzy a opakovaně dodává vzorek stejným způsobem.
@@ -223,17 +223,19 @@ export function GasChromatographyArticle() {
           <SourceLink id="2015_NOAA_CH4_Analysis">technický postup NOAA</SourceLink>.
         </p>
         <p>
-          Jednu lahev obvykle analyzujeme opakovaně. Každá dávka poskytne vlastní hodnotu
-          v ppb a z těchto hodnot vypočteme aritmetický průměr:{" "}
-          <SourceLink id="2015_NOAA_CH4_Analysis">(NOAA, oddíly 5–6)</SourceLink>
+          V jednom měřicím běhu analyzujeme stejný plyn opakovaně. Každá dávka poskytne vlastní
+          hodnotu v ppb a z těchto hodnot vypočteme aritmetický průměr.{" "}
+          <SourceLink id="2015_NOAA_CH4_Analysis">(NOAA, oddíly 5.2 a 6.1)</SourceLink>
         </p>
         <Equation tex={String.raw`\bar{x} = \frac{x_1 + x_2 + \dots + x_N}{N}`} />
         <p>
           Symboly <InlineMath tex={String.raw`x_1, x_2, \dots, x_N`} /> jsou výsledky jednotlivých
           analýz téhož plynu v ppb, <InlineMath tex={String.raw`N`} /> je jejich počet
           a <InlineMath tex={String.raw`\bar{x}`} /> výsledný průměr, opět v ppb.
-          Průměrujeme opakování ve srovnatelných podmínkách. U odběrové baňky tak získáme
-          jeden údaj o složení vzduchu z konkrétního místa a doby odběru.
+          Průměr shrnuje jeden běh za srovnatelných podmínek. Když laboratoř NOAA přiřazuje
+          směsi v tlakové lahvi molární zlomek metanu, provede nejméně dva samostatné běhy a jejich výsledky
+          porovná.{" "}
+          <SourceLink id="2015_NOAA_CH4_Analysis">(NOAA, oddíl 5.2)</SourceLink>
         </p>
 
         <h3>Co metoda přináší klimatologii</h3>
@@ -241,9 +243,10 @@ export function GasChromatographyArticle() {
           Opakované odběry na stanicích vytvářejí časový záznam metanu v atmosféře.
           Síť rozložená po světě umožňuje porovnávat i různé zeměpisné oblasti.
           <SourceLink id="1994_Lang_NOAA_Methane_Network"> Lang a kolegové (1994)</SourceLink>{" "}
-          zveřejnili měření sítě NOAA za roky 1989–1992 včetně měsíčních hodnot, popisu odběrů
-          a chromatografické analýzy. Tyto údaje dokládají, jak se zastoupení metanu mění
-          během roku i mezi roky. Z odběrových sítí získáváme také údaje o jiných plynech,
+          popsali odběry a chromatografickou analýzu v síti NOAA za roky 1989–1992.
+          V příloze A zveřejnili měsíční průměry metanu vypočtené z vyhlazeného průběhu
+          naměřených hodnot. Tyto průměry zachycují změny během roku i mezi roky.
+          Z odběrových sítí získáváme také údaje o jiných plynech,
           například <Link href="/pozorovani/atmosfericka-koncentrace-co2/#odber-do-banek">pozorování atmosférického CO₂</Link>,
           pro který se běžně využívají optické analyzátory.
         </p>
@@ -251,9 +254,10 @@ export function GasChromatographyArticle() {
           Chromatograf může analyzovat i vzduch uvolněný z bublinek v ledu.
           <SourceLink id="DOI_10_5194_essd_11_473_2019"> Rubino a kolegové (2019)</SourceLink>{" "}
           tak sestavili záznamy CO₂, metanu a oxidu dusného z antarktického Law Dome.
-          Určení stáří zachyceného vzduchu umožňuje přiřadit rozbor minulému období
-          a propojit jej s novodobým měřením. Chromatografie zde poskytuje složení vzorku,
-          datování a uvolnění vzduchu z ledu jsou další kroky výzkumu.
+          Pro měření CO₂ použili po oddělení v koloně převod na metan, který pak prošel
+          plamenovým detektorem. Určení stáří vzduchu umožňuje přiřadit rozbor minulému období.
+          <SourceLink id="DOI_10_25919_5bfe29ff807fb"> Veřejná tabulka CSIRO</SourceLink>{" "}
+          uvádí hodnoty jednotlivých plynů podle ledového jádra a stáří vzduchu.
         </p>
 
         <p>
@@ -290,7 +294,7 @@ export function GasChromatographyArticle() {
         <p>
           Výsledek ovlivňuje zachování vzorku, dávkování, oddělení píků a kalibrace.
           U atmosférických záznamů záleží také na četnosti odběrů.
-          Na irské stanici Mace Head porovnali <SourceLink id="DOI_10_5194_amt_9_4737_2016">Zellweger a kolegové</SourceLink>{" "}
+          Na irské stanici Mace Head porovnali <SourceLink id="DOI_10_5194_amt_9_4737_2016">Zellweger a kolegové (obr. 12)</SourceLink>{" "}
           chromatograf s optickým přístrojem. U časově spárovaných měření činil průměrný rozdíl
           v absolutní hodnotě 0,57 ppb a směrodatná odchylka rozdílů 3,79 ppb. Malý průměrný posun ukazuje návaznost
           obou postupů, rozptyl jednotlivých rozdílů vyjadřuje jejich shodu při jednotlivých odběrech.
@@ -310,15 +314,17 @@ export function GasChromatographyArticle() {
           <h3>Kalibrace a stabilita</h3>
           <p>
             Nejistota výsledku zahrnuje i nejistoty referenčních směsí a přenosu stupnice.
-            Provozní kontrola proto používá také samostatnou kontrolní lahev, jejíž hodnota
-            nesloužila k sestavení právě používané kalibrační křivky. Opakované rozbory této
-            lahve ověřují, zda přístroj její hodnotu dlouhodobě obnovuje.
-            NOAA ji v metodice z roku 2015 doložila 798 dvojicemi rozborů referenčních lahví
-            z let 1994–2013, provedených s odstupem delším než rok. Přibližně 95 % posuzovaných
-            rozdílů nepřesáhlo velikost 1 ppb. Před vyhodnocením autoři vyřadili jeden rozdíl
-            větší než 5 ppb jako zjevný problém měření nebo odběru. Výsledek charakterizuje
-            dlouhodobé opakování hodnot v této sestavě.{" "}
-            <SourceLink id="2015_NOAA_CH4_Analysis">(NOAA, oddíl 6.2)</SourceLink>
+            Při provozní kontrole NOAA pravidelně analyzuje kontrolní lahve se známou hodnotou.
+            Sleduje tak změny odezvy přístroje.{" "}
+            <SourceLink id="2015_NOAA_CH4_Analysis">(NOAA, oddíl 5.3)</SourceLink>
+          </p>
+          <p>
+            Dlouhodobou reprodukovatelnost, tedy shodu rozborů po delší době, NOAA odhadla
+            z 798 dvojic rozborů pracovních referenčních lahví z let 1994–2013.
+            V každé dvojici dělil rozbory více než rok. Přibližně 95 % posuzovaných rozdílů
+            nepřesáhlo 1 ppb. Před vyhodnocením autoři vyřadili jeden rozdíl větší než 5 ppb
+            jako zjevný problém měření nebo odběru.{" "}
+            <SourceLink id="2015_NOAA_CH4_Analysis">(NOAA, oddíl 6.2 a příloha A)</SourceLink>
           </p>
           <p>
             Rozšíření stupnice X2004A zahrnovalo porovnání referenčních lahví také optickým
@@ -342,8 +348,8 @@ export function GasChromatographyArticle() {
 
         <h2>Příklad rozboru jedné lahve</h2>
         <p>
-          Veřejná <SourceLink id="2015_NOAA_CH4_Analysis">metodika NOAA, tabulka A1</SourceLink>,
-          obsahuje dvacet analýz plynu z jedné lahve provedených 23. července 2015.
+          <SourceLink id="2015_NOAA_CH4_Analysis">Tabulka A1 v metodice NOAA</SourceLink>{" "}
+          obsahuje dvacet analýz plynu z jedné lahve v jediném měřicím běhu 23. července 2015.
           Zveřejňuje plochy píků, poměry odezev i vypočtené hodnoty metanu.
           Začneme první dávkou vzorku a dvěma sousedními dávkami reference:
         </p>
@@ -392,7 +398,7 @@ export function GasChromatographyArticle() {
           <figcaption>
             Vodorovná osa ukazuje pořadí analýzy, svislá molární zlomek metanu v ppb.
             Modré body jsou jednotlivé výsledky, oranžová přerušovaná čára jejich aritmetický
-            průměr. Jde o opakované rozbory jedné lahve během dvou hodin, nikoli o vývoj
+            průměr. Jde o opakované rozbory jedné lahve během přibližně dvou hodin, nikoli o vývoj
             metanu v atmosféře. Vlastní graf ze zveřejněné tabulky NOAA.{" "}
             <SourceLink id="2015_NOAA_CH4_Analysis">(NOAA, příloha A, tabulka A1)</SourceLink>
           </figcaption>

@@ -2542,7 +2542,7 @@ test("publishes the full phenology method with traceable observations and bounde
   assert.ok(body, "The complete method must replace the catalogue placeholder");
   assert.equal((body.match(/<h2>/g) ?? []).length, 4);
   assert.equal((body.match(/<details\b/g) ?? []).length, 2);
-  assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">6\. listopadu 2026<\/p>/);
   assert.match(body, /class="method-flow"/);
   assert.match(body, /nps-field-observations\.jpg/);
   assert.match(body, /leaf-onset\.png/);
@@ -2611,7 +2611,7 @@ test("publishes the complete chromatography method with accessible sources and r
   assert.ok(body, "A full article must replace the catalogue placeholder");
   assert.equal((body.match(/<h2\b[^>]*>/g) ?? []).length, 4);
   assert.equal((body.match(/<details\b/g) ?? []).length, 2);
-  assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">6\. listopadu 2026<\/p>/);
   assert.match(body, /noaa-analysis-system\.jpg/);
   assert.match(body, /class="method-flow__track"/);
   assert.match(body, /repeated-analyses\.png/);

@@ -531,7 +531,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "plynova-chromatografie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Laboratorní analýza" title="Plynová chromatografie" meta="31. října 2026">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Plynová chromatografie" meta="6. listopadu 2026">
           <p>Jak oddělení plynů ve vzorku a porovnání s referenčními směsmi umožňují měřit zastoupení metanu ve vzduchu.</p>
         </PageLead>
         <GasChromatographyArticle />
@@ -543,7 +543,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "standardizovane-fenologicke-pozorovani") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Přímá měření" title="Standardizované fenologické pozorování" meta="31. října 2026">
+        <PageLead eyebrow="Metody / Přímá měření" title="Standardizované fenologické pozorování" meta="6. listopadu 2026">
           <p>Jak opakované návštěvy rostlin a společné definice vývojových fází vytvářejí záznam přírodního kalendáře.</p>
         </PageLead>
         <PhenologyMonitoringArticle />
