@@ -73,7 +73,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Atmosféra"
           title="Oxid uhličitý v atmosféře"
-          meta="2. listopadu 2026"
+          meta="6. listopadu 2026"
         >
           <p>
             Co přesně znamená údaj v ppm, jak se CO₂ měří na stanicích, v odebraném vzduchu, v ledu a z družic a
@@ -168,7 +168,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Oceány"
           title="Acidifikace oceánu"
-          meta="5. listopadu 2026"
+          meta="6. listopadu 2026"
         >
           <p>
             Co přesně znamená změna pH mořské vody, jak se měří celý uhličitanový systém, jak vznikají globální

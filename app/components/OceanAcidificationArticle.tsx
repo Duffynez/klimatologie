@@ -586,6 +586,26 @@ export function OceanAcidificationArticle() {
           rozdíl mezi částmi oceánu a nedovoluje připsat povrchové tempo celé jeho hloubce.
         </p>
 
+        <h3 id="zasoba-uhliku">Změna zásoby uhlíku pod hladinou</h3>
+        <p>
+          Rozbory mořské vody kromě pH určují celkový rozpuštěný anorganický uhlík.
+          Zahrnuje rozpuštěný CO₂, hydrogenuhličitanové a uhličitanové ionty.
+          Jeho množství lze zjistit <Link href="/metody/coulometrie/#princip">coulometrií</Link>.
+          Porovnání opakovaných odběrů potom ukazuje změnu mezi výpravami.
+          Pro oceánskou zásobu je třeba spojit koncentrace s objemem jednotlivých vrstev
+          a doplnit neproměřené oblasti. <SourceLink id="DOI_10_1126_science_aau5153">(Gruber a kol. 2019)</SourceLink>
+        </p>
+        <p>
+          Gruberův tým v roce 2019 použil opakované průřezy z 90. let a následujícího desetiletí.
+          Pomocí dalších vlastností vody odděloval přirozené změny související s prouděním a rozkladem
+          organické hmoty. Pro uhlík přidaný lidskou činností tak odhadl zvýšení oceánské zásoby
+          o 34 ± 4 miliardy tun mezi roky 1994 a 2007. Rozpětí zahrnuje statistickou nejistotu
+          i citlivost na zvolený postup. Jde o zpracovaný odhad této složky, nikoli o přímé změření
+          původu každého atomu nebo o součet všech přirozených toků. Výsledné prostorové údaje
+          a dokumentaci zveřejňuje <SourceLink id="DATA_GRUBER_2019_OCEAN">NOAA NCEI</SourceLink>.
+          {" "}<SourceLink id="DOI_10_1126_science_aau5153">(Gruber a kol. 2019, obr. 1 a tab. 2)</SourceLink>
+        </p>
+
         <div className="article-observation-summary">
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
@@ -599,6 +619,10 @@ export function OceanAcidificationArticle() {
           </p>
         </div>
 
+        <aside className="article-related-mechanism" aria-label="Navazující vysvětlení">
+          <p>Jak změna zásoby a výměna přes hladinu pomáhají rozlišit zdroje atmosférického uhlíku, vysvětluje článek <Link href="/mechanismy/puvod-rustu-atmosferickeho-co2/#ocean">Proč v atmosféře přibývá CO₂?</Link></p>
+        </aside>
+
         <h2>Prameny, data a licence</h2>
         <p>
           Všechny odborné práce a metodické dokumenty použité v tomto článku mají veřejný plný text.
@@ -609,6 +633,7 @@ export function OceanAcidificationArticle() {
           <section>
             <h3>Staniční pozorování a změny v hloubce</h3>
             <ul>
+              <li><SourceLink id="DOI_10_1126_science_aau5153">Gruber a kol. (2019): oceánský uhlík 1994–2007</SourceLink> – veřejný plný text a <SourceLink id="DATA_GRUBER_2019_OCEAN">zpracovaná data NOAA NCEI</SourceLink>.</li>
               <li><SourceLink id="DOI_10_1073_pnas_0906044106">Dore a kol. (2009): stanice ALOHA</SourceLink> – veřejné PDF u programu HOT, přímé a vypočtené pH.</li>
               <li><SourceLink id="DOI_10_5670_oceanog_2014_16">Bates a kol. (2014): sedm dlouhodobých pozorování</SourceLink> – veřejné PDF vydavatele.</li>
               <li><SourceLink id="DOI_10_3389_fmars_2023_1289931">Bates a Johnson (2023): Bermudy 1983–2023</SourceLink> – otevřený článek, tabulka trendů a grafy.</li>

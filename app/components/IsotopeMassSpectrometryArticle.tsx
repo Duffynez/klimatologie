@@ -9,7 +9,7 @@ export function IsotopeMassSpectrometryArticle() {
   return (
     <article className="article-layout">
       <div className="article-prose">
-        <h2>Jak změříme izotopové složení vody</h2>
+        <h2 id="princip">Jak změříme izotopové složení vody</h2>
         <p className="article-prose__intro">
           Hmotnostní spektrometrie je metoda, která rozlišuje elektricky nabité částice podle
           poměru jejich hmotnosti a náboje. Umožňuje určit složení vzorku a zastoupení izotopů,
@@ -380,6 +380,10 @@ export function IsotopeMassSpectrometryArticle() {
             Zachovává různý význam nejistot a nepočítá z nich společnou přesnost přístrojů.
           </p>
         </details>
+
+        <aside className="article-related-mechanism" aria-label="Navazující vysvětlení">
+          <p>Izotopové složení uhlíku využívá také článek <Link href="/mechanismy/puvod-rustu-atmosferickeho-co2/#fosilni-uhlik">Proč v atmosféře přibývá CO₂?</Link> Ukazuje, jak rozbory přispívají k určení původu atmosférického uhlíku. Naměřený vývoj jeho izotopového složení uvádí <Link href="/pozorovani/atmosfericka-koncentrace-co2/#uhlik-a-kyslik">pozorování atmosférického CO₂</Link>.</p>
+        </aside>
 
         <h2>Shrnutí</h2>
         <div className="method-conclusion">

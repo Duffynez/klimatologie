@@ -722,7 +722,7 @@ test("publishes 23 mechanism topics and preserves the split snow-and-sea-ice add
     assert.ok(sitemap.includes(`<loc>https://klimatologie.eu/mechanismy/${slug}/</loc>`), "Missing sitemap route " + slug);
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     assert.ok(html.includes(`<h1>${title}</h1>`), "Wrong detail title " + slug);
-    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu"].includes(slug)) {
+    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2"].includes(slug)) {
       assert.match(html, /Co musí toto vysvětlení objasnit/);
       assert.match(html, /<section class="mechanism-detail-evidence"[^>]*>[\s\S]*<p>[^<]+<\/p><\/section>/);
     }
@@ -1126,7 +1126,7 @@ test("publishes a sourced atmospheric carbon dioxide article instead of the gene
 
   assert.match(evidencePage, /AtmosphericCo2Article/);
   assert.match(evidencePage, /title="Oxid uhličitý v atmosféře"/);
-  assert.match(evidencePage, /title="Oxid uhličitý v atmosféře"\s+meta="2\. listopadu 2026"/);
+  assert.match(evidencePage, /title="Oxid uhličitý v atmosféře"\s+meta="6\. listopadu 2026"/);
   assert.match(article, /href="\/metody\/plynova-chromatografie\/?(?:#[^"]+)?"/);
   assert.match(article, /Atmosférický oxid uhličitý popisujeme podílem molekul CO₂ v suchém vzduchu/);
   assert.doesNotMatch(article, /Potřebné informace|article-glossary/);
@@ -1335,7 +1335,7 @@ test("publishes a sourced ocean acidification article with measured and reconstr
 
   assert.match(evidencePage, /OceanAcidificationArticle/);
   assert.match(evidencePage, /title="Acidifikace oceánu"/);
-  assert.match(evidencePage, /title="Acidifikace oceánu"\s+meta="5\. listopadu 2026"/);
+  assert.match(evidencePage, /title="Acidifikace oceánu"\s+meta="6\. listopadu 2026"/);
   assert.match(article, /Acidifikace oceánu je dlouhodobý posun chemického stavu mořské vody/);
   assert.match(article, /Jak se chemie oceánu měří/);
   assert.match(article, /Jak vzniká zveřejněný výsledek/);
@@ -2780,7 +2780,7 @@ test("publishes isotope mass spectrometry with an honest example and open source
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">6\. listopadu 2026<\/p>/);
   const headings = [...body.matchAll(/<h2\b[^>]*>(.*?)<\/h2>/g)].map(m => m[1]);
   assert.deepEqual(headings, ["Jak změříme izotopové složení vody", "Nejistoty a ověření", "Příklad: stejná voda ve třech laboratořích", "Shrnutí"]);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
@@ -4369,6 +4369,7 @@ test("keeps each hypothesis independently collapsible with complete content and 
   for (const [slug, ids] of [
     ["energeticka-bilance-zeme", ["slunecni-hypoteza", "prirozena-hypoteza", "lidske-pusobeni"]],
     ["radiacni-pusobeni-sklenikovych-plynu", ["nasyceni", "promena-prenosu"]],
+    ["puvod-rustu-atmosferickeho-co2", ["ocean", "pevnina", "fosilni-uhlik"]],
   ]) {
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)[1];
@@ -4384,4 +4385,53 @@ test("keeps each hypothesis independently collapsible with complete content and 
       assert.doesNotMatch(story, /<h2\b|data-hypothesis-story=/, "Do not hide another story or the following explanation");
     }
   }
+});
+
+test("publishes the CO2 origin mechanism with three illustrated stories and traceable evidence", async () => {
+  const path = "/mechanismy/puvod-rustu-atmosferickeho-co2";
+  const html = await readFile(new URL("dist/client" + path + "/index.html", root), "utf8");
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.doesNotMatch(html, /class="mechanism-detail-evidence"/);
+  assert.deepEqual([...body.matchAll(/<h2 id="([^"]+)"/g)].map(m => m[1]),
+    ["co-vysvetlujeme", "hypotezy", "pribehy", "mechanismus", "shrnuti", "prameny"]);
+  assert.equal((body.slice(0, body.indexOf('<h2 id="hypotezy"')).match(/<p\b/g) ?? []).length, 2);
+  const diagram = body.match(/<figure[^>]+aria-labelledby="carbon-origin-hypotheses-caption"[\s\S]*?<\/figure>/)?.[0];
+  assert.ok(diagram);
+  assert.deepEqual([...diagram.matchAll(/href="#([^"]+)"/g)].map(m => m[1]), ["ocean", "pevnina", "fosilni-uhlik"]);
+  for (const label of ["Jedinečná předpověď", "Jak hypotézu testujeme", "Výsledek testů", "Dnešní hodnocení"]) {
+    assert.equal((diagram.match(new RegExp("<dt>" + label + "</dt>", "g")) ?? []).length, 3);
+  }
+  for (const id of ["ocean-hladina", "ocean-zasoba", "pevnina-kyslik", "pevnina-bilance", "fosilni-radiouhlik", "fosilni-bilance"]) {
+    assert.ok(body.includes('id="' + id + '"'));
+  }
+  const bibliography = body.slice(body.indexOf('<h2 id="prameny"'));
+  const sources = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
+  for (const id of new Set([...body.matchAll(/href="\/zdroje#([^"]+)"/g)].map(m => m[1]))) {
+    assert.ok(bibliography.includes('href="/zdroje#' + id + '"'), "Missing bibliography " + id);
+    const card = sources.match(new RegExp('<article[^>]+id="' + id + '"[\\s\\S]*?</article>'))?.[0];
+    assert.ok(card, "Missing card " + id);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    assert.match(card, /Otevřít (plný text|veřejn)/);
+  }
+  for (const target of ["/pozorovani/atmosfericka-koncentrace-co2", "/pozorovani/acidifikace-oceanu", "/metody/hmotnostni-a-izotopova-spektrometrie"]) {
+    const related = await readFile(new URL("dist/client" + target + "/index.html", root), "utf8");
+    assert.ok(hasArticleLink(body, target));
+    assert.ok(hasArticleLink(related, path), "Missing reciprocal link " + target);
+  }
+  for (const [, target, anchor] of body.matchAll(/href="(\/(?:pozorovani|metody|mechanismy)\/[^"#]+)(?:#([^"]+))?"/g)) {
+    const related = await readFile(new URL("dist/client" + target.replace(/\/$/, "") + "/index.html", root), "utf8");
+    if (anchor) assert.ok(related.includes('id="' + anchor + '"'), "Missing anchor " + target + "#" + anchor);
+  }
+  for (const name of ["ocean.png", "pevnina.png", "fosilni-uhlik.png", "podklady.csv", "podklady.txt"]) {
+    assert.ok(body.includes("/media/puvod-rustu-atmosferickeho-co2/" + name));
+    const asset = await readFile(new URL("dist/client/media/puvod-rustu-atmosferickeho-co2/" + name, root));
+    assert.ok(asset.length > 100);
+  }
+  const detail = body.match(/<details class="method-details">([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(detail);
+  assert.ok(detail.replace(/<[^>]+>/g, " ").trim().split(/\s+/).length <= 600);
+  const prose = body.replace(/<[^>]+>/g, " ").replace(/&(?:#\d+|#x[0-9a-f]+|[a-z]+);/gi, "");
+  assert.doesNotMatch(prose, /;/);
+  assert.match(body, /class="method-conclusion"/);
 });

@@ -574,6 +574,42 @@ export function AtmosphericCo2Article() {
           </SourceLink>
         </p>
 
+        <h3 id="uhlik-a-kyslik">Izotopy uhlíku a souběžná změna kyslíku</h3>
+        <p>
+          Vzorky vzduchu poskytují vedle množství CO₂ také jeho izotopové složení.
+          Izotopy jsou atomy téhož prvku s různou hmotností. U uhlíku lze například porovnat
+          zastoupení stabilního uhlíku 13 a uhlíku 12. Rozbor vysvětluje
+          {" "}<Link href="/metody/hmotnostni-a-izotopova-spektrometrie/#princip">hmotnostní a izotopová spektrometrie</Link>.
+          Výsledek se zapisuje jako δ¹³C: odchylka poměru ¹³C/¹²C od referenčního materiálu
+          na stupnici VPDB, vyjádřená v promile. Zápornější hodnota znamená menší podíl uhlíku 13
+          vůči uhlíku 12. <SourceLink id="DOI_10_1029_2019GB006170">(Graven a kol. 2020, oddíl 2)</SourceLink>
+        </p>
+        <p>
+          Záznam sestavený z přímých měření a vzduchu v ledu ukazuje pokles globálního δ¹³C
+          atmosférického CO₂ z přibližně −6,6 ‰ v roce 1850 na −8,4 ‰ v roce 2015.
+          Jde o změnu poměru dvou druhů atomů, zatímco koncentrace CO₂ v ppm vyjadřuje množství
+          celého plynu ve vzduchu. Obě měření tak popisují různé vlastnosti stejného vzorku.
+          {" "}<SourceLink id="DOI_10_1029_2019GB006170">(Graven a kol. 2020, obr. 1 a 3)</SourceLink>
+        </p>
+        <p>
+          Další řada sleduje kyslík společně s CO₂. Kyslíkové změny jsou malé vzhledem k jeho
+          celkovému zastoupení, proto se přesně měří poměr O₂ k dusíku N₂ vůči referenčnímu vzduchu.
+          Keeling, Piper a Heimann v roce 1996 proložili sezónní průběhy z Alertu, La Jolly a mysu Grim
+          a spojili je do odhadu pro obě polokoule. Mezi roky 1991 a 1994 vzrostl jejich globální odhad
+          CO₂ o 3,2 ± 0,26 ppm. Poměr O₂/N₂ současně klesl o 42 ± 6 jednotek „per meg“.
+          Jedna taková jednotka je miliontina referenčního poměru O₂/N₂. Není to pokles
+          koncentrace kyslíku o 42 ppm. Uvedená rozpětí zahrnují nejistotu průměrů a dlouhodobé kalibrace.
+          {" "}<SourceLink id="DOI_10_1038_381218a0">(Keeling a kol. 1996, obr. 2)</SourceLink>
+        </p>
+        <p>
+          Staniční záznamy O₂/N₂ a CO₂ dále zveřejňuje
+          {" "}<SourceLink id="DATA_SCRIPPS_O2">Scripps O₂ Program</SourceLink>.
+          Tři historické stanice samy nepokrývají celou atmosféru. Globální výsledek vznikl
+          jejich zpracováním a předpoklady o zastoupení polokoulí, které původní práce popisuje.
+          Izotopový a kyslíkový záznam umožňují srovnávat pozorované změny složení vzduchu
+          s předpověďmi různých zdrojů CO₂.
+        </p>
+
         <h3 id="zmena-infracerveneho-zareni">CO₂ a změna infračerveného záření</h3>
         <p>
           S růstem koncentrace lze porovnat také záření přicházející z atmosféry
@@ -620,6 +656,7 @@ export function AtmosphericCo2Article() {
         </div>
 
         <aside className="article-related-mechanism" aria-label="Navazující vysvětlení">
+          <p>Původ přibývajícího uhlíku rozebírá článek <Link href="/mechanismy/puvod-rustu-atmosferickeho-co2/">Proč v atmosféře přibývá CO₂?</Link> Porovnává oceán, pevninu a fosilní paliva pomocí izotopů, kyslíku a uhlíkové bilance.</p>
           <p><strong>Navazující vysvětlení:</strong>{' '}
             <Link href="/mechanismy/radiacni-pusobeni-sklenikovych-plynu/">Proč další CO₂ mění tepelné záření Země</Link>
             {' '}rozebírá historické hypotézy a jejich testy.
@@ -635,6 +672,14 @@ export function AtmosphericCo2Article() {
           dokumentů přímo na stránku vydavatele nebo do jeho repozitáře.
         </p>
         <div className="article-source-groups">
+          <section>
+            <h3>Izotopy a kyslík</h3>
+            <ul>
+              <li><SourceLink id="DOI_10_1029_2019GB006170">Graven, Keeling a Rogelj 2020</SourceLink>: definice a záznamy izotopů uhlíku, včetně historických dat.</li>
+              <li><SourceLink id="DOI_10_1038_381218a0">Keeling, Piper a Heimann 1996</SourceLink>: společná změna CO₂ a O₂/N₂ v letech 1991–1994, původní měření, zpracování a nejistoty.</li>
+              <li><SourceLink id="DATA_SCRIPPS_O2">Scripps O₂ Program: veřejná data</SourceLink>: staniční řady a popis použití, CC BY 4.0.</li>
+            </ul>
+          </section>
           <section>
             <h3>Historické a primární práce</h3>
             <ul>

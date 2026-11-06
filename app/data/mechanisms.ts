@@ -36,7 +36,7 @@ export const climateMechanisms: ClimateMechanism[] = [
     title: "Proč v atmosféře přibývá CO₂?",
     category: "Záření a složení atmosféry",
     cardSummary: "Zdroje oxidu uhličitého a jeho pohlcování oceánem a pevninou.",
-    summary: "Zdroje CO₂ a jeho pohlcování oceánem a pevninou společně určují růst koncentrace, sezónní kolísání i rozdíly mezi roky.",
+    summary: "Pochází přibývající CO₂ z oceánu, pevniny, nebo fosilních paliv? Historie tří vysvětlení a zkoušky původu i množství uhlíku ve vzduchu.",
     distinguishingEvidence: "Porovnání emisí a pohlcování CO₂ s jeho přírůstkem v atmosféře, izotopovým složením uhlíku a poklesem kyslíku. Sezónní a zeměpisné rozdíly ověřují úlohu vegetace a přenosu vzduchu.",
   },
   {

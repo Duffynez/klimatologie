@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageLead } from "../../components/PageLead";
 import { EarthEnergyBalanceArticle } from "../../components/EarthEnergyBalanceArticle";
+import { CarbonDioxideOriginArticle } from "../../components/CarbonDioxideOriginArticle";
 import { GreenhouseRadiationArticle } from "../../components/GreenhouseRadiationArticle";
 import { climateMechanisms, mechanismBySlug } from "../../data/mechanisms";
 
@@ -75,6 +76,18 @@ export default async function MechanismDetail({ params }: { params: Promise<{ sl
           <p>Co způsobuje přibývání energie v oceánu, atmosféře, pevnině a ledu? Tři hypotézy, historie jejich zkoumání a měření, podle kterých mezi nimi rozlišujeme.</p>
         </PageLead>
         <EarthEnergyBalanceArticle />
+        <Link className="text-link catalog-back-link" href="/mechanismy">&larr; Zpět na všechny mechanismy</Link>
+      </div>
+    );
+  }
+
+  if (slug === "puvod-rustu-atmosferickeho-co2") {
+    return (
+      <div className="page-shell">
+        <PageLead eyebrow={"Mechanismy / " + mechanism.category} title={mechanism.title} meta="6. listopadu 2026">
+          <p>{mechanism.summary}</p>
+        </PageLead>
+        <CarbonDioxideOriginArticle />
         <Link className="text-link catalog-back-link" href="/mechanismy">&larr; Zpět na všechny mechanismy</Link>
       </div>
     );

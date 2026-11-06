@@ -507,7 +507,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "hmotnostni-a-izotopova-spektrometrie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Laboratorní analýza" title="Hmotnostní a izotopová spektrometrie" meta="31. října 2026">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Hmotnostní a izotopová spektrometrie" meta="6. listopadu 2026">
           <p>Jak z vody připravíme plyn, rozlišíme jeho ionty podle hmotnosti a získáme izotopový záznam koloběhu vody.</p>
         </PageLead>
         <IsotopeMassSpectrometryArticle />

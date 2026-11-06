@@ -1,0 +1,33 @@
+.explanatoryFigure {
+  width: min(calc(100vw - 40px), var(--max-width));
+  max-width: 1122px;
+}
+.figureScroll, .tableScroll { overflow-x: auto; overscroll-behavior-inline: contain; }
+.figureScroll img { min-width: 980px; height: auto; }
+.testHeading {
+  margin: 40px 0 18px;
+  padding: 13px 18px;
+  border-left: 3px solid var(--sea);
+  background: rgba(29, 93, 88, 0.055);
+  color: var(--ink);
+  font-size: 1.08rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.budget {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  font: 1rem/1.5 Arial, Helvetica, sans-serif;
+  text-align: left;
+}
+.budget caption { padding: 0 0 14px; text-align: left; color: var(--muted); }
+.budget th, .budget td { padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.budget thead { border-top: 4px solid var(--coral); }
+.budget tbody th { font-weight: 400; }
+.budget td { white-space: nowrap; }
+@media (max-width: 600px) {
+  .testHeading { padding: 12px 14px; }
+  .budget { font-size: 0.875rem; }
+  .budget th, .budget td { padding: 10px 8px; }
+}
