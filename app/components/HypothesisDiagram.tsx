@@ -27,10 +27,9 @@ export function HypothesisDiagram({ hypotheses, captionId, caption, context }: P
   return (
     <>
       <p className={styles.guide}>
-        Diagram ukazuje, čím se od sebe hypotézy liší a jak dopadly jejich testy.
-        Porovnává to, co bychom podle každého vysvětlení měli pozorovat,
-        s tím, co vědci skutečně zjistili. Kliknutím na název hypotézy
-        přejdete k příběhu jejího zkoumání.
+        Diagram porovnává očekávané výsledky zkoušek s tím, co vědci zjistili.
+        Hodnocení říká, co výsledky ukázaly o zkoumaném vysvětlení.
+        Kliknutím na název přejdete k příslušnému příběhu.
       </p>
       {context}
       <figure className={styles.diagram} aria-labelledby={captionId}>
@@ -44,7 +43,7 @@ export function HypothesisDiagram({ hypotheses, captionId, caption, context }: P
               </a>
               <dl className={styles.steps}>
                 <div className={styles.step}>
-                  <dt>Jedinečná předpověď</dt>
+                  <dt>Rozlišující předpověď</dt>
                   <dd>{hypothesis.prediction}</dd>
                 </div>
                 <div className={styles.step}>

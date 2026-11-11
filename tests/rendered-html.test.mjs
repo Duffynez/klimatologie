@@ -4786,7 +4786,7 @@ test("publishes the greenhouse mechanism with two linked stories and open eviden
   const stories = [...diagram.matchAll(/href="#([^"]+)"/g)].map(m => m[1]);
   assert.equal(stories.length, 2);
   assert.ok(body.indexOf(`id="${stories[0]}"`) < body.indexOf(`id="${stories[1]}"`));
-  for (const label of ["Jedinečná předpověď", "Jak hypotézu testujeme", "Výsledek testů", "Dnešní hodnocení"]) {
+  for (const label of ["Rozlišující předpověď", "Jak hypotézu testujeme", "Výsledek testů", "Dnešní hodnocení"]) {
     assert.equal((diagram.match(new RegExp(`<dt>${label}</dt>`, "g")) ?? []).length, 2);
   }
   const bibliography = body.slice(body.indexOf('<h2 id="prameny"'));
@@ -4838,9 +4838,9 @@ test("publishes the full energy-balance mechanism with evidence, sources and ret
   const diagram = mechanismBody.match(/<figure[^>]+aria-labelledby="hypothesis-map-caption"[\s\S]*?<\/figure>/)?.[0];
   assert.ok(diagram, "Introduce the hypotheses with an accessible diagram");
   const diagramIntroduction = mechanismBody.slice(mechanismBody.indexOf('<h2 id="priciny"'), mechanismBody.indexOf(diagram));
-  assert.match(diagramIntroduction, /<p[^>]*>Diagram ukazuje/,
+  assert.match(diagramIntroduction, /<p[^>]*>Diagram porovnává očekávané výsledky zkoušek/,
     "Explain how to read the diagram immediately below its heading");
-  for (const label of ["Jedinečná předpověď", "Jak hypotézu testujeme", "Výsledek testů", "Dnešní hodnocení"]) {
+  for (const label of ["Rozlišující předpověď", "Jak hypotézu testujeme", "Výsledek testů", "Dnešní hodnocení"]) {
     assert.equal([...diagram.matchAll(new RegExp(`<dt>${label}</dt>`, "g"))].length, 3,
       "Keep the shared diagram fields consistent for every hypothesis");
   }
@@ -5192,7 +5192,7 @@ test("publishes the CO2 origin mechanism with three illustrated stories and trac
   const diagram = body.match(/<figure[^>]+aria-labelledby="carbon-origin-hypotheses-caption"[\s\S]*?<\/figure>/)?.[0];
   assert.ok(diagram);
   assert.deepEqual([...diagram.matchAll(/href="#([^"]+)"/g)].map(m => m[1]), ["ocean", "pevnina", "fosilni-uhlik"]);
-  for (const label of ["Jedinečná předpověď", "Jak hypotézu testujeme", "Výsledek testů", "Dnešní hodnocení"]) {
+  for (const label of ["Rozlišující předpověď", "Jak hypotézu testujeme", "Výsledek testů", "Dnešní hodnocení"]) {
     assert.equal((diagram.match(new RegExp("<dt>" + label + "</dt>", "g")) ?? []).length, 3);
   }
   for (const id of ["ocean-hladina", "ocean-zasoba", "pevnina-kyslik", "pevnina-bilance", "fosilni-radiouhlik", "fosilni-bilance"]) {
