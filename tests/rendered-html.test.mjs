@@ -1278,6 +1278,25 @@ test("groups all 23 mechanism topics by their link to observations and preserves
     "hmotnostni-bilance-a-dynamika-ledovych-prikrovu",
   ]);
   assert.deepEqual(otherSlugs, records.map(([, slug]) => slug).filter((slug) => !mainSlugs.includes(slug)));
+  const cards = [...catalogue.matchAll(/<article class="mechanism-tile">[\s\S]*?<\/article>/g)].map(([card]) => card);
+  const linkedCards = cards.filter((card) => card.includes('class="mechanism-tile__observations"'));
+  assert.equal(cards.length, records.length);
+  assert.equal(linkedCards.length, 22);
+  const firstCard = cards[0];
+  assert.match(firstCard, /<\/a><div class="mechanism-tile__observations">/);
+  assert.match(firstCard, /href="\/pozorovani\/tepelny-obsah-oceanu\/#souvislost-s-bilanci"[^>]*>Přírůstek energie v klimatickém systému<\/a>/);
+  const pinatuboCard = linkedCards.find((card) => hasArticleLink(card, "/mechanismy/sopecne-aerosoly"));
+  assert.ok(pinatuboCard);
+  assert.match(pinatuboCard, /href="\/pozorovani\/gmst\/#pinatubo"/);
+  assert.match(pinatuboCard, /href="\/pozorovani\/stratosfericke-ochlazovani\/#pinatubo"/);
+  const observationLinks = new Set(linkedCards.flatMap((card) =>
+    [...card.matchAll(/href="(\/pozorovani\/[^"]+)"/g)].map(([, href]) => href)
+  ));
+  for (const href of observationLinks) {
+    const [path, anchor] = href.split("#");
+    const observation = await readFile(new URL("dist/client" + path + "index.html", root), "utf8");
+    if (anchor) assert.ok(observation.includes('id="' + anchor + '"'), "Missing observation section " + href);
+  }
   for (const [, slug, title] of records) {
     assert.ok(hasArticleLink(catalogue, `/mechanismy/${slug}`), "Missing catalogue link " + slug);
     assert.ok(sitemap.includes(`<loc>https://klimatologie.eu/mechanismy/${slug}/</loc>`), "Missing sitemap route " + slug);

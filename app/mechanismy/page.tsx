@@ -42,11 +42,23 @@ export default function MechanismsPage() {
             </div>
             <div className="mechanism-catalog__grid">
               {mechanisms.map((mechanism) => (
-                <Link className="mechanism-tile" href={`/mechanismy/${mechanism.slug}`} key={mechanism.slug}>
-                  <p className="mechanism-tile__category">{mechanism.category}</p>
-                  <h3>{mechanism.title}</h3>
-                  <p>{mechanism.cardSummary}</p>
-                </Link>
+                <article className="mechanism-tile" key={mechanism.slug}>
+                  <Link className="mechanism-tile__content" href={`/mechanismy/${mechanism.slug}`}>
+                    <p className="mechanism-tile__category">{mechanism.category}</p>
+                    <h3>{mechanism.title}</h3>
+                    <p>{mechanism.cardSummary}</p>
+                  </Link>
+                  {mechanism.observations?.length ? (
+                    <div className="mechanism-tile__observations">
+                      <p className="mechanism-tile__observation-label">Pozorování</p>
+                      <ul>
+                        {mechanism.observations.map(({ href, label }) => (
+                          <li key={href}><Link className="text-link" href={href}>{label}</Link></li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
+                </article>
               ))}
             </div>
           </section>
