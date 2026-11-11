@@ -544,6 +544,16 @@ h3 {
   margin-top: 58px;
 }
 
+.mechanism-catalog__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.mechanism-catalog__heading h2 {
+  scroll-margin-top: 106px;
+}
+
 .method-catalog__heading,
 .mechanism-catalog__heading {
   display: flex;
@@ -588,6 +598,17 @@ h3 {
   color: var(--ink);
   text-decoration: none;
   transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.mechanism-catalog .mechanism-tile {
+  display: block;
+}
+
+.mechanism-tile .mechanism-tile__category {
+  margin-bottom: 8px;
+  color: var(--sea);
+  font-size: 0.78rem;
+  font-weight: 800;
 }
 
 .method-tile > span,

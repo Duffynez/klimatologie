@@ -1245,7 +1245,7 @@ test("preserves the former titration and coulometry address as a two-method guid
   assert.match(sitemap, /https:\/\/klimatologie\.eu\/metody\/titrace-a-coulometrie\//);
 });
 
-test("publishes 23 mechanism topics and preserves the split snow-and-sea-ice address", async () => {
+test("groups all 23 mechanism topics by their link to observations and preserves the split snow-and-sea-ice address", async () => {
   const [catalogue, mechanisms, sitemap, legacy] = await Promise.all([
     readFile(new URL("dist/client/mechanismy/index.html", root), "utf8"),
     readFile(new URL("app/data/mechanisms.ts", root), "utf8"),
@@ -1256,6 +1256,28 @@ test("publishes 23 mechanism topics and preserves the split snow-and-sea-ice add
   assert.equal(records.length, 23);
   assert.equal(new Set(records.map(([, slug]) => slug)).size, 23);
   assert.equal((catalogue.match(/class="mechanism-tile"/g) ?? []).length, 23);
+  const mainQuestions = catalogue.match(/<section[^>]+aria-labelledby="hlavni-otazky"[^>]*>[\s\S]*?<\/section>/)?.[0];
+  const otherQuestions = catalogue.match(/<section[^>]+aria-labelledby="dalsi-otazky"[^>]*>[\s\S]*?<\/section>/)?.[0];
+  assert.ok(mainQuestions && otherQuestions);
+  assert.ok(catalogue.indexOf(mainQuestions) < catalogue.indexOf(otherQuestions));
+  assert.match(mainQuestions, /<h2 id="hlavni-otazky">Hlavní otázky<\/h2>/);
+  assert.match(otherQuestions, /<h2 id="dalsi-otazky">Další otázky<\/h2>/);
+  assert.ok(catalogue.includes('href="#hlavni-otazky"'));
+  assert.ok(catalogue.includes('href="#dalsi-otazky"'));
+  const mechanismSlugs = (section) => [...section.matchAll(/href="\/mechanismy\/([^"/]+)\/?"/g)].map(([, slug]) => slug);
+  const mainSlugs = mechanismSlugs(mainQuestions);
+  const otherSlugs = mechanismSlugs(otherQuestions);
+  assert.deepEqual(mainSlugs, [
+    "energeticka-bilance-zeme",
+    "puvod-rustu-atmosferickeho-co2",
+    "prumyslove-aerosoly-a-oblaka",
+    "zmeny-ozonu-ve-stratosfere",
+    "pohlcovani-a-presun-tepla-oceanem",
+    "vznik-tani-a-pohyb-morskeho-ledu",
+    "hmotnostni-bilance-horskych-ledovcu",
+    "hmotnostni-bilance-a-dynamika-ledovych-prikrovu",
+  ]);
+  assert.deepEqual(otherSlugs, records.map(([, slug]) => slug).filter((slug) => !mainSlugs.includes(slug)));
   for (const [, slug, title] of records) {
     assert.ok(hasArticleLink(catalogue, `/mechanismy/${slug}`), "Missing catalogue link " + slug);
     assert.ok(sitemap.includes(`<loc>https://klimatologie.eu/mechanismy/${slug}/</loc>`), "Missing sitemap route " + slug);

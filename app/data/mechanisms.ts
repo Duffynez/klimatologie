@@ -9,6 +9,7 @@ export type ClimateMechanism = {
   slug: string;
   title: string;
   category: MechanismCategory;
+  isMainQuestion?: boolean;
   cardSummary: string;
   summary: string;
   distinguishingEvidence: string;
@@ -19,6 +20,7 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "energeticka-bilance-zeme",
     title: "Proč v klimatickém systému přibývá energie?",
     category: "Záření a složení atmosféry",
+    isMainQuestion: true,
     cardSummary: "Vliv Slunce, přirozeného kolísání a lidské činnosti na příjem a výdej energie Země.",
     summary: "Oceán, pevnina a atmosféra získávají energii a led taje. Sledujeme příběhy tří vysvětlení: silnějšího Slunce, přirozeného kolísání a lidského působení. Jejich testy vedou k vysvětlení, jak rozdíl příjmu a výdeje energie ohřívá Zemi.",
     distinguishingEvidence: "Změny slunečního příkonu, celkový přírůstek energie a rozložení ohřevu v hloubkách oceánu. Laboratorní vlastnosti plynů, pozemní měření jejich radiačního účinku a porovnání pozorování s výpočty přirozených a lidských vlivů.",
@@ -35,6 +37,7 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "puvod-rustu-atmosferickeho-co2",
     title: "Proč v atmosféře přibývá CO₂?",
     category: "Záření a složení atmosféry",
+    isMainQuestion: true,
     cardSummary: "Zdroje oxidu uhličitého a jeho pohlcování oceánem a pevninou.",
     summary: "Pochází přibývající CO₂ z oceánu, pevniny, nebo fosilních paliv? Historie tří vysvětlení a zkoušky původu i množství uhlíku ve vzduchu.",
     distinguishingEvidence: "Porovnání emisí a pohlcování CO₂ s jeho přírůstkem v atmosféře, izotopovým složením uhlíku a poklesem kyslíku. Sezónní a zeměpisné rozdíly ověřují úlohu vegetace a přenosu vzduchu.",
@@ -59,6 +62,7 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "prumyslove-aerosoly-a-oblaka",
     title: "Proč se za loděmi a továrnami mění jas oblaků?",
     category: "Záření a složení atmosféry",
+    isMainQuestion: true,
     cardSummary: "Lodní a průmyslové stopy ukazují, jak částice mění kapky a odraz světla.",
     summary: "Co vytváří jasnější oblaka za loděmi a průmyslovými zdroji? Dvě hypotézy, letecké pokusy a změny po omezení síry v palivu. Jak částice působí na kapky, záření a klima.",
     distinguishingEvidence: "Porovnání oblastí a období s rozdílnými emisemi při zohlednění počasí. Souběžné změny částic, oblačných kapek a záření ověřují přímé působení aerosolů i jejich vliv prostřednictvím oblaků.",
@@ -67,6 +71,7 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "zmeny-ozonu-ve-stratosfere",
     title: "Proč se nad Antarktidou ochladila jarní stratosféra?",
     category: "Záření a složení atmosféry",
+    isMainQuestion: true,
     cardSummary: "Ozon, CO₂ a proudění v testech výrazného jarního ochlazení.",
     summary: "Proč se dolní stratosféra nad Antarktidou na konci 20. století nejvíce ochladila právě na jaře? Porovnání vlivu CO₂ a ozonu, kontrolované pokusy a vysvětlení výměny energie.",
     distinguishingEvidence: "Porovnání změn ozonu a teploty v jednotlivých výškách, oblastech a ročních obdobích. Chemická měření a vývoj po omezení látek poškozujících ozon pomáhají oddělit jeho vliv od CO₂ a proudění.",
@@ -75,6 +80,7 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "pohlcovani-a-presun-tepla-oceanem",
     title: "Proč se teplo v Jižním oceánu ukládá jinde, než přichází?",
     category: "Atmosféra a oceán",
+    isMainQuestion: true,
     cardSummary: "Promíchávání a proudění v testech nerovnoměrného oteplování oceánu.",
     summary: "Pomalé oteplování hladiny nemusí znamenat malý příjem tepla. Jak výstup hlubinné vody, proudění a zanořování rozdělují přijatou energii v Jižním oceánu?",
     distinguishingEvidence: "Porovnání toků tepla přes hladinu a přenosu proudy se změnou zásoby tepla v různých oblastech a hloubkách. Společná bilance odlišuje přesun energie uvnitř oceánu od jejího celkového přírůstku.",
@@ -147,6 +153,7 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "vznik-tani-a-pohyb-morskeho-ledu",
     title: "Proč arktický mořský led ubývá a tenčí se?",
     category: "Kryosféra",
+    isMainQuestion: true,
     cardSummary: "Jak růst, tání a vývoz ker mění arktickou zásobu ledu a jak jejich vlivy rozlišíme.",
     summary: "Proč větší plocha odnášených ker nemusí znamenat větší úbytek objemu a jak oteplování mění růst a tání. Vysvětlení ověřené měřením ve Framském průlivu, sedmi ledovými bójemi a rozborem dlouhodobých změn.",
     distinguishingEvidence: "Porovnání plochy a objemu vývozu, měřeného tání a odhadu pohlcené energie. Družicové řady a klimatické výpočty rozlišují příspěvek skleníkových plynů od přirozených vlivů a kolísání.",
@@ -163,6 +170,7 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "hmotnostni-bilance-horskych-ledovcu",
     title: "Proč horské ledovce ztrácejí hmotu a ustupují?",
     category: "Kryosféra",
+    isMainQuestion: true,
     cardSummary: "Vliv sněžení, tání a proudění ledu na hmotnost ledovce a polohu jeho čela.",
     summary: "Jak odlišíme menší zimní přírůstky od většího letního tání a proč může čelo ustupovat se zpožděním. Vysvětlení bilance, přísunu energie a proudění ledu opřené o sezonní měření a historii konkrétních ledovců.",
     distinguishingEvidence: "Porovnání zimních přírůstků, letních ztrát a toku ledu s celkovou bilancí. Společný vývoj rychlosti, tloušťky a polohy čela ověřuje, zda vysvětlení zachytí i časovou odezvu ledovce.",
@@ -171,6 +179,7 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "hmotnostni-bilance-a-dynamika-ledovych-prikrovu",
     title: "Proč Grónsko a Antarktida ztrácejí led?",
     category: "Kryosféra",
+    isMainQuestion: true,
     cardSummary: "Sněžení, tání a odtok ledu do oceánu v různých částech ledových příkrovů.",
     summary: "Co odhalují grónské řeky, družicová měření a rozpad šelfu Larsen B? Jak rozlišíme tání na povrchu od zrychleného odtoku ledu do moře a proč záleží na mechanické opoře ledovců?",
     distinguishingEvidence: "Oddělené bilance povrchu a odtoku ledu, porovnané s celkovou změnou hmotnosti. Vztah mezi oteplováním oceánu, táním ledových šelfů, pohybem linie ukotvení a zrychlováním ledu testuje dynamické vysvětlení.",
@@ -199,14 +208,6 @@ export const climateMechanisms: ClimateMechanism[] = [
     summary: "Co vysvětlí samotné proudění a co přidává oteplování a vysychání půdy? Dvě hypotézy, historie jejich zkoumání a testy na evropských, ruských a severoamerických vedrech.",
     distinguishingEvidence: "Porovnání dnů s podobným prouděním, pokusy s půdní vodou a opakování úspěšné předpovědi v chladnějším klimatu rozlišují vznik jedné události od dlouhodobé změny teploty a pravděpodobnosti.",
   },
-];
-
-export const mechanismCategories: MechanismCategory[] = [
-  "Záření a složení atmosféry",
-  "Atmosféra a oceán",
-  "Oceán a hladina moře",
-  "Kryosféra",
-  "Živá příroda a extrémy",
 ];
 
 export function mechanismBySlug(slug: string) {
