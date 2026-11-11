@@ -550,6 +550,24 @@ h3 {
   gap: 8px 24px;
 }
 
+.page-lead__copy .mechanism-catalog__legend {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0 0;
+  font-size: 0.88rem;
+}
+
+.mechanism-status-dot {
+  width: 10px;
+  height: 10px;
+  flex: none;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  background: currentColor;
+  color: var(--sea);
+}
+
 .mechanism-catalog__heading h2 {
   scroll-margin-top: 106px;
 }
@@ -641,8 +659,15 @@ h3 {
   text-underline-offset: 3px;
 }
 
-.mechanism-tile .mechanism-tile__category {
+.mechanism-tile__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
   margin-bottom: 8px;
+}
+
+.mechanism-tile .mechanism-tile__category {
   color: var(--sea);
   font-size: 0.78rem;
   font-weight: 800;
