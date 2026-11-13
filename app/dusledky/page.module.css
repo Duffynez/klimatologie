@@ -1,0 +1,88 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 42px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(18px, 3vw, 28px);
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--sea);
+  border-radius: 7px;
+  background: var(--white);
+  scroll-margin-top: 110px;
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.28rem, 2.4vw, 1.6rem);
+  line-height: 1.25;
+}
+
+.summary {
+  margin: 0;
+  color: var(--muted);
+}
+
+.sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 16px;
+  margin: 12px 0 20px;
+  padding: 0;
+  list-style: none;
+  font-size: 0.86rem;
+}
+
+.related {
+  display: grid;
+  gap: 4px;
+  margin: auto 0 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.related > div {
+  display: grid;
+  grid-template-columns: 6.3rem minmax(0, 1fr);
+  align-items: baseline;
+  gap: 8px;
+}
+
+.related dt {
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.related dd {
+  margin: 0;
+}
+
+.sources a,
+.related a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 740px) {
+  .grid {
+    grid-template-columns: 1fr;
+    margin-top: 28px;
+  }
+}
+
+@media (max-width: 440px) {
+  .related {
+    gap: 9px;
+  }
+
+  .related > div {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

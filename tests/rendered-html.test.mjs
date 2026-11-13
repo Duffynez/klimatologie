@@ -1509,23 +1509,37 @@ test("groups all 23 mechanism topics by their link to observations and preserves
   assert.match(sitemap, /https:\/\/klimatologie\.eu\/mechanismy\/energeticka-bilance-snehu-a-morskeho-ledu\//);
 });
 
-test("adds projections and consequences as substantive top-level sections", async () => {
+test("publishes projections and links each consequence to observations, a mechanism and sources", async () => {
   const [projections, consequences, header, sitemap] = await Promise.all([
     readFile(new URL("app/projekce/page.tsx", root), "utf8"),
-    readFile(new URL("app/dusledky/page.tsx", root), "utf8"),
+    readFile(new URL("dist/client/dusledky/index.html", root), "utf8"),
     readFile(new URL("app/components/SiteHeader.tsx", root), "utf8"),
     readFile(new URL("public/sitemap.xml", root), "utf8"),
   ]);
 
   assert.equal((projections.match(/summary: "/g) ?? []).length, 6);
-  assert.equal((consequences.match(/summary: "/g) ?? []).length, 6);
   assert.match(projections, /Co lze říci o budoucím klimatu/);
   assert.match(projections, /Ověřování modelů/);
   assert.match(projections, /Nejistota a časový horizont/);
-  assert.match(consequences, /Co pozorované a očekávané změny způsobují/);
-  assert.match(consequences, /fyzikální změny, vystavení lidí a přírody jejím účinkům a zranitelnosti/);
-  assert.match(consequences, /Potraviny, sídla a infrastruktura/);
+  assert.match(consequences, /<h1>Jak se změna klimatu projevuje\?<\/h1>/);
+  assert.doesNotMatch(consequences, /chybějící zdroj/);
   assert.doesNotMatch(projections + consequences, /Obsah připravujeme/);
+  const cards = [...consequences.matchAll(/<article\b[^>]*>([\s\S]*?)<\/article>/g)];
+  assert.equal(cards.length, 6);
+  const targets = new Map();
+  for (const [, card] of cards) {
+    const hrefs = [...card.matchAll(/href="([^"]+)"/g)].map((match) => match[1]);
+    for (const section of ["/pozorovani/", "/mechanismy/", "/zdroje"]) {
+      assert.ok(hrefs.some((href) => href.startsWith(section)), `Missing ${section} link in ${card.match(/<h2>([^<]+)<\/h2>/)?.[1]}`);
+    }
+    for (const href of hrefs) {
+      const [path, anchor] = href.split("#");
+      if (!targets.has(path)) {
+        targets.set(path, await readFile(new URL(`dist/client${path.replace(/\/$/, "")}/index.html`, root), "utf8"));
+      }
+      if (anchor) assert.ok(targets.get(path).includes(`id="${anchor}"`), `Missing target ${href}`);
+    }
+  }
   assert.match(header, /href: "\/projekce", label: "Projekce"/);
   assert.match(header, /href: "\/dusledky", label: "Důsledky"/);
   assert.match(sitemap, /https:\/\/klimatologie\.eu\/projekce\//);
