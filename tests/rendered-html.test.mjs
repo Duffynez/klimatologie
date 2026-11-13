@@ -3431,7 +3431,7 @@ test("publishes the complete chromatography method with accessible sources and r
     const card = catalogue.match(new RegExp(`<article[^>]*id="${id}"[\\s\\S]*?<\\/article>`))?.[0];
     assert.ok(card, `Missing chromatography source ${id}`);
     assert.doesNotMatch(card, /drive\.google\.com/);
-    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)|Stáhnout použitý sešit Law Dome \(XLSX\)/);
     if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
   }
   for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
@@ -3945,20 +3945,25 @@ test("ice-core method publishes reproducible dated measurements and reciprocal C
   assert.match(body, /o 38,3 ppm více/);
   assert.ok(hasArticleLink(observation, `/metody/${slug}`));
   assert.ok(hasArticleLink(body, "/pozorovani/atmosfericka-koncentrace-co2"));
+  const base = new URL("public/data/methods/ice-cores/", root);
+  const metadata = JSON.parse(await readFile(new URL("provenance.json", base), "utf8"));
   const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
   assert.ok(ids.length >= 5);
   for (const id of ids) {
     const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
     assert.ok(card, "Missing ice-core source " + id);
-    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    if (id === "DOI_10_25919_5bfe29ff807fb") {
+      assert.ok(card.includes(`href="${metadata.source_url}"`));
+      assert.ok(card.includes("Stáhnout použitý sešit Law Dome (XLSX)"));
+    } else {
+      assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    }
     assert.doesNotMatch(card, /drive\.google\.com/);
   }
   for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
     const file = /\.[a-z0-9]+$/i.test(match[1]) ? match[1] : match[1].replace(/\/$/, "") + "/index.html";
     await readFile(new URL("dist/client" + file, root));
   }
-  const base = new URL("public/data/methods/ice-cores/", root);
-  const metadata = JSON.parse(await readFile(new URL("provenance.json", base), "utf8"));
   for (const [name, sha] of Object.entries(metadata.sha256)) {
     assert.equal(createHash("sha256").update(await readFile(new URL(name, base))).digest("hex"), sha);
   }
@@ -3983,20 +3988,28 @@ test("sediment-core method publishes dated source data and links to the ice arch
   assert.ok(ice.includes(`href="/metody/${slug}"`));
   assert.ok(body.includes('href="/metody/ledova-jadra-a-analyza-uzavreneho-vzduchu"'));
   assert.ok(hasArticleLink(body, "/pozorovani/atmosfericka-koncentrace-co2"));
+  const base = new URL("public/data/methods/sediment-cores/", root);
+  const metadata = JSON.parse(await readFile(new URL("provenance.json", base), "utf8"));
   const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
   assert.ok(ids.length >= 5);
   for (const id of ids) {
     const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
     assert.ok(card, "Missing sediment-core source " + id);
-    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    if (id === "DOI_10_14379_iodp_proc_397_204supp_2026") {
+      assert.ok(card.includes(`href="${metadata.source_url}"`));
+      assert.ok(card.includes("Stáhnout sešit s tabulkou 11 (XLSX)"));
+    } else if (id === "DOI_10_1594_PANGAEA_917503") {
+      assert.ok(card.includes('href="https://doi.pangaea.de/10.1594/PANGAEA.917503?format=zip"'));
+      assert.ok(card.includes("Stáhnout data CENOGRID (ZIP)"));
+    } else {
+      assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    }
     assert.doesNotMatch(card, /drive\.google\.com/);
   }
   for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
     const file = /\.[a-z0-9]+$/i.test(match[1]) ? match[1] : match[1].replace(/\/$/, "") + "/index.html";
     await readFile(new URL("dist/client" + file, root));
   }
-  const base = new URL("public/data/methods/sediment-cores/", root);
-  const metadata = JSON.parse(await readFile(new URL("provenance.json", base), "utf8"));
   for (const [name, sha] of Object.entries(metadata.sha256)) {
     assert.equal(createHash("sha256").update(await readFile(new URL(name, base))).digest("hex"), sha);
   }

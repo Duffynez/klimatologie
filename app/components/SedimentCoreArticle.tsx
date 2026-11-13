@@ -175,11 +175,12 @@ export function SedimentCoreArticle() {
           <SourceLink id="DOI_10_5194_cp_19_607_2023">(Hodell a kol. 2023, oddíl 2.1)</SourceLink>
         </p>
         <p>
-          Jeden takový referenční záznam, Prob-stack, kombinuje 180
-          izotopových záznamů a popisuje i jejich rozptyl. Místní průběh
-          přiřazujeme k jeho odpovídajícím částem. Vztah k referenci poskytne
-          vybraným hloubkám stáří. Jde o datování prostřednictvím
-          společných změn, které přebírá časovou stupnici reference.{" "}
+          Při datování jader expedice 397 autoři u mladších vrstev převzali
+          stáří z jader expedice 339 podle shody průběhu Ca/Ti mezi oběma odběry.
+          Pro stáří přibližně mezi 1,45 a 2 miliony let porovnali izotopový průběh
+          schránek s referencí Prob-stack, která kombinuje 180 mořských záznamů.
+          Přiřazení stejných změn k referenci umožňuje převzít její časovou stupnici.{" "}
+          <SourceLink id="DOI_10_14379_iodp_proc_397_204_2026">(Hodell a kol. 2026, oddíl 3.4)</SourceLink>{" "}
           <SourceLink id="DOI_10_1093_climsys_dzx002">(Ahn a kol. 2017)</SourceLink>
         </p>
         <p>
@@ -241,7 +242,8 @@ export function SedimentCoreArticle() {
           minulosti. Soubor CENOGRID spojuje izotopové rozbory schránek dírkovců do
           časové řady za posledních 66 000 000 let. Umožňuje sledovat přechody mezi
           teplými obdobími a světem s rozsáhlými ledovými příkrovy.{" "}
-          <SourceLink id="DOI_10_1594_PANGAEA_917503">(Westerhold, 2020: CENOGRID)</SourceLink>
+          <SourceLink id="DOI_10_1126_science_aba6853">(Westerhold a kol. 2020)</SourceLink>{" "}
+          <SourceLink id="DOI_10_1594_PANGAEA_917503">(data CENOGRID)</SourceLink>
         </p>
 
         <h3>Vývoj odběru a jezerní varianty</h3>
@@ -345,7 +347,7 @@ export function SedimentCoreArticle() {
         </p>
         <Equation tex={String.raw`s = \frac{130\,\mathrm{cm}}{15{,}6\,\text{tisíce let}} \doteq 8{,}33\,\frac{\mathrm{cm}}{\text{tisíc let}}`} />
         <p>
-          Složený záznam v tomto úseku tedy přibýval průměrně o přibližně
+          Průměrné tempo mezi body na složené hloubkové stupnici vychází na
           8,33 centimetru za tisíc let. Obráceným podílem dostaneme dobu
           připadající na jeden centimetr: 15 600 let děleno 130 centimetry
           je 120 let na centimetr. To popisuje průměrné časové rozestupy

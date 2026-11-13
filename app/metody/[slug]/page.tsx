@@ -291,7 +291,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "sedimentarni-jadra-a-stratigrafie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Přírodní archivy" title="Sedimentární jádra a stratigrafie" meta="31. října 2026">
+        <PageLead eyebrow="Metody / Přírodní archivy" title="Sedimentární jádra a stratigrafie" meta="13. listopadu 2026">
           <p>Jak odebíráme usazeniny ze dna, spojujeme jejich vrstvy a určujeme časovou osu záznamu minulého prostředí.</p>
         </PageLead>
         <SedimentCoreArticle />
@@ -303,7 +303,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "ledova-jadra-a-analyza-uzavreneho-vzduchu") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Přírodní archivy" title="Ledová jádra a analýza uzavřeného vzduchu" meta="31. října 2026">
+        <PageLead eyebrow="Metody / Přírodní archivy" title="Ledová jádra a analýza uzavřeného vzduchu" meta="13. listopadu 2026">
           <p>Jak led uchovává vzorky minulé atmosféry, jak změříme jejich složení a proč potřebujeme rozlišit stáří ledu a vzduchu.</p>
         </PageLead>
         <IceCoreArticle />

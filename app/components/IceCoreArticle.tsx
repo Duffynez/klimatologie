@@ -14,7 +14,8 @@ export function IceCoreArticle() {
           a vzduch uzavřený později v bublinkách. Analýza těchto složek umožňuje
           zkoumat minulé prostředí. Zde se zaměříme na měření oxidu uhličitého
           v zachovaném vzduchu, konkrétně na postup používaný pro antarktický Law Dome.{" "}
-          <SourceLink id="WEB_AAD_Ice_Cores">(Australian Antarctic Program)</SourceLink>
+          <SourceLink id="WEB_AAD_Ice_Cores">(Australian Antarctic Program)</SourceLink>{" "}
+          <SourceLink id="DOI_10_5194_essd_11_473_2019">(Rubino a kol. 2019, oddíl 2)</SourceLink>
         </p>
 
         <h3>Jak se vzduch uzavře do ledu</h3>
@@ -156,7 +157,7 @@ export function IceCoreArticle() {
           těžších molekul, mezi něž patří CO₂. Změřenou koncentraci proto
           zpracování sníží o tento vypočtený příspěvek, aby odpovídala
           složení atmosféry nad povrchem.{" "}
-          <SourceLink id="DOI_10_5194_essd_11_473_2019">(Rubino a kol. 2019, doplněk S1.2)</SourceLink>
+          <SourceLink id="DOI_10_5194_essd_11_473_2019_supplement">(Rubino a kol. 2019, doplněk S1.2)</SourceLink>
         </p>
 
         <h3>Jak měření přiřadíme k datu</h3>
@@ -195,7 +196,7 @@ export function IceCoreArticle() {
           <InlineMath tex={String.raw`\Delta t`} /> udává, o kolik let je led
           starší než vzduch. Jde o přepočet mezi dvěma způsoby datování téhož
           vzorku. Velikost rozdílu se určuje pro daný vrt a podmínky tvorby ledu.{" "}
-          <SourceLink id="DOI_10_5194_essd_11_473_2019">(Rubino a kol. 2019, doplněk S1)</SourceLink>
+          <SourceLink id="DOI_10_5194_essd_11_473_2019_supplement">(Rubino a kol. 2019, doplněk S1)</SourceLink>
         </p>
 
         <h3>Co datovaný výsledek umožňuje zjistit</h3>
@@ -273,7 +274,8 @@ export function IceCoreArticle() {
             s vrstvou taveniny, vyřazují. Uvedená nejistota nezahrnuje dodatečné
             rozdíly mezi vrty. Pro část předindustriálního období tyto rozdíly
             podle autorů mohou dosahovat až 5 ppm.{" "}
-            <SourceLink id="DOI_10_5194_essd_11_473_2019">(Rubino a kol. 2019 a doplněk S1)</SourceLink>
+            <SourceLink id="DOI_10_5194_essd_11_473_2019">(Rubino a kol. 2019)</SourceLink>{" "}
+            <SourceLink id="DOI_10_5194_essd_11_473_2019_supplement">(doplněk S1)</SourceLink>
           </p>
           <p>
             Rozdíl stáří ledu a vzduchu není totéž co šířka časového záběru vzorku.
@@ -359,7 +361,7 @@ export function IceCoreArticle() {
             metodické studie. Neobsahují nejistotu datování ani všechny možné
             společné odchylky měření. Rozdíl 38,318 ppm proto ponecháváme jako
             aritmetický výsledek a věcně jej shrnujeme zaokrouhleně.{" "}
-            <SourceLink id="DOI_10_5194_essd_11_473_2019">(Rubino a kol. 2019, doplněk S1.3)</SourceLink>
+            <SourceLink id="DOI_10_5194_essd_11_473_2019_supplement">(Rubino a kol. 2019, doplněk S1.3)</SourceLink>
           </p>
           <ul>
             <li><a href="/data/methods/ice-cores/Law_Dome_GHG_2000years.xlsx">Původní datový soubor XLSX</a></li>
