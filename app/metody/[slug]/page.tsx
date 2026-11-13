@@ -116,7 +116,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "asimilace-dat-a-reanalyzy") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Zpracování dat a vyhodnocování výsledků" title="Asimilace dat a reanalýzy" meta="31. října 2026">
+        <PageLead eyebrow="Metody / Zpracování dat a vyhodnocování výsledků" title="Asimilace dat a reanalýzy" meta="13. listopadu 2026">
           <p>Jak se měření propojují s fyzikálním modelem a vytvářejí souvislý obraz minulého počasí.
             Souborový Kalmanův filtr, reanalýza 20CR a výpočet z veřejných údajů o tlaku.</p>
         </PageLead>
@@ -635,7 +635,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Srážkoměry a disdrometry"
-          meta="5. listopadu 2026"
+          meta="13. listopadu 2026"
         >
           <p>
             Srážkoměr zachycuje vodu, disdrometr sleduje jednotlivé padající částice.

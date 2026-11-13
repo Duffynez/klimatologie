@@ -138,7 +138,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Atmosféra"
           title="Srážky a přívalové srážky"
-          meta="5. listopadu 2026"
+          meta="13. listopadu 2026"
         >
           <p>
             Jak se měří celkové úhrny, nejvyšší denní a hodinové srážky, jak se z bodových měření vytvářejí mapy a co

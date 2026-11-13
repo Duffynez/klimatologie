@@ -1,0 +1,56 @@
+Změny množství a intenzity srážek
+Klimatologie.eu, 13. listopadu 2026
+
+Původ obrázků
+Vlastní ilustrace vytvořené vestavěným nástrojem image_gen. Licence CC BY 4.0.
+Výsledné PNG mají rozměry 1536 × 1024 pixelů. Zadání a oprava druhé grafiky jsou v prompts.json ve stejné složce.
+Jde o kvalitativní schémata. Velikosti šipek, hustota teček, srážky, přístroj, malý graf a mapa nejsou datovou rekonstrukcí.
+
+vodni-para.png
+Izoluje vliv zvýšené vlhkosti při podobném výstupu vzduchu.
+Relativní vlhkost v porovnávaných prostředích zůstává stejná. Modré tečky představují vodní páru.
+Přibližných 7 % na 1 °C je změna tlaku nasycené páry při teplotách běžných v dolní atmosféře.
+Není to univerzální předpověď pro všechny deště.
+Podklady:
+Held a Soden 2006, DOI 10.1175/JCLI3990.1, oddíly 1 a 2.
+O’Gorman a Schneider 2009, DOI 10.1073/pnas.0907610106, obrázky 2 a 3.
+Westra a kol. 2013, DOI 10.1175/JCLI-D-12-00502.1, tabulka 1.
+
+energie.png
+Sleduje přenos energie vypařováním a její uvolnění při kondenzaci.
+Tečky představují plynné molekuly, velká kapka kapalnou vodu. V revizi byly doplněny výslovné popisky obou skupenství.
+Oranžová barva značí energii. Vlnité šipky označují záření, rovná šipka přenos tepla z povrchu.
+Atmosféra vyzařuje k povrchu i do vesmíru a také pohlcuje záření. Rozhoduje čisté radiační ochlazování.
+Omezení platí pro globální dlouhodobý průměr, nikoli samostatnou bouřku.
+Podklady:
+Held a Soden 2006, DOI 10.1175/JCLI3990.1, obrázek 2.
+Pendergrass a Hartmann 2014, DOI 10.1175/JCLI-D-13-00163.1, oddíly 2–4.
+IPCC 2021, kapitola 8, DOI 10.1017/9781009157896.010, oddíl 8.2.1.
+
+proudeni.png
+Odděluje účinek výstupu a trvání při stejné vlhkosti přitékajícího vzduchu.
+Schéma není mapou nebo profilem ledna 2014. Silnější výstup znamená větší rychlost kondenzace při ostatních podobných podmínkách.
+O’Gorman a Schneider 2009 představují stejnou modelovou studii jako v prvním příběhu, nejde o nezávislý nový soubor.
+Oueslati a kol. 2019 porovnávají leden 2014 s klimatologií 1981–2010.
+Výsledek přes 90 % se týká dynamického příspěvku k anomálii svislého přenosu vlhkosti, nikoli podílu srážek způsobeného člověkem.
+Podklady:
+O’Gorman a Schneider 2009, DOI 10.1073/pnas.0907610106, obrázek 3.
+Oueslati a kol. 2019, DOI 10.1038/s41598-019-39306-y, obrázky 1–3 a metodika.
+
+Kontrola čísel v článku
+Westra 2013: 8 326 stanic, alespoň 30 let záznamu v období 1900–2009.
+64 % kladných a 36 % záporných trendů. Rozmezí 5,9–7,7 % na 1 °C tvoří výsledky různých analytických variant, není intervalem spolehlivosti.
+Held a Soden 2006: dvacet modelů, scénář A1B, první a poslední dvacetiletí 21. století. Pára přibližně 7,5 % na 1 °C, medián změny srážek 1,7 % na 1 °C.
+Pendergrass a Hartmann 2014: CMIP5, koncentrace CO₂ roste o 1 % ročně, porovnání modelových let 1–10 a 61–70. Průměrná změna globálních srážek 1,4 % na 1 °C. Nejde o scénář RCP8.5.
+IPCC 2021: velmi pravděpodobných 2–3 % na 1 °C náleží samotné teplotní odezvě. Rychlá reakce na změnu složení atmosféry se hodnotí odděleně.
+Oueslati 2019: oblast 50–52° severní šířky a 6,5° západní délky až 0°, leden 2014, reference 1981–2010.
+
+Veřejné plné texty a data
+https://www.image.ucar.edu/idag/Papers/Held_hydro.pdf
+https://authors.library.caltech.edu/records/ged8k-xpa53/files/OGorman2009p5856P_Natl_Acad_Sci_Usa.pdf?download=1
+https://atmos.uw.edu/~dennis/Pendergrass%26Hartmann_2014a.pdf
+https://dspace.library.uvic.ca/bitstreams/77b058c8-7847-468f-972b-f812da09cea1/download
+https://www.nature.com/articles/s41598-019-39306-y.pdf
+https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_Chapter08.pdf
+https://www.wcrp-cmip.org/cmip-data-access/
+https://psl.noaa.gov/data/gridded/data.ncep.reanalysis.html

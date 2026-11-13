@@ -454,6 +454,8 @@ export function ReanalysisArticle() {
           </p>
         </details>
 
+        <p>Jak reanalýzy propojují srážky s pohybem vzduchu, ukazuje <Link href="/mechanismy/termodynamika-a-dynamika-srazek/#test-britanie">rozbor mimořádně deštivého ledna 2014 v jižní Británii</Link>. Porovnání s měřenými úhrny umožňuje ověřit, zda rekonstruovaný výstup a přenos vlhkosti odpovídají průběhu události.</p>
+
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>

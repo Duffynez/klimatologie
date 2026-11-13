@@ -556,6 +556,8 @@ export function RainGaugeArticle() {
           </p>
         </details>
 
+        <p>Dlouhé srážkoměrné řady poskytují pozorovací test mechanismu <Link href="/mechanismy/termodynamika-a-dynamika-srazek/#test-stanice">zesilování nejvyšších denních srážek</Link>. Výklad odděluje jejich změnu od ročního úhrnu a vysvětluje, proč oba ukazatele nemusí růst stejně.</p>
+
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>
