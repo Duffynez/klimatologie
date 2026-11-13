@@ -2174,12 +2174,14 @@ test("publishes a sourced global mean sea-level article with tide-gauge and sate
   const seaLevelSourceIds = [
     ...article.matchAll(/<SourceLink id="([^"]+)"/g),
   ].map((match) => match[1]);
-  assert.equal(new Set(seaLevelSourceIds).size, 36);
+  assert.equal(new Set(seaLevelSourceIds).size, 37);
   for (const id of new Set(seaLevelSourceIds)) {
     const catalogueOccurrences = sourceCatalogueText.split(id).length - 1;
-    assert.ok(catalogueOccurrences >= 2, `${id} must exist and be marked as open access`);
+    const inlineEntry = sourceCatalogueText.match(new RegExp(`\\{[^\\n]*id: "${id}"[^\\n]*\\}`))?.[0] ?? "";
+    const explicitOpenAccess = /openAccessUrl: "https:\/\//.test(inlineEntry) && /availability: "open-access"/.test(inlineEntry);
+    assert.ok(catalogueOccurrences >= 2 || explicitOpenAccess, `${id} must exist and be marked as open access`);
     if (id.startsWith("DOI_")) {
-      assert.match(sourceCatalogueText, new RegExp(`${id}:\\s*"https://`));
+      assert.ok(explicitOpenAccess || new RegExp(`${id}:\\s*"https://`).test(sourceCatalogueText), `${id} must provide a public full text`);
     }
   }
   assert.match(sourceCatalogueText, /zanna-researchteam\.github\.io\/files\/Frederikse-et-al-2020\.pdf/);
