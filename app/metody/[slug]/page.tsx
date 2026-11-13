@@ -315,7 +315,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "pozemni-mereni-vodni-pary-pomoci-gnss") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Pozemní měření vodní páry pomocí GNSS" meta="31. října 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Pozemní měření vodní páry pomocí GNSS" meta="13. listopadu 2026">
           <p>Jak zpoždění navigačních signálů umožňuje určit množství vody nad stanicí a jak tento převod zopakovat na českých datech.</p>
         </PageLead>
         <GnssWaterVaporArticle />
@@ -327,7 +327,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "radiove-zakryty-gnss") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Rádiové zákryty GNSS" meta="31. října 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Rádiové zákryty GNSS" meta="13. listopadu 2026">
           <p>Jak ohyb navigačního signálu odhaluje výškové uspořádání atmosféry a jak se ze skutečného družicového profilu vypočítá teplota.</p>
         </PageLead>
         <RadioOccultationArticle />

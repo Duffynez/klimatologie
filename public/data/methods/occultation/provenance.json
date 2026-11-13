@@ -4,6 +4,8 @@
   "accessed": "2026-10-28",
   "archive_url": "https://data.cosmic.ucar.edu/gnss-ro/cosmic2/nrt/level2/2024/001/atmPrf_nrt_2024_001.tar.gz",
   "archive_member": "atmPrf_C2E1.2024.001.00.01.G11_0001.0001_nc",
+  "public_download": "https://klimatologie.eu/data/methods/occultation/atmPrf_C2E1.2024.001.00.01.G11_0001.0001_nc",
+  "data_terms": "https://www.ucar.edu/terms-of-use/data",
   "profile_sha256": "a71af44f9988fa591062d64eba0adf9c4f99261e72563dc1578e9d9f694e38e3",
   "extract_sha256": "130665a020be67847e9c78370cc613451845f00f34eca4d88cd84d35dff96cd5",
   "selection": "Nearest unmasked MSL_alt to 20, 25 and 30 km, no interpolation. bad must be 0.",

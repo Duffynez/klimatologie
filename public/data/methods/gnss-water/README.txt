@@ -14,8 +14,9 @@ složky. Spusťte python reproduce.py. Stačí standardní knihovna Pythonu 3.
 Skript porovná výřez s původní staniční řadou a ověří její kontrolní součet.
 Vypočítá mokré zpoždění a přibližný přepočet na srážitelnou vodu.
 
-Pro nezávislé stažení původních dat otevřete archive_url z provenance.json.
-Archiv má asi 54 MB. Rozbalte pouze soubor 2012/GOPE.2012 a porovnejte SHA-256.
+Původní staniční soubor je přímo na kartě zdroje NCAR:
+https://klimatologie.eu/zdroje/#DOI_10_5065_047C_HV45
+Jeho umístění v ročním archivu NCAR o velikosti asi 54 MB uvádí provenance.json.
 Nejde o opakování zpracování rádiových měření. Začínáme veřejným produktem
 s již odhadnutým zenitovým zpožděním, tlakem a váženou teplotou.
 

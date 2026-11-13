@@ -666,6 +666,22 @@ function hasArticleLink(html, path) {
     href.split("#")[0].replace(/\/$/, "") === path.replace(/\/$/, ""));
 }
 
+test("links both GNSS examples to the original files with matching checksums", async () => {
+  const catalogue = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
+  for (const [directory, id, hashKey, label] of [
+    ["occultation", "DOI_10_5065_T353_C093", "profile_sha256", "Stáhnout použitý profil COSMIC-2 (NetCDF)"],
+    ["gnss-water", "DOI_10_5065_047C_HV45", "station_file_sha256", "Stáhnout staniční soubor GOPE.2012"],
+  ]) {
+    const meta = JSON.parse(await readFile(new URL("public/data/methods/" + directory + "/provenance.json", root), "utf8"));
+    const path = new URL(meta.public_download).pathname;
+    const data = await readFile(new URL("dist/client" + path, root));
+    assert.equal(createHash("sha256").update(data).digest("hex"), meta[hashKey], path);
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?</article>'))?.[0];
+    assert.ok(card?.includes('href="' + path + '"'), id);
+    assert.ok(card.includes(label), id);
+  }
+});
+
 test("links the interferometry and gravimetry examples to their exact inputs and versions", async () => {
   const [catalogue, netcdf, interferometryMeta, gravimetryMeta] = await Promise.all([
     readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
