@@ -9,7 +9,7 @@ import { sourceById } from "../data/sources";
 
 export const metadata: Metadata = {
   title: "Historie",
-  description: "Zásadní milníky poznání změny klimatu a klimatické politiky. Chronologická osa se třemi stupni důležitosti, filtry a původními prameny.",
+  description: "Milníky poznání změny klimatu, klimatické politiky a společenského vnímání. Chronologická osa se třemi stupni důležitosti, filtry a prameny.",
 };
 
 export default function HistoryPage() {
@@ -129,9 +129,9 @@ export default function HistoryPage() {
 
   return (
     <div className="page-shell">
-      <PageLead eyebrow="Historie poznání" title="Historie poznání změny klimatu."
-        meta="6. listopadu 2026">
-        <p>Jak jsme zjistili, že se klima mění, co tyto změny způsobuje a jak na ně reagovaly státy. Osa vybírá zásadní objevy, měření a klimatická rozhodnutí.</p>
+      <PageLead eyebrow="Věda, politika, společnost" title="Historie poznání a vnímání změny klimatu."
+        meta="13. listopadu 2026">
+        <p>Jak jsme zjistili, že se klima mění, co tyto změny způsobuje a jak na ně reagovaly státy i společnost. Osa vybírá zásadní objevy, měření, klimatická rozhodnutí a kulturní díla, která přibližovala klima veřejnosti.</p>
         <p>Milníky mají tři stupně důležitosti: zásadní (1), důležité (2) a doplňující (3). Ve filtru je můžete libovolně kombinovat. Vědu lze dále filtrovat na pozorování, metody a mechanismy.</p>
       </PageLead>
       {legacyNotices}
