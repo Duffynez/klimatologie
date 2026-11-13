@@ -116,7 +116,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "asimilace-dat-a-reanalyzy") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Zpracování dat a vyhodnocování výsledků" title="Asimilace dat a reanalýzy" meta="31. října 2026">
+        <PageLead eyebrow="Metody / Zpracování dat a vyhodnocování výsledků" title="Asimilace dat a reanalýzy" meta="13. listopadu 2026">
           <p>Jak se měření propojují s fyzikálním modelem a vytvářejí souvislý obraz minulého počasí.
             Souborový Kalmanův filtr, reanalýza 20CR a výpočet z veřejných údajů o tlaku.</p>
         </PageLead>
@@ -291,7 +291,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "sedimentarni-jadra-a-stratigrafie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Přírodní archivy" title="Sedimentární jádra a stratigrafie" meta="31. října 2026">
+        <PageLead eyebrow="Metody / Přírodní archivy" title="Sedimentární jádra a stratigrafie" meta="13. listopadu 2026">
           <p>Jak odebíráme usazeniny ze dna, spojujeme jejich vrstvy a určujeme časovou osu záznamu minulého prostředí.</p>
         </PageLead>
         <SedimentCoreArticle />
@@ -303,7 +303,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "ledova-jadra-a-analyza-uzavreneho-vzduchu") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Přírodní archivy" title="Ledová jádra a analýza uzavřeného vzduchu" meta="31. října 2026">
+        <PageLead eyebrow="Metody / Přírodní archivy" title="Ledová jádra a analýza uzavřeného vzduchu" meta="13. listopadu 2026">
           <p>Jak led uchovává vzorky minulé atmosféry, jak změříme jejich složení a proč potřebujeme rozlišit stáří ledu a vzduchu.</p>
         </PageLead>
         <IceCoreArticle />
@@ -315,7 +315,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "pozemni-mereni-vodni-pary-pomoci-gnss") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Pozemní měření vodní páry pomocí GNSS" meta="31. října 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Pozemní měření vodní páry pomocí GNSS" meta="13. listopadu 2026">
           <p>Jak zpoždění navigačních signálů umožňuje určit množství vody nad stanicí a jak tento převod zopakovat na českých datech.</p>
         </PageLead>
         <GnssWaterVaporArticle />
@@ -327,7 +327,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "radiove-zakryty-gnss") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Rádiové zákryty GNSS" meta="31. října 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Rádiové zákryty GNSS" meta="13. listopadu 2026">
           <p>Jak ohyb navigačního signálu odhaluje výškové uspořádání atmosféry a jak se ze skutečného družicového profilu vypočítá teplota.</p>
         </PageLead>
         <RadioOccultationArticle />
@@ -635,7 +635,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Srážkoměry a disdrometry"
-          meta="5. listopadu 2026"
+          meta="13. listopadu 2026"
         >
           <p>
             Srážkoměr zachycuje vodu, disdrometr sleduje jednotlivé padající částice.

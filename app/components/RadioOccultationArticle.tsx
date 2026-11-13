@@ -314,8 +314,8 @@ export function RadioOccultationArticle() {
           přibližně na 17,5° jižní šířky a 149,2° východní délky.
           Profil prošel kontrolou kvality poskytovatele. Zopakujeme poslední
           krok suchého výpočtu, určení teploty z již vypočteného tlaku
-          a refraktivity.{" "}
-          <SourceLink id="DOI_10_5065_T353_C093">(UCAR: COSMIC-2, produkt atmPrf)</SourceLink>
+          a refraktivity. Použitý NetCDF lze stáhnout přímo z{" "}
+          <SourceLink id="DOI_10_5065_T353_C093">karty dat COSMIC-2</SourceLink>.
         </p>
         <p>
           Z profilu vybíráme body nejbližší výškám 20, 25 a 30 kilometrů.
@@ -355,10 +355,11 @@ export function RadioOccultationArticle() {
         <details className="article-details">
           <summary>Data a postup pro zopakování</summary>
           <p>
-            Základem je soubor <code>atmPrf_C2E1.2024.001.00.01.G11_0001.0001_nc</code>{" "}
-            z <SourceLink id="DOI_10_5065_T353_C093">denního adresáře UCAR</SourceLink>.
-            Patří do archivu <code>atmPrf_nrt_2024_001.tar.gz</code>, který má
-            přibližně 2 GB. Název profilu je identifikátorem události.
+            Základem je soubor <code>atmPrf_C2E1.2024.001.00.01.G11_0001.0001_nc</code>.{" "}
+            <SourceLink id="DOI_10_5065_T353_C093">Karta zdroje</SourceLink>{" "}
+            nabízí jeho nezměněnou kopii z denního archivu UCAR{" "}
+            <code>atmPrf_nrt_2024_001.tar.gz</code> o velikosti přibližně
+            2 GB. Název profilu je identifikátorem události.
             Atributy začátku záznamu v souboru uvádějí 31. prosince 2023
             ve 23:58:47, což zachováváme v popisu původu dat.
             Použita je veřejná operativní verze dostupná 28. října 2026,
@@ -374,7 +375,7 @@ export function RadioOccultationArticle() {
             2747 a 2498. Hodnoty jsme neinterpolovali. Jde o produkt{" "}
             <code>atmPrf</code>, odlišný od produktu <code>wetPf2</code>,
             který spojuje zákryt s meteorologickou předpovědí.{" "}
-            <SourceLink id="DOI_10_5065_T353_C093">(UCAR: popis produktů a metadata souboru)</SourceLink>
+            <SourceLink id="DOI_10_5065_T353_C093">(UCAR: popis produktů a stažení profilu)</SourceLink>
           </p>
           <p>
             Zveřejňujeme <a href="/data/methods/occultation/profile-extract.csv">tři řádky CSV</a>,{" "}
@@ -384,8 +385,8 @@ export function RadioOccultationArticle() {
             Základní výpočet nepotřebuje další balíčky.
             Volba <code>--profile cesta-k-souboru</code> porovná výřez
             s původním souborem pomocí balíčku <code>netCDF4</code>.
-            Postup získání jediného profilu bez stahování celého archivu
-            obsahuje <a href="/data/methods/occultation/README.txt">doprovodný návod</a>.
+            Stažení a ověření profilu popisuje{" "}
+            <a href="/data/methods/occultation/README.txt">doprovodný návod</a>.
           </p>
         </details>
 

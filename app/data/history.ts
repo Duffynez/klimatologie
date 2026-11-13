@@ -1752,6 +1752,25 @@ export const historyEvents: HistoryEvent[] = [
     ]
   },
   {
+    id: "2010_Cancun_Green_Climate_Fund",
+    year: 2010,
+    dateMeaning: "Rozhodnutí o založení fondu",
+    title: "Cancúnské dohody zakládají Zelený klimatický fond",
+    category: "politics",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Na klimatické konferenci v Cancúnu státy rozhodly založit Zelený klimatický fond. Jeho úkolem se stala podpora projektů a opatření v rozvojových zemích, včetně snižování emisí a přizpůsobování se změně klimatu. Dohoda tím vytvořila institucionální základ pro dlouhodobé financování klimatických opatření.",
+        references: [{ sourceId: "2011_UNFCCC_Cancun_Agreements", locator: "rozhodnutí 1/CP.16, odstavce 97–102" }]
+      },
+      {
+        text: "Pravidla určovala rovné zastoupení rozvinutých a rozvojových zemí ve správní radě fondu a jeho odpovědnost vůči konferenci smluvních stran. Země přijímající podporu tak měly mít podíl na rozhodování o jejím využití. Podrobný návrh fungování fondu měl připravit přechodný výbor pro další jednání.",
+        references: [{ sourceId: "2011_UNFCCC_Cancun_Agreements", locator: "rozhodnutí 1/CP.16, odstavce 102–111 a příloha III" }]
+      }
+    ],
+    relatedLinks: []
+  },
+  {
     id: "2013_Santer",
     year: 2013,
     dateMeaning: "Zveřejnění práce",
@@ -1964,6 +1983,27 @@ export const historyEvents: HistoryEvent[] = [
     ]
   },
   {
+    id: "2021_EU_Climate_Law",
+    year: 2021,
+    dateMeaning: "Přijetí nařízení",
+    title: "Evropská unie přijímá závazný cíl klimatické neutrality",
+    category: "politics",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Evropský parlament a Rada Evropské unie přijaly nařízení, které stanovilo závazný cíl klimatické neutrality Evropské unie do roku 2050. Zbývající emise skleníkových plynů se mají vyrovnat jejich pohlcováním. Pro rok 2030 nařízení určilo snížení čistých emisí, tedy emisí po odečtení pohlcování, alespoň o 55 % oproti roku 1990.",
+        references: [{ sourceId: "2021_EU_Climate_Law", locator: "články 2 a 4, původní znění" }]
+      },
+      {
+        text: "Nařízení spojilo společné cíle s pravidelným hodnocením pokroku a opatření Evropskou komisí. Unie a členské státy mají přijímat kroky potřebné ke společnému dosažení klimatické neutrality. Dlouhodobý směr evropské klimatické politiky tak získal závazný právní rámec, podle něhož lze posuzovat navazující opatření.",
+        references: [{ sourceId: "2021_EU_Climate_Law", locator: "článek 2 odstavec 2 a články 6–7" }]
+      }
+    ],
+    relatedLinks: [
+      { href: "/mechanismy/puvod-rustu-atmosferickeho-co2/", label: "Jak emise a pohlcování mění množství CO₂ v atmosféře" }
+    ]
+  },
+  {
     id: "2021_Dont_Look_Up",
     year: 2021,
     dateMeaning: "Uvedení filmu",
@@ -1985,6 +2025,72 @@ export const historyEvents: HistoryEvent[] = [
     ],
     relatedLinks: [
       { href: "/mechanismy/radiacni-pusobeni-sklenikovych-plynu/", label: "O jaké důkazy se opírá vysvětlení skleníkového oteplování" }
+    ]
+  },
+  {
+    id: "2022_Loss_And_Damage_Fund",
+    year: 2022,
+    dateMeaning: "Rozhodnutí o založení fondu",
+    title: "Státy zakládají fond pro klimatické ztráty a škody",
+    category: "politics",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Státy na klimatické konferenci v Šarm aš-Šajchu rozhodly vytvořit fond pro řešení ztrát a škod spojených se změnou klimatu. Pomoc určená zvlášť zranitelným rozvojovým zemím má zahrnovat následky extrémního počasí i pomalu postupujících změn. Rozhodnutí počítalo také s obnovou a rekonstrukcí po vzniklých škodách.",
+        references: [{ sourceId: "2023_UNFCCC_Loss_Damage_Fund", locator: "rozhodnutí 2/CP.27, odstavce 1–3" }]
+      },
+      {
+        text: "Podpora řešení vzniklých škod tak získala vlastní fond v rámci mezinárodní klimatické spolupráce. Rozhodnutí z roku 2022 zároveň ustavilo výbor, který měl připravit jeho fungování. Základní pravidla správy fondu státy schválily v Dubaji v roce 2023.",
+        references: [
+          { sourceId: "2023_UNFCCC_Loss_Damage_Fund", locator: "odstavce 4–5" },
+          { sourceId: "2024_UNFCCC_COP28_Decisions", locator: "rozhodnutí 5/CMA.5, odstavce 2–5 a příloha I" }
+        ]
+      }
+    ],
+    relatedLinks: [
+      { href: "/mechanismy/mechanismy-vln-veder/", label: "Jak oteplování ovlivňuje riziko vln veder" }
+    ]
+  },
+  {
+    id: "2023_COP28_Fossil_Fuels",
+    year: 2023,
+    dateMeaning: "Přijetí výsledku globálního hodnocení",
+    title: "Dubajské rozhodnutí vyzývá k odklonu od fosilních paliv",
+    category: "politics",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "V Dubaji státy dokončily první globální hodnocení plnění Pařížské dohody, tedy společné posouzení pokroku vůči jejím cílům. Přijaté rozhodnutí je vyzvalo, aby přispěly k odklonu od fosilních paliv v energetických systémech. Zdůraznilo přitom spravedlivý a řízený průběh změny a zrychlení opatření během 20. let 21. století.",
+        references: [{ sourceId: "2024_UNFCCC_COP28_Decisions", locator: "rozhodnutí 1/CMA.5, úvodní odkaz na článek 14 Pařížské dohody a odstavec 28(d)" }]
+      },
+      {
+        text: "Výsledek hodnocení měl sloužit státům při přípravě dalších národních klimatických plánů. Dubajská výzva určila společný směr pro energetiku, zatímco konkrétní způsob příspěvku jednotlivých států ponechala jejich národním rozhodnutím s ohledem na rozdílné podmínky. Odklon od fosilních paliv se tak stal výslovně pojmenovanou součástí společné klimatické reakce.",
+        references: [{ sourceId: "2024_UNFCCC_COP28_Decisions", locator: "rozhodnutí 1/CMA.5, odstavce 28 a 39" }]
+      }
+    ],
+    relatedLinks: [
+      { href: "/mechanismy/puvod-rustu-atmosferickeho-co2/", label: "Jak určujeme původ rostoucího CO₂" }
+    ]
+  },
+  {
+    id: "2025_ICJ_Climate_Opinion",
+    year: 2025,
+    dateMeaning: "Vydání poradního stanoviska",
+    title: "Mezinárodní soudní dvůr vyjasňuje klimatické povinnosti států",
+    category: "politics",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Mezinárodní soudní dvůr vydal na žádost Valného shromáždění Organizace spojených národů nezávazné poradní stanovisko k existujícím klimatickým povinnostem států. Soud vyložil, že státy mají přijímat opatření k předcházení závažnému poškozování klimatického systému a spolupracovat na jeho ochraně. Tyto povinnosti vyvozoval z klimatických smluv i z obecných pravidel mezinárodního práva.",
+        references: [{ sourceId: "2025_ICJ_Climate_Opinion", locator: "odstavce 1–3 a 271–315, závěrečný výrok v odstavci 457" }]
+      },
+      {
+        text: "Stanovisko také vysvětlilo, že porušení klimatických povinností může založit mezinárodní odpovědnost státu. Při prokázané příčinné souvislosti mezi protiprávním jednáním a škodou může vzniknout povinnost náhrady. Odpovědnost i rozsah nápravy je podle soudu nutné posuzovat v konkrétním případě. Stanovisko tak poskytlo výklad práva pro hodnocení klimatické politiky a případných sporů.",
+        references: [{ sourceId: "2025_ICJ_Climate_Opinion", locator: "odstavce 421–438 a 444–455" }]
+      }
+    ],
+    relatedLinks: [
+      { href: "/mechanismy/mechanismy-vln-veder/", label: "Jak zkoumáme lidský vliv na riziko vln veder" }
     ]
   }
 ];

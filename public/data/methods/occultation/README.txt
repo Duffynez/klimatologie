@@ -3,6 +3,7 @@ Rádiové zákryty GNSS: poslední krok suchého výpočtu
 Data: UCAR COSMIC Program, 2019, COSMIC-2 Data Products.
 DOI: https://doi.org/10.5065/T353-C093
 Veřejný portál: https://www.cosmic.ucar.edu/what-we-do/cosmic-2/data
+Podmínky datových repozitářů: https://www.ucar.edu/terms-of-use/data
 Přístup: 28. října 2026.
 
 Výřez obsahuje tři skutečné body profilu z denního archivu 2024/001.
@@ -14,13 +15,15 @@ jedné referenční poloze celého zákrytu. Neproběhla interpolace.
 
 1. Stáhněte profile-extract.csv, provenance.json a reproduce.py do jedné složky.
 2. Spusťte python reproduce.py. Stačí standardní Python 3.
-3. Pro kontrolu původu stáhněte do stejné složky download-profile.py.
-   Spusťte python download-profile.py. Skript čte archiv postupně
-   a po nalezení jediného profilu spojení uzavře. Ve verzi ověřené
-   28. října 2026 je vybraný profil prvním členem archivu.
+3. Nezměněný soubor stáhněte z karty zdroje COSMIC-2:
+   https://klimatologie.eu/zdroje/#DOI_10_5065_T353_C093
 4. Při instalovaném balíčku netCDF4 lze spustit:
    python reproduce.py --profile atmPrf_C2E1.2024.001.00.01.G11_0001.0001_nc
    Tato volba kontroluje SHA-256 i přesnou shodu všech vybraných hodnot.
+
+Pokud je denní archiv UCAR dostupný, můžete použít download-profile.py.
+Skript čte archiv postupně a po nalezení jediného profilu spojení uzavře.
+Ve verzi ověřené 28. října 2026 byl vybraný profil prvním členem archivu.
 
 MSL_alt: nadmořská výška v km. Ref: bezrozměrná refraktivita.
 Pres: suchý tlak v mb, číselně shodný s hPa. Temp: suchá teplota v °C.

@@ -208,18 +208,18 @@ export function GnssWaterVaporArticle() {
           (NCAR) spojuje výsledky několika sítí a poskytuje je
           po dvou hodinách. Kromě výsledné vody uchovává zpoždění, tlak
           a váženou teplotu, takže lze sledovat návaznost jednotlivých kroků.{" "}
-          <SourceLink id="DOI_10_5065_047C_HV45">(NCAR: veřejná data)</SourceLink>{" "}
+          <SourceLink id="DOI_10_5065_047C_HV45">(NCAR: datová sada a soubor GOPE)</SourceLink>{" "}
           <SourceLink id="WEB_NCAR_GPS_PW_Readme">(popis datového formátu)</SourceLink>
         </p>
         <p>
           Pro klimatologii jsou důležité mnohaleté řady. Alshawafová
           a spoluautoři v roce 2017 zkoumali změny množství vodní páry na
-          113 stanicích převážně v Německu. Použili řady dlouhé 10 až 19 let,
-          oddělili pravidelné střídání ročních období a potom odhadovali
+          119 stanicích převážně v Německu s řadami dlouhými 10 až 19 let.
+          Oddělili pravidelné střídání ročních období a potom odhadovali
           dlouhodobou změnu. Jednotlivé stanice ukazovaly různé směry i rychlosti
           změn. Práce tak ukazuje, jak se soustavná geodetická měření využívají
           ke sledování vlhkosti atmosféry v konkrétních oblastech.{" "}
-          <SourceLink id="DOI_10_5194_amt_10_3117_2017">(Alshawaf a kol. 2017, oddíly 3–4)</SourceLink>
+          <SourceLink id="DOI_10_5194_amt_10_3117_2017">(Alshawaf a kol. 2017, oddíl 4.1 a obrázek 8)</SourceLink>
         </p>
         <p>
           Širší souvislosti shrnuje článek o <Link href="/pozorovani/narust-vlhkosti/#pozemni-gnss">vlhkosti atmosféry</Link>.
@@ -256,9 +256,9 @@ export function GnssWaterVaporArticle() {
           Výsledek ovlivňuje určení zpoždění, tlak i odhad vážené teploty.
           Pro dlouhé řady je důležitá stabilita stanice a srovnatelné zpracování.
           Wangová a spoluautoři porovnali výsledky s radiosondami na 98 místech
-          v letech 2003–2004. Souhrnná velikost rozdílu činila 2,83 milimetru vody. Autoři ji
-          vyjádřili střední kvadratickou hodnotou, která zvýrazňuje větší odchylky. Tento údaj zahrnuje chyby obou metod i rozdíl mezi vzduchem,
-          který skutečně zachytily.{" "}
+          v letech 2003–2004. Odmocnina z průměru čtverců rozdílů vyšla
+          2,83 milimetru vody. Tato míra zvýrazňuje větší odchylky a zahrnuje
+          chyby obou metod i rozdíl v tom, jaký vzduch zachytily.{" "}
           <SourceLink id="DOI_10_1029_2006JD007529">(Wang a kol. 2007, oddíl 4.1)</SourceLink>
         </p>
         <details className="article-details">
@@ -293,8 +293,7 @@ export function GnssWaterVaporArticle() {
             Ani měření blízko sebe tedy nevzorkují přesně totožný vzduch.
             Průměrně vycházela radiosondová voda o 1,08 milimetru nižší,
             především kvůli známým suchým odchylkám některých sond.
-            Střední kvadratický rozdíl 2,83 milimetru zdůrazňuje větší
-            odchylky a nelze jej připsat pouze GNSS.{" "}
+            Na souhrnném rozdílu 2,83 milimetru se podílejí obě měření.{" "}
             <SourceLink id="DOI_10_1029_2006JD007529">(Wang a kol. 2007, oddíl 4.1)</SourceLink>
           </p>
           <p>
@@ -317,9 +316,9 @@ export function GnssWaterVaporArticle() {
           1. července 2012 v 09:00 UTC, tedy v 11 hodin tehdejšího českého
           letního času. Vezmeme jej z veřejného dvouhodinového souboru NCAR.
           Začínáme již zpracovaným zenitovým zpožděním a zopakujeme jeho
-          převod na množství vody.{" "}
-          <SourceLink id="WEB_EPN_GOPE">(EPN: stanice GOPE)</SourceLink>{" "}
-          <SourceLink id="DOI_10_5065_047C_HV45">(NCAR: data)</SourceLink>
+          převod na množství vody. Původní řadu stanice za rok 2012 lze stáhnout
+          přímo z <SourceLink id="DOI_10_5065_047C_HV45">karty dat NCAR</SourceLink>.{" "}
+          <SourceLink id="WEB_EPN_GOPE">(EPN: stanice GOPE)</SourceLink>
         </p>
         <p>
           Tabulka obsahuje vstupy jednoho záznamu. Hydrostatická složka
@@ -377,7 +376,7 @@ export function GnssWaterVaporArticle() {
             <code> 2012/GOPE.2012</code> a v něm den roku 183, hodinu 9.
             Rok 2012 byl přestupný. Souřadnice stanice v seznamu poskytovatele
             jsou 49,913703° severní šířky a 14,785620° východní délky.{" "}
-            <SourceLink id="DOI_10_5065_047C_HV45">(NCAR: soubory a seznam stanic)</SourceLink>
+            <SourceLink id="DOI_10_5065_047C_HV45">(NCAR: původ a stažení souboru GOPE.2012)</SourceLink>
           </p>
           <p>
             Sloupce <code>Ps</code>, <code>ZTD</code>, <code>ZDD</code>,

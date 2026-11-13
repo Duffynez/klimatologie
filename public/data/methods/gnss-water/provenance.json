@@ -7,6 +7,7 @@
   "accessed": "2026-10-28",
   "archive_url": "https://osdf-director.osg-htc.org/ncar/gdex/d721001/igs_suomienet/igs+suo.2012.tar.gz",
   "archive_member": "2012/GOPE.2012",
+  "public_download": "https://klimatologie.eu/data/methods/gnss-water/GOPE.2012",
   "archive_sha256": "bdfe51bae6d7364da7e0c8ee8c41bf3aba2c3210161bccea3d7d62bd3a40d9e5",
   "station_file_sha256": "53af9559f4f1f1b0f75ae9a8cb3b021022c5074489a6628530d61c0574e789f7",
   "station": "GOPE",

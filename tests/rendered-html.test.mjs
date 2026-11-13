@@ -724,6 +724,22 @@ function hasArticleLink(html, path) {
     href.split("#")[0].replace(/\/$/, "") === path.replace(/\/$/, ""));
 }
 
+test("links both GNSS examples to the original files with matching checksums", async () => {
+  const catalogue = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
+  for (const [directory, id, hashKey, label] of [
+    ["occultation", "DOI_10_5065_T353_C093", "profile_sha256", "Stáhnout použitý profil COSMIC-2 (NetCDF)"],
+    ["gnss-water", "DOI_10_5065_047C_HV45", "station_file_sha256", "Stáhnout staniční soubor GOPE.2012"],
+  ]) {
+    const meta = JSON.parse(await readFile(new URL("public/data/methods/" + directory + "/provenance.json", root), "utf8"));
+    const path = new URL(meta.public_download).pathname;
+    const data = await readFile(new URL("dist/client" + path, root));
+    assert.equal(createHash("sha256").update(data).digest("hex"), meta[hashKey], path);
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?</article>'))?.[0];
+    assert.ok(card?.includes('href="' + path + '"'), id);
+    assert.ok(card.includes(label), id);
+  }
+});
+
 test("links the interferometry and gravimetry examples to their exact inputs and versions", async () => {
   const [catalogue, netcdf, interferometryMeta, gravimetryMeta] = await Promise.all([
     readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
@@ -1549,7 +1565,7 @@ test("groups all 23 mechanism topics by their link to observations and preserves
     assert.ok(sitemap.includes(`<loc>https://klimatologie.eu/mechanismy/${slug}/</loc>`), "Missing sitemap route " + slug);
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     assert.ok(html.includes(`<h1>${title}</h1>`), "Wrong detail title " + slug);
-    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen", "prumyslove-aerosoly-a-oblaka", "zmeny-ozonu-ve-stratosfere", "prenos-tepla-do-pudy-a-tani-permafrostu", "pohlcovani-a-presun-tepla-oceanem", "hmotnostni-bilance-a-dynamika-ledovych-prikrovu", "vodni-para-jako-zpetna-vazba", "hmotnostni-bilance-horskych-ledovcu", "vznik-a-zanik-snehove-pokryvky-na-sousi", "vznik-tani-a-pohyb-morskeho-ledu", "odrazivost-snehu-a-ledu-jako-zpetna-vazba", "pohlcovani-co2-oceanem-a-uhlicitanova-chemie", "oblaka-a-jejich-klimaticke-zpetne-vazby", "bilance-globalni-hladiny-more"].includes(slug)) {
+    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen", "prumyslove-aerosoly-a-oblaka", "zmeny-ozonu-ve-stratosfere", "prenos-tepla-do-pudy-a-tani-permafrostu", "pohlcovani-a-presun-tepla-oceanem", "hmotnostni-bilance-a-dynamika-ledovych-prikrovu", "vodni-para-jako-zpetna-vazba", "hmotnostni-bilance-horskych-ledovcu", "vznik-a-zanik-snehove-pokryvky-na-sousi", "vznik-tani-a-pohyb-morskeho-ledu", "odrazivost-snehu-a-ledu-jako-zpetna-vazba", "pohlcovani-co2-oceanem-a-uhlicitanova-chemie", "oblaka-a-jejich-klimaticke-zpetne-vazby", "bilance-globalni-hladiny-more", "termodynamika-a-dynamika-srazek"].includes(slug)) {
       assert.match(html, /Co musí toto vysvětlení objasnit/);
       assert.match(html, /<section class="mechanism-detail-evidence"[^>]*>[\s\S]*<p>[^<]+<\/p><\/section>/);
     }
@@ -2073,7 +2089,7 @@ test("publishes a sourced precipitation article with separate daily and sub-dail
 
   assert.match(evidencePage, /PrecipitationArticle/);
   assert.match(evidencePage, /title="Srážky a přívalové srážky"/);
-  assert.match(evidencePage, /title="Srážky a přívalové srážky"\s+meta="5\. listopadu 2026"/);
+  assert.match(evidencePage, /title="Srážky a přívalové srážky"\s+meta="13\. listopadu 2026"/);
   assert.match(article, /Srážkový úhrn udává, jak vysoká vrstva vody dopadla/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
   assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
@@ -2108,12 +2124,14 @@ test("publishes a sourced precipitation article with separate daily and sub-dail
   const precipitationSourceIds = [
     ...article.matchAll(/<SourceLink id="([^"]+)"/g),
   ].map((match) => match[1]);
-  assert.equal(new Set(precipitationSourceIds).size, 35);
+  assert.equal(new Set(precipitationSourceIds).size, 36);
   for (const id of new Set(precipitationSourceIds)) {
     const catalogueOccurrences = sourceCatalogueText.split(id).length - 1;
-    assert.ok(catalogueOccurrences >= 2, `${id} must exist and be marked as open access`);
+    assert.ok(catalogueOccurrences >= 1, `${id} must exist`);
     if (id.startsWith("DOI_")) {
-      assert.match(sourceCatalogueText, new RegExp(`${id}:\\s*"https://`));
+      const mappedUrl = new RegExp(`${id}:\\s*"https://`).test(sourceCatalogueText);
+      const record = sourceCatalogueText.match(new RegExp('\\{[^{}]*id:\\s*"' + id + '"[^{}]*\\}'))?.[0] ?? "";
+      assert.ok(mappedUrl || /openAccessUrl:\s*"https:\/\//.test(record), `${id} must link a public full text`);
     }
   }
   assert.match(article, /Open Government Licence v3\.0/);
@@ -2594,7 +2612,7 @@ test("publishes a sourced heat-wave article that keeps definitions and observati
 
   assert.match(evidencePage, /HeatWavesArticle/);
   assert.match(evidencePage, /title="Vlny veder"/);
-  assert.match(evidencePage, /meta="5\. listopadu 2026"/);
+  assert.match(evidencePage, /title="Vlny veder"\s+meta="6\. listopadu 2026"/);
   assert.match(article, /Vlna veder je souvislé období několika dnů/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
   assert.match(article, /Standardní ukazatel WSDI/);
@@ -3471,7 +3489,7 @@ test("publishes the complete chromatography method with accessible sources and r
     const card = catalogue.match(new RegExp(`<article[^>]*id="${id}"[\\s\\S]*?<\\/article>`))?.[0];
     assert.ok(card, `Missing chromatography source ${id}`);
     assert.doesNotMatch(card, /drive\.google\.com/);
-    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)|Stáhnout použitý sešit Law Dome \(XLSX\)/);
     if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
   }
   for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
@@ -3985,20 +4003,25 @@ test("ice-core method publishes reproducible dated measurements and reciprocal C
   assert.match(body, /o 38,3 ppm více/);
   assert.ok(hasArticleLink(observation, `/metody/${slug}`));
   assert.ok(hasArticleLink(body, "/pozorovani/atmosfericka-koncentrace-co2"));
+  const base = new URL("public/data/methods/ice-cores/", root);
+  const metadata = JSON.parse(await readFile(new URL("provenance.json", base), "utf8"));
   const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
   assert.ok(ids.length >= 5);
   for (const id of ids) {
     const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
     assert.ok(card, "Missing ice-core source " + id);
-    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    if (id === "DOI_10_25919_5bfe29ff807fb") {
+      assert.ok(card.includes(`href="${metadata.source_url}"`));
+      assert.ok(card.includes("Stáhnout použitý sešit Law Dome (XLSX)"));
+    } else {
+      assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    }
     assert.doesNotMatch(card, /drive\.google\.com/);
   }
   for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
     const file = /\.[a-z0-9]+$/i.test(match[1]) ? match[1] : match[1].replace(/\/$/, "") + "/index.html";
     await readFile(new URL("dist/client" + file, root));
   }
-  const base = new URL("public/data/methods/ice-cores/", root);
-  const metadata = JSON.parse(await readFile(new URL("provenance.json", base), "utf8"));
   for (const [name, sha] of Object.entries(metadata.sha256)) {
     assert.equal(createHash("sha256").update(await readFile(new URL(name, base))).digest("hex"), sha);
   }
@@ -4023,20 +4046,28 @@ test("sediment-core method publishes dated source data and links to the ice arch
   assert.ok(ice.includes(`href="/metody/${slug}"`));
   assert.ok(body.includes('href="/metody/ledova-jadra-a-analyza-uzavreneho-vzduchu"'));
   assert.ok(hasArticleLink(body, "/pozorovani/atmosfericka-koncentrace-co2"));
+  const base = new URL("public/data/methods/sediment-cores/", root);
+  const metadata = JSON.parse(await readFile(new URL("provenance.json", base), "utf8"));
   const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
   assert.ok(ids.length >= 5);
   for (const id of ids) {
     const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
     assert.ok(card, "Missing sediment-core source " + id);
-    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    if (id === "DOI_10_14379_iodp_proc_397_204supp_2026") {
+      assert.ok(card.includes(`href="${metadata.source_url}"`));
+      assert.ok(card.includes("Stáhnout sešit s tabulkou 11 (XLSX)"));
+    } else if (id === "DOI_10_1594_PANGAEA_917503") {
+      assert.ok(card.includes('href="https://doi.pangaea.de/10.1594/PANGAEA.917503?format=zip"'));
+      assert.ok(card.includes("Stáhnout data CENOGRID (ZIP)"));
+    } else {
+      assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    }
     assert.doesNotMatch(card, /drive\.google\.com/);
   }
   for (const match of body.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
     const file = /\.[a-z0-9]+$/i.test(match[1]) ? match[1] : match[1].replace(/\/$/, "") + "/index.html";
     await readFile(new URL("dist/client" + file, root));
   }
-  const base = new URL("public/data/methods/sediment-cores/", root);
-  const metadata = JSON.parse(await readFile(new URL("provenance.json", base), "utf8"));
   for (const [name, sha] of Object.entries(metadata.sha256)) {
     assert.equal(createHash("sha256").update(await readFile(new URL(name, base))).digest("hex"), sha);
   }
@@ -4743,7 +4774,7 @@ test("time changes and extremes publish the full method, reproducible example an
   ]);
   assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
   assert.match(heat, /<p class="page-lead__meta">6\. listopadu 2026<\/p>/);
-  assert.match(rain, /<p class="page-lead__meta">5\. listopadu 2026<\/p>/);
+  assert.match(rain, /<p class="page-lead__meta">13\. listopadu 2026<\/p>/);
   for (const observation of [heat, rain]) assert.match(observation, /href="\/metody\/analyza-casovych-zmen-a-extremu\/?(?:#[^"]+)?"/);
   for (const slug of ["vlny-veder", "srazky-a-privalove-srazky"]) assert.ok(hasArticleLink(body, "/pozorovani/" + slug));
   for (const text of ["23 376", "3.35-upd-2026102817", "15,8773", "84 dnů", "−0,09 až +0,25", "nejmenších čtverců", "oboustranný test", "není homogenizován"]) assert.ok(body.includes(text), text);
@@ -4945,7 +4976,7 @@ test("reanalysis explains assimilation and links open references and observation
   assert.deepEqual([...body.matchAll(/<h2\b[^>]*>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak měření a model společně rekonstruují atmosféru", "Nejistoty a ověření reanalýzy", "Příklad tlaku u New Yorku v březnu 1888", "Shrnutí",
   ]);
-  assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">13\. listopadu 2026<\/p>/);
   for (const text of ["pozorovací operátor", "kovariance", "Kalman", "1 001,84 hPa", "999,60 hPa", "1 003,09 hPa", "80 realizací", "41° s. š., 74° z. d."]) assert.ok(body.includes(text), text);
   assert.match(body, /href="\/pozorovani\/gmst\/?(?:#[^"]+)?"/);
   assert.match(observation, /href="\/metody\/asimilace-dat-a-reanalyzy\/?(?:#[^"]+)?"/);
@@ -5236,6 +5267,7 @@ test("keeps each hypothesis independently collapsible with complete content and 
     ["hmotnostni-bilance-a-dynamika-ledovych-prikrovu", ["povrchova-bilance", "povrch-a-odtok-ledu"]],
     ["vodni-para-jako-zpetna-vazba", ["vysusovani", "zesileni"]],
     ["oblaka-a-jejich-klimaticke-zpetne-vazby", ["plocha-vysokych-oblaku", "vyska", "nizka-oblacnost"]],
+    ["termodynamika-a-dynamika-srazek", ["vodni-para", "energie", "proudeni"]],
     ["hmotnostni-bilance-horskych-ledovcu", ["mene-snehu", "vetsi-tani"]],
     ["vznik-a-zanik-snehove-pokryvky-na-sousi", ["zmena-srazek", "teplota-a-tani"]],
     ["vznik-tani-a-pohyb-morskeho-ledu", ["silnejsi-vyvoz", "energie-a-tani"]],
@@ -5598,4 +5630,50 @@ test("cloud radiation observation preserves the CERES edition, period, signs and
     const target = await readFile(new URL("dist/client" + path.replace(/\/$/, "") + "/index.html", root), "utf8");
     if (anchor) assert.ok(target.includes('id="' + anchor + '"'), "Broken anchor " + href);
   }
+});
+
+test("precipitation mechanisms connect distinct scales, six tests, open sources and reciprocal evidence", async () => {
+  const slug = "termodynamika-a-dynamika-srazek";
+  const html = await readFile(new URL("dist/client/mechanismy/" + slug + "/index.html", root), "utf8");
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.match(html, /13\. listopadu 2026/);
+  assert.doesNotMatch(html, /class="mechanism-detail-evidence"/);
+  assert.equal((body.match(/<h4\b/g) ?? []).length, 6);
+  assert.equal((body.match(/<img\b/g) ?? []).length, 3);
+  assert.equal((body.slice(0, body.indexOf('<h2 id="hypotezy"')).match(/<p\b/g) ?? []).length, 2);
+  assert.match(body, /Zde nehledáme jediného vítěze/);
+  assert.match(body, /není to interval spolehlivosti/);
+  assert.match(body, /Neudává podíl srážek způsobený člověkem/);
+  const bibliography = body.slice(body.indexOf('<h2 id="prameny"'));
+  const catalogue = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
+  for (const id of new Set([...body.matchAll(/href="\/zdroje#([^"]+)"/g)].map(m => m[1]))) {
+    assert.ok(bibliography.includes('href="/zdroje#' + id + '"'), "Missing bibliography entry " + id);
+    const card = catalogue.match(new RegExp('<article[^>]+id="' + id + '"[\\s\\S]*?</article>'))?.[0];
+    assert.ok(card, "Missing source " + id);
+    assert.match(card, /Otevřít (plný text|veřejn[áý]|podklady)/);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+  }
+  for (const name of ["vodni-para.png", "energie.png", "proudeni.png", "prompts.json", "podklady.txt"]) {
+    const original = await readFile(new URL("public/media/" + slug + "/" + name, root));
+    assert.deepEqual(original, await readFile(new URL("dist/client/media/" + slug + "/" + name, root)));
+    if (name.endsWith(".png")) {
+      assert.equal(original.readUInt32BE(16), 1536);
+      assert.equal(original.readUInt32BE(20), 1024);
+    }
+  }
+  for (const route of ["pozorovani/srazky-a-privalove-srazky", "metody/srazkomery-a-disdrometry", "metody/asimilace-dat-a-reanalyzy"]) {
+    const linked = await readFile(new URL("dist/client/" + route + "/index.html", root), "utf8");
+    assert.ok(linked.includes("/mechanismy/" + slug + "/"), "Missing reciprocal link " + route);
+    assert.match(linked, /13\. listopadu 2026/);
+  }
+  for (const [,href] of body.matchAll(/href="(\/[^"]+)"/g)) {
+    if (href.startsWith("/media/")) continue;
+    const [path, anchor] = href.split("#");
+    const target = await readFile(new URL("dist/client" + path.replace(/\/$/, "") + "/index.html", root), "utf8");
+    if (anchor) assert.ok(target.includes('id="' + anchor + '"'), "Broken anchor " + href);
+  }
+  const details = body.match(/<details class="method-details">([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(details && details.replace(/<[^>]+>/g, " ").split(/\s+/).length <= 600);
+  assert.doesNotMatch(body.replace(/<[^>]+>/g, " ").replace(/&[^;]+;/g, " "), /;/);
 });

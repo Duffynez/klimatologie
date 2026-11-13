@@ -152,11 +152,12 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "termodynamika-a-dynamika-srazek",
     title: "Proč se mění množství a intenzita srážek?",
     category: "Atmosféra a oceán",
+    isComplete: true,
     cardSummary: "Úloha vodní páry, proudění vzduchu a energetických toků v úhrnech a intenzitě srážek.",
     observations: [
       { href: "/pozorovani/srazky-a-privalove-srazky/#pozorovani", label: "Úhrny a extrémy srážek" },
     ],
-    summary: "Dostupná vodní pára, pohyb vzduchu a energetické toky určují množství a intenzitu srážek. Celkové úhrny a nejsilnější srážky mohou reagovat rozdílně.",
+    summary: "Proč mohou nejsilnější deště zesilovat, i když se celkový úhrn mění málo? Výzkum vodní páry, energie a proudění vysvětluje rozdíly mezi lijákem, deštivým rokem a změnami v jednotlivých oblastech.",
     distinguishingEvidence: "Oddělené porovnání celkových úhrnů, denních a hodinových extrémů. Měření vlhkosti, výstupných pohybů a proudění ověřují, proč se mění intenzita, četnost či trvání srážek v jednotlivých oblastech.",
   },
   {

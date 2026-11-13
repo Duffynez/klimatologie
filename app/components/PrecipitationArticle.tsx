@@ -513,6 +513,9 @@ export function PrecipitationArticle() {
           neposkytuje rovnocenně dlouhý globální trend přívalových srážek pro celý svět.
         </p>
 
+        <h3 id="britanie-2014">Mimořádný leden 2014 v jižní Británii</h3>
+        <p>Soubor E-OBS zachycuje v lednu 2014 výrazně zvýšené srážky v jižní Británii proti lednovému průměru 1981–2010. Pro oblast 50–52° severní šířky a 6,5° západní délky až 0° porovnala studie také denní průběh s reanalýzami ERA-Interim a NCEP. Obě intenzitu podhodnocovaly, ERA-Interim lépe vystihla prostorový obraz i denní kolísání. <SourceLink id="DOI_10_1038_s41598_019_39306_y">(Oueslatiová a kol. 2019, obrázky 1 a 2)</SourceLink></p>
+
         <div className="article-observation-summary">
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
@@ -526,7 +529,10 @@ export function PrecipitationArticle() {
           </p>
         </div>
 
+        <p>Proč se denní maxima, sezonní úhrny a jednotlivé oblasti vyvíjejí rozdílně, vysvětluje mechanismus <Link href="/mechanismy/termodynamika-a-dynamika-srazek/">změn množství a intenzity srážek</Link>. Propojuje vlhkost, energetickou bilanci a proudění. <Link href="/mechanismy/termodynamika-a-dynamika-srazek/#test-britanie">Rozbor ledna 2014</Link> navazuje na zde uvedený britský záznam.</p>
+
         <h2>Prameny, data a licence</h2>
+        <p>Britský případ: <SourceLink id="DOI_10_1038_s41598_019_39306_y">Oueslatiová, Yiou a Jézéquelová (2019), rozbor ledna 2014</SourceLink>. Plný text a doplněk obsahují porovnání s E-OBS a oběma reanalýzami.</p>
         <p>
           K odborným pracím uvádíme veřejný plný text bez předplatného. Pokud má práce DOI, odkazujeme i na něj. U studie Gu a Adlera je veřejnou
           kopií autorský preprint z roku 2022. Data a metodické dokumenty odkazují přímo k poskytovatelům.
