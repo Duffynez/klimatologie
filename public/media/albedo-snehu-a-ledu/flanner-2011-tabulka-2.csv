@@ -1,0 +1,13 @@
+atmosphere,albedo_contrast,delta_absorbed_nh_w_m2,snow_share_percent
+CAM3,low,0.26,42
+CAM3,central,0.38,50
+CAM3,high,0.48,53
+AM2,low,0.29,41
+AM2,central,0.40,49
+AM2,high,0.49,52
+ISCCP,low,0.40,48
+ISCCP,central,0.57,54
+ISCCP,high,0.72,56
+APP-x,low,0.31,41
+APP-x,central,0.48,49
+APP-x,high,0.59,49

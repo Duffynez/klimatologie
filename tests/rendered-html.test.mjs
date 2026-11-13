@@ -4,6 +4,72 @@ import { readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 import { stripTypeScriptTypes } from "node:module";
 
+test("albedo mechanism links its experiments and distinguishes measured radiation from reconstruction", async () => {
+  const route = "/mechanismy/odrazivost-snehu-a-ledu-jako-zpetna-vazba";
+  const html = await readFile(new URL("dist/client" + route + "/index.html", root), "utf8");
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "Replace the existing outline with the complete article");
+  assert.match(html, /<p class="page-lead__meta">13\. listopadu 2026<\/p>/);
+  assert.equal((body.slice(0, body.indexOf('<h2 id="hypotezy"')).match(/<p\b/g) ?? []).length, 2);
+  assert.match(body, /Jedna hypotéza a její předpovědi/);
+  for (const id of ["svetly-povrch", "test-laborator", "test-druzice", "test-teren", "test-oteplovani", "zaver"]) assert.ok(body.includes(`id="${id}"`));
+  const bibliography = body.slice(body.indexOf('<h2 id="prameny"'));
+  const catalogue = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
+  for (const id of new Set([...body.matchAll(/href="\/zdroje#([^"]+)"/g)].map(m => m[1]))) {
+    assert.ok(bibliography.includes('href="/zdroje#' + id + '"'), "Missing bibliography entry " + id);
+    const card = catalogue.match(new RegExp('<article[^>]+id="' + id + '"[\\s\\S]*?</article>'))?.[0];
+    assert.ok(card, "Missing source card " + id);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    if (id.startsWith("DOI_")) {
+      assert.match(card, /doi\.org\//);
+      assert.match(card, /Otevřít plný text|Stáhnout podíl sněhové pokrývky/);
+    }
+  }
+  for (const [, href] of body.matchAll(/href="(\/[^\"]+)"/g)) {
+    const [pathname, anchor] = href.split("#");
+    const file = /\.[a-z0-9]+$/i.test(pathname) ? pathname : pathname.replace(/\/$/, "") + "/index.html";
+    const target = await readFile(new URL("dist/client" + file, root), "utf8");
+    if (anchor) assert.ok(target.includes(`id="${anchor}"`), "Broken evidence link " + href);
+  }
+  for (const target of ["/pozorovani/ubytek-arktickeho-ledu", "/pozorovani/snehova-pokryvka-a-permafrost", "/metody/mereni-radiacnich-toku"]) {
+    const related = await readFile(new URL("dist/client" + target + "/index.html", root), "utf8");
+    assert.ok(hasArticleLink(body, target));
+    assert.ok(hasArticleLink(related, route), "Missing reciprocal link " + target);
+  }
+  const observation = await readFile(new URL("dist/client/pozorovani/ubytek-arktickeho-ledu/index.html", root), "utf8");
+  assert.match(observation, /2000–2011[\s\S]*?4,2 W\/m²/);
+  assert.match(observation, /Starší období 1979–1999[\s\S]*?dopočítali/);
+  assert.match(observation, /6,4 ± 0,9 W\/m²/);
+  assert.match(body, /modelovým odhadem z terénních vstupů/);
+  assert.match(body, /dennímu maximu teploty vzduchu/);
+  const base = new URL("public/media/albedo-snehu-a-ledu/", root);
+  for (const file of ["mechanismus.svg", "srovnani-vypoctu.svg", "grafika.mjs", "flanner-2011-tabulka-2.csv", "vypocty.mjs", "podklady.txt"]) {
+    const original = await readFile(new URL(file, base));
+    assert.deepEqual(original, await readFile(new URL("dist/client/media/albedo-snehu-a-ledu/" + file, root)));
+    if (file.endsWith(".svg")) {
+      assert.ok(body.includes("/media/albedo-snehu-a-ledu/" + file));
+      assert.match(original.toString(), /<title[^>]*>[^<]+<\/title>/);
+      assert.match(original.toString(), /<desc[^>]*>[^<]+<\/desc>/);
+    }
+  }
+  const { calculate } = await import(new URL("vypocty.mjs", base));
+  const result = calculate();
+  assert.equal(result.rows.length, 12);
+  assert.equal(new Set(result.rows.map(row => row.atmosphere + "/" + row.contrast)).size, 12);
+  assert.deepEqual(result.rows.map(row => row.deltaWm2), [0.26, 0.38, 0.48, 0.29, 0.40, 0.49, 0.40, 0.57, 0.72, 0.31, 0.48, 0.59]);
+  assert.ok(Math.abs(result.meanWm2 - 0.4475) < 1e-12);
+  assert.equal(result.minWm2, 0.26);
+  assert.equal(result.maxWm2, 0.72);
+  assert.ok(Math.abs(result.example.differenceWm2 - 120) < 1e-12);
+  const graph = await readFile(new URL("srovnani-vypoctu.svg", base), "utf8");
+  for (const row of result.rows) assert.ok(graph.includes(row.deltaWm2.toFixed(2).replace(".", ",")));
+  assert.match(graph, /severní polokoule/);
+  assert.match(graph, /Rozpětí variant není interval spolehlivosti/);
+  const uncertainty = body.slice(body.indexOf('<h2 id="nejistoty"'), body.indexOf('<h2 id="dalsi-overeni"'));
+  assert.ok(uncertainty.replace(/<[^>]+>/g, " ").split(/\s+/).length <= 600);
+  assert.doesNotMatch(body.replace(/<[^>]+>/g, " ").replace(/&[^;]+;/g, " "), /;/);
+});
+
 test("sea ice mechanism separates area export, volume export and measured melting with reproducible data", async () => {
   const route = "/mechanismy/vznik-tani-a-pohyb-morskeho-ledu";
   const html = await readFile(new URL("dist/client" + route + "/index.html", root), "utf8");
@@ -882,7 +948,7 @@ test("publishes radiative fluxes with a complete example and reciprocal ocean co
     "Jak měříme přenos energie zářením", "Nejistoty a ověření",
     "Příklad: jedna hodina na stanici Table Mountain", "Shrnutí",
   ]);
-  assert.match(html, /<p class="page-lead__meta">6\. listopadu 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">13\. listopadu 2026<\/p>/);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
   assert.doesNotMatch(body, /_vinext\/image|katex-error|Potřebné informace|RTV/);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
@@ -1302,7 +1368,7 @@ test("groups all 23 mechanism topics by their link to observations and preserves
     assert.ok(sitemap.includes(`<loc>https://klimatologie.eu/mechanismy/${slug}/</loc>`), "Missing sitemap route " + slug);
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     assert.ok(html.includes(`<h1>${title}</h1>`), "Wrong detail title " + slug);
-    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen", "prumyslove-aerosoly-a-oblaka", "zmeny-ozonu-ve-stratosfere", "prenos-tepla-do-pudy-a-tani-permafrostu", "pohlcovani-a-presun-tepla-oceanem", "hmotnostni-bilance-a-dynamika-ledovych-prikrovu", "vodni-para-jako-zpetna-vazba", "hmotnostni-bilance-horskych-ledovcu", "vznik-a-zanik-snehove-pokryvky-na-sousi", "vznik-tani-a-pohyb-morskeho-ledu"].includes(slug)) {
+    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen", "prumyslove-aerosoly-a-oblaka", "zmeny-ozonu-ve-stratosfere", "prenos-tepla-do-pudy-a-tani-permafrostu", "pohlcovani-a-presun-tepla-oceanem", "hmotnostni-bilance-a-dynamika-ledovych-prikrovu", "vodni-para-jako-zpetna-vazba", "hmotnostni-bilance-horskych-ledovcu", "vznik-a-zanik-snehove-pokryvky-na-sousi", "vznik-tani-a-pohyb-morskeho-ledu", "odrazivost-snehu-a-ledu-jako-zpetna-vazba"].includes(slug)) {
       assert.match(html, /Co musí toto vysvětlení objasnit/);
       assert.match(html, /<section class="mechanism-detail-evidence"[^>]*>[\s\S]*<p>[^<]+<\/p><\/section>/);
     }
@@ -1312,7 +1378,7 @@ test("groups all 23 mechanism topics by their link to observations and preserves
     assert.ok(hasArticleLink(legacy, `/mechanismy/${slug}`), "Missing split destination " + slug);
   }
   assert.match(catalogue, /Jak oblaka zesilují nebo tlumí oteplování\?/);
-  assert.match(catalogue, /Jak úbytek sněhu a ledu zesiluje oteplování\?/);
+  assert.match(catalogue, /Jak úbytek sněhu a ledu mění příjem sluneční energie\?/);
   assert.match(catalogue, /Jak změny vodní páry ovlivňují oteplování\?/);
   assert.match(catalogue, /Proč se objem mořské vody mění s teplotou a slaností\?/);
   assert.match(catalogue, /Proč se za loděmi a továrnami mění jas oblaků\?/);
@@ -1980,7 +2046,7 @@ test("publishes a sourced Arctic sea ice article with extent, age, and thickness
 
   assert.match(evidencePage, /ArcticSeaIceArticle/);
   assert.match(evidencePage, /title="Arktický mořský led"/);
-  assert.match(evidencePage, /title="Arktický mořský led"\s+meta="6\. listopadu 2026"/);
+  assert.match(evidencePage, /title="Arktický mořský led"\s+meta="13\. listopadu 2026"/);
   assert.match(article, /Arktický mořský led je zmrzlá mořská voda/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
   assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
@@ -2179,7 +2245,7 @@ test("publishes a sourced snow-cover and permafrost article with distinct observ
 
   assert.match(evidencePage, /SnowPermafrostArticle/);
   assert.match(evidencePage, /title="Sněhová pokrývka a permafrost"/);
-  assert.match(evidencePage, /title="Sněhová pokrývka a permafrost"\s+meta="6\. listopadu 2026"/);
+  assert.match(evidencePage, /title="Sněhová pokrývka a permafrost"\s+meta="13\. listopadu 2026"/);
   assert.match(article, /Sníh na souši pozorujeme jako plochu, dobu trvání, výšku a množství vody/);
   assert.match(article, /Jak vzniká zveřejněný záznam/);
   assert.match(article, /Mapa rozsahu sněhu/);
@@ -2242,7 +2308,7 @@ test("renders open snow and permafrost sources with qualified trends and data co
   assert.match(articleHtml, /3 500 řádků pro 140 kódů lokalit/);
   assert.match(articleHtml, /Z 316 registrovaných míst vybrala 156/);
   assert.match(articleHtml, /Jediný panel porovnává dubnovou hmotnost/);
-  assert.match(articleHtml, /<p class="page-lead__meta">6\. listopadu 2026<\/p>/);
+  assert.match(articleHtml, /<p class="page-lead__meta">13\. listopadu 2026<\/p>/);
   assert.doesNotMatch(articleHtml, /Čtyři nezávislé podklady|s úplným desetiletým výsledkem|severoamerické \(a\) a euroasijské \(b\)/);
 });
 

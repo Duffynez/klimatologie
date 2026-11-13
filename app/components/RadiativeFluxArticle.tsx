@@ -484,6 +484,9 @@ export function RadiativeFluxArticle() {
 
         <p>Další použití družicových radiačních měření ukazuje <Link href="/pozorovani/stopy-v-oblacich/#mereni">pozorování stop lodí a průmyslu v oblacích</Link>. Na ně navazuje vysvětlení, <Link href="/mechanismy/prumyslove-aerosoly-a-oblaka/#rozptyl-svetla">proč menší kapky mění odraz slunečního záření</Link>.</p>
 
+        <p>Konkrétní použití družicových toků ukazuje <Link href="/pozorovani/ubytek-arktickeho-ledu/#odrazivost-arktidy">pozorování odrazivosti arktického oceánu</Link>. Rozlišuje měřený úsek CERES a starší rekonstrukci podle map ledu.</p>
+        <p><Link href="/mechanismy/odrazivost-snehu-a-ledu-jako-zpetna-vazba/">Jak úbytek sněhu a ledu mění příjem sluneční energie?</Link> Navazující mechanismus využívá měření odraženého záření k ověření zpětné vazby povrchové odrazivosti.</p>
+
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>

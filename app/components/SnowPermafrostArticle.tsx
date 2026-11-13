@@ -593,6 +593,31 @@ export function SnowPermafrostArticle() {
           <SourceLink id="DOI_10_1038_s41586_023_06794_y"> (Gottlieb a Mankin 2024)</SourceLink>
         </p>
 
+        <h3 id="odrazivost-snehu-a-ledu">Mapy sněhu a ledu převedené na sluneční bilanci</h3>
+        <p>
+          Flanner a kolegové zpracovali změny sněhu a mořského ledu na severní polokouli v letech 1979–2008.
+          Použili mapy přítomnosti sněhu NOAA/Rutgers, koncentraci ledu NASA Team a odrazivost z produktů MODIS MCD43C3 Collection 5 a APP-x.
+          Odrazivost mořského ledu popsali sezonními hodnotami podle typu ledu.
+          Podklady převedli na síť o velikosti buňky 1° a výsledky vážili plochou. Jednotlivé vstupy nepokrývají celé období stejnými přístroji,
+          například údaje MODIS pocházejí z let 2000–2008. Starší změny se proto neměří zpětně přístrojem MODIS.
+          <SourceLink id="DOI_10_1038_ngeo1062"> (Flanner a kol. 2011, metody)</SourceLink>
+        </p>
+        <p>
+          Z map autoři vypočítali změnu bilance slunečního záření nad atmosférou. Čtyři popisy přenosu záření atmosférou
+          kombinovali se třemi velikostmi rozdílu odrazivosti pokryté a odkryté plochy.
+          Průměrný výsledek dvanácti variant zahrnujících oblaka činí 0,45 W/m² většího příjmu, vztaženého k celé severní polokouli.
+          Jde o lineární trend násobený 30 lety, nikoli o roční přírůstek nebo přímé měření celého radiačního toku.
+          Přibližně polovina vypočtené změny připadá na sníh a polovina na mořský led.
+          Rozpětí variant v tabulce 2 je 0,26–0,72 W/m². Vyjadřuje citlivost na vstupní předpoklady, nikoli statistický interval spolehlivosti.
+          <SourceLink id="DOI_10_1038_ngeo1062"> (Flanner a kol. 2011, tab. 2)</SourceLink>
+        </p>
+        <p>
+          Veřejný text popisuje datové produkty a výpočet. <a href="/media/albedo-snehu-a-ledu/flanner-2011-tabulka-2.csv">Přepis dvanácti hodnot v CSV</a>{" "}
+          a <a href="/media/albedo-snehu-a-ledu/vypocty.mjs">krátký skript</a> umožňují ověřit uvedený průměr.
+          <a href="/media/albedo-snehu-a-ledu/podklady.txt"> Podklady</a> uvádějí také rozdíl mezi spodní hodnotou v tabulce a v souvislém textu studie.
+          Tato kontrola tabulky nenahrazuje opakování celého radiačního výpočtu z původních map.
+        </p>
+
         <h3 id="teplota-permafrostu">Teplota permafrostu ve vrtech</h3>
         <p>
           Z celkem 154 vrtů použili Biskaborn et al. pro trend 123 míst. Prostorově vážené tempo oteplování
@@ -739,6 +764,10 @@ export function SnowPermafrostArticle() {
           <Link href="/mechanismy/vznik-a-zanik-snehove-pokryvky-na-sousi/">Proč se mění množství sněhu a délka sněhové sezóny?</Link>{" "}
           Navazující mechanismus porovnává změny srážek, skupenství a přísunu energie pomocí těchto měření.
         </p>
+        <p>
+          <Link href="/mechanismy/odrazivost-snehu-a-ledu-jako-zpetna-vazba/">Jak úbytek sněhu a ledu mění příjem sluneční energie?</Link>{" "}
+          Samostatné vysvětlení propojuje měřenou pokrývku, odraz světla a následný ohřev.
+        </p>
 
         <h2>Prameny a data</h2>
         <div className="article-source-groups">
@@ -753,6 +782,7 @@ export function SnowPermafrostArticle() {
               <li><SourceLink id="DOI_10_1038_s41467_018_03629_7">Jennings a kol., 2018: prostorové rozdíly skupenství srážek</SourceLink></li>
               <li><SourceLink id="DOI_10_5194_tc_11_2847_2017">Musselman a kol., 2017: měření sněhu v povodí Kaweah a modelové oteplení</SourceLink></li>
               <li><SourceLink id="DOI_10_1038_s41586_023_06794_y">Gottlieb a Mankin, 2024: březnová zásoba v povodích a příčiny změn</SourceLink></li>
+              <li><SourceLink id="DOI_10_1038_ngeo1062">Flanner a kol., 2011: mapy pokrývky a radiační bilance severní polokoule</SourceLink></li>
             </ul>
           </section>
 

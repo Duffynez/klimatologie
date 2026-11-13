@@ -203,14 +203,15 @@ export const climateMechanisms: ClimateMechanism[] = [
   },
   {
     slug: "odrazivost-snehu-a-ledu-jako-zpetna-vazba",
-    title: "Jak úbytek sněhu a ledu zesiluje oteplování?",
+    title: "Jak úbytek sněhu a ledu mění příjem sluneční energie?",
     category: "Kryosféra",
+    isComplete: true,
     cardSummary: "Změny odrazivosti povrchu a pohlcování sluneční energie při ústupu sněhu a ledu.",
     observations: [
-      { href: "/pozorovani/snehova-pokryvka-a-permafrost/#jarni-rozsah-snehu", label: "Úbytek jarní sněhové pokrývky v Arktidě" },
-      { href: "/pozorovani/ubytek-arktickeho-ledu/#pozorovani", label: "Úbytek arktického mořského ledu" },
+      { href: "/pozorovani/snehova-pokryvka-a-permafrost/#odrazivost-snehu-a-ledu", label: "Změny pokrývky a přepočet sluneční bilance" },
+      { href: "/pozorovani/ubytek-arktickeho-ledu/#odrazivost-arktidy", label: "Měřená odrazivost arktického oceánu" },
     ],
-    summary: "Úbytek světlého sněhu a ledu odkrývá tmavší povrch, který pohlcuje více sluneční energie. Tím může zesílit oteplování a další tání.",
+    summary: "Od laboratorního měření sněhu přes družicový odraz až k pokusu s oteplováním. Jak ověřujeme, zda ústup světlé pokrývky zesiluje příjem energie, ohřev a další tání.",
     distinguishingEvidence: "Současná měření sněhu a ledu, odrazivosti a pohlceného záření. Porovnání období s rozdílným slunečním osvitem a zohlednění oblačnosti ověřují velikost i sezónní průběh této zpětné vazby.",
   },
   {

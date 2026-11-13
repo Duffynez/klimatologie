@@ -205,7 +205,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Kryosféra"
           title="Arktický mořský led"
-          meta="6. listopadu 2026"
+          meta="13. listopadu 2026"
         >
           <p>
             Co přesně znamenají rozsah, plocha, stáří, tloušťka a objem mořského ledu, jak vznikají družicová data a
@@ -262,7 +262,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Kryosféra"
           title="Sněhová pokrývka a permafrost"
-          meta="6. listopadu 2026"
+          meta="13. listopadu 2026"
         >
           <p>
             Jak se měří plocha, trvání a vodní hodnota sněhu, jak se ve vrtech sleduje teplota permafrostu a hloubka

@@ -641,6 +641,44 @@ export function ArcticSeaIceArticle() {
           Produkt obsahuje také starší historické rekonstrukce, které mají odlišné pokrytí. Shoda tří družicových algoritmů není shodou tří nezávislých přístrojů.
         </p>
 
+        <h3 id="odrazivost-arktidy">Odraz slunečního záření nad arktickým oceánem</h3>
+        <p>
+          Pistone a kolegové porovnali oceán severně od 60° severní šířky, bez pevniny, s měřením přístroje CERES na družici Terra.
+          Použili měsíční toky záření z produktu SSF Edition 2.6 v síti 1° pro roky 2000–2011 a koncentraci ledu Bootstrap verze 2 v síti 25 km.
+          Tok je rychlost přenosu energie na jednotku plochy, vyjádřená ve W/m². Z poměru odraženého a dopadajícího slunečního toku odvodili albedo,
+          tedy podíl vráceného záření. Družice měří nad atmosférou, takže výsledek zahrnuje také oblaka a vzduch, nikoli pouze odraz povrchu.
+          Převod družicového měření na tok vysvětluje <Link href="/metody/mereni-radiacnich-toku/#druzicova-bilance">metoda měření záření</Link>.
+          <SourceLink id="DOI_10_1073_pnas_1318201111"> (Pistone a kol. 2014, metody a doplněk)</SourceLink>
+        </p>
+        <p>
+          Pro roky 2000–2011 vyšel nárůst pohlceného slunečního záření 4,2 W/m² v průměru nad vymezeným oceánem.
+          Starší období 1979–1999 autoři dopočítali ze vztahu mezi ledem a odrazivostí v novějším období, samostatně podle měsíců a oblastí.
+          Prodloužený záznam ukazuje za roky 1979–2011 pokles planetárního albeda přibližně z 0,52 na 0,48
+          a zvýšení příjmu o 6,4 ± 0,9 W/m². Nejistota za ± vychází z regresní rekonstrukce a nepokrývá všechny možné přístrojové a systematické chyby.
+          Delší výsledek tedy není přímým měřením záření po celých 33 let a nelze jej vydávat za globální plošný průměr.
+          <SourceLink id="DOI_10_1073_pnas_1318201111"> (Pistone a kol. 2014, obr. 4)</SourceLink>
+        </p>
+        <p>
+          Veřejný plný text obsahuje i doplňkové metody s přesnými verzemi vstupů a odkazy na datové portály.
+          Postup měření vysvětluje také <SourceLink id="WEB_NASA_CERES_FAQ">metodická dokumentace NASA CERES</SourceLink>.
+          Současné verze produktů je při opakování výpočtu nutné odlišit od historických verzí použitých v této práci.
+          Výsledek byl získán plošným vážením toků a jejich následným poměrem, nikoli prostým průměrem měsíčních hodnot albeda.
+        </p>
+        <h3 id="odraz-snehu-na-ledu">Odraz světla v tajícím sněhu na mořském ledu</h3>
+        <p>
+          Vérin a kolegové měřili v letech 2015 a 2016 u Qikiqtarjuaqu v Baffinově zálivu vrstvy sněhu na ledu spojeném s pobřežím,
+          jejich hustotu, plochu zrn a odraz světla o vlnových délkách 300–1 100 nanometrů. Nanometr je miliardtina metru.
+          Měření zachytilo pokles odrazivosti při tání a její obnovu po sněžení. Výpočet přenosu záření z naměřené struktury umožnil
+          doplnit i neměřené části spektra. Pro rozsah 300–3 000 nanometrů vyšlo albedo až 0,87 u suchého sněhu a přibližně 0,70 při tání.
+          To jsou modelové hodnoty celkového odrazu, nikoli přímé měření všech těchto vlnových délek.
+          Shoda se spektrálním měřením závisela i na zahrnutí nečistot a není dokladem stejného průběhu na všech arktických krách.
+          <SourceLink id="DOI_10_5194_tc_16_3431_2022"> (Vérin a kol. 2022, obr. 9–10)</SourceLink>
+        </p>
+        <p>
+          Článek v oddílu dostupnosti odkazuje na data výpravy Green Edge a veřejný kód TARTES.
+          Profil sněhu je vstupem výpočtu, optické měření slouží k jeho kontrole. Jejich rozlišení je při samostatném ověření důležité.
+        </p>
+
         <div className="article-observation-summary">
           <p className="eyebrow">Shrnutí pozorování</p>
           <p>
@@ -659,6 +697,10 @@ export function ArcticSeaIceArticle() {
           Navazující vysvětlení <Link href="/mechanismy/vznik-tani-a-pohyb-morskeho-ledu/">proč arktický mořský led ubývá a tenčí se</Link>{" "}
           porovnává odvoz ker, tepelnou bilanci a příčiny dlouhodobých změn.
         </p>
+        <p>
+          <Link href="/mechanismy/odrazivost-snehu-a-ledu-jako-zpetna-vazba/">Jak úbytek sněhu a ledu mění příjem sluneční energie?</Link>{" "}
+          Navazující mechanismus zkoumá vztah odrazivosti, energetické bilance a dalšího tání.
+        </p>
 
         <h2>Prameny a data</h2>
         <p>
@@ -673,6 +715,9 @@ export function ArcticSeaIceArticle() {
             <ul>
               <li><SourceLink id="DOI_10_5194_tc_11_65_2017">Smedsrud a kol. 2017</SourceLink> a <SourceLink id="DOI_10_1029_2019jc016039">Spreen a kol. 2020</SourceLink>: plocha a objem vývozu Framským průlivem.</li>
               <li><SourceLink id="DOI_10_3189_172756411795931714">Perovich a kol. 2011</SourceLink>: horní a spodní tání sedmi ker v létě 2008.</li>
+              <li><SourceLink id="DOI_10_1073_pnas_1318201111">Pistone a kol. 2014</SourceLink>: měřené toky CERES a rekonstrukce odrazivosti arktického oceánu.</li>
+              <li><SourceLink id="WEB_NASA_CERES_FAQ">NASA CERES</SourceLink>: vysvětlení směrových měření a odvození toků.</li>
+              <li><SourceLink id="DOI_10_5194_tc_16_3431_2022">Vérin a kol. 2022</SourceLink>: terénní profily sněhu, spektrální odraz a výpočet přenosu záření.</li>
               <li>
                 <SourceLink id="WEB_NASA_Cavalieri_1997_Sea_Ice_User_Guide">Cavalieri et al., 1997</SourceLink>:
                 původní příručka zpracování koncentrace a propojení přístrojů SMMR a SSM/I.

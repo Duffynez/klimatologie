@@ -1,0 +1,85 @@
+Odrazivost sněhu a ledu: podklady článku Klimatologie.eu
+Připraveno 13. listopadu 2026.
+
+AUTORSTVÍ A LICENCE
+mechanismus.svg je vlastní kvalitativní fyzikální schéma.
+srovnani-vypoctu.svg je vlastní graf číselných údajů z tabulky 2 studie Flanner et al. 2011.
+Obě grafiky a skripty připravila Klimatologie.eu s pomocí AI. Licence CC BY 4.0:
+https://creativecommons.org/licenses/by/4.0/
+Nejde o převzaté obrázky ani o fotografie. Tvary a šipky ve schématu nevyjadřují naměřené velikosti.
+Číselný přepis zachovává hodnoty původní studie, nikoli její grafické zpracování.
+Licence vlastní grafiky se nevztahuje na plné texty citovaných studií.
+
+REPRODUKCE
+Stáhněte do jedné složky flanner-2011-tabulka-2.csv, vypocty.mjs a grafika.mjs.
+Node.js bez dalších balíčků:
+node vypocty.mjs
+node grafika.mjs
+První skript vypíše všechny vstupy, průměr a názorný energetický příklad.
+Druhý zapíše obě SVG. Vstupní soubory jsou vedle tohoto dokumentu.
+
+GRAF: VÝZNAM VELIČINY A VÝBĚR
+Flanner, M. G., Shell, K. M., Barlage, M., Perovich, D. K., Tschudi, M. A. (2011).
+Radiative forcing and albedo feedback from the Northern Hemisphere cryosphere between 1979 and 2008.
+Nature Geoscience 4, 151–155. DOI: https://doi.org/10.1038/ngeo1062
+Veřejný plný text:
+https://flanner.engin.umich.edu/wp-content/uploads/sites/544/2021/09/FlS11.pdf
+
+Z tabulky 2 přepisujeme všech 12 variant zahrnujících oblačnost (all-sky).
+Vynechaných 6 výpočtů bez oblaků (clear-sky) představuje jinou podmínku.
+CAM3 a AM2 používají klimatické modely atmosféry. ISCCP a APP-x využívají družicová data o oblacích.
+V každé skupině jsou menší, střední a větší rozdíl odrazivosti mezi pokrytou a odkrytou plochou.
+Sloupec delta_absorbed_nh_w_m2 je změna radiačního účinku sněhu a mořského ledu za 1979–2008.
+Jde o lineární trend násobený 30 lety, nikoli prostý rozdíl prvního a posledního roku.
+Kladná hodnota značí zeslabení ochlazujícího účinku kryosféry, tedy více pohlceného slunečního záření.
+Plošný průměr se vztahuje k CELÉ SEVERNÍ POLOKOULI a bilanci nad atmosférou.
+Není to globální hodnota, změna na jednotku nezaledněné vody, roční trend ani teplotní koeficient.
+snow_share_percent uvádí procentní podíl sněhu na změně podle závorek tabulky 2.
+V grafu není tento sloupec zobrazen.
+Prostý průměr publikovaných zaokrouhlených 12 hodnot je 0,4475 W/m², zaokrouhleně 0,45 W/m².
+Minimum je 0,26 a maximum 0,72 W/m². Rozpětí předpokladů není statistický interval spolehlivosti.
+POZOR: text studie uvádí spodní hranici 0,27, zatímco buňka CAM3/low v tabulce 2 obsahuje 0,26.
+Náš graf a CSV přesně zachovávají TABULKU, tento rozdíl nijak neopravují.
+Čísla se nepřepočítávají na teplotu.
+
+VSTUPNÍ DATA STUDIÍ A JEJICH VERZE
+Flanner et al.: mapy sněhu NOAA/Rutgers 1979–2008, koncentrace mořského ledu NASA Team,
+odrazivost sněhu MODIS MCD43C3 Collection 5 (2000–2008), doplnění APP-x (1982–2004),
+terénně podložené sezonní odrazivosti jednoletého a víceletého ledu.
+Metody v článku popisují převod na síť 1° a plošné vážení.
+Veřejné portály: https://climate.rutgers.edu/snowcover/ a https://nsidc.org/data/seaice_index/
+Druhý portál slouží jako rozcestník k měření ledu, nikoli jako identický vstupní soubor této studie.
+Aktuální verze produktů nelze bez kontroly zaměnit za historické verze použité autory.
+
+Pistone, K., Eisenman, I., Ramanathan, V. (2014). DOI: https://doi.org/10.1073/pnas.1318201111
+Plný text a doplněk: https://eisenman.ucsd.edu/papers/Pistone-Eisenman-Ramanathan-2014.pdf
+CERES SSF Terra Level 3 Edition 2.6, březen 2000 až prosinec 2011, mřížka 1°.
+Bootstrap sea ice concentration version 2, mřížka 25 km, 1979–2011.
+Vymezení: oceán severně od 60° s. š., bez pevniny. Albedo z poměru průměrných toků.
+Pro starší část 1979–1999 použita regrese vztahu mezi ledem a odrazem z novějšího období.
+Nejde o přímé měření záření v celém období 1979–2011.
+Portál záření a dokumentace produktů: https://ceres.larc.nasa.gov/
+
+FYZIKÁLNÍ SCHÉMA A DALŠÍ ZKOUŠKY
+Budyko (1969), DOI 10.3402/tellusa.v21i5.10109: historický model.
+Gallet et al. (2009), DOI 10.5194/tc-3-167-2009: laboratorní vztah mezi plochou zrn a odrazem.
+Vérin et al. (2022), DOI 10.5194/tc-16-3431-2022: terénní struktura a spektrální odraz sněhu.
+Hodnoty celkového albeda 0,87 a asi 0,70 jsou MODELOVÉ pro spektrum 300–3000 nm.
+Přímé spektrální měření v této práci pokrývá 300–1100 nm.
+Článek odkazuje na data Green Edge (DOI 10.17882/59892) a model TARTES (DOI 10.5281/zenodo.7031229).
+Richardson et al. (2024), DOI 10.1029/2023JG007833: pokus SPRUCE a analýza místní zpětné vazby.
+Sníh odvozený z fotografií: https://doi.org/10.6084/m9.figshare.24226177.v2
+Stahovaný veřejný soubor frakce sněhu (XLSX): https://ndownloader.figshare.com/files/42523201
+Ověřeno stažením 13. listopadu 2026, 231599 bajtů. MD5 podle metadat Figshare: 697e4c06ad0543819071dff8a24ddd1f.
+Přítomnost sněhu 2015–2021, plošný podíl 2017–2021, hloubka 2019–2021.
+Příspěvek 0,8 ± 0,1 °C se týká denního MAXIMA místní teploty vzduchu při 10 MJ/m² dopadající energie za den.
+Nejde o rozdíl mezi teplotně regulovanými vyhřívanými komorami.
+Je odvozen z nevyhřívaných komor a volného terénu s oddělením účinku komor regresí.
+± 0,1 °C je jedna standardní chyba zvoleného statistického odhadu, nikoli úplná nejistota.
+IPCC AR6 WGI (2021), kapitola 7, oddíl 7.4.2.3: globální zhodnocení zpětné vazby povrchového albeda.
+
+NÁZORNÝ VÝPOČET
+S = 200 W/m², počáteční albedo = 0,8, nové albedo = 0,2 jsou ZVOLENÉ hodnoty.
+Q = (1 - albedo) × S. Výsledky 40 a 160 W/m², rozdíl 120 W/m².
+Systém zahrnuje pokrývku i podklad, do něhož projde světlo. Samotný led nepohltí vše, co neodrazí.
+Výpočet nepředstavuje měření a nelze jej bez energetické bilance převést na stupně oteplení.
