@@ -387,7 +387,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "aktivni-radarove-mereni") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Radarové měření srážek a struktury sněhu a ledu" meta="31. října 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Radarové měření srážek a struktury sněhu a ledu" meta="13. listopadu 2026">
           <p>Jak čas a síla radarového echa ukážou rozložení deště, jak se počítá jeho intenzita a jak radar odhaluje vrstvy uvnitř ledovce.</p>
         </PageLead>
         <RadarArticle />
@@ -399,7 +399,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "pasivni-mikrovlnna-radiometrie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Pasivní mikrovlnná radiometrie" meta="6. listopadu 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Pasivní mikrovlnná radiometrie" meta="13. listopadu 2026">
           <p>Jak družice zachytí přirozené mikrovlnné záření a jak z několika měřených kanálů vypočítáme podíl mořské hladiny pokrytý ledem.</p>
         </PageLead>
         <MicrowaveRadiometryArticle />

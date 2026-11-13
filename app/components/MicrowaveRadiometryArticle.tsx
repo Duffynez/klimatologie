@@ -116,19 +116,20 @@ export function MicrowaveRadiometryArticle() {
           dobře pohlcující a vyzařující těleso, jehož teplotu sledují teplotní čidla.
           Dostáváme tak dvě známé úrovně záření a dvě odpovídající odezvy přijímače.
           Při přibližně lineární odezvě z jejich rozdílu určíme převodní měřítko
-          a z jedné reference jeho počátek. Každému kroku v uložených číslech tak
-          přiřadíme odpovídající změnu jasové teploty. Tím můžeme převést i odezvu
-          při pohledu na Zemi.{" "}
-          <SourceLink id="WEB_NOAA_RSS_Microwave_ATBD_2018">(RSS/NOAA 2018, oddíl 3.4, rovnice 19–21)</SourceLink>
+          a z jedné reference jeho počátek. Odezvu při pohledu na Zemi tak
+          vyjádříme jako anténní teplotu. Ta popisuje celkový výkon záření,
+          který anténa zachytí i z okolí hlavního směru pohledu.{" "}
+          <SourceLink id="WEB_NASA_SSMI_Validation_1992">(Cavalieri, ed., 1992, oddíl 2.2.1)</SourceLink>{" "}
+          a <SourceLink id="WEB_NOAA_RSS_Microwave_ATBD_2018">(RSS/NOAA 2018, rovnice 19)</SourceLink>
         </p>
         <p>
           Následná korekce zohlední, odkud anténa záření přijímá. Největší citlivost
-          má v hlavním směru pohledu, menší část signálu však zachytí také z okolí
-          a z druhé polarizace. Změřené vlastnosti antény umožňují tyto příspěvky
-          oddělit. Zpracování dále sjednocuje odezvu různých přístrojů během období,
-          kdy pozorují Zemi současně. Výsledkem jsou kalibrované jasové teploty
+          má v hlavním směru pohledu. Část signálu pochází i z druhé polarizace.
+          Korekce těchto příspěvků převádí anténní teplotu na jasovou teplotu
+          pozorovaného místa. Zpracování také sjednocuje odezvu různých přístrojů
+          pomocí pozorování ze společných období. Výsledkem jsou kalibrované jasové teploty
           jednotlivých kanálů s přiřazeným místem a časem měření.{" "}
-          <SourceLink id="WEB_NOAA_RSS_Microwave_ATBD_2018">(RSS/NOAA 2018, oddíly 3.4 a 3.4.7)</SourceLink>
+          <SourceLink id="WEB_NOAA_RSS_Microwave_ATBD_2018">(RSS/NOAA 2018, oddíly 3.4 a 3.4.1)</SourceLink>
         </p>
 
         <h3 id="koncentrace-ledu">Jak z několika jasových teplot získáme podíl ledu</h3>
@@ -337,7 +338,7 @@ export function MicrowaveRadiometryArticle() {
           Výsledkem je mimo jiné odhad intenzity srážek u povrchu v mm/h.
           Databáze se opírá také o společná pozorování družicového radaru
           a radiometru.{" "}
-          <SourceLink id="WEB_NASA_GPROF2021_ATBD_2022">(GPROF2021, oddíly 1.3 a 3.3)</SourceLink>
+          <SourceLink id="WEB_NASA_GPROF2021_ATBD_2022">(GPROF2021, oddíly 3, 3.3 a 3.4)</SourceLink>
         </p>
         <p>
           Tyto odhady lze spojovat v čase a prostoru s dalšími družicovými údaji.
@@ -432,7 +433,7 @@ export function MicrowaveRadiometryArticle() {
           jasové teploty. Z nich zopakujeme jádro převodu NASA Team s referencemi
           pro F11 zveřejněnými v roce 1997. Výsledkem bude náš přepočet jedné
           stopy pomocí těchto zvolených vstupů.{" "}
-          <SourceLink id="DOI_10_7289_V5SJ1HKZ">(Wentz a Mears: RSS v7)</SourceLink>{" "}
+          <SourceLink id="DOI_10_7289_V5SJ1HKZ">(použitý soubor oběhu F11, RSS v7)</SourceLink>{" "}
           a <SourceLink id="WEB_NASA_Cavalieri_1997_Sea_Ice_User_Guide">(Cavalieri a kol. 1997, tabulka 3)</SourceLink>
         </p>
         <p>

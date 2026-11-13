@@ -283,8 +283,11 @@ export function RadarArticle() {
           Radar vysílá a přijímá vodorovnou i svislou složku a porovnává
           jejich odezvu. Zploštělé kapky, sněhové vločky a kroupy na obě složky
           reagují různě. Porovnání proto pomáhá určit, jaké částice echo vytvářejí,
-          a zvolit odpovídající postup pro odhad srážek.
-          Kalibraci této úpravy sítě WSR-88D popsali Ice a kolegové.{" "}
+          a zvolit odpovídající postup pro odhad srážek. Ryzhkov a kolegové
+          vyzkoušeli odhad z dvojí polarizace na prototypu WSR-88D a porovnali
+          jej se srážkoměry v Oklahomě.{" "}
+          <SourceLink id="2003_Ryzhkov_Polarimetric_WSR88D">(Ryzhkov a kol. 2003, oddíly 1, 3 a 4)</SourceLink>{" "}
+          Kalibraci antény při této úpravě sítě popsali Ice a kolegové.{" "}
           <SourceLink id="WEB_Ice_Radar_Solar_Calibration_2014">(Ice a kol. 2014, oddíly I a III)</SourceLink>
         </p>
 
@@ -329,13 +332,13 @@ export function RadarArticle() {
         </p>
         <p>
           Stáří vrstvy se určuje pomocí návaznosti na ledovcové vrty.
-          Kde radarová trasa protíná vrt, spojí se rozhraní v radarovém záznamu
-          s datovanou hloubkou ve vrtu. Sledování stejné vrstvy pak přenese
-          informaci o stáří do okolí. MacGregor a kolegové tak využili letecká
-          měření z Grónska z let 1993–2013 a stáří ze šesti hlubokých vrtů.
+          MacGregor a kolegové propojili datované hloubky ze šesti hlubokých vrtů
+          s rozhraními z leteckých měření v Grónsku z let 1993–2013. Využili
+          i trasy, které vedly nejvýše tři kilometry od vrtu. Sledováním stejné
+          vrstvy mezi radarovými trasami pak rozšířili údaje o jejím stáří do okolí.
           Vytvořili prostorový obraz stáří ledu, který pomáhá rekonstruovat
           historii a deformaci ledového příkrovu.{" "}
-          <SourceLink id="DOI_10_1002_2014JF003215">(MacGregor a kol. 2015)</SourceLink>
+          <SourceLink id="DOI_10_1002_2014JF003215">(MacGregor a kol. 2015, oddíl 3.3.1)</SourceLink>
         </p>
 
         <h2>Nejistoty a ověření</h2>
@@ -414,7 +417,7 @@ export function RadarArticle() {
           UTC je světový koordinovaný čas. Začínáme u archivovaných dat
           úrovně Level II, která již obsahují přístrojem zpracovanou odrazivost.
           Vlastní výpočet tedy navazuje až na tuto část měření.{" "}
-          <SourceLink id="DOI_10_7289_V5W9574V">(NOAA NEXRAD Level II)</SourceLink>
+          <SourceLink id="DOI_10_7289_V5W9574V">(použitý soubor KHGX, NOAA NEXRAD Level II)</SourceLink>
         </p>
         <div className="method-data-output">
           <div className="method-data-output__table-wrap">
