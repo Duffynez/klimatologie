@@ -27,13 +27,14 @@ Skript používá úplná čísla, článek zobrazuje zaokrouhlené hodnoty.
 
 Ověření proti originálu
 ----------------------
-Ze záznamu Zenodo stáhněte soubor
-v2_ITS_LIVE_Sentinel_1_image_pair_product_samples.zip (294 117 491 bajtů).
-Rozbalte soubor uvedený v provenance.json, klíč archive_member.
+Použitý NetCDF stáhněte přímo z karty zdroje ITS_LIVE:
+https://klimatologie.eu/zdroje/#DOI_10_5281_zenodo_5606118
+Jde o obsah souboru archive_member v provenance.json pod licencí CC BY 4.0.
+Celý původní archiv v Zenodu obsahuje 21 dvojic a má 294 117 491 bajtů.
 Nainstalujte netCDF4, numpy a pyproj, například do virtuálního prostředí:
 
   python -m pip install netCDF4 numpy pyproj
-  python reproduce.py --netcdf CESTA_K_ROZBALENEMU_SOUBORU.nc
+  python reproduce.py --netcdf jakobshavn-2017-04-04-10.nc
 
 Skript ověří SHA-256 celého původního souboru. Neprovádí nové hledání
 posunů, výběr snímků ani kalibraci. Znovu vybere nejbližší střed buňky

@@ -6,7 +6,9 @@
   "landing_url": "https://www.nasa.gov/stem-content/antarctic-ice-mass-data-set/",
   "provider": "NASA Office of STEM Engagement, original JPL data",
   "underlying_dataset": "Wiese, Yuan, Boening, Landerer and Watkins (2022), JPL GRACE and GRACE-FO Mascon Ocean, Ice, and Hydrology Equivalent Water Height RL06.1M CRI Filtered Version 3.0",
-  "dataset_doi": "10.5067/TEMSC-3MJ62",
+  "dataset_doi": "10.5067/TEMSC-3JC63",
+  "greenland_series_doi": "10.5067/TEMSC-GT613",
+  "workbook_header_doi": "10.5067/TEMSC-3MJ62",
   "original_sheet": "Greenland Original Data",
   "original_cells": [
     "A207",

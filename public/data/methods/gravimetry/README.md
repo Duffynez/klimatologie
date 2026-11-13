@@ -10,4 +10,6 @@ Spuštění `python reproduce.py` ověří SHA-256 CSV a provede odečtení pomo
 
 Pro kontrolu původních buněk stáhněte sešit NASA z adresy v metadatech a spusťte `python reproduce.py --workbook cesta-k-sesitu.xlsx`. Skript ověří SHA-256 sešitu i shodu původních řádků a hmotnosti v odvozeném listu. Případná pozdější změna souboru NASA vyvolá chybu místo tichého použití jiné verze.
 
+V katalogu NASA má grónská řada RL06.1Mv03 DOI 10.5067/TEMSC-GT613 a její podkladová globální mřížka DOI 10.5067/TEMSC-3JC63. DOI v záhlaví sešitu odkazuje na vydání RL06Mv02. Použitá data v sešitu označuje vlastní záhlaví řady jako RL06.1Mv03.
+
 Nevkládáme hodnoty do mezer a nepočítáme trend. Zaokrouhlené desetinné roky 2019.29 a 2020.29 označují dubnová období, nikoli přesný okamžik. Datum stažení je 28. října 2026. NASA sestavila tuto veřejnou kopii 24. ledna 2023.

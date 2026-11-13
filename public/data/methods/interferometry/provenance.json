@@ -12,6 +12,7 @@
   "archive_url": "https://zenodo.org/api/records/5606118/files/v2_ITS_LIVE_Sentinel_1_image_pair_product_samples.zip/content",
   "archive_checksum": "md5:0bf406f341e6474c5c9e5b358af13661",
   "archive_member": "v2_ITS_LIVE_Sentinel_1_image_pair_product_samples/Region_1/S1B_IW_SLC__1SSH_20170404T204604_20170404T204631_005016_008C58_5527_X_S1A_IW_SLC__1SSH_20170410T204646_20170410T204713_016087_01A8F8_2577_G0120V02_P098.nc",
+  "public_download": "https://klimatologie.eu/data/methods/interferometry/jakobshavn-2017-04-04-10.nc",
   "netcdf_sha256": "a3ae9b3b06e385e47f83630158bd58ea7340bfc9335d56809b257423bbeb8921",
   "sample_csv_sha256": "157181adcf48727dda9e31406e4124516b1238633d8d557d8e1d6e21dcb651ae",
   "target_lon_lat": [

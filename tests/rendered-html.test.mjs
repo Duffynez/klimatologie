@@ -603,6 +603,28 @@ function hasArticleLink(html, path) {
     href.split("#")[0].replace(/\/$/, "") === path.replace(/\/$/, ""));
 }
 
+test("links the interferometry and gravimetry examples to their exact inputs and versions", async () => {
+  const [catalogue, netcdf, interferometryMeta, gravimetryMeta] = await Promise.all([
+    readFile(new URL("dist/client/zdroje/index.html", root), "utf8"),
+    readFile(new URL("dist/client/data/methods/interferometry/jakobshavn-2017-04-04-10.nc", root)),
+    readFile(new URL("public/data/methods/interferometry/provenance.json", root), "utf8").then(JSON.parse),
+    readFile(new URL("public/data/methods/gravimetry/provenance.json", root), "utf8").then(JSON.parse),
+  ]);
+  assert.equal(createHash("sha256").update(netcdf).digest("hex"), interferometryMeta.netcdf_sha256);
+  const expectedLinks = [
+    ["DOI_10_5281_zenodo_5606118", new URL(interferometryMeta.public_download).pathname, "Stáhnout použitou dvojici ITS_LIVE (NetCDF)"],
+    ["WEB_NASA_Ice_Mass_Data_2023", gravimetryMeta.source_url, "Stáhnout původní sešit NASA (XLSX)"],
+    ["DOI_10_5067_TEMSC_GT613", "https://doi.org/" + gravimetryMeta.greenland_series_doi, "Otevřít metadata grónské řady"],
+    ["DOI_10_5067_TEMSC_3JC63", "https://doi.org/" + gravimetryMeta.dataset_doi, "Otevřít metadata globální mřížky"],
+  ];
+  for (const [id, href, label] of expectedLinks) {
+    const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?</article>'))?.[0];
+    assert.ok(card, "Missing source card " + id);
+    assert.ok(card.includes('href="' + href + '"'), href);
+    assert.ok(card.includes(label), label);
+  }
+});
+
 test("publishes altimetry with real data, open sources and reciprocal ocean and ice links", async () => {
   const slug = "radarova-a-laserova-altimetrie";
   const [html, source, catalogue, ocean, ice] = await Promise.all([
