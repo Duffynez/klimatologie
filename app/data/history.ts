@@ -1,7 +1,7 @@
 export const historyBranches = {
   science: "Věda",
   politics: "Politika",
-  culture: "Kultura",
+  culture: "Společnost a kultura",
 } as const;
 
 export type HistoryBranch = keyof typeof historyBranches;
@@ -33,8 +33,8 @@ export const historyCategories = {
   },
   culture: {
     branch: "culture",
-    label: "Kultura",
-    description: "Jak se klima promítalo do kultury",
+    label: "Společnost a kultura",
+    description: "Jak se klima stalo veřejným tématem",
     href: null,
   },
 } as const satisfies Record<string, { branch: HistoryBranch; label: string; description: string; href: string | null }>;
@@ -43,8 +43,8 @@ export type HistoryCategory = keyof typeof historyCategories;
 export type HistoryImportance = 1 | 2 | 3;
 
 export const historyImportances = {
-  1: { label: "Zásadní", description: "Hlavní objevy a klimatická rozhodnutí", filterLabel: "1 · Zásadní milníky" },
-  2: { label: "Důležitý", description: "Důležité metody, záznamy a další důkazy", filterLabel: "2 · Důležité milníky" },
+  1: { label: "Zásadní", description: "Rozhodující kroky v poznání, politice a veřejném vnímání klimatu", filterLabel: "1 · Zásadní milníky" },
+  2: { label: "Důležitý", description: "Důležité poznatky, postupy a další kroky ve společenské odezvě", filterLabel: "2 · Důležité milníky" },
   3: { label: "Doplňující", description: "Vybraní předchůdci a podrobnější ověření", filterLabel: "3 · Doplňující milníky" },
 } as const satisfies Record<HistoryImportance, { label: string; description: string; filterLabel: string }>;
 
@@ -865,6 +865,33 @@ export const historyEvents: HistoryEvent[] = [
     ]
   },
   {
+    id: "1958_Unchained_Goddess",
+    year: 1958,
+    dateMeaning: "První televizní vysílání pořadu",
+    title: "Televizní pořad upozorňuje na oteplování způsobené člověkem",
+    category: "culture",
+    importance: 3,
+    paragraphs: [
+      {
+        text: "Americká televize NBC odvysílala 12. února 1958 pořad The Unchained Goddess ze série Bell System Science Series. V rozhovoru o počasí zaznělo, že oxid uhličitý vypouštěný továrnami a automobily může měnit světové klima. Pořad spojil oteplování s možným táním polárního ledu a vzestupem mořské hladiny.",
+        references: [
+          { sourceId: "DOI_10_1017_S0007087425101118", locator: "s. 622, přehled pořadů a dat vysílání" },
+          { sourceId: "2010_Jenkins_Unchained_Goddess", locator: "citovaný rozhovor Baxtera a Carlsona" }
+        ]
+      },
+      {
+        text: "Série propojovala hrané rozhovory, animaci a vědecké vysvětlování a po televizním vysílání se využívala také ve školách. Tento díl tak dokládá, že představa lidského oteplování vstoupila do televizní popularizace už v 50. letech. Dochovaný úryvek zachycuje tehdejší způsob výkladu a jeho obrazy možných následků.",
+        references: [
+          { sourceId: "DOI_10_1017_S0007087425101118", locator: "s. 621–622, dosah a forma série" },
+          { sourceId: "2010_Jenkins_Unchained_Goddess", locator: "úryvek z pořadu" }
+        ]
+      }
+    ],
+    relatedLinks: [
+      { href: "/mechanismy/radiacni-pusobeni-sklenikovych-plynu/", label: "Jak dnes ověřujeme radiační působení skleníkových plynů" }
+    ]
+  },
+  {
     id: "1958_Keeling",
     year: 1958,
     dateMeaning: "Zahájení měření na Mauna Loa",
@@ -1160,6 +1187,27 @@ export const historyEvents: HistoryEvent[] = [
       }
     ],
     relatedLinks: []
+  },
+  {
+    id: "1989_McKibben_End_of_Nature",
+    year: 1989,
+    dateMeaning: "Vydání knihy",
+    title: "Kniha spojuje oteplování s proměnou vztahu člověka k přírodě",
+    category: "culture",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Bill McKibben vydal knihu The End of Nature. Vysvětloval širokému čtenářstvu růst skleníkových plynů a zasazoval jej do vyprávění o tom, jak lidská činnost mění prostředí celé planety. Rychlost těchto změn porovnával s běžnou představou pomalého vývoje přírody.",
+        references: [{ sourceId: "1989_McKibben_End_of_Nature", locator: "autorský popis knihy a veřejná ukázka u nakladatele, oddíl Excerpt" }]
+      },
+      {
+        text: "Pod označením konec přírody rozuměl ztrátu představy přírody jako světa nezávislého na člověku. Klimatické poznatky tak spojil s otázkami odpovědnosti, každodenního života a významu divoké přírody. Kniha představuje důležitý krok klimatického eseje, v němž se měnící atmosféra stává také kulturní a filozofickou otázkou.",
+        references: [{ sourceId: "1989_McKibben_End_of_Nature", locator: "autorský popis knihy a citované dobové recenze" }]
+      }
+    ],
+    relatedLinks: [
+      { href: "/pozorovani/atmosfericka-koncentrace-co2/", label: "Jak měříme růst koncentrace CO₂" }
+    ]
   },
   {
     id: "1990_IPCC_FAR",
@@ -1461,6 +1509,30 @@ export const historyEvents: HistoryEvent[] = [
     ]
   },
   {
+    id: "2004_Day_After_Tomorrow",
+    year: 2004,
+    dateMeaning: "Uvedení filmu do kin",
+    title: "Klimatická katastrofa se stává tématem hollywoodského velkofilmu",
+    category: "culture",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Film Den poté režiséra Rolanda Emmericha postavil příběh na náhlé klimatické katastrofě vyvolané změnou oceánského proudění. V květnu 2004 vstoupil do kin jako velká dobrodružná podívaná. Klimatické ohrožení zobrazil prostřednictvím lidských osudů a ničivých událostí. Prudký příchod nové doby ledové je součástí filmové fikce.",
+        references: [
+          { sourceId: "WEB_20th_Century_Day_After_Tomorrow", locator: "Release Date, Genre, synopse a Directed By" },
+          { sourceId: "DOI_10_1080_00139150409603663", locator: "s. 23–26, děj filmu a jeho přijetí" }
+        ]
+      },
+      {
+        text: "Anthony Leiserowitz zkoumal americké publikum pomocí dotazníků před uvedením filmu a po něm. Ze sledovaných diváků 49 % uvedlo, že v nich film zvýšil obavy z globálního oteplování. Tento výsledek zachycuje vlastní hodnocení diváků. Příběh zábavného filmu se stal podnětem k veřejné debatě o klimatickém riziku i k výzkumu diváckých představ.",
+        references: [{ sourceId: "DOI_10_1080_00139150409603663", locator: "s. 24 a 26–27, postup průzkumu a odpovědi diváků" }]
+      }
+    ],
+    relatedLinks: [
+      { href: "/mechanismy/pohlcovani-a-presun-tepla-oceanem/", label: "Jak oceán skutečně přijímá a přenáší teplo" }
+    ]
+  },
+  {
     id: "2004_Sabine",
     year: 2004,
     dateMeaning: "Zveřejnění inventury pro stav v roce 1994",
@@ -1587,6 +1659,30 @@ export const historyEvents: HistoryEvent[] = [
     relatedLinks: [
       { href: "/metody/druzicova-gravimetrie/", label: "Jak družice měří změny gravitačního pole" },
       { href: "/pozorovani/nestabilita-prikrovu/", label: "Jak určujeme změnu hmotnosti ledových příkrovů" }
+    ]
+  },
+  {
+    id: "2006_Inconvenient_Truth",
+    year: 2006,
+    dateMeaning: "Uvedení dokumentu do kin",
+    title: "Klimatická přednáška se mění ve výrazný filmový dokument",
+    category: "culture",
+    importance: 1,
+    paragraphs: [
+      {
+        text: "Davis Guggenheim natočil dokument Nepříjemná pravda, který propojil klimatickou přednášku Ala Gorea s jeho osobním příběhem. Vysvětlování oteplování tak získalo podobu celovečerního filmu určeného publiku kin. Vyprávění spojovalo vědecké informace s obrazy možných následků a výzvou k jednání.",
+        references: [{ sourceId: "WEB_Paramount_Inconvenient_Truth", locator: "About the Film, synopse a údaje o tvůrcích" }]
+      },
+      {
+        text: "V únoru 2007 získal film Oscara za celovečerní dokument. Jeho kulturní význam spočívá v propojení popularizace klimatického poznání s osobním vyprávěním a výrazným uznáním ve filmovém prostředí.",
+        references: [
+          { sourceId: "WEB_Paramount_Inconvenient_Truth", locator: "rok vydání a synopse" },
+          { sourceId: "2007_Academy_Awards", locator: "Documentary (Feature), vítězný film" }
+        ]
+      }
+    ],
+    relatedLinks: [
+      { href: "/pozorovani/gmst/", label: "Jak sestavujeme záznam globální teploty" }
     ]
   },
   {
@@ -1754,6 +1850,30 @@ export const historyEvents: HistoryEvent[] = [
     ],
     relatedLinks: [
       { href: "/mechanismy/radiacni-pusobeni-sklenikovych-plynu/", label: "Jak různé plyny ovlivňují klima" }
+    ]
+  },
+  {
+    id: "2018_Warming_Stripes",
+    year: 2018,
+    dateMeaning: "Zveřejnění klimatických pruhů",
+    title: "Barevné pruhy přenášejí záznam oteplování do vizuální kultury",
+    category: "culture",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Ed Hawkins zveřejnil klimatické pruhy, jednoduché zobrazení teplotního záznamu, v němž jeden svislý pruh představuje jeden rok. Modré odstíny označují chladnější roky a červené teplejší. Ranou podobu připravil pro literární festival v Hay-on-Wye v roce 2018 z místních dat sahajících do roku 2017. Grafika umožnila sledovat průběh oteplování bez os a číselných popisků.",
+        references: [
+          { sourceId: "2018_Hawkins_Warming_Stripes", locator: "úvodní vysvětlení grafiky" },
+          { sourceId: "WEB_Reading_Climate_Stripes", locator: "Climate Stripes: Warming Stripes, Hay-on-Wye 2017" }
+        ]
+      },
+      {
+        text: "Motiv se rozšířil do televizního počasí, oblečení, uměleckých instalací a koncertních scén. University of Reading zařadila jeho dvě verze do své umělecké sbírky. Milník ukazuje, jak se zobrazení naměřených dat může stát sdíleným kulturním symbolem. Jednotlivé verze používají data pro konkrétní místo či celou planetu a odlišná období.",
+        references: [{ sourceId: "WEB_Reading_Climate_Stripes", locator: "úvod a popisy místní a globální verze" }]
+      }
+    ],
+    relatedLinks: [
+      { href: "/pozorovani/gmst/", label: "Z jakých měření vzniká záznam globální teploty" }
     ]
   }
 ];
