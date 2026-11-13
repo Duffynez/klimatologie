@@ -1308,14 +1308,14 @@ test("publishes the home page with a linked observation example", async () => {
   assert.match(layout, /Klimatologie\.eu/);
   assert.match(layout, /static\.cloudflareinsights\.com\/beacon\.min\.js/);
   assert.match(layout, /5e5e8b07ed9f445d82e999e0de1c8f65/);
-  assert.match(header, /label: "Úvod"[\s\S]*label: "Pozorování"[\s\S]*label: "Metody"[\s\S]*label: "Mechanismy"[\s\S]*label: "Projekce"[\s\S]*label: "Důsledky"[\s\S]*label: "Historie"[\s\S]*label: "Osobnosti"[\s\S]*label: "Zdroje"/);
-  assert.doesNotMatch(header, /Slovníček|Otázky|\/slovnicek|\/disidenti/);
+  assert.match(header, /label: "Úvod"[\s\S]*label: "Pozorování"[\s\S]*label: "Metody"[\s\S]*label: "Mechanismy"[\s\S]*label: "Projekce"[\s\S]*label: "Důsledky"[\s\S]*label: "Historie"[\s\S]*label: "Zdroje"/);
+  assert.doesNotMatch(header, /Slovníček|Otázky|Osobnosti|\/slovnicek|\/disidenti|\/osobnosti/);
   assert.doesNotMatch(footer, /Jak pracujeme s daty|Zápisník projektu|\/metody|\/blog/);
   assert.match(robots, /Sitemap: https:\/\/klimatologie\.eu\/sitemap\.xml/);
   assert.match(sitemap, /https:\/\/klimatologie\.eu\/pozorovani\/stratosfericke-ochlazovani\//);
   assert.match(sitemap, /https:\/\/klimatologie\.eu\/pozorovani\/tepelny-obsah-oceanu\//);
   assert.match(sitemap, /https:\/\/klimatologie\.eu\/metody\//);
-  assert.doesNotMatch(sitemap, /\/slovnicek\/|\/disidenti\//);
+  assert.doesNotMatch(sitemap, /\/slovnicek\/|\/disidenti\/|\/osobnosti\//);
   assert.doesNotMatch(sitemap, /https:\/\/klimatologie\.eu\/blog\//);
   assert.doesNotMatch(home, /SkeletonPreview|codex-preview/);
 });
@@ -2515,21 +2515,19 @@ test("gives every heat-wave source public access and preserves corrected measure
 });
 
 test("keeps catalogue headers compact and gives history a dated introduction", async () => {
-  const [evidenceIndex, evidenceFallback, history, people, sources] = await Promise.all([
+  const [evidenceIndex, evidenceFallback, history, sources] = await Promise.all([
     readFile(new URL("app/pozorovani/page.tsx", root), "utf8"),
     readFile(new URL("app/pozorovani/[slug]/page.tsx", root), "utf8"),
     readFile(new URL("app/historie/page.tsx", root), "utf8"),
-    readFile(new URL("app/osobnosti/page.tsx", root), "utf8"),
     readFile(new URL("app/zdroje/page.tsx", root), "utf8"),
   ]);
 
   assert.doesNotMatch(evidenceIndex, /topic\.status|Tahle mapa propojí/);
   assert.doesNotMatch(evidenceFallback, /topic\.status|<PageLead[^>]*>[\s\S]*topic\.summary/);
   assert.doesNotMatch(history, /Tato osa začíná knihovnou/);
-  assert.doesNotMatch(people, /Profily propojí životopis/);
   assert.match(history, /meta="[1-9]\d?\. [^"]+ 20\d{2}"/);
   assert.match(history, /<\/PageLead>/);
-  for (const page of [evidenceIndex, evidenceFallback, people, sources]) {
+  for (const page of [evidenceIndex, evidenceFallback, sources]) {
     assert.match(page, /<PageLead[^>]*\/>/);
   }
 });

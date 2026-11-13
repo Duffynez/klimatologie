@@ -8,7 +8,6 @@ const navigation = [
   { href: "/projekce", label: "Projekce" },
   { href: "/dusledky", label: "Důsledky" },
   { href: "/historie", label: "Historie" },
-  { href: "/osobnosti", label: "Osobnosti" },
   { href: "/zdroje", label: "Zdroje" },
 ];
 
