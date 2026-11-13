@@ -142,8 +142,10 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "oblaka-a-jejich-klimaticke-zpetne-vazby",
     title: "Jak oblaka zesilují nebo tlumí oteplování?",
     category: "Atmosféra a oceán",
-    cardSummary: "Odraz slunečního záření a přenos tepelného záření při změnách oblačnosti.",
-    summary: "Oblaka odrážejí sluneční záření a ovlivňují únik infračerveného záření. Změny jejich množství, výšky a složení při oteplování mění další vývoj teploty.",
+    isComplete: true,
+    cardSummary: "Jak změny plochy, výšky a odrazivosti oblaků ovlivňují další oteplování.",
+    observations: [{ href: "/pozorovani/oblaka-a-radiacni-bilance/#vysledky", label: "Oblaka a radiační bilance" }],
+    summary: "Proč dnešní ochlazující účinek oblaků neznamená, že budou oteplování tlumit. Tři oblačné odezvy, jejich historie a konkrétní testy plochy, výšky a odrazu světla.",
     distinguishingEvidence: "Současné změny vlastností oblaků, teploty a radiačních toků v různých oblastech. Porovnání s fyzikálními výpočty při oddělení změn aerosolů a proudění ověřuje oblačnou odezvu na oteplování.",
   },
   {

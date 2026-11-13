@@ -40,7 +40,7 @@ export function InterferometryArticle() {
             Bílý rám a závěsy během zkoušky odlehčují anténu, která bude pracovat
             ve stavu beztíže. Foto © ESA–S. Corvaja, 2014.{" "}
             <SourceLink id="WEB_ESA_Sentinel1A_Radar_Photo_2014">Původní snímek</SourceLink>,{" "}
-            <SourceLink id="WEB_ESA_Media_Terms_2024">podmínky vzdělávacího a redakčního použití ESA</SourceLink>.
+            <SourceLink id="WEB_ESA_Media_Terms_2024">podmínky použití snímků ESA</SourceLink>.
           </figcaption>
         </figure>
         <p>
@@ -280,9 +280,9 @@ export function InterferometryArticle() {
           Sledování útvarů závisí na kvalitě nalezené shody a poloze snímků.
           Oba postupy potřebují vhodnou referenci a geometrii převodu.
           Lei a kolegové porovnali radarové a optické rychlosti na rychlém
-          výtoku Jakobshavnu. Souhrnná velikost rozdílů mezi ITS_LIVE Sentinel-1 a Landsatem 8
-          vyšla přibližně 314 metrů za rok, tedy 3,7 % podle vyhodnocení autorů. To je výsledek konkrétního
-          porovnání, nikoli univerzální přesnost radarového měření.{" "}
+          výtoku Jakobshavnu. Odmocnina z průměru čtverců rozdílů rychlostí
+          mezi ITS_LIVE Sentinel-1 a Landsatem 8 vyšla přibližně 314 metrů
+          za rok, tedy 3,7 % podle vyhodnocení autorů.{" "}
           <SourceLink id="WEB_ESA_InSAR_TM19_2007">(ESA)</SourceLink>{" "}
           <SourceLink id="DOI_10_5194_essd_14_5111_2022">(Lei a kol. 2022, oddíl 4.1)</SourceLink>
         </p>
@@ -350,9 +350,9 @@ export function InterferometryArticle() {
           Vybereme bod poblíž 69,124° severní šířky a 49,496° západní délky
           na Jakobshavnu v Grónsku, který metodická studie používá k porovnání
           rychlostí. Data už prošla hledáním posunů, kalibrací a převodem do mapy.
-          Zopakujeme závěrečný výpočet rychlosti a odpovídajícího posunu,
-          nikoli zpracování surového radarového signálu.{" "}
-          <SourceLink id="DOI_10_5281_zenodo_5606118">(Lei, Gardner a Agram 2021, veřejná data)</SourceLink>{" "}
+          Z těchto hodnot zopakujeme závěrečný výpočet rychlosti a posunu.
+          Použitý soubor NetCDF lze stáhnout přímo z{" "}
+          <SourceLink id="DOI_10_5281_zenodo_5606118">karty dat ITS_LIVE</SourceLink>.{" "}
           <SourceLink id="DOI_10_5194_essd_14_5111_2022">(Lei a kol. 2022, obr. 11–13)</SourceLink>
         </p>
         <div className="method-data-output method-data-output--compact method-data-output__table-wrap">
@@ -422,8 +422,10 @@ export function InterferometryArticle() {
             přepočítá zveřejněný{" "}
             <a href="/data/methods/interferometry/sample.csv">výřez hodnot CSV</a>.
             Volitelně načte původní soubor NetCDF, ověří jeho kontrolní součet,
-            znovu vybere buňku a porovná výřez s originálem. Soubor lze získat
-            z <SourceLink id="DOI_10_5281_zenodo_5606118">původního archivu</SourceLink>.
+            znovu vybere buňku a porovná výřez s originálem.{" "}
+            <SourceLink id="DOI_10_5281_zenodo_5606118">Karta dat</SourceLink>{" "}
+            odkazuje na celý archiv v Zenodu a nabízí ke stažení ověřenou
+            kopii jednoho souboru použitého v příkladu.
             Postup a potřebné knihovny popisuje{" "}
             <a href="/data/methods/interferometry/README.txt">návod</a>.
             Původní pole v obsahuje zaokrouhlenou mapovou rychlost 6 916 m za rok,

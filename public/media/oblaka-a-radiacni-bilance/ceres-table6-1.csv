@@ -1,0 +1,8 @@
+edition,component,value_w_m2,period_start,period_end
+2.8,shortwave,-47.1,2005-07,2015-06
+2.8,longwave,25.8,2005-07,2015-06
+2.8,net,-21.3,2005-07,2015-06
+4.0,shortwave,-45.8,2005-07,2015-06
+4.0,longwave,28.0,2005-07,2015-06
+4.0,net,-17.9,2005-07,2015-06
+

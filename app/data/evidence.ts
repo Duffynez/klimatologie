@@ -7,6 +7,7 @@ export type EvidenceTopic = {
 };
 
 export const evidenceTopics: EvidenceTopic[] = [
+  { slug: "oblaka-a-radiacni-bilance", title: "Oblaka a radiační bilance", category: "Atmosféra", summary: "Družicové měření odrazu slunečního světla a úniku tepelného záření. Globální součet, změny v čase a vlastnosti oblaků.", status: "hotovo" },
   { slug: "gmst", title: "Globální teplota u povrchu", category: "Atmosféra", summary: "Jak se z pozemních a oceánských měření počítá globální změna teploty a co ukazují zveřejněná data.", status: "hotovo" },
   { slug: "stratosfericke-ochlazovani", title: "Teplota stratosféry", category: "Atmosféra", summary: "Jak se teplota stratosféry měří balóny, družicemi a rádiovými zákryty a co ukazují zveřejněná data.", status: "hotovo" },
   { slug: "slunecni-zareni", title: "Proměny slunečního záření", category: "Atmosféra", summary: "Družicové měření příkonu nad atmosférou, kalibrace přístrojů a graf z veřejných dat SORCE TIM.", status: "hotovo" },

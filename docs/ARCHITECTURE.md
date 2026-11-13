@@ -42,7 +42,7 @@ Hlavní navigace není odvozena automaticky ze složek. Je to ručně udržovan�
 
 | Adresa | Zdroj stránky | Zdroj obsahu |
 | --- | --- | --- |
-| `/` | `app/page.tsx` | Ručně sestavený úvod, vybraná pozorování a počet zdrojů. |
+| `/` | `app/page.tsx` | Úvod s ukázkou pozorování, metody a mechanismu, zásadami projektu, rozcestníkem a výběrem pozorování. |
 | `/pozorovani/` | `app/pozorovani/page.tsx` | `app/data/evidence.ts`. |
 | `/pozorovani/[slug]/` | `app/pozorovani/[slug]/page.tsx` | Katalog `evidence.ts` a ručně připojené komponenty `*Article.tsx`. |
 | `/metody/` | `app/metody/page.tsx` | `app/data/methods.ts`. |
@@ -78,7 +78,7 @@ Záznam vytvoří dlaždici a statickou adresu, ale plný článek vznikne teprv
 2. je importována v `app/pozorovani/[slug]/page.tsx`;
 3. route obsahuje větev pro její slug, úvod, datum a samotnou komponentu.
 
-Všech současných šestnáct pozorování má vlastní komponentu. Obecná náhradní stránka na konci routy zůstává jako pojistka pro budoucí katalogovou položku bez plného článku.
+Všech současných sedmnáct pozorování má vlastní komponentu. Obecná náhradní stránka na konci routy zůstává jako pojistka pro budoucí katalogovou položku bez plného článku.
 
 ### Metody
 
@@ -90,7 +90,7 @@ Titrace a coulometrie mají samostatné položky `/metody/titrace/` a `/metody/c
 
 Úvodní diagram hotových mechanismů sjednocuje `HypothesisDiagram.tsx` a jeho CSS modul. Společná komponenta obsahuje návod, sémantický seznam hypotéz a čtyři kroky každé větve. Článková komponenta `EnergyHypothesisDiagram.tsx` dodává konkrétní obsah, podmínky a kotvy pro energetickou bilanci. Diagram funguje bez klientského JavaScriptu, rozložení přizpůsobuje CSS. Samotné příběhy obaluje klientská komponenta `HypothesisStory.tsx` s vlastním CSS modulem. Používá nativní `details` se zachovanými kotvami nadpisů, výchozí HTML obsahuje celé otevřené příběhy. JavaScript doplňuje sbalení z konce příběhu s návratem k nadpisu a otevření cílového příběhu při navigaci na jeho nadpis nebo vnitřní kotvu.
 
-`app/data/mechanisms.ts` obsahuje 23 témat s pěti tematickými kategoriemi. Šestnáct plných článků má komponenty `EarthEnergyBalanceArticle.tsx`, `GreenhouseRadiationArticle.tsx`, `CarbonDioxideOriginArticle.tsx`, `SolarVariabilityArticle.tsx`, `VolcanicAerosolsArticle.tsx`, `HeatWaveMechanismsArticle.tsx`, `PhenologyMechanismsArticle.tsx`, `AnthropogenicAerosolsArticle.tsx`, `OzoneStratosphereArticle.tsx`, `PermafrostMechanismsArticle.tsx`, `OceanHeatTransportArticle.tsx`, `IceSheetMechanismsArticle.tsx`, `WaterVapourFeedbackArticle.tsx`, `GlacierMechanismsArticle.tsx`, `SnowCoverMechanismsArticle.tsx` a `SeaIceMechanismsArticle.tsx`, připojené v `app/mechanismy/[slug]/page.tsx`. Ostatních 7 témat zatím ukazuje vymezení a rozlišující důkazy z katalogu. Další plné články vyžadují stejnou ruční vazbu komponenty a routy jako u metod.
+`app/data/mechanisms.ts` obsahuje 23 témat s pěti tematickými kategoriemi. Devatenáct plných článků má komponenty `EarthEnergyBalanceArticle.tsx`, `GreenhouseRadiationArticle.tsx`, `CarbonDioxideOriginArticle.tsx`, `SolarVariabilityArticle.tsx`, `VolcanicAerosolsArticle.tsx`, `HeatWaveMechanismsArticle.tsx`, `PhenologyMechanismsArticle.tsx`, `AnthropogenicAerosolsArticle.tsx`, `OzoneStratosphereArticle.tsx`, `PermafrostMechanismsArticle.tsx`, `OceanHeatTransportArticle.tsx`, `IceSheetMechanismsArticle.tsx`, `WaterVapourFeedbackArticle.tsx`, `GlacierMechanismsArticle.tsx`, `SnowCoverMechanismsArticle.tsx`, `SeaIceMechanismsArticle.tsx`, `AlbedoFeedbackArticle.tsx`, `CloudFeedbackArticle.tsx` a `OceanAcidificationMechanismArticle.tsx`, připojené v `app/mechanismy/[slug]/page.tsx`. Ostatní 4 témata zatím ukazují vymezení a rozlišující důkazy z katalogu. Další plné články vyžadují stejnou ruční vazbu komponenty a routy jako u metod.
 
 Článek o bilanci horských ledovců zachovává adresu `/mechanismy/hmotnostni-bilance-horskych-ledovcu/`. Dvě hypotézy spojují čtyři testy se sezonní bilancí, energetickými měřeními a historií čel. Je obousměrně propojený s doplněným pozorováním horských ledovců a metodou terénní bilance. Schémata, jejich generátor, přepis tabulky Sarennes a početní příklady jsou v `public/media/horske-ledovce-mechanismy/`.
 
@@ -273,3 +273,5 @@ Dokumentace má také popsat místa, kde architektura není ideální:
 Tyto body nejsou důvodem k okamžitému přepisu. Jsou upozorněním pro budoucí změny: nová abstrakce má vzniknout až tehdy, když skutečně zjednoduší správu a zachová stabilní adresy a ID.
 
 Článek „Jak sluneční cyklus ovlivňuje klima?“ je propojený s novým pozorováním slunečního příkonu (`SolarIrradianceArticle.tsx`), teplotou stratosféry a měřením radiačních toků. Obsahuje dva příběhy, dvě vysvětlující grafiky a veřejné číselné podklady. Pozorování přikládá nezměněná denní data SORCE TIM v20, CSV průměrů, metadata, skript reprodukce a datový graf.
+
+Oblačné zpětné vazby mají tři příběhy současně působících procesů, tři AI ilustrace a šest testů. CloudFeedbackArticle.tsx je obousměrně propojen s novým pozorováním CloudRadiationArticle.tsx na /pozorovani/oblaka-a-radiacni-bilance/ a třemi metodami. Pozorování obsahuje graf z veřejného přepisu tabulky CERES EBAF 4.0. Podklady a reprodukční skript jsou v public/media/oblaka-a-radiacni-bilance/, ilustrace a prompty v public/media/oblaka-a-jejich-klimaticke-zpetne-vazby/.

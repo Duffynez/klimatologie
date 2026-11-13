@@ -1,0 +1,8 @@
+Klimatologie.eu, 13. listopadu 2026
+Graf je původní vykreslení čísel z NASA CERES EBAF Ed4.0 Data Quality Summary, 17. ledna 2018, tabulka 6-1, strana 24 dokumentu.
+https://ceres.larc.nasa.gov/documents/DQ_summaries/CERES_EBAF_Ed4.0_DQS.pdf
+Červenec 2005 až červen 2015, globální průměr. CSV obsahuje edice 2.8 i 4.0, graf vykresluje jen 4.0. Zachován publikovaný čistý účinek, který kvůli zaokrouhlení není přesným součtem uvedených dílčích hodnot.
+Nejde o přepočet aktuálního EBAF z měsíčních dat. Nejistoty této trojice nejsou v tabulce uvedeny, nejsou v grafu vymyšleny.
+Současný datový portál: https://ceres.larc.nasa.gov/data/
+Reprodukce: python plot.py (vyžaduje matplotlib). CSV, skript a vlastní graf: CC BY 4.0.
+

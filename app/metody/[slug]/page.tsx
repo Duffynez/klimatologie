@@ -339,7 +339,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "druzicova-gravimetrie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Družicová gravimetrie" meta="31. října 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Družicová gravimetrie" meta="13. listopadu 2026">
           <p>Jak změny vzdálenosti mezi družicemi umožňují měřit přesuny vody a úbytek hmotnosti ledových příkrovů.</p>
         </PageLead>
         <GravimetryArticle />
@@ -351,7 +351,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "radarova-interferometrie-a-sledovani-pohybu-povrchu") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Radarová interferometrie a sledování pohybu povrchu" meta="6. listopadu 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Radarová interferometrie a sledování pohybu povrchu" meta="13. listopadu 2026">
           <p>Jak se z opakovaných radarových snímků měří pohyb povrchu a jak mapy rychlosti ledu pomáhají určit odtok z ledových příkrovů.</p>
         </PageLead>
         <InterferometryArticle />
@@ -411,7 +411,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "pasivni-infracervena-radiometrie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Pasivní infračervená radiometrie" meta="6. listopadu 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Pasivní infračervená radiometrie" meta="13. listopadu 2026">
           <p>Jak družice zachytí tepelné záření a jak z něj po oddělení vlivu atmosféry a vlastností povrchu získáme teplotní mapu.</p>
         </PageLead>
         <InfraredRadiometryArticle />

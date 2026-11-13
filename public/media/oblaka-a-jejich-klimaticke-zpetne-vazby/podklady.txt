@@ -1,0 +1,8 @@
+Klimatologie.eu, 13. listopadu 2026
+Tři původní vysvětlující ilustrace vytvořené vestavěným nástrojem image_gen. Režim generate, neprůhledné pozadí. Úplné prompty jsou v prompts.json. Licence vlastních ilustrací CC BY 4.0.
+iris.png: Lindzen, Chou a Hou (2001), DOI 10.1175/1520-0477(2001)082<0417:DTEHAA>2.3.CO;2, dále Hartmann a Michelsen (2002), DOI 10.1175/1520-0477(2002)083<0249:NEFI>2.3.CO;2 a Fu, Baker a Hartmann (2002), DOI 10.5194/acp-2-31-2002.
+vyska.png: Hartmann a Larson (2002), DOI 10.1029/2002GL015835, Zelinka a Hartmann (2010), DOI 10.1029/2010JD013817 a (2011), DOI 10.1029/2011JD016459.
+nizka.png: Myers a kol. (2021), DOI 10.1038/s41558-021-01039-0, doplňující fyzikální přehled Ceppi a kol. (2017), DOI 10.1002/wcc.465.
+Výšky, počty a šířky šipek jsou ilustrativní. Žádná grafika nepředstavuje měřený snímek ani numerickou simulaci. Bóje a barevná mapa v nizka.png jsou ilustrace, nikoli datové podklady testu. Oranžové šipky značí tepelné záření, žluté sluneční světlo, proudnice promíchávání. Černá značka u výšky označuje posun hladiny.
+Číselné výsledky a omezení jednotlivých testů uvádí doprovodný článek se zdroji. Graf radiačního účinku v navazujícím pozorování je naopak reprodukovatelně vykreslen z publikovaných hodnot.
+

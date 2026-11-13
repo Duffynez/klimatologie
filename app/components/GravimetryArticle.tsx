@@ -59,7 +59,8 @@ export function GravimetryArticle() {
           změna vzdálenosti. Měření v obou směrech se spojí a vztáhne ke společnému
           času. Pro výpočet gravitačního pole se používá zejména rychlost, s jakou
           se vzájemná vzdálenost mění.{" "}
-          <SourceLink id="WEB_GRACEFO_L1_Handbook_2019">(příručka GRACE-FO, oddíl 3.3)</SourceLink>
+          <SourceLink id="WEB_GRACEFO_L1_Handbook_2019">(příručka GRACE-FO, oddíl 3.3)</SourceLink>{" "}
+          <SourceLink id="DOI_10_1029_2020GL088306">(Landerer a kol. 2020, oddíly 2 a 3)</SourceLink>
         </p>
         <figure className="article-figure">
           <Image src="/media/gravimetry/grace-fo-clean-room.jpg" width={6569} height={4693}
@@ -281,7 +282,7 @@ export function GravimetryArticle() {
           Součet se porovnává s vývojem
           <Link href="/pozorovani/gmsl/#bilance-hladiny"> globální hladiny moře</Link>.
           Frederikse a kolegové pro období 2003–2018 použili k určení
-          hmotnostního příspěvku měření GRACE.{" "}
+          hmotnostního příspěvku měření GRACE a GRACE-FO.{" "}
           <SourceLink id="DOI_10_1038_s41586_020_2591_3">(Frederikse a kol. 2020, bilance hladiny)</SourceLink>
         </p>
 
@@ -300,9 +301,9 @@ export function GravimetryArticle() {
         <details className="article-details">
           <summary>Podrobnosti nejistot a nezávislé kontroly</summary>
           <p>
-            <strong>Velikost rozlišovaných oblastí.</strong> Mascony JPL mají
-            rozměr plochu odpovídající přibližně třem krát třem
-            úhlovým stupňům na rovníku. Jemnější půlstupňová mřížka
+            <strong>Velikost rozlišovaných oblastí.</strong> Každý mascon JPL má
+            přibližně stejnou plochu jako políčko o rozměrech tři krát tři
+            úhlové stupně u rovníku. Jemnější půlstupňová mřížka
             zveřejněné mapy obsahuje hodnoty těchto větších prvků. Samostatné
             políčko proto nepředstavuje nezávislé měření malého ledovce.{" "}
             <SourceLink id="DOI_10_1002_2014JB011547">(Watkins a kol. 2015)</SourceLink>{" "}
@@ -325,7 +326,7 @@ export function GravimetryArticle() {
             nezávislou kontrolou.{" "}
             <SourceLink id="WEB_GRACEFO_L1_Handbook_2019">(příručka GRACE-FO)</SourceLink>{" "}
             <SourceLink id="WEB_JPL_Mascon_RL061Mv3_Notes_2022">(JPL, změny verze 3)</SourceLink>{" "}
-            <SourceLink id="DOI_10_1038_s43247_020_0010_1">(Sasgen a kol. 2020)</SourceLink>
+            <SourceLink id="DOI_10_1029_2020GL088306">(Landerer a kol. 2020, oddíl 3)</SourceLink>
           </p>
           <p>
             <strong>Jiná měření.</strong> Tapley a kolegové ověřili model
@@ -359,8 +360,8 @@ export function GravimetryArticle() {
         <h2>Skutečný příklad: změna hmotnosti Grónska</h2>
         <p>
           NASA zveřejňuje tabulku grónské a antarktické hmotnostní řady
-          od dubna 2002 do září 2022. Jde o veřejný výběr z produktu JPL
-          RL06.1M CRI, verze 3.0, připravený 24. ledna 2023.
+          od dubna 2002 do září 2022. Sešit z 24. ledna 2023 zachycuje
+          tehdejší řady JPL založené na řešení RL06.1M CRI, verze 3.0.
           Použijeme dvě grónské hodnoty: duben 2019 a duben 2020.
           Vstupujeme do postupu až po výpočtu gravitačního pole, odečtení
           modelovaného pohybu podloží a sečtení hmotnosti území.
@@ -405,8 +406,11 @@ export function GravimetryArticle() {
             A207 a A219 s časovými značkami 2019.29 a 2020.29.
             Zaokrouhlený desetinný rok označuje měsíční období, nepřevádíme
             jej na přesný den. Stejná čísla jsou na řádcích 173 a 185 listu
-            <code> Greenland &amp; Ant Derived Data</code>. Podkladový produkt
-            JPL má DOI <code>10.5067/TEMSC-3MJ62</code>.
+            <code> Greenland &amp; Ant Derived Data</code>. Katalog NASA
+            popisuje <SourceLink id="DOI_10_5067_TEMSC_GT613">grónskou řadu JPL</SourceLink>{" "}
+            a její <SourceLink id="DOI_10_5067_TEMSC_3JC63">podkladovou globální mřížku</SourceLink>.
+            Oba záznamy označují vydání RL06.1Mv03. Hodnoty z příkladu
+            jsou dostupné bez účtu v uvedeném sešitu.
           </p>
           <p>
             Zveřejňujeme <a href="/data/methods/gravimetry/greenland-april.csv">dva vybrané řádky CSV</a>,{" "}
