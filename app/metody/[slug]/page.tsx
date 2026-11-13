@@ -363,7 +363,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "radarova-a-laserova-altimetrie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Radarová a laserová altimetrie" meta="31. října 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Radarová a laserová altimetrie" meta="13. listopadu 2026">
           <p>Jak družice měří výšku oceánu a ledových příkrovů a jak z těchto měření vzniká údaj o změně hladiny nebo povrchu ledu.</p>
         </PageLead>
         <AltimetryArticle />
@@ -375,7 +375,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "lidar-a-laserove-mereni-vzdalenosti") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Dálkový průzkum" title="Lidarové měření atmosféry a vegetace" meta="31. října 2026">
+        <PageLead eyebrow="Metody / Dálkový průzkum" title="Lidarové měření atmosféry a vegetace" meta="13. listopadu 2026">
           <p>Jak návrat laserového světla odhaluje vrstvy oblaků a aerosolu i výšku porostu a jak se z jednoho skutečného pulzu GEDI vypočítá výškový ukazatel.</p>
         </PageLead>
         <LidarArticle />

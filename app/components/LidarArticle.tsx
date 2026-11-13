@@ -28,7 +28,7 @@ export function LidarArticle() {
           jehož dalekohled jej soustředí na detektor. Detektor přemění světlo na
           elektrický signál a elektronika zaznamená, jak se tento signál mění
           v čase. Blízké části prostředí se v záznamu ozvou dříve než vzdálené.{" "}
-          <SourceLink id="WEB_CALIPSO_Final_Report_2026">(Trepte 2026, přístroj CALIOP)</SourceLink>
+          <SourceLink id="DOI_10_1029_2007GL030135">(Winker a kol. 2007, oddíl 2)</SourceLink>
         </p>
         <Equation tex={String.raw`r=\frac{c\,\Delta t}{2}`} />
         <p>
@@ -78,7 +78,7 @@ export function LidarArticle() {
           propouštěly úzké pásmo kolem vyslané vlnové délky, aby omezily světlo
           z jiných zdrojů. Ze záznamu se odečte pozadí, tedy úroveň signálu,
           kterou přístroj zachycuje i bez návratu sledovaného pulzu.{" "}
-          <SourceLink id="WEB_CALIPSO_Final_Report_2026">(Trepte 2026)</SourceLink>{" "}
+          <SourceLink id="DOI_10_1029_2007GL030135">(Winker a kol. 2007, oddíl 2)</SourceLink>{" "}
           a <SourceLink id="DOI_10_5194_amt_11_1459_2018">(Kar a kol. 2018, oddíl 2)</SourceLink>
         </p>
         <p>
@@ -378,10 +378,12 @@ export function LidarArticle() {
           Obsahuje křivku návratu z produktu GEDI L1B i již vypočtené polohy
           z produktu L2A, obojí ve verzi 001. L1B poskytuje opravený záznam
           s určenou polohou, L2A výsledek rozpoznání půdy a výškové ukazatele.
-          Zopakujeme poslední krok: převod poloh v záznamu na relativní výšku.{" "}
-          <SourceLink id="WEB_rGEDI_Frozen_Samples_2026">(veřejný výřez rGEDI)</SourceLink>,{" "}
-          <SourceLink id="DOI_10_5067_GEDI_GEDI01_B_001">(GEDI L1B)</SourceLink>{" "}
-          a <SourceLink id="DOI_10_5067_GEDI_GEDI02_A_001">(GEDI L2A)</SourceLink>
+          Katalog NASA uchovává popis vyřazené verze 001. Použité soubory
+          zpřístupňuje <SourceLink id="WEB_rGEDI_Frozen_Samples_2026">repozitář rGEDI</SourceLink>{" "}
+          a jednotlivé výřezy lze stáhnout z karet{" "}
+          <SourceLink id="DOI_10_5067_GEDI_GEDI01_B_001">GEDI L1B</SourceLink>{" "}
+          a <SourceLink id="DOI_10_5067_GEDI_GEDI02_A_001">GEDI L2A</SourceLink>.
+          Zopakujeme poslední krok, převod poloh v záznamu na relativní výšku.
         </p>
         <p>
           Křivka níže ukazuje sílu přijatého signálu po odečtení zveřejněné
@@ -455,8 +457,8 @@ export function LidarArticle() {
             Vyžaduje knihovnu h5py, ověřeno s verzí 3.16.0.
             Záznam má příznaky <code>quality_flag=1</code>,{" "}
             <code>degrade_flag=0</code> a používá algoritmus 1.
-            Jde o historické produkty V001, nikoli o jejich pozdější
-            přepracování. <a href="/data/methods/lidar/plot.py">Skript grafu</a>{" "}
+            Skript čte historické produkty V001.{" "}
+            <a href="/data/methods/lidar/plot.py">Skript grafu</a>{" "}
             umožňuje zopakovat i zobrazení.
           </p>
         </details>

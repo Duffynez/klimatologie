@@ -618,7 +618,7 @@ test("publishes altimetry with real data, open sources and reciprocal ocean and 
     "Jak altimetrie určuje výšku hladiny a ledu", "Nejistoty a ověření",
     "Příklad: jeden záznam hladiny v Tichém oceánu", "Shrnutí",
   ]);
-  assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">13\. listopadu 2026<\/p>/);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
   assert.match(body, /6,7 centimetru nad místním referenčním průměrem/);
   assert.match(body, /historický produkt GDR-D/);
@@ -635,7 +635,16 @@ test("publishes altimetry with real data, open sources and reciprocal ocean and 
   for (const id of ids) {
     const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
     assert.ok(card, "Missing altimetry source " + id);
-    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    if (id === "DATA_Jason3_GDRD_C066_P082") {
+      const record = JSON.parse(await readFile(new URL("public/data/methods/altimetry/jason3-record.json", root), "utf8"));
+      assert.ok(card.includes('href="' + record.source_url + '"'));
+      assert.match(card, /Stáhnout původní přelet Jasonu-3 \(NetCDF\)/);
+    } else if (id === "WEB_NASA_ATLAS_Testing_11709") {
+      assert.match(card, /href="https:\/\/svs\.gsfc\.nasa\.gov\/vis\/[^"]+\.jpg"/);
+      assert.match(card, /Otevřít původní snímek ATLAS \(JPG\)/);
+    } else {
+      assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    }
     assert.doesNotMatch(card, /drive\.google\.com/);
     if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
   }
@@ -685,7 +694,7 @@ test("publishes lidar with accessible sources, local illustrations and a recipro
   assert.deepEqual([...body.matchAll(/<h2\b[^>]*>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak lidar rozpoznává vrstvy atmosféry a porostu", "Nejistoty a ověření", "Příklad: výška porostu z jednoho pulzu GEDI", "Shrnutí",
   ]);
-  assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">13\. listopadu 2026<\/p>/);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
   assert.match(body, /10,90 metru/);
   assert.match(body, /historické produkty V001/);
@@ -697,10 +706,23 @@ test("publishes lidar with accessible sources, local illustrations and a recipro
   assert.ok(hasArticleLink(observation, `/metody/${slug}`));
   const ids = [...new Set([...source.matchAll(/<SourceLink id="([^"]+)"/g)].map(m => m[1]))];
   assert.ok(ids.length >= 5);
+  const meta = JSON.parse(await readFile(new URL("public/data/methods/lidar/provenance.json", root), "utf8"));
+  const dataArchives = new Map([
+    ["DOI_10_5067_GEDI_GEDI01_B_001", meta.download_archives[0].url],
+    ["DOI_10_5067_GEDI_GEDI02_A_001", meta.download_archives[1].url],
+  ]);
   for (const id of ids) {
     const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
     assert.ok(card, "Missing lidar source " + id);
-    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    if (dataArchives.has(id)) {
+      assert.ok(card.includes('href="' + dataArchives.get(id) + '"'));
+      assert.match(card, /Stáhnout výřez s (křivkou návratu L1B|výškami L2A) \(ZIP\)/);
+    } else if (id === "WEB_NASA_GEDI_Receiver_Photo_2019") {
+      assert.match(card, /href="https:\/\/www\.nasa\.gov\/wp-content\/uploads\/[^"]+\.jpg\?w=2048"/);
+      assert.match(card, /Otevřít fotografii dalekohledu \(JPG\)/);
+    } else {
+      assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    }
     assert.doesNotMatch(card, /drive\.google\.com/);
     if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
   }
