@@ -4,17 +4,19 @@ import "./globals.css";
 import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
 
+const slogan = "Klima, které můžete zkoumat sami.";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://klimatologie.eu"),
   title: {
-    default: "Klimatologie.eu | Data, souvislosti, zdroje",
+    default: `Klimatologie.eu | ${slogan}`,
     template: "%s | Klimatologie.eu",
   },
   description: "Český rozcestník k datům, metodám a původním zdrojům o klimatu.",
   openGraph: {
     title: "Klimatologie.eu",
-    description: "Data, souvislosti, zdroje.",
-    images: ["/og.png"],
+    description: slogan,
+    images: [{ url: "/earth-europe.jpg", alt: "Země na snímku NASA Blue Marble" }],
   },
   icons: {
     icon: "/favicon.svg",

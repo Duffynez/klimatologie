@@ -42,7 +42,7 @@ Hlavní navigace není odvozena automaticky ze složek. Je to ručně udržovan�
 
 | Adresa | Zdroj stránky | Zdroj obsahu |
 | --- | --- | --- |
-| `/` | `app/page.tsx` | Ručně sestavený úvod, vybraná pozorování a počet zdrojů. |
+| `/` | `app/page.tsx` | Úvod s ukázkou pozorování, metody a mechanismu, rozcestníkem a výběrem pozorování. |
 | `/pozorovani/` | `app/pozorovani/page.tsx` | `app/data/evidence.ts`. |
 | `/pozorovani/[slug]/` | `app/pozorovani/[slug]/page.tsx` | Katalog `evidence.ts` a ručně připojené komponenty `*Article.tsx`. |
 | `/metody/` | `app/metody/page.tsx` | `app/data/methods.ts`. |

@@ -1260,9 +1260,9 @@ test("routes every published article source through the central catalogue", asyn
   }
 });
 
-test("replaces the temporary starter surface", async () => {
+test("publishes the home page with a linked observation example", async () => {
   const [home, layout, header, footer, robots, sitemap] = await Promise.all([
-    readFile(new URL("app/page.tsx", root), "utf8"),
+    readFile(new URL("dist/client/index.html", root), "utf8"),
     readFile(new URL("app/layout.tsx", root), "utf8"),
     readFile(new URL("app/components/SiteHeader.tsx", root), "utf8"),
     readFile(new URL("app/components/SiteFooter.tsx", root), "utf8"),
@@ -1270,13 +1270,19 @@ test("replaces the temporary starter surface", async () => {
     readFile(new URL("public/sitemap.xml", root), "utf8"),
   ]);
 
-  assert.match(home, /Jak víme, co se s klimatem děje/);
-  assert.match(home, /co bylo skutečně pozorováno nebo změřeno/);
-  assert.match(home, /veřejnými daty a původními studiemi/);
+  assert.match(home, /<h1>Klima, které můžete zkoumat sami\.<\/h1>/);
+  assert.match(home, /href="#ledovce"/);
   assert.match(home, /earth-europe\.jpg/);
-  assert.match(home, /unoptimized/);
-  assert.match(home, /featuredObservationSlugs[\s\S]*"gmst"[\s\S]*"stratosfericke-ochlazovani"[\s\S]*"ustup-ledovcu"/);
-  assert.doesNotMatch(home, /Mapa pozorování|slice\(0, 6\)/);
+  const glacierExample = home.match(/<section[^>]*id="ledovce"[\s\S]*?<\/section>/)?.[0];
+  assert.ok(glacierExample);
+  assert.ok(home.indexOf(glacierExample) < home.indexOf('id="rozcestnik-nadpis"'));
+  for (const href of [
+    "/pozorovani/ustup-ledovcu/#pozorovani",
+    "/metody/terenni-mereni-bilance-ledovcu/#terenni-odecty",
+    "/mechanismy/hmotnostni-bilance-horskych-ledovcu/",
+  ]) assert.ok(glacierExample.includes('href="' + href + '"'), "Missing example link " + href);
+  const directory = home.match(/<section[^>]*aria-labelledby="rozcestnik-nadpis"[\s\S]*?<\/section>/)?.[0];
+  assert.ok(directory && hasArticleLink(directory, "/mechanismy/"));
   assert.match(layout, /Klimatologie\.eu/);
   assert.match(layout, /static\.cloudflareinsights\.com\/beacon\.min\.js/);
   assert.match(layout, /5e5e8b07ed9f445d82e999e0de1c8f65/);
