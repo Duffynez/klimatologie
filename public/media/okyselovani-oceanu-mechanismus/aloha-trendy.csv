@@ -1,0 +1,4 @@
+method,label,period,annual_slope,annual_standard_error,source_locator
+prediction,Očekávání z atmosférického CO2,1988–2007,-0.0016,0.00003,Dore 2009 s. 12236
+calculated,Výpočet z uhlíku a alkalinity,1988–2007,-0.0019,0.0002,Dore 2009 s. 12236
+measured,Samostatné optické měření,1992–1998 a 2003–2007,-0.0014,0.0002,Dore 2009 s. 12236

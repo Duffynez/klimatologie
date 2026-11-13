@@ -1,0 +1,55 @@
+Klimatologie.eu: Proč klesá pH povrchového oceánu?
+Připraveno a ověřeno 13. listopadu 2026.
+
+PŮVOD A LICENCE
+mechanismus.svg: vlastní kvalitativní schéma připravené s pomocí AI.
+aloha-srovnani.svg: vlastní graf publikovaných čísel, připravený s pomocí AI.
+Grafika, doprovodný kód a tento text: Klimatologie.eu, CC BY 4.0.
+Nejde o převzaté obrázky. Číselná fakta jsou přepsána z původní studie.
+Velikosti šipek ve schématu nejsou měřítkem toků. Převládající směr změny
+odpovídá přídavku CO2 při stejné teplotě, slanosti a celkové alkalinitě.
+
+CHEMICKÉ SCHÉMA
+Dickson, Sabine a Christian (eds.), 2007. Guide to Best Practices for Ocean
+CO2 Measurements, kapitola 2 (rovnice 2–9 a definice analytických parametrů).
+DOI: https://doi.org/10.25607/OBP-1342
+Plný text: https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/Handbook_2007/Guide_all_in_one.pdf
+Ma, Gregor a Gruber, 2023. Four Decades of Trends and Drivers of Global
+Surface Ocean Acidification, oddíly 2.3 a 3.3.
+DOI: https://doi.org/10.1029/2023GB007765
+Plný text: https://www.research-collection.ethz.ch/server/api/core/bitstreams/3cd55c02-f828-4b4a-ae85-15def9324f52/content?download=1
+
+HAVAJSKÝ GRAF
+Dore, Lukas, Sadler, Church a Karl, 2009. Physical and biogeochemical
+modulation of ocean acidification in the central North Pacific.
+PNAS 106(30), 12235–12240. DOI: https://doi.org/10.1073/pnas.0906044106
+Plný text: https://hahana.soest.hawaii.edu/cmoreserver/summercourse/2015/documents/Bottjer_05-30/Dore_2009_OA_NPSG.pdf
+Zdroj hodnot: s. 12236, oddíl Long-Term Trends in Seawater pH, souvislost
+s obrázkem 1. Povrchová vrstva stanice ALOHA: 0–30 m.
+První dvě hodnoty popisují období říjen 1988 až prosinec 2007.
+Přímé měření: duben 1992 až červen 1998 a červen 2003 až prosinec 2007.
+pH je na celkové stupnici a při podmínkách odběru. Přímé optické měření
+probíhalo při 25 °C, přepočet na podmínky odběru používá chemické vztahy.
+Roční sklony a jejich standardní chyby jsou v aloha-trendy.csv.
+Na desetiletí převádíme sklon i jeho standardní chybu násobením deseti.
+Úsečky představují ±1 standardní chybu sklonu, nikoli 95% interval.
+Jde o přepis publikovaných souhrnů, nikoli nový trend z dnešního archivu HOT.
+Graf nesrovnává tři zcela nezávislé záznamy za totožné období.
+
+OPAKOVÁNÍ
+Soubory aloha-trendy.csv, vypocty.mjs a grafika.mjs uložte do jedné složky.
+V Node.js spusťte: node vypocty.mjs
+Obrázky vytvoří: node grafika.mjs
+Skripty nevyžadují další balíčky a zapisují SVG pouze do vlastní složky.
+Vypocty.mjs také počítá čistě ilustrační poměr 10^(8.2 - 8.1).
+Poměr přibližně 1.2589 odpovídá asi 26% růstu vodíkových iontů na téže
+stupnici pH. Tento příklad není samostatné měření ani historická rekonstrukce.
+
+LABORATORNÍ OVĚŘENÍ V TEXTU
+Lueker, Dickson a Keeling, 2000. Marine Chemistry 70(1–3), 105–119.
+DOI: https://doi.org/10.1016/S0304-4203(00)00022-0
+Plný text: https://bluemoon.ucsd.edu/publications/tim/marchem_2000.pdf
+Tabulka 3 obsahuje jednotlivé laboratorní výsledky, tabulka 4 průměrné
+relativní odchylky a jejich 95% intervaly spolehlivosti. Hranice rozsahu
+je fCO2 = 500 mikroatmosfér. Nad ní uvedená formulace vykazovala větší
+rozdíl. Nezaměňovat tento interval s jednou standardní chybou v grafu ALOHA.

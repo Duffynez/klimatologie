@@ -495,7 +495,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
   if (slug === "spektrofotometrie") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow="Metody / Laboratorní analýza" title="Spektrofotometrie roztoků" meta="6. listopadu 2026">
+        <PageLead eyebrow="Metody / Laboratorní analýza" title="Spektrofotometrie roztoků" meta="13. listopadu 2026">
           <p>Jak přidané barvivo a měření pohlcovaného světla umožňují určit pH mořské vody a sledovat acidifikaci oceánu.</p>
         </PageLead>
         <SpectrophotometryArticle />

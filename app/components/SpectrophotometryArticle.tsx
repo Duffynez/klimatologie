@@ -374,6 +374,9 @@ export function SpectrophotometryArticle() {
             <SourceLink id="DOI_10_5194_os_7_597_2011">(Aßmann a kol., 2011)</SourceLink>
           </p>
         </div>
+        <aside className="article-related-mechanism" aria-label="Navazující vysvětlení">
+          <p>Jak samostatné optické měření ověřuje chemické vysvětlení změny oceánu, ukazuje článek <Link href="/mechanismy/pohlcovani-co2-oceanem-a-uhlicitanova-chemie/#test-havaj">Proč klesá pH povrchového oceánu?</Link></p>
+        </aside>
       </div>
     </article>
   );

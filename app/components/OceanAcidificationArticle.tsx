@@ -532,7 +532,7 @@ export function OceanAcidificationArticle() {
           <SourceLink id="DOI_10_3389_fmars_2023_1289931">Bates a Johnson, 2023</SourceLink>
         </p>
 
-        <p>
+        <p id="aloha-povrch">
           Nezávislé dlouhé odběry u Havaje ukazují podobnou změnu. Dore a kol. pro povrchovou vodu stanice ALOHA v
           období 1988–2007 vypočetli z DIC a alkalinity sklon pH −0,0019 ± 0,0002 za rok. Přímá měření pH byla dostupná
           jen v letech 1992–1998 a 2003–2007. Po převodu na teplotu a tlak při odběru dala sklon −0,0014 ± 0,0002 za rok.
@@ -545,7 +545,7 @@ export function OceanAcidificationArticle() {
           <SourceLink id="DOI_10_5670_oceanog_2014_16">Bates a kol., 2014</SourceLink>
         </p>
 
-        <p>
+        <p id="globalni-povrch">
           Lauvset a kol. rozdělili oceán do 17 velkých oblastí podle teploty, hloubky promíchané vrstvy a obsahu chlorofylu.
           Pro období 1991–2011 mělo dostatek dat 15 oblastí. Statisticky významný pokles pH našli přibližně v 70 %
           všech 17 oblastí. Plošně vážený průměr sklonů ve 13 oblastech se statisticky významnou změnou byl
@@ -620,6 +620,7 @@ export function OceanAcidificationArticle() {
         </div>
 
         <aside className="article-related-mechanism" aria-label="Navazující vysvětlení">
+          <p>Laboratorní a oceánské zkoušky příčin rozebírá článek <Link href="/mechanismy/pohlcovani-co2-oceanem-a-uhlicitanova-chemie/">Proč klesá pH povrchového oceánu?</Link></p>
           <p>Jak změna zásoby a výměna přes hladinu pomáhají rozlišit zdroje atmosférického uhlíku, vysvětluje článek <Link href="/mechanismy/puvod-rustu-atmosferickeho-co2/#ocean">Proč v atmosféře přibývá CO₂?</Link></p>
         </aside>
 

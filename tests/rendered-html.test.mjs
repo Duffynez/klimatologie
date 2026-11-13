@@ -4,6 +4,69 @@ import { readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 import { stripTypeScriptTypes } from "node:module";
 
+test("ocean acidification connects independent measurements, controls and reproducible trend data", async () => {
+  const route = "/mechanismy/pohlcovani-co2-oceanem-a-uhlicitanova-chemie";
+  const html = await readFile(new URL("dist/client" + route + "/index.html", root), "utf8");
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "Replace the existing outline with the complete mechanism");
+  assert.match(html, /<h1>Proč klesá pH povrchového oceánu\?<\/h1>/);
+  assert.match(html, /<p class="page-lead__meta">13\. listopadu 2026<\/p>/);
+  assert.equal((body.slice(0, body.indexOf('<h2 id="hypotezy"')).match(/<p\b/g) ?? []).length, 2);
+  for (const id of ["prisun-co2", "test-laborator", "test-havaj", "test-globalni", "chemie", "zaver"]) assert.ok(body.includes(`id="${id}"`));
+  assert.match(body, /přirozenou složku/);
+  assert.match(body, /Také tato složka může reagovat na oteplování způsobené člověkem/);
+  assert.match(body, /1992–1998 a 2003–2007/);
+  assert.match(body, /standardní chybu odhadu sklonu/);
+  assert.doesNotMatch(body, /katex-error|_vinext\/image/);
+  const bibliography = body.slice(body.indexOf('<h2 id="prameny"'));
+  const catalogue = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
+  for (const id of new Set([...body.matchAll(/href="\/zdroje#([^"]+)"/g)].map(m => m[1]))) {
+    assert.ok(bibliography.includes('href="/zdroje#' + id + '"'), "Missing bibliography entry " + id);
+    const card = catalogue.match(new RegExp('<article[^>]+id="' + id + '"[\\s\\S]*?</article>'))?.[0];
+    assert.ok(card, "Missing source card " + id);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    assert.match(card, /Otevřít (plný text|veřejný zdroj|veřejná data)/);
+    if (id.startsWith("DOI_")) assert.match(card, /doi\.org\//);
+  }
+  for (const [, href] of body.matchAll(/href="(\/[^\"]+)"/g)) {
+    const [pathname, anchor] = href.split("#");
+    const file = /\.[a-z0-9]+$/i.test(pathname) ? pathname : pathname.replace(/\/$/, "") + "/index.html";
+    const target = await readFile(new URL("dist/client" + file, root), "utf8");
+    if (anchor) assert.ok(target.includes(`id="${anchor}"`), "Broken evidence link " + href);
+  }
+  for (const target of ["/pozorovani/acidifikace-oceanu", "/metody/spektrofotometrie"]) {
+    const related = await readFile(new URL("dist/client" + target + "/index.html", root), "utf8");
+    assert.ok(hasArticleLink(body, target));
+    assert.ok(hasArticleLink(related, route), "Missing reciprocal link " + target);
+  }
+  const base = new URL("public/media/okyselovani-oceanu-mechanismus/", root);
+  for (const file of ["mechanismus.svg", "aloha-srovnani.svg", "aloha-trendy.csv", "vypocty.mjs", "grafika.mjs", "podklady.txt"]) {
+    const original = await readFile(new URL(file, base));
+    assert.deepEqual(original, await readFile(new URL("dist/client/media/okyselovani-oceanu-mechanismus/" + file, root)));
+    if (file.endsWith(".svg")) {
+      assert.ok(body.includes("/media/okyselovani-oceanu-mechanismus/" + file));
+      assert.match(original.toString(), /<title[^>]*>[^<]+<\/title>/);
+      assert.match(original.toString(), /<desc[^>]*>[^<]+<\/desc>/);
+    }
+  }
+  const { calculate } = await import(new URL("vypocty.mjs", base));
+  const result = calculate();
+  assert.deepEqual(result.rows.map(r => r.annualSlope), [-0.0016, -0.0019, -0.0014]);
+  assert.deepEqual(result.rows.map(r => r.annualStandardError), [0.00003, 0.0002, 0.0002]);
+  assert.ok(Math.abs(result.illustrativeHydrogenRatio - 1.2589254117941673) < 1e-12);
+  const graph = await readFile(new URL("aloha-srovnani.svg", base), "utf8");
+  for (const row of result.rows) {
+    assert.ok(Math.abs(row.decadeSlope - row.annualSlope * 10) < 1e-12);
+    assert.ok(Math.abs(row.decadeStandardError - row.annualStandardError * 10) < 1e-12);
+    assert.ok(graph.includes(row.decadeSlope.toFixed(3).replace("-", "−").replace(".", ",")));
+  }
+  assert.match(graph, /±1 standardní chyba/);
+  assert.match(graph, /1992–1998 a 2003–2007/);
+  const uncertainty = body.slice(body.indexOf('<h2 id="nejistoty"'), body.indexOf('<h2 id="dalsi-overeni"'));
+  assert.ok(uncertainty.replace(/<[^>]+>/g, " ").trim().split(/\s+/).length <= 600);
+  assert.doesNotMatch(body.replace(/<[^>]+>/g, " ").replace(/&[^;]+;/g, " "), /;/);
+});
+
 test("albedo mechanism links its experiments and distinguishes measured radiation from reconstruction", async () => {
   const route = "/mechanismy/odrazivost-snehu-a-ledu-jako-zpetna-vazba";
   const html = await readFile(new URL("dist/client" + route + "/index.html", root), "utf8");
@@ -1400,7 +1463,7 @@ test("groups all 23 mechanism topics by their link to observations and preserves
     assert.ok(sitemap.includes(`<loc>https://klimatologie.eu/mechanismy/${slug}/</loc>`), "Missing sitemap route " + slug);
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     assert.ok(html.includes(`<h1>${title}</h1>`), "Wrong detail title " + slug);
-    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen", "prumyslove-aerosoly-a-oblaka", "zmeny-ozonu-ve-stratosfere", "prenos-tepla-do-pudy-a-tani-permafrostu", "pohlcovani-a-presun-tepla-oceanem", "hmotnostni-bilance-a-dynamika-ledovych-prikrovu", "vodni-para-jako-zpetna-vazba", "hmotnostni-bilance-horskych-ledovcu", "vznik-a-zanik-snehove-pokryvky-na-sousi", "vznik-tani-a-pohyb-morskeho-ledu", "odrazivost-snehu-a-ledu-jako-zpetna-vazba"].includes(slug)) {
+    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen", "prumyslove-aerosoly-a-oblaka", "zmeny-ozonu-ve-stratosfere", "prenos-tepla-do-pudy-a-tani-permafrostu", "pohlcovani-a-presun-tepla-oceanem", "hmotnostni-bilance-a-dynamika-ledovych-prikrovu", "vodni-para-jako-zpetna-vazba", "hmotnostni-bilance-horskych-ledovcu", "vznik-a-zanik-snehove-pokryvky-na-sousi", "vznik-tani-a-pohyb-morskeho-ledu", "odrazivost-snehu-a-ledu-jako-zpetna-vazba", "pohlcovani-co2-oceanem-a-uhlicitanova-chemie"].includes(slug)) {
       assert.match(html, /Co musí toto vysvětlení objasnit/);
       assert.match(html, /<section class="mechanism-detail-evidence"[^>]*>[\s\S]*<p>[^<]+<\/p><\/section>/);
     }
@@ -2019,7 +2082,7 @@ test("publishes a sourced ocean acidification article with measured and reconstr
 
   assert.match(evidencePage, /OceanAcidificationArticle/);
   assert.match(evidencePage, /title="Acidifikace oceánu"/);
-  assert.match(evidencePage, /title="Acidifikace oceánu"\s+meta="6\. listopadu 2026"/);
+  assert.match(evidencePage, /title="Acidifikace oceánu"\s+meta="13\. listopadu 2026"/);
   assert.match(article, /Acidifikace oceánu je dlouhodobý posun chemického stavu mořské vody/);
   assert.match(article, /Jak se chemie oceánu měří/);
   assert.match(article, /Jak vzniká zveřejněný výsledek/);
@@ -3530,7 +3593,7 @@ test("publishes solution spectrophotometry with the correct data level and conne
   ]);
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.match(html, /<p class="page-lead__meta">6\. listopadu 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">13\. listopadu 2026<\/p>/);
   assert.deepEqual([...body.matchAll(/<h2\b[^>]*>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak změříme pH pomocí světla", "Nejistoty a ověření", "Příklad: výpočet ze skutečných absorbancí", "Shrnutí",
   ]);

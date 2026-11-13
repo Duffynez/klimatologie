@@ -192,14 +192,15 @@ export const climateMechanisms: ClimateMechanism[] = [
   },
   {
     slug: "pohlcovani-co2-oceanem-a-uhlicitanova-chemie",
-    title: "Proč se oceán okyseluje?",
+    title: "Proč klesá pH povrchového oceánu?",
     category: "Oceán a hladina moře",
-    cardSummary: "Přijímání CO₂ oceánem a jeho vliv na chemické složení a kyselost mořské vody.",
+    isComplete: true,
+    cardSummary: "Jak ověřujeme příčinu dlouhodobého okyselování povrchové mořské vody.",
     observations: [
       { href: "/pozorovani/acidifikace-oceanu/#pozorovani", label: "Pokles pH mořské vody" },
     ],
-    summary: "Přijímání CO₂ mění rovnováhu rozpuštěných forem uhlíku a pH mořské vody. Proudění, teplota a biologická činnost ovlivňují průběh změn v různých oblastech, hloubkách a ročních obdobích.",
-    distinguishingEvidence: "Porovnání očekávané chemické odezvy s měřením rozpuštěného uhlíku, pH, alkality a CO₂ ve vzduchu i vodě. Opakované profily a sezónní záznamy rozlišují vliv přísunu CO₂, proudění a biologické činnosti.",
+    summary: "Laboratorní pokusy, dlouhé měření u Havaje a globální rozbor ukazují, jak přísun CO₂ mění chemii vody. Co tyto zkoušky říkají o příčině poklesu pH a o vlivu teploty, proudění a biologické činnosti.",
+    distinguishingEvidence: "Nezávislá kontrola chemického výpočtu plynovým a optickým měřením. Porovnání očekávaného tempa s pozorováním a rozklad globální změny na příspěvky uhlíku, teploty a dalších vlastností vody.",
   },
   {
     slug: "odrazivost-snehu-a-ledu-jako-zpetna-vazba",
