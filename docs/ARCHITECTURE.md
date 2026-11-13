@@ -52,8 +52,6 @@ Hlavní navigace není odvozena automaticky ze složek. Je to ručně udržovan�
 | `/projekce/` | `app/projekce/page.tsx` | Lokální pole témat přímo v souboru stránky. |
 | `/dusledky/` | `app/dusledky/page.tsx` | Lokální pole témat přímo v souboru stránky. |
 | `/historie/` | `app/historie/page.tsx` | `app/data/history.ts` a zdroje podle ID. |
-| `/osobnosti/` | `app/osobnosti/page.tsx` | Ručně psaná stránka. |
-| `/osobnosti/mariotte/` | `app/osobnosti/mariotte/page.tsx` | Ručně psaný profil. |
 | `/zdroje/` | `app/zdroje/page.tsx` | Spojené pole `sources` z `app/data/sources.ts`. |
 
 `generateStaticParams` u pozorování, metod a mechanismů vytvoří adresy pro všechny položky příslušného katalogu už při buildu. Neznámý slug skončí přes `notFound()`.

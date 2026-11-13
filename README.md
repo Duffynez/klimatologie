@@ -39,7 +39,7 @@ Vinext sestaví aplikaci jako statický web. GitHub Actions po každém pushi do
 | --- | --- |
 | `app/page.tsx` | Úvodní stránka. |
 | `app/pozorovani`, `app/metody`, `app/mechanismy` | Katalogy a dynamické adresy hlavních odborných částí. |
-| `app/projekce`, `app/dusledky`, `app/historie`, `app/osobnosti`, `app/zdroje` | Ostatní hlavní části webu. |
+| `app/projekce`, `app/dusledky`, `app/historie`, `app/zdroje` | Ostatní hlavní části webu. |
 | `app/components/*Article.tsx` | Ručně psané plné články. |
 | `app/components/SourceLink.tsx` | Přirozená citace uvnitř článku, která vede na příslušnou kartu zdroje. |
 | `app/components/Citation.tsx` | Krátká hranatá citace používaná například na historické ose. |

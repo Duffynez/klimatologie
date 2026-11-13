@@ -116,11 +116,9 @@ Každý celý příběh hypotézy obalte komponentou `HypothesisStory` z `app/co
 
 Autor, název a rok vydání publikace zůstávají pouze v katalogu zdrojů. Datum události je samostatný údaj: například pokus z roku 1774 může být doložen knihou vydanou v roce 1786.
 
-## 7. Projekce, důsledky a osobnosti
+## 7. Projekce a důsledky
 
 Projekce a důsledky jsou zatím osnovy přímo v příslušných souborech `page.tsx`. Přidání dlaždice proto nevyžaduje datový katalog, ale ani automaticky nevytvoří detailní adresu.
-
-Osobnosti jsou ručně vytvořené stránky. Při přidání další osobnosti je nutné vytvořit adresář, stránku, odkaz z katalogu, případné zdroje, sitemapu a test.
 
 ## 8. Citace v textu
 
