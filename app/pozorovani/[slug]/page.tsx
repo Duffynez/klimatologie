@@ -176,7 +176,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Oceány"
           title="Globální střední hladina moře"
-          meta="2. listopadu 2026"
+          meta="13. listopadu 2026"
         >
           <p>
             Jak se výška moře měří na pobřeží a z družic, jak z jednotlivých měření vzniká globální průměr a co ukazují

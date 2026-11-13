@@ -183,14 +183,16 @@ export const climateMechanisms: ClimateMechanism[] = [
   },
   {
     slug: "bilance-globalni-hladiny-more",
-    title: "Proč stoupá hladina moře?",
+    title: "Proč stoupá globální hladina moře?",
     category: "Oceán a hladina moře",
-    cardSummary: "Rozpínání mořské vody, přísun vody z pevniny a příčiny regionálních rozdílů.",
+    isComplete: true,
+    cardSummary: "Jak rozlišujeme rozpínání vody a její přísun z pevniny a ověřujeme jejich součet.",
     observations: [
       { href: "/pozorovani/gmsl/#pozorovani", label: "Vzestup globální hladiny moře" },
+      { href: "/pozorovani/gmsl/#pokles-2010-2011", label: "Dočasný pokles hladiny v letech 2010–2011" },
     ],
-    summary: "Změna objemu mořské vody a přísun vody z pevniny společně mění globální hladinu. Regionální rozdíly dále souvisejí s prouděním, gravitací a pohybem souše.",
-    distinguishingEvidence: "Porovnání celkové změny hladiny se součtem objemového příspěvku, úbytku pevninského ledu a změn zásob vody na souši. Prostorový obraz a pohyb pobřeží ověřují vysvětlení místních odchylek.",
+    summary: "Teplejší voda zabírá větší objem, voda přidaná z pevniny zvyšuje hmotnost oceánu. Laboratorní měření, teplotní profily a družice umožňují tyto příspěvky rozlišit a jejich součet porovnat s výškou hladiny.",
+    distinguishingEvidence: "Rozdílné stopy v teplotě, slanosti a gravitačním poli. Pokles hladiny při úbytku oceánské vody v letech 2010–2011 a společná bilance příspěvků za období 1993–2018 ověřují směr i velikost účinku.",
   },
   {
     slug: "pohlcovani-co2-oceanem-a-uhlicitanova-chemie",

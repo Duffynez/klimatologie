@@ -1,0 +1,62 @@
+Klimatologie.eu – Proč stoupá globální hladina moře?
+Připraveno 13. listopadu 2026 s pomocí AI.
+
+Číselný podklad
+Frederikse, T. a kol. (2020): The causes of sea-level rise since 1900.
+Nature 584, 393–397. DOI https://doi.org/10.1038/s41586-020-2591-3
+Ověřený veřejný plný text:
+https://zanna-researchteam.github.io/files/Frederikse-et-al-2020.pdf
+Tabulka 1, s. 395, strana 3 PDF. Sloupec lineárních trendů 1993–2018.
+CSV je ruční přepis šesti řádků tabulky. Desetinná tečka, oddělovač čárka.
+Jednotka všech trendů a mezí: mm/year (milimetr za rok).
+lower/upper jsou publikované dolní/horní meze 90% intervalu.
+Nejde o standardní odchylky ročních hodnot ani rozsah ročních výkyvů.
+observed odpovídá řádku Observed GMSL (rekonstrukce z pobřežních stanic).
+satellite odpovídá Satellite altimetry.
+residual je Observed minus sum. Jeho meze −0,32 a 0,70 se přebírají,
+nepočítají se z mezí samostatných příspěvků. Studie zahrnuje jejich závislosti.
+Graf obsahuje prvních pět řádků, zbytek je vyčíslen v článku.
+Zobrazené první dva příspěvky se sčítají. Poslední dvě měření se nesčítají,
+jsou kontrolami celku. Nejde o přepočet surových signálů ani pozdější verzi dat.
+
+Veřejná data původního zpracování:
+https://doi.org/10.5281/zenodo.3862995
+https://zenodo.org/records/3862995
+global_basin_timeseries.xlsx – časové řady globálně a po oceánských pánvích.
+GMSL_ensembles.nc – 5 000 variant globální bilance s nejistotami.
+Původní výpočetní kód:
+https://github.com/thomasfrederikse/sealevelbudget_20c
+
+Vlastní kontrolní výpočet
+node vypocty.mjs
+Potřebuje pouze Node.js a CSV vedle skriptu, bez dalších balíčků.
+Kontroluje 1,19 + 1,97 = 3,16 a 3,35 − 3,16 = 0,19 mm/rok.
+Nejistotu těchto operací znovu neodhaduje.
+Ilustrační převod hmotnosti podle Gregory a kol. 2019, rovnice 37:
+https://doi.org/10.1007/s10712-019-09525-z
+Hustota sladké vody 1 000 kg/m³, zaokrouhlená plocha 3,6 × 10^14 m².
+1 Gt = 10^12 kg, 1 km² = 10^6 m², 1 m = 1 000 mm.
+360 Gt / (1 000 kg/m³ × 3,6 × 10^14 m²) = 0,001 m = 1 mm.
+−1 800 Gt odpovídá −5 mm. Plocha je ilustrační zaokrouhlení, ne nový odhad.
+
+Kvalitativní schémata
+rozpinani.svg: objem při stálé hmotnosti, teplotní profily a odlišná měření
+výšky a hmotnosti. Tečky jsou značky stejného množství vody, nikoli molekuly
+v měřítku. Sloupce ilustrují princip, ne izolované nádoby v oceánu.
+Fyzikální podklad: Gregory a kol. 2019 a oficiální manuál TEOS-10:
+https://www.teos-10.org/pubs/TEOS-10_Manual.pdf
+presun-vody.svg: odtok, úbytek pevninského ledu a opačný přesun výparem
+a srážkami na souš. Šířka šipek nevyjadřuje velikost toku.
+Podklad: Gregory a kol. 2019 a Boening a kol. 2012:
+https://doi.org/10.1029/2012GL053055
+https://www.issibern.ch/teams/climatemodels/wp-content/uploads/sites/40/2015/03/Boening-2012_Strong-La-Nina-2012.pdf
+Použita konečná publikovaná verze, ne dřívější rukopis.
+Přibližný pokles o 5 mm se týká března 2010 až května 2011.
+
+Reprodukce grafiky
+node grafika.mjs
+Skript načte CSV přes vypocty.mjs a vytvoří všechny tři SVG.
+Všechny obrázky jsou vlastní vektorové kresby, nekopírují cizí obrazovou plochu.
+Číselné hodnoty jsou citovanými vědeckými údaji. Nešíříme kopii cizího PDF.
+Vlastní text podkladů, grafika a kód: Klimatologie.eu, CC BY 4.0.
+https://creativecommons.org/licenses/by/4.0/

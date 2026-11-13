@@ -285,6 +285,11 @@ export function GravimetryArticle() {
           hmotnostního příspěvku měření GRACE a GRACE-FO.{" "}
           <SourceLink id="DOI_10_1038_s41586_020_2591_3">(Frederikse a kol. 2020, bilance hladiny)</SourceLink>
         </p>
+        <p>
+          Jak hmotnostní příspěvek odlišit od tepelného rozpínání a porovnat jejich součet s výškou hladiny
+          ukazuje mechanismus <Link href="/mechanismy/bilance-globalni-hladiny-more">Proč stoupá globální hladina moře?</Link>
+          Zahrnuje i dočasný pokles při přesunu vody z oceánu na pevninu v letech 2010–2011.
+        </p>
 
         <h2>Nejistoty a ověření</h2>
         <p>

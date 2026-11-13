@@ -404,6 +404,16 @@ export function GlobalMeanSeaLevelArticle() {
           ukazuje, zda měřené změny hmotnosti a objemu vysvětlují pozorovaný vzestup.{" "}
           <SourceLink id="DOI_10_1038_s41586_020_2591_3">(porovnání bilance hladiny)</SourceLink>
         </p>
+        <p>
+          Pro roky 1993–2018 publikovali Frederikse a kolegové teplotní příspěvek 1,19 mm za rok
+          s 90% intervalem 0,99–1,44 a hmotnostní příspěvek 1,97 mm za rok s intervalem 1,63–2,33.
+          Horních 2 000 metrů oceánu zpracovali z map teploty a slanosti, hlubší část doplnili rekonstrukcí.
+          Hmotnostní řada spojuje od roku 2003 gravimetrii se staršími odhady ledu a pevninské vody.
+          Součet činí 3,16 mm za rok s intervalem 2,78–3,57, pobřežní rekonstrukce 3,35 s intervalem 2,91–3,82
+          a družicové měření 3,32 s intervalem 2,87–3,79 mm za rok. Jde o lineární trendy stejného období,
+          nikoli rozdíl dvou jednotlivých měření. Nejistoty zahrnují také společné vazby mezi opravami a příspěvky.{" "}
+          <SourceLink id="DOI_10_1038_s41586_020_2591_3">(Frederikse a kol. 2020, tab. 1 a metody)</SourceLink>
+        </p>
 
         <h2 id="pozorovani">Pozorování</h2>
         <p>
@@ -436,6 +446,25 @@ export function GlobalMeanSeaLevelArticle() {
           <SourceLink id="DOI_10_1038_s43247_024_01761_5">Hamlington et al., 2024</SourceLink>
         </p>
 
+        <h3 id="pokles-2010-2011">Krátkodobý pokles v letech 2010–2011</h3>
+        <p>
+          Mezi březnem 2010 a květnem 2011 klesla družicově měřená globální hladina přibližně o 5 mm.
+          Boening a kolegové porovnali radarové výškoměry, gravimetrii GRACE a profily Argo v horních 900 metrech.
+          Ze záznamů odstranili pravidelný roční cyklus a vyhladili krátké výkyvy.
+          Oceánská hmotnost podle GRACE klesla přibližně o 1 800 gigatun, tedy 1 800 miliard tun.
+          Teplotní příspěvek se během epizody měnil, ale mezi jejím začátkem a koncem zůstal téměř stejný.
+          GRACE současně zaznamenala přírůstek zásob vody zejména v Austrálii, na severu Jižní Ameriky a v jihovýchodní Asii.{" "}
+          <SourceLink id="DOI_10_1029_2012gl053055">(Boening a kol. 2012, obr. 2–3)</SourceLink>
+        </p>
+        <p>
+          Studie uvádí nejistotu 1,6 mm pro jednu hodnotu hladiny vyhlazenou přes 60 dní.
+          U součtu hmotnostního a objemového příspěvku ukazuje chybové úsečky 2,5 mm.
+          Tato čísla nejsou nejistotou celého pětimilimetrového rozdílu mezi začátkem a koncem epizody.
+          Odhady oceánské a pevninské hmotnosti navíc sdílejí gravitační měření, zatímco výškoměry a Argo přinášejí jiné vstupy.{" "}
+          <SourceLink id="DOI_10_1029_2012gl053055">(Boening a kol. 2012, oddíl 2 a popisek obr. 2)</SourceLink>
+        </p>
+
+        <h3>Rozdíly mezi roky a oblastmi</h3>
         <p>
           Jednotlivé roky se od dlouhodobého průběhu výrazně odchylují. NASA vyčíslila přírůstek v roce 2024 na 5,9 mm,
           zatímco v roce 2025 na 0,8 mm. Jeden pomalý rok proto neruší změnu zjištěnou za tři desetiletí a jeden rychlý rok
@@ -463,6 +492,10 @@ export function GlobalMeanSeaLevelArticle() {
           </p>
         </div>
 
+        <aside className="article-related" aria-label="Související mechanismus">
+          <p>Jak rozlišujeme příčiny změny vysvětluje článek <Link href="/mechanismy/bilance-globalni-hladiny-more">Proč stoupá globální hladina moře?</Link> Porovnává rozpínání vody a její přísun z pevniny s měřenou výškou hladiny.</p>
+        </aside>
+
         <h2>Prameny, data a licence</h2>
         <p>
           K odborným pracím uvádíme DOI a veřejný plný text bez předplatného. Článek Ablaina a kol. z roku 2017
@@ -475,6 +508,7 @@ export function GlobalMeanSeaLevelArticle() {
           <section>
             <h3>Definice a primární práce</h3>
             <ul>
+              <li><SourceLink id="DOI_10_1029_2012gl053055">Boening a kol. (2012): pokles hladiny během La Niña</SourceLink> – veřejná konečná publikovaná verze, přístroje a zpracování v oddílu 2, porovnání na obrázcích 2–3.</li>
               <li><SourceLink id="DOI_10_1007_s10712_019_09525_z">Gregory et al. (2019): terminologie místní a globální hladiny</SourceLink> – otevřený článek a PDF.</li>
               <li><SourceLink id="DOI_10_1007_s10712_011_9119_1">Church &amp; White (2011): globální rekonstrukce od konce 19. století</SourceLink> – otevřený článek a PDF.</li>
               <li><SourceLink id="DOI_10_1038_s41558_019_0531_8">Dangendorf et al. (2019): rekonstrukce globální hladiny od roku 1960</SourceLink> – veřejný plný text v institucionálním repozitáři.</li>
