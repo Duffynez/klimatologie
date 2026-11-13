@@ -682,7 +682,7 @@ test("publishes radar with a complete explanation, real echo and reciprocal prec
   assert.deepEqual([...body.matchAll(/<h2\b[^>]*>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak radar měří déšť a rozpoznává vrstvy ledu", "Nejistoty a ověření", "Příklad: radarové měření u Houstonu", "Shrnutí",
   ]);
-  assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">13\. listopadu 2026<\/p>/);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
   assert.match(body, /41 dBZ/);
   assert.match(body, /26,2 mm\/h/);
@@ -698,7 +698,11 @@ test("publishes radar with a complete explanation, real echo and reciprocal prec
   for (const id of ids) {
     const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
     assert.ok(card, "Missing radar source " + id);
-    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    if (id === "DOI_10_7289_V5W9574V") {
+      assert.match(card, /href="https:\/\/unidata-nexrad-level2\.s3\.amazonaws\.com\/2017\/08\/27\/KHGX\/KHGX20170827_120416_V06"[^>]*>Stáhnout původní měření KHGX \(Level II\)/);
+    } else {
+      assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    }
     assert.doesNotMatch(card, /drive\.google\.com/);
     if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
   }
@@ -746,7 +750,7 @@ test("publishes microwave radiometry with the full signal-to-ice explanation and
   assert.deepEqual([...body.matchAll(/<h2\b[^>]*>(.*?)<\/h2>/g)].map(m => m[1]), [
     "Jak mikrovlny rozliší led a vodu", "Nejistoty a ověření", "Příklad: zimní měření severně od Aljašky", "Shrnutí",
   ]);
-  assert.match(html, /<p class="page-lead__meta">6\. listopadu 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">13\. listopadu 2026<\/p>/);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
   assert.match(body, /matematické jádro metody, nikoli oficiální/);
   assert.doesNotMatch(body, /_vinext\/image|katex-error|Potřebné informace/);
@@ -760,7 +764,13 @@ test("publishes microwave radiometry with the full signal-to-ice explanation and
   for (const id of ids) {
     const card = catalogue.match(new RegExp('<article[^>]*id="' + id + '"[\\s\\S]*?<\\/article>'))?.[0];
     assert.ok(card, "Missing microwave source " + id);
-    assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    if (id === "DOI_10_7289_V5SJ1HKZ") {
+      const meta = JSON.parse(await readFile(new URL("public/data/methods/microwave-radiometry/example.json", root), "utf8"));
+      assert.ok(card.includes(`href="${meta.source_url}"`));
+      assert.match(card, /Stáhnout původní data oběhu F11 \(NetCDF\)/);
+    } else {
+      assert.match(card, /Otevřít (veřejný zdroj|plný text|veřejná data)/);
+    }
     assert.doesNotMatch(card, /drive\.google\.com/);
     if (id.startsWith("DOI_")) assert.match(card, /Otevřít DOI/);
   }
