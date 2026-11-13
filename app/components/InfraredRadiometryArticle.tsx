@@ -498,6 +498,8 @@ export function InfraredRadiometryArticle() {
 
         <p>Porovnání infračerveného a mikrovlnného záření umožňuje testovat <Link href="/mechanismy/vodni-para-jako-zpetna-vazba/#test-vysusovani">změny vodní páry v horní troposféře</Link>. Konkrétní naměřené trendy uvádí <Link href="/pozorovani/narust-vlhkosti/#horni-troposfera">pozorování vlhkosti</Link>. Navazující mechanismus vysvětluje, jak se z těchto měření posuzuje její vliv na oteplování.</p>
 
+<p>Měření teploty a výšky oblaků má konkrétní využití v <Link href="/mechanismy/oblaka-a-jejich-klimaticke-zpetne-vazby/#test-vysky-druzice">družicovém testu oblačné zpětné vazby</Link>. Srovnání s radarem pomáhá ověřit, zda oblaky v teplejších obdobích vystupují.</p>
+
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>

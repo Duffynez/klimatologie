@@ -491,6 +491,8 @@ export function RadarArticle() {
           </ul>
         </details>
 
+<p>Radarové profily CloudSatu doplňují infračervené měření v <Link href="/mechanismy/oblaka-a-jejich-klimaticke-zpetne-vazby/#test-vysky-druzice">testu změn výšky vysokých oblaků</Link>. Sledují svislou polohu oblačných částic a umožňují porovnat dva různé měřicí principy.</p>
+
         <h2>Shrnutí</h2>
         <div className="method-conclusion">
           <p>

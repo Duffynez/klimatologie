@@ -910,7 +910,7 @@ test("publishes thermal infrared radiometry with its source trail and temperatur
     "Jak ze záření zjistíme teplotu", "Nejistoty a ověření",
     "Příklad: teplota jednoho místa u Aletschského ledovce", "Shrnutí",
   ]);
-  assert.match(html, /<p class="page-lead__meta">6\. listopadu 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">13\. listopadu 2026<\/p>/);
   assert.match(body, /<h2>Shrnutí<\/h2><div class="method-conclusion"><p>/);
   assert.doesNotMatch(body, /_vinext\/image|katex-error|Potřebné informace/);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/);
@@ -1379,7 +1379,7 @@ test("groups all 23 mechanism topics by their link to observations and preserves
   const cards = [...catalogue.matchAll(/<article class="mechanism-tile">[\s\S]*?<\/article>/g)].map(([card]) => card);
   const linkedCards = cards.filter((card) => card.includes('class="mechanism-tile__observations"'));
   assert.equal(cards.length, records.length);
-  assert.equal(linkedCards.length, 22);
+  assert.equal(linkedCards.length, 23);
   const firstCard = cards[0];
   assert.match(firstCard, /<\/a><div class="mechanism-tile__observations">/);
   assert.match(firstCard, /href="\/pozorovani\/tepelny-obsah-oceanu\/#souvislost-s-bilanci"[^>]*>Přírůstek energie v klimatickém systému<\/a>/);
@@ -1400,7 +1400,7 @@ test("groups all 23 mechanism topics by their link to observations and preserves
     assert.ok(sitemap.includes(`<loc>https://klimatologie.eu/mechanismy/${slug}/</loc>`), "Missing sitemap route " + slug);
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     assert.ok(html.includes(`<h1>${title}</h1>`), "Wrong detail title " + slug);
-    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen", "prumyslove-aerosoly-a-oblaka", "zmeny-ozonu-ve-stratosfere", "prenos-tepla-do-pudy-a-tani-permafrostu", "pohlcovani-a-presun-tepla-oceanem", "hmotnostni-bilance-a-dynamika-ledovych-prikrovu", "vodni-para-jako-zpetna-vazba", "hmotnostni-bilance-horskych-ledovcu", "vznik-a-zanik-snehove-pokryvky-na-sousi", "vznik-tani-a-pohyb-morskeho-ledu", "odrazivost-snehu-a-ledu-jako-zpetna-vazba"].includes(slug)) {
+    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen", "prumyslove-aerosoly-a-oblaka", "zmeny-ozonu-ve-stratosfere", "prenos-tepla-do-pudy-a-tani-permafrostu", "pohlcovani-a-presun-tepla-oceanem", "hmotnostni-bilance-a-dynamika-ledovych-prikrovu", "vodni-para-jako-zpetna-vazba", "hmotnostni-bilance-horskych-ledovcu", "vznik-a-zanik-snehove-pokryvky-na-sousi", "vznik-tani-a-pohyb-morskeho-ledu", "odrazivost-snehu-a-ledu-jako-zpetna-vazba", "oblaka-a-jejich-klimaticke-zpetne-vazby"].includes(slug)) {
       assert.match(html, /Co musí toto vysvětlení objasnit/);
       assert.match(html, /<section class="mechanism-detail-evidence"[^>]*>[\s\S]*<p>[^<]+<\/p><\/section>/);
     }
@@ -3427,11 +3427,12 @@ test("reproduces the optical response calibration without inventing the missing 
   }
 });
 
-test("keeps the current catalogue of sixteen observations", async () => {
+test("keeps the current catalogue of seventeen observations", async () => {
   const evidence = await readFile(new URL("app/data/evidence.ts", root), "utf8");
   const slugs = [...evidence.matchAll(/\{ slug: "([^"]+)"/g)].map((match) => match[1]);
 
   assert.deepEqual(slugs, [
+    "oblaka-a-radiacni-bilance",
     "gmst",
     "stratosfericke-ochlazovani",
     "slunecni-zareni",
@@ -5073,6 +5074,7 @@ test("keeps each hypothesis independently collapsible with complete content and 
     ["prenos-tepla-do-pudy-a-tani-permafrostu", ["teplo-z-hloubky", "teplo-od-povrchu"]],
     ["hmotnostni-bilance-a-dynamika-ledovych-prikrovu", ["povrchova-bilance", "povrch-a-odtok-ledu"]],
     ["vodni-para-jako-zpetna-vazba", ["vysusovani", "zesileni"]],
+    ["oblaka-a-jejich-klimaticke-zpetne-vazby", ["plocha-vysokych-oblaku", "vyska", "nizka-oblacnost"]],
     ["hmotnostni-bilance-horskych-ledovcu", ["mene-snehu", "vetsi-tani"]],
     ["vznik-a-zanik-snehove-pokryvky-na-sousi", ["zmena-srazek", "teplota-a-tani"]],
     ["vznik-tani-a-pohyb-morskeho-ledu", ["silnejsi-vyvoz", "energie-a-tani"]],
@@ -5366,4 +5368,73 @@ test("publishes the CO2 origin mechanism with three illustrated stories and trac
   const prose = body.replace(/<[^>]+>/g, " ").replace(/&(?:#\d+|#x[0-9a-f]+|[a-z]+);/gi, "");
   assert.doesNotMatch(prose, /;/);
   assert.match(body, /class="method-conclusion"/);
+});
+
+test("publishes cloud feedback with concurrent processes, testable predictions and accessible evidence", async () => {
+  const slug = "oblaka-a-jejich-klimaticke-zpetne-vazby";
+  const html = await readFile(new URL("dist/client/mechanismy/" + slug + "/index.html", root), "utf8");
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.match(html, /13\. listopadu 2026/);
+  assert.doesNotMatch(html, /class="mechanism-detail-evidence"/);
+  assert.match(body, /mohou probíhat současně/);
+  assert.match(body, /Silná stabilizace nebyla doložena/);
+  assert.equal((body.match(/<h4\b/g) ?? []).length, 6);
+  assert.equal((body.match(/<img\b/g) ?? []).length, 3);
+  assert.equal((body.slice(0, body.indexOf('<h2 id="hypotezy"')).match(/<p\b/g) ?? []).length, 2);
+  const bibliography = body.slice(body.indexOf('<h2 id="prameny"'));
+  const catalogue = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
+  for (const id of new Set([...body.matchAll(/href="\/zdroje#([^"]+)"/g)].map(m => m[1]))) {
+    assert.ok(bibliography.includes('href="/zdroje#' + id + '"'), "Missing bibliography entry " + id);
+    const card = catalogue.match(new RegExp('<article[^>]+id="' + id + '"[\\s\\S]*?</article>'))?.[0];
+    assert.ok(card, "Missing source " + id);
+    assert.match(card, /Otevřít (plný text|veřejn[áý]|podklady)/);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+  }
+  for (const name of ["iris.png", "vyska.png", "nizka.png", "prompts.json", "podklady.txt"]) {
+    const original = await readFile(new URL("public/media/" + slug + "/" + name, root));
+    const exported = await readFile(new URL("dist/client/media/" + slug + "/" + name, root));
+    assert.deepEqual(original, exported);
+    if (name.endsWith(".png")) {
+      assert.equal(original.readUInt32BE(16), 1536);
+      assert.equal(original.readUInt32BE(20), 1024);
+    }
+  }
+  for (const route of ["pozorovani/oblaka-a-radiacni-bilance", "metody/mereni-radiacnich-toku", "metody/pasivni-infracervena-radiometrie", "metody/aktivni-radarove-mereni"]) {
+    const linked = await readFile(new URL("dist/client/" + route + "/index.html", root), "utf8");
+    assert.ok(linked.includes("/mechanismy/" + slug + "/"), "Missing reciprocal link " + route);
+  }
+  const details = body.match(/<details class="method-details">([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(details && details.replace(/<[^>]+>/g, " ").split(/\s+/).length <= 600);
+  assert.doesNotMatch(body.replace(/<[^>]+>/g, " ").replace(/&[^;]+;/g, " "), /;/);
+});
+
+test("cloud radiation observation preserves the CERES edition, period, signs and published rounded net", async () => {
+  const html = await readFile(new URL("dist/client/pozorovani/oblaka-a-radiacni-bilance/index.html", root), "utf8");
+  assert.match(html, /<h1>Oblaka a radiační bilance<\/h1>/);
+  assert.match(html, /13\. listopadu 2026/);
+  for (const anchor of ["pozorovani", "historie", "mereni", "data", "vysledky", "porovnani", "shrnuti", "prameny"]) {
+    assert.ok(html.includes('id="' + anchor + '"'));
+  }
+  assert.match(html, /−17,9/);
+  assert.match(html, /−0,18 ± 0,17/);
+  assert.match(html, /0,1 W\/m²/);
+  assert.match(html, /Nejde o výpočet z nejnovějšího/);
+  const csv = await readFile(new URL("public/media/oblaka-a-radiacni-bilance/ceres-table6-1.csv", root), "utf8");
+  const rows = csv.trim().split(/\r?\n/).slice(1).map(l => l.split(","));
+  assert.equal(rows.length, 6);
+  for (const row of rows) assert.deepEqual(row.slice(3), ["2005-07", "2015-06"]);
+  assert.deepEqual(rows.filter(r => r[0] === "4.0").map(r => Number(r[2])), [-45.8, 28, -17.9]);
+  assert.deepEqual(rows.filter(r => r[0] === "2.8").map(r => Number(r[2])), [-47.1, 25.8, -21.3]);
+  for (const name of ["ceres-table6-1.csv", "plot.py", "radiacni-ucinek.png", "podklady.txt"]) {
+    assert.deepEqual(await readFile(new URL("public/media/oblaka-a-radiacni-bilance/" + name, root)), await readFile(new URL("dist/client/media/oblaka-a-radiacni-bilance/" + name, root)));
+  }
+  const sitemap = await readFile(new URL("dist/client/sitemap.xml", root), "utf8");
+  assert.match(sitemap, /https:\/\/klimatologie\.eu\/pozorovani\/oblaka-a-radiacni-bilance\//);
+  for (const [,href] of html.matchAll(/href="(\/[^"]+)"/g)) {
+    if (href.startsWith("/_") || href.startsWith("/assets/") || href.startsWith("/media/") || href === "/") continue;
+    const [path, anchor] = href.split("#");
+    const target = await readFile(new URL("dist/client" + path.replace(/\/$/, "") + "/index.html", root), "utf8");
+    if (anchor) assert.ok(target.includes('id="' + anchor + '"'), "Broken anchor " + href);
+  }
 });

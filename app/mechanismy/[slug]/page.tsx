@@ -1,3 +1,4 @@
+import { CloudFeedbackArticle } from "../../components/CloudFeedbackArticle";
 import { WaterVapourFeedbackArticle } from "../../components/WaterVapourFeedbackArticle";
 import type { Metadata } from "next";
 import { OceanHeatTransportArticle } from "../../components/OceanHeatTransportArticle";
@@ -81,6 +82,14 @@ export default async function MechanismDetail({ params }: { params: Promise<{ sl
 
   if (!mechanism) {
     notFound();
+  }
+
+  if (slug === "oblaka-a-jejich-klimaticke-zpetne-vazby") {
+    return <div className="page-shell">
+      <PageLead eyebrow={"Mechanismy / " + mechanism.category} title={mechanism.title} meta="13. listopadu 2026"><p>{mechanism.summary}</p></PageLead>
+      <CloudFeedbackArticle />
+      <Link className="text-link catalog-back-link" href="/mechanismy">&larr; Zpět na všechny mechanismy</Link>
+    </div>;
   }
 
   if (slug === "vodni-para-jako-zpetna-vazba") {

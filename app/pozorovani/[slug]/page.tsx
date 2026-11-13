@@ -1,3 +1,4 @@
+import { CloudRadiationArticle } from "../../components/CloudRadiationArticle";
 import Link from "next/link";
 import { CloudTracksArticle } from "../../components/CloudTracksArticle";
 import { notFound } from "next/navigation";
@@ -29,6 +30,14 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
 
   if (!topic) {
     notFound();
+  }
+
+  if (slug === "oblaka-a-radiacni-bilance") {
+    return <div className="page-shell">
+      <PageLead eyebrow="Pozorování / Atmosféra" title={topic.title} meta="13. listopadu 2026"><p>Družicové měření odrazu slunečního světla a úniku tepelného záření. Globální součet, změny v čase a vlastnosti oblaků.</p></PageLead>
+      <CloudRadiationArticle />
+      <Link className="text-link catalog-back-link" href="/pozorovani">&larr; Zpět na všechna pozorování</Link>
+    </div>;
   }
 
   if (slug === "stopy-v-oblacich") {
