@@ -131,7 +131,7 @@ export default function HistoryPage() {
     <div className="page-shell">
       <PageLead eyebrow="Věda, politika, společnost" title="Historie poznání a vnímání změny klimatu."
         meta="13. listopadu 2026">
-        <p>Jak jsme zjistili, že se klima mění, co tyto změny způsobuje a jak na ně reagovaly státy i společnost. Osa vybírá zásadní objevy, měření, klimatická rozhodnutí a kulturní díla, která přibližovala klima veřejnosti.</p>
+        <p>Jak jsme zjistili, že se klima mění, co tyto změny způsobuje a jak na ně reagovaly státy i společnost. Osa vybírá zásadní objevy, měření, klimatická rozhodnutí, kulturní díla a společenské události, které utvářely veřejnou debatu o klimatu.</p>
         <p>Milníky mají tři stupně důležitosti: zásadní (1), důležité (2) a doplňující (3). Ve filtru je můžete libovolně kombinovat. Vědu lze dále filtrovat na pozorování, metody a mechanismy.</p>
       </PageLead>
       {legacyNotices}

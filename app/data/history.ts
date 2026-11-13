@@ -1372,6 +1372,27 @@ export const historyEvents: HistoryEvent[] = [
     ]
   },
   {
+    id: "1993_Butler_Parable_of_the_Sower",
+    year: 1993,
+    dateMeaning: "Vydání románu",
+    title: "Román propojuje klimatickou změnu s každodenním přežitím",
+    category: "culture",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Octavia E. Butler vydala román Parable of the Sower. Příběh zasadila do budoucí Kalifornie, kde se klimatická změna spojuje s hospodářskou krizí, nedostatkem vody a rozpadem společenského pořádku. Hlavní postava Lauren Olamina hledá bezpečí pro sebe a své blízké v prostředí, které přestává poskytovat základní jistoty.",
+        references: [{ sourceId: "1993_Butler_Parable_of_the_Sower", locator: "oficiální synopse a životopisný oddíl Octavia E. Butler v přehledu knihovny Huntington" }]
+      },
+      {
+        text: "Klimatické ohrožení zde vstupuje do každodenních rozhodnutí o přežití, důvěře a vytváření nové komunity. Román ukazuje jednu z podob klimatické beletrie: příběh, v němž změněné prostředí spoluutváří lidské vztahy a možnosti jednání. Autorka tak propojila klimatické téma se sociální zkušeností a hledáním společné budoucnosti.",
+        references: [{ sourceId: "1993_Butler_Parable_of_the_Sower", locator: "oficiální synopse románu a popis témat autorčiny tvorby" }]
+      }
+    ],
+    relatedLinks: [
+      { href: "/pozorovani/srazky-a-privalove-srazky/", label: "Jak měříme a porovnáváme změny srážek" }
+    ]
+  },
+  {
     id: "1997_Kyoto",
     year: 1997,
     dateMeaning: "Přijetí protokolu",
@@ -1765,6 +1786,27 @@ export const historyEvents: HistoryEvent[] = [
     ]
   },
   {
+    id: "2014_Ice_Watch",
+    year: 2014,
+    dateMeaning: "První instalace v Kodani",
+    title: "Grónský led přibližuje klimatickou změnu lidem v ulicích",
+    category: "culture",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Olafur Eliasson a geolog Minik Rosing umístili na kodaňské náměstí dvanáct bloků ledu do tvaru hodin. Led pocházel z grónského ledového příkrovu, rozsáhlé vrstvy ledu pokrývající pevninu. Autoři odebrali jeho odlomené části z fjordu u Nuuku. Instalace Ice Watch umožnila lidem přiblížit se k ledu a sledovat jeho postupné tání.",
+        references: [{ sourceId: "WEB_Eliasson_Rosing_Ice_Watch", locator: "popis díla a kodaňské instalace 26.–29. října 2014" }]
+      },
+      {
+        text: "Dílo převádělo vzdálené klimatické téma do bezprostředního zážitku ve veřejném prostoru. Po Kodani následovala instalace při klimatické konferenci v Paříži roku 2015 a později v Londýně. Opakované uvedení spojilo umění s veřejnou debatou o úbytku ledu a klimatické odpovědnosti.",
+        references: [{ sourceId: "WEB_Eliasson_Rosing_Ice_Watch", locator: "autorský popis záměru a přehled tří instalací" }]
+      }
+    ],
+    relatedLinks: [
+      { href: "/pozorovani/nestabilita-prikrovu/", label: "Jak měříme úbytek ledu v Grónsku a Antarktidě" }
+    ]
+  },
+  {
     id: "2015_Feldman",
     year: 2015,
     dateMeaning: "Zveřejnění práce",
@@ -1796,6 +1838,27 @@ export const historyEvents: HistoryEvent[] = [
         href: "/mechanismy/radiacni-pusobeni-sklenikovych-plynu/",
         label: "Jak oddělujeme radiační účinek CO₂"
       }
+    ]
+  },
+  {
+    id: "2015_Laudato_Si",
+    year: 2015,
+    dateMeaning: "Zveřejnění encykliky",
+    title: "Papežský list propojuje ochranu klimatu s morální odpovědností",
+    category: "culture",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Papež František zveřejnil encykliku Laudato si’, tedy veřejný papežský list o péči o společný domov. Klimatickou změnu popsal jako celosvětový problém, jehož důsledky zvlášť těžce dopadají na chudé. Klima představil jako společné dobro, na němž závisí život všech lidí.",
+        references: [{ sourceId: "2015_Francis_Laudato_Si", locator: "odstavce 23–26" }]
+      },
+      {
+        text: "Text se obrací ke všem lidem a propojuje ochranu životního prostředí s odpovědností vůči budoucím generacím. František vyzývá k promýšlení způsobu života, výroby a spotřeby také z hlediska spravedlnosti. Klimatické téma tím zasazuje do náboženské a etické debaty o tom, jaký svět lidé předávají svým dětem.",
+        references: [{ sourceId: "2015_Francis_Laudato_Si", locator: "odstavce 3, 23 a 159–162" }]
+      }
+    ],
+    relatedLinks: [
+      { href: "/mechanismy/puvod-rustu-atmosferickeho-co2/", label: "Jak určujeme lidský původ přibývajícího CO₂" }
     ]
   },
   {
@@ -1874,6 +1937,54 @@ export const historyEvents: HistoryEvent[] = [
     ],
     relatedLinks: [
       { href: "/pozorovani/gmst/", label: "Z jakých měření vzniká záznam globální teploty" }
+    ]
+  },
+  {
+    id: "2018_Fridays_For_Future",
+    year: 2018,
+    dateMeaning: "Vznik hnutí, globální stávky v roce 2019",
+    title: "Školní stávky přerůstají v celosvětové klimatické hnutí",
+    category: "culture",
+    importance: 1,
+    paragraphs: [
+      {
+        text: "Greta Thunbergová zahájila v srpnu 2018 školní stávku před švédským parlamentem. V září se spolu s dalšími studenty rozhodla pokračovat v pravidelných pátečních protestech a vyzvala mladé lidi v dalších zemích, aby se připojili. Pod označením Fridays for Future vzniklo hnutí požadující rychlejší reakci na klimatickou změnu.",
+        references: [{ sourceId: "WEB_Fridays_For_Future_History", locator: "Who We Are, počátky hnutí v srpnu a září 2018" }]
+      },
+      {
+        text: "V roce 2019 se školní protest rozšířil do celosvětových klimatických stávek. Program OSN pro životní prostředí v dobovém přehledu popsal pravidelné pochody ve více než stovce zemí. Mladí lidé prostřednictvím společných protestů požadovali, aby politici naslouchali vědeckým poznatkům a omezovali oteplování. Školní stávka se tak stala výraznou formou občanské účasti na klimatické debatě.",
+        references: [
+          { sourceId: "2019_UNEP_Fridays_For_Future", locator: "popis mezinárodního rozšíření a pravidelných pochodů" },
+          { sourceId: "WEB_Fridays_For_Future_History", locator: "Our Goals" }
+        ]
+      }
+    ],
+    relatedLinks: [
+      { href: "/pozorovani/gmst/", label: "Jaká měření ukazují průběh globálního oteplování" }
+    ]
+  },
+  {
+    id: "2021_Dont_Look_Up",
+    year: 2021,
+    dateMeaning: "Uvedení filmu",
+    title: "Filmová satira ukazuje přehlížení vědeckých varování",
+    category: "culture",
+    importance: 2,
+    paragraphs: [
+      {
+        text: "Adam McKay natočil satirický film K zemi hleď!, v originále Don’t Look Up. Dva astronomové v něm upozorňují na kometu mířící k Zemi, jejich varování však naráží na neochotu jednat a na způsob, jakým média zacházejí s vážnou vědeckou zprávou. Film využívá katastrofický příběh k zobrazení společenské reakce na hrozbu.",
+        references: [
+          { sourceId: "WEB_Netflix_Dont_Look_Up", locator: "rok vydání a synopse" },
+          { sourceId: "2022_Netflix_Dont_Look_Up_Climate", locator: "úvodní popis filmu a jeho tvůrců" }
+        ]
+      },
+      {
+        text: "Hrozící kometa slouží jako alegorie, tedy obrazné vyprávění o klimatické nečinnosti. Netflix v lednu 2022 tuto souvislost výslovně rozvedl v textu s reakcemi klimatických vědců a odkazem na doprovodný klimatický projekt. Satira tak přenesla do filmového příběhu otázku, proč společnost odkládá reakci i na závažná a opakovaná varování.",
+        references: [{ sourceId: "2022_Netflix_Dont_Look_Up_Climate", locator: "klimatická interpretace filmu, citované reakce a doprovodný projekt" }]
+      }
+    ],
+    relatedLinks: [
+      { href: "/mechanismy/radiacni-pusobeni-sklenikovych-plynu/", label: "O jaké důkazy se opírá vysvětlení skleníkového oteplování" }
     ]
   }
 ];
