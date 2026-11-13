@@ -654,7 +654,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Konduktometrie"
-          meta="5. listopadu 2026"
+          meta="13. listopadu 2026"
         >
           <p>
             Jak elektrický proud ve vodě umožňuje určit její slanost. Princip čidla,

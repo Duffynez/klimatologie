@@ -1,0 +1,90 @@
+Tepelná roztažnost a slanost mořské vody – Klimatologie.eu
+Datum zpracování a ověření: 13. listopadu 2026
+
+VLASTNÍ GRAFIKA
+teplota-slanost.svg: původní kvalitativní schéma sestavené v SVG pomocí AI.
+Vlevo je ohřev jedné hmotnosti bez úniku vody, vpravo porovnání dvou stejně
+těžkých vzorků při stejné teplotě. Tlak je v obou srovnáních stejný.
+Rozdíly objemu jsou záměrně zvětšené, tečky neudávají počty iontů.
+Dolní panel zachycuje měření oceánských vrstev a nezávislé fyzikální signály.
+Podklad: TEOS-10, oddíly 2.7, 2.18 a 2.19, a Leuliette a Miller 2009.
+https://www.teos-10.org/pubs/TEOS-10_Manual.pdf
+https://doi.org/10.1029/2008GL036010
+
+GRAF HUSTOTY
+hustota.svg, hustota-vypocet.csv: vlastní výpočet podle Millera a Poissona
+(1981), International one-atmosphere equation of state of seawater,
+Deep Sea Research Part A 28(6), 625–629, rovnice na s. 628–629.
+https://doi.org/10.1016/0198-0149(81)90122-9
+Veřejný reprint: https://www.jodc.go.jp/info/ioc_doc/UNESCO_tech/047363eb.pdf
+Samotná práce tvoří strany 15–19 PDF.
+
+Podmínky: tlak jedné atmosféry (101 325 Pa), teplota IPTS-68, praktická
+salinita bez jednotky. První řada: S=35, T=0 až 30 °C po 1 °C.
+Druhá řada: T=15 °C, S=30 až 40 po 0,5. Hustota je v kg/m³.
+Nejde o naměřené časové řady ani o TEOS-10. Rovnice slouží k ilustraci
+směru a nelinearity vztahu, nikoli k současné rekonstrukci hlubokého oceánu.
+Graf neukazuje intervaly nejistoty, protože vykresluje deterministickou
+rovnici při zadaných podmínkách, ne nový odhad z měření.
+Kontrolní hodnota původního článku, tabulka 2: při 5 °C a S=35 je hustota
+1 027,67547 kg/m³. Náš výpočet dává 1 027,6754652782759 kg/m³.
+Pro oceánské použití je nutné zohlednit tlak, teplotní a salinitní stupnici,
+složení a měřicí nejistotu. Současnou soustavu popisuje manuál TEOS-10.
+
+priklady.json: dvě samostatná množství vody, každé má před ohřevem 1 m³.
+Hmotnost každého vzorku = počáteční hustota × 1 m³ a při ohřevu se nemění.
+Nový objem = hmotnost / konečná hustota. Rozdíl objemů × 1 000 000 dává
+mililitry. S=35, tlak 1 atm, stupnice IPTS-68.
+5 → 6 °C: přírůstek 119,2393897 ml. 25 → 26 °C: 300,8532157 ml.
+Publikovaný text zaokrouhluje na 119 a 301 ml.
+
+REPRODUKCE
+Node.js bez doplňkových balíčků. Stáhněte soubory do jednoho adresáře.
+node vypocty.mjs
+node grafika.mjs
+První příkaz obnoví CSV i JSON, druhý z CSV vykreslí graf a vytvoří schéma.
+
+OCEÁNSKÉ TRENDY
+leuliette-2009-tabulka-1.csv: ruční přepis tabulky 1 původní práce,
+ověřený proti veřejnému plnému textu vydané verze.
+Leuliette, E. W., Miller, L. (2009), Closing the sea level rise budget
+with altimetry, Argo, and GRACE, GRL 36, L04608.
+https://doi.org/10.1029/2008GL036010
+https://ftp.soest.hawaii.edu/coastal/Climate%20Articles/Leuliette%20Closing%20sea%20level%20budget%202004%202007.pdf
+Období leden 2004 až prosinec 2007, trendy v mm/rok, intervaly 95%.
+Dolní a horní meze jsou publikovaná střední hodnota minus/plus rozpětí.
+Součet 1,5 přebíráme ze studie, nesčítáme zaokrouhlené složky 0,8 a 0,8.
+Objemový příspěvek Argo omezen na 0–900 m, oblast převážně ±66°.
+Masky se mezi přístroji liší, viz oddíl 2 studie a pozorovací článek.
+Nejistoty pocházejí z proložení trendu a ročního cyklu s předpokladem
+nezávislých časových vzorků. Nejde o kompletní rozpočet všech systematických
+chyb. Krátké období neurčuje dlouhodobé klimatické tempo.
+Tento přepis reprodukuje publikované výsledky, nikoli původní zpracování
+242 305 profilů, radarových návratů nebo gravitačních měření.
+Původní studie uvádí, že nepodléhá americkému autorskému právu.
+
+DALŠÍ LABORATORNÍ KONTROLY
+Millero a Huang 2009: 230 nových měření proti rovnici 1981, obr. 2,
+směrodatná odchylka 0,0036 kg/m³. Data v přílohách A a B, CC BY 3.0.
+https://doi.org/10.5194/os-5-91-2009
+https://os.copernicus.org/articles/5/91/2009/os-5-91-2009.pdf
+Koeficienty nového fitu v tabulce 2 byly opraveny v roce 2010:
+https://doi.org/10.5194/os-6-379-2010
+https://os.copernicus.org/articles/6/379/2010/os-6-379-2010.pdf
+Náš graf používá rovnici 1981, tedy ani původní, ani opravený fit 2009.
+
+Schmidt a kol. 2018: nový vztah hustoty a salinity a jeho nejistoty.
+Rozdíl od TEOS-10 až 15 g/m³ = 0,015 kg/m³ při atmosférickém tlaku.
+Tento rozdíl absolutní hustoty není přímo chybou teplotní roztažnosti.
+https://doi.org/10.5194/os-14-15-2018
+https://os.copernicus.org/articles/14/15/2018/os-14-15-2018.pdf
+Veřejný datový doplněk je odkazován z webové stránky studie. CC BY 4.0.
+
+LICENCE
+Vlastní grafika, kód, popis a zpracování: Klimatologie.eu, CC BY 4.0.
+https://creativecommons.org/licenses/by/4.0/
+Odborné rovnice a jednotlivé číselné výsledky přebíráme s uvedením zdroje.
+Z původních prací nekopírujeme grafické obrázky.
+AI pomáhala při psaní, tvorbě kódu a schémat. Popisky, pořadí zkoušek,
+znaménka účinků, podmínky, koeficienty a číselné přepisy byly zkontrolovány
+proti uvedeným primárním zdrojům.

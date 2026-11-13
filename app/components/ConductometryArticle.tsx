@@ -277,6 +277,11 @@ export function ConductometryArticle() {
           <SourceLink id="WEB_NOAA_Dickson_et_al_2007_prirucka_standardnich_mericic_9661bd2a">(Dickson a kol., kapitola 2)</SourceLink>
         </p>
         <p>
+          Jak se ze změny slanosti stane změna hustoty a objemu vysvětluje
+          <Link href="/mechanismy/tepelna-roztaznost-morske-vody/#slanost"> mechanismus teplotní roztažnosti a slanostního smrštění</Link>.
+          Rozlišuje kontrolované porovnání stejně těžkých vzorků od přítoku další vody do oceánu.
+        </p>
+        <p>
           <SourceLink id="WEB_International_Argo_Program_Data_from_GDACs_b2737bdf">Globální
           datová centra Argo</SourceLink> zpřístupňují profily spolu s technickými
           údaji a informacemi o přístrojích. Položka <code>PSAL</code> obsahuje

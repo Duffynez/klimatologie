@@ -107,6 +107,8 @@ export function SeaLevelBudgetArticle() {
         Dnešní oceánské výpočty používají standard <strong>TEOS-10</strong>, který popisuje vlastnosti mořské vody včetně závislosti na tlaku a složení solí.
         Laboratorně určený vztah se tak musí používat ve správném rozsahu a s odpovídajícími měřenými veličinami.
         <SourceLink id="TEOS10_MANUAL_2010"> (IOC, SCOR a IAPSO 2010, oddíly 1–2)</SourceLink>
+        Podrobnější laboratorní kontroly a výpočet objemu rozvádí
+        <Link href="/mechanismy/tepelna-roztaznost-morske-vody/"> změna hustoty při ohřevu a změně slanosti</Link>.
       </p>
 
       <h4 className={styles.testHeading} id="test-profily">Zkouška 2. Objem z oceánských profilů</h4>

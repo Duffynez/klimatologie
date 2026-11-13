@@ -177,11 +177,12 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "tepelna-roztaznost-morske-vody",
     title: "Proč se objem mořské vody mění s teplotou a slaností?",
     category: "Oceán a hladina moře",
-    cardSummary: "Vliv teploty a obsahu solí na hustotu vody, její objem a výšku hladiny.",
+    isComplete: true,
+    cardSummary: "Jak laboratorní měření a oceánské profily ověřují změnu hustoty, objemu a příspěvku k hladině moře.",
     observations: [
       { href: "/pozorovani/gmsl/#bilance-hladiny", label: "Objemový příspěvek ke změně hladiny moře" },
     ],
-    summary: "Teplota a salinita, tedy obsah rozpuštěných solí, ovlivňují hustotu mořské vody. Jejich změny se proto promítají do objemu vody a výšky hladiny.",
+    summary: "Jak se ohřev a změna slanosti promítají do hustoty mořské vody. Od kontrolovaných laboratorních vzorků přes přepočet objemu až k ověření oceánskou hladinou.",
     distinguishingEvidence: "Výpočet objemové změny z profilů teploty a salinity. Porovnání s výškoměry po oddělení hmotnostního příspěvku ověřeného gravimetrií rozlišuje změnu objemu od přibývání vody.",
   },
   {

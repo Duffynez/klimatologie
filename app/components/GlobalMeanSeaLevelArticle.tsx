@@ -415,6 +415,35 @@ export function GlobalMeanSeaLevelArticle() {
           <SourceLink id="DOI_10_1038_s41586_020_2591_3">(Frederikse a kol. 2020, tab. 1 a metody)</SourceLink>
         </p>
 
+        <h3 id="objem-2004-2007">Souběžná kontrola tří měřicích systémů v letech 2004–2007</h3>
+        <p>
+          Leuliette a Miller porovnali za leden 2004 až prosinec 2007 teplotní a slanostní profily Argo,
+          gravitační měření GRACE a radarové výškoměry Jason-1 a Envisat.
+          Vyřadili profily s chybným tlakem a dalšími příznaky špatné kvality.
+          Po kontrole zůstalo 242 305 profilů. Změnu objemu přepočítali z hustoty v horních 900 metrech,
+          kde bylo pokrytí dostatečné i v tropech. Rozdíly vůči dlouhodobé prostorové mapě seskupili do buněk 5° × 5°
+          a mezery doplnili podle prostorové souvislosti údajů. Výsledkem byla měsíční řada.{" "}
+          <SourceLink id="DOI_10_1029_2008GL036010">(Leuliette a Miller 2009, oddíl 2.2)</SourceLink>
+        </p>
+        <p>
+          Srovnání omezili především na oceán mezi 66° jižní a severní šířky.
+          Výškoměry vynechaly pás do 200 km od pobřeží a oblasti s více než polovičním pokrytím ledem.
+          Gravimetrie vynechala pás do 300 km od pobřeží, kde se signál oceánu obtížně odděluje od souše.
+          Družicová data zahrnují opravy atmosféry, přílivu a pomalé odezvy pevné Země na dávné zalednění.
+          Výpočet tak nesrovnává neupravené signály ani úplně totožné pokrytí všemi přístroji.{" "}
+          <SourceLink id="DOI_10_1029_2008GL036010">(Leuliette a Miller 2009, oddíly 2.1–2.3)</SourceLink>
+        </p>
+        <p>
+          Lineární trend objemového příspěvku činil 0,8 ± 0,8 mm za rok, hmotnostního 0,8 ± 0,5 mm za rok.
+          Jejich publikovaný součet 1,5 ± 1,0 mm za rok se zaokrouhlením liší od součtu uvedených zaokrouhlených složek.
+          Jason-1 zaznamenal 2,4 ± 1,1 a Envisat 2,7 ± 1,5 mm za rok.
+          Všechna rozpětí jsou 95% intervaly z proložení trendu spolu s ročním cyklem.
+          Autoři při odhadu těchto intervalů předpokládali nezávislost jednotlivých časových vzorků.
+          Čtyři roky mají výraznou meziroční proměnlivost a širokou nejistotu, nejde o dlouhodobé klimatické tempo.{" "}
+          <SourceLink id="DOI_10_1029_2008GL036010">(Leuliette a Miller 2009, tab. 1)</SourceLink>
+          <a href="/media/tepelna-roztaznost/leuliette-2009-tabulka-1.csv"> Veřejný přepis tabulky trendů</a>.
+        </p>
+
         <h2 id="pozorovani">Pozorování</h2>
         <p>
           Pobřežní stanice dokládají, že globální střední hladina stoupala už před začátkem družicového měření. Frederikse
@@ -494,6 +523,7 @@ export function GlobalMeanSeaLevelArticle() {
 
         <aside className="article-related" aria-label="Související mechanismus">
           <p>Jak rozlišujeme příčiny změny vysvětluje článek <Link href="/mechanismy/bilance-globalni-hladiny-more">Proč stoupá globální hladina moře?</Link> Porovnává rozpínání vody a její přísun z pevniny s měřenou výškou hladiny.</p>
+          <p>Laboratorní základ objemového přepočtu rozebírá článek <Link href="/mechanismy/tepelna-roztaznost-morske-vody/">Proč se objem mořské vody mění s teplotou a slaností?</Link> Ukazuje kontrolovaná srovnání, přesnost rovnice hustoty i její použití po vrstvách oceánu.</p>
         </aside>
 
         <h2>Prameny, data a licence</h2>
@@ -508,6 +538,7 @@ export function GlobalMeanSeaLevelArticle() {
           <section>
             <h3>Definice a primární práce</h3>
             <ul>
+              <li><SourceLink id="DOI_10_1029_2008GL036010">Leuliette a Miller (2009): souběžná kontrola Argo, GRACE a výškoměrů</SourceLink> – veřejný plný text, výběr dat v oddílu 2 a 95% intervaly trendů v tabulce 1.</li>
               <li><SourceLink id="DOI_10_1029_2012gl053055">Boening a kol. (2012): pokles hladiny během La Niña</SourceLink> – veřejná konečná publikovaná verze, přístroje a zpracování v oddílu 2, porovnání na obrázcích 2–3.</li>
               <li><SourceLink id="DOI_10_1007_s10712_019_09525_z">Gregory et al. (2019): terminologie místní a globální hladiny</SourceLink> – otevřený článek a PDF.</li>
               <li><SourceLink id="DOI_10_1007_s10712_011_9119_1">Church &amp; White (2011): globální rekonstrukce od konce 19. století</SourceLink> – otevřený článek a PDF.</li>

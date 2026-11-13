@@ -1,0 +1,6 @@
+component,start_month,end_month,trend_mm_year,lower_95_mm_year,upper_95_mm_year,steric_depth_m,latitude_limit_degrees,source
+steric_Argo,2004-01,2007-12,0.8,0.0,1.6,900,66,10.1029/2008GL036010_Table1
+mass_GRACE,2004-01,2007-12,0.8,0.3,1.3,,66,10.1029/2008GL036010_Table1
+sum_steric_mass,2004-01,2007-12,1.5,0.5,2.5,900,66,10.1029/2008GL036010_Table1
+total_Jason1,2004-01,2007-12,2.4,1.3,3.5,,66,10.1029/2008GL036010_Table1
+total_Envisat,2004-01,2007-12,2.7,1.2,4.2,,66,10.1029/2008GL036010_Table1

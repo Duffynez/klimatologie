@@ -1,0 +1,22 @@
+{
+  "model": "Millero and Poisson 1981, 1 atm, IPTS-68",
+  "warming": [
+    {
+      "initial_T": 5,
+      "final_T": 6,
+      "S": 35,
+      "initial_volume_m3": 1,
+      "mass_kg": 1027.6754652782759,
+      "increase_ml": 119.2393896964905
+    },
+    {
+      "initial_T": 25,
+      "final_T": 26,
+      "S": 35,
+      "initial_volume_m3": 1,
+      "mass_kg": 1023.3430584772268,
+      "increase_ml": 300.853215746244
+    }
+  ],
+  "check_5C_35": 1027.6754652782759
+}

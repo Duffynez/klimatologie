@@ -24,6 +24,7 @@ import { SeaIceMechanismsArticle } from "../../components/SeaIceMechanismsArticl
 import { AlbedoFeedbackArticle } from "../../components/AlbedoFeedbackArticle";
 import { OceanAcidificationMechanismArticle } from "../../components/OceanAcidificationMechanismArticle";
 import { SeaLevelBudgetArticle } from "../../components/SeaLevelBudgetArticle";
+import { ThermalExpansionArticle } from "../../components/ThermalExpansionArticle";
 import { climateMechanisms, mechanismBySlug } from "../../data/mechanisms";
 
 const combinedCryosphereSlug = "energeticka-bilance-snehu-a-morskeho-ledu";
@@ -140,6 +141,14 @@ export default async function MechanismDetail({ params }: { params: Promise<{ sl
     return <div className="page-shell">
       <PageLead eyebrow={"Mechanismy / " + mechanism.category} title={mechanism.title} meta="13. listopadu 2026"><p>{mechanism.summary}</p></PageLead>
       <SeaLevelBudgetArticle />
+      <Link className="text-link catalog-back-link" href="/mechanismy">&larr; Zpět na všechny mechanismy</Link>
+    </div>;
+  }
+
+  if (slug === "tepelna-roztaznost-morske-vody") {
+    return <div className="page-shell">
+      <PageLead eyebrow={"Mechanismy / " + mechanism.category} title={mechanism.title} meta="13. listopadu 2026"><p>{mechanism.summary}</p></PageLead>
+      <ThermalExpansionArticle />
       <Link className="text-link catalog-back-link" href="/mechanismy">&larr; Zpět na všechny mechanismy</Link>
     </div>;
   }

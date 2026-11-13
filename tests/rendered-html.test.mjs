@@ -4,6 +4,69 @@ import { readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 import { stripTypeScriptTypes } from "node:module";
 
+test("thermal expansion connects laboratory controls to ocean measurements and reproducible density examples", async () => {
+  const route = "/mechanismy/tepelna-roztaznost-morske-vody";
+  const html = await readFile(new URL("dist/client" + route + "/index.html", root), "utf8");
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body, "The final mechanism must have a complete article");
+  assert.match(html, /<p class="page-lead__meta">13\. listopadu 2026<\/p>/);
+  assert.doesNotMatch(body, /katex-error|_vinext\/image/);
+  assert.equal((body.slice(0, body.indexOf('<h2 id="hypotezy"')).match(/<p\b/g) ?? []).length, 2);
+  for (const id of ["zmena-hustoty", "test-laborator", "test-ocean", "test-presnost", "mechanismus", "slanost", "vrstvy", "zaver"]) assert.ok(body.includes('id="' + id + '"'), id);
+  const bibliography = body.slice(body.indexOf('<h2 id="prameny"'));
+  const catalogue = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
+  for (const id of new Set([...body.matchAll(/href="\/zdroje#([^"]+)"/g)].map(m => m[1]))) {
+    assert.ok(bibliography.includes('href="/zdroje#' + id + '"'), "Missing bibliography entry " + id);
+    const card = catalogue.match(new RegExp('<article[^>]+id="' + id + '"[\\s\\S]*?</article>'))?.[0];
+    assert.ok(card, "Missing source " + id);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    assert.match(card, /Otevřít (plný text|veřejný zdroj|veřejná data)/);
+    if (id.startsWith("DOI_")) assert.match(card, /doi\.org\//);
+  }
+  for (const [, href] of body.matchAll(/href="(\/[^"]+)"/g)) {
+    const [pathname, anchor] = href.split("#");
+    const file = /\.[a-z0-9]+$/i.test(pathname) ? pathname : pathname.replace(/\/$/, "") + "/index.html";
+    const target = await readFile(new URL("dist/client" + file, root), "utf8");
+    if (anchor) assert.ok(target.includes('id="' + anchor + '"'), "Broken target " + href);
+  }
+  for (const target of ["/pozorovani/gmsl", "/metody/konduktometrie", "/mechanismy/bilance-globalni-hladiny-more"]) {
+    const related = await readFile(new URL("dist/client" + target + "/index.html", root), "utf8");
+    assert.ok(hasArticleLink(body, target));
+    assert.ok(hasArticleLink(related, route), "Missing reciprocal link " + target);
+  }
+  const base = new URL("public/media/tepelna-roztaznost/", root);
+  const { density, calculate } = await import(new URL("vypocty.mjs", base));
+  // Published reference value, Millero and Poisson 1981, Table 2.
+  assert.ok(Math.abs(density(5, 35) - 1027.67547) < .000005);
+  const result = calculate();
+  assert.deepEqual(result.warming.map(r => Math.round(r.increase_ml)), [119, 301]);
+  const csv = (await readFile(new URL("hustota-vypocet.csv", base), "utf8")).trim().split("\n").slice(1);
+  assert.equal(csv.length, result.rows.length);
+  csv.forEach((line, i) => {
+    const [series, T, S, p, rho] = line.split(",");
+    assert.equal(series, result.rows[i].series);
+    assert.equal(+p, 1);
+    assert.ok(Math.abs(+rho - density(+T, +S)) < .00000001);
+  });
+  const ocean = (await readFile(new URL("leuliette-2009-tabulka-1.csv", base), "utf8")).trim().split("\n").slice(1).map(l => l.split(","));
+  assert.ok(ocean.every(r => r[1] === "2004-01" && r[2] === "2007-12"));
+  assert.deepEqual(ocean.map(r => r.slice(3, 6).map(Number)), [[.8, 0, 1.6], [.8, .3, 1.3], [1.5, .5, 2.5], [2.4, 1.3, 3.5], [2.7, 1.2, 4.2]]);
+  for (const file of ["teplota-slanost.svg", "hustota.svg", "hustota-vypocet.csv", "priklady.json", "leuliette-2009-tabulka-1.csv", "vypocty.mjs", "grafika.mjs", "podklady.txt"]) {
+    const original = await readFile(new URL(file, base));
+    assert.deepEqual(original, await readFile(new URL("dist/client/media/tepelna-roztaznost/" + file, root)));
+    assert.ok(body.includes("/media/tepelna-roztaznost/" + file), "Missing public asset link " + file);
+    if (file.endsWith(".svg")) {
+      assert.match(original.toString(), /<title[^>]*>[^<]+<\/title>/);
+      assert.match(original.toString(), /<desc[^>]*>[^<]+<\/desc>/);
+    }
+  }
+  assert.match(body, /stejné hmotnosti, slanosti a tlaku/);
+  assert.match(body, /Čáry jsou výpočet pro zadané podmínky/);
+  assert.match(body, /95% intervaly/);
+  assert.match(body, /DOI_10_5194_os_6_379_2010/);
+  assert.doesNotMatch(body.replace(/<[^>]+>/g, " ").replace(/&[^;]+;/g, " "), /;/);
+});
+
 test("sea level budget exposes comparable contributions, uncertainty data and reciprocal measurement links", async () => {
   const route = "/mechanismy/bilance-globalni-hladiny-more";
   const html = await readFile(new URL("dist/client" + route + "/index.html", root), "utf8");
@@ -1565,7 +1628,7 @@ test("groups all 23 mechanism topics by their link to observations and preserves
     assert.ok(sitemap.includes(`<loc>https://klimatologie.eu/mechanismy/${slug}/</loc>`), "Missing sitemap route " + slug);
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     assert.ok(html.includes(`<h1>${title}</h1>`), "Wrong detail title " + slug);
-    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen", "prumyslove-aerosoly-a-oblaka", "zmeny-ozonu-ve-stratosfere", "prenos-tepla-do-pudy-a-tani-permafrostu", "pohlcovani-a-presun-tepla-oceanem", "hmotnostni-bilance-a-dynamika-ledovych-prikrovu", "vodni-para-jako-zpetna-vazba", "hmotnostni-bilance-horskych-ledovcu", "vznik-a-zanik-snehove-pokryvky-na-sousi", "vznik-tani-a-pohyb-morskeho-ledu", "odrazivost-snehu-a-ledu-jako-zpetna-vazba", "pohlcovani-co2-oceanem-a-uhlicitanova-chemie", "oblaka-a-jejich-klimaticke-zpetne-vazby", "bilance-globalni-hladiny-more", "termodynamika-a-dynamika-srazek", "vnitrni-promenlivost-atmosfery-a-oceanu"].includes(slug)) {
+    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen", "prumyslove-aerosoly-a-oblaka", "zmeny-ozonu-ve-stratosfere", "prenos-tepla-do-pudy-a-tani-permafrostu", "pohlcovani-a-presun-tepla-oceanem", "hmotnostni-bilance-a-dynamika-ledovych-prikrovu", "vodni-para-jako-zpetna-vazba", "hmotnostni-bilance-horskych-ledovcu", "vznik-a-zanik-snehove-pokryvky-na-sousi", "vznik-tani-a-pohyb-morskeho-ledu", "odrazivost-snehu-a-ledu-jako-zpetna-vazba", "pohlcovani-co2-oceanem-a-uhlicitanova-chemie", "oblaka-a-jejich-klimaticke-zpetne-vazby", "bilance-globalni-hladiny-more", "termodynamika-a-dynamika-srazek", "vnitrni-promenlivost-atmosfery-a-oceanu", "tepelna-roztaznost-morske-vody"].includes(slug)) {
       assert.match(html, /Co musí toto vysvětlení objasnit/);
       assert.match(html, /<section class="mechanism-detail-evidence"[^>]*>[\s\S]*<p>[^<]+<\/p><\/section>/);
     }
@@ -2174,7 +2237,7 @@ test("publishes a sourced global mean sea-level article with tide-gauge and sate
   const seaLevelSourceIds = [
     ...article.matchAll(/<SourceLink id="([^"]+)"/g),
   ].map((match) => match[1]);
-  assert.equal(new Set(seaLevelSourceIds).size, 37);
+  assert.equal(new Set(seaLevelSourceIds).size, 38);
   for (const id of new Set(seaLevelSourceIds)) {
     const catalogueOccurrences = sourceCatalogueText.split(id).length - 1;
     const inlineEntry = sourceCatalogueText.match(new RegExp(`\\{[^\\n]*id: "${id}"[^\\n]*\\}`))?.[0] ?? "";
