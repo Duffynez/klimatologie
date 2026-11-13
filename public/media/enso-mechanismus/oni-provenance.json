@@ -1,0 +1,14 @@
+{
+  "source": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso/oni/v6/",
+  "provider": "NOAA Climate Prediction Center",
+  "version": "ERSSTv6",
+  "accessed": "2026-11-13",
+  "source_sha256": "4b8e5ae8d2accf3673eabd49a9d5e7081d16cf9059b982f96e24130ad1c4c232",
+  "region": "5°S–5°N, 170°W–120°W",
+  "values": "Published three-month ONI values rounded to 0.1 °C. Central month labels.",
+  "baseline": "NOAA centered 30-year base periods updated every five years",
+  "interval": "1996–1999, 48 overlapping three-month seasons",
+  "processing": "Select rows 1996–1999 from NOAA HTML table, preserve published values. No detrending or smoothing beyond the source ONI.",
+  "uncertainty": "Source table does not publish a confidence interval for each ONI value.",
+  "license": "NOAA public US government data. Original graphical processing CC BY 4.0."
+}

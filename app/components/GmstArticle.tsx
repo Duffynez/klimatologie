@@ -526,6 +526,7 @@ export function GmstArticle() {
         <aside className="article-related-mechanism" aria-label="Navazující vysvětlení">
           <p>Teplotní výkyv po roce 1991 a testování jeho příčiny vysvětluje článek <Link href="/mechanismy/sopecne-aerosoly/">Proč mohou velké sopečné erupce ochladit Zemi?</Link></p>
           <p className="eyebrow">Navazující vysvětlení</p>
+          <p>Vznik oceánských výkyvů, které se promítají i do atmosféry, vysvětluje mechanismus <Link href="/mechanismy/vnitrni-promenlivost-atmosfery-a-oceanu/">El Niño a La Niña</Link>.</p>
           <p>Proč přebytek energie vede k ohřívání Země a jak oteplení ovlivňuje její další vyzařování, vysvětluje článek <Link href="/mechanismy/energeticka-bilance-zeme/#nerovnovaha-a-teplota">Proč v klimatickém systému přibývá energie</Link>.</p>
           <p>Proč se rychlost oteplování u povrchu mění, rozebírá <Link href="/mechanismy/energeticka-bilance-zeme/#prirozena-hypoteza">příběh přirozeného kolísání</Link>, včetně pokusu s teplotou rovníkového Pacifiku.</p>
         </aside>

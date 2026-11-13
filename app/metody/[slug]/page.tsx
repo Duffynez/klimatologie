@@ -694,7 +694,7 @@ export default async function MethodDetail({ params }: { params: Promise<{ slug:
         <PageLead
           eyebrow="Metody / Přímá měření"
           title="Odporová termometrie a termistory"
-          meta="5. listopadu 2026"
+          meta="13. listopadu 2026"
         >
           <p>
             Elektrický odpor čidla se mění s teplotou. Této závislosti využívají teploměry

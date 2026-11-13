@@ -1,3 +1,4 @@
+import { InternalVariabilityArticle } from "../../components/InternalVariabilityArticle";
 import { PrecipitationMechanismsArticle } from "../../components/PrecipitationMechanismsArticle";
 import { CloudFeedbackArticle } from "../../components/CloudFeedbackArticle";
 import { WaterVapourFeedbackArticle } from "../../components/WaterVapourFeedbackArticle";
@@ -85,6 +86,14 @@ export default async function MechanismDetail({ params }: { params: Promise<{ sl
 
   if (!mechanism) {
     notFound();
+  }
+
+  if (slug === "vnitrni-promenlivost-atmosfery-a-oceanu") {
+    return <div className="page-shell">
+      <PageLead eyebrow={"Mechanismy / " + mechanism.category} title={mechanism.title} meta="13. listopadu 2026"><p>{mechanism.summary}</p></PageLead>
+      <InternalVariabilityArticle />
+      <Link className="text-link catalog-back-link" href="/mechanismy">&larr; Zpět na všechny mechanismy</Link>
+    </div>;
   }
 
   if (slug === "termodynamika-a-dynamika-srazek") {

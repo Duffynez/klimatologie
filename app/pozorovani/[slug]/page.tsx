@@ -62,7 +62,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Atmosféra"
           title="Globální teplota u povrchu"
-          meta="6. listopadu 2026"
+          meta="13. listopadu 2026"
         >
           <p>
             Jak se z měření meteorologických stanic, lodí a bójí počítá globální změna teploty, jak se měření
@@ -157,7 +157,7 @@ export default async function EvidenceDetail({ params }: { params: Promise<{ slu
         <PageLead
           eyebrow="Pozorování / Oceány"
           title="Obsah tepla v oceánu"
-          meta="6. listopadu 2026"
+          meta="13. listopadu 2026"
         >
           <p>
             Jak se z teplot naměřených v různých hloubkách počítá změna obsahu tepla, jak se měření vyvíjela a co

@@ -162,14 +162,16 @@ export const climateMechanisms: ClimateMechanism[] = [
   },
   {
     slug: "vnitrni-promenlivost-atmosfery-a-oceanu",
-    title: "Proč klima kolísá i bez změny vnějších vlivů?",
+    title: "Jak vznikají výkyvy El Niño a La Niña?",
+    isComplete: true,
     category: "Atmosféra a oceán",
-    cardSummary: "Proudění a výměna energie mezi atmosférou a oceánem při El Niño a dalších výkyvech.",
+    cardSummary: "Jak vítr a oceán rozvíjejí výkyv, připravují jeho obrat a mění sílu jednotlivých událostí.",
     observations: [
+      { href: "/pozorovani/tepelny-obsah-oceanu/#enso-pacifik", label: "Teplotní výkyvy a zásoba teplé vody v Pacifiku" },
       { href: "/pozorovani/gmst/#zpomaleni-2002-2012", label: "Dočasné zpomalení růstu povrchové teploty" },
     ],
-    summary: "Proudění a vzájemná výměna energie vytvářejí kolísání klimatu i bez změny vnějšího působení.",
-    distinguishingEvidence: "Časový sled a prostorové uspořádání změn teploty, větru a oceánu během El Niño a dalších výkyvů. Bilance celého systému odlišuje vnitřní přesuny tepla od dlouhodobého přírůstku energie.",
+    summary: "Proč se rovníkový Pacifik střídavě otepluje a ochlazuje? Co při tom dělá vítr, voda pod hladinou a krátké epizody počasí?",
+    distinguishingEvidence: "Společný vývoj větru, povrchové teploty a termokliny. Předstih změn podpovrchové zásoby teplé vody a řízené zásahy do modelového větru ověřují zesilování, obrat a nepravidelnost ENSO.",
   },
   {
     slug: "tepelna-roztaznost-morske-vody",

@@ -1,0 +1,60 @@
+El Niño a La Niña: obrazové a číselné podklady
+Klimatologie.eu, 13. listopadu 2026
+
+Zveřejněné ilustrace
+zpetna-vazba.png
+pamet-oceanu.png
+vetrne-impulzy.png
+
+Všechny tři jsou vlastní kvalitativní ilustrace vytvořené vestavěným nástrojem
+image_gen. Přesná zadání a opravný pokyn druhého obrázku jsou v prompts.json.
+Vlastní zpracování zveřejňujeme pod CC BY 4.0:
+https://creativecommons.org/licenses/by/4.0/
+Nejde o kopie původních odborných obrázků, naměřené profily ani modelový výstup.
+
+Odborné podklady a kontrola ilustrací
+1. Bjerknesova vazba: Bjerknes (1969), oddíly 2–4, a Vialard a kol. (2025),
+oddíl 2.1 a obrázek 1. Západ je vlevo, východ vpravo. Běžné pasáty směřují
+na západ. Termoklina je na západě hlubší. Při rozvoji El Niño mohou pasáty
+slábnout a termoklina na východě klesat. Posun deště mění proudění.
+https://doi.org/10.1175/1520-0493(1969)097%3C0163:ATFTEP%3E2.3.CO;2
+https://doi.org/10.1029/2024RG000843
+
+2. Paměť oceánu: Jin (1997), obrázek 1 a oddíl 2, Meinen a McPhaden (2000),
+obrázky 1, 4 a 5. Sledujeme objem nad 20 °C v rovníkovém pásu.
+Přesun vody od rovníku a k rovníku je znázorněn vodorovně ve směru sever–jih.
+Šipka ve třetím panelu znamená výstup vody. Šipky mezi panely znamenají čas.
+Teplota povrchu je popsaná vůči sezonnímu průměru, oranžová vrstva zůstává
+nad 20 °C i v chladné fázi. Obrázek rozlišuje povrchovou odchylku a objem.
+Neznázorňuje symetrii skutečných událostí, jejich pevnou periodu ani globální
+ztrátu energie. Tloušťky a velikosti šipek nejsou v měřítku.
+https://doi.org/10.1175/1520-0469(1997)054%3C0811:AEORPF%3E2.0.CO;2
+https://www.pmel.noaa.gov/pubs/outstand/mein2119/mein2119.shtml
+
+3. Větrné impulzy: Hu a Fedorov (2016), obrázek 4 a metodický oddíl.
+Zobrazeny jsou dvě sady s přidanými větrnými impulzy, studie má také kontrolu.
+Každá sada obsahuje deset běhů se shodným počátečním oceánem a různou
+počáteční atmosférou. Západní vítr vane od západu na východ, východní opačně.
+Povrch a termoklina jsou schémata očekávané odezvy, nikoli export CESM.
+V článku uvedené hodnoty zhruba 1,4, 2,1 a 1,1 °C představují souborové
+průměry modelové odezvy Niño3, ne měření jedné události a ne intervaly jistoty.
+Obrázek 4 původní studie ukazuje také rozptyl a překrývání jednotlivých běhů.
+https://repository.library.noaa.gov/view/noaa/29249/noaa_29249_DS1.pdf
+
+Datový graf v pozorování
+oni-1996-1999.csv: 48 zveřejněných hodnot z tabulky NOAA CPC, ERSSTv6.
+oni-provenance.json: verze, oblast, základ, datum, kontrolní otisk zdrojové stránky.
+graf.py: reprodukční skript Python 3 + matplotlib + numpy, čte místní CSV.
+oni-1996-1999.svg a oni-1996-1999.png: výsledný graf, vlastní sazba CC BY 4.0.
+Zdrojové hodnoty NOAA jsou veřejná data americké federální instituce.
+Tříměsíční průměr je zakreslen u prostředního měsíce. Hodnoty tabulky jsou
+zaokrouhlené na 0,1 °C. Nepřidáváme další vyhlazování ani odstraňování trendu.
+Tabulka neobsahuje interval spolehlivosti pro jednotlivé body.
+https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso/oni/v6/
+
+Veřejné další podklady
+Současné indexy objemu teplé vody GODAS a historické BMRC jsou rozdílná
+datová zpracování, záměnu v článku výslovně vylučujeme.
+https://pmel.noaa.gov/elnino/upper-ocean-heat-content-and-enso/
+https://www.pmel.noaa.gov/tao/wwv/data/
+https://pmel.noaa.gov/elnino/upper-ocean-heat-content-and-enso/bmrc/

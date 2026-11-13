@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SourceLink } from "./SourceLink";
 import oceanTransportStyles from "./OceanHeatTransportArticle.module.css";
+import ensoStyles from "./InternalVariabilityArticle.module.css";
 
 export function OceanHeatArticle() {
   return (
@@ -484,6 +485,19 @@ export function OceanHeatArticle() {
           </SourceLink>
         </p>
 
+        <h3 id="enso-pacifik">El Niño a La Niña: povrch a voda pod ním</h3>
+        <p>Teplota povrchu rovníkového Pacifiku střídá výrazné teplé a chladné výkyvy. Jejich průběh lze sledovat indexem ONI. Ten je tříměsíčním průměrem teplotní odchylky v oblasti Niño3.4, mezi 5° jižní a 5° severní šířky a 170° až 120° západní délky. Níže používáme verzi ERSSTv6 a odchylky od obvyklé teploty stejné části roku. Referenční třicetiletá období NOAA aktualizuje po pěti letech. Tabulka začíná rokem 1950, náš graf vybírá roky 1996–1999. <SourceLink id="WEB_NOAA_ONI_ERSSTV6">(NOAA, ONI)</SourceLink></p>
+        <p>ONI zachycuje povrchovou část výkyvu. O vodě pod hladinou vypovídají teplotní profily. Pozorovací soustava budovaná během programu TOGA v letech 1985–1994 umožnila událost 1997–1998 sledovat společně nad vodou i pod ní. Bóje TAO zaznamenávaly vítr, povrchovou teplotu a teploty v různých hloubkách. V publikovaných řezech se porovnávají pětidenní průměry z rovníkového pásu. <SourceLink id="DOI_10_1126_science_283_5404_950">(McPhaden 1999, obrázky 1 a 2)</SourceLink></p>
+        <figure className="article-figure">
+          <div className={ensoStyles.figureScroll} tabIndex={0} role="region" aria-label="Graf teplotních výkyvů Pacifiku, posuvný do stran">
+            <a href="/media/enso-mechanismus/oni-1996-1999.svg" aria-label="Otevřít graf ONI v plné velikosti"><Image className="article-figure__media" src="/media/enso-mechanismus/oni-1996-1999.svg" width={1200} height={540} alt="Index ONI v letech 1996–1999. Teplý vrchol dosahuje +2,4 °C za listopad 1997 až leden 1998, o rok později odchylka činí −1,5 °C." unoptimized /></a>
+          </div>
+          <figcaption>Vodorovná osa udává prostřední měsíc tříměsíčního průměru, svislá teplotní odchylku v °C. Oranžová plocha je nad referenčním průměrem, modrá pod ním. Výřez zachycuje jednu silnou událost a následné ochlazení, nikoli dlouhodobý trend. Zdrojová tabulka neuvádí interval spolehlivosti jednotlivých hodnot. <SourceLink id="WEB_NOAA_ONI_ERSSTV6">NOAA CPC, ERSSTv6</SourceLink>, výřez stažený 13. listopadu 2026. <a href="/media/enso-mechanismus/oni-1996-1999.csv">Číselná data</a>, <a href="/media/enso-mechanismus/oni-provenance.json">původ a zpracování</a>, <a href="/media/enso-mechanismus/graf.py">reprodukční skript</a>. Vlastní graf, CC BY 4.0.</figcaption>
+        </figure>
+        <p>Za listopad 1997 až leden 1998 činí v této verzi ONI +2,4 °C. Za listopad 1998 až leden 1999 už −1,5 °C. Hodnoty vyjadřují odchylku od sezonního základu, nikoli rozdíl dvou absolutních teplot. NOAA dnes pro operativní sledování ENSO používá relativní index RONI. Zde zůstáváme u výslovně označené historické řady ONI. <SourceLink id="WEB_NOAA_ONI_ERSSTV6">(NOAA, datová tabulka a dokumentace)</SourceLink></p>
+        <p>Meinen a McPhaden z teplotních profilů odvodili také objem vody nad 20 °C v pásu 5° S–5° N, 120° E–80° W. Během události 1997–1998 se tento objem zmenšil téměř o čtvrtinu. Jde o objem v části Pacifiku, ne o úbytek tepla z celého oceánu. Studie používá rozbor BMRC, který není totožný s dnešní řadou GODAS. <SourceLink id="DOI_10_1175_MEINEN_MCPHADEN_2000">(Meinen a McPhaden 2000, obrázek 4)</SourceLink></p>
+        <p>Dnešní veřejné odhady zásoby teplé vody spojují teplotní profily bójí, plováků Argo a dalších měření s oceánským modelem GODAS. Poskytovatel zpřístupňuje měsíční objemy, jejich odchylky i dokumentaci a odkazuje na historický archiv BMRC. Význam tohoto spojení měření s modelem vysvětluje metoda <Link href="/metody/asimilace-dat-a-reanalyzy/#ocean">asimilace dat a reanalýzy</Link>. <SourceLink id="WEB_NOAA_PACIFIC_WWV">(NOAA, WWV)</SourceLink></p>
+
         <h3 id="jizni-ocean">Pomalý ohřev hladiny a příjem tepla v Jižním oceánu</h3>
         <p>Armour a kolegové porovnali povrchové teploty z dat NOAA ERSST v3b za roky 1950–2012. Jižně od 50° jižní šířky vyšel trend 0,02 °C za deset let, mezi 40° a 50° jižní šířky 0,11 °C a pro celý světový oceán 0,08 °C. Jde o rychlost změny průměrné teploty hladiny, nikoli o teplotu vody ani o obsah tepla celého sloupce. Graf přebírá zaokrouhlené hodnoty z textu studie. <SourceLink id="DOI_10_1038_ngeo2731">(Armour a kol. 2016, úvod a metody)</SourceLink></p>
         <figure className={`article-figure ${oceanTransportStyles.explanatoryFigure}`}>
@@ -592,6 +606,7 @@ export function OceanHeatArticle() {
 
         <aside className="article-related-mechanism" aria-label="Navazující vysvětlení">
           <p className="eyebrow">Navazující vysvětlení</p>
+          <p>Proč se rovníkový Pacifik střídavě otepluje a ochlazuje a proč záleží na vodě pod hladinou, vysvětluje mechanismus <Link href="/mechanismy/vnitrni-promenlivost-atmosfery-a-oceanu/">El Niño a La Niña</Link>.</p>
           <p>Jak přibývání tepla v oceánu souvisí s rozdílem mezi přijatým a odevzdaným zářením Země, vysvětluje článek <Link href="/mechanismy/energeticka-bilance-zeme/#porovnani">Proč v klimatickém systému přibývá energie</Link>.</p>
         </aside>
 
@@ -601,6 +616,7 @@ export function OceanHeatArticle() {
         </aside>
 
         <h2>Prameny, data a licence</h2>
+        <p>Rovníkový Pacifik dokládají <SourceLink id="DOI_10_1126_science_283_5404_950">McPhaden 1999</SourceLink>, <SourceLink id="DOI_10_1175_MEINEN_MCPHADEN_2000">Meinen a McPhaden 2000</SourceLink>, <SourceLink id="WEB_NOAA_ONI_ERSSTV6">NOAA ONI</SourceLink> a <SourceLink id="WEB_NOAA_PACIFIC_WWV">NOAA WWV</SourceLink>. <SourceLink id="MEDIA_ENSO_MECHANISM_2026">Podklady grafu a licence</SourceLink>.</p>
         <p>Regionální rozbor doplňují <SourceLink id="DOI_10_1038_ngeo2731">Armour a kol. 2016</SourceLink> a <SourceLink id="DOI_10_1002_jgrc_20157">Sallée a kol. 2013</SourceLink>. Vstupní údaje zpřístupňují <SourceLink id="DATA_NOAA_ERSST_V3B">NOAA ERSST v3b</SourceLink>, <SourceLink id="DATA_METOFFICE_EN4">Met Office EN4</SourceLink> a <SourceLink id="DATA_WHOI_OAFLUX">WHOI OAFlux</SourceLink>.</p>
         <p>
           K odborným pracím uvádíme veřejný plný text bez předplatného. Pokud má práce DOI, odkazujeme i na něj. Datové portály vedou

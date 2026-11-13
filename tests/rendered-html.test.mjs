@@ -1565,7 +1565,7 @@ test("groups all 23 mechanism topics by their link to observations and preserves
     assert.ok(sitemap.includes(`<loc>https://klimatologie.eu/mechanismy/${slug}/</loc>`), "Missing sitemap route " + slug);
     const html = await readFile(new URL(`dist/client/mechanismy/${slug}/index.html`, root), "utf8");
     assert.ok(html.includes(`<h1>${title}</h1>`), "Wrong detail title " + slug);
-    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen", "prumyslove-aerosoly-a-oblaka", "zmeny-ozonu-ve-stratosfere", "prenos-tepla-do-pudy-a-tani-permafrostu", "pohlcovani-a-presun-tepla-oceanem", "hmotnostni-bilance-a-dynamika-ledovych-prikrovu", "vodni-para-jako-zpetna-vazba", "hmotnostni-bilance-horskych-ledovcu", "vznik-a-zanik-snehove-pokryvky-na-sousi", "vznik-tani-a-pohyb-morskeho-ledu", "odrazivost-snehu-a-ledu-jako-zpetna-vazba", "pohlcovani-co2-oceanem-a-uhlicitanova-chemie", "oblaka-a-jejich-klimaticke-zpetne-vazby", "bilance-globalni-hladiny-more", "termodynamika-a-dynamika-srazek"].includes(slug)) {
+    if (!["energeticka-bilance-zeme", "radiacni-pusobeni-sklenikovych-plynu", "puvod-rustu-atmosferickeho-co2", "slunecni-promenlivost", "sopecne-aerosoly", "mechanismy-vln-veder", "biologicke-mechanismy-fenologickych-zmen", "prumyslove-aerosoly-a-oblaka", "zmeny-ozonu-ve-stratosfere", "prenos-tepla-do-pudy-a-tani-permafrostu", "pohlcovani-a-presun-tepla-oceanem", "hmotnostni-bilance-a-dynamika-ledovych-prikrovu", "vodni-para-jako-zpetna-vazba", "hmotnostni-bilance-horskych-ledovcu", "vznik-a-zanik-snehove-pokryvky-na-sousi", "vznik-tani-a-pohyb-morskeho-ledu", "odrazivost-snehu-a-ledu-jako-zpetna-vazba", "pohlcovani-co2-oceanem-a-uhlicitanova-chemie", "oblaka-a-jejich-klimaticke-zpetne-vazby", "bilance-globalni-hladiny-more", "termodynamika-a-dynamika-srazek", "vnitrni-promenlivost-atmosfery-a-oceanu"].includes(slug)) {
       assert.match(html, /Co musí toto vysvětlení objasnit/);
       assert.match(html, /<section class="mechanism-detail-evidence"[^>]*>[\s\S]*<p>[^<]+<\/p><\/section>/);
     }
@@ -1829,7 +1829,7 @@ test("publishes the global surface temperature article instead of the generic pl
 
   assert.match(evidencePage, /GmstArticle/);
   assert.match(evidencePage, /title="Globální teplota u povrchu"/);
-  assert.match(evidencePage, /title="Globální teplota u povrchu"\s+meta="6\. listopadu 2026"/);
+  assert.match(evidencePage, /title="Globální teplota u povrchu"\s+meta="13\. listopadu 2026"/);
   assert.match(article, /Globální teplota u povrchu vyjadřuje, jak se průměrná teplota/);
   assert.match(article, /Historie globálního výpočtu/);
   assert.match(article, /Jak vzniká globální výpočet/);
@@ -1927,7 +1927,7 @@ test("publishes a sourced ocean heat content article instead of the generic plac
   ]);
 
   assert.match(evidencePage, /OceanHeatArticle/);
-  assert.match(evidencePage, /if \(slug === "tepelny-obsah-oceanu"\)[\s\S]*?meta="6\. listopadu 2026"/);
+  assert.match(evidencePage, /title="Obsah tepla v oceánu"\s+meta="13\. listopadu 2026"/);
   assert.match(article, /Obsah tepla v oceánu vyjadřuje/);
   assert.match(article, /Jak vzniká globální výpočet/);
   assert.match(article, /<h2 id="pozorovani">Pozorování<\/h2>/);
@@ -1956,7 +1956,7 @@ test("publishes a sourced ocean heat content article instead of the generic plac
   const oceanHeatSourceIds = [
     ...article.matchAll(/<SourceLink id="([^"]+)"/g),
   ].map((match) => match[1]);
-  assert.equal(new Set(oceanHeatSourceIds).size, 42);
+  assert.equal(new Set(oceanHeatSourceIds).size, 47);
   const renderedSources = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
   for (const id of new Set(oceanHeatSourceIds)) {
     const start = renderedSources.indexOf('id="' + id + '"');
@@ -2768,7 +2768,7 @@ test("publishes reproducible thermometry examples with open sources and working 
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
   const displayedDate = html.match(/<p class="page-lead__meta">([^<]*)<\/p>/)?.[1];
-  assert.equal(displayedDate, "5. listopadu 2026", "Show only the last edit date, without a label");
+  assert.equal(displayedDate, "13. listopadu 2026", "Show only the last edit date, without a label");
   assert.doesNotMatch(article, /<Citation\b/);
   assert.doesNotMatch(body.replace(/<[^>]*>/g, "").replace(/&[^;\s]+;/g, ""), /;/, "Czech prose must not contain semicolons");
   assert.match(body, /29,8627 °C/);
@@ -4599,7 +4599,7 @@ test("quality control and homogenization connects a complete method to global te
     "Jak získáme srovnatelný klimatický záznam", "Nejistoty a ověření", "Příklad: kontrola a úpravy teplot v Ruzyni", "Shrnutí",
   ]);
   assert.match(html, /<p class="page-lead__meta">31\. října 2026<\/p>/);
-  assert.match(observation, /<p class="page-lead__meta">6\. listopadu 2026<\/p>/);
+  assert.match(observation, /<p class="page-lead__meta">13\. listopadu 2026<\/p>/);
   assert.match(body, /EZM00011518/);
   assert.match(body, /v4\.0\.1\.20261029/);
   assert.match(body, /719/);
@@ -5270,6 +5270,7 @@ test("keeps each hypothesis independently collapsible with complete content and 
     ["vodni-para-jako-zpetna-vazba", ["vysusovani", "zesileni"]],
     ["oblaka-a-jejich-klimaticke-zpetne-vazby", ["plocha-vysokych-oblaku", "vyska", "nizka-oblacnost"]],
     ["termodynamika-a-dynamika-srazek", ["vodni-para", "energie", "proudeni"]],
+    ["vnitrni-promenlivost-atmosfery-a-oceanu", ["zpetna-vazba", "pamet-oceanu", "vetrne-impulzy"]],
     ["hmotnostni-bilance-horskych-ledovcu", ["mene-snehu", "vetsi-tani"]],
     ["vznik-a-zanik-snehove-pokryvky-na-sousi", ["zmena-srazek", "teplota-a-tani"]],
     ["vznik-tani-a-pohyb-morskeho-ledu", ["silnejsi-vyvoz", "energie-a-tani"]],
@@ -5669,6 +5670,60 @@ test("precipitation mechanisms connect distinct scales, six tests, open sources 
     assert.ok(linked.includes("/mechanismy/" + slug + "/"), "Missing reciprocal link " + route);
     assert.match(linked, /13\. listopadu 2026/);
   }
+  for (const [,href] of body.matchAll(/href="(\/[^"]+)"/g)) {
+    if (href.startsWith("/media/")) continue;
+    const [path, anchor] = href.split("#");
+    const target = await readFile(new URL("dist/client" + path.replace(/\/$/, "") + "/index.html", root), "utf8");
+    if (anchor) assert.ok(target.includes('id="' + anchor + '"'), "Broken anchor " + href);
+  }
+  const details = body.match(/<details class="method-details">([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(details && details.replace(/<[^>]+>/g, " ").split(/\s+/).length <= 600);
+  assert.doesNotMatch(body.replace(/<[^>]+>/g, " ").replace(/&[^;]+;/g, " "), /;/);
+});
+
+
+test("ENSO connects six causal tests, open sources, observed data and reciprocal links", async () => {
+  const slug = "vnitrni-promenlivost-atmosfery-a-oceanu";
+  const html = await readFile(new URL("dist/client/mechanismy/" + slug + "/index.html", root), "utf8");
+  const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
+  assert.ok(body);
+  assert.match(html, /<h1>Jak vznikají výkyvy El Niño a La Niña\?<\/h1>/);
+  assert.match(html, /<p class="page-lead__meta">13\. listopadu 2026<\/p>/);
+  assert.equal((body.match(/<h4\b/g) ?? []).length, 6);
+  assert.equal((body.match(/<img\b/g) ?? []).length, 3);
+  assert.equal((body.slice(0, body.indexOf('<h2 id="hypotezy"')).match(/<p\b/g) ?? []).length, 2);
+  const bibliography = body.slice(body.indexOf('<h2 id="prameny"'));
+  const catalogue = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
+  const ids = new Set([...body.matchAll(/href="\/zdroje#([^"]+)"/g)].map(m => m[1]));
+  assert.equal(ids.size, 12);
+  for (const id of ids) {
+    assert.ok(bibliography.includes('href="/zdroje#' + id + '"'), "Missing bibliography entry " + id);
+    const card = catalogue.match(new RegExp('<article[^>]+id="' + id + '"[\\s\\S]*?</article>'))?.[0];
+    assert.ok(card, "Missing source " + id);
+    assert.match(card, /Otevřít (plný text|veřejn[áý])/);
+    assert.doesNotMatch(card, /drive\.google\.com/);
+    if (id.startsWith("DOI_")) assert.match(card, /doi\.org/);
+  }
+  for (const name of ["zpetna-vazba.png", "pamet-oceanu.png", "vetrne-impulzy.png", "prompts.json", "podklady.txt", "oni-1996-1999.csv", "oni-provenance.json", "oni-1996-1999.svg", "graf.py"]) {
+    const original = await readFile(new URL("public/media/enso-mechanismus/" + name, root));
+    assert.deepEqual(original, await readFile(new URL("dist/client/media/enso-mechanismus/" + name, root)));
+    if (name.endsWith(".png")) {
+      assert.equal(original.readUInt32BE(16), 1536);
+      assert.equal(original.readUInt32BE(20), 1024);
+    }
+  }
+  for (const route of ["pozorovani/tepelny-obsah-oceanu", "pozorovani/gmst", "metody/odporova-termometrie-a-termistory"]) {
+    const target = await readFile(new URL("dist/client/" + route + "/index.html", root), "utf8");
+    assert.ok(target.includes("/mechanismy/" + slug + "/"), "Missing reciprocal link " + route);
+    assert.match(target, /<p class="page-lead__meta">13\. listopadu 2026<\/p>/);
+  }
+  const ocean = await readFile(new URL("dist/client/pozorovani/tepelny-obsah-oceanu/index.html", root), "utf8");
+  assert.ok(ocean.includes('id="enso-pacifik"'));
+  assert.ok(ocean.includes('/media/enso-mechanismus/oni-1996-1999.svg'));
+  const csv = await readFile(new URL("public/media/enso-mechanismus/oni-1996-1999.csv", root), "utf8");
+  assert.equal(csv.trim().split(/\r?\n/).length, 49);
+  assert.match(csv, /1997-12,NDJ,2\.4/);
+  assert.match(csv, /1998-12,NDJ,-1\.5/);
   for (const [,href] of body.matchAll(/href="(\/[^"]+)"/g)) {
     if (href.startsWith("/media/")) continue;
     const [path, anchor] = href.split("#");
