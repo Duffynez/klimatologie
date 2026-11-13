@@ -242,10 +242,9 @@ export function AltimetryArticle() {
           <SourceLink id="DOI_10_1016_j_rse_2019_111352">(Smith a kol. 2019, oddíly 3.3–3.4)</SourceLink>
         </p>
         <p>
-          Konečná výška vychází ze středu opraveného rozdělení návratů
-          kolem proložené přímky. Tímto středem je medián.
-          Při seřazení hodnot od nejnižší po nejvyšší leží uprostřed,
-          takže polovinu hodnot má pod sebou a polovinu nad sebou.
+          Výšku z proložené přímky upravíme o obě opravy tak, aby
+          odpovídala odhadu mediánu výšek návratů. Medián dělí seřazené
+          hodnoty na dvě stejně početné poloviny.
           Výsledný produkt ATL06 obsahuje výšku ledového povrchu,
           jeho sklon a údaje o kvalitě pro jednotlivé úseky.{" "}
           <SourceLink id="DOI_10_1016_j_rse_2019_111352">(Smith a kol. 2019, oddíly 3.3–3.4)</SourceLink>
@@ -276,18 +275,19 @@ export function AltimetryArticle() {
           Nad mořským ledem nejprve rozlišíme návraty od ker a od vody
           v mezerách mezi nimi. Hladina poskytne místní výškovou referenci.
           Rozdíl mezi výškou kry a okolní hladinou se nazývá volný bok.
-          U laseru jde obvykle o výšku horního povrchu sněhu nad vodou.
+          Laser ICESat-2 určuje výšku povrchu kry nad vodou. Pokud na
+          kře leží sníh, měří k povrchu sněhu.
           Radar CryoSat-2 se v zimě vyhodnocuje s předpokladem odrazu
           na rozhraní sněhu a ledu a s opravou zpomalení vlny ve sněhu.{" "}
-          <SourceLink id="DOI_10_1016_j_rse_2019_111325">(Neumann a kol. 2019)</SourceLink>{" "}
+          <SourceLink id="DOI_10_1029_2019JC015486">(Kwok a kol. 2019)</SourceLink>{" "}
           <SourceLink id="DOI_10_1002_grl_50193">(Laxon a kol. 2013, oddíl 2)</SourceLink>
         </p>
         <p>
           Plovoucí kra vytlačuje vodu, jejíž hmotnost vyrovnává hmotnost ledu
           i sněhu na něm. Z této rovnováhy vypočteme celkovou tloušťku ledu.
-          K naměřenému volnému boku proto přidáváme výšku a hustotu sněhu
-          a hustoty ledu a vody. Sníh totiž kru zatěžuje a zároveň zvyšuje
-          povrch, který zachytí laser. Jak se tento převod používá
+          K převodu volného boku na tloušťku ledu potřebujeme také
+          tloušťku sněhu a hustoty sněhu, ledu a vody. Sníh kru zatěžuje
+          a zároveň zvyšuje povrch, který zachytí laser. Jak se tento převod používá
           a kontroluje, ukazuje pozorování
           <Link href="/pozorovani/ubytek-arktickeho-ledu/#tloustka"> tloušťky arktického mořského ledu</Link>.{" "}
           <SourceLink id="DOI_10_1002_grl_50193">(Laxon a kol. 2013)</SourceLink>
