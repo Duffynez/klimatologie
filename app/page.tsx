@@ -72,7 +72,7 @@ export default function Home() {
         <div className="hero__content">
           <h1>Klima, které můžete zkoumat sami.</h1>
           <p className="hero__lede">
-            Projděte si měření, zjistěte, jak vznikla, a ověřte si závěry v původních studiích.
+            Pomáháme vám porozumět tomu, co se s klimatem děje, a ověřit si, z jakých měření a studií vycházejí závěry.
           </p>
           <div className="hero__actions">
             <a className="action action--primary" href="#ledovce">Začít ukázkou</a>
@@ -120,6 +120,41 @@ export default function Home() {
             <SourceLink id="WEB_U_S_Geological_Survey_Grinnell_Glacier_Pair_248d244b">Archiv USGS</SourceLink>
           </figcaption>
         </figure>
+      </section>
+
+      <section className="home-purpose" id="proc-klimatologie" aria-labelledby="proc-klimatologie-nadpis">
+        <div className="section-shell home-purpose__inner">
+          <div className="section-heading">
+            <h2 id="proc-klimatologie-nadpis">Proč děláme Klimatologie.eu</h2>
+          </div>
+          <p className="home-purpose__intro">
+            Chceme zpřístupnit poznatky o klimatu i lidem bez odborného vzdělání. Články vám pomohou přečíst graf,
+            najít podklady k vlastní otázce a posoudit, jak dobře měření podpírají jednotlivá vysvětlení.
+          </p>
+          <div className="home-purpose__principles">
+            <div>
+              <h3>Co měření říkají</h3>
+              <p>
+                Vysvětlujeme, co vědci měřili, kde a kdy měření proběhla a jak z nich vznikl zveřejněný výsledek.
+                Rozlišujeme pozorování, vysvětlení příčin, odhady budoucího vývoje a jeho důsledků i politická rozhodnutí.
+              </p>
+            </div>
+            <div>
+              <h3>Jak si výsledek ověřit</h3>
+              <p>
+                U důležitých tvrzení odkazujeme na původní studie a veřejná data. Ukazujeme, z jakých údajů
+                vznikly grafy a jak vědci počítali výsledky. U početních příkladů si můžete výsledek z podkladů přepočítat.
+              </p>
+            </div>
+            <div>
+              <h3>Proč závěrům přikládáme váhu</h3>
+              <p>
+                Když se shodnou výsledky nezávislých měření, máme pro závěr víc opory. Ukazujeme, kde se odhady liší,
+                jak velká je nejistota a kdy nové důkazy vedly k opravě staršího vysvětlení.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="section-shell home-directory" aria-labelledby="rozcestnik-nadpis">

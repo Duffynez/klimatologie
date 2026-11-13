@@ -335,6 +335,46 @@ h3 {
   font-size: 0.85rem;
 }
 
+.home-purpose {
+  background: #edf2ee;
+  scroll-margin-top: 104px;
+}
+
+.home-purpose__inner {
+  padding-block: clamp(36px, 5vw, 66px);
+}
+
+.home-purpose .section-heading {
+  margin-bottom: 16px;
+}
+
+.home-purpose__intro {
+  max-width: 68ch;
+  margin: 0 0 30px;
+  font-size: 1.08rem;
+}
+
+.home-purpose__principles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px clamp(24px, 3vw, 42px);
+}
+
+.home-purpose__principles > div {
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.home-purpose__principles h3 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+.home-purpose__principles p {
+  margin: 0;
+}
+
 .citation {
   color: var(--source-science);
   font-weight: 800;
@@ -1791,6 +1831,10 @@ video.article-figure__media {
     max-width: 700px;
     gap: 24px;
     scroll-margin-top: 104px;
+  }
+
+  .home-purpose__principles {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .page-lead {
