@@ -26,7 +26,7 @@ Před psaním vymezíme hlavní otázku a předmět textu a sestavíme posloupno
 
 Pořadí informací ve zdrojích ani obsahový kontrolní seznam automaticky nepřebíráme jako osnovu. Závaznou strukturu jednotlivých typů článků stanovuje jejich tematický standard.
 
-Každý odstavec rozvíjí jednu hlavní myšlenku. Úvodní věta čtenáře orientuje, další myšlenku vysvětlí nebo doloží. Následující odstavec vychází z již objasněného. Počet vět ani délku odstavce neurčujeme předem.
+**Každý odstavec přidá jeden ucelený krok výkladu.** Vymezí otázku nebo pojem, objasní jev či vztah, doloží tvrzení konkrétním výsledkem nebo ukáže, co z už řečeného plyne. Úvodní věta zasadí myšlenku do dosavadního výkladu, další věty ji vysvětlí nebo doloží. Když složitou myšlenku rozdělíme do více odstavců, každý objasní vlastní krok. Délku odstavce určuje náročnost jeho úlohy.
 
 Důležitý vztah, jeho důvod a význam rozvineme před použitím v dalším kroku. Tempo posuzujeme podle množství nových pojmů a vztahů, které musí čtenář současně spojovat. Samotné rozdělení do krátkých vět chybějící vysvětlení nenahradí. Obtížnému místu věnujeme potřebný prostor, omezíme hromadění závorek a vsuvek.
 
@@ -42,7 +42,7 @@ Pojmenování a značky používáme jednotně. Změnu významu nebo konvence v�
 
 ## 5. Výpočty a postupy
 
-Před významnou operací vysvětlíme její účel a vstupy, potom postup a význam výsledku. Platí to také pro nematematické operace, včetně výběru, porovnávání a třídění. U sloves „zohledňuje“, „koriguje“, „převádí“ a „vyhodnocuje“ ověříme, zda nezastupují celý nevysvětlený postup.
+Před významným postupem řekneme, co má zjistit a z čeho vychází. Potom vysvětlíme, co se s údaji či vzorky udělalo, jak tím vznikl výsledek a co znamená. U porovnání pojmenujeme obě strany, rozhodující rozdíl a podmínky potřebné k výkladu. U výběru a třídění vysvětlíme, podle čeho se rozhodovalo. Slovesa jako „porovnali“, „korigovali“ a „zohlednili“ doplníme o konkrétní krok, na kterém výsledek závisí.
 
 U rovnic vysvětlíme symboly, jednotky, podmínky použití a význam vztahu mezi veličinami. Čtenář má rozumět tomu, proč danou operaci provádíme a co z ní zjistíme. Rozsah odvození volíme podle účelu článku a zachováme potřebné logické kroky.
 
@@ -84,7 +84,7 @@ Nejprve zkontrolujeme obsah podle příslušného odborného standardu. Ověří
 
 Potom provedeme samostatný průchod zaměřený na čtivost a vysvětlení. Následující kroky jsou povinnou součástí redakce před odevzdáním textu:
 
-1. **Určíme účel každého odstavce.** Pracovně jednou větou napíšeme, co má čtenář po jeho přečtení pochopit. Poznámka pojmenuje konkrétní myšlenku, nikoli jen téma. Tyto pracovní poznámky nevkládáme do článku.
+1. **Prověříme přínos každého odstavce.** Mimo článek si jednou větou zapíšeme, co konkrétního si má čtenář z odstavce odnést. Pak ověříme, že toto sdělení skutečně vyplývá z textu. Pokud při formulaci potřebujeme souvislost, kterou známe jen z podkladů, doplníme ji do výkladu.
 2. **Prověříme úlohu každé věty.** Věta má myšlenku odstavce vysvětlovat, dokládat nebo připravovat bezprostředně následující krok. Samotná věcná souvislost s tématem nestačí. Větu, která před dokončením vysvětlení odbočuje například k poruchám, výjimkám, ověřování nebo jiné otázce, přesuneme na místo odpovídající její úloze a tematickému standardu. Zachováme její věcný obsah i zdroj. Předpoklady a podmínky nutné k pochopení daného kroku zůstávají u něj. Rozhodujeme podle významu a funkce věty, nikoli podle negativního tónu nebo přítomnosti slov jako „ale“ či „nemusí“.
 3. **Doplníme chybějící vysvětlení.** Po přesunech zkontrolujeme, zda odstavec skutečně vysvětluje zamýšlenou myšlenku. Rozvineme chybějící vztahy a objasníme potřebné pojmy dříve, než je použijeme v dalším kroku. U postupu musí být srozumitelné, proč jej provádíme, na co navazuje a co jeho výsledek znamená. Vysvětlení má umožnit vyjádřit vztah vlastními slovy a pochopit jeho rozsah. Doplnění musí mít oporu v podkladech podle oddílu 6. Odstranění odbočky ani rozdělení souvětí tuto práci nenahrazuje.
 4. **Přečteme souvisle hlavní text bez technických doplňků.** Ověříme, že začátek poskytuje srozumitelnou představu o tématu, jednotlivé kroky na sebe navazují a závěr odpovídá otázce článku konkrétním poznatkem. Opravíme přeskoky, předčasné odbočky a opakování bez ztráty významu. Čtenář musí mít vysvětlené předpoklady každého dalšího kroku a nesmí být nucen hledat rozhodující vysvětlení v doplňku. Po opravách znovu přečteme dotčenou pasáž i její napojení na okolní text.

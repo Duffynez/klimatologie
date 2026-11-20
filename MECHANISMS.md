@@ -45,8 +45,10 @@ U historické hypotézy popíšeme doložené okolnosti vzniku, které pomáhaj�
 
 Nejdříve vysvětlíme vztah, ze kterého otázka pro zkoušku vyplývá. Při přechodu k další zkoušce řekneme, co přidává k předchozímu zjištění. Pokud se mění období, oblast nebo měřítko, objasníme důvod změny dřív, než uvedeme nový výsledek. Následující kroky patří k rozhodujícím zkouškám jak v příbězích, tak v souvislém výkladu. Lze je vyložit v jednom odstavci nebo rozložit podle náročnosti porovnání.
 
+Samostatný odstavec o uspořádání zkoušky vysvětlí, co lze porovnáním zjistit a proč to zvolený postup umožňuje. Na popis přímo naváže naměřený či vypočtený výsledek a vysvětlení, co říká o zkoumaném jevu.
+
 1. **Předpověď.** Vysvětlíme potřebné pojmy, uvedeme očekávaný rozdíl a objasníme, proč vyplývá z vysvětlení.
-2. **Zkouška.** Popíšeme skutečně provedené porovnání. Čtenář musí vědět, co se měřilo nebo počítalo, s čím se výsledek srovnával a za jakých podmínek.
+2. **Zkouška.** Podle [STYLE.md, oddílu 5](STYLE.md#5-výpočty-a-postupy) popíšeme, co se měřilo či počítalo, s čím se výsledek srovnával a za jakých podmínek. U modelových variant nebo kontrolovaného pokusu vysvětlíme, co se měnilo a které podmínky měly porovnávané případy společné.
 3. **Výsledek.** Uvedeme rozhodující hodnotu či vlastnost změny, období, oblast a podstatnou nejistotu. Vysvětlíme, zda se výsledek shoduje s předpovědí v mezích nejistoty a jak velký rozdíl nejistota připouští.
 4. **Závěr.** Vyložíme, kterou část vysvětlení porovnání ověřuje, jakou má váhu vůči ostatním možnostem a kam jeho závěr sahá.
 
