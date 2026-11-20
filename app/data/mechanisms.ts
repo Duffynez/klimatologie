@@ -58,7 +58,7 @@ export const climateMechanisms: ClimateMechanism[] = [
     observations: [
       { href: "/pozorovani/atmosfericka-koncentrace-co2/#pozorovani", label: "Růst koncentrace CO₂ v atmosféře" },
     ],
-    summary: "Pochází přibývající CO₂ z oceánu, pevniny, nebo fosilních paliv? Historie tří vysvětlení a zkoušky původu i množství uhlíku ve vzduchu.",
+    summary: "Při spalování uhlí i při rozkladu dřeva vzniká CO₂. Oba zdroje pomáhá rozlišit stáří uhlíku ve vzduchu. Změny kyslíku a rozbory mořské vody zase ukazují, kolik uhlíku zachytily rostliny a oceán.",
     distinguishingEvidence: "Porovnání emisí a pohlcování CO₂ s jeho přírůstkem v atmosféře, izotopovým složením uhlíku a poklesem kyslíku. Sezónní a zeměpisné rozdíly ověřují úlohu vegetace a přenosu vzduchu.",
   },
   {
