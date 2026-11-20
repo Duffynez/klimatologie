@@ -12,20 +12,20 @@ const observation = "/pozorovani/ubytek-arktickeho-ledu/";
 const hypotheses: readonly MechanismHypothesis[] = [
   {
     id: "silnejsi-vyvoz", name: "Úbytek objemu způsobuje rostoucí vývoz ledu",
-    prediction: "Pokud byla roční bilance původně vyrovnaná a růst, tání ani přísun se nezmění, nový úbytek zásoby má doprovázet větší odvoz objemu ledu.",
-    test: "Ve Framském průlivu porovnáme vyvezenou plochu s objemem vypočteným z pohybu, koncentrace a sonarové tloušťky ledu.",
-    observation: "Vyvážená plocha v letech 1979–2014 rostla. Objem však v období 1992–2014 klesal, protože led tenčil.",
-    verdict: "Samotný rostoucí vývoz objemu nestačí",
-    explanation: "Vývoz odstraňuje led a přispívá ke kolísání jednotlivých let. Jeho dlouhodobý pokles však neodpovídá představě zesilujícího odvozu zásoby.",
+    prediction: "Při původní rovnováze a stejném růstu, tání i přísunu musí nový úbytek provázet větší vývoz objemu.",
+    test: "Ve Framském průlivu sledujeme vývoz podle družic. Pro odhad objemu přidáme měření tloušťky.",
+    observation: "Plocha vyvezeného ledu v letech 1979–2014 rostla. Vyvážený objem v letech 1992–2014 klesal.",
+    verdict: "Růst objemového vývozu se ve Framském průlivu nepotvrdil",
+    explanation: "Vývoz ovlivňuje množství ledu v jednotlivých letech. Během měření objemu průlivem procházely stále tenčí kry.",
     state: "insufficient",
   },
   {
     id: "energie-a-tani", name: "Oteplování mění bilanci růstu a tání",
-    prediction: "Přísun energie má vysvětlit naměřené tání. Dlouhodobý pokles má být lépe slučitelný s působením skleníkových plynů než se samotnými přirozenými změnami.",
-    test: "Srovnáme tání u bójí s odhadem pohlceného záření. Potom porovnáme družicovou plochu s klimatickými výpočty při různých příčinách změn.",
-    observation: "Bóje zachytily silnější spodní tání v oblastech s větším slunečním ohřevem oceánu. Analýza let 1979–2019 rozlišila vliv skleníkových plynů ve všech měsících.",
-    verdict: "Podpořené vysvětlení společně s pohybem ledu",
-    explanation: "Růst a tání určují tepelnou část bilance. Vítr, proudy, sníh a stav oceánu mění její místní a sezonní průběh.",
+    prediction: "Kde voda pohltí víc sluneční energie, má zespodu odtávat víc ledu. Pokud k dlouhodobému úbytku výrazně přispívá lidské oteplování, má být rozlišitelný účinek skleníkových plynů.",
+    test: "U bójí srovnáme tání s odhadem ohřevu vody. Změnu plochy ledu za několik desetiletí porovnáme s výpočty pro různé příčiny oteplování.",
+    observation: "U bójí odtávalo zespodu víc ledu tam, kde odhad ukázal větší ohřev okolní vody. V letech 1979–2019 se vliv skleníkových plynů podařilo rozlišit ve všech měsících.",
+    verdict: "Změnu růstu a tání podporují oba testy",
+    explanation: "Bóje ukázaly jednu z cest letního tání. Srovnání s modely přisoudilo většinu dlouhodobého poklesu plochy skleníkovým plynům.",
     state: "supported",
   },
 ];
@@ -52,47 +52,44 @@ export function SeaIceMechanismsArticle() {
   return <article className="article-layout"><div className="article-prose">
     <h2 id="co-vysvetlujeme">Menší pokrývka, tenčí led</h2>
     <p className="article-prose__intro">
-      Zářijový rozsah arktického mořského ledu se podle amerického Národního centra pro data o sněhu a ledu v letech 1979–2025 zmenšoval v průměru o 76 100 km² ročně.
-      V šesti dlouhodobě srovnávaných oblastech se tloušťka na konci tání mezi obdobími 1958–1976 a 2011–2018 snížila přibližně o dva metry.
-      <Link href={`${observation}#pozorovani`}> Pozorování arktického ledu</Link> tedy zachycují změnu pokryté oblasti i vrstvy ledu.
-      Kolik z toho může způsobit odnášení ker a kolik změna jejich růstu a tání?
+      Na konci léta zabírá arktický mořský led menší území a je tenčí než dřív.
+      Podle amerického Národního centra pro data o sněhu a ledu se jeho zářijový rozsah v letech 1979–2025 zmenšoval v průměru o 76 100 km² ročně.
+      V šesti srovnávaných oblastech byl led na konci sezony tání v letech 2011–2018 přibližně o dva metry tenčí než v letech 1958–1976.
+      Jakou roli v těchto <Link href={`${observation}#pozorovani`}>pozorovaných změnách</Link> hraje odnášení ker a jakou jejich růst a tání?
       <SourceLink id="DOI_10_25923_mmxf_0r86"> (Meier a kol. 2025</SourceLink>,{" "}
       <SourceLink id="DOI_10_1088_1748_9326_aae3ec">Kwok 2018)</SourceLink>
     </p>
     <p>
-      Mořský led vzniká zamrzáním mořské vody. Jeho <strong>rozsah</strong> je součet ploch buněk mapy s nejméně 15 % ledu,
-      zatímco <strong>plocha ledu</strong> započítává skutečně zaledněný podíl každé buňky.
-      Teprve přidání tloušťky umožní odhadnout <strong>objem</strong> v kilometrech krychlových.
-      Vítr může kry stlačit na menší plochu, aniž by tím roztály. Následující zkoušky proto sledují pohyb i tání a vztahují se k Arktidě.
-      Jejich číselné výsledky nelze automaticky přenést na moře kolem Antarktidy.
-      <Link href={`${observation}#objem`}> Jak vzniká odhad objemu</Link>.
+      Vítr může natlačit kry k sobě a zmenšit tak území, na němž se led vyskytuje, i když žádný neroztaje.
+      <strong> Rozsah ledu</strong> se na družicové mapě počítá ze všech polí pokrytých alespoň z 15 % ledem.
+      Pole pokryté z poloviny se do rozsahu započítá celé, do <strong>plochy ledu</strong> jen z poloviny.
+      Pro odhad <Link href={`${observation}#objem`}>objemu ledu</Link> v kilometrech krychlových potřebujeme znát i jeho tloušťku.
     </p>
 
     <h2 id="hypotezy">Dvě hypotézy a jejich předpovědi</h2>
     <HypothesisDiagram hypotheses={hypotheses} captionId="sea-ice-hypotheses-caption"
-      context={<p>Pohyb a tání probíhají současně. Porovnání zkoumá, zda k vysvětlení dlouhodobého úbytku postačí zesilující vývoz, nebo potřebujeme také změnu tepelné bilance.</p>}
-      caption={<>Rozhoduje objem přenesený přes hranici oblasti, energie potřebná k tání a vývoj ledu při různých příčinách klimatické změny.</>} />
+      context={<p>Vítr a proudy odnášejí kry, zatímco na nich přimrzá nebo odtává led. Porovnání zjišťuje, který z těchto dějů se změnil natolik, aby vysvětlil dlouhodobý úbytek v Arktidě.</p>}
+      caption={<>Srovnání vývozu ledu, letního tání a příčin dlouhodobého úbytku v Arktidě.</>} />
 
     <h2 id="pribehy">Jak se vysvětlení ověřovala</h2>
     <HypothesisStory id="silnejsi-vyvoz" number={1} title="Úbytek objemu způsobuje rostoucí vývoz ledu">
       <p>
-        Pohyb ker byl známý dávno před družicemi. Loď Fram při výpravě v letech 1893–1896 unášel led, do kterého byla sevřená.
-        Zpráva kapitána Otty Sverdrupa v Nansenově knize zachycuje změny polohy i střídání příznivého a opačného pohybu.
-        Led tedy nemusí roztát tam, kde vznikl. Proud a vítr jej mohou dopravit z Arktidy na jih.
+        Při výpravě v letech 1893–1896 unášel loď Fram led, v němž zamrzla. Kapitán Otto Sverdrup zaznamenal,
+        jak se loď i s ledem někdy posouvala vpřed a jindy se vracela. Vítr a proudy tak mohou přemístit i mohutné kry,
+        které by na místě vydržely bez roztání.
         <SourceLink id="BOOK_Nansen_1897_Farthest_North_II"> (Nansen 1897, příloha Sverdrupovy zprávy)</SourceLink>
       </p>
       <p>
-        Hlavním místem tohoto odtoku je Framský průliv mezi Grónskem a Špicberky.
-        Významnou kvantitativní zkoušku přinesla rekonstrukce Larse Smedsruda a kolegů z roku 2017, která spojila osm desetiletí údajů.
-        Zkoušíme zde změnu původně vyrovnané roční bilance. Pokud se růst, tání ani přísun nezmění a nový úbytek způsobuje větší odvoz,
-        musí přes průliv přibývat odvážený objem.
-        Větší plocha tenčích ker tuto podmínku sama nesplňuje.
+        Hlavní cestou ledu z Arktidy je Framský průliv mezi Grónskem a Špicberky.
+        Představme si rok, kdy se přírůstky a ztráty ledu vyrovnávaly. Pokud se od té doby nezměnilo zamrzání, tání ani přísun,
+        nový úbytek by musel vzniknout tím, že z Arktidy odchází větší objem ledu.
+        Schéma ukazuje, proč na tloušťce záleží. Dvě kry mohou zabírat stejnou plochu, ale pokud je jedna o polovinu tenčí, nese také jen polovinu objemu.
         <SourceLink id="DOI_10_5194_tc_11_65_2017"> (Smedsrud a kol. 2017)</SourceLink>
       </p>
       <Graphic name="pohyb-a-vyvoz" alt="Pohled na kry unášené mezi Grónskem a Špicberky. Družice sleduje posun a podíl ledu, sonar pod hladinou měří jeho ponořenou část. Zvětšená plocha tenčích ker může nést menší objem."
         tests={[
-          { title: "Test 1 · Plocha odnášených ker", prediction: "Zesílení odvozu se má projevit větší plochou ledu překračující průliv.", test: "Spojíme družicový pohyb a koncentraci s rekonstrukcí podle tlaku vzduchu.", result: "Plocha vývozu za roky 1979–2014 rostla přibližně o 6 % za desetiletí." },
-          { title: "Test 2 · Objem vyvezeného ledu", prediction: "Nový úbytek původně vyrovnané zásoby vyžaduje při stejném růstu, tání a přísunu větší odvoz objemu.", test: "K pohybu a koncentraci přidáme sonarová měření tloušťky.", result: "Objem za roky 1992–2014 klesal. V hlavní variantě výpočtu přibližně o 27 % za desetiletí." },
+          { title: "Test 1 · Plocha odnášených ker", prediction: "Při stejné tloušťce by většímu odvozu odpovídala větší plocha.", test: "Družice sledují, kolik je mezi krami vody a kam se kry posouvají.", result: "Plocha vývozu v letech 1979–2014 rostla." },
+          { title: "Test 2 · Objem vyvezeného ledu", prediction: "Průlivem prochází větší objem ledu.", test: "Sonary pod ledem dodají údaj potřebný k výpočtu tloušťky.", result: "V letech 1992–2014 vyvážený objem klesal." },
         ]}>
         Měřicí uspořádání podle <SourceLink id="DOI_10_5194_tc_11_65_2017">Smedsruda a kol. (2017)</SourceLink> a{" "}
         <SourceLink id="DOI_10_1029_2019jc016039">Spreena a kol. (2020)</SourceLink>.
@@ -101,68 +98,64 @@ export function SeaIceMechanismsArticle() {
 
       <h4 id="test-plocha" className={styles.testHeading}>Test 1 · Plocha odnášených ker</h4>
       <p>
-        Smedsrudův tým od roku 2004 sledoval shodné útvary na radarových snímcích pořízených s odstupem tří dnů.
-        Posun ker převedl na rychlost, spojil s <Link href="/metody/pasivni-mikrovlnna-radiometrie/#koncentrace-ledu">koncentrací ledu z mikrovlnného záření</Link> a sečetl plochu překračující 79° severní šířky.
-        Starší část řady od roku 1935 dopočítal ze vztahu pohybu k rozdílu tlaku vzduchu mezi břehy průlivu.
-        Překryv s družicemi umožnil tento vztah ověřit. Starší hodnoty jsou tedy rekonstrukcí, nikoli radarovým měřením.
+        Lars Smedsrud s kolegy v roce 2017 zveřejnil odhad plochy, která průlivem prošla od roku 1935.
+        Z dvojic radarových snímků pořizovaných od roku 2004 určili, kam a jak daleko se stejné kry posunuly za tři dny.
+        Z posunu spočítali rozlohu pásu, který během té doby překročil 79° severní šířky. Do vývozu započetli jen
+        <Link href="/metody/pasivni-mikrovlnna-radiometrie/#koncentrace-ledu"> část tohoto pásu pokrytou ledem</Link>.
+        Pro starší roky měli k dispozici rozdíl tlaku vzduchu mezi břehy průlivu. Podle let s oběma druhy údajů odvodili, jak spolu rozdíl tlaku a pohyb ledu souvisejí.
+        Tím získali odhad vývozu i pro dobu bez snímků.
         <SourceLink id="DOI_10_5194_tc_11_65_2017"> (Smedsrud a kol. 2017, oddíl 2)</SourceLink>
       </p>
       <p>
-        Za celé období 1935–2014 nevyšel průkazný dlouhodobý trend. V úseku <strong>1979–2014 však plocha vývozu rostla přibližně o 6 % za desetiletí</strong>,
-        nejsilněji od března do srpna. Procentní trend vyjadřuje desetiletou změnu vzhledem k průměrnému vývozu.
-        Tento výsledek podporuje význam pohybu pro proměnu ledové pokrývky.
-        Předpověď o úbytku zásoby ale ještě neověřuje, protože v součtu chybí tloušťka.
+        V celém záznamu z let 1935–2014 se jasný dlouhodobý růst ani pokles neprokázal.
+        V kratším období <strong>1979–2014 rostla plocha vývozu přibližně o 6 % za desetiletí</strong> vzhledem k průměrnému vývozu v tomto období.
+        Růst byl nejsilnější od března do srpna. Abychom zjistili, co větší vyvážená plocha znamenala pro ztrátu zásoby,
+        potřebujeme ještě změřit tloušťku ker.
         <SourceLink id="DOI_10_5194_tc_11_65_2017"> (Smedsrud a kol. 2017, obr. 5)</SourceLink>{" "}
         <SourceLink id="DOI_10_1594_pangaea_868944">Měsíční rekonstrukce 1935–2014</SourceLink> je veřejná.
       </p>
 
       <h4 id="test-objem" className={styles.testHeading}>Test 2 · Objem vyvezeného ledu</h4>
       <p>
-        Gunnar Spreen s kolegy v roce 2020 spojil družicové údaje se sonary ukotvenými pod ledem.
-        Zvukové odrazy určují ponor, tedy ponořenou část ledu. Celkovou tloušťku z ní odvodili z rovnováhy tíhy a vztlaku.
-        Mezi měřidly tloušťku odhadli plynulým propojením naměřených hodnot. Mimo jejich síť použili typický pokles tloušťky směrem od Grónska.
-        Součet součinů tloušťky, zaledněného podílu a pohybu přes průřez pak dává vyvezený objem.
-        <Link href={`${observation}#vyvoz-ledu`}> Měření vývozu a jejich mezery</Link> popisuje pozorovací článek.
+        Gunnar Spreen a kolegové v roce 2020 zveřejnili odhad objemu pro roky, kdy už mohli využít sonary ukotvené pod ledem.
+        Odraz zvuku ukázal, jak hluboko kry sahaly pod hladinu. Plovoucí kra ponoří právě tak velkou část, aby vytlačila vodu o své vlastní hmotnosti.
+        Díky tomu mohli vědci z ponořené části a odhadu hustoty vypočítat celkovou tloušťku.
+        Pro každý úsek průlivu vynásobili prošlou plochu ledu jeho tloušťkou a dílčí objemy sečetli.
+        <Link href={`${observation}#vyvoz-ledu`}>Pozorování vývozu</Link> ukazuje, kde sonary měřily a jak se doplnily mezery mezi nimi.
         <SourceLink id="DOI_10_1029_2019jc016039"> (Spreen a kol. 2020, oddíl 2)</SourceLink>
       </p>
       <p>
-        V letech <strong>1992–2014 vyvážený objem klesal přibližně o 27 % za desetiletí</strong> v hlavním výpočtu s pohybem podle laboratoře NASA Jet Propulsion Laboratory, zkráceně JPL.
-        I zde je procentní změna vztažena k průměrnému vývozu, tentokrát objemovému.
-        Při dalších dvou zpracováních pohybu vyšlo 38 a 44 %, přičemž druhé z nich neobsahuje letní měsíce.
-        Jde o rozdíly metod a pokrytí, nikoli interval spolehlivosti.
-        Řady sdílejí sonarovou tloušťku a část družicových vstupů, takže nejsou třemi nezávislými měřeními.
-        Všechny však dávají pokles. Hlavní příčinou tohoto poklesu vývozu bylo tenčení odnášených ker.
+        V letech <strong>1992–2014 klesal vyvážený objem přibližně o 27 % za desetiletí</strong> vzhledem k průměrnému objemovému vývozu.
+        Hlavní výpočet použil odhad pohybu od Jet Propulsion Laboratory, pracoviště NASA. Dvě další zpracování pohybu dala pokles
+        o 38 a 44 % za desetiletí, druhé bez letních měsíců. Ve všech třech výpočtech se odváželo méně ledu, především proto, že odnášené kry tenčily.
         <SourceLink id="DOI_10_1029_2019jc016039"> (Spreen a kol. 2020, oddíl 3.3)</SourceLink>
       </p>
       <p>
-        <strong>Rostoucí odvoz objemu Framským průlivem tedy dlouhodobý úbytek zásoby v tomto období nevysvětluje.</strong>
-        Vývoz sám nezmizel a jeho výkyvy mohly přispět k malému letnímu pokryvu v jednotlivých letech.
-        Také rozvolnění ker může podpořit pozdější tání. Tento další účinek už potřebuje přísun energie, který ověříme v následujícím příběhu.
+        Silný vývoz mohl přispět k malé letní pokrývce v jednotlivých letech. Za celé sledované období však průlivem odcházelo čím dál méně ledu,
+        tedy opačně, než předpokládá hypotéza. Zásoba může ubývat i při slabším vývozu, pokud led pomaleji dorůstá nebo víc taje.
         <SourceLink id="DOI_10_1029_2019jc016039"> (Spreen a kol. 2020, oddíly 3.4–4)</SourceLink>
       </p>
     </HypothesisStory>
 
     <HypothesisStory id="energie-a-tani" number={2} title="Oteplování mění bilanci růstu a tání">
       <p>
-        Fyzikální základ lze ověřit v laboratoři: roztavení známé hmotnosti ledu spotřebuje určité množství tepla.
-        Nathan Osborne v roce 1939 přepočítal čtyři soubory měření tepla spotřebovaného při tání. Pro čistý led při bodu tání odpovídá výsledek přibližně
-        <strong> 334 kilojoulům na kilogram</strong>. Dodaná energie se při tání spotřebovává na změnu skupenství.
-        Pro slaný mořský led je tento převod přiblížením, protože obsahuje také kapsy koncentrované slané vody a jeho vlastnosti závisí na teplotě.
+        K přeměně jednoho kilogramu čistého ledu o teplotě tání na vodu je třeba dodat asi <strong>334 kilojoulů</strong>, tedy 334 tisíc joulů.
+        Tuto hodnotu získal Nathan Osborne v roce 1939 ze čtyř souborů laboratorních měření. Díky ní lze z množství roztátého ledu vypočítat,
+        kolik energie tání spotřebovalo. U mořského ledu se používá jako přibližná hodnota, protože led obsahuje kapsy slané vody a jeho vlastnosti se mění s teplotou.
         <SourceLink id="DOI_10_6028_jres_023_043"> (Osborne 1939</SourceLink>,{" "}
         <SourceLink id="DOI_10_1029_jc076i006p01550">Maykut a Untersteiner 1971)</SourceLink>
       </p>
       <p>
-        Gary Maykut a Norbert Untersteiner v roce 1971 sestavili podrobný časově proměnný výpočet ledu a sněhu nad ním.
-        Vedení tepla vrstvou spojili se zářením, výměnou se vzduchem a teplem z oceánu.
-        Při předepsaných podmínkách centrální Arktidy získali průměrnou rovnovážnou tloušťku 2,88 m a povrchové tání 0,40 m za rok,
-        blízké tehdejším terénním údajům. Šlo o idealizovaný sloupec ledu bez vodorovného pohybu, nikoli předpověď dnešního arktického průměru.
-        Model vyjasnil testovatelnou vazbu: změna přenosu energie musí vést ke změně růstu, tání nebo vnitřní teploty ledu.
+        Gary Maykut a Norbert Untersteiner v roce 1971 zkoumali, jestli lze z přenosu tepla vypočítat, kolik ledu za rok přimrzne a roztaje.
+        V modelu ponechali sloupec ledu na místě. Počítali, jak se v průběhu roku mění přísun tepla z oceánu, výměna se vzduchem a záření,
+        a jak se teplo šíří ledem a sněhem. Pro tehdejší podmínky centrální Arktidy vyšla roční rovnováha růstu a tání při průměrné tloušťce 2,88 m.
+        Z povrchu modelového ledu za rok odtálo 0,40 m. Obě hodnoty byly blízké tehdejším terénním údajům.
         <SourceLink id="DOI_10_1029_jc076i006p01550"> (Maykut a Untersteiner 1971)</SourceLink>
       </p>
       <Graphic name="energie-a-rust" alt="Řez plovoucí krou. V zimě odvádí vedení teplo vzhůru a led může přirůstat zespodu. V létě sluneční záření ohřívá odkrytou vodu, která dodává teplo spodnímu okraji. Bóje sleduje horní a dolní povrch, teplotní řetězec vnitřek ledu a družice okolní koncentraci."
         tests={[
-          { title: "Test 3 · Energie a tání u bójí", prediction: "Větší ohřev vody má doprovázet větší spodní tání. Jeho energetický nárok lze vypočítat z úbytku ledu.", test: "Porovnáme sedm bójí z léta 2008 s odhadem slunečního ohřevu okolní vody.", result: "Spodní tání činilo 0,16 až 1,77 m. Studie uvádí korelaci 0,94, přepočet její tabulky dává 0,98." },
-          { title: "Test 4 · Příčiny dlouhodobé změny", prediction: "Pokud rozhoduje lidské oteplování, samotné přirozené vlivy nevystihnou pozorovaný pokles během roku.", test: "Porovnáme plochu ledu 1979–2019 s výpočty přírodních a lidských vlivů.", result: "Analýza rozlišila příspěvek skleníkových plynů ve všech měsících u všech tří pozorovacích produktů." },
+          { title: "Test 3 · Energie a tání u bójí", prediction: "Víc slunečního tepla ve vodě má znamenat víc tání zespodu.", test: "Bóje na letní straně schématu sleduje, ze které strany led odtává.", result: "Víc spodního tání provázel větší odhadovaný ohřev vody." },
+          { title: "Test 4 · Příčiny dlouhodobé změny", prediction: "Účinek skleníkových plynů má být rozlišitelný v dlouhodobém úbytku plochy.", test: "Družicová pozorování porovnáme s výpočty pro různé vlivy na klima.", result: "Účinek skleníkových plynů se projevil ve všech měsících." },
         ]}>
         Přenosy podle <SourceLink id="DOI_10_1029_jc076i006p01550">Maykuta a Untersteinera (1971)</SourceLink> a měření podle{" "}
         <SourceLink id="DOI_10_3189_172756411795931714">Peroviche a kol. (2011)</SourceLink>.
@@ -171,18 +164,25 @@ export function SeaIceMechanismsArticle() {
 
       <h4 id="test-boje" className={styles.testHeading}>Test 3 · Energie a tání u bójí</h4>
       <p>
-        Donald Perovich a kolegové sledovali v létě 2008 sedm bójí na rovném víceletém ledu, převážně v západní Arktidě.
-        Akustická měřidla zaznamenávala polohu horního a spodního povrchu, řetězec čidel teplotu uvnitř.
-        Tím šlo odlišit povrchové tání od spodního. Pokud spodní tání významně zásobuje sluneční ohřev odkryté vody,
-        mělo by jej být více tam, kde voda přijímá více energie.
+        Když slunce ohřívá vodu mezi krami, voda může část tepla předat spodní straně ledu. Kde sluneční energie do vody vstupuje víc,
+        čekáme tedy větší úbytek na spodní straně. Donald Perovich a kolegové to zkoumali v létě 2008 u sedmi bójí na rovném víceletém ledu,
+        většinou v západní Arktidě. Pomocí zvukových odrazů stanovili, kolik ledu odtálo shora a kolik zespodu.
+        Řetězec čidel mezi oběma povrchy měřil teplotu uvnitř ledu.
         <SourceLink id="DOI_10_3189_172756411795931714"> (Perovich a kol. 2011)</SourceLink>
       </p>
       <p>
-        Přísun sluneční energie autoři odhadli z družicového podílu otevřené vody a z meteorologické reanalýzy,
-        která spojuje měření s fyzikálním výpočtem počasí. Její záření opravili podle starší reanalýzy s lepším popisem oblačnosti.
-        Pohlcenou energii sečetli v buňkách 25 × 25 km. Šlo o odhad vstupu do vody mezi krami,
-        nikoli o přímé měření veškerého tepla proudícího k bóji.
+        K odhadu, kolik sluneční energie přijala voda, potřebovali vědět, kolik záření dopadlo a jak velké byly mezery mezi krami.
+        Družice jim daly podíl otevřené vody v každém poli mapy o rozměrech 25 × 25 km. Dopadající záření vzali z reanalýzy,
+        tedy z rekonstrukce počasí založené na měřeních a fyzikálním modelu. Odhad záření upravili podle staršího zpracování s lepším popisem oblačnosti.
+        Započítali jen energii, která dopadla do otevřené vody a kterou voda neodrazila. Součet za dobu tání vztáhli k celé ploše pole včetně ledu.
         <SourceLink id="DOI_10_3189_172756411795931714"> (Perovich a kol. 2011, rovnice 1)</SourceLink>
+      </p>
+      <p>
+        U bóje 5 odtálo zespodu 0,16 m ledu. Při hustotě 900 kg/m³ použité ve studii ubylo 144 kg ledu na metr čtvereční.
+        Když tuto hmotnost vynásobíme 334 kJ/kg potřebnými k tání, vyjde asi <strong>48 MJ/m²</strong>.
+        <a href={`${media}/vypocty.mjs`}>Zveřejněný výpočet</a> takto přepočítá všech sedm řádků.
+        V pravém sloupci najdeme, kolik energie podle samostatného odhadu přijala okolní voda. U bóje 5 to bylo 131 MJ/m².
+        <SourceLink id="DOI_10_3189_172756411795931714"> (Perovich a kol. 2011, rovnice 4 a tabulka 1)</SourceLink>
       </p>
       <div className={styles.tableScroll} tabIndex={0} role="region" aria-label="Měření sedmi bójí a odhad energie, tabulka posuvná do stran">
         <table className={styles.budgetTable}>
@@ -200,160 +200,161 @@ export function SeaIceMechanismsArticle() {
         </table>
       </div>
       <p>
-        Hodnoty pocházejí z tabulky 1 studie a z jejího <SourceLink id="DOI_10_1594_pangaea_817713">veřejného datového přepisu</SourceLink>.
-        *Bóje 2 v Beaufortově moři přestala měřit před úplným roztáním kry. Její úbytek je proto neúplný záznam sezony.
-        Tabulka neuvádí intervaly nejistoty jednotlivých hodnot a sedm míst nepředstavuje plošný průměr Arktidy.
-        <Link href={`${observation}#boje-a-tani`}> Podrobnosti měření</Link> zůstávají v pozorovacím článku.
+        *Bóje 2 v Beaufortově moři přestala měřit před úplným roztáním kry. Údaj 1,77 m tedy zachycuje jen část sezonního úbytku.
+        Všech sedm záznamů je k dispozici ve <SourceLink id="DOI_10_1594_pangaea_817713">veřejném přepisu tabulky studie</SourceLink>.
+        Pozorovací článek vysvětluje, <Link href={`${observation}#boje-a-tani`}>jak bóje měří tání</Link>.
       </p>
       <p>
-        Energetický přepočet lze zkontrolovat na bóji 5: 0,16 m spodního tání při použité hustotě 900 kg/m³
-        znamená 144 kg ledu na metr čtvereční. Při 334 kJ/kg vychází přibližně <strong>48 MJ/m²</strong>.
-        To je množství energie potřebné k naměřenému tání, nikoli další nezávisle změřený tepelný tok.
-        Stejný postup používá původní práce. <a href={`${media}/vypocty.mjs`}>Zveřejněný výpočet</a> přepočítá všech sedm řádků.
-      </p>
-      <p>
-        Korelace vyjadřuje, nakolik se dvě veličiny mění společně. Hodnota blízká jedné zde znamená, že větší sluneční vstup doprovází větší tání.
-        Studie uvádí mezi slunečním vstupem do vody a energií spodního tání korelaci <strong>0,94</strong>.
-        Náš přepočet jejích sedmi tabulkových řádků dává <strong>0,98</strong>. Dostupné podklady rozdíl nevysvětlují.
-        Obě hodnoty znamenají silnou společnou změnu napříč místy, nejde však o přesnou reprodukci publikovaného koeficientu.
-        Vztah podporuje účast slunečního ohřevu vody, ale nezměří podíl každého zdroje tepla.
-        U povrchového tání byla souvislost se slunečním vstupem podstatně slabší, s korelací 0,38.
-        Obě výsledné vazby proto neopravňují nahrazovat celou energetickou bilanci jediným slunečním členem.
+        Voda u některých ker přijala víc sluneční energie a zpravidla u nich také víc ledu odtálo zespodu. Korelace vyjadřuje,
+        jak těsně spolu obě hodnoty souvisejí, a v tomto případě je blízko jedné. Studie uvádí <strong>0,94</strong>,
+        přepočet sedmi řádků tabulky <strong>0,98</strong>. Dostupné podklady rozdíl nevysvětlují.
+        U tání shora byla souvislost s týmž ohřevem slabší, s korelací 0,38. To odpovídá tomu, že teplo z vody působí především na spodní stranu kry.
         <SourceLink id="DOI_10_3189_172756411795931714"> (Perovich a kol. 2011, obr. 3)</SourceLink>
       </p>
 
       <h4 id="test-priciny" className={styles.testHeading}>Test 4 · Příčiny dlouhodobé změny</h4>
       <p>
-        Měření bójí ověřuje místní fyzikální cestu. Samo neurčí příčinu několika desetiletí úbytku.
-        Yeon-Hee Kim s kolegy v roce 2023 porovnala měsíční <strong>plochu ledu za roky 1979–2019</strong>
-        ze tří družicových produktů s deseti klimatickými modely z mezinárodního porovnání CMIP6.
-        <SourceLink id="DOI_10_25592_uhhfdm_8559"> Veřejný soubor použitých měsíčních ploch</SourceLink> uchovává jednotlivé produkty odděleně.
-        Zkoušela výpočty se všemi vlivy, se skleníkovými plyny, s aerosoly, tedy drobnými částicemi ve vzduchu, a se samotnými změnami Slunce a sopečné činnosti.
-        Pokud lidské oteplování přispívá, měla by jeho časová odezva v pozorování zůstat rozlišitelná i po započtení ostatních vlivů a kolísání klimatu.
+        Zkouška u bójí objasnila, jak může ohřev vody způsobit letní tání. Příčinu dlouhodobého úbytku zkoumal v roce 2023 tým Yeon-Hee Kim
+        na <strong>měsíční ploše arktického ledu v letech 1979–2019</strong>. Pokud úbytek souvisí s přibýváním skleníkových plynů,
+        měl by být jejich účinek rozlišitelný i po započtení jiných vlivů a přirozeného kolísání.
+        Tým proto porovnal <SourceLink id="DOI_10_25592_uhhfdm_8559">tři družicová zpracování plochy ledu</SourceLink> s výpočty deseti klimatických modelů
+        ze šesté fáze mezinárodního porovnání klimatických modelů (CMIP6), v němž modely dostávají společné zadání.
         <SourceLink id="DOI_10_1038_s41467_023_38511_8"> (Kim a kol. 2023)</SourceLink>
       </p>
       <p>
-        Autoři nejprve zprůměrovali výsledky různých realizací každého modelu a potom modely mezi sebou.
-        Tak potlačili náhodný průběh jednotlivých let a získali očekávaný vývoj při jednotlivých příčinách.
-        Potom hledali, kolikrát je potřeba jednotlivé příspěvky zvětšit nebo zmenšit, aby jejich součet nejlépe odpovídal pozorování.
-        Přirozené kolísání odhadli z 516 úseků dlouhých 41 let z kontrolních simulací 38 modelů.
-        V nich se nemění vnější podmínky, například složení atmosféry odpovídající době před průmyslovou érou.
-        Polovinu úseků použili k výpočtu a druhou ke kontrole, zda odchylky zbývající po přizpůsobení odpovídají očekávanému kolísání.
+        Modely počítaly, jak se plocha ledu mění při působení všech zkoumaných vlivů dohromady. V oddělených výpočtech se měnilo
+        působení skleníkových plynů, aerosolů, tedy drobných částic ve vzduchu, nebo Slunce a sopečné činnosti.
+        Tým zprůměroval průběhy v každém modelu a pak výsledky modelů mezi sebou. Tím potlačil výkyvy jednotlivých let a zvýraznil změny, které nastávaly při stejném zadání.
+        Od změny se všemi vlivy odečetl část způsobenou aerosoly a přírodními vlivy. Zbylá složka GHG+ (z anglického <i>greenhouse gases</i>)
+        zahrnuje účinek skleníkových plynů spolu se změnami ozonu a využití půdy.
         <SourceLink id="DOI_10_1038_s41467_023_38511_8"> (Kim a kol. 2023, Methods)</SourceLink>
       </p>
       <p>
-        Rozhodující složku pro skleníkové plyny, označenou ve studii GHG+ podle anglického greenhouse gases,
-        autoři získali odečtením odezvy na aerosoly a přírodní vlivy od výpočtu se všemi vlivy.
-        Obsahuje proto také ozon a změny využití půdy. Není to samostatný odhad účinku oxidu uhličitého.
+        Tým hledal, kolikrát každou z vypočtených změn zvětšit nebo zmenšit, aby jejich součet nejlépe odpovídal pozorovanému průběhu.
+        Jak velká část odchylek může vzniknout náhodným kolísáním ledu, odhadl z 516 úseků po 41 letech z kontrolních běhů 38 modelů.
+        V nich zůstávaly vnější podmínky, například předprůmyslové složení atmosféry, stálé. Polovina úseků pomohla určit příspěvky jednotlivých vlivů.
+        Druhá polovina sloužila ke kontrole, zda se odchylky po jejich započtení vejdou do běžného kolísání.
         <SourceLink id="DOI_10_1038_s41467_023_38511_8"> (Kim a kol. 2023, Methods)</SourceLink>
       </p>
       <p>
-        Příspěvek skleníkových plynů vyšel rozlišitelný <strong>ve všech dvanácti měsících u všech tří produktů</strong>
-        a vysvětloval převážnou část poklesu. Celý 90% interval odhadnutého násobku tohoto příspěvku ležel nad nulou,
-        takže podle zvoleného statistického testu k vysvětlení pozorování nestačily ostatní vlivy.
-        Kontrola zbývajícího kolísání prošla pro všechny měsíce.
-        Modely však velikost úbytku v průměru podhodnocovaly, zejména v teplé části roku.
-        Výsledek podporuje příčinný vliv, nikoli dokonalou shodu modelu s každým rokem.
+        Příspěvek skleníkových plynů byl rozlišitelný <strong>ve všech dvanácti měsících u všech tří družicových zpracování</strong>
+        a vysvětloval většinu poklesu plochy. Celý 90% interval odhadnutého násobku ležel nad nulou, tedy nad hodnotou,
+        při níž by tento vliv z výpočtu vypadl. Ve všech měsících se zbývající odchylky vešly do očekávaného přirozeného kolísání.
+        Samotné modely přitom průměrnou velikost úbytku podhodnocovaly, zvlášť v teplé části roku.
         <SourceLink id="DOI_10_1038_s41467_023_38511_8"> (Kim a kol. 2023, obr. 1–3)</SourceLink>
       </p>
     </HypothesisStory>
 
-    <h2 id="jak-mechanismus-funguje">Jak vznik, tání a pohyb mění zásobu</h2>
+    <h2 id="jak-mechanismus-funguje">Jak v teplejší Arktidě ubývá ledu</h2>
     <p>
-      Rostoucí vývoz objemu neobstál jako samostatné vysvětlení zkoumaného dlouhodobého úbytku.
-      Měření tání a rozbor klimatických příčin podporují změnu tepelné bilance v oteplujícím se klimatu.
-      Pohyb a tání proto spojíme v jednom fyzikálním popisu: led přibývá zamrzáním, ubývá táním a přechází přes hranice oblasti.
+      Objem vyvezený Framským průlivem v letech 1992–2014 klesal, takže úbytek ledu v těchto letech nevysvětlí růst objemového vývozu touto cestou.
+      U bójí provázelo silnější tání zespodu větší ohřev okolní vody. Za čtyři desetiletí odpovídal úbytek plochy především účinku skleníkových plynů.
+      V teplejším klimatu se mění i zimní růst, protože k zamrzání další vody musí led teplo nejdřív ztratit.
       <SourceLink id="DOI_10_1029_2019jc016039"> (Spreen a kol. 2020</SourceLink>,{" "}
+      <SourceLink id="DOI_10_3189_172756411795931714">Perovich a kol. 2011</SourceLink>,{" "}
       <SourceLink id="DOI_10_1038_s41467_023_38511_8">Kim a kol. 2023)</SourceLink>
     </p>
     <h3 id="rust-v-zime">V zimě musí teplo odcházet</h3>
     <p>
-      Mořská voda nejprve vychladne k bodu mrznutí, který sůl posouvá pod 0 °C.
-      Při vzniku ledu se uvolňuje teplo, a další zamrzání proto vyžaduje jeho odvod.
-      Led na spodním okraji roste, pokud vedení vzhůru odnáší více tepla, než přivádí oceán.
-      Za stejných ostatních podmínek teplejší vzduch oslabí odvod tepla z povrchu a zbrzdí růst ledu.
-      Tenká vrstva za jinak stejných podmínek vede teplo snáze než silná, a může proto rychleji dorůstat.
-      Sníh tento přenos tlumí. Zimní dohánění tloušťky je stabilizující účinek, ne záruka úplné náhrady letních ztrát.
+      Sůl snižuje bod mrznutí mořské vody pod 0 °C. Když voda dostatečně vychladne a začne mrznout, uvolňuje se teplo.
+      Aby mohlo zamrzání pokračovat, musí se uvolněné teplo odvést. Zespodu prochází ledem a případnou vrstvou sněhu k povrchu, odkud uniká do chladného vzduchu.
+      Led roste zespodu, pokud nahoru odchází víc tepla, než zespodu dodává oceán. Za stejných ostatních podmínek teplejší vzduch odvod tepla zpomalí.
+      Na spodní straně pak přimrzá méně vody.
+      <SourceLink id="DOI_10_1029_jc076i006p01550"> (Maykut a Untersteiner 1971)</SourceLink>
+    </p>
+    <p>
+      Přes tenkou vrstvu ledu proniká teplo snáze než přes silnou. Pokud mají dvě kry stejnou sněhovou pokrývku a jsou ve stejných podmínkách,
+      ta tenčí může v zimě dorůstat rychleji. Sníh izoluje a odvod tepla zpomaluje. Rychlejší zimní růst tenkých ker může vyrovnat část letních ztrát.
       <SourceLink id="DOI_10_1029_jc076i006p01550"> (Maykut a Untersteiner 1971)</SourceLink>
     </p>
     <h3 id="tani-v-lete">V létě energie přichází shora i z vody</h3>
     <p>
-      Povrch přijímá a odráží sluneční záření, vyměňuje tepelné záření s atmosférou a teplo i vodní páru se vzduchem.
-      Zespodu dodává teplo oceán. Část dostupné energie nejprve ohřívá studený led, další může způsobit tání.
-      Sníh a světlý led odrážejí více slunečního záření než tmavá voda.
-      Když se otevřou mezery mezi krami, voda může přijmout více energie a podpořit další tání.
-      Tato zesilující vazba vyžaduje sluneční záření, v polární noci stejnou cestou nepůsobí.
-      Přibývání energie v atmosféře a oceánu tak může současně brzdit zimní obnovu ledu a zvyšovat letní ztráty.
-      <SourceLink id="DOI_10_1029_jc076i006p01550"> (Maykut a Untersteiner 1971</SourceLink>,{" "}
-      <SourceLink id="DOI_10_3189_172756411795931714">Perovich a kol. 2011)</SourceLink>
+      V létě přijímá povrch ledu část slunečního záření. Se vzduchem si vyměňuje teplo, tepelné záření i vodní páru.
+      Na spodní straně může teplo dodávat oceán. Část energie zprvu ohřívá studený led. Když horní nebo spodní strana dosáhne teploty tání,
+      další přísun energie může odtávat led z příslušné strany.
+      <SourceLink id="DOI_10_1029_jc076i006p01550"> (Maykut a Untersteiner 1971)</SourceLink>
     </p>
-    <h3 id="bilance-objemu">Bilance objemu drží oba procesy pohromadě</h3>
     <p>
-      Pro vybranou oblast a stejné období zapíšeme změnu objemu jako součet čtyř příspěvků.
-      <InlineMath tex="\Delta V" /> je rozdíl mezi objemem na konci a na začátku období.
-      <InlineMath tex="G" /> je objem nově vzniklého ledu, <InlineMath tex="M" /> objem roztátého ledu,
-      <InlineMath tex="I" /> přísun a <InlineMath tex="E" /> odsun přes hranice. Všechny členy jsou například v km³ za zvolený rok.
-      Zjednodušení zanedbává změny hustoty a menší příspěvky, například přímý přechod ledu ve vodní páru.
+      Tání může samo zvýšit letní ohřev. Když se mezi krami otevře mezera, tmavá hladina odrazí méně slunečního záření než sníh a světlý led.
+      Voda se více ohřeje a přispěje k dalšímu tání zespodu. Tím se může odkrytá plocha ještě zvětšit.
+      Tato zpětná vazba funguje, dokud na hladinu dopadá sluneční záření.
+      <SourceLink id="DOI_10_3189_172756411795931714"> (Perovich a kol. 2011)</SourceLink>
+    </p>
+    <h3 id="bilance-objemu">Bilance objemu zahrnuje tání i pohyb</h3>
+    <p>
+      Led v oblasti přibývá zamrzáním (<InlineMath tex="G" />) a přísunem ker přes její hranici (<InlineMath tex="I" />).
+      Ubývá táním (<InlineMath tex="M" />) a vývozem (<InlineMath tex="E" />).
+      Všechny čtyři příspěvky vyjádříme v km³ pro tutéž oblast a stejné období, například jeden rok.
+      Jejich součet se znaménky udává změnu objemu <InlineMath tex="\Delta V" /> mezi začátkem a koncem období.
+      V tomto zjednodušení zanedbáváme změny hustoty a drobné ztráty, například přímý přechod ledu na vodní páru.
     </p>
     <Equation tex={String.raw`\Delta V = G-M+I-E`} />
     <p>
-      Stlačení a vršení ker přerozdělí tloušťku uvnitř oblasti, samo však ledovou hmotu neodstraní.
-      Odvoz přes hranici sníží místní zásobu i bez místního tání. Změna větru navíc otevírá vodu nebo přesouvá led do teplejšího prostředí,
-      a tím ovlivňuje další členy bilance. Proto „pohyb“ a „teplo“ nelze v přírodě úplně oddělit.
+      Když se kry uvnitř oblasti navrší na sebe, mohou být místy silnější a zabírat menší plochu. Množství ledu uvnitř hranic se tím nezmění.
+      Teprve pohyb přes hranici přímo změní místní zásobu. Vítr ale může také otevřít mezery mezi krami nebo přenést led do teplejší vody.
+      Pohyb tak může změnit i míru tání, která v rovnici vystupuje jako samostatný příspěvek.
       <SourceLink id="DOI_10_1029_2019jc016039"> (Spreen a kol. 2020</SourceLink>,{" "}
       <SourceLink id="DOI_10_5194_tc_11_65_2017">Smedsrud a kol. 2017)</SourceLink>
     </p>
 
     <h2 id="nejistoty">Co zůstává nejisté</h2>
     <p>
-      Jednotlivé roky a oblasti výrazně mění vítr, oceánské proudy, sníh a oblačnost.
-      Nejistota jejich podílů je větší než nejistota toho, že Arktida dlouhodobě ztrácí led a že k tomu významně přispívá lidské oteplování.
+      Kolik ledu v určité oblasti za rok ubude, záleží také na větru, proudech, sněhu a oblačnosti. Jejich vliv se rok od roku mění.
+      Podíl těchto vlivů na jednotlivých ztrátách známe méně přesně než dlouhodobý úbytek a roli lidského oteplování v celé Arktidě.
       <SourceLink id="DOI_10_1017_9781009157896_011"> (IPCC 2021, oddíl 9.3)</SourceLink>
     </p>
     <details className="article-details">
       <summary>Meze měření a přisouzení příčin</summary>
       <p>
-        Sonary nepokrývají celý průliv a v některých letech chybějí měsíce. Odhad vývozu tedy závisí na doplnění prostorových mezer.
-        Přímé měření rychlosti akustickými proudoměry v letech 2012–2014 bylo v průměru rychlejší než družicový odhad.
-        Absolutní vývoz tak mohl být podhodnocen. Autoři nenašli doklad, že by tato odchylka obracela znaménko trendu,
-        krátké kontrolní období ale nemůže zaručit neměnnost chyby v celém záznamu.
+        V některých letech chybějí měsíce měření a sonary nepokrývaly celý průliv. Mezi sonary autoři odhadli tloušťku propojením naměřených hodnot.
+        Mimo jejich dosah použili typický pokles tloušťky směrem od Grónska.
+        Tři výpočty vývozu používají stejnou sonarovou tloušťku a část společných družicových vstupů. Rozdíly mezi nimi ukazují, jak volba postupu
+        a pokrytí měření ovlivní odhad rychlosti poklesu. Tyto rozdíly proto nelze číst jako interval spolehlivosti jednoho odhadu.
         <SourceLink id="DOI_10_1029_2019jc016039"> (Spreen a kol. 2020, oddíl 3.6)</SourceLink>
       </p>
       <p>
-        Bóje měří konkrétní kru, zatímco odhad slunečního ohřevu průměruje okolní buňku s vodou i ledem.
-        Oba energetické údaje proto nelze beze zbytku odečíst a zbytek prohlásit za teplo uložené v oceánu.
-        Výpočet nezahrnul záření procházející ledem a voda může teplo přinášet i odnášet.
-        Výsledný vztah také není důkazem, že sluneční ohřev sám vysvětluje dlouhodobý úbytek celé Arktidy.
+        Akustické proudoměry v letech 2012–2014 ukázaly rychlejší posun ker, než vycházel z družic. Výpočet tak mohl podhodnotit množství vyvezeného ledu.
+        Autoři nenašli doklad, že by tato odchylka měnila pokles vývozu v růst. Tři roky kontroly však nestačí k určení, jak se odchylka měnila v celém období.
+        <SourceLink id="DOI_10_1029_2019jc016039"> (Spreen a kol. 2020, oddíl 3.6)</SourceLink>
+      </p>
+      <p>
+        Sedm ker u bójí zachycuje místní podmínky a tabulka neudává nejistotu jednotlivých hodnot. Energie tání se vztahuje ke konkrétní kře,
+        odhad slunečního ohřevu k okolnímu poli mapy. Pro bilanci tepla v oceánu by oba údaje musely pokrývat stejnou oblast a zahrnout i další toky,
+        například záření procházející ledem a teplo přinesené nebo odnesené proudy. Porovnání proto ukazuje souvislost se slunečním ohřevem,
+        velikost jeho podílu na celkovém tání z něj nevyčteme.
         <SourceLink id="DOI_10_3189_172756411795931714"> (Perovich a kol. 2011)</SourceLink>
       </p>
       <p>
-        Přisouzení příčin závisí na věrnosti modelových odezev a odhadu přirozeného kolísání.
-        Statistické přizpůsobení velikosti odezvy zlepšuje shodu s daty, není však nezávislou předpovědí těchto dat.
-        Kontrola zbytků zkouší, zda po odečtení odhadnutých vlivů nezůstává další nevysvětlená změna.
-        Pozorovací produkty OSI SAF, NASA Team a Bootstrap zčásti zpracovávají stejné družice.
-        Jejich shoda omezuje závislost na algoritmu, ale netvoří tři nezávislé přístrojové důkazy.
-        Výpočty se všemi vlivy končí historickým zadáním v roce 2014. Pro roky 2015–2019 je autoři prodloužili scénářem SSP2-4.5,
-        tedy jednou z předepsaných variant dalšího vývoje emisí.
-        Zde používáme historickou část práce Kimové a kolegů. Její výhled budoucího léta bez ledu je odlišnou úlohou.
+        Odhad příčin závisí na tom, jak věrně modely zachycují přirozené výkyvy a reakci na jednotlivé vlivy. Velikost příspěvků autoři
+        přizpůsobili týmž pozorováním, s nimiž výsledek srovnávají. Samostatná kontrola testuje, zda po tomto přizpůsobení nezůstává odchylka
+        přesahující běžné kolísání v modelech. Tři družicová zpracování OSI SAF, NASA Team a Bootstrap používají zčásti stejná měření.
+        Jejich shoda ukazuje, že výsledek obstojí při různých postupech zpracování.
+        <SourceLink id="DOI_10_1038_s41467_023_38511_8"> (Kim a kol. 2023)</SourceLink>
+      </p>
+      <p>
+        Výpočty se všemi vlivy používají historické zadání do roku 2014. Pro posledních pět let srovnání s družicemi, 2015–2019,
+        navazují na toto zadání scénářem SSP2-4.5, tedy předepsanou variantou dalšího vývoje emisí.
         <SourceLink id="DOI_10_1038_s41467_023_38511_8"> (Kim a kol. 2023)</SourceLink>
       </p>
     </details>
     <h2 id="dalsi-overeni">Co by vysvětlení oslabilo</h2>
     <p>
-      Výklad by vyžadoval revizi, kdyby úplnější měření všech výstupních průlivů ukázalo růst odváženého objemu dostatečný k vysvětlení úbytku
-      při nezměněném růstu, tání a přísunu. Stejně důležitý by byl opakovaný nesoulad mezi změřenými tepelnými toky a změnami ledu
-      po započtení pohybu. Přisouzení dlouhodobé změny by oslabilo zjištění, že modely soustavně podceňují přirozené kolísání natolik,
-      že vysvětlí pozorovaný vývoj bez rostoucího působení skleníkových plynů.
-      Jde o konkrétní možnosti další kontroly, nikoli o výsledky dosavadních testů.
+      Větší úlohu vývozu by podpořilo měření ve všech výstupních průlivech, které by doložilo růst vyváženého objemu dostatečný
+      k vysvětlení úbytku při stejném růstu, tání a přísunu. Vysvětlení růstu a tání by bylo třeba upravit, kdyby naměřené změny ledu
+      opakovaně neodpovídaly množství tepla, které k ledu přichází a odchází, ani po započtení pohybu ker. Přisouzení úbytku skleníkovým plynům
+      by oslabil doklad, že přirozené výkyvy samy mohou vysvětlit pozorovaný dlouhodobý pokles.
     </p>
     <div className="article-observation-summary" id="zaver">
       <p className="eyebrow">Závěr</p>
       <p>
-        Arktický mořský led ubývá tehdy, když jeho růst a přísun nestačí vyrovnávat tání a odsun.
-        Větší vyvážená plocha ker sama nedokazuje větší ztrátu objemu.
-        Ve Framském průlivu vyvážený objem v letech 1992–2014 klesal, takže zesilující odvoz zásoby nevysvětluje dlouhodobý úbytek v tomto období.
-        Měření bójí potvrzuje tání zespodu a jeho vazbu na ohřev vody. Rozbor let 1979–2019 podporuje dominantní příspěvek skleníkových plynů k poklesu plochy ledu během celého roku.
-        Vítr a oceánské proudy zůstávají důležité pro rozmístění ledu, jeho vývoz a odlišný průběh jednotlivých let.
+        Oteplování mění, kolik ledu v Arktidě přes zimu přimrzne a kolik ho v létě odtaje. Teplejší vzduch zpomaluje odvod tepla potřebný
+        k zamrzání. Ohřátá voda zase předává teplo spodní straně ker. Když ani rychlejší zimní dorůstání tenkých ker nevyrovná letní ztráty,
+        zbývá méně ledu a kry jsou tenčí.
+      </p>
+      <p>
+        Vítr a proudy dál odnášejí led a ovlivňují průběh jednotlivých let. Ve Framském průlivu však vyvážený objem v letech 1992–2014 klesal,
+        hlavně kvůli tenčení ker. Srovnání družicových měření s výpočty přisoudilo většinu poklesu plochy ledu v letech 1979–2019
+        působení skleníkových plynů. Jejich příspěvek byl patrný ve všech měsících.
       </p>
     </div>
     <h2 id="prameny">Prameny, data a schémata</h2>
