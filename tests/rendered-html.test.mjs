@@ -509,7 +509,7 @@ test("publishes ice-sheet mechanisms with distinct water and ice budgets and tra
   assert.ok(body, "Replace the catalogue outline with the full article");
   assert.deepEqual([...body.matchAll(/<h2 id="([^"]+)"/g)].map(m => m[1]), ["co-vysvetlujeme", "hypotezy", "pribehy", "jak-mechanismus-funguje", "shrnuti", "prameny"]);
   assert.equal((body.slice(0, body.indexOf('<h2 id="hypotezy"')).match(/<p\b/g) ?? []).length, 2);
-  assert.match(html, /6\. listopadu 2026/);
+  assert.match(html, /20\. listopadu 2026/);
   for (const id of ["test-reka", "test-gronska-bilance", "test-larsen", "test-spodek-selfu"]) {
     assert.ok(body.includes(`id="${id}"`));
   }

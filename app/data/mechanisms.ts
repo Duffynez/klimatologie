@@ -267,12 +267,12 @@ export const climateMechanisms: ClimateMechanism[] = [
     category: "Kryosféra",
     isMainQuestion: true,
     isComplete: true,
-    cardSummary: "Sněžení, tání a odtok ledu do oceánu v různých částech ledových příkrovů.",
+    cardSummary: "Kolik vody odtéká z tajícího povrchu a co určuje, jak rychle odchází do moře i pevný led.",
     observations: [
       { href: "/pozorovani/nestabilita-prikrovu/#pozorovani", label: "Úbytek hmotnosti Grónska a Antarktidy" },
     ],
-    summary: "Co odhalují grónské řeky, družicová měření a rozpad šelfu Larsen B? Jak rozlišíme tání na povrchu od zrychleného odtoku ledu do moře a proč záleží na mechanické opoře ledovců?",
-    distinguishingEvidence: "Oddělené bilance povrchu a odtoku ledu, porovnané s celkovou změnou hmotnosti. Vztah mezi oteplováním oceánu, táním ledových šelfů, pohybem linie ukotvení a zrychlováním ledu testuje dynamické vysvětlení.",
+    summary: "V Grónsku lze vodu z tajícího příkrovu měřit přímo v řece. V Antarktidě zase družice zachytily, jak po rozpadu plovoucího šelfu zrychlily ledovce na pevnině. Jak se oba děje promítají do změny hmotnosti příkrovů?",
+    distinguishingEvidence: "Změny na povrchu a odtok pevného ledu lze porovnat s úbytkem hmotnosti zjištěným z gravitace. Vliv šelfu na pohyb ledu ukazuje rozdíl mezi ledovci, které po jeho rozpadu ztratily oporu, a těmi, kterým opora zůstala.",
   },
   {
     slug: "prenos-tepla-do-pudy-a-tani-permafrostu",

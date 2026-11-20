@@ -211,7 +211,7 @@ export default async function MechanismDetail({ params }: { params: Promise<{ sl
 
   if (slug === "hmotnostni-bilance-a-dynamika-ledovych-prikrovu") {
     return <div className="page-shell">
-      <PageLead eyebrow={"Mechanismy / " + mechanism.category} title={mechanism.title} meta="6. listopadu 2026"><p>{mechanism.summary}</p></PageLead>
+      <PageLead eyebrow={"Mechanismy / " + mechanism.category} title={mechanism.title} meta="20. listopadu 2026"><p>{mechanism.summary}</p></PageLead>
       <IceSheetMechanismsArticle />
       <Link className="text-link catalog-back-link" href="/mechanismy">&larr; Zpět na všechny mechanismy</Link>
     </div>;
