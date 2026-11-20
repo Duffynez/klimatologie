@@ -119,11 +119,11 @@ export const climateMechanisms: ClimateMechanism[] = [
     category: "Atmosféra a oceán",
     isMainQuestion: true,
     isComplete: true,
-    cardSummary: "Promíchávání a proudění v testech nerovnoměrného oteplování oceánu.",
+    cardSummary: "U Antarktidy se hladina ohřívala pomalu. Nejvíc tepla ve vodním sloupci přibylo dál na sever.",
     observations: [
       { href: "/pozorovani/tepelny-obsah-oceanu/#jizni-ocean", label: "Příjem a ukládání tepla v Jižním oceánu" },
     ],
-    summary: "Pomalé oteplování hladiny nemusí znamenat malý příjem tepla. Jak výstup hlubinné vody, proudění a zanořování rozdělují přijatou energii v Jižním oceánu?",
+    summary: "Blíž k Antarktidě přijímal oceán přes hladinu víc tepla než dřív. Když však oceánografové porovnali měření z různých hloubek, našli největší přírůstek dál na sever.",
     distinguishingEvidence: "Porovnání toků tepla přes hladinu a přenosu proudy se změnou zásoby tepla v různých oblastech a hloubkách. Společná bilance odlišuje přesun energie uvnitř oceánu od jejího celkového přírůstku.",
   },
   {
