@@ -97,7 +97,7 @@ export const climateMechanisms: ClimateMechanism[] = [
     observations: [
       { href: "/pozorovani/stopy-v-oblacich/#vysledky", label: "Stopy lodí a průmyslu v oblacích" },
     ],
-    summary: "Co vytváří jasnější oblaka za loděmi a průmyslovými zdroji? Dvě hypotézy, letecké pokusy a změny po omezení síry v palivu. Jak částice působí na kapky, záření a klima.",
+    summary: "U kalifornského pobřeží pluly dvě lodě pod podobnou oblačností, ale světlou stopu zanechala jen jedna. Měření v jejich spalinách pomohla vysvětlit, proč se za některými loděmi a továrnami mění velikost kapek i množství světla, které oblak odráží.",
     distinguishingEvidence: "Porovnání oblastí a období s rozdílnými emisemi při zohlednění počasí. Souběžné změny částic, oblačných kapek a záření ověřují přímé působení aerosolů i jejich vliv prostřednictvím oblaků.",
   },
   {
