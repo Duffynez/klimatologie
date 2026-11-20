@@ -258,7 +258,7 @@ export const climateMechanisms: ClimateMechanism[] = [
     observations: [
       { href: "/pozorovani/ustup-ledovcu/#pozorovani", label: "Úbytek hmotnosti a ústup horských ledovců" },
     ],
-    summary: "Jak odlišíme menší zimní přírůstky od většího letního tání a proč může čelo ustupovat se zpožděním. Vysvětlení bilance, přísunu energie a proudění ledu opřené o sezonní měření a historii konkrétních ledovců.",
+    summary: "Na francouzském ledovci Sarennes přibývalo v zimě víc sněhu než dřív, přesto ledovec dál ztrácel hmotu. Jakou roli hrálo letní tání a proč může trvat roky, než se změna projeví na dolním okraji ledovce?",
     distinguishingEvidence: "Porovnání zimních přírůstků, letních ztrát a toku ledu s celkovou bilancí. Společný vývoj rychlosti, tloušťky a polohy čela ověřuje, zda vysvětlení zachytí i časovou odezvu ledovce.",
   },
   {

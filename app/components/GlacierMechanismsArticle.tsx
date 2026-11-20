@@ -12,21 +12,21 @@ const hypotheses: readonly MechanismHypothesis[] = [
   {
     id: "mene-snehu",
     name: "Úbytek způsobuje hlavně menší přísun sněhu",
-    prediction: "Při podobných letních ztrátách má zhoršení roční bilance doprovázet menší zimní přírůstek. Historický postup ledovců může naopak vyžadovat více sněhu, pokud jej nevysvětlí teplota.",
-    test: "Porovnáme historické rozměry alpských ledovců s výpočtem pro různé srážky. U Sarennes změříme zvlášť zimní přírůstek a letní ztrátu.",
-    observation: "Vyšší sněžení pomohlo vysvětlit alpský postup v letech 1760–1830. Na Sarennes však zimní přírůstky po roce 1976 vzrostly, zatímco po roce 1982 zesílily letní ztráty.",
-    verdict: "Skutečný vliv, který novější úbytek sám nevysvětluje",
-    explanation: "Změny sněžení jsou místně důležité. Pokles zimního přírůstku ale neodpovídá sezonním měřením novějšího úbytku na Sarennes.",
+    prediction: "Jestliže se letní ztráty téměř nemění, musí při zrychlujícím se úbytku ledu klesat zimní přírůstek. Větší zimní zásoba by naopak mohla vysvětlit někdejší postup ledovců v Alpách.",
+    test: "Pro dva alpské ledovce porovnáme historický objem s výpočty pro různá množství zimních srážek. Na ledovci Sarennes porovnáme přímo měřené změny za zimu a za léto.",
+    observation: "Větší sněžení pomohlo vysvětlit postup v letech 1760–1830. Na Sarennes po roce 1976 zimní přírůstek vzrostl. Po roce 1982 přibylo letních ztrát.",
+    verdict: "Vliv sněhu doložený v Alpách, pro novější úbytek na Sarennes nedostatečný",
+    explanation: "Ledovec Sarennes vstupoval do léta s větší zásobou sněhu než dříve. Menší zimní přírůstek proto jeho ztrátu v tomto období nevysvětluje.",
     state: "insufficient",
   },
   {
     id: "vetsi-tani",
-    name: "Ztráty při tání převáží nad přírůstkem sněhu",
-    prediction: "Ledovec může ubývat i při větším zimním přírůstku. Výpočet z dodané energie má zachytit tání a změna čela má záviset také na předchozím vývoji a tvaru ledovce.",
-    test: "Na Morteratschi porovnáme výpočet z meteorologických měření s úbytkem ledu. V severních Kaskádách sledujeme, kdy na změnu podmínek zareagují čela různých ledovců.",
-    observation: "Výpočet energie zachytil velikost místního tání. U 21 kaskádových ledovců nastala první zřetelná změna chování čela se zpožděním 4–16 let.",
-    verdict: "Podpořené vysvětlení současného úbytku",
-    explanation: "Ztrátu hmoty vysvětluje bilance sněhu a tání. Proudění a geometrie určují, jak se tato nerovnováha projeví ústupem čela. Výsledky jednotlivých míst nejsou globálními konstantami.",
+    name: "V létě odtává víc sněhu a ledu než dříve",
+    prediction: "Ledovec může ubývat rychleji i po vydatnějších zimách. Výpočet z energie dodané povrchu by měl vystihnout, kolik ledu v létě odtaje. U různě utvářených ledovců se změna může projevit na čele v různých letech.",
+    test: "Na Morteratschi porovnáme tání vypočtené z počasí s úbytkem ledu u měřicích tyčí. V severních Kaskádách porovnáme změny podnebí s pohybem čel sousedních ledovců.",
+    observation: "Výpočet zachytil velikost letního tání u stanice na Morteratschi. V Kaskádách se první zřetelná změna čela u 21 ledovců projevila za 4–16 let.",
+    verdict: "Silnější tání vysvětluje novější úbytek na Sarennes",
+    explanation: "Na Sarennes převážily letní ztráty i při vydatnějších zimách. Měření na Morteratschi ověřila vztah mezi dodanou energií a táním. Doba reakce čela závisí také na proudění a tvaru ledovce.",
     state: "supported",
   },
 ];
@@ -51,43 +51,39 @@ function Graphic({ name, alt, tests, children }: { name: string; alt: string; te
 
 export function GlacierMechanismsArticle() {
   return <article className="article-layout"><div className="article-prose">
-    <h2 id="co-vysvetlujeme">Ledovce ubývají, jejich čela však nereagují současně</h2>
+    <h2 id="co-vysvetlujeme">Hmotnost ledovce a poloha jeho čela</h2>
     <p className="article-prose__intro">
-      Světové ledovce mimo hlavní grónský a antarktický příkrov ztrácely v letech 2000–2023 průměrně <strong>273 ± 16 gigatun ročně</strong>.
-      Gigatuna je miliarda tun, uvedená nejistota odpovídá 95% intervalu spolehlivosti.
-      <Link href="/pozorovani/ustup-ledovcu/#pozorovani"> Pozorování horských ledovců</Link> zachycují také ústup čel, tedy zkracování ledovců.
-      Ztráta hmotnosti a posun čela se ale nemusejí odehrát ve stejném roce. Jakou úlohu mají sněžení, tání a pohyb ledu?
-      <SourceLink id="DOI_10_1038_s41586_024_08545_z"> (GlaMBIE 2025)</SourceLink>
+      Podle terénních a družicových měření ztrácely ledovce mimo hlavní ledové příkrovy Grónska a Antarktidy v letech 2000–2023 v průměru <strong>273 ± 16 gigatun ročně</strong>.
+      Gigatuna je miliarda tun. Rozpětí od 257 do 289 miliard tun ročně vyjadřuje 95% interval spolehlivosti odhadu za celé toto období.
+      <SourceLink id="DOI_10_1038_s41586_024_08545_z"> (GlaMBIE 2025)</SourceLink>{" "}
+      Při <Link href="/pozorovani/ustup-ledovcu/#pozorovani">pozorování horských ledovců</Link> sledujeme také polohu čela, tedy místa, kde ledovec v údolí končí.
+      Ledovec se může už několik let ztenčovat, než jeho čelo začne ustupovat.
     </p>
     <p>
-      Led vzniká především ze sněhu, který přežije léto a postupně se zhutňuje.
-      U horských ledovců končících na souši převládá mezi ztrátami odtok vody z tání.
-      Právě na nich můžeme dobře oddělit zimní přírůstky od letních ztrát. Podrobné testy níže pocházejí z Alp a severních Kaskád v USA.
-      U ledovců ústících do jezera nebo moře musíme navíc započítat odlamování a tání pod hladinou.
+      Ledovec přibývá na hmotnosti hlavně díky sněhu. Část, která přečká léto, se postupně zhutňuje a mění v led.
+      Z ledovců končících na souši odchází hmota hlavně jako voda z tajícího sněhu a ledu.
+      U čela v jezeře nebo v moři se navíc mohou odlamovat kusy ledu a led taje i pod hladinou.
       <SourceLink id="DOI_10_1017_9781009157896_011"> (IPCC 2021, oddíl 9.5.1)</SourceLink>
+      {" "}Jak v terénu poznáme, zda ledovci ubylo zimního sněhu, nebo přes léto víc roztálo? A proč čelo na tuto změnu reaguje se zpožděním?
     </p>
 
     <h2 id="hypotezy">Dvě hypotézy a jejich předpovědi</h2>
     <HypothesisDiagram hypotheses={hypotheses} captionId="glacier-hypotheses-caption"
-      context={<p>Sněžení a tání působí současně. Porovnáváme, zda rozhodující změna nastala v přísunu sněhu, nebo ve ztrátách při tání. Nejde o dvě historické školy, které by existenci druhého děje popíraly.</p>}
-      caption={<>Samotné ustupující čelo příčinu neprozradí. Rozhoduje oddělení sezonních přírůstků a ztrát, kontrola přísunu energie a sledování reakce ledovce v čase.</>} />
+      context={<p>Rozdíl mezi hmotou, kterou ledovec za rok získá a ztratí, nazýváme roční hmotnostní bilancí. Stejná roční ztráta může vzniknout po skromné zimě s obvyklým létem i po vydatné zimě s mimořádně silným táním. Obě možnosti rozlišíme, když změříme, co přibylo do konce zimy a co pak do konce léta ubylo.</p>}
+      caption={<>Zimní sníh a letní tání určují změnu hmotnosti. O tom, kdy se pohne čelo, rozhoduje také přítok ledu z vyšších částí ledovce.</>} />
 
     <h2 id="pribehy">Co ukázaly zimní zásoby, letní tání a poloha čela</h2>
     <HypothesisStory id="mene-snehu" number={1} title="Úbytek způsobuje hlavně menší přísun sněhu">
       <p>
-        Pro ledovec je podstatný rozdíl mezi tím, kolik hmoty získá a kolik ztratí. Tento rozdíl nazýváme hmotnostní bilance.
-        Menší množství zimního sněhu může bilanci zhoršit i při nezměněném létě.
-        Výzkumný program zahájený roku 1946 na švédském Storglaciären proto měřil obě strany této bilance.
-        Valter Schytt v roce 1962 popsal průměrný přírůstek odpovídající přibližně 1,3 metru vody a ztrátu 2,0 metru vody ročně.
-        Takový rozpočet už umožňuje položit přesnější otázku než pouhé „proč se čelo posunulo“.
-        <SourceLink id="DOI_10_3189_s002214300002757x"> (Schytt 1962)</SourceLink>
+        Když se v zimě uloží méně sněhu, stačí stejné letní tání jako dříve, aby ledovec za celý rok ztratil víc hmoty.
+        Pro porovnání zimy s létem potřebujeme společnou jednotku. Metr čerstvého sněhu je totiž mnohem lehčí než stejně silná vrstva ledu.
+        Z tloušťky a hustoty vrstvy lze určit, jak vysoká vrstva vody by z ní vznikla po roztátí. Tomu říkáme{" "}
+        <Link href="/metody/terenni-mereni-bilance-ledovcu/#vodni-ekvivalent">vodní ekvivalent</Link>. Jeden metr vody odpovídá jedné tuně na metr čtvereční.
       </p>
       <p>
-        Vodní ekvivalent vyjadřuje hmotnost sněhu či ledu jako vrstvu kapalné vody na stejné ploše.
-        Jeden metr vodního ekvivalentu znamená jednu tunu vody na metr čtvereční.
-        Díky tomuto převodu lze porovnat lehký sníh s hutným ledem.
-        <Link href="/metody/terenni-mereni-bilance-ledovcu/#vodni-ekvivalent"> Terénní metoda</Link> určí vodní ekvivalent z tloušťky a hustoty vrstvy.
-        Následující schéma ukazuje, co by způsobil menší přísun sněhu při stejných letních ztrátách.
+        Takto měřili přírůstky a ztráty už od roku 1946 na švédském ledovci Storglaciären.
+        Valter Schytt v roce 1962 uvedl oba průměry ve vodním ekvivalentu. Za rok na ledovci přibylo přibližně 1,3 metru vody a ubylo 2,0 metru. Rozdíl ukázal úbytek i bez měření polohy čela.
+        <SourceLink id="DOI_10_3189_s002214300002757x"> (Schytt 1962)</SourceLink>
       </p>
       <Graphic name="mene-snehu" alt="Řez horským ledovcem. Sníh doplňuje zásobu v horní části, led teče dolů a voda odtéká z tajícího jazyka. Při menším zimním přírůstku a stejné letní ztrátě se roční bilance zhorší. Sněhová sonda měří zimní zásobu, tyč v ledu letní úbytek."
         tests={[
@@ -100,31 +96,29 @@ export function GlacierMechanismsArticle() {
 
       <h4 id="test-mala-doba-ledova" className={styles.testHeading}>Test 1 · Ledovce na konci malé doby ledové</h4>
       <p>
-        Christian Vincent a kolegové v roce 2005 zkoumali rozpor: alpské ledovce v letech 1760–1830 postupovaly,
-        ale tehdejší teplotní řada jejich zvětšení při obvyklých srážkách nevysvětlovala.
-        Pokud ve výpočtu chyběl větší přísun sněhu, mělo zvýšení srážek zlepšit shodu s historickou velikostí ledovců.
-        Autoři porovnali teplotně řízený výpočet tání s <Link href="/pozorovani/ustup-ledovcu/#historicke-objemy">objemem odvozeným ze starých map a morén</Link>,
-        tedy valů hornin zanechaných u někdejšího okraje ledu.
-        <SourceLink id="DOI_10_1029_2005gl022552"> (Vincent a kol. 2005)</SourceLink>
+        Na konci malé doby ledové, v letech 1760–1830, se v Alpách ledovce zvětšovaly. Z tehdejší doby však chybějí měření zimních přírůstků a letních ztrát.
+        Christian Vincent a jeho spoluautoři zkoumali, zda k vysvětlení jejich tehdejší velikosti stačí slabší tání, nebo zda muselo také více sněžit.
+        U ledovců Saint-Sorlin a Argentière mohli někdejší <Link href="/pozorovani/ustup-ledovcu/#historicke-objemy">objem odhadnout ze starých map a morén</Link>.
+        Morény jsou valy kamenů a dalšího materiálu, které označují někdejší okraj ledu. Umožnily tak posoudit vypočtené změny podle stop v krajině.
       </p>
       <p>
-        Varianty s <strong>o 25–35 % vyššími zimními srážkami</strong> než ve 20. století přiblížily výpočet rekonstruovanému vývoji.
-        Pokles takto zvýšených srážek mohl přispět k následnému ústupu.
-        Jde o srážky odvozené pomocí modelu, nikoli o přímé měření sněhu v roce 1800.
-        Rozpětí označuje zkoušené varianty, ne interval spolehlivosti. Výsledek závisí na rekonstrukci objemu a vztahu teploty k tání.
-        Ukazuje však, proč je sněžení vážným vysvětlením některých historických změn. Pro novější úbytek potřebujeme přímější test.
+        Autoři z dobových údajů o teplotě vypočetli tání. Teploty pak ve výpočtu ponechali stejné a měnili množství zimních srážek.
+        Při srážkách odpovídajících průměru 20. století vyšel přírůstek příliš malý. Výpočet se historickému objemu přiblížil, když autoři zimní srážky zvýšili v jedné variantě <strong>o 25 % a v druhé o 35 %</strong>.
+        Obrázek 3 studie ukazuje obě vyzkoušené varianty. Odhad tehdejšího sněžení proto závisí na přesnosti rekonstrukce objemu i výpočtu tání. Pokud po roce 1830 sněžení opět zesláblo, mohlo to přispět k ústupu.
+        <SourceLink id="DOI_10_1029_2005gl022552"> (Vincent a kol. 2005)</SourceLink>
       </p>
 
       <h4 id="test-sarennes" className={styles.testHeading}>Test 2 · Zima a léto na Sarennes</h4>
       <p>
-        Na francouzském Sarennes se od roku 1949 opakovala měření sněhu a úbytku ledu na čtyřech až pěti místech.
-        Emmanuel Thibert a spoluautoři oddělili společný časový průběh od rozdílů mezi místy a chyb měření.
-        Jejich <Link href="/pozorovani/ustup-ledovcu/#sezonni-bilance-sarennes">zpracovaná sezonní řada</Link> umožnila ověřit očekávaný pokles zimního přírůstku.
+        Na francouzském ledovci Sarennes lze obě vysvětlení rozlišit přímo v terénu. Pokud za novější úbytek mohl hlavně nedostatek sněhu, mělo ho na konci zimy zůstávat méně než dříve.
+        Od roku 1949 tu výzkumníci na čtyřech až pěti místech měřili tloušťku a hustotu zimní vrstvy sněhu. U tyčí pak sledovali, jak nízko povrch klesl do konce léta.
+        Emmanuel Thibert a jeho spoluautoři v <Link href="/pozorovani/ustup-ledovcu/#sezonni-bilance-sarennes">záznamu za roky 1949–2007</Link> oddělili rozdíly mezi měřicími místy od změn, které se na nich projevovaly společně.
+        Dobu, kdy se průměr změnil, určili pro každou sezonu zvlášť.
         <SourceLink id="DOI_10_5194_tc_7_47_2013"> (Thibert a kol. 2013, tabulka 1)</SourceLink>
       </p>
       <div className={styles.tableScroll} role="region" tabIndex={0} aria-label="Sezonní bilance Sarennes, tabulka posuvná do stran">
         <table className={styles.budgetTable}>
-          <caption>Sarennes: průměrná sezonní bilance v metrech vodního ekvivalentu za rok. Kladné znaménko znamená přírůstek, záporné ztrátu.</caption>
+          <caption>Ledovec Sarennes. Průměrná změna hmotnosti za zimu a za léto v metrech vodního ekvivalentu. Kladná hodnota znamená přírůstek, záporná ztrátu.</caption>
           <thead><tr><th scope="col">Část roku</th><th scope="col">Dřívější období</th><th scope="col">Bilance</th><th scope="col">Pozdější období</th><th scope="col">Bilance</th></tr></thead>
           <tbody>
             <tr><th scope="row">Zima</th><td>1949–1976</td><td>+1,48</td><td>1977–2007</td><td>+1,88</td></tr>
@@ -133,37 +127,28 @@ export function GlacierMechanismsArticle() {
         </table>
       </div>
       <p>
-        Zimní přírůstek se zvětšil, letní bilance se však stala podstatně zápornější.{" "}
-        <strong>Předpověď menšího zimního přírůstku zde selhala.</strong> Hranice období se liší, protože statisticky zjištěné změny nenastaly ve stejné době.
-        Čísla z různých období proto nesčítáme do jediné roční bilance.
-        Tabulka uvádí odhady průměrů bez vlastních intervalů nejistoty, nikoli přesné hodnoty každého roku.
-        <a href={`${media}/sarennes-tabulka-1.csv`}> Přepis použitých údajů</a> umožňuje porovnání zkontrolovat.
+        Po roce 1976 přibývalo za zimu v průměru o 0,40 metru vodního ekvivalentu víc než v předchozím období.
+        Ledovec tedy vstupoval do léta s větší zásobou sněhu. Po roce 1982 naopak v létě ubývalo v průměru o 0,96 metru vodního ekvivalentu víc než dříve.
+        <strong>Zhoršení bilance na Sarennes tak vysvětluje silnější letní tání. Zimní sníh naopak část ztrát nahrazoval.</strong>
       </p>
       <p>
-        <strong>Méně sněhu je možné místní vysvětlení, ale není společným vysvětlením všech ústupů.</strong>{" "}
-        Historická rekonstrukce jeho význam podpořila. Novější sezonní měření na Sarennes naopak ukázala, že větší zimní zásoba nestačila vyrovnat letní ztráty.
-        Nyní je třeba ověřit fyzikální důvod tohoto tání a vazbu mezi úbytkem hmoty a délkou ledovce.
+        Změna přišla v zimních měřeních o několik let dříve než v letních. Čísla z různých období proto nesčítáme do změny roční bilance.
+        V <a href={`${media}/sarennes-tabulka-1.csv`}>přepisu tabulky</a> lze zkontrolovat oba rozdíly průměrů. Původní tabulka k nim vlastní intervaly nejistoty neuvádí.
       </p>
     </HypothesisStory>
 
-    <HypothesisStory id="vetsi-tani" number={2} title="Ztráty při tání převáží nad přírůstkem sněhu">
+    <HypothesisStory id="vetsi-tani" number={2} title="V létě odtává víc sněhu a ledu než dříve">
       <p>
-        K roztavení ledu je třeba dodat energii. Laboratorní pokusy proto porovnávaly známou hmotnost ledu s teplem dodaným elektrickým ohřevem
-        nebo teplejší vodou. Nathan Osborne v roce 1939 přepočítal čtyři série měření s přesnější tepelnou kapacitou vody.
-        Výsledek odpovídal přibližně <strong>334 kilojoulům na kilogram ledu</strong> při bodu tání.
-        Energie spotřebovaná předtím na ohřátí studeného ledu se musí počítat zvlášť.
-        Tím dostáváme ověřený převod mezi energií a množstvím tání, nikoli jen souvislost mezi teplým počasím a ústupem.
+        Měření na Sarennes ukazují, kdy se ztráta zvětšila. Příčinu letního úbytku lze ověřit tím, že množství odtátého ledu porovnáme s energií, kterou povrch dostal.
+        Kolik jí led potřebuje, určili výzkumníci v laboratoři. Ke známému množství ledu přivedli teplo elektrickým ohřevem nebo teplejší vodou a změřili, kolik ledu roztálo.
+        Nathan Osborne roku 1939 přepočítal čtyři soubory těchto měření s přesnějším údajem o teple potřebném k ohřevu vody.
+        Na roztavení kilogramu ledu, který už dosáhl bodu tání, připadá přibližně <strong>334 kilojoulů</strong>. Chladnější led musí nejprve přijmout energii na ohřátí.
         <SourceLink id="DOI_10_6028_jres_023_043"> (Osborne 1939)</SourceLink>
       </p>
       <p>
-        Na ledovci energii dodává pohlcené sluneční a tepelné záření i přenos tepla ze vzduchu.
-        Část současně odchází vyzařováním, výparem nebo vedením do chladnějšího ledu.
-        Dlouhodobá meteorologická stanice na švýcarském Morteratschi umožnila tyto příspěvky porovnat s úbytkem povrchu.
-        Jiná otázka se týkala čela: výpočty Tómase Jóhannessona, Charlese Raymonda a Eda Waddingtona z roku 1989 ukázaly,
-        proč změna objemu a přizpůsobení délky potřebují rozdílný čas.
-        Schéma spojuje oba kroky, které následující testy ověřují samostatně.
-        <SourceLink id="DOI_10_3189_002214309789470969"> (Oerlemans a kol. 2009)</SourceLink>
-        <SourceLink id="DOI_10_3189_s002214300000928x"> (Jóhannesson a kol. 1989)</SourceLink>
+        Na povrch ledovce přichází energie ze Slunce, z tepelného záření okolí i ze vzduchu, který je teplejší než led. Povrch zároveň teplo vyzařuje.
+        Část energie může odnést vypařující se voda nebo ji odvede chladnější led do hloubky. Z toho, kolik energie nakonec zbude pro tání, lze vypočítat úbytek ledu.
+        Právě tento výpočet mohli výzkumníci na švýcarském ledovci Morteratsch porovnat se skutečně odtátou vrstvou.
       </p>
       <Graphic name="vetsi-tani" alt="Sluneční záření a teplo ze vzduchu dodávají energii tajícímu povrchu. Po odtání světlého sněhu odkrytý led pohlcuje více slunečního záření. Voda odnáší hmotu, ledovec se ztenčuje a jeho čelo může ustoupit, přestože led stále teče dolů údolím."
         tests={[
@@ -177,148 +162,144 @@ export function GlacierMechanismsArticle() {
 
       <h4 id="test-morteratsch" className={styles.testHeading}>Test 3 · Energie a úbytek na Morteratschi</h4>
       <p>
-        Stanice měřila dopadající a odražené záření, teplotu, vlhkost a vítr. Model z nich určil energii dostupnou pro tání.
-        Oerlemansův tým výsledek porovnal s <Link href="/pozorovani/ustup-ledovcu/#misto-morteratsch">úbytkem zjištěným výškovým čidlem a tyčemi</Link>.
-        V létě, kdy bylo místo bez sněhu, úbytek povrchu do modelu nevstupoval.
-        Rozdíl letních energetických odhadů pro roky 1999–2006 měl střední kvadratickou velikost 11,7 W/m², přibližně 6 % průměrné energie tání.
-        Jde o souhrnnou míru odchylek výpočtu od měření. Jeden W/m² znamená jeden joule energie za sekundu na metr čtvereční povrchu.
-        To podporuje fyzikální výpočet velikosti úbytku v daném místě.
+        U stanice na dolní části Morteratsche mohli vědci energii spotřebovanou na tání určit dvěma způsoby.
+        V prvním výpočtu použili měření záření, teploty, vlhkosti a větru. Ve druhém vyšli z <Link href="/pozorovani/ustup-ledovcu/#misto-morteratsch">poklesu povrchu změřeného výškovým čidlem a u tyčí</Link>.
+        Z tloušťky odtátého ledu a jeho hustoty určili ztracenou hmotnost a z ní teplo potřebné k roztátí. Když byl v létě led bez sněhu, měřený pokles povrchu do prvního výpočtu nevstupoval. Oba výsledky se proto daly porovnat nezávisle.
+      </p>
+      <p>
+        Tým porovnal průměry za červen až srpen v jednotlivých letech 1999–2006. Výsledky vyjádřil ve wattech na metr čtvereční (W/m²).
+        Hodnota 1 W/m² znamená, že na metr čtvereční připadne každou sekundu jeden joule energie.
+        Mezi oběma odhady vyšel střední kvadratický rozdíl 11,7 W/m². Tato míra shrnuje odchylky ve všech osmi létech a přikládá větší váhu větším rozdílům.
+        Odpovídala asi 6 % průměrného příkonu spotřebovaného na tání. Výpočet z místního počasí tedy zachytil velikost letního úbytku u stanice.
         <SourceLink id="DOI_10_3189_002214309789470969"> (Oerlemans a kol. 2009, obr. 6)</SourceLink>
       </p>
       <p>
-        U stanice současně klesala odrazivost odkrytého ledu, tedy podíl světla vrácený povrchem. Tmavší led tak při stejném osvětlení pohltil více energie.
-        Ve výpočtu pro roky 2003–2006 vedlo naměřené ztmavnutí k dodatečnému tání <strong>3,32 metru vodního ekvivalentu</strong>{" "}
-        proti variantě s pevnou odrazivostí 0,32, která vracela 32 % dopadajícího světla.
-        Tento rozdíl je modelový odhad místního účinku, nikoli samostatně změřená ztráta celého ledovce.
-        Referenční odrazivost byla nastavena podle období před rokem 2003. Obě větve pak používaly stejné počasí, takže porovnání oddělilo právě její změnu.
+        Odkrytý led u stanice během měření tmavnul. Při stejném dopadajícím slunečním záření tak mohl více energie pohltit.
+        Aby tým určil velikost tohoto účinku, použil ve dvou výpočtech stejné počasí. V jednom nechal led odrážet naměřený podíl světla, v druhém stále 32 %, což odpovídalo poměrům před rokem 2003.
+        V první variantě od počátku roku 2003 do konce období tání v roce 2006 odtálo navíc tolik ledu, kolik odpovídá <strong>3,32 metru vody</strong>.
+        Rozdíl mezi křivkami na obrázku 8 studie je tedy modelový odhad místního účinku ztmavnutí za čtyři roky.
+        <SourceLink id="DOI_10_3189_002214309789470969"> (Oerlemans a kol. 2009)</SourceLink>
       </p>
 
       <h4 id="test-odezva-cela" className={styles.testHeading}>Test 4 · Zpožděná reakce čela</h4>
       <p>
-        Led se pod stálým zatížením pomalu deformuje, jak ukázaly mimo jiné laboratorní pokusy Johna Glena z roku 1952.
-        Na svahu tak proudí z horní části ledovce dolů.
-        Pokud se změní bilance, musí se postupně změnit také tloušťka a množství ledu přiváděného k čelu.
-        Proto očekáváme různou odezvu u ledovců s odlišným sklonem, tloušťkou a předchozí historií, i když čelí podobnému počasí.
+        Tyč v ledu ukáže za jediné léto úbytek na konkrétním místě. Poloha čela závisí také na tom, kolik nového ledu k němu dorazí.
+        John Glen v laboratoři ukázal, že se led při trvalém zatížení pomalu deformuje. Tímto způsobem se může i pevný led na svahu vlastní vahou pohybovat dolů údolím.
         <SourceLink id="DOI_10_3189_s0022143000034067"> (Glen 1952)</SourceLink>
+        {" "}Změní-li se sněžení nebo tání ve vyšších polohách, postupně se mění tloušťka ledu a s ní i přítok k čelu.
+        Tómas Jóhannesson, Charles Raymond a Ed Waddington z těchto vztahů odvodili, proč se stejná změna podmínek může u ledovců s různou tloušťkou projevit na čele až po různě dlouhé době.
         <SourceLink id="DOI_10_3189_s002214300000928x"> (Jóhannesson a kol. 1989)</SourceLink>
       </p>
       <p>
-        Mauri Pelto a Cliff Hedlund v roce 2001 porovnali <Link href="/pozorovani/ustup-ledovcu/#cela-kaskady">historii 38 ledovců v severních Kaskádách</Link>.
-        Vycházeli z map, opakovaných fotografií a terénních měření. Sledovali odezvu na chladnější a vlhčí období od roku 1944
-        a na návrat teplejších a sušších podmínek od roku 1976. U 21 ledovců určili první zřetelnou reakci čela
-        <strong>4–16 let po změně klimatických podmínek</strong>.
-        Při podobném kolísání ročních bilancí se chování čel lišilo. Samotná místní teplota proto nebyla dostatečným popisem jejich délky.
+        Tuto předpověď lze prověřit na sousedních ledovcích, které zažily tytéž změny podnebí. Mauri Pelto a Cliff Hedlund porovnali{" "}
+        <Link href="/pozorovani/ustup-ledovcu/#cela-kaskady">záznamy o 38 ledovcích v severních Kaskádách</Link> v americkém státě Washington.
+        Z map, fotografií a terénních měření určili, kdy která čela postupovala a kdy ustupovala. Tyto údaje porovnali se dvěma změnami v oblasti. V roce 1944 začalo chladnější a vlhčí období, od roku 1976 opět převládly teplejší a sušší podmínky.
+      </p>
+      <p>
+        U 21 ledovců uplynulo od změny podmínek do prvního zřetelného obratu v pohybu čela <strong>4–16 let</strong>.
+        Roční bilance ledovců v této oblasti kolísaly podobně. Přesto mezi lety 1950 a 1975 jižní ledovec Klawatti postupoval, kdežto jeho severní soused dál ustupoval.
+        Oba ledovce mají rozdílně velké plochy ve vyšších a nižších polohách. V celém zkoumaném souboru souvisely rozdíly v chování čel také se sklonem ledovců a s rychlostí proudění ledu.
+      </p>
+      <p>
+        První obrat čela lze odečíst z map a fotografií. Mnohem déle trvá, než se délka ledovce přiblíží hodnotě odpovídající novým podmínkám.
+        U nejrychleji reagující skupiny odhadli autoři tuto dobu přizpůsobení na 20–30 let. U nejpomalejší skupiny stanovili pouze dolní mez, 60 až 100 let.
+        Jóhannessonův jednoduchý výpočet vychází z tloušťky ledovce a rychlosti tání u čela.
+        <SourceLink id="DOI_10_3189_s002214300000928x"> (Jóhannesson a kol. 1989)</SourceLink>
+        {" "}Pelto a Hedlund ho porovnali se záznamy z Kaskád. U dvou ze tří skupin dával příliš krátké doby. Posuny čel i roky jejich obratu lze dohledat v tabulkách 1 a 2.
         <SourceLink id="DOI_10_3189_172756501781832098"> (Pelto a Hedlund 2001)</SourceLink>
-      </p>
-      <p>
-        Odhad přizpůsobení celého ledovce byl delší, od několika desetiletí po nejméně 60–100 let u pomalu reagující skupiny.
-        Nešlo o čekání na první pohyb čela. Jednoduchý výpočet z tloušťky a tání na čele navíc u dvou skupin dobu podhodnocoval.
-        Pozorování tedy podpořila zpožděnou a rozdílnou odezvu, ale ukázala meze jednoho zjednodušeného vzorce.
-      </p>
-      <p>
-        <strong>Přijaté vysvětlení spojuje bilanci hmoty, energii a proudění.</strong>{" "}
-        Sezonní měření rozlišují přírůstek od ztráty, energetická měření ověřují tání a záznamy čel prověřují jeho pozdější geometrický důsledek.
-        Tyto důkazy nejsou zaměnitelné. Globální úbytek doložený družicemi rozšiřuje prostorový záběr, sám však neurčuje příčinu každého místního ústupu.
-        Souhrn širšího výzkumu hodnotí oteplování atmosféry jako velmi pravděpodobnou hlavní příčinu globálního ústupu ledovců.
-        <SourceLink id="DOI_10_1017_9781009157896_011"> (IPCC 2021, oddíl 9.5.1.1.3)</SourceLink>
       </p>
     </HypothesisStory>
 
-    <h2 id="jak-mechanismus-funguje">Jak přebytek ztrát promění celý ledovec</h2>
+    <h2 id="jak-mechanismus-funguje">Proč ledovec ztrácí hmotu a jeho čelo ustupuje</h2>
     <p>
-      Změna sněžení může vysvětlit část místních i historických výkyvů, ale novější úbytek na Sarennes nenastal při menším zimním přírůstku.
-      Druhé vysvětlení obstálo v měření energie i ve zpožděné reakci čel: tání převážilo nad přírůstky a ledovec se postupně přizpůsoboval menší zásobě ledu.
-      Nyní spojíme jednotlivé kroky a ukážeme, proč ani několik sněhově bohatých zim nemusí ústup zastavit.
+      Zimní sníh navíc pomohl vysvětlit někdejší růst alpských ledovců. Na Sarennes však ani vydatnější zimy nestačily vyrovnat sílící letní tání. Na Morteratschi potvrdilo měření počasí, že na pozorované tání bylo skutečně k dispozici dost energie.
+      V celosvětovém měřítku hodnotí Mezivládní panel pro změnu klimatu (IPCC) oteplování atmosféry jako velmi pravděpodobnou hlavní příčinu ústupu ledovců.
+      <SourceLink id="DOI_10_1017_9781009157896_011"> (IPCC 2021, oddíl 9.5.1.1.3)</SourceLink>{" "}
+      Jak rychle ubývá konkrétní ledovec, však závisí na tom, jak se změny v obou sezonách za celý rok sečtou.
     </p>
 
     <h3 id="rocni-bilance">Rozhoduje bilance celého roku</h3>
     <p>
-      Pro stejnou plochu a navazující sezonní období platí jednoduchý součet:
+      Jestliže sledujeme tutéž plochu od začátku zimy do konce léta, každá změna hmotnosti patří do jedné z těchto dvou sezon. Jejich součet proto dává změnu za celý rok.
     </p>
     <Equation tex={String.raw`b_{\text{rok}} = b_{\text{zima}} + b_{\text{léto}}`} />
     <p>
-      Symbol <InlineMath tex="b" /> označuje změnu hmotnosti přepočtenou na jednotku plochy.
-      Zimní bilance bývá kladná, letní záporná. Obě zahrnují všechny přírůstky i ztráty příslušné sezony,
-      takže zimní bilance není prostým úhrnem sněžení.
-      Pokud přibyde vrstva odpovídající dvěma metrům vody a do konce léta ubudou tři metry, roční ztráta odpovídá jednomu metru vody.
-      To je vysvětlující příklad, nikoli další pozorování.
-      <Link href="/metody/terenni-mereni-bilance-ledovcu/#plosna-bilance"> Bilanci celého ledovce</Link> získáme plošným vážením místních měření.
+      Písmeno <InlineMath tex="b" /> označuje změnu hmotnosti na metr čtvereční, zde vyjádřenou v metrech vodního ekvivalentu. Index říká, ke které části roku hodnota patří.
+      Zimní bilance udává, kolik hmoty za zimu skutečně přibylo po započtení nového sněhu i případných ztrát. Letní bilance bývá záporná.
+      Kdyby v jednom roce do konce zimy přibyla vrstva odpovídající dvěma metrům vody a přes léto ubyla vrstva odpovídající třem, ztratil by ledovec za rok ekvivalent jednoho metru vody.
+      Při výpočtu <Link href="/metody/terenni-mereni-bilance-ledovcu/#plosna-bilance">bilance celého ledovce</Link> má místní údaj tím větší váhu, čím větší plochu zastupuje.
     </p>
     <p>
-      Teplejší podmínky mohou prodloužit dobu, po kterou povrch taje. Po zmizení světlého sněhu se odkryje tmavší led,
-      který při stejném slunečním příkonu pohltí více energie. Tání se tím může dále zesílit.
-      Záleží ale také na oblačnosti, větru, vlhkosti a čerstvém sněhu během léta.
-      Teplota vzduchu je proto užitečný ukazatel podmínek pro tání, úplný energetický rozpočet však nenahrazuje.
+      Za teplejšího počasí může tání začít dříve nebo trvat déle. Když světlý sníh zmizí, odkryje se tmavší led. Při stejném osvětlení pohltí víc sluneční energie a tání může ještě zesílit.
+      Čerstvý letní sníh naopak světlý povrch obnoví. Kolik energie v daný den zbude na tání, závisí také na oblačnosti, větru a vlhkosti.
       <SourceLink id="DOI_10_1017_9781009157896_011"> (IPCC 2021, oddíly 9.5.1.1.3 a 9.5.1.2)</SourceLink>
     </p>
 
     <h3 id="energie-tani">Kolik ledu může dodaná energie roztavit</h3>
     <p>
-      Je-li povrch už na bodu tání, množství vody vzniklé táním na jednotce plochy určí vztah:
+      Je-li povrch na bodu tání, můžeme ze zbývající energie vypočítat, kolik ledu za den roztaje. Celkovou energii, která za tu dobu připadne na tání, vydělíme energií potřebnou k roztavení jednoho kilogramu.
     </p>
     <Equation tex={String.raw`m = \frac{Q_{\text{tání}}\,\Delta t}{L_{\mathrm{t}}}`} />
     <p>
-      <InlineMath tex="m" /> je hmotnost roztátého ledu na metr čtvereční v kg/m².{" "}
-      <InlineMath tex={String.raw`Q_{\text{tání}}`} /> je energie dostupná pro tání za sekundu na metr čtvereční, ve W/m²,
-      po započtení všech přísunů, ztrát a ohřevu sněhu či ledu. <InlineMath tex={String.raw`\Delta t`} /> je čas v sekundách
-      a <InlineMath tex={String.raw`L_{\mathrm{t}}`} /> skupenské teplo tání, přibližně 334 000 J/kg.
-      Stálých 10 W/m² navíc po jeden den tak může roztavit asi 2,6 kg ledu na metr čtvereční, tedy vytvořit 2,6 mm vody.
-      Je to početní odhad, který předpokládá využití celé této energie na tání. Znovuzamrznutí či zadržení vody může její odtok zmenšit.
+      <InlineMath tex={String.raw`Q_{\text{tání}}`} /> udává, kolik energie zbude každou sekundu na tání na metru čtverečním povrchu (W/m²).
+      Vynásobením tohoto průměrného příkonu dobou <InlineMath tex={String.raw`\Delta t`} /> v sekundách dostaneme energii v joulech na metr čtvereční.
+      Po vydělení skupenským teplem tání <InlineMath tex={String.raw`L_{\mathrm{t}}`} />, přibližně 334 000 joulů na kilogram, vyjde hmotnost roztátého ledu{" "}
+      <InlineMath tex="m" /> v kilogramech na metr čtvereční.
       <SourceLink id="DOI_10_6028_jres_023_043"> (Osborne 1939)</SourceLink>
-      <a href={`${media}/vypocty.mjs`}> Podklady a přepočet příkladu</a>.
+    </p>
+    <p>
+      Pokud na tání připadá celý den o 10 W/m² více, dodá se za 86 400 sekund na každý metr čtvereční navíc 864 000 joulů.
+      To stačí na roztavení asi 2,6 kilogramu ledu na metr čtvereční, tedy na vrstvu vody vysokou 2,6 milimetru.
+      Skutečný odtok může být menší, protože část vody se ve sněhu zadrží nebo znovu zmrzne.
+      <a href={`${media}/vypocty.mjs`}> Přepočet příkladu</a>.
     </p>
 
     <h3 id="ustup-cela">Čelo ustupuje, i když led stále teče dolů</h3>
     <p>
-      V horní části přísun sněhu zpravidla převládá nad ztrátami, na nízkém jazyku bývá poměr opačný.
-      Proudění přivádí led dolů a část místního tání tím nahrazuje. Když však u čela dlouhodobě ubývá více ledu, než přiteče,
-      jazyk se ztenčí a jeho konec zanikne. Nové čelo pak leží výše v údolí.
-      Ústup tedy neznamená, že se led začal pohybovat do kopce.
-      U ledovce končícího na souši vnitřní přesun ledu sám hmotnost celku nemění, mění její rozložení.
+      Ve vyšších částech ledovce za rok zpravidla přibývá sníh. Led odtud proudí do níže položeného výběžku, kterému se říká ledovcový jazyk.
+      Když přítok shora právě nahradí to, co na konci jazyka odtaje, může čelo zůstat celé roky na témže místě.
+      Jestliže na konci jazyka dlouhodobě taje více ledu, než přitéká, jeho nejnižší část postupně zmizí.
+      Čelo se tak posouvá výš do údolí, zatímco led dál proudí dolů. Samotné proudění uvnitř ledovce končícího na souši pouze přemisťuje jeho hmotu.
       <SourceLink id="DOI_10_3189_s002214300000928x"> (Jóhannesson a kol. 1989)</SourceLink>
     </p>
     <p>
-      Zmenšování může odstranit nízko položenou část s velkým táním a tím pomoci obnovit rovnováhu.
-      Ztenčování současně snižuje povrch do teplejší výškové hladiny, což může tání podpořit.
-      Výsledek závisí na tvaru údolí a rozložení plochy podle výšky.
-      Proto se po změně klimatu nejprve může měnit hmotnost a tloušťka, zatímco čelo ještě nějakou dobu pokračuje v předchozím vývoji.
+      Jak rychle se vytvoří nová rovnováha, závisí i na tvaru údolí. Když odtaje spodní konec jazyka, ledovec přijde o nízko položenou plochu, na níž tál nejrychleji.
+      Celková roční ztráta se tím může zmírnit. Kde se však led ztenčuje, jeho povrch zároveň klesá do nižší nadmořské výšky, v níž bývá tepleji.
+      Oba vlivy závisí na tom, jak velká část ledovce leží v jednotlivých výškách. Ledovce v sousedních údolích proto mohou na stejné počasí reagovat různě.
       <SourceLink id="DOI_10_3189_s002214300000928x"> (Jóhannesson a kol. 1989)</SourceLink>
     </p>
 
     <p id="nejistoty">
-      Základní vztah mezi energií, táním a bilancí je přímo ověřený. Nejistější je velikost jednotlivých příspěvků u konkrétního ledovce
-      a doba, za kterou se změní jeho čelo. Alpské číselné výsledky nelze přenést na všechny světové ledovce, zejména na ledovce s mocnou sutí nebo s čelem ve vodě.
+      Laboratorní pokusy a měření na odkrytém ledu ověřují, kolik ledu může dodaná energie roztavit. U jednotlivého ledovce je obtížnější určit, jak velká část úbytku připadá na změnu sněžení a jak velká na tání.
+      Silnější tání jako příčinu úbytku by na daném místě zpochybnila dlouhodobá měření, v nichž by letní ztráty zůstávaly stejné a celé zhoršení roční bilance by vysvětlil pokles zimních přírůstků.
+      Doba odezvy čela navíc závisí na tvaru a předchozím vývoji daného ledovce.
     </p>
     <details className="article-details">
       <summary>Co výklad omezuje a jak jej lze dále prověřovat</summary>
       <p>
-        Srážky se v horském terénu měří obtížně. Vítr a laviny přerozdělují sníh a několik měřicích bodů nemusí vystihnout celý ledovec.
-        Proto sezonní měření kontrolujeme změnou objemu z opakovaných výškových map.
-        Na Sarennes statistické zpracování oddělovalo místní rozdíly a doplňovalo chybějící hodnoty, nevytvořilo však další nezávislé měření.
+        Vítr přenáší sníh po svahu a laviny jej mohou dodat i z okolních stěn. Několik sond tak může minout místa, kde se ukládá nejvíc sněhu.
+        Kontrolu nabízí změna objemu celého ledovce mezi dvěma výškovými mapami. Na Sarennes statistické zpracování pomohlo oddělit rozdíly mezi místy a doplnit chybějící hodnoty.
+        Tyto odhady však stále vycházejí z téže sítě měření.
         <SourceLink id="DOI_10_5194_tc_7_47_2013"> (Thibert a kol. 2013)</SourceLink>
       </p>
       <p>
-        Na Morteratschi se zimní výška sněhu používala i jako vstup modelu. Nezávislé porovnání úbytku se proto vztahuje především na povrch bez sněhu.
-        Výsledek jednoho místa také neurčuje příspěvek ztmavnutí k bilanci celého ledovce.
-        Tenká nečistota může tání podpořit, dostatečně silná suť naopak led tepelně izoluje.
+        Na Morteratschi vědci použili měřenou zimní výšku sněhu také při výpočtu tání. Nezávislou kontrolu proto poskytlo hlavně léto, kdy sníh zmizel a zůstal odkrytý led.
+        Výsledek u jedné stanice ukazuje, co způsobilo ztmavnutí v tomto místě. Jinde může tenká vrstva nečistot tání urychlit, zatímco dostatečně silná vrstva suti led tepelně izoluje.
+        U ledovců končících ve vodě záleží navíc na odlamování a tání pod hladinou.
         <SourceLink id="DOI_10_3189_002214309789470969"> (Oerlemans a kol. 2009)</SourceLink>
         <SourceLink id="DOI_10_1017_9781009157896_011"> (IPCC 2021)</SourceLink>
       </p>
       <p>
-        Konkrétní přisouzení úbytku zesílenému tání by oslabila dlouhá řada, v níž by při spolehlivě měřené nezměněné letní ztrátě
-        pokles zimních přírůstků vysvětlil celý úbytek. Energetický výpočet by vyžadoval opravu, pokud by opakovaně
-        předpovídal jiné tání než nezávislé měření i po zahrnutí nejistot. U délky ledovce je obdobnou kontrolou shoda předpovědi
-        s později změřenou tloušťkou, rychlostí a polohou čela, které nebyly použity k nastavení modelu.
+        Kdyby výpočet z počasí i po započtení nejistot opakovaně předpovídal jiné tání, než kolik ledu u tyčí skutečně ubylo, bylo by potřeba přezkoumat započtené přísuny a ztráty energie.
+        Výpočet budoucího pohybu čela lze obdobně prověřit pozdějšími měřeními tloušťky, rychlosti proudění a polohy čela, která vědci při nastavování modelu ještě neznali.
       </p>
     </details>
 
     <h2 id="shrnuti">Shrnutí</h2>
     <div className="method-conclusion"><p>
-      Horský ledovec ztrácí hmotu, když jeho celkové ztráty dlouhodobě převáží nad přírůstkem sněhu.
-      Při dnešním oteplování je hlavním globálním vlivem zesílené tání, které může převážit i nad bohatšími zimami.
-      Rozlišujeme to měřením zimních přírůstků a letních ztrát a kontrolujeme výpočtem energie dostupné pro tání.
-      Ubývající ledovec se ztenčuje a mění tok ledu. Jeho čelo ustoupí, když místní ztrátu nestačí nahradit přítok ledu shora.
-      Proto může ustupovat se zpožděním, přestože led dál proudí dolů údolím. Sněžení, tvar údolí, suť a případný kontakt s vodou určují místní odlišnosti.
+      Horský ledovec končící na souši ztrácí hmotu, když voda odtékající z tajícího sněhu a ledu dlouhodobě převáží nad tím, co přibude sněžením.
+      V celosvětovém měřítku je hlavní příčinou novodobého ústupu ledovců velmi pravděpodobně oteplování atmosféry. I po vydatnějších zimách může v létě odtát víc sněhu a ledu, než v zimě přibylo, jak ukazují měření na francouzském ledovci Sarennes.
+      Čelo začne ustupovat, když místní tání překoná přísun ledu shora. Proto mohou dva ledovce po stejném teplém létě ztratit hmotu, ale jejich čela se pohnou v různých letech.
     </p></div>
 
     <h2 id="prameny">Prameny a veřejná data</h2>

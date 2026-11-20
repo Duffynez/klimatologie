@@ -384,7 +384,7 @@ test("publishes glacier mechanisms with seasonal evidence, energy tests and dela
   assert.ok(body, "The mechanism must replace the catalogue outline");
   assert.deepEqual([...body.matchAll(/<h2 id="([^"]+)"/g)].map(m => m[1]), ["co-vysvetlujeme", "hypotezy", "pribehy", "jak-mechanismus-funguje", "shrnuti", "prameny"]);
   assert.equal((body.slice(0, body.indexOf('<h2 id="hypotezy"')).match(/<p\b/g) ?? []).length, 2);
-  assert.match(html, /6\. listopadu 2026/);
+  assert.match(html, /20\. listopadu 2026/);
   for (const id of ["test-mala-doba-ledova", "test-sarennes", "test-morteratsch", "test-odezva-cela"]) assert.ok(body.includes(`id="${id}"`));
   const bibliography = body.slice(body.indexOf('<h2 id="prameny"'));
   const catalogue = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
@@ -429,7 +429,7 @@ test("publishes glacier mechanisms with seasonal evidence, energy tests and dela
   });
   assert.match(body, /Čísla z různých období proto nesčítáme/);
   assert.match(body, /modelový odhad místního účinku/);
-  assert.match(body, /led začal pohybovat do kopce/);
+  assert.match(body, /Čelo se tak posouvá výš do údolí, zatímco led dál proudí dolů/);
   assert.match(body, /katex/);
   const uncertainty = body.slice(body.indexOf('<p id="nejistoty"'), body.indexOf('<h2 id="shrnuti"'));
   assert.ok(uncertainty.replace(/<[^>]+>/g, " ").split(/\s+/).length <= 600);
