@@ -106,11 +106,11 @@ export const climateMechanisms: ClimateMechanism[] = [
     category: "Záření a složení atmosféry",
     isMainQuestion: true,
     isComplete: true,
-    cardSummary: "Ozon, CO₂ a proudění v testech výrazného jarního ochlazení.",
+    cardSummary: "Co o příčině ochlazení prozradila měření ozonu a teploty ve výšce kolem 16 kilometrů.",
     observations: [
       { href: "/pozorovani/stratosfericke-ochlazovani/#antarkticke-jaro", label: "Jarní ochlazení dolní stratosféry nad Antarktidou" },
     ],
-    summary: "Proč se dolní stratosféra nad Antarktidou na konci 20. století nejvíce ochladila právě na jaře? Porovnání vlivu CO₂ a ozonu, kontrolované pokusy a vysvětlení výměny energie.",
+    summary: "Na konci 20. století naměřily balony vysoko nad antarktickým ledem největší ochlazení v listopadu, kdy už nad pólem svítí slunce. Vědci pak v modelu vyzkoušeli, jak teplý by byl vzduch, kdyby v něm na jaře zůstalo víc ozonu.",
     distinguishingEvidence: "Porovnání změn ozonu a teploty v jednotlivých výškách, oblastech a ročních obdobích. Chemická měření a vývoj po omezení látek poškozujících ozon pomáhají oddělit jeho vliv od CO₂ a proudění.",
   },
   {
