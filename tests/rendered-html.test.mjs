@@ -1650,16 +1650,23 @@ test("groups all 23 mechanism topics by their link to observations and preserves
 
 test("publishes projections and links each consequence to observations, a mechanism and sources", async () => {
   const [projections, consequences, header, sitemap] = await Promise.all([
-    readFile(new URL("app/projekce/page.tsx", root), "utf8"),
+    readFile(new URL("dist/client/projekce/index.html", root), "utf8"),
     readFile(new URL("dist/client/dusledky/index.html", root), "utf8"),
     readFile(new URL("app/components/SiteHeader.tsx", root), "utf8"),
     readFile(new URL("public/sitemap.xml", root), "utf8"),
   ]);
 
-  assert.equal((projections.match(/summary: "/g) ?? []).length, 6);
-  assert.match(projections, /Co lze říci o budoucím klimatu/);
-  assert.match(projections, /Ověřování modelů/);
-  assert.match(projections, /Nejistota a časový horizont/);
+  assert.match(projections, /<h1>Jak se může změnit klima\?<\/h1>/);
+  const categoryList = projections.match(/<ul\b[^>]*aria-label="Kategorie klimatických projekcí"[^>]*>([\s\S]*?)<\/ul>/);
+  assert.ok(categoryList, "Missing list of projection categories");
+  assert.deepEqual([...categoryList[1].matchAll(/<li>([^<]+)<\/li>/g)].map(([, name]) => name), [
+    "Teplota a energetická bilance Země",
+    "Srážky a voda na pevnině",
+    "Proudění vzduchu a bouře",
+    "Sníh, led a permafrost",
+    "Oceán a hladina moře",
+    "Složení atmosféry a koloběh uhlíku",
+  ]);
   assert.match(consequences, /<h1>Jak se změna klimatu projevuje\?<\/h1>/);
   assert.doesNotMatch(consequences, /chybějící zdroj/);
   assert.doesNotMatch(projections + consequences, /Obsah připravujeme/);

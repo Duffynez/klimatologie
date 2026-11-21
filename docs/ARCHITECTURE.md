@@ -49,7 +49,7 @@ Hlavní navigace není odvozena automaticky ze složek. Je to ručně udržovan�
 | `/metody/[slug]/` | `app/metody/[slug]/page.tsx` | Katalog metod; hotové články se připojují ručně. |
 | `/mechanismy/` | `app/mechanismy/page.tsx` | `app/data/mechanisms.ts`. |
 | `/mechanismy/[slug]/` | `app/mechanismy/[slug]/page.tsx` | Plné články připojené podle slugu a obecné detailní stránky ostatních témat. |
-| `/projekce/` | `app/projekce/page.tsx` | Lokální pole témat přímo v souboru stránky. |
+| `/projekce/` | `app/projekce/page.tsx` | Názvy hlavních kategorií klimatických projekcí. |
 | `/dusledky/` | `app/dusledky/page.tsx` | Lokální pole témat přímo v souboru stránky. |
 | `/historie/` | `app/historie/page.tsx` | `app/data/history.ts` a zdroje podle ID. |
 | `/zdroje/` | `app/zdroje/page.tsx` | Spojené pole `sources` z `app/data/sources.ts`. |
