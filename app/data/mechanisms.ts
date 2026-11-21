@@ -191,7 +191,7 @@ export const climateMechanisms: ClimateMechanism[] = [
     observations: [
       { href: "/pozorovani/acidifikace-oceanu/#pozorovani", label: "Pokles pH mořské vody" },
     ],
-    summary: "Laboratorní pokusy, dlouhé měření u Havaje a globální rozbor ukazují, jak přísun CO₂ mění chemii vody. Co tyto zkoušky říkají o příčině poklesu pH a o vlivu teploty, proudění a biologické činnosti.",
+    summary: "Ze složení mořské vody lze vypočítat, jak se změní její pH, když ve vzduchu přibude oxid uhličitý. U Havaje můžeme tuto předpověď porovnat se vzorky odebranými během téměř dvaceti let.",
     distinguishingEvidence: "Nezávislá kontrola chemického výpočtu plynovým a optickým měřením. Porovnání očekávaného tempa s pozorováním a rozklad globální změny na příspěvky uhlíku, teploty a dalších vlastností vody.",
   },
   {

@@ -131,7 +131,7 @@ test("ocean acidification connects independent measurements, controls and reprod
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body, "Replace the existing outline with the complete mechanism");
   assert.match(html, /<h1>Proč klesá pH povrchového oceánu\?<\/h1>/);
-  assert.match(html, /<p class="page-lead__meta">13\. listopadu 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">21\. listopadu 2026<\/p>/);
   assert.equal((body.slice(0, body.indexOf('<h2 id="hypotezy"')).match(/<p\b/g) ?? []).length, 2);
   for (const id of ["prisun-co2", "test-laborator", "test-havaj", "test-globalni", "chemie", "zaver"]) assert.ok(body.includes(`id="${id}"`));
   assert.match(body, /přirozenou složku/);

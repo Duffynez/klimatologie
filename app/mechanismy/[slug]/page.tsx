@@ -131,7 +131,7 @@ export default async function MechanismDetail({ params }: { params: Promise<{ sl
 
   if (slug === "pohlcovani-co2-oceanem-a-uhlicitanova-chemie") {
     return <div className="page-shell">
-      <PageLead eyebrow={"Mechanismy / " + mechanism.category} title={mechanism.title} meta="13. listopadu 2026"><p>{mechanism.summary}</p></PageLead>
+      <PageLead eyebrow={"Mechanismy / " + mechanism.category} title={mechanism.title} meta="21. listopadu 2026"><p>{mechanism.summary}</p></PageLead>
       <OceanAcidificationMechanismArticle />
       <Link className="text-link catalog-back-link" href="/mechanismy">&larr; Zpět na všechny mechanismy</Link>
     </div>;
