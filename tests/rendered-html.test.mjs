@@ -1667,16 +1667,35 @@ test("publishes projections and links each consequence to observations, a mechan
     "Oceán a hladina moře",
     "Složení atmosféry a koloběh uhlíku",
   ]);
-  assert.match(consequences, /<h1>Jak se změna klimatu projevuje\?<\/h1>/);
+  assert.match(consequences, /<h1>Co znamená změna klimatu pro lidi a přírodu\?<\/h1>/);
   assert.doesNotMatch(consequences, /chybějící zdroj/);
   assert.doesNotMatch(projections + consequences, /Obsah připravujeme/);
-  const cards = [...consequences.matchAll(/<article\b[^>]*>([\s\S]*?)<\/article>/g)];
-  assert.equal(cards.length, 6);
+
+  const groups = [...consequences.matchAll(/<section\b[^>]*aria-labelledby="([^"]+)"[^>]*>([\s\S]*?)<\/section>/g)];
+  const studyIdsByGroup = {
+    "lidske-zdravi": ["vedra-a-zdravi"],
+    "voda-v-ceske-krajine": ["snih-a-letni-prutoky"],
+    "uroda-a-potraviny": [],
+    "povodne-a-zivot-na-pobrezi": ["povoden-v-krnove"],
+    "lesy-a-volne-zijici-zivocichove": ["hnizdeni-a-potrava"],
+    "morsky-zivot": ["ledni-medvedi-na-sousi"],
+    "budovy-energie-a-doprava": ["permafrost-a-stavby"],
+  };
+  assert.deepEqual(groups.map(([, id]) => id), Object.keys(studyIdsByGroup));
+  for (const [, id, group] of groups) {
+    assert.ok(consequences.includes(`href="#${id}"`));
+    assert.ok(group.includes(`<h2 id="${id}">`));
+    assert.ok((group.match(/<h3>[^<]+\?<\/h3>/g) ?? []).length >= 2, `Missing proposed questions in ${id}`);
+    const studyIds = [...group.matchAll(/<article\b[^>]*id="([^"]+)"/g)].map(([, studyId]) => studyId);
+    assert.deepEqual(studyIds, studyIdsByGroup[id]);
+  }
+
+  const examples = [...consequences.matchAll(/<article\b[^>]*id="([^"]+)"[^>]*>([\s\S]*?)<\/article>/g)];
   const targets = new Map();
-  for (const [, card] of cards) {
-    const hrefs = [...card.matchAll(/href="([^"]+)"/g)].map((match) => match[1]);
+  for (const [, id, example] of examples) {
+    const hrefs = [...example.matchAll(/href="([^"]+)"/g)].map((match) => match[1]);
     for (const section of ["/pozorovani/", "/mechanismy/", "/zdroje"]) {
-      assert.ok(hrefs.some((href) => href.startsWith(section)), `Missing ${section} link in ${card.match(/<h2>([^<]+)<\/h2>/)?.[1]}`);
+      assert.ok(hrefs.some((href) => href.startsWith(section)), `Missing ${section} link in ${id}`);
     }
     for (const href of hrefs) {
       const [path, anchor] = href.split("#");
