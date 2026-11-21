@@ -73,7 +73,7 @@ test("sea level budget exposes comparable contributions, uncertainty data and re
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body, "The complete article must replace the catalogue outline");
   assert.match(html, /<h1>Proč stoupá globální hladina moře\?<\/h1>/);
-  assert.match(html, /<p class="page-lead__meta">13\. listopadu 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">21\. listopadu 2026<\/p>/);
   assert.doesNotMatch(body, /katex-error|_vinext\/image/);
   assert.equal((body.slice(0, body.indexOf('<h2 id="hypotezy"')).match(/<p\b/g) ?? []).length, 2);
   for (const id of ["rozpinani", "prisun-vody", "test-hustota", "test-profily", "test-pokles", "test-soucet", "mechanismus", "zaver"]) assert.ok(body.includes(`id="${id}"`), id);
@@ -120,8 +120,8 @@ test("sea level budget exposes comparable contributions, uncertainty data and re
   assert.match(graph, /1993–2018/);
   assert.match(graph, /90% intervaly/);
   for (const row of result.rows.slice(0, 5)) for (const key of ["trend", "lower", "upper"]) assert.ok(graph.includes(row[key].toFixed(2).replace(".", ",")));
-  const uncertainty = body.slice(body.indexOf('<h2 id="nejistoty"'), body.indexOf('<h2 id="dalsi-overeni"'));
-  assert.ok(uncertainty.replace(/<[^>]+>/g, " ").trim().split(/\s+/).length <= 600);
+  const uncertainty = body.match(/<h2 id="nejistoty">([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty && uncertainty.replace(/<[^>]+>/g, " ").trim().split(/\s+/).length <= 600);
   assert.doesNotMatch(body.replace(/<[^>]+>/g, " ").replace(/&[^;]+;/g, " "), /;/);
 });
 

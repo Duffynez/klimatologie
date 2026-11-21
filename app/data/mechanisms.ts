@@ -175,12 +175,12 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "bilance-globalni-hladiny-more",
     title: "Proč stoupá globální hladina moře?",
     category: "Oceán a hladina moře",
-    cardSummary: "Jak rozlišujeme rozpínání vody a její přísun z pevniny a ověřujeme jejich součet.",
+    cardSummary: "Jak z měření poznáme, o kolik zvedl hladinu ohřev vody a kolik vody do oceánu přibylo z pevniny?",
     observations: [
       { href: "/pozorovani/gmsl/#pozorovani", label: "Vzestup globální hladiny moře" },
       { href: "/pozorovani/gmsl/#pokles-2010-2011", label: "Dočasný pokles hladiny v letech 2010–2011" },
     ],
-    summary: "Teplejší voda zabírá větší objem, voda přidaná z pevniny zvyšuje hmotnost oceánu. Laboratorní měření, teplotní profily a družice umožňují tyto příspěvky rozlišit a jejich součet porovnat s výškou hladiny.",
+    summary: "Od března 2010 do května 2011 klesla průměrná hladina oceánu asi o půl centimetru. Kam se voda poděla a co tento krátký pokles prozradil o příčinách dlouhodobého vzestupu?",
     distinguishingEvidence: "Rozdílné stopy v teplotě, slanosti a gravitačním poli. Pokles hladiny při úbytku oceánské vody v letech 2010–2011 a společná bilance příspěvků za období 1993–2018 ověřují směr i velikost účinku.",
   },
   {

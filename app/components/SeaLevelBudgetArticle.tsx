@@ -42,18 +42,19 @@ function TestPanels({ start }: { start: number }) {
 
 export function SeaLevelBudgetArticle() {
   return <article className="article-layout"><div className="article-prose">
-    <h2 id="co-vysvetlujeme">Dva způsoby, jak zvětšit objem oceánu</h2>
+    <h2 id="co-vysvetlujeme">Co prozradí samotná výška hladiny?</h2>
     <p className="article-prose__intro">
-      Globální hladina moře dlouhodobě stoupá. Družicová měření za roky 1993–2018 dávají v rozboru Thomase Frederikseho a kolegů průměrné tempo 3,32 mm za rok.
-      Jak z měření poznáme, kolik vody přibylo a nakolik se zvětšil objem vody, která už v oceánu byla?
-      <Link href="/pozorovani/gmsl/#bilance-hladiny"> Pozorování globální hladiny</Link> vysvětluje vznik údajů, s nimiž zde porovnáme oba příspěvky.
-      <SourceLink id="DOI_10_1038_s41586_020_2591_3"> (Frederikse a kol. 2020, tab. 1)</SourceLink>
+      V letech 1993–2018 stoupala podle družic <Link href="/pozorovani/gmsl/#bilance-hladiny">globální hladina moře</Link> v průměru o 3,32 milimetru za rok.
+      Část vzestupu způsobuje voda, která už v oceánu je a při ohřevu zvětšuje svůj objem.
+      Další část připadá na vodu přitékající z pevniny.
+      Ta zvyšuje objem i hmotnost oceánu.
+      Výškoměr oba děje zachytí dohromady.<SourceLink id="DOI_10_1038_s41586_020_2591_3"> (Frederikse a kol. 2020, tab. 1)</SourceLink>
     </p>
     <p>
-      <strong>Bilance hladiny</strong> je porovnání celkové změny se součtem změn, které ji mají vysvětlit.
-      Rozpínání teplejší vody a přísun vody z pevniny mohou působit současně. Každý ale zanechává jinou měřitelnou stopu.
-      Zkoumáme globální průměr v posledních desetiletích. Výška moře vůči jednotlivému pobřeží se navíc mění s prouděním, gravitací a pohybem pevniny.
-      <SourceLink id="DOI_10_1007_s10712_019_09525_z"> (Gregory a kol. 2019)</SourceLink>
+      Z teploty a slanosti v různých hloubkách lze spočítat, o kolik se zvětšil objem vody při ohřevu.
+      Změny gravitace zase prozradí, kolik vody oceán získal nebo ztratil.
+      Když oba příspěvky vyjádříme v milimetrech, můžeme jejich součet porovnat s naměřeným vzestupem.
+      Tomuto porovnání říkáme <strong>bilance hladiny moře</strong>.<SourceLink id="DOI_10_1007_s10712_019_09525_z"> (Gregory a kol. 2019)</SourceLink>
     </p>
 
     <h2 id="hypotezy">Dva příspěvky a jejich zkoušky</h2>
@@ -61,20 +62,19 @@ export function SeaLevelBudgetArticle() {
       context={<p>První větev mění objem při stálé hmotnosti vody. Druhá mění množství vody. Rozlišujeme je pomocí teploty, slanosti a gravitace, potom jejich součet porovnáme s měřenou výškou hladiny. Číselné trendy níže patří stejnému období 1993–2018.</p>}
       caption={<>Oba příspěvky se doplňují. Shoda jejich součtu s hladinou ověřuje velikost vysvětlené změny, ne pouze její směr. Krátkodobý pokles v letech 2010–2011 tvoří samostatnou zkoušku přesunu vody.</>} />
 
-    <h2 id="pribehy">Jak se příspěvky podařilo rozlišit</h2>
+    <h2 id="pribehy">Jak se od sebe oddělí rozpínání vody a její přítok</h2>
     <HypothesisStory id="rozpinani" number={1} title="Teplejší voda zabírá větší objem">
-      <p>
-        Pro přepočet teploty na objem potřebujeme znát <strong>hustotu</strong>, tedy hmotnost připadající na jednotku objemu.
-        U mořské vody závisí také na obsahu solí a na tlaku. Laboratorní vztah proto musí popsat více podmínek než pouhé zahřátí jedné sklenice.
-        Frank Millero a Alain Poisson v roce 1981 spojili dvě řady laboratorních měření do rovnice hustoty při tlaku jedné atmosféry.
-        Reagovali mimo jiné na nové výsledky, podle nichž předchozí rovnice z roku 1976 nad 25 °C nestačila.
-        <SourceLink id="DOI_10_1016_0198_0149_81_90122_9"> (Millero a Poisson 1981, s. 625–626)</SourceLink>
+      <p id="objem-a-hmotnost">
+        Hustota vody udává, kolik kilogramů váží jeden metr krychlový.
+        V rozmezí teplot běžných v oceánu hustota mořské vody při ohřevu klesá, pokud se slanost a tlak nemění.
+        Kilogram ohřáté vody proto zabírá o něco víc místa než před ohřevem.
+        Její objem <i>V</i> v metrech krychlových dostaneme, když hmotnost <i>m</i> v kilogramech vydělíme hustotou <i>ρ</i> v kilogramech na metr krychlový.<SourceLink id="TEOS10_MANUAL_2010"> (IOC, SCOR a IAPSO 2010, oddíly 2.7 a 2.18–2.20)</SourceLink>
       </p>
+      <Equation tex={String.raw`V=\frac{m}{\rho}`} />
       <p>
-        Schéma odděluje teplotní změnu od přidání vody. Stejné množství vody po ohřátí zabírá vyšší sloupec, zatímco jeho hmotnost zůstává stejná.
-        V oceánu sledujeme teplotu a slanost po vrstvách. Radarová družice kontroluje výšku hladiny, gravitační měření pomáhá oddělit změnu hmotnosti.
-        Obrázek ukazuje princip, nikoli měřítko skutečného rozpínání.
-        <SourceLink id="DOI_10_1007_s10712_019_09525_z"> (Gregory a kol. 2019)</SourceLink>
+        V oceánu může voda proudit i do stran.
+        Pokud se ale objem ohřáté vrstvy zvětší, při stejné ploše oceánu musí jeho průměrná hladina stoupnout.<SourceLink id="DOI_10_1007_s10712_019_09525_z"> (Gregory a kol. 2019)</SourceLink> O kolik, to záleží i na výchozí teplotě vody, její slanosti a hloubce, s níž roste tlak.
+        Dvě stejně silné vrstvy se proto mohou při ohřátí o jeden stupeň roztáhnout různě.<SourceLink id="DOI_10_1007_s10712_019_09525_z"> (Gregory a kol. 2019, N17–N20)</SourceLink>
       </p>
       <figure className={`article-figure ${styles.explanatoryFigure}`}>
         <div className={styles.figureScroll} tabIndex={0} role="region" aria-label="Schéma rozpínání vody, na úzké obrazovce posuvné do stran">
@@ -88,73 +88,70 @@ export function SeaLevelBudgetArticle() {
         </figcaption>
       </figure>
 
-      <h4 className={styles.testHeading} id="test-hustota">Zkouška 1. Hustota při známé teplotě</h4>
+      <h4 className={styles.testHeading} id="test-hustota">1. Jak přesně známe hustotu mořské vody?</h4>
       <p>
-        Millero a Poisson použili 467 hodnot z měření dvou pracovišť. Hledali rovnici, která vystihne hustotu v rozsahu 0–40 °C a slaností 0,5–43 na tehdejší praktické stupnici.
-        Běžná oceánská voda má na této stupnici hodnotu přibližně 35. Změnu hustoty při ohřevu lze ověřit porovnáním vzorků při stejné slanosti.
-        Srovnání laboratoří přitom vyžadovalo sjednocení referenční vody a opravu přiřazené slanosti některých vzorků.
-        Po těchto úpravách se vyhlazené výsledky pracovišť lišily nejvýše přibližně o 0,005 kg/m³.
-        <SourceLink id="DOI_10_1016_0198_0149_81_90122_9"> (Millero a Poisson 1981, s. 626–629)</SourceLink>
+        Nová laboratorní měření ukázala, že rovnice z roku 1976 přestává při teplotách nad 25 °C přesně vystihovat hustotu mořské vody.
+        Frank Millero a Alain Poisson proto v roce 1981 spojili 467 hodnot ze dvou pracovišť.
+        Při tlaku jedné atmosféry porovnali hustotu vzorků o stejné slanosti při různých teplotách.
+        Aby si vzorky z obou laboratoří skutečně odpovídaly, sjednotili referenční vodu a opravili hodnoty slanosti u části měření.<SourceLink id="DOI_10_1016_0198_0149_81_90122_9"> (Millero a Poisson 1981, s. 625–626)</SourceLink>
       </p>
       <p>
-        Typickou velikost odchylky naměřených hustot od výsledné rovnice autoři vyjádřili směrodatnou odchylkou 0,00366 kg/m³.
-        Pro představu, rovnice dává při 5 °C a slanosti 35 hustotu přibližně 1 027,675 kg/m³. Rozdíly tedy leží v tisícinách kilogramu na metr krychlový vody.
-        Uvedená odchylka vyjadřuje shodu rovnice s údaji, z nichž byla sestavena. Není nezávislou předpovědní zkouškou na nových vzorcích.
-        Opravovaná starší rovnice zároveň ukazuje, proč potřebujeme další měření: nová data mohou odhalit chybu dříve přijatého vztahu.
-        <SourceLink id="DOI_10_1016_0198_0149_81_90122_9"> (Millero a Poisson 1981, s. 628–629)</SourceLink>
-      </p>
-      <p>
-        Dnešní oceánské výpočty používají standard <strong>TEOS-10</strong>, který popisuje vlastnosti mořské vody včetně závislosti na tlaku a složení solí.
-        Laboratorně určený vztah se tak musí používat ve správném rozsahu a s odpovídajícími měřenými veličinami.
-        <SourceLink id="TEOS10_MANUAL_2010"> (IOC, SCOR a IAPSO 2010, oddíly 1–2)</SourceLink>
-        Podrobnější laboratorní kontroly a výpočet objemu rozvádí
-        <Link href="/mechanismy/tepelna-roztaznost-morske-vody/"> změna hustoty při ohřevu a změně slanosti</Link>.
+        Po těchto úpravách se vyhlazené výsledky obou pracovišť lišily nejvýše asi o 0,005 kg/m³.<SourceLink id="DOI_10_1016_0198_0149_81_90122_9"> (Millero a Poisson 1981, s. 626–629)</SourceLink> V hlubinách oceánu je však voda pod mnohem vyšším tlakem než v tomto pokusu.
+        Dnešní výpočty proto vycházejí z mezinárodního standardu pro výpočet vlastností mořské vody (TEOS-10), který zahrnuje i účinek tlaku a složení rozpuštěných solí.
+        Jak se <Link href="/mechanismy/tepelna-roztaznost-morske-vody/">hustota mění při ohřevu a při změně slanosti</Link>, lze podle něj spočítat pro každou hloubku zvlášť.<SourceLink id="TEOS10_MANUAL_2010"> (IOC, SCOR a IAPSO 2010, oddíly 1–2)</SourceLink>
       </p>
 
-      <h4 className={styles.testHeading} id="test-profily">Zkouška 2. Objem z oceánských profilů</h4>
+      <h4 className={styles.testHeading} id="test-profily">2. Kolik ke vzestupu přidal ohřev jednotlivých vrstev?</h4>
       <p>
-        Laboratoř určuje, jak se voda rozpíná. Pro skutečný oceán ještě potřebujeme zjistit, které vrstvy se o kolik oteplily.
-        Frederikse a kolegové v roce 2020 zpracovali mapy teploty a slanosti založené na lodních měřeních a později také na autonomních plovácích.
-        Pro období po roce 1957 použili v horních 2 000 metrech tři různé datové soubory a zohlednili jejich rozdíly.
-        Nešlo o tři zcela nezávislá pozorování: soubory sdílejí část profilů, liší se mimo jiné způsobem vyplnění mezer mezi nimi.
-        <SourceLink id="DOI_10_1038_s41586_020_2591_3"> (Frederikse a kol. 2020, Methods: Steric changes)</SourceLink>
+        Teplota hladiny sama neukáže, zda se oteplila jen mělká vrstva, nebo také stovky metrů vody pod ní.
+        Thomas Frederikse a jeho kolegové proto v roce 2020 použili měření z lodí a plováků.
+        Záznam <Link href="/pozorovani/gmsl/#bilance-hladiny">teploty a slanosti v různých hloubkách</Link> na jednom místě tvoří takzvaný profil.
+        Ze změny hustoty odvodili, o kolik se při stejné hmotnosti změnila tloušťka každé vrstvy.
+        Příspěvky vrstev pod sebou sečetli.
+        V celosvětovém průměru pak měla každá oblast váhu podle své plochy.<SourceLink id="DOI_10_1038_s41586_020_2591_3"> (Frederikse a kol. 2020, metody)</SourceLink>
       </p>
       <p>
-        Z teploty, slanosti a tlaku se určí hustota každé vrstvy. Její změna říká, o kolik se při stejné hmotnosti změní tloušťka vodního sloupce.
-        Příspěvky vrstev se sečtou a oblasti oceánu se zprůměrují podle plochy. Hlubší část pod 2 000 metry autoři doplnili rekonstrukcí založenou na šíření teplotních změn oceánem.
-        Výsledek tedy spojuje měření s prostorovým zpracováním a dopočtem nedostatečně proměřené hloubky.
-        Postup získání teplotních a slanostních údajů rozvádí <Link href="/pozorovani/gmsl/#bilance-hladiny">pozorovací článek</Link>.
-        <SourceLink id="DOI_10_1038_s41586_020_2591_3"> (Frederikse a kol. 2020, metody)</SourceLink>
+        Z měření v horních 2 000 metrech vznikly pro období po roce 1957 tři soubory map.
+        Autoři využili všechny tři.
+        Soubory mají část profilů společnou, liší se však například tím, jak doplňují údaje v místech bez měření.
+        Pro větší hloubky, odkud bylo dat podstatně méně, autoři použili rekonstrukci založenou na šíření teplotních změn oceánem.<SourceLink id="DOI_10_1038_s41586_020_2591_3"> (Frederikse a kol. 2020, Methods: Steric changes)</SourceLink>
       </p>
       <p>
-        Za roky 1993–2018 vyšel teplotní příspěvek <strong>1,19 mm za rok</strong>, s 90% intervalem 0,99–1,44 mm za rok.
-        Tento interval vyjadřuje nejistotu odhadu trendu v použitém zpracování, nikoli rozsah ročních výkyvů.
-        Družicový vzestup za stejné období činil 3,32 mm za rok, s intervalem 2,87–3,79 mm za rok.
-        Rozpínání tak vysvětluje podstatnou část změny, ale samo na celý vzestup nestačí.
-        Zkouška součtu s přidanou vodou následuje ve <a href="#test-soucet">čtvrté zkoušce</a>.
-        <SourceLink id="DOI_10_1038_s41586_020_2591_3"> (Frederikse a kol. 2020, tab. 1)</SourceLink>
+        Pro období 1993–2018 vyšel příspěvek rozpínání <strong>1,19 mm za rok</strong>.
+        Jeho 90% interval nejistoty sahá od 0,99 do 1,44 mm za rok a týká se průměrného tempa za celé období.
+        Rozpínání tedy vysvětluje zhruba třetinu vzestupu zachyceného družicemi.
+        Pro <a href="#test-soucet">porovnání součtu s měřenou hladinou</a> ještě potřebujeme zjistit, kolik vody oceán získal z pevniny.<SourceLink id="DOI_10_1038_s41586_020_2591_3"> (Frederikse a kol. 2020, tab. 1)</SourceLink>
       </p>
     </HypothesisStory>
 
     <HypothesisStory id="prisun-vody" number={2} title="Do oceánu přibývá voda z pevniny">
-      <p>
-        Vědět o rozpínání a tání ještě neznamená umět doložit jejich velikost. Walter Munk v roce 2002 ukázal, že tehdejší odhady příspěvků nedokázaly vysvětlit celý odhadovaný vzestup ve 20. století.
-        Zvažoval chybu v rekonstruované hladině, podcenění oceánského ohřevu i problémy s omezením úbytku ledu podle zemské rotace.
-        Jeho rozbor pojmenoval nesoulad dostupných údajů. Nevylučoval samotný fyzikální účinek přidané vody.
-        <SourceLink id="DOI_10_1073_pnas_092704599"> (Munk 2002)</SourceLink>
+      <p id="hmotnostni-prispevek">
+        Voda z tajících ledovců na pevnině odtéká do moře.
+        Hmotnost oceánu vzroste i tehdy, když se část pevninského ledovce odlomí a odpluje.
+        Led, který už plave, vytlačuje vodu odpovídající jeho hmotnosti.
+        Jeho pozdější roztání proto hladinu přímo ovlivní jen málo.<SourceLink id="DOI_10_1007_s10712_019_09525_z"> (Gregory a kol. 2019, N19)</SourceLink> Hladinu mění i zásoby kapalné vody na souši.
+        Část odčerpané podzemní vody odteče do moře.
+        Když se naopak voda z dešťů zadrží v půdě, jezerech nebo přehradách, v oceánu dočasně chybí.<SourceLink id="DOI_10_1007_s10712_019_09525_z"> (Gregory a kol. 2019, N19)</SourceLink>
       </p>
       <p>
-        Družice GRACE, vypuštěné v roce 2002, přidaly jiný druh měření: změny gravitačního pole způsobené přesuny hmoty.
-        Přesné sledování vzdálenosti mezi dvěma družicemi umožňuje určit, kde vody přibývá a kde ubývá.
-        Princip a nutné opravy popisuje <Link href="/metody/druzicova-gravimetrie/#hmotnost-oceanu">družicová gravimetrie</Link>.
-        Hmotnostní příspěvek tak nemusíme odvozovat jen jako nevysvětlený zbytek mezi hladinou a rozpínáním.
-        <SourceLink id="DOI_10_1029_2012gl053055"> (Boening a kol. 2012, oddíl 2)</SourceLink>
+        Hmotnost přidané vody lze převést na výšku vrstvy, kterou by vytvořila po celé ploše oceánu.
+        Přírůstek hmotnosti ΔM v kilogramech nejprve vydělíme hustotou sladké vody ρ<sub>f</sub> a získáme objem.
+        Po vydělení plochou oceánu <i>A</i> v metrech čtverečních vyjde změna průměrné výšky Δh v metrech.
+        Jde o běžný přepočet na vrstvu sladké vody při přibližně stálé ploše oceánu.<SourceLink id="DOI_10_1007_s10712_019_09525_z"> (Gregory a kol. 2019, vymezení N19 a rovnice 37)</SourceLink>
+      </p>
+      <Equation tex={String.raw`\Delta h=\frac{\Delta M}{\rho_{\mathrm{f}}\,A}`} />
+      <p>
+        Na každém metru čtverečním váží milimetrová vrstva sladké vody jeden kilogram, počítáme-li s hustotou 1 000 kg/m³.
+        Na ploše oceánu zaokrouhlené na 360 milionů km² to dává asi <strong>360 gigatun vody na jeden milimetr hladiny</strong>.
+        Jedna gigatuna je miliarda tun.
+        Tentýž <a href={`${media}/vypocty.mjs`}>přepočet</a> dovoluje předpovědět i pokles hladiny, pokud víme, kolik vody oceán ztratil.<SourceLink id="DOI_10_1029_2012gl053055"> (Boening a kol. 2012)</SourceLink>
       </p>
       <p>
-        Schéma sleduje vodu mezi oceánem a pevninou. Odtok a úbytek pevninského ledu mohou vodu do oceánu přidávat.
-        Vypařování, srážky a zadržení vody na souši mohou přesun dočasně obrátit. Výsledek ověřujeme gravitační změnou a výškou hladiny současně.
-        Barvy šipek rozlišují směr přesunu, jejich šířka neudává množství vody.
-        <SourceLink id="DOI_10_1007_s10712_019_09525_z"> (Gregory a kol. 2019, N19)</SourceLink>
+        Právě takové měření dříve chybělo.
+        V roce 2002 ukázal Walter Munk, že tehdejší odhady rozpínání a úbytku pevninského ledu dohromady nestačí na rekonstruovaný vzestup ve 20. století.
+        Zvažoval, zda je problém v odhadu samotné hladiny, v podcenění ohřevu nebo v tom, kolik úbytku ledu tehdy připouštěly údaje o rotaci Země.<SourceLink id="DOI_10_1073_pnas_092704599"> (Munk 2002)</SourceLink> V témže roce odstartovala dvojice družic GRACE.
+        Družice během letu zaznamenávaly drobné změny své vzájemné vzdálenosti způsobené tím, jak silně je přitahovala hmota pod nimi.
+        Z opakovaných přeletů lze pomocí <Link href="/metody/druzicova-gravimetrie/#hmotnost-oceanu">družicové gravimetrie</Link> odhadnout přesun vody i bez měření výšky hladiny.<SourceLink id="DOI_10_1029_2012gl053055"> (Boening a kol. 2012, oddíl 2)</SourceLink>
       </p>
       <figure className={`article-figure ${styles.explanatoryFigure}`}>
         <div className={styles.figureScroll} tabIndex={0} role="region" aria-label="Schéma přesunu vody, na úzké obrazovce posuvné do stran">
@@ -168,44 +165,49 @@ export function SeaLevelBudgetArticle() {
         </figcaption>
       </figure>
 
-      <h4 className={styles.testHeading} id="test-pokles">Zkouška 3. Dočasný pokles v letech 2010–2011</h4>
+      <h4 className={styles.testHeading} id="test-pokles">3. Kam se poděla voda při poklesu hladiny v letech 2010–2011?</h4>
       <p>
-        Předpověď přesunu vody platí v obou směrech. Pokud se voda přesune z oceánu na pevninu, musí hmotnostní příspěvek k hladině klesnout.
-        Carmen Boening a kolegové v roce 2012 využili výraznou epizodu La Niña, změnu proudění a teplot v tropickém Pacifiku, která ovlivnila rozložení srážek.
-        Mezi březnem 2010 a květnem 2011 se globální hladina snížila přibližně o 5 mm.
-        Tento krátký pokles umožnil prověřit opačné znaménko účinku, bez čekání na další desetiletí růstu.
-        <SourceLink id="DOI_10_1029_2012gl053055"> (Boening a kol. 2012)</SourceLink>
+        Mezi březnem 2010 a květnem 2011 zaznamenaly radarové družice pokles globální hladiny přibližně o 5 mm.
+        V té době se v tropickém Pacifiku projevila výrazná La Niña.
+        Při ní se část povrchových vod ochladí a změny proudění vzduchu ovlivní, kde nad oceánem a pevninou prší.
+        Carmen Boening a její kolegové proto zkoumali dvě možnosti.
+        Oceán se mohl ochladit a smrštit, nebo mohla část vody zůstat po srážkách na souši.<SourceLink id="DOI_10_1029_2012gl053055"> (Boening a kol. 2012)</SourceLink>
       </p>
       <p>
-        Autoři spojili radarová měření hladiny, GRACE a teplotní i slanostní profily plováků Argo v horních 900 metrech.
-        Odstranili pravidelný roční cyklus a krátké výkyvy vyhladili. Gravimetrie ukázala úbytek přibližně <strong>1 800 gigatun</strong> vody z oceánu.
-        Jedna gigatuna je miliarda tun. Teplotní příspěvek se během epizody také měnil, ale mezi jejím začátkem a koncem zůstal téměř stejný.
-        Pokles tak odpovídal především ztrátě vody, ne smrštění oceánu při ochlazení.
-        <SourceLink id="DOI_10_1029_2012gl053055"> (Boening a kol. 2012, obr. 2 a oddíly 2–3)</SourceLink>
+        Vedle výšky hladiny sledoval tým hmotnost oceánu pomocí družic GRACE a teplotu a slanost v horních 900 metrech pomocí plováků Argo.
+        Ze záznamů odečetl pravidelné sezónní kolísání a vyhladil krátké výkyvy.
+        Mezi začátkem a koncem epizody se příspěvek odvozený z teploty vody změnil jen málo.
+        Oceán však podle gravimetrie ztratil asi <strong>1 800 gigatun vody</strong>.
+        Při přepočtu 360 gigatun na jeden milimetr tedy vychází pokles přibližně o pět milimetrů.
+        Tolik naměřil i radar.<SourceLink id="DOI_10_1029_2012gl053055"> (Boening a kol. 2012, obr. 2 a oddíly 2–3)</SourceLink>
       </p>
       <p>
-        Na pevnině současně přibyly zásoby vody, zejména v Austrálii, na severu Jižní Ameriky a v jihovýchodní Asii.
-        Tyto dvě gravitační mapy nejsou nezávislými měřicími metodami, obě vycházejí z GRACE.
-        Podstatnou další kontrolu tvoří jinak měřená výška hladiny a teplotní profily.
-        <Link href="/pozorovani/gmsl/#pokles-2010-2011"> Pozorovací článek</Link> rozlišuje jejich zpracování a nejistoty.
-        Krátká epizoda potvrzuje účinek přesunu vody, sama však neurčuje příčinu dlouhodobého trendu.
-        <SourceLink id="DOI_10_1029_2012gl053055"> (Boening a kol. 2012, obr. 2–3)</SourceLink>
+        Měření GRACE zároveň ukázala, kde na pevnině vody přibylo.
+        Zadržela se zejména v Austrálii, na severu Jižní Ameriky a v jihovýchodní Asii.
+        Odhady pro souš i oceán využívají stejné družice.
+        Samostatnou kontrolu poskytly radarové výškoměry a plováky, jejichž <Link href="/pozorovani/gmsl/#pokles-2010-2011">měření lze pro toto období přímo porovnat</Link>.<SourceLink id="DOI_10_1029_2012gl053055"> (Boening a kol. 2012, obr. 2–3)</SourceLink>
       </p>
 
-      <h4 className={styles.testHeading} id="test-soucet">Zkouška 4. Součet proti měřené hladině</h4>
-      <p>
-        Dlouhodobou kontrolu nabízí rozbor Frederikseho a kolegů. Přírůstek vody určili z úbytku ledovců, Grónska a Antarktidy a ze změn zásob vody na souši.
-        Pro období od roku 2003 využili gravimetrii. Starší část vyžadovala měření a rekonstrukce ledovců i modelové odhady pevninské vody, včetně nádrží a čerpání podzemních zásob.
-        Celý příspěvek za roky 1993–2018 proto není přímým měřením jedné družice.
-        Vyšel <strong>1,97 mm za rok</strong>, s 90% intervalem 1,63–2,33 mm za rok.
-        <SourceLink id="DOI_10_1038_s41586_020_2591_3"> (Frederikse a kol. 2020, tab. 1 a metody)</SourceLink>
-      </p>
-      <p>
-        Graf porovnává průměrná tempa za stejné období. Například bod 1,19 znamená, že samotné rozpínání by podle výpočtu přidávalo průměrně 1,19 mm hladiny za rok.
-        Jeho úsečka 0,99–1,44 ukazuje 90% interval nejistoty odhadu. První dva řádky se sčítají.
-        Poslední dva jsou různými odhady celkového vzestupu, s nimiž se tento součet porovnává.
-        <SourceLink id="DOI_10_1038_s41586_020_2591_3"> (Frederikse a kol. 2020, tab. 1)</SourceLink>
-      </p>
+    </HypothesisStory>
+
+    <h2 id="mechanismus">Bilance hladiny za čtvrtstoletí družicových měření</h2>
+    <p>
+      Krátký pokles hladiny ověřil účinek vody zadržené na souši.
+      Pro bilanci celého období 1993–2018 potřeboval Frederikseho tým zjistit, kolik vody putovalo oběma směry.
+      K vodě uvolněné z ledovců a z ledových příkrovů Grónska a Antarktidy proto přičetl vodu, která odtekla z pevninských zásob.
+      Vodu, která se na souši naopak nahromadila, odečetl.
+      Od roku 2003 využil gravimetrii.
+      Pro dřívější roky vycházel z měření a rekonstrukcí úbytku ledu i z modelových odhadů, které zahrnují vodu zadrženou v přehradách a čerpání podzemních zásob.
+      Čistý přírůstek vody z pevniny tak za celé období zvyšoval hladinu v průměru o <strong>1,97 mm za rok</strong>, s 90% intervalem 1,63–2,33 mm za rok.<SourceLink id="DOI_10_1038_s41586_020_2591_3"> (Frederikse a kol. 2020, tab. 1 a metody)</SourceLink>
+    </p>
+    <h3 className={styles.testHeading} id="test-soucet">4. Souhlasí součet s tím, co naměřily družice a pobřežní stanice?</h3>
+    <p>
+      Sečteme-li 1,19 mm za rok připadající na ohřev a 1,97 mm za rok připadající na přísun vody, vyjde <strong>3,16 mm za rok</strong>.
+      Pro tento součet uvádějí autoři 90% interval 2,78–3,57 mm za rok.
+      Družice naměřily 3,32 mm za rok s intervalem 2,87–3,79 mm za rok.
+      V grafu patří první dva řádky jednotlivým příspěvkům, pod jejich součtem jsou dva odhady celkového vzestupu.
+      Body udávají průměrné tempo za roky 1993–2018 a úsečky jeho nejistotu.<SourceLink id="DOI_10_1038_s41586_020_2591_3"> (Frederikse a kol. 2020, tab. 1)</SourceLink>
+    </p>
       <figure className={`article-figure ${styles.explanatoryFigure}`}>
         <div className={styles.figureScroll} tabIndex={0} role="region" aria-label="Graf bilance hladiny, na úzké obrazovce posuvný do stran">
           <a href={`${media}/bilance-1993-2018.svg`} aria-label="Otevřít graf bilance v plné velikosti"><Image className="article-figure__media" src={`${media}/bilance-1993-2018.svg`} width={1100} height={650} alt="Trendy 1993–2018 v milimetrech za rok: rozpínání 1,19, přísun vody 1,97, jejich součet 3,16, pobřežní rekonstrukce 3,35 a družice 3,32. Graf uvádí 90% intervaly všech odhadů, které se u součtu a obou celkových měření překrývají." unoptimized /></a>
@@ -215,137 +217,86 @@ export function SeaLevelBudgetArticle() {
           <a href={`${media}/frederikse-2020-tabulka-1.csv`}> Číselné podklady</a>, <a href={`${media}/vypocty.mjs`}>kontrolní výpočet</a> a <a href={`${media}/podklady.txt`}>původ údajů</a>.
         </figcaption>
       </figure>
-      <p>
-        Součet příspěvků činí <strong>3,16 mm za rok</strong>, s intervalem 2,78–3,57 mm za rok.
-        Z pobřežních měření rekonstruovaná globální hladina stoupala o 3,35 mm za rok, s intervalem 2,91–3,82 mm za rok, družicová o 3,32 mm za rok.
-        Rozdíl pobřežní rekonstrukce a součtu je 0,19 mm za rok, s publikovaným intervalem −0,32 až 0,70 mm za rok.
-        Rozpětí zahrnuje nulu. Rozbor tedy neprokazuje chybějící příspěvek, který by byl pro toto období nutný nad rámec uvedených nejistot.
-        <SourceLink id="DOI_10_1038_s41586_020_2591_3"> (Frederikse a kol. 2020, tab. 1)</SourceLink>
-      </p>
-      <p>
-        Výška, teplota a gravitace vycházejí z odlišných fyzikálních měření. Hotové výsledky přesto nejsou zcela nezávislé.
-        Opravy pobřežní rekonstrukce používají také odhad přerozdělení vody a deformace Země při změnách ledových hmot.
-        Některé postupy navíc sdílejí opravy pomalého pohybu zemského pláště po ústupu dávných ledovců.
-        Autoři přenesli nejistoty a jejich společné vazby přes 5 000 variant výpočtu. Proto ani nejistotu součtu zde nepočítáme prostým sčítáním mezí jednotlivých řádků.
-        <SourceLink id="DOI_10_1038_s41586_020_2591_3"> (Frederikse a kol. 2020, metody)</SourceLink>
-      </p>
-      <p>
-        Výpočet lze kontrolovat podrobněji než jen podle výsledného grafu.
-        <SourceLink id="DOI_10_5281_zenodo_3862995"> Veřejný datový doplněk</SourceLink> obsahuje časové řady i soubor 5 000 variant,
-        <SourceLink id="WEB_GitHub_GitHub_thomasfrederikse_sealevelbudget_20c_4d484230"> původní zdrojový kód</SourceLink> popisuje zpracování.
-        Naše tabulka přepisuje publikované trendy za roky 1993–2018. Nepředstavuje nový výpočet z původních družicových signálů ani odhad pro pozdější roky.
-      </p>
-      <p>
-        Novější rozbor se vrátil také k bilanci celého 20. století, v níž Munk upozornil na nesoulad.
-        Frederikse a kolegové pro delší období 1900–2018 určili součet příspěvků 1,52 mm za rok a rekonstruovaný vzestup 1,56 mm za rok, opět se shodou v rámci nejistot.
-        Vysvětlení se zlepšilo díky zpřesnění obou stran porovnání, příspěvků i samotné rekonstruované hladiny.
-        Tento dlouhý odhad je samostatné srovnání, jeho tempo nemícháme s grafem za roky 1993–2018.
-        <SourceLink id="DOI_10_1038_s41586_020_2591_3"> (Frederikse a kol. 2020, tab. 1 a hlavní text)</SourceLink>
-      </p>
-    </HypothesisStory>
-
-    <h2 id="mechanismus">Jak rozpínání a přidaná voda zvyšují hladinu</h2>
     <p>
-      <strong>Dlouhodobý vzestup globální hladiny vysvětluje souběh tepelného rozpínání a přísunu vody z pevniny.</strong>
-      Laboratorní měření určují objemovou odezvu vody, gravimetrie rozlišuje změnu jejího množství a měření výšky kontroluje společný výsledek.
-      Pro období 1993–2018 vysvětluje jejich součet pozorovaný vzestup v rámci vyčíslených nejistot.
-      Stejné fyzikální rozdělení používá i hodnocení IPCC, které porovnává více studií a upozorňuje na nejistotu jednotlivých příspěvků.
-      <SourceLink id="DOI_10_1038_s41586_020_2591_3"> (Frederikse a kol. 2020)</SourceLink> a
-      <SourceLink id="DOI_10_1017_9781009157896_011"> IPCC 2021, oddíl 9.6.1</SourceLink>
-    </p>
-    <h3 id="objem-a-hmotnost">Stejná voda může zabírat více místa</h3>
-    <p>
-      Objem vody je její hmotnost dělená hustotou. V rovnici označuje V objem v m³, m hmotnost v kg a ρ hustotu v kg/m³.
-      Při stejném m vede menší hustota k většímu objemu. Mořská voda se v běžném oceánském rozsahu teplot při ohřevu rozpíná.
-      Velikost odezvy závisí na výchozí teplotě, slanosti a tlaku, takže stejný přírůstek teploty nemusí v každé vrstvě způsobit stejnou změnu objemu.
-      <SourceLink id="TEOS10_MANUAL_2010"> (IOC, SCOR a IAPSO 2010, oddíly 2.7 a 2.18–2.20)</SourceLink>
-    </p>
-    <Equation tex={String.raw`V=\frac{m}{\rho}`} />
-    <p>
-      V hlubokém oceánu se jednotlivé vrstvy nemohou volně rozpínat do stran bez pohybu okolní vody.
-      Jejich objemový přírůstek se promítá do výšky sloupce a proudění jej přerozděluje.
-      K určení globálního teplotního příspěvku proto potřebujeme změny v celém objemu, nejen teplotu hladiny.
-      Slanost má na hustotu také vliv, ale její místní změny nelze bez dalšího zaměnit za globální tepelné rozpínání.
-      <SourceLink id="DOI_10_1007_s10712_019_09525_z"> (Gregory a kol. 2019, N17–N20)</SourceLink>
-    </p>
-    <h3 id="hmotnostni-prispevek">Přidaná voda vytváří další vrstvu</h3>
-    <p>
-      Když se zmenšují ledovce a ledové příkrovy na pevnině, voda odtéká nebo led odplouvá do oceánu.
-      Množství oceánské vody se mění také čerpáním podzemních zásob, napouštěním přehrad a kolísáním zásob v půdě, řekách a jezerech.
-      Pro jednoduchý převod přidané hmotnosti ΔM na výšku vrstvy Δh vydělíme hmotnost hustotou sladké vody ρ<sub>f</sub> a plochou oceánu A.
-      Používáme zde běžnou konvenci ekvivalentní vrstvy sladké vody a přibližně stálou dnešní plochu oceánu.
-      <SourceLink id="DOI_10_1007_s10712_019_09525_z"> (Gregory a kol. 2019, vymezení N19 a rovnice 37)</SourceLink>
-    </p>
-    <Equation tex={String.raw`\Delta h=\frac{\Delta M}{\rho_{\mathrm{f}}\,A}`} />
-    <p>
-      Pro ilustraci vezměme 360 gigatun, hustotu 1 000 kg/m³ a zaokrouhlenou plochu oceánu 360 milionů km².
-      Výpočet dává přibližně <strong>1 mm globální hladiny</strong>. Jde o jednotkový převod s uvedenými předpoklady, ne o samostatné měření.
-      Úbytek asi 1 800 gigatun během epizody 2010–2011 tak odpovídá přibližně pěti milimetrům, jak předpokládá hmotnostní vysvětlení.
-      Přesný přepočet a jednotky jsou v <a href={`${media}/vypocty.mjs`}>doprovodném výpočtu</a>.
-      <SourceLink id="DOI_10_1029_2012gl053055"> (Boening a kol. 2012)</SourceLink>
+      Druhou kontrolu poskytly stanice na pobřeží, které měří hladinu vůči místní souši.
+      Když autoři z jejich záznamů rekonstruovali globální hladinu, vyšel vzestup 3,35 mm za rok s 90% intervalem 2,91–3,82 mm za rok.
+      Od této pobřežní rekonstrukce pak odečetli součet příspěvků 3,16 mm za rok.
+      Zůstal rozdíl 0,19 mm za rok, jehož 90% interval sahá od −0,32 do 0,70 mm za rok.
+      Protože rozpětí zahrnuje nulu, je naměřený vzestup slučitelný s tím, kolik dohromady přibylo rozpínáním a přísunem vody.<SourceLink id="DOI_10_1038_s41586_020_2591_3"> (Frederikse a kol. 2020, tab. 1)</SourceLink>
     </p>
     <p>
-      Plovoucí mořský led už před roztáním vytlačuje vodu odpovídající své hmotnosti. Jeho tání proto nemá velký přímý účinek jako přísun ledu z pevniny.
-      U ledu spočívajícího na podloží pod hladinou se musí odečíst prostor, který po jeho ústupu zaplní moře.
-      Přesná bilance navíc zahrnuje malé objemové změny spojené s odlišnou hustotou a slaností. Jednoduché rozdělení na pevninský a plovoucí led je tak užitečný začátek, ne úplný výpočet každého ledovce.
-      <SourceLink id="DOI_10_1007_s10712_019_09525_z"> (Gregory a kol. 2019, N19)</SourceLink>
+      Problém, na který upozornil Walter Munk, se týkal delšího období než družicová měření.
+      Frederikse a jeho kolegové proto porovnání provedli i za roky 1900–2018.
+      Součet příspěvků činil 1,52 mm za rok, zatímco z pobřežních záznamů vyšel vzestup o 1,56 mm za rok.
+      I zde se výsledky shodují v mezích nejistoty.
+      Mezeru, kterou Munk popsal, tak pomohlo uzavřít zpřesnění obou stran bilance, od příspěvků ledu a ohřevu až po rekonstrukci samotné hladiny.<SourceLink id="DOI_10_1038_s41586_020_2591_3"> (Frederikse a kol. 2020, tab. 1 a hlavní text)</SourceLink>
     </p>
-    <h3 id="mistni-hladina">Globální milimetr není milimetr na každém pobřeží</h3>
+    <h3 id="mistni-hladina">Proč se výsledek liší pobřeží od pobřeží?</h3>
     <p>
-      Oceán není nádrž s nehybným dnem a všude stejnou hladinou. Proudění přerozděluje vodu a teplo, pobřeží může klesat nebo stoupat.
-      Velký ledový příkrov navíc přitahuje okolní vodu gravitací. Když ubývá, mění se toto přitahování i zatížení zemského povrchu.
-      Voda se přerozdělí, takže poblíž ubývajícího příkrovu může hladina vůči pevnině i klesat, zatímco vzdálenější oblasti zaznamenají větší vzestup.
-      Globální bilance proto neudává sama o sobě změnu na konkrétním pobřeží.
-      <SourceLink id="DOI_10_1007_s10712_019_09525_z"> (Gregory a kol. 2019)</SourceLink> a
-      <SourceLink id="DOI_10_1017_9781009157896_011"> IPCC 2021, oddíl 9.6.1.3</SourceLink>
+      Na konkrétním pobřeží záleží i na tom, kam proudy přinesou vodu a teplo a zda se souš zvedá, nebo klesá.
+      U velkého ledového příkrovu působí navíc jeho gravitace.
+      Příkrov k sobě přitahuje mořskou vodu.
+      Jak led ubývá, přitažlivost slábne a část vody se přesune dál od pobřeží.
+      Souš se navíc může po odlehčení zvedat.
+      V blízkosti tajícího příkrovu proto může hladina vůči pevnině klesat, zatímco na vzdálenějším pobřeží může růst rychleji než v globálním průměru.<SourceLink id="DOI_10_1007_s10712_019_09525_z"> (Gregory a kol. 2019)</SourceLink> Tyto místní rozdíly podrobněji rozebírá<SourceLink id="DOI_10_1017_9781009157896_011"> IPCC 2021, oddíl 9.6.1.3</SourceLink>.
     </p>
 
-    <h2 id="nejistoty">Co omezuje přesnost rozdělení</h2>
-    <p>
-      Neúplná měření hlubokého oceánu a zásob vody na pevnině omezují přesnost příspěvků.
-      Shoda celkové bilance podporuje jejich společné vysvětlení, ale nevylučuje chyby, které se navzájem vyrovnají.
-      Proto potřebujeme vedle součtu kontrolovat i jednotlivé složky a jejich společné předpoklady.
+    <h2 id="nejistoty">Jak přesně umíme příčiny vzestupu oddělit?</h2>
+    <p id="dalsi-overeni">
+      K nejistým příspěvkům patří ohřev hlubokého oceánu a dlouhodobé změny zásob vody na pevnině, jak shrnuje<SourceLink id="DOI_10_1017_9781009157896_011"> IPCC 2021, oddíl 9.6.1</SourceLink>.
+      Kdyby se první příspěvek podcenil a druhý o stejnou hodnotu přecenil, v součtu by se chyby vyrovnaly.<SourceLink id="DOI_10_1038_s41586_020_2591_3"> (Frederikse a kol. 2020)</SourceLink> Pokud by výškoměry i pobřežní stanice dlouhodobě ukazovaly vzestup mimo interval nejistoty společné bilance, stálo by za to hledat chybějící přesun vody, přehlédnuté oteplení nebo chybu ve výpočtu.
+      Rozhodnout mezi nimi pomohou přesnější měření hmotnosti a výšky hladiny spolu s teplotními profily zasahujícími až do hlubin.
     </p>
-    <details className="article-details"><summary>Podrobnosti k datům, opravám a srovnatelnosti odhadů</summary>
+    <details className="article-details"><summary>Podrobnosti k měřením a jejich nejistotám</summary>
       <p>
-        Před rozšířením autonomních plováků byly teplotní profily řidší a i dnes je hloubka pod 2 000 metry hůře pokrytá.
-        Doplnění mezer vyžaduje předpoklady o prostorovém rozložení a šíření změn. Rozdíl datových souborů zachycuje část této nejistoty, ne nutně každou sdílenou chybu měření.
-        Autoři také opravili posun měřené slanosti zaznamenaný od roku 2015: z map odečetli odhad globální objemové změny spojené se slaností.
-        Tato oprava brání tomu, aby se chyba slanosti promítla do odhadu tepelného rozpínání.
-        <SourceLink id="DOI_10_1038_s41586_020_2591_3"> (Frederikse a kol. 2020, metody)</SourceLink>
+        Laboratorní rovnice Millera a Poissona platila pro teploty 0–40 °C a slanost 0,5–43 na praktické stupnici, na níž má běžná oceánská voda hodnotu kolem 35.
+        Při slanosti 35 a teplotě 5 °C dává hustotu 1 027,675 kg/m³.
+        Směrodatná odchylka jednotlivých měření od rovnice činila 0,00366 kg/m³.
+        Udává, jak dobře rovnice vystihla údaje, ze kterých ji autoři sestavili.<SourceLink id="DOI_10_1016_0198_0149_81_90122_9"> (Millero a Poisson 1981, s. 628–629)</SourceLink>
       </p>
       <p>
-        Gravimetrie musí oddělit přesun vody od pomalých změn pevné Země. U pobřeží se také obtížně rozlišuje signál pevniny a oceánu.
-        Opravy ovlivňují více příspěvků současně. Intervaly v grafu přebíráme z původního společného výpočtu, nepovažujeme všechny vstupy za nezávislé.
-        <SourceLink id="DOI_10_1038_s41586_020_2591_3"> (Frederikse a kol. 2020, metody)</SourceLink>
+        Před rozšířením měřicích plováků chyběly profily i ve velkých oblastech horního oceánu.
+        Pod 2 000 metry je měření stále málo.
+        Rozdíly mezi třemi zpracováními ukazují, jak výsledek ovlivňuje doplnění mezer.
+        Chyba ve společných profilech se však může projevit ve všech třech podobně.
+        Od roku 2015 byl v datech patrný posun měřené slanosti.
+        Aby nezkreslil odhad tepelného rozpínání, autoři od map odečetli odhad globální objemové změny související se slaností.<SourceLink id="DOI_10_1038_s41586_020_2591_3"> (Frederikse a kol. 2020, metody)</SourceLink>
       </p>
       <p>
-        Zásoby vody na souši mají zvlášť nejistý dlouhodobý vývoj. Hodnocení IPCC popisuje i rozdíly ve znaménku jejich odhadovaného příspěvku mezi staršími a novějšími studiemi.
-        Je to důvod průběžně zpřesňovat rozdělení příčin. Přidaná voda ani tepelné rozpínání tím neztrácejí svůj fyzikální účinek.
-        <SourceLink id="DOI_10_1017_9781009157896_011"> (IPCC 2021, oddíly 9.6.1.1–9.6.1.2)</SourceLink>
+        Poblíž pobřeží zasahuje do gravitačního měření jak změna hmotnosti oceánu, tak přesun vody na souši.
+        Navíc se po ústupu dávných ledovců dodnes pomalu pohybuje zemský plášť.
+        Gravimetrie i některé opravy pobřežních měření proto závisejí na společných odhadech pohybu pevné Země.
+        Pobřežní rekonstrukce zohledňuje také přerozdělení vody a změnu tvaru Země při dnešním úbytku ledu.<SourceLink id="DOI_10_1038_s41586_020_2591_3"> (Frederikse a kol. 2020, metody)</SourceLink>
       </p>
       <p>
-        Číselné srovnání v tomto článku používá lineární trendy 1993–2018 z jedné studie.
-        Jiné období, průměr krajních let nebo nová verze dat mohou dát jiné tempo. Takový rozdíl vyžaduje sjednocení postupu, než jej vyložíme jako rozpor měření.
-        Bilance navíc rozlišuje fyzikální cestu změny hladiny. Přisouzení oteplování a úbytku ledu lidskému působení vyžaduje další rozbor příčin těchto změn.
-        <SourceLink id="DOI_10_1017_9781009157896_011"> (IPCC 2021, oddíl 9.6.1)</SourceLink>
+        Aby se tyto souvislosti promítly do nejistoty součtu i zbylého rozdílu, počítal Frederikseho tým bilanci v 5 000 variantách.
+        Z nich určil intervaly v grafu.
+        Pouhé sečtení dolních či horních mezí obou příspěvků by jejich společné závislosti pominulo.<SourceLink id="DOI_10_1038_s41586_020_2591_3"> (Frederikse a kol. 2020, metody)</SourceLink> <SourceLink id="DOI_10_5281_zenodo_3862995"> Veřejný datový doplněk</SourceLink> obsahuje časové záznamy i jednotlivé varianty výpočtu.
+        Jak vznikly, lze ověřit v repozitáři, kde autoři zveřejnili<SourceLink id="WEB_GitHub_GitHub_thomasfrederikse_sealevelbudget_20c_4d484230"> původní zdrojový kód</SourceLink>.
+      </p>
+      <p>
+        U ledu, který před ústupem spočíval na dně pod úrovní moře, část uvolněného prostoru vyplní mořská voda.
+        O tento objem se příspěvek ledu k hladině zmenší.
+        Přesný výpočet zahrnuje i malé rozdíly spojené s hustotou a slaností.
+        U kapalné vody na souši činí potíže hlavně dlouhodobé změny zásob.
+        Některé studie se liší i v tom, zda přesuny této vody v součtu zvedaly hladinu, nebo ji snižovaly.<SourceLink id="DOI_10_1017_9781009157896_011"> (IPCC 2021, oddíly 9.6.1.1–9.6.1.2)</SourceLink>
+      </p>
+      <p>
+        Čísla v grafu jsou publikované lineární trendy z jedné studie za období 1993–2018.
+        Porovnání s novějšími výsledky má smysl pro stejné období a stejný způsob určení tempa.
+        Bilance ukazuje, jakými fyzikálními cestami se hladina změnila.
+        Otázka, jak velký podíl na ohřevu a úbytku ledu měla lidská činnost, vyžaduje další rozbor.<SourceLink id="DOI_10_1017_9781009157896_011"> (IPCC 2021, oddíl 9.6.1)</SourceLink>
       </p>
     </details>
 
-    <h2 id="dalsi-overeni">Jaký výsledek by vysvětlení oslabil</h2>
-    <p>
-      Přetrvávající rozdíl mezi měřenou hladinou a součtem příspěvků, větší než ověřené nejistoty a potvrzený několika přístroji, by vyžadoval revizi bilance.
-      Museli bychom hledat chybějící zásobu vody, nedostatečně zachycený ohřev nebo chybu převodu a oprav.
-      Přesnější souběžná měření výšky, gravitace a teploty včetně hlubokého oceánu mohou tyto možnosti rozlišit.
-      Samotná shoda globálního průměru by nadále nestačila k ověření místního vývoje na pobřeží.
-    </p>
-
-    <div className="article-observation-summary" id="zaver"><p className="eyebrow">Shrnutí mechanismu</p><p>
-      Globální hladina stoupá, protože se ohřívaná mořská voda rozpíná a zároveň do oceánu přibývá voda z pevniny.
-      Tyto příspěvky rozlišujeme měřením teploty, slanosti a gravitace. Jejich součet porovnáváme s výškou hladiny.
-      Za roky 1993–2018 odpovídá součet pozorovanému vzestupu v rámci nejistot. Krátký pokles v letech 2010–2011 navíc ukázal opačnou odezvu při přesunu vody na souš.
-      Globální výsledek vyžaduje samostatné doplnění o proudění, gravitaci a pohyb pevniny, chceme-li vysvětlit změnu na jednotlivém pobřeží.
-    </p></div>
+    <div className="article-observation-summary" id="zaver"><p className="eyebrow">Shrnutí mechanismu</p>
+      <p>
+        Globální hladina stoupá, protože teplejší mořská voda zabírá více místa a oceán zároveň získává vodu z pevniny, zejména z ubývajících ledovců a ledových příkrovů.
+        V letech 1993–2018 přidávalo rozpínání v průměru 1,19 mm za rok a přírůstek vody 1,97 mm za rok.
+        Součet 3,16 mm za rok se v mezích nejistoty shoduje jak s družicovým měřením, tak s výškou hladiny odvozenou z pobřežních stanic.
+        Přísun vody z pevniny tak v tomto období přispěl ke vzestupu více než ohřev oceánu.
+      </p>
+    </div>
 
     <h2 id="prameny">Prameny a veřejné podklady</h2>
     <div className="article-sources">
