@@ -10,22 +10,22 @@ const media = "/media/vodni-para-jako-zpetna-vazba";
 const hypotheses: readonly MechanismHypothesis[] = [
   {
     id: "vysusovani",
-    name: "Výstup vzduchu horní troposféru vysuší",
-    prediction: "Při oteplování tropického povrchu má v horní troposféře ubývat páry. Její menší množství má usnadnit únik tepelného záření a oteplování tlumit.",
-    test: "Porovnáme změny množství páry ve výšce s teplotou tropického oceánu. Odděleně sledujeme relativní vlhkost, která závisí také na teplotě vzduchu.",
-    observation: "Družicový test na hladině 215 hPa v letech 1993–1999 ukázal při teplejších obdobích více páry. Růst páry potvrzuje také dlouhodobý radiační záznam z let 1979–2005.",
-    verdict: "Předpověď vysušování neobstála",
-    explanation: "Kondenzace a sestup vzduch skutečně vysušují. Pozorovaná odezva na oteplení má však v těchto testech opačné znaménko než navržený úbytek páry.",
+    name: "Výstup vzduchu nad teplejším oceánem vysuší horní troposféru",
+    prediction: "Pokud nad teplejším tropickým oceánem ubude páry ve výšce, bude odtud snáze unikat tepelné záření do vesmíru. To by oteplení tlumilo.",
+    test: "Jak se měnilo množství páry ve výšce, když byl tropický oceán teplejší? A jak se v delším období vyvíjelo záření v pásmu citlivém na páru ve srovnání s teplotou vzduchu?",
+    observation: "V letech 1993–1999 bylo při teplejším tropickém oceánu asi 11 km nad zemí více páry. Také vývoj záření za roky 1979–2005 odpovídal přibývání páry ve výšce.",
+    verdict: "Předpověď převládajícího vysušování neobstála",
+    explanation: "Srážky skutečně odnášejí vodu z oblaků. V průměru však bylo při teplejším oceánu v tropickém vzduchu ve výšce více páry, i když jeho relativní vlhkost klesla.",
     state: "rejected",
   },
   {
     id: "zesileni",
-    name: "Přibývající pára změnu teploty zesílí",
-    prediction: "Oteplení doprovodí více páry a silnější zadržování energie. Při ochlazení se směr obrátí: páry ubude a slabší skleníkový účinek ochlazení zesílí.",
-    test: "Po Pinatubu porovnáme měření s výpočtem se zapnutou a potlačenou radiační odezvou páry. Z družicových profilů pak samostatně vypočteme její radiační účinek.",
-    observation: "Model s odezvou páry lépe vystihl ochlazení v letech 1991–1995. Profily AIRS z let 2003–2008 dávají kladný radiační účinek vlhkostních změn.",
-    verdict: "Podpořené vysvětlení",
-    explanation: "Pozorování i výpočty podporují zesilující zpětnou vazbu. Přibližně stálá relativní vlhkost je užitečný globální popis, nikoli pravidlo pro každé místo.",
+    name: "Vodní pára zesiluje původní změnu teploty",
+    prediction: "Při oteplení přibude páry, která pohltí více tepelného záření a oteplení zesílí. Při ochlazení páry ubude a její slabší skleníkový účinek prohloubí pokles teploty.",
+    test: "Po erupci Pinatuba vědci porovnali naměřené ochlazení s výpočty, ve kterých změny páry buď ovlivňovaly tepelné záření, nebo se v něm neprojevily. Z dalších družicových měření odhadli, jak se účinek páry mění mezi teplejšími a chladnějšími měsíci.",
+    observation: "Ochlazení po erupci lépe vystihl výpočet, v němž úbytek páry zeslabil její skleníkový účinek. V pěti srovnáních teplejšího a chladnějšího ledna přispívala vodní pára pokaždé k oteplení.",
+    verdict: "Měření podporují zesilující zpětnou vazbu",
+    explanation: "Při oteplení i ochlazení působila změna množství páry stejným směrem jako počáteční změna teploty. Velikost zesílení závisí také na tom, v jaké výšce páry přibude nebo ubude.",
     state: "supported",
   },
 ];
@@ -41,73 +41,269 @@ function Graphic({ name, alt, children }: { name: string; alt: string; children:
 
 export function WaterVapourFeedbackArticle() {
   return <article className="article-layout"><div className="article-prose">
-    <h2 id="co-vysvetlujeme">Jak si vysvětlujeme přibývání páry a její vliv na teplotu</h2>
-    <p className="article-prose__intro">Družicová měření nad nezamrzlými oceány ukazují, že v letech 1988–2017 přibývalo ve sloupci atmosféry průměrně 0,436 kilogramu vodní páry na metr čtvereční za deset let. To odpovídá růstu o 1,49 % za desetiletí. Pozemní měření současně zachycují více páry i v oblastech, kde klesá relativní vlhkost. Výsledky a jejich rozsah rozebírá pozorování <Link href="/pozorovani/narust-vlhkosti/#pozorovani">vlhkosti atmosféry</Link>. <SourceLink id="DOI_10_1002_2018ea000363">(Mears a kol. 2018)</SourceLink>{" "}<SourceLink id="DOI_10_1073_pnas_1722312115">(Byrne a O’Gorman 2018)</SourceLink></p>
-    <p>Jak tyto změny souvisejí s oteplováním a co pak pára udělá s teplotou? Pro odpověď potřebujeme sledovat i troposféru, nejnižší část atmosféry, ve které se odehrává většina počasí. Zejména množství páry v jejích chladných horních vrstvách ovlivňuje, kolik tepelného záření unikne do vesmíru. Právě o vývoj této páry se vedl spor, který můžeme sledovat prostřednictvím konkrétních předpovědí a měření. <SourceLink id="DOI_10_1146_annurev_energy_25_1_441">(Held a Soden 2000)</SourceLink></p>
+    <h2 id="co-vysvetlujeme">Přibývá vodní páry i vysoko nad povrchem?</h2>
+    <p className="article-prose__intro">
+      Nad nezamrzlými oceány přibylo podle družicových měření z let 1988–2017 v průměru 0,436 kg vodní páry
+      na metr čtvereční za desetiletí. To odpovídá růstu o 1,49 % za desetiletí. Měření zahrnuje páru v celém
+      sloupci vzduchu nad mořskou hladinou. Také u některých stanic na souši páry přibývalo, i když relativní
+      vlhkost klesala a vzduch měl k nasycení dál. Výsledky družic i pozemních stanic shrnuje{" "}
+      <Link href="/pozorovani/narust-vlhkosti/#pozorovani">přehled měření vlhkosti atmosféry</Link>.{" "}
+      <SourceLink id="DOI_10_1002_2018ea000363">(Mears a kol. 2018)</SourceLink>{" "}<SourceLink id="DOI_10_1073_pnas_1722312115">(Byrne a O’Gorman 2018)</SourceLink>
+    </p>
+    <p>
+      Pro teplotu Země záleží i na tom, kde pára přibývá. Pohlcuje část tepelného záření, jímž Země ztrácí
+      energii do vesmíru. Zvlášť citelný účinek má vysoko v troposféře, spodní části atmosféry, kde se odehrává
+      většina počasí. V těchto výškách je vzduch chladnější a sám vyzařuje méně energie než vzduch u povrchu. Celkový přírůstek páry
+      nad oceánem přitom ještě neříká, zda jí přibylo i vysoko nad hladinou.{" "}
+      <SourceLink id="DOI_10_1146_annurev_energy_25_1_441">(Held a Soden 2000)</SourceLink>
+    </p>
 
     <h2 id="hypotezy">Dvě hypotézy a jejich předpovědi</h2>
     <HypothesisDiagram hypotheses={hypotheses} captionId="water-vapour-hypotheses-caption"
-      context={<p>Množství vodní páry říká, kolik vody je ve vzduchu jako plyn. Relativní vlhkost vyjadřuje míru jeho nasycení při dané teplotě. Zesilující neboli kladná zpětná vazba zvětšuje původní změnu. Může tedy zesilovat oteplení i ochlazení. <SourceLink id="2013_NPL_Humidity">(Bell 2013)</SourceLink>{" "}<SourceLink id="DOI_10_1126_science_296_5568_727">(Soden a kol. 2002)</SourceLink></p>}
-      caption={<>Porovnáváme znaménko vlhkostní odezvy a jejího radiačního účinku. Místní suché sestupné proudy se vyskytují v obou vysvětleních. Rozhoduje, jak se jejich výsledné působení změní při oteplování. <SourceLink id="DOI_10_1175_1520_0442_2004_017_1272_WVFITT">(Minschwaner a Dessler 2004)</SourceLink></>} />
+      context={<p>Relativní vlhkost říká, jak blízko je vzduch při své teplotě k nasycení vodní párou. Zpětná vazba vzniká, když změna teploty ovlivní množství páry a pára pak zpětně ovlivní teplotu. Zesilující vazba může prohloubit i ochlazení. <SourceLink id="2013_NPL_Humidity">(Bell 2013)</SourceLink>{" "}<SourceLink id="DOI_10_1126_science_296_5568_727">(Soden a kol. 2002)</SourceLink></p>}
+      caption={<>Obě hypotézy počítají se suchým vzduchem, který v tropech sestupuje mezi oblastmi s vysokými oblaky. Liší se v tom, zda v teplejší atmosféře začne ve výšce převažovat úbytek páry a jak se tím změní únik tepla do vesmíru. <SourceLink id="DOI_10_1175_1520_0442_2004_017_1272_WVFITT">(Minschwaner a Dessler 2004)</SourceLink></>} />
 
-    <h2 id="pribehy">Jak se hledalo vysvětlení</h2>
-    <HypothesisStory id="vysusovani" number={1} title="Výstup vzduchu horní troposféru vysuší">
-      <p>Richard Lindzen v roce 1990 upozornil na skutečný vysušující účinek hlubokých kupovitých oblaků. Vzduch v nich stoupá, rozpíná se a chladne. Část páry zkondenzuje na kapky nebo přejde v led a srážky vodu odnesou. Vzduch vytékající nahoře z oblaku proto obsahuje méně páry než při vstupu dole. Rozlévá se do okolí a pomalu sestupuje. Tím může vysušovat rozsáhlé oblasti mimo samotný oblak. <SourceLink id="DOI_10_1175_1520_0477_1990_071_0288_SCCGW">(Lindzen 1990, s. 296–297)</SourceLink></p>
-      <p>Lindzen navrhl, že v teplejším klimatu by mohly oblačné výstupy sahat výše, odvádět vodu účinněji a zásobovat okolí ještě sušším vzduchem. Méně páry ve výšce by znamenalo slabší pohlcování tepelného záření. Tato odezva by původní oteplení tlumila. Byla to rozumná otázka k testování: vyšší teplota u hladiny sama neříká, kolik vody přežije cestu vzhůru a následné proudění. Předpovědí tohoto návrhu je ovšem úbytek samotné páry, nikoli jen pokles procentního údaje relativní vlhkosti. <SourceLink id="DOI_10_1175_1520_0477_1990_071_0288_SCCGW">(Lindzen 1990, obrázky 7 a 8)</SourceLink></p>
-      <p>Obrázek ukazuje navržený vysušující děj a měření, podle kterého můžeme jeho předpověď posoudit. Modré šipky označují rozlévání a sestup vzduchu. Oranžové šipky uvnitř oblaku znamenají vzestup teplého vzduchu, samostatná šipka nad oblakem očekávaný snazší únik tepelného záření.</p>
+    <h2 id="pribehy">Co ukázala měření nad tropy a ochlazení po sopečné erupci</h2>
+    <HypothesisStory id="vysusovani" number={1} title="Výstup vzduchu nad teplejším oceánem vysuší horní troposféru">
+      <p>
+        Když teplý a vlhký vzduch stoupá v tropickém bouřkovém oblaku, rozpíná se a chladne. Část jeho vodní páry
+        se mění v kapičky a ledové krystalky. Srážky pak část vody odnášejí. Nahoře z oblaku proudí do okolí vzduch,
+        kterému z původní zásoby zbývá málo páry. Když tento vzduch dále od oblaku sestupuje, stlačuje se a ohřívá.
+        Jeho relativní vlhkost tak dál klesá, i když už žádnou vodu neztratí.{" "}
+        <SourceLink id="DOI_10_1175_1520_0477_1990_071_0288_SCCGW">(Lindzen 1990, s. 296–297)</SourceLink>
+      </p>
+      <p>
+        Richard Lindzen v roce 1990 navrhl, že nad teplejším oceánem by bouřkové oblaky mohly sahat výše a cestou
+        vzhůru ztrácet ještě více vody. Pokud by do širokého okolí dodávaly sušší vzduch, v horní troposféře by ubylo
+        páry pohlcující tepelné záření. Do vesmíru by tak při téže teplotě unikalo více energie, což by původní oteplení
+        tlumilo. Pro tuto předpověď je rozhodující, zda ve výšce při oteplení skutečně ubude vodní páry.{" "}
+        <SourceLink id="DOI_10_1175_1520_0477_1990_071_0288_SCCGW">(Lindzen 1990, obrázky 7 a 8)</SourceLink>
+      </p>
+      <p>
+        Na obrázku lze cestu vzduchu sledovat po oranžových šipkách vzhůru oblakem a pak po modrých šipkách do stran
+        a dolů. Samostatná oranžová šipka nad oblakem ukazuje, kudy by za těchto podmínek snáze unikalo tepelné záření.
+      </p>
       <Graphic name="vysusovani" alt="Historická hypotéza: teplejší oceán zesílí hluboké výstupy, kondenzace a srážky odeberou vodu a sušší vzduch ve výšce usnadní únik záření. Test HALOE v letech 1993–1999 ale našel v teplejších obdobích více páry.">Horní panel představuje hypotézu. Spodní výsledek se týká uvedeného družicového testu v tropech, nikoli každého sestupného proudu. <SourceLink id="DOI_10_1175_1520_0477_1990_071_0288_SCCGW">(Lindzen 1990)</SourceLink>{" "}<SourceLink id="DOI_10_1175_1520_0442_2004_017_1272_WVFITT">(Minschwaner a Dessler 2004)</SourceLink></Graphic>
-      <h4 id="test-vysusovani" className={styles.testHeading}>Test: ubývá při oteplení skutečně vodní pára?</h4>
-      <p>Ken Minschwaner a Andrew Dessler v roce 2004 sestavili model, který společně počítal přísun vlhkosti z oblaků, sestup okolního vzduchu a radiační ochlazování. V teplejším stavu vystupoval vzduch z oblaků výše, ale také při vyšší teplotě. Do okolí tak přinášel více páry. Výpočet ukázal, proč vyšší oblak automaticky neznamená sušší vzduch: mění se i teplota prostředí, do kterého oblak vyrůstá. <SourceLink id="DOI_10_1175_1520_0442_2004_017_1272_WVFITT">(Minschwaner a Dessler 2004, oddíly 3 a 6)</SourceLink></p>
-      <p>Autoři porovnali výsledek s družicovým přístrojem HALOE. Mezi 20° jižní a 20° severní šířky v letech 1993–1999 zjistili, že teplejší oceán v oblastech výstupů doprovázelo více páry na tlakové hladině 215 hPa, přibližně 11 kilometrů vysoko. Samostatné měření relativní vlhkosti přístrojem MLS přitom ukazovalo její pokles. Množství páry rostlo pomaleji než množství odpovídající nasycení. Zjištění tedy podpořilo zesilující vazbu, ale opravilo představu, že relativní vlhkost musí zůstat všude stejná. <SourceLink id="DOI_10_1175_1520_0442_2004_017_1272_WVFITT">(Minschwaner a Dessler 2004, oddíl 5)</SourceLink></p>
-      <p>Pozdější dlouhodobý test Chunga a kolegů z roku 2014 sledoval záření atmosféry v letech 1979–2005. Kombinoval pásmo citlivé na vodní páru s mikrovlnným měřením teploty. Princip prvního měření vysvětluje <Link href="/metody/pasivni-infracervena-radiometrie/#teplota-atmosfery">infračervená radiometrie</Link>. Rozdíl obou signálů rostl. Výpočty se stejnými teplotními profily tento vývoj zachytily při rostoucím množství páry, zatímco při jejím umělém zachování nikoli. Naměřené změny a jejich nejistoty uvádíme v <Link href="/pozorovani/narust-vlhkosti/#horni-troposfera">pozorování horní troposféry</Link>. <SourceLink id="DOI_10_1073_pnas_1409659111">(Chung a kol. 2014, obrázek 1)</SourceLink></p>
-      <p>Vysušování při kondenzaci a sestupu tedy zůstává součástí vysvětlení dnešní atmosféry. Neobstála předpověď, že tyto děje při oteplování povedou k převládajícímu úbytku páry ve vysoké troposféře a k obrácení znaménka její zpětné vazby. Krátkodobé i dlouhodobé testy místo toho zachycují přibývání páry. <SourceLink id="DOI_10_1017_9781009157896_009">(IPCC 2021, oddíl 7.4.2.2)</SourceLink></p>
+      <h4 id="test-vysusovani" className={styles.testHeading}>Je nad teplejším tropickým oceánem ve výšce méně páry?</h4>
+      <p>
+        Záleží i na teplotě, při níž vzduch oblak opouští. Ken Minschwaner a Andrew Dessler proto v roce 2004
+        spočítali, jak se spolu mění přísun vlhkosti z oblaků, sestup vzduchu v okolí a jeho ochlazování vyzařováním.
+        V jejich modelu vzduch nad teplejším oceánem opouštěl oblaky sice výše, ale při vyšší teplotě. Po kondenzaci
+        mu tak zbylo více páry, kterou přinesl do okolí.{" "}
+        <SourceLink id="DOI_10_1175_1520_0442_2004_017_1272_WVFITT">(Minschwaner a Dessler 2004, oddíly 3 a 6)</SourceLink>
+      </p>
+      <p>
+        Mezi 20° jižní a 20° severní šířky porovnali autoři teplotu oceánu v oblastech
+        výstupu vzduchu s družicovými údaji z let 1993–1999. Když byl oceán teplejší, přístroj HALOE zjistil
+        více páry i ve výšce asi 11 km nad hladinou, kde má vzduch tlak přibližně 215 hektopascalů. Jiný družicový
+        přístroj, MLS, ve srovnatelné výšce zaznamenal pokles relativní vlhkosti. Páry přibylo, jen pomaleji, než s teplotou rostlo množství potřebné k nasycení.{" "}
+        <SourceLink id="DOI_10_1175_1520_0442_2004_017_1272_WVFITT">(Minschwaner a Dessler 2004, oddíl 5)</SourceLink>
+      </p>
+      <p>
+        Zda podobný vývoj zachytí družice i v delším období a v globálním průměru, zkoumal tým Eui-Seoka Chunga.
+        Mikrovlnné měření mu poskytlo údaje o teplotě vzduchu. Intenzita{" "}
+        <Link href="/metody/pasivni-infracervena-radiometrie/#teplota-atmosfery">infračerveného záření</Link>{" "}
+        v pásmu, kde záření pohlcuje pára, závisí i na množství vody ve výšce. V letech 1979–2005 rostl
+        mikrovlnný signál rychleji než infračervený. Autoři spočítali, jak by se při stejném oteplování vyvíjel
+        rozdíl obou signálů, kdyby ve výšce páry přibývalo nebo kdyby její množství zůstalo stejné. Naměřený směr
+        změny vystihl pouze výpočet s přibývající párou. Hodnoty i jejich nejistoty uvádí{" "}
+        <Link href="/pozorovani/narust-vlhkosti/#horni-troposfera">pozorování horní troposféry</Link>.{" "}
+        <SourceLink id="DOI_10_1073_pnas_1409659111">(Chung a kol. 2014, obrázek 1)</SourceLink>
+      </p>
+      <p>
+        Suchý vzduch proudící z jednotlivých oblaků a přibývání páry v průměru nad tropy se tedy nevylučují.
+        Lindzenova předpověď vyžadovala, aby při oteplování v horní troposféře převládl úbytek páry. Tropická měření
+        i delší globální záznam ukázaly opačný směr.{" "}
+        <SourceLink id="DOI_10_1017_9781009157896_009">(IPCC 2021, oddíl 7.4.2.2)</SourceLink>
+      </p>
     </HypothesisStory>
 
-    <HypothesisStory id="zesileni" number={2} title="Přibývající pára změnu teploty zesílí">
-      <p>Zesilující vysvětlení se rozvíjelo už dlouho před sporem o vysušování horní troposféry. Jeho první oporou byly laboratorní pokusy. John Tyndall v roce 1861 měnil složení plynů v laboratorní trubici a měřil, kolik tepelného záření jí projde. Vlhký vzduch pohlcoval více než vysušený. Tím bylo možné oddělit účinek páry od účinku hlavních složek vzduchu. Princip podobných zkoušek vysvětluje <Link href="/metody/absorpcni-spektroskopie/#pohlcovani-svetla">absorpční spektroskopie</Link>. <SourceLink id="1862_Tyndall">(Tyndall 1861)</SourceLink></p>
-      <p>Syukuro Manabe a Richard Wetherald v roce 1967 spojili přenos záření s vertikálním přenosem tepla v modelu jednoho atmosférického sloupce. Při zdvojnásobení CO₂ a zachování relativní vlhkosti dostali oteplení povrchu přibližně o 2,3 °C. Když zachovali množství páry, vyšlo přibližně 1,3 °C. Rozdíl vyjadřoval účinek dodatečné vody, kterou první varianta připustila. Tehdy šlo o podmíněný výpočet s předepsaným rozložením vlhkosti, nikoli o důkaz, že skutečná atmosféra tuto podmínku dodrží. <SourceLink id="1967_Manabe_Wetherald">(Manabe a Wetherald 1967, závěr 4)</SourceLink></p>
-      <p>Návrh poskytl předpověď pro oba směry změny. Oteplení má doprovázet více páry a zesílení skleníkového účinku. Ochlazení má páry ubrat, tím uvolnit více energie do vesmíru a původní ochlazení prohloubit. Velká sopečná erupce tak nabídla příležitost zkoumat tentýž vztah při poklesu teploty. Grafika propojuje fyzikální děj s touto zkouškou a s pozdějšími družicovými profily. <SourceLink id="DOI_10_1126_science_296_5568_727">(Soden a kol. 2002)</SourceLink></p>
+    <HypothesisStory id="zesileni" number={2} title="Vodní pára zesiluje původní změnu teploty">
+      <p>
+        V roce 1861 měřil John Tyndall, kolik tepelného záření projde trubicí naplněnou vzduchem. Když vysušený
+        vzduch nahradil vlhkým, na druhý konec trubice dorazilo méně záření. Pokusem tak oddělil vliv vodní páry
+        od vlivu ostatních plynů ve vzduchu. Na tomto principu stojí i dnešní{" "}
+        <Link href="/metody/absorpcni-spektroskopie/#pohlcovani-svetla">absorpční spektroskopie</Link>. O kolik by
+        se zesílilo oteplení, kdyby páry v atmosféře přibylo?{" "}
+        <SourceLink id="1862_Tyndall">(Tyndall 1861)</SourceLink>
+      </p>
+      <p>
+        Syukuro Manabe a Richard Wetherald tuto otázku v roce 1967 zkoumali na modelu jednoho sloupce atmosféry.
+        V obou variantách pokusu zdvojnásobili koncentraci oxidu uhličitého. Pak spočítali, o kolik se musí
+        povrch oteplit, aby se příjem a výdej energie opět vyrovnaly. Když ponechali množství vodní páry stejné, povrch se oteplil asi o 1,3 °C.
+        Když ponechali stejnou relativní vlhkost, mohlo s teplotou přibývat i páry a oteplení dosáhlo asi 2,3 °C.
+        Zbývalo ověřit, jak se vlhkost mění ve skutečné atmosféře.{" "}
+        <SourceLink id="1967_Manabe_Wetherald">(Manabe a Wetherald 1967, závěr 4)</SourceLink>
+      </p>
+      <p>
+        Zesilující vliv páry se dá vyzkoušet i při poklesu teploty. Pokud v chladnoucím vzduchu ubude páry,
+        unikne do vesmíru více tepelného záření, než kdyby si vzduch při téže teplotě podržel původní vlhkost.
+        Pokles teploty by se tím měl prohloubit. V červnu 1991 se po erupci sopky Pinatubo v atmosféře vytvořila vrstva drobných částic. Část slunečního světla rozptýlily
+        zpět do vesmíru. Po erupci tak bylo možné sledovat,
+        co se děje s párou, když Země po určitou dobu dostává méně sluneční energie.{" "}
+        <SourceLink id="DOI_10_1126_science_296_5568_727">(Soden a kol. 2002)</SourceLink>
+      </p>
       <Graphic name="zesileni" alt="Přibývající vodní pára mění výšku, ze které uniká tepelné záření, a při stejném teplotním profilu snižuje výdej energie. Dva testy porovnávají ochlazení po Pinatubu a radiační účinek družicových vlhkostních profilů.">Tečky označují neviditelnou vodní páru. Ve středních panelech ponecháváme stejný průběh teploty s výškou, abychom oddělili samotný radiační účinek přidané páry. Modré oblasti jsou chladnější, oranžové teplejší. Čárkované čáry představují orientační hladiny úniku záření v pásmech páry. <SourceLink id="DOI_10_1146_annurev_energy_25_1_441">(Held a Soden 2000)</SourceLink>{" "}<SourceLink id="DOI_10_1126_science_296_5568_727">(Soden a kol. 2002)</SourceLink>{" "}<SourceLink id="DOI_10_1029_2008GL035333">(Dessler a kol. 2008)</SourceLink></Graphic>
-      <h4 id="test-pinatubo" className={styles.testHeading}>První test: zesílil úbytek páry ochlazení po Pinatubu?</h4>
-      <p>Brian Soden a kolegové v roce 2002 porovnali družicová měření s modelem atmosféry spojeným s promíchanou vrstvou oceánu. Účinek sopečných aerosolů zadali podle pozorování. Potom pokus zopakovali a potlačili v něm vliv změn páry na dlouhovlnné záření. Rozdíl obou výpočtů tak ukázal, co tato část vazby přidává k ochlazení. V období od června 1991 do prosince 1995 vyšlo průměrné ochlazení 0,31 °C s vazbou a 0,19 °C bez ní. Družicový odhad činil 0,30 °C. <SourceLink id="DOI_10_1126_science_296_5568_727">(Soden a kol. 2002, obrázek 4)</SourceLink></p>
-      <p>Graf porovnává velikost ochlazení dolní troposféry, tedy vrstvy vzduchu nad povrchem. Delší sloupec znamená větší ochlazení. Modrý sloupec je pozorování, ostatní dva modelové pokusy. Čísla jsou průměry za uvedené období, nikoli nejhlubší jednotlivý teplotní pokles.</p>
+      <h4 id="test-pinatubo" className={styles.testHeading}>Jak vodní pára ovlivnila ochlazení po erupci Pinatuba?</h4>
+      <p>
+        Brian Soden a jeho kolegové v roce 2002 zadali do modelu účinek sopečných částic podle měření. V jednom
+        výpočtu mohla ubývající pára ovlivnit přenos tepelného záření. Ve druhém se množství páry v modelové atmosféře
+        měnilo také, ale pro výpočet tepelného záření model tuto změnu nezohlednil. Z rozdílu výsledných teplot tak
+        autoři mohli určit, nakolik úbytek páry v jejich modelu prohloubil ochlazení.{" "}
+        <SourceLink id="DOI_10_1126_science_296_5568_727">(Soden a kol. 2002, obrázek 4)</SourceLink>
+      </p>
+      <p>
+        Od června 1991 do prosince 1995 byla dolní troposféra podle družicových měření v globálním průměru o 0,30 °C chladnější
+        než od ledna do května 1991. Tuto hodnotu ukazuje v grafu modrý sloupec. Další dva sloupce porovnávají
+        modelové ochlazení vůči výpočtu bez erupce. Když model zohlednil i slabší skleníkový účinek ubývající páry,
+        vyšlo 0,31 °C. Když tento účinek vynechal, vyšlo 0,19 °C.
+      </p>
       <figure className="article-figure article-figure--scroll-mobile">
         <div className="article-figure__scroll"><a href={`${media}/pinatubo.png`} aria-label="Otevřít graf ochlazení v plné velikosti"><Image className="article-figure__media" src={`${media}/pinatubo.png`} width={1400} height={760} alt="Průměrná velikost ochlazení dolní troposféry od června 1991 do prosince 1995: družicový odhad 0,30 °C, model s vlhkostní zpětnou vazbou 0,31 °C a model s potlačenou dlouhovlnnou odezvou páry 0,19 °C." unoptimized /></a></div>
         <figcaption>Vlastní přepis tří souhrnných hodnot z textu <SourceLink id="DOI_10_1126_science_296_5568_727">Sodena a kol. (2002, s. 729)</SourceLink>. Pozorování používá odchylku vůči lednu až květnu 1991, model rozdíl sopečného a kontrolního pokusu. Zobrazený pozorovací odhad nemá odstraněný vliv El Niño. Pro tuto trojici článek neuvádí společné intervaly nejistoty, proto je do grafu nedoplňujeme. <Link href={`${media}/pinatubo.csv`}>CSV</Link>{" · "}<Link href={`${media}/plot.py`}>reprodukční skript</Link>. Graf CC BY 4.0.</figcaption>
       </figure>
-      <p>Samotná shoda teplot by nestačila určit, která zpětná vazba zabrala. Proto autoři kontrolovali také sloupcovou páru a záření citlivé na horní troposféru. Obě měření odpovídala vysoušení při ochlazení. Teplotní a vlhkostní výsledek tak podpíraly stejný děj. <SourceLink id="DOI_10_1126_science_296_5568_727">(Soden a kol. 2002, obrázky 2 a 3)</SourceLink></p>
-      <h4 id="test-profily" className={styles.testHeading}>Druhý test: jaký radiační účinek mají změřené změny páry?</h4>
-      <p>Andrew Dessler a kolegové v roce 2008 použili přístroj AIRS na družici Aqua. Ten poskytuje odhady teploty a vlhkosti v různých výškách. Autoři porovnali jednotlivé ledny 2003–2007 s chladnějším lednem 2008. Pro každou část atmosféry znali změnu množství páry a pomocí výpočtu přenosu záření určili její příspěvek k energetické bilanci. Součet pak vydělili rozdílem globální povrchové teploty. Měření tedy dodalo vlhkostní změnu, radiační model její energetický účinek. <SourceLink id="DOI_10_1029_2008GL035333">(Dessler a kol. 2008, oddíly 2 a 4)</SourceLink></p>
-      <p>Průměr pěti porovnání byl kladný: 2,04 wattu na metr čtvereční na jeden stupeň oteplení. Vyjadřuje, o kolik změna páry posunula bilanci celé Země směrem k příjmu energie při přepočtu na 1 °C globálního oteplení. Jednotlivá porovnání dala 0,94 až 2,69. Tento rozsah je rozdílem mezi zkoumanými ledny, nikoli intervalem spolehlivosti. Přehled hodnot je dostupný v <Link href={`${media}/dessler2008.csv`}>CSV přepisu tabulky 1</Link>. <SourceLink id="DOI_10_1029_2008GL035333">(Dessler a kol. 2008)</SourceLink></p>
-      <p>Krátké kolísání samo neurčuje velikost vazby za celé století. Dlouhodobou návaznost prověřil Chungův tým porovnáním historických výpočtů, přirozených vlivů a růstu skleníkových plynů. Pozorované přibývání páry v horní troposféře odpovídalo pokusům zahrnujícím lidské působení. Samotné přirozené vlivy obdobný trend nevystihly. Tento test rozšířil argument z jednotlivé erupce a meziročního kolísání také na několik desetiletí. <SourceLink id="DOI_10_1073_pnas_1409659111">(Chung a kol. 2014, obrázky 2 a 3)</SourceLink></p>
+      <p>
+        Podobnou teplotu mohou dát i výpočty, které změnu vlhkosti vystihnou špatně. Autoři proto ověřili také to,
+        zda a kde po erupci páry ubylo.
+        Družice po erupci změřily pokles množství páry v celém sloupci vzduchu. Změna infračerveného záření v pásmu
+        citlivém na páru zároveň odpovídala úbytku vlhkosti vysoko v troposféře. Ochlazení tak provázela právě ta změna,
+        kterou model potřeboval k jeho zesílení.{" "}
+        <SourceLink id="DOI_10_1126_science_296_5568_727">(Soden a kol. 2002, obrázky 2 a 3)</SourceLink>
+      </p>
+      <h4 id="test-profily" className={styles.testHeading}>Jak se změny vlhkosti v různých výškách promítají do bilance energie?</h4>
+      <p>
+        Účinek páry lze odhadnout i během běžného střídání teplejších a chladnějších let. Andrew Dessler a kolegové
+        použili údaje z infračerveného přístroje AIRS na družici Aqua, z nichž se odhaduje teplota a množství páry
+        v různých výškách. Každý leden od roku 2003 do roku 2007 porovnali s chladnějším lednem 2008. V modelu pak měnili vlhkost v každé vrstvě zvlášť podle družicových měření.
+        Počítali, jak tato změna ovlivní rozdíl mezi příchozím a odchozím zářením na horním okraji atmosféry. Příspěvky vrstev sečetli a spočítali průměr za celou Zemi. Ten vydělili rozdílem globální povrchové
+        teploty mezi oběma ledny.{" "}
+        <SourceLink id="DOI_10_1029_2008GL035333">(Dessler a kol. 2008, oddíly 2 a 4)</SourceLink>
+      </p>
+      <p>
+        Ve všech pěti teplejších lednech změna množství páry podle výpočtu zvýšila čistý příjem energie Země.
+        V přepočtu na jeden stupeň rozdílu v globální povrchové teplotě činil tento příspěvek v průměru 2,04 wattu
+        na metr čtvereční. Jednotlivé odhady sahaly od 0,94 do 2,69 W/m² na stupeň. Rozpětí ukazuje, jak se od sebe
+        lišilo pět lednových srovnání. Hodnoty najdete v <Link href={`${media}/dessler2008.csv`}>přepisu tabulky 1 v CSV</Link>.{" "}
+        <SourceLink id="DOI_10_1029_2008GL035333">(Dessler a kol. 2008)</SourceLink>
+      </p>
+      <p>
+        Pět lednových srovnání zachycuje jen krátké kolísání. Pro delší období si Chungův tým položil jinou otázku.
+        Mohly změny sluneční aktivity a sopečné erupce vysvětlit přibývání páry ve výšce v letech 1979–2005?
+        Při působení samotných přírodních vlivů modely pozorovaný trend nevystihly. Přiblížily se mu až pokusy,
+        které zahrnuly i lidský vliv, zejména růst koncentrací skleníkových plynů. Toto srovnání pomáhá určit
+        příčinu dlouhodobé změny vlhkosti.{" "}
+        <SourceLink id="DOI_10_1073_pnas_1409659111">(Chung a kol. 2014, obrázky 2 a 3)</SourceLink>
+      </p>
     </HypothesisStory>
 
-    <h2 id="mechanismus">Jak se vlhkostní zpětná vazba uzavírá</h2>
-    <p>Hypotéza převládajícího vysušování nevystihla pozorované přibývání páry ve výšce. Zesilující vazba naopak obstála v porovnání vlhkostních profilů, radiačních výpočtů i ochlazení po Pinatubu. Dnešní vysvětlení proto spojuje oteplování s větším množstvím vodní páry a s jejím dalším radiačním působením. Nyní si projdeme, jak tuto vazbu vytvářejí vypařování, kondenzace, proudění a přenos energie.</p>
-    <h3 id="nasyceni">Teplota mění podmínky nasycení</h3>
-    <p>Vodní pára vzniká vypařováním a mizí kondenzací nebo přechodem v led. Nad vodní hladinou probíhají současně dva děje: molekuly opouštějí kapalinu a jiné se do ní z páry vracejí. Při nasycení se oba proudy vyrovnávají. Když se voda oteplí, molekuly z ní unikají rychleji. Nová rovnováha proto nastane při větším množství páry a vyšším tlaku, kterým pára působí. Závislost tohoto tlaku na teplotě popisuje Clausiova–Clapeyronova rovnice. V teplejší atmosféře proto může být před dosažením nasycení více páry. Skutečné množství dodají výpar a přenos vzduchu, jejich účinek průběžně vyvažuje kondenzace. <SourceLink id="DOI_10_1146_annurev_energy_25_1_441">(Held a Soden 2000, s. 443–445)</SourceLink>{" "}<SourceLink id="2013_NPL_Humidity">(Bell 2013, oddíl 3)</SourceLink></p>
-    <p>Relativní vlhkost porovnává skutečný tlak vodní páry s tlakem při nasycení. Tlak páry vyjadřuje příspěvek jejích molekul k tlaku celé směsi vzduchu. Oba tlaky měříme ve stejných jednotkách, například v pascalech. Podíl nemá jednotku a vynásobením stem získáme procenta. <SourceLink id="2013_NPL_Humidity">(Bell 2013, oddíl 3.2)</SourceLink></p>
+    <h2 id="mechanismus">Jak oteplení změní vlhkost a vlhkost pak teplotu Země</h2>
+    <p>
+      Přibývání páry ve výšce při teplejším oceánu odporuje předpovědi, že převládne vysušování. Měření po erupci
+      Pinatuba zachytila i opačný průběh. Páry ubylo a pokles teploty lépe vystihl výpočet, který její úbytek promítl
+      do přenosu záření. Oba výsledky podporují zesilující zpětnou vazbu. Na jejím začátku se s teplotou mění rovnováha mezi vypařováním vody a její kondenzací.
+    </p>
+    <h3 id="nasyceni">Proč k nasycení teplejšího vzduchu potřebujeme více páry</h3>
+    <p>
+      I nad klidnou vodní hladinou část molekul opouští kapalinu a část se z páry do kapaliny vrací. Je-li vzduch
+      u hladiny nasycený, v průměru se za stejnou dobu vrátí tolik molekul, kolik se jich vypaří. Když se voda ohřeje,
+      molekuly z hladiny unikají rychleji. Rovnováha se obnoví při vyšším tlaku vodní páry. Tuto závislost tlaku
+      nasycené páry na teplotě popisuje Clausiova–Clapeyronova rovnice. Aby v ovzduší opravdu přibylo vody, musí ji
+      dodat výpar nebo přinést proudící vzduch.{" "}
+      <SourceLink id="DOI_10_1146_annurev_energy_25_1_441">(Held a Soden 2000, s. 443–445)</SourceLink>{" "}<SourceLink id="2013_NPL_Humidity">(Bell 2013, oddíl 3)</SourceLink>
+    </p>
+    <p>
+      Relativní vlhkost (RH) vyjadřuje v procentech poměr dvou tlaků. Při relativní vlhkosti 50 % dosahuje tlak
+      vodní páry poloviny tlaku potřebného k nasycení při dané teplotě. Tlak páry je ta část celkového tlaku vzduchu,
+      kterou působí molekuly vody.{" "}
+      <SourceLink id="2013_NPL_Humidity">(Bell 2013, oddíl 3.2)</SourceLink>
+    </p>
     <Equation tex={String.raw`\mathrm{RH}=100\,\frac{e}{e_{\mathrm{s}}(T)}\,\%`} />
-    <p>Zde <InlineMath tex="e" /> znamená skutečný tlak páry a <InlineMath tex={String.raw`e_{\mathrm{s}}(T)`} /> tlak při nasycení za teploty <InlineMath tex="T" />. Pokud druhý tlak roste rychleji než první, relativní vlhkost klesá i při přibývání vody. Jak obě veličiny zjistíme z měření, vysvětluje <Link href="/metody/hygrometrie/#princip">hygrometrie</Link>. <SourceLink id="2013_NPL_Humidity">(Bell 2013)</SourceLink></p>
+    <p>
+      V čitateli je skutečný tlak páry <InlineMath tex="e" />, ve jmenovateli tlak nasycené páry{" "}
+      <InlineMath tex={String.raw`e_{\mathrm{s}}(T)`} /> při teplotě <InlineMath tex="T" />. Oba tlaky vyjadřujeme
+      ve stejných jednotkách, například v pascalech. Když po oteplení stoupne tlak v čitateli pomaleji než ve
+      jmenovateli, relativní vlhkost klesne. Jak ji v praxi určíme, vysvětluje článek o{" "}
+      <Link href="/metody/hygrometrie/#princip">měření vlhkosti vzduchu</Link>.{" "}
+      <SourceLink id="2013_NPL_Humidity">(Bell 2013)</SourceLink>
+    </p>
     <h3 id="sous-a-ocean">Proč nad souší může relativní vlhkost klesat</h3>
-    <p>Významná část vlhkosti nad pevninou přichází se vzduchem z oceánu. Její přísun tedy souvisí i s teplotou moře. Pevnina se přitom může oteplovat rychleji. Množství páry přinesené z pomaleji se ohřívajícího oceánu pak nestačí udržet stejnou míru nasycení nad teplejší souší. Páry přibývá, ale relativní vlhkost klesá. Místní výpar z půdy a rostlin tento vztah dále ovlivňuje. <SourceLink id="DOI_10_1073_pnas_1722312115">(Byrne a O’Gorman 2018)</SourceLink></p>
-    <p>Byrne a O’Gorman toto vysvětlení v roce 2018 prověřili pro pozorování z let 1979–2016. Jejich teorie spojovala výměnu energie mezi souší a oceánem s přenosem vlhkosti. Z oceánského oteplování a vlhkosti odhadovali změny nad pevninou a porovnali je se staničními údaji. Zachytili dlouhodobý směr změn teploty i vlhkosti. Kratší kolísání relativní vlhkosti bylo výraznější, než jednoduchý výpočet vysvětlil. <SourceLink id="DOI_10_1073_pnas_1722312115">(Byrne a O’Gorman 2018)</SourceLink></p>
-    <h3 id="zareni">Jak další pára mění výdej energie</h3>
-    <p>Molekuly vody pohlcují a vyzařují infračervené záření v určitých pásmech vlnových délek. Když páry přibude, záření v těchto pásmech prochází atmosférou obtížněji. Větší část energie unikající do vesmíru pak pochází z vyšších vrstev, které jsou v troposféře zpravidla chladnější. Při zachovaném teplotním profilu vyzáří méně energie. Tento účinek přidané páry tak posouvá celkovou bilanci směrem k ohřevu. Při následném oteplování povrch i vzduch svůj výdej záření zase zvyšují. <SourceLink id="DOI_10_1146_annurev_energy_25_1_441">(Held a Soden 2000, s. 445–449)</SourceLink></p>
-    <p>Síla této vazby závisí na tom, kde páry přibývá. Stejný přírůstek v různých výškách nevyvolá stejnou změnu záření, protože se liší teploty i průhlednost atmosféry. Proto radiační výpočty používají celé profily a samostatně mění páru při zachování ostatních veličin. Tím oddělují její účinek od účinku současného oteplení, oblaků a dalších změn. <SourceLink id="DOI_10_1175_2007JCLI2110_1">(Soden a kol. 2008)</SourceLink></p>
-    <p>Souhrn IPCC z roku 2021 uvádí pro samotnou troposférickou vodní páru v modelech dvou generací průměr 1,77 ± 0,20 W/m² na 1 °C, kde ± označuje jednu směrodatnou odchylku modelových výsledků. Jde o dlouhodobou modelovou odezvu, nikoli o totéž porovnání jako pět lednů z družice AIRS. Shoda v kladném znaménku spolu s pozorovaným přibýváním páry podpírá závěr o zesilující vazbě. Změna rozložení teploty s výškou část tohoto účinku tlumí, a proto se ve výsledné klimatické citlivosti posuzují obě odezvy společně. <SourceLink id="DOI_10_1017_9781009157896_009">(IPCC 2021, oddíl 7.4.2.2)</SourceLink></p>
-    <p>Nejistoty se týkají především velikosti a prostorového rozložení odezvy. Družice nesledují všechny výšky a oblačné podmínky stejně a krátkodobé kolísání se liší od dlouhodobého oteplování. Současný závěr by významně oslabil vzájemně ověřený dlouhodobý záznam úbytku páry v radiačně důležitých vrstvách při oteplování, doprovázený odpovídajícím růstem úniku energie po oddělení teploty a oblaků. Dosavadní rozebrané testy ukazují opačným směrem. <SourceLink id="DOI_10_1073_pnas_1409659111">(Chung a kol. 2014)</SourceLink>{" "}<SourceLink id="DOI_10_1017_9781009157896_009">(IPCC 2021)</SourceLink></p>
+    <p>
+      Nad pevninu přináší velkou část vodní páry vzduch od oceánu. Když se moře ohřívá, může tento vzduch přinášet
+      více vláhy. Souš se však často otepluje rychleji než sousední oceán. K udržení stejné relativní vlhkosti by
+      nad ní muselo páry přibývat rychleji, než ji oceán dodává. Vzduch nad pevninou tak může obsahovat více vody
+      a přitom mít k nasycení dál. Výsledek místně ovlivňuje také výpar z půdy a rostlin.{" "}
+      <SourceLink id="DOI_10_1073_pnas_1722312115">(Byrne a O’Gorman 2018)</SourceLink>
+    </p>
+    <p>
+      Michael Byrne a Paul O’Gorman tento vztah prověřili na údajích z let 1979–2016. Ze změn teploty a vlhkosti
+      nad oceánem odhadli, jak by se měly změnit podmínky nad pevninou, a odhad porovnali s údaji z pozemních stanic.
+      Zachytili tak dlouhodobý směr změn teploty i vlhkosti. Výkyvy relativní vlhkosti v kratších obdobích byly
+      větší, než dokázal jejich výpočet vysvětlit.{" "}
+      <SourceLink id="DOI_10_1073_pnas_1722312115">(Byrne a O’Gorman 2018)</SourceLink>
+    </p>
+    <h3 id="zareni">Proč s větším množstvím páry uniká při stejné teplotě méně energie</h3>
+    <p>
+      Povrch i atmosféra vydávají energii v podobě infračerveného záření. Molekuly vodní páry je v určitých
+      pásmech vlnových délek pohlcují a samy v těchto pásmech vyzařují všemi směry. Když páry přibude,
+      menší část záření z nižších vrstev projde atmosférou až do vesmíru. Záření, které pak v těchto pásmech
+      zachytí družice, pochází v průměru z větší výšky. V troposféře bývá výše chladněji
+      a chladnější vrstvy vyzařují méně. Dokud se teploty nezmění, Země tak vydává méně energie. Tento rozdíl přispívá k dalšímu ohřevu. Teplejší povrch a vzduch pak opět vyzařují více energie.{" "}
+      <SourceLink id="DOI_10_1146_annurev_energy_25_1_441">(Held a Soden 2000, s. 445–449)</SourceLink>
+    </p>
+    <p>
+      Pára přidaná blízko teplého povrchu proto může mít jiný účinek než stejné množství přidané výše v chladném
+      vzduchu. K výpočtu používají vědci údaje o tom, kolik páry přibylo v každé vrstvě. Postupně mění vlhkost
+      v jednotlivých výškách a přitom ponechávají stejné teploty i oblaky. Tím mohou vyčíslit příspěvek páry
+      k toku energie i tehdy, když se ve skutečné atmosféře mění všechny tyto veličiny najednou.{" "}
+      <SourceLink id="DOI_10_1175_2007JCLI2110_1">(Soden a kol. 2008)</SourceLink>
+    </p>
+    <p>
+      V dlouhodobých výpočtech dvou generací klimatických modelů vyšel pro vodní páru v troposféře průměrný
+      příspěvek k energetické bilanci Země +1,77 W/m² na 1 °C globálního oteplení. Hodnota ± 0,20 W/m² na stupeň
+      vyjadřuje jednu směrodatnou odchylku mezi výsledky modelů. Kladné znaménko znamená, že pára podporuje další oteplování. Na stejný směr účinku ukázalo také pět
+      lednových srovnání z družice Aqua. O celkovém oteplení ale rozhoduje i to, jak se s výškou mění
+      teplota vzduchu. Když se horní troposféra ohřeje silněji než povrch, vyzařuje více energie do vesmíru a část
+      účinku přidané páry vyvažuje.{" "}
+      <SourceLink id="DOI_10_1017_9781009157896_009">(IPCC 2021, oddíl 7.4.2.2)</SourceLink>
+    </p>
+    <p>
+      Nejistota se týká hlavně velikosti zesílení. Družice sledují některé výšky a oblasti zakryté oblaky hůře než
+      jiné. Závěr o směru vazby by oslabil například dlouhodobý záznam, v němž by při oteplování v horní troposféře
+      soustavně ubývalo páry. Zároveň by měření musela ukázat, že tento úbytek zvýšil únik tepelného záření i po
+      oddělení vlivu teploty a oblaků.{" "}
+      <SourceLink id="DOI_10_1073_pnas_1409659111">(Chung a kol. 2014)</SourceLink>{" "}<SourceLink id="DOI_10_1017_9781009157896_009">(IPCC 2021)</SourceLink>
+    </p>
     <details className="method-details">
-      <summary>Nejistoty a rozsah platnosti testů</summary>
-      <p>Studie z roku 2004 využila měření HALOE, jehož vzorkování horní troposféry upřednostňovalo sušší bezoblačné oblasti. Odstranění několika silných odchylek spojených s El Niño zmenšilo zjištěný vztah mezi párou a teplotou oceánu. Proto tento jednotlivý test neurčuje přesnou globální sílu vazby. Jeho hlavní přínos spočívá v rozlišení změny množství vody od změny relativní vlhkosti. <SourceLink id="DOI_10_1175_1520_0442_2004_017_1272_WVFITT">(Minschwaner a Dessler 2004)</SourceLink></p>
-      <p>Po Pinatubu se současně projevovalo El Niño. Jeho odstranění různými postupy dalo v použité teplotní analýze průměrné ochlazení 0,29 až 0,36 °C. Srovnání tedy nestojí na přesné rovnosti jedné dvojice čísel. Model měl navíc zjednodušený oceán a vypnutí vazby měnilo pouze dlouhovlnnou radiační odezvu páry. Erupce zkouší mechanismus, ale sama nenahrazuje dlouhodobý pokus se skleníkovými plyny. <SourceLink id="DOI_10_1126_science_296_5568_727">(Soden a kol. 2002, poznámky 26, 42 a 43)</SourceLink></p>
-      <p>Dlouhé družicové záznamy vyžadují propojení přístrojů a opravy změn jejich citlivosti. Radiační účinek se odvozuje výpočtem, který využívá změřené profily a vlastnosti molekul. Větší váhu než opakované zpracování stejného signálu má shoda rozdílných měření a testů. Studie přitom nejsou zcela nezávislé: některé sdílejí přístroje, modely nebo výpočty přenosu záření. <SourceLink id="DOI_10_1073_pnas_1409659111">(Chung a kol. 2014)</SourceLink>{" "}<SourceLink id="DOI_10_1029_2008GL035333">(Dessler a kol. 2008)</SourceLink></p>
+      <summary>Co omezuje přesnost jednotlivých zkoušek</summary>
+      <p>
+        Přístroj HALOE měřil horní troposféru především v sušších oblastech s jasnou oblohou. Když autoři ze srovnání
+        vyloučili několik zvlášť výrazných výkyvů spojených s El Niño, kdy se otepluje povrch střední a východní části tropického
+        Tichého oceánu, vztah mezi teplotou oceánu a množstvím páry zeslábl. Z této krátké tropické řady proto nelze spolehlivě určit velikost vazby pro celou Zemi.{" "}
+        <SourceLink id="DOI_10_1175_1520_0442_2004_017_1272_WVFITT">(Minschwaner a Dessler 2004)</SourceLink>
+      </p>
+      <p>
+        El Niño ovlivňovalo globální teplotu také v době po erupci Pinatuba. Podle toho, jak autoři jeho vliv odhadli a odečetli, vyšlo průměrné ochlazení dolní troposféry
+        v rozmezí 0,29 až 0,36 °C. Model navíc zastupoval oceán jen promíchanou povrchovou vrstvou. Porovnání pokusů
+        vyčíslilo vliv změn páry na tepelné záření během několika let po erupci. Přesnou velikost stejné vazby při desítkách let oteplování jedna erupce neurčí.{" "}
+        <SourceLink id="DOI_10_1126_science_296_5568_727">(Soden a kol. 2002, poznámky 26, 42 a 43)</SourceLink>
+      </p>
+      <p>
+        U dlouhé řady z let 1979–2005 museli vědci navázat měření z různých družic a zohlednit změny citlivosti
+        jejich přístrojů. Pět lednových srovnání z družice Aqua má jinou mez. Všechna mají společný referenční leden
+        2008, takže chyba údajů z tohoto měsíce by ovlivnila každý z pěti odhadů. Oba týmy využily výpočty přenosu záření, a jejich závěry tak závisí částečně na stejných fyzikálních předpokladech.{" "}
+        <SourceLink id="DOI_10_1073_pnas_1409659111">(Chung a kol. 2014)</SourceLink>{" "}<SourceLink id="DOI_10_1029_2008GL035333">(Dessler a kol. 2008)</SourceLink>
+      </p>
     </details>
 
     <h2 id="shrnuti">Shrnutí</h2>
     <div className="method-conclusion">
-      <p>Při oteplování se mění vypařování, proudění a kondenzace tak, že v globálním měřítku přibývá vodní páry i ve vysoké troposféře. Přidaná pára mění přenos záření a zesiluje původní oteplení. Při ochlazení se směr obrací: páry ubývá a její slabší skleníkový účinek ochlazení zesiluje. Tento vztah podporují družicové profily, dlouhodobá radiační měření i test po erupci Pinatuba.</p>
-      <p>Relativní vlhkost přitom nemusí růst. Pokud se podmínky nasycení mění rychleji než skutečné množství vody, může klesat i při přibývání páry. Právě rozlišení těchto dvou veličin umožňuje společně pochopit vlhčí atmosféru a klesající relativní vlhkost nad částí pevniny.</p>
+      <p>
+        Při globálním oteplování přibývá vodní páry i vysoko v troposféře. V pásmech, kde pára pohlcuje tepelné
+        záření, pak energie uniká do vesmíru v průměru z vyšších, chladnějších vrstev. Země tím při stejných teplotách ztrácí
+        méně energie a dále se otepluje. Při ochlazení ubývající pára naopak pokles teploty prohlubuje, jak ukázalo
+        porovnání měření po erupci Pinatuba s modelovými pokusy. Pro sílu této zpětné vazby je důležité, kolik páry přibude nebo ubude v různých
+        výškách. Relativní vlhkost přitom může místy klesat, pokud páry přibývá pomaleji, než roste množství potřebné k nasycení.
+      </p>
     </div>
 
     <h2 id="prameny">Prameny, data a podklady</h2>

@@ -121,12 +121,12 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "vodni-para-jako-zpetna-vazba",
     title: "Jak změny vodní páry ovlivňují oteplování?",
     category: "Atmosféra a oceán",
-    cardSummary: "Spor o vysušování horní troposféry a testy zesilujícího účinku vodní páry.",
+    cardSummary: "Co ukázala měření páry vysoko nad tropy a proč její úbytek po erupci Pinatuba prohloubil ochlazení.",
     observations: [
       { href: "/pozorovani/narust-vlhkosti/#pozorovani", label: "Množství vodní páry a relativní vlhkost" },
     ],
-    summary: "Proč při oteplování přibývá vodní páry, i když relativní vlhkost místy klesá? Dvě hypotézy, jejich historie a testy pomocí družicových profilů, záření a ochlazení po Pinatubu.",
-    distinguishingEvidence: "Současný růst množství páry a pokles relativní vlhkosti nad částí pevniny, rozdíly mezi souší a oceánem a výškové profily. Radiační měření ověřují další článek vazby mezi vlhkostí a oteplováním.",
+    summary: "Po erupci sopky Pinatubo se Země na několik let ochladila a v atmosféře ubylo vodní páry. Vědci tak mohli ověřit, zda změna množství páry dokáže původní změnu teploty ještě zesílit.",
+    distinguishingEvidence: "Družicová měření ukazují, zda nad teplejším tropickým oceánem ve výšce přibývá páry. Ochlazení po erupci Pinatuba lze porovnat s výpočty, které umožňují oddělit vliv páry na únik tepelného záření.",
   },
   {
     slug: "oblaka-a-jejich-klimaticke-zpetne-vazby",
