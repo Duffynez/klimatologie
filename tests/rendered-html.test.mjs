@@ -5634,7 +5634,7 @@ test("publishes cloud feedback with concurrent processes, testable predictions a
   const html = await readFile(new URL("dist/client/mechanismy/" + slug + "/index.html", root), "utf8");
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.match(html, /13\. listopadu 2026/);
+  assert.match(html, /21\. listopadu 2026/);
   assert.doesNotMatch(html, /class="mechanism-detail-evidence"/);
   assert.match(body, /mohou probíhat současně/);
   assert.match(body, /Silná stabilizace nebyla doložena/);
