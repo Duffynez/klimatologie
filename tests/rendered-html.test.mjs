@@ -371,11 +371,11 @@ test("snow mechanism publishes traceable evidence and distinguishes stock, melti
   assert.ok(Math.abs(result.meltwaterEquivalentMm - 7.760479041916168) < 1e-10);
   assert.equal(result.largerStockDurationDays, 20);
   assert.equal(result.smallerStockDurationDays, 10);
-  assert.match(body, /Samotné roztání ledu ještě vodu ze zásoby neodstraní/);
-  assert.match(body, /Rozpětí označuje tři zkoumané sezony/);
+  assert.match(body, /Dokud zůstává ve sněhu, započítává se dál do zásoby/);
+  assert.match(body, /Rozpětí vyjadřuje rozdíl mezi výsledky pro tři výchozí sezony/);
   assert.match(body, /Tento počet zahrnuje úbytky/);
-  const uncertainty = body.slice(body.indexOf('<h2 id="nejistoty"'), body.indexOf('<h2 id="dalsi-overeni"'));
-  assert.ok(uncertainty.replace(/<[^>]+>/g, " ").split(/\s+/).length <= 600);
+  const uncertainty = body.match(/<h2 id="nejistoty">([\s\S]*?)<\/details>/)?.[1];
+  assert.ok(uncertainty && uncertainty.replace(/<[^>]+>/g, " ").trim().split(/\s+/).length <= 600);
   assert.doesNotMatch(body.replace(/<[^>]+>/g, " ").replace(/&[^;]+;/g, " "), /;/);
 });
 

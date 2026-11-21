@@ -222,12 +222,12 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "vznik-a-zanik-snehove-pokryvky-na-sousi",
     title: "Proč se mění množství sněhu a délka sněhové sezóny?",
     category: "Kryosféra",
-    cardSummary: "Jak srážky, teplota a přísun energie mění zimní zásobu a jarní zánik sněhu.",
+    cardSummary: "Proč na jaře může ubýt vody ve sněhu i po vlhké zimě a kdy sníh zmizí z krajiny.",
     observations: [
       { href: "/pozorovani/snehova-pokryvka-a-permafrost/#jarni-rozsah-snehu", label: "Jarní rozsah a zásoba sněhu v Arktidě" },
     ],
-    summary: "Proč může sněhu ubývat i při větších srážkách a proč kratší sezona nemusí znamenat rychlejší tání každý den. Vysvětlení ověřené staničními hlášeními, měřením horské zásoby a rozborem povodí.",
-    distinguishingEvidence: "Porovnání sněžení a energetické bilance se zásobou vody ve sněhu a datem odtání. Oddělení změn zimní zásoby a jarního tání vysvětluje rozdílný vývoj rozsahu, hmotnosti a délky sněhové sezóny.",
+    summary: "I dvě zimy se stejným množstvím srážek mohou na jaře zanechat různou zásobu sněhu. Záleží na tom, kolik vody spadlo ve vločkách a kolik jí ve sněhu zůstalo po oblevách.",
+    distinguishingEvidence: "Staniční hlášení ukazují, kdy sněží a kdy prší. Měření vody ve sněhu pak umožňují ověřit, jak v horském povodí souvisí zimní zásoba s průběhem jarního tání.",
   },
   {
     slug: "hmotnostni-bilance-horskych-ledovcu",
