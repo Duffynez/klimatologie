@@ -5703,14 +5703,14 @@ test("precipitation mechanisms connect distinct scales, six tests, open sources 
   const html = await readFile(new URL("dist/client/mechanismy/" + slug + "/index.html", root), "utf8");
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
-  assert.match(html, /13\. listopadu 2026/);
+  assert.match(html, /21\. listopadu 2026/);
   assert.doesNotMatch(html, /class="mechanism-detail-evidence"/);
   assert.equal((body.match(/<h4\b/g) ?? []).length, 6);
   assert.equal((body.match(/<img\b/g) ?? []).length, 3);
   assert.equal((body.slice(0, body.indexOf('<h2 id="hypotezy"')).match(/<p\b/g) ?? []).length, 2);
-  assert.match(body, /Zde nehledáme jediného vítěze/);
-  assert.match(body, /není to interval spolehlivosti/);
-  assert.match(body, /Neudává podíl srážek způsobený člověkem/);
+  assert.match(body, /Vlhkost, energie a proudění působí současně/);
+  assert.match(body, /5,9 až 7,7 %[^<]*mezi variantami výpočtu[^<]*nejistotu jednoho odhadu/);
+  assert.match(body, /přes 90 % odchylky svislého přenosu vlhkosti[^<]*v klimatu bez lidského vlivu/);
   const bibliography = body.slice(body.indexOf('<h2 id="prameny"'));
   const catalogue = await readFile(new URL("dist/client/zdroje/index.html", root), "utf8");
   for (const id of new Set([...body.matchAll(/href="\/zdroje#([^"]+)"/g)].map(m => m[1]))) {
