@@ -61,12 +61,12 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "slunecni-promenlivost",
     title: "Jak sluneční cyklus ovlivňuje klima?",
     category: "Záření a složení atmosféry",
-    cardSummary: "Proměnlivý sluneční příkon, oteplující stopa ve stratosféře a testy vlivu kosmického záření na oblaka.",
+    cardSummary: "Sluneční maximum se projevuje v teplotě u povrchu i ve stratosféře. Mohou jeho vliv zesílit nízké oblaky?",
     observations: [
       { href: "/pozorovani/slunecni-zareni/#pozorovani", label: "Proměny slunečního záření" },
       { href: "/pozorovani/stratosfericke-ochlazovani/#slunecni-cyklus", label: "Sluneční cyklus v teplotě stratosféry" },
     ],
-    summary: "Jak se malá změna Slunce projeví v atmosféře a oceánu? Dvě hypotézy, laboratorní i družicové testy a vysvětlení velikosti teplotní odezvy na sluneční cyklus.",
+    summary: "V době slunečního maxima přibývá na Slunci tmavých skvrn i jasných oblastí. K Zemi tehdy dorazí o něco víc záření. Proč je to v teplotě vysoko nad Zemí patrnější než u jejího povrchu?",
     distinguishingEvidence: "Porovnání změřených změn slunečního záření s velikostí, načasováním a výškovým průběhem teplotní odezvy. Ověření vztahu k jedenáctiletému slunečnímu cyklu i dlouhodobému vývoji.",
   },
   {
