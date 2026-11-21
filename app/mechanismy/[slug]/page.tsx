@@ -276,7 +276,7 @@ export default async function MechanismDetail({ params }: { params: Promise<{ sl
   if (slug === "radiacni-pusobeni-sklenikovych-plynu") {
     return (
       <div className="page-shell">
-        <PageLead eyebrow={`Mechanismy / ${mechanism.category}`} title={mechanism.title} meta="6. listopadu 2026">
+        <PageLead eyebrow={`Mechanismy / ${mechanism.category}`} title={mechanism.title} meta="21. listopadu 2026">
           <p>{mechanism.summary}</p>
         </PageLead>
         <GreenhouseRadiationArticle />

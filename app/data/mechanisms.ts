@@ -42,7 +42,7 @@ export const climateMechanisms: ClimateMechanism[] = [
     observations: [
       { href: "/pozorovani/atmosfericka-koncentrace-co2/#zmena-infracerveneho-zareni", label: "CO₂ a změna infračerveného záření" },
     ],
-    summary: "Proč další CO₂ působí, i když už část záření téměř úplně pohlcuje? Historický spor o nasycení, laboratorní pokusy a pozemní i družicové testy vysvětlují přenos energie atmosférou.",
+    summary: "Na některých vlnových délkách projde atmosférou jen zlomek záření od zemského povrchu. Vzduch však také sám vyzařuje. S množstvím CO₂ se mění, z jakých vrstev záření dojde k povrchu a z jakých unikne do vesmíru.",
     distinguishingEvidence: "Změna záření v pásmu CO₂ při známé změně jeho koncentrace a po zohlednění teploty i vlhkosti. Shoda pozemních a družicových spekter s výpočty založenými na laboratorních vlastnostech plynů.",
   },
   {
