@@ -10,22 +10,22 @@ const media = "/media/mechanismy-vln-veder";
 const hypotheses: readonly MechanismHypothesis[] = [
   {
     id: "samotne-proudeni",
-    name: "Změny proudění samy vysvětlují zesilování veder",
-    prediction: "Jestliže se mění pouze výskyt a trvání horkých povětrnostních situací, po oddělení těchto změn nezbude soustavný růst extrémních teplot. Teplotní podmínky oceánu a pevniny přitom zůstávají stejné.",
-    test: "Nejprve porovnáme ruské vedro roku 2010 se staršími tlakovými situacemi. Potom v západoevropském záznamu hledáme dny s podobným prouděním a vyčíslíme, kolik dlouhodobé změny vysvětlí jeho proměny.",
-    observation: "Proudění vysvětluje velkou část mimořádnosti ruské události. V západní Evropě však jeho změny vysvětlují jen část růstu nejvyšších letních teplot v letech 1950–2022.",
-    verdict: "Skutečný proces, který sám nestačí",
-    explanation: "Vznik jednotlivého vedra a dlouhodobý růst jeho pravděpodobnosti vyžadují různá porovnání. Úspěch prvního testu nenahrazuje druhý.",
+    name: "K zesílení veder stačí změny proudění",
+    prediction: "Pokud se mění jen to, odkud a jak dlouho proudí vzduch, měly by změny proudění vysvětlit celý růst nejvyšších teplot. Při stejném proudění by vedra dlouhodobě nesílila.",
+    test: "Porovnáme skutečný červenec 2010 v západním Rusku s modelovanými průběhy počasí. Pro západní Evropu spočítáme, kolik z růstu letních maxim připadá na změny proudění.",
+    observation: "Nad Ruskem dlouho setrvávala tlaková výše. Do západní Evropy častěji proudil vzduch od jihu, což vysvětluje část růstu nejvyšších letních teplot.",
+    verdict: "Proudění vysvětluje část změny",
+    explanation: "Proudění dokázalo udržet mimořádné vedro nad jednou oblastí. Změny proudění v západní Evropě v letech 1950–2022 byly na celý pozorovaný růst maxim příliš malé.",
     state: "insufficient",
   },
   {
     id: "teplejsi-klima",
-    name: "Oteplování mění podmínky, ve kterých vedra vznikají",
-    prediction: "Při srovnatelném proudění mají být extrémy v teplejším klimatu teplejší a častěji překračovat tutéž hranici. Když navíc vyschne půda, omezení výparu může zvýšit ohřev vzduchu.",
-    test: "V simulacích evropského léta 2003 změníme zásobu půdní vody. Pro Rusko porovnáme četnost stejného extrému ve dvou obdobích. Úspěšnou předpověď severoamerického vedra 2021 zopakujeme s chladnějšími klimatickými podmínkami.",
-    observation: "Vlhčí půda zeslabila simulované evropské vedro. Ruské porovnání ukázalo, jak menší teplotní posun mění četnost. Předpovědní experimenty pro rok 2021 daly v chladnějším klimatu slabší extrém.",
-    verdict: "Podpořené společné vysvětlení",
-    explanation: "Proudění určuje průběh události, oteplování posouvá její teplotu a půdní voda může účinek zesílit. Velikost příspěvků se liší podle místa a události.",
+    name: "V teplejším klimatu přináší podobné počasí silnější vedro",
+    prediction: "Za podobného proudění může teplota vystoupit výš a častěji překročit stejnou hranici. Pokud navíc vyschne půda, slabší výpar dovolí vzduchu nad ní více se ohřát.",
+    test: "V simulacích evropského léta 2003 změníme vlhkost půdy. Pro západní Rusko porovnáme četnost stejně horkého července ve dvou obdobích. Předpověď severoamerického vedra z roku 2021 zopakujeme v chladnějším klimatu.",
+    observation: "Nad vlhčí půdou vyšlo evropské léto chladnější. V novějším období model častěji dosáhl podmínek ruského července 2010. V chladnějším klimatu měl severoamerický extrém nižší vrchol.",
+    verdict: "Pokusy podporují vliv oteplování i půdní vody",
+    explanation: "Zvýšení výchozí teploty mění sílu i pravděpodobnost vedra. Nad pevninou může vedro dále zesílit vysychání půdy, jak ukázal pokus s evropským létem 2003.",
     state: "supported",
   },
 ];
@@ -52,41 +52,37 @@ function Graphic({ name, alt, tests, children }: { name: string; alt: string; te
 export function HeatWaveMechanismsArticle() {
   const temperatures = [27, 29, 30, 32, 33, 31, 29, 28, 26];
   return <article className="article-layout"><div className="article-prose">
-    <h2 id="co-vysvetlujeme">Proč přibývá horkých dnů a mimořádně teplých událostí</h2>
+    <h2 id="co-vysvetlujeme">Jak se změnily vlny veder od poloviny 20. století</h2>
     <p className="article-prose__intro">
-      Ve většině sledovaných oblastí souše přibylo od poloviny 20. století dnů ve vlnách veder a nejdelší události se prodloužily.
-      Dokládají to <Link href="/pozorovani/vlny-veder/#pozorovani">denní teplotní záznamy</Link>.
-      „Silnější“ přitom může znamenat vyšší vrchol teploty i větší součet překročení za celou událost. Tyto vlastnosti se nemění stejně.
-      Zde vysvětlíme, proč se k situacím schopným vyvolat vedro přidává stále teplejší výchozí klima. <SourceLink id="DOI_10_1038_s41467_020_16970_7">(Perkins-Kirkpatrick a Lewis 2020)</SourceLink>
+      V letech 1950–2017 přibylo ve většině sledovaných oblastí pevniny dnů ve vlnách veder. Vědci prošli <Link href="/pozorovani/vlny-veder/#pozorovani">denní teplotní záznamy</Link>
+      a hledali alespoň tři dny za sebou, kdy denní maximum překročilo místní hranici pro danou část léta. V letech 1961–1990 se nad touto hranicí pohybovala přibližně desetina denních maxim.
+      Téměř všude vzrostl i součet stupňů, o které teplota ve dnech veder tuto hranici překročila. Nejvíc k tomu přispěl větší počet horkých dnů. <SourceLink id="DOI_10_1038_s41467_020_16970_7">(Perkins-Kirkpatrick a Lewis 2020)</SourceLink>
     </p>
     <p>
-      Rozlišíme vznik konkrétního vedra od dlouhodobé změny jeho četnosti a síly. Nejprve prověříme, kam dosáhne vysvětlení samotným prouděním vzduchu.
-      Potom přidáme oteplování a výměnu energie mezi půdou a atmosférou. „Četností“ budeme podle daného testu rozumět počet dnů nebo pravděpodobnost překročení přesně určené teplotní hranice.
+      Horkých dnů může přibýt dvěma způsoby. Když se ke dvěma dnům nad hranicí přidá třetí v řadě, započítá se nová vlna. Jindy se o pár dnů protáhne vlna, která by nastala i dřív.
+      Proč dnes podobná povětrnostní situace snáze překročí dřívější teplotní hranici a proč může teplota vystoupit výš?
     </p>
 
     <h2 id="hypotezy">Dvě hypotézy a jejich předpovědi</h2>
     <HypothesisDiagram hypotheses={hypotheses} captionId="heat-hypotheses-caption"
-      context={<p>Proudění znamená pohyb vzduchu včetně jeho přenosu mezi oblastmi a výškami. Srovnatelným prouděním rozumíme podobné rozložení větru či tlakových útvarů nad širší oblastí. Samo neurčuje, jak teplý přicházející vzduch bude. První hypotéza je proto záměrně omezená na vysvětlení změn veder změnou proudění při stálých ostatních podmínkách.</p>}
-      caption={<>Obě vysvětlení zahrnují běžné počasí. Liší se v tom, zda k dlouhodobé změně veder stačí proměny proudění, nebo se mění i teplotní podmínky. Testy jednotlivých událostí mají užší platnost než závěr pro celosvětový vývoj.</>} />
+      context={<p>Proudění určuje, odkud vzduch přichází a jak dlouho se nad oblastí udrží podobné počasí. Na dvou letních mapách mohou mít vítr i tlakové výše podobné rozložení. Vzduch, který přichází ze stejného směru, přesto může být v jednom období teplejší.</p>}
+      caption={<>Obě vysvětlení počítají s vlivem proudění. Rozlišit je pomůže teplota při srovnatelném proudění v různě teplém klimatu.</>} />
 
-    <h2 id="pribehy">Jak se zkoumaly příčiny veder</h2>
-    <HypothesisStory id="samotne-proudeni" number={1} title="Změny proudění samy vysvětlují zesilování veder">
+    <h2 id="pribehy">Co ukázalo srovnání evropských a severoamerických veder</h2>
+    <HypothesisStory id="samotne-proudeni" number={1} title="K zesílení veder stačí změny proudění">
       <p>
-        Dlouhotrvající tlakové situace se zkoumaly dávno před dnešními studiemi lidského vlivu na extrémy. Daniel Rex v roce 1950 porovnal pět případů atmosférického blokování.
-        V mapách našel rozdělené západní proudění a téměř stojící tlakové útvary. Jeho vymezení vyžadovalo alespoň deset dnů trvání.
-        Nešlo o dnešní definici vlny veder, ale o popis situace, která dokáže na dlouho změnit počasí celé oblasti. <SourceLink id="DOI_10_3402_tellusa_v2i3_8546">(Rex 1950)</SourceLink>
+        Proč někdy nad rozsáhlým územím vydrží stejné počasí mnoho dní? Daniel Rex v roce 1950 prozkoumal pět takových případů.
+        Na mapách našel místa, kde se obvyklé západní proudění rozdělilo do dvou větví a tlakové útvary mezi nimi se téměř nepohybovaly.
+        Aby situaci označil za atmosférické blokování, muselo toto uspořádání trvat alespoň deset dnů. <SourceLink id="DOI_10_3402_tellusa_v2i3_8546">(Rex 1950)</SourceLink>
       </p>
       <p>
-        Blokování znamená, že se obvyklý postup tlakových útvarů zpomalí nebo odkloní. Pod letní tlakovou výší může vzduch klesat.
-        Při sestupu se dostává pod vyšší tlak, stlačuje se a ohřívá. Oblaků pak bývá méně a sluneční záření déle ohřívá povrch.
-        Vítr zároveň může přivádět teplý vzduch z jiné oblasti. Tyto děje poskytují konkrétní fyzikální vysvětlení jednotlivé horké epizody. <SourceLink id="DOI_10_1029_2010GL046582">(Dole a kol. 2011)</SourceLink>
+        Když v létě nad krajinou setrvává tlaková výše, vzduch v ní klesá. Blíž k povrchu roste tlak, takže se sestupující vzduch stlačuje a ohřívá.
+        Za těchto podmínek se tvoří méně oblaků a slunce déle ohřívá zem. Také vítr může několik dní přinášet teplý vzduch ze stejného směru. <SourceLink id="DOI_10_1029_2010GL046582">(Dole a kol. 2011)</SourceLink>
       </p>
       <p>
-        Pro vysvětlení dlouhodobé změny by však bylo potřeba více takových situací, delší trvání nebo účinnější přísun teplého vzduchu.
-        Pokud by všechny ostatní podmínky zůstaly stejné, srovnatelné proudění by nemělo postupně přinášet stále vyšší teploty.
-        To je rozlišující předpověď, kterou budeme testovat. Nepřipisujeme ji všem badatelům zabývajícím se blokováním. Zkoušíme, zda skutečný a důležitý proces stačí také na celé pozorované zesilování veder.
+        Kdyby častější nebo vytrvalejší přísun horkého vzduchu stačil k vysvětlení celého dlouhodobého růstu teplotních maxim, měl by jít tento růst vypočítat už ze změn proudění.
+        Nejdřív ale potřebujeme vědět, jak velkou odchylku vůbec dokáže vyvolat počasí během jediného léta.
       </p>
-      <p>Schéma odděluje děj během jednoho vedra od náročnějšího testu dlouhodobého vývoje.</p>
       <Graphic name="proudeni" alt="Letní tlaková výše odklání postup počasí. Sestupující vzduch se stlačuje a otepluje, sluneční záření ohřívá pevninu a vítr přináší teplý vzduch. Předpověď hypotézy samotného proudění vyžaduje stálé teplotní podmínky."
         tests={[
           { title: "Test 1 · Ruské vedro 2010", prediction: "Silné blokování může vyvolat velkou odchylku.", test: "Porovnání teplot, tlakových map a simulací s dřívějšími podmínkami.", result: "Velká role počasí v síle jedné události." },
@@ -97,52 +93,44 @@ export function HeatWaveMechanismsArticle() {
 
       <h4 id="rusko-2010" className={styles.testHeading}>Test 1 · Ruské vedro 2010</h4>
       <p>
-        Velký výkyv způsobený počasím by měl mít odpovídající neobvyklou tlakovou situaci. Doleho tým proto porovnal <Link href="/pozorovani/vlny-veder/#rusko-2010">ruský červenec 2010</Link> s historickými mapami a modelovými pokusy.
-        Dva atmosférické modely opakovaně spustil s oceánem, mořským ledem a množstvím oxidu uhličitého, CO₂, roku 2010 a se srovnávacími průměrnými podmínkami let 1971–2000.
-        Výjimečnou sílu události vysvětlilo především trvající blokování. Pomalu se měnící podmínky neposkytly silné předběžné varování. <SourceLink id="DOI_10_1029_2010GL046582">(Dole a kol. 2011, oddíly 2–4)</SourceLink>
+        V <Link href="/pozorovani/vlny-veder/#rusko-2010">červenci 2010 nad západním Ruskem</Link> ukázaly tlakové mapy vytrvalé blokování. Doleho tým zkoumal, zda tak horký měsíc šlo čekat už podle stavu oceánu a složení atmosféry.
+        Ve dvou modelech zadal pozorované teploty oceánu, rozsah mořského ledu a množství oxidu uhličitého (CO₂) pro rok 2010. Pak pokusy zopakoval s průměrnými podmínkami let 1971–2000.
+        Pro každou variantu nechal každý model vytvořit padesát možných průběhů počasí.
       </p>
       <p>
-        Tím obstála důležitost proudění pro konkrétní událost. Z výsledku ale neplyne, že její pravděpodobnost zůstala stejná.
-        I menší oteplení může rozhodnout, kolik podobných situací překročí vysokou hranici. K této odlišné otázce se vrátíme u druhé hypotézy.
+        Ani se skutečnými podmínkami roku 2010 modely předem neukazovaly tak silné vedro jako pravděpodobný výsledek. Mimořádnou teplotu července vysvětloval především průběh počasí, zejména dlouhé trvání tlakové výše. <SourceLink id="DOI_10_1029_2010GL046582">(Dole a kol. 2011, oddíly 2–4)</SourceLink>
+        Jak se v průběhu desetiletí měnila šance, že tak horký červenec vůbec nastane, zkoumá <a href="#pravdepodobnost">jiné porovnání téže události</a>.
       </p>
 
       <h4 id="evropske-proudeni" className={styles.testHeading}>Test 2 · Západní Evropa 1950–2022</h4>
       <p>
-        Kdyby celý dlouhodobý růst vysvětlovaly změny proudění, měly by po jejich vyčíslení pokrýt i naměřenou velikost změny.
-        Vautardův tým v roce 2023 hledal v letních záznamech dny s podobným prouděním několik kilometrů nad povrchem.
-        Teploty náhradních dnů převedl na společnou úroveň oteplení, aby do odhadu proudění nezapočítal i teplejší klima. <SourceLink id="DOI_10_1038_s41467_023_42143_3">(Vautard a kol. 2023)</SourceLink>
+        K oddělení vlivu proudění od dlouhodobého oteplování využil Vautardův tým léta 1950–2022. Ke každému letnímu dni hledal v jiných letech dny s podobným prouděním několik kilometrů nad západní Evropou.
+        Jejich teploty přepočítal na stejnou úroveň globálního oteplení. Z takto sestavené řady mohl odhadnout, o kolik by se zvýšila letní maxima už tím, že některé směry proudění byly v pozdějších letech častější. <SourceLink id="DOI_10_1038_s41467_023_42143_3">(Vautard a kol. 2023)</SourceLink>
       </p>
       <p>
-        Pro západní Evropu mezi 5° západní a 15° východní délky a 45–55° severní šířky vyšel ve zpětné rekonstrukci počasí ERA5 příspěvek proudění přibližně <strong>0,8 °C [0,2–1,4]</strong>
-        na stupeň globálního oteplení. Celý růst nejvyšší letní denní teploty činil <strong>3,4 °C [2,4–4,3]</strong> na stejný stupeň globálního oteplení.
-        Závorky vyjadřují nejistotu pomocí 95% intervalů. Oba poměry změn patří k letům 1950–2022, nikoli k jednomu desetiletí.
-        Výpočet ze staničního souboru E-OBS a druhý statistický postup podpořily dílčí roli proudění. <SourceLink id="DOI_10_1038_s41467_023_42143_3">(Vautard a kol. 2023, výsledky a metody)</SourceLink>
+        V každém místě na pevnině vědci vybrali nejvyšší denní teplotu daného léta a tato maxima pak zprůměrovali za celou oblast. Nejteplejší den ve Francii tak mohl připadnout na jiné datum než v Německu.
+        Na jeden stupeň růstu globální teploty připadal růst těchto místních maxim o <strong>3,4 °C</strong> (95% interval 2,4 až 4,3 °C).
+        Změny proudění, zejména častější přísun vzduchu od jihu, vysvětlily podle odhadu <strong>0,8 °C</strong> na stejný stupeň globálního oteplení (95% interval 0,2 až 1,4 °C). <SourceLink id="DOI_10_1038_s41467_023_42143_3">(Vautard a kol. 2023, výsledky a metody)</SourceLink>
       </p>
       <p>
-        Přesný význam teplotního ukazatele popisuje <Link href="/pozorovani/vlny-veder/#evropska-vedra">pozorovací článek</Link>.
-        Proudění tedy nezanedbáváme. U této dlouhodobé změny je však nedostatečným samostatným vysvětlením.
-        Zbytek nelze automaticky celý připsat CO₂. Zahrnuje další vlivy a nepřesnost rozdělení.
+        Tento výpočet využil rekonstrukci počasí ERA5, která spojuje měření s modelem atmosféry. Podobný výsledek vyšel i z teplot stanic zpracovaných do souboru E-OBS a při použití druhé statistické metody.
+        <Link href="/pozorovani/vlny-veder/#evropska-vedra">Obě teplotní řady</Link> tak podporují závěr, že změny proudění vysvětlují jen část růstu letních maxim. Kolik ze zbývajícího růstu připadá na jednotlivé další vlivy, toto srovnání samo nerozliší.
       </p>
     </HypothesisStory>
 
-    <HypothesisStory id="teplejsi-klima" number={2} title="Oteplování mění podmínky, ve kterých vedra vznikají">
+    <HypothesisStory id="teplejsi-klima" number={2} title="V teplejším klimatu přináší podobné počasí silnější vedro">
       <p>
-        Souvislost mezi množstvím CO₂ a teplotou počítal už Svante Arrhenius v roce 1896. Zkoumal, zda změna pohlcování tepelného záření může vysvětlit rozdílné klimatické podmínky.
-        Jeho výpočet se týkal průměrného klimatu. Příspěvek oteplování k jednotlivému vedru je další otázka, která vyžaduje zachytit i proměnlivost počasí. <SourceLink id="1896_Arrhenius">(Arrhenius 1896)</SourceLink>
+        Už v roce 1896 počítal Svante Arrhenius, jak se změní průměrná teplota u povrchu, když se v ovzduší změní množství CO₂.
+        Jeho výpočet spojil složení atmosféry s podnebím, ve kterém se jednotlivé povětrnostní situace odehrávají. <SourceLink id="1896_Arrhenius">(Arrhenius 1896)</SourceLink>
       </p>
       <p>
-        Druhé vysvětlení zachovává proudění a doplňuje měnící se energetické podmínky. Fyzikální základ shrnuje článek o <Link href="/mechanismy/radiacni-pusobeni-sklenikovych-plynu/#mechanismus">účinku dalšího CO₂ na tepelné záření</Link>.
-        Při zvýšení množství skleníkových plynů se zpočátku zmenší odvod energie do vesmíru. Povrch a nižší atmosféra se oteplují, dokud vyšší výdej a další změny bilanci znovu nepřiblíží rovnováze.
-        Počasí se potom odehrává v jiných teplotních podmínkách. <SourceLink id="DOI_10_1017_9781009157896_009">(IPCC AR6, kapitola 7)</SourceLink>
+        Při nezměněné teplotě uniká po přidání CO₂ do vesmíru méně tepelného záření. Země tak nějakou dobu přijímá víc energie, než vydává. Povrch a dolní vrstvy atmosféry se oteplují a výdej energie postupně roste.
+        Podrobněji tento vztah vysvětluje článek o <Link href="/mechanismy/radiacni-pusobeni-sklenikovych-plynu/#mechanismus">účinku dalšího CO₂ na tepelné záření</Link>. <SourceLink id="DOI_10_1017_9781009157896_009">(IPCC AR6, kapitola 7)</SourceLink>
       </p>
       <p>
-        Pro vedra z toho plynou dva ověřitelné důsledky. Srovnatelná situace může dosáhnout vyšší teploty a více situací překročí stejnou hranici.
-        Na pevnině navíc záleží, kolik energie spotřebuje výpar. Přeměna kapalné vody na páru vyžaduje energii.
-        Když dostupná voda ubývá, menší část přijaté energie může odejít touto cestou a větší část může ohřívat povrch a vzduch.
-        Rozdělení povrchové energie popisuje <SourceLink id="DOI_10_1017_9781009157896_009">IPCC AR6, oddíl 7.2</SourceLink>.
-        Jeho roli pro evropské léto 2003 prověří první pokus.
+        V teplejším klimatu může za letní tlakové výše stačit menší dodatečný ohřev, aby teplota překročila stejnou hranici jako dřív. Na pevnině záleží také na tom, kam se poděje energie, kterou povrch přijme.
+        Část se spotřebuje na vypařování vody z půdy a rostlin. Při nedostatku vody výpar slábne a více energie může připadnout na ohřev povrchu a vzduchu nad ním. Toto rozdělení popisuje <SourceLink id="DOI_10_1017_9781009157896_009">IPCC AR6, oddíl 7.2</SourceLink>.
       </p>
-      <p>Schéma ukazuje teplotní posun a zesílení při vysychání. Následující testy oddělují půdní vodu, pravděpodobnost události a její teplotní vrchol.</p>
       <Graphic name="oteplovani-a-puda" alt="Dvě pevninské krajiny pod podobným prouděním. Ve vlhčí půdě se část energie spotřebuje na výpar. V teplejší a vyschlé krajině je výpar omezen a vzduch se může více ohřívat. Rozdíl je kvalitativní, nejde o naměřené energetické toky."
         tests={[
           { title: "Test 1 · Voda v půdě", prediction: "Vlhčí půda zeslabí vedro za podobného proudění.", test: "V regionálním modelu roku 2003 změníme počáteční zásobu vody.", result: "Menší teplotní odchylka ve vlhčí variantě." },
@@ -154,64 +142,61 @@ export function HeatWaveMechanismsArticle() {
 
       <h4 id="pokus-s-pudou" className={styles.testHeading}>Test 1 · Voda v půdě</h4>
       <p>
-        Pokud vysychání zesiluje vedro omezením výparu, doplnění vody má při podobném proudění teplotu snížit.
-        Erich Fischer, Sonia Seneviratne a spoluautoři tuto předpověď prověřili v roce 2007 regionálním modelem evropského léta 2003.
-        Na okrajích oblasti zadali stejné atmosférické podmínky a změnili jarní půdní vlhkost. Oddělili tak její účinek od pouhého souběhu sucha a tepla. <SourceLink id="DOI_10_1175_JCLI4288_1">(Fischer a kol. 2007)</SourceLink>
+        Sucho a horko často přicházejí společně. Jak zjistit, zda vyschlá půda vedro také zesiluje?
+        Fischerův tým v modelu několikrát zopakoval evropské léto 2003. Na okrajích sledované oblasti pokaždé zadal stejný průběh počasí, na jaře však půdu v jednotlivých pokusech různě nasytil vodou.
+        Pokud výpar krajinu ochlazuje, mělo by při stejném přísunu vzduchu nad vlhčí půdou vyjít chladnější léto. <SourceLink id="DOI_10_1175_JCLI4288_1">(Fischer a kol. 2007)</SourceLink>
       </p>
       <p>
-        Bez neobvyklého půdního vyschnutí vyšla letní teplotní odchylka v některých oblastech přibližně o 40 % menší.
-        Jde o modelový podíl na odchylce vůči letům 1970–2000, nikoli o 40 % teploty ve stupních Celsia nebo o univerzální podíl sucha na každé vlně.
-        Výsledek podpořil zpětnou vazbu mezi vodou a ohřevem, sám však neurčuje příčinu dlouhodobého globálního oteplování. <SourceLink id="DOI_10_1175_JCLI4288_1">(Fischer a kol. 2007, oddíly 4–6)</SourceLink>
+        Bez mimořádného vyschnutí půdy vyšla v některých částech Evropy teplotní odchylka asi <strong>o 40 % menší</strong>. Autoři počítali, o kolik průměrná teplota od června do srpna 2003 převýšila letní průměr modelu za roky 1970–2000.
+        Těch 40 % se tedy vztahuje k velikosti odchylky za jedno léto v částech Evropy zasažených suchem. <SourceLink id="DOI_10_1175_JCLI4288_1">(Fischer a kol. 2007, oddíly 4–6)</SourceLink>
       </p>
 
       <h4 id="pravdepodobnost" className={styles.testHeading}>Test 2 · Pravděpodobnost</h4>
       <p>
-        Proč se po ruském vedru 2010 lišily závěry o roli oteplování? Friederike Otto a spoluautoři v roce 2012 ukázali, že velikost teplotní odchylky a změna četnosti jsou různé otázky.
-        Jejich předpověď byla jednoduchá: posun teplot má zmenšit vzdálenost mezi běžným stavem a pevnou hranicí extrému, i když sám tvoří menší část mimořádné teploty. <SourceLink id="DOI_10_1029_2011GL050422">(Otto a kol. 2012)</SourceLink>
+        Jak se v západním Rusku změnila šance na tak horký měsíc, jaký oblast zažila v červenci 2010?
+        Friederike Otto a její kolegové porovnali pro stejnou oblast mnoho simulovaných červenců ze dvou období.
+        Aby model lépe zachytil podmínky dlouhého blokování, zkombinovali červencovou teplotu s údajem o proudění ve výšce a opravili soustavné odchylky modelu vůči pozorování. <SourceLink id="DOI_10_1029_2011GL050422">(Otto a kol. 2012)</SourceLink>
       </p>
       <p>
-        Autoři porovnali soubory atmosférických simulací pro šedesátá léta a první desetiletí 21. století. Pro oblast 50–60° severní šířky a 35–55° východní délky
-        použili červencový ukazatel kombinující teplotu a tlakovou situaci. Po opravě modelových odchylek odpovídal rozdíl přibližně 1 °C pro událost stejné vzácnosti,
-        zatímco četnost překročení hranice roku 2010 vzrostla asi trojnásobně. Sami výsledek označili za ilustrační, závislý na této opravě. <SourceLink id="DOI_10_1029_2011GL050422">(Otto a kol. 2012, obrázek 4)</SourceLink>
+        Na úroveň července 2010 dosáhl tento ukazatel za podmínek šedesátých let v průměru asi jednou za 99 let. Za podmínek prvního desetiletí 21. století už asi jednou za 33 let.
+        Odhadovaná šance v daném roce tedy vzrostla zhruba <strong>na trojnásobek</strong>. Autoři pak porovnali stejně vzácné července, které se v každém období vyskytovaly v průměru jednou za 33 let.
+        Rozdíl odpovídal přibližně <strong>1 °C</strong>. Oba odhady závisejí na použité opravě modelu. <SourceLink id="DOI_10_1029_2011GL050422">(Otto a kol. 2012, obrázek 4)</SourceLink>
       </p>
       <p>
-        Nebyl to definitivní přesný podíl lidského vlivu. Pokus vysvětlil, proč dominantní role počasí v teplotní odchylce nevylučuje významnou změnu pravděpodobnosti.
-        V tom se oba pohledy doplňují. Jeden samotný neodpovídá na obě otázky.
+        Tím se vysvětluje zdánlivý rozpor ve výsledcích obou týmů. Dlouhé blokování vysvětlovalo velkou část teplotní odchylky v červenci 2010.
+        I poměrně malé oteplení přitom stačilo, aby podobně horké měsíce v simulacích přibývaly.
       </p>
 
       <h4 id="predpoved-2021" className={styles.testHeading}>Test 3 · Předpovězené vedro</h4>
       <p>
-        Další zkouška využila model, který severoamerické vedro v červnu 2021 úspěšně předpověděl. Nicholas Leach a spoluautoři v roce 2024 zopakovali předpovědi Evropského centra pro střednědobé předpovědi počasí, ECMWF,
-        s nižším CO₂ a s odhadem lidského oteplení odebraným z oceánu, včetně úpravy mořského ledu. Atmosféru nechali přizpůsobit.
-        Jestliže teplejší klimatické podmínky zesílily událost, chladnější pokus má dát nižší vrchol. <SourceLink id="DOI_10_1038_s41467_024_48280_7">(Leach a kol. 2024)</SourceLink>
+        V červnu 2021 předpověděl model Evropského centra pro střednědobé předpovědi počasí silné vedro na západě Kanady a severozápadě USA.
+        Leachův tým pak předpověď zopakoval. Snížil koncentraci CO₂ a upravil teplotu hladiny oceánu i rozsah mořského ledu podle odhadu předindustriálních podmínek. Atmosféru nechal těmto změnám přizpůsobit.
+        Pokud oteplování přispělo k síle vedra, měl být jeho vrchol v upravené předpovědi nižší. <SourceLink id="DOI_10_1038_s41467_024_48280_7">(Leach a kol. 2024)</SourceLink>
       </p>
       <p>
-        Souhrnný odhad příspěvku lidského oteplení vůči předindustriálním podmínkám činil <strong>1,3 °C s rozmezím 0,7–1,6 °C</strong> pro regionální denní maximum.
-        Meze vymezují prostředních 66 % rozdělení odhadu, jeho 17.–83. percentil. Jde tedy o užší interval než dříve uvedené 95% intervaly.
-        Vymezení oblasti a pozorovaný vrchol obsahuje <Link href="/pozorovani/vlny-veder/#severni-amerika-2021">pozorovací článek</Link>.
-        Shoda běžné předpovědi se skutečností kontroluje schopnost modelu vytvořit událost. Chladnější svět přímo pozorovat nemůžeme, takže vyčíslení příspěvku zůstává modelovým výsledkem. <SourceLink id="DOI_10_1038_s41467_024_48280_7">(Leach a kol. 2024)</SourceLink>
+        Autoři pro každý den zprůměrovali nejvyšší teploty za celou sledovanou oblast. Porovnávali <Link href="/pozorovani/vlny-veder/#severni-amerika-2021">vrchol takto získané řady</Link>.
+        Z pokusů zahájených s různým předstihem odhadli, že lidské oteplování zvýšilo vrchol události o <strong>1,3 °C</strong>. Prostřední dvě třetiny rozdělení tohoto odhadu leží mezi 0,7 a 1,6 °C (17. až 83. percentil). <SourceLink id="DOI_10_1038_s41467_024_48280_7">(Leach a kol. 2024)</SourceLink>
       </p>
       <p>
-        Tato hypotéza tak obstála ve třech rozdílných zkouškách. Zásah do půdní vody ověřuje zesílení u povrchu, soubory simulací vztah teploty a četnosti a předpovědní pokus vliv klimatických podmínek na konkrétní událost.
-        Nejde o tři nezávislá měření téhož čísla. Je to souběh důkazů pro jednotlivé části společného vysvětlení.
+        Původní předpověď lze porovnat s naměřenými teplotami. Její shoda s průběhem veder ukazuje, že model dokázal tuto konkrétní událost zachytit.
+        O kolik by za předindustriálních podmínek zeslábla, už můžeme posoudit jen pomocí výpočtu.
       </p>
     </HypothesisStory>
 
-    <h2 id="mechanismus">Jak oteplování, proudění a půdní voda působí společně</h2>
+    <h2 id="mechanismus">Jak se za stejné situace může vedro protáhnout a zesílit</h2>
     <p>
-      Samotné proudění dobře vysvětluje vznik mimořádné situace, ale v testovaném evropském záznamu nestačí na celý růst extrémních teplot.
-      Lépe obstojí vysvětlení, v němž se počasí odehrává v teplejším klimatu a nedostatek půdní vody může ohřev dále zesílit.
-      Nyní spojíme tyto děje a ukážeme, proč posun teploty mění také počet a délku překročení pevné hranice.
+      Stálá tlaková výše pomohla udržet vedro nad západním Ruskem. Za dlouhodobým růstem maxim v západní Evropě však změny proudění stály jen zčásti.
+      Pokusy s evropským suchem a se severoamerickou předpovědí ukazují dvě další příčiny. Při podobném proudění může teplota vystoupit výš, když je teplejší už přicházející vzduch nebo když nad vyschlou půdou zeslábne ochlazování výparem.
+      Stačí posunout teplotu o několik stupňů a změní se i to, kolik dnů v řadě překročí stejnou hranici.
     </p>
-    <h3 id="teplotni-posun">Vyšší teplota mění i délku překročení</h3>
+    <h3 id="teplotni-posun">Jak se ze tří horkých dnů stane šest</h3>
     <p>
-      Vlna veder je souvislá řada dnů splňujících zvolené teplotní pravidlo. Její délka proto nezávisí jen na délce tlakové situace, ale také na vzdálenosti teplot od hranice.
-      Vyšší výchozí teplota může přidat horké dny na začátku a na konci téže epizody.
-      Přesný postup určení hranice vysvětluje <Link href="/pozorovani/vlny-veder/#hranice-a-trvani">pozorování vln veder</Link>.
+      Na začátku i na konci horkého období bývají dny, kdy se teplota k hranici veder jen přiblíží. Právě ty mohou v teplejším klimatu rozhodnout o délce celé vlny.
+      Aby šlo srovnávat různá desetiletí, používají vědci pro dané místo a část roku <Link href="/pozorovani/vlny-veder/#hranice-a-trvani">hranici odvozenou ze stejného historického období</Link>.
     </p>
     <p>
-      Následující vlastní početní příklad používá devět vymyšlených denních maxim. Zvolíme hranici <strong>striktně nad 30 °C</strong> a nejméně tři dny po sobě.
-      Pak ke každému dni přičteme přesně 2 °C. Tvar a časový průběh epizody ponecháme stejný. Je to záměrně jednoduchý pokus s pravidlem, nikoli měření ani klimatická projekce.
+      Vezměme devět vymyšlených denních maxim. Pro snazší počítání zvolme jako vlnu veder alespoň tři dny po sobě s maximem <strong>striktně nad 30 °C</strong>.
+      Ve druhém řádku tabulky přidáme každému dni 2 °C. Pořadí dnů i rozdíly mezi nimi zůstanou stejné.
     </p>
     <div className={styles.exampleTable} tabIndex={0} role="region" aria-label="Ilustrační denní maxima, tabulka posuvná do stran">
       <table>
@@ -221,73 +206,62 @@ export function HeatWaveMechanismsArticle() {
       </table>
     </div>
     <p>
-      Ve výchozí řadě podmínku splňují dny 4–6, tedy tři dny. Po posunu ji splňují dny 2–7, tedy šest dnů.
-      Hodnota přesně 30 °C se nezapočítá. Délka se v tomto příkladu zdvojnásobila, přestože jsme nezměnili pořadí ani rozdíly mezi jednotlivými dny.
-      <a href={`${media}/ilustracni-rada.csv`}>Vstupní a posunutou řadu lze stáhnout</a>.
+      V první řadě překročí hranici jen čtvrtý až šestý den. Po oteplení ji překročí už druhý až sedmý den. <strong>V obou řadách je jedna vlna.</strong> Její délka vzrostla ze tří dnů na šest a vrchol z 33 na 35 °C.
+      Všechny hodnoty obsahuje <a href={`${media}/ilustracni-rada.csv`}>tabulka ke stažení</a>.
     </p>
     <p>
-      Příklad ukazuje možnost prodloužení, neurčuje skutečný násobek změny četnosti. Ten závisí na tom, kolik dnů leží blízko hranice a jak na sebe navazují.
-      Při hranici posouvané spolu s novým teplotním průměrem by se měnila i otázka, kterou počítáme.
-      Pro srovnání historických veder vůči dřívějším podmínkám je proto podstatné zachovat stejnou referenci.
+      Sílu téže vlny můžeme vyjádřit i součtem denních překročení. Den s maximem 32 °C přispěje dvěma stupni nad hranicí. V první řadě se tak sečtou 2 + 3 + 1, tedy šest stupňodnů. Ve druhé jich napočítáme šestnáct.
+      Skutečná změna závisí na tom, kolik dnů se teplotou blížilo k hranici a jak šly za sebou. Den, který se oteplí z 28 na přesně 30 °C, do vlny podle zvoleného pravidla přesto nevstoupí.
     </p>
 
-    <h3 id="energie-a-voda">Kam odchází energie nad pevninou</h3>
+    <h3 id="energie-a-voda">Proč sucho zesiluje horko a teplo může přetrvat přes noc</h3>
     <p>
-      Dokud má povrch dost vody, může teplé a suché počasí zesílit výpar. Ten však zároveň čerpá její zásobu.
-      Pokud ji déšť nedoplňuje, začne nedostatek vody výpar omezovat. Oslabení této chladicí cesty potom umožní větší ohřev.
-      Tak vzniká zesilující zpětná vazba: horká epizoda přispívá k vysychání a vysychání může zesílit horko. <SourceLink id="DOI_10_1017_9781009157896_013">(IPCC AR6, box 11.1)</SourceLink>
+      Za slunného dne se z vlhké půdy a z listů vypařuje voda. Přeměna kapalné vody na páru spotřebuje energii a povrch se tolik neohřeje.
+      Teplé, suché počasí výpar zprvu urychluje. Jakmile zásoba vody v půdě klesne natolik, že se výpar omezí, toto ochlazování slábne. Horko tak přispívá k vysychání a vysychání může další horko zesílit. <SourceLink id="DOI_10_1017_9781009157896_013">(IPCC AR6, box 11.1)</SourceLink>
     </p>
     <p>
-      Sluneční záření ohřívá zemský povrch. Energie se potom rozděluje mezi vyzařování, ohřev půdy, výpar a předávání tepla vzduchu.
-      Suchá půda nevytváří novou energii. Omezuje jednu z cest jejího odvodu. Rozdíl mezi vlhkou a suchou krajinou proto nejde vyjádřit jen množstvím dopadajícího slunečního záření.
-      Výsledek pokusu s půdou ukazuje význam tohoto rozdělení. <SourceLink id="DOI_10_1017_9781009157896_009">(IPCC AR6, oddíl 7.2)</SourceLink>
+      Za podobného slunečního svitu se proto mohou dvě pole ohřát rozdílně. Z povrchu energie odchází vyzařováním, část se předává půdě a vzduchu a část spotřebuje výpar.
+      Nad vyschlým polem může na ohřev vzduchu připadnout větší díl. Právě tento rozdíl pomohl vysvětlit výsledek pokusu s vlhkostí půdy v létě 2003. <SourceLink id="DOI_10_1017_9781009157896_009">(IPCC AR6, oddíl 7.2)</SourceLink>
     </p>
     <p>
-      Vedro může mít také paměť přes noc. Diego Miralles a spoluautoři v roce 2014 spojili družicové údaje, radiosondáže a model sloupce půdy a atmosféry pro Francii 2003 a Rusko 2010.
-      Nad povrchem ochlazeným v noci zůstávala teplá vrstva vzduchu. Další den se rostoucí promíchaná vrstva znovu spojila s teplým vzduchem nad ní.
-      Část tepla z předchozího dne tak vstoupila do dalšího denního vývoje. <SourceLink id="DOI_10_1038_ngeo2141">(Miralles a kol. 2014)</SourceLink>
+      Co se s teplem stane po západu slunce? Mirallesův tým spojil při rozboru francouzských veder z roku 2003 a ruských z roku 2010 měření z družic, údaje z meteorologických balónů a model půdy a vzduchu nad ní.
+      Povrch se v noci ochlazoval, ve výšce však zůstala vrstva teplého vzduchu z předchozího dne. <SourceLink id="DOI_10_1038_ngeo2141">(Miralles a kol. 2014)</SourceLink>
     </p>
     <p>
-      <Link href="/pozorovani/vlny-veder/#teplota-ve-vysce">Výšková měření</Link> zde přidávají kontrolu, kterou samotný povrchový teploměr neposkytne.
-      Mechanismus spojuje přísun vzduchu, povrchový ohřev a promíchávání ve výšce. Vyschlá půda i teplá vrstva mohou přetrvávat, takže jednotlivé dny nejsou nezávislé pokusy.
-      Změna proudění nebo déšť může toto pokračování přerušit. <SourceLink id="DOI_10_1038_ngeo2141">(Miralles a kol. 2014)</SourceLink>
+      Druhý den slunce půdu znovu ohřálo. Od ní se ohříval i vzduch, stoupal a promíchával se se vzduchem nad sebou. Když promíchávání dosáhlo až k teplé vrstvě, část včerejšího tepla se dostala zpět k povrchu.
+      <Link href="/pozorovani/vlny-veder/#teplota-ve-vysce">Měření teploty v různých výškách</Link> ukazují, kde teplo přes noc přetrvalo. Za stálého počasí se celý děj může opakovat několik dní. <SourceLink id="DOI_10_1038_ngeo2141">(Miralles a kol. 2014)</SourceLink>
     </p>
 
-    <h3 id="co-je-dolozeno">Co vysvětlení pokrývá</h3>
+    <h3 id="co-je-dolozeno">Co platí celosvětově a co závisí na místě</h3>
     <p>
-      Souhrn výzkumu v IPCC AR6 přisuzuje lidskému vlivu hlavní úlohu v celosvětovém růstu četnosti a intenzity horkých extrémů s hodnocením „extrémně pravděpodobné“, tedy více než 95 %.
-      Základem je oteplování způsobené zejména skleníkovými plyny. Regionální vývoj upravují proudění, půdní voda, změny aerosolů a využití půdy.
-      Tato syntéza shrnuje více oblastí a studií než zde podrobně rozebrané události. <SourceLink id="DOI_10_1017_9781009157896_013">(IPCC AR6, oddíl 11.3.4)</SourceLink>
+      Podle hodnocení IPCC je extrémně pravděpodobné, že lidský vliv je hlavní příčinou celosvětového růstu četnosti a intenzity horkých extrémů na souši od poloviny 20. století.
+      Označení „extrémně pravděpodobné“ vyjadřuje pravděpodobnost tohoto závěru v rozmezí 95 až 100 %. Vychází z dlouhodobých měření, porovnání modelů i znalosti toho, jak skleníkové plyny ovlivňují teplotu. <SourceLink id="DOI_10_1017_9781009157896_013">(IPCC AR6, oddíl 11.3.4)</SourceLink>
     </p>
     <p>
-      Nejjistější je směr základního teplotního posunu. Méně jisté jsou přesné podíly při jednotlivé události a budoucí regionální změny proudění.
-      Různé definice vlny také dávají různé změny četnosti a síly. Příspěvek 1,3 °C k jedné události proto nelze přenést na všechna budoucí vedra.
+      Pro konkrétní oblast záleží také na směru větru, vodě v půdě, množství drobných částic v ovzduší a způsobu využívání krajiny.
+      Zejména v západní Evropě zůstává otevřené, nakolik se bude dosavadní vliv změn proudění opakovat v dalších desetiletích.
     </p>
     <details className="method-details">
       <summary>Meze testů a co by vysvětlení změnilo</summary>
       <p>
-        Srovnání podobných tlakových map neudrží stejné úplně všechny podmínky. Půdní voda i teplota přicházejícího vzduchu se mohou lišit.
-        U evropských extrémů navíc klimatické modely podhodnotily odhadovaný příspěvek změn proudění.
-        Nevíme přesně, kolik z rozdílu připadá na vynucenou změnu a kolik na pomalé přirozené kolísání. <SourceLink id="DOI_10_1038_s41467_023_42143_3">(Vautard a kol. 2023)</SourceLink>
+        Západoevropský výpočet pokrývá pevninu od 45 do 55° severní šířky a od 5° západní do 15° východní délky. Při podobném proudění se mohou dvě léta lišit vlhkostí půdy i teplotou vzduchu, který vítr přináší. ERA5 a E-OBS používají odlišné způsoby zpracování, část měření však sdílejí.
+        V klimatických simulacích vyšel pro západní Evropu slabší vliv změn proudění než v rekonstrukci podle pozorování. Modely mohou podceňovat reakci proudění na vnější vlivy včetně skleníkových plynů, přirozené výkyvy v délce desetiletí nebo obojí. <SourceLink id="DOI_10_1038_s41467_023_42143_3">(Vautard a kol. 2023)</SourceLink>
       </p>
       <p>
-        Vysychání má největší možnost změnit ohřev tam, kde se výpar právě začíná omezovat nedostatkem vody.
-        V již téměř suché půdě nemůže stejným způsobem ubývat neomezené množství výparu.
-        Tento mechanismus také sám nepopisuje vlhké vedro ani zdravotní zátěž, pro kterou záleží na vlhkosti vzduchu a nočních teplotách. <SourceLink id="DOI_10_1017_9781009157896_013">(IPCC AR6, box 11.1 a oddíl 11.3)</SourceLink>
+        Další vysychání horko nejsnáze zesílí tam, kde dosud zbývalo dost vody pro výpar. V půdě, z níž se už téměř žádná voda nevypařuje, má další úbytek vody na ochlazování malý vliv.
+        Pro posouzení zátěže, kterou vedro působí člověku, záleží vedle denních maxim také na vlhkosti vzduchu a na tom, jak chladné jsou noci. <SourceLink id="DOI_10_1017_9781009157896_013">(IPCC AR6, box 11.1 a oddíl 11.3)</SourceLink>
       </p>
       <p>
-        Současné vysvětlení by oslabila opakovaná zjištění, že při srovnatelném proudění, půdní vodě a stejné definici extrému nevzniká očekávaný teplotní posun, přestože se okolní klima prokazatelně oteplilo.
-        Půdní zesílení by vyžadovalo opravu, kdyby současná měření výparu a toku tepla při vysychání systematicky neukazovala předpovězené přerozdělení energie.
-        Jediná chladnější epizoda takový test nepředstavuje. Rozhodovala by opakovaná neshoda přesahující nejistotu měření a výpočtu.
+        Odhad vlivu oteplování na místní vedra by bylo třeba snížit, kdyby opakovaná měření ukázala, že při srovnatelném proudění a vlhkosti půdy zůstávají maxima dlouhodobě stejná i po prokazatelném oteplení okolí.
+        Vliv vysychání lze zkoušet souběžným měřením výparu a tepla předávaného vzduchu. Kdyby při ubývání půdní vody opakovaně chyběl očekávaný pokles výparu i zesílený ohřev a rozdíl přesahoval nejistotu měření, museli bychom přehodnotit připisovanou úlohu sucha.
       </p>
     </details>
 
     <h2 id="shrnuti">Shrnutí fungování mechanismu</h2>
     <div className="method-conclusion"><p>
-      Vlnu veder vytváří konkrétní průběh počasí. Dlouhodobé oteplování však zvyšuje teplotu, ze které tento průběh vychází, a tím usnadňuje překračování stejných vysokých hranic.
-      Na pevnině může vedro dále zesílit nedostatek vody pro výpar. Samotné změny proudění nevysvětlují celý pozorovaný růst extrémních teplot.
-      Společné vysvětlení podporují porovnání podobných povětrnostních situací, pokusy s půdní vodou i předpovědní model ověřený na skutečné události.
-      Přesný příspěvek jednotlivých dějů závisí na místě, období a definici vlny.
+      V teplejším klimatu stačí menší výkyv počasí, aby teplota několik dní po sobě překračovala stejnou vysokou hranici. Vedro tak může začít dřív, později skončit a dosáhnout vyššího maxima.
+      Proudění určuje, kam se teplý vzduch dostane a jak dlouho tam vydrží. Na pevnině může vedro dále zesílit vysychání půdy, protože ubývá vody, jejíž výpar krajinu ochlazuje.
+      Tento výklad podporují srovnání dnů s podobným prouděním i pokusy, v nichž vědci změnili vlhkost půdy nebo zopakovali předpověď skutečného vedra v chladnějším klimatu. Velikost těchto vlivů se místo od místa liší.
     </p></div>
 
     <h2 id="prameny">Prameny, data a vlastní podklady</h2>

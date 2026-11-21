@@ -279,11 +279,11 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "mechanismy-vln-veder",
     title: "Proč jsou vlny veder častější a silnější?",
     category: "Živá příroda a extrémy",
-    cardSummary: "Jak se při vzniku veder spojují oteplování, proudění vzduchu a půdní voda a čím jejich příspěvky ověřujeme.",
+    cardSummary: "Proč při podobném počasí přibývá dnů nad hranicí veder a jak vyschlá půda ovlivňuje nejvyšší teplotu.",
     observations: [
       { href: "/pozorovani/vlny-veder/#pozorovani", label: "Dlouhodobé změny vln veder" },
     ],
-    summary: "Co vysvětlí samotné proudění a co přidává oteplování a vysychání půdy? Dvě hypotézy, historie jejich zkoumání a testy na evropských, ruských a severoamerických vedrech.",
+    summary: "Letní tlaková výše může nad krajinou setrvat několik dní. V teplejším klimatu za stejné situace teplota snáze překročí hranici veder. O tom, jak vysoko vystoupí, rozhoduje i voda v půdě. Její výpar krajinu ochlazuje.",
     distinguishingEvidence: "Porovnání dnů s podobným prouděním, pokusy s půdní vodou a opakování úspěšné předpovědi v chladnějším klimatu rozlišují vznik jedné události od dlouhodobé změny teploty a pravděpodobnosti.",
   },
 ];
