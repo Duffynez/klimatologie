@@ -203,7 +203,7 @@ export const climateMechanisms: ClimateMechanism[] = [
       { href: "/pozorovani/snehova-pokryvka-a-permafrost/#odrazivost-snehu-a-ledu", label: "Změny pokrývky a přepočet sluneční bilance" },
       { href: "/pozorovani/ubytek-arktickeho-ledu/#odrazivost-arktidy", label: "Měřená odrazivost arktického oceánu" },
     ],
-    summary: "Od laboratorního měření sněhu přes družicový odraz až k pokusu s oteplováním. Jak ověřujeme, zda ústup světlé pokrývky zesiluje příjem energie, ohřev a další tání.",
+    summary: "Po ústupu sněhu nebo ledu dopadá sluneční světlo na tmavší půdu či vodu. V létě může takto odkrytá plocha pohltit dost energie pro další tání. Za polární noci stejný úbytek ledu žádnou sluneční energii navíc nepřinese.",
     distinguishingEvidence: "Současná měření sněhu a ledu, odrazivosti a pohlceného záření. Porovnání období s rozdílným slunečním osvitem a zohlednění oblačnosti ověřují velikost i sezónní průběh této zpětné vazby.",
   },
   {

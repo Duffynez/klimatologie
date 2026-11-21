@@ -8,57 +8,73 @@ import styles from "./AlbedoFeedbackArticle.module.css";
 
 const media = "/media/albedo-snehu-a-ledu";
 const hypotheses: readonly MechanismHypothesis[] = [{
-  id: "svetly-povrch", name: "Ústup a tmavnutí sněhu a ledu zesilují ohřev",
-  prediction: "Při stejném dopadajícím záření a stejném stavu atmosféry má úbytek světlé pokrývky zvýšit příjem sluneční energie. Účinek má slábnout s osvitem.",
-  test: "Změříme odraz sněhu v laboratoři a terénu, porovnáme změny ledu s družicovým zářením a sledujeme sníh i teplotu při pokusu s oteplováním.",
-  observation: "Struktura sněhu odpovídá změnám odrazu. S ústupem arktického ledu klesl odraz do vesmíru. Místní teplotní účinek úbytku sněhu roste s osvitem.",
+  id: "svetly-povrch", name: "Úbytek a tmavnutí sněhu a ledu zesilují ohřev",
+  prediction: "Při stejném osvitu pohltí tmavší povrch více energie. Rozdíl mezi zasněženou a odkrytou plochou má narůstat s množstvím dopadajícího záření.",
+  test: "Vědci měří odraz sněhu při změně velikosti zrn a při tání. Na družicových mapách porovnávají ústup ledu s odrazem do vesmíru. Na pokusných plochách sledují osvit, sníh a teplotu.",
+  observation: "Tající sníh odrážel méně světla. S ústupem arktického ledu se méně záření vracelo i do vesmíru. Na rašeliništi se úbytek sněhu projevil na denní teplotě více za slunných dnů.",
   verdict: "Podpořená zesilující zpětná vazba",
-  explanation: "Shodují se různé typy měření i fyzikální výpočet. Velikost účinku závisí na oblačnosti, roční době a povrchu pod sněhem nebo ledem.",
+  explanation: "Po počátečním oteplení může tmavší povrch pohltit dost energie pro další ohřev či tání. Velikost účinku závisí na osvitu, oblačnosti a povrchu, který se odkryje.",
   state: "supported",
 }];
 const tests = [
-  { title: "1. Struktura sněhu v laboratoři", prediction: "Jemnější zrna s větší plochou povrchu mají v měřeném pásmu více odrážet.", test: "Odraz při dvou vlnových délkách porovnáme s nezávisle změřenou plochou zrn.", result: "Odraz umožňuje určit plochu zrn. Velmi řídký sníh vyžaduje jinou kalibraci." },
-  { title: "2. Záření nad atmosférou", prediction: "Ústup světlé pokrývky má snížit odražené záření i po průchodu atmosférou.", test: "Radiační výpočet z map sněhu a ledu a samostatné měření záření družicemi.", result: "Oba postupy ukazují větší příjem energie. Neudávají přesně stejnou velikost změny." },
-  { title: "3. Tající sníh v terénu", prediction: "Z naměřené struktury sněhu má jít vypočítat jeho odraz.", test: "Porovnáme výpočet z vrstev a zrn s optickým měřením na mořském ledu.", result: "Výpočet vystihuje většinu změn. Záleží také na nečistotách pohlcujících světlo." },
-  { title: "4. Pokus s oteplováním", prediction: "Pokud sníh ovlivňuje ohřev, teplotní rozdíl má záviset na rozdílu pokrytí i na osvitu.", test: "Pokus v Minnesotě a rozbor teploty na nevyhřívaných kontrolních plochách.", result: "Méně sněhu souviselo se silnějším denním oteplením. Odhad je místní a závisí na oddělení vlivu komor." },
+  { title: "1. Odraz sněhových zrn", prediction: "Sníh s jemnějšími zrny má odrážet více blízkého infračerveného světla.", test: "Odraz při dvou vlnových délkách porovnáme s povrchem zrn připadajícím na kilogram sněhu.", result: "Podle odrazu se dala plocha zrn odhadnout. Velmi řídký čerstvý sníh vyžadoval jinou kalibraci." },
+  { title: "2. Tající sníh na mořském ledu", prediction: "I na dosud zasněžené kře se odraz při tání změní.", test: "Odraz vypočtený z vlastností sněhových vrstev porovnáme s množstvím světla, které se nad sněhem skutečně naměřilo.", result: "Výpočet vystihl pokles odrazu při tání i jeho růst po sněžení. Ve viditelném světle záleželo také na nečistotách." },
+  { title: "3. Odraz do vesmíru", prediction: "Ústup světlé pokrývky má být patrný také na množství záření, které se vrací do vesmíru.", test: "Výpočet z map sněhu a ledu zahrnuje i oblaka. Nad arktickým oceánem lze odraz měřit družicemi.", result: "Oba postupy ukázaly větší příjem sluneční energie. Výše odhadu se mění s oblastí, obdobím a popisem oblaků." },
+  { title: "4. Sníh a denní teplota", prediction: "Oteplení zmenší zasněženou plochu. Kde sníh chybí, půda pohltí víc světla a za slunečného dne se může více ohřát i vzduch.", test: "Vědci srovnali sníh při různém vyhřívání. Zpětný vliv sněhu na teplotu hledali na plochách bez vytápění.", result: "Oteplení o 2,25 °C zhruba rozpůlilo podíl zasněžené plochy. Na nevyhřívaných plochách přispívalo méně sněhu k vyšší denní teplotě hlavně za silného osvitu." },
 ];
 
 export function AlbedoFeedbackArticle() {
   return <article className="article-layout"><div className="article-prose">
-    <h2 id="co-vysvetlujeme">Když se mění sníh, led i odražené světlo</h2>
+    <h2 id="co-vysvetlujeme">Proč se z arktického oceánu vrací méně světla do vesmíru?</h2>
     <p className="article-prose__intro">
-      Družice nad oceánem severně od 60° severní šířky zachytily v letech 2000–2011 ústup ledu a pokles slunečního záření vraceného do vesmíru.
-      Odhad příjmu energie tím v průměru nad touto oblastí vzrostl o 4,2 wattu na metr čtvereční, zkráceně W/m².
-      Jde o rychlost příjmu energie na jednotku plochy, nikoli o změnu teploty.
-      <Link href="/pozorovani/ubytek-arktickeho-ledu/#odrazivost-arktidy"> Pozorování odrazivosti Arktidy</Link> vysvětluje měření i delší rekonstrukci.
-      Co tento vztah způsobuje a jak se může promítnout do dalšího tání?
-      <SourceLink id="DOI_10_1073_pnas_1318201111"> (Pistone a kol. 2014)</SourceLink>
+      V letech 2000–2011 ubývalo v arktickém oceánu mořského ledu. Družice zároveň zaznamenaly, že se z této oblasti vrací do vesmíru méně slunečního záření.
+      Z rozdílu mezi dopadajícím a odraženým zářením vyšlo, že oceán a atmosféra nad ním dohromady pohlcovaly více sluneční energie.
+      Pro <Link href="/pozorovani/ubytek-arktickeho-ledu/#odrazivost-arktidy">oceán severně od 60° severní šířky</Link> činil nárůst v průměru 4,2 wattu na metr čtvereční (W/m²). Jeden watt odpovídá jednomu joulu energie za sekundu.
+      <SourceLink id="DOI_10_1073_pnas_1318201111"> (Pistone a kol. 2014, obr. 1 a 4)</SourceLink>
     </p>
     <p>
-      <strong>Albedo neboli odrazivost</strong> je podíl dopadajícího slunečního záření, který se odrazí.
-      Hodnota 0,8 znamená 80 %. U povrchu měříme odraz sněhu, ledu, vody či půdy.
-      Družice nad atmosférou vidí navíc vliv oblaků a vzduchu, a měří tedy jinou veličinu, <strong>planetární albedo</strong>.
-      Článek sleduje, zda změna povrchu zesiluje příjem energie a ohřev. Číselné zkoušky pocházejí ze severní polokoule.
-      Postup měření popisuje <Link href="/metody/mereni-radiacnich-toku/">metoda měření radiačních toků</Link>.
+      Podíl slunečního záření, který se odrazí, se nazývá <strong>albedo</strong>. Sníh s albedem 0,8 odráží 80 % záření, které na něj dopadá.
+      Při <Link href="/metody/mereni-radiacnich-toku/">měření nad sněhem</Link> můžeme zjistit odrazivost samotného povrchu. Družice zachytí navíc světlo odražené oblaky a rozptýlené vzduchem.
+      Podílu dopadajícího záření, který se vrátí až do vesmíru, říkáme <strong>planetární albedo</strong>. Jak velkou část záření tedy po ústupu sněhu a ledu pohltí Země navíc?
     </p>
 
     <h2 id="hypotezy">Jedna hypotéza a její předpovědi</h2>
     <HypothesisDiagram hypotheses={hypotheses} captionId="albedo-hypotheses-caption"
-      context={<p>Srovnávací variantou je povrch, jehož odrazivost se nezmění, při stejném osvitu a stavu atmosféry. Je to výpočetní kontrola, pomocí které oddělujeme účinek sněhu a ledu od ostatních změn.</p>}
-      caption={<>Hypotéza musí obstát při měření odrazu, při bilanci záření nad atmosférou i při zkoumání následného ohřevu. Samotná fotografie ubývajícího ledu celý řetězec neověřuje.</>} />
+      context={<p>Porovnejme tutéž plochu před ústupem sněhu nebo ledu a po něm. Kdyby se zároveň rozplynuly oblaky, na povrch by začalo dopadat více světla. Abychom zjistili účinek samotné pokrývky, ponecháme ve výpočtu stejné sluneční záření i stejnou atmosféru.</p>}
+      caption={<>Z dopadajícího a odraženého záření lze určit, kolik energie povrch pohltí. K ověření zpětné vazby potřebujeme také zjistit, zda tato energie podpoří další tání nebo ohřev.</>} />
 
-    <h2 id="pribehy">Jak se vysvětlení ověřovalo</h2>
-    <HypothesisStory id="svetly-povrch" number={1} title="Ústup a tmavnutí sněhu a ledu zesilují ohřev">
+    <h2 id="pribehy">Proč tmavší povrch může urychlit další tání</h2>
+    <HypothesisStory id="svetly-povrch" number={1} title="Úbytek a tmavnutí sněhu a ledu zesilují ohřev">
       <p>
-        Michail Budyko v roce 1969 zkoumal, jak by změny slunečního záření mohly souviset se zaledněním Země.
-        V jeho modelu chladnutí rozšiřovalo světlý led a větší odraz podporoval další chladnutí. Stejný vztah působil při oteplování opačně.
-        Model ukázal důsledky této vazby za zvolených předpokladů. Velikost odrazivosti v něm však byla zadána, takže sám nedokazoval sílu zpětné vazby ve skutečném klimatu.
-        K tomu je potřeba změřit jednotlivé články navrženého procesu.
+        Michail Budyko v roce 1969 zkoumal, jak se může rozšířit zalednění, když na Zemi začne dopadat méně slunečního záření.
+        V jeho modelu se při počátečním ochlazení rozšířila plocha ledu. Led odrážel více světla, takže k ohřevu povrchu zbývalo méně energie a ochlazení zesílilo.
+        Při počátečním oteplení vedl ústup ledu naopak k většímu pohlcování sluneční energie. Právě tomu, že změna pokrývky zesiluje původní ochlazení či oteplení, říkáme <strong>kladná zpětná vazba</strong>.
+        Budyko přidělil ledu a nezaledněným oblastem různou odrazivost předem. Jak silná je tato vazba v přírodě, závisí na skutečném rozdílu mezi povrchy.
         <SourceLink id="1969_Budyko"> (Budyko 1969)</SourceLink>
       </p>
+
+      <h4 id="pohlceni">Kolik záření zůstane u povrchu</h4>
       <p>
-        Schéma porovnává dva stavy stejné plochy. Žluté šipky představují dopadající světlo, zelené odraz a oranžové příjem energie.
-        Sledujme, jak po ústupu světlé pokrývky roste příjem a může podpořit další tání. Čtyři zkoušky pod obrázkem postupně ověřují tento řetězec.
+        Když na pevnině roztaje sníh, sluneční světlo dopadá přímo na půdu nebo vegetaci. Když ustoupí mořský led, odkryje se hladina vody.
+        Tyto povrchy obvykle odrážejí méně světla než sníh a led. Ztmavnout může i pokrývka, která dosud nezmizela, třeba když se na ledu vytvoří jezírka vody z tání.
+        Ze stejného množství dopadajícího záření pak větší díl zůstane v pokrývce a jejím podkladu. Do tohoto součtu patří i světlo, které projde ledem a pohltí ho až voda pod ním.
+        <SourceLink id="DOI_10_1017_9781009157896_009"> (IPCC 2021, oddíl 7.4.2.3)</SourceLink>
+      </p>
+      <p>
+        Označme dopadající sluneční tok <InlineMath tex={String.raw`S`} /> a odražený podíl, tedy albedo, <InlineMath tex={String.raw`\alpha`} />.
+        Zbývající podíl dopadajícího toku se pohltí. Pohlcený tok <InlineMath tex={String.raw`Q`} /> vyjadřujeme stejně jako dopadající tok ve W/m².
+        Druhá část rovnice ukazuje, jak se pohlcený tok změní při stejném osvitu. Značka <InlineMath tex={String.raw`\Delta`} /> označuje rozdíl nové a původní hodnoty.
+      </p>
+      <Equation tex={String.raw`Q=(1-\alpha)S,\qquad \Delta Q=-S\,\Delta\alpha`} />
+      <p>
+        Pro ilustraci nechme na dva povrchy dopadat shodně 200 W/m². Světlý povrch s albedem 0,8 odrazí čtyři pětiny světla a pohltí 40 W/m².
+        Tmavý povrch s albedem 0,2 pohltí čtyři pětiny, tedy 160 W/m². Rozdíl v příjmu při tomto zvoleném osvitu činí 120 W/m².
+        Kdyby dopadala polovina záření, byl by při stejných dvou hodnotách albeda poloviční i rozdíl. V polární noci tento sluneční příspěvek k ohřevu mizí.
+        <SourceLink id="MEDIA_ALBEDO_2026"> (Podklady k výpočtu)</SourceLink>
+      </p>
+      <p>
+        Ve schématu proto na obě plochy dopadá stejné množství světla, označené žlutými šipkami. Po ústupu pokrývky se menší část světla odrazí vzhůru (zelená šipka)
+        a větší část se pohltí (oranžová šipka). Jestliže tato energie ohřeje okolí nebo roztaví další led, tmavá plocha se může dále zvětšit.
       </p>
       <figure className={`article-figure ${styles.explanatoryFigure}`}>
         <div className={styles.figureScroll} tabIndex={0} role="region" aria-label="Schéma zpětné vazby, na úzké obrazovce posuvné do stran">
@@ -73,42 +89,49 @@ export function AlbedoFeedbackArticle() {
         </figcaption>
       </figure>
 
-      <h4 className={styles.testHeading} id="test-laborator">Zkouška 1. Struktura sněhu v laboratoři</h4>
+      <h4 className={styles.testHeading} id="test-laborator">Zkouška 1. Proč záleží na velikosti sněhových zrn?</h4>
       <p>
-        Sníh je směsí ledu a vzduchu. Na rozhraních se směr světla opakovaně mění a část světla se vrací vzhůru.
-        Proto může být sníh světlý, přestože je kus čistého ledu průhledný. Ve větších zrnech světlo mezi rozhraními prochází delší dráhou uvnitř ledu,
-        což zvyšuje možnost jeho pohlcení, zvlášť v infračervené části spektra.
-        Jemnější zrna mají na kilogram sněhu větší plochu povrchu. V měřeném infračerveném pásmu proto očekáváme u jemnějšího sněhu větší odraz.
+        Kus čistého ledu může být průhledný, zatímco sníh ze stejného ledu je bílý. Mezi sněhovými zrny je totiž vzduch. Na rozhraních ledu a vzduchu mění světlo směr a část se po opakovaném rozptylu vrací vzhůru.
+        Ve větších zrnech urazí světlo delší dráhu uvnitř ledu, než znovu narazí na rozhraní. Led tak může pohltit větší část záření. Zvlášť dobře je tento rozdíl patrný v blízké infračervené části slunečního záření, na vlnových délkách delších než u viditelného světla.
         <SourceLink id="DOI_10_5194_tc_3_167_2009"> (Gallet a kol. 2009)</SourceLink>
       </p>
       <p>
-        Jean-Charles Gallet a kolegové v roce 2009 měřili odraz vzorků v duté kouli, která sbírala světlo rozptýlené různými směry.
-        Použili dvě vlnové délky blízkého infračerveného světla, 1 310 a 1 550 nanometrů. Nanometr je miliardtina metru.
-        Plochu zrn určili nezávisle podle množství metanu, který při velmi nízké teplotě ulpěl na jejich povrchu.
-        Naměřený odraz umožnil plochu zrn odhadovat, avšak velmi řídký čerstvý sníh vyžadoval jinou kalibraci.
-        Zkouška potvrzuje vztah mezi strukturou a odrazem. Dvě vlnové délky samy ještě neurčují odraz celého slunečního spektra.
-        <SourceLink id="DOI_10_5194_tc_3_167_2009"> (Gallet a kol. 2009, obr. 2, 5 a 8)</SourceLink>
+        Při stejné hmotnosti sněhu mají jemnější zrna dohromady větší povrch. Jean-Charles Gallet a kolegové v roce 2009 zkoušeli, zda vzorek s větším povrchem zrn na kilogram opravdu odráží více záření. Použili dvě vlnové délky, 1 310 a 1 550 nanometrů. Nanometr je miliardtina metru.
+        Světlo odražené od vzorku sbírala dutá koule, aby se zachytily i paprsky rozptýlené do stran. Plochu zrn přitom změřili zvlášť. Při velmi nízké teplotě nechali na ledu ulpět metan a z jeho množství určili, jak velký povrch mu byl přístupný.
+        <SourceLink id="DOI_10_5194_tc_3_167_2009"> (Gallet a kol. 2009, obr. 2 a 5)</SourceLink>
+      </p>
+      <p>
+        V těchto pásmech sníh s větší plochou zrn na kilogram odrážel více záření. Vztah byl natolik pravidelný, že se dala plocha zrn odhadnout už podle samotného odrazu.
+        Pro velmi řídký čerstvý sníh potřebovali jiný převod mezi odrazem a plochou zrn.
+        <SourceLink id="DOI_10_5194_tc_3_167_2009"> (Gallet a kol. 2009, obr. 5 a 8)</SourceLink>
       </p>
 
-      <h4 className={styles.testHeading} id="test-druzice">Zkouška 2. Záření nad atmosférou</h4>
+      <h4 className={styles.testHeading} id="test-teren">Zkouška 2. Kolik světla odráží tající sníh na mořském ledu?</h4>
       <p>
-        Oblaka mohou povrch zakrýt a sama odrážejí světlo. Změna odrazu u země se proto do vesmíru nepřenáší celá.
-        Mark Flanner a kolegové v roce 2011 spojili měsíční mapy sněhu a mořského ledu z let 1979–2008 s jejich odrazivostí.
-        Pomocí čtyř výpočtů přenosu záření určovali, kolik se při změně povrchu změní bilance nad atmosférou.
-        Každý výpočet zopakovali pro tři varianty rozdílu odrazivosti mezi pokrytou a odkrytou plochou.
-        <SourceLink id="DOI_10_1038_ngeo1062"> (Flanner a kol. 2011)</SourceLink>
+        Na mořském ledu se vrství sníh z několika sněžení a jednotlivé vrstvy se při tání mění různě. Takovou pokrývku v letech 2015 a 2016 sledovali Gauthier Vérin a kolegové u Qikiqtarjuaqu v Baffinově zálivu.
+        U jednotlivých vrstev změřili tloušťku, hustotu a povrch zrn připadající na kilogram sněhu. Z těchto vlastností vypočítali, jaká část dopadajícího světla by se měla vrátit nad sníh.
+        Výsledek mohli zkontrolovat při vlnových délkách od 300 do 1 100 nanometrů, kde vedle vlastností sněhu přímo měřili také jeho odraz.
+        <SourceLink id="DOI_10_5194_tc_16_3431_2022"> (Vérin a kol. 2022)</SourceLink>
       </p>
       <p>
-        Všech dvanáct variant ukázalo rostoucí příjem energie. Jejich průměrný odhad změny za třicet let je 0,45 W/m²,
-        vztažený k ploše celé severní polokoule. Přibližně polovinu připsaly úbytku sněhu a polovinu mořskému ledu.
-        Je to výsledek měřených změn pokrývky vložených do radiačního výpočtu, nikoli přímé měření celého tohoto toku.
-        <Link href="/pozorovani/snehova-pokryvka-a-permafrost/#odrazivost-snehu-a-ledu"> Podrobná cesta od vstupních map k výsledku</Link> je v pozorovacím článku.
+        Při tání odraz slábl a po novém sněžení opět zesílil. Výpočet většinu těchto změn vystihl. Ve viditelném světle bylo k dobré shodě potřeba započítat i nečistoty ve sněhu, které část záření pohlcují.
+        Autoři pak výpočet rozšířili na sluneční záření v pásmu 300–3 000 nanometrů. Pro suchý sníh vyšlo albedo až 0,87 a při tání přibližně 0,70.
+        I při stejném osvitu tak zasněžená kra může pohlcovat více energie, ještě než se na ní objeví první místa bez sněhu.
+        <SourceLink id="DOI_10_5194_tc_16_3431_2022"> (Vérin a kol. 2022, obr. 9–10)</SourceLink>
+      </p>
+
+      <h4 className={styles.testHeading} id="test-druzice">Zkouška 3. Je změna odrazu patrná i nad atmosférou?</h4>
+      <p>
+        Oblaka odrážejí část slunečního světla ještě předtím, než dopadne na sníh nebo vodu. Ovlivňují také to, kolik světla odraženého povrchem projde zpět do vesmíru. Změna odrazu se proto nad oblaky obvykle projeví slaběji než přímo nad povrchem.
+        Mark Flanner a kolegové vyšli z <Link href="/pozorovani/snehova-pokryvka-a-permafrost/#odrazivost-snehu-a-ledu">měsíčních map sněhu a mořského ledu</Link> z let 1979–2008. Pro každou změnu pokrývky počítali, jak se změní množství světla vracejícího se do vesmíru.
+        Přenos světla atmosférou popsali čtyřmi způsoby. Dva vycházely z klimatických modelů a dva z družicových údajů o oblacích.
         <SourceLink id="DOI_10_1038_ngeo1062"> (Flanner a kol. 2011, tab. 2)</SourceLink>
       </p>
       <p>
-        V grafu má každý popis atmosféry tři body. Například první trojice ukazuje, jak se výsledek mění od 0,26 přes 0,38 k 0,48 W/m²,
-        když zvětšujeme předpokládaný rozdíl odrazivosti sněhu či ledu proti odkrytému povrchu. Všechny body leží napravo od nuly,
-        ale jejich vzdálenosti ukazují, proč nemá odhad jedinou přesnou hodnotu.
+        Každý řádek grafu ukazuje jeden z těchto čtyř výpočtů. V rámci řádku se mění jediný předpoklad, totiž o kolik více světla odráží zasněžená či zaledněná plocha než stejná plocha po ústupu pokrývky.
+        V prvním řádku například vychází při nejmenším rozdílu odrazivosti dodatečný příjem 0,26 W/m². Při středním rozdílu je to 0,38 a při největším 0,48 W/m².
+        Hodnoty platí v průměru pro celou severní polokouli. Autoři vynásobili průměrnou roční změnu podle trendu třiceti, aby vyjádřili změnu za celé sledované období.
+        <SourceLink id="DOI_10_1038_ngeo1062"> (Flanner a kol. 2011, tab. 2)</SourceLink>
       </p>
       <figure className={`article-figure ${styles.explanatoryFigure}`}>
         <div className={styles.figureScroll} tabIndex={0} role="region" aria-label="Graf dvanácti výpočtů, na úzké obrazovce posuvný do stran">
@@ -121,148 +144,111 @@ export function AlbedoFeedbackArticle() {
         </figcaption>
       </figure>
       <p>
-        Kristina Pistone a kolegové v roce 2014 zvolili jinou kontrolu. Nad arktickým oceánem porovnali mapy ledu s měřením přístrojů CERES.
-        Název znamená Clouds and the Earth&apos;s Radiant Energy System, tedy systém pro měření oblaků a vyzařované energie Země.
-        Přístroje měří záření směřující do vesmíru. V období 2000–2011 ukazují rostoucí pohlcování přímo odvozené z těchto měření.
-        Prodloužení do roku 1979 už používá vztah mezi ledem a odrazem z novějšího období.
-        Výsledky podporují očekávané znaménko změny, ale velikost se s Flannerovou prací přesně neshoduje.
-        Liší se období i postup a společná družicová měření ledu také znamenají, že nejde o zcela nezávislé vstupy.
+        Všech dvanáct bodů leží vpravo od nuly. Ve všech variantách tedy severní polokoule v důsledku ústupu sněhu a ledu pohlcovala více slunečního záření.
+        Odhady sahají od 0,26 do 0,72 W/m². Jejich průměr je 0,45 W/m² a přibližně polovina vypočteného přírůstku připadá na sníh na pevnině, druhá na mořský led.
+        Rozpětí ukazuje, jak výsledek závisí na popisu atmosféry a odrazivosti povrchu. Všechny varianty přitom používají stejné mapy změn pokrývky.
+        <SourceLink id="DOI_10_1038_ngeo1062"> (Flanner a kol. 2011, tab. 2)</SourceLink>
+      </p>
+      <p>
+        Nad arktickým oceánem měli vědci k dispozici i měření samotného záření vracejícího se do vesmíru. Kristina Pistoneová a kolegové použili údaje přístroje CERES na družici Terra. Název CERES (Clouds and the Earth&apos;s Radiant Energy System) označuje systém pro měření oblaků a toků záření Země.
+        Když údaje družice porovnali s mapami mořského ledu, menšímu podílu ledu zpravidla odpovídal i menší podíl odraženého záření.
+        Z těchto měření vyšel za roky 2000–2011 přírůstek 4,2 W/m² uvedený v úvodu. Tento průměr se vztahuje jen k oceánu severně od 60° severní šířky.
         <SourceLink id="DOI_10_1073_pnas_1318201111"> (Pistone a kol. 2014, obr. 1 a 4)</SourceLink>
       </p>
-
-      <h4 className={styles.testHeading} id="test-teren">Zkouška 3. Tající sníh v terénu</h4>
       <p>
-        Gauthier Vérin a kolegové sledovali v letech 2015 a 2016 tání sněhu na mořském ledu v Baffinově zálivu u Qikiqtarjuaqu.
-        Měřili vrstvy sněhu, hustotu a plochu zrn i odraz světla různých vlnových délek. Naměřenou strukturu vložili do modelu šíření světla.
-        Jeho předpověď pak porovnali s optickým měřením. Tím zkoušeli, zda fyzikální popis z laboratoře obstojí ve vrstevnatém přírodním sněhu.
-        <SourceLink id="DOI_10_5194_tc_16_3431_2022"> (Vérin a kol. 2022)</SourceLink>
-      </p>
-      <p>
-        Výpočty vystihly většinu změn odrazivosti při tání a novém sněžení. Pro viditelné světlo bylo důležité zahrnout i nečistoty pohlcující záření.
-        Teprve ověřený výpočet autoři rozšířili na celé zvolené sluneční spektrum. V něm vyšel pokles albeda z přibližně 0,87 u suchého sněhu
-        asi k 0,70 během tání. Tyto dvě hodnoty jsou modelovým odhadem z terénních vstupů, nikoli přímým měřením přes celé spektrum.
-        Studie tak ověřuje prostřední článek vazby, změnu odrazu při proměně sněhu. Sama neurčuje následnou změnu teploty vzduchu.
-        <SourceLink id="DOI_10_5194_tc_16_3431_2022"> (Vérin a kol. 2022, obr. 9–10)</SourceLink>
+        Mapy mořského ledu sahají dále do minulosti než měření záření přístrojem CERES. Pro roky 1979–1999 proto tým použil vztah mezi množstvím ledu a odrazem, který zjistil z pozdějších měření pro jednotlivé měsíce a oblasti.
+        V takto prodlouženém záznamu vyšel za roky 1979–2011 nad vymezeným oceánem nárůst pohlceného záření o 6,4 ± 0,9 W/m². Uvedená nejistota se vztahuje k dopočtu starší části.
+        Měření záření tak potvrdilo směr změny jiným postupem než výpočet z map. Obě práce přitom čerpají také z družicových pozorování ledu.
+        <SourceLink id="DOI_10_1073_pnas_1318201111"> (Pistone a kol. 2014, obr. 4)</SourceLink>
       </p>
 
-      <h4 className={styles.testHeading} id="test-oteplovani">Zkouška 4. Pokus s oteplováním</h4>
+      <h4 id="energie-a-teplota">Kam se pohlcená energie dostane</h4>
       <p>
-        Pokus SPRUCE v minnesotském rašeliništi vyhřívá půdu i vzduch v komorách s otevřeným vrškem.
-        Název zkracuje Spruce and Peatland Responses Under Changing Environments, výzkum odezvy smrků a rašeliniště na měnící se prostředí.
-        Andrew Richardson a kolegové v roce 2024 vyhodnotili sníh zachycený fotografiemi v letech 2015–2021.
-        Už přídavné oteplení o 2,25 °C zhruba rozpůlilo průměrný zimní podíl zasněžené plochy i počet dnů s více než polovičním pokrytím.
-        Vyhřívání zde přímo mění podmínky, takže pokus ověřuje první cestu vazby: oteplení může podstatně omezit sníh.
-        <SourceLink id="DOI_10_1029_2023jg007833"> (Richardson a kol. 2024</SourceLink>, <SourceLink id="DOI_10_6084_m9_figshare_24226177_v2">veřejná data SPRUCE)</SourceLink>
+        Z měření záření víme, kolik sluneční energie v oblasti zůstane. Jak se změní teplota, záleží na tom, kam se tato energie dostane.
+        Voda mezi krami se může ohřát a část tepla předat ledu zespodu. Během samotného tání se energie spotřebovává na přeměnu ledu ve vodu, i když teplota tajícího ledu zůstává stejná.
+        Část tepla může oceán také uchovat a předat vzduchu až později.
+        <SourceLink id="DOI_10_3189_172756411795931714"> (Perovich a kol. 2011)</SourceLink>
       </p>
       <p>
-        Cestu zpět k teplotě autoři zkoumali na nevyhřívaných plochách, protože v těch vyhřívaných regulace topení udržovala předepsaný rozdíl teplot.
-        Porovnali nevyhřívané komory s volným terénem. Teplotní rozdíl popsali jako součet vlivu komory, jeho změny s osvitem
-        a dalšího příspěvku závislého současně na osvitu a rozdílu sněhového pokrytí. Velikosti těchto příspěvků určili z denních měření.
-        Poslední člen tak odhaduje, kolik k rozdílu teplot přidává sníh při daném množství sluneční energie.
+        Donald Perovich a kolegové v létě 2008 u sedmi arktických bójí porovnali odhad energie pohlcené okolní otevřenou vodou s tím, kolik ledu odtálo shora a kolik zespodu.
+        Větší příjem sluneční energie ve vodě provázelo větší tání především na spodní straně ker, právě tam, kde se voda ledu dotýká.
+        Podrobnosti ukazuje <Link href="/mechanismy/vznik-tani-a-pohyb-morskeho-ledu/#test-boje">porovnání tání u jednotlivých bójí</Link>.
+        <SourceLink id="DOI_10_3189_172756411795931714"> (Perovich a kol. 2011, obr. 3)</SourceLink>
+      </p>
+
+      <h4 className={styles.testHeading} id="test-oteplovani">Zkouška 4. Jak sníh ovlivňuje denní teplotu nad pevninou?</h4>
+      <p>
+        Na rašeliništi v Minnesotě mohli vědci zkoumat oba směry zpětné vazby. Aby zjistili, jak sníh reaguje na oteplení, vyhřívali půdu i vzduch v komorách s otevřeným vrškem. Andrew Richardson a kolegové z fotografií pořízených v letech 2015–2021 určili, kdy na plochách ležel sníh. Od roku 2017 mohli sledovat i to, jakou část plochy pokrýval.
+        Při přídavném oteplení o 2,25 °C se průměrný zimní podíl zasněžené plochy zmenšil zhruba na polovinu. Přibližně na polovinu klesl také počet dnů, kdy sníh pokrýval většinu plochy.
+        <SourceLink id="DOI_10_1029_2023jg007833"> (Richardson a kol. 2024)</SourceLink>
+        <SourceLink id="DOI_10_6084_m9_figshare_24226177_v2"> (Údaje o zasněžení odvozené z fotografií)</SourceLink>
+      </p>
+      <p>
+        K ověření opačného směru bylo třeba zjistit, zda úbytek sněhu sám zesílí ohřev. Ve vyhřívaných komorách se udržoval předepsaný teplotní rozdíl. Autoři se proto zaměřili na nevyhřívané komory a sousední volný terén.
+        I bez topení ovlivňuje konstrukce komory teplotu a její vliv se může měnit s osvitem. Z denních měření proto autoři odhadli, jaký rozdíl teplot při daném osvitu připadá na samotnou komoru a jaký další rozdíl souvisí s tím, že jedna plocha nese více sněhu než druhá.
         <SourceLink id="DOI_10_1029_2023jg007833"> (Richardson a kol. 2024, rovnice 4)</SourceLink>
       </p>
       <p>
-        Pro den s dopadající sluneční energií 10 megajoulů na metr čtvereční vyšel místní příspěvek úplného odtání sněhu asi 0,8 °C k dennímu maximu teploty vzduchu.
-        Megajoule je milion joulů, jednotek energie. Výsledek závisel na osvitu, jak vazba předpovídá.
-        Je to místní statistický odhad, který závisí na správném oddělení účinku komor, nikoli obecný teplotní násobitel pro Zemi.
+        Při silnějším osvitu měl úbytek sněhu větší účinek na denní teplotu. Například při 10 megajoulech dopadající sluneční energie na metr čtvereční za den odpovídalo úplné odtání sněhu přibližně o 0,8 °C vyššímu dennímu maximu teploty vzduchu.
+        Megajoule je milion joulů a zde se energie sčítá za celý den. Jedna standardní chyba teplotního odhadu činila 0,1 °C a vyjadřuje statistickou nejistotu srovnání na tomto rašeliništi.
         <SourceLink id="DOI_10_1029_2023jg007833"> (Richardson a kol. 2024, rovnice 4 a obr. 7)</SourceLink>
-      </p>
-      <p>
-        Jednotlivé zkoušky se doplňují: měření zrn vysvětluje změnu odrazu, družice kontrolují její projev nad atmosférou
-        a pokus ukazuje místní odezvu sněhu a teploty. Shoda podporuje celý navržený proces, i když z těchto různých prostředí nelze převzít jednu společnou velikost účinku.
       </p>
     </HypothesisStory>
 
-    <h2 id="mechanismus">Jak úbytek světlého povrchu zesiluje ohřev</h2>
+    <h2 id="mechanismus">Jak silná je zpětná vazba v měřítku celé Země?</h2>
     <p>
-      Zkoušky podporují zesilující zpětnou vazbu odrazivosti. Laboratorní měření spojuje odraz se strukturou sněhu,
-      terénní měření kontroluje výpočet v přírodě a družice zachycují důsledek nad atmosférou.
-      Pokus s oteplováním doplňuje místní ověření změn sněhu i jejich teplotního účinku.
-      Tato shoda má větší váhu než samotný výstup klimatického modelu. Fyzikální řetězec začíná změnou pokrývky a pokračuje přes příjem energie k další odezvě povrchu.
+      U tajícího sněhu lze sledovat změnu odrazu přímo, nad arktickým oceánem její důsledek pro příjem sluneční energie. O tom, jak silně ústup pokrývky zesílí probíhající oteplování, rozhoduje i jeho načasování.
+      Led, který zmizí už na jaře, může odkrýt vodu na týdny s dlouhými slunečnými dny. Stejný úbytek ledu na konci léta ponechá vodě méně příležitostí pohltit sluneční energii.
+      Zářijové minimum rozlohy ledu proto zachycuje jen část toho, co potřebujeme znát, abychom určili příspěvek odrazivosti k rychlému oteplování Arktidy.
+      <SourceLink id="DOI_10_1038_ngeo1062"> (Flanner a kol. 2011)</SourceLink>
     </p>
-    <h3 id="pohlceni">Menší odraz znamená větší příjem energie</h3>
     <p>
-      Po ústupu sněhu se odkryje půda či vegetace, po ústupu mořského ledu voda. Tyto povrchy obvykle odrážejí méně slunečního záření.
-      I zachovaná pokrývka může tmavnout, když se mění sněhová zrna nebo vznikají jezírka na ledu.
-      Větší příjem energie pak podporuje ohřev a tání, které mohou pokrývku dále omezovat.
-      Označení <strong>kladná zpětná vazba</strong> znamená, že proces zesiluje původní změnu. Neříká, že je změna prospěšná.
+      Mezivládní panel pro změnu klimatu (IPCC) v roce 2021 shrnul měření, fyzikální výpočty i klimatické modely do odhadu, který vztahuje změnu v příjmu záření ke změně teploty.
+      Když globální průměrná teplota u povrchu vzroste o 1 °C, změna odrazivosti povrchu podle tohoto odhadu zvýší příjem sluneční energie v průměru za celou Zemi přibližně o 0,35 W/m².
+      Pravděpodobné rozmezí činí 0,25–0,45 W/m² na stupeň. Tento vztah vyjadřuje, nakolik změna odrazivosti už probíhající oteplování zesiluje.
       <SourceLink id="DOI_10_1017_9781009157896_009"> (IPCC 2021, oddíl 7.4.2.3)</SourceLink>
-    </p>
-    <p>
-      Pro jednoduchou bilanci označme dopadající sluneční tok <InlineMath tex={String.raw`S`} /> a albedo <InlineMath tex={String.raw`\alpha`} />.
-      Pohlcený tok <InlineMath tex={String.raw`Q`} /> zahrnuje sníh či led i podklad, který přijme světlo procházející pokrývkou.
-      Oba toky vyjadřujeme ve W/m². Při stejném dopadajícím toku platí:
-    </p>
-    <Equation tex={String.raw`Q=(1-\alpha)S,\qquad \Delta Q=-S\,\Delta\alpha`} />
-    <p>
-      Symbol <InlineMath tex={String.raw`\Delta`} /> označuje rozdíl nové a původní hodnoty.
-      Zkusme čistě názorný příklad s tokem 200 W/m². Při albedu 0,8 se pohltí 40 W/m²,
-      při albedu 0,2 už 160 W/m². Rozdíl činí 120 W/m². Čísla jsme zvolili pro vysvětlení výpočtu,
-      nejde o naměřenou změnu celé Arktidy. Stejný pokles odrazivosti má při slabším slunečním osvitu menší účinek.
-      <SourceLink id="MEDIA_ALBEDO_2026"> Výpočet lze zopakovat z veřejných podkladů.</SourceLink>
-    </p>
-    <h3 id="energie-a-teplota">Energie navíc není totéž co okamžité oteplení</h3>
-    <p>
-      Dodatečná energie může ohřívat vodu či půdu nebo tavit led. Během tání část energie mění skupenství vody místo zvyšování její teploty.
-      Oceán navíc může energii uložit a později ji předat vzduchu. Proto z rozdílu ve W/m² nelze bez další bilance vyvodit konkrétní počet stupňů oteplení.
-      Příklad tání měřeného bójemi popisuje <Link href="/mechanismy/vznik-tani-a-pohyb-morskeho-ledu/#test-boje">mechanismus změn mořského ledu</Link>.
-      <SourceLink id="DOI_10_3189_172756411795931714"> (Perovich a kol. 2011)</SourceLink>
-    </p>
-    <p>
-      V polární noci tato sluneční vazba nepřidává energii, protože chybí dopadající sluneční záření.
-      Důležité je proto načasování ústupu sněhu a ledu vůči jaru a létu, nikoli jen velikost zářijového minima.
-      Zpětná vazba navíc potřebuje počáteční změnu. Sama nevysvětluje, proč se klima začalo oteplovat,
-      a není jediným důvodem rychlejšího oteplování Arktidy.
-      <SourceLink id="DOI_10_1038_ngeo1062"> (Flanner a kol. 2011</SourceLink>, <SourceLink id="DOI_10_1017_9781009157896_009">IPCC 2021)</SourceLink>
     </p>
 
-    <h2 id="nejistoty">Jak dobře známe velikost vazby</h2>
+    <h2 id="nejistoty">Proč se odhady velikosti účinku liší</h2>
     <p>
-      Směr účinku je dobře podložený, jeho velikost se ale mění s místem, sezonou a oblačností.
-      Mezivládní panel pro změnu klimatu, zkráceně IPCC, v roce 2021 shrnul měření, teorii i modely do globálního odhadu.
-      Při globálním oteplení o 1 °C podle něj změna povrchového albeda přidává přibližně 0,35 W/m² zadržovaného záření,
-      s pravděpodobným rozmezím 0,25–0,45 W/m² na stupeň.
-      Tento globální koeficient není totožný s místním teplotním účinkem sněhu ani s odhadnutou historickou změnou nad severní polokoulí.
-      <SourceLink id="DOI_10_1017_9781009157896_009"> (IPCC 2021, oddíl 7.4.2.3)</SourceLink>
+      I když ze dvou stejně velkých ploch zmizí sníh ve stejný den, změna odrazu se může lišit. Záleží na tom, jak světlý byl původní sníh, co po jeho ústupu zůstane odkryté a kolik světla propustí oblaka.
+      U odhadů z map pak záleží na tom, jak přesně se podařilo zachytit změny povrchu i oblačnosti ve stejném období.
+      <SourceLink id="DOI_10_1038_ngeo1062"> (Flanner a kol. 2011)</SourceLink>
     </p>
     <details className="article-details">
-      <summary>Co omezuje jednotlivé zkoušky</summary>
+      <summary>Podrobnosti k měření a srovnání odhadů</summary>
       <p>
-        Laboratorní kalibrace závisí na vlnové délce, hustotě a typu sněhu. V terénu přibývají nečistoty, proměnlivé vrstvy a nerovný povrch.
-        Shoda výpočtu s odrazem ve změřené části spektra proto neodstraňuje nejistotu při rozšíření na celé sluneční záření.
-        <SourceLink id="DOI_10_5194_tc_3_167_2009"> (Gallet a kol. 2009</SourceLink>, <SourceLink id="DOI_10_5194_tc_16_3431_2022">Vérin a kol. 2022)</SourceLink>
+        Převod mezi odrazem a plochou sněhových zrn závisí na vlnové délce, hustotě a typu sněhu. V přírodě přistupují nerovnosti povrchu, vrstvy různého stáří a nečistoty.
+        Přímé srovnání s měřením v Baffinově zálivu prověřilo výpočet v pásmu 300–1 100 nanometrů. V dalších částech slunečního spektra závisí odhad na tom, jak dobře výpočet zachytí pohlcování světla v ledu a v nečistotách.
+        <SourceLink id="DOI_10_5194_tc_3_167_2009"> (Gallet a kol. 2009)</SourceLink>
+        <SourceLink id="DOI_10_5194_tc_16_3431_2022"> (Vérin a kol. 2022)</SourceLink>
       </p>
       <p>
-        Flannerův odhad používá předepsaný sezonní průběh odrazivosti, a nezachycuje tedy všechny změny začátku tání či vlastností sněhu.
-        Rozpětí dvanácti variant vyjadřuje citlivost na zvolené předpoklady, nikoli úplnou statistickou nejistotu.
-        Pro samotný mořský led vychází po přepočtu na celou severní polokouli u Flannera změna přibližně 0,22 W/m² za roky 1979–2008,
-        u Pistoneové 0,43 W/m² za roky 1979–2011. Rozdílný postup i delší období druhé práce brání považovat tuto dvojici za přesnou shodu velikostí.
-        U Pistoneové je období před rokem 2000 rekonstruováno za předpokladu, že vztah mezi pokrytím ledem a odrazem lze přenést do minulosti.
-        Atmosféra přitom část povrchových změn zakrývá a oblaka se mohou měnit také.
-        <SourceLink id="DOI_10_1038_ngeo1062"> (Flanner a kol. 2011</SourceLink>, <SourceLink id="DOI_10_1073_pnas_1318201111">Pistone a kol. 2014)</SourceLink>
+        Flannerův výpočet zahrnoval pevninu i oceán, zatímco Pistoneová se zaměřila na mořský led. Pro porovnání proto z obou prací vybereme příspěvek samotného mořského ledu a rozpočítáme ho na stejnou plochu.
+        V průměru za celou severní polokouli pak u Flannera vychází změna asi 0,22 W/m² za roky 1979–2008 a u Pistoneové 0,43 W/m² za roky 1979–2011.
+        První výpočet přisuzuje sněhu a ledu předem daný sezónní průběh odrazivosti. Nemůže tak plně zachytit třeba posun začátku tání. Druhý odhad závisí na tom, do jaké míry lze vztah mezi ledem a odrazem z družicového měření záření přenést na roky před jeho začátkem.
+        Rozdíl obou čísel tedy zahrnuje jak různé postupy, tak různě dlouhá období.
+        <SourceLink id="DOI_10_1038_ngeo1062"> (Flanner a kol. 2011)</SourceLink>
+        <SourceLink id="DOI_10_1073_pnas_1318201111"> (Pistone a kol. 2014)</SourceLink>
       </p>
       <p>
-        Pokus SPRUCE představuje jedno rašeliniště. Komory ovlivňují prostředí i bez zapnutého topení,
-        takže odhad zpětného účinku sněhu závisí na statistickém oddělení jejich vlivu.
-        U uvedeného příspěvku 0,8 °C vyšla jedna standardní chyba odhadu 0,1 °C. To popisuje statistickou přesnost zvoleného vztahu,
-        nikoli úplnou nejistotu pokusu nebo přenositelnost na jiné krajiny.
+        V minnesotském pokusu SPRUCE (Spruce and Peatland Responses Under Changing Environments) závisí odhad vlivu sněhu na tom, jak dobře výpočet oddělil ohřev způsobený samotnou komorou. Kdyby se vliv konstrukce měnil s osvitem jinak, než výpočet předpokládá, připadla by na sníh jiná část teplotního rozdílu. Tuto možnost uvedená standardní chyba nezahrnuje.
+        K přenesení výsledku na jinou krajinu bychom potřebovali znát její osvit a vlastnosti povrchu, který tání odkryje.
         <SourceLink id="DOI_10_1029_2023jg007833"> (Richardson a kol. 2024)</SourceLink>
       </p>
     </details>
     <h2 id="dalsi-overeni">Co by vysvětlení oslabilo</h2>
     <p>
-      Výklad by oslabil opakovaný výsledek, při němž odstranění světlé pokrývky za stejného osvitu a srovnatelných podmínek nezvýší příjem sluneční energie.
-      Velikost odhadované vazby by vyžadovala revizi, kdyby přesnější měření oblaků, odrazu a pokrývky soustavně ukazovala slabší změnu bilance nad atmosférou.
-      Teplotní část by zpochybnil nesoulad s ohřevem nebo táním i po započtení ukládání energie a jejího odvodu prouděním.
-      Tyto kontroly rozlišují chybu v samotném mechanismu od chyby v odhadu jeho místní či globální síly.
+      Pokud by opakovaná měření za stejného osvitu ukázala, že po ústupu světlého sněhu či ledu příjem energie na dané ploše nevzrostl, chyběl by tam předpokládaný příspěvek k ohřevu.
+      Odhad síly vazby by bylo potřeba snížit, kdyby povrch podle měření tmavl, ale úbytek odraženého záření nad atmosférou byl i po započtení oblaků soustavně menší, než výpočet předpovídá.
+      U teplotní odezvy by bylo rozhodující, zda energii navíc provází očekávaný ohřev nebo tání i po započtení tepla, které oceán mezitím uložil či odvedl prouděním.
     </p>
     <div className="article-observation-summary" id="zaver">
-      <p className="eyebrow">Závěr</p>
+      <p className="eyebrow">Shrnutí mechanismu</p>
       <p>
-        Ústup sněhu a ledu obvykle odkrývá tmavší povrch, který při stejném osvitu přijímá více sluneční energie.
-        Ta může podpořit další ohřev a tání. Laboratorní, terénní a družicová měření společně podporují tuto zesilující zpětnou vazbu.
-        Její sílu určují také oblaka, roční doba a způsob, jakým povrch energii ukládá nebo předává dál.
-        Vazba zesiluje probíhající změnu, sama však neurčuje její počáteční příčinu ani velikost výsledného oteplení.
+        Po ústupu sněhu nebo mořského ledu slunce obvykle osvětluje tmavší půdu, vegetaci či vodu. Ty odrazí méně světla a pohltí více energie. Ta může ohřívat vodu či vzduch a podpořit další tání.
+        Družice nad arktickým oceánem při ústupu ledu zaznamenaly méně odraženého světla. Měření u bójí ukázala, že tam, kde odkrytá voda přijala více sluneční energie, zpravidla také více ledu odtálo zespodu.
+        Nejsilněji se tento účinek projevuje, když světlý povrch ubývá v době, kdy na něj dopadá hodně slunečního záření.
       </p>
     </div>
     <h2 id="prameny">Prameny, data a schémata</h2>

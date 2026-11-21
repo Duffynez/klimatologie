@@ -193,7 +193,7 @@ test("albedo mechanism links its experiments and distinguishes measured radiatio
   const html = await readFile(new URL("dist/client" + route + "/index.html", root), "utf8");
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body, "Replace the existing outline with the complete article");
-  assert.match(html, /<p class="page-lead__meta">13\. listopadu 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">21\. listopadu 2026<\/p>/);
   assert.equal((body.slice(0, body.indexOf('<h2 id="hypotezy"')).match(/<p\b/g) ?? []).length, 2);
   assert.match(body, /Jedna hypotéza a její předpovědi/);
   for (const id of ["svetly-povrch", "test-laborator", "test-druzice", "test-teren", "test-oteplovani", "zaver"]) assert.ok(body.includes(`id="${id}"`));
@@ -224,7 +224,9 @@ test("albedo mechanism links its experiments and distinguishes measured radiatio
   assert.match(observation, /2000–2011[\s\S]*?4,2 W\/m²/);
   assert.match(observation, /Starší období 1979–1999[\s\S]*?dopočítali/);
   assert.match(observation, /6,4 ± 0,9 W\/m²/);
-  assert.match(body, /modelovým odhadem z terénních vstupů/);
+  const fieldTest = body.slice(body.indexOf('id="test-teren"'), body.indexOf('id="test-druzice"'));
+  assert.match(fieldTest, /od 300 do 1 100 nanometrů[^<]*přímo měřili také jeho odraz/);
+  assert.match(fieldTest, /výpočet rozšířili[^<]*300–3 000 nanometrů[^<]*0,87[^<]*0,70/);
   assert.match(body, /dennímu maximu teploty vzduchu/);
   const base = new URL("public/media/albedo-snehu-a-ledu/", root);
   for (const file of ["mechanismus.svg", "srovnani-vypoctu.svg", "grafika.mjs", "flanner-2011-tabulka-2.csv", "vypocty.mjs", "podklady.txt"]) {
