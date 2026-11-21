@@ -152,13 +152,13 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "vnitrni-promenlivost-atmosfery-a-oceanu",
     title: "Jak vznikají výkyvy El Niño a La Niña?",
     category: "Atmosféra a oceán",
-    cardSummary: "Jak vítr a oceán rozvíjejí výkyv, připravují jeho obrat a mění sílu jednotlivých událostí.",
+    cardSummary: "Proč slabší pasáty oteplují východ rovníkového Pacifiku a jak se už za teplé fáze může pod hladinou připravovat obrat.",
     observations: [
       { href: "/pozorovani/tepelny-obsah-oceanu/#enso-pacifik", label: "Teplotní výkyvy a zásoba teplé vody v Pacifiku" },
       { href: "/pozorovani/gmst/#zpomaleni-2002-2012", label: "Dočasné zpomalení růstu povrchové teploty" },
     ],
-    summary: "Proč se rovníkový Pacifik střídavě otepluje a ochlazuje? Co při tom dělá vítr, voda pod hladinou a krátké epizody počasí?",
-    distinguishingEvidence: "Společný vývoj větru, povrchové teploty a termokliny. Předstih změn podpovrchové zásoby teplé vody a řízené zásahy do modelového větru ověřují zesilování, obrat a nepravidelnost ENSO.",
+    summary: "Na jaře 1998 zůstávala hladina ve východním rovníkovém Pacifiku nezvykle teplá, přestože se k ní z hloubky už přibližovala chladnější voda. Teprve když v květnu znovu zesílil vítr od východu, začal se povrch prudce ochlazovat.",
+    distinguishingEvidence: "Bóje měří vítr nad hladinou i změny teploty vody v různých hloubkách. Z jejich časového sledu lze poznat, co předchází obratu. V modelových pokusech lze měnit vítr a sledovat, jak různě se vyvine tentýž počáteční stav oceánu.",
   },
   {
     slug: "tepelna-roztaznost-morske-vody",

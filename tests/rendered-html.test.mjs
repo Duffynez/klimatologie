@@ -5751,7 +5751,7 @@ test("ENSO connects six causal tests, open sources, observed data and reciprocal
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body);
   assert.match(html, /<h1>Jak vznikají výkyvy El Niño a La Niña\?<\/h1>/);
-  assert.match(html, /<p class="page-lead__meta">13\. listopadu 2026<\/p>/);
+  assert.match(html, /<p class="page-lead__meta">21\. listopadu 2026<\/p>/);
   assert.equal((body.match(/<h4\b/g) ?? []).length, 6);
   assert.equal((body.match(/<img\b/g) ?? []).length, 3);
   assert.equal((body.slice(0, body.indexOf('<h2 id="hypotezy"')).match(/<p\b/g) ?? []).length, 2);
