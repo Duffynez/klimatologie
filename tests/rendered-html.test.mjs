@@ -1648,7 +1648,7 @@ test("groups all 23 mechanism topics by their link to observations and preserves
   assert.match(sitemap, /https:\/\/klimatologie\.eu\/mechanismy\/energeticka-bilance-snehu-a-morskeho-ledu\//);
 });
 
-test("publishes projections and links each consequence to observations, a mechanism and sources", async () => {
+test("links each projection topic and consequence to observations, a mechanism and sources", async () => {
   const [projections, consequences, header, sitemap] = await Promise.all([
     readFile(new URL("dist/client/projekce/index.html", root), "utf8"),
     readFile(new URL("dist/client/dusledky/index.html", root), "utf8"),
@@ -1657,9 +1657,9 @@ test("publishes projections and links each consequence to observations, a mechan
   ]);
 
   assert.match(projections, /<h1>Jak se může změnit klima\?<\/h1>/);
-  const categoryList = projections.match(/<ul\b[^>]*aria-label="Kategorie klimatických projekcí"[^>]*>([\s\S]*?)<\/ul>/);
-  assert.ok(categoryList, "Missing list of projection categories");
-  assert.deepEqual([...categoryList[1].matchAll(/<li>([^<]+)<\/li>/g)].map(([, name]) => name), [
+  assert.match(projections, /<ul\b[^>]*aria-label="Kategorie klimatických projekcí"/);
+  const projectionGroups = [...projections.matchAll(/<li><h2>([^<]+)<\/h2>((?:<details\b[\s\S]*?<\/details>)+)<\/li>/g)];
+  assert.deepEqual(projectionGroups.map(([, name]) => name), [
     "Teplota a energetická bilance Země",
     "Srážky a voda na pevnině",
     "Proudění vzduchu a bouře",
@@ -1667,8 +1667,13 @@ test("publishes projections and links each consequence to observations, a mechan
     "Oceán a hladina moře",
     "Složení atmosféry a koloběh uhlíku",
   ]);
+  const topics = projectionGroups.flatMap(([, , html]) => [...html.matchAll(/<details\b[^>]*\bid="([^"]+)"[^>]*>([\s\S]*?)<\/details>/g)]);
+  assert.equal(new Set(topics.map(([, id]) => id)).size, topics.length, "Each topic needs a unique anchor");
+  for (const [, id, html] of topics) {
+    assert.match(html, /<summary>[^<]+\?<\/summary><p>[^<]+<\/p>/, id);
+  }
   assert.match(consequences, /<h1>Co znamená změna klimatu pro lidi a přírodu\?<\/h1>/);
-  assert.doesNotMatch(consequences, /chybějící zdroj/);
+  assert.doesNotMatch(projections + consequences, /chybějící zdroj/);
   assert.doesNotMatch(projections + consequences, /Obsah připravujeme/);
 
   const groups = [...consequences.matchAll(/<section\b[^>]*aria-labelledby="([^"]+)"[^>]*>([\s\S]*?)<\/section>/g)];
@@ -1692,8 +1697,8 @@ test("publishes projections and links each consequence to observations, a mechan
 
   const examples = [...consequences.matchAll(/<article\b[^>]*id="([^"]+)"[^>]*>([\s\S]*?)<\/article>/g)];
   const targets = new Map();
-  for (const [, id, example] of examples) {
-    const hrefs = [...example.matchAll(/href="([^"]+)"/g)].map((match) => match[1]);
+  for (const [, id, html] of [...topics, ...examples]) {
+    const hrefs = [...html.matchAll(/href="([^"]+)"/g)].map((match) => match[1]);
     for (const section of ["/pozorovani/", "/mechanismy/", "/zdroje"]) {
       assert.ok(hrefs.some((href) => href.startsWith(section)), `Missing ${section} link in ${id}`);
     }
