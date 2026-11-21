@@ -31,10 +31,6 @@ export default function MechanismsPage() {
             <a className="text-link" href={`#${id}`} key={id}>{title}</a>
           ))}
         </nav>
-        <p className="mechanism-catalog__legend">
-          <span className="mechanism-status-dot" aria-hidden="true" />
-          Hotový článek
-        </p>
       </PageLead>
 
       <div className="mechanism-catalog">
@@ -48,12 +44,7 @@ export default function MechanismsPage() {
               {mechanisms.map((mechanism) => (
                 <article className="mechanism-tile" key={mechanism.slug}>
                   <Link className="mechanism-tile__content" href={`/mechanismy/${mechanism.slug}`}>
-                    <div className="mechanism-tile__meta">
-                      <p className="mechanism-tile__category">{mechanism.category}</p>
-                      {mechanism.isComplete && (
-                        <span className="mechanism-status-dot" role="img" aria-label="Hotový článek" title="Hotový článek" />
-                      )}
-                    </div>
+                    <p className="mechanism-tile__category">{mechanism.category}</p>
                     <h3>{mechanism.title}</h3>
                     <p>{mechanism.cardSummary}</p>
                   </Link>

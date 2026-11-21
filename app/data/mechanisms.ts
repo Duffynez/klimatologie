@@ -15,7 +15,6 @@ export type ClimateMechanism = {
   title: string;
   category: MechanismCategory;
   isMainQuestion?: boolean;
-  isComplete?: boolean;
   cardSummary: string;
   observations?: readonly MechanismObservation[];
   summary: string;
@@ -28,7 +27,6 @@ export const climateMechanisms: ClimateMechanism[] = [
     title: "Proč v klimatickém systému přibývá energie?",
     category: "Záření a složení atmosféry",
     isMainQuestion: true,
-    isComplete: true,
     cardSummary: "Vliv Slunce, přirozeného kolísání a lidské činnosti na příjem a výdej energie Země.",
     observations: [
       { href: "/pozorovani/tepelny-obsah-oceanu/#souvislost-s-bilanci", label: "Přírůstek energie v klimatickém systému" },
@@ -40,7 +38,6 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "radiacni-pusobeni-sklenikovych-plynu",
     title: "Proč další CO₂ mění tepelné záření Země?",
     category: "Záření a složení atmosféry",
-    isComplete: true,
     cardSummary: "Pohlcování a vyzařování infračerveného záření při rostoucím množství CO₂ v atmosféře.",
     observations: [
       { href: "/pozorovani/atmosfericka-koncentrace-co2/#zmena-infracerveneho-zareni", label: "CO₂ a změna infračerveného záření" },
@@ -53,7 +50,6 @@ export const climateMechanisms: ClimateMechanism[] = [
     title: "Proč v atmosféře přibývá CO₂?",
     category: "Záření a složení atmosféry",
     isMainQuestion: true,
-    isComplete: true,
     cardSummary: "Zdroje oxidu uhličitého a jeho pohlcování oceánem a pevninou.",
     observations: [
       { href: "/pozorovani/atmosfericka-koncentrace-co2/#pozorovani", label: "Růst koncentrace CO₂ v atmosféře" },
@@ -65,7 +61,6 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "slunecni-promenlivost",
     title: "Jak sluneční cyklus ovlivňuje klima?",
     category: "Záření a složení atmosféry",
-    isComplete: true,
     cardSummary: "Proměnlivý sluneční příkon, oteplující stopa ve stratosféře a testy vlivu kosmického záření na oblaka.",
     observations: [
       { href: "/pozorovani/slunecni-zareni/#pozorovani", label: "Proměny slunečního záření" },
@@ -78,7 +73,6 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "sopecne-aerosoly",
     title: "Proč mohou velké sopečné erupce ochladit Zemi?",
     category: "Záření a složení atmosféry",
-    isComplete: true,
     cardSummary: "Popel, sirné kapky a testy ochlazení po erupci Pinatuba.",
     observations: [
       { href: "/pozorovani/gmst/#pinatubo", label: "Ochlazení povrchu po erupci Pinatuba" },
@@ -92,7 +86,6 @@ export const climateMechanisms: ClimateMechanism[] = [
     title: "Proč se za loděmi a továrnami mění jas oblaků?",
     category: "Záření a složení atmosféry",
     isMainQuestion: true,
-    isComplete: true,
     cardSummary: "Lodní a průmyslové stopy ukazují, jak částice mění kapky a odraz světla.",
     observations: [
       { href: "/pozorovani/stopy-v-oblacich/#vysledky", label: "Stopy lodí a průmyslu v oblacích" },
@@ -105,7 +98,6 @@ export const climateMechanisms: ClimateMechanism[] = [
     title: "Proč se nad Antarktidou ochladila jarní stratosféra?",
     category: "Záření a složení atmosféry",
     isMainQuestion: true,
-    isComplete: true,
     cardSummary: "Co o příčině ochlazení prozradila měření ozonu a teploty ve výšce kolem 16 kilometrů.",
     observations: [
       { href: "/pozorovani/stratosfericke-ochlazovani/#antarkticke-jaro", label: "Jarní ochlazení dolní stratosféry nad Antarktidou" },
@@ -118,7 +110,6 @@ export const climateMechanisms: ClimateMechanism[] = [
     title: "Proč se teplo v Jižním oceánu ukládá jinde, než přichází?",
     category: "Atmosféra a oceán",
     isMainQuestion: true,
-    isComplete: true,
     cardSummary: "U Antarktidy se hladina ohřívala pomalu. Nejvíc tepla ve vodním sloupci přibylo dál na sever.",
     observations: [
       { href: "/pozorovani/tepelny-obsah-oceanu/#jizni-ocean", label: "Příjem a ukládání tepla v Jižním oceánu" },
@@ -130,7 +121,6 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "vodni-para-jako-zpetna-vazba",
     title: "Jak změny vodní páry ovlivňují oteplování?",
     category: "Atmosféra a oceán",
-    isComplete: true,
     cardSummary: "Spor o vysušování horní troposféry a testy zesilujícího účinku vodní páry.",
     observations: [
       { href: "/pozorovani/narust-vlhkosti/#pozorovani", label: "Množství vodní páry a relativní vlhkost" },
@@ -142,7 +132,6 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "oblaka-a-jejich-klimaticke-zpetne-vazby",
     title: "Jak oblaka zesilují nebo tlumí oteplování?",
     category: "Atmosféra a oceán",
-    isComplete: true,
     cardSummary: "Jak změny plochy, výšky a odrazivosti oblaků ovlivňují další oteplování.",
     observations: [{ href: "/pozorovani/oblaka-a-radiacni-bilance/#vysledky", label: "Oblaka a radiační bilance" }],
     summary: "Proč dnešní ochlazující účinek oblaků neznamená, že budou oteplování tlumit. Tři oblačné odezvy, jejich historie a konkrétní testy plochy, výšky a odrazu světla.",
@@ -152,7 +141,6 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "termodynamika-a-dynamika-srazek",
     title: "Proč se mění množství a intenzita srážek?",
     category: "Atmosféra a oceán",
-    isComplete: true,
     cardSummary: "Úloha vodní páry, proudění vzduchu a energetických toků v úhrnech a intenzitě srážek.",
     observations: [
       { href: "/pozorovani/srazky-a-privalove-srazky/#pozorovani", label: "Úhrny a extrémy srážek" },
@@ -163,7 +151,6 @@ export const climateMechanisms: ClimateMechanism[] = [
   {
     slug: "vnitrni-promenlivost-atmosfery-a-oceanu",
     title: "Jak vznikají výkyvy El Niño a La Niña?",
-    isComplete: true,
     category: "Atmosféra a oceán",
     cardSummary: "Jak vítr a oceán rozvíjejí výkyv, připravují jeho obrat a mění sílu jednotlivých událostí.",
     observations: [
@@ -177,7 +164,6 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "tepelna-roztaznost-morske-vody",
     title: "Proč se objem mořské vody mění s teplotou a slaností?",
     category: "Oceán a hladina moře",
-    isComplete: true,
     cardSummary: "Jak laboratorní měření a oceánské profily ověřují změnu hustoty, objemu a příspěvku k hladině moře.",
     observations: [
       { href: "/pozorovani/gmsl/#bilance-hladiny", label: "Objemový příspěvek ke změně hladiny moře" },
@@ -189,7 +175,6 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "bilance-globalni-hladiny-more",
     title: "Proč stoupá globální hladina moře?",
     category: "Oceán a hladina moře",
-    isComplete: true,
     cardSummary: "Jak rozlišujeme rozpínání vody a její přísun z pevniny a ověřujeme jejich součet.",
     observations: [
       { href: "/pozorovani/gmsl/#pozorovani", label: "Vzestup globální hladiny moře" },
@@ -202,7 +187,6 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "pohlcovani-co2-oceanem-a-uhlicitanova-chemie",
     title: "Proč klesá pH povrchového oceánu?",
     category: "Oceán a hladina moře",
-    isComplete: true,
     cardSummary: "Jak ověřujeme příčinu dlouhodobého okyselování povrchové mořské vody.",
     observations: [
       { href: "/pozorovani/acidifikace-oceanu/#pozorovani", label: "Pokles pH mořské vody" },
@@ -214,7 +198,6 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "odrazivost-snehu-a-ledu-jako-zpetna-vazba",
     title: "Jak úbytek sněhu a ledu mění příjem sluneční energie?",
     category: "Kryosféra",
-    isComplete: true,
     cardSummary: "Změny odrazivosti povrchu a pohlcování sluneční energie při ústupu sněhu a ledu.",
     observations: [
       { href: "/pozorovani/snehova-pokryvka-a-permafrost/#odrazivost-snehu-a-ledu", label: "Změny pokrývky a přepočet sluneční bilance" },
@@ -228,7 +211,6 @@ export const climateMechanisms: ClimateMechanism[] = [
     title: "Proč arktický mořský led ubývá a tenčí se?",
     category: "Kryosféra",
     isMainQuestion: true,
-    isComplete: true,
     cardSummary: "Jak růst, tání a vývoz ker mění arktickou zásobu ledu a jak jejich vlivy rozlišíme.",
     observations: [
       { href: "/pozorovani/ubytek-arktickeho-ledu/#pozorovani", label: "Úbytek a tenčení arktického mořského ledu" },
@@ -240,7 +222,6 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "vznik-a-zanik-snehove-pokryvky-na-sousi",
     title: "Proč se mění množství sněhu a délka sněhové sezóny?",
     category: "Kryosféra",
-    isComplete: true,
     cardSummary: "Jak srážky, teplota a přísun energie mění zimní zásobu a jarní zánik sněhu.",
     observations: [
       { href: "/pozorovani/snehova-pokryvka-a-permafrost/#jarni-rozsah-snehu", label: "Jarní rozsah a zásoba sněhu v Arktidě" },
@@ -253,7 +234,6 @@ export const climateMechanisms: ClimateMechanism[] = [
     title: "Proč horské ledovce ztrácejí hmotu a ustupují?",
     category: "Kryosféra",
     isMainQuestion: true,
-    isComplete: true,
     cardSummary: "Vliv sněžení, tání a proudění ledu na hmotnost ledovce a polohu jeho čela.",
     observations: [
       { href: "/pozorovani/ustup-ledovcu/#pozorovani", label: "Úbytek hmotnosti a ústup horských ledovců" },
@@ -266,7 +246,6 @@ export const climateMechanisms: ClimateMechanism[] = [
     title: "Proč Grónsko a Antarktida ztrácejí led?",
     category: "Kryosféra",
     isMainQuestion: true,
-    isComplete: true,
     cardSummary: "Kolik vody odtéká z tajícího povrchu a co určuje, jak rychle odchází do moře i pevný led.",
     observations: [
       { href: "/pozorovani/nestabilita-prikrovu/#pozorovani", label: "Úbytek hmotnosti Grónska a Antarktidy" },
@@ -278,7 +257,6 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "prenos-tepla-do-pudy-a-tani-permafrostu",
     title: "Proč rozmrzá permafrost?",
     category: "Kryosféra",
-    isComplete: true,
     cardSummary: "Šíření tepla do zmrzlé půdy a vliv sněhu, vody a vlastností podloží.",
     observations: [
       { href: "/pozorovani/snehova-pokryvka-a-permafrost/#teplota-permafrostu", label: "Teplota permafrostu ve vrtech" },
@@ -290,7 +268,6 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "biologicke-mechanismy-fenologickych-zmen",
     title: "Proč se mění doba kvetení rostlin a tahu ptáků?",
     category: "Živá příroda a extrémy",
-    isComplete: true,
     cardSummary: "Jak teplota, zimní chlad, délka dne a potrava mění kvetení a ptačí tah.",
     observations: [
       { href: "/pozorovani/fenologicke-posuny/#pozorovani", label: "Posuny kvetení a tahu ptáků" },
@@ -302,7 +279,6 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "mechanismy-vln-veder",
     title: "Proč jsou vlny veder častější a silnější?",
     category: "Živá příroda a extrémy",
-    isComplete: true,
     cardSummary: "Jak se při vzniku veder spojují oteplování, proudění vzduchu a půdní voda a čím jejich příspěvky ověřujeme.",
     observations: [
       { href: "/pozorovani/vlny-veder/#pozorovani", label: "Dlouhodobé změny vln veder" },
