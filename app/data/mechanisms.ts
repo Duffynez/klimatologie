@@ -268,12 +268,12 @@ export const climateMechanisms: ClimateMechanism[] = [
     slug: "biologicke-mechanismy-fenologickych-zmen",
     title: "Proč se mění doba kvetení rostlin a tahu ptáků?",
     category: "Živá příroda a extrémy",
-    cardSummary: "Jak teplota, zimní chlad, délka dne a potrava mění kvetení a ptačí tah.",
+    cardSummary: "Jak zimní chlad a jarní teplo ovlivňují kvetení a jak délka dne a potrava mění přípravu ptáků na tah.",
     observations: [
       { href: "/pozorovani/fenologicke-posuny/#pozorovani", label: "Posuny kvetení a tahu ptáků" },
     ],
-    summary: "Proč samotný sezónní kalendář nestačí? Pokusy s rostlinami a ptáky ukazují, jak teplota, zimní chlad a potrava mění průběh vývoje a přípravu k tahu.",
-    distinguishingEvidence: "Pokusy oddělující teplotu, délku dne a předchozí chlad, porovnané s terénními záznamy rostlin. U ptáků porovnání druhů, migračních tras a podmínek v zimovišti i hnízdišti testuje jejich vliv na načasování tahu.",
+    summary: "Dvě větve zlatice mohou ve stejně teplé místnosti rozkvést v různou dobu podle toho, jakou zimu mají za sebou. Na jamajském zimovišti zase titíž ptáci po suchém březnu odlétali o několik dnů později než po deštivém.",
+    distinguishingEvidence: "U větví lze při stejné délce dne měnit teplotu a měřit čas do otevření květu. U ptáků lze porovnat noční aktivitu po oteplení na jaře a na podzim a v přírodě sledovat, kdy titíž jedinci opouštějí zimoviště v suchých a deštivých letech.",
   },
   {
     slug: "mechanismy-vln-veder",

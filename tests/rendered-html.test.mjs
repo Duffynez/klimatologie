@@ -747,7 +747,7 @@ test("phenology mechanism publishes the full argument with working evidence path
   const html = await readFile(new URL("dist/client" + route + "/index.html", root), "utf8");
   const body = html.match(/<article class="article-layout">([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body, "Replace the outline at the existing address with a full article");
-  assert.match(html, /6\. listopadu 2026/);
+  assert.match(html, /<p class="page-lead__meta">21\. listopadu 2026<\/p>/);
   assert.deepEqual([...body.matchAll(/<h2 id="([^"]+)"/g)].map(match => match[1]),
     ["co-vysvetlujeme", "hypotezy", "pribehy", "jak-mechanismus-funguje", "shrnuti", "prameny"]);
   assert.equal((body.slice(0, body.indexOf('<h2 id="hypotezy"')).match(/<p\b/g) ?? []).length, 2);

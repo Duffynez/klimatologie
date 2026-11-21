@@ -10,22 +10,22 @@ const media = "/media/fenologicke-mechanismy";
 const hypotheses: readonly MechanismHypothesis[] = [
   {
     id: "pevny-kalendar",
-    name: "Samotný sezónní kalendář určuje termín",
-    prediction: "Při stejném průběhu délky dne a stejném nastavení vnitřního rytmu mají termíny zůstat stejné, i když se změní teplota nebo potrava. Meziroční posun vyžaduje změnu samotného kalendáře.",
-    test: "Změnou osvětlení nejprve ověříme, zda světelný kalendář vůbec působí. Potom porovnáme dlouhé záznamy ze stejných míst, kde se délka dne v dané části roku prakticky nemění.",
-    observation: "Prodloužení dne podpořilo přípravu čížků k tahu. Evropské jarní a letní fáze rostlin se ale v letech 1971–2000 posunuly v průměru o 2,5 dne za desetiletí dopředu.",
-    verdict: "Důležitá součást, která sama nestačí",
-    explanation: "Světelný kalendář pomáhá určit roční období. Jeho existence nevysvětluje celou proměnlivost termínů ani jejich dlouhodobý posun.",
+    name: "Délka dne a vnitřní rytmus samy určují termín",
+    prediction: "Jestliže rozhoduje pouze sezónní kalendář, při stejném osvětlení a stejném vnitřním rytmu zůstane termín stejný i v teplejším roce.",
+    test: "U čížků porovnáme přípravu na tah při krátkém a při prodlužujícím se dni. V přírodě sledujeme stejné sezónní události na stejných místech po několik desetiletí.",
+    observation: "S prodlužujícím se dnem čížci nabrali zásoby a v noci byli aktivnější. V přírodě se však data rašení, kvetení i zrání měnila, přestože se délka dne opakovala.",
+    verdict: "Vysvětluje pravidelnost, k vysvětlení posunů nestačí",
+    explanation: "Světlo pomáhá načasovat přípravu na určité roční období. Pro rozdíly mezi roky potřebujeme znát i podmínky, které rostlina nebo pták zažívá.",
     state: "insufficient",
   },
   {
     id: "rytmus-a-prostredi",
-    name: "Prostředí upravuje průběh sezónního vývoje",
-    prediction: "I při stejné délce dne může teplota změnit vývoj rostlin a tahovou aktivitu ptáků. Účinek závisí na předchozím chladu, ročním období a připravenosti organismu. Nedostatek potravy může odlet zdržet.",
-    test: "U větví měníme teplotu a osvětlení odděleně. U odchycených ptáků měníme teplotu mezi dvěma nocemi. V přírodě opakovaně sledujeme odlety stejných jedinců spolu se srážkami a potravou.",
-    observation: "Teplejší komory urychlily otevření květů. Jarní oteplení zvýšilo noční aktivitu červenek a bělořitů, podzimní reakce se lišila. Na Jamajce odlety za sucha zaostávaly o několik dnů.",
-    verdict: "Podpořené společné vysvětlení",
-    explanation: "Rostliny a ptáci mají odlišnou fyziologii. Jejich sezónní program však v obou případech reaguje na podmínky, které skutečně zažívají.",
+    name: "Termín závisí i na teplotě a dostupnosti potravy",
+    prediction: "Při stejném osvětlení může teplo urychlit otevření květu nebo změnit připravenost ptáka k letu. Pták, který na zimovišti obtížně hledá potravu, může odletět později.",
+    test: "U větví měníme teplotu a osvětlení. U ptáků sledujeme noční pohyb před změnou teploty a po ní. Ve volné přírodě porovnáváme odlety týchž jedinců v různě suchých letech.",
+    observation: "V teplejší komoře se květy otevřely dříve. Po jarním oteplení byli červenky i bělořiti v noci aktivnější, na podzim se reakce druhů lišily. Po suchém březnu odlétali ptáci z Jamajky později.",
+    verdict: "Vliv prostředí dokládají pokusy i pozorování",
+    explanation: "U květů záleželo také na předchozím zimním chladu, u ptáků na roční době. Vztah mezi potravou a odletem vychází ze sledování jednotlivých ptáků na zimovišti.",
     state: "supported",
   },
 ];
@@ -48,43 +48,40 @@ function Graphic({ name, alt, tests, children }: { name: string; alt: string; te
 
 export function PhenologyMechanismsArticle() {
   return <article className="article-layout"><div className="article-prose">
-    <h2 id="co-vysvetlujeme">Sezónní události se posouvají různým tempem</h2>
+    <h2 id="co-vysvetlujeme">Jak se změnily termíny kvetení a tahu</h2>
     <p className="article-prose__intro">
-      Jarní a letní fáze evropských rostlin se v souboru z let 1971–2000 posouvaly v průměru o <strong>2,5 dne za desetiletí k dřívějším termínům</strong>.
-      Přehled ptačích studií našel u jarního tahu a rozmnožování průměrný posun přibližně 2–3 dny za desetiletí, ale výrazné rozdíly mezi druhy a oblastmi.
-      Tyto <Link href="/pozorovani/fenologicke-posuny/#pozorovani">záznamy fenologických změn</Link> vyvolávají otázku, co v organismu dokáže termín posunout a proč nejsou reakce stejné. <SourceLink id="DOI_10_1111_j_1365_2486_2006_01193_x">(Menzel a kol. 2006)</SourceLink> <SourceLink id="DOI_10_1002_ecm_1552">(Romano a kol. 2023)</SourceLink>
+      Podle evropských záznamů z let 1971–2000 nastávaly jarní a letní události v životě rostlin, například rašení a kvetení, v průměru <strong>o 2,5 dne za desetiletí dříve</strong>.
+      U ptáků se podle souhrnu dlouhodobých studií tah před hnízděním i samotné hnízdění posouvaly přibližně o dva až tři dny za desetiletí stejným směrem.{" "}
+      <Link href="/pozorovani/fenologicke-posuny/#pozorovani">Dlouhodobá pozorování</Link> však ukazují i značné rozdíly mezi druhy. Proč se u jedněch termín posouvá více než u druhých?{" "}
+      <SourceLink id="DOI_10_1111_j_1365_2486_2006_01193_x">(Menzel a kol. 2006)</SourceLink> <SourceLink id="DOI_10_1002_ecm_1552">(Romano a kol. 2023)</SourceLink>
     </p>
     <p>
-      Fenologie sleduje načasování opakujících se událostí, například otevření květů nebo průletu ptáků.
-      Zde se zaměříme na jarní kvetení dřevin mírného pásu a na tah ptáků. Oddělíme vznik květního základu od otevření květu a přípravu k tahu od skutečného odletu a příletu.
-      Přesné vymezení události vysvětluje <Link href="/metody/standardizovane-fenologicke-pozorovani/#definice-faze">metoda fenologického pozorování</Link>.
+      Pozorovatel zapisuje třeba den, kdy se na keři otevře první květ. Pupen se přitom vyvíjel už dlouho předtím.
+      Podobně i jarnímu příletu ptáka předchází příprava na zimovišti, odlet a cesta se zastávkami. Každý z těchto kroků může výsledné datum posunout.
+      Aby šlo různé roky porovnat, určuje <Link href="/metody/standardizovane-fenologicke-pozorovani/#definice-faze">metoda fenologického pozorování</Link>, kterou událost a podle jakých znaků zaznamenat.
     </p>
 
     <h2 id="hypotezy">Dvě hypotézy a jejich předpovědi</h2>
     <HypothesisDiagram hypotheses={hypotheses} captionId="phenology-hypotheses-caption"
-      context={<p>Délkou dne rozumíme trvání světlé části dne, nikoli počet hodin slunečního svitu bez oblaků. Na stejném místě se její roční průběh opakuje téměř stejně. První hypotéza zkouší, zda tento kalendář spolu s neměnným vnitřním rytmem stačí. Druhá připouští další vliv prostředí.</p>}
-      caption={<>Předpovědi se liší v reakci na změnu podmínek při stejném světelném režimu. Výsledky z klecí a růstových komor se vztahují k měřeným projevům a podmínkám pokusu, nikoli automaticky ke všem volně žijícím organismům.</>} />
+      context={<p>Délka dne je doba mezi východem a západem slunce. Na stejném místě je třeba v polovině dubna rok od roku téměř stejná, ať je zrovna teplo, nebo chladno. Dá se proto zkoušet, co organismus načasuje podle světla a co ovlivní počasí.</p>}
+      caption={<>U rostlin lze přímo zaznamenat otevření květu. U ptáka v kleci lze sledovat přípravu k tahu. Termín odletu ze zimoviště zjišťovali vědci u volně žijících ptáků.</>} />
 
-    <h2 id="pribehy">Jak se odděloval kalendář od vlivu počasí</h2>
-    <HypothesisStory id="pevny-kalendar" number={1} title="Samotný sezónní kalendář určuje termín">
+    <h2 id="pribehy">Co ukázaly pokusy a opakovaná pozorování</h2>
+    <HypothesisStory id="pevny-kalendar" number={1} title="Délka dne a vnitřní rytmus samy určují termín">
       <p>
-        Roční období se opakují pravidelněji než jednotlivé teplé a chladné dny. Délka dne proto nabízí organismu spolehlivou informaci o části roku.
-        Americký botanik Wightman Garner v roce 1933 shrnul pokusy, které prováděl i s Harrym Allardem. Některé rostliny přecházely ke kvetení při delších dnech, jiné při kratších.
-        Už tehdy upozorňoval, že neexistuje jediná délka dne platná pro všechny rostliny. <SourceLink id="DOI_10_1104_pp_8_3_347">(Garner 1933, s. 347–348)</SourceLink>
+        Prodlužování dne začíná už v zimě. Rostlina tak může podle světla poznat, že se mění roční období, ještě než se trvale oteplí.
+        V pokusech amerických botaniků Wightmana Garnera a Harryho Allarda některé rostliny začaly tvořit květy, když se den prodloužil. Jiné přecházely ke kvetení při krátkém dni.{" "}
+        <SourceLink id="DOI_10_1104_pp_8_3_347">(Garner 1933, s. 347–348)</SourceLink>
       </p>
       <p>
-        U ptáků k tomu přistupuje vnitřní roční rytmus. Pokusy Eberharda Gwinnera s budníčky v šedesátých letech ukázaly,
-        že se období tahové aktivity mohou opakovat i za stálých podmínek. Postupně se však rozcházela s kalendářním rokem.
-        Přehled Barbary Helm a Miriam Liedvogel z roku 2024 vysvětluje, proč je nutné rozlišovat vnitřní rytmus a jeho seřizování vnějšími signály.
-        Tento historický závěr zde přebíráme z jejich odborné syntézy. <SourceLink id="DOI_10_1007_s00359_023_01688_w">(Helm a Liedvogel 2024)</SourceLink>
+        Pták může rytmus ročních období udržovat i bez střídání dlouhých a krátkých dnů. V pokusech Eberharda Gwinnera v 60. letech 20. století se budníčkům za stálých podmínek opakovaně vracela období tahové aktivity.
+        Časem se však s kalendářním rokem rozešla. Jak vysvětlují Barbara Helm a Miriam Liedvogel, ptáci mají <strong>vnitřní roční rytmus</strong>, který v přírodě pomáhají seřizovat změny délky dne.{" "}
+        <SourceLink id="DOI_10_1007_s00359_023_01688_w">(Helm a Liedvogel 2024)</SourceLink>
       </p>
       <p>
-        Samotný kalendář poskytuje rozumné výchozí vysvětlení pravidelnosti. Jeho přísná varianta ale předpovídá,
-        že při stejném osvětlení a stejném vnitřním nastavení jiná teplota ani množství potravy termín neposune.
-        Takto omezenou možnost budeme testovat. Netvrdíme, že Garner nebo Gwinner popírali všechny ostatní vlivy.
-        Oddělujeme důkaz existence sezónního programu od otázky, zda sám vysvětlí také změny jeho průběhu.
+        Kdyby o termínu rozhodovaly pouze délka dne a vnitřní rytmus, měly by se při stejném osvětlení a stejně seřízeném rytmu první květy otevírat a ptáci odlétat přibližně ve stejnou dobu jako loni.
+        Úlohu samotného světla lze ověřit v chovu. Když se změní jen doba osvětlení, začnou se ptáci chystat k letu dříve?
       </p>
-      <p>Schéma ukazuje skutečnou úlohu délky dne a očekávání, které vznikne, když jí přisoudíme celé načasování.</p>
       <Graphic name="kalendar" alt="Opakující se roční průběh délky dne působí na vývoj rostlin a přípravu ptáků k tahu. Při neměnném vnitřním rytmu předpovídá vysvětlení samotným kalendářem stejné termíny každý rok."
         tests={[
           { title: "Test 1 · Změna délky dne", prediction: "Prodloužení dne má podpořit sezónní přípravu ptáků.", test: "Čížci mají buď stále 10 hodin světla, nebo přirozeně se prodlužující den.", result: "Prodlužující se den podpořil tělesnou přípravu a noční aktivitu." },
@@ -95,54 +92,50 @@ export function PhenologyMechanismsArticle() {
 
       <h4 id="test-delka-dne" className={styles.testHeading}>Test 1 · Změna délky dne</h4>
       <p>
-        Pokud světlo spouští přípravu k jarnímu tahu, umělé prodlužování dne má změnit i ptáky chované uvnitř.
-        Ashley Robart, Mali McGuire a Heather Watts to zkoušely v letech 2015–2016 u severoamerického čížka <i>Spinus pinus</i>.
-        Jedna skupina 21 ptáků zažívala den prodlužující se jako na 34° severní šířky, druhých 20 ptáků stále 10 hodin světla a 14 hodin tmy.
-        Potravu měli k dispozici neomezeně. Autoři sledovali hmotnost, tuk, prsní svalstvo a pohyb pomocí infračervených čidel. <SourceLink id="DOI_10_1098_rsos_180876">(Robart a kol. 2018)</SourceLink>
+        Tým Ashley Robartové rozdělil severoamerické čížky druhu <i>Spinus pinus</i> do dvou skupin.
+        Jednadvaceti ptákům se den prodlužoval jako na 34. stupni severní šířky. Dalších dvacet mělo po celou dobu deset hodin světla denně.
+        Obě skupiny měly volný přístup k potravě. Vědci ptáky vážili, hodnotili jejich tukové zásoby a prsní svalstvo a infračervenými čidly sledovali jejich pohyb.{" "}
+        <SourceLink id="DOI_10_1098_rsos_180876">(Robart a kol. 2018)</SourceLink>
       </p>
       <p>
-        Při prodlužujícím se dni vzrostl ukazatel tělesné kondice, který spojoval hmotnost a tukové zásoby, více než při stálém krátkém dni.
-        Zvětšilo se také prsní svalstvo a narostla noční aktivita.
-        Rozdílný průběh noční aktivity podpořil také statistický model zohledňující opakované měření stejných ptáků.
-        Takzvaný tahový neklid je zvýšený pohyb v době obvyklého tahu. V kleci je ukazatelem přípravy, nikoli změřeným odletem.
-        Pokus podpořil význam světla, ale nezkoušel vyloučit vliv jiných podmínek. <SourceLink id="DOI_10_1098_rsos_180876">(Robart a kol. 2018, obr. 1)</SourceLink>
+        Při prodlužujícím se dni získali čížci lepší tělesnou kondici než při stálém krátkém dni. Vědci ji posuzovali podle hmotnosti a zásob tuku. Zvětšily se jim také prsní svaly a v noci byli aktivnější.
+        Takovému pohybu v době obvyklého tahu se říká <strong>tahový neklid</strong>. Rozdíl v noční aktivitě se projevil i ve výpočtu, který zohlednil opakovaná měření týchž ptáků.
+        Pokus tak zachytil přípravu k letu už v kleci.{" "}
+        <SourceLink id="DOI_10_1098_rsos_180876">(Robart a kol. 2018, obr. 1)</SourceLink>
       </p>
 
       <h4 id="test-terenni-rady" className={styles.testHeading}>Test 2 · Stejná místa v dalších letech</h4>
       <p>
-        Kdyby termíny určoval jen neměnný kalendář, neměly by se na stejných lokalitách soustavně posouvat.
-        Annette Menzel a spoluautoři v roce 2006 porovnávali dlouhé řady jednotlivých druhů a fází, nikoli pouze průměr všech náhodně došlých hlášení.
-        U rostlin nastalo 78 % sledovaných trendů rašení, kvetení a zrání směrem k dřívějším datům. Statisticky průkazně dřívějších bylo 30 % všech řad,
-        pozdějších 3 %. Soubor tedy neříká, že se stejně změnila každá rostlina. <SourceLink id="DOI_10_1111_j_1365_2486_2006_01193_x">(Menzel a kol. 2006)</SourceLink>
+        Na jednom místě se každé jaro opakuje téměř stejný průběh délky dne. Připadají tam také první květy každý rok na podobné datum?
+        Annette Menzelová a její kolegové vybrali místa, kde pozorovatelé u téhož druhu zapisovali stejnou událost v nejméně 15 letech. Z těchto dat vypočítali, jak se měnil termín na každém místě.
+        U rašení, kvetení a zrání mířilo 78 % takto vypočtených trendů k časnějším termínům. U 30 % všech těchto záznamů byl posun k dřívějším datům statisticky průkazný, u 3 % byl průkazný posun k pozdějším datům.{" "}
+        <SourceLink id="DOI_10_1111_j_1365_2486_2006_01193_x">(Menzel a kol. 2006)</SourceLink>
       </p>
       <p>
-        Průměrný jarní a letní posun 2,5 dne za desetiletí je změna data události, nikoli délky vegetační sezóny.
-        Výběr řad a nejistoty popisuje <Link href="/pozorovani/fenologicke-posuny/#rostliny-v-evrope">pozorovací článek</Link>.
-        U ptáků navíc <Link href="/pozorovani/fenologicke-posuny/#ptaci">dlouhodobé záznamy</Link> rozlišují jarní a podzimní tah, druhy i trasy.
-        Podzimní souhrn neukázal stejný celkový posun jako jarní. <SourceLink id="DOI_10_1002_ecm_1552">(Romano a kol. 2023)</SourceLink>
+        Podrobnosti o výběru rostlin a míst uvádí <Link href="/pozorovani/fenologicke-posuny/#rostliny-v-evrope">rozbor evropských záznamů</Link>.
+        U ptáků záleželo i na části roku. V <Link href="/pozorovani/fenologicke-posuny/#ptaci">souhrnu pozorování 684 druhů</Link> vycházel pro tah před hnízděním posun k časnějším termínům. Pro tah po hnízdění se společný směr spolehlivě určit nepodařilo.{" "}
+        <SourceLink id="DOI_10_1002_ecm_1552">(Romano a kol. 2023)</SourceLink>
       </p>
       <p>
-        Stálá délka dne sama tuto změnu nevysvětluje. Terénní řady však ještě nerozhodují, zda se mění okamžitá reakce organismu,
-        dědičné vlastnosti populace nebo jiné podmínky. Přísně neměnný kalendář selhal jako úplné vysvětlení. Jeho skutečná biologická úloha tím zůstává zachována.
-        K určení dalších příčin potřebujeme pokusy, které mění jednotlivé podmínky odděleně.
+        Na stejném místě se tedy kvetení nebo tah mohou v kalendáři posunout, i když se průběh délky dne rok od roku opakuje. Které podmínky posun způsobily, z dat kvetení a tahu samotných nepoznáme.
+        U pupenů lze jeden z možných vlivů vyzkoušet už tím, že větve téhož druhu přeneseme do různě teplých místností.
       </p>
     </HypothesisStory>
 
-    <HypothesisStory id="rytmus-a-prostredi" number={2} title="Prostředí upravuje průběh sezónního vývoje">
+    <HypothesisStory id="rytmus-a-prostredi" number={2} title="Termín závisí i na teplotě a dostupnosti potravy">
       <p>
-        Výzkum světelného kalendáře probíhal vedle výzkumu teploty a vývojového klidu. U dřevin se dlouho využívá zkušenost,
-        že větve přenesené do tepla mohou vyrašit a rozkvést. Richard Primack a spoluautoři v roce 2015 shrnuli, jak z tohoto postupu vzniká kontrolovaný experiment:
-        větve různých druhů vystavíme stanovenému chladu, světlu a následnému teplu a změříme, kdy dosáhnou stejné fáze. <SourceLink id="DOI_10_1093_aob_mcv032">(Primack a kol. 2015)</SourceLink>
+        Větev, kterou v zimě uřízneme a dáme doma do vody, může během několika týdnů rozkvést. Botanici tohoto jevu využívají k pokusům.
+        Rozdělí větve do komor, v nichž nastaví teplotu a dobu osvětlení, a zaznamenají, za kolik dnů se otevře první květ. Postup a zkušenosti z pokusů s různými dřevinami shrnuli Richard Primack a jeho kolegové.{" "}
+        <SourceLink id="DOI_10_1093_aob_mcv032">(Primack a kol. 2015)</SourceLink>
       </p>
       <p>
-        Vývojový klid neznamená pouhé okamžité zpomalení zimou. Pupen může určitou dobu zůstat uzavřený i po přenesení do tepla.
-        Prodělaný chlad pomáhá tento vnitřní stav změnit. Následné teplo pak podporuje další vývoj.
-        U ptáků analogicky rozlišujeme připravenost k tahu a podmínky umožňující odlet. Jde o různé biologické děje, společná je jejich závislost na dosavadním stavu organismu. <SourceLink id="DOI_10_1093_aob_mcv032">(Primack a kol. 2015)</SourceLink> <SourceLink id="DOI_10_1007_s00359_023_01688_w">(Helm a Liedvogel 2024)</SourceLink>
+        Záleží i na tom, kdy větev uřízneme. U mnoha dřevin je pupen na začátku zimy ve <strong>vývojovém klidu</strong> a může zůstat zavřený i v teplé místnosti.
+        Po dostatečně dlouhém období chladu vývojový klid odezní a pupen na teplo reaguje rychlejším růstem. Také u ptáka záleží na tom, v jaké fázi ročního cyklu ho změna počasí zastihne a kolik už má zásob na cestu.{" "}
+        <SourceLink id="DOI_10_1093_aob_mcv032">(Primack a kol. 2015)</SourceLink> <SourceLink id="DOI_10_1007_s00359_023_01688_w">(Helm a Liedvogel 2024)</SourceLink>
       </p>
       <p>
-        Z toho plyne odlišná předpověď než u pevného kalendáře. Změna teploty při stejném osvětlení může změnit termín nebo aktivitu.
-        Stejný teplotní zásah ale nemusí působit stejně po různě dlouhé zimě nebo na jaře a na podzim.
-        Následující schéma ukazuje dvě cesty, kterými prostředí upravuje sezónní vývoj. Testy je ověřují jednotlivě.
+        Při stejné délce dne by se měly květy na připravených větvích otevřít v teple dříve než v chladu.
+        U tažného ptáka zase může oteplení vyvolat na jaře jinou reakci než na podzim.
       </p>
       <Graphic name="prostredi" alt="U dřeviny předchozí chlad mění vývojový klid pupenu a následné teplo podporuje jeho rozvoj až k otevření květu. U ptáka sezónní přípravu doplňuje získávání potravy a reakce na podmínky v místě zastávky."
         tests={[
@@ -155,153 +148,141 @@ export function PhenologyMechanismsArticle() {
 
       <h4 id="test-kveteni" className={styles.testHeading}>Test 1 · Květy v růstových komorách</h4>
       <p>
-        Huanjiong Wang a spoluautoři zkoumali šest druhů dřevin odebraných v Pekingu v zimě 2017–2018.
-        Větve kombinovaně vystavili <strong>12, 15 nebo 18 °C a 10 nebo 14 hodinám světla</strong>. Každá kombinace měla tři větve ze tří rostlin.
-        Tři odběry následovaly po 3, 38 a 59 dnech s průměrnou teplotou pod 5 °C. Výzkumníci kontrolovali větve třikrát týdně a počítali dny od odběru do otevření prvního květu.
-        Tato fáze má v číselné stupnici vývoje rostlin označení BBCH 60. Tak lze oddělit následné teplo od osvětlení. <SourceLink id="DOI_10_3389_fpls_2020_00443">(Wang a kol. 2020, metody)</SourceLink>
+        Huanjiong Wang a jeho kolegové v zimě 2017–2018 třikrát odebrali v Pekingu větve šesti druhů dřevin. Před prvním odběrem napočítali venku tři dny s průměrnou teplotou pod 5 °C, před dalšími odběry 38 a 59 takových dnů.
+        Při každém odběru rozdělili větve mezi komory se třemi teplotami (12, 15 a 18 °C) a dvěma délkami dne (10 a 14 hodin). Pro každý druh a každou kombinaci použili tři větve, každou z jiné rostliny.
+        Třikrát týdně kontrolovali, zda se na větvi otevřel první květ. V datech studie najdeme tuto fázi vývoje pod označením BBCH 60.{" "}
+        <SourceLink id="DOI_10_3389_fpls_2020_00443">(Wang a kol. 2020, metody)</SourceLink>
       </p>
       <p>
-        Vyšší teplota dobu zkrátila u všech šesti druhů. Například u <i>Forsythia suspensa</i> činil rozdíl mezi 18 a 12 °C v průměru <strong>29,7 dne</strong>.
-        Po nejkratším předchozím chladu čtyři druhy vůbec nevykvetly. Účinek tepla tedy není nezávislý na připravenosti pupenu.
-        Rozdíl 29,7 dne pochází z průměrování pokusných kombinací, není předpovědí pro příští jaro.
-        Studie k němu v tabulce 3 neuvádí interval spolehlivosti, obrázek 2 ukazuje rozptyl tří opakování pomocí směrodatné odchylky. <SourceLink id="DOI_10_3389_fpls_2020_00443">(Wang a kol. 2020)</SourceLink>
+        Vyšší teplota v komoře zkrátila dobu do rozkvětu u všech šesti druhů. U zlatice <i>Forsythia suspensa</i> se první květ při 18 °C otevřel v průměru <strong>o 29,7 dne dříve</strong> než při 12 °C.
+        Do průměru vstoupily výsledky z různých termínů odběru i z obou délek dne. Obrázek 2 původní studie ukazuje, nakolik se výsledky v každé trojici lišily. Po pouhých třech dnech zimního chladu čtyři z šesti druhů do konce pokusu vůbec nevykvetly.
+        Změna délky dne z deseti na čtrnáct hodin měla statisticky průkazný účinek jen u dvou druhů.{" "}
+        <SourceLink id="DOI_10_3389_fpls_2020_00443">(Wang a kol. 2020)</SourceLink>
       </p>
       <p>
-        Jde o přímý zásah do podmínek, nikoli jen souběh teplého počasí a časného kvetení. Pokusy na odříznutých větvích však nezachycují kořeny ani všechny venkovní podmínky.
-        Proto je důležité porovnávat je s dalšími pokusy a s terénními řadami. Přehled studií z Evropy a Severní Ameriky ukazuje společný význam tepla a zimního chladu,
-        ale rozdílné nároky jednotlivých druhů. <SourceLink id="DOI_10_1093_aob_mcv032">(Primack a kol. 2015)</SourceLink>
+        Teplotu a osvětlení v komoře mohli vědci nastavit nezávisle na sobě. Naproti tomu délka chladu venku souvisela s datem odběru. Později uříznuté větve měly za sebou také jiný průběh počasí a délky dne.
+        Podobné pokusy v Evropě a Severní Americe potvrzují, že ke kvetení mnoha dřevin přispívá zimní chlad i následné teplo. Jednotlivé druhy se ale liší v tom, kolik chladu a tepla potřebují.{" "}
+        <SourceLink id="DOI_10_1093_aob_mcv032">(Primack a kol. 2015)</SourceLink>
       </p>
 
       <h4 id="test-teplota-ptaci" className={styles.testHeading}>Test 2 · Teplota během tahové zastávky</h4>
       <p>
-        U ptáků potřebujeme jinou zkoušku. Jestliže místní teplota upravuje připravenost pokračovat v tahu, její změna má ovlivnit tahový neklid při stejném světelném režimu.
-        Thomas Klinner a Heiko Schmaljohann v roce 2018 na Helgolandu dočasně chovali odchycené červenky obecné a bělořity šedé.
-        Po třech nocích při 5 nebo 25 °C ptáky přemístili do opačné teploty. Čidla zachycovala pohyb a z něj autoři počítali minuty aktivity.
-        Porovnávali stejného jedince během třetí a čtvrté noci,
-        s přihlédnutím k jeho energetickým zásobám a datu odchytu. <SourceLink id="DOI_10_1098_rspb_2020_1650">(Klinner a Schmaljohann 2020)</SourceLink>
+        Co udělá změna teploty s ptákem, který už je na cestě? Thomas Klinner a Heiko Schmaljohann na ostrově Helgoland v roce 2018 dočasně odchytili táhnoucí červenky obecné a bělořity šedé.
+        Po třech nocích při 5 nebo 25 °C přemístili ptáky z chladu do tepla nebo z tepla do chladu. Přitom zachovali stejný světelný režim. Během prvních deseti hodin třetí a čtvrté noci spočítali minuty, v nichž čidlo zaznamenalo pohyb.
+        U každého ptáka tak mohli porovnat aktivitu před změnou teploty a po ní. Při výpočtu zohlednili také datum odchytu a zásoby energie na cestu.{" "}
+        <SourceLink id="DOI_10_1098_rspb_2020_1650">(Klinner a Schmaljohann 2020)</SourceLink>
       </p>
       <p>
-        Jarní oteplení zvýšilo neklid obou druhů. Tato větev pokusu zahrnovala 28 červenek a 26 bělořitů.
-        Na podzim oteplení aktivitu bělořitů snížilo, u červenek nebyla změna statisticky průkazná.
-        Výsledek odpovídá reakci závislé na sezóně a druhu, nikoli pravidlu „tepleji vždy znamená dříve“.
-        Náhlý rozdíl <strong>20 °C</strong> ověřuje možnost reakce, ne velikost účinku běžného klimatického oteplení. <SourceLink id="DOI_10_1098_rspb_2020_1650">(Klinner a Schmaljohann 2020, tabulky 1, 3 a 4)</SourceLink>
+        Na jaře pobývalo nejprve v chladu a pak v teple 28 červenek a 26 bělořitů. Po oteplení z 5 na 25 °C vzrostla noční aktivita obou druhů.
+        Na podzim po stejném oteplení aktivita bělořitů naopak klesla. U červenek se tehdy průkazná změna neprojevila.
+        Bělořiti tedy na stejné oteplení reagovali v obou obdobích opačně.{" "}
+        <SourceLink id="DOI_10_1098_rspb_2020_1650">(Klinner a Schmaljohann 2020, tabulky 1, 3 a 4)</SourceLink>
       </p>
       <p>
-        Slabinou je chybějící souběžná skupina bez změny teploty. Nelze úplně vyloučit vliv dalšího dne v zajetí.
-        Navíc se měřil pohyb v kleci. K ověření, zda podmínky mění také skutečné termíny odletů, se proto obrátíme k opakovaným terénním pozorováním. <SourceLink id="DOI_10_1098_rspb_2020_1650">(Klinner a Schmaljohann 2020, diskuse)</SourceLink>
+        Žádná skupina ptáků nestrávila třetí i čtvrtou noc při stejné teplotě. Část rozdílu v pohybu proto mohla souviset také s delším pobytem v zajetí.
+        Kdy pták skutečně vyrazil, lze zjistit sledováním jeho pohybu v přírodě.{" "}
+        <SourceLink id="DOI_10_1098_rspb_2020_1650">(Klinner a Schmaljohann 2020, diskuse)</SourceLink>
       </p>
 
       <h4 id="test-potrava" className={styles.testHeading}>Test 3 · Potrava před odletem</h4>
       <p>
-        Jestliže nedostatek potravy zdržuje přípravu, měli by se ve slabších letech zpozdit i stejní ptáci.
-        Colin Studds a Peter Marra sledovali na Jamajce 74 barevně kroužkovaných jedinců druhu <i>Setophaga ruticilla</i> po dobu dvou až šesti sezón.
-        V letech 2003–2009, bez odletových měření v roce 2006, získali 194 odletových událostí. Srážky porovnali s množstvím členovců na teritoriích a s termíny odletu.
-        Způsob kontroly nepřítomnosti ptáka popisuje <Link href="/pozorovani/fenologicke-posuny/#odlety-z-jamajky">navazující pozorování</Link>. <SourceLink id="DOI_10_1098_rspb_2011_0332">(Studds a Marra 2011)</SourceLink>
+        Na jamajském zimovišti sledovali Colin Studds a Peter Marra 74 dospělých pěvců druhu <i>Setophaga ruticilla</i>. Podle barevných kroužků každého poznali a mohli porovnat jeho odlety ve dvou až šesti sezónách.
+        Mezi roky 2003 a 2009 tak získali 194 odhadů data odletu. Jen v roce 2006 odlety nesledovali. Vycházeli z <Link href="/pozorovani/fenologicke-posuny/#odlety-z-jamajky">opakovaných kontrol ptačích teritorií</Link> přibližně po třech dnech.
+        Úhrn březnových srážek znali z místní stanice. Množství dostupné potravy odhadli ze 132 vzorků členovců, které za dobu sledování nasbírali na ptačích teritoriích.{" "}
+        <SourceLink id="DOI_10_1098_rspb_2011_0332">(Studds a Marra 2011)</SourceLink>
       </p>
       <p>
-        Sušší březen souvisel s méně potravou a pozdějším odletem. Rozpětí srážek mezi zkoumanými roky odpovídalo v modelu přibližně <strong>3–5 dnům zpoždění</strong> podle prostředí.
-        Opakování u stejných ptáků omezuje možnost, že jde jen o výměnu jedinců v populaci. Srážky ale výzkumníci náhodně nepřidělovali.
-        Studie podporuje potravní vysvětlení, sama neprokazuje každý článek příčinné řady ani lidský původ konkrétního sucha. <SourceLink id="DOI_10_1098_rspb_2011_0332">(Studds a Marra 2011)</SourceLink>
-      </p>
-      <p>
-        Druhé vysvětlení tak obstálo vlastními předpověďmi. Pokus s rostlinami ukazuje změnu po zásahu do prostředí, ptačí pokus doplňuje závislost na roční době
-        a terénní sledování spojuje změnu podmínek se skutečnými odlety. Tyto postupy mají různé slabiny a neměří stejnou veličinu.
-        Jejich shoda podporuje souběžné působení sezónního programu a prostředí, nikoli jediný univerzální spouštěč.
+        Po sušším březnu našli vědci v teritoriích méně potravy a titíž ptáci odlétali později. Mezi nejsušším a nejdeštivějším březnem činil rozdíl 190 mm srážek.
+        Tomuto rozdílu odpovídal podle výpočtu pozdější odlet v suchém roce přibližně o <strong>tři dny v mangrovech a pět dnů v křovinách</strong>. Zda jsou ptáci v křovinách na sucho citlivější, zůstává kvůli nejistotě obou odhadů otevřené.
+        Opakované odlety stejných jedinců podporují vysvětlení, že přípravu na cestu prodloužil nedostatek potravy. Za sucha se ovšem mohly měnit i další podmínky.{" "}
+        <SourceLink id="DOI_10_1098_rspb_2011_0332">(Studds a Marra 2011)</SourceLink>
       </p>
     </HypothesisStory>
 
-    <h2 id="jak-mechanismus-funguje">Jak prostředí mění termín události</h2>
+    <h2 id="jak-mechanismus-funguje">Od zimního pupenu ke květu, od přípravy k odletu</h2>
     <p>
-      Světelný a vnitřní kalendář vysvětlují pravidelnost sezónního života, samy však nestačí na jeho pozorované posuny.
-      Vysvětlení doplněné o teplotu, předchozí chlad a dostupnost potravy obstálo v pokusech i v terénním porovnání.
-      Nyní projdeme, jak se vnější podmínka může proměnit v biologickou změnu a nakonec v jiné datum kvetení nebo tahu.
+      Prodlužování dne stačilo čížkům k přípravě na tah. Samotný kalendář však nevysvětluje, proč se termíny posouvají. I při stejném osvětlení rozkvetly větve v teplejší komoře dříve a bělořiti po změně teploty změnili noční aktivitu.
+      Na zimovišti se pozdější odlet pojil se skrovnější nabídkou potravy. Který vliv se projeví, záleží i na tom, jak daleko už pupen ve vývoji nebo pták v přípravě na cestu pokročil.
     </p>
 
-    <h3>Rostlina musí dospět ke konkrétní vývojové fázi</h3>
+    <h3>Od založení květu k jeho otevření</h3>
     <p>
-      Kvetení zahrnuje několik dějů. Rostlina nejprve vytváří květní základy, které se potom vyvíjejí až k otevřenému květu.
-      U mnoha jarních dřevin přezimují už založené pupeny. Jejich zimní klid a následný rozvoj proto nelze zaměnit za první rozhodnutí rostliny vytvářet květy.
-      Zimní chlad může uvolnit omezení dalšího vývoje, teplo potom urychluje postup k pozorované fázi. <SourceLink id="DOI_10_1093_aob_mcv032">(Primack a kol. 2015)</SourceLink>
+      U mnoha na jaře kvetoucích dřevin najdeme základy budoucích květů v pupenech už před zimou. Když se pupen na jaře otevře, vidíme výsledek vývoje, který začal v předchozí sezóně.
+      Během zimy chlad pomáhá ukončit vývojový klid. Jakmile je pupen připravený pokračovat v růstu, může teplo výrazně zkrátit dobu, která zbývá do rozkvětu.{" "}
+      <SourceLink id="DOI_10_1093_aob_mcv032">(Primack a kol. 2015)</SourceLink>
     </p>
     <p>
-      Že světelný signál skutečně mění biologické řízení, ukazují pokusy s huseníčkem rolním <i>Arabidopsis thaliana</i>.
-      Za vhodného světelného režimu vzniká v listech bílkovina FT. Přesouvá se do růstového vrcholu, kde pomáhá přepnout vývoj ke tvorbě květů.
-        Michitaka Notaguchi a spoluautoři v roce 2008 využili roubování a označenou bílkovinu. Po vyvolání její tvorby v dárcovské části ji nalezli u vrcholu příjemce během jednoho až dvou dnů.
-        Roubovací pokusy doložily také přenositelný účinek podporující kvetení. <SourceLink id="DOI_10_1093_pcp_pcn154">(Notaguchi a kol. 2008)</SourceLink>
+      Jak se informace o délce dne dostane z listu až na místo, kde vznikne květ? U huseníčku rolního (<i>Arabidopsis thaliana</i>) vzniká za dlouhého dne v listech bílkovina FLOWERING LOCUS T, zkráceně FT.
+      Michitaka Notaguchi a jeho kolegové spojili roubováním části dvou rostlin. V jedné vyvolali tvorbu označené bílkoviny a za jeden až dva dny ji našli ve druhé, u rostoucí špičky výhonu.
+      Právě tam tento signál z listů podporuje zakládání květů.{" "}
+      <SourceLink id="DOI_10_1093_pcp_pcn154">(Notaguchi a kol. 2008)</SourceLink>
     </p>
     <p>
-      Tento pokus ověřuje cestu od signálu k vývojové odpovědi u konkrétní rostliny. Není důkazem, že stejná bílkovina přímo určila každé datum otevření květu v pekingském pokusu.
-      Oba experimenty zachycují jiné kroky. Právě jejich rozlišení umožňuje spojit molekulární biologii s pozorováním v přírodě bez záměny měřených událostí.
-    </p>
-
-    <h3>Jak se v modelu sčítají teploty</h3>
-    <p>
-      Praktický model vývoje sčítá teplotu nad zvolenou základní hodnotou. Den s průměrem 12 °C při základu 5 °C přidá sedm stupňodnů.
-      Dva takové dny přidají čtrnáct. Stupňoden tedy vyjadřuje teplotní rozdíl násobený dobou, nikoli energii dodanou rostlině.
-      Součet je zjednodušený popis vývoje. Teplotní hranici a potřebnou dávku je nutné ověřit pro druh, fázi a podmínky. <SourceLink id="DOI_10_1093_aob_mcv032">(Primack a kol. 2015)</SourceLink>
-    </p>
-    <p>
-      Pro názorný výpočet zvolme <strong>modelovou potřebu 140 stupňodnů nad 5 °C</strong>.
-      Při stálých 12 °C se naplní za 140 ÷ 7 = 20 dnů, při 15 °C za 140 ÷ 10 = 14 dnů.
-      Rozdíl šesti dnů plyne jen ze zvoleného modelu, není novým měřením určité rostliny.
-      Výpočet vysvětluje směr reakce: při nezměněných nárocích může teplejší jaro dovést vývoj ke stejné fázi dříve.
-    </p>
-    <p>
-      Předchozí zima však může změnit samotné nároky. Méně účinného zimního chladu může následný vývoj zbrzdit a část účinku teplého jara vyrovnat.
-      Délka dne může u některých druhů postup dále omezovat. Vysvětlení proto připouští rozdílné reakce i v jednom místě.
-      Konkrétní rozdíl mezi komorami nelze bez dalšího přepočítat na počet dnů za desetiletí ve volné přírodě. <SourceLink id="DOI_10_3389_fpls_2020_00443">(Wang a kol. 2020)</SourceLink>
+      Větev zlatice v pekingské komoře už měla květy založené. U ní tedy záleží na tom, jak dlouho bude trvat, než se připravený pupen rozvine.
+      Tuto dobu lze přibližně vyjádřit pomocí teplot, které větev postupně zažije.
     </p>
 
-    <h3>Pták postupně připravuje tělo, odlétá a zastavuje po cestě</h3>
+    <h3>Za kolik teplých dnů se pupen otevře</h3>
     <p>
-      U ptáků sezónní řízení koordinuje chování i tělesnou přípravu. Změny příjmu potravy, zásob a svalstva umožňují pozdější cestu.
-      Světelný signál tak nepůsobí jako povel k jedinému okamžitému startu. Připravuje organismus, jehož další chování závisí také na aktuálních možnostech.
-      Přehled migračních hodin ukazuje, že se vnitřní časování, seřizování světlem a pružná reakce na okolí doplňují. <SourceLink id="DOI_10_1007_s00359_023_01688_w">(Helm a Liedvogel 2024)</SourceLink>
+      V jednoduchém modelu počítáme za každý den jen tu část průměrné teploty, která převyšuje zvolenou mez. Zvolíme-li hranici 5 °C, pak den s průměrem 12 °C přidá sedm <strong>stupňodnů</strong>.
+      Den s průměrem 5 °C nebo nižším přidá nulu. Takto sečtené stupňodny vyjadřují, jak dlouho a o kolik byla teplota nad zvolenou mezí. Kde tato hranice leží a jaký součet odpovídá rozkvětu, vědci ověřují pro jednotlivé druhy a fáze vývoje.{" "}
+      <SourceLink id="DOI_10_1093_aob_mcv032">(Primack a kol. 2015)</SourceLink>
     </p>
     <p>
-      Zásoby pro let musí pták získat z potravy. Horší potravní podmínky mohou tento krok prodloužit.
-      Na trase se střídají lety a zastávky, během nichž pták znovu doplňuje zásoby a reaguje na místní podmínky.
-      Datum příletu je proto výsledkem odletu i celé cesty. Teplé evropské jaro není informací, kterou by pták na vzdáleném zimovišti automaticky přímo vnímal. <SourceLink id="DOI_10_1007_s00359_023_01688_w">(Helm a Liedvogel 2024)</SourceLink>
+      Představme si pupen, který po skončení zimního klidu potřebuje k rozkvětu 140 stupňodnů nad 5 °C. Při stálých 12 °C přibývá sedm stupňodnů denně, takže by se květ otevřel za 20 dnů.
+      Při 15 °C přibývá deset stupňodnů denně a stačilo by 14 dnů. Těchto šest dnů rozdílu vychází z ilustračního výpočtu se zvoleným nárokem na teplo.
     </p>
     <p>
-      Změna chování téhož jedince podle podmínek se označuje jako fenotypová plasticita, tedy schopnost vytvářet různé projevy bez změny jeho dědičné výbavy.
-      Vedle ní se mohou mezi generacemi měnit i dědičné vlastnosti populace. Samotné dřívější datum příletu tyto dvě možnosti nerozliší.
-      Potřebujeme sledování jedinců, kontrolované podmínky a při zkoumání evoluce také údaje o dědičnosti. <SourceLink id="DOI_10_1007_s00359_023_01688_w">(Helm a Liedvogel 2024)</SourceLink>
+      Po mírné zimě však může stejný pupen potřebovat k rozkvětu více jarního tepla. Část náskoku, který by jinak poskytlo teplé jaro, se tak může ztratit.
+      U některých druhů záleží také na tom, zda už je den dost dlouhý. Proto mohou dvě dřeviny, které rostou vedle sebe, posunout kvetení v témže roce různě.{" "}
+      <SourceLink id="DOI_10_3389_fpls_2020_00443">(Wang a kol. 2020)</SourceLink>
     </p>
 
-    <h3>Co je ověřené a co je třeba měřit dál</h3>
+    <h3>Co určuje datum příletu na hnízdiště</h3>
     <p>
-      Přímé pokusy ověřují citlivost určitých fází a projevů na světlo a teplotu. Dlouhé řady ukazují, že se termíny skutečně mění.
-      Nejméně jistý bývá přesný podíl jednotlivých vlivů u určitého druhu a místa. Propojení důkazů vysvětluje směr mnoha jarních posunů i rozdílnost reakcí,
-      ale neposkytuje jediné číslo platné pro všechny rostliny a ptáky.
+      Délka dne pomáhá ptákům seřídit vnitřní roční rytmus. Díky němu se v době přípravy na tah mění chování i tělo ptáka.
+      Pták přijímá potravu, ukládá tuk a připravuje si svalstvo na let. V roce s nedostatkem potravy mu může získání potřebných zásob trvat déle.{" "}
+      <SourceLink id="DOI_10_1007_s00359_023_01688_w">(Helm a Liedvogel 2024)</SourceLink>
+    </p>
+    <p>
+      Po odletu ze zimoviště se střídají úseky letu se zastávkami, kde pták odpočívá a znovu doplňuje zásoby. Kdy dorazí na hnízdiště, závisí i na podmínkách podél trasy.
+      Pokud na hnízdiště přiletí dříve než loni, mohl letos dřív odletět, strávit méně času na zastávkách nebo obojí. K rozlišení těchto možností potřebujeme údaje i z cesty.{" "}
+      <SourceLink id="DOI_10_1007_s00359_023_01688_w">(Helm a Liedvogel 2024)</SourceLink>
+    </p>
+    <p>
+      Jednotlivý pták může načasování tahu přizpůsobovat podmínkám během svého života, jak ilustrují odlety z Jamajky. Biologové takovou schopnost označují jako <strong>fenotypovou plasticitu</strong>.
+      U celé populace se navíc mezi generacemi mohou měnit dědičné předpoklady k časnějšímu či pozdějšímu tahu. Chceme-li určit podíl této změny, potřebujeme vedle termínů příletu znát také příbuznost ptáků a porovnat jejich chování za srovnatelných podmínek.{" "}
+      <SourceLink id="DOI_10_1007_s00359_023_01688_w">(Helm a Liedvogel 2024)</SourceLink>
+    </p>
+
+    <h3>Co ještě potřebujeme zjistit</h3>
+    <p>
+      U ptáků zůstává otevřené, do jaké míry změna nočního neklidu předpovídá skutečný odlet. Rozhodnout by pomohlo sledování po vypuštění. Kdyby ptáci po oteplení byli v kleci aktivnější, ale z ostrova odletěli ve stejnou dobu jako skupina při stálé teplotě, samotný neklid by se pro odhad dne odletu v těchto podmínkách neosvědčil.
+      U dřevin zůstává otevřené, jak velkou část dlouhodobého posunu venku lze připsat jarnímu teplu. K takovému odhadu potřebujeme znát také průběh zimy a ověřit reakci celých stromů.
     </p>
     <details className="method-details">
-      <summary>Meze pokusů a konkrétní další zkouška</summary>
+      <summary>Jak ověřit účinek zimního chladu a datum odletu</summary>
       <p>
-        Větve odebrané v různých zimních termínech nezažily jen různé množství chladu, ale také jinou předchozí délku dne a další podmínky.
-        Tento postup je slabší izolací účinku chladu než náhodné rozdělení současně odebraného materiálu do chladových režimů.
-        Odříznutí navíc mění zásobování a růstové komory nemusí napodobit kolísání počasí. <SourceLink id="DOI_10_1093_aob_mcv032">(Primack a kol. 2015)</SourceLink>
+        Větve pro srovnání by šlo odebrat v jediný den a náhodně je rozdělit mezi různě dlouhá období chladu. Následné oteplení by pak začínalo za předem určených podmínek.
+        Výsledky by bylo třeba srovnat s celými stromy venku. Odříznutá větev ztratila spojení s kořeny a v komoře zažívá menší výkyvy teplot než v přírodě.{" "}
+        <SourceLink id="DOI_10_1093_aob_mcv032">(Primack a kol. 2015)</SourceLink>
       </p>
       <p>
-        Tahový neklid je nepřímým ukazatelem. Jeho změnu nelze převést na stejné zpoždění skutečného příletu.
-        Ani terénní souběh sucha a pozdějšího odletu sám nevylučuje všechny další vlivy. Pokusy s teplotou a sledování volně žijících jedinců proto potřebujeme propojit,
-        ne je považovat za zaměnitelná měření. <SourceLink id="DOI_10_1098_rspb_2020_1650">(Klinner a Schmaljohann 2020)</SourceLink> <SourceLink id="DOI_10_1098_rspb_2011_0332">(Studds a Marra 2011)</SourceLink>
+        Na Helgolandu činil teplotní skok 20 °C. Při opakování by šlo vyzkoušet mírnější oteplení a ponechat srovnávací skupinu po celou dobu při stejné teplotě.
+        Po vypuštění by vysílače ukázaly, kdy jednotliví ptáci skutečně pokračují v tahu. Na zimovišti mají terénní kontroly jinou mez. Odlet lze datovat jen s přesností, kterou dovoluje odstup mezi návštěvami.{" "}
+        <SourceLink id="DOI_10_1098_rspb_2020_1650">(Klinner a Schmaljohann 2020)</SourceLink> <SourceLink id="DOI_10_1098_rspb_2011_0332">(Studds a Marra 2011)</SourceLink>
       </p>
       <p>
-        Konkrétní další test by mohl přidat ptákům kontrolní skupinu bez změny teploty, mírnější teplotní rozdíly a po vypuštění sledování vysílači.
-        Pokud by se neklid změnil, ale skutečné pokračování tahu nikoli, oslabilo by to přenos výsledku z klece do přírody.
-        U rostlin by opakované pokusy při shodném chladu, světle a zásobování, které by nedoložily očekávané urychlení po oteplení,
-        vyžadovaly změnu modelu pro dotčený druh a fázi. Jde o návrhy ověření, nikoli o zde již získané výsledky.
+        Také převod stupňodnů na datum rozkvětu lze vyzkoušet na dalších zimách. Kdyby dřevina po srovnatelném zimním chladu při stejné délce dne opakovaně rozkvétala stejně rychle v chladnějších i teplejších podmínkách, bylo by třeba pro tento druh a rozsah teplot jednoduchý model upravit.
       </p>
     </details>
 
     <section className="method-conclusion" aria-labelledby="shrnuti">
-      <h2 id="shrnuti">Proč se termíny mění</h2>
+      <h2 id="shrnuti">Proč se kvetení a tah posouvají</h2>
       <p>
-        Sezónní život řídí biologický vývoj a vnitřní rytmy reagující na prostředí. U jarních dřevin může teplo urychlit vývoj připravených pupenů,
-        zatímco nedostatek předchozího chladu jej může brzdit. U ptáků se k sezónní přípravě přidávají potrava a podmínky na zimovišti i během cesty.
-        Proto se mění data kvetení a tahu a různé druhy se posouvají různě. Vysvětlení stojí na zásazích do podmínek i na opakovaných měřeních v přírodě.
-        Samotná shoda události s teplým rokem by tak silný důkaz neposkytla.
+        U mnoha jarních dřevin pomáhá zimní chlad připravit pupen k dalšímu růstu. Teplé jaro pak může otevření květů uspíšit, po mírné zimě však mohou pupeny potřebovat k rozkvětu více tepla.
+        U ptáků pomáhají délka dne a vnitřní rytmus načasovat přípravu na cestu. Odlet ovlivňuje také možnost získat potravu a do příletu se promítne i čas strávený na zastávkách.
+        Proto mohou i druhy, které zažívají stejné jaro, posunout kvetení nebo tah o různý počet dnů.
       </p>
     </section>
 
