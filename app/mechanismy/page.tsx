@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageLead } from "../components/PageLead";
+import { QuestionTile } from "../components/QuestionTile";
 import { climateMechanisms } from "../data/mechanisms";
 
 export const metadata: Metadata = {
@@ -42,12 +43,13 @@ export default function MechanismsPage() {
             </div>
             <div className="mechanism-catalog__grid">
               {mechanisms.map((mechanism) => (
-                <article className="mechanism-tile" key={mechanism.slug}>
-                  <Link className="mechanism-tile__content" href={`/mechanismy/${mechanism.slug}`}>
-                    <p className="mechanism-tile__category">{mechanism.category}</p>
-                    <h3>{mechanism.title}</h3>
-                    <p>{mechanism.cardSummary}</p>
-                  </Link>
+                <QuestionTile
+                  key={mechanism.slug}
+                  title={mechanism.title}
+                  summary={mechanism.cardSummary}
+                  category={mechanism.category}
+                  href={`/mechanismy/${mechanism.slug}`}
+                >
                   {mechanism.observations?.length ? (
                     <div className="mechanism-tile__observations">
                       <p className="mechanism-tile__observation-label">Pozorování</p>
@@ -58,7 +60,7 @@ export default function MechanismsPage() {
                       </ul>
                     </div>
                   ) : null}
-                </article>
+                </QuestionTile>
               ))}
             </div>
           </section>

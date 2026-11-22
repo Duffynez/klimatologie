@@ -1692,6 +1692,7 @@ test("links each projection topic and consequence to observations, a mechanism a
   assert.doesNotMatch(projections + consequences, /chybějící zdroj/);
   assert.doesNotMatch(projections + consequences, /Obsah připravujeme/);
 
+  assert.match(consequences, /<div class="mechanism-catalog">/);
   const groups = [...consequences.matchAll(/<section\b[^>]*aria-labelledby="([^"]+)"[^>]*>([\s\S]*?)<\/section>/g)];
   const studyIdsByGroup = {
     "lidske-zdravi": ["vedra-a-zdravi"],
@@ -1706,9 +1707,16 @@ test("links each projection topic and consequence to observations, a mechanism a
   for (const [, id, group] of groups) {
     assert.ok(consequences.includes(`href="#${id}"`));
     assert.ok(group.includes(`<h2 id="${id}">`));
-    assert.ok((group.match(/<h3>[^<]+\?<\/h3>/g) ?? []).length >= 2, `Missing proposed questions in ${id}`);
+    assert.match(group, /<div class="mechanism-catalog__grid">/, id);
+    const questions = group.match(/<h3>[^<]+\?<\/h3>/g) ?? [];
+    const tiles = group.match(/<article class="mechanism-tile"><(?:a|div)\b[^>]*\bclass="mechanism-tile__content"[^>]*><h3>/g) ?? [];
+    assert.ok(questions.length >= 2, `Missing proposed questions in ${id}`);
+    assert.equal(tiles.length, questions.length, `Each question in ${id} needs its own catalogue tile`);
+    assert.ok(group.includes(`<span>${tiles.length}</span>`), `Incorrect topic count in ${id}`);
     const studyIds = [...group.matchAll(/<article\b[^>]*id="([^"]+)"/g)].map(([, studyId]) => studyId);
     assert.deepEqual(studyIds, studyIdsByGroup[id]);
+    const tileLinks = [...group.matchAll(/<a\b(?=[^>]*\bclass="mechanism-tile__content")[^>]*\bhref="#([^"]+)"/g)].map(([, target]) => target);
+    assert.deepEqual(tileLinks, studyIds);
   }
 
   const examples = [...consequences.matchAll(/<article\b[^>]*id="([^"]+)"[^>]*>([\s\S]*?)<\/article>/g)];

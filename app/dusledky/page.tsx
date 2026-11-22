@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageLead } from "../components/PageLead";
+import { QuestionTile } from "../components/QuestionTile";
 import { SourceLink } from "../components/SourceLink";
-import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "Důsledky změny klimatu",
@@ -200,27 +200,28 @@ const topicGroups: TopicGroup[] = [
 
 function ResearchExample({ study }: { study: Study }) {
   return (
-    <details className={styles.study}>
-      <summary>{study.title}</summary>
-      <article className={styles.evidence} id={study.id} aria-label={study.title}>
-        <p>{study.summary}</p>
-        <ul className={styles.sources} aria-label="Prameny k příkladu" role="list">
-          {study.sources.map((source) => (
-            <li key={source.id}><SourceLink id={source.id}>{source.label}</SourceLink></li>
-          ))}
-        </ul>
-        <dl className={styles.related}>
-          <div>
-            <dt>Pozorování</dt>
-            <dd><Link className="text-link" href={study.observation.href}>{study.observation.label}</Link></dd>
-          </div>
-          <div>
-            <dt>Mechanismus</dt>
-            <dd><Link className="text-link" href={study.mechanism.href}>{study.mechanism.label}</Link></dd>
-          </div>
-        </dl>
-      </article>
-    </details>
+    <div className="mechanism-tile__observations">
+      <p className="mechanism-tile__observation-label">Příklad z výzkumu</p>
+      <details className="article-prose">
+        <summary className="text-link">{study.title}</summary>
+        <article id={study.id} aria-label={study.title}>
+          <p>{study.summary}</p>
+          <ul aria-label="Prameny a související články" role="list">
+            {study.sources.map((source) => (
+              <li key={source.id}><SourceLink id={source.id}>{source.label}</SourceLink></li>
+            ))}
+            <li>
+              <span className="mechanism-tile__observation-label">Pozorování</span>{" "}
+              <Link className="text-link" href={study.observation.href}>{study.observation.label}</Link>
+            </li>
+            <li>
+              <span className="mechanism-tile__observation-label">Mechanismus</span>{" "}
+              <Link className="text-link" href={study.mechanism.href}>{study.mechanism.label}</Link>
+            </li>
+          </ul>
+        </article>
+      </details>
+    </div>
   );
 }
 
@@ -228,37 +229,30 @@ export default function ConsequencesPage() {
   return (
     <div className="page-shell">
       <PageLead eyebrow="Důsledky" title="Co znamená změna klimatu pro lidi a přírodu?">
-        <p>
-          Z mapy povodně poznáme, kam dosáhla voda. Kdy se lidé mohli vrátit domů, zjistíme z údajů o zasažených domácnostech.
-          V sedmi okruzích najdete náměty na samostatné články. U vybraných otázek si můžete rozbalit příklad z výzkumu a jeho prameny.
-        </p>
+        <p>V sedmi okruzích najdete náměty na samostatné články. U vybraných otázek si můžete rozbalit příklad z výzkumu a jeho prameny.</p>
+        <nav className="mechanism-catalog__nav" aria-label="Tematické okruhy" id="tematicke-okruhy">
+          {topicGroups.map((group) => (
+            <a className="text-link" href={`#${group.id}`} key={group.id}>{group.title}</a>
+          ))}
+        </nav>
       </PageLead>
 
-      <div className={styles.directory}>
-        <nav className={styles.index} aria-labelledby="tematicke-okruhy">
-          <h2 id="tematicke-okruhy">Tematické okruhy</h2>
-          <ul role="list">
-            {topicGroups.map((group) => (
-              <li key={group.id}><a href={`#${group.id}`}>{group.title}</a></li>
-            ))}
-          </ul>
-        </nav>
-        <div className={styles.groups}>
-          {topicGroups.map((group) => (
-            <section className={styles.group} key={group.id} aria-labelledby={group.id}>
+      <div className="mechanism-catalog">
+        {topicGroups.map((group) => (
+          <section className="mechanism-catalog__group" aria-labelledby={group.id} key={group.id}>
+            <div className="mechanism-catalog__heading">
               <h2 id={group.id}>{group.title}</h2>
-              <ul className={styles.topics} role="list">
-                {group.topics.map((topic) => (
-                  <li key={topic.question}>
-                    <h3>{topic.question}</h3>
-                    <p className={styles.focus}>{topic.description}</p>
-                    {topic.study && <ResearchExample study={topic.study} />}
-                  </li>
-                ))}
-              </ul>
-            </section>
-          ))}
-        </div>
+              <span>{group.topics.length}</span>
+            </div>
+            <div className="mechanism-catalog__grid">
+              {group.topics.map(({ question, description, study }) => (
+                <QuestionTile key={question} title={question} summary={description} href={study && `#${study.id}`}>
+                  {study && <ResearchExample study={study} />}
+                </QuestionTile>
+              ))}
+            </div>
+          </section>
+        ))}
       </div>
     </div>
   );
