@@ -120,6 +120,8 @@ Autor, název a rok vydání publikace zůstávají pouze v katalogu zdrojů. Da
 
 Téma projekce přidejte do `app/data/projections.ts`. Kategorie, název otázky a krátký popis se zobrazí ve stejné dlaždici jako u metod. Na stránce tématu se zobrazí delší popis a odkazy na pozorování, mechanismus a zdroj projekce. Adresu `/projekce/[slug]/` doplňte do `public/sitemap.xml`. Slug již publikovaného tématu zachovejte také kvůli odkazům na kotvu dlaždice.
 
+Do pole `area` uveďte území, pro které platí výsledek. Celosvětové součty, průměry a mapy patří pod „Celý svět“. U regionální studie uveďte konkrétní oblast a při prvním použití ji přiřaďte v `scopeByArea` k výběru „Regiony světa“. Pro výsledek z českého území zvolte „Česko“. Dlaždice pak automaticky dostane také malý obrys českých hranic. Podkladem obrysu je [mapa státních hranic Natural Earth v měřítku 1 : 50 milionům](https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/).
+
 Témata a příklady důsledků se upravují přímo v `app/dusledky/page.tsx`.
 
 ## 8. Citace v textu

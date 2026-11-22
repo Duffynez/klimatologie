@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import { PageLead } from "../components/PageLead";
-import { TopicCatalog } from "../components/TopicCatalog";
-import { projectionCategories, projections } from "../data/projections";
+import { ProjectionDirectory } from "./ProjectionDirectory";
 
 export const metadata: Metadata = {
   title: "Projekce klimatu",
@@ -9,12 +7,5 @@ export const metadata: Metadata = {
 };
 
 export default function ProjectionsPage() {
-  return (
-    <div className="page-shell">
-      <PageLead eyebrow="Projekce" title="Jak se může změnit klima?">
-        <p>Klimatické projekce ukazují, jak se může klima vyvíjet při různých emisích skleníkových plynů. U každé otázky najdete také měření, se kterými výpočty souvisejí.</p>
-      </PageLead>
-      <TopicCatalog basePath="/projekce" categories={projectionCategories} topics={projections} />
-    </div>
-  );
+  return <ProjectionDirectory />;
 }

@@ -640,6 +640,29 @@ h3 {
   gap: 8px 24px;
 }
 
+.projection-scope-nav {
+  margin-top: 16px;
+  font-size: 0.95rem;
+}
+
+.projection-scope-nav a[aria-current="page"] {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.projection-area {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 21px;
+  margin-bottom: 6px;
+  color: var(--sea);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
 .mechanism-catalog__heading h2 {
   scroll-margin-top: 106px;
 }

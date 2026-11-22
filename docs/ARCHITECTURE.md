@@ -50,6 +50,7 @@ Hlavní navigace není odvozena automaticky ze složek. Je to ručně udržovan�
 | `/mechanismy/` | `app/mechanismy/page.tsx` | `app/data/mechanisms.ts`. |
 | `/mechanismy/[slug]/` | `app/mechanismy/[slug]/page.tsx` | Plné články připojené podle slugu a obecné detailní stránky ostatních témat. |
 | `/projekce/` | `app/projekce/page.tsx` | `app/data/projections.ts`. Kategorie a dlaždice vykresluje stejná komponenta `TopicCatalog` jako u metod. |
+| `/projekce/uzemi/[scope]/` | `app/projekce/uzemi/[scope]/page.tsx` | Tři statické výběry podle území. Stejný rozcestník v `ProjectionDirectory` zachovává tematické skupiny a čísla dlaždic. |
 | `/projekce/[slug]/` | `app/projekce/[slug]/page.tsx` | Popis tématu a odkazy na pozorování, mechanismus a zdroj projekce. |
 | `/dusledky/` | `app/dusledky/page.tsx` | Lokální pole témat přímo v souboru stránky. |
 | `/historie/` | `app/historie/page.tsx` | `app/data/history.ts` a zdroje podle ID. |

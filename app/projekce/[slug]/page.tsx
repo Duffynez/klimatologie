@@ -35,6 +35,7 @@ export default async function ProjectionPage({ params }: ProjectionPageProps) {
           <li><Link className="text-link" href={topic.observation.href}>{topic.observation.label}</Link></li>
           <li><Link className="text-link" href={topic.mechanism.href}>{topic.mechanism.label}</Link></li>
           <li><SourceLink id={topic.source.id}>{topic.source.label}</SourceLink></li>
+          {topic.dataSource && <li><SourceLink id={topic.dataSource.id}>{topic.dataSource.label}</SourceLink></li>}
         </ul>
       </section>
       <Link className="text-link catalog-back-link" href={`/projekce/#${topic.slug}`}>

@@ -1665,13 +1665,19 @@ test("links each projection topic and consequence to observations, a mechanism a
     "Složení atmosféry a koloběh uhlíku",
   ]);
   const topics = [];
+  const tilePattern = /<a\b([^>]*class="method-tile"[^>]*)><span>(\d+)<\/span><div><span class="projection-area">([\s\S]*?)<\/span><h3>([^<]+\?)<\/h3><p>[^<]+<\/p><\/div><\/a>/g;
+  const areas = new Map();
   for (const [, name, count, group] of projectionGroups) {
-    const tiles = [...group.matchAll(/<a\b([^>]*class="method-tile"[^>]*)><span>(\d+)<\/span><div><h3>([^<]+\?)<\/h3><p>[^<]+<\/p><\/div><\/a>/g)];
+    const tiles = [...group.matchAll(tilePattern)];
     assert.equal(tiles.length, Number(count), name);
     assert.ok(tiles.length > 0, name);
-    for (const [, attributes, number, question] of tiles) {
+    for (const [, attributes, number, areaMarkup, question] of tiles) {
       const slug = attributes.match(/href="\/projekce\/([\w-]+)\/?"/)?.[1];
       assert.ok(slug, question);
+      const area = areaMarkup.replace(/<[^>]+>/g, "");
+      assert.equal(areaMarkup.includes('class="projection-area__map"'), area === "Česko", slug);
+      if (area === "Česko") assert.match(areaMarkup, /<svg\b[^>]*aria-hidden="true"[^>]*><path\b/);
+      areas.set(slug, { area, number });
       assert.ok(attributes.includes(`id="${slug}"`), "Missing original topic anchor " + slug);
       assert.equal(number, String(topics.length + 1).padStart(2, "0"));
       const html = await readFile(new URL(`dist/client/projekce/${slug}/index.html`, root), "utf8");
@@ -1685,9 +1691,47 @@ test("links each projection topic and consequence to observations, a mechanism a
     }
   }
   assert.deepEqual(topics.map(([slug]) => slug), [
-    "globalni-otepleni", "delka-vln-veder", "nejdestivejsi-den", "letni-prutok", "pacificke-pasaty",
-    "snih-v-ceskych-horach", "arkticke-zari", "vzestup-hladiny", "okyselovani-oceanu", "podil-co2-v-atmosfere",
+    "globalni-otepleni", "cetnost-mimoradne-horkych-dnu", "delka-vln-veder",
+    "rozlozeni-srazek", "nejdestivejsi-den", "letni-prutok",
+    "nejsilnejsi-tropicke-cyklony", "pacificke-pasaty", "hmotnost-svetovych-ledovcu",
+    "snih-v-ceskych-horach", "arkticke-zari", "vzestup-hladiny", "ohrev-svetoveho-oceanu",
+    "okyselovani-oceanu", "podil-co2-v-atmosfere", "teplota-po-zastaveni-emisi-co2",
   ]);
+  const localAreas = {
+    "delka-vln-veder": "Střední Evropa",
+    "nejdestivejsi-den": "Střední Evropa",
+    "letni-prutok": "Česko",
+    "pacificke-pasaty": "Rovníkový Pacifik",
+    "snih-v-ceskych-horach": "Česko",
+    "arkticke-zari": "Arktida",
+  };
+  for (const [slug, { area }] of areas) assert.equal(area, localAreas[slug] ?? "Celý svět", slug);
+  const views = [
+    ["/projekce/", "Všechna území", [...areas.keys()]],
+    ["/projekce/uzemi/svet/", "Celý svět", [...areas.keys()].filter(slug => !localAreas[slug])],
+    ["/projekce/uzemi/regiony/", "Regiony světa", Object.keys(localAreas).filter(slug => localAreas[slug] !== "Česko")],
+    ["/projekce/uzemi/cesko/", "Česko", Object.keys(localAreas).filter(slug => localAreas[slug] === "Česko")],
+  ];
+  for (const [path, label, expected] of views) {
+    const html = await readFile(new URL("dist/client" + path + "index.html", root), "utf8");
+    assert.ok(sitemap.includes("<loc>https://klimatologie.eu" + path + "</loc>"));
+    const nav = html.match(/<nav\b[^>]*aria-label="Projekce podle území"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
+    assert.ok(nav, path);
+    const links = [...nav.matchAll(/<a\b([^>]*)>([^<]+)<\/a>/g)];
+    assert.deepEqual(links.map(([, attrs, text]) => [attrs.match(/href="([^"]+)"/)[1], text]), views.map(([href, text]) => [href, text]));
+    assert.deepEqual(links.filter(([, attrs]) => attrs.includes('aria-current="page"')).map(([, , text]) => text), [label]);
+    const visibleTiles = [...html.matchAll(tilePattern)];
+    const visibleSlugs = visibleTiles.map(([, attrs]) => attrs.match(/id="([\w-]+)"/)[1]);
+    assert.deepEqual(visibleSlugs, expected, path);
+    visibleTiles.forEach(([, , number, markup], i) => {
+      const { area, number: originalNumber } = areas.get(visibleSlugs[i]);
+      assert.equal(number, originalNumber);
+      assert.equal(markup.includes("<svg"), area === "Česko");
+    });
+    const counts = [...html.matchAll(/class="method-catalog__heading"><h2>[^<]+<\/h2><span>(\d+)<\/span>/g)].map(([, count]) => Number(count));
+    assert.ok(counts.every(n => n > 0));
+    assert.equal(counts.reduce((sum, count) => sum + count, 0), expected.length);
+  }
   assert.match(consequences, /<h1>Co znamená změna klimatu pro lidi a přírodu\?<\/h1>/);
   assert.doesNotMatch(projections + consequences, /chybějící zdroj/);
   assert.doesNotMatch(projections + consequences, /Obsah připravujeme/);
