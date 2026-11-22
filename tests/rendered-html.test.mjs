@@ -1523,8 +1523,7 @@ test("publishes the home page with a linked observation example", async () => {
 });
 
 test("publishes forty-five measurement and analysis methods with working routes", async () => {
-  const [page, detailPage, methods, styles, catalogueHtml, sitemap] = await Promise.all([
-    readFile(new URL("app/metody/page.tsx", root), "utf8"),
+  const [detailPage, methods, styles, catalogueHtml, sitemap] = await Promise.all([
     readFile(new URL("app/metody/[slug]/page.tsx", root), "utf8"),
     readFile(new URL("app/data/methods.ts", root), "utf8"),
     readFile(new URL("app/globals.css", root), "utf8"),
@@ -1550,9 +1549,8 @@ test("publishes forty-five measurement and analysis methods with working routes"
   assert.match(methods, /title: "Dendrochronologie"/);
   assert.match(methods, /title: "Radiometrické a expoziční datování"/);
   assert.match(methods, /title: "Rekonstrukce teploty z vrtů"/);
-  assert.match(page, /measurementMethods\.filter/);
-  assert.match(page, /className="method-tile"/);
-  assert.match(page, /href=\{`\/metody\/\$\{method\.slug\}`\}/);
+  const tileNumbers = [...catalogueHtml.matchAll(/<a\b[^>]*class="method-tile"[^>]*><span>(\d+)<\/span><div><h3>/g)];
+  assert.deepEqual(tileNumbers.map(([, number]) => number), methodRecords.map((_, i) => String(i + 1).padStart(2, "0")));
   assert.match(detailPage, /generateStaticParams/);
   assert.match(detailPage, /methodBySlug/);
   assert.match(detailPage, /Zpět na všechny metody/);
@@ -1657,8 +1655,7 @@ test("links each projection topic and consequence to observations, a mechanism a
   ]);
 
   assert.match(projections, /<h1>Jak se může změnit klima\?<\/h1>/);
-  assert.match(projections, /<ul\b[^>]*aria-label="Kategorie klimatických projekcí"/);
-  const projectionGroups = [...projections.matchAll(/<li><h2>([^<]+)<\/h2>((?:<details\b[\s\S]*?<\/details>)+)<\/li>/g)];
+  const projectionGroups = [...projections.matchAll(/<section class="method-catalog__group"><div class="method-catalog__heading"><h2>([^<]+)<\/h2><span>(\d+)<\/span><\/div><div class="method-catalog__grid">([\s\S]*?)<\/section>/g)];
   assert.deepEqual(projectionGroups.map(([, name]) => name), [
     "Teplota a energetická bilance Země",
     "Srážky a voda na pevnině",
@@ -1667,11 +1664,30 @@ test("links each projection topic and consequence to observations, a mechanism a
     "Oceán a hladina moře",
     "Složení atmosféry a koloběh uhlíku",
   ]);
-  const topics = projectionGroups.flatMap(([, , html]) => [...html.matchAll(/<details\b[^>]*\bid="([^"]+)"[^>]*>([\s\S]*?)<\/details>/g)]);
-  assert.equal(new Set(topics.map(([, id]) => id)).size, topics.length, "Each topic needs a unique anchor");
-  for (const [, id, html] of topics) {
-    assert.match(html, /<summary>[^<]+\?<\/summary><p>[^<]+<\/p>/, id);
+  const topics = [];
+  for (const [, name, count, group] of projectionGroups) {
+    const tiles = [...group.matchAll(/<a\b([^>]*class="method-tile"[^>]*)><span>(\d+)<\/span><div><h3>([^<]+\?)<\/h3><p>[^<]+<\/p><\/div><\/a>/g)];
+    assert.equal(tiles.length, Number(count), name);
+    assert.ok(tiles.length > 0, name);
+    for (const [, attributes, number, question] of tiles) {
+      const slug = attributes.match(/href="\/projekce\/([\w-]+)\/?"/)?.[1];
+      assert.ok(slug, question);
+      assert.ok(attributes.includes(`id="${slug}"`), "Missing original topic anchor " + slug);
+      assert.equal(number, String(topics.length + 1).padStart(2, "0"));
+      const html = await readFile(new URL(`dist/client/projekce/${slug}/index.html`, root), "utf8");
+      assert.ok(html.includes(`<h1>${question}</h1>`), slug);
+      assert.ok(html.includes(`href="/projekce/#${slug}"`), "Missing catalogue return for " + slug);
+      assert.ok(sitemap.includes(`<loc>https://klimatologie.eu/projekce/${slug}/</loc>`), slug);
+      const evidence = html.match(/<section\b[^>]*aria-labelledby="podklady"[^>]*>([\s\S]*?)<\/section>/)?.[1];
+      assert.ok(evidence, slug);
+      assert.doesNotMatch(evidence, /chybějící zdroj/);
+      topics.push([slug, evidence]);
+    }
   }
+  assert.deepEqual(topics.map(([slug]) => slug), [
+    "globalni-otepleni", "delka-vln-veder", "nejdestivejsi-den", "letni-prutok", "pacificke-pasaty",
+    "snih-v-ceskych-horach", "arkticke-zari", "vzestup-hladiny", "okyselovani-oceanu", "podil-co2-v-atmosfere",
+  ]);
   assert.match(consequences, /<h1>Co znamená změna klimatu pro lidi a přírodu\?<\/h1>/);
   assert.doesNotMatch(projections + consequences, /chybějící zdroj/);
   assert.doesNotMatch(projections + consequences, /Obsah připravujeme/);
@@ -1697,7 +1713,7 @@ test("links each projection topic and consequence to observations, a mechanism a
 
   const examples = [...consequences.matchAll(/<article\b[^>]*id="([^"]+)"[^>]*>([\s\S]*?)<\/article>/g)];
   const targets = new Map();
-  for (const [, id, html] of [...topics, ...examples]) {
+  for (const [id, html] of [...topics, ...examples.map(([, id, section]) => [id, section])]) {
     const hrefs = [...html.matchAll(/href="([^"]+)"/g)].map((match) => match[1]);
     for (const section of ["/pozorovani/", "/mechanismy/", "/zdroje"]) {
       assert.ok(hrefs.some((href) => href.startsWith(section)), `Missing ${section} link in ${id}`);

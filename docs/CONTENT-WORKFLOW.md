@@ -118,7 +118,9 @@ Autor, název a rok vydání publikace zůstávají pouze v katalogu zdrojů. Da
 
 ## 7. Projekce a důsledky
 
-Projekce a důsledky jsou zatím osnovy přímo v příslušných souborech `page.tsx`. Přidání dlaždice proto nevyžaduje datový katalog, ale ani automaticky nevytvoří detailní adresu.
+Téma projekce přidejte do `app/data/projections.ts`. Kategorie, název otázky a krátký popis se zobrazí ve stejné dlaždici jako u metod. Na stránce tématu se zobrazí delší popis a odkazy na pozorování, mechanismus a zdroj projekce. Adresu `/projekce/[slug]/` doplňte do `public/sitemap.xml`. Slug již publikovaného tématu zachovejte také kvůli odkazům na kotvu dlaždice.
+
+Témata a příklady důsledků se upravují přímo v `app/dusledky/page.tsx`.
 
 ## 8. Citace v textu
 

@@ -49,12 +49,13 @@ Hlavní navigace není odvozena automaticky ze složek. Je to ručně udržovan�
 | `/metody/[slug]/` | `app/metody/[slug]/page.tsx` | Katalog metod; hotové články se připojují ručně. |
 | `/mechanismy/` | `app/mechanismy/page.tsx` | `app/data/mechanisms.ts`. |
 | `/mechanismy/[slug]/` | `app/mechanismy/[slug]/page.tsx` | Plné články připojené podle slugu a obecné detailní stránky ostatních témat. |
-| `/projekce/` | `app/projekce/page.tsx` | Šest kategorií s rozbalovacími otázkami. Každá otázka odkazuje na pozorování, mechanismus a zdroj projekce. |
+| `/projekce/` | `app/projekce/page.tsx` | `app/data/projections.ts`. Kategorie a dlaždice vykresluje stejná komponenta `TopicCatalog` jako u metod. |
+| `/projekce/[slug]/` | `app/projekce/[slug]/page.tsx` | Popis tématu a odkazy na pozorování, mechanismus a zdroj projekce. |
 | `/dusledky/` | `app/dusledky/page.tsx` | Lokální pole témat přímo v souboru stránky. |
 | `/historie/` | `app/historie/page.tsx` | `app/data/history.ts` a zdroje podle ID. |
 | `/zdroje/` | `app/zdroje/page.tsx` | Spojené pole `sources` z `app/data/sources.ts`. |
 
-`generateStaticParams` u pozorování, metod a mechanismů vytvoří adresy pro všechny položky příslušného katalogu už při buildu. Neznámý slug skončí přes `notFound()`.
+`generateStaticParams` u pozorování, metod, mechanismů a projekcí vytvoří adresy pro všechny položky příslušného katalogu už při buildu. Neznámý slug skončí přes `notFound()`.
 
 ## 4. Katalog není totéž co článek
 
@@ -109,7 +110,7 @@ Sníh na souši a mořský led mají samostatná témata. Původní adresa `/mec
 
 ### Projekce a důsledky
 
-Tyto dvě sekce zatím nemají samostatné datové katalogy ani detailní adresy. Jejich osnovy jsou pole přímo v souborech `page.tsx`.
+Dlaždice projekce vede na vlastní stránku tématu. Její HTML `id` odpovídá slugu, takže původní odkazy na `/projekce/#slug` vedou přímo k příslušné dlaždici. Důsledky mají osnovu v `app/dusledky/page.tsx`.
 
 ## 5. Článkové komponenty
 
@@ -264,7 +265,7 @@ Dokumentace má také popsat místa, kde architektura není ideální:
 - plné články a jejich hlavičky nejsou propojené jedním registrem;
 - zdroje jsou z historických důvodů rozdělené mezi dva ruční soubory;
 - sitemap se udržuje ručně;
-- projekce a důsledky mají osnovu přímo ve stránce;
+- důsledky mají osnovu přímo ve stránce.
 - auditní manifesty se po každé změně katalogu neobnovují automaticky;
 - jeden globální CSS soubor má velký rozsah dopadu.
 
